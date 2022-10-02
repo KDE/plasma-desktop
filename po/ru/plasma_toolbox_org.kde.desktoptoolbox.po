@@ -1,0 +1,54 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2016, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2021-12-28 15:12+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: contents/ui/ToolBoxContent.qml:269
+#, kde-format
+msgid "Choose Global Theme…"
+msgstr "Выбрать оформление рабочей среды..."
+
+#: contents/ui/ToolBoxContent.qml:276
+#, kde-format
+msgid "Configure Display Settings…"
+msgstr "Настроить параметры экрана…"
+
+#: contents/ui/ToolBoxContent.qml:298
+#, kde-format
+msgid "Exit Edit Mode"
+msgstr "Выйти из режима редактирования"
+
+#~ msgid "Finish Customizing Layout"
+#~ msgstr "Завершить настройку компоновки"
+
+# Это название должно совпадать с названием комнаты, которая создаётся по умолчанию. Смотри перевод в файле kactivities5.po. --aspotashev
+#~ msgid "Default"
+#~ msgstr "Начальная комната"
+
+#~ msgid "Desktop Toolbox"
+#~ msgstr "Инструменты Plasma"
+
+#~ msgid "Desktop Toolbox — %1 Activity"
+#~ msgstr "Инструменты Plasma — комната «%1»"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Заблокировать экран"
+
+#~ msgid "Leave"
+#~ msgstr "Завершить работу..."

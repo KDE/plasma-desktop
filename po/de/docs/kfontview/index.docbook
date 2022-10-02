@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Schriftartenbetrachter</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Schriftartenbetrachter</keyword>
+<keyword
+>Schriften</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; ist ein Programm zur Anzeige und Installation für folgende Schriftarten: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; Typ 1 (Dateierweiterung unter &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; unter &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, Dateierweiterung <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, Dateierweiterung <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Mit &kfontview; können Sie Schriften, die Sie aus dem Internet heruntergeladen haben, betrachten und installieren. In der Vorschau können Sie überprüfen, ob die Schrift alle benötigten Zeichen enthält. </para>
+<para
+>&kfontview; kann auch im Modul <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Schriftarten-Verwaltung</guilabel
+></ulink
+> der &systemsettings; gestartet werden, um die erweiterten Vorschauarten dieses Programms zu nutzen.</para>
+
+<para
+>Alternativ können Sie das Modul <guilabel
+>Schriftarten-Verwaltung</guilabel
+> für Installation, Löschen, Vorschau und Verwaltung aller Schriften in Ihrem System benutzen.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>Das Programm &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Das Programm &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Die <guilabel
+>Standardvorschau</guilabel
+> in &kfontview; zeigt Ihre Schrift als Pangramm (ein Satz mit allen Buchstaben des Alphabets) in mehreren Schriftgrößen an, damit erhalten Sie eine Eindruck vom Erscheinungsbild der Schrift. Mithilfe des Mausrades können Sie die Schriftgröße ändern. Im Auswahlfeld in der Werkzeugleiste können Sie weitere Vorschauarten auswählen. <itemizedlist>
+<listitem
+><para
+><guilabel
+>Alle Zeichen</guilabel
+> zeigt alle in der Schrift in einer Größe. </para
+></listitem>
+<listitem
+><para
+>Unicode-Block: Im Unicode-Standard werden Gruppen von Zeichen in Blöcken zusammengefasst.</para
+></listitem>
+<listitem
+><para
+>Unicode-Skript: In Unicode ist ein Skript eine Zusammenstellung von Buchstaben und Schriftzeichen, die zur Anzeige von Textinformation in einer oder mehreren Schriftsystemen.</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Text ändern</guibutton
+>: Mit diesem Knopf öffnen Sie den Dialog <guilabel
+>Vorschau-Zeichenfolge</guilabel
+> und können hier einen eigenen Text für die Vorschau eintragen. Mit dieser Funktion können Sie überprüfen, ob eine Schrift alle benötigten Zeichen enthält. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Mit den Knöpfen zum Vergrößern oder Verkleinern oder mit dem Mausrad können Sie die Schriftgröße ändern.</para>
+<para
+>Im Vorschaumodus <guilabel
+>Unicode-Block</guilabel
+> und <guilabel
+>Unicode-Skript</guilabel
+> werden zusätzlich Informationen als Kurzinfos angezeigt, wenn Sie den Mauszeiger über ein Zeichen führen: Die Unicode-<guilabel
+>Kategorie</guilabel
+> sowie die als Schreibweise in <guilabel
+>UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> und als <guilabel
+>XML-Dezimal-Entität</guilabel
+>.</para>
+
+<para
+>Um eine Schrift zu installieren, die Sie aus dem Internet heruntergeladen haben, klicken Sie auf den Knopf <guibutton
+>Installieren</guibutton
+> rechts unten. </para>
+
+<para
+>Sie können Schriften nur für sich oder systemweit installieren. Eine systemweite Installation kann nur vom Systemverwalter durchgeführt werden.</para>
+
+<para
+>Schriften werden meistens in einem Archivformat wie <literal role="extension"
+>zip</literal
+> angeboten. Öffnen Sie diese Archive mit &ark;, das eine einfache Vorschau ermöglicht. Um die erweiterten Fähigkeiten von &kfontview; zu benutzen, entpacken Sie die Schriften und öffnen Sie sie in &kfontview;. </para
+><para
+>Die neu installierten Schriften können nur von neu gestarteten Anwendungen benutzt werden.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

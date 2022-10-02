@@ -1,0 +1,428 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Aksesibilitas</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>24-07-2017</date>
+<releaseinfo
+>Plasma 5.10</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>aksesibilitas</keyword>
+<keyword
+>tuts</keyword>
+<keyword
+>bel</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Aksesibilitas</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Pengenalan</title>
+
+<para
+>Modul ini dirancang untuk membantu pengguna yang memiliki kesulitan mendengar isyarat yang dapat didengar, atau yang mengalami kesulitan menggunakan keyboard. </para>
+
+<para
+>Modul dibagi dalam lima tab: <link linkend="access-bell"
+><guilabel
+>Bel</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Pemodif tuts</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filter Keyboard</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Gestur Pengaktifan</guilabel
+></link
+> dan <guilabel
+>Pembaca Layar</guilabel
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Bel</guilabel
+></title>
+
+<para
+>Panel ini dibagi kedalam sebuah bagian <guilabel
+>Bel Dapat Diaudiokan</guilabel
+> dan bagian <guilabel
+>Bel Dapat Divisualkan</guilabel
+>. </para>
+
+<para
+>Kotak centang atas berlabel <guilabel
+>Gunakan Bel Sistem</guilabel
+>, menentukan apakah bel Sistem normal berdering. Jika opsi ini dinonfungsikan, bel Sistem akan disenyapkan. </para>
+
+<para
+>Kotak centang selanjutnya dapat digunakan untuk memutar suara yang berbeda setiap kali bel sistem dipicu. Untuk mengaktifkan, letakkan tanda di kotak centang berlabel <guilabel
+>Gunakan bel khusus</guilabel
+>, dan masukkan nama alur lengkap ke file suara di kotak teks berlabel <guilabel
+>Sound to play</guilabel
+>. Jika kamu mau, kamu bisa memilih tombol <guibutton
+>Telusuri</guibutton
+> untuk menavigasi melalui filesystem-mu untuk menemukan file yang tepat. </para>
+
+<para
+>Untuk pengguna yang mengalami kesulitan mendengar bel Sistem, atau pengguna yang memiliki komputer yang sunyi, &kde; menawarkan <emphasis
+>bel visual</emphasis
+>. Ini memberikan sinyal visual (membalikkan layar atau memancarkan warna di atasnya) ketika bel sistem biasanya berbunyi. </para>
+
+<para
+>Untuk menggunakan bel visual, pertama tempatkan tanda dalam kotak centang yang berlabel <guilabel
+>Gunakan bel visual</guilabel
+>. </para>
+
+<para
+>Kemudian kamu bisa memilih antara <guilabel
+>Balik layar</guilabel
+>, atau <guilabel
+>Layar flash</guilabel
+>. Jika kamu memilih <guilabel
+>Balik layar</guilabel
+>, semua warna pada layar akan berbalik. Jika kamu memilih <guilabel
+>Layar flash</guilabel
+>, kamu bisa memilih warna dengan mengeklik tombol disebelah kanan dari pilihan <guilabel
+>Layar flash</guilabel
+>. </para>
+
+<para
+>Kotak putar dapat digunakan untuk mengatur durasi bel dapat divisualkan. Nilai bakunya adalah 500 mdet, atau setengah detik. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Pemodif tuts</guilabel
+></title>
+
+<para
+>Ada dua bagian <guilabel
+>Tuts Lekat</guilabel
+> dan <guilabel
+>Penguncian Tuts</guilabel
+> untuk panel ini.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gunakan Tuts Lekat</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini difungsikan, kamu bisa tekan dan lepas &Shift;, &Alt; atau tuts &Ctrl;, dan tekan tuts lainnya untuk mendapatkan key combo (contohnya: <keycombo action="simul"
+>&Ctrl; &Alt; <keycap
+>Del</keycap
+></keycombo
+> dapat dilakukan dengan &Ctrl; kemudian &Alt; lalu <keycap
+>Del</keycap
+>). </para>
+
+<para
+>Begitu juga dalam bagian ini adalah sebuah kotak centang yang berlabel <guilabel
+>Kunci Tuts Lekat</guilabel
+>. Jika kotak centang ini difungsikan, tuts &Alt;, &Ctrl; dan &Shift; masih <quote
+>terpilih</quote
+> sampai kamu <quote
+>tak memilih</quote
+>nya. </para>
+
+<para
+>Sebuah contoh: </para>
+<variablelist>
+<varlistentry>
+<term
+>Dengan <guilabel
+>Kunci Tuts Lekat</guilabel
+> yang dinonfungsikan:</term>
+<listitem>
+<para
+>Jika kamu tekan tuts &Shift; kemudian tekan tuts  <keycap
+>F</keycap
+>, maka komputer menafsirkan ini sebagai <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Sekarang jika kamu tekan <keycap
+>P</keycap
+>, si komputer menafsir ini sebagai huruf p (tanpa shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Dengan <guilabel
+>Kunci Tuts Lekat</guilabel
+> yang difungsikan:</term>
+<listitem>
+<para
+>Jika kamu tekan tuts &Shift; <emphasis
+>dua kali</emphasis
+> kemudian tekan tuts <keycap
+>F</keycap
+>, maka komputer menafsirkan ini sebagai <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Sekarang jika kamu ketik <keycap
+>P</keycap
+>, maka komputer menafsirkan ini sebagai huruf P (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Untuk membatalkan pilihan tuts &Shift;, tekanlah itu kembali. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filter Keyboard</guilabel
+></title>
+
+<para
+>Ada dua bagian untuk panel ini.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gunakan tuts pelan</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini difungsikan, kamu harus menahan tombol selama waktu yang ditentukan (disesuaikan dengan kotak putar) sebelum keystroke akan disetujui. Ini membantu mencegah pukulan tuts yang tidak disengaja. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Gunakan tuts mentul</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini difungsikan, kamu harus menunggu selama waktu yang ditentukan (dapat dikonfigurasi dengan kotak putar) sebelum penekanan tombol selanjutnya dapat diterima. Ini mencegah beberapa tombol yang tidak disengaja ditekan. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gestur Pengaktifan</guilabel
+></title>
+
+<para
+>Ada dua bagian untuk panel ini.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestur Pengaktifan</guilabel
+> dengan opsi ini:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Gunakan gestur untuk mengaktifkan tuts lekat dan tuts pelan</guilabel
+></member>
+<member
+>Di sini kamu bisa mengaktifkan gestur keyboard dengan menyalakan fitur-fitur berikut ini:</member>
+<member
+>Tuts Mouse: Tekan &Shift;+NumLock</member>
+<member
+>Tuts lekat: Tekan tuts &Shift; lima kali berturut-turut</member>
+<member
+>Tuts pelan: Tekan &Shift; tahan delapan detik</member>
+<member
+><guilabel
+>Matikan tuts lekat dan tuts pelan setelah beberapa saat tidak aktif.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notifikasi</guilabel
+> dengan opsi ini:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Gunakan bel sistem kapan pun saat sebuah gestur digunakan untuk menyalakan atau mematikan fitur aksesibilitas</guilabel
+></member>
+
+<member
+><guilabel
+>Tampilkan dialog konfirmasi kapan pun saat sebuah fitur aksesibilitas keyboard dinyalakan atau dimatikan</guilabel
+></member>
+<member
+>Jika opsi ini tercentang, &kde; akan menampilkan sebuah dialog konfirmasi kapan pun saat sebuah fitur aksesibilitas keyboard telah dinyalakan atau dimatikan.</member>
+<member
+>Pastikan kamu tahu apa yang kamu lakukan jika kamu menghapus centangnya, sebagaimana pengaturan aksesibilitas keyboard maka akan selalu diterapkan tanpa konfirmasi.</member>
+
+<member
+><guilabel
+>Gunakan mekanisme notifikasi sistem &kde; kapan pun saat sebuah fitur aksesibilitas keyboard telah dinyalakan atau dimatikan</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Klik tombol <guibutton
+>Konfigurasikan Notifikasi</guibutton
+> untuk membuka dialog yang memungkinkanmu untuk mengedit notifikasi atas perubahan status pada semua tuts.</para>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Pembaca Layar</guilabel
+></title>
+
+<para
+>Instal sebuah aplikasi pembaca layar seperti <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> bersama dengan <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Uji apakah suara dari speech dispatcher bekerja menggunakan perintah <command
+>spd-say hello</command
+> di dalam terminal. </para>
+
+<para
+>Selain itu kqmu perlu sebuah teks untuk speech synthesizer seperti misal (&eg;) <application
+>espeak</application
+>. </para>
+
+<para
+>Fungsikan pembaca layar di dalam kotak-centang, logout dan restart sesi desktopmu. </para>
+
+<para
+>Untuk &plasma; sendiri, pastikan untuk menggunakan <guilabel
+>Menu Aplikasi</guilabel
+> tradisional, dan periksalah bahwa menu ini memiliki pintasan keyboard yang terkait dengan (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Ketika menekan pintasan ini, menu seharusnya terbuka dan dapat dibaca ketika menavigasi menu dengan tuts panah. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

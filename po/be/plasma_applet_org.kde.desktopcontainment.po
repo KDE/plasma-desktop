@@ -1,0 +1,936 @@
+# translation of libkonq.po to Belarusian
+# Belarusian (classic spelling) translation of libkonq.pot
+# Copyright (C) 2002-2004 KDE Team.
+#
+# Eugene Zelenko <greendeath@mail.ru>, 2002-2004.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+# Darafei Praliaskouski <komzpa@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2008-02-02 18:28+0200\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KAider 0.1\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Actions"
+msgid "Location"
+msgstr "Дзеянні"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr ""
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File"
+msgid "Files:"
+msgstr "Файл"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Shred Files"
+msgid "Show all"
+msgstr "Знішчыць файлы"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File name pattern:"
+msgstr "Назва файла:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File types:"
+msgstr "Назва файла:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File type"
+msgstr "Назва файла:"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, fuzzy, kde-format
+#| msgid "Destination"
+msgid "Description"
+msgstr "Прызначэнне"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Enlarge Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Павялічыць значкі"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "&Маленькі"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "&Вялікі"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "&Сярэдні"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show folder preview popups"
+msgstr "Прагляд"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "Und&o: Rename"
+msgid "Rename:"
+msgstr "&Вярнуць: перайменаванне"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Previews:"
+msgstr "Прагляд у"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Show preview thumbnails"
+msgstr "Прагляд у"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Configure Preview Plugins…"
+msgstr "Прагляд у"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Desktop folder"
+msgstr "Новая тэчка"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Actions"
+msgid "Custom location:"
+msgstr "Дзеянні"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Няма"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "&Default Size"
+msgid "Default"
+msgstr "&Стандартны памер"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Hide Background"
+msgstr "Фон"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Show Background"
+msgstr "Фон"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Preview Plugins"
+msgstr "Прагляд у"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, fuzzy, kde-format
+#| msgid "C&ancel"
+msgid "Cancel"
+msgstr "&Скасаваць"
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "Configure Background..."
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Настаўленні фону..."
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Select Folder"
+msgstr "Новая тэчка"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "&Пустая сметніца"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "&Аднавіць"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Адкрыць"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Уласцівасці"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "&Мізэрны"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "&Маленькі"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "&Маленькі"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "&Сярэдні"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "&Сярэдні"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "&Вялікі"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "&Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "В&ялізны"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show Previews"
+msgstr "Прагляд"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "Стварыць &тэчку..."
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "Новая тэчка"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgid "&Move to Trash"
+#~ msgstr "Перамясціць у сметніцу"
+
+#, fuzzy
+#~| msgid "Deleting"
+#~ msgid "&Delete"
+#~ msgstr "Выдаленне"
+
+#, fuzzy
+#~| msgid "Shred Files"
+#~ msgid "Show Original File"
+#~ msgstr "Знішчыць файлы"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&Пустая сметніца"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&Дадаць гэтую старонку ў закладкі"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&Дадаць гэтае месцазнаходжанне ў закладкі"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&Дадаць гэтую тэчку ў закладкі"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&Дадаць гэтую спасылку ў закладкі"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&Дадаць гэты файл у закладкі"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "&Скапіраваць сюды"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Перамясціць у сметніцу"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Новая тэчка"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Новая тэчка"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "&Скапіраваць сюды"
+
+#, fuzzy
+#~| msgid "&Move Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "&Перамясціць сюды"
+
+#~ msgid "Share"
+#~ msgstr "Апублікаваць"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Вы не можаце перацягнуць тэчку саму ў сябе"
+
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Назва файла для перацягнутага зместу:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Перамясціць сюды"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Скапіраваць сюды"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Спаслацца тут"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Скасаваць"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Усталяваць &шпалеры"
+
+#, fuzzy
+#~| msgid "Creating directory"
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Стварэнне тэчкі"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Вызначце назву тэчкі:"
+
+#, fuzzy
+#~| msgid "Creating directory"
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Стварэнне тэчкі"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Новая тэчка"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Новая тэчка"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Вызначце назву тэчкі:"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Новая тэчка"
+
+#~ msgid "Create New"
+#~ msgstr "Стварыць новы"
+
+#~ msgid "Link to Device"
+#~ msgstr "Спасылка на прыладу"
+
+#~ msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+#~ msgstr "<qt>Не існуе файла шаблону <b>%1</b>.</qt>"
+
+#, fuzzy
+#~| msgid "&Open With"
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With"
+#~ msgstr "&Адкрыць у"
+
+#, fuzzy
+#~| msgid "&Other..."
+#~ msgctxt "@action:inmenu Open With"
+#~ msgid "&Other..."
+#~ msgstr "&Іншыя..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With..."
+#~ msgstr "&Адкрыць у..."
+
+#, fuzzy
+#~| msgid "Open with %1"
+#~ msgid "Open &with %1"
+#~ msgstr "&Адкрыць у %1"
+
+#~ msgid "Open in New &Window"
+#~ msgstr "Адкрыць у новым &акне"
+
+#~ msgid "Open the trash in a new window"
+#~ msgstr "Адкрыць сметніцу ў новым акне"
+
+#~ msgid "Open the medium in a new window"
+#~ msgstr "Адкрыць носьбіт у новым акне"
+
+#~ msgid "Open the document in a new window"
+#~ msgstr "Адкрыць дакумент у новым акне"
+
+#~ msgid "Directory"
+#~ msgstr "Тэчка"
+
+#~ msgid "Moving"
+#~ msgstr "Перамяшчэнне"
+
+#~ msgid "Source"
+#~ msgstr "Крыніца"
+
+#~ msgid "Und&o"
+#~ msgstr "&Вярнуць"
+
+#~ msgid "Und&o: Copy"
+#~ msgstr "&Вярнуць: капіраванне"
+
+#~ msgid "Und&o: Link"
+#~ msgstr "&Вярнуць: стварэнне спасылкі"
+
+#~ msgid "Und&o: Move"
+#~ msgstr "&Вярнуць: перамяшчэнне"
+
+#~ msgid "Und&o: Trash"
+#~ msgstr "&Вярнуць: перамяшчэнне ў сметніцу"
+
+#~ msgid "Und&o: Create Folder"
+#~ msgstr "&Вярнуць: стварэнне тэчкі"
+
+#~ msgid ""
+#~ "The file %1 was copied from %2, but since then it has apparently been "
+#~ "modified at %3.\n"
+#~ "Undoing the copy will delete the file, and all modifications will be "
+#~ "lost.\n"
+#~ "Are you sure you want to delete %4?"
+#~ msgstr ""
+#~ "Файл %1 быў скапіраваны з %2, але з таго часу быў зменены ў %3.\n"
+#~ "Адмена аперацыі выдаліць файл, і змены будуць згублены.\n"
+#~ "Вы сапраўды хочаце выдаліць %4?"
+
+#~ msgid "Undo File Copy Confirmation"
+#~ msgstr "Вяртанне капіравання файла"
+
+#, fuzzy
+#~ msgid "Do you really want to delete this item?"
+#~ msgid_plural "Do you really want to delete these %1 items?"
+#~ msgstr[0] "Вы сапраўды хочаце выдаліць гэты %1 элемент?"
+#~ msgstr[1] "Вы сапраўды хочаце выдаліць гэтыя %1 элементы?"
+#~ msgstr[2] "Вы сапраўды хочаце выдаліць гэтыя %1 элементаў?"
+
+#~ msgid "Delete Files"
+#~ msgstr "Выдаліць файлы"
+
+#, fuzzy
+#~ msgid "Do you really want to move this item to the trash?"
+#~ msgid_plural "Do you really want to move these %1 items to the trash?"
+#~ msgstr[0] "Вы сапраўды хочаце перамясціць гэты %1 элемент у сметніцу?"
+#~ msgstr[1] "Вы сапраўды хочаце перамясціць гэтыя %1 элементы ў сметніцу?"
+#~ msgstr[2] "Вы сапраўды хочаце перамясціць гэтыя %1 элементаў у сметніцу?"
+
+#~ msgctxt "Verb"
+#~ msgid "&Trash"
+#~ msgstr "&У сметніцу"
+
+#, fuzzy
+#~| msgid "Und&o"
+#~ msgid "Und&o: %1"
+#~ msgstr "&Вярнуць"
+
+#~ msgid "Background Settings"
+#~ msgstr "Настаўленні фону"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Ко&лер:"
+
+#~ msgid "&Picture:"
+#~ msgstr "&Відарыс:"
+
+#~ msgid "Shrink Icons"
+#~ msgstr "Расцягнуць значкі"
+
+#~ msgid "&Very Large"
+#~ msgstr "&Вельмі вялікі"
+
+#~ msgid "Allows choosing of background settings for this view"
+#~ msgstr "Дазваляе выбраць настаўленні фону для гэтага выгляду"
+
+#~ msgid "<p>You do not have enough permissions to read <b>%1</b></p>"
+#~ msgstr "<p>Вы не маеце дастаткова правоў для чытання <b>%1</b></p>"
+
+#~ msgid "<p><b>%1</b> does not seem to exist anymore</p>"
+#~ msgstr "<p><b>%1</b> ужо не існуе</p>"
+
+#~ msgid "Search result: %1"
+#~ msgstr "Вынік пошуку: %1"
+
+#, fuzzy
+#~ msgid "Do you really want to shred this item?"
+#~ msgid_plural "Do you really want to shred these %1 items?"
+#~ msgstr[0] "Вы сапраўды хочаце знішчыць гэты %1 элемент?"
+#~ msgstr[1] "Вы сапраўды хочаце знішчыць гэтыя %1 элементы?"
+#~ msgstr[2] "Вы сапраўды хочаце знішчыць гэтыя %1 элементаў?"
+
+#~ msgid "Shred"
+#~ msgstr "Знішчыць"

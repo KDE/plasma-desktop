@@ -1,0 +1,381 @@
+# Translation for kcm_componentchooser.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2014, Free Software Foundation, Inc.
+# Copyright (C) 2015-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Alfredo Beaumont <ziberpun@ziberghetto.dhis.org>, 2002.
+# Juan Irigoien <juanirigoien@yahoo.es>, 2004.
+# Marcos  <marcos@euskalgnu.org>, 2005, 2006, 2007, 2008.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018, 2020, 2021, 2022.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-02-20 10:46+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Web arakatzaile lehenetsia"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Beste..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Hautatu lehenetsitako arakatzailea"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Hautatu lehenetsitako e-posta bezeroa"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Hautatu lehenetsitako fitxategi-kudeatzailea"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Hautatu mapa lehenetsia"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Hautatu markatzeko aplikazio lehenetsia"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Hautatu lehenetsitako terminal emulatzailea"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Web arakatzailea:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Fitxategi-kudeatzailea:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "E-posta bezeroa:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Terminal emulatzailea:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Mapa:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Markatzailea:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xalba@ni.eus"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Lehenetsitako aplikazioak"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Ezezaguna"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Osagai-hautatzailea"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Aukeratu zerrenda honetatik zer osagai erabili behar den lehenespenez %1 "
+#~ "zerbitzurako."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Aldatu egin duzu zuk aukeratutako osagai lehenetsia. Orain gorde nahi "
+#~ "duzu aldaketa hori?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Ez dago deskribapenik erabilgarri"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Hemen, osagai-programa alda dezakezu. Osagaiak programak dira, eta "
+#~ "oinarrizko zereginak dituzte, hala nola terminal-emuladorea, testu-"
+#~ "editorea eta posta-bezeroa. KDE aplikazioek, batzuetan, kontsola-"
+#~ "emuladore bat erabili, mezu elektroniko bat bidali edo testu batzuk "
+#~ "bistaratu behar izaten dituzte. Koherentziaz egiteko, aplikazio horiek "
+#~ "osagai berak deitzen dituzte beti. Hemen, osagai horiek zer programari "
+#~ "dagozkien aukeratu dezakezu."
+
+#~ msgid "Default Component"
+#~ msgstr "Osagai lehenetsia"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Zerrenda honek konfigura daitezkeen osagai-motak erakusten ditu. "
+#~ "Sakatu konfiguratu nahi duzun osagaia.</p>\n"
+#~ "<p>Elkarrizketa-koadro honetan, KDEren osagai lehenetsiak alda ditzakezu. "
+#~ "Osagaiak programak dira, eta oinarrizko zereginak dituzte, hala nola "
+#~ "terminal-emuladorea, testu-editorea eta posta-bezeroa. KDE aplikazioek, "
+#~ "batzuetan, kontsola-emuladore bat erabili, mezu elektroniko bat bidali "
+#~ "edo testu batzuk bistaratu behar izaten dituzte. Koherentziaz egiteko, "
+#~ "aplikazio horiek osagai berak deitzen dituzte beti. Hemen, osagai horiek "
+#~ "zer programari dagozkien hauta dezakezu.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Ireki <b>http</b> eta <b>https</b> URLak</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "URLko edukietan oinarritutako aplikazio batean"
+
+#~ msgid "in the following application:"
+#~ msgstr "ondorengo aplikazioan:"
+
+#~ msgid "with the following command:"
+#~ msgstr "ondorengo komandoarekin:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Hautatu gogoko web-arakatzailearen aplikazioa:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail da KDE mahaigaineko posta-programa estandarra."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Erabili KMail gogoko posta-bezero gisa"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Hautatu aukera hau, beste edozein posta-programa erabili nahi baduzu."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Hautazko leku-markak: <ul> <li>%t: Hartzailearen helbidea</li> <li>%s: "
+#~ "Gaia</li> <li>%c: Ikatz Kopia (CC)</li> <li>%b: Ezkutuko ikatza kopia "
+#~ "(BCC)</li> <li>%B: Gorputz-testuaren txantiloia</li> <li>%A: Eranskina </"
+#~ "li> <li>%u: «mailto:» URL osoa </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Sakatu botoi hau, gogoko posta-bezeroa hautatzeko. Kontuan izan hautatzen "
+#~ "duzun fitxategiak exekutagarritasunaren atributua izan behar duela "
+#~ "onartua izan dadin.<br/> Halaber, leku-markak erabil ditzakezu, eta uneko "
+#~ "balioek ordezkatu egingo dituzte haiek, posta-bezeroa deitzen denean:<ul> "
+#~ "<li>%t: Hartzailearen helbidea</li> <li>%s: Gaia</li> <li>%c: Kopia (CC)</"
+#~ "li> <li>%b: Ezkutuko kopia (BCC)</li><li>%B: Gorputz-testuaren "
+#~ "txantiloia</li> <li>%A: Eranskina </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Egin klik hemen, posta-programako fitxategia arakatzeko."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktibatu aukera hau, hautatutako posta-bezeroa terminal batean (adib., "
+#~ "<em>Konsole</em>-n) exekutatzea nahi baduzu."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Exekutatu terminalean"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Arakatu direktorioak, fitxategi-kudeatzaile hau erabiliz:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr ""
+#~ "Bestela, sakatu 'Gehitu...', hemen erakusten den elkarrizketa-koadroan:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Erabili Konsole terminal-aplikazio gisa"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Erabili beste &terminal-programa bat:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Sakatu botoi hau, gogoko terminal-bezeroa hautatzeko. Kontuan izan "
+#~ "hautatzen duzun fitxategiak exekutagarria atributua izan behar duela "
+#~ "ezarria, onartzeko.<br/> Halaber, kontuan izan terminal-emuladorea "
+#~ "erabiltzen duten programa batzuek ez dutela funtzionatuko komando-lerroko "
+#~ "argumentuak gehitzen badituzu (adibidez: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Egin klik hemen, terminal-programa arakatzeko."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Segundo 1 falta da:"
+#~ msgstr[1] "%1 segundo falta dira:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "KDE abiarazten den hurrengo aldian erabiliko da leiho-kudeatzaile berria."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Leiho-kudeatzailea aldatzea"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Leiho-kudeatzaile berri bat ari da kudeatzen.\n"
+#~ "Gomendagarria da KDEko saio hau berrabiaraztea, ziurtatzeko exekutatzen "
+#~ "ari diren aplikazio guztiak aldaketa horretara egokitzen direla."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Leiho-kudeatzailea ordezkatuta"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Exekutatzen ari den leiho-kudeatzailearen ordez, zuk konfiguratutako bat "
+#~ "ezarriko da."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Leiho-kudeatzailearen konfigurazioa aldatzea"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Onartu aldaketa"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Aurrekora itzuli"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Konfiguratutako leiho-kudeatzailea abiarazi da.\n"
+#~ "Begiratu behar bezala abiarazi den, eta berretsi aldaketa.\n"
+#~ "Abioa bertan behera geratuko da automatikoki 20 segundoan."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Exekutatzen ari den leiho-kudeatzailea aurrekora itzuli da: KWin ezarri "
+#~ "da, KDEren leiho-kudeatzaile lehenetsia."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Leiho-kudeatzaile berriak huts egin du abiaraztean.\n"
+#~ "Exekutatzen ari den leiho-kudeatzailea aurrekora itzuli da: KWin ezarri "
+#~ "da, KDEren leiho-kudeatzaile lehenetsia."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Konfigurazio-tresnak huts egin du exekutatzean"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Erabili KDEren leiho-kudeatzaile lehenetsia (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Erabili beste &leiho-kudeatzaile bat:"
+
+#~ msgid "Configure"
+#~ msgstr "Konfiguratu"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Oharra: leiho-kudeatzaile gehienek beren konfigurazioa dute, eta ez diote "
+#~ "jarraitzen KDEren ezarpenei."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"

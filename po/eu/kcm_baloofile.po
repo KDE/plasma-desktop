@@ -1,0 +1,193 @@
+# Translation for kcm_baloofile.po to Euskara/Basque (eu).
+# Copyright (C) 2018, Free Software Foundation, Inc.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-20 15:26+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Modulu honek fitxategi indexatzailea eta bilaketa funtzionaltasuna "
+"konfiguratzen uzten dizu."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"KRunner eta abiarazteko menuetako fitxategi bilaketa ezgaituko du, eta KDE "
+"aplikazio guztietako meta-datu hedatuak kenduko ditu."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Gordetako indize-datuak ezabatu nahi dituzu? Espazioaren %1 libratuko da, "
+"baina aurreago indexatzea birgaituko balitz, indize osoa hutsetik sortu "
+"beharko litzateke. Fitxategi kopuruaren arabera, denbora pixka bat har "
+"dezake."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Ezabatu indize-datuak"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Fitxategien bilaketak zure fitxategi guztiak euren edukian oinarrituta azkar "
+"aurkitzen laguntzen dizu."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Gaitu fitxategien bilaketa"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Gainera indexatu fitxategien edukia"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indexatu ezkutuko fitxategiak eta karpetak"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Egoera: %1, %%2 osatuta"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Indexatzailearen etenaldia"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Indexatzailea berrekin"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Une honetan indexatzen: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Karpetaren berariazko konfigurazioa:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Hasi karpeta bat indexatzen..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Gelditu karpeta bat indexatzen..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Indexatu gabe"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexatuta"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Ezabatu sarrera"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Hautatu sartu beharreko karpeta bat"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Hautatu kanporatu beharreko karpeta bat"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xalba@euskalnet.net"
+
+#~ msgid "File Search"
+#~ msgstr "Fitxategien bilaketa"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Gehitu karpetaren konfigurazioa..."
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 barneratu da."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 kanporatu da."
+
+#~ msgid "Disable indexing"
+#~ msgstr "Desgaitu indexatzea"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Ez bilatu kokaleku honetan:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Hautatu baztertu beharko litzatekeen karpeta"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Ez da onartzen erro karpeta baztertzea, desgaitu fitxategi bilaketa hura "
+#~ "nahi ez baduzu"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Karpetaren %1 gurasoa dagoeneko baztertua dago"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Konfiguratu fitxategi bilaketa"

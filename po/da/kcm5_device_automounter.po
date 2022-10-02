@@ -1,0 +1,257 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2009, 2010, 2011, 2015, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2022-08-20 17:29+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Martin Schlander"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mschlander@opensuse.org"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Automontering af enheder"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Oprindelig udvikler"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Portering til Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Denne liste indeholder de lagringsenheder der er kendte af systemet. Hvis "
+"\"Automontér ved login\" er markeret, vil enheden blive monteret automatisk, "
+"selvom \"Montér alle flytbare medier ved login\" er afmarkeret. Det samme "
+"gælder for \"Automontér ved tilslutning\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Tryk på denne knap får de valgte enheder til at blive \"glemt\". Dette er "
+"kun nyttigt hvis \"Montér kun flytbare medier automatisk, der er blevet "
+"monteret manuelt før\" er markeret. Når en enhed er glemt og systemet er sat "
+"til kun at montere kendte enheder automatisk, vil enheden ikke blive "
+"monteret automatisk."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Glem enhed"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Når dette ikke er markeret, vil kun huskede enheder blive monteret "
+"automatisk. En enhed \"huskes\" hvis den er blevet monteret før. For "
+"eksempel er tilslutning af en USB-medieafspiller for at oplade den ikke "
+"tilstrækkeligt til at den huskes. Hvis filerne ikke tilgås, vil den ikke "
+"blive monteret automatisk næste gang den ses. Når de er blevet tilgået, vil "
+"enhedens indhold dog automatisk blive gjort tilgængeligt for systemet."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Montér automatisk flytbare medier, der aldrig er blevet monteret før"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Automontér enhed"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Ved login"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Ved tilslutning"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Alle enheder"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Alle kendte enheder"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Tilsluttede enheder"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Fjernede enheder"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Denne enhed vil automatisk blive monteret ved login."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Denne enhed vil ikke blive monteret automatisk ved login."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Denne enhed vil automatisk blive monteret ved tilslutning."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Denne enhed vil ikke blive monteret automatisk ved tilslutning."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Hvis en flytbar lagringsenhed tilsluttes systemet ved login til dit "
+#~ "skrivebordsmiljø, vil dens indhold automatisk blive gjort tilgængeligt "
+#~ "for dit system, så andre programmer kan læse det."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Montér automatisk alle flytbare medier ved login"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Når dette er markeret, vil indholdet af alle lagringsenheder automatiske "
+#~ "blive gjort tilgængeligt for dit system når de tilsluttes."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Montér automatisk alle flytbare medier når de tilsluttes"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Automatisk montering"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Når dette er afmarkeret, vil ingen automontering af nogen slags findes "
+#~ "sted, uanset hvad der er valgt i sektionen \"Tilsidesættelse pr. enhed\"."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Aktivér automatisk montering af flytbare medier"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Tilsidesættelse pr. enhed"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Automontér ved tilslutning"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Monterer automatisk enheder ved login eller når de tilsluttes"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "nej"
+
+#~ msgid "Enter the device's system identifier"
+#~ msgstr "Angiv enhedens systemidentifikator"
+
+#~ msgctxt ""
+#~ "@title:column The device's internal UDI if not attached, user-friendly "
+#~ "name reported by Solid otherwise."
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#~ msgid "Always Automount"
+#~ msgstr "Automontér altid"
+
+#~ msgid ""
+#~ "Enabling \"Always Automount\" for a device in this list overrides any "
+#~ "other setting."
+#~ msgstr ""
+#~ "Aktivering af \"Automontér altid\" for en enhed i denne liste "
+#~ "tilsidesætter alle andre indstillinger."
+
+#~ msgid "Add Device..."
+#~ msgstr "Tilføj enhed..."

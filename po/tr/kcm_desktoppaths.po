@@ -1,0 +1,158 @@
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to Turkish
+# KDE TÜRKÇELEŞTİRME PROJESİ.
+# Copyright (C) 2000,2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Adem GUNES <adem@alaeddin.cc.selcuk.edu.tr>, 2000.
+# Görkem Çetin <gorkem@kde.org>, 2002, 2003.
+# Rıdvan CAN <ridvan@geleceklinux.org>, 2003.
+# Adil Yıldız <adil_yildiztr@yahoo.com>, 2004.
+# Adem Alp Yıldız <ademalp@kde.org.tr>, 2005.
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2012.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Volkan Gezer <volkangezer@gmail.com>, 2021.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2022-03-12 13:45+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Masaüstü"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Belgeler"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "İndirilenler"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Müzik"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Resimler"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Videolar"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Yollar</h1>\n"
+"Bu modül, masaüstünüzdeki dosyaların nerede saklanacağını seçmenizi sağlar.\n"
+"Özel seçenekler hakkında bilgi almak için \"Bu Nedir?\" (Shift+F1) kullanın."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Masaüstü yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Bu klasörde masaüstünde gördüğünüz tüm dosyalar yer alır. Dilerseniz bu "
+"klasörün konumunu değiştirebilirsiniz. Değiştirirseniz dizinin içeriği de "
+"otomatik olarak yeni konuma taşınacaktır."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Belgeler yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Bu klasör, belgelerinizi kaydetmek için öntanımlı konum olarak kullanılır."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "İndirilenler yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Bu klasör, indirilen dosyalarınızı kaydetmek için öntanımlı konum olarak "
+"kullanılır."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Videolar yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Bu klasör, filmlerinizi kaydetmek için öntanımlı konum olarak kullanılır."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Resimler yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Bu klasör, resim dosyalarınızı kaydetmek için öntanımlı konum olarak "
+"kullanılır."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Müzikler yolu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Bu klasör, müziklerinizi kaydetmek için öntanımlı konum olarak kullanılır."

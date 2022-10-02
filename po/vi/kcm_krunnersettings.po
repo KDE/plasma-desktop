@@ -1,0 +1,313 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-06-19 14:26+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "Vị trí trên màn hình:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "Trên"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "Giữa"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "Kích hoạt:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "Kích hoạt khi đang ở bàn làm việc và nhấn phím bất kì"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "Lịch sử:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "Nhớ các tìm kiếm"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "Giữ lại tìm kiếm cuối cho lần mở tiếp theo"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "Đi theo Hoạt động (tìm kiếm cuối và lịch sử)"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "Xoá lịch sử"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "Xoá lịch sử cho Hoạt động \"%1\""
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "Xoá lịch sử…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "Cho tất cả các Hoạt động"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "Cho Hoạt động \"%1\""
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "Phần cài cắm:"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Cấu hình các phần cài cắm tìm kiếm được bật…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "Phần cài cắm khả dụng"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "Bật hoặc tắt các phần cài cắm (dùng trong KRunner, Trình khởi chạy ứng "
+#~ "dụng, và hiệu ứng Tổng quan)"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "Cấu hình KRunner…"
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "Lấy phần cài cắm mới…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr ""
+#~ "Chạy kịch bản cài đặt trong dòng lệnh thất bại: <message>%1</message>"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "Việc cài đặt được thực thi thành công, giờ bạn có thể đóng cửa sổ này"
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "Việc gỡ cài đặt được thực thi thành công, giờ bạn có thể đóng cửa sổ này"
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "Cài đặt phần cài cắm KRunner thất bại"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "Lệnh để thực thi: install hoặc uninstall."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Đường dẫn đến kho trữ."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "Không hỗ trợ PackageKit"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "Xác nhận cài đật"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "Bạn sắp cài đặt một gói nhị phân. Bạn chỉ nên cài đặt chúng từ một tác "
+#~ "giả/người đóng gói đáng tin cậy."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "Chấp nhận rủi ro và tiếp tục"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "Xem tệp"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "Kiểu MIME %1 không được hỗ trợ bởi hậu phương PackageKit"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Phần cài cắm này không cung cấp kịch bản gỡ cài đặt. Vui lòng liên hệ tác "
+#~ "giả. Bạn có thể thử gỡ cài đặt phần cài cắm một cách thủ công.<nl/>Nếu "
+#~ "bạn không cảm thấy đủ khả năng hoặc thoải mái với việc này, hãy bấm "
+#~ "<interface>Hủy</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Phần cài cắm này không cung cấp kịch bản gỡ cài đặt. Vui lòng liên hệ tác "
+#~ "giả. Bạn có thể thử gỡ cài đặt phần cài cắm một cách thủ công. Vui lòng "
+#~ "xem hướng dẫn của tác giả trong README.<nl/>Nếu bạn không cảm thấy đủ khả "
+#~ "năng hoặc thoải mái với việc này, hãy bấm <interface>Hủy</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Phần cài cắm này không cung cấp kịch bản cài đặt. Vui lòng liên hệ tác "
+#~ "giả. Bạn có thể thử cài đặt phần cài cắm một cách thủ công.<nl/>Nếu bạn "
+#~ "không cảm thấy đủ khả năng hoặc thoải mái với việc này, hãy bấm "
+#~ "<interface>Hủy</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Phần cài cắm này không cung cấp kịch bản cài đặt. Vui lòng liên hệ tác "
+#~ "giả. Bạn có thể thử cài đặt phần cài cắm một cách thủ công. Vui lòng xem "
+#~ "hướng dẫn của tác giả trong README.<nl/>Nếu bạn không cảm thấy đủ khả "
+#~ "năng hoặc thoải mái với việc này, hãy bấm <interface>Hủy</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "Phần cài cắm này sử dụng một kịch bản cài đặt có thể gây rủi ro về mặt an "
+#~ "ninh. Vui lòng kiểm tra toàn bộ nội dung của phần cài cắm trước khi cài "
+#~ "đặt, hoặc ít nhất đọc mã nguồn của kịch bản.<nl/>Nếu bạn không cảm thấy "
+#~ "đủ khả năng hoặc thoải mái với việc này, hãy bấm <interface>Hủy</"
+#~ "interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Phần cài cắm này sử dụng một kịch bản cài đặt có thể gây rủi ro về mặt an "
+#~ "ninh. Vui lòng kiểm tra toàn bộ nội dung của phần cài cắm trước khi cài "
+#~ "đặt, hoặc ít nhất đọc tệp README và mã nguồn của kịch bản.<nl/>Nếu bạn "
+#~ "không cảm thấy đủ khả năng hoặc thoải mái với việc này, hãy bấm "
+#~ "<interface>Hủy</interface>."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "Đánh dấu mục là đã gỡ cài đặt"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "Đánh dấu mục là đã cài đặt"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "Xem kịch bản"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "Xem thư mục nguồn"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "Xem %1"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "Không phân giải được tên gói của %1"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr "Chạy lệnh cài đặt thất bại: <message>%1</message>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nguyễn Hùng Phú"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "phu.nguyen@kdemail.net"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Cấu hình thiết lập tìm kiếm"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "Vị trí KRunner:"
+
+#~ msgid "Enable"
+#~ msgstr "Bật"
+
+#~ msgid "KRunner history:"
+#~ msgstr "Lịch sử KRunner:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Giữ lại tìm kiếm trước"
+
+#~ msgid "Clear History..."
+#~ msgstr "Xoá lịch sử…"

@@ -1,0 +1,510 @@
+# translation of kaccess.po to Icelandic
+# kaccess.po
+# Copyright (C) 2000, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
+#
+# Richard Allen <ra@ra.is>, 2000.
+# Arnar Leosson <leosson@frisurf.no>, 2005.
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2022-08-22 17:48+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Richard Allen, Arnar Leósson, Sveinn í Felli"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ra@ra.is, leosson@frisurf.no, sv1@fellsnet.is"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Shift lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Shift lykilinn er virkur."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Shift lykilinn er óvirkur."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Control lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Control lykilinn er virkur."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Control lykilinn er óvirkur."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Alt lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Alt lykilinn er virkur."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Alt lykilinn er óvirkur."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Win lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Win lykilinn er virkur."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Win lykilinn er óvirkur."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Meta lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Meta lykilinn er virkur."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Meta lykilinn er óvirkur."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Super lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Super lykilinn er virkur."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Super lykilinn er óvirkur."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Hyper lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Hyper lykilinn er virkur."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Hyper lykilinn er óvirkur."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Alt Graph lyklinum hefur verið læst og er nú virkur fyrir eftirfarandi "
+"lyklaborðsaðgerðir."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Alt Graph lykilinn er virkur."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Alt Graph lykilinn er óvirkur."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Num Lock lykilinn er virkur."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Num Lock lykilinn er óvirkur."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Caps Lock lykilinn er virkur."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Caps Lock lykilinn er óvirkur."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Scroll Lock lykilinn er virkur."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Scroll Lock lykilinn er óvirkur."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Víxla skjálesara AF og Á"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Auðveldað aðgengi"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Yfir"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Súper"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Aðvörun"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "Þ&egar bending er notuð:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Breyta stillingum án staðfestingar"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Sýna þennan staðfestingaglugga"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Slökkva á öllum AccessX eiginleikum og bendingum"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Hægir lyklar"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Skoppandi lyklar"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Klístraðir lyklar"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Mýsarlyklar"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Viltu virkilega slökkva á \"%1\"?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Viltu virkilega slökkva á \"%1\" og \"%2\"?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Viltu virkilega slökkva á \"%1\", \"%2\" og \"%3\"?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Viltu virkilega slökkva á \"%1\", \"%2\", \"%3\" og \"%4\"?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Viltu virkilega virkja \"%1\"?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Viltu virkilega virkja \"%1\" og slökkva á \"%2\"?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "Viltu virkilega virkja \"%1\" og slökkva á \"%2\" og \"%3\"?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr "Viltu virkilega virkja \"%1\" og slökkva á \"%2\", \"%3\" og \"%4\"?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Viltu virkilega virkja \"%1\" og \"%2\"?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "Viltu virkilega virkja \"%1\" og \"%2\" og slökkva á \"%3\"?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr "Viltu virkilega virkja \"%1\" og \"%2\" og slökkva á \"%3\" og \"%4\"?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Viltu virkilega virkja \"%1\", \"%2\" og \"%3\"?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr "Viltu virkilega virkja \"%1\", \"%2\" og \"%3\" og slökkva á \"%4\"?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Viltu virkilega virkja \"%1\", \"%2\", \"%3\" og \"%4\"?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Forrit vill breyta þessari stillingu."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Þú hélst niðri Shift hnappnum lengur en 8 sekúndur eða forrit vill breyta "
+"þessari stillingu."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Þú slóst fimm sinnum á Shift hnappinn eða forrit vill breyta þessari "
+"stillingu."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr "Þú slóst á %1 eða forrit vill breyta þessari stillingu."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Forrit vill breyta þessari stillingu eða þú notaðir samsetningu af "
+"lyklaborðsbendingum."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Forrit vill breyta þessum stillingum."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Þessar AccessX stillingar eru nauðsynlegar fyrir notendur sem eru "
+"hreyfihamlaðir og er hægt að breyta í KDE stjórnborðinu. Þú getur einnig "
+"kveikt og slökkt á þeim með stöðluðum lyklaborðsbendingum.\n"
+"\n"
+"Ef þú þarft ekki á þeim að halda skaltu velja \"Slökkva á öllum AccessX "
+"eiginleikum og bendingum\"."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Hægir lyklar eru virkir. Þú verður að halda hverjum lykli inn ákveðna stund "
+"til að virkja hann."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Hægir lyklar eru óvirkir."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Skoppandi lyklar eru virkir. Framvegis verður hver lykill útilokaður í "
+"ákveðinn tíma eftir notkun."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Skoppandi lyklar eru óvirkir."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Kveikt hefur verið á klístruðum lyklum. Breytilyklar munu áfram vera læstir "
+"eftir að þú sleppir þeim."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Klístraðir lyklar eru óvirkir."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Kveikt hefur verið á músarlyklum. Nú getur þú notað númerahluta "
+"lyklaborðsins til að stýra músinni."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Músarlyklar eru óvirkir."
+
+#: main.cpp:49
+#, kde-format
+msgid "Accessibility"
+msgstr "Auðveldað aðgengi"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Höfundur"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "Aðgengistól KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Sticky Keys"
+#~ msgstr "Klístraðir lyklar"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Use &sticky keys"
+#~ msgstr "Klístraðir lyklar"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "&Lock sticky keys"
+#~ msgstr "Klístraðir lyklar"
+
+#, fuzzy
+#~| msgid "Slow keys"
+#~ msgid "&Use slow keys"
+#~ msgstr "Hægir lyklar"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Bounce Keys"
+#~ msgstr "Skoppandi lyklar"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Skoppandi lyklar"

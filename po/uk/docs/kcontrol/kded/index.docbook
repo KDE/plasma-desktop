@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Фонові служби</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8 квітня 2015 року</date>
+<releaseinfo
+>Плазма 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>Служба</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою модуля <guilabel
+>Менеджер служб</guilabel
+> ви можете працювати зі списком всіх додатків фонової служби &kde;, які ще називають службами &kde;. Загалом кажучи, існує два типи служб:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Служби, які завантажуються за запитом</guilabel
+></term>
+<listitem
+><para
+>Це список наявних служб &kde;, які завантажуються за потреби. Цей список наведено лише для зручності, оскільки ви не можете керувати відповідними службами. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Служби, які завантажуються при запуску</guilabel
+></term>
+<listitem
+><para
+>Тут показано служби &kde;, які можна завантажувати під час запуску &kde;. Служби, позначені у стовпчику <guilabel
+>Використовувати</guilabel
+>, буде завантажено при наступному запуску KDE.</para>
+<para
+>Будьте обережні з вимиканням невідомих вам служб: деякі зі служб є дуже важливими для роботи &kde;; не вимикайте служб, якщо не впевнені у потребі такого вимикання. </para>
+<para
+>Щоб змінити <guilabel
+>Стан</guilabel
+> служби, позначте її пункт у списку. Потім натисніть кнопку <guibutton
+>Запустити</guibutton
+> або <guibutton
+>Зупинити</guibutton
+>, щоб змінити стан служби з <guilabel
+>Зупинено</guilabel
+> на <guilabel
+>Запущено</guilabel
+>, і навпаки. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

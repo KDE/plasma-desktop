@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Mus</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Det här är dokumentationen för systeminställningarnas modul som anpassar musen och andra pekdon. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>mus</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Den här modulen låter dig anpassa ditt pekdon. Ditt pekdon kan vara en mus, en snurrboll, en tryckplatta, eller någon annan sorts hårdvara som utför en liknade funktion.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Allmänt</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Vänsterhänt läge</guilabel
+></term>
+<listitem
+><para
+>Om du är vänsterhänt kan du föredra att byta funktionerna på <mousebutton
+>vänster</mousebutton
+> och <mousebutton
+>höger</mousebutton
+> musknapp på ditt pekdon genom att markera alternativet. Om ditt pekdon har mer än två knappar, är det bara de som fungerar som <mousebutton
+>vänster</mousebutton
+> och <mousebutton
+>höger</mousebutton
+> musknapp som påverkas. Om du till exempel har en mus med tre knappar, är <mousebutton
+>mitten</mousebutton
+>knappen opåverkad.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tryck på vänster- och högerknapp för mittenklick</guilabel
+></term>
+<listitem
+><para
+>Markera alternativet om du inte har en mittenknapp. Du kan trycka på vänster och höger musknappar samtidigt för att emulera ett mittenklick. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Pekarhastighet</guilabel
+></term>
+<listitem
+><para
+>Det här alternativet låter dig ändra förhållandet mellan avståndet som muspekaren flyttas på skärmen och den relativa förflyttningen av den fysiska enheten själv (som kan vara en mus, snurrboll, eller något annat pekdon.)</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Accelerationsprofil</guilabel
+></term>
+<listitem
+><para
+>Profilen <guilabel
+>Adaptiv</guilabel
+> är standardprofilen för alla enheter och tar hänsyn till enhetens nuvarande hastighet när accelerationen bestäms. Profilen <guilabel
+>Enkel</guilabel
+> är helt enkelt en konstant faktor applicerad på alla delta från enheten, oberoende av rörelsens hastighet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Rullning: Omvänd rullningsriktning</guilabel
+></term>
+<listitem
+><para
+>När den här kryssrutan är markerad, fungerar rullhjulet (om det finns) i omvänd riktning (så om rulla mushjulet mot dig tidigare orsakade rullning neråt, orsakar det nu rullning uppåt). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>I &plasma; 5.13 hittar du inställningen att använda enkla eller dubbla musklick för att öppna filer och kataloger i modulen <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Arbetsyta</ulink
+>. </para
+></note>
+
+</article>

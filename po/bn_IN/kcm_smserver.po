@@ -1,0 +1,235 @@
+# translation of kcmsmserver.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runab@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-01-09 16:29+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "কম্পিউটার পুনরারম্ভ করুন (&R)"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "সাধারণ"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "লগ-আউটের সময় নিশ্চিত করা হবে (&i)"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "বন্ধ করার সময় বিকল্প প্রদর্শন করা হবে (&f)"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "বন্ধ করার জন্য ডিফল্ট বিকল্প"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "বর্তমান সেশান সমাপ্ত করুন (&E)"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "কম্পিউটার পুনরারম্ভ করুন (&R)"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "কম্পিউটার বন্ধ করুন (&T)"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "ব্যবহারকারী দ্বারা সংরক্ষিত সেশান পুনরুদ্ধার করুন (&m)"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "ব্যবহারকারী দ্বারা সংরক্ষিত সেশান পুনরুদ্ধার করুন (&m)"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ফাঁকা সেশান সহ আরম্ভ করা হবে (&s)"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "লগ-আউটের সময় নিশ্চিত করা হবে (&i)"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "বন্ধ করার সময় বিকল্প প্রদর্শন করা হবে (&f)"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "বন্ধ করার জন্য ডিফল্ট বিকল্প"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "লগ-ইনের সময়"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "সেশানের মধ্যে যে অ্যাপ্লিকেশনগুলি অন্তর্ভুক্ত করা হবে না: (&x)"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "পূর্ববর্তী সেশান পুনরুদ্ধার করুন (&p)"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "ব্যবহারকারী দ্বারা সংরক্ষিত সেশান পুনরুদ্ধার করুন (&m)"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "সেশান পরিচালন ব্যবস্থা দ্বারা লগ-আউট করার সময় নিশ্চিতির ডায়লগ বক্স প্রদর্শনের "
+#~ "জন্য এই বিকল্পটি নির্বাচন করুন।"
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "লগ-আউটের সময় নিশ্চিত করা হবে (&i)"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "বন্ধ করার সময় বিকল্প প্রদর্শন করা হবে (&f)"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "লগ-আউট করার সময়, ডিফল্ট কর্ম এইখানে নির্বাচন করা যাবে। KDM সহযোগে লগ-ইন করা "
+#~ "হলে এটি প্রয়োগ করা যাবে।"
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "বন্ধ করার জন্য ডিফল্ট বিকল্প"
+
+#~ msgid "On Login"
+#~ msgstr "লগ-ইনের সময়"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "সেশানের মধ্যে যে অ্যাপ্লিকেশনগুলি অন্তর্ভুক্ত করা হবে না: (&x)"
+
+#~ msgid "Session Manager"
+#~ msgstr "সেশান পরিচালনব্যবস্থা"

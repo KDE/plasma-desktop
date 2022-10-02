@@ -1,0 +1,299 @@
+# translation of kcmsmserver.po to Dutch
+# Nederlandse vertaling van kcmsmserver
+# Copyright (C) 2000-2002 KDE e.v..
+# KDE-vertaalgroep Nederlands <www.kde.nl>
+# Proefgelezen door Onno Zweers, 18-4-2002.
+# Rinse de Vries <Rinse@kde.nl>, 2000-2002.
+# Rinse de Vries <rinse@kde.nl>, 2003, 2004.
+# Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2008.
+# Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009, 2013, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-23 12:26+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Sessiebeheerder</h1>U kunt hier de sessiebeheerder instellen. Dit omvat "
+"het instellen van opties, zoals of het afmelden zal worden bevestigd, of de "
+"sessie zal worden opgeslagen bij het afmelden, en of de computer standaard "
+"zal worden uitgeschakeld als u de sessie beëindigt."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Verzoek om te herstarten naar firmware setup is mislukt: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"De volgende keer dat de computer wordt herstart zal het naar het UEFI setup "
+"scherm gaan."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"De volgende keer dat de computer wordt herstart zal het naar het firmware "
+"setup scherm gaan."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Nu herstarten"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Algemeen:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Afmelden bevestigen"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Afsluitopties aanbieden"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Standaard afmeldoptie:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Huidige sessie beëindigen"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Computer herstarten"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Computer uitschakelen"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Bij aanmelden:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Laatste sessie herstellen"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Laatste handmatig opgeslagen sessie herstellen"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Met een lege sessie opstarten"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Deze toepassingen niet herstellen:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Hier kunt u programma's opgeven die niet in sessies mogen worden opgeslagen, "
+"en dus niet worden gestart tijdens het herstellen van een sessie. Scheidt de "
+"toepassingen van elkaar met behulp van komma's of dubbele punten, zoals "
+"'xterm,xconsole' of 'xterm:konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Ga naar firmware setup-scherm bij volgende herstart"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Afmelden bevestigen"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Afsluitopties aanbieden"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Standaard afmeldoptie"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Bij aanmelden"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Uit te sluiten toepassingen van sessie"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Freek de Kruijf - 2020 t/m 2021"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "freekdekruijf@kde.nl"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Bureaubladsessie"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Aan- en afmelden van bureaubladsessie"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Copyright © 2000–2020 Team van Bureaubladsessie"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Vorige opgeslagen sessie herstellen"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "UEFI setup"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Met UEFI setup beginnen bij volgende herstart"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Schakel deze optie in als u wilt dat de sessiebeheerder u om een "
+#~ "bevestiging vraagt als u zich afmeldt."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Afmelden be&vestigen"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Afsluit&opties aanbieden"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Hier kunt u kiezen wat er standaard zal gebeuren als u zich afmeldt. Dit "
+#~ "is alleen van toepassing als u zich hebt aangemeld via het grafische "
+#~ "aanmeldscherm van KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Standaard afmeldoptie"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Vorige sessie herstellen:</b>Dit onthoudt welke toepassingen "
+#~ "actief zijn als u zich afmeldt en herstelt ze bij de volgende start.</"
+#~ "li>\n"
+#~ "<li><b>Handmatig opgeslagen sessie herstellen: </b> hiermee kunt u op elk "
+#~ "gewenst moment een sessie opslaan via de optie \"Sessie opslaan\" in het "
+#~ "K-menu. De toepassingen die op dat moment actief zijn zullen worden "
+#~ "hersteld bij de volgende start van KDE.</li>\n"
+#~ "<li><b>Starten met een lege sessie:</b> sla niets op. Bij de volgende "
+#~ "start begint u met een schone lei.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Bij het aanmelden"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Toepassingen die uit&gesloten worden van sessies:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Firmware setup"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Wanneer de computer de volgende keer wordt herstart, ga naar het firmware "
+#~ "setup scherm (dwz. UEFI of BIOS setup)"
+
+#~ msgid "Session Manager"
+#~ msgstr "Sessiebeheerder"
+
+#, fuzzy
+#~| msgid "Session Manager"
+#~ msgid "Window Manager"
+#~ msgstr "Sessiebeheerder"
+
+#~ msgid "Advanced"
+#~ msgstr "Geavanceerd"

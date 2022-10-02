@@ -1,0 +1,268 @@
+# Translation of kcm_workspace.po to Ukrainian
+# Copyright (C) 2014-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-06-20 08:34+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Візуальна поведінка:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:25 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Показувати інформаційні підказки при наведенні вказівника"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Показувати візуальний супровід змін стану"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgid "Animation speed:"
+msgstr "Швидкість анімації:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Повільна"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Миттєва"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Клацання на файлах або теках:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "відкриває їх"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Позначення клацанням на маркері позначення елемента"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "позначає їх"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Відкривати подвійним клацанням"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Клацання на смужці гортання:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Гортає на сторінку вгору чи вниз"
+
+#: package/contents/ui/main.qml:164
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Клацання середньою гортає до місця клацання"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Гортає до місця клацання"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Middle Click:"
+msgstr "Клацання середньою:"
+
+#: package/contents/ui/main.qml:196
+#, kde-format
+msgid "Paste selected text"
+msgstr "Вставити позначений текст"
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Режим сенсорного керування:"
+
+#: package/contents/ui/main.qml:215
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Автоматично увімкнути, якщо потрібно"
+
+#: package/contents/ui/main.qml:215 package/contents/ui/main.qml:244
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Ніколи не вмикати"
+
+#: package/contents/ui/main.qml:227
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Режим сенсорного керування буде автоматично задіяно, якщо система виявить "
+"сенсорний екран, але не виявить миші або сенсорної панелі. Приклад: "
+"відкинуто або від'єднано клавіатурний модуль ноутбука-трансформера."
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Увімкнено завжди"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"У режимі сенсорного керування багато елементів інтерфейсу користувача "
+"стануть більшими, щоб ними легше було оперувати за допомогою дотиків."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Одинарне клацання для відкриття файлів"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Швидкість анімації"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Клацання лівою кнопкою на смужці гортання пересуває перегляд на одну сторінку"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Автоматично перемикатися у режим оптимізації сенсорного керування"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Увімкнути вставлення позначеного клацанням середньою кнопкою"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Показувати екранну панель для індикації змін стану, зокрема яскравості "
+"дисплея та гучності"
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Екранна панель при зміні компонування"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Показувати контекстну панель при зміні компонування"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Юрій Чорноіван"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yurchor@ukr.net"
+
+#~ msgid "General Behavior"
+#~ msgstr "Загальна поведінка"
+
+#~ msgid "System Settings module for configuring general workspace behavior."
+#~ msgstr ""
+#~ "Модуль «Системних параметрів» для налаштовування загальної поведінки "
+#~ "робочого простору Плазми."
+
+#~ msgid "Furkan Tokac"
+#~ msgstr "Furkan Tokac"
+
+#~ msgid "Never optimize for touch usage"
+#~ msgstr "Ніколи не оптимізувати для сенсорного керування"
+
+#~ msgid "Always optimize for touch usage"
+#~ msgstr "Завжди оптимізувати для сенсорного керування"
+
+#~ msgid "Click behavior:"
+#~ msgstr "Поведінка при клацанні:"
+
+#~ msgid "Double-click to open files and folders"
+#~ msgstr "Подвійне клацання відкриває файли та теки"
+
+#~ msgid "Select by single-clicking"
+#~ msgstr "Позначення одинарним клацанням"
+
+#~ msgid "Double-click to open files and folders (single click to select)"
+#~ msgstr "Подвійне клацання відкриває файли та теки (перше клацання — вибір)"
+
+#~ msgid "Plasma Workspace global options"
+#~ msgstr "Загальні параметри робочого простору Плазми"
+
+#~ msgid "(c) 2009 Marco Martin"
+#~ msgstr "© Marco Martin, 2009"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Maintainer"
+#~ msgstr "Супровідник"
+
+#~ msgid "Show Informational Tips"
+#~ msgstr "Показувати інформаційні підказки"

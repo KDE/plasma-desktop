@@ -1,0 +1,965 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Manual do &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>22/07/2015</date>
+<releaseinfo
+>Plasma 5.4</releaseinfo>
+
+<abstract>
+<para
+>O &plasma;, é a interface base do usuário para o ambiente de trabalho. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoide</keyword>
+<keyword
+>Widget</keyword>
+<keyword
+>Contêineres</keyword>
+<keyword
+>Ambiente de Trabalho</keyword>
+<keyword
+>Execução</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+
+<para
+>O &plasma; oferece um ambiente moderno e personalizável para executar os seus aplicativos favoritos e acessar suas informações, onde quer que esteja. Outros atributos comuns do &plasma; Desktop incluem o gerenciamento avançado das janelas e os efeitos da área de trabalho, suporte para os widgets gráficos do KDE Plasma, pesquisa integrada, gerenciamento de hardware e um grau elevado de personalização. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Usando o &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>Componentes do &plasma;</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Widgets e contêineres do &plasma;</title>
+
+<para
+>A essência do &plasma; gira em torno de dois conceitos básicos: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Widgets do &plasma;</term>
+<listitem>
+<para
+>Miniaplicativos ou pequenos aplicativos que residem no ambiente de trabalho. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Contêineres</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Miniaplicativos que atuam como recipientes para os widgets do &plasma; </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Em um ambiente de trabalho padrão, existem dois elementos principais: o Painel e a Área de Trabalho em si. Ambos são contêineres, no contexto do &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Área de trabalho &plasma; padrão</title>
+
+<para
+><note
+><para
+>A área de trabalho &plasma; pode ser configurada de inúmeras formas. A imagem abaixo mostra uma área de trabalho relativamente normal. Algumas distribuições aplicam várias personalizações e, dessa forma, sua área de trabalho poderá parecer diferente. </para>
+<para
+>De forma semelhante, a aparência gráfica dos elementos da interface pode mudar o seu estilo. Estas imagens usam o Breeze, o estilo padrão do &plasma;.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Área de trabalho &plasma; padrão no seu estado normal</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-kickoff" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-kickoff" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="toolboxes" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="toolboxes" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-kickoff" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>O lançador de programas. Normalmente será o <link linkend="panel-kickoff"
+>Lançador de aplicativos</link
+>.</para
+></listitem>
+<listitem
+><para
+>Alguns ícones que permitem acessar facilmente os aplicativos usados com frequência</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Gerenciador de tarefas</link
+>, que mostra os títulos das janelas que pertencem aos aplicativos em execução. Nenhum aplicativo tinha aberto qualquer janela quando a imagem foi obtida</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Área de notificação</link
+></para
+></listitem>
+<listitem
+><para
+>Widget <link linkend="panel-digital-clock"
+>Relógio digital</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="toolboxes"
+>Área do Painel</link
+></para
+></listitem>
+<listitem
+><para
+>Caixa de ferramentas da área de trabalho</para
+></listitem>
+<listitem
+><para
+>Widget Exibição de pastas, que mostra o conteúdo da pasta 'Desktop'</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>O Painel</title>
+
+<para id="panel-kickoff"
+>O painel padrão contém alguns widgets do &plasma;. Iniciando pela esquerda, existe o lançador de aplicativos. Você pode usá-lo para iniciar aplicativos, abrir arquivos recentemente abertos e acessar as opções usuais de fechar sessão/desligar. Existe também uma estrutura que permite-lhe navegar por seus aplicativos. A aparência foi otimizada para o uso mais comum: iniciar um aplicativo. A aba padrão é a <guilabel
+>Favoritos</guilabel
+>, que mantém os itens mais usados. No início, você provavelmente usará a aba <guilabel
+>Aplicativos</guilabel
+> mais frequentemente. Uma vez que você tenha encontrado os seus aplicativos mais frequentemente usados, clique com o botão <mousebutton
+>direito</mousebutton
+> nos itens e selecione <guimenuitem
+>Adicionar aos favoritos</guimenuitem
+> para adicioná-los aos seus <guilabel
+>Favoritos</guilabel
+> (ou diretamente ao painel ou à área de trabalho). Observe que para qualquer tipo de modificação você precisa <quote
+>desbloquear</quote
+> o &plasma; usando o menu de contexto acessado com um clique com o botão <mousebutton
+>direito</mousebutton
+> na área de trabalho. Se você preferir usar o estilo de menu do lançador de aplicativos tradicional, altere-o com um clique com o botão <mousebutton
+>direito</mousebutton
+> no ícone do menu e selecione <guimenuitem
+>Mudar para o estilo clássico de menu</guimenuitem
+>. </para>
+
+<para id="panel-taskbar"
+>A barra de tarefas é o outro item do painel. Ela mostra uma área para todas as janelas abertas em todas as áreas de trabalho por padrão. Você pode fazer com que ela mostre somente as janelas abertas na área de trabalho atual selecionando a opção <guimenuitem
+>Mostrar apenas as tarefas da área de trabalho atual</guimenuitem
+> na janela de Configurações do Gerenciador de tarefas. Esta janela de configuração é acessada executando um clique com o botão direito sobre o gerenciador de tarefas, entre duas janelas. O tamanho do texto nos itens da barra de tarefas pode ser configurado nas &systemsettings; do &kde; na página <menuchoice
+><guimenu
+>Aparência</guimenu
+><guisubmenu
+>Fontes</guisubmenu
+></menuchoice
+>. Um clique direito sobre a barra de tarefas apresenta a janela de Configurações a partir da qual você pode selecionar diversas opções para personalizar sua barra de tarefas. <screenshot>
+<screeninfo
+>Aqui está uma imagem da janela de configuração da barra de tarefas</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Janela de configuração da barra de tarefas</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para id="panel-system-tray"
+>Outro item em seu painel padrão é a <application
+>Área de notificação</application
+>, que é usada pelos aplicativos tradicionais e widgets como área de acoplagem. Um clique direito na <application
+>Área de notificação</application
+> permite que você abra as janelas de configuração, de onde pode definir quais entradas a exibir e em que condições. </para>
+<screenshot>
+<screeninfo
+>Janela da Área de notificação</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Janela da Área de notificação</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para id="device-notifier"
+>Um ícone normalmente localizado na área de notificação é o <application
+>Notificador de dispositivos</application
+>. Conecte um dispositivo de armazenamento <acronym
+>USB</acronym
+> para que apareça uma janela de onde poderá abrir o dispositivo no &dolphin; ou em outro aplicativo associado. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>O <application
+>Notificador de dispositivos</application
+> é usado para manipular dispositivos plugáveis como pendrives <acronym
+>USB</acronym
+> (também chamados flash drives), câmeras digitais, discos rígidos <acronym
+>USB</acronym
+> externos, &etc; Ele também oferece a opção de reprodução quando uma mídia como um &CD; ou DVD é carregada em um drive ótico. </para>
+<para
+>Quando você conectar um dispositivo externo, ou carrega uma nova mídia no drive, a janela do <guilabel
+>Notificador</guilabel
+> aparece (você também pode abri-la explicitamente clicando em seu ícone no painel). Ela permanece aberta enquanto o cursor estiver sobre ela, caso contrário ele se oculta após alguns segundos. </para>
+<para
+>A janela do <guilabel
+>Notificador</guilabel
+> mostra uma lista de todos os dispositivos reconhecidos. Mover o cursor do mouse sobre um dispositivo realçará todas as ações possíveis associadas aquele dispositivo. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Clicar em qualquer local na caixa sombreada ao redor do nome do dispositivo (mas não no ícone ejetar/desmontar, se presente) expande a entrada para mostrar a lista das ações possíveis para aquele dispositivo. O conjunto de ações depende do dispositivo; isto é configurável a partir do menu de contexto do <application
+>Notificador de dispositivos</application
+> ou a partir dos módulos <ulink url="help:/kcontrol/solid-actions/index.html"
+>Ações do dispositivo</ulink
+> e <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Dispositivos removíveis</ulink
+> das &systemsettings;. Basta selecionar uma ação com o mouse ou teclado para executá-la. </para>
+<para
+>Existe também um pequeno ícone à direita de cada entrada mostrando se aquele dispositivo está atualmente acessível (ou <emphasis
+>montado</emphasis
+>) ou não. Somente quando o dispositivo não está montado é seguro desconectá-lo fisicamente do computador. Clicar no ícone faz com que o dispositivo seja desmontado e/ou a mídia seja ejetada se estiver montada no momento, e montará se ela não estiver. Observe que a desmontagem/ejeção deve falhar se o dispositivo ainda estiver com arquivos abertos, &eg; se uma grande cópia de arquivos ainda não tiver sido terminada. Na maioria dos casos, você pode simplesmente esperar um pouco e tentar novamente. Quando uma desmontagem for bem sucedida, um ícone de sucesso será mostrado no ícone do <application
+>Notificador de dispositivos</application
+>. </para>
+
+<para
+>A <application
+>Área de notificação</application
+> normalmente possui mais itens, como &klipper;, &kmix;, &etc;</para>
+
+<para
+>Algumas entradas padrão na <application
+>Área de notificação</application
+> estão ocultas para economizar espaço na barra. Para exibir estas entradas clique no pequeno triângulo <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, e então use o &LMB; para lançar um widget ou o &RMB; para abrir sua janela de configuração.</para>
+
+<para id="panel-digital-clock"
+>O widget do &plasma; mais à direita no painel padrão é o <application
+>Relógio digital</application
+>. Este relógio pode exibir a hora nos diferentes fusos horários, podendo ter seu tamanho ajustado. O relógio irá ajustar o tamanho da fonte de acordo com a área que tiver disponível no contêiner envolvente (o próprio painel neste caso). Se você optar por mostrar a data, ela será representada com a opção <guimenuitem
+>Fonte pequena</guimenuitem
+> da janela das &systemsettings; para as <guilabel
+>Fontes</guilabel
+>. A hora irá ocupar o resto do espaço. Por isso, no final, você irá selecionar a quantidade de informação apresentada, assim como se ela cabe ou não. Se você quiser exibir mais informações, aumente o tamanho do painel ou coloque o relógio na área de trabalho, onde poderá então aumentá-lo livremente. </para>
+
+<para
+>Um item opcional em seu painel é o <application
+>Paginador</application
+>. Ele permite-lhe alternar entre suas áreas de trabalho virtuais. Se você mudar a aparência do <application
+>Paginador</application
+> através da opção <guimenuitem
+>Número de linhas</guimenuitem
+>, isto também afetará a aparência e animações que são exibidas no efeito <guimenuitem
+>Grade da área de trabalho</guimenuitem
+> do &kwin;. Para paginadores mais largos, selecionar <guimenuitem
+>Exibir ícones das janelas</guimenuitem
+> normalmente é adequado. </para>
+
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="toolboxes">
+<title
+>A Caixa de ferramentas do painel</title>
+
+<para
+>Se sua área de trabalho estiver desbloqueada (você pode fazer isto clicando com o botão <mousebutton
+>direito</mousebutton
+> do mouse na área de trabalho ou, quando nenhum aplicativo estiver em primeiro plano, com a combinação <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), um pequeno logotipo do &plasma; será exibido no canto inferior direito no painel (normalmente chamado de "caju"). Clique neste "caju" para que o controlador do painel seja aberto.</para>
+
+<screenshot>
+<screeninfo
+>Configurações do painel</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Configurações do painel</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Esse controlador permite-lhe posicionar, dimensionar e realinhar o painel. Os widgets do &plasma; que residem no painel irão ajustar o seu tamanho automaticamente. Os widgets do &plasma; recebem informações básicas sobre o dimensionamento fornecidas pelo contêiner. Eles estão programados para tirar partido desse tamanho, informando ao miniaplicativo o espaço que irão possivelmente precisar. No fim, o contêiner atribui um tamanho possível aos widgets, que eles irão obedecer.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Adicionando Widgets</title>
+
+<para
+>Desbloqueie a área de trabalho, para que você possa adicionar e remover widgets do &plasma; do painel ou da própria área. Você poderá adicionar widgets do &plasma; arrastando-os para onde desejar. Clique com o botão <mousebutton
+>direito</mousebutton
+> num widget para removê-lo. <screenshot
+> <screeninfo
+>Adicionar widgets</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Adicionar widgets</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> O botão para <guibutton
+>Obter novos widgets</guibutton
+> permite-lhe adicionar widgets que tenha baixado anteriormente e baixar novos widgets do &plasma;. Atualmente, ele tem suporte aos pacotes nativos do &plasmagik; e os widgets do painel do &Mac; OS&nbsp;X. Os widgets instalados desta forma poderão ser acessados como se fossem elementos normais e pré-instalados. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>A Área de trabalho</title>
+
+<para
+>A área de trabalho é, de fato, outro contêiner. Um contêiner que não impõe restrições de tamanho aos widgets. Eles poderão ser posicionados e dimensionados livremente. Na área de trabalho desbloqueada, os widgets do &plasma; irão exibir uma moldura quando você passar o mouse por cima deles. Esta manipulação do miniaplicativo permite-lhe mover, dimensionar e realinhar o elemento. Também lhe permite arrastar os widgets do Plasma na área de trabalho. Os botões no canto são usados para dimensionar, rodar, configurar e remover o miniaplicativo. Quando for rodado, um widget do &plasma; irá atuar de forma magnética em relação às 12 horas, de modo que seja fácil posicioná-lo adequadamente. Por padrão, a maioria dos miniaplicativos mantém as suas proporções quando forem dimensionados. Se você quiser dimensionar um miniaplicativo livremente, mantenha a tecla &Ctrl; pressionada durante o dimensionamento. </para>
+
+<para
+>O clique com o botão direito na área de trabalho permite que você configure alguns aspectos, como o papel de parede e disposição usados, além das ações do mouse. Ele oferece a possibilidade de obter novos papéis de parede e temas com o &knewstuff;. </para>
+
+<screenshot>
+<screeninfo
+>Configurações da área de trabalho</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Configurações da área de trabalho</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Para mudar o tema do &plasma; ou obter um novo por meio do &knewstuff; abra a página em <menuchoice
+><guimenu
+>Aparência</guimenu
+> <guimenuitem
+>Tema da área de trabalho</guimenuitem
+></menuchoice
+> nas &systemsettings;.</para>
+
+<para
+>Com os aplicativos abertos, torna-se cada vez mais difícil ver os widgets do &plasma; no seu ambiente de trabalho. O <emphasis role="bold"
+>Dashboard</emphasis
+> coloca estes widgets do &plasma; à sua frente, como acontece na funcionalidade <guilabel
+>Mostrar área de trabalho</guilabel
+> existente nos ambientes de trabalho tradicionais. </para>
+
+</sect1>
+
+<sect1 id="krunner">
+<title
+>O &krunner;</title>
+
+<para
+>O &krunner; é uma versátil mini-linha de comando. Você poderá usá-lo para iniciar os aplicativos, abrir páginas Web, acessar seus favoritos, pesquisar dados do seu ambiente de trabalho, calcular algumas equações simples, entre muitas outras coisas. Pressionar <keycombo action="simul"
+>&Alt;<keysym
+>Espaço</keysym
+></keycombo
+>, abrirá a janela do &krunner;. Você poderá então começar a digitar e o &krunner; começará a procurar ocorrências de comandos, assim que tiver digitado mais de dois caracteres. Você poderá abrir a janela de configuração para conhecer as funcionalidades do &krunner; fornecidas pelos plugins. Poderá navegar pelas ocorrências usando a tabulação e as teclas de setas. </para>
+<!-- whitout tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Caixa de diálogo do &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Caixa de diálogo do &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Use o botão <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> para abrir o módulo <guilabel
+>Pesquisa do Plasma</guilabel
+> nas &systemsettings; e configurar onde e o que pesquisar no &krunner; </para>
+
+<para
+>Se quiser saber o que está acontecendo no seu sistema, pressione <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+>, que lhe fornece um acesso rápido a uma lista de janelas e processos, com algumas opções para monitorar os seus resultados e encerrar a execução dos processos. </para>
+
+</sect1>
+
+<sect1 id="zooming-user-interface">
+<title
+>Atividades</title>
+
+<para
+>A caixa de ferramentas da área de trabalho, acessada no canto superior esquerdo da tela, possui um botão para exibir suas atividades, sendo que o &plasma; permite-lhe ter mais de uma. Basicamente, isto corresponde a vários contêineres das áreas de trabalho que contém diferentes conjuntos de widgets do &plasma;. Exiba a barra de <quote
+>Atividades</quote
+>, selecione uma das atividades predefinidas ou selecione <guilabel
+>Criar atividade</guilabel
+> para criar um novo contêiner, selecione o seu novo contêiner e personalize-o conforme desejar. As atividades do &plasma; e a grade da área de trabalho do &kwin; são semelhantes nesse aspecto, mas possuem uma diferença fundamental. Enquanto as áreas de trabalho virtuais são usadas para agrupar e organizar janelas, as atividades do &plasma; são usadas para agrupar e organizar widgets do &plasma;. Desta forma, você poderá mudar de atividades e possuir diferentes widgets do &plasma; relevantes que suportem a tarefa que está tentando executar no momento. Você poderá criar uma atividade de <quote
+>Tempo livre</quote
+>, com tiras de desenho em quadrinhos, um quebra-cabeça e outros widgets do &plasma;, assim com uma atividade de <quote
+>Trabalho</quote
+>, com fontes de <acronym
+>RSS</acronym
+> relevantes, uma calculadora e um calendário, por exemplo. </para>
+
+<para
+>Para apagar uma atividade, pressione o botão <guibutton
+>Parar a atividade</guibutton
+> da barra de <quote
+>Atividades</quote
+> (pressione <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> e depois em <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> para abrir esta barra), depois clique no 'X' vermelho (ou pressione <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> e depois em <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) para confirmar a remoção. </para>
+
+</sect1>
+
+<!-- print shortcuts settings dialog in branch 4.7)
+Shortcuts for Plasma Desktop Shell
+Action          Shortcut      Global
+Activities ...  Alt+D, Alt+A  Meta+Q
+Activities ...  Alt+D, Alt+A  Meta+Q
+Activity Settings Alt+D, Alt+S
+Add Widgets ...   Alt+D, A
+Lock Widgets      Alt+D, L
+Lock Widgets      Alt+D, L
+Next Widget       Alt+D, N
+Previous Widget   Alt+D, P
+Remove this Activity  Alt+D, Alt+R
+Remove this Widget    Alt+D, R
+Run the Associated Application  Alt+D, T
+Run the Associated Application  Alt+D, T
+Widget Settings   Alt+D, S
+Why these duplicated entries?
+-->
+<sect1 id="shortcuts">
+<title
+>Atalhos</title>
+
+<para
+>A maior parte da funcionalidade do &plasma; está também acessível por meio de atalhos de teclado. Várias combinações devem ser pressionadas em sequência, como por exemplo <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> que significa: Pressione &Alt; e <keycap
+>D</keycap
+>, solte e pressione <keycap
+>A</keycap
+>. </para>
+<para
+>Atualmente, os seguintes atalhos de teclado padrão podem ser usados: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Adicionar widgets</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Remover widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Bloquear/desbloquear widgets</para
+></listitem>
+</varlistentry>
+
+<!-- zoom still valid in 4.7?
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>-</keycap
+></term>
+<listitem
+><para
+>Zoom out</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>+</keycap
+></term>
+<listitem
+><para
+>Zoom in</para
+></listitem>
+</varlistentry>
+-->
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Próximo widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Widget anterior</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Configurações do widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Atividades</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Remover esta atividade</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Configurações das atividades</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Tab;</keycombo
+></term>
+<listitem
+><para
+>Próxima atividade</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Atividade anterior</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Mostrar painel</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Executar o aplicativo associado</para
+></listitem>
+</varlistentry>
+
+<!-- still valid in 4.7?
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>]</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Next containment</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>[</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Previous containment</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<keycombo action="simul">
+&Shift;&Ctrl;<keycap
+>S</keycap>
+</keycombo>
+</term>
+<listitem
+><para
+>Containment settings</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+<para
+>Para alterar atalhos, clique com o &LMB; na <guilabel
+>Caixa de ferramentas</guilabel
+> da área de trabalho (o caju normalmente no canto superior direito da área de trabalho) e selecione <guilabel
+>Configurações dos atalhos</guilabel
+>.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Créditos e Licença</title>
+
+<para
+>&plasma; </para>
+<para
+>Programa com Copyright &copy; 2008 de &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Documentação com Copyright &copy; 2008&ndash;2010 de Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Tradução de Marcus Gama <email
+>marcus.gama@gmail.com</email
+> e André Marcelo Alvarenga <email
+>alvarenga@kde.org</email
+></para
+> 
+&underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

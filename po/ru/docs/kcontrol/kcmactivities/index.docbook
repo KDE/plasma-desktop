@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Комнаты</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Редактирование перевода</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>комната</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Комнаты</title>
+<sect2 id="activities-intro">
+
+<title
+>Введение</title>
+
+<para
+>Этот модуль позволяет настраивать комнаты. Комнаты — это возможность иметь несколько конфигураций &plasma;, состоящих из разных наборов виджетов и тем. Некоторые комнаты возможно сделать закрытыми. Такие комнаты не отслеживают действия пользователя (например, они не запоминают последние открытые документы). </para>
+
+<para
+>Этот модуль состоит из трёх вкладок: <link linkend="activities-main"
+><guilabel
+>Комнаты</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Переключение</guilabel
+></link
+> и <link linkend="activities-privacy"
+><guilabel
+>Конфиденциальность</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Комнаты</guilabel
+></title>
+
+<para
+>На этой вкладке находится список текущих комнат. Чтобы настроить или удалить комнату, воспользуйтесь соответствующими кнопками справа от названия комнаты. </para>
+
+<para
+>Чтобы настроить комнату, нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Для изменения доступны следующие параметры: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Значок</guilabel
+></term>
+        <listitem>
+            <para
+>Значок комнаты возможно увидеть на панели выбора комнат &plasma;. Чтобы изменить значок на какой-либо системный или добавить собственный файл, нажмите на текущий значок. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Название</guilabel
+></term>
+        <listitem>
+            <para
+>Текстовое поле для ввода названия комнаты. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Описание</guilabel
+></term>
+        <listitem>
+            <para
+>Текстовое поле для описания комнаты, которое будет отображаться под названием комнаты на панели выбора комнат &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Конфиденциальность</guilabel
+></term>
+        <listitem>
+            <para
+>Чтобы отключить ведение статистики использования комнаты, установите флажок <guilabel
+>Не запоминать статистику использования</guilabel
+>. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Комбинация клавиш для переключения</guilabel
+></term>
+        <listitem>
+            <para
+>Чтобы добавить новую комбинацию клавиш для переключения на комнату, нажмите первую кнопку. Чтобы удалить текущую комбинацию клавиш, нажмите вторую кнопку. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Чтобы удалить комнату, нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. </para>
+<para
+>Чтобы создать новую комнату, нажмите кнопку <guibutton
+>Создать...</guibutton
+>, расположенную под списком; откроется диалог <guilabel
+>Создание новой комнаты</guilabel
+>, похожий на диалог настройки, описанный выше. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Переключение</guilabel
+></title>
+
+<para
+>Эта вкладка позволяет указать, должна ли &plasma; <guilabel
+>Запоминать для каждой комнаты (требуется перезапуск)</guilabel
+> текущий рабочий стол. Здесь также возможно настроить комбинации клавиш для переключения между комнатами. </para>
+<para
+>Для получения дополнительных сведений об использовании комбинаций клавиш в &kde; посетите раздел <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Использование и настройка комбинаций клавиш</emphasis
+></ulink
+> справки <emphasis
+>Основы &kde;</emphasis
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Конфиденциальность</guilabel
+></title>
+
+<para
+>Эта вкладка позволяет настроить срок, на протяжении которого следует <guilabel
+>Хранить историю</guilabel
+>, и стереть некоторые данные. В раскрывающемся списке <guibutton
+>Очистить историю</guibutton
+> доступны следующие варианты: <guimenuitem
+>Стереть последний час</guimenuitem
+>, <guimenuitem
+>Стереть последние два часа</guimenuitem
+>, <guimenuitem
+>Стереть день</guimenuitem
+> и <guimenuitem
+>Стереть всё</guimenuitem
+>. </para>
+<para
+>Ниже возможно настроить список приложений, которые должны запоминать последние открытые документы в комнатах. Чтобы сохранять все данные, выберите вариант <guilabel
+>Для всех приложений</guilabel
+>. Чтобы отключить запоминание данных, выберите вариант <guilabel
+>Не запоминать</guilabel
+>. Чтобы выбрать определённые приложения, которые должны запоминать данные, выберите вариант <guilabel
+>Только для определённых приложений</guilabel
+> и выберите их в списке. </para>
+<para
+>Чтобы отключить отслеживание данных для всех приложений, которых нет в списке, установите флажок <guilabel
+>Заблокировать все приложения, кроме перечисленных</guilabel
+>. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

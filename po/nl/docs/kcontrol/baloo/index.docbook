@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Bestanden zoeken</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>zoeken</keyword>
+<keyword
+>bestand</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module &systemsettings; stelt u in staat in te stellen welke bestanden geïndexeerd moeten worden voor snel zoeken. Intern gebruikt het een technologie met de naam Baloo om efficiënt in bestanden te zoeken. </para>
+
+<para
+>Het widget <guilabel
+>Zoeken</guilabel
+> toevoegen aan uw paneel of schakel zoeken in in &krunner; om het resultaat van indexering te gebruiken voor snellere toegang tot uw documenten. </para>
+
+<para
+>Het item <guilabel
+>Bestand zoeken</guilabel
+> activeren als u de mogelijkheid bureaubladzoeken en andere &kde; toepassingen in &dolphin; wilt gebruiken. Deactiveer het item als u het bestand zoeken met Baloo niet wilt gebruiken (het is mogelijk andere zoektechnologieën, &eg; &kfind; te gebruiken). </para>
+
+<para
+><guilabel
+>Ook bestandsinhoud indexeren</guilabel
+> om ook de bestandsinhoud te indexeren naast de bestandsnamen. </para>
+
+<para
+>Activeer het item <guilabel
+>Verborgen bestanden en mappen indexeren</guilabel
+> om Baloo verborgen bestanden en mappen te laten indexeren. </para>
+
+<note>
+    <para
+>Elk bestand- of mapnaam die begint met een punt (<literal
+>.</literal
+>) is standaard verborgen. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Mapspecifieke configuratie</guilabel
+></term>
+<listitem>
+    <para
+>U krijgt een lijst met mappen te zien die geïndexeerd kunnen worden. Standaard wordt alleen uw gehele <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> map geïndexeerd en geen andere folders of opslagapparaten. </para>
+    <para
+>Verwijderbare media worden standaard nooit geïndexeerd. Dit kan expliciet verwijderd worden uit de lijst met uit te sluiten mappen en deze zullen dan geïndexeerd worden. </para>
+    <para
+>Het is mogelijk de keuzelijst naast elk item in de lijst te gebruiken om te configureren of dit item te markeren voor <guimenuitem
+>Indexeren</guimenuitem
+> of <guimenuitem
+>Niet indexeren</guimenuitem
+>. </para>
+    <para
+>Gebruik de knop prullenbak om een item uit de lijst te verwijderen. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Mapconfiguratie toevoegen...</guibutton
+></term>
+<listitem>
+    <para
+>Op deze knop drukken om de selector te openen met twee opties, namelijk <guimenuitem
+>Indexering van een map beginnen...</guimenuitem
+> en <guimenuitem
+>Indexering van een map stoppen...</guimenuitem
+>. </para>
+    <para
+>Klikken op een van de boven genoemde opties toont de standaard dialoog van &plasma; <guilabel
+>Een map om te filteren selecteren</guilabel
+> en biedt u het kiezen van de map om overeenkomstig behandeld te worden. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Voor meer informatie over extra configuratieopties &eg; hoe een aparaat aangekoppeld buiten uw <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> folder lees <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuratie</ulink
+>.</para>
+
+</article>

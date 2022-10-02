@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Дата и время</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Сергей</firstname
+> <surname
+>Синьковский</surname
+> <affiliation
+><address
+><email
+>silver@neverland.od.ua</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Стёпа</firstname
+><surname
+>Семенуха</surname
+><affiliation
+><address
+><email
+>semenukha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олеся</firstname
+> <surname
+>Герасименко</surname
+> <affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25 марта 2018 г.</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>часы</keyword>
+<keyword
+>дата</keyword>
+<keyword
+>время</keyword>
+<keyword
+>установить</keyword>
+<keyword
+>настроить</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Дата и время</title>
+
+<para
+>Этот модуль программы &systemsettings; предоставляет удобный графический интерфейс для изменения системных времени и даты.</para>
+
+<note
+><para
+>Так как эти параметры влияют не только на профиль текущего пользователя, но и на систему в целом, для их изменения требуется уровень доступа системного администратора (<systemitem class="username"
+>root</systemitem
+>). Если пользователь не обладает этим уровнем доступа, в окне текущие параметры даты и времени возможно только просмотреть, но не изменить: внесённые изменения не будут сохранены.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Дата и время</title>
+
+<para
+>При включении параметра <guilabel
+>Устанавливать дату и время автоматически</guilabel
+> для получения сведений о дате и времени будет использоваться служба системы инициализации <acronym
+>systemd</acronym
+>.</para>
+
+<para
+>Если на компьютере не используется система инициализации <acronym
+>systemd</acronym
+>, то для получения сведений о дате и времени с использованием протокола <acronym
+>NTP</acronym
+> будут использоваться приложения <command
+>rdate</command
+> или <command
+>ntpdate</command
+>. </para>
+
+<para
+>Для соединения с одним или несколькими серверами <acronym
+>NTP</acronym
+> необходимо подключение к сети Интернет. При наличии подключения к Интернету при запуске сеанса работы &plasma; синхронизация даты и времени будет выполнена немедленно, в случае отсутствия подключения — позже, после того, как соединение будет установлено.</para>
+<para
+>Но этого недостаточно для поддержания точного времени в течение длительного периода. Эта функция полезна для периодической установки точного времени на компьютерах, у которых нет постоянного доступа к Интернету (например, на ноутбуках). </para>
+
+<para
+>Если сервер времени не используется, дату возможно изменить выбором числа в календаре.</para>
+<para
+>Используйте элементы управления, расположенные в нижней части календаря, чтобы выбрать текущую дату, ввести дату в поле редактирования или выбрать номер недели из раскрывающегося списка.</para>
+
+<para
+>Поля, расположенные под часами со стрелками, позволяют установить время. Также возможно ввести необходимое значение времени непосредственно с клавиатуры.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Часовой пояс</title>
+<para
+>Чтобы задать новый часовой пояс, просто выберите необходимую область в списке ниже. Используйте поле фильтра, чтобы найти необходимую <guilabel
+>Область</guilabel
+> или <guilabel
+>Регион</guilabel
+>.</para>
+</sect2>
+
+</sect1>
+
+</article>

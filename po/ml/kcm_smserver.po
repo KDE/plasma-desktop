@@ -1,0 +1,274 @@
+# translation of kcmsmserver.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kappfinder\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2008-07-04 11:50+0530\n"
+"Last-Translator: ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>സെഷന്‍ മാനേജര്‍</h1> സെഷന്‍ മാനേജരെ ഇവിടെ നിന്ന് ക്രമീകരിക്കാം . സെഷനില്‍ നിന്ന് പുറത്ത് "
+"പോകുന്നതിനെ (ലോഗൌട്ട്) സ്ഥിരീകരിക്കണോ വേണ്ടയോ , സെഷന്‍ പുന:സ്ഥാപിക്കണോ വേണ്ടയോ , സെഷനില്‍ "
+"നിന്ന് പുറത്ത് പോയതിന് ശേഷം കമ്പ്യൂട്ടര്‍ സ്വയം അടച്ചു പൂട്ടണോ എന്നിവയൊക്കെ ഈക്രമീകരണങ്ങളില്‍ പെടും"
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+msgid "Restart Now"
+msgstr "കമ്പ്യൂട്ടര്‍ &വീണ്ടും ആരംഭിക്കുക"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "പൊതുവായ"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "പുറത്തുപോകല്‍ ഉ&റപ്പാക്കുക"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "അടച്ചു പൂട്ടുന്നതിനുള്ള  ഐച്ഛികങ്ങള്‍ &നല്‍കുക"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+msgid "Default leave option:"
+msgstr "അടച്ചു പൂട്ടുന്നതിനു് സ്വതവേയുള്ള ഉപാധി"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "നിലവിലുള്ള സെഷന്‍ &അവസാനിപ്പിക്കുക"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "കമ്പ്യൂട്ടര്‍ &വീണ്ടും ആരംഭിക്കുക"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "കമ്പ്യൂട്ടര്‍ &അടച്ചു പൂട്ടുക"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "&നിങ്ങള്‍ സ്വയം സൂക്ഷിച്ച സെഷന്‍ വീണ്ടെടുക്കുക"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "&നിങ്ങള്‍ സ്വയം സൂക്ഷിച്ച സെഷന്‍ വീണ്ടെടുക്കുക"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ശൂന്യമായ &സെഷനില്‍ ആരംഭിക്കുക"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, fuzzy, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"സെഷനുകളില്‍ സൂക്ഷിക്കേണ്ടാത്ത പ്രയോഗങ്ങള്‍ നിങ്ങള്‍ക്കു് കോമാ ഉപയോഗിച്ചു് വേര്‍തിരിച്ചു് ഇവിടെ നല്‍കാം. "
+"ഇവ സെഷന്‍ പിന്നീടു് വീണ്ടെടുക്കുമ്പോള്‍ ഇവആരംഭിക്കുന്നതല്ല. ഉദാ, 'xterm,xconsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "പുറത്തുപോകല്‍ ഉ&റപ്പാക്കുക"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "അടച്ചു പൂട്ടുന്നതിനുള്ള  ഐച്ഛികങ്ങള്‍ &നല്‍കുക"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+msgid "Default leave option"
+msgstr "അടച്ചു പൂട്ടുന്നതിനു് സ്വതവേയുള്ള ഉപാധി"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "അകത്തുകയറുമ്പോള്‍"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "സെഷനുകളില്‍ നിന്നും &മാറ്റേണ്ട പ്രയോഗങ്ങള്‍:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "&മുന്‍പുണ്ടായിരുന്ന സെഷന്‍ വീണ്ടെടുക്കുക"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "&നിങ്ങള്‍ സ്വയം സൂക്ഷിച്ച സെഷന്‍ വീണ്ടെടുക്കുക"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "പുറത്തുപോകല്‍ ഉറപ്പാക്കുന്ന ചോദ്യത്തിനുള്ള ഡയലോഗ് ബോക്സ് സെഷന്‍ മാനേജര്‍ കാണിക്കുന്നതിനായി ഇതു "
+#~ "തിരഞ്ഞെടുക്കുക."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "പുറത്തുപോകല്‍ ഉ&റപ്പാക്കുക"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "അടച്ചു പൂട്ടുന്നതിനുള്ള  ഐച്ഛികങ്ങള്‍ &നല്‍കുക"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "പുറത്തുപോകുമ്പോള്‍ സ്വതവേ എന്തു് സംഭവിക്കണം എന്നതു് ഇവിടെ നിങ്ങള്‍ക്കു് തിരഞ്ഞെടുക്കാം. KDM വഴി "
+#~ "ലോഗിന്‍ ചെയ്താല്‍ മാത്രമേ ഇതിനര്‍ത്ഥമുള്ളൂ."
+
+#, fuzzy
+#~ msgid "Default Leave Option"
+#~ msgstr "അടച്ചു പൂട്ടുന്നതിനു് സ്വതവേയുള്ള ഉപാധി"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>മുന്‍പുണ്ടായിരുന്ന സെഷന്‍ വീണ്ടെടുക്കുക:</b> പ്രയോഗങ്ങളുടെ പ്രവര്‍ത്തനത്തിനിടയില്‍ പുറത്തു് "
+#~ "കടന്നാല്‍, അവയെ സൂക്ഷിച്ചു് അടുത്ത തവണ ആരംഭിക്കുമ്പോള്‍ വീണ്ടെടുക്കുന്നു.</li>\n"
+#~ "<li><b>നിങ്ങള്‍ സ്വയം സൂക്ഷിച്ച സെഷന്‍ വീണ്ടെടുക്കുക: </b> കെ-മെനുവിലുള്ള \"സെഷന്‍ സൂക്ഷിക്കുക"
+#~ "\" ഉപയോഗിച്ചു് എപ്പോഴും സെഷന്‍ സൂക്ഷിക്കുന്നു. അതായതു്, നിലവില്‍ തുടങ്ങിയ പ്രയോഗങ്ങള്‍ അടുത്ത തവണ "
+#~ "ആരംഭിക്കുമ്പോള്‍ വീണ്ടും ലഭ്യമാകുന്നു.</li>\n"
+#~ "<li><b>ശൂന്യമായ സെഷനില്‍ ആരംഭിക്കുക:</b> ഒന്നും സൂക്ഷിക്കുകയില്ല. അടുത്ത തവണ ആരംഭിക്കുമ്പോള്‍ "
+#~ "പണിയിടം കാലിയാകുന്നു.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "അകത്തുകയറുമ്പോള്‍"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "സെഷനുകളില്‍ നിന്നും &മാറ്റേണ്ട പ്രയോഗങ്ങള്‍:"
+
+#~ msgid "Session Manager"
+#~ msgstr "സെഷന്‍ മാനേജര്‍"
+
+#~ msgid "Advanced"
+#~ msgstr "പുരോഗമിച്ചവ"
+
+#~ msgid ""
+#~ "The new window manager will be used when KDE is started the next time."
+#~ msgstr "കെഡിഇ അടുത്ത തവണ ആരംഭിക്കുമ്പോള്‍ മുതല്‍ പുതിയ ജാലക പാലകന്‍ ഉപയോഗിക്കുന്നതായിരിക്കും"
+
+#~ msgid "Window manager change"
+#~ msgstr "ജാലകപാലകന്റെ മാറ്റം"
+
+#~ msgid "KWin (KDE default)"
+#~ msgstr "KWin (KDE-ല്‍ സ്വതവേയുള്ളതു്)"
+
+#~ msgid "Window Manager"
+#~ msgstr "ജാലകപാലകന്‍"

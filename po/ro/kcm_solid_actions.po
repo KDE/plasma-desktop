@@ -1,0 +1,354 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2009.
+# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2020, 2021.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_solid_actions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2021-07-25 13:55+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: ActionEditor.cpp:60
+#, kde-format
+msgid "Editing Action '%1'"
+msgstr "Se modifică acțiunea „%1”"
+
+#: ActionEditor.cpp:162
+#, kde-format
+msgid ""
+"It appears that the action name, command, icon or condition are not valid.\n"
+"Therefore, changes will not be applied."
+msgstr ""
+"Se pare că denumirea acțiunii, comanda, pictograma sau condiția nu este "
+"validă.\n"
+"De aceea, modificările nu vor fi aplicate."
+
+#: ActionEditor.cpp:163
+#, kde-format
+msgid "Invalid action"
+msgstr "Acțiune nevalidă"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Modifică parametru"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Tip parametru:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Potrivire proprietate"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Conjuncție conținut"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Disjuncție conținut"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Potrivire interfață dispozitiv"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Tip dispozitiv:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Denumire valoare:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Egal cu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Conține"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Reinițializează parametru"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Salvează modificări parametru"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Pictograma acțiunii, apăsați pentru a o schimba"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Denumire acțiune"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Comandă: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Comanda care va declanșa acțiunea\n"
+"Aceasta poate să conțină oricare sau toate dintre substituenții insensibili "
+"la majuscule:\n"
+"\n"
+"%f: Locul de montare al dispozitivului - Doar dispozitive cu capacități de "
+"stocare\n"
+"%d: Calea către nodul dispozitivului - Doar pentru dispozitive bloc\n"
+"%i: Identificatorul dispozitivului"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Dispozitivul trebuie să se potrivească cu următorii parametri pentru această "
+"acțiune:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Denumire acțiune:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Introduceți denumirea pentru noua acțiune"
+
+#: DesktopFileGenerator.cpp:25
+#, kde-format
+msgid "Solid Action Desktop File Generator"
+msgstr "Generator de fișiere Desktop pentru acțiuni solid"
+
+#: DesktopFileGenerator.cpp:27
+#, kde-format
+msgid ""
+"Tool to automatically generate Desktop Files from Solid DeviceInterface "
+"classes for translation"
+msgstr ""
+"Unealtă pentru generarea automată a fișierelor Desktop din clase Solid "
+"DeviceInterface pentru traducere"
+
+#: DesktopFileGenerator.cpp:29
+#, kde-format
+msgid "(c) 2009, Ben Cooksley"
+msgstr "(c) 2009, Ben Cooksley"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Ben Cooksley"
+msgstr "Ben Cooksley"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Responsabil"
+
+#: PredicateItem.cpp:119
+#, kde-format
+msgid "The device must be of the type %1"
+msgstr "Dispozitivul trebuie să fie de tipul %1"
+
+#: PredicateItem.cpp:122
+#, kde-format
+msgid "Any of the contained properties must match"
+msgstr "Oricare dintre proprietățile conținute trebuie să se potrivească"
+
+#: PredicateItem.cpp:125
+#, kde-format
+msgid "All of the contained properties must match"
+msgstr "Toate proprietățile conținute trebuie să se potrivească"
+
+#: PredicateItem.cpp:134
+#, kde-format
+msgid "The device property %1 must equal %2"
+msgstr "Proprietatea %1 a dispozitivului trebuie să fie egală cu %2"
+
+#: PredicateItem.cpp:137
+#, kde-format
+msgid "The device property %1 must contain %2"
+msgstr "Proprietatea %1 a dispozitivului trebuie să conțină %2"
+
+#: SolidActions.cpp:33
+#, kde-format
+msgid "Solid Device Actions Editor"
+msgstr "Redactor de acțiuni Solid pentru dispozitive"
+
+#: SolidActions.cpp:35
+#, kde-format
+msgid "Solid Device Actions Control Panel Module"
+msgstr "Modul al panoului de control cu acțiuni Solid pentru dispozitive"
+
+#: SolidActions.cpp:37
+#, kde-format
+msgid "(c) 2009, 2014 Solid Device Actions team"
+msgstr "(c) 2009, 2014 Echipa Acțiuni solid pentru dispozitive"
+
+#: SolidActions.cpp:39
+#, kde-format
+msgid "Port to Plasma 5"
+msgstr "Portare la Plasma 5"
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "It appears that the predicate for this action is not valid."
+msgstr "Se pare că predicatul pentru această acțiune nu este valid."
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "Error Parsing Device Conditions"
+msgstr "Eroare la parcurgerea condițiilor dispozitivului"
+
+#: SolidActions.cpp:200
+#, kde-format
+msgid "No Action Selected"
+msgstr "Nicio acțiune aleasă"
+
+#: SolidActions.cpp:221
+#, kde-format
+msgid "Cannot be deleted"
+msgstr "Nu poate fi șters"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Elimină"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Modifică…"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Adaugă…"
+
+#~ msgid "Edit..."
+#~ msgstr "Modificare..."
+
+#~ msgid "Add..."
+#~ msgstr "Adăugare..."
+
+#~ msgid "Contains Other Requirements"
+#~ msgstr "Conține alte cerințe"
+
+#~ msgid "Is A Requirement"
+#~ msgstr "Este o cerință"
+
+#~ msgid "Logic type:"
+#~ msgstr "Tipul logicii:"
+
+#~ msgid "All Contained Requirements Must Match"
+#~ msgstr "Orice cerință conținută trebuie să se potrivească"
+
+#~ msgid "Any Contained Required Must Match"
+#~ msgstr "Toate cerințele conținute trebuie să se potrivească"
+
+#~ msgid "Restriction type:"
+#~ msgstr "Tipul restricției:"
+
+#~ msgid "Is Value Type"
+#~ msgstr "Este tip valoare"
+
+#~ msgid "Compare Value To"
+#~ msgstr "Compară valoarea cu"
+
+#~ msgid "Does Not Equal"
+#~ msgstr "Diferit de"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Add a new requirement"
+#~ msgstr "Adaugă cerință nouă"
+
+#~ msgid "Edit current requirement"
+#~ msgstr "Modifică cerința actuală"
+
+#~ msgid "Remove current requirement"
+#~ msgstr "Elimină cerința actuală"
+
+#~ msgid ""
+#~ "It appears that the device conditions for this action are not valid. \n"
+#~ "If you previously used this utility to make changes, please revert them "
+#~ "and file a bug"
+#~ msgstr ""
+#~ "Se pare că condițiile pentru dispozitive ale acestei acțiuni nu sunt "
+#~ "valide.\n"
+#~ "Dacă ați utilizat anterior această unealtă pentru a face modificări, "
+#~ "anulați-le și raportați o erare"
+
+#~ msgid "Editing Requirement"
+#~ msgstr "Modificare cerință"
+
+#~ msgid "Action Name:"
+#~ msgstr "Denumire acțiune:"

@@ -1,0 +1,182 @@
+# Translation of kcm_device_automounter into Japanese.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2009.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2010, 2011, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2022-08-20 23:06-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Yukiko Bando, Ryuichi Yamada"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ybando@k6.dion.ne.jp, ryuichi_ya220@outlook.jp"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "デバイス自動マウンタ"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "オリジナルの作者"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 ポート"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"これはシステムが認識したストレージデバイスの一覧です。ここで「ログイン時に自"
+"動マウント」を選択したデバイスは、「ログイン時にすべてのリムーバブルメディア"
+"をマウントする」がチェックされていなくても自動的にマウントされます。「接続時"
+"に自動マウント」についても同様です。"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"このボタンをクリックすると選択されたデバイスの存在を忘れます。これは「一度手"
+"動でマウントされたリムーバブルメディアのみを自動マウントする」がチェックされ"
+"ている場合にのみ意味があります。既知のデバイスのみを自動的にマウントするよう"
+"に設定されている場合、デバイスを忘れさせると、そのデバイスは自動マウントされ"
+"なくなります。"
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "デバイスを忘れさせる"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"これをチェックしない場合、「覚えている」デバイスのみが自動的にマウントされま"
+"す。デバイスは一度マウントされると記憶されますが、例えば USB メディアプレー"
+"ヤーを充電のために接続し、そのファイルにアクセスしなかった場合は、次にそのプ"
+"レーヤーを接続しても自動的にマウントしません。しかし、一度そのファイルにアク"
+"セスすると、次回からは自動的にそのデバイスのコンテンツにアクセスできるように"
+"します。"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "一度もマウントされたことのないリムーバブルメディアを自動マウントする"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "デバイスを自動マウント"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "ログイン時"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "接続時"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "すべてのデバイス"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "すべての既知のデバイス"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "接続されているデバイス"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "取り外されたデバイス"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "このデバイスはログイン時に自動的にマウントされます。"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "このデバイスはログイン時に自動的にマウントされません。"
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "このデバイスは接続時に自動的にマウントされます。"
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "このデバイスは接続時に自動的にマウントされません。"

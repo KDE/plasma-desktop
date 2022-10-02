@@ -1,0 +1,78 @@
+# Irish translation of plasma_applet_showactivitymanager
+# Copyright (C) 2011 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_showactivitymanager package.
+# Kevin Scannell <kscanne@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_showactivitymanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-20 00:47+0000\n"
+"PO-Revision-Date: 2011-12-28 12:28-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:24
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:26
+#, kde-format
+msgid "Show the current activity icon"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:32
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:42
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:44
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgid "Show the current activity name"
+msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "Cliceáil chun an bainisteoir gníomhaíochta a thaispeáint"
+
+#~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
+#~ msgstr ""
+#~ "Cliceáil nó brúigh an eochair Meta agus 'Q' chun an bainisteoir "
+#~ "gníomhaíochta a thaispeáint"
+
+#~ msgid ""
+#~ "Click or press the associated keyboard shortcut (%1) to show the activity "
+#~ "manager"
+#~ msgstr ""
+#~ "Cliceáil nó brúigh an t-aicearra (%1) chun an bainisteoir gníomhaíochta a "
+#~ "thaispeáint"

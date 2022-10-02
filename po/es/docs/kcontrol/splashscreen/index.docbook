@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Pantalla de bienvenida</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-11-10</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>pantalla de bienvenida</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo proporciona una interfaz para ver y seleccionar temas de pantallas de bienvenida.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Veamos una captura de pantalla del administrador de la pantalla de bienvenida</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El módulo del administrador de la pantalla de bienvenida</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>En esta página puede ver vistas previas de las pantallas de bienvenida que tenga instaladas. La vista previa de la pantalla de bienvenida actual estará resaltada.</para>
+
+<para
+>Sitúe el cursor del ratón sobre una imagen de vista previa para que aparezca el botón <guilabel
+>Probar pantalla de bienvenida</guilabel
+> en la parte inferior derecha de la imagen. Pulse este botón para ver la pantalla de bienvenida en acción.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Obtener tema nuevo...</guilabel
+></term>
+<listitem>
+<para
+>Necesita estar conectado a Internet para utilizar esta acción. Un diálogo mostrará una lista de temas del sitio web <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Al pulsar el botón <guibutton
+>Instalar</guibutton
+> asociado con un tema se instalará dicho tema localmente. </para>
+<para>
+<screenshot>
+<screeninfo
+>Instalar un tema nuevo</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Instalar un tema nuevo</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Este tema nuevo estará disponible inmediatamente después de que cierre el diálogo de instalación de las &systemsettings; y se resalte. La vista previa muestra la imagen. Necesitará pulsar el botón <guibutton
+>Aplicar</guibutton
+> para hacer de este tema el tema actual de su pantalla de bienvenida. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<!-- not in 5.14
+<varlistentry
+><term
+><guilabel
+>Install Theme File...</guilabel
+></term>
+<listitem>
+<para>
+Instead of installing a theme directly as above you might have a tarball of a theme locally that you want to install. Clicking on this button will open a file dialog and you choose the tarball of the theme you want to install. The installer then unpacks the theme locally and makes it immediately available in the themes list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Remove Theme</guilabel
+></term>
+<listitem>
+<para>
+Removing a theme means removing the theme files from your disk. A message box warns you before doing anything and indicates to you what it will remove. Clicking on <guibutton
+>Delete</guibutton
+> in this message box will remove the splash screen theme from your disk. Clicking <guibutton
+>Cancel</guibutton
+> will abort the remove action. If you choose <guibutton
+>Delete</guibutton
+>, the theme is then no longer available in the list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Test Theme</guilabel
+></term>
+<listitem>
+<para>
+This shows you the theme and the associated icons as they will be displayed as splash screen when &kde; starts. Clicking on the splash screen hides it.
+</para>
+</listitem>
+</varlistentry>
+
+-->
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

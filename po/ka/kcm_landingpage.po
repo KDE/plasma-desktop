@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"PO-Revision-Date: 2022-09-02 07:37+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "ფერების სქემის სახელი"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "ერთი წკაპი ფაილის გასახსნელად"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "გარეგნობის გლობალური პაკეტი"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "გარეგნობის გლობალური პაკეტი, ალტერნატიული"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "ანიმაციის სიჩქარე"
+
+#: package/contents/ui/FeedbackControls.qml:64
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/FeedbackControls.qml:72
+#, kde-format
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you."
+msgstr ""
+"თქვენ შეგიძლიათ დაეხმაროთ KDE-ს პლაზმის გაუმჯობესებაში ინფორმაციის "
+"მიწოდებით, თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება "
+"მოახდინოთ თქვენთვის მნიშვნელოვან საკითხებზე.<br/><br/>ამ ინფორმაციის "
+"კონტრიბუცია არჩევითია და სრულიად ანონიმური. ჩვენ არასოდეს ვაგროვებთ თქვენს "
+"პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, ვებსაიტებს, რომლებსაც "
+"სტუმრობთ, ან ინფორმაციას, რომელსაც შეუძლია თქვენი იდენტიფიცირება."
+
+#: package/contents/ui/FeedbackControls.qml:75
+#, kde-format
+msgid "No data will be sent."
+msgstr "მონაცემები გადაგზავნილი არ იქნება."
+
+#: package/contents/ui/FeedbackControls.qml:77
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "გაგზავნილი იქნება შემდეგი ინფორმაცია:"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "Theme:"
+msgstr "თემა:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Animation speed:"
+msgstr "ანიმაციის სიჩქარე:"
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "ნელი"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "მყისი"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "ფონის სურათის შეცვლა…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "გარეგნობის მეტი პარამეტრი…"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "დაწკაპუნება ფაილზე ან საქაღალდეზე:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "გახსნის მათ"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "არჩიეთ ჩანაწერის არჩევის სანიშნზე დაწკაპუნებით"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "მონიშნავს"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Send User Feedback:"
+msgstr "მომხმარებლის უკუკავშირის გაგზავნა:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "ქცევის მეტი პარამეტრი…"
+
+#: package/contents/ui/main.qml:211
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "ყველაზე ხშირად გამოყენებული გვერდები:"
+
+#~ msgctxt "Adjective; as in, 'light theme'"
+#~ msgid "Light"
+#~ msgstr "მსუბუქი"
+
+#~ msgctxt "Adjective; as in, 'dark theme'"
+#~ msgid "Dark"
+#~ msgstr "ბნელი"

@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm_landingpage.pot\n"
+"X-Crowdin-File-ID: 25356\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "配色方案名称"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "单击打开文件/文件夹"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "全局界面外观主题包"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "全局界面外观主题包, 备选"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "动效速度"
+
+#: package/contents/ui/FeedbackControls.qml:64
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/FeedbackControls.qml:72
+#, kde-format
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you."
+msgstr ""
+"您可以与 KDE 分享 Plasma 的使用统计信息，让我们知道各项功能的使用情况，从而改"
+"进您最常用的功能。<br/><br/>信息的上传基于自愿原则，它是非强制性且完全匿名"
+"的。我们绝不会收集您的个人信息、您使用的文件、您访问的网页或任何可以识别您个"
+"人身份的信息。"
+
+#: package/contents/ui/FeedbackControls.qml:75
+#, kde-format
+msgid "No data will be sent."
+msgstr "不发送任何数据。"
+
+#: package/contents/ui/FeedbackControls.qml:77
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "发送以下信息："
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "Theme:"
+msgstr "主题："
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Animation speed:"
+msgstr "动效速度："
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "缓慢"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "即时"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "更换壁纸…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "更多外观设置…"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "单击文件、文件夹时："
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "打开"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "提示：单击对象的选择框可以选中"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "选中"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "提示：双击可以打开对象"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Send User Feedback:"
+msgstr "发送使用情况反馈："
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "更多行为设置…"
+
+#: package/contents/ui/main.qml:211
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "最常用页面："
+
+#~ msgctxt "Adjective; as in, 'light theme'"
+#~ msgid "Light"
+#~ msgstr "浅色"
+
+#~ msgctxt "Adjective; as in, 'dark theme'"
+#~ msgid "Dark"
+#~ msgstr "深色"

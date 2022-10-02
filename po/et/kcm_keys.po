@@ -1,0 +1,293 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2020-10-07 22:52+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: globalaccelmodel.cpp:113
+#, kde-format
+msgid "Applications"
+msgstr "Rakendused"
+
+#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
+#, kde-format
+msgid "System Services"
+msgstr "Süsteemi teenused"
+
+#: globalaccelmodel.cpp:187
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Tõrge kiirklahvi %1 salvestamisel: %2"
+
+#: globalaccelmodel.cpp:295
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr ""
+
+#: globalaccelmodel.cpp:338
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Tõrge suhtlemisel globaalsete kiirklahvide teenusega"
+
+#: kcm_keys.cpp:50
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Suhtlemine globaalsete kiirklahvide deemoniga nurjus"
+
+#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
+#: standardshortcutsmodel.cpp:29
+#, kde-format
+msgid "Common Actions"
+msgstr "Tüüpilised menüükäsud"
+
+#: kcm_keys.cpp:230
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Kiirklahv %1 on juba omistatud tüüpilisele menüükäsule \"%2 -> %3\".\n"
+"Kas soovid loovutada selle valitud toimingule?"
+
+#: kcm_keys.cpp:234
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Kiirklahv %1 on juba omistatud rakenduse/teenuse %3 toimingule \"%2\".\n"
+"Kas soovid loovutada selle valitud toimingule?"
+
+#: kcm_keys.cpp:235
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "Leiti konflikt"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Skeemi ei saa eksportida, sest selles on salvestamata muutusi"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "Vali allpool komponendid, mis kaasata eksporditavasse skeemi"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "Save scheme"
+msgstr "Salvesta skeem"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Kõigi %1 kiirklahvide eemaldamine"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Undo deletion"
+msgstr "Kustutamise tagasivõtmine"
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgid "No items matched the search terms"
+msgstr ""
+
+#: package/contents/ui/main.qml:224
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Vali loendis element selle kiirklahvide nägemiseks"
+
+#: package/contents/ui/main.qml:232
+#, fuzzy, kde-format
+#| msgid "Add Application..."
+msgid "Add Application…"
+msgstr "Lisa rakendus ..."
+
+#: package/contents/ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "Import Scheme..."
+msgid "Import Scheme…"
+msgstr "Impordi skeem ..."
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Cancel Export"
+msgstr "Katkesta eksport"
+
+#: package/contents/ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Export Scheme..."
+msgid "Export Scheme…"
+msgstr "Ekspordi skeem ..."
+
+#: package/contents/ui/main.qml:268
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Kiirklahviskeemi eksport"
+
+#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Kiirklahviskeemi import"
+
+#: package/contents/ui/main.qml:270
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Kiirklahviskeem (*.kksrc)"
+
+#: package/contents/ui/main.qml:296
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Imporditav skeem:"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Kohandatud skeem"
+
+#: package/contents/ui/main.qml:313
+#, fuzzy, kde-format
+#| msgid "Select File..."
+msgid "Select File…"
+msgstr "Vali fail ..."
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Import"
+msgstr "Impordi"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:26
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the name of the component, %2 is the action for which saving failed"
+#| msgid "Error while saving shortcut %1: %2"
+msgid "Editing shortcut: %1"
+msgstr "Tõrge kiirklahvi %1 salvestamisel: %2"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:38
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:51
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Aktiivseid kiirklahve pole"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:90
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Vaikimisi kiirklahv"
+msgstr[1] "Vaikimisi kiirklahvid"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:92
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Vaikimisi kiirklahve pole"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgid "Default shortcut %1 is enabled."
+msgstr "Vaikimisi kiirklahv"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgid "Default shortcut %1 is disabled."
+msgstr "Vaikimisi kiirklahv"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:121
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Kohandatud kiirklahvid"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:145
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Selle kiirklahvi kustutamine"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:151
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Lisa kohandatud kiirklahv"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:185
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Uue kiirklahvi määramisest loobumine"
+
+#: standardshortcutsmodel.cpp:33
+#, kde-format
+msgid "File"
+msgstr "Fail"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "Edit"
+msgstr "Redigeerimine"
+
+#: standardshortcutsmodel.cpp:36
+#, kde-format
+msgid "Navigation"
+msgstr "Liikumine"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "View"
+msgstr "Vaade"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "Settings"
+msgstr "Seadistused"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Help"
+msgstr "Abi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "Shortcuts"
+#~ msgstr "Kiirklahvid"
+
+#~ msgid "David Redondo"
+#~ msgstr "David Redondo"

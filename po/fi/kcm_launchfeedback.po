@@ -1,0 +1,146 @@
+# translation of kcmlaunch.po to Finnish
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2012, 2014, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2012, 2015, 2018, 2020, 2021.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-06-07 16:49+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:23+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Aikakatkaisu sekunteina"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Käynnistymisen ilmaiseminen"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Kohdistin:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Ei ilmaista mitenkään"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Staattinen"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Vilkkuva"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Pomppiva"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Tehtävienhallinta:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Käytä animointeja"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Pysäytä animointi ajassa:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 s"
+msgstr[1] "%1 s"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "translator@legisign.org"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "Ohjelmien käynnistymisen ilmaisemisen asetukset"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Käynnistymisen ilmaiseminen</h1> Tässä voit määrittää sovellusten "
+#~ "käynnistymispalautteen."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Varattu osoitin</h1>\n"
+#~ "KDE voi näyttää ohjelman käynnistyessä hiiriosoittimen ”varattuna”.\n"
+#~ "Jos haluat käyttää tätä asetusta, valitse haluamasi esitystapa\n"
+#~ "monivalintalaatikosta.\n"
+#~ "Kaikki ohjelmat eivät välttämättä kunnioita tapaa. Tällöin osoitin\n"
+#~ "lakkaa vilkkumasta sen jälkeen, kun aikakatkaisussa annettu aika on\n"
+#~ "kulunut."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Ei varattua osoitinta"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Passiivinen varattu osoitin"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "Tehtäväpalki&n ilmoitus"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Tehtäväpalkin ilmoitus</H1>\n"
+#~ "Tiedon ohjelmien käynnistämisestä voi näyttää paitsi\n"
+#~ "varatulla osoittimella myös tehtäväpalkissa: käynnistyvän\n"
+#~ "ohjelman kuvakkeen päällä näkyy pyörivä kiekko. Kaikki\n"
+#~ "sovellukset eivät osaa lopettaa tehtäväpalkin ilmoitusta\n"
+#~ "jolloin ilmoitus lopetetaan määritetyn aikaviiveen jälkeen."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Kä&ynnistyksen ilmaisemisen aikakatkaisu:"

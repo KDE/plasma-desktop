@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Keyboard</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18-03-2016</date>
+<releaseinfo
+>Plasma 5.7</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>keyboard</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Model ini memungkinkanmu untuk memilih bagaimana keyboard-mu bekerja.</para>
+
+<para
+>Ada tiga tab di dalam modul ini.</para>
+
+<sect1 id="hardware">
+<title
+>Tab Hardware</title>
+<para
+>Opsi-opsi pengaturan efek tersebut sebenarnya tergantung pada fitur yang disediakan oleh hardware keyboard-mu dan server X tempat &plasma; berjalan. Sebagai contoh, kamu mungkin menemukan bahwa mengubah tuts klik volume tidak berpengaruh karena fitur itu tidak tersedia di sistem kamu. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Model keyboard:</guilabel
+></term>
+<listitem>
+<para
+>Di sini kamu bisa mengeset model keyboard-mu. Setelan ini tidak tergantung pada tataletak keyboard-mu dan merujuk ke model &quot;hardware&quot;, misal cara keyboard-mu diproduksi. Keyboard modern yang menyertai komputermu biasanya memiliki dua tuts tambahan dan disebut sebagai model &quot;104-key&quot;, yang mungkin apa yang kamu inginkan jika kamu tidak tau jenis keyboard yang kamu miliki. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock saat Pemulaian Plasma</guilabel
+></term>
+<listitem>
+<para
+>Kamu bisa memilih untuk selalu <guilabel
+>Nyalakan</guilabel
+> atau <guilabel
+>Matikan</guilabel
+> NumLock saat &plasma; dimulai, atau kamu bisa memilih untuk membiarkan &plasma; memiliki NumLock terserah mau diset apa saat sebelum &plasma; dimulai. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pengulangan Keyboard</guilabel
+></term>
+<listitem>
+<para
+>Ketika opsi ini dinyalakan, menekan dan menahan tombol memancarkan karakter yang sama berulang kali sampai tuts dilepaskan. Menekan dan menahan tuts akan memiliki efek yang sama dengan menekannya beberapa kali berturut-turut.</para>
+<tip
+><para
+>Hampir semua pengguna ingin memiliki opsi ini difungsikan, karena itu membuat navigasi dokumen dengan tuts panah secara signifikan lebih mudah. </para
+></tip>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tunda</guilabel
+></term>
+<listitem>
+<para
+>Opsi ini memungkinkanmu untuk mengatur penundaan setelah tuts mana yang ditekan akan mulai menghasilkan kode kunci.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Laju</guilabel
+></term>
+<listitem>
+<para
+>Opsi ini memungkinkanmu untuk mengatur kecepatan di mana kode kunci dihasilkan saat tuts ditekan.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Ketikkan beberapa karakter ke dalam kotak teks <guilabel
+>Area pengujian</guilabel
+> untuk memverifikasi pengaturan.</para>
+<para
+>Banyak komputer tidak mendukung fungsi ini.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Tab Tataletak</title>
+<para
+>Tab ini memungkinkanmu memilih tataletak keyboard apa yang ingin kamu gunakan, indikator apa yang kamu inginkan dalam baki sistem, bagaimana kamu ingin beralih dan pintasan mana yang akan kamu gunakan.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indikator Tataletak</guilabel
+></term>
+<listitem>
+<para
+>Kamu bisa memilih untuk <guilabel
+>Tampilkan indikator tataletak</guilabel
+> yang akan menampilkan nama ISO bahasa di baki sistem. Kamu bisa memilih untuk menampilkan indikator meskipun kamu memiliki tataletak tunggal yang difungsikan dan kamu bisa menampilkan bendera bahasa alih-alih kode ISO saja dengan mencentang <guilabel
+>Tampilkan bendera</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Kebijakan Pengalihan</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu memilih kebijakan pengalihan <guilabel
+>Aplikasi</guilabel
+> atau <guilabel
+>Window</guilabel
+>, mengubah tataletak keyboard hanya akan memengaruhi aplikasi atau window saat ini. <guilabel
+>Global</guilabel
+> akan mengubah tataletak keyboard secara global dan <guilabel
+>Desktop</guilabel
+> akan mengubahnya hanya untuk desktop virtual saat ini. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pintasan untuk Tataletak Pengalihan</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Pintasan utama</guilabel
+> adalah pintasan untuk beralih tataletak yang ditangani oleh X.org. <guilabel
+>Pintasan tingkat ketiga</guilabel
+> adalah pintasan untuk beralih ke tataletak aktif tingkat ketiga (jika memiliki satu) yang ditangani oleh X.org. Ini memungkinkan pintasan yang dimodifikasi saja. <guilabel
+>Pintasan alternatif</guilabel
+> adalah pintasan untuk beralih tataletak yang ditangani oleh &plasma;. Itu tidak mendukung pintasan yang hanya dimodifikasi khusus dan juga mungkin tidak berfungsi dalam beberapa situasi ((&eg;) misal jika pupup telah aktif atau dari screensaver). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Konfigurasikan tataletak</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu mencentang <guilabel
+>Konfigurasikan tataletak</guilabel
+> kamu akan dapat menambah dan menghapus tataletak keyboard untuk beralih di antara mereka saat kamu membutuhkan. </para>
+<para
+>Mengeklik <guibutton
+>Tambah</guibutton
+> akan membuka dialog di mana kamu akan dapat memilih tataletak keyboard baru yang ingin kamu tambahkan sebagaimana varian, label, dan pintasannya. </para>
+<para
+>Daftar tataletak yang tepat ke label <guilabel
+>Tataletak</guilabel
+> dalam dialog <guilabel
+>Tambah Tataletak</guilabel
+> dapat dipersempit menggunakan daftar bentang turun <guilabel
+>Batasi pemilihan menurut bahasa</guilabel
+>. Kamu bida mengeklik tombol <guibutton
+>Pratinjau</guibutton
+> untuk mempratinjau tataletak yang dipilih di window  terpisah. </para>
+<para
+>Kamu bisa mengurutkan tataletak dengan tombol naik dan turun, yang teratas adalah yang bakunya. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tataletak cadangan</guilabel
+></term>
+<listitem>
+<para
+>Opsi ini bisa difungsikan hanya jika kamu memiliki tataletak lebih dari dua.</para>
+<para
+>Tataletak cadangan memungkinkan untuk beralih di antara sejumlah kecil tataletak dengan mudah sambil menjaga tataletak lebih dekat. Misalnya, kamu bisa menggunakan 3 bahasa: Inggris, Ukraina dan Jerman, tetapi dua yang pertama sering digunakan dan yang ketiga hanya sesekali. Dalam hal ini kamu bisa mengkonfigurasi dua yang pertama sebagai tataletak utama (pengaturan <guilabel
+>Jumlah tataletak utama</guilabel
+>: 2) dan bahasa Jerman sebagai cadangan - ketika kamu beralih dengan tuts keyboard dan mouse kiri, pengalihan hanya akan terjadi di antara tataletak utama tetapi kamu selalu dapat memilih tataletak ke-3 dengan menu konteks.</para>
+<para
+>Ketika tataletak cadangan dipilih, itu menggantikan tataletak utama terakhir (ini dilakukan karena alasan teknis, biasanya pintasan global bekerja berdasarkan tataletak aktif 1 sehingga lebih dapat diandalkan untuk mempertahankan tataletak 1 saat memungkinkan untuk mengaktifkan tataletak cadangan).</para>
+<!-- context menu ?-->
+<para
+>Karena X.org hanya memungkinkan untuk memiliki 4 tataletak untuk beralih fitur <quote
+>tataletak cadangan</quote
+> juga memungkinkan untuk mengatasi batasan ini: pengguna dapat memiliki hingga 4 tataletak utama (dikelola oleh X.org) tetapi 4 tataletak cadangan lainnya diizinkan (dikelola oleh pengalih tataletak). Dengan demikian pengguna dapat dengan mudah bekerja dengan total 8 tataletak (meskipun batas tataletak cadangan 4 dapat dinaikkan di masa mendatang). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Tab Tingkat-lanjut</title>
+<para
+>Di tab ini, jika kamu mencentang <guilabel
+>Konfigurasikan opsi keyboard</guilabel
+> maka kamu akan bisa mengatur beberapa opsi mengenai beberapa pengaturan tuts khusus. Kamu bisa membentangkan opsi ini dengan mengeklik simbol &gt; di sebelah kiri opsi maka kamu memilih pengaturanmu dalam daftar yang dibentangkan.</para>
+<para
+>Ini adalah sebuah &GUI; untuk membantu penciptaan tataletak keyboard kustom untuk X11 menggunakan XKB. </para>
+<para
+>Untuk informasi selebihnya silakan merujuk ke bagian <emphasis
+>Tautan</emphasis
+> di <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>halaman XKeyboardConfig di freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

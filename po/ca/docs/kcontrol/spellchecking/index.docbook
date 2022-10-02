@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Corrector ortogràfic</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Ortografia</keyword>
+<keyword
+>diccionari</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Corrector ortogràfic</title>
+<para
+>Les opcions de configuració aquí disponibles són utilitzades de manera predeterminada a totes les aplicacions &kde; que utilitzen el &sonnet;, el qual és el frontal per a diversos correctors ortogràfics lliures.</para>
+
+<para
+>Per a utilitzar el &sonnet;, cal instal·lar algun verificador ortogràfic com &pex; el <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, el <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> o l'<ulink url="https://hunspell.sourceforge.net/"
+>Hunspell</ulink
+> i addicionalment, els corresponents de diccionari per al vostre idioma.</para>
+
+<para
+>Les opcions de configuració seleccionades aquí, poden ser substituïdes en cada aplicació.</para>
+
+<para
+>A la llista desplegable <guilabel
+>Idioma predeterminat</guilabel
+>, seleccioneu entre els diccionaris disponibles, quin utilitzar amb el &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Opcions</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Activa la detecció automàtica de l'idioma</guilabel
+></term>
+<listitem>
+<para
+>Aquesta característica es basa en diverses heurístiques (empra un script, coincidència del trigrama i posició de l'idioma entre els idiomes disponibles al dorsal per a la correcció ortogràfica). Això permet canviar automàticament l'idioma en un document en diversos idiomes. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Verificació automàtica de l'ortografia habilitada per defecte</guilabel
+></term>
+<listitem>
+<para
+>Si hi ha una marca en aquesta casella de selecció, es comprovarà l'ortografia de les paraules del document en teclejar-les. Les incorrectes tindran dibuixada a sota una línia vermella. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Omet totes les paraules en majúscules</guilabel
+></term>
+<listitem>
+<para
+>Si hi ha una marca en aquesta casella de selecció, no es comprovarà l'ortografia de cap paraula escrita en majúscules.</para>
+<tip
+><para
+>Això és útil en els documents que utilitzin un gran nombre d'acrònims. Si aquesta casella es deixa sense seleccionar, la majoria dels acrònims es marcaran com incorrectes. Posant una marca a la casella de selecció, els acrònims no es marcaran com a errors ortogràfics.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Omet les paraules enganxades</guilabel
+></term>
+<listitem
+><para
+>Si aquesta casella no està marcada, les paraules que apareixen al diccionari per separat, però que s'han escrit juntes, es consideraran com a errors d'ortografia. Exemples d'aquestes paraules són expresident, superusuari, i autoconfiguració. </para>
+
+<tip
+><para
+>Marcant aquesta casella s'evitarà que les aplicacions comptin les adreces web i de correu electrònic per a les correccions ortogràfiques. Aquestes adreces sovint contenen paraules compostes.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Paraules ignorades</title>
+<para
+>La meitat inferior del diàleg us permet designar paraules específiques (pot ser terminologia especialitzada, noms propis, &etc;) que el programa de verificació ortogràfica hauria d'ignorar.</para>
+
+<sect3
+><title
+>Afegir una paraula a la llista per a ignorar</title>
+<para
+>Per a afegir una paraula, teclegeu-la en el quadre de text i feu clic al botó <guibutton
+>Afegeix</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Suprimir una paraula de la llista a ignorar</title>
+<para
+>Per a esborrar una paraula, seleccioneu-la en el quadre de llista que conté totes les paraules actualment ignorades, fent-hi clic amb el &BER;. Després feu clic al botó <guibutton
+>Elimina</guibutton
+>.</para>
+
+<para
+>Quan esteu satisfet amb els canvis, simplement feu clic a <guibutton
+>Aplica</guibutton
+>.</para>
+
+<para
+>Fent clic al botó <guibutton
+>Inicialitza</guibutton
+>, es restauraran tots els valors als seus valors predeterminats.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

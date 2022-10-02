@@ -1,0 +1,512 @@
+# Translation of kaccess.po into Bosnian.
+# Marko Rosic <roske@kde.org.yu>, 2000.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2013-10-18 20:19+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 05:57+0000\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Samir Ribić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "samir.ribic@etf.unsa.ba"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Shift je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Taster Shift je sada aktivan."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Taster Shift sada nije aktivan."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Control je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Taster Control je sada aktivan."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Taster Control sada nije aktivan."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Alt je zaključan i sada je aktivan za sve naredne pritiske na tastere."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Taster Alt je sada aktivan."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Taster Alt sada nije aktivan."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Win je zaključan i sada je aktivan za sve naredne pritiske na tastere."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Taster Win je sada aktivan."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Taster Win sada nije aktivan."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Meta je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Taster Meta je sada aktivan."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Taster Meta sada nije aktivan."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Super je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Taster Super je sada aktivan."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Taster Super sada nije aktivan."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster Hyper je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Taster Hyper je sada aktivan."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Taster Hyper sada nije aktivan."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Taster AltGr je zaključan i sada je aktivan za sve naredne pritiske na "
+"tastere."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Taster AltGr je sada aktivan."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Taster AltGr sada nije aktivan."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Taster NumLock je aktiviran."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Taster NumLock sada nije aktivan."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Taster CapsLock je aktiviran."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Taster CapsLock sada nije aktivan."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Taster ScrollLock je aktiviran."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Taster ScrollLock sada nije aktivan."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr ""
+
+#: kaccess.cpp:333
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "KDE‑ova alatka za pristupačnost"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGr"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&Kada se gest upotrijebi:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Promijeni postavke bez pitanja"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Prikaži ovaj dijalog za potvrdu"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Deaktiviraj sve accessX mogućnosti i gestove"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Spori tasteri"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Odskočni tasteri"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Ljepljivi tasteri"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Tasteri za miš"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Želite li zaista da deaktivirate „%1“?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Želite li zaista da deaktivirate „%1“ i „%2“?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Želite li zaista da deaktivirate „%1“, „%2“ i „%3“?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Želite li zaista da deaktivirate „%1“, „%2“, „%3“ i „%4“?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Želite li zaista da aktivirate „%1“?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i deaktivirate „%2“?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i deaktivirate „%2“ i „%3“?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i deaktivirate „%2“, „%3“ i „%4“?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i „%2“?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i „%2“ i deaktivirate „%3“?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr "Želite li zaista da aktivirate „%1“ i „%2“ i deaktivirate „%3“ i „%4“?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Želite li zaista da aktivirate „%1“, „%2“ i „%3“?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr "Želite li zaista da aktivirate „%1“, „%2“ i „%3“ i deaktivirate „%4“?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Želite li zaista da aktivirate „%1“, „%2“, „%3“ i „%4“?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Program je zatražio da promijeni ovu postavku."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Držali ste taster Shift tokom osam sekundi ili je program zatražio da "
+"promijeni ovu postavku."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Pritisnuli ste taster Shift pet puta za redom ili je program zatražio da "
+"promijeni ovu postavku."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr ""
+"Pritisnuli ste %1 ili je program zatražio da promijeni ovo podešavanje."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Program je zatražio da promijeni ove postavke, ili ste upotrijebili "
+"kombinaciju nekoliko gestova sa tastature."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Program je zatražio da promijeni ove postavke."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Ove accessX postavke potrebne su korisnicima sa ograničenom pokretljivošću i "
+"mogu se podesiti u Sistemskim postavkama KDE‑a. Takođe ih možete uključivati "
+"i isključivati pomoću standardizovanih gestova sa tastature.\n"
+"\n"
+"Ako vam nisu potrebna, možete izabrati „Deaktiviraj sve accessX mogućnosti i "
+"gestove“."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Uključeni su spori tasteri. Od sada, svaki taster morate držati pritisnut "
+"neko vrijeme prije nego što se prihvati."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Spori tasteri su isključeni."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Uključeni su odskočni tasteri. Od sada, svaki taster će biti blokiran neko "
+"vrijeme pošto se pritisne."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Odskočni tasteri su isključeni."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Uključeni su ljepljivi tasteri. Od sada, modifikatorski tasteri će ostati "
+"zapeti pošto ih otpustite."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Ljepljivi tasteri su isključeni."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Uključeni su tasteri za miš. Od sada, možete koristiti numerički dio "
+"tastature za kontrolisanje miša."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Tasteri za miš su isključeni."
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgid "Accessibility"
+msgstr "KDE‑ova alatka za pristupačnost"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "© 2000, Matijas Helcer-Klipfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matijas Helcer-Klipfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Autor"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "KDE‑ova alatka za pristupačnost"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Sticky Keys"
+#~ msgstr "Ljepljivi tasteri"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Use &sticky keys"
+#~ msgstr "Ljepljivi tasteri"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "&Lock sticky keys"
+#~ msgstr "Ljepljivi tasteri"
+
+#, fuzzy
+#~| msgid "Slow keys"
+#~ msgid "&Use slow keys"
+#~ msgstr "Spori tasteri"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Bounce Keys"
+#~ msgstr "Odskočni tasteri"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Odskočni tasteri"

@@ -1,0 +1,819 @@
+# Translation of package plasma_applet_folderview into Lithuanian
+# This file is distributed under the same license as the plasma_applet_folderview package.
+#
+# Andrius Štikonas <andrius@stikonas.eu>, 2009.
+# Donatas G. <dgvirtual@akl.lt>, 2010.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012.
+# Liudas Alisauskas <liudas@akmc.lt>, 2013, 2014, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2021-12-12 13:45+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Vieta"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Piktogramos"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Filtras"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Atgal"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "Failai:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Rodyti visus"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Rodyti atitinkančius"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Slėpti atitinkančius"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Failų pavadinimų šablonas:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Failų tipai:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Failo tipas"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Aprašas"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Žymėti visus"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Nuimti žymėjimą nuo visų"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Skydelio mygtukas:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Naudoti tinkintą piktogramą"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Pasirinkti…"
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Išvalyti piktogramą"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Išdėstymas:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Lygiuoti kairėje"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align right"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Lygiuoti dešinėje"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Užrakinti vietoje"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Rikiavimas:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, fuzzy, kde-format
+#| msgid "Manual"
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Rankinis"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Dydis"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Tipas"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Data"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Mažėjančiai"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgid "Folders first"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Pirma aplankai"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Rodinio veiksena:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, fuzzy, kde-format
+#| msgid "List"
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Sąrašas"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Piktogramų dydis:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Mažas"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Didelis"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Etikečių plotis:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, fuzzy, kde-format
+#| msgid "Narrow"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Siauras"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Vidutinis"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, fuzzy, kde-format
+#| msgid "Wide"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Platus"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Teksto eilutės:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, fuzzy, kde-format
+#| msgid "Tooltips"
+msgid "Show tooltips"
+msgstr "Paaiškinimai"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Selection markers"
+msgid "Show selection markers"
+msgstr "Žymėjimo žymekliai"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Folder preview popups"
+msgid "Show folder preview popups"
+msgstr "Aplanko peržiūros iškylantieji langai"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "&Pervadinti"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr "Pervadinti tiesiogiai, spustelėjant ant pažymėto elemento teksto"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Show Previews"
+msgid "Previews:"
+msgstr "Rodyti peržiūras"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Preview thumbnails"
+msgid "Show preview thumbnails"
+msgstr "Peržiūros miniatiūros"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "Konfigūruoti peržiūros papildinius…"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Rodyti:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Darbalaukio aplankas"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "Failai susieti su dabartine veikla"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Vietų skydelio elementas:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Tinkinta vieta:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "Įrašykite kelią ar URL…"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Pavadinimas:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Nėra"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Numatytasis"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Pilnas kelias"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Tinkintas pavadinimas"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "Įveskite tinkintą pavadinimą…"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Pasukti"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Atverti išoriškai"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Slėpti foną"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Rodyti foną"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Šalinti"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Peržiūros papildiniai"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "Gerai"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Konfigūruoti darbalaukį ir jo foną…"
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Pasirinkite aplanką"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "Į&kelti darbalaukį iš naujo"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "Įke&lti rodinį iš naujo"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "&Išvalyti šiukšlinę"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Atkurti"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "At&verti"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "Į&dėti"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Savybės"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Rikiuoti pagal"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Nerikiuota"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Dydis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Tipas"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Data"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Mažėjančiai"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Pirma aplankai"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Piktogramų dydis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Mažytis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Very Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Labai mažas"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Mažas"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "Small-Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Mažesnis nei vidutinis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Vidutinis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Didelis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Didžiulis"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange In"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Išdėstyti"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Lygiuotė"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Kairėje"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Dešinėje"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Rodyti peržiūras"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, fuzzy, kde-format
+#| msgid "Locked"
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Užrakinta"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Eilutės"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Stulpeliai"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Eilutės"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Stulpeliai"
+
+#~ msgid "Features:"
+#~ msgstr "Savybės:"
+
+#~ msgid "Search…"
+#~ msgstr "Ieškoti…"
+
+#~ msgid "&Create Folder"
+#~ msgstr "Sukurti ap&lanką"
+
+#~ msgid "Tweaks"
+#~ msgstr "Pagerinimai"
+
+#~ msgid ""
+#~ "With the Desktop Toolbox hidden, right-click on the desktop and choose "
+#~ "'Configure Desktop...' to access this configuration window in the future"
+#~ msgstr ""
+#~ "Jei darbalaukio parankinė yra paslėpta, šį konfigūracijos langą "
+#~ "pasieksite dešiniu pelės mygtuku spustelėję ant darbalaukio ir pasirinkę "
+#~ "„Konfigūruoti darbalaukį...“"
+
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Rodyti darbalaukio parankinę"
+
+#~ msgid "Press and hold widgets to move them and reveal their handles"
+#~ msgstr ""
+#~ "Paspauskite ir palaikykite valdiklius, norėdami juos perkelti ir pamatyti "
+#~ "jų rankenėles"
+
+#~ msgid "Widgets unlocked"
+#~ msgstr "Valdikliai atrakinti"
+
+#~ msgid ""
+#~ "You can press and hold widgets to move them and reveal their handles."
+#~ msgstr ""
+#~ "Galima paspausti ir palaikyti valdiklius, norint juos perkelti ir "
+#~ "pamatyti jų rankenėles."
+
+#~ msgid "Got it"
+#~ msgstr "Supratau"
+
+#~ msgid "Resize"
+#~ msgstr "Keisti dydį"
+
+#~ msgid "Show All Files"
+#~ msgstr "Rodyti visus failus"
+
+#~ msgid "Size:"
+#~ msgstr "Dydis:"
+
+#~ msgid "Desktop Layout"
+#~ msgstr "Darbalaukio išdėstymas"
+
+#~ msgid "Widget Handling"
+#~ msgstr "Valdiklio tvarkymas"
+
+#, fuzzy
+#~| msgid "Arrange in:"
+#~ msgid "Arrange in"
+#~ msgstr "Išdėstyti:"
+
+#, fuzzy
+#~| msgid "Sort By"
+#~ msgid "Sort by"
+#~ msgstr "Rikiuoti pagal"
+
+#, fuzzy
+#~| msgid "Appearance"
+#~ msgid "Appearance:"
+#~ msgstr "Išvaizda"
+
+#, fuzzy
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "Vieta"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Rodyti darbalaukio aplanką"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Rodyti aplanką:"
+
+#~ msgid "&Reload"
+#~ msgstr "Įkelti iš &naujo"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "Perkelti į šiu&kšliadėžę"
+
+#~ msgid "&Delete"
+#~ msgstr "&Trinti"
+
+#~ msgid "Align:"
+#~ msgstr "Lygiuotė:"
+
+#~ msgid "Sorting"
+#~ msgstr "Rikiavimas"
+
+#~ msgid "Up"
+#~ msgstr "Aukštyn"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Rodyti pradinį aplanką"
+
+#~ msgid "Show Original File"
+#~ msgstr "Rodyti pradinį failą"
+
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&Konfigūruoti šiukšlinę"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "Įtraukti šį puslapį prie &žymelių"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "Įtraukti šią vietą prie &žymelių"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "Įtraukti šį aplanką prie &žymelių"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "Įtraukti šią nuorodą prie &žymelių"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "Įtraukti šią failą prie &žymelių"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Kopijuoti į"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Perkelti į"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Pradžios aplankas"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Šakninis aplankas"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Naršyti..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Kopijuoti čia"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Perkelti čia"

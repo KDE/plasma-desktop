@@ -1,0 +1,455 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname-n '<application>K‑mrežohvat</application>'>
+  <!ENTITY kappname-g '<application>K‑mrežohvata</application>'>
+  <!ENTITY kappname-d '<application>K‑mrežohvatu</application>'>
+  <!ENTITY kappname-a '<application>K‑mrežohvat</application>'>
+  <!ENTITY kappname-i '<application>K‑mrežohvatom</application>'>
+  <!ENTITY kappname-l '<application>K‑mrežohvatu</application>'>
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Serbian-Latin "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Priručnik za <application
+>K‑mrežohvat</application
+></title>
+
+<authorgroup>
+<author
+><personname
+><firstname
+>Orvil</firstname
+> <surname
+>Benet</surname
+></personname
+> &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Orvil Benet</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10. 4. 2015.</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+><application
+>K‑mrežohvat</application
+> je čarobnjak koji olakšava integrisanje mrežnih resursa sa radnom površi KDE‑a. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>K‑mrežohvat</keyword>
+<keyword
+>mrežne fascikle</keyword>
+<keyword
+>čarobnjak mrežnih fascikli</keyword>
+<keyword
+>KDE‑ov čarobnjak mrežnih fascikli</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>Čarobnjak <application
+>K‑mrežohvat</application
+>, iz milja zvan čarobnjakom mrežnih fascikli, omogućava lako dodavanje i integrisanje mrežnih fascikli u radnu površ KDE‑a. Molimo da prijavite bilo kakve probleme ili želje za novim mogućnostima na KDE‑ov veb sajt za praćenje grešaka. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Korišćenje <application
+>K‑mrežohvata</application
+></title>
+
+<para
+>Kao što možete videti na donjem snimku ekrana, čarobnjak mrežnih fascikli trenutno omogućava dodavanje četiri tipa mrežnih fascikli: WebDAV, FTP, windows mrežne jedinice (Samba) i SSH. Za spisak takođe možete izabrati nedavno ostvarenu vezu. <screenshot>
+<screeninfo
+>Evo snimka ekrana <application
+>K‑mrežohvata</application
+>:</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+<caption>
+<para
+>Glavni prozor čarobnjaka mrežnih fascikli.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Dodavanje mrežnih fascikli</title>
+
+<para
+>Mrežne fascikle pojavljuju se na specijalnoj lokaciji u <application
+>K‑osvajaču</application
+> i <application
+>Dolphinu</application
+>, zvanoj <emphasis
+>virtuelna fascikla</emphasis
+>. Virtuelnoj fascikli pristupa se unošenjem <userinput
+>remote:/</userinput
+> u traku lokacije ili izborom <guilabel
+>Mreža</guilabel
+> sa panela <guilabel
+>Mesta</guilabel
+>. Time ćete dobiti pregled svih ranije dodatih fascikli, i moći ćete čarobnjakom da dodate nove. <screenshot>
+<screeninfo
+>Evo snimka ekrana <application
+>K‑mrežohvata</application
+>:</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+<caption>
+<para
+>Virtuelna fascikla sa čarobnjakom mrežnih fascikli.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Čarobnjak mrežne fascikle je zamišljen kao vrlo lak za upotrebu. Posle otvaranja čarobnjaka, morate izabrati tip mrežne fascikle kojoj biste hteli da pristupite. Kad pređete na sledeći ekran, treba samo da popunite tražene podatke. Krajnji korak je unošenje vašeg korisničkog imena i prijavne lozinke za mrežno deljenje kojem želite da pristupate. </para>
+<para
+>Dole je spisak podataka potrebnih čarobnjaku za stvaranje mrežnih fascikli. Ako za datu fasciklu neka opcija nije raspoloživa, ne mora se unositi; npr. Samba fascikle ne zahtevaju port. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ime:</guilabel
+></term>
+<listitem>
+<para
+>Ovde dajete ime mrežnoj vezi. Ograničeno je samo vašom maštom (i abecedom). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Korisnik:</guilabel
+></term>
+<listitem>
+<para
+>Korisničko ime pod kojim će se uspostaviti veza. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Server:</guilabel
+></term>
+<listitem>
+<para
+>Adresa servera koji pokušavate da dodate. To može biti IP adresa ili ime domena. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Port:</guilabel
+></term>
+<listitem>
+<para
+>Broj porta na koji želite da se povežete. Podrazumevani je obično dovoljan. <note
+> <para
+>Nije raspoloživo za windows (Samba) fascikle. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Fascikla:</guilabel
+></term>
+<listitem>
+<para
+>Putanja do fascikle na koju želite da se povežete. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kodiranje:</guilabel
+></term>
+<listitem>
+<para
+>Preko stavki na ovom spisku birate kodiranje za FTP i SSH veze. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Napravi ikonicu za ovu udaljenu fasciklu</guilabel
+></term>
+<listitem>
+<para
+>Ako je ova kućica popunjena, biće stvorena ikonica za pristup kroz virtuelnu fasciklu <literal
+>remote:/</literal
+>. Ako nije popunjena, veza će biti moguća, ali neće biti dostupna iz <literal
+>remote:/</literal
+>. <note
+> <para
+>Opcija <guilabel
+>Nedavne veze:</guilabel
+> dopušta vam ponovno povezivanje na poslednju mrežnu tačku montiranja na koju ste se povezali koristeći čarobnjak, bez obzira na to da li je stvorena ikonica za nju. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Šifruj</guilabel
+></term>
+<listitem>
+<para
+>Ako je uključeno, biće omogućena sposobnost ostvarivanja bezbedne veze. <note
+> <para
+>Raspoloživo samo za webDAV fascikle.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Prolazak kroz <application
+>K‑mrežohvat</application
+></title>
+
+
+<para
+>Sledi brzi prolazak kroz čarobnjak mrežnih fascikli. Ne trepćite, inače biste ga mogli propustiti. </para>
+
+<para
+>Ispod vidite glavni prozor čarobnjaka mrežnih fascikli. U njemu se bira tip fascikle za dodavanje ili povezivanje. U svrhu prolaska upotrebićemo FTP, koji sadrži većinu opcija koje ćete sresti u čarobnjaku. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Snimak ekrana glavnog prozora <application
+>K‑mrežohvata</application
+>.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Biramo, dakle, FTP fasciklu. Dole vidite primer podataka koje treba upisati za dodavanje jednog određenog FTP servera. Posle popunjavanja, pritiskamo <guibutton
+>Sačuvaj i poveži se</guibutton
+> i čekamo da se odradi posao. Ako server traži nekakvu overu, bićete upitani za nju pre nego što se povezivanje dopusti. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Snimak ekrana o dodavanju FTP fascikle <application
+>K‑mrežohvatom</application
+>.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Sad kad smo povezani, možemo se baciti u šetnju kroz novododato deljenje. Uživajte! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Snimak ekrana povezane FTP fascikle.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Za povratak na mrežne fascikle, sve što treba je da upišete <userinput
+>remote:/</userinput
+> u traku lokacije u <application
+>K‑osvajaču</application
+> ili <application
+>Dolphinu</application
+>, ili izaberete <guilabel
+>Mreža</guilabel
+> sa panela <guilabel
+>Mesta</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Snimak ekrana virtuelne fascikle <literal
+>remote:/</literal
+> sa dodatom vezom.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Snimak ekrana.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Sa iste lokacije takođe možete dodavati nove fascikle putem veze <guilabel
+>Dodaj mrežnu fasciklu</guilabel
+>. Ovim smo završili prolazak (rekosmo da će biti kratak). Sve najbolje u vašim budućim avanturama kroz mrežne fascikle! </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasluge i licenca</title>
+
+<para
+><application
+>K‑mrežohvat</application
+> </para>
+<para
+>Autorska prava za program © 2004, <personname
+><firstname
+>Džordž</firstname
+> <surname
+>Stajkos</surname
+></personname
+> &George.Staikos.mail; </para>
+
+<para
+>Autorska prava za dokumentaciju © 2005, <personname
+><firstname
+>Orvil</firstname
+> <surname
+>Benet</surname
+></personname
+> &Orville.Bennett.mail; </para>
+
+<para
+>Preveo Dragan Pantelić <email
+>falcon-10@gmx.de</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

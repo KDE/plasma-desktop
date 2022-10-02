@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Activitats</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>12 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>activitat</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Activitats</title>
+<sect2 id="activities-intro">
+
+<title
+>Introducció</title>
+
+<para
+>Aquest mòdul permet configurar les activitats. Les activitats són una forma de tenir múltiples configuracions del &plasma;, cadascuna amb un conjunt de ginys i temes diferents. Algunes activitats poden ser privades. Aquestes activitats no enregistren les vostres accions. Per exemple, no segueixen quin document s'ha obert recentment. </para>
+
+<para
+>El mòdul es divideix en tres pestanyes: <link linkend="activities-main"
+><guilabel
+>Activitats</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Canvi</guilabel
+></link
+> i <link linkend="activities-privacy"
+><guilabel
+>Privadesa</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Activitats</guilabel
+></title>
+
+<para
+>Aquesta pestanya llista les vostres activitats actuals. Passeu el cursor del ratolí per sobre dels elements a la llista per a revelar els botons per a configurar o eliminar les activitats. </para>
+
+<para
+>Utilitzeu el botó de superposició <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> per a configurar l'activitat. Podeu canviar els paràmetres següents de l'activitat: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Icona:</guilabel
+></term>
+        <listitem>
+            <para
+>La icona de l'activitat es pot veure al selector del gestor d'activitats en el plafó del &plasma;. Feu clic sobre la icona actual per a triar alguna icona de tot el sistema o exploreu el sistema de fitxers per a seleccionar una icona personalitzada. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Nom:</guilabel
+></term>
+        <listitem>
+            <para
+>Doneu-li a l'activitat un nom reconeixible. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Descripció:</guilabel
+></term>
+        <listitem>
+            <para
+>Creeu una descripció de forma lliure de l'activitat que es mostrarà a sota del nom al selector del gestor d'activitats en el plafó del &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Privadesa</guilabel
+></term>
+        <listitem>
+            <para
+>Marqueu l'element <guilabel
+>No segueixis l'ús d'aquesta activitat</guilabel
+> per a desactivar qualsevol seguiment de la vostra activitat. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Drecera per a alternar:</guilabel
+></term>
+        <listitem>
+            <para
+>Premeu el primer botó per a introduir la drecera nova per a canviar a l'activitat. Premeu el segon botó per a eliminar la drecera actual. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>En fer clic al botó <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> s'eliminarà l'activitat. </para>
+<para
+>En fer clic al botó <guibutton
+>Crea nova...</guibutton
+> a sota de la llista, s'obrirà el diàleg <guilabel
+>Crea una activitat nova</guilabel
+>, el qual és similar al diàleg de configuració de l'activitat que s'ha descrit anteriorment. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Canvi</guilabel
+></title>
+
+<para
+>Aquí podreu configurar si el &plasma; haurà de recordar l'<guilabel
+>Escriptori virtual actual</guilabel
+> per a cada activitat (necessita reiniciar). També és possible configurar les dreceres per a recórrer la llista d'activitats. </para>
+<para
+>Per a obtenir més informació sobre com utilitzar el sistema de dreceres del &kde;, vegeu la <ulink url="help:/fundamentals/shortcuts.html"
+>secció <emphasis
+>Usar i personalitzar les dreceres</emphasis
+> en els <emphasis
+>Fonaments del &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Privadesa</guilabel
+></title>
+
+<para
+>Aquesta pestanya permet configurar el temps de les activitats per a <guilabel
+>Mantén l'historial:</guilabel
+> i netejar algunes dades de seguiment. Utilitzeu el botó desplegable <guibutton
+>Neteja historial</guibutton
+> per a fer que el &plasma; <guimenuitem
+>Oblida la darrera hora</guimenuitem
+>, <guimenuitem
+>Oblida les dues darreres hores</guimenuitem
+>, <guimenuitem
+>Oblida un dia</guimenuitem
+> o <guimenuitem
+>Oblida-ho tot</guimenuitem
+>. </para>
+<para
+>A continuació, podreu configurar l'interval d'aplicacions per a memoritzar els documents oberts en les vostres activitats. Utilitzeu l'element <guilabel
+>Per a totes les aplicacions</guilabel
+> per a emmagatzemar totes les dades, l'element <guilabel
+>No ho recordis</guilabel
+> per a desactivar l'emmagatzematge de les dades o l'element <guilabel
+>Només per a aplicacions específiques</guilabel
+> per a una selecció detallada (en fer clic sobre l'element de l'aplicació s'alternarà el seu mode actual). </para>
+<para
+>Marqueu l'element <guilabel
+>Bloqueja les aplicacions que no estiguin a la llista</guilabel
+> per a desactivar el seguiment de totes les aplicacions que no es trobin a la llista. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

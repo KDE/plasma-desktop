@@ -1,0 +1,365 @@
+# translation of kcmcomponentchooser.po to Malayalam
+# Copyright (C) 2008,2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Hari|ഹരി  Vishnu | വിഷ്ണു <harivishnu@gmail.com>, 2008.
+# seshagiri prabhu <seshagiriprabhu@gmail.com>, 2010.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2019-12-12 23:04+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "മറ്റൊരു &ഈമെയില്‍ ക്ലയന്റ് ഉപയോഗിക്കുക:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "അനി പീറ്റര്‍,ഹരി വിഷ്ണു,ശേഷഗിരി പ്രഭു,പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "ജോസഫ് വെന്നിങര്‍"
+
+#~ msgid "Unknown"
+#~ msgstr "അപരിചിതം"
+
+#~ msgid "Component Chooser"
+#~ msgstr "ഘടകം തിരഞ്ഞെടുക്കുന്നതിനുള്ള ഉപാധി"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 ജോസഫ് വെന്നിങര്‍"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "%1 സേവനത്തിനു് സഹജമായി ഉപയോഗിയ്ക്കേണ്ട ഘടകം താഴെയുള്ള പട്ടികയില്‍ നിന്നും തെരഞ്ഞെടുക്കുക."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>നിങ്ങള്‍ക്കിഷ്ടമുള്ള സഹജമായ ഘടകം മാറ്റിയിരിയ്ക്കുന്നു, ആ മാറ്റങ്ങള്‍ ഇപ്പോള്‍ സൂക്ഷിയ്ക്കണമോ ?"
+#~ "</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "വിവരണം ലഭ്യമല്ല"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "ഇവിടെ നിങ്ങള്‍ക്ക്  ഘടക പ്രോഗ്രാമില്‍ മാറ്റം വരുത്താം.  ടെര്‍മിനല്‍ എമുലേറ്റര്‍, എഴുത്തിടം, "
+#~ "ഈമെയില്‍ ക്ലയന്റ് പോലെ അടിസ്ഥാന ജോലികള്‍ കൈകാര്യം ചെയ്യുന്ന പ്രോഗ്രാമുകളാണു് ഘടകങ്ങള്‍. "
+#~ "വ്യത്യസ്ത കെഡിഇ പ്രയോഗങ്ങള്‍ക്കു് ചിലപ്പോള്‍ കണ്‍സോള്‍ എമുലേറ്റര്‍ തുടങ്ങുക, ഈമെയില്‍ അയയ്ക്കുക ചില "
+#~ "പദാവലി കാണിയ്ക്കുക തുടങ്ങിയ കാര്യങ്ങള്‍ ചെയ്യേണ്ടി വരും. ഈ ഘടകങ്ങള്‍ എതു് പ്രോഗ്രാമുകളാണെന്നു് "
+#~ "ഇവിടെ നിങ്ങള്‍ക്കു് തെരഞ്ഞെടുക്കാം."
+
+#~ msgid "Default Component"
+#~ msgstr "സഹജമായ ഘടകം"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>ക്രമീകരിയ്ക്കാന്‍ പറ്റുന്ന ഘടകങ്ങളുടെ തരം കാണിയ്ക്കുന്ന പട്ടികയയാണിതു്. നിങ്ങള്‍ക്കു് "
+#~ "ക്രമീകരിയ്ക്കേണ്ട ഘടകത്തില്‍ അമര്‍ത്തുക.</p>\n"
+#~ "<p>ഈ ഡയലോഗില്‍ നിങ്ങള്‍ക്ക് സഹജമായ കെഡിഇ ഘടകങ്ങളെ മാറ്റാം. ടെര്‍മിനല്‍ എമുലേറ്റര്‍, "
+#~ "എഴുത്തിടം, ഈമെയില്‍ ക്ലയന്റ് പോലെ അടിസ്ഥാന ജോലികള്‍ കൈകാര്യം ചെയ്യുന്ന പ്രോഗ്രാമുകളാണു് "
+#~ "ഘടകങ്ങള്‍. വ്യത്യസ്ത കെഡിഇ പ്രയോഗങ്ങള്‍ക്കു് ചിലപ്പോള്‍ കണ്‍സോള്‍ എമുലേറ്റര്‍ തുടങ്ങുക, ഈമെയില്‍ "
+#~ "അയയ്ക്കുക ചില പദാവലി കാണിയ്ക്കുക തുടങ്ങിയ കാര്യങ്ങള്‍ ചെയ്യേണ്ടി വരും.  ഇതു ധ്രടതയോടെ "
+#~ "ചെയ്യുവാന്‍ ചില പ്രയോഗം ഒരെ ഘടകത്തിനെ വീണ്ടും വിളിക്കുന്നു. അവ പ്രതീക്ഷയ്ക്കൊത്തു് ചെയ്യുവാന്‍ ഈ "
+#~ "പ്രയോഗങ്ങള്‍ ഒരേ ഘടകങ്ങളെ എപ്പോഴും വിളിയ്ക്കുന്നു. ഈ ഘടകങ്ങള്‍ ഏതു് പ്രോഗ്രാമുകളാണെന്നു് ഇവിടെ "
+#~ "നിങ്ങള്‍ക്കു് തെരഞ്ഞെടുക്കാം.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b>, <b>https</b> യുആര്‍എലുകള്‍ </qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "ഇവയുടെ ഉള്ളടക്കമനുസരിച്ചുള്ള പ്രയോഗത്തില്‍ താഴെ"
+
+#, fuzzy
+#~ msgid "in the following application:"
+#~ msgstr "പറയുന്ന ബ്രൌസറില്‍ തുറക്കുക:"
+
+#, fuzzy
+#~ msgid "with the following command:"
+#~ msgstr "പറയുന്ന ബ്രൌസറില്‍ തുറക്കുക:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ വെബ് ബ്രൌസര്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#, fuzzy
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "കെഡിഇ പണിയിടത്തില്‍ സാധാരണ ഉപയോഗിക്കുന്ന മെയില്‍ പ്രോഗ്രാമാണു് കെമെയില്‍."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റായി കെമെയില്‍ &തിരഞ്ഞെടുക്കുക"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "നിങ്ങള്‍ക്കു് മറ്റൊരു മെയില്‍ പ്രോഗ്രാം ഉപയോഗിക്കണമെങ്കില്‍ ഇതുപയോഗിക്കുക."
+
+#, fuzzy
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: കിട്ടേണ്ടയാളുടെ വിലാസം</li> <li>%s: വിഷയം</li> <li>%c: കാര്‍ബണ്‍ പകര്‍"
+#~ "പ്പു് (CC)</li> <li>%b: മറ്റുള്ളവരെ അറിയിയ്ക്കാത്ത കാര്‍ബണ്‍ പകര്‍പ്പു് (BCC)</li> <li>%B: "
+#~ "ഉള്ളടക്കത്തിന്റെ മാതൃക</li> <li>%A: അനുബന്ധം </li> <li>%u: മുഴുവന്‍ മെയില്‍ടു: യുആര്‍എല്‍ </"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "നിങ്ങളുടെ പ്രയപ്പെട്ട ഈമെയില്‍ ക്ലയന്റ് തെരഞ്ഞെടുക്കാന്‍ ഈ ബട്ടന്‍ അമര്‍ത്തു. നിങ്ങള്‍ തിരഞ്ഞെടുത്ത "
+#~ "ഫയല്‍ പ്രവര്‍ത്തിപ്പിയ്ക്കാന്‍ കഴിയുന്നതാണെങ്കില്‍ മാത്രമേ സ്വീകരിയ്ക്കുകയുള്ളൂ.<br/> നിങ്ങള്‍ക്ക് പല "
+#~ "തരത്തിലുള്ള സ്ഥലംപിടിയ്ക്കാനുള്ള സംഗതികളും ഉപയോഗിയ്ക്കാം,  ഈമെയില്‍ ക്ലയന്റിനെ "
+#~ "വിളിയ്ക്കുമ്പോള്‍ സ്ഥലം പിടിയ്ക്കാന്‍ വച്ചവ മാറ്റി ശരിയായ വിലകള്‍ വയ്ക്കും:<ul> <li>%t: "
+#~ "കിട്ടേണ്ടയാളുടെ വിലാസം</li> <li>%s: വിഷയം</li> <li>%c: കാര്‍ബണ്‍ പകര്‍പ്പ് (CC)</li> "
+#~ "<li>%b: മറ്റാരുമറിയാത്ത കാര്‍ബണ്‍ പകര്‍പ്പ് (BCC)</li> <li>%B: ഉള്ളടക്ക മാതൃക </li> <li>"
+#~ "%A: അനുബന്ധം </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "മെയില്‍ പ്രോഗ്രാം ഫയല്‍ ബ്രൌസ് ചെയ്യുന്നതിനായി ഇവിടെ ക്ലിക്ക് ചെയ്യുക."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ക്കു് തെരഞ്ഞെടുത്ത ഈമെയില്‍ ക്ലയന്റ് ടെര്‍മിനലില്‍ (ഉദാ. <em>കണ്‍സോള്‍</em>) പ്രവര്‍"
+#~ "ത്തിപ്പിക്കണമെങ്കില്‍ ഇതു് സജീവമാക്കുക."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "ടെര്‍മിനലില്‍ &പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "ഈ ഫയല്‍ കാര്യസ്ഥന്‍ ഉപയോഗിച്ച് തട്ടുകളില്‍ നോക്കുക"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "വേറെ: ഇവിടെ കാണിക്കുന്ന ഡയലോഗ് ബോക്സില്‍ ചേര്‍ക്കുക... എന്നമര്‍ത്തുക:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "ടെര്‍മിനല്‍ പ്രയോഗമായി കണ്‍സോള്‍ &ഉപയോഗിക്കുക"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "മറ്റൊരു &ടെര്‍മിനല്‍ പ്രയോഗം ഉപയോഗിക്കുക:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "നിങ്ങളുടെ പ്രയപ്പെട്ട ടെര്‍മിനല്‍ തിരഞ്ഞെടുക്കാന്‍ ഈ ബട്ടന്‍ അമര്‍ത്തു. നിങ്ങള്‍ തിരഞ്ഞെടുത്ത ഫയല്‍ "
+#~ "പ്രവര്‍ത്തിക്കാന്‍ കഴിയുന്നതാണെങ്കില്‍ മാത്രമേ സ്വീകരിക്കുകയുള്ളു.<br/> ടെര്‍മിനല്‍ എമുലേറ്റര്‍ "
+#~ "ഉപയൊഗിച്ചു് പ്രവര്‍ത്തിക്കുന്ന പ്രോഗ്രാമില്‍ ആജ്ഞാസ്ഥാനം ആര്‍ഗ്യുമെന്റ് ചേര്‍ത്താല്‍ അതു പ്രവര്‍ത്തന "
+#~ "രഹിതമാക്കും (ഉദാ: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "ടെര്‍മിനല്‍ പ്രോഗ്രാം ബ്രൌസ് ചെയ്യുന്നതിനായി ഇവിടെ ക്ലിക്ക് ചെയ്യുക."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 സെകന്റ് ബാക്കിയുണ്ട്"
+#~ msgstr[1] "%1 സെകന്റുകള്‍ ബാക്കിയുണ്ട്"
+
+#, fuzzy
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "കെ.ഡി.ഇ അടുത്ത തവണ തുടങ്ങുമ്പോള്‍ പുതിയ ജാലക പാലകന്‍ ഉപയോഗിക്കപെടും."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "ജാലക കാര്യസ്ഥന്റെ മാറ്റം"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "ഒരു പുതിയ ജാലക പാലകന്‍ പ്രവര്‍ത്തിക്കുന്നു.\n"
+#~ "എന്നാലും എല്ലാ പ്രവര്‍ത്തിക്കുന്ന പ്രയോഗങ്ങളും മാറ്റങ്ങള്‍ ഉള്‍ക്കൊള്ളാന്‍, കെഡിഇ പ്രവര്‍ത്തനവേള "
+#~ "വീണ്ടും തുടങ്ങാന്‍ ശുപാര്‍ശ ചെയ്യുന്നു."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "ജാലക പാലകന്‍ മാറിയിരിക്കുന്നു"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "നിങ്ങളുടെ പ്രവര്‍ത്തിക്കുന്ന ജാലക കാര്യസ്ഥനു പകരം ഇപ്പോള്‍ ക്രമീകരിച്ചത് ഉപയോഗിക്കപ്പെടും."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "ജാലക കാര്യസ്ഥന്റെ മാറ്റം ക്രമീകരിക്കുക"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Aമാറ്റം അംഗീകരിക്കുക"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&മുമ്പുണ്ടായിരുന്നതിലേക്ക് തിരിച്ചെത്തുക"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "ക്രമീകരിച്ച ജാലപാലകന്‍ തുടങ്ങിക്കൊണ്ടിരിയ്ക്കുന്നു.\n"
+#~ "ദയവായി അതു് ശരിയായി തുടങ്ങിയിട്ടുണ്ടെന്നു് പരിശോധിച്ചു് മാറ്റം ഉറപ്പു് വരുത്തുക\n"
+#~ "തുടങ്ങിയതു് 20 സെക്കന്റുകള്‍ക്കു് ശേഷം സ്വയം തിരിച്ചു് വയ്ക്കുന്നതായിരിയ്ക്കും."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "നിലവില്‍ പ്രവര്‍ത്തിക്കുന്ന ജാലക പാലകന്‍ സ്വാഭാവികമായ കെ.ഡി.ഇ ജാലക കാര്യസ്ഥനായ 'കെ-വിന്‍'-"
+#~ "ലേക്ക് മാറ്റിയിരിക്കുന്നു."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "പുതിയ ജാലകപാലകന്‍ തുടങ്ങുന്നതില്‍ പരാജയപ്പെട്ടു.\n"
+#~ "പ്രവര്‍ത്തിച്ചുകൊണ്ടിരിയ്ക്കുന്ന ജാലകപാലകനെ സഹജമായ കെഡിഇ ജാലകപാലകനായ കെവിനായി "
+#~ "മാറ്റിയിരിക്കുന്നു."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "ക്രമീകരണ ഉപകരണം പ്രവര്‍ത്തിക്കുന്നതില്‍ പരാജയപെട്ടു"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&സഹജമായ കെഡിഇ ജാലകപാലകനെ (കെവിന്‍) ഉപയോഗിക്കുക"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "മറ്റൊരു &ജാലക പാലക പ്രയോഗം ഉപയോഗിക്കുക:"
+
+#~ msgid "Configure"
+#~ msgstr "ക്രമീകരിക്കുക"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "കുറിപ്പു്: മിക്ക ജാലപാലകന്മാര്‍ക്കും അവരുടേതായ ക്രമീകരണമുള്ളതു കൊണ്ടു് കെഡിഇയുടെ സജ്ജീകരണം "
+#~ "പിന്തുടരുകയില്ല."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "കെസിഎംകമ്പോണന്റ്ചൂസര്‍"
+
+#~ msgid "Component Description"
+#~ msgstr "ഘടകത്തിനുള്ള വിവരണം"

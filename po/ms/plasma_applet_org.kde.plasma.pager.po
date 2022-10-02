@@ -1,0 +1,202 @@
+# plasma_applet_pager Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008 K Desktop Environment
+# This file is distributed under the same license as the plasma_applet_pager package.
+#
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008, 2009, 2010.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2010-07-25 21:12+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Umum"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Umum"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display text:"
+msgid "Text display:"
+msgstr "Teks yang dipaparkan:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Tiada teks"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Nombor desktop"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Nama desktop"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "Memilih desktop semasa:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "Memilih desktop semasa:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Tidak berbuat apa-apa"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "Papar desktop"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and 1 other"
+#| msgid_plural "and %1 others"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "dan 1 lagi"
+msgstr[1] "dan 1 lagi"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "One window:"
+#| msgid_plural "%1 windows:"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "Satu tetingkap:"
+msgstr[1] "Satu tetingkap:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Nama desktop"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, fuzzy, kde-format
+#| msgid "&Add Virtual Desktop"
+msgid "Add Virtual Desktop"
+msgstr "T&ambah Desktop Maya"
+
+#: package/contents/ui/main.qml:600
+#, fuzzy, kde-format
+#| msgid "&Remove Last Virtual Desktop"
+msgid "Remove Virtual Desktop"
+msgstr "Buang Desktop Maya Te&rakhir"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "Configure Pager"
+msgid "Configure Virtual Desktops…"
+msgstr "Tetapkan Pager"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Papar dashboard"
+
+#~ msgid "Display icons:"
+#~ msgstr "Ikon dipaparkan:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "T&ambah Desktop Maya"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "Buang Desktop Maya Te&rakhir"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Bilangan lajur:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Bilangan baris:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Tukar jumlah baris"

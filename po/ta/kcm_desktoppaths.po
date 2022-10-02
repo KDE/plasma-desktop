@@ -1,0 +1,789 @@
+# translation of kcmkonq.po to Tamil
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-08-05 21:06+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "பணிமேடை"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "ஆவணங்கள்"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "பதிவிறக்கங்கள்"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "பாடல்கள்"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "படங்கள்"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "ஒளிக்காட்சிகள்"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>பாதைகள்</h1>\n"
+"கோப்பு முறைமையில் உங்கள் கோப்புகள் சேமிக்கப்படும் இடத்தை மாற்றியமைக்க இந்த கூறு "
+"உதவுகிறது.\n"
+"குறிப்பிட்ட தேர்வுகள் குறித்த உதவியை பெறுவதற்கு \"இது என்ன?\" (Shift+F1) என்பதை "
+"பயன்படுத்தவும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "பணிமேடைப் பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"பணிமேடையில் காட்டப்படும் கோப்புகளை இந்த அடைவு கொண்டிருக்கும். இந்த அடைவின் இருப்பிடத்தை "
+"மாற்றினால், அதில் உள்ள உருப்படிகள் தானாகவே புது இடத்திற்கு நகர்த்தப்படும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "ஆவணங்களுக்கான பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "ஆவணங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "பதிவிறக்கங்களுக்கான பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"உங்கள் பதிவிறக்கங்களை சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "ஒளிக்காட்சிகளுக்கான பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"ஒளிக்காட்சிகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "படங்களுக்கான பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "பாடல்களுக்கான பாதை:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "பாடல்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#, fuzzy
+#~| msgid "A&utostart path:"
+#~ msgid "Autostart path:"
+#~ msgstr "தன்னாரம்பப் பாதை:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "கேடிஇயை துவக்கும்போது தானாகவே தொடங்கும் நிரல்கள் மற்றும் நிரல்களுக்கான இணைப்புகள் இந்த "
+#~ "அடைவில் உள்ளது. இந்த அடைவின் இடத்தை மாற்றினால் அதில் உள்ள உள்ளடக்கங்களும் தானாகவே புது "
+#~ "இடத்திற்கு மாறும்."
+
+#~ msgid "Autostart"
+#~ msgstr "தானே துவங்கும்"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Movies"
+#~ msgstr "ஆவணப் பாதை:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' இன் பாதை மாற்றப்பட்டுள்ளது:\n"
+#~ "கோப்புக்களை '%2' இலிருந்து '%3' இற்கு நகர்த்தவா?"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' இன் பாதை மாற்றப்பட்டுள்ளது:\n"
+#~ "கோப்புக்களை '%2' இலிருந்து '%3' இற்கு நகர்த்தவா?"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "உறுதிப்படுத்தல் தேவைப்படுகிறது"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>கான்கொரர் தன்மை</h1> இங்கு நீங்கள் கான்கொரர் ஒரு கோப்பு மேலாளராக செயல்படும் "
+#~ "விதத்தை வடிவமைக்கலாம்."
+
+#~ msgid "Misc Options"
+#~ msgstr "இதர விருப்பங்கள்"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "அடைவுகளைத் தனிச் சாளரங்களில் திற"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "இவ் விருப்பத்தை தேர்வு செய்து, நீங்கள் ஒரு அடைவை க்ளிக் செய்தால் கான்கொரர் உங்கள் பழைய "
+#~ "சாளரத்தில் அந்த அடைவை காட்டுவதற்கு பதில், ஒரு புதிய சாளரத்தை திறக்கும்."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "குப்பைத்தொட்டிக்கு செல்லும் 'நீக்கு' உரை பட்டியல் உள்ளீடுகளை காட்டு"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "மேல்மேசை, கோப்பு மேலாளரின் பட்டிகள் மற்றும் சூழல் பட்டியலில் 'நீக்கு' பட்டியல் கட்டளைகள் "
+#~ "தெரியவேண்டாமானால் இதை தேர்ந்தெடுக்கவும். நீங்கள் கோப்புகளை ஷிப்ட் விசை பிடித்துக்கொண்டு "
+#~ "'குப்பைத்தொட்டிக்கு நகர்த்து' என்பதை க்ளிக் செய்வதன் மூலம் நீக்கலாம்."
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "உறுதிப்படுத்தலை கோரு:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This option tells Konqueror whether to ask for a confirmation when you "
+#~| "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to "
+#~| "your trash folder, from where it can be recovered very easily.</li> "
+#~| "<li><em>Delete:</em> simply deletes the file.</li> </li></ul>"
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "நீங்கள் கோப்பு சூழல் பட்டியில் \"நீக்கு\" என்பதை தேர்வு செய்தால் கான்கொரர் என்ன செய்ய "
+#~ "வேண்டும் என்பதை இந்த தேர்வு சொல்லும். <ul><li><em>>குப்பைக்கு நகர்த்து</li> கோப்புகளை "
+#~ "குப்பை அடைவுக்கு நகர்த்தும், இங்கிருந்து மீட்டுக்கொள்ளலாம்.<em> நீக்கு</em>கோப்புகளை "
+#~ "நீக்கும்</li> </li></ul>"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "குப்பைத்தொட்டிக்கு நகர்த்து"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "நீக்கு"
+
+#~ msgid "&Behavior"
+#~ msgstr "நடத்தை"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&முன்தோற்றம்&& மீ- தரவு "
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr "முன்னோட்டமிடுவதோடு 'அடைவுக்குள் உள்ளவற்றின் குறும்படங்கள்' அனுமதி:"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>முன்காட்சி விருப்பத்தேர்வுகள்</h1> இங்கு கான்கொரரின் முன்னோட்ட நடத்தையை "
+#~ "அமைக்கலாம்<h2>வரைமுறைகளின் பட்டியல்:</h2> எந்தெந்த கோப்பு வகைகளுக்கு முன்னோட்டம் காட்ட "
+#~ "வேண்டும் என இங்கு வடிவமைக்கலாம்<h2>உச்ச கோப்பு அளவு:</h2>சில பெரிய கோப்புகளுக்கு "
+#~ "முன்னோட்டத்தை தடுக்க முடியும், உதா, 1 மெகாபைட்டுக்கு மேற்பட்ட கோப்புகள் மிக மெதுவடைய "
+#~ "செய்யும்."
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "தேர்ந்தெடுத்த நெறிமுறைகள் "
+
+#~ msgid "Local Protocols"
+#~ msgstr "உள்ளிருப்பு நெறிமுறைகள் "
+
+#~ msgid "Internet Protocols"
+#~ msgstr "இணையத் நெரிமுரை"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "இந்த விருப்பத்தேர்வுகள், உங்களை கோப்பு முன்னோட்டத்தையும், அடைவு குறும்படத்தையும் "
+#~ "வடிவமைக்க உதவுகிறது..\n"
+#~ "பின்வரும் வரைமுறைகளில் உங்கள் கணினியின் வேகத்திற்கு தகுந்தாற் போன்றதை தேர்வுச் செய்யவும்"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "உச்சக் கோப்பு அளவு:"
+
+#~ msgid " MB"
+#~ msgstr "மெகாபைட்"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "குறும்பட அளவை பொறுத்து, பலகத்தை மாற்றியைக்க முடியம்."
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "உட்பொதித்த குறும்படத்தை பயன்படுத்து"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "படங்களை முன்னோட்டமாக பார்க்க இதனை தேர்வு செய்க. இது வேகத்தை அதிகரித்து, வட்டின் "
+#~ "உபயோகத்தை குறைக்கும்."
+
+#~ msgid "Sound Files"
+#~ msgstr "ஒலிக் கோப்புக்கள்"
+
+#~ msgid "&Left button:"
+#~ msgstr "இடது பொத்தான்:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "மேல்மேசையில் உள்ள குறியீட்டு சாதனத்தின் இடது பக்க விசையை அழுத்தும்போது நிகழ்வதை "
+#~ "தேர்வு செய்யலாம்."
+
+#~ msgid "Right b&utton:"
+#~ msgstr "வலது பொத்தான்:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "மேல்மேசையில் உள்ள குறியீட்டு சாதனத்தின் வலது பக்க விசையை அழுத்தும்போது நிகழ்வதை "
+#~ "தேர்வு செய்யலாம்."
+
+#, fuzzy
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>செயல் இல்லை.:</em> நீங்கள் நினைப்பதுபோல் எதுவும் நடக்கவில்லை</li> "
+#~ "<li><em>சாளர பட்டியல் பட்டி</em> எல்லா சாளரங்களையும் மெய்நிகர் மேல்மேசையில் காட்டும் "
+#~ "பட்டி. மேசையின் பெயரின் மேல் க்ளிக் செய்தால் அந்த மேசைக்கு செல்லலாம், அல்லது சாளரத்தின் "
+#~ "பெயருக்கு செல்லலாம், தேவையான மேசையை அணுகலாம்,மறைந்துள்ள சாளரத்தை மீட்கலாம். "
+#~ "மறைக்கப்பட்ட அல்லது சிறிதாக்கப்பட்ட பட்ட சாளரத்தின் பெயர்கள் அடைப்புக்குறிக்குள் இருக்கும். "
+#~ "</li> <li>மேல்மேசை பட்டி:</em>மேல் மேசை தோன்றும் சாளரத்துக்கான சூழமைவு பட்டி.இவை "
+#~ "தவிர இந்த பட்டியில் காட்சியை அமைத்தல், திரையை பூட்டல் , கேடியில் இருந்து "
+#~ "வெளிச்செல்லல். ஆகிய வசதிகள் உள்ளது. </li> <li><em>பயன்பாட்டு பட்டி::</em> \"K\"  "
+#~ "தோன்றும் சாளரம். பலகத்தை மறைவில் வைத்துக்கொண்டு மற்ற பயன்பாடுகளை வேகமாக அணுக "
+#~ "பயன்படும் .</li></ul>"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "நீங்கள் உங்கள் சுட்டி சாதனத்தின் மைய பட்டனை மேல்மேசையில் பயன்படுத்தலாம்."
+#~ "<ul><li><em>செயல்பாடு இல்லை:</em> நீங்கள் நினைப்பதுபோல் எதுவும் நடக்கவில்லை</li> "
+#~ "<li><em>சாளர பட்டியல் பட்டி</em> எல்லா சாளரங்களையும் மெய்நிகர் மேல்மேசையில் காட்டும் "
+#~ "பட்டி. மேசையின் பெயரின் மேல் க்ளிக் செய்தால் அந்த மேசைக்கு செல்லலாம், அல்லது சாளரத்தின் "
+#~ "பெயருக்கு செல்லலாம், தேவையான மேசையை அணுகலாம்,மறைந்துள்ள சாளரத்தை மீட்கலாம். "
+#~ "மறைக்கப்பட்ட அல்லது சிறிதாக்கப்பட்ட பட்ட சாளரத்தின் பெயர்கள் அடைப்புக்குறிக்குள் இருக்கும். "
+#~ "</li> <li>மேல்மேசை பட்டி:</em>மேல் மேசை தோன்றும் சாளரத்துக்கான சூழமைவு பட்டி.இவை "
+#~ "தவிர இந்த பட்டியில் காட்சியை அமைத்தல், திரையை பூட்டல் , கேடியில் இருந்து "
+#~ "வெளிச்செல்லல். ஆகிய வசதிகள் உள்ளது. </li> <li><em>பயன்பாட்டு பட்டி::</em> \"K\"  "
+#~ "தோன்றும் சாளரம். பலகத்தை மறைவில் வைத்துக்கொண்டு மற்ற பயன்பாடுகளை வேகமாக அணுக "
+#~ "பயன்படும் . "
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>செயல் இல்லை.:</em> நீங்கள் நினைப்பதுபோல் எதுவும் நடக்கவில்லை</li> "
+#~ "<li><em>சாளர பட்டியல் பட்டி</em> எல்லா சாளரங்களையும் மெய்நிகர் மேல்மேசையில் காட்டும் "
+#~ "பட்டி. மேசையின் பெயரின் மேல் க்ளிக் செய்தால் அந்த மேசைக்கு செல்லலாம், அல்லது சாளரத்தின் "
+#~ "பெயருக்கு செல்லலாம், தேவையான மேசையை அணுகலாம்,மறைந்துள்ள சாளரத்தை மீட்கலாம். "
+#~ "மறைக்கப்பட்ட அல்லது சிறிதாக்கப்பட்ட பட்ட சாளரத்தின் பெயர்கள் அடைப்புக்குறிக்குள் இருக்கும். "
+#~ "</li> <li>மேல்மேசை பட்டி:</em>மேல் மேசை தோன்றும் சாளரத்துக்கான சூழமைவு பட்டி.இவை "
+#~ "தவிர இந்த பட்டியில் காட்சியை அமைத்தல், திரையை பூட்டல் , கேடியில் இருந்து "
+#~ "வெளிச்செல்லல். ஆகிய வசதிகள் உள்ளது. </li> <li><em>பயன்பாட்டு பட்டி::</em> \"K\"  "
+#~ "தோன்றும் சாளரம். பலகத்தை மறைவில் வைத்துக்கொண்டு மற்ற பயன்பாடுகளை வேகமாக அணுக "
+#~ "பயன்படும் .</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "செயல் இல்லை"
+
+#~ msgid "Window List Menu"
+#~ msgstr "சாளரப் பட்டியற் பட்டி"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "மேசைப் பட்டி"
+
+#~ msgid "Application Menu"
+#~ msgstr "நிரற் பட்டி"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "தனிப்பயன் பட்டி 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "தனிப்பயன் பட்டி 2"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>நடவடிக்கை</h1>\n"
+#~ "உங்கள் மேல்மேசைக்கான பல தேர்வுகளை தேர்ந்தெடுக்க இந்த பகுதி அனுமதிக்கிறது\n"
+#~ " including the way in which icons are arranged, the\n"
+#~ "location of your desktop directory, and the pop-up menus associated\n"
+#~ "with clicks of the middle and right mouse buttons on the desktop.\n"
+#~ "\"என்ன இது??\" (Shift+F1) என்பதை அழுத்தி குறிப்பிட்ட தேர்வுக்கான உதவியை பெறலாம்."
+
+#~ msgid "General"
+#~ msgstr "பொதுப்பயன் "
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "மேசை மேல் சின்னங்கள் தேவை இல்லையெனில் இந்த தேர்வை ரத்து செய்யவும். இதனால் மேசையின் "
+#~ "செயல்பாடு வேகமாக இருக்கும். ஆனால் கோப்புகளை இழுக்க முடியாது."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "மறைக்கப்பட்ட கோப்புகளை மேசையிற் காட்டு"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "என்ஸ்னோ,எக்ஸ்பென்குயின் இல் வரைவதற்கேற்க X11 நிரலை இயக்க இந்த தேர்வை பயன்படுத்தவும். "
+#~ "நிகழ்வுகளை இயக்க மூல சாளரத்தை பயன்படுத்தும் நெட்ஸ்கேப் போன்ற பயன்பாடுகள் உங்களிடம் "
+#~ "இருந்தால் இந்த தேர்வை செயல்நீக்கம் செய்யவும்."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "மேசைச் சாளரத்தில் நிரல்களுக்கு ஆதரவளி"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "கோப்பு குறிப்பைக் காட்டு"
+
+#, fuzzy
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "பட்டியல் பட்டி திரைக்கு மேலேயுள்ளது"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr ""
+#~ "விருப்பத் தேர்வுகள் தேர்ந்தெடுக்கபட்டிருந்தால்,  திரைக்கு மேலே  மெனு பட்டி  எதுவும் "
+#~ "தென்பவில்லை "
+
+#~ msgid "&None"
+#~ msgstr "&எதுவும் இல்லை"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "விருப்பத்தேர்வுகள் தேர்ந்தெடுக்க பட்டிருந்தால்,   திரைக்கு மேலே மெனு  பட்டி மேசைக்கா "
+#~ "மெனுவை கான்பிகவும் "
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "மேசைப் பட்டி"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "விருப்பத் தேர்வுகள் தேர்ந்தெடுக்கபட்டிருந்தால், இந்த பயன்பாடைல்வுள்ள  மெனு பட்டி தெர்வு "
+#~ "செய்தால் இந்த சாலனம் எப்போழுதும் இயங்காது, மெனு பட்டி தற்போது இயங்கும் பயன்பாடுகளை "
+#~ "கான்பிக்காது.  Mac OSல் இருந்து இந்த பயன் பாடுகளை அறாலம்."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "&தற்போதைய பயன்பாடின் பட்டியல் பட்டி (Mac OS-style)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "சுட்டியின் பொத்தான் செயல் "
+
+#~ msgid "Middle button:"
+#~ msgstr "நடு பொத்தான்:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "இடது பொத்தான்:"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "வலது பொத்தான்:"
+
+#~ msgid "Edit..."
+#~ msgstr "தொகு..."
+
+#~ msgid "File Icons"
+#~ msgstr "கோப்பின் சின்னங்கள்"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "விருப்பத் தேர்வை தேர்ந்தெடுத்தால், நகரும்பொழுது  தானாக இயங்கும்  சின்னங்களின்  கட்டங்கள் "
+#~ "தென்படும்"
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "தானாக சின்னங்களை வரிசைப்படுத்து"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>நீங்கள் இந்த தேர்வை பயன்படுத்தினால் உங்கள் மேசை அடைவில் [.] யோடு துவங்கும். அனைத்து "
+#~ "கோப்புகளும் காட்டப்படும். இது போன்ற கோப்புகளில் வடிவமைப்பு தகவல்கள் இருக்ப்பதால் "
+#~ "மறைக்கப்பட்டிருக்கும்.</p> \n"
+#~ "<p>உதாரணமாக \".directory\" பெயருள்ள கோப்பு சாதாரண உரைக்கோப்பாக கான்கொரர் "
+#~ "தகவல்கள், அடைவைக்காட்டும் சின்னம், கோப்புகள் அடுக்கப்படவேண்டிய முறை "
+#~ "போன்றவற்றைக்கொண்டிருக்கும்.இவை பற்றிய விவரம் தெரியாமல் இக்கோப்புகளை மாற்றவோ நீக்கவோ "
+#~ "கூடாது.</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "மறைக்கப்பட்ட கோப்புகளை மேசையிற் காட்டு"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr "எக்கோப்புவகைகளுக்கு பட முன்னோட்டம் தேவையென இஹ்ங்கு தெரிவுசெய்யவும்"
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "பின்வருவனவற்றை முன்னோட்டமிடு:"
+
+#~ msgid "Device Icons"
+#~ msgstr "சாதனங்கள்"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "மேசையிற் சாதனங்களை இயக்கு"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr "மேசையில் தெரியக்கூடாத சாதனங்களை தேர்வுச் செய்யாதே"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "காட்சி வகைகள்"
+
+#~ msgid "Show file &tips"
+#~ msgstr "கோப்பு குறிப்புகளைக் காட்டு"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "இதன் மூலம், ஓரு கோப்பின் மேல் சுட்டி செல்லும்போது , ஒரு சிறிய கூடுதல் தகவல் "
+#~ "குறிப்புகளைத் தரச் செய்யலாம்."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "முன்காட்சிகளை கோப்பு குறிப்புகளில் காட்டு"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "இதன் மூலம், ஓரு கோப்பின் மேல் சுட்டி செல்லும்போது , ஒரு பெரிய முன்னோட்டத்தை தரச் "
+#~ "செய்யலாம்."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>பலதரப்பட்ட மேல்மேசைகள்</h1>இந்த கூற்றில் தேவையான மாயமேசைகளை வடிவமைத்துக் கொண்டு "
+#~ "அவற்றிற்கு பெயரிடலாம்."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "மேல்மேசைகளின் எண்ணிக்கை: "
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "இங்கு உங்கள் KDE மேசையில் எத்தனை மேல்மேசைகள் தேவையென அமைக்கலாம். மதிப்பை மாற்ற "
+#~ "ஸ்லைடரை நகர்த்தவும்."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "மேல்மேசைகளின்  பெயர்கள்"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "மேல்மேசை %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "இங்கு %1 மேமேல்சையின் பெயரை உள்ளிடலாம்."
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "மேல் மேசையின் மேல் சுட்டியை வைத்தால் மேல் மேசையின்  நிலைமாரும் "
+
+#~ msgid "Desktop %1"
+#~ msgstr "மேல்மேசை %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "வரியில் உள்ள சின்னங்களை பெயர் மாற்று "
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "இந்த தேர்வை சரிபார்ப்பதன் மூலம் சின்னத்தின் மீதே அழுத்தி மாற்றப்பட வேண்டிய கோப்புகளின் "
+#~ "பெயர்களை மாற்றலாம்"
+
+#~ msgid "&Appearance"
+#~ msgstr "தோற்றம்"
+
+#~ msgid "&Standard font:"
+#~ msgstr "நிரந்தர எழுத்துரு:"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr "கான்கொரர் சாளரங்களில் உரை காட்ட பயன்படும் எழுத்துரு."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "எழுத்துரு அளவு:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr "கான்கொரர் சாளரங்களில் உரை காட்டப்படும் எழுத்துரு அளவு."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "இயல்பு உரை நிறம்:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr "கான்கொரர் சாளரத்தில் உரையைக் காட்ட பயன்படுத்தும் நிறம்."
+
+#~ msgid "&Text background color:"
+#~ msgstr "உரைப் பின்னணி நிறம்:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr "மேசையிலுள்ள குறும்படங்களிறகுரிய உரையின் பின்னே பயன்படுத்தப்படும் நிறம் இது."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "வரிமடிப்புக் குறும்பட உரை:"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "சின்னங்கள் உரை வரைய உபயோகப்படும் அதிகபட்ச வரிகள் இதுதான்.நீள கோப்பு பெயர்கள் கடைசி "
+#~ "வரி முடிவில் துணித்தலாகும்."
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "& குறும்பட உரைக்கான அகலம்:"
+
+#~ msgid ""
+#~ "This is the maximum width for the icon text when konqueror is used in "
+#~ "multi column view mode."
+#~ msgstr ""
+#~ "இது கான்கொரரை பல நெடுவரிசை காட்சி வகையில் பயன்படுத்தும்போது குறும்பட உரைக்கான "
+#~ "அதிகப்பட்ச அகலம்."
+
+#~ msgid "&Underline filenames"
+#~ msgstr "கோப்புப் பெயர்களைக் அடிக்கோடிடு"
+
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "இந்த தேர்வின் மூலம் கோப்பு பெயர்கள் அடிக்கோடிடப்படும். அது வலைத்தளத்தில் உள்ள இணைப்புகள் "
+#~ "போல தெரியும். குறிப்பு:  Note: to complete the analogy, make sure that "
+#~ "single click activation is enabled in the mouse control module."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "கோப்புகளின் அளவை பைட்டுகளில் காண்பி"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "இந்த தேர்வின் மூலம் கோப்புகளின் அளவுகள் பைட்டுகளில் தெரியும். இல்லையெனில் கிலோ "
+#~ "பைட்டுகளிலோ அல்லது மெகா பைட்டுகளிலோ தெரியும்."
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>கான்கொரர் தோற்றம்</h1> இங்கு கான்கொரரின் கோப்பு மேலாளர் தோற்றத்தை வடிவமைக்க "
+#~ "முடியும்"
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "வலை நடவடிக்கைகளை ஒரு சாளரத்தில் காட்டு"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "இந்த தேர்வை சரிபார்ப்பதால் வலைப்பின்னல் கோப்பிற்கான தகவல் முன்னேற்றங்கள் பட்டியலுடன் ஒரே "
+#~ "சாளரத்திற்கு மாற்றப்படும். இந்த தேர்வு சரிப்பார்க்கப்பட வில்லையென்றால் எல்லா மாற்றங்களும் "
+#~ "தனித்தனி சாளரத்தில் தெரியும்."
+
+#~ msgid "Home &URL:"
+#~ msgstr "தொடக்க வலைமனை:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "ஆரம்ப அடைவை தேர்ந்தெடு"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "\"தொடக்கம்\" எனும் விசையை அழுத்தினால் கான்கொரர் இந்த வலைமனைக்கு (உ+ம். ஒரு அடைவு "
+#~ "அல்லது ஒரு வலை பக்கம்) தாவும். பொதுவாக இது 'டில்ட்' (~) குறியிடப்பட்ட ஆரம்ப "
+#~ "அடைவாகும்."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "இடது பொத்தான்:"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "வலது பொத்தான்:"
+
+#~ msgid "&Quick Copy && Move"
+#~ msgstr "விரைவாக நகலெடுத்து நகர்த்துதல்"

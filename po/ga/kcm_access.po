@@ -1,0 +1,870 @@
+# translation of kcmaccess.po to Irish
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
+# Kevin Scannell <kscanne@gmail.com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta1\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "Brúigh %1 nuair atá NumLock, CapsLock agus ScrollLock gníomhach"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "Brúigh %1 nuair atá CapsLock agus ScrollLock gníomhach"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "Brúigh %1 nuair atá NumLock agus ScrollLock gníomhach"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Brúigh %1 nuair atá ScrollLock gníomhach"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "Brúigh %1 nuair atá NumLock agus CapsLock gníomhach"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Brúigh %1 nuair atá CapsLock gníomhach"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Brúigh %1 nuair atá NumLock gníomhach"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Brúigh %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr ""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Use System Bell"
+msgstr "Ú&sáid cloigín an chórais"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Customize system bell"
+msgstr "Ú&sáid cloigín an chórais"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Color of the Visible Bell"
+msgstr "Ú&sáid cloigín an chórais"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Use sticky Keys"
+msgstr "Ú&sáid eochracha greamaitheacha"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgid "Lock the sticky keys"
+msgstr "Cuir eochracha greamaitheacha faoi gh&las"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr ""
+"Díghníomhachtaigh eochracha greamaitheacha nuair a bhrúitear dhá eochair san "
+"am céanna"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Beep on a sticky key press"
+msgstr "Ú&sáid eochracha greamaitheacha"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Use slow keypresses"
+msgstr "Úsáid &eochracha malla"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Eochracha preabtha"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:31
+#, fuzzy, kde-format
+#| msgid "Audible Bell"
+msgid "Audible bell:"
+msgstr "Cloigín inchloiste"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visible Bell"
+msgid "Visual bell:"
+msgstr "Cloigín Infheicthe"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:108
+#, fuzzy, kde-format
+#| msgid "I&nvert screen"
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "I&nbhéartaigh an scáileán"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:147
+#, fuzzy, kde-format
+#| msgid "Duration:"
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Aga:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Slow keys:"
+msgstr "Úsáid &eochracha malla"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring system bell:"
+msgstr "Ú&sáid cloigín an chórais"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "Ú&sáid cloigín an chórais nuair a bhrúitear eochair"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "Ú&sáid cloigín an chórais nuair a ghlacfar le heochair"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "Ú&sáid cloigín an chórais nuair a dhiúltaítear eochair"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, fuzzy, kde-format
+#| msgid "Bounce Keys"
+msgid "Bounce keys:"
+msgstr "Eochracha preabtha"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgid "Ring system bell when rejected"
+msgstr "Ú&sáid cloigín an chórais nuair a dhiúltaítear eochair"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "&Bell"
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "&Cloigín"
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "&Modifier Keys"
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Eochracha &Mionathraithe"
+
+#: package/contents/ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "&Keyboard Filters"
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Scagairí &Méarchláir"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, fuzzy, kde-format
+#| msgid "S&ticky Keys"
+msgid "Sticky keys:"
+msgstr "Eochracha Greamai&theacha"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgid "Ring system bell when modifier keys are used"
+msgstr "Ú&sáid cloigín an chórais nuair a bhrúitear eochair"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgid "Ring system bell when locking keys are toggled"
+msgstr "Ú&sáid cloigín an chórais nuair a ghlacfar le heochair"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, fuzzy, kde-format
+#| msgid ""
+#| "Use KDE's system notification mechanism whenever a modifier or locking "
+#| "key changes its state"
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"Úsáid an córas fógartha KDE nuair a athraíonn mionathraitheoir nó eochair "
+"ghlasála a staid"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "Cumraigh &Fógairt..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "Ú&sáid cloigín an chórais"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "Fógairt"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration delay:"
+msgstr "Moill &inghlacthachta:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration time:"
+msgstr "Moill &inghlacthachta:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration profile:"
+msgstr "Moill &inghlacthachta:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgid "Accessibility"
+#~ msgstr "Uirlis Inrochtaineachta KDE"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "© 2000, Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Údar"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation:"
+#~ msgstr "Gothaí Gníomhachtaithe"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is checked, the default system bell will be used. See the "
+#~| "\"System Bell\" control module for how to customize the system bell. "
+#~| "Normally, this is just a \"beep\"."
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Más ticeáilte é seo, úsáidfear cloigín réamhshocraithe an chórais. Féach "
+#~ "ar an modúl rialaithe \"Cloigín an Chórais\" chun an cloigín a chumrú. De "
+#~ "ghnáth, níl ann ach \"bíp\"."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>Check this option if you want to use a customized bell, playing a "
+#~| "sound file. If you do this, you will probably want to turn off the "
+#~| "system bell.</p><p> Please note that on slow machines this may cause a "
+#~| "\"lag\" between the event causing the bell and the sound being played.</"
+#~| "p>"
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "<p>Ticeáil an rogha seo más mian leat cloigín saincheaptha a úsáid trí "
+#~ "chomhad fuaime a roghnú. Má dhéanann tú é seo, ba chóir duit cloigín an "
+#~ "chórais a mhúchadh freisin.</p><p> Tabhair faoi deara go mbeidh moill "
+#~ "bheag idir an teagmhas is cúis leis an gcloigín agus an cloigín féin ar "
+#~ "ríomhaire mall.</p>"
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Úsáid cloigín sainch&eaptha"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Má tá an rogha \"Úsáid cloigín saincheaptha\" cumasaithe, is féidir leat "
+#~ "comhad fuaime a roghnú anseo. Cliceáil \"Brabhsáil...\" chun comhad "
+#~ "fuaime a roghnú leis an dialóg comhad."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Fuaim le &seinm:"
+
+#~ msgid "Browse..."
+#~ msgstr "Brabhsáil..."
+
+#, fuzzy
+#~| msgid ""
+#~| "This option will turn on the \"visible bell\", i.e. a visible "
+#~| "notification shown every time that normally just a bell would occur. "
+#~| "This is especially useful for deaf people."
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Gníomhachtaíonn an rogha seo an \"cloigín infheicthe\", .i. fógairt "
+#~ "infheicthe a thaispeánfar nuair a bhuailfí cloigín go hiondúil. Rogha "
+#~ "úsáideach é seo do na bodhair."
+
+#, fuzzy
+#~| msgid "&Use visible bell"
+#~ msgid "&Use visual bell"
+#~ msgstr "Úsáid cloigín in&fheicthe"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Athrófar dath an scáileáin go dath saincheaptha ar feadh na tréimhse "
+#~ "sonraithe thíos."
+
+#~ msgid "F&lash screen"
+#~ msgstr "Sp&lanc an scáileán"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "Inbhéartófar dathanna an scáileáin ar feadh na tréimhse sonraithe thíos."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Cliceáil anseo chun dath an chloigín infheicthe \"splanctha\" a roghnú."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "Anseo is féidir leat tréimhse an \"chloigín infheicthe\" a shaincheapadh."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Úsáid cloigín an chórais nuair atá mionathraitheoir laiste, glasáilte, nó "
+#~ "díghlasáilte"
+
+# used attributively --kps
+#~ msgid "Locking Keys"
+#~ msgstr "Eochracha Glasála"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Úsáid cloigín an chórais nuair atá eochair ghlasála gníomhachtaithe nó "
+#~ "díghníomhachtaithe"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "Eochracha &Malla"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Úsáid eochracha prea&btha"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Úsáid cloigín an chórais nuair a dhiúltaítear eochair"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation &Gestures"
+#~ msgstr "Gothaí Gníomhachtaithe"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Úsáid gothaí chun eochracha greamaitheacha agus eochracha malla a "
+#~ "ghníomhachtú"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Díghníomhachtaigh eochracha greamaitheacha agus eochracha malla nuair "
+#~ "nach bhfuil siad in úsáid ar feadh tréimhse áirithe."
+
+#~ msgid " min"
+#~ msgstr " nóiméad"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Úsáid cloigín an chórais nuair a bhaintear úsáid as gotha chun gné "
+#~ "inrochtaineachta a ghníomhachtú nó a dhíghníomhachtú"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Má chuireann tú tic leis an rogha seo, taispeánfaidh KDE dialóg "
+#~ "dheimhnithe agus gnéithe inrochtaineachta á ngníomhachtú nó á "
+#~ "ndíghníomhachtú.\n"
+#~ "Bí cinnte go bhfuil fios do ghnó agat mura gcuireann tú tic leis, mar sa "
+#~ "chás sin cuirfear na socruithe inrochtaineachta i bhfeidhm gan deimhniú."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Taispeáin dialóg dheimhnithe agus gnéithe inrochtaineachta á ngníomhachtú "
+#~ "nó á ndíghníomhachtú"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use KDE's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Úsáid an córas fógartha KDE nuair atá gné inrochtaineachta méarchláir "
+#~ "gníomhachtaithe nó díghníomhachtaithe"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Anseo is féidir leat gothaí méarchláir a ghníomhachtú a chuireann na "
+#~ "gnéithe seo a leanas ar fáil: \n"
+#~ "Eochracha greamaitheacha: Brúigh an eochair Shift 5 huaire as a chéile\n"
+#~ "Eochracha malla: Coinnigh an eochair Shift thíos ar feadh 8 soicind"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Anseo is féidir leat gothaí méarchláir a ghníomhachtú a chuireann na "
+#~ "gnéithe seo a leanas ar fáil: \n"
+#~ "Eochracha luiche: %1\n"
+#~ "Eochracha greamaitheacha: Brúigh an eochair Shift 5 huaire as a chéile\n"
+#~ "Eochracha malla: Coinnigh an eochair Shift thíos ar feadh 8 soicind"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "&Activation Gestures"
+#~ msgstr "Gothaí Gníomhachtaithe"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "Aga &díphreabtha:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Teorainn Ama:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|Comhaid WAV"

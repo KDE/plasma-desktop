@@ -1,0 +1,185 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2014, 2015, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-07-25 13:31+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Acest modul vă permite să configurați indexatorul de fișiere și "
+"funcționalitatea de căutare."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Aceasta va dezactiva căutarea fișierelor în KRunner și meniurile "
+"lansatorilor și va elimina afișarea metadatelor extinse din toate "
+"aplicațiile KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Doriți să ștergeți datele salvate din index? %1 din spațiu vor fi eliberați "
+"dar, dacă indexarea va fi reactivată mai târziu, întregul index va trebui "
+"recreat de la zero. Aceasta poate dura ceva timp, în dependență de câte "
+"fișiere aveți."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Șterge datele indexului"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Căutarea de fișiere vă ajută să localizați rapid toate fișierele pe baza "
+"conținutului acestora."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Activează căutarea de fișiere"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indexează și conținutul fișierelor"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indexează fișiere și dosare ascunse"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Stare: %1, %2% încheiat"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Întrerupe indexatorul"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Reia indexatorul"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Acum se indexează: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Configurări specifice dosarului:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Începe indexarea dosarului…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Oprește indexarea dosarului…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Neindexat"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexat"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Șterge înregistrarea"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Alege un dosar de inclus"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Alege un dosar de exclus"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "File Search"
+#~ msgstr "Căutare fișiere"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Drept de autor 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Adaugă configurări dosar…"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Dosarul %1 e deja exclus"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Nu căuta în aceste locuri"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Alegeți dosarul care trebuie exclus"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Părintele %1 al dosarului e deja exclus"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Configurează căutarea de fișiere"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Dosarul rădăcină e ascuns întotdeauna"

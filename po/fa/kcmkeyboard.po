@@ -1,0 +1,600 @@
+# translation of kcmkeyboard.po to Persian
+# Saied Taghavi <s.taghavi@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkeyboard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2008-04-18 14:31+0330\n"
+"Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "نازنین کاظمی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kazemi@itland.ir"
+
+#: bindings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgid "Keyboard Layout Switcher"
+msgstr "تکرار صفحه کلید"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "سودهی به طرح‌بندی صفحه کلید بعدی"
+
+#: bindings.cpp:49
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch keyboard layout to %1"
+msgstr "سودهی به طرح‌بندی صفحه کلید بعدی"
+
+#: flags.cpp:122
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgid "Add Layout"
+msgstr "تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr "برچسب:"
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr ""
+
+#: kcm_keyboard.cpp:32
+#, fuzzy, kde-format
+#| msgid "KDE Keyboard Layout Switcher"
+msgid "KDE Keyboard Control Module"
+msgstr "سوده طرح‌بندی صفحه کلید KDE"
+
+#: kcm_keyboard.cpp:36
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2006-2007 Andriy Rysin"
+msgid "(c) 2010 Andriy Rysin"
+msgstr "حق نشر (ح) ۲۰۰۷-۲۰۰۶ Andriy Rysin"
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgid "Keyboard &model:"
+msgstr "تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+"در اینجا می‌توانید یک مدل صفحه‌ کلید انتخاب کنید. این تنظیم مستقل از طرح‌بندی "
+"صفحه‌ کلید شما می‌باشد و به مدل »سخت‌افزار«، یعنی روشی که صفحه‌ کلید شما ساخته "
+"شده است، برمی‌گردد. صفحه‌ کلیدهای پیشرفته‌ای که برای رایانه شما در نظر گرفته "
+"می‌شوند، معمولاً دو کلید اضافه دارند و به مدل  »104-key« برمی‌گردد. اگر نوع "
+"صفحه‌ کلید خود را نمی‌دانید، شاید این همان چیزی باشد که می‌خواهید.\n"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgid "Layouts"
+msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+"اگر سیاست سودهی »کاربرد« یا »پنجره« را انتخاب کنید، تغییر طرح‌بندی صفحه‌ کلید "
+"فقط بر کاربرد یا پنجره جاری اثر می‌گذارد."
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr "سیاست سودهی"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr "&سراسری‌"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, fuzzy, kde-format
+#| msgid "Desktop"
+msgid "&Desktop"
+msgstr "رومیزی"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, fuzzy, kde-format
+#| msgid "Application"
+msgid "&Application"
+msgstr "کاربرد"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr "&پنجره‌"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgid "Shortcuts for Switching Layout"
+msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+"این میان‌بری برای سودهی طرح‌بندی ها است که توسط X.org اعمال می‌شود. این اجازهٔ "
+"میان‌برهای فقط‌تغییردهنده را می‌دهد."
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+"این یک میان‌بر برای سودهی به سطح سومی از طرح‌بندی فعال است (اگر یکی داشته "
+"باشد) که توسط X.org اعمال می‌شود. این اجازهٔ میان‌برهای فقط‌تغییردهنده را می‌دهد."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr "میان‌بر دیگر:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "This is a shortcut for switching layouts which is handled by KDE. It does "
+#| "not support modifier-only shortcuts and also may not work in some "
+#| "situations (e.g. if popup is active or from screensaver)."
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+"این یک میان‌بر برای سودهی طرح‌بندی‌ها است که توسط KDE اعمال می‌شود. این از "
+"میان‌برهای فقط‌تغییردهنده پشتیبانی نمی‌کند و همچنین ممکن است در برخی موقعیت‌ها "
+"کار نکند (مثلاً اگر بالاپری فعال باشد یا از محافظ صفحه)."
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgid "Configure layouts"
+msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgid "Spare layouts"
+msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr "پیشرفته"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgid "&Configure keyboard options"
+msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:643
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: kcm_keyboard_widget.cpp:657
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "میان‌برهای اصلی:"
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+#| msgid "Map"
+msgctxt "layout map name"
+msgid "Map"
+msgstr "نقشه"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Layout"
+msgstr "طرح‌بندی"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Variant"
+msgstr ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr "برچسب"
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgid "Shortcut"
+msgstr "میان‌برهای اصلی:"
+
+#: kcm_view_models.cpp:273
+#, fuzzy, kde-format
+#| msgctxt "Default variant"
+#| msgid "Default"
+msgctxt "variant"
+msgid "Default"
+msgstr "پیش‌فرض"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, fuzzy, kde-format
+#| msgid ""
+#| "If supported, this option allows you to setup the state of NumLock after "
+#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
+#| "configure KDE not to set NumLock state."
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"در صورت پشتیبانی، این گزینه به شما اجازه می‌دهد وضعیت قفل اعداد پس از "
+"راه‌اندازی KDE را تنظیم کنید.<p>شما می‌توانید قفل اعداد را پیکربندی کنید که "
+"خاموش یا روشن باشد، یا KDE را تنظیم کنید که وضعیت قفل اعداد را تنظیم نکند."
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, fuzzy, kde-format
+#| msgid "NumLock on KDE Startup"
+msgid "NumLock on Plasma Startup"
+msgstr "قفل اعداد هنگام راه‌اندازی KDE"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "&روشن کن"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgid "&Turn off"
+msgstr "&خاموش کن"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "&بدون تغییر رها کن"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr "&سرعت:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+"در صورت پشتیبانی، این گزینه به شما اجازه می‌دهد تنظیم کنید که یک کلید پس از "
+"فشرده شدن، با چه تأخیری شروع به تولید کدهای کلید می‌کند. گزینهٔ «سرعت تکرار» ،"
+"بسامد این کدهای کلید را تعیین می‌کند."
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+"در صورت پشتیبانی، این گزینه به شما اجازه می‌دهد تنظیم کنید هنگامی که کلیدی "
+"فشرده شده است، کدهای کلید با چه سرعتی تولید بشوند."
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, kde-format
+msgid "&Delay:"
+msgstr "&تأخیر"
+
+#: tastenbrett/main.cpp:57
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "تکرار صفحه‌کلید"
+
+#: tastenbrett/main.cpp:59
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "تکرار صفحه کلید"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+
+#, fuzzy
+#~| msgid "Keyboard Repeat"
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "تکرار صفحه کلید"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~| msgid "&Enable keyboard repeat"
+#~ msgid "Show for single layout"
+#~ msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#, fuzzy
+#~| msgid "Keyboard Repeat"
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "تکرار صفحه‌کلید"
+
+#, fuzzy
+#~| msgid "&Enable keyboard repeat"
+#~ msgid "Configure Layouts..."
+#~ msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#~ msgid "Keyboard Repeat"
+#~ msgstr "تکرار صفحه‌کلید"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "&خاموش کن"
+
+#, fuzzy
+#~| msgid "Leave unchan&ged"
+#~ msgid "&Leave unchanged"
+#~ msgstr "&بدون تغییر رها کن"
+
+#, fuzzy
+#~| msgid "&Enable keyboard repeat"
+#~ msgid "Configure..."
+#~ msgstr "&فعال‌سازی تکرار صفحه‌کلید"
+
+#~ msgid ""
+#~ "If supported, this option allows you to hear audible clicks from your "
+#~ "computer's speakers when you press the keys on your keyboard. This might "
+#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
+#~ "that the keys make is very soft.<p>You can change the loudness of the key "
+#~ "click feedback by dragging the slider button or by clicking the up/down "
+#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
+#~ msgstr ""
+#~ "در صورت پشتیبانی، این گزینه به شما اجازه می‌دهد که وقتی کلیدهای صفحه‌کلید "
+#~ "را فشار می‌دهید، صدای تیک از بلندگوی رایانه‌تان بشنوید. این می‌تواند وقتی که "
+#~ "صفحه‌کلید شما کلید مکانیکی ندارد، یا صدای کلیدهایش بسیار ضعیف است، مفید "
+#~ "باشد.<p>شما می‌توانید بلندی صدای تیک بازخورد کلید را با کشیدن دکمهٔ لغزنده "
+#~ "یا با کلیک کردن روی پیکان‌های بالا/پایین روی جعبهٔ چرخشی، تغییر دهید. تنظیم "
+#~ "بلندی روی ۰٪ تیکِ کلید را خاموش می‌کند."
+
+#, fuzzy
+#~| msgid "Key click &volume:"
+#~ msgid "&Key click volume:"
+#~ msgstr "&بلندی تیک کلید:"
+
+#~ msgid ""
+#~ "If you check this option, pressing and holding down a key emits the same "
+#~ "character over and over again. For example, pressing and holding down the "
+#~ "Tab key will have the same effect as that of pressing that key several "
+#~ "times in succession: Tab characters continue to be emitted until you "
+#~ "release the key."
+#~ msgstr ""
+#~ "اگر این گزینه را علامت بزنید، فشردن و پایین نگه داشتن یک کلید، یک نویسهٔ "
+#~ "ثابت را بارها و بارها ساتع می‌کند. برای مثال، فشردن و نگه داشتن کلید Tab "
+#~ "همان اثری را دارد که چند بار فشردن متوالی آن کلید خواهد داشت: نویسه‌های "
+#~ "جهش به ساتع شدن ادامه می‌دهند تا وقتی که کلید را رها کنید."
+
+#~ msgid "&Enable keyboard repeat"
+#~ msgstr "&فعال‌سازی تکرار صفحه‌کلید"

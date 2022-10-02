@@ -1,0 +1,214 @@
+# Translation of plasma_applet_pager to Croatian
+#
+# Andrej Dundovic <adundovi@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2009-11-03 10:46+0100\n"
+"Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Općenito"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Općenito"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display text:"
+msgid "Text display:"
+msgstr "Prikaži tekst:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Bez teksta"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Broj radne površine"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Naziv radne površine"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "Odabirem trenutnu radnu površinu:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "Odabirem trenutnu radnu površinu:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Ne čini ništa"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "Prikaži radnu površinu"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and 1 other"
+#| msgid_plural "and %1 others"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "i %1 ostali"
+msgstr[1] "i %1 ostali"
+msgstr[2] "i %1 ostali"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "One window:"
+#| msgid_plural "%1 windows:"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 prozor:"
+msgstr[1] "%1 prozor:"
+msgstr[2] "%1 prozor:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Naziv radne površine"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, fuzzy, kde-format
+#| msgid "&Add Virtual Desktop"
+msgid "Add Virtual Desktop"
+msgstr "Dod&aj virtualne radne površine"
+
+#: package/contents/ui/main.qml:600
+#, fuzzy, kde-format
+#| msgid "&Remove Last Virtual Desktop"
+msgid "Remove Virtual Desktop"
+msgstr "&Ukloni zadnju virtualnu radnu površinu"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Virtual Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "&Podesi virtualne radne površine …"
+
+#, fuzzy
+#~| msgid "Configure Desktops..."
+#~ msgid "Configure Desktops..."
+#~ msgstr "Podesi radnih površina …"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Pokaži nadzornu ploču"
+
+#~ msgid "Display icons:"
+#~ msgstr "Prikaži ikone:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "Dod&aj virtualne radne površine"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Ukloni zadnju virtualnu radnu površinu"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Podesi Pager"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Broj stupaca:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Broj redaka:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Promijeni broj redaka"

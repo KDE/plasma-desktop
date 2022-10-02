@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Dateisuche</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Suchen</keyword>
+<keyword
+>Datei</keyword>
+<keyword
+>Baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Mit diesem Modul der &systemsettings; können Sie einstellen, welche Dateien für die schnelle Suche indiziert werden sollen. Intern wird eine Technologie mit dem Namen Baloo für die effiziente Suche in den Dateien verwendet. </para>
+
+<para
+>Fügen Sie das Miniprogramm <guilabel
+>Suche</guilabel
+> zur Kontrollleiste hinzu oder aktivieren Sie die Suche in &krunner;, um Ihre indizierten Dokumente schneller zu finden. </para>
+
+<para
+>Aktivieren Sie <guilabel
+>Dateisuche aktivieren</guilabel
+>, um die Suchfunktion in &dolphin; und anderen &kde;-Anwendungen zu benutzen. Ist diese Einstellung abgeschaltet, wird die Dateisuche mit Baloo nicht benutzt. Sie können dann andere Verfahren zur Suche wie &eg; &kfind; verwenden. </para>
+
+<para
+>Aktivieren Sie <guilabel
+>Auch Dateiinhalt indizieren</guilabel
+>, um zusätzlich zu den Dateinamen auch deren Inhalte zu indizieren. </para>
+
+<para
+>Aktivieren Sie <guilabel
+>Versteckte Dateien und Ordner indizieren</guilabel
+>, damit Baloo auch diese Elemente in den Index aufnimmt. </para>
+
+<note>
+    <para
+>Jede Datei und jeder Ordner, dessen Name mit einem Punkt (<literal
+>.</literal
+>) beginnt, wird in der Standardeinstellung bei der Anzeige ausgeblendet. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Spezielle Ordnereinstellung</guilabel
+></term>
+<listitem>
+    <para
+>Es wird eine Liste von Ordnern angezeigt, die indiziert werden können. In der Standardeinstellung wird Ihr gesamter Persönlicher Ordner  <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> indiziert und alle anderen Laufwerke bzw. Ordner sind von der Indizierung ausgeschlossen. </para>
+    <para
+>Wechselmedien werden in der Standardeinstellung niemals indiziert. Sie können explizit aus der Liste der ausgeschlossenen Ordner entfernt werden und werden dann indiziert. </para>
+    <para
+>Im Kombinationsfeld neben jedem Eintrag in der Liste können Sie <guimenuitem
+>Indiziert</guimenuitem
+> oder <guimenuitem
+>Nicht indiziert</guimenuitem
+> einstellen. </para>
+    <para
+>Benutzen Sie das Symbol „Papierkorb“, um einen Eintrag aus der Liste zu löschen. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Ordnereinstellung hinzufügen ...</guibutton
+></term>
+<listitem>
+    <para
+>Klicken Sie auf diesen Knopf, können Sie die Einstellungen <guimenuitem
+>Indizierung eines Ordner starten</guimenuitem
+> oder <guimenuitem
+>Indizierung eines Ordner anhalten</guimenuitem
+> auswählen. </para>
+    <para
+>Durch Klicken auf eine der oben genannten Einstellungen öffnen Sie den normalen &plasma;-Dateidialog, hier können Sie Ordner auswählen, die indiziert werden oder von der Indizierung ausgeschlossen werden. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Weitere Informationen über zusätzliche Einstellungen um &eg; ein Laufwerk hinzuzufügen, das nicht in Ihrem persönlichen Ordner <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> eingehängt ist, finden Sie auf <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

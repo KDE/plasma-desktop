@@ -1,0 +1,397 @@
+# translation of kcmcomponentchooser.po to Français
+# translation of kcmcomponentchooser.po to
+# traduction de kcmcomponentchooser.po en Français
+# Copyright (C) 2002,2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
+# Gérard Delafond <gerard@delafond.org>, 2002, 2003.
+# Gilles CAULIER <caulier.gilles@free.fr>, 2003.
+# Charles de Miramon <cmiramon@kde-france.org>, 2003.
+# Matthieu Robin <kde@macolu.org>, 2004, 2005.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004, 2005.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2007, 2008.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2016, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2020.
+# William Oprandi <william.oprandi@gmail.com>, 2020.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-10 08:56+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Navigateur Internet par défaut"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Autre..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Sélectionner le navigateur par défaut"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Sélectionner votre client de messagerie électronique par défaut"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Sélectionner votre gestionnaire de fichiers par défaut"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Sélectionner la carte par défaut"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Sélectionnez l'application par défaut de numérotation"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Sélectionner votre émulateur de terminal par défaut"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Navigateur Internet :"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Gestionnaire de fichiers :"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Client de courrier électronique :"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Émulateur de terminal :"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Carte :"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Numérotation :"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Gérard Delafond, Charles de Miramon, Nicolas Ternisien, Vincent Pinon, "
+#~ "Xavier Besnard"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "gerard@delafond.org, cmiramon@kde-france.org, nicolas.ternisien@gmail."
+#~ "com, vpinon@kde.org, xavier.besnard@neuf.fr"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Applications par défaut"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Inconnu"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Sélecteur de composants"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Choisissez dans la liste ci-dessous quel composant doit être utilisé par "
+#~ "défaut pour le service « %1 »."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Vous avez modifié le composant par défaut de votre choix. Voulez-vous "
+#~ "enregistrer les changements maintenant ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Pas de description disponible"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Vous pouvez choisir ici un programme pour chaque composant. Les "
+#~ "composants sont des programmes dédiés à une tâche simple, par exemple, "
+#~ "l'émulateur de terminal, l'éditeur de texte et le client de messagerie. "
+#~ "Certaines applications de KDE ont parfois besoin de lancer l'émulateur de "
+#~ "terminal, d'envoyer un courrier électronique ou d'afficher du texte. Pour "
+#~ "faire cela de manière uniforme, ces applications doivent lancer toujours "
+#~ "les mêmes composants. Vous pouvez choisir ici les programmes "
+#~ "correspondant à ces composants."
+
+#~ msgid "Default Component"
+#~ msgstr "Composant par défaut"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt> <p> Cette liste montre les types de composants à configurer. Cliquez "
+#~ "sur le composant que vous voulez configurer.</p>\n"
+#~ "<p> Dans cette boîte de dialogue, vous pouvez changer les composants par "
+#~ "défaut de KDE. Les composants sont des programmes dédiés à une tâche "
+#~ "simple, par exemple, l'émulateur de terminal, l'éditeur de texte et le "
+#~ "client de messagerie. Certaines applications de KDE ont parfois besoin de "
+#~ "lancer l'émulateur de terminal, d'envoyer un courrier électronique ou "
+#~ "d'afficher du texte. Pour faire cela de manière uniforme, ces "
+#~ "applications doivent lancer toujours les mêmes composants. Vous pouvez "
+#~ "choisir ici les programmes correspondant à ces composants.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Ouvrir les adresses <b>http</b> et <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "dans une application fondée sur le contenu de l'URL"
+
+#~ msgid "in the following application:"
+#~ msgstr "dans l'application suivante :"
+
+#~ msgid "with the following command:"
+#~ msgstr "avec la commande suivante :"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Choisissez votre navigateur web préféré :"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr ""
+#~ "KMail est le programme de messagerie par défaut pour le bureau Plasma."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Utiliser KMail comme client de messagerie préféré"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Sélectionnez cette option si vous voulez utiliser un autre programme de "
+#~ "messagerie."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Mots clés optionnels :<ul> <li>%t : adresse du destinataire</li> <li>%s : "
+#~ "sujet</li> <li>%c : copie carbone (CC)</li> <li>%b : copie carbone cachée "
+#~ "(BCC)</li> <li>%B : texte du modèle</li> <li>%A : pièce jointe </li> <li>"
+#~ "%u : adresse « mailto: » complète </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Utilisez ce bouton pour sélectionner votre client de messagerie préféré. "
+#~ "Veuillez noter que le fichier à sélectionner doit posséder l'attribut "
+#~ "« exécutable » pour être accepté.<br />Vous pouvez aussi utiliser "
+#~ "plusieurs mots clés qui seront remplacés par leurs vraies valeurs lors de "
+#~ "l'appel du client de messagerie :<ul> <li>%t : adresse du destinataire</"
+#~ "li> <li>%s : sujet</li> <li>%c : copie carbone (CC)</li> <li>%b : copie "
+#~ "carbone cachée (BCC)</li> <li>%B : texte du corps du modèle</li> <li>%A : "
+#~ "pièce jointe </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Cliquez ici pour sélectionner le nom du programme de messagerie."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Activez cette option si vous voulez que le client de messagerie choisi "
+#~ "soit exécuté dans un terminal (par exemple <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Exécute&r dans un terminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr ""
+#~ "Naviguer dans les dossiers en utilisant le gestionnaire de fichiers "
+#~ "suivant :"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr ""
+#~ "Autre : cliquez sur le bouton « Ajouter » de la fenêtre affichée ici :"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Utiliser Konsole comme application de terminal"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "U&tiliser un autre programme de terminal :"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Utilisez sur ce bouton pour choisir votre émulateur de terminal préféré. "
+#~ "Veuillez noter que le fichier à sélectionner doit posséder l'attribut "
+#~ "« exécutable » pour être utilisé. <br />Certaines applications utilisant "
+#~ "l'émulateur de terminal peuvent ne pas fonctionner si vous ajoutez des "
+#~ "arguments (exemple : « konsole -ls »)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Cliquez ici pour choisir un émulateur de terminal."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 seconde restante :"
+#~ msgstr[1] "%1 secondes restantes :"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Le nouveau gestionnaire de fenêtres sera utilisé au prochain démarrage de "
+#~ "KDE."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Changement du gestionnaire de fenêtres"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Un nouveau gestionnaire de fenêtre est lancé.\n"
+#~ "Il est toujours recommandé de redémarrer votre session de KDE pour "
+#~ "s'assurer que les applications lancées s'ajusteront à cette modification."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Remplacement du gestionnaire de fenêtres"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Votre gestionnaire de fenêtres actuellement lancé va maintenant être "
+#~ "remplacé par celui que vous avez configuré."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Configurer le changement de gestionnaire de fenêtres"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Accepter la modification"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Revenir au précédent"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Le gestionnaire de fenêtres configuré va être lancé.\n"
+#~ "Veuillez-vous assurer qu'il a démarré convenablement et confirmer cette "
+#~ "modification.\n"
+#~ "Le démarrage sera automatiquement annulé dans 20 secondes."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Le gestionnaire de fenêtre lancé a été remplacé par KWin, le gestionnaire "
+#~ "de fenêtres de KDE par défaut."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Échec du lancement du nouveau gestionnaire de fenêtres.\n"
+#~ "Le gestionnaire de fenêtre lancé a été remplacé par KWin, le gestionnaire "
+#~ "de fenêtres de KDE par défaut."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Échec du lancement de l'outil de configuration"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Utiliser KWin, le gestionnaire de fenêtres de KDE par défaut"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Utiliser un autre gestionnaire de &fenêtres :"
+
+#~ msgid "Configure"
+#~ msgstr "Configurer"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Remarque : la plupart des gestionnaires de fenêtres possèdent leur propre "
+#~ "configuration et n'utilisent pas la configuration de KDE."

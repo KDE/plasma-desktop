@@ -1,0 +1,150 @@
+# translation of kcmlaunch.po to galician
+# Copyright (C) 2002, 2003, 2007, 2009 Free Software Foundation, Inc.
+# Javier Jardón <javierjc@mundo-r.com>, 2002, 2003.
+# mvillarino <mvillarino@users.sourceforge.net>, 2007, 2009.
+# marce villarino <mvillarino@users.sourceforge.net>, 2009.
+# Marce Villarino <mvillarino@gmail.com>, 2009, 2011.
+# Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2017.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2019-10-19 22:06+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.11.70\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Indicación de inicio"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Cursor:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Sen indicación"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Estático"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Pestanexante"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Elástico"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Xestor de tarefas:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Activar a animación"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Deter a animación tras:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "%1 sec"
+#| msgid_plural "%1 secs"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 seg"
+msgstr[1] "%1 segundos"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Adrian Chaves"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "adrian@chaves.io"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "Configurar a indicación sobre o inicio de aplicacións"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Notificación de inicio</h1> Aquí pode configurar a notificación de "
+#~ "inicio dun aplicativo."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Cursor ocupado</h1>\n"
+#~ "KDE ofrece un cursor ocupado para notificar o inicio dun aplicativo.\n"
+#~ "Para activar o cursor ocupado, seleccione no despregábel o tipo de "
+#~ "información visual.\n"
+#~ "Pode ocorrer que algúns aplicativos non reciban esta notificación\n"
+#~ "de inicio. Neste caso, o cursor deixa de pestanexar despois de "
+#~ "transcorrido\n"
+#~ "o tempo que figura na sección «Tempo de espera da indicación de inicio»."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Sen cursor de ocupado"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Cursor ocupado pasivo"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "&Notificación na barra de tarefas"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Notificación na barra de tarefas</H1>\n"
+#~ "Pode activar un segundo método de notificación de inicio que\n"
+#~ "é usado pola barra de tarefas onde aparece un botón cun disco\n"
+#~ "en rotación, simbolizando que o aplicativo iniciado está cargándose.\n"
+#~ "Pode ocorrer que algúns aplicativos non reciban esta\n"
+#~ "notificación de inicio. Neste caso, o botón desaparecerá\n"
+#~ "despois do tempo estabelecido en «Tempo de expiración da indicación de "
+#~ "inicio»."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Tempo de e&xpiración da indicación de inicio:"

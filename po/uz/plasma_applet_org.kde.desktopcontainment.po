@@ -1,0 +1,898 @@
+# translation of libkonq.po to Uzbek
+# Copyright (C) 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2006-04-07 18:03+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Location"
+msgstr "&Amallar"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr ""
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "Files:"
+msgstr "Faylning nomi:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Shred Files"
+msgid "Show all"
+msgstr "Faylni qirib tashlash"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File name pattern:"
+msgstr "Faylning nomi:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File types:"
+msgstr "Faylning nomi:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File type"
+msgstr "Faylning nomi:"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Enlarge Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Nishonchalarni kattalashtirish"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "&Kichik"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "K&atta"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Oʻr&ta"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show folder preview popups"
+msgstr "Koʻrib chiqish"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+msgid "Rename:"
+msgstr "&Bekor qilish: Bogʻlash"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Previews:"
+msgstr "Koʻrib chiqish"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show preview thumbnails"
+msgstr "Koʻrib chiqish"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Configure Preview Plugins…"
+msgstr "Koʻrib chiqish"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Desktop folder"
+msgstr "Yangi jild"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Custom location:"
+msgstr "&Amallar"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Yoʻq"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "&Default Size"
+msgid "Default"
+msgstr "&Andoza oʻlcham"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Hide Background"
+msgstr "Orqa fon"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Show Background"
+msgstr "Orqa fon"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview Plugins"
+msgstr "Koʻrib chiqish"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, fuzzy, kde-format
+#| msgid "C&ancel"
+msgid "Cancel"
+msgstr "&Bekor qilish"
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "Configure Background..."
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Orqa fonni moslash"
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Select Folder"
+msgstr "Yangi jild"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "Chiqindilar qutisini &boʻshatish"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Q&ayta tiklash"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Ochish"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Xossalari"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "&Juda kichik"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "&Kichik"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "&Kichik"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Oʻr&ta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Oʻr&ta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "K&atta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "&Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "&Bahaybat"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show Previews"
+msgstr "Koʻrib chiqish"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "Jildni &yaratish"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "Yangi jild"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgid "&Move to Trash"
+#~ msgstr "Chiqindilar qutisiga olib tashlash"
+
+#, fuzzy
+#~| msgid "Delete Files"
+#~ msgid "&Delete"
+#~ msgstr "Fayllarni oʻchirish"
+
+#, fuzzy
+#~| msgid "Shred Files"
+#~ msgid "Show Original File"
+#~ msgstr "Faylni qirib tashlash"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "Chiqindilar qutisini &boʻshatish"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "Bu sahifani &xatchoʻplarga qoʻshish"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "Bu manzilni &xatchoʻplarga qoʻshish"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "Bu jildni &xatchoʻplarga qoʻshish"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "Bu bogʻni &xatchoʻplarga qoʻshish"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "Bu faylni &xatchoʻplarga qoʻshish"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Shu yerga &nusxa olish"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Chiqindilar qutisiga olib tashlash"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Yangi jild"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Yangi jild"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Shu yerga &nusxa olish"
+
+#, fuzzy
+#~| msgid "&Move Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Shu yerga &koʻchirish"
+
+#~ msgid "Share"
+#~ msgstr "Boʻlishish"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Jildni oʻzidan oʻziga koʻchirib boʻlmaydi"
+
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Faylning nomi:"
+
+#~ msgid "&Move Here"
+#~ msgstr "Shu yerga &koʻchirish"
+
+#~ msgid "&Copy Here"
+#~ msgstr "Shu yerga &nusxa olish"
+
+#~ msgid "&Link Here"
+#~ msgstr "Shu yerga &bogʻlash"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Bekor qilish"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Ish &stoliga qoʻyish"
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Yaratish"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Jildning nomini kiriting:"
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Yaratish"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Yangi jild"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Yangi jild"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Jildning nomini kiriting:"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Yangi jild"
+
+#~ msgid "Create New"
+#~ msgstr "Yaratish"
+
+#~ msgid "Link to Device"
+#~ msgstr "Uskunaga bogʻ"
+
+#~ msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+#~ msgstr "<qt>Namuna fayli <b>%1</b> mavjud emas.</qt>"
+
+#, fuzzy
+#~| msgid "&Open With"
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With"
+#~ msgstr "...bilan &ochish"
+
+#, fuzzy
+#~| msgid "&Other..."
+#~ msgctxt "@action:inmenu Open With"
+#~ msgid "&Other..."
+#~ msgstr "&Boshqa..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With..."
+#~ msgstr "...bilan &ochish"
+
+#, fuzzy
+#~| msgid "Open with %1"
+#~ msgid "Open &with %1"
+#~ msgstr "%1 bilan ochish"
+
+#~ msgid "Open in New &Window"
+#~ msgstr "&Yangi oynada ochish"
+
+#~ msgid "Open the trash in a new window"
+#~ msgstr "Chiqindilar qutisini yangi oynada ochish"
+
+#~ msgid "Open the medium in a new window"
+#~ msgstr "Yangi oynada ochish"
+
+#~ msgid "Open the document in a new window"
+#~ msgstr "Hujjatni yangi oynada ochish"
+
+#~ msgid "Und&o"
+#~ msgstr "&Bekor qilish"
+
+#~ msgid "Und&o: Copy"
+#~ msgstr "&Bekor qilish: Nusxa olish"
+
+#~ msgid "Und&o: Link"
+#~ msgstr "&Bekor qilish: Bogʻlash"
+
+#~ msgid "Und&o: Move"
+#~ msgstr "&Bekor qilish: Koʻchirish"
+
+#~ msgid "Und&o: Trash"
+#~ msgstr "&Bekor qilish: Chiqindilar qutisiga joʻnatish"
+
+#~ msgid "Und&o: Create Folder"
+#~ msgstr "&Bekor qilish: Jildni yaratish"
+
+#, fuzzy
+#~ msgid "Do you really want to delete this item?"
+#~ msgid_plural "Do you really want to delete these %1 items?"
+#~ msgstr[0] "Rostdan bu elementni oʻchirmoqchimisiz?"
+
+#~ msgid "Delete Files"
+#~ msgstr "Fayllarni oʻchirish"
+
+#, fuzzy
+#~ msgid "Do you really want to move this item to the trash?"
+#~ msgid_plural "Do you really want to move these %1 items to the trash?"
+#~ msgstr[0] ""
+#~ "Rostdan bu elementni chiqindilar qutisiga olib tashlamoqchimisiz?Rostdan "
+#~ "bu %1 elementni chiqindilar qutisiga olib tashlamoqchimisiz?"
+
+#~ msgctxt "Verb"
+#~ msgid "&Trash"
+#~ msgstr "Chiqindilar qutisiga &joʻnatish"
+
+#, fuzzy
+#~| msgid "Und&o"
+#~ msgid "Und&o: %1"
+#~ msgstr "&Bekor qilish"
+
+#~ msgid "Background Settings"
+#~ msgstr "Orqa fon moslamalari"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Rang:"
+
+#~ msgid "&Picture:"
+#~ msgstr "&Rasm:"
+
+#~ msgid "Shrink Icons"
+#~ msgstr "Nishonchalarni kichiklashtirish"
+
+#~ msgid "&Very Large"
+#~ msgstr "J&uda katta"
+
+#~ msgid "Allows choosing of background settings for this view"
+#~ msgstr "Bu koʻrinish uchun orqa fonni moslash"
+
+#~ msgid "<p>You do not have enough permissions to read <b>%1</b></p>"
+#~ msgstr "<p><b>%1</b>'ni oʻqish uchun sizda yetarli huquqlar yoʻq</p>"
+
+#~ msgid "<p><b>%1</b> does not seem to exist anymore</p>"
+#~ msgstr "<p><b>%1</b> mavjud emasga oʻxshaydi</p>"
+
+#~ msgid "Search result: %1"
+#~ msgstr "Qidiruv natijasi: %1"
+
+#~ msgid "Do you really want to shred this item?"
+#~ msgid_plural "Do you really want to shred these %1 items?"
+#~ msgstr[0] "Rostdan bu elementni qirib tashlamoqchimisiz?"
+
+#~ msgid "Shred"
+#~ msgstr "Qirib tashlash"

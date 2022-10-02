@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Pantalla de presentació</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>pantalla de presentació</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul proporciona una interfície per a visualitzar i seleccionar els temes de la pantalla de presentació.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aquesta és una captura de pantalla del gestor de pantalla de presentació</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El mòdul gestor de la pantalla de presentació</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>En aquesta pàgina podeu veure una vista prèvia de les pantalles de presentació instal·lades. La vista prèvia de la pantalla de presentació actual es troba ressaltada.</para>
+
+<para
+>Col·loqueu una imatge de vista prèvia amb el cursor del ratolí i després apareixerà el botó <guilabel
+>Vista prèvia de la pantalla de presentació</guilabel
+> a la part inferior dreta de la imatge. Premeu-lo per a veure la pantalla de presentació en acció.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Obtén pantalles noves de presentació...</guilabel
+></term>
+<listitem>
+<para
+>Us cal estar connectat a Internet per a utilitzar aquesta acció. Es mostrarà un diàleg d'una llista de temes d'emoticones des del lloc web <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Fent clic al botó <guibutton
+>Instal·la</guibutton
+> associat amb un tema, aquest s'instal·larà localment. </para>
+<para>
+<screenshot>
+<screeninfo
+>Instal·lant un tema nou</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Instal·lant un tema nou</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Aquest tema nou estarà immediatament disponible després d'haver tancat el diàleg Baixa Pantalles de presentació de l'&systemsettings; i estarà ressaltat. La vista prèvia mostrarà la imatge. Haureu de fer clic al botó <guibutton
+>Aplica</guibutton
+> per a fer que aquest tema sigui el tema actual de la pantalla de presentació. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

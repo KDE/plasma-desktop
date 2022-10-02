@@ -1,0 +1,214 @@
+# translation of knetattach.po to Chinese Traditional
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2008.
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
+# Franklin <franklin@goodhorse.idv.tw>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"PO-Revision-Date: 2011-12-10 19:24+0800\n"
+"Last-Translator: Franklin <franklin@goodhorse.idv.tw>\n"
+"Language-Team: Chinese Traditional <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"dot tw>\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frank Weng (a.k.a. Franklin)"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "franklin@goodhorse.idv.tw"
+
+#: knetattach.cpp:79
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"輸入這個 <i>Web資料夾</i> 的名稱及伺服器位址、埠號與資料夾路徑，然後按下「<b>"
+"儲存並連線</b>」。"
+
+#: knetattach.cpp:82
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"輸入這個<i>SSH 連線</li>的名稱及伺服器位址、埠號與資料夾路徑，然後按下「<b>儲"
+"存並連線</b>」。"
+
+#: knetattach.cpp:86
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"輸入這個<i>FTP 連線</li>的名稱及伺服器位址、埠號與資料夾路徑，然後按下「<b>儲"
+"存並連線</b>」。"
+
+#: knetattach.cpp:90
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"輸入這個<i>Microsoft Windows 網路磁碟機</li>的名稱及伺服器位址、埠號與資料夾"
+"路徑，然後按下「<b>儲存並連線</b>」。"
+
+#: knetattach.cpp:208
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr "無法連到伺服器。請確認您的設定再試一次。"
+
+#: knetattach.cpp:336
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "儲存並連線(&O)"
+
+#: knetattach.cpp:338
+#, kde-format
+msgid "C&onnect"
+msgstr "連線(&O)"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "網路資料夾精靈"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "新增網路資料夾"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "請選擇您要連接的網路資料夾的型態，然後按「下一步」。"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "最近的連線(&R)："
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "Web 資料夾(webdav)(&W)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "SSH(&S)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FTP(&P)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "Microsoft® Windows® 網路磁碟機(&M)"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "網路資料夾資訊"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "名稱(&N)："
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "使用者(&U)："
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "伺服器(&R)："
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "埠號(&P)："
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "協定(&P)："
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "資料夾(&F)："
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "編碼："
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "為遠端資料夾產生圖示(&E)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "加密(&U)"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "KDE 網路精靈"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "(c) 2004 George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "主要作者與維護者"

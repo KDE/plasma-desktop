@@ -1,0 +1,137 @@
+# kcmlaunch Bahasa Melayu (Malay) (ms)
+# Copyright (C) K Desktop Environment
+#
+# Muhammad Najmi Ahmad Zabidi <md_najmi@yahoo.com>, 2003.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2008-03-03 20:04+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "Kursor S&ibuk"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "Kursor Berkelip"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "Kursor Melantun"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "Hidupkan pemberi&tahuan papan tugas"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "Had ma&sa penanda permulaan:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " saat"
+msgstr[1] " saat"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Maklumbalas Pelancaran </h1> Anda boleh selaraskan maklumbalas lancar-"
+#~ "aplikasi di sini."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Kursor Sibuk</h1>\n"
+#~ "Kursor Sibuk KDE untuk pemberitahuan memulakan aplikasi.\n"
+#~ "Untuk membolehkan kursor sibuk, pilih satu jenis maklumbalas visual\n"
+#~ "dari kekotak kombo.\n"
+#~ "Kadang-kadang berkemungkinan aplikasi tidak menyedari\n"
+#~ "fungsi ini. Dalam hal ini, kursor berhenti berkelip selepas masa\n"
+#~ "yang diberi untuk seksyen 'Penunujuk had masa permulaan'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Tiada Kursor Sibuk"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Kursor Sibuk Pasif"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "Papan Tugas Pemberitahua&n"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Papan Tugas Pemberitahuan</H1>\n"
+#~ "Anda boleh hidupkan kaedah kedua untuk pemberitahuan permulaan\n"
+#~ "iaitu dengan jam kaca berputar,\n"
+#~ "sebagai simbol aplikasi anda sedang dimuatkan.\n"
+#~ "Kadang-kadang berkemungkinan aplikasi tidak menyedari\n"
+#~ "fungsi ini. Dalam hal ini, kursor berhenti berkelip selepas masa\n"
+#~ "yang diberi untuk seksyen 'Penunujuk had masa permulaan'"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Had masa penanda perm&ulaan:"

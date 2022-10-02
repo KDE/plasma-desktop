@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Spelbesturing</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>joystick</keyword>
+<keyword
+>besturing</keyword>
+<keyword
+>spelpad</keyword>
+<keyword
+>kalibreren</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Spelbesturing kalibreren</title>
+
+<para
+>Deze module levert een interface om uw spelbesturing te kalibreren evenals om te zien welke functies op uw spelbesturing overeenkomen met welke logische knop of as.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Een schermafdruk van de spelbesturingsmodule</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>De spelbesturingsmodule</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Apparaat</guilabel
+></term>
+<listitem>
+<para
+>Hier ziet u de logische locatie van het apparaat. Als u meer dan een spelbesturing hebt, dan kunt u hier selecteren welke u wilt configureren. </para>
+<para
+>Als er niet automatisch een spelbesturing op uw computer is gevonden en u zeker weet dat er een is aangesloten, dan kunt u het juiste apparaatbestand hier invoeren. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Positie</guilabel
+></term>
+<listitem>
+<para
+>De getekende locatie van de X- en Y-as van de spelbesturing. Schakel <guibutton
+>Spoor tonen</guibutton
+> in om de loop van van de joystick te tekenen van het ene punt naar het andere. </para>
+<tip
+><para
+>Als de joystick niet elk punt van deze grafiek kan bereiken of als het niet juist is gecentreerd, dan dient u het apparaat te kalibreren. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Knoppen</guilabel
+></term>
+<listitem>
+<para
+>Een plek om de ingedrukte status van knoppen op uw spelbesturing te zien en of de knoppen juist overeenkomen. Wanneer een knop wordt ingedrukt, zal <guilabel
+>INGEDRUKT</guilabel
+> verschijnen naast het logische nummer (zoals de computer het ziet) van de knop die was ingedrukt. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Assen</guilabel
+></term>
+<listitem>
+<para
+>Dit geeft de numerieke waarden van de as-posities zien. 0 is gecentreerd en de maximum en minimum waarden hangen af van de spelbesturing en de betreffende as. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kalibreren</guilabel
+></term>
+<listitem>
+<para
+>Klikken op <guibutton
+>Kalibreren</guibutton
+> zal een dialoog openen om elke as op uw spelbesturing te kalibreren. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Kalibreren van uw spelbesturing</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Kalibreren van uw spelbesturing</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Elke as moet naar de minimum positie worden verplaatst, daarna het midden en uiteindelijk de maximum positie. Een meter in de linkeronderhoek van de dialoog helpt op welke manier de waarden toe dan wel afnemen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

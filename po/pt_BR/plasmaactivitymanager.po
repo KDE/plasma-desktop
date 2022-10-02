@@ -1,0 +1,76 @@
+# Translation of plasmaactivitymanager.po to Brazilian Portuguese
+# Copyright (C) 2016 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasmaactivitymanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2016-04-09 10:39-0300\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: sortedactivitiesmodel.cpp:316
+#, kde-format
+msgid "Used some time ago"
+msgstr "Usado algum tempo atrás"
+
+#: sortedactivitiesmodel.cpp:332
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "Usado há mais de um ano"
+
+#: sortedactivitiesmodel.cpp:333
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "Usado há um mês"
+msgstr[1] "Usado há %1 meses"
+
+#: sortedactivitiesmodel.cpp:334
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "Usado há um dia"
+msgstr[1] "Usado há %1 dias"
+
+#: sortedactivitiesmodel.cpp:335
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "Usado há uma hora"
+msgstr[1] "Usado há %1 horas"
+
+#: sortedactivitiesmodel.cpp:336
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "Usado há um minuto"
+msgstr[1] "Usado há %1 minutos"
+
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used a moment ago"
+msgstr "Usado em algum momento"
+
+#: switcherbackend.cpp:166
+#, kde-format
+msgid "Walk through activities"
+msgstr "Percorrer as atividades"
+
+#: switcherbackend.cpp:171
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "Percorrer as atividades (inverso)"

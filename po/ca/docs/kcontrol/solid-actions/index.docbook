@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Accions de dispositiu</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>10 de desembre de 2018</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>accions</keyword>
+<keyword
+>dispositius</keyword>
+<keyword
+>maquinari</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Accions per a dispositius nous</title>
+<sect2 id="icons-intro">
+<title
+>Introducció</title>
+
+<para
+>Aquest mòdul us permet configurar les accions que voleu associar quan connecteu nous dispositius.</para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del Gestor d'accions de dispositiu</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del Gestor d'accions de dispositiu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Veureu que figuren totes les accions possibles que estan disponibles quan els dispositius estan connectats. Si us plau, cal tenir present que només estarà disponible en determinades condicions.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Afegeix</guibutton
+>: Us demanarà que proporcioneu un nom per a la nova acció, a continuació, s'obrirà l'acció per a la seva edició. Si no proporcioneu tots els detalls requerits en aquest diàleg, llavors aquesta acció serà eliminada. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Edita</guibutton
+>: Us permetrà canviar el nom, icona, ordre a executar i les condicions de l'acció amb les que ha de coincidir per a ser mostrada. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Descarta / No es pot esborrar / Esborra</guibutton
+>: Farà diferents accions, depenent de si se subministra amb el sistema o l'heu creat. Només es poden descartar els canvis sobre les accions en tot el sistema, si no hi ha canvis, llavors aquestes accions no es podran eliminar. Les creades per l'usuari seran eliminades completament, inclosos tots els canvis. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Afegir una acció</title>
+
+<para
+>El botó <guibutton
+>Afegeix</guibutton
+> farà aparèixer un diàleg per a introduir el nom de la nova acció. </para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del diàleg Afegeix una acció</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del diàleg Afegeix una acció</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>El nom d'acció correcte ha de descriure l'acció. Després d'introduir un nom i fer clic a <guibutton
+>D'acord</guibutton
+>, es mostrarà el diàleg per a editar l'acció permetent-vos ajustar les propietats de l'acció. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Editar una acció</title>
+
+<para
+>Aquest diàleg permet canviar la configuració de l'acció seleccionada.</para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del diàleg Edita una acció</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del diàleg Edita una acció</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Això inclou la icona, el nom de l'acció, l'ordre per a l'acció i els diversos paràmetres. Podeu canviar la icona fent-hi clic.</para>
+<para
+>Els paràmetres es mostren en un arbre, l'element superior haurà de ser veritat perquè l'acció sigui mostrada.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Editar un paràmetre</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tipus de paràmetre</guilabel
+></term>
+<listitem>
+<para
+>Controla el que pot estar contingut al seu interior, o quina coincidència es realitzarà per a comprovar si és cert. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Coincidència de propietat</guilabel
+></term>
+<listitem>
+<para
+>Compara la propietat especificada del dispositiu (utilitzant <guilabel
+>Tipus de dispositiu</guilabel
+> i <guilabel
+>Nom del valor</guilabel
+>) i utilitzant l'avaluador, es compara amb el text proporcionat.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Conjunció de contingut</guilabel
+></term>
+<listitem>
+<para
+>Totes les subpropietats d'aquest hauran de ser certes perquè sigui certa en si mateixa.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Disjunció de contingut</guilabel
+></term>
+<listitem>
+<para
+>Qualsevol subcaracterística d'aquesta pot ser certa perquè sigui certa en si mateixa.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Coincidència de la interfície del dispositiu</guilabel
+></term>
+<listitem>
+<para
+>Comprova si el dispositiu pot ser classificat com al tipus de dispositiu seleccionat.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tipus de dispositiu</guilabel
+></term>
+<listitem>
+<para
+>Aquests són els tipus de dispositius possibles admesos pel &plasma; al vostre sistema. S'utilitzen tant en les coincidències de la propietat com en la interfície del dispositiu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nom del valor</guilabel
+></term>
+<listitem>
+<para
+>Aquí teniu la llista de tots els noms de les propietats possibles per al tipus de dispositiu seleccionat. També proporciona la selecció del valor per a l'avaluador (el qual pot ser <guilabel
+>Iguals</guilabel
+> o <guilabel
+>Conté</guilabel
+>), i permet l'entrada del text que serà comparat.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Reinicia el paràmetre</guibutton
+></term>
+<listitem>
+<para
+>Reverteix els canvis no desats que heu fet a aquest paràmetre.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Desa els canvis de paràmetre</guibutton
+></term>
+<listitem>
+<para
+>Desa els canvis que heu realitzat al paràmetre.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

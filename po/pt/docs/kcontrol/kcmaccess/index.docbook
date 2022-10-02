@@ -1,0 +1,389 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Acessibilidade</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Pedro</firstname
+><surname
+>Morais</surname
+><affiliation
+><address
+><email
+>morais@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>acessibilidade</keyword>
+<keyword
+>teclas</keyword>
+<keyword
+>campainha</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Acessibilidade</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Introdução</title>
+
+<para
+>Este módulo foi concebido para ajudar os utilizadores que têm dificuldade em ouvir avisos sonoros, ou que têm dificuldade em utilizar o teclado. </para>
+
+<para
+>O módulo está dividido em quatro páginas: <link linkend="access-bell"
+><guilabel
+>Campainha</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Teclas modificadoras</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtros do Teclado</guilabel
+></link
+> e <link linkend="access-activation-gestures"
+><guilabel
+>Gestos de Activação</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Campainha</guilabel
+></title>
+
+<para
+>Este painel está dividido numa secção <guilabel
+>Campainha Audível</guilabel
+> e uma secção <guilabel
+>Campainha Visível</guilabel
+>. </para>
+
+<para
+>A opção no topo com o nome <guilabel
+>Utilizar a Campainha do Sistema</guilabel
+>, determina se a campainha normal toca. Se esta opção não estiver seleccionada, a campainha do sistema não emitirá nenhum som. </para>
+
+<para
+>A opção directamente abaixo pode ser utilizada para tocar um som diferente sempre que a campainha do sistema é despoletada. Para activar, seleccione a opção com o nome <guilabel
+>Utilizar uma campainha personalizada</guilabel
+> e introduza a localização completa do ficheiro com o som no campo <guilabel
+>Som a Reproduzir</guilabel
+>. Se quiser, poderá utilizar o botão <guibutton
+>Escolher</guibutton
+> para navegar pelo seu sistema de ficheiros e encontrar o ficheiro exacto. </para>
+
+<para
+>Para os utilizadores que têm dificuldades em ouvir a campainha do sistema, ou para os utilizadores cujos computadores não conseguem reproduzir sons, o &kde; oferece a <emphasis
+>campainha visível</emphasis
+>. Esta campainha pode dar um sinal visual (inverter o ecrã ou piscar uma cor no ecrã) nas situações em que a campainha do sistema iria tocar. </para>
+
+<para
+>Para utilizar a campainha visível, comece por seleccionar a opção com o nome <guilabel
+>Utilizar uma campainha visível</guilabel
+>. </para>
+
+<para
+>Poderá então seleccionar este <guilabel
+>Inverter ecrã</guilabel
+>, ou <guilabel
+>Piscar ecrã</guilabel
+>. Se optar por <guilabel
+>Inverter ecrã</guilabel
+>, todas as cores no ecrã serão invertidas. Se escolher <guilabel
+>Piscar cor</guilabel
+>, poderá escolher a cor, carregando para tal no botão à direita da opção <guilabel
+>Piscar ecrã</guilabel
+>. </para>
+
+<para
+>A barra deslizante pode ser utilizada para ajustar a duração da campainha visível. O valor por omissão é 500ms, ou seja, meio segundo. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Teclas modificadoras</guilabel
+></title>
+
+<para
+>Existem duas secções neste painel, a <guilabel
+>Teclas Fixas</guilabel
+> e as <guilabel
+>Teclas de Bloqueio</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar Teclas Fixas</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estive seleccionada, o utilizador pode pressionar e largar as teclas &Shift;, &Alt; ou &Ctrl;, e depois carregar noutra tecla para obter uma combinação de teclas (exemplo: <keycombo action="simul"
+>&Ctrl; &Alt; <keycap
+>Del</keycap
+></keycombo
+> poderia ser feito com &Ctrl; seguido de &Alt; seguido de <keycap
+>Del</keycap
+>). </para>
+
+<para
+>Nesta secção também está uma opção <guilabel
+>Trancar as Teclas Fixas</guilabel
+>. Se esta estiver seleccionada, as teclas &Alt;, &Ctrl;, e &Shift; ficam <quote
+>seleccionadas</quote
+> até que sejam <quote
+>desactivadas</quote
+> de novo pelo utilizador. </para>
+
+<para
+>Por exemplo: </para>
+<variablelist>
+<varlistentry>
+<term
+>Com a opção <guilabel
+>Trancar as teclas fixas</guilabel
+> desactivada:</term>
+<listitem>
+<para
+>O utilizador carrega na tecla &Shift;, e carrega de seguida na tecla <keycap
+>F</keycap
+>. O computador traduz esta acção em <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Se o utilizador de seguida carregar na tecla <keycap
+>P</keycap
+>, o computador recebe a letra p (sem o Shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Com o <guilabel
+>Trancar as teclas fixas</guilabel
+> activado:</term>
+<listitem>
+<para
+>Se o utilizador carregar na tecla &Shift; <emphasis
+>duas vezes</emphasis
+> e carregar de seguida na tecla <keycap
+>F</keycap
+>, o computador traduz esta acção em <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Se o utilizador de seguida carregar na tecla <keycap
+>P</keycap
+>, o computador interpreta isto como a letra P (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Para desligar a tecla &Shift;, carregue nela de novo. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtros do Teclado</guilabel
+></title>
+
+<para
+>Existem duas secções neste painel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar as teclas lentas</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver activa, o utilizador tem de manter a tecla carregada durante um período de tempo específico (ajustável com a barra deslizante), antes que a tecla seja aceite. Isto previne o pressionar acidental de teclas. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Usar as teclas sonoras</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver seleccionada, o utilizador tem que esperar um intervalo de tempo específico (configurado com a barra) antes que a próxima tecla seja aceite. Isto evita que as pessoas carreguem na mesma tecla mais do que uma vez sem querer. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gestos de Activação</guilabel
+></title>
+
+<para
+>Existem duas secções neste painel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos de Activação</guilabel
+> com estas opções:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar os gestos para activar as teclas fixas e lentas</guilabel
+></member>
+<member
+>Aqui poderá activar os gestos do teclado que activam as seguintes funcionalidades:</member>
+<member
+>Rato por Teclado: Carregue em &Shift;+NumLock</member>
+<member
+>Teclas fixas: Carregue em &Shift; 5 vezes consecutivas</member>
+<member
+>Teclas lentas: Mantenha carregado o &Shift; durante 8 segundos</member>
+<member
+><guilabel
+>Desligar as teclas fixas e lentas ao fim de um dado período de inactividade</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificação</guilabel
+> com estas opções:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar a campainha do sistema sempre que for usado um gesto para activar ou desactivar uma função de acessibilidade</guilabel
+></member>
+
+<member
+><guilabel
+>Mostrar uma janela de confirmação quando uma função de acessibilidade do teclado for activada ou desactivada</guilabel
+></member>
+<member
+>Se esta opção estiver assinalada, o &kde; irá mostrar uma janela de confirmação, sempre que uma dada funcionalidade de acessibilidade seja activada ou desactivada.</member>
+<member
+>Certifique-se que sabe o que está a fazer quando a desligar, dado que a configuração da acessibilidade do teclado será sempre aplicada sem qualquer confirmação.</member>
+
+<member
+><guilabel
+>Use o mecanismo de notificações do sistema do &kde; para saber quando uma funcionalidade de acessibilidade do teclado é activada ou desactivada</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Carregue no botão para <guibutton
+>Configurar as Notificações</guibutton
+>, de modo a abrir uma janela que lhe permite editar as notificações das mudanças de estado de todas as teclas.</para>
+
+</sect3>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Підручник з &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10 квітня 2015 року</date>
+<releaseinfo
+>Плазма 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; — це майстер полегшення інтеграції ваших мережевих ресурсів з вашою стільницею &kde;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Мережеві теки</keyword>
+<keyword
+>Майстер мережевих тек</keyword>
+<keyword
+>Майстер мережевих тек KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<para
+>Майстер &knetattach;, яку ми з ніжністю далі за текстом називатимемо Майстром мережевих тек, спрощує додавання та інтеграцію різноманітних мережевих тек з вашою стільницею &kde;. Будь ласка, повідомляйте про будь-які проблеми або надсилайте запити на реалізацію можливостей у цій програмі на сайті, присвяченому вадам у &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Користування &knetattach;</title>
+
+<para
+>Як ви можете бачити зі знімку вікна, показано нижче, Майстер мережевих тек цієї версії надає вам змогу додавати мережеві теки чотирьох типів: WebDav, &FTP;, мережеві диски &Microsoft; &Windows; (Samba) і SSH. Крім того, ви можете вибрати пункт одного з нещодавніх з’єднань зі списку. <screenshot>
+<screeninfo
+>Це знімок вікна &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+<caption>
+<para
+>Головне вікно майстра мережевих тек</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Додавання мережевих тек</title>
+
+<para
+>Мережеві теки буде показано у окремому місці &konqueror; і &dolphin;, яке називається <emphasis
+>віртуальною текою</emphasis
+>. Доступ до віртуальної теки можна отримати введенням адреси <userinput
+>remote:/</userinput
+> на панелі адреси або вибором пункту <guilabel
+>Мережа</guilabel
+> на панелі <guilabel
+>Місця</guilabel
+>. Після цього ви зможете переглядати будь-які теки, які раніше було додано, а також скористатися майстром для додавання нових тек. <screenshot>
+<screeninfo
+>Це знімок вікна &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+<caption>
+<para
+>Віртуальна тека з Майстром мережевих тек</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Як і всі програми-майстри, Майстер мережевих тек розроблено так, щоб ним можна було якнайлегше користуватися. Після відкриття майстра вам слід обрати тип мережевої теки, доступ до якої ви бажаєте отримати. Після цього перед вами відкриється наступне вікно, де вам просто слід ввести потрібні дані. Останнім кроком є введення вашого імені користувача і пароля для спільного ресурсу у мережі, доступ до якого ви отримуєте. </para>
+<para
+>Нижче за текстом ви побачите список відомостей, потрібних для того, щоб майстер міг створити мережеву теку. Якщо для якоїсь з тек відповідного пункту немає у списку, вводити цей пункт не потрібно. Наприклад, для тек Samba не потрібен пункт <guilabel
+>Порт</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Назва:</guilabel
+></term>
+<listitem>
+<para
+>Тут вам слід вказати назву мережевого з’єднання. Її обмежено лише вашою уявою (або абеткою). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Користувач:</guilabel
+></term>
+<listitem>
+<para
+>Це ім’я користувача, яке буде використано для встановлення з’єднання. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Сервер:</guilabel
+></term>
+<listitem>
+<para
+>Тут слід вказати адресу сервера, який ви намагаєтеся додати. Це може бути IP-адреса або доменна назва. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Порт:</guilabel
+></term>
+<listitem>
+<para
+>Тут вам слід ввести номер порту, з яким ви бажаєте з’єднати комп’ютер. Зазвичай, типового значення достатньо. <note
+> <para
+>Недоступний для тек &Microsoft; &Windows; (Samba). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Тека:</guilabel
+></term>
+<listitem>
+<para
+>Шлях до теки, з якою ви бажаєте з’єднати ваш комп’ютер з метою подальшого її відкриття. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Кодування:</guilabel
+></term>
+<listitem>
+<para
+>Скористайтеся пунктами цього списку для вибору кодування даних з’єднань &FTP; та ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Створити піктограму для цієї віддаленої теки</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, буде створено піктограму, яка надаватиме доступ за допомогою віртуальної теки remote:/. Якщо пункт позначено не буде, з’єднання буде можливим, але доступ до нього з теки remote:/ буде неможливим. <note
+> <para
+>За допомогою пункт <guilabel
+>Недавнє з’єднання:</guilabel
+> можна повторно з’єднатися з останньою точкою монтування мережі, з якою було з’єднано ваш комп’ютер за допомогою майстра, байдуже чи створювалася при цьому піктограма, чи ні. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Використовувати шифрування</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, буде увімкнено можливість встановлення безпечного з’єднання. <note
+> <para
+>Доступний лише для тек WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Прогулянка &knetattach;</title>
+
+
+<para
+>Тут ми швиденько прогуляємося Майстром мережевих тек. Уважно роздивляйтеся, аби не пропустити чогось. </para>
+
+<para
+>Нижче ви бачите знімок вікна Майстра мережевих тек. На момент знімку ми обираємо тип теки, яку бажаємо додати або з якою бажаємо з’єднати наш комп’ютер. У цьому прикладі ми використали &FTP;. За таких умов ми познайомимося з більшістю параметрів, з якими ви можете мати справу під час роботи з майстром. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Це знімок головного вікна &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Гаразд, отже ми (ну, в даному випадку, я) бажаємо додати теку &FTP;. Нижче ви можете бачити приклад типів тої інформації, яку вам слід додати для вашого сервера &FTP;. Після того, як ми вкажемо потрібні дані, слід натиснути <guibutton
+>Зберегти і з’єднатися</guibutton
+>, а потім почекати, доки програма владнає свої справи. А, ось ще, якщо для доступу до сервера потрібна перевірка користувача будь-якого типу, на цьому кроці програма запитає у вас про потрібні дані, перш ніж дозволити з’єднання. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>На знімку вікна показано додавання теки &FTP; за допомогою &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Отже, тепер ми з’єднали наш комп’ютер з потрібною текою, а отже, маємо змогу пересуватися щойно доданим спільним ресурсом. Насолоджуйтесь! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Знімок вікна зі з’єднаною текою &FTP;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Щоб повернутися до наших мережевих тек, достатньо ввести <action
+>remote:/</action
+> у поле адреси &konqueror; або &dolphin; чи скористатися пунктом <guilabel
+>Мережа</guilabel
+> на панелі <guilabel
+>Місця</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Знімок вікна з віртуальною текою remote:/ з доданим з’єднанням</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Знімок вікна</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Крім того, ви навіть можете додавати нові теки, знаходячись за нашою новою адресою, за допомогою посилання <guilabel
+>Додати мережеву теку</guilabel
+>. Ну ось ми і завершили нашу прогулянку (я ж казав, що все буде швидко). Бажаю вам всього найкращого у ваших подорожах мережевими теками ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Подяки і ліцензія</title>
+
+<para
+>&knetattach; </para>
+<para
+>Авторські права на програму належать &George.Staikos; &George.Staikos.mail;, ©2004 </para>
+
+<para
+>Авторські права на документацію належать &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

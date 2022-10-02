@@ -1,0 +1,571 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# Kristof Kiszel <ulysses@fsf.hu>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-02-07 11:00+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: contents/activitymanager/ActivityItem.qml:212
+msgid "Currently being used"
+msgstr "Jelenleg használt"
+
+#: contents/activitymanager/ActivityItem.qml:252
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Áthelyezés\n"
+"erre az aktivitásra"
+
+#: contents/activitymanager/ActivityItem.qml:282
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Megjelenítés\n"
+"ezen az aktivitáson is"
+
+#: contents/activitymanager/ActivityItem.qml:342
+msgid "Configure"
+msgstr "Beállítások"
+
+#: contents/activitymanager/ActivityItem.qml:359
+msgid "Stop activity"
+msgstr "Aktivitás leállítása"
+
+#: contents/activitymanager/ActivityList.qml:143
+msgid "Stopped activities:"
+msgstr "Leállított aktivitások:"
+
+#: contents/activitymanager/ActivityManager.qml:127
+msgid "Create activity…"
+msgstr "Aktivitás létrehozása…"
+
+#: contents/activitymanager/Heading.qml:61
+msgid "Activities"
+msgstr "Aktivitások"
+
+#: contents/activitymanager/StoppedActivityItem.qml:133
+msgid "Configure activity"
+msgstr "Aktivitás beállítása"
+
+#: contents/activitymanager/StoppedActivityItem.qml:148
+msgid "Delete"
+msgstr "Törlés"
+
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr "Hiba történt a(z) %1 betöltésekor."
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr "Másolás a vágólapra"
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr "Hiba részleteinek megjelenítése…"
+
+#: contents/applet/CompactApplet.qml:70
+msgid "Open %1"
+msgstr "%1 megnyitása"
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:240
+msgid "About"
+msgstr "Névjegy"
+
+#: contents/configuration/AboutPlugin.qml:45
+msgid "Send an email to %1"
+msgstr "E-mail küldése neki: %1"
+
+#: contents/configuration/AboutPlugin.qml:59
+#, fuzzy
+#| msgid "Open %1"
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr "%1 megnyitása"
+
+#: contents/configuration/AboutPlugin.qml:107
+msgid "Copyright"
+msgstr "Copyright"
+
+#: contents/configuration/AboutPlugin.qml:127 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Licenc:"
+
+#: contents/configuration/AboutPlugin.qml:140
+msgid "Authors"
+msgstr "Szerzők"
+
+#: contents/configuration/AboutPlugin.qml:150
+msgid "Credits"
+msgstr "Köszönetnyilvánítás"
+
+#: contents/configuration/AboutPlugin.qml:161
+msgid "Translators"
+msgstr "Fordítók"
+
+#: contents/configuration/AboutPlugin.qml:175
+msgid "Report a Bug…"
+msgstr ""
+
+#: contents/configuration/AppletConfiguration.qml:55
+msgid "Keyboard Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: contents/configuration/AppletConfiguration.qml:288
+msgid "Apply Settings"
+msgstr "Beállítások alkalmazása"
+
+#: contents/configuration/AppletConfiguration.qml:289
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr ""
+"Az aktuális modul beállításai megváltoztak. Szeretné menteni a "
+"módosításokat, vagy elveti azokat?"
+
+#: contents/configuration/AppletConfiguration.qml:319
+msgid "OK"
+msgstr "OK"
+
+#: contents/configuration/AppletConfiguration.qml:327
+msgid "Apply"
+msgstr "Alkalmazás"
+
+#: contents/configuration/AppletConfiguration.qml:333
+#: contents/explorer/AppletAlternatives.qml:179
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr "Beállítóoldal megnyitása"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:19
+msgid "Left-Button"
+msgstr "Bal gomb"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:20
+msgid "Right-Button"
+msgstr "Jobb gomb"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Middle-Button"
+msgstr "Középső gomb"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Back-Button"
+msgstr "Visszaléptető gomb"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Forward-Button"
+msgstr "Előre léptető gomb"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Vertical-Scroll"
+msgstr "Függőleges görgetés"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:26
+msgid "Horizontal-Scroll"
+msgstr "Vízszintes görgetés"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:29
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:73
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Művelet hozzáadása"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+msgid "Layout changes have been restricted by the system administrator"
+msgstr "Elrendezést csak a rendszeradminisztrátor módosíthat"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+msgid "Layout:"
+msgstr "Elrendezés:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+msgid "Wallpaper type:"
+msgstr "Háttérkép típus:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
+msgstr "Új kiegészítők letöltése…"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+msgid "Layout changes must be applied before other changes can be made"
+msgstr "A felület változtatásait alkalmazni kell a további módosítások előtt"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#, fuzzy
+#| msgid "Apply now"
+msgid "Apply Now"
+msgstr "Alkalmazás most"
+
+#: contents/configuration/ConfigurationShortcuts.qml:16
+msgid "Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr ""
+"Ez a gyorsbillentyű aktiválja a kisalkalmazást, mintha rákattintottak volna."
+
+#: contents/configuration/ContainmentConfiguration.qml:29
+msgid "Wallpaper"
+msgstr "Háttérkép"
+
+#: contents/configuration/ContainmentConfiguration.qml:34
+msgid "Mouse Actions"
+msgstr "Egérműveletek"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Bemenet itt"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+msgid "Remove Panel"
+msgstr "Panel eltávolítása"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
+msgid "Panel Alignment"
+msgstr "Panel igazítása"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Top"
+msgstr "Fentre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Left"
+msgstr "Balra"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+msgid "Center"
+msgstr "Középre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Bottom"
+msgstr "Lentre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Right"
+msgstr "Jobbra"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+msgid "Visibility"
+msgstr "Láthatóság"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+msgid "Always Visible"
+msgstr "Mindig látható"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+msgid "Auto Hide"
+msgstr "Automatikus elrejtés"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
+msgid "Windows Can Cover"
+msgstr "Az ablakok eltakarhatják"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
+msgid "Windows Go Below"
+msgstr "Az ablakok elé kerülhet"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr "Áttetszőség"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr "Adaptív"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr "Nem áttetsző"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr "Átlátszó"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid "Maximize Panel"
+msgstr "Panel maximalizálása"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+msgid "Floating Panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+msgid "Shortcut"
+msgstr "Gyorsbillentyű"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+msgid "Add Widgets…"
+msgstr "Elemek hozzáadása…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
+msgid "Add Spacer"
+msgstr "Elválasztó hozzáadása"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
+msgid "More Options…"
+msgstr "További beállítások…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr "Húzza az áthelyezéshez"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel width:"
+msgstr "Panelszélesség:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel height:"
+msgstr "Panelmagasság:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:397
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Bezárás"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Panel- és asztalkezelés"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+"A paneleket és asztalokat húzással mozgathatja a különböző képernyők között."
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
+msgid "%1 (primary)"
+msgstr "%1 (elsődleges)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
+msgid "%1 (disabled)"
+msgstr "%1 (letiltva)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+msgid "Swap with Desktop on Screen %1"
+msgstr "Csere a(z) %1. képernyőn lévő asztallal"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+msgid "Move to Screen %1"
+msgstr "Áthelyezés a(z) %1. képernyőre"
+
+#: contents/explorer/AppletAlternatives.qml:63
+msgid "Alternative Widgets"
+msgstr "Alternatív widgetek"
+
+#: contents/explorer/AppletAlternatives.qml:163
+msgid "Switch"
+msgstr "Váltás"
+
+#: contents/explorer/AppletDelegate.qml:175
+msgid "Undo uninstall"
+msgstr "Eltávolítás visszavonása"
+
+#: contents/explorer/AppletDelegate.qml:176
+msgid "Uninstall widget"
+msgstr "Widget eltávolítása"
+
+#: contents/explorer/Tooltip.qml:102
+msgid "Author:"
+msgstr "Szerző:"
+
+#: contents/explorer/Tooltip.qml:110
+msgid "Email:"
+msgstr "E-mail:"
+
+#: contents/explorer/Tooltip.qml:129
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: contents/explorer/WidgetExplorer.qml:134
+#: contents/explorer/WidgetExplorer.qml:245
+msgid "All Widgets"
+msgstr "Minden elem"
+
+#: contents/explorer/WidgetExplorer.qml:199
+msgid "Widgets"
+msgstr "Elemek"
+
+#: contents/explorer/WidgetExplorer.qml:207
+msgid "Get New Widgets…"
+msgstr "Új widgetek letöltése…"
+
+#: contents/explorer/WidgetExplorer.qml:256
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets matched the search terms"
+msgstr "Nincs a keresési kifejezésekre illő elem"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets available"
+msgstr "Nincsenek widgetek"
+
+#~ msgid "Appearance"
+#~ msgstr "Megjelenés"
+
+#~ msgid "Search…"
+#~ msgstr "Keresés…"
+
+#~ msgid "Screen Edge"
+#~ msgstr "Képernyőszél"
+
+#~ msgid "Click and drag the button to a screen edge to move the panel there."
+#~ msgstr ""
+#~ "Kattintson a gombra és húzza a képernyő egyik szélére a panel "
+#~ "áthelyezéséhez."
+
+#~ msgid "Add Widgets..."
+#~ msgstr "Elemek hozzáadása…"
+
+#, fuzzy
+#~| msgid "Apply Settings"
+#~ msgid "Settings"
+#~ msgstr "Beállítások alkalmazása"
+
+#~ msgid "Width"
+#~ msgstr "Szélesség"
+
+#~ msgid "Height"
+#~ msgstr "Magasság"
+
+#~ msgid "Click and drag the button to resize the panel."
+#~ msgstr "Kattintson a gombra és húzza a panel átméretezéséhez."
+
+#~ msgid "Layout cannot be changed while widgets are locked"
+#~ msgstr "A felület nem változtatható, amíg a widgetek zárolva vannak"
+
+#~ msgid "Lock Widgets"
+#~ msgstr "Elemek zárolása"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet: it will give the keyboard focus "
+#~ "to it, and if the applet has a popup (such as the start menu), the popup "
+#~ "will be open."
+#~ msgstr ""
+#~ "Ez a gyorsbillentyű aktiválja a kisalkalmazást: átadja neki a "
+#~ "billentyűzet fókuszát, és ha a kisalkalmazásnak van felugró eleme (mint "
+#~ "például az indítómenünek), a felugró elem megnyílik."
+
+#~ msgid "Activity name:"
+#~ msgstr "Aktivitásnév:"
+
+#~ msgid "Create"
+#~ msgstr "Létrehozás"
+
+#, fuzzy
+#~| msgid "Are you sure you want to delete the activity?"
+#~ msgid "Are you sure you want to delete this activity?"
+#~ msgstr "Biztosan törölni szeretné az aktivitást?"
+
+#, fuzzy
+#~| msgid "Ok"
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Ok"
+#~ msgstr "OK"
+
+#, fuzzy
+#~| msgid "Apply"
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Apply"
+#~ msgstr "Alkalmazás"
+
+#, fuzzy
+#~| msgid "Cancel"
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Cancel"
+#~ msgstr "Mégsem"
+
+#~ msgid "Enter search term..."
+#~ msgstr "Írjon be egy keresőkifejezést…"
+
+#~ msgid "Remove activity %1?"
+#~ msgstr "Eltávolítja a(z) %1 aktivitást?"
+
+#~ msgid "Remove"
+#~ msgstr "Eltávolítás"
+
+#~ msgid "Templates"
+#~ msgstr "Sablonok"
+
+#~ msgid "Empty Desktop"
+#~ msgstr "Üres asztal"
+
+#~ msgid "None"
+#~ msgstr "Nincs"

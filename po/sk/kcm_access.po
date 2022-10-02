@@ -1,0 +1,814 @@
+# translation of kcmaccess.po to Slovak
+# Marián Čavojský <cavojsky@soria-grey.sk>, 2000.
+# Stanislav Visnovsky <stano@ms.mff.cuni.cz>, 2002.
+# Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2017, 2021.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2022-06-26 14:57+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "Stlačte %1 pokiaľ sú NumLock, CapsLock a ScrollLock aktívne"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "Stlačte %1 pokiaľ sú CapsLock a ScrollLock aktívne"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "Stlačte %1 pokiaľ sú NumLock a ScrollLock aktívne"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Stlačte %1 pokiaľ je ScrollLock aktívny"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "Stlačte %1 pokiaľ sú NumLock a CapsLock aktívne"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Stlačte %1 pokiaľ je CapsLock aktívny"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Stlačte %1 pokiaľ je NumLock aktívny"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Stlačte %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "Nemôžem nastaviť gsettings pre Orca: \"%1\" zlyhalo"
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "Chyba: Nemôžem spustiť \"orca --setup\""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Použiť systémový zvonček"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Prispôsobiť systémový zvonček"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Zvukový súbor pre Zvonček"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Namiesto zvuku používať vizuálny zvonček"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Invertovať systémové farby na zvončeku"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Farba viditeľného zvončeka"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Trvanie vizuálneho zvončeku"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Použiť lepkavé klávesy"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Uzamknúť lepkavé klávesy"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Vypnúť lepkavé klávesy keď sú dva klávesy stlačené naraz"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Pípnutie po stlačení lepkavej klávesy"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Prepínacie klávesy pípajú"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Upozorňovať, keď je stlačený modifikátor klávesnice"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Použite oneskorenie"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Na prístup použiť pípnutie"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Použiť pomalé stlačenia kláves"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Oneskorenie stlačenia klávesu"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Pípnuť pri pomalom stláčaní kláves"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Pípnutie po prijatí stlačeného klávesu"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Pípnutie po odmietnutí stlačeného klávesu"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Odrazové klávesy"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Použiť zdržanie pri skákaní"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Pípnuť, ak je odmietnutá udalosť klávesu skoku"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Požívať klávesy na ovládanie myši"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Oneskorenie pohybu myši"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Interval opakovania pre pohyb myši"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Čas na dosiahnutie maximálnej rýchlosti"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "Maximálna rýchlosť"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Maximálna rýchlosť"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Krivka klávesy myši"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "Použiť gestá"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Požiadať o potvrdenie gesta"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Potvrdiť prístup ku klávesnici"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Povoliť čítačku obrazovky"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "Vyberte zvukový súbor"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "Zvukové súbory (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "Akustický zvonček:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "Vlastný zvuk:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "Vyhľadajte zvukový súbor pre systémový zvonček"
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "Tlačidlo hľadania audio súboru"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "Vizuálny zvonček:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "Negovať zobrazenie"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "Bliknúť"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "Farba"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Trvanie:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "Pomalé klávesy"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "Oneskorenie:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "Použiť systémový zvonček:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "keď je stlačený kláves"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "keď je kláves akceptovaný"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "keď je kláves odmietnutý"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "Odrazové klávesy:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "Oneskorenie:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "Použiť systémový zvonček keď je odmietnutý"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+"Tento modul umožňuje konfigurovať funkcie dostupnosti, ako je napríklad "
+"čítačka obrazovky."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "Zvonček"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Modifikačné klávesy"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Klávesnicové filtre"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "Navigácia myšou"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Čítačka obrazovky"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "Lepkavé klávesy:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "Zamknúť"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "Zakázať keď sú stlačené dva klávesy"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "Použiť systémový zvonček vždy keď je stlačený modifikačný kláves"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "Odozva:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr "Pri prepínaní uzamykacích kláves zazvoniť systémový zvonček"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"Zobraziť upozornenie, keď sa používajú modifikátory alebo uzamykacie klávesy"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Nastaviť notifikácie..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "Používať číselnú klávesnicu na ovládanie kurzoru:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "Povoliť"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Keď je použité gesto:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Zobraziť potvrdzovacie dialógové okno"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Použiť systémový zvonček"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "Zobraziť notifikáciu"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "Oneskorenie zrýchlenia:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "Interval opakovania:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "Čas zrýchlenia:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "Maximálna rýchlosť:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Profil zrýchlenia:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Spustiť konfiguráciu čítačky obrazovky Orca..."
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Upozorňujeme, že na správne fungovanie čítačky obrazovky sa možno budete "
+"musieť odhlásiť alebo reštartovať."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"Zdá sa, že čítačka obrazovky Orca nie je nainštalovaná. Pred použitím tejto "
+"funkcie ju nainštalujte a potom sa odhláste alebo reštartujte"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marián Čavojský,Miroslav Dávid"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "cavojsky@soria-grey.sk,mirodav@gmail.com"
+
+#~ msgid "Accessibility"
+#~ msgstr "Prístupnosť"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid "Automatically turn off the sticky keys after an interval"
+#~ msgstr "Po určitom čase automaticky vypnúť lepiace klávesy"
+
+#~ msgid "Ring when toggling accessibility features with gestures"
+#~ msgstr "Zvoniť pri prepínaní funkcií dostupnosti gestami"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktivácia:"
+
+#~ msgid "Use gestures to activate"
+#~ msgstr "Aktivovať pomocou gest"
+
+#~ msgid "Disable After:"
+#~ msgstr "Zakázať po:"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Ak je táto možnosť zapnutá, bude použitý štandardný systémový zvonček, čo "
+#~ "je len \"pípnutie\"."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Zapnite túto voľbu, ak chcete použiť upravený zvonček, prehranie "
+#~ "zvukového súboru. Ak to urobíte, tak budete pravdepodobne chcieť vypnúť "
+#~ "systémový zvonček."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Použiť uprav&ený zvonček"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Ak je možnosť \"Použiť upravený zvonček\" zapnutá, môžete si tu vybrať "
+#~ "zvukový súbor. Kliknite na \"Prehliadať...\", aby ste si mohli vybrať "
+#~ "zvuk pomocou súborového dialógu."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Použiť &zvuk:"
+
+#~ msgid "Browse..."
+#~ msgstr "Prechádzať..."
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Táto možnosť spustí \"vizuálny zvonček\", t.j. vizuálnu komunikáciu "
+#~ "spustenú vždy kedy by mal zaznieť zvonček. Táto možnosť je "
+#~ "najpoužiteľnejšia pre  nepočujúcich ľudí."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "&Použiť vizuálny zvonček"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "Obrazovka sa zafarbí na zvolenú farbu na čas, špecifikovaný nižšie."
+
+#~ msgid "F&lash screen"
+#~ msgstr "Za&blikať obrazovkou"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Všetky farby zobrazenia budú obrátené na čas, špecifikovaný nižšie."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Kliknite tu pre výber farby použitej pre vizuálny zvonček \"Za&blikať "
+#~ "obrazovkou\"."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "Tu môžete nastaviť časové trvanie zobrazovania efektu \"vizuálneho "
+#~ "zvončeka\"."
+
+#~ msgid " msec"
+#~ msgstr " msek"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr "Použiť systémový zvonček vždy keď sa stav modifikátora zmení"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Zamykacie klávesy"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr "Použiť systémový zvonček vždy keď sa stav zamykacích kláves zmení"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&Pomalé klávesy"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Použiť &odrazové klávesy"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Použiť systémový zvonček vždy keď je kláves odmietnutý"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Aktivačné gestá"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Použiť gestá pre aktivovanie lepkavých a pomalých kláves"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr "Vypnúť lepkavé a pomalé klávesy po určitom čase neaktivity."
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Použiť systémový zvonček vždy keď je gesto použité na zapnutie alebo "
+#~ "vypnutie vlastnosti prístupnosti"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Ak je táto voľba zapnutá, KDE zobrazí potvrdzujúce dialógové okno vždy "
+#~ "keď je vlastnosť prístupnosti klávesnice zapnutá alebo vypnutá.\n"
+#~ "Presvedčte sa, že viete čo robíte keď voľbu vypnete, lebo nastavenia "
+#~ "prístupnosti klávesnice sa aplikujú bez potvrdenia."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Zobraziť potvrdzujúce dialógové okno vždy keď je vlastnosť prístupnosti "
+#~ "klávesnice zapnutá alebo vypnutá"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Použiť mechanizmus systémovej notifikácie Plasma vždy keď je vlastnosť "
+#~ "prístupnosti klávesnice zapnutá alebo vypnutá"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr ""
+#~ "Pohybovať kurzorom pomocou klávesnice (pomocou numerickej klávesnice)"
+
+#~ msgid " pixel/sec"
+#~ msgstr " pixel/sek"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Čítačka obrazovky je povolená"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Tu môžte aktivovať klávesnicové gestá, ktoré zapnú nasledujúce "
+#~ "vlastnosti: \n"
+#~ "Lepkavé klávesy: Stlačte Shift 5-krát po sebe\n"
+#~ "Pomalé klávesy: Držte stlačený Shift 8 sekúnd"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Tu môžte aktivovať klávesnicové gestá, ktoré zapnú nasledujúce "
+#~ "vlastnosti: \n"
+#~ "Myšie klávesy: %1\n"
+#~ "Lepkavé klávesy: Stlačte Shift 5-krát po sebe\n"
+#~ "Pomalé klávesy: Držte stlačený Shift 8 sekúnd"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "Aktivačné gestá"
+
+#~ msgid "Form"
+#~ msgstr "Formulár"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "Čas pre d&ebounce:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Čas vypršania:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"

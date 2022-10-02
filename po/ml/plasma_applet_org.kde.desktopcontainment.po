@@ -1,0 +1,1007 @@
+# translation of plasma_applet_folderview.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+#
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2019-12-29 20:50+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "സ്ഥാനം"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "ചിഹ്നങ്ങള്‍"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "അരിപ്പ"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "പുറകോട്ട്"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+msgid "Files:"
+msgstr "ഫയലുകള്‍:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "എല്ലാം കാണിക്കുക"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+msgid "Show matching"
+msgstr "പൊരുത്തമുള്ളത് മാത്രം കാണിക്കുക"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+msgid "Hide matching"
+msgstr "പൊരുത്തമുള്ളവ മറയ്ക്കുക "
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "ഫയലിന്റെ പേരിലെ പാറ്റേണ്‍:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "ഫയലിന്റെ തരങ്ങള്‍:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "ഫയലിന്റെ തരം"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "വിവരണം"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "എല്ലാം തെരഞ്ഞെടുക്കാത്തതാക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "പാനൽ ബട്ടൺ:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, fuzzy, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "പരതുക..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "ചിഹ്നം മായ്ക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "ചിഹ്നങ്ങളുടെ അടുക്കിവയ്ക്കല്‍"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "ഇടത്തേക്ക് ചേര്‍ത്ത്"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align right"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "വലത്തേക്ക് ചേര്‍ത്ത്"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "സ്ഥാനത്തു് പൂട്ടുക"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "വിന്യാസക്രമം:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "പേര്"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "വലിപ്പമനുസരിച്ചു്"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "തരമനുസരിച്ചു്"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "തിയ്യതിയ്ക്കനുസരിച്ചു്"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "അവരോഹണക്രമത്തിൽ"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgid "Folders first"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "അറകളാദ്യം"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, fuzzy, kde-format
+#| msgid "List"
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "പട്ടിക"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "ചിഹ്നത്തിന്റെ വലിപ്പം:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "ചെറുതു്"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "വലുതു്"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "പേരിന്റെ വീതി:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, fuzzy, kde-format
+#| msgid "Narrow"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "ഇടുങ്ങിയത്"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "ഇടത്തരം"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, fuzzy, kde-format
+#| msgid "Wide"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "വീതിയില്‍"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "പദാവലി വരികള്‍"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, fuzzy, kde-format
+#| msgid "Tooltips"
+msgid "Show tooltips"
+msgstr "സൂചനകള്‍"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+msgid "Show selection markers"
+msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+msgid "Show folder preview popups"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "&പേരു് മാറ്റുക"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+msgid "Previews:"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+msgid "Show preview thumbnails"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "കാണിക്കുക:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+msgid "Desktop folder"
+msgstr "പണിയിട അറ കാണിയ്ക്കുക"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "നിലവിലത്തെ പരിപാടിയുമായി ബന്ധപ്പെട്ട ഫയലുകള്‍"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+msgid "Custom location:"
+msgstr "സ്ഥാനം"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, fuzzy, kde-format
+msgid "Type path or URL…"
+msgstr "ഒരു വഴിയോ യുആര്‍എല്ലോ ഇവിടെ ടൈപ്പ് ചെയ്യുക"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "ഒന്നുമല്ല"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട്"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Enter custom title..."
+msgid "Enter custom title…"
+msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട് നൽകുക..."
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "തിരിക്കുക"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "പശ്ചാത്തലം മറയ്ക്കുക"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "പശ്ചാത്തലം കാണിക്കുക"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+msgid "Preview Plugins"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "റദ്ദാക്കുക"
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "പണിയിടം ക്രമീകരിക്കുക"
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+msgid "Select Folder"
+msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "പണിയിടം പുതുക്കുക (&R)"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "കാഴ്ച പുതുക്കുക (&R)"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+msgid "&Empty Trash"
+msgstr "ചവറ്റുകുട്ട കാലിയാക്കുക (&E)"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "വീണ്ടെടുക്കുക (&R)"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "തുറക്കുക (&O)"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "ഒട്ടിക്കുക (&P)"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "ഗുണഗണങ്ങള്‍ (&P)"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, fuzzy, kde-format
+msgid "Sort By"
+msgstr "ചിഹ്നങ്ങള്‍ തരം തിരിയ്ക്കുക:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "തരംതിരിയ്ക്കാത്തതു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "പേര്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "വലിപ്പമനുസരിച്ചു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "തരമനുസരിച്ചു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "തിയ്യതിയ്ക്കനുസരിച്ചു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "അവരോഹണക്രമത്തിൽ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "അറകളാദ്യം"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, fuzzy, kde-format
+msgid "Icon Size"
+msgstr "ചിഹ്നത്തിന്റെ വലിപ്പം:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "ചെറുത്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "ചെറുതു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "ചെറുതു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "ഇടത്തരം"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "ഇടത്തരം"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "വലുതു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "വളരെ വലുത്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "ചിഹ്നങ്ങള്‍ അടുക്കിവയ്ക്കുക:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, fuzzy, kde-format
+msgid "Align"
+msgstr "ഗ്രിഡുമായി ചേര്‍ത്തു്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "ഇടത്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "വലത്"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+msgid "Show Previews"
+msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, fuzzy, kde-format
+#| msgid "Locked"
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "പൂട്ടി"
+
+#~ msgid "Features:"
+#~ msgstr "വിശേഷതകൾ:"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Search…"
+#~ msgstr "തിരയുക..."
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "&അറയുണ്ടാക്കുക..."
+
+#, fuzzy
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "പണിയിട അറ കാണിയ്ക്കുക"
+
+#~ msgid "Show All Files"
+#~ msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
+
+#, fuzzy
+#~ msgid "Size:"
+#~ msgstr "വലിപ്പമനുസരിച്ചു്"
+
+#, fuzzy
+#~ msgid "Desktop Layout"
+#~ msgstr "പണിയിട അറ"
+
+#, fuzzy
+#~ msgid "Arrange in"
+#~ msgstr "ചിഹ്നങ്ങള്‍ അടുക്കിവയ്ക്കുക:"
+
+#, fuzzy
+#~ msgid "Sort by"
+#~ msgstr "ചിഹ്നങ്ങള്‍ തരം തിരിയ്ക്കുക:"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "പണിയിട അറ കാണിയ്ക്കുക"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "ഒരു അറ വ്യക്തമാക്കുക:"
+
+#~ msgid "&Reload"
+#~ msgstr "&വീണ്ടും ലഭ്യമാക്കുക"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&ചവറ്റുകുട്ടയിലിടുക"
+
+#~ msgid "&Delete"
+#~ msgstr "&വെട്ടി മാറ്റുക"
+
+#, fuzzy
+#~ msgid "Align:"
+#~ msgstr "ഗ്രിഡുമായി ചേര്‍ത്തു്"
+
+#, fuzzy
+#~ msgid "Sorting"
+#~ msgstr "ചിഹ്നങ്ങള്‍ തരം തിരിയ്ക്കുക:"
+
+#, fuzzy
+#~ msgid "Show Original Directory"
+#~ msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
+
+#, fuzzy
+#~ msgid "Show Original File"
+#~ msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
+
+#, fuzzy
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "ചവറ്റുകുട്ട &കാലിയാക്കുക"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "ഈ താള്‍ &ഓര്‍മ്മക്കറിപ്പായി ചേര്‍ക്കുക"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "ഈ സ്ഥാനം &ഓര്‍മ്മക്കറിപ്പായി ചേര്‍ക്കുക"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "ഈ അറ &ഓര്‍മ്മക്കറിപ്പായി ചേര്‍ക്കുക"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "ഈ കണ്ണി &ഓര്‍മ്മക്കറിപ്പായി ചേര്‍ക്കുക"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "ഈ ഫയല്‍ &ഓര്‍മ്മക്കറിപ്പായി ചേര്‍ക്കുക"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "എവിടേക്കു് പകര്‍ത്തണം"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "എവിടേക്കു് നീക്കണം"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "പണിയിട അറ"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "പണിയിട അറ"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "പരതുക..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "ഇവിടെ ഒട്ടിക്കുക"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "ഇവിടേക്കു് നീക്കുക"
+
+#~ msgid "Share"
+#~ msgstr "പങ്കിടുക"
+
+#, fuzzy
+#~ msgid "Icon:"
+#~ msgstr "ചിഹ്നങ്ങള്‍"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "ഒരു അറ അതിന്റെ മുകളിലേക്ക് തന്നെ ഇടാന്‍ കഴിയില്ല"
+
+#, fuzzy
+#~ msgid "File name for dropped contents:"
+#~ msgstr "ഫയലിന്റെ പേരിലെ പാറ്റേണ്‍:"
+
+#~ msgid "&Move Here"
+#~ msgstr "ഇവിടേക്കു് &നീക്കുക"
+
+#~ msgid "&Copy Here"
+#~ msgstr "ഇവിടെ &പകര്‍ത്തുക"
+
+#~ msgid "&Link Here"
+#~ msgstr "ഇവിടെ &ബന്ധപ്പെടുത്തുക"
+
+#~ msgid "C&ancel"
+#~ msgstr "റ&ദ്ദാക്കുക"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "&ചുമര്‍ച്ചിത്രമായി ക്രമീകരിക്കുക"
+
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "പുതിയതുണ്ടാക്കുക"
+
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "അറയുടെ പേരു് നല്‍കുക:"
+
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "പുതിയതുണ്ടാക്കുക"
+
+#, fuzzy
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "പണിയിട അറ"
+
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "പണിയിട അറ"
+
+#, fuzzy
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "അറയുടെ പേരു് നല്‍കുക:"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "പണിയിട അറ"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "&ഒട്ടിക്കുക"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "ചിഹ്നങ്ങള്‍"
+
+#~ msgid "Align to Grid"
+#~ msgstr "ഗ്രിഡുമായി ചേര്‍ത്തു്"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "സ്ഥാനത്തു് പൂട്ടുക"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "1 അറ"
+#~ msgstr[1] "%1 അറകള്‍"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 ഫയല്‍"
+#~ msgstr[1] "%1 ഫയലുകള്‍"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "1 ഫയല്‍."
+#~ msgstr[1] "%1 ഫയലുകള്‍."
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "ചിഹ്നങ്ങള്‍ കാഴ്ചയില്‍ അടുക്കിവയ്ക്കുന്നതിനുള്ള അടിസ്ഥാനം തെരഞ്ഞെടുക്കാന്‍ ഈ നിയന്ത്രണം "
+#~ "തെരഞ്ഞെടുക്കുക."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "ചിഹ്നങ്ങള്‍ കാഴ്ചയില്‍ അടുക്കിവയ്ക്കുന്നതിനുള്ള അടിസ്ഥാനം തെരഞ്ഞെടുക്കാന്‍ ഈ നിയന്ത്രണം "
+#~ "തെരഞ്ഞെടുക്കുക."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "ചിഹ്നങ്ങള്‍ കാഴ്ചയില്‍ അടുക്കിവയ്ക്കുന്നതിനുള്ള അടിസ്ഥാനം തെരഞ്ഞെടുക്കാന്‍ ഈ നിയന്ത്രണം "
+#~ "തെരഞ്ഞെടുക്കുക."
+
+#, fuzzy
+#~ msgid "Align to grid:"
+#~ msgstr "ഗ്രിഡുമായി ചേര്‍ത്തു്"
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr "കാണാവുന്ന ചിഹ്നങ്ങളുടെ വലിപ്പം കൂട്ടാനോ കുറയ്ക്കാനോ ഈ സ്ലൈഡറുപയോഗിയ്ക്കുക."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr "ചിഹ്നങ്ങളില്‍ ഫയലിലെ ഉള്ളടക്കം കൂടി കാണിയ്ക്കുവാന്‍ ഈ ഐച്ഛികം തെരഞ്ഞെടുക്കുക."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "ഏതൊക്കെ തരം ഫയലുകള്‍ക്കാണു് ഉള്ളടക്കം കാണിയ്ക്കേണ്ടതെന്നു് തെരഞ്ഞെടുക്കാന്‍ ഈ ബട്ടണില്‍ ഞെക്കുക."
+
+#, fuzzy
+#~ msgid "Icon Text"
+#~ msgstr "ചിഹ്നത്തിന്റെ സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "ചിഹ്നങ്ങള്‍ക്കു് താഴെ എത്ര വരി പദാവലി കാണിയ്ക്കുമെന്നു് തെരഞ്ഞെടുക്കാന്‍ ഈ നിയന്ത്രണം "
+#~ "തെരഞ്ഞെടുക്കുക."
+
+#, fuzzy
+#~ msgid "1 line"
+#~ msgstr "1 ഫയല്‍"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "കാഴ്ച്ചയില്‍ പദാവലിയായുള്ള പേരുകള്‍ക്കുപയോഗിയ്ക്കേണ്ട നിറം തെരഞ്ഞെടുക്കുവാന്‍ ഈ ബട്ടണ്‍ ഞെക്കുക."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr "ചിഹ്നങ്ങളില്‍ ഫയലിലെ ഉള്ളടക്കം കൂടി കാണിയ്ക്കുവാന്‍ ഈ ഐച്ഛികം തെരഞ്ഞെടുക്കുക."
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "സ്പെയിസ് ഉപയോഗിച്ചു് വേര്‍തിരിച്ച എക്സ്റ്റെന്‍ഷനുകള്‍, ഉദാ *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "സ്പെയിസ് ഉപയോഗിച്ചു് വേര്‍തിരിച്ച എക്സ്റ്റെന്‍ഷനുകള്‍, ഉദാ ഓഫീസ്, ടെക്സ്റ്റ് ഫയലുകള്‍ എന്നിവയ്ക്കുള്ള "
+#~ "*.txt *.od*"
+
+#~ msgid "Pattern filter"
+#~ msgstr "പാറ്റേണ്‍ ഫില്‍ടര്‍"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "ചിഹ്നങ്ങളില്‍ ഉള്ളടക്കം കാണിയ്ക്കേണ്ടതേതെല്ലാം തരം ഫയലുകള്‍ക്കാണെന്നു് തെരഞ്ഞെടുക്കുക:"
+
+#, fuzzy
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "1 ഫയല്‍"
+#~ msgstr[1] "%1 ഫയലുകള്‍"
+
+#, fuzzy
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "ഇടത്തു് നിന്നും വലത്തു് വരെ"
+
+#, fuzzy
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "ഇടത്തു് നിന്നും വലത്തു് വരെ"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "പ്രദര്‍ശനം"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "വലിപ്പമനുസരിച്ചു്"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ക്കു് ചിഹ്നങ്ങള്‍ ഇടതു് വശത്തു് തുടങ്ങി മുകളില്‍ നിന്നും താഴെ വരെയാണോ അല്ലെങ്കില്‍ മുകളില്‍ "
+#~ "തുടങ്ങി ഇടതു് വശത്തു് നിന്നും വലതു് വശത്തു് വരെയാണോ വേണ്ടതെന്നു് തെരഞ്ഞെടുക്കാന്‍ ഈ നിയന്ത്രണം "
+#~ "ഉപയോഗിയ്ക്കുക."
+
+#~ msgid "Advanced Options"
+#~ msgstr "വിശദമായ ഐച്ഛികങ്ങള്‍"
+
+#~ msgid "Text Settings"
+#~ msgstr "പദാവലിയുടെ സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid "Text color:"
+#~ msgstr "പദാവലിയുടെ നിറം:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "വരികളുടെ എണ്ണം:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "പദാവലിയുടെ നിഴലുകള്‍ കാണിയ്ക്കുക"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "ചിഹ്നങ്ങള്‍ ഗ്രിഡുമായി ചേര്‍ത്തു് വയ്ക്കുക"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "ചിഹ്നങ്ങളെ അവയുടെ സ്ഥാനത്തു് പൂട്ടുക"
+
+#~ msgid ""
+#~ "<html><body><b>Note: The Desktop folder currently does not exist.<br />If "
+#~ "you select this option and click OK it will be created for you.</b></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><body><b>കുറിപ്പു്: പണിയിട അറ ഇപ്പോള്‍ നിലവിലില്ല.<br /> ഈ ഐച്ഛികം തെരഞ്ഞെടുത്തു് "
+#~ "ശരിയെന്നമര്‍ത്തിയാല്‍ ഇതു് നിങ്ങള്‍ക്കു് വേണ്ടി സൃഷ്ടിയ്ക്കുന്നതായിരിയ്ക്കും.</b></body></html>"
+
+#~ msgid "Show a custom folder"
+#~ msgstr "നിങ്ങളുടെ അറ കാണിയ്ക്കുക"
+
+#~ msgid "Select:"
+#~ msgstr "തെരഞ്ഞെടുക്കുക:"
+
+#~ msgid "Home"
+#~ msgstr "ആസ്ഥാനം"

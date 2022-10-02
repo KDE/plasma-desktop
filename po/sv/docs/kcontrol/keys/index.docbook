@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Genvägar</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>tangentbindningar</keyword>
+<keyword
+>bindningar</keyword>
+<keyword
+>genvägar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Genvägar</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Inledning</title
+> 
+
+<para
+>Även om det mesta av funktionaliteten som erbjuds av &plasma; kan kommas åt med ett enkelt <quote
+>peka och klicka</quote
+> gränssnitt, föredrar många att använda tangentbordet för en del aktiviteter. Att trycka på något som <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+> </keycombo
+> är ofta bra snabbare än att flytta handen från tangentbordet till musen, öppna <guimenu
+>Redigera</guimenu
+>-menyn och välja <guimenuitem
+>Sök</guimenuitem
+>.</para>
+
+<para
+>Eftersom olika människor föredrar olika snabbtangenter, erbjuder &plasma; fullständig anpassning av <quote
+>tangentbindningar</quote
+>. En tangentbindning är en kombination av en åtgärd och en tangent eller kombination av tangenter.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Standardgenvägar och globala genvägar</title>
+
+<para
+>Standardgenvägar och globala genvägar fungerar på precis samma sätt. I själva verket är standard- eller programgenvägar också <quote
+>globala</quote
+>. Den enda skillnaden är:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Vanliga genvägar</guilabel
+> hör ihop med åtgärder som ofta är tillgängliga i program, som spara, skriv ut, kopiera, etc.</para
+></listitem
+> 
+<listitem
+><para
+><guilabel
+>Globala genvägar</guilabel
+> är genvägar för åtgärder som också är rimliga om inget program är öppet. Dessa genvägar hör ofta ihop med åtgärder som att byta skrivbord, manipulera fönster, etc.</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Observera att programgenvägarna som ställs in här är <emphasis
+>bara</emphasis
+> standardåtgärderna som ofta finns i program. De flesta program definierar också sina egna åtgärder, som anpassas i programmets tangentbindningsdialog.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Sidan Vanliga genvägar</title>
+<para
+>Längst upp i dialogrutan finns en inmatningsruta, där du kan söka interaktivt efter namn på genvägar (t.ex. Kopiera) eller tangentkombinationer (t.ex. <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) genom att skriva in dem där.</para>
+<para
+>Under sökrutan kan du se en lista på kortkommandon, dvs. bindningar mellan åtgärder (t.ex. Kopiera) som visas i kolumnen <guilabel
+>Åtgärd</guilabel
+> och tangenter eller kombinationer av tangenter (t.ex. <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) som visas i kolumnen <guilabel
+>Genväg</guilabel
+> eller <guilabel
+>Alternativ</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Sidan Globala genvägar</title>
+<para
+>Till vänster på sidan finns en listruta som låter dig välja en <guilabel
+>Komponent</guilabel
+>som Kwin, Plasma skrivbord, etc. De definierade genvägarna för vald komponent visas i kolumnerna <guilabel
+>Åtgärder</guilabel
+> och <guilabel
+>Global</guilabel
+> i listvyn.</para>
+<para
+>Den här sidan har en likadan sökruta som <guilabel
+>Vanliga genvägar</guilabel
+>.</para>
+<para
+>Använd <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> eller <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> för att lägga till eller ta bort en komponent. </para>
+
+<para
+>När en komponent läggs till visas en dialogruta där program från startmenystrukturen kan väljas för att lägga till dem som startprogram användbara i genvägar. Om ett program har hopplistealternativ blir de tillgängliga som åtgärder. </para>
+
+<para
+>Klicka på kombinationsrutan <guilabel
+>Fil</guilabel
+> till höger för att importera eller exportera ett schema, och ställa in alla genvägar till Ingen.</para>
+<para
+>Globala genvägar kan nu ställas in för att gå till en specifik uppgift inne i ett program.</para>
+
+<para
+>Normalt kan programmenyn visas genom att bara trycka på tangenten <keysym
+>Meta</keysym
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Anpassa tangentbindningar</title>
+
+<para
+>Att anpassa tangentbindningar är rätt enkelt. I mitten av dessa moduler i systeminställningarna hittar du en lista på tillgängliga åtgärder. Om det finns en tangentbindning inställd för den åtgärden ser du den i kolumnerna till höger om den. Markera bara åtgärden som du vill anpassa.</para>
+
+<para
+>Efter du har markerat en åtgärd ser du att objektet är markerat och att det finns två ytterligare kryssrutor under objektet i listvyn. Där kan du ställa in en kombination av tangenter eller kanske ingen tangentbindning alls för den valda åtgärden. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Förval</guilabel
+>: den valda åtgärden hör ihop med &kde;:s förvalda värde. Det här är ett bra val för de flesta åtgärder, eftersom &kde; levereras med rimliga tangentbindningar som vi har tänkt över. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Egen</guilabel
+>: om det här alternativet markeras, kan du skapa en tangentkombination för åtgärden. Klicka antingen på knappen som heter <guibutton
+>Ingen</guibutton
+> eller har namn efter den föregående skapade egna genvägen. Nu ändras knappens namn till <guibutton
+>Inmatning</guibutton
+>. Tryck därefter på någon väljartangent (dvs. &Shift;, &Ctrl; eller &Alt;) och sedan en normal tangent eller en funktionstangent (t.ex. <keycap
+>F11</keycap
+>) som du vill tilldela till den här tangentkombinationen.</para>
+<para
+>Att klicka på kolumnen <guilabel
+>Alternativ</guilabel
+> för en rad i listan gör det möjligt att redigera den andra genvägen för åtgärden.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

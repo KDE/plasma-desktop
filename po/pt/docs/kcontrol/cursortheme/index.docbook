@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema de Cursores</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-09-21</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<abstract>
+<para
+>Esta é a documentação do módulo do &systemsettings; para personalizar a aparência do cursor do rato. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>rato</keyword>
+<keyword
+>cursor</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo permite-lhe seleccionar um tema dentro de um conjunto de temas instalados. Aparecerá uma antevisão do aspecto do cursor por cima da lista. </para>
+
+<para
+>As funcionalidades oferecidas por este módulo poderão não estar disponíveis em alguns sistemas. O seu sistema poderá ter de ser actualizado para suportar os temas de cursores. </para>
+
+<para
+>Se tiver temas adicionais disponíveis, podê-los-á instalar e remover com os botões no fundo da lista. Lembre-se que não poderá apagar os temas predefinidos. </para>
+
+<para
+>Use o botão <guibutton
+>Obter Temas Novos</guibutton
+> para lançar a janela <guilabel
+>Obter Coisas Novas</guilabel
+> e transferir temas adicionais da Internet.</para>
+
+<para
+>Alguns temas permitem escolher o tamanho do cursor com a lista à direita. </para>
+
+<para
+>O mesmo poderá ser definido como <guilabel
+>dependente da resolução</guilabel
+> ou um dos tamanhos disponíveis para o seu sistema. </para>
+
+</article>

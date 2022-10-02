@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Datum &amp; Tijd</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&Niels.Reedijk;<othercredit role="translator"
+><firstname
+>Freek</firstname
+><surname
+>de Kruijf</surname
+><affiliation
+><address
+><email
+>f.de.kruijf@gmail.com</email
+></address
+></affiliation
+><contrib
+></contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>Klok</keyword>
+<keyword
+>datum</keyword>
+<keyword
+>tijd</keyword>
+<keyword
+>set</keyword>
+<keyword
+>instellen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Datum &amp; Tijd</title>
+
+<para
+>U kunt deze module gebruiken om de systeemdatum en -tijd te wijzigen, door middel van een handige interface.</para>
+
+<note
+><para
+>Voor het wijzigen van de systeemdatum en -tijd heeft u de toegangsrechten van (<systemitem class="username"
+>root</systemitem
+>) nodig. Als u deze toegangsrechten niet hebt, dan zal het dialoogvenster u slechts de huidige instellingen tonen, maar uw wijzigingen zullen niet worden opgeslagen.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Datum en tijd</title>
+
+<para
+>Als u <guilabel
+>Datum en tijd automatisch instellen</guilabel
+> activeert dan zal deze module <acronym
+>systemd</acronym
+> gebruiken om datum en tijd op te halen.</para>
+
+<para
+>Op een computer zonder <acronym
+>systemd</acronym
+> zullen de hulpmiddelen van <acronym
+>NTP</acronym
+> <command
+>rdate</command
+> of <command
+>ntpdate</command
+> gebruikt worden. Als deze hulpmiddelen ontbreken, installeer ze. </para>
+
+<para
+>Wanneer u zich aanmeldt in de &plasma;-sessie terwijl u online bent of wanneer u later verbinding maakt met het internet zal toegang gezocht worden tot een of meer <acronym
+>NTP</acronym
+>-servers.</para>
+<para
+>Dit is echter niet genoeg voor het op de lange duur handhaven van een accurate klok. Het is nuttig voor het af en toe instellen van de tijd op machines die niet steeds een netwerkverbinding hebben, zoals laptops. </para>
+
+<para
+>Als u geen time-server gebruikt kunt u de datum handmatig instellen in de agenda.</para>
+<para
+>Gebruik de besturing aan de onderkant van de kalender om de huidige datum te selecteren, voer de datum in in het bewerkingsvak of selecteer de week van het jaar uit het afrolvak.</para>
+
+<para
+>U kunt de tijd instellen door gebruik te maken van de spinvelden onder de klok of door direct een waarde in te vullen.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Tijdzone</title>
+<para
+>Om een nieuwe tijdzone in te stellen selecteert u gewoon uw nieuwe tijdzone uit de lijst hieronder.Gebruik het filtervak om het gewenste <guilabel
+>Gebied</guilabel
+> of <guilabel
+>Regio</guilabel
+> te vinden.</para>
+</sect2>
+
+</sect1>
+
+</article>

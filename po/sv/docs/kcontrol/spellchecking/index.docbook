@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Stavningskontroll</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Stavning</keyword>
+<keyword
+>ordlista</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Stavningskontroll</title>
+<para
+>Inställningsalternativen som är tillgängliga här används av alla &kde;-program som använder &sonnet;, som är ett gränssnitt för diverse fria stavningskontrollverktyg.</para>
+
+<para
+>För att använda &sonnet; måste rättstavningsprogram som t.ex. <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> eller <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> installeras, och dessutom motsvarande ordlistor för ditt språk.</para>
+
+<para
+>Inställningsalternativen som väljes här kan överskridas av varje program.</para>
+
+<para
+>Välj bland de tillgängliga ordlistorna i kombinationsrutan <guilabel
+>Förvalt språk</guilabel
+>, vilken som skall användas för &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Alternativ</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Aktivera automatisk detektering av språk</guilabel
+></term>
+<listitem>
+<para
+>Funktionen är baserad på flera olika uppskattningar (använt skript, matchning av trigram och språkrankning av tillgängliga språk i gränssnittet för stavningskontroll). Det gör det möjligt att automatiskt byta språk i ett dokument som innehåller flera språk. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Automatisk stavningskontroll normalt aktiverad</guilabel
+></term>
+<listitem>
+<para
+>Om kryssrutan markeras, kontrolleras stavningen av ord i dokument när du skriver dem. En röd linje ritas under felstavningar.  </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Hoppa över alla ord med stora bokstäver</guilabel
+></term>
+<listitem>
+<para
+>Om kryssrutan markeras, kontrolleras inte stavningen hos något ord som består av enbart stora bokstäver.</para>
+<tip
+><para
+>Det är användbart för dokument som använder ett stort antal akronymer. Om rutan lämnas omarkerar, blir de flesta akronymer markerade som felaktiga. Genom att markera rutan, anges inte akronymer som felstavade.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Hoppa över sammansatta ord</guilabel
+></term>
+<listitem
+><para
+>Om den här rutan inte är markerad, så anses ord som finns separerat i ordlistan, men har skrivits ihop, vara stavfel. Exempel på sådana ord är ordlista och rättstavning. </para>
+
+<tip
+><para
+>Att markera rutan förhindrar att program anger webbadresser och e-postadresser som felstavningar. Dessa adresser innehåller ofta sammansatta ord.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Ignorera ord</title>
+<para
+>Den nedre delen av dialogrutan låter dig ange specifika ord som ska ignoreras av stavningsprogrammet (de kan vara speciell terminologi, egennamn, etc.).</para>
+
+<sect3
+><title
+>Lägga till ett ord i listan att ignorera</title>
+<para
+>Skriv in ett ord i textrutan och klicka på knappen <guibutton
+>Lägg till</guibutton
+> för att lägga till ett ord.</para>
+</sect3>
+
+<sect3
+><title
+>Ta bort ett ord från listan att ignorera</title>
+<para
+>För att ta bort ett ord, markera ordet i listrutan som innehåller alla ord som för närvarande ignoreras, genom att klicka på det med vänster musknapp. Klicka därefter på knappen <guibutton
+>Ta bort</guibutton
+>.</para>
+
+<para
+>När du är nöjd med ändringarna, klicka helt enkelt på <guibutton
+>Verkställ</guibutton
+>.</para>
+
+<para
+>Att klicka på knappen <guibutton
+>Förval</guibutton
+> återställer alla värden till sina förvalda värden.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

@@ -1,0 +1,711 @@
+# translation of kcmaccess.po to Bengali
+# Deepayan Sarkar <deepayan@bengalinux.org>, 2004, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2006-01-04 13:00-0600\n"
+"Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
+"Language-Team: Bengali <kde-translation@bengalinux.org>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr ""
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr ""
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr ""
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr ""
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr ""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Use System Bell"
+msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Customize system bell"
+msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Color of the Visible Bell"
+msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Use sticky Keys"
+msgstr "আঠালো(&আ) কি ব্যবহার কর"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgid "Lock the sticky keys"
+msgstr "স্টিকি কি লক কর"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Beep on a sticky key press"
+msgstr "আঠালো(&আ) কি ব্যবহার কর"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Use slow keypresses"
+msgstr "মন্থর কি ব্যবহার(&ব) কর"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "লাফানো কি"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:31
+#, fuzzy, kde-format
+#| msgid "Audible Bell"
+msgid "Audible bell:"
+msgstr "শ্রাব্য ঘণ্টা"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visible Bell"
+msgid "Visual bell:"
+msgstr "দ্রষ্টিগোচর ঘণ্টা"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:108
+#, fuzzy, kde-format
+#| msgid "I&nvert screen"
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "পর্দা উল্টে(&উ) দাও"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:147
+#, fuzzy, kde-format
+#| msgid "Duration:"
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "স্থিতিকাল:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Slow keys:"
+msgstr "মন্থর কি ব্যবহার(&ব) কর"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring system bell:"
+msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "আঠালো(&আ) কি ব্যবহার কর"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, fuzzy, kde-format
+#| msgid "Bounce Keys"
+msgid "Bounce keys:"
+msgstr "লাফানো কি"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr ""
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "&Bell"
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "&ঘণ্টা"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr ""
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr ""
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, fuzzy, kde-format
+#| msgid "S&ticky Keys"
+msgid "Sticky keys:"
+msgstr "অনড় কি (&ড)"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "সৌগত ঘোষ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qcd_saugata@hotmail.com"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgid "Accessibility"
+#~ msgstr "কে.ডি.ই. সহায়ক প্রযুক্তি টুল"
+
+#~ msgid "Author"
+#~ msgstr "লেখক"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is checked, the default system bell will be used. See the "
+#~| "\"System Bell\" control module for how to customize the system bell. "
+#~| "Normally, this is just a \"beep\"."
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "এই অপশনটি চেক করলে ডিফল্ট সিস্টেম ঘণ্টা ব্যবহার করা হবে।  সিস্টেম ঘণ্টার আচরণ "
+#~ "কনফিগার করার জন্যে \"সিস্টেম ঘণ্টা\"  নিয়ন্ত্রণ মডিউলটি দেখুন। সাধারণত এটি শুধু "
+#~ "একটি \"বীপ\" শব্দ  করে থাকে।"
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "যদি স্বনির্বাচিত ঘণ্টা, যা কিনা একটি ধ্বনি ফাইল ব্যবহার করতে চান,তাহলে এই "
+#~ "অপশনটি চেক করুন। সেক্ষেত্রে আপনি হয়ত সিস্টেম ঘণ্টাটি বন্ধ করেরাখতে চাইলেন। কিন্তু "
+#~ "মনে রাখবেন যে স্লো মেশিন হলে পরে ধ্বনিটি শোনা ও ইভেন্টটিঘটার মধ্যে সময়ের "
+#~ "পার্থক্য ঘটবে।"
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "স্বনির্বাচিত ঘণ্টা ব্য&বহার করো"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "যদি \"স্বনির্বাচিত ঘণ্টা\" অপশনটি চালু থাকে, তাহলে এখানে একটি ধ্বনি ফাইল "
+#~ "বাছতেপারেন। \"ব্রাউজ...\" ক্লিক করে ফাইল ডায়ালগ খুলে ধ্বনি ফাইলটি বেছে নিন।"
+
+#~ msgid "Sound &to play:"
+#~ msgstr "যে ধ্বনিটি বা&জবে:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This option will turn on the \"visible bell\", i.e. a visible "
+#~| "notification shown every time that normally just a bell would occur. "
+#~| "This is especially useful for deaf people."
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "এই অপশনটি \"দ্রষ্টিগোচর ঘণ্টা\"-কে চালু করে দেবে। এর ফলে যেসব ক্ষেত্রে শুধুমাত্র "
+#~ "ধ্বনি শোনা যেত,সেক্ষেত্রে একটি ঘণ্টাও দ্রশ্যমান হবে। এটি বিশেষ করে বধিরদের জন্যে "
+#~ "খুবই কার্যকারি ।"
+
+#, fuzzy
+#~| msgid "&Use visible bell"
+#~ msgid "&Use visual bell"
+#~ msgstr "দ্রষ্টিগোচর &ঘণ্টা ব্যবহার করো"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "নীচে যে সময়টি উল্লেখ করা আছে, ততক্ষণের জন্যে পর্দার রং একটি স্বনির্বাচিত রং এ "
+#~ "বদলে যাবে ।"
+
+#~ msgid "F&lash screen"
+#~ msgstr "ফ্ল্যা&শ স্ক্রীণ"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "নীচে যে সময়টি উল্লেখ করা আছে, ততক্ষণের জন্যে পর্দার সবকটি রং উল্টে দেখানো হবে ।"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "\"ফ্ল্যাশ স্ক্রীণ\" য় যে ঘণ্টাটি দেখানো হবে তার রং ঠিক করার জন্যে এইখানে ক্নিক "
+#~ "করুন ।"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "এইখানে আপনি \"দ্রষ্টিগোচর ঘণ্টা\" র স্থিতিকাল নির্ধারণ করতে পারেন ।"
+
+#, fuzzy
+#~ msgid "Locking Keys"
+#~ msgstr "স্টিকি কি লক(&) কর"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "মন্থর(&ম) কি"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "লাফানো(&ল) কি ব্যবহার কর"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr ".wav|WAV ফাইল"

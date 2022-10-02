@@ -1,0 +1,256 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <danishka@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-12-15 08:14+0530\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"Language-Team: Sinhala <danishka@gmail.com>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 0.3\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>සැසි පාලකය</h1> ඔබට මෙහිදී වාර පාලකය සැකසිය හැක.  මෙහි මෙය පිටවීම තහවුරු කල යුතුද "
+"යන්න, නැවත පිවිසි විට වාරය ප්‍රථිස්තාපනය කල යුතුද යන්න හා වාරය පිටවූ විට පරිගණකය පෙරනිමියෙන් "
+"වසාදැමිය යුතුද යන්න වැනි විකල්ප අඩංගුවේ."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "පරිගණකය ප්‍රථිපණගන්වන්න (&R)"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "සාමාන්‍ය"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "පිටවීම තහවුරු කරන්න (&i)"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "පෙරනිමි පිටවීම් විකල්ප"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "වත්මන් වාරය නිම කරන්න (&E)"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "පරිගණකය ප්‍රථිපණගන්වන්න (&R)"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "පරිගණකය වසාදමන්න (&T)"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "ශ්‍රමිකව සුරැකුනු සැසිය ප්‍රථිස්තාපනය කරන්න (&m)"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "ශ්‍රමිකව සුරැකුනු සැසිය ප්‍රථිස්තාපනය කරන්න (&m)"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "හිස් සැසියක් සමඟ අරඹන්න (&s)"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"මෙහිදී ඔබට සැසි තුල සුරැකිය යුතු නොවන භාවිතයෙදවුම් ලැයිස්තුවක් තිත්කොමාවකින් හෝ කොමාවකින් වෙන්කල "
+"ලැයිස්තුවක දැකිවිය හැක. ඒවා සැසි ප්‍රථිස්තාපනයන් හීදී ආරම්භ නොවේ. උදාහරණකයක් ලෙස 'xterm:"
+"konsole' හෝ 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "පිටවීම තහවුරු කරන්න (&i)"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "පෙරනිමි පිටවීම් විකල්ප"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "පිවිසීමේදී"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "සැසියන්ට පරිබාහිර භාවිත යෙදවුම් (&x):"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "පෙර වාරය ප්‍රථිස්තාපනය කරන්න (&p)"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "ශ්‍රමිකව සුරැකුනු සැසිය ප්‍රථිස්තාපනය කරන්න (&m)"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "වාර පාලකය විසින් පිටවීම තහවුරු කිරීමේ සංවාද කොටුවක් පෙන්විය යුතු නම් මෙම විකල්පය තෝරන්න."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "පිටවීම තහවුරු කරන්න (&i)"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "ඔබ KDM මාර්ගයෙන් පිවිසුනේ නම්. මෙහිදී ඔබ පිටවූ විට පෙරනිමියෙන් සිදුවිය යුත්තේ කුමක්දැයි තෝරාගත "
+#~ "හැක."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "පෙරනිමි පිටවීම් විකල්ප"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>පෙර සැසිය ප්‍රථිපිහිටුවන්න:</b> දැනට ධාවනය වන භාවිත යෙදවුම් සියල්ල සුරැකෙන අතර "
+#~ "ඊලඟ පණගැන්වීමේදී ඒවා ප්‍රථිස්තාපනය වනු ඇත</li>\n"
+#~ "<li><b>ශ්‍රමිකව සුරැකුනු වාරය ප්‍රථිස්තාපනය කරන්න: </b> K-මෙනුවේ ඇති  \"වාරය සුරකින්න\" "
+#~ "භාවිත කරමින් වාරය ඕනෑම මොහොතක සුරැකීමට මෙම විකල්පය ඉඩ දේ ආරම්භ කර ඇති භාවිතයෙදවුම් "
+#~ "ඊලඟ පණගැන්වීමේදී පෙන්වනු ඇත.</li>\n"
+#~ "<li><b>හිස් වාරයක් සමඟ අරඹන්න:</b> කිසිවක් නොසුරකි. ඊලඟ ආරම්ඹයේදීහිස් වැඩතලයක් සමඟ "
+#~ "පැමිණේ.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "පිවිසීමේදී"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "සැසියන්ට පරිබාහිර භාවිත යෙදවුම් (&x):"

@@ -1,0 +1,338 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2022.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-07-11 18:47+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Käytettävissä olevat liitännäiset"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Ota käyttöön tai poista käytöstä (KRunnerin, sovelluskäynnistimen ja "
+"yleiskuvatehosteen) liitännäisiä"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "KRunnerin asetukset…"
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Hae uusia liitännäisiä…"
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr ""
+"Asennusskriptin suorittaminen päätteessä <message>%1</message> epäonnistui"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "Asennus onnistui: tämän ikkunan voi nyt sulkea"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "Asennuksen poisto onnistui: tämän ikkunan voi nyt sulkea"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "KRunner-liitännäisen asentaminen epäonnistui"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Suoritettava komento: asennus tai asennuksen poisto."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Arkiston sijainti."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Ei PackageKit-tukea"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Vahvista asentaminen"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Ollaan asentamassa binaaripakettia. Näitä tulisi asentaa vain luotetuilta "
+"tekijöitä tai paketoijilta."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Hyväksy riskit ja jatka"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Näytä tiedosto"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "PackageKit-taustaosa ei tue MIME-tyyppiä %1"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen ei tarjoa asennuksen poistoskriptiä. Ota yhteyttä "
+"tekijään. Liitännäisen voi yrittää poistaa itse.<nl/>Ellet osaa tai halua "
+"tehdä näin, napsauta <interface>Peru</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen ei tarjoa asennuksen poistoskriptiä. Ota yhteyttä "
+"tekijään. Liitännäisen voi yrittää poistaa itse. Katso tekijän ohjeet README-"
+"tiedostosta.<nl/>Ellet osaa tai halua tehdä näin, napsauta <interface>Peru</"
+"interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen ei tarjoa asennusskriptiä. Ota yhteyttä tekijään. "
+"Liitännäisen voi yrittää asentaa itse.<nl/>Ellet osaa tai halua tehdä näin, "
+"napsauta <interface>Peru</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen ei tarjoa asennuskriptiä. Ota yhteyttä tekijään. "
+"Liitännäisen voi yrittää asentaa itse. Katso tekijän ohjeet README-"
+"tiedostosta.<nl/>Ellet osaa tai halua tehdä näin, napsauta <interface>Peru</"
+"interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen käyttää asennukseen skriptiä, mikä voi uhata tietoturvaa. "
+"Tutki liitännäisen koko sisältö ennen asentamista tai vähintään lue skriptin "
+"lähdekoodi.<nl/>Ellet osaa tai halua tehdä näin, napsauta <interface>Peru</"
+"interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tämä liitännäinen käyttää asennukseen skriptiä, mikä voi uhata tietoturvaa. "
+"Tutki liitännäisen koko sisältö ennen asentamista tai vähintään lue README-"
+"tiedosto ja skriptin lähdekoodi.<nl/>Ellet osaa tai halua tehdä näin, "
+"napsauta <interface>Peru</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Merkitse asentamattomaksi"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Merkitse asennetuksi"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Näytä skripti"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Näytä lähdekansio"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "Näytä %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Kohteen %1 paketin nimeä ei saatu selville"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "Komennon suorittaminen epäonnistui: <message>%1</message>"
+
+#~ msgid "Position on screen:"
+#~ msgstr "Sijainti ruudulla:"
+
+#~ msgid "Top"
+#~ msgstr "Ylhäällä"
+
+#~ msgid "Center"
+#~ msgstr "Keskellä"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktivointi:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activate when pressing any key on the desktop"
+#~ msgstr "Aktivoi painettaessa työpöydällä mitä tahansa näppäintä"
+
+#~ msgid "History:"
+#~ msgstr "Historia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Remember past searches"
+#~ msgstr "Muista aiemmat haut"
+
+#~ msgctxt "@option:check"
+#~ msgid "Retain last search when re-opening"
+#~ msgstr "Näytä uudelleen avattaessa viimeisin haku"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "Aktiviteettitietoinen (viimeisin haku ja historia)"
+
+#~ msgid "Clear History"
+#~ msgstr "Tyhjennä historia"
+
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "Tyhjennä aktiviteetin ”%1” historia"
+
+#~ msgid "Clear History…"
+#~ msgstr "Tyhjennä historia…"
+
+#~ msgctxt "@item:inmenu delete krunner history for all activities"
+#~ msgid "For all activities"
+#~ msgstr "Kaikissa aktiviteeteissa"
+
+#~ msgctxt "@item:inmenu delete krunner history for this activity"
+#~ msgid "For activity \"%1\""
+#~ msgstr "Aktiviteetissa ”%1”"
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Liitännäiset:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Aseta käytössä olevat hakuliitännäiset…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lasse Liehu, Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lasse.liehu@gmail.com, translator@legisign.org"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Hakuasetukset"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "KRunnerin sijainti:"
+
+#~ msgid "Enable"
+#~ msgstr "Käytä"
+
+#~ msgid "KRunner history:"
+#~ msgstr "KRunnerin historia:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Säilytä edellinen haku"
+
+#~ msgid "Clear History..."
+#~ msgstr "Tyhjennä historia…"
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "Ota käyttöön tai poista käytöstä KRunner-liitännäiset:"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Valitse hakuliitännäiset:"

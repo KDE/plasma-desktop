@@ -1,0 +1,246 @@
+# translation of kcmkded.po to Lavtian
+# Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2008-12-27 19:34+0200\n"
+"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
+"Language-Team: Lavtian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Viesturs Zariņš, Aleksejs Zosims"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "viesturs.zarins@mii.lu.lv, locale@aleksejs.id.lv"
+
+#: kcmkded.cpp:48
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Background Services"
+msgstr "Sistēmas palaišanās servisi"
+
+#: kcmkded.cpp:52
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Daniel Molkentin"
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniels Molkentins (Daniel Molkentin)"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniels Molkentins (Daniel Molkentin)"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmkded.cpp:125
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "Neizdevās apturēt serveri <em>%1</em>."
+
+#: kcmkded.cpp:127
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "Neizdevās palaist serveri <em>%1</em>."
+
+#: kcmkded.cpp:134
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "Neizdevās apturēt serveri <em>%1</em>."
+
+#: kcmkded.cpp:136
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "Neizdevās palaist serveri <em>%1</em>."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
+#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
+#| "listed for convenience. The startup services can be started and stopped. "
+#| "In Administrator mode, you can also define whether services should be "
+#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
+#| "for KDE; do not deactivate services if you do not know what you are doing."
+#| "</b></p>"
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>Servisu pārvaldnieks</h1><p>Šis modulis ļauj redzēt pārskatu par visiem "
+"KDE dēmona spraudņiem, vēl sauktiem par KDE servisiem. Vispārīgi runājot, ir "
+"divi servisu veidi:</p><ul><li>Servisi, kurus aktivizē pie sistēmas "
+"palaišanās</li><li>Servisi, kurus izsauc pēc pieprasījuma</li></ul><p>Otrā "
+"grupa ir uzskaitīta tikai ērtības dēļ. Sistēmas palaišanās servisus var gan "
+"palaist, gan apstādināt. Administratora režīmā var arī noteikt, vai servisam "
+"būtu jāpalaižas pie sistēmas palaišanas.</p><p><b>Izmantojiet uzmanīgi: daži "
+"servisi ir būtiski svarīgi KDE darbībai, neatslēdziet servisus, ja nezināt, "
+"kādas tam būs sekas.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "Serviss"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "Darbojas"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Nedarbojas"
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "Sistēmas palaišanās servisi"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Pēc vajadzības ielādējami servisi"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Nedarbojas"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Darbojas"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "Serviss"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "Serviss"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE servisu pārvaldnieks"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Šis ir saraksts ar pieejamajiem KDE servisiem, kas tiek palaisti pēc "
+#~ "pieprasījuma. Tie ir uzskaitīti tikai ērtības labad, jo ar šiem servisiem "
+#~ "nevar manipulēt."
+
+#~ msgid "Status"
+#~ msgstr "Statuss"
+
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Šeit uzrādīti visi KDE servisi, kurus var ielādēt KDE palaišanās laikā. "
+#~ "Atzīmētie servisi tiks palaisti nākamajā palaišanas reizē. Esiet uzmanīgi "
+#~ "atslēdzot nezināmus servisus (un uzmanieties arī ieslēdzot nezināmus)."
+
+#~ msgid "Use"
+#~ msgstr "Lietot"
+
+#~ msgid "Start"
+#~ msgstr "Palaist"
+
+#~ msgid "Stop"
+#~ msgstr "Apstādināt"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Neizdevās sazināties ar KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Neizdevās palaist servisu  <em>%1</em>.<br /><br /><i>Kļūda: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Neizdevās apturēt servisu <em>%1</em>.<br /><br /><i>Kļūda: %2</i>"

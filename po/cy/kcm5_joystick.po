@@ -1,0 +1,337 @@
+# translation of joystick.po to Cymraeg
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2004-07-03 11:25+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KD wrth Kyfieithu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kyfieithu@dotmon.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "Graddnodi"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "Nesaf"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "Arhoswch am eiliad i gyfrifo'r trachywiredd"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr ""
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr ""
+
+#: caldialog.cpp:87
+#, fuzzy, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Mae graddnodi ar fin gwirio amrediad y gwerthoedd y ddarperir gan eich "
+"dyfais.<br><br>Symudwch <b>echelin %1</b> ar eich dyfais i'r lleoliad "
+"<b>lleiaf</b>. <br><br>Gwasgwch unrhyw botwm ar y dyfais i barhau efo'r cam "
+"nesaf.</qt>"
+
+#: caldialog.cpp:110
+#, fuzzy, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Mae graddnodi ar fin gwirio amrediad y gwerthoedd y ddarperir gan eich "
+"dyfais.<br><br>Symudwch <b>echelin %1</b> ar eich dyfais i'r lleoliad "
+"<b>canolig</b>. <br><br>Gwasgwch unrhyw botwm ar y dyfais i barhau efo'r cam "
+"nesaf.</qt>"
+
+#: caldialog.cpp:133
+#, fuzzy, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Mae graddnodi ar fin gwirio amrediad y gwerthoedd y ddarperir gan eich "
+"dyfais.<br><br>Symudwch <b>echelin %1</b> ar eich dyfais i'r lleoliad "
+"<b>uchaf</b>. <br><br>Gwasgwch unrhyw botwm ar y dyfais i barhau efo'r cam "
+"nesaf.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "Gwall Cyfathrebu"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "Rydych wedi graddnodi eich dyfais yn lwyddiannus"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "Llwyddiant Graddnodi"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "Gwerth Echelin %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "Ni allwyd agor y ddyfais benodol %1: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "Nid ffon rheoli yw'r ddyfais benodol %1."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr ""
+"Methu nôl fersiwn y gyrriant cnewyllyn ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"Nid yw'r fersiwn gyrriant cnewyllyn sy'n rhedeg yn gyfredol (%1.%2.%3) yr un "
+"a gafodd y modiwl yma ei grynhoi amdano  (%4.%5.%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "Methu cael nifer y botymau ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "Methu cael nifer yr echeliniau ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "Methu cael gwerthoedd graddnodi ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "Methu adfer gwerthoedd graddnodi ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr ""
+"Methu ymgychwyn gwerthoedd graddnodi ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr ""
+"Methu gweithredu gwerthoedd graddnodi ar gyfer dyfais ffon rheoli %1: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "gwall mewnol - côd %1 anhysbys"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "Modiwl Rheoli Ffon Rheoli KDE"
+
+#: joystick.cpp:31
+#, fuzzy, kde-format
+#| msgid "KDE Control Center Module to test Joysticks"
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "Modiwl Canolfan Reoli KDE i brofi Ffyn Rheoli"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr ""
+
+#: joystick.cpp:38
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#| "correctly.<br>If it delivers wrong values for the axes, you can try to "
+#| "solve this with the calibration.<br>This module tries to find all "
+#| "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#| "js[0-4]<br>If you have another device file, enter it in the combobox."
+#| "<br>The Buttons list shows the state of the buttons on your joystick, the "
+#| "Axes list shows the current value for all axes.<br>NOTE: the current "
+#| "Linux device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, "
+#| "4-button joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-"
+#| "button joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For "
+#| "details you can check your Linux source/Documentation/input/joystick.txt)"
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>Ffon rheoli</h1>Mae'r modiwl yma yn gymorth i wirio a yw eich ffon "
+"rheoli yn gweithio yn gywir. <br>Os darperir gwerthoedd anghywir ar gyfer yr "
+"echeliniau, gallwch geisio datrys hyn efo'r graddnodi.<br>Mae'r modiwl yma "
+"yn ceisio darganfod pob dyfais ffon rheoli gan wirio /dev/js[0-4] a dev/"
+"input/js[0-4].<br>Os oes gennych ffeil dyfais arall, rhowch ei henw yn y "
+"blwch cyfuno. <br>Mae'r rhestr Botymau yn dangos cyflwr y botymau ar eich "
+"ffon rheoli, ac mae'r rhestr Echeliniau yn dangos y gwerth cyfredol ar gyfer "
+"pob echelin.<br>NODER: gall y gyrriant dyfais Linux cyfredol (Cnewyllyn 2.4, "
+"2.6) ddarganfod y dilynnol yn unig:<ul> <li>ffon rheoli 2-echelin, 4-botwm</"
+"li> <li>ffon rheoli 3-echelin, 4-botwm</li> <li>ffon rheoli 4-echelin, 4-"
+"botwm</li> <li>ffyn rheoli Saitek Cyborg 'digidol'</li> </ul>(Am fanylion "
+"gallwch wirio eich Linux source/Documentation/input/joystick.txt)."
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "Dyfais:"
+
+#: joywidget.cpp:84
+#, fuzzy, kde-format
+#| msgid "Position:"
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "Lleoliad:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "Dangos olrheiniad"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "GWASGEDIG\t"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "Botymau:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "Cyflwr"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "Echeliniau:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "Gwerth"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "Graddnodi"
+
+#: joywidget.cpp:190
+#, fuzzy, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"Ni ddarganfuwyd dyfais ffon rheoli yn ymysgogol ar y cyfrifiadur yma.\n"
+"Gwiriwyd /dev/js[0-4] a /dev/input/js[0-4]\n"
+"Os gwyddoch bod un yn gysylltiedig, rhowch y ffeil dyfais gywir."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"Mae'r enw dyfais a roed yn annilys (dim yn cynnwys /dev).\n"
+"Dewiswch ddyfais o'r rhestr, neu\n"
+"rhowch ffeil ddyfais, megis /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "Dyfais Anysbys"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "Gwall Dyfais"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr ""
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr ""
+
+#: joywidget.cpp:331
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>Calibration is about to check the precision.<br><br><b>Please move "
+#| "all axes to their center position and then do not touch the joystick "
+#| "anymore.</b><br><br>Click OK to start the calibration.</qt>"
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>Mae graddnodi ar fin gwirio'r trachywiredd. <br><br><b>Symudwch pob "
+"echelin i'w lleoliad canolig, ac wedyn peidiwch â chyffwrdd y ffon rheoli yn "
+"bellach.</b><br><br>Cliciwch Iawn i ddechrau'r graddnodi.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "Wedi adfer pob gwerth graddnodi ar gyfer dyfais ffon rheoli %1."

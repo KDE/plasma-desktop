@@ -1,0 +1,176 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018, 2019, 2020.
+# Vit Pelcak <vpelcak@suse.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2021-06-02 16:01+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "Aktivity"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Smazat aktivitu"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Opravdu si přejete smazat '%1'?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr "Chyba při načítání souborů QML. Zkontrolujte si instalaci. Chybí %1"
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "Obecné"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Vytvořit novou aktivitu"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Nastavení aktivity"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Vytvořit"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "Název:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "Popis:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr "Soukromí:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Nesledovat použití této aktivity"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Zkratky pro přepínání:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Kolik měsíců ponechat v historii aktivit"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Která data ponechat v historii aktivity"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Seznam aplikací jejichž historii aktivit ukládat"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Seznam aplikací jejichž historii aktivit neukládat"
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "Přepínání"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Nastavit aktivitu %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Smazat aktivitu %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr "Vytvořit novou…"
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "Přepínání aktivit"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "Procházet aktivity"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "Procházet aktivity (pozpátku)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Zapamatovat si každou aktivitu (vyžaduje restart)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Současná virtuální plocha:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Zkratky:"

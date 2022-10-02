@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>'Joystick'</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+<keyword
+>joystick</keyword>
+<keyword
+>calibrar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Módulo de configuração do 'joystick'</title>
+
+<para
+>Este módulo oferece uma interface para configurar o seu dispositivo 'joystick', assim como ver as funções do seu 'joystick' e os mapeamentos para os botões ou eixos lógicos.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do módulo do 'joystick'</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>O módulo do 'joystick'</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Aqui poderá ver a localização lógica do dispositivo. Se tiver mais de um 'joystick', poderá também seleccionar qual deseja configurar. </para>
+<para
+>Se não for detectado automaticamente nenhum 'joystick' no seu computador e souber que está um ligado, poderá indicar aqui o ficheiro do dispositivo correcto. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Posição</guilabel
+></term>
+<listitem>
+<para
+>A localização desenhada dos eixos do X e do Y do 'joystick'. Active a opção <guibutton
+>Mostrar o seguimento</guibutton
+> para desenhar o caminho do 'joystick' de um ponto para outro. </para>
+<tip
+><para
+>Se o 'joystick' não conseguir chegar a todos os pontos deste gráfico, ou se não se conseguir centrar correctamente, terá de calibrar o seu dispositivo. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Botões</guilabel
+></term>
+<listitem>
+<para
+>Um local para ver o estado pressionado ou não dos botões do seu 'joystick', assim como verificar se os botões estão mapeados correctamente. Quando for carregado o botão de um 'joystick', irá aparecer <guilabel
+>CARREGADO</guilabel
+> ao lado do número lógico (a forma como o computador o vê) do botão que foi carregado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eixos</guilabel
+></term>
+<listitem>
+<para
+>Isto mostra os valores numéricos das posições dos eixos. O 0 significa centrado e os valores mínimo e máximo dependem do 'joystick' e de cada eixo em particular. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Calibrar</guilabel
+></term>
+<listitem>
+<para
+>Se carregar em <guibutton
+>Calibrar</guibutton
+>, irá abrir uma janela para calibrar todos os eixos do seu 'joystick'. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Calibrar o seu 'joystick'</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Calibrar o seu 'joystick'</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Cada eixo terá de ser movido para a posição mínima, depois para o centro e finalmente para a posição máxima. Existe um indicador no canto inferior esquerdo da janela que o ajudará a determinar qual a forma de aumentar e diminuir os valores. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

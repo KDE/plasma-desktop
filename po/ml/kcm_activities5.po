@@ -1,0 +1,176 @@
+# Malayalam translations for plasma-desktop package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2018-08-16 09:15+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
+"org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr ""
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr ""
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr ""
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr ""
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr ""
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr ""
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr ""
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr ""
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr ""
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr ""
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr ""
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr ""
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr ""
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr ""
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr ""
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr ""
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr ""

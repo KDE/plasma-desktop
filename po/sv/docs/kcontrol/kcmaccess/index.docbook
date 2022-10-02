@@ -1,0 +1,527 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Handikappstöd</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>handikappstöd</keyword>
+<keyword
+>tangenter</keyword>
+<keyword
+>alarm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Handikappstöd</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Inledning</title>
+
+<para
+>Den här modulen är avsedd att hjälpa användare som har svårigheter att höra ljudsignaler, eller som har svårigheter att använda ett tangentbord. </para>
+
+<para
+>Modulen är indelad i sex flikar: <link linkend="access-bell"
+><guilabel
+>Alarm</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Väljartangenter</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Tangentbordsfilter</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Aktiveringssekvenser</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Musnavigering</guilabel
+></link
+> och <link linkend="access-screenreader"
+><guilabel
+>Skärmläsare</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Alarm</guilabel
+></title>
+
+<para
+>Den här panelen är delad i sektionerna <guilabel
+>Hörbart alarm</guilabel
+> och <guilabel
+>Visuellt alarm</guilabel
+>. </para>
+
+<para
+>Den översta rutan med namnet <guilabel
+>Använd systemets summer</guilabel
+>, avgör om den normala systemsummern ljuder. Om det här valet är inaktiverat, är systemsummern tyst. </para>
+
+<para
+>Nästa kryssruta neråt kan användas för att spela upp ett annat ljud när systemsummern aktiveras. För att välja detta, markera rutan med namnet <guilabel
+>Använd eget ljud</guilabel
+>, och skriv in den fullständiga sökvägen till ljudfilen i textfältet med namnet <guilabel
+>Ljud att spela</guilabel
+>. Om du vill kan du använda knappen <guibutton
+>Bläddra</guibutton
+> för att navigera i filsystemet för att hitta den rätta filen. </para>
+
+<para
+>För de användare som har svårt att höra systemsummern, eller de användare som har en tyst dator, erbjuder &kde; det <emphasis
+>visuella alarmet</emphasis
+>. Detta erbjuder en visuell signal (inverterad skärm eller en blinkande färg över skärmen), när systemsummern normalt skulle ljuda. </para>
+
+<para
+>För att använda det visuella alarmet, markera först rutan med namnet <guilabel
+>Använd visuellt alarm</guilabel
+>. </para>
+
+<para
+>Därefter kan du välja mellan <guilabel
+>Invertera skärm</guilabel
+>, eller <guilabel
+>Blinka skärmen</guilabel
+>. Om du väljer invertera skärm, kommer alla färger på skärmen bli inverterade. Om du väljer blinka skärmen, kan du välja färg genom att klicka på knappen till höger om valet <guilabel
+>Blinka skärmen</guilabel
+>. </para>
+
+<para
+>Nummerrutan kan användas för att justera längden på det visuella alarmet. Normalvärdet är 500 ms, eller en halv sekund. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Väljartangenter</guilabel
+></title>
+
+<para
+>Den här panelen har de två sektionerna <guilabel
+>Klistriga tangenter</guilabel
+> och <guilabel
+>Låstangenter</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Använd klistriga tangenter</guilabel
+></term>
+<listitem>
+<para
+>Om det här alternativet är aktiverat, kan användaren trycka på och släppa &Shift;-, &Alt;- eller &Ctrl;-tangenterna, och sedan trycka på en annan tangent för att få en tangentkombination (till exempel <keycombo action="simul"
+>&Ctrl; &Alt; <keycap
+>Delete</keycap
+></keycombo
+> skulle kunna göras med &Ctrl; sedan &Alt; sedan <keycap
+>Delete</keycap
+>). </para>
+
+<para
+>I den här sektionen finns också en ruta med namnet <guilabel
+>Lås klistriga tangenter</guilabel
+>. Om rutan är markerad, så förblir &Alt;-, &Ctrl;-, och &Shift;-tangenterna <quote
+>valda</quote
+> tills de <quote
+>väljs bort</quote
+> av användaren. </para>
+
+<para
+>Som ett exempel: </para>
+<variablelist>
+<varlistentry>
+<term
+>Med <guilabel
+>Lås klistriga tangenter</guilabel
+> inaktiverat:</term>
+<listitem>
+<para
+>Om du trycker på skifttangenten, och därefter på <keycap
+>F</keycap
+>-tangenten, tolkar datorn det som <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Om du nu skriver in ett <keycap
+>P</keycap
+>, tolkar datorn det som bokstaven p (inget skift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Med <guilabel
+>Lås klistriga tangenter</guilabel
+> aktiverat:</term>
+<listitem>
+<para
+>Om du trycker på &Shift;-tangenten <emphasis
+>två gånger</emphasis
+>, och därefter på <keycap
+>F</keycap
+>-tangenten. Datorn översätter det här till <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Om du nu skriver in ett <keycap
+>P</keycap
+>, tolkar datorn detta som bokstaven <keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>. För att välja bort &Shift;-tangenten, tryck på den igen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Tangentbordsfilter</guilabel
+></title>
+
+<para
+>Det finns två sektioner i den här panelen.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Använd långsamma tangenter</guilabel
+></term>
+<listitem>
+<para
+>Om det här alternativet är markerat måste användaren hålla nere tangenten en specificerad tid (som kan justeras med nummerrutan) innan tangentnedtryckningen accepteras. Det här hjälper till att förhindra felaktiga nedtryckningar. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Använd studsande tangenter</guilabel
+></term>
+<listitem>
+<para
+>Om det här alternativet är markerat måste användaren vänta en specificerad tid (som kan justeras med nummerrutan) innan nästa tangentnedtryckning kan accepteras. Det här förhindrar felaktiga nedtryckningar. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Aktiveringssekvenser</guilabel
+></title>
+
+<para
+>Det finns två sektioner i den här panelen.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Aktiveringssekvenser</guilabel
+> med följande alternativ:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Använd sekvenser för att aktivera klistriga och långsamma tangenter</guilabel
+></member>
+<member
+>Här kan du aktivera tangentbordssekvenser som aktiverar följande funktioner:</member>
+<member
+>Mustangenter: Tryck på &Shift;+Num Lock</member>
+<member
+>Klistriga tangenter: Tryck på &Shift;-tangenten fem gånger i rad</member>
+<member
+>Långsamma tangenter: Håll nere &Shift;-tangenten under 8 sekunder</member>
+<member
+><guilabel
+>Stäng av klistriga och långsamma tangenter efter en viss tid utan aktivitet</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Underrättelse</guilabel
+> med följande alternativ:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Använd systemets hörbara alarm så fort en gest används för att sätta på eller stänga av en handikappfunktion</guilabel
+></member>
+
+<member
+><guilabel
+>Visa en bekräftelsedialogruta så fort en handikappfunktion för tangentbordet sätts på eller stängs av</guilabel
+></member>
+<member
+>Om alternativet är markerat, visar &kde; en bekräftelsedialogruta så fort en handikappfunktion för tangentbordet sätts på eller stängs av.</member>
+<member
+>Försäkra dig om att du vet vad du gör om du avmarkerar den, eftersom tangentbordets handikappinställningar då alltid kommer att verkställas utan bekräftelse.</member>
+
+<member
+><guilabel
+>Använd &kde;:s systemunderrättelse så fort en handikappfunktion för tangentbordet sätts på eller stängs av</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Klicka på knappen <guibutton
+>Anpassa underrättelser</guibutton
+> för att visa en dialogruta som låter dig redigera underrättelserna för statusändringar av alla tangenter.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Musnavigering</title>
+
+<para
+>Den här fliken låter dig ställa in det numeriska tangentbordet som en sorts musenhet. Det kan vara användbart om du arbetar med en dator utan något annat pekdon, eller där du inte har någon annan användning för det numeriska tangentbordet. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Flytta musen med tangentbordet (använd numeriska tangentbordet)</guilabel
+></term>
+<listitem>
+<para
+>För att aktivera tangentbordets musläge, måste du markera kryssrutan som heter <guilabel
+>Flytta musen med tangentbordet (använd numeriska tangentbordet)</guilabel
+>. När du gör det aktiveras övriga inställningar, och du kan anpassa beteendet hos tangentbordspekaren ytterligare, om det behövs. </para>
+<para
+>De olika tangenterna på det numeriska tangentbordet flyttar i riktningarna du kan förvänta dig. Observera att du kan flytta diagonalt förutom uppåt, neråt, åt vänster och åt höger. Tangenten <keycap
+>5</keycap
+> motsvarar ett klick på en musknapp, typiskt vänsterknappen. Du kan ändra vilken knapp som den motsvarar genom att använda tangenten <keycap
+>/</keycap
+> (som gör den till vänsterknapp), <keycap
+>*</keycap
+> (som gör den till mittenknapp) och <keycap
+>-</keycap
+> (som gör den till högerknapp). Att trycka på <keycap
+>+</keycap
+> motsvarar ett dubbelklick med den valda musknappen. Du kan använda tangenten <keycap
+>0</keycap
+> för att hålla nere den valda musknappen (för att lätt kunna dra), och därefter använda <keycap
+>.</keycap
+> för att släppa den valda musknappen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Accelerationsfördröjning</guilabel
+></term>
+<listitem>
+<para
+>Det här är tiden (i millisekunder) mellan ursprunglig tangentnertryckning och första upprepade rörelsehändelsen för acceleration av mustangenten. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Upprepningsintervall</guilabel
+></term>
+<listitem>
+<para
+>Det här är tiden i millisekunder mellan upprepade rörelsehändelsen för acceleration av mustangenten. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Accelerationstid</guilabel
+></term>
+<listitem>
+<para
+>Det här är tiden i millisekunder innan pekaren når en maximal hastighet för acceleration av mustangenten. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Maximal hastighet</guilabel
+></term>
+<listitem>
+<para
+>Det här är maximal hastighet i bildpunkter per sekund som pekaren kan nå för acceleration av mustangenten. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Accelerationsprofil</guilabel
+></term>
+<listitem>
+<para
+>Det här är lutningen på accelerationskurvan för acceleration av mustangenten. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Skärmläsare</guilabel
+></title>
+
+<para
+>Installera ett skärmläsarprogram såsom <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> tillsammans med  <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Prova att ljud från peech dispatcher fungerar genom att använda kommandot <command
+>spd-say hello</command
+> i en terminal. </para>
+
+<para
+>Dessutom behövs tal-till-textsyntes såsom t.ex. <application
+>espeak</application
+>. </para>
+
+<para
+>Aktivera skärmläsaren i kryssrutan, logga ut och starta om skrivbordssessionen. </para>
+
+<para
+>För själva &plasma;, försäkra dig om att använda traditionell <guilabel
+>Programmeny</guilabel
+>, och kontrollera att menyn har en tillhörande snabbtangent (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). När genvägen används, ska menyn visas och kommas åt när menyn navigeras med piltangenterna. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

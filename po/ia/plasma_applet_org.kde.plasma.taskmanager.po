@@ -1,0 +1,794 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2013, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2022-07-08 18:28+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Apparentia"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: package/contents/ui/AudioStream.qml:101
+#, fuzzy, kde-format
+#| msgctxt "button to unmute app"
+#| msgid "Unmute %1"
+msgctxt "@action:button"
+msgid "Unmute"
+msgstr "Non silente %1"
+
+#: package/contents/ui/AudioStream.qml:101
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@action:button"
+msgid "Mute"
+msgstr "Mute (Surdina)"
+
+#: package/contents/ui/AudioStream.qml:102
+#, fuzzy, kde-format
+#| msgctxt "button to unmute app"
+#| msgid "Unmute %1"
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Unmute %1"
+msgstr "Non silente %1"
+
+#: package/contents/ui/AudioStream.qml:102
+#, fuzzy, kde-format
+#| msgctxt "button to mute app"
+#| msgid "Mute %1"
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Mute %1"
+msgstr "Mute %1"
+
+#: package/contents/ui/Badge.qml:54
+#, kde-format
+msgctxt "Invalid number of new messages, overlay, keep short"
+msgid "—"
+msgstr "—"
+
+#: package/contents/ui/Badge.qml:56
+#, kde-format
+msgctxt "Over 9999 new messages, overlay, keep short"
+msgid "9,999+"
+msgstr "9,999+"
+
+#: package/contents/ui/ConfigAppearance.qml:33
+#, kde-format
+msgid "General:"
+msgstr "General:"
+
+#: package/contents/ui/ConfigAppearance.qml:34
+#, kde-format
+msgid "Show tooltips"
+msgstr "Monstra consilios"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Highlight windows when hovering over task tooltips"
+msgstr "Evidentia fenestras quando plana sur consilios de carga"
+
+#: package/contents/ui/ConfigAppearance.qml:50
+#, kde-format
+msgid "Mark applications that play audio"
+msgstr "Marca applicationes que reproduce audio"
+
+#: package/contents/ui/ConfigAppearance.qml:58
+#, kde-format
+msgctxt "@option:check"
+msgid "Fill free space on Panel"
+msgstr "Reimple spatio libere sur Pannello"
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Maximum columns:"
+msgstr "Maxime columnas:"
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Maximum rows:"
+msgstr "Maxime lineas:"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgid "Always arrange tasks in rows of as many columns"
+msgstr "Sempre dispone cargas in rangos le mesmo que columnas"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgid "Always arrange tasks in columns of as many rows"
+msgstr " Sempre dispone cargas in columnas le mesmo que rangos "
+
+#: package/contents/ui/ConfigAppearance.qml:83
+#, kde-format
+msgid "Spacing between icons:"
+msgstr "Distantia inter le icones:"
+
+#: package/contents/ui/ConfigAppearance.qml:87
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Parve"
+
+#: package/contents/ui/ConfigAppearance.qml:91
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normal"
+
+#: package/contents/ui/ConfigAppearance.qml:95
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Grande (Large)"
+
+#: package/contents/ui/ConfigAppearance.qml:119
+#, kde-format
+msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Automaticamente fixa a Grande (large) quando in modo de tocco (touch)"
+
+#: package/contents/ui/ConfigBehavior.qml:47
+#, kde-format
+msgid "Group:"
+msgstr "Gruppo:"
+
+#: package/contents/ui/ConfigBehavior.qml:50
+#, kde-format
+msgid "Do not group"
+msgstr "Non gruppa"
+
+#: package/contents/ui/ConfigBehavior.qml:50
+#, kde-format
+msgid "By program name"
+msgstr "Per nomine de programma"
+
+#: package/contents/ui/ConfigBehavior.qml:55
+#, kde-format
+msgid "Clicking grouped task:"
+msgstr "Pulsar carga gruppate:"
+
+#: package/contents/ui/ConfigBehavior.qml:62
+#, kde-format
+msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
+msgid "Cycles through tasks"
+msgstr "Cycla per cargas"
+
+#: package/contents/ui/ConfigBehavior.qml:63
+#, kde-format
+msgctxt ""
+"Completes the sentence 'Clicking grouped task shows tooltip window "
+"thumbnails' "
+msgid "Shows tooltip window thumbnails"
+msgstr "Monstra miniaturas de fenestra de consilio"
+
+#: package/contents/ui/ConfigBehavior.qml:64
+#, kde-format
+msgctxt ""
+"Completes the sentence 'Clicking grouped task shows windows side by side' "
+msgid "Shows windows side by side"
+msgstr "Monstra fenestra latere per latere"
+
+#: package/contents/ui/ConfigBehavior.qml:65
+#, kde-format
+msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
+msgid "Shows textual list"
+msgstr "Monstra lista textual"
+
+#: package/contents/ui/ConfigBehavior.qml:73
+#, kde-format
+msgid ""
+"Tooltips are disabled, so the windows will be displayed side by side instead."
+msgstr ""
+"Consilios es dishabilitate, assi que fenestras in loco essera monstrate "
+"latere per latere."
+
+#: package/contents/ui/ConfigBehavior.qml:80
+#, kde-format
+msgid ""
+"Tooltips are disabled, and the compositor does not support displaying "
+"windows side by side, so a textual list will be displayed instead"
+msgstr ""
+"Consilios es dishabilitate, e le compositor non supporta monstrar fenestras "
+"latere per latere, assi que in loco essera monstrate un lista textual"
+
+#: package/contents/ui/ConfigBehavior.qml:87
+#, kde-format
+msgid ""
+"The compositor does not support displaying windows side by side, so a "
+"textual list will be displayed instead."
+msgstr ""
+"Le compositor non supporta monstrar fenestras latere per latere, assi que un "
+"lista textual essera monstrate in loco."
+
+#: package/contents/ui/ConfigBehavior.qml:97
+#, kde-format
+msgid "Combine into single button"
+msgstr "Combina inun singule button"
+
+#: package/contents/ui/ConfigBehavior.qml:104
+#, kde-format
+msgid "Group only when the Task Manager is full"
+msgstr "Gruppa solmente quando le gerente de barra de carga es plen"
+
+#: package/contents/ui/ConfigBehavior.qml:115
+#, kde-format
+msgid "Sort:"
+msgstr "Ordina:"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Do not sort"
+msgstr "Non ordina"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Manually"
+msgstr "Manualmente"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Alphabetically"
+msgstr "Alphabeticamente"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "By desktop"
+msgstr "Per scriptorio"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "By activity"
+msgstr "Per Activitate"
+
+#: package/contents/ui/ConfigBehavior.qml:124
+#, kde-format
+msgid "Keep launchers separate"
+msgstr "Mantene lanceatores separate"
+
+#: package/contents/ui/ConfigBehavior.qml:135
+#, kde-format
+msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Clicking active task:"
+msgstr "Pulsar carca active:"
+
+#: package/contents/ui/ConfigBehavior.qml:136
+#, kde-format
+msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Minimizes the task"
+msgstr "Minimisa le carga"
+
+#: package/contents/ui/ConfigBehavior.qml:141
+#, kde-format
+msgid "Middle-clicking any task:"
+msgstr "Pulsar in le medie ulle carga:"
+
+#: package/contents/ui/ConfigBehavior.qml:145
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+msgid "Does nothing"
+msgstr "Il face nihil"
+
+#: package/contents/ui/ConfigBehavior.qml:146
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
+msgid "Closes window or group"
+msgstr "Claude fenestra o gruppo"
+
+#: package/contents/ui/ConfigBehavior.qml:147
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
+msgid "Opens a new window"
+msgstr "Aperi un nove fenestra"
+
+#: package/contents/ui/ConfigBehavior.qml:148
+#, kde-format
+msgctxt ""
+"Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
+"group'"
+msgid "Minimizes/Restores window or group"
+msgstr "Minimisa/Restabili fenestra o gruppo"
+
+#: package/contents/ui/ConfigBehavior.qml:149
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
+msgid "Toggles grouping"
+msgstr "Commuta gruppar"
+
+#: package/contents/ui/ConfigBehavior.qml:150
+#, kde-format
+msgctxt ""
+"Part of a sentence: 'Middle-clicking any task brings it to the current "
+"virtual desktop'"
+msgid "Brings it to the current virtual desktop"
+msgstr "Porta al scriptorio currente virtual"
+
+#: package/contents/ui/ConfigBehavior.qml:160
+#, kde-format
+msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+msgid "Mouse wheel:"
+msgstr "Rota de mus:"
+
+#: package/contents/ui/ConfigBehavior.qml:161
+#, kde-format
+msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+msgid "Cycles through tasks"
+msgstr "Cycla per cargas"
+
+#: package/contents/ui/ConfigBehavior.qml:170
+#, kde-format
+msgid "Skip minimized tasks"
+msgstr "Salta cargas minimisate"
+
+#: package/contents/ui/ConfigBehavior.qml:181
+#, kde-format
+msgid "Show only tasks:"
+msgstr "Monstra solmente cargas:"
+
+#: package/contents/ui/ConfigBehavior.qml:182
+#, kde-format
+msgid "From current screen"
+msgstr "Ex le schermo currente"
+
+#: package/contents/ui/ConfigBehavior.qml:187
+#, kde-format
+msgid "From current desktop"
+msgstr "Ex le scriptorio currente"
+
+#: package/contents/ui/ConfigBehavior.qml:192
+#, kde-format
+msgid "From current activity"
+msgstr "Ex activitate currente"
+
+#: package/contents/ui/ConfigBehavior.qml:197
+#, kde-format
+msgid "That are minimized"
+msgstr "Que es minimisate"
+
+#: package/contents/ui/ConfigBehavior.qml:206
+#, kde-format
+msgid "When panel is hidden:"
+msgstr "Quando pannello es celate:"
+
+#: package/contents/ui/ConfigBehavior.qml:207
+#, kde-format
+msgid "Unhide when a window wants attention"
+msgstr "Dis-cela quando Fenestra '' demanda attention"
+
+#: package/contents/ui/ConfigBehavior.qml:219
+#, kde-format
+msgid "New tasks appear:"
+msgstr "Nove cargas appare:"
+
+#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:229
+#, kde-format
+msgid "To the right"
+msgstr "A Dextera"
+
+#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:229
+#, kde-format
+msgid "To the left"
+msgstr "A Sinistra"
+
+#: package/contents/ui/ContextMenu.qml:93
+#, kde-format
+msgid "Places"
+msgstr "Placias"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Recent Files"
+msgstr "Files recente"
+
+#: package/contents/ui/ContextMenu.qml:103
+#, kde-format
+msgid "Actions"
+msgstr "Actiones"
+
+#: package/contents/ui/ContextMenu.qml:168
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Previe tracia"
+
+#: package/contents/ui/ContextMenu.qml:182
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Pausa"
+
+#: package/contents/ui/ContextMenu.qml:182
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Reproduce"
+
+#: package/contents/ui/ContextMenu.qml:200
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Proxime tracia"
+
+#: package/contents/ui/ContextMenu.qml:211
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Stoppa"
+
+#: package/contents/ui/ContextMenu.qml:231
+#, kde-format
+msgctxt "Quit media player app"
+msgid "Quit"
+msgstr "Quita"
+
+#: package/contents/ui/ContextMenu.qml:246
+#, kde-format
+msgctxt "Open or bring to the front window of media player app"
+msgid "Restore"
+msgstr "Restabili"
+
+#: package/contents/ui/ContextMenu.qml:272
+#, kde-format
+msgid "Mute"
+msgstr "Mute (Surdina)"
+
+#: package/contents/ui/ContextMenu.qml:283
+#, kde-format
+msgid "Open New Window"
+msgstr "Aperi nove fenestra"
+
+#: package/contents/ui/ContextMenu.qml:299
+#, kde-format
+msgid "Move to &Desktop"
+msgstr "Move a &scriptorio"
+
+#: package/contents/ui/ContextMenu.qml:323
+#, kde-format
+msgid "Move &To Current Desktop"
+msgstr "Move &a le scriptorio currente"
+
+#: package/contents/ui/ContextMenu.qml:332
+#, kde-format
+msgid "&All Desktops"
+msgstr "&Omne Scriptorios"
+
+#: package/contents/ui/ContextMenu.qml:346
+#, kde-format
+msgctxt "1 = number of desktop, 2 = desktop name"
+msgid "&%1 %2"
+msgstr "&%1 %2"
+
+#: package/contents/ui/ContextMenu.qml:360
+#, kde-format
+msgid "&New Desktop"
+msgstr "&Nove scriptorio"
+
+#: package/contents/ui/ContextMenu.qml:380
+#, kde-format
+msgid "Show in &Activities"
+msgstr "Monstra in &Activitates"
+
+#: package/contents/ui/ContextMenu.qml:404
+#, kde-format
+msgid "Add To Current Activity"
+msgstr "Adde a activitate currente"
+
+#: package/contents/ui/ContextMenu.qml:414
+#, kde-format
+msgid "All Activities"
+msgstr "Omne Activitates"
+
+#: package/contents/ui/ContextMenu.qml:471
+#, kde-format
+msgid "Move to %1"
+msgstr "Move a %1"
+
+#: package/contents/ui/ContextMenu.qml:498
+#: package/contents/ui/ContextMenu.qml:515
+#, kde-format
+msgid "&Pin to Task Manager"
+msgstr "Attac&ha a Gerente de carga"
+
+#: package/contents/ui/ContextMenu.qml:567
+#, kde-format
+msgid "On All Activities"
+msgstr "Sur omne  Activitates"
+
+#: package/contents/ui/ContextMenu.qml:573
+#, kde-format
+msgid "On The Current Activity"
+msgstr "Sur le activitate currente"
+
+#: package/contents/ui/ContextMenu.qml:597
+#, kde-format
+msgid "Unpin from Task Manager"
+msgstr "Deattacha ex Gerente de carga"
+
+#: package/contents/ui/ContextMenu.qml:612
+#, kde-format
+msgid "More"
+msgstr "Plus"
+
+#: package/contents/ui/ContextMenu.qml:621
+#, kde-format
+msgid "&Move"
+msgstr "&Move"
+
+#: package/contents/ui/ContextMenu.qml:630
+#, kde-format
+msgid "Re&size"
+msgstr "Redimen&siona"
+
+#: package/contents/ui/ContextMenu.qml:644
+#, kde-format
+msgid "Ma&ximize"
+msgstr "Ma&ximiza"
+
+#: package/contents/ui/ContextMenu.qml:658
+#, kde-format
+msgid "Mi&nimize"
+msgstr "Mi&nimisa"
+
+#: package/contents/ui/ContextMenu.qml:668
+#, kde-format
+msgid "Keep &Above Others"
+msgstr "Mantene  Super &Alteres"
+
+#: package/contents/ui/ContextMenu.qml:678
+#, kde-format
+msgid "Keep &Below Others"
+msgstr "Mantene  Su&b Alteres"
+
+#: package/contents/ui/ContextMenu.qml:690
+#, kde-format
+msgid "&Fullscreen"
+msgstr "Sc&hermo plen"
+
+#: package/contents/ui/ContextMenu.qml:702
+#, kde-format
+msgid "&Shade"
+msgstr "&Adumbra"
+
+#: package/contents/ui/ContextMenu.qml:718
+#, kde-format
+msgid "Allow this program to be grouped"
+msgstr "Il permitte iste programma de esser gruppate"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, kde-format
+msgid "&Close"
+msgstr "&Claude"
+
+#: package/contents/ui/Task.qml:74
+#, kde-format
+msgctxt "@info:usagetip %1 application name"
+msgid "Launch %1"
+msgstr ""
+
+#: package/contents/ui/Task.qml:79
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "There is %1 new message."
+msgid_plural "There are %1 new messages."
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/Task.qml:88
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgctxt "@info:usagetip %1 task name"
+msgid "Show Task tooltip for %1"
+msgstr "Monstra consilios"
+
+#: package/contents/ui/Task.qml:94
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
+msgctxt "@info:usagetip %1 task name"
+msgid "Show windows side by side for %1"
+msgstr "Monstra fenestra latere per latere"
+
+#: package/contents/ui/Task.qml:99
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Open textual list of windows for %1"
+msgstr ""
+
+#: package/contents/ui/Task.qml:103
+#, kde-format
+msgid "Activate %1"
+msgstr "Activa %1"
+
+#: package/contents/ui/ToolTipInstance.qml:326
+#, kde-format
+msgctxt "button to unmute app"
+msgid "Unmute %1"
+msgstr "Non silente %1"
+
+#: package/contents/ui/ToolTipInstance.qml:327
+#, kde-format
+msgctxt "button to mute app"
+msgid "Mute %1"
+msgstr "Mute %1"
+
+#: package/contents/ui/ToolTipInstance.qml:350
+#, kde-format
+msgctxt "Accessibility data on volume slider"
+msgid "Adjust volume for %1"
+msgstr "Adjusta volumine per %1"
+
+#: package/contents/ui/ToolTipInstance.qml:366
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/ToolTipInstance.qml:369
+#, kde-format
+msgctxt "only used for sizing, should be widest possible string"
+msgid "100%"
+msgstr "100%"
+
+#: package/contents/ui/ToolTipInstance.qml:393
+#, kde-format
+msgctxt "Comma-separated list of desktops"
+msgid "On %1"
+msgstr "Sur %1"
+
+#: package/contents/ui/ToolTipInstance.qml:396
+#, kde-format
+msgctxt "Comma-separated list of desktops"
+msgid "Pinned to all desktops"
+msgstr "Attachate a omne scriptorios"
+
+#: package/contents/ui/ToolTipInstance.qml:407
+#, kde-format
+msgctxt "Which virtual desktop a window is currently on"
+msgid "Available on all activities"
+msgstr "Disponibile sur omne activitates"
+
+#: package/contents/ui/ToolTipInstance.qml:429
+#, kde-format
+msgctxt "Activities a window is currently on (apart from the current one)"
+msgid "Also available on %1"
+msgstr "Anque disponibile sur %1"
+
+#: package/contents/ui/ToolTipInstance.qml:433
+#, kde-format
+msgctxt "Which activities a window is currently on"
+msgid "Available on %1"
+msgstr "Disponibile sur %1"
+
+#: plugin/backend.cpp:326
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "%1 ulterior placia"
+msgstr[1] "%1 ulterior placias"
+
+#: plugin/backend.cpp:422
+#, kde-format
+msgid "Recent Downloads"
+msgstr "Discargamentos recente"
+
+#: plugin/backend.cpp:424
+#, kde-format
+msgid "Recent Connections"
+msgstr "Conexiones recente"
+
+#: plugin/backend.cpp:426
+#, kde-format
+msgid "Recent Places"
+msgstr "Placias recente"
+
+#: plugin/backend.cpp:435
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Oblida discargamentos  recente"
+
+#: plugin/backend.cpp:437
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Oblida connexiones recente"
+
+#: plugin/backend.cpp:439
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Oblida placias recente"
+
+#: plugin/backend.cpp:441
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Oblida files recente"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "
+#~ "effect' "
+#~ msgid "Shows 'Present Windows' effect"
+#~ msgstr "Monstra effecto de 'Fenestras Presente'"
+
+#~ msgid "Icon size:"
+#~ msgstr "Dimension de Icone:"
+
+#~ msgid "Start New Instance"
+#~ msgstr "Initia nove instantia"
+
+#~ msgid "More Actions"
+#~ msgstr "Altere actiones"
+
+#~ msgid "Panel Hiding:"
+#~ msgstr "Celar pannello."
+
+#~ msgctxt "The click action"
+#~ msgid "None"
+#~ msgstr "Necun"
+
+#~ msgctxt "When clicking it would toggle grouping windows of a specific app"
+#~ msgid "Group/Ungroup"
+#~ msgstr "Gruppar/DeGruppar:"
+
+#~ msgid "Filter:"
+#~ msgstr "Filtro:"
+
+#~ msgid "Show only tasks from the current desktop"
+#~ msgstr "Solmente il monstra cargas ex le scriptorio currente"
+
+#~ msgid "Show only tasks from the current activity"
+#~ msgstr "Solmente Il monstra cargas ex le activitate currente"
+
+#, fuzzy
+#~| msgid "By Activity"
+#~ msgid "Move to &Activity"
+#~ msgstr "Per Activitate"
+
+#~ msgid "Highlight windows"
+#~ msgstr "Evidentia fenestras"
+
+#~ msgid "Grouping and Sorting"
+#~ msgstr "Gruppar e ordinar"
+
+#~ msgid "Do Not Sort"
+#~ msgstr "Non ordina"
+
+#~ msgid "Force row settings"
+#~ msgstr "Fortia preferentias de linea"
+
+#~ msgid "Collapse Group"
+#~ msgstr "Plica gruppo"
+
+#~ msgid "Expand Group"
+#~ msgstr "Expande Gruppo"
+
+#~ msgid "Edit Group"
+#~ msgstr "Edita Gruppo"
+
+#~ msgid "New Group Name: "
+#~ msgstr "Nove Nomine de Gruppo:"
+
+#~ msgid "Collapse Parent Group"
+#~ msgstr "Plica gruppo genitor"

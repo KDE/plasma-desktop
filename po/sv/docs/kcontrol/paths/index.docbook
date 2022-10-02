@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Platser</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-09-05</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>skrivbord</keyword>
+<keyword
+>sökvägar</keyword>
+<keyword
+>plats</keyword>
+<keyword
+>systeminställning</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Det här är en modul för att ställa in nödvändiga sökvägar för &plasma;-skrivbordet.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ställ in vissa sökvägar i &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Ställ in vissa sökvägar i &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Enheter som monteras automatiskt vid inloggning kan inte användas som sökvägar. Sådana enheter återställs till förval vid omstart av &plasma;. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Sökväg för skrivbord:</guilabel
+></term>
+<listitem
+><para
+>Skrivbordskatalogen innehåller alla filer som du ser i den grafiska komponenten <guilabel
+>Katalogvy</guilabel
+> på skrivbordet. Den normala sökvägen är oftast <filename class="directory"
+>~/Desktop</filename
+>, men här kan du ändra katalogens plats. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sökväg för dokument:</guilabel
+></term>
+<listitem
+><para
+>Denna katalog kommer att användas som förval när du laddar eller sparar dokument.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sökväg till nerladdat:</guilabel
+></term>
+<listitem
+><para
+>Denna katalog kommer att användas som förval för att spara nerladdade objekt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sökväg till videor:</guilabel
+></term>
+<listitem
+><para
+>Denna katalog kommer att användas som förval när du laddar eller sparar filmer.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sökväg till bilder:</guilabel
+></term>
+<listitem
+><para
+>Denna katalog kommer att användas som förval när du laddar eller sparar bilder.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sökväg till musik:</guilabel
+></term>
+<listitem
+><para
+>Denna katalog kommer att användas som förval när du laddar eller sparar musik.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Om du ändrar en sökväg och klickar på <guibutton
+>Verkställ</guibutton
+> visas en dialogruta där du kan välja att flytta innehållet till den nya katalogen eller använda den nya katalogen utan att flytta filerna.</para>
+
+</article>

@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Pintasan</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>ikatan tuts</keyword>
+<keyword
+>ikatan</keyword>
+<keyword
+>pintasan</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Pintasan</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Pengenalan</title
+> 
+
+<para
+>Sementara sebagian besar fungsi yang ditawarkan oleh &plasma; bisa diakses menggunakan antarmuka <quote
+>titik dan klik</quote
+> yang sederhana, banyak orang lebih suka menggunakan keyboard untuk beberapa tugas. Menekan sesuatu seperti <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> seringkali lebih cepat daripada menggerakkan tanganmu dari keyboard ke mouse, membuka menu <guimenu
+>Edit</guimenu
+> dan pilih <guimenuitem
+>Temukan</guimenuitem
+>.</para>
+
+<para
+>Karena orang yang berbeda memiliki preferensi yang berbeda tentang pintasan keyboard,&plasma; menawarkan kustomisasi penuh dari  <quote
+>Ikatan tuts</quote
+>. Sebuah ikatan tuts atau pintasan adalah kombinasi dari suatu aksi dengan tuts atau kombinasi tuts.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Pintasan Standar dan Pintasan Global</title>
+
+<para
+>Pintasan Standar dan pintasan Global berfungsi sama. Sebenarnya, dalam cara pintasan standar atau pintasan aplikasi tertentu juga <quote
+>global</quote
+>. Satu-satunya perbedaannya adalah:</para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Pintasan Standard</quote
+> merujuk ke aksi yang sering tersedia di aplikasi, sepertihalnya Simpan, Cetak, Salin dll. (&etc;)</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Pintasan Global</quote
+> adalah pintasan untuk aksi yang masuk akal bahkan ketika tidak ada aplikasi yang dibuka. Pintasan ini biasanya merujuk pada aksi seperti beralih desktop, memanipulasi windows dll. (&etc;)</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Harap dicatat, bahwa pintasan aplikasi yang dikonfigurasi di sini adalah <emphasis
+>hanya</emphasis
+> aksi standar yang sering ditemukan dalam aplikasi. Sebagian besar aplikasi akan menentukan aksi mereka sendiri juga, di mana kamu harus mengkustomisasi ikatan tuts menggunakan dialog ikatan tuts aplikasi.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Halaman Pintasan Standard</title>
+<para
+>Di bagian atas dialog ini kamu melihat sebuah  kotak input, tempat kamu bisa mencari secara interaktif untuk nama pintasan (misal Salin (&eg; Copy)) atau kombinasi tuts ((&eg;) misal <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) dengan mengetiknya di sini secara benar.</para>
+<para
+>Di bawah kotak pencarian kamu bisa melihat daftar ikatan tuts, (&eg;) misal himpunan antara aksi (misal Salin (&eg; Copy)) yang ditampilkan di kolom <guilabel
+>Aksi</guilabel
+> dan tuts atau kombinasi tuts ((&eg;) misal <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) yang ditampilkan di <guilabel
+>Pintasan</guilabel
+> atau kolom <guilabel
+>Alternatif</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Halaman Pintasan Global</title>
+<para
+>Di sebelah kiri halaman ini adalah kotak daftar yang memungkinkanmu untuk memilih <guilabel
+>Komponen</guilabel
+> seperti KWin, Plasma Desktop dll.. Pintasan yang ditentukan untuk komponen yang dipilih yang didisplaikan di kolom <guilabel
+>Aksi</guilabel
+> dan <guilabel
+>Global</guilabel
+> di dalam tampilan daftar.</para>
+<para
+>Halaman ini memiliki kotak pencarian yang sama sebagai tab <guilabel
+>Pintasan Standard</guilabel
+></para>
+<para
+>Gunakan <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> atau <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> untuk menambahkan atau menghapus komponen. </para>
+
+<para
+>Menambahkan komponen membukakan sebuah dialog untuk menukil aplikasi dari struktur menu start untuk menambahkan luncuran menjadi berguna sebagai pintasan. Jika sebuah aplikasi memiliki opsi jumplist yang akan tersedia sebagai aksi. </para>
+
+<para
+>Klik <guilabel
+>File</guilabel
+> kotak tarik turun di sebelah kanan untuk impor/ekpor Skema, set semua pintasan ke nihil.</para>
+<para
+>Pintasan Global sekarang bisa dikonfigurasi untuk melompat ke tugas khusus terhadap aplikasi.</para>
+
+<para
+>Berdasarkan bakunya kamu bisa membuka menu aplikasi hanya dengan menekan tuts <keysym
+>Meta</keysym
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Mengkonfigurasi Ikatan Tuts</title>
+
+<para
+>Mengkonfigurasi ikatan tuts adalah cukup mudah. Di tengah-tengah modul &systemsettings; ini kamu akan menemukan daftar aksi yang tersedia. Jika ada pengikat tuts yang dikonfigurasi untuk aksi itu kamu akan menemukannya di dalam kolom situ. Cukup pilih aksi yang ingin kamu konfigurasi.</para>
+
+<para
+>Setelah memilih aksi dalam daftar, kamu akan melihat bahwa butir ini disorot dan kamu melihat dua kotak centang tambahan di bawah butir ini di tampilan daftar. Di sana kamu bisa mengkonfigurasi kombinasi tuts atau mungkin tidak ada ikatan tuts sama sekali untuk aksi yang dipilih. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Baku</guilabel
+>: aksi yang dipilih akan dikaitkan dengan nilai baku &kde;. Ini adalah pilihan yang baik untuk sebagian besar aksi, karena &kde; dilengkapi dengan ikatan tuts yang masuk akal yang telah kita pikirkan. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Kustom</guilabel
+>: jika opsi ini difungsikan, kamu bisa menciptakan sebuah kombinasi tuts untuk aksi yang dipilih. Klik pada tombol yang berlabel antara <guibutton
+>Nihil</guibutton
+> atau yang berlabel dengan pintasan kustom yang dipilih sebelumnya. Sekarang label tombol berubah ke <guibutton
+>Input</guibutton
+>. Kemudian tekan tuts pemodif apa pun ((&eg;) misal &Shift;, &Ctrl;, atau &Alt;) dan kemudian tuts normal atau tuts fungsi ((&eg;) misal <keycap
+>F11</keycap
+>) yang kamu inginkan untuk menetapkan kombinasi tuts ini.</para>
+<para
+>Mengeklik pada kolom <guilabel
+>Alternatif</guilabel
+> dari baris di dalam daftar memungkinkan untuk mengedit pintasan kedua untuk si aksi.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

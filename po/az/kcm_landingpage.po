@@ -1,0 +1,194 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Kheyyam Gojayev <xxmn77@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"PO-Revision-Date: 2022-02-13 13:18+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Rəng sxeminin adı"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Faylları açmaq üçün tək klik"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Qlobal Xarici Görünüş paketi"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Qlobal Xarici Görünüş paketi, alternativ"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Animasiya sürəti"
+
+#: package/contents/ui/FeedbackControls.qml:64
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/FeedbackControls.qml:72
+#, kde-format
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you."
+msgstr ""
+"KDE-ni necə istifadə etdiyiniz haqqında təcrübələrinizi bizimlə bölüşərək "
+"bizə daha vacib detallara diqqət yetirməmizə və Plasmanı sizin üçün daha da "
+"yaxşılaşdırmağımıza kömək etmiş olursunuz <<br/><br/>Bu məlumatları "
+"paylaşmaq yalnız sizin arzunuzla ola bilər və anonimliyiniz tamamən qorunur. "
+"Şəxsi məlumatlarınızı, istifadə etdiyiniz faylları, ziyarət etdiyiniz veb "
+"səhifələrini və ya sizi tanıda biləcək bilgiləri əsla toplamırıq."
+
+#: package/contents/ui/FeedbackControls.qml:75
+#, kde-format
+msgid "No data will be sent."
+msgstr "Məlumat göndərilməyəcək."
+
+#: package/contents/ui/FeedbackControls.qml:77
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Aşağıdakı məlumatlar göndəriləcək:"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "Theme:"
+msgstr "Mövzu:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Animation speed:"
+msgstr "Animasiya sürəti:"
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Yavaş"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Ani"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "Divar Kağızını dəyişin…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "Daha çox xarici görünüş ayarları..."
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Faylları və qovluqları açmaq üçün klikləmə:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Onları açın"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Elementin seçim işarəsini klikləyərək seçin"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Onları seçin"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Əvəzinə cüt kliklə açın"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Send User Feedback:"
+msgstr "İstifadəçi rəyi göndərin:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "Daha çox davranış ayarları…"
+
+#: package/contents/ui/main.qml:211
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "Çox istifadə olunan səhifələr:"
+
+#~ msgctxt "Adjective; as in, 'light theme'"
+#~ msgid "Light"
+#~ msgstr "İşıqlı"
+
+#~ msgctxt "Adjective; as in, 'dark theme'"
+#~ msgid "Dark"
+#~ msgstr "Qaranlıq"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "Quick Settings"
+#~ msgstr "Cəld ayarlar"
+
+#~ msgid "Landing page with some basic settings."
+#~ msgstr "Bəzi əsas ayarlara sahib açılış səhifəsi."
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Most used module number %1"
+#~ msgstr "Çox istifadə olunan %1 saylı modul"
+
+#~ msgid "Enable file indexer"
+#~ msgstr "Fayl indeksləyicini işə salın"
+
+#~ msgid "File Indexing:"
+#~ msgstr "Fayl indekslənir:"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktivdir"

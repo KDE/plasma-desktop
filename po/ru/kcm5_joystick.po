@@ -1,0 +1,338 @@
+# translation of joystick.po into Russian
+# Gregory Mokhin <mok@kde.ru>, 2004, 2005.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2010-12-26 16:55+0300\n"
+"Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Григорий Мохин"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mok@kde.ru"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "Калибровка"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "Далее"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "Подождите, пока идёт калибровка чувствительности"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(обычно X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(обычно Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Процедура калибровки готова определить диапазон чувствительности "
+"устройства.<br/><br/>Передвиньте указатель по <b>оси %1 %2</b> в "
+"<b>минимальное</b> положение.<br/><br/>Для перехода к следующему этапу "
+"нажмите любую кнопку на устройстве.</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Процедура калибровки готова определить диапазон чувствительности "
+"устройства.<br/><br/>Передвиньте указатель по <b>оси %1 %2</b> в "
+"<b>центральное</b> положение.<br/><br/>Для перехода к следующему этапу "
+"нажмите любую кнопку на устройстве.</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Процедура калибровки готова определить диапазон чувствительности "
+"устройства.<br/><br/>Передвиньте указатель по <b>оси %1 %2</b> в "
+"<b>максимальное</b> положение.<br/><br/>Для перехода к следующему этапу "
+"нажмите любую кнопку на устройстве.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "Ошибка соединения"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "Калибровка устройства выполнена успешно"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "Калибровка выполнена"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "Значение по оси %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "Не удаётся открыть устройство %1: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "Устройство %1 - это не джойстик."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "Не удаётся загрузить модуль ядра для устройства джойстика %1: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"Текущая версия ядра (%1.%2.%3) отличается от той, для которой был собран "
+"модуль (%4.%5.%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr ""
+"Не удаётся определить количество кнопок для устройства джойстика %1: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "Не удаётся определить количество осей для устройства джойстика %1: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr ""
+"Не удаётся определить значения калибровки для устройства джойстика %1: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr ""
+"Не удаётся восстановить значения калибровки для устройства джойстика %1: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr ""
+"Не удаётся инициализировать значения калибровки для устройства джойстика %1: "
+"%2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr ""
+"Не удаётся применить значения калибровки для устройства джойстика %1: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "Внутренняя ошибка с неизвестным кодом %1"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "Модуль KDE управления джойстиком"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "Модуль настройки для проверки джойстиков"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "© Martin Koller, 2004"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>Джойстик</h1>Этот модуль позволяет проверить правильность работы "
+"джойстика.<br/>Если значения для осей указаны неверно, это можно исправить с "
+"помощью процедуры калибровки.<br/>Устройства джойстика опрашиваются для /dev/"
+"js[0-4] и /dev/input/js[0-4]<br/>Если ваш джойстик работает на другом "
+"устройстве, укажите его в поле ввода.<br/>В списке «Кнопки» показано "
+"состояние кнопок джойстика, а списке «Оси» — состояние осей.<br/>Примечание: "
+"в текущей реализации драйвер джойстика ядра Linux (для 2.4 и 2.6) может "
+"правильно определить следующие устройства:<ul><li>джойстик с двумя осями и "
+"четырьмя кнопками</li><li>джойстик с тремя осями и четырьмя кнопками</"
+"li><li>джойстик с четырьмя осями и четырьмя кнопками</li><li>цифровые "
+"джойстики Saitek Cyborg</li></ul>(Подробнее об этом см. документацию ядра "
+"Linux, файл Documentation/input/joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "Устройство:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "Положение:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "Показывать след"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "НАЖАТА"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "Кнопки:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "Состояние"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "Оси:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "Значение"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "Калибровка"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"Джойстики не обнаружены.<br/>Проверялись устройства /dev/js[0-4] и /dev/"
+"input/js[0-4]<br/>Если вы знаете, на каком устройстве работает джойстик, "
+"укажите его."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"Указано недопустимое имя устройства (отсутствует /dev).\n"
+"Выберите устройство из списка или\n"
+"введите его имя, например, /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "Неизвестное устройство"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "Ошибка устройства"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>Начинается калибровка чувствительности.<br/><br/><b>Передвиньте джойстик "
+"в центральное положение по обеим осям и более не трогайте его.</b>.<br/><br/"
+">Для начала калибровки нажмите ОК.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "Все значения калибровки для джойстика %1 были восстановлены."
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Григорий Мохин"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "mok@kde.ru"

@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Layar Splash</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-11-2018</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>layar splash</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modul ini menyediakan sebuah antarmuka untuk menampilkan dan memilih tema-tema layar splash.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ini adalah sebuah cuplikan-nya pengelola layar splash</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modul pengelola layar splash</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Pada halaman ini kamu bisa melihat pratinjau dari layar splash yang sudah terinstal. Pratinjau dari layar splash saat ini yang telah tersorot.</para>
+
+<para
+>Melayangi sebuah citra pratinjau dengan kursor mouse kemudian tekan <guilabel
+>Uji Splashscreen</guilabel
+> yang muncul di sebelah kanan bawah citra. Tekanlah tombol ini untuk menampilkan aksinya splashscreen.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dapatkan Tema Baru...</guilabel
+></term>
+<listitem>
+<para
+>Anda perlu Internet yang terkoneksi untuk menggunakan aksi ini. Sebuah dialog akan mendisplaikan daftar tema dari situs <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Mengeklik tombol <guibutton
+>Instal</guibutton
+> yang terkait dengan tema akan menginstal tema ini secara lokal. </para>
+<para>
+<screenshot>
+<screeninfo
+>Menginstal sebuah tema baru</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Menginstal sebuah tema baru</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Tema baru ini tersedia segera setelah kamu menutup dialog Penginstal Pernik &systemsettings; dan tersorot. Pratinjau mendisplaikan gambar. Kamu perlu mengeklik tombol <guibutton
+>Terapkan</guibutton
+> untuk membuat tema ini menjadi tema layar splash-mu saat ini. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<!-- not in 5.14
+<varlistentry
+><term
+><guilabel
+>Install Theme File...</guilabel
+></term>
+<listitem>
+<para>
+Instead of installing a theme directly as above you might have a tarball of a theme locally that you want to install. Clicking on this button will open a file dialog and you choose the tarball of the theme you want to install. The installer then unpacks the theme locally and makes it immediately available in the themes list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Remove Theme</guilabel
+></term>
+<listitem>
+<para>
+Removing a theme means removing the theme files from your disk. A message box warns you before doing anything and indicates to you what it will remove. Clicking on <guibutton
+>Delete</guibutton
+> in this message box will remove the splash screen theme from your disk. Clicking <guibutton
+>Cancel</guibutton
+> will abort the remove action. If you choose <guibutton
+>Delete</guibutton
+>, the theme is then no longer available in the list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Test Theme</guilabel
+></term>
+<listitem>
+<para>
+This shows you the theme and the associated icons as they will be displayed as splash screen when &kde; starts. Clicking on the splash screen hides it.
+</para>
+</listitem>
+</varlistentry>
+
+-->
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

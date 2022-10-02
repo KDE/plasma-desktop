@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Tangentbord</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>Tangentbord</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Den här modulen gör det möjligt att välja hur ditt tangentbord fungerar.</para>
+
+<para
+>Det finns tre flikar i den här modulen.</para>
+
+<sect1 id="hardware">
+<title
+>Fliken Hårdvara</title>
+<para
+>Den verkliga effekten av att ställa in de här alternativen beror på funktionerna som tillhandahålls av din tangentbordshårdvara och X-servern som &plasma; använder. Du kan till exempel märka att ändra volymen för tangentbordsklick inte har någon effekt, därför att den funktionen inte är tillgänglig i ditt system. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tangentbordsmodell:</guilabel
+></term>
+<listitem>
+<para
+>Här kan du ställa in tangentbordsmodell. Den här inställningen är oberoende av din tangentbordslayout och refererar till modellen på &quot;hårdvaran&quot;, dvs på det sätt som tangetbordet är tillverkat. Moderna tangentbord som kommer med datorer har vanligtvis två extra tangenter och refereras som &quot;104-key&quot;-modeller, vilket troligen är vad du vill ha om du inte vet vilken typ av tangentbord du har. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock vid start av Plasma</guilabel
+></term>
+<listitem>
+<para
+>Du kan välja att antingen alltid <guilabel
+>Slå på</guilabel
+> eller <guilabel
+>Slå av</guilabel
+> NumLock när &plasma; startar, eller så kan du välja att låta &plasma; lämna NumLock som det var inställt innan &plasma; startade.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>När en tangent hålls nere:</guilabel
+></term>
+<listitem>
+<para
+>Det är möjligt att välja ett av tre alternativ här, närmare bestämt:</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Visa accenttecken och liknande tecken</guilabel
+></term>
+<listitem>
+<para
+>Om alternativet är markerat, visas en meddelanderuta när en tangent hålls nere medan text matas  in som gör att man kan välja mellan diverse accentformer av tecknet.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Gör ingenting</guilabel
+></term>
+<listitem>
+<para
+>Alternativet låter dig stänga av alla aktiviteter när tangenter trycks och hålls nere.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Upprepa tangenten</guilabel
+></term>
+<listitem>
+<para
+>När det här alternativet är markerat, så kommer du att kunna skriva in en lång rad av samma tecken genom att hålla dess tangent nedtryckt. Trycka och hålla tangenten får samma effekt som att trycka på tangenten flera gånger i rad.</para>
+<tip
+><para
+>Nästan alla användare vill ha det här alternativet aktiverat, eftersom det gör det mycket lättare att navigera genom dokument med piltangenterna. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Fördröjning</guilabel
+></term>
+<listitem>
+<para
+>Alternativet låter dig ställa in fördröjningen innan en nertryckt tangent börjar skapa tangentkoder.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Upprepningstakt</guilabel
+></term>
+<listitem>
+<para
+>Alternativet låter dig ställa in upprepningstakten som tangentkoder skapas medan en tangent är nertryckt.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Skriv in några tecken i textrutan <guilabel
+>Provområde</guilabel
+> för att verifiera inställningarna.</para>
+<para
+>Många datorer stöder inte den här funktionen.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Fliken Layouter</title>
+<para
+>Den här fliken låter dig välja vilka tangentbordslayouter du vill använda, vilken indikering du vill ha i systembrickan, hur du vill byta och vilka genvägar du vill använda.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Layoutindikator</guilabel
+></term>
+<listitem>
+<para
+>Du kan välja <guilabel
+>Visa layoutindikator</guilabel
+>, vilket visar språkets ISO-namn i systembrickan. Du kan välja <guilabel
+>Visa indikator</guilabel
+> även om du har en ensam layout aktiverad, och du kan visa språkets flagga instället för vara ISO-koden genom att markera <guilabel
+>Visa flagga</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Princip för byte</guilabel
+></term>
+<listitem>
+<para
+>Om du väljer bytesprinciperna <guilabel
+>Program</guilabel
+> eller <guilabel
+>Fönster</guilabel
+>, påverkar bara byte av tangentbordslayout aktuellt program eller fönster.. <guilabel
+>Allmänt</guilabel
+> påverkar tangentbordslayouten allmänt och <guilabel
+>Skrivbord</guilabel
+> byter den bara för det aktuella virtuella skrivbordet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Genvägar för att byta layout</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Huvudgenväg</guilabel
+> är en genväg för att byta layout som hanteras av X.org. <guilabel
+>Tredje nivåns genväg</guilabel
+> är en genväg för att byta till en tredje nivå för den aktiva layouten (om den har någon), som hanteras av X.org. Den tillåter genvägar med bara väljartangenter. <guilabel
+>Alternativ genväg</guilabel
+> är en genväg för att byta layouter som hanteras av &plasma;. Den stöder inte genvägar med bara väljartangenter, och kanske inte heller fungerar under vissa omständigheter (t.ex. om en meddelanderuta är aktiv, eller från skärmsläckaren). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Anpassa layouter</guilabel
+></term>
+<listitem>
+<para
+>Om du markerar <guilabel
+>Anpassa layouter</guilabel
+> kommer du att kunna lägga till och ta bort tangentbordslayouter, för att kunna byta mellan dem vid behov. </para>
+<para
+>Att klicka på <guibutton
+>Lägg till</guibutton
+> visar en dialogruta där du kan välja en ny tangentbordslayout som du vill lägga till, samt dess variant, beteckning och genväg. </para>
+<para
+>Listan med layouter till höger om beteckningen <guilabel
+>Layout</guilabel
+> i dialogrutan <guilabel
+>Lägg till layout</guilabel
+> kan begränsas genom att använda kombinationsrutan <guilabel
+>Begränsa urval enligt språk</guilabel
+>. Du kan klicka på knappen <guibutton
+>Förhandsgranska</guibutton
+> för att granska den valda layouten i ett separat fönster. </para>
+<para
+>Du kan ordna layouter med uppåt- och neråtknapparna, där den översta är standard. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Reservlayouter</guilabel
+></term>
+<listitem>
+<para
+>Det här alternativet kan bara aktiveras om du har fler än två layouter.</para>
+<para
+>Reservlayouter gör det möjligt att enkelt växla mellan ett fåtal layouter medan flera layouter är bekvämt tillgängliga. Du kanske använder tre språk: engelska, svenska och tyska, men de två första används ofta och det tredje bara då och då. I så fall kan du ställa in de två första som huvudlayouter (inställningen <guilabel
+>Antal huvudlayouter</guilabel
+>: 2) och den tyska som reserv. När du växlar med tangentbordet och vänster musknapp sker bytet bara mellan huvudlayouterna, men du kan alltid välja den tredje layouten med den sammanhangsberoende menyn.</para>
+<para
+>När reservlayouten väljes ersätter den senaste huvudlayout (det görs av tekniska orsaker, oftast fungerar globala genvägar baserat på den första aktiva layouten, så det ger bättre tillförlitlighet att bevara den första layouten när det är tillåtet att aktivera reservlayouter).</para>
+<!-- context menu ?-->
+<para
+>Eftersom X.org bara tillåter att byta mellan fyra layouter, gör <quote
+>reservlayouter</quote
+> det också möjligt att gå runt den begränsningen: användare kan ha upp till fyra huvudlayouter (som hanteras av X.org), men ytterligare fyra reservlayouter är tillåtna (som hanteras av layoutväxlaren). På så sätt kan användare bekvämt arbete med upp till totalt åtta layouter (gränsen med fyra reservlayouter kan dock komma att höjas i framtiden). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Fliken Avancerat</title>
+<para
+>Om du markerar <guilabel
+>Anpassa tangentbordsalternativ</guilabel
+> under den här fliken, kommer du att kunna ställa in några alternativ för vissa tangentinställningar. Du kan expandera alternativen genom att klicka på symbolen &gt; till vänster om alternativet, och därefter välja inställning i den expanderade listan.</para>
+<para
+>Det finns ett grafiskt användargränssnitt för att hjälpa till att skapa egna tangentbordslayouter för &X11; som använder XKB. </para>
+<para
+>För mer information, se avsnittet <emphasis
+>Länkar</emphasis
+> på sidan <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>XKeyboardConfig på freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

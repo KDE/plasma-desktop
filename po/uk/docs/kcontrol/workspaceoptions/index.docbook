@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Загальна поведінка</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18 травня 2022 року</date>
+
+<releaseinfo
+>Плазма 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>стільниця</keyword>
+<keyword
+>робочий простір</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Цей модуль призначено для налаштовування загальної поведінки робочого простору Плазми. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Показувати інформаційні підказки при наведенні вказівника</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, система показуватиме панелі підказок при наведенні вказівника миші на панель Плазми або на стільницю.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Показувати візуальний супровід змін стану</guilabel
+></term>
+<listitem>
+<para
+>Якщо ви, наприклад, зміните яскравість екрана або гучність відтворення звуку за допомогою клавіатури, ці зміни у стані буде показано на екранній панелі.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Швидкість анімації</guilabel
+></term>
+<listitem>
+    <para
+>Надає вам змогу встановити швидкість ефектів стільничної анімації у межах від <guilabel
+>Повільна</guilabel
+> до <guilabel
+>Миттєва</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Одинарне клацання відкриває файли та теки</guilabel
+></term>
+<listitem>
+<para
+>Це типовий параметр. Одинарне клацання, якщо вказівник знаходиться над піктограмою, відкриває цю піктограму. З метою вибору ви можете перетягнути вказівник навколо піктограм, утримувати натиснутою клавішу &Ctrl; з одночасним клацанням <mousebutton
+>правою</mousebutton
+> кнопкою миші або просто клацнути по піктограмі і перетягнути її. Також позначення можна виконати клацанням на відповідній позначці пункту.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Подвійне клацання відкриває файли та теки</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, одинарне клацання <mousebutton
+>лівою</mousebutton
+> кнопкою миші, коли вказівник знаходиться над піктограмою або файлом відкриватиме цю піктограму або цей файл. Ця поведінка є типовою, вона повністю подібна до того, що відбувається коли ви натискаєте посилання у більшості з переглядачів Тенет. Але ви можете зробити так, щоб піктограми і файли відкривалися подвійним клацанням, а одинарне клацання лише позначало б піктограму або файл. З такою поведінкою ви можете ознайомитися на прикладі інших стільничних середовищ або операційних систем.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Клацання на смужці гортання</guimenu
+><guimenuitem
+>Гортає на сторінку вгору чи вниз</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Це типове значення. Клацання лівою кнопкою на смужці гортання пересуває перегляд на одну сторінку.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Клацання на смужці гортання</guimenu
+><guimenuitem
+>Гортає до місця клацання</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Вмикає поведінку системи, коли позиція повзунка гортання перестрибує безпосередньо до позиції у документі, де ви клацнули. Ця поведінка може бути відомою вам із досвіду роботи у інших стільницях або операційних системах.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Режим сенсорного керування</guimenu
+><guimenuitem
+>Автоматично увімкнути, якщо потрібно/Ніколи не вмикати</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Режим сенсорного керування буде автоматично задіяно, якщо система виявить сенсорний екран, але не виявить миші або сенсорної панелі. Приклад: відкинуто або від'єднано клавіатурний модуль ноутбука-трансформера.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Увімкнено завжди (типовий варіант)/Ніколи не вмикати</guimenuitem
+></term>
+<listitem>
+<para
+>У режимі сенсорного керування багато елементів інтерфейсу користувача стануть більшими, щоб ними легше було оперувати за допомогою дотиків.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

@@ -1,0 +1,228 @@
+# translation of knetattach.po to
+#
+# Adam Kubas <adam.kubas@wp.pl>, 2004, 2005.
+# Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
+# Robert Gomulka <rgom@o2.pl>, 2006.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2009.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2016, 2017, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"PO-Revision-Date: 2019-06-28 08:51+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.07.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Adam Kubas"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "adam.kubas@wp.pl"
+
+#: knetattach.cpp:79
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"Podaj nazwę dla tego <i>katalogu sieciowego</i>, a także adres serwera, port "
+"i ścieżkę katalogu, a następnie naciśnij przycisk <b>Zapisz i podłącz</b>."
+
+#: knetattach.cpp:82
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Podaj nazwę dla tego <i>połączenia przez SSH</i>, a także adres serwera, "
+"port i ścieżkę katalogu, a następnie naciśnij przycisk <b>Zapisz i podłącz</"
+"b>."
+
+#: knetattach.cpp:86
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Podaj nazwę dla tego <i>połączenia FTP</i>, a także adres serwera i ścieżkę "
+"katalogu, a następnie naciśnij przycisk <b>Zapisz i podłącz</b>."
+
+#: knetattach.cpp:90
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Podaj nazwę dla tego <i>dysku sieciowego Microsoft Windows</i>, a także "
+"adres serwera, port i ścieżkę katalogu, a następnie naciśnij przycisk "
+"<b>Zapisz i podłącz</b>."
+
+#: knetattach.cpp:208
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr ""
+"Nie można połączyć się z serwerem. Sprawdź ustawienia i spróbuj ponownie."
+
+#: knetattach.cpp:336
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "Zapisz i &podłącz"
+
+#: knetattach.cpp:338
+#, kde-format
+msgid "C&onnect"
+msgstr "&Podłącz"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Pomocnik od katalogów sieciowych"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Dodaj katalog sieciowy"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"Wybierz rodzaj katalogu sieciowego, z którym chcesz się połączyć, a "
+"następnie naciśnij na przycisk \"Dalej\"."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Ostatnie połączenie:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "Katalog sieciowy (&webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "Bezpieczna powłoka (&ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "Dysk sieciowy &Microsoft® Windows®"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Dane o katalogu sieciowym"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Nazwa:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Użytkownik:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Se&rwer:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Port:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protokół:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Folder:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Kodowanie:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "S&twórz ikonę dla tego zdalnego katalogu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Użyj szyfrowania"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "Pomocnik KDE od sieci"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "(c) 2004 George Staikos "
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "Główny autor i opiekun"
+
+#~ msgid ""
+#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
+#~ "folder path to use and press the Next button."
+#~ msgstr ""
+#~ "Proszę podać nazwę dla <i>%1</i>, jak również adres serwera, port i "
+#~ "ścieżkę do folderu, a następnie proszę nacisnąć przycisk \"Dalej\"."

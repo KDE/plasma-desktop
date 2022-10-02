@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Posizioni</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Valter</firstname
+><surname
+>Mura</surname
+><affiliation
+><address
+><email
+>valtermura@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-09-05</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>desktop</keyword>
+<keyword
+>percorsi</keyword>
+<keyword
+>posizione</keyword>
+<keyword
+>impostazione_di_sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo serve per configurare percorsi fondamentali per il desktop &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configura alcuni percorsi di &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configura alcuni percorsi di &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>I dispositivi che vengono montati automaticamente all'accesso non possono essere utilizzati come percorsi. Tali dispositivi verranno riportati alle impostazioni predefinite durante il riavvio di &plasma;. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Percorso desktop:</guilabel
+></term>
+<listitem
+><para
+>La cartella Desktop contiene tutti i file visibili in un oggetto <guilabel
+>Vista cartelle</guilabel
+> sul tuo desktop. Il percorso predefinito è in genere <filename class="directory"
+>~/Desktop</filename
+>, ma puoi cambiare la posizione di questa cartella. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Percorso documenti:</guilabel
+></term>
+<listitem
+><para
+>Questa cartella è la cartella predefinita da cui aprire o in cui salvare i tuoi documenti.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Percorso scaricamenti:</guilabel
+></term>
+<listitem
+><para
+>Questa cartella è la cartella predefinita in cui salvare gli elementi scaricati.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Percorso video:</guilabel
+></term>
+<listitem
+><para
+>Questa cartella è la cartella predefinita da cui aprire o in cui salvare i video.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Percorso immagini:</guilabel
+></term>
+<listitem
+><para
+>Questa cartella è la cartella predefinita da cui aprire o in cui salvare le immagini.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Percorso musica:</guilabel
+></term>
+<listitem
+><para
+>Questa cartella è la cartella predefinita da cui aprire o in cui salvare la musica.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Se modifichi un percorso e fai clic su <guibutton
+>Applica</guibutton
+>, appare una finestra di dialogo in cui scegliere di spostare il contenuto nella nuova cartella o usare la nuova cartella senza spostare i file.</para>
+
+</article>

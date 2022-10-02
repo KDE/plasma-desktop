@@ -1,0 +1,291 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2021-09-05 11:38-0700\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik Language Support\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Умумӣ"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Тоза кардан аз баргузидаҳо"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Илова кардан ба баргузидаҳо"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "Дар ҳамаи фаъолиятҳо"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Дар фаъолияти ҷорӣ"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Намоиш додан дар баргузидаҳо"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Нишона:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open icon chooser dialog"
+#| msgid "Choose..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Интихоб намоед..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "Умумӣ:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, fuzzy, kde-format
+#| msgid "Sort alphabetically"
+msgid "Always sort applications alphabetically"
+msgstr "Аз рӯи алифбо мураттаб кардан"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Show in Favorites"
+msgid "Show favorites:"
+msgstr "Намоиш додан дар баргузидаҳо"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgid "Show other applications:"
+msgstr "Намоиш додани барномаҳо аз рӯи ном"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Барқ"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Ҷаласа"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Барқ ва ҷаласа"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr ""
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Барномаҳо"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Ҷойҳо"
+
+#: package/contents/ui/Header.qml:63
+#, fuzzy, kde-format
+#| msgid "Go to user settings"
+msgid "Open user settings"
+msgstr "Гузариш ба танзимоти корбар"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Таҳрир кардани барномаҳо..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr ""
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Баромад"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Бештар"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Компютер"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Таърих"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Бисёр истифодашуда"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "&Пок кардан нишона"
+
+#~ msgid "Search…"
+#~ msgstr "Ҷустуҷӯ..."
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave…"
+#~ msgstr "Баромадан"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Updating applications…"
+#~ msgstr "Таҳрир кардани барномаҳо..."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave..."
+#~ msgstr "Баромадан"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Open icon chooser dialog"
+#~| msgid "Choose..."
+#~ msgid "More..."
+#~ msgstr "Интихоб намоед..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Барномаҳо нав карда шудаанд."
+
+#~ msgid "All Applications"
+#~ msgstr "Ҳамаи барномаҳо"
+
+#~ msgid "Favorites"
+#~ msgstr "Баргузидаҳо"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Варақаҳои фаъол"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Варақаҳои ғайрифаъол"

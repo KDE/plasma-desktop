@@ -1,0 +1,240 @@
+# Malayalam translation of kcmkclock.
+# Copyright (C) 2008,2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmkclock package.
+# Manu S Madhav <manusmad@gmail.com>, 2008.
+# Hari Vishnu <harivishnu@gmail.com>, 2008.
+# മണിലാല്‍ കെ.എം|Manilal K M <libregeek@gmail.com>, 2008.
+# Ershad K <ershad92@gmail.com>, 2010.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock trunk\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2019-12-12 22:39+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "മനു എസ് മാധവ്, ഹരി വിഷ്ണു, മണിലാല്‍ കെ.എം, ഇര്‍ഷാദ് കെ, പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "ദിവസവും സമയവും"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+msgid "Set date and time &automatically"
+msgstr "ദിവസവും സമയവും &തനിയെ സജ്ജീകരിക്കുക:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, fuzzy, kde-format
+msgid "&Time server:"
+msgstr "സമയ സെര്‍വര്‍:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "ഇവിടെ നിങ്ങള്‍ക്ക് സിസ്റ്റത്തിലെ തിയ്യതിയുടെ ദിവസവും മാസവും കൊല്ലവും മാറ്റാം."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "സമയമേഖല"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "പ്രാദേശിക സമയമേഖല മാറ്റുവാന്‍, നിങ്ങളുടെ പ്രദേശം ഈ പട്ടികയില്‍ നിന്നു തിരഞ്ഞെടുക്കുക."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "നിലവിലുള്ള പ്രാദേശിക സമയമേഖല:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
+msgstr "തിരയുക..."
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"ഇവിടെ നിങ്ങള്‍ക്ക് സിസ്റ്റം സമയം മാറ്റാം. മണിക്കൂറുകള്‍, മിനിട്ടുകള്‍, സെക്കന്‍ഡുകള്‍ എന്നീ "
+"സ്ഥാനങ്ങളില്‍ ക്ലിക്ക് ചെയ്താല്‍ അതാത് മൂല്യങ്ങള്‍ മാറ്റാം. ഇത് വലതുവശത്തുള്ള മുകളിലേക്കും താഴേക്കുമുള്ള "
+"ബട്ടനുകളുപയോഗിച്ചോ പുതിയ മൂല്യങ്ങള്‍ നല്‍കിയോ ആകാം."
+
+#: dtime.cpp:113
+#, fuzzy, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "നിലവിലുള്ള പ്രാദേശിക സമയമേഖല:"
+
+#: dtime.cpp:116
+#, fuzzy, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "നിലവിലുള്ള പ്രാദേശിക സമയമേഘല: %1 (%2) "
+
+#: dtime.cpp:203
+#, fuzzy, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"പൊതു സമയ സെര്‍വര്‍ (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
+"america.pool.ntp.org,oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "ദിവസം സജ്ജീകരിക്കാന്‍ കഴിയില്ല."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "പുതിയ സമയമേഘല നിര്‍മ്മിക്കുന്നതില്‍ പിശക്."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "സമയമേഘലയിലെ പിശക്"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>ദിവസവും സമയവും</h1> ഈ സിസ്റ്റം മൊഡ്യൂള്‍ സിസ്റ്റത്തിലെ ദിവസവും "
+"സമയവുംസജ്ജീകരിക്കാനുപയോഗിക്കാം. ഈ സജ്ജീകരണങ്ങള്‍ ഉപയോക്താവെന്ന നിലയ്ക്കു് നിങ്ങളെ മാത്രമല്ല "
+"മുഴുവന്‍ സിസ്റ്റത്തേയും ബാധിക്കുന്നതിനാല്‍, നിയന്ത്രണ കേന്ദ്രം റൂട്ടായി തുറക്കുമ്പോഴേ നിങ്ങള്‍ക്ക് ഇവ "
+"മാറ്റാനാകൂ. നിങ്ങളുടെ പക്കല്‍ റൂട്ട് അടയാളവാക്കില്ല, എന്നാല്‍ സിസ്റ്റം സമയം ശരിയാക്കണമെന്ന് "
+"തോന്നുകയാണെങ്കില്‍, ദയവായി നിങ്ങളുടെ സിസ്റ്റം നടത്തിപ്പുകാരനുമായി ബന്ധപ്പെടുക."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "കെഡിഇ സമയസൂചിക നിയന്ത്രണ മൊഡ്യൂള്‍"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 ല്യൂക്ക മൊണ്ടെഷ്യാനി"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "ല്യൂക്ക മൊണ്ടെഷ്യാനി"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "ആദ്യ രചയിതാവ്"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "പോള്‍ ക്യാംബല്‍"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "ഇപ്പോഴത്തെ പരിപാലകന്‍"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "ബെന്‍ജമിന്‍ മെയര്‍"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "എന്‍ ടി പി പിന്തുണ കൂട്ടിച്ചേര്‍ത്തു"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+".<h1>ദിവസവും സമയവും</h1> ഈ നിയന്ത്രണ മൊഡ്യൂള്‍ സിസ്റ്റം ദിവസവും "
+"സമയവുംസജ്ജീകരിക്കാനുപയോഗിക്കാം. ഈ സജ്ജീകരണള്‍ നിങ്ങളെന്ന ഉപയോക്താവിനെ മാത്രമല്ല മുഴുവന്‍ "
+"സിസ്റ്റത്തേയും ബാധിക്കുന്നതിനാല്‍, നിയന്ത്രണ കേന്ദ്രം റൂട്ടായി തുറക്കുമ്പോഴേ നിങ്ങള്‍ക്ക് ഇവ "
+"മാറ്റാനാകൂ. നിങ്ങളുടെ പക്കല്‍ റൂട്ട് അക്ഷരവാക്കില്ല, എന്നാല്‍ സിസ്റ്റം സമയം ശരിയാക്കണമെന്ന് "
+"തോന്നുകയാണെങ്കില്‍, ദയവായി നിങ്ങളുടെ സിസ്റ്റം നടത്തിപ്പുകാരനുമായി ബന്ധപ്പെടുക."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "ആധികാരികത ഉറപ്പുവരുത്താനോ/പ്രവര്‍ത്തിപ്പിയ്ക്കാനോ സാധിക്കുന്നില്ല: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: main.cpp:144
+#, fuzzy, kde-format
+msgid "Unable to set current time"
+msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
+
+#: main.cpp:154
+#, fuzzy, kde-format
+msgid "Unable to set timezone"
+msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "ദിവസം/സമയം/സമയമേഖല നിര്‍മിക്കുന്നതില്‍ പരാജയപ്പെട്ടു."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "ദിവസം/സമയ തെറ്റ്"

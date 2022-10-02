@@ -1,0 +1,821 @@
+# translation of kcmaccess.po to
+# translation of kcmaccess.po to Finnish
+# Copyright (C) 2003, 2005, 2008 Free Software Foundation, Inc.
+# Tapio Kautto <eleknader@phnet.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
+# Teemu Rytilahti <tpr@d5k.net>, 2008.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2020, 2021, 2022.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2022-06-05 20:02+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:20+0000\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGr"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "Paina %1 kun NumLock, CapsLock ja ScrollLock ovat aktiivisia"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "Paina %1 kun CapsLock ja ScrollLock ovat aktiivisia"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "Paina %1 kun NumLock ja ScrollLock ovat aktiivisia"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Paina %1 kun ScrollLock on aktiivinen"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "Paina %1 kun NumLock ja CapsLock ovat aktiivisia"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Paina %1 kun CapsLock on aktiivinen"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Paina %1 kun NumLock on aktiivinen"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Paina %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "Ei voitu asettaa Orcan gsettings-asetusta: ”%1” epäonnistui"
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "Virhe: Ei voitu käynnistää ”orca --setup”"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Käytä järjestelmän äänimerkkiä"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Mukauta järjestelmän äänimerkkiä"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Äänimerkin äänitiedosto"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Käytä näkyvää ilmoitusta äänen sijaan"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Kääntää kellon järjestelmävärit"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Näkyvän äänimerkin väri"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Näkyvän äänimerkin kesto"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Käytä alas jääviä näppäimiä"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Lukitse alas jäävät näppäimet"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr ""
+"Poista alas jäävien näppäinten tila kun kahta näppäintä painetaan samaan "
+"aikaan"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Anna äänimerkki painettaessa alas jääviä näppäimiä"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Käytä/älä käytä näppäinpainallusääniä"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Ilmoita painettaessa muuntonäppäintä"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Käytä aikakatkaisuviivettä"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Anna äänimerkki käyttöoikeudesta"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Käytä hitaita näppäimiä"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Näppäinpainalluksen viive"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Anna hitaasta näppäinpainalluksesta äänimerkki"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Anna hyväksytystä näppäinpainalluksesta äänimerkki"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Anna hylätystä näppäinpainalluksesta äänimerkki"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Toistavat näppäimet"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Aseta toistamisviive"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Anna äänimerkki, jos näppäintoisto estetään"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Ohjaa hiirtä näppäimin"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Hiiren liikkeen viive"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Hiiren liikkeen toistoväli"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Aika enimmäisnopeuteen"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "Enimmäisnopeus"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Enimmäisnopeus"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Hiiripainikekäyrä"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "Käytä eleitä"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Pyydä vahvistamaan ele"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Vahvista näppäimistön käyttöoikeus"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Käytä näyttölukijaa"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "Valitse äänitiedosto"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "Äänitiedostot (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "Kuuluva äänimerkki:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "Mukautettu ääni:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "Etsi järjestelmän äänimerkin äänitiedostoa"
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "Äänitiedoston hakupainike"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "Näkyvä äänimerkki:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "Käänteiset värit"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "Väläytä"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "Väri"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Kesto:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "Hitaat näppäimet:"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "Viive:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "Käytä järjestelmän äänimerkkiä:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "painettaessa &mitä tahansa näppäintä"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "&hyväksyttäessä mikä tahansa näppäin"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "h&ylättäessä mikä tahansa näppäin"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "Toistavat näppäimet:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "Viive:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "Anna järjestelmän äänimerkki hylättäessä"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr "Tässä voit asettaa saavutettavuusominaisuuksia kuten näyttölukijan."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "Äänimerkki"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Muuntonäppäimet"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Näppäimistösuodattimet"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "Hiirinavigointi"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Näyttölukija"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "Alas jäävät näppäimet:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "Lukitse"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "Poista käytöstä, kun kahta näppäintä pidetään pohjassa"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "Käytä järjestelmän äänimerkkiä painettaessa muuntonäppäimiä"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "Palaute:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr "Anna järjestelmän äänimerkki vaihdettaessa lukitusnäppäinten tilaa"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr "Näytä ilmoitus muunto- tai lukitusnäppäimiä käytettäessä"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Ilmoitusasetukset…"
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "Liikuta osoitinta numeronäppäimin:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "Käytä"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Elettä käytettäessä:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Näytä vahvistusikkuna"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Käytä järjestelmän äänimerkkiä"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "Näytä ilmoitus"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "Kiihdytysviive:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "Toistoväli:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "Kiihdytysaika:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "Enimmäisnopeus:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Kiihdytysprofiili:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Käynnistä &Orca-näyttölukijan määritys…"
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Huomaa, ettei näyttölukija ehkä tule käyttöön ennen uudelleenkirjautumista "
+"tai -käynnistystä."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"Orca-näyttölukijaa ei vaikuta olevan asennettu. Ennen kuin yrität käytät "
+"tätä ominaisuutta, asenna se ja kirjaudu ulos tai käynnistä kone uudelleen"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kim Enkovaara,Tapio Kautto,Teemu Rytilahti,Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "kim.enkovaara@iki.fi,eleknader@phnet.fi,teemu.rytilahti@kde-fi.org,"
+#~ "translator@legisign.org"
+
+# pmap: =/gen=KDE:n esteettömyystyökalun/
+# pmap: =/elat=KDE:n esteettömyystyökalusta/
+#~ msgid "Accessibility"
+#~ msgstr "Esteettömyys"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "© 2000 Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Tekijä"
+
+#~ msgid "Automatically turn off the sticky keys after an interval"
+#~ msgstr "Poista tahmeat näppäimet automaattisesti käytöstä tietyssä ajassa"
+
+#~ msgid "Ring when toggling accessibility features with gestures"
+#~ msgstr "Anna äänimerkki, kun esteettömyysominaisuuksia muutetaan elein"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktivointi:"
+
+#~ msgid "Use gestures to activate"
+#~ msgstr "Aktivoi elein"
+
+#~ msgid "Disable After:"
+#~ msgstr "Poista käytöstä ajassa:"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Jos tämä on valittuna, käytetään järjestelmän äänimerkkiä. Yleensä "
+#~ "äänimerkki on yksinkertainen ”piip”."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Valitse, jos haluat käyttää omaa äänitiedostoa äänimerkkinä. Jos valitset "
+#~ "tämän, haluat todennäköisesti poistaa käytöstä järjestelmän varoitusäänen."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Käytä &omaa äänimerkkiä"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "jos valinta \"Käytä omaa ääntä\" on valittuna, voit valita soitettavan "
+#~ "äänitiedoston tässä kohdassa. Paina \"Selaa…\"-painiketta valitaksesi "
+#~ "äänitiedoston."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "&Soitettava ääni:"
+
+#~ msgid "Browse..."
+#~ msgstr "Selaa…"
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Ottaa käyttöön visuaalisen äänimerkin: tehoste, joka näytetään aina, kun "
+#~ "tavallisesti soitettaisiin äänimerkki. Asetus on hyödyllinen varsinkin "
+#~ "kuuroille."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "&Käytä visuaalista äänimerkkiä"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "Ruutu välähtää määrätyn ajan määrätyllä värillä."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Väläytä näyttöä"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Kaikki näytön värit käännetään määrätyksi ajaksi."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Napsauta tästä, jos haluat valita värin, jota käytetään \"Väläytä näyttöä"
+#~ "\" -huomautuksessa."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Tässä voit määritellä \"Näkyvä äänimerkki\"-tehosteen keston."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä aina kun muuntonäppäin teljetään, lukitaan "
+#~ "tai vapautetaan"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Lukkiutuvat näppäimet"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä kun lukitseva näppäin aktivoidaan tai "
+#~ "aktivointi poistetaan"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&Näppäimien toiston suodatus"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Käytä &toistavia näppäimiä"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Käytä järjestelmän äänimerkkiä kun näppäin kimpoaa takaisin"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Aktivointi&eleet"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Käytä toimintatapoja aktivoidaksesi alas jääviä ja hitaita näppäimiä"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Poista alas jäävät ja hitaat näppäimet tietyn ajan jälkeen, jos niitä ei "
+#~ "ole käytetty."
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä kun tavoitettavuustoiminto asetetaan "
+#~ "päälle tai pois käyttäen elettä"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Jos tämä valittuna, KDE näyttää vahvistusikkunan aina, kun "
+#~ "helppokäyttöasetusten ominaisuuksia vaihdetaan.\n"
+#~ "Ole varovainen tämän valinnan kanssa, sillä jos tämä ei ole valittuna, "
+#~ "niin helppokäyttöasetukset otetaan käyttöön ilman vahvistusta."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Näytä vahvistusdialogi aina kun toimintatapaa muutetaan päälle tai pois"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Käytä Plasman ilmoitusmekanismia aina kun toimintatapaa muutetaan päälle "
+#~ "tai pois"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Siirrä osoitinta näppäimistöllä (numeronäppäimin)"
+
+#~ msgid " pixel/sec"
+#~ msgstr " kuvapistettä sekunnissa"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Näyttölukija käytössä"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Tässä voit aktivoida näppäimistön toimintatapoja, jotka käynnistävät "
+#~ "seuraavat ominaisuudet: \n"
+#~ "Alas jäävät näppäimet: Paina vaihtonäppäintä 5 kertaa\n"
+#~ "Hitaat näppäimet: Pidä vaihtonäppäintä alhaalla 8 sekuntia"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Tässä voit aktivoida näppäimistön toimintatapoja: \n"
+#~ "Hiirinäppäimet: %1\n"
+#~ "Alas jäävät näppäimet: Paina vaihtonäppäintä 5 kertaa\n"
+#~ "Hitaat näppäimet: Pidä vaihtonäppäintä alhaalla 8 sekuntia"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "&Aktivointitoimet"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "Takaisin&kimpoamisaika:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Aikaviive:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|WAV-tiedostot"

@@ -1,0 +1,372 @@
+# Translation of kcmcomponentchooser.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2006, 2007, 2008, 2009.
+# Manfred Wiese <m.j.wiese@web.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2011-06-22 05:44+0200\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "En anner N&ettpostprogramm bruken:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Vörtrocken Nettpostprogramm utsöken:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Vörtrocken Nettpostprogramm utsöken:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Vörtrocken Terminalprogramm utsöken:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Vörtrocken Terminalprogramm utsöken:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Vörtrocken Terminalprogramm utsöken:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Nich begäng"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponent utsöken"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Söök ut de List ut, welk Komponent standardwies för den Deenst \"%1\" "
+#~ "bruukt warrt."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Du hest Dien Standardkomponent ännert. Wullt Du disse Ännern nu "
+#~ "sekern?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Keen Beschrieven verföögbor"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Hier kannst Du de Komponenten fastleggen. Komponenten sünd Programmen, de "
+#~ "faken bruukte Opgaven övernehmt, as de Terminalemulator, de Texteditor un "
+#~ "dat Nettpostprogramm. En Reeg KDE-Programmen mööt af un an maal en "
+#~ "Terminalemulator opropen, en Nettbreef sennen oder en beten Text "
+#~ "dorstellen. Dormit dat eenfach blifft, schöölt se jümmers de sülven "
+#~ "Programmen bruken. Du kannst hier disse Komponentprogrammen utsöken."
+
+#~ msgid "Default Component"
+#~ msgstr "Standardkomponent"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Disse List wiest de Komponenten, de instellt warrn köönt. Klick op de "
+#~ "Komponent, de Du ännern wullt.</p>\n"
+#~ "<p>Mit dissen Dialoog kannst Du de KDE-Standardkomponenten ännern. "
+#~ "Komponenten sünd Programmen, de faken bruukte Opgaven övernehmt, as de "
+#~ "Terminalemulator, dat Nettpostprogramm un de Texteditor. En Reeg KDE-"
+#~ "Programmen mööt af un an maal en Terminalemulator opropen, en Nettbreef "
+#~ "sennen oder en beten Text dorstellen. Dormit dat eenfach blifft, schöölt "
+#~ "se jümmers de sülven Programmen bruken. Du kannst hier disse "
+#~ "Komponentprogrammen utsöken.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Maak <b>http</b>- un <b>htpps</b>-Adressen (URLs) op</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "mit en Programm, dat na de Inhollen vun de Adress utsöcht warrt"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "mit dissen Nettkieker:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "mit dissen Nettkieker:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Vörtrocken Nettkieker utsöken:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "KMail is dat Standard-Nettpostprogramm vun KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "KMail as vörtrocken Nettpostprogramm br&uken"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn Du jichtenseen anner Nettpostprogramm bruken wullt."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Adressaat</li> <li>%s: Bedröppt</li> <li>%c: Kopie (CC)</li> "
+#~ "<li>%b: Blindkopie (BCC)</li> <li>%B: Textvörlaag</li> <li>%A: Bilaag </"
+#~ "li> <li>%u: Heel mailto-Adress</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Klick op dissen Knoop, wenn Du Dien vörtrocken Nettpostprogramm "
+#~ "fastleggen wullt. Beacht bitte, de utsöchte Datei mutt de Utföhrbor-Mark "
+#~ "hebben.<br/> Du kannst en Reeg Platzhollers bruken, för de bi't Opropen "
+#~ "vun't Nettpostprogramm Weerten inföögt warrt:<ul> <li>%t: Den Adressaat "
+#~ "sien Adress</li> <li>%s: Bedröppt</li> <li>%c: Kopie (CC)</li> <li>%b: "
+#~ "Blindkopie (BCC)</li> <li>%B: Vörlaagtext</li> <li>%A: Bilaag </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr ""
+#~ "Klick hier, wenn Du in't Dateisysteem na de utföhrbore Datei kieken wullt."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn dat utsöchte Nettpostprogramm op en Terminal (t.B. "
+#~ "<em>Konsole</em>) utföhrt warrn schall."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "In en &Terminal starten"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Ornern mit dissen Dateipleger dörkieken :"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Anner: Klick binnen dissen Dialoog op \"Tofögen...\":"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Konsole as vörtrocken Terminalprogramm br&uken"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "En anner &Terminalprogramm bruken:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Klick op dissen Knoop, wenn Du Dien vörtrockenTerminalprogramm fastleggen "
+#~ "wullt. Beacht bitte, de utsöchte Datei mutt de Utföhrbor-Mark hebben.<br/"
+#~ "> Beacht ok, dat en poor Programmen, de en Terminalemulater bruukt, nich "
+#~ "funkscheneert, wenn Du Befehlsreegoptschonen angiffst (as bi \"konsole -ls"
+#~ "\")."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr ""
+#~ "Klick hier, wenn Du in't Dateisysteem na dat Terminalprogramm kieken "
+#~ "wullt."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 Sekunn na:"
+#~ msgstr[1] "%1 Sekunnen na:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "De niege Finsterpleger warrt bi den nakamen Start vun KDE bruukt."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Finsterpleger ännert"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Dor löppt en nieg Finsterpleger.\n"
+#~ "Start man Dien KDE-Törn nieg, denn köönt sik all Programmen de niege "
+#~ "Ümgeven topassen."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Finsterpleger utwesselt"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Dien lopen Finsterpleger warrt nu mit den instellten niegen utwesselt."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Finsterplegerinstellen ännert"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Ännern ö&vernehmen"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "Na Verleden &torüchgahn"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "De nieg instellte Finsterpleger wöör opropen.\n"
+#~ "Kiek bitte, wat he propper löppt, un beglööv de Ännern.\n"
+#~ "De Start warrt in 20 Sekunnen automaatsch torüchnahmen."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "De lopen Finsterpleger wöör op den Standard-Finsterpleger för KDE - KWin "
+#~ "- torüchsett."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "De niege Finsterpleger lett sik nich opropen.\n"
+#~ "De lopen Finsterpleger wöör op den Standard-Finsterpleger för KDE - KWin "
+#~ "- torüchsett."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Dat Instellprogramm lett sik nich utföhren"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Den Standard-Finsterpleger för &KDE (KWin) bruken"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "En anner &Finsterpleger bruken:"
+
+#~ msgid "Configure"
+#~ msgstr "Inrichten"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Beacht: De mehrsten Finsterplegers hebbt ehr egen Instellen un kiekt nich "
+#~ "de vun KDE."

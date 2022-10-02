@@ -1,0 +1,434 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-09-24 15:58+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmänt"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Ta bort från favoriter"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Lägg till i favoriter"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "För alla aktiviteter"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "För aktuell aktivitet"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Visa i favoriter"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Välj…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr "Återställ till standardikon"
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr "Ta bort ikon"
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Textetikett:"
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "Skriv här för att lägga till en textetikett"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "En textetikett kan inte anges när panelen är vertikal."
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr "Allmänt:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Sortera alltid program alfabetiskt"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr "Använd kompakt stil för listalternativ"
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr "Automatiskt inaktiverat i pekläge"
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Anpassa aktiverade sökinsticksprogram…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Visa favoriter:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "I ett rutnät"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "I en lista"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Visa övriga program:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "I ett rutnät"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "I en lista"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Visa knappar för:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Strömhantering"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Session"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Strömhantering och session"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Visa rubriker för åtgärdsknappar"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Program"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Platser"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Visa användarinställningar"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Behåll öppet"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Redigera program…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Rutnät med %1 rader, %2 kolumner"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Gå ifrån"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Mer"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Dator"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Historik"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Oftast använda"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Rensa ikon"
+
+#~ msgid "Search…"
+#~ msgstr "Sök…"
+
+#~ msgid "Primary actions:"
+#~ msgstr "Primära åtgärder:"
+
+#~ msgid "Power actions"
+#~ msgstr "Kraftåtgärder"
+
+#~ msgid "Session actions"
+#~ msgstr "Sessionsåtgärder"
+
+#~ msgid "Leave…"
+#~ msgstr "Gå ifrån…"
+
+#~ msgid "Power…"
+#~ msgstr "Ström…"
+
+#~ msgid "More…"
+#~ msgstr "Mer…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "Uppdaterar program…"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Tillåt att beteckning har två rader"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Lista med 1 objekt"
+#~ msgstr[1] "Lista med %1 objekt"
+
+#~ msgid "%1 submenu"
+#~ msgstr "Undermeny %1"
+
+#~ msgid "Leave..."
+#~ msgstr "Gå ifrån..."
+
+#~ msgid "Power..."
+#~ msgstr "Kraft..."
+
+#~ msgid "More..."
+#~ msgstr "Mer..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Program uppdaterade."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Byt flikar när musen hålls över dem"
+
+#~ msgid "All Applications"
+#~ msgstr "Alla program"
+
+#~ msgid "Favorites"
+#~ msgstr "Favoriter"
+
+#~ msgid "Often Used"
+#~ msgstr "Ofta använda"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Aktiva flikar"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Inaktiva flikar"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Dra flikar mellan rutorna för att visa eller dölja dem, eller ordna om de "
+#~ "synliga flikarna genom att dra dem."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Expandera sökning till bokmärken, filer och e-post"
+
+#~ msgid "Appearance"
+#~ msgstr "Utseende"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Menyknappar"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Synliga flikar"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Favoriter"
+
+#~ msgid "Log out"
+#~ msgstr "Logga ut"
+
+#~ msgid "Lock"
+#~ msgstr "Lås"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lås skärmen"
+
+#~ msgid "Switch user"
+#~ msgstr "Byt användare"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Starta en parallell session som en annan användare"
+
+#~ msgid "Shut down"
+#~ msgstr "Stäng av"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Stäng av datorn"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Starta om"
+
+#~ msgid "Restart computer"
+#~ msgstr "Starta om datorn"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Spara aktuell session till nästa inloggning"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Vänteläge"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Gör en paus utan att logga ut"
+
+#~ msgid "Hibernate"
+#~ msgstr "Dvala"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Viloläge på disk"
+
+#~ msgid "Suspend"
+#~ msgstr "Viloläge"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Gå till viloläge i minnet"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Home Folder"
+#~ msgstr "Hemkatalog"
+
+#~ msgid "Network Folders"
+#~ msgstr "Nätverkskataloger"
+
+#~ msgid "Documents"
+#~ msgstr "Dokument"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Senast använda dokument"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Senaste program"
+
+#~ msgid "Run Command..."
+#~ msgstr "Kör kommando..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Kör ett kommando eller utför en sökning"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Flyttbara lagringsmedia"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Visa 'Senast installerade'"
+
+#~ msgid "Uninstall"
+#~ msgstr "Avinstallera"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Sortera alfabetiskt (Ö till A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Rensa senaste program"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Rensa senaste dokument"
+
+#~ msgid "Sleep"
+#~ msgstr "Viloläge"
+
+#~ msgid "Add To Favorites In This Activity Only"
+#~ msgstr "Lägg till i favoriter bara i den här aktiviteten"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plasma av KDE"

@@ -1,0 +1,143 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2022-09-07 07:32+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Primary (default)"
+msgstr "Primarni (privzeto)"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Portrait"
+msgstr "Portret"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Landscape"
+msgstr "Pokrajina"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "Obrnjen portret"
+
+#: kcmtablet.cpp:37
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "Obrnjena pokrajina"
+
+#: kcmtablet.cpp:70
+#, kde-format
+msgid "Follow the active screen"
+msgstr "Sledi aktivnemu zaslonu"
+
+#: kcmtablet.cpp:78
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:116
+#, kde-format
+msgid "Fit to Output"
+msgstr "Prilagodi izhodu"
+
+#: kcmtablet.cpp:117
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr "Prilagodi izhodu v tablici"
+
+#: kcmtablet.cpp:118
+#, kde-format
+msgid "Custom size"
+msgstr "Velikost po meri"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "Ni najdenih tablic za risanje."
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Naprava:"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "Target display:"
+msgstr "Ciljni zaslon:"
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientacija:"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "Način za levičarje:"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Area:"
+msgstr "Površina:"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Resize the tablet area"
+msgstr "Spremeni velikost površine tablice"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Zakleni razmerje stranic"
+
+#: package/contents/ui/main.qml:204
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr "Podloga:"
+
+#: package/contents/ui/RebindButtons.qml:43
+#, kde-format
+msgid "Button %1:"
+msgstr "Gumb %1:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matjaž Jeran"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matjaz.jeran@amis.net"
+
+#~ msgid "Tablet"
+#~ msgstr "Tablica"
+
+#~ msgid "Configure drawing tablets"
+#~ msgstr "Nastavi tablice za risanje"

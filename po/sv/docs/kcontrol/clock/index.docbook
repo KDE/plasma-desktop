@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Datum och tid</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>klocka</keyword>
+<keyword
+>datum</keyword>
+<keyword
+>tid</keyword>
+<keyword
+>ställ in</keyword>
+<keyword
+>anpassa</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Datum och tid</title>
+
+<para
+>Du kan använda den här modulen för att ändra systemets datum och tid, med ett bekvämt grafiskt gränssnitt.</para>
+
+<note
+><para
+>Eftersom inställningarna inte bara påverkar dig som användare, utan hela systemet, måste du ha behörigheter som systemadministratör (<systemitem class="username"
+>root</systemitem
+>) för att kunna ändra systemets datum och tid. Om du inte har de här behörigheterna, visar den här modulen de nuvarande inställningarna, men dina ändringar sparas inte.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Datum och tid</title>
+
+<para
+>Om du markerar <guilabel
+>Ställ in datum och tid automatiskt</guilabel
+> använder modulen <acronym
+>systemd</acronym
+> för att hämta datum och tid.</para>
+
+<para
+>På en dator utan <acronym
+>systemd</acronym
+> används <acronym
+>NTP</acronym
+>-verktygen <command
+>rdate</command
+> eller <command
+>ntpdate</command
+>. Om verktygen saknas, installera dem. </para>
+
+<para
+>När du loggar in på &plasma;-sessionen medan du är uppkopplad eller när du senare ansluter till Internet, sker åtkomsten till en eller flera <acronym
+>NTP</acronym
+>-servrar.</para>
+<para
+>Det är dock inte tillräckligt för att behålla en noggrann klocka i det långa loppet. Det är användbart för att då och då ställa in tiden för datorer som inte alltid har nätverksanslutning, såsom bärbara datorer. </para>
+
+<para
+>Om du inte använder en tidsserver, kan datumet ställas in för hand i kalendern.</para>
+<para
+>Använd rutorna under almanackan för att välja dagens datum, skriv in datumet i redigeringsrutan eller välj vecka under året i kombinationsrutan.</para>
+
+<para
+>Du ställer in tiden med nummerrutorna under den analoga klockan. Du kan också direkt skriva in värdet.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Tidszon</title>
+<para
+>För att ställa in en ny tidzon, välj helt enkelt din area i listan nedanför. Använd filterrutan för att hitta önskad <guilabel
+>Area</guilabel
+> eller <guilabel
+>Region</guilabel
+>.</para>
+</sect2>
+
+</sect1>
+
+</article>

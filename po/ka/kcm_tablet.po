@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2022-09-02 07:39+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Primary (default)"
+msgstr "ძირითადი (ნაგულისხმები)"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Portrait"
+msgstr "პორტრეტი"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Landscape"
+msgstr "ლანდშაფტი"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "აყირავებული პორტრეტი"
+
+#: kcmtablet.cpp:37
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "აყირავებული ლანდშაფტი"
+
+#: kcmtablet.cpp:70
+#, kde-format
+msgid "Follow the active screen"
+msgstr "აქტიურ ეკრანზე მიყოლება"
+
+#: kcmtablet.cpp:78
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:116
+#, kde-format
+msgid "Fit to Output"
+msgstr "გამოტანაში ჩატევა"
+
+#: kcmtablet.cpp:117
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr "გამოტანის ტაბლეტში ჩატევა"
+
+#: kcmtablet.cpp:118
+#, kde-format
+msgid "Custom size"
+msgstr "მორგებული ზომა"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "სახატი ტაბლეტი ვერ ვიპოვე."
+
+#: package/contents/ui/main.qml:35
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "მოწყობილობა:"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "Target display:"
+msgstr "სამიზნე ეკრანი:"
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgid "Orientation:"
+msgstr "ორიენტაცია:"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "ცაცია:"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Area:"
+msgstr "ფართობი:"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Resize the tablet area"
+msgstr "ტაბლეტის ფართობში ჩატევა"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "გადიდების კოეფიციენტის დაბლოკვა"
+
+#: package/contents/ui/main.qml:204
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr ""
+
+#: package/contents/ui/RebindButtons.qml:43
+#, kde-format
+msgid "Button %1:"
+msgstr ""

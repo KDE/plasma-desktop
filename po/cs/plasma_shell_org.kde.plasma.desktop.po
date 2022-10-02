@@ -1,0 +1,474 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vit Pelcak <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-06-28 10:45+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 22.04.2\n"
+"X-Language: cs_CZ\n"
+"X-Source-Language: en_US\n"
+
+#: contents/activitymanager/ActivityItem.qml:212
+msgid "Currently being used"
+msgstr "V současnosti používaný"
+
+#: contents/activitymanager/ActivityItem.qml:252
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Přesunout\n"
+"do této aktivity"
+
+#: contents/activitymanager/ActivityItem.qml:282
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Zobrazit také\n"
+"v této aktivitě"
+
+#: contents/activitymanager/ActivityItem.qml:342
+msgid "Configure"
+msgstr "Nastavit"
+
+#: contents/activitymanager/ActivityItem.qml:359
+msgid "Stop activity"
+msgstr "Zastavit aktivitu"
+
+#: contents/activitymanager/ActivityList.qml:143
+msgid "Stopped activities:"
+msgstr "Zastavené aktivity:"
+
+#: contents/activitymanager/ActivityManager.qml:127
+msgid "Create activity…"
+msgstr "Vytvořit aktivitu…"
+
+#: contents/activitymanager/Heading.qml:61
+msgid "Activities"
+msgstr "Aktivity"
+
+#: contents/activitymanager/StoppedActivityItem.qml:133
+msgid "Configure activity"
+msgstr "Nastavit aktivitu"
+
+#: contents/activitymanager/StoppedActivityItem.qml:148
+msgid "Delete"
+msgstr "Smazat"
+
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr "Při načítání došlo k chybě %1."
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr "Zkopírovat do schránky"
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr "Zobrazit podrobnosti chyby..."
+
+#: contents/applet/CompactApplet.qml:70
+msgid "Open %1"
+msgstr "Otevřít %1"
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:240
+msgid "About"
+msgstr "O aplikaci"
+
+#: contents/configuration/AboutPlugin.qml:45
+msgid "Send an email to %1"
+msgstr "Odeslat e-mail %1"
+
+#: contents/configuration/AboutPlugin.qml:59
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:107
+msgid "Copyright"
+msgstr "Copyright"
+
+#: contents/configuration/AboutPlugin.qml:127 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Licence:"
+
+#: contents/configuration/AboutPlugin.qml:140
+msgid "Authors"
+msgstr "Autoři"
+
+#: contents/configuration/AboutPlugin.qml:150
+msgid "Credits"
+msgstr "Poděkování"
+
+#: contents/configuration/AboutPlugin.qml:161
+msgid "Translators"
+msgstr "Překladatelé"
+
+#: contents/configuration/AboutPlugin.qml:175
+msgid "Report a Bug…"
+msgstr ""
+
+#: contents/configuration/AppletConfiguration.qml:55
+msgid "Keyboard Shortcuts"
+msgstr "Klávesové zkratky"
+
+#: contents/configuration/AppletConfiguration.qml:288
+msgid "Apply Settings"
+msgstr "Provést nastavení"
+
+#: contents/configuration/AppletConfiguration.qml:289
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr ""
+"V aktivním modulu jsou neuložené změny. Přejete si změny aplikovat, nebo "
+"zahodit?"
+
+#: contents/configuration/AppletConfiguration.qml:319
+msgid "OK"
+msgstr "OK"
+
+#: contents/configuration/AppletConfiguration.qml:327
+msgid "Apply"
+msgstr "Použít"
+
+#: contents/configuration/AppletConfiguration.qml:333
+#: contents/explorer/AppletAlternatives.qml:179
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr "Otevřít stránku s nastavením"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:19
+msgid "Left-Button"
+msgstr "Levé tlačítko"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:20
+msgid "Right-Button"
+msgstr "Pravé tlačítko"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Middle-Button"
+msgstr "Prostřední tlačítko"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Back-Button"
+msgstr "Tlačítko zpět"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Forward-Button"
+msgstr "Tlačítko vpřed"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Vertical-Scroll"
+msgstr "Svislý posuv"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:26
+msgid "Horizontal-Scroll"
+msgstr "Vodorovný posuv"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:29
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:73
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Přidat činnost"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+msgid "Layout changes have been restricted by the system administrator"
+msgstr "Změny rozvržení byly zakázány správcem systému"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+msgid "Layout:"
+msgstr "Rozvržení:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+msgid "Wallpaper type:"
+msgstr "Typ tapety:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
+msgstr "Získat nové moduly…"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+msgid "Layout changes must be applied before other changes can be made"
+msgstr "Změny rozložení musí být aplikovány před ostatními změnami"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+msgid "Apply Now"
+msgstr "Aplikovat nyní"
+
+#: contents/configuration/ConfigurationShortcuts.qml:16
+msgid "Shortcuts"
+msgstr "Zkratky"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr ""
+"Tato klávesová zkratka applet aktivuje stejně jako by na něj uživatel klikl."
+
+#: contents/configuration/ContainmentConfiguration.qml:29
+msgid "Wallpaper"
+msgstr "Tapeta"
+
+#: contents/configuration/ContainmentConfiguration.qml:34
+msgid "Mouse Actions"
+msgstr "Činnosti myši"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Vstup zde"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+msgid "Remove Panel"
+msgstr "Odstranit panel"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
+msgid "Panel Alignment"
+msgstr "Zarovnání panelu"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Top"
+msgstr "Nahoru"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Left"
+msgstr "Vlevo"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+msgid "Center"
+msgstr "Střed"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Bottom"
+msgstr "Dolů"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Right"
+msgstr "Vpravo"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+msgid "Visibility"
+msgstr "Viditelnost"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+msgid "Always Visible"
+msgstr "Vždy viditelné"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+msgid "Auto Hide"
+msgstr "Automaticky skrývat"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
+msgid "Windows Can Cover"
+msgstr "Může být překryt okny"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
+msgid "Windows Go Below"
+msgstr "Okna jdou pod"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr "Krytí"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr "Adaptivní"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr "Neprůhledné"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr "Průhledné"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid "Maximize Panel"
+msgstr "Maximalizovat panel"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+msgid "Floating Panel"
+msgstr "Plovoucí panel"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+msgid "Shortcut"
+msgstr "Zkratka"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+msgid "Add Widgets…"
+msgstr "Přidat widgety…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
+msgid "Add Spacer"
+msgstr "Přidat mezeru"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
+msgid "More Options…"
+msgstr "Více možností…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr "Přetáhněte pro přesunuti"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel width:"
+msgstr "Šířka panelu:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel height:"
+msgstr "Výška panelu:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:397
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Zavřít"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Správa panelů a pracovních ploch"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+"Můžete různě přesunovat panely a pracovní plochy a přetahovat je na různé "
+"obrazovky."
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
+msgid "%1 (primary)"
+msgstr "%1 (promární)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
+msgid "%1 (disabled)"
+msgstr "%1 (zakázáno)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+msgid "Swap with Desktop on Screen %1"
+msgstr "Prohodit s plochou na obrazovce %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+msgid "Move to Screen %1"
+msgstr "Přesunout na obrazovku %1"
+
+#: contents/explorer/AppletAlternatives.qml:63
+msgid "Alternative Widgets"
+msgstr "Alternativní widgety"
+
+#: contents/explorer/AppletAlternatives.qml:163
+msgid "Switch"
+msgstr "Přepnout"
+
+#: contents/explorer/AppletDelegate.qml:175
+msgid "Undo uninstall"
+msgstr "Vrátit odinstalaci zpět"
+
+#: contents/explorer/AppletDelegate.qml:176
+msgid "Uninstall widget"
+msgstr "Odinstalovat widget"
+
+#: contents/explorer/Tooltip.qml:102
+msgid "Author:"
+msgstr "Autor:"
+
+#: contents/explorer/Tooltip.qml:110
+msgid "Email:"
+msgstr "E-mail:"
+
+#: contents/explorer/Tooltip.qml:129
+msgid "Uninstall"
+msgstr "Odinstalovat"
+
+#: contents/explorer/WidgetExplorer.qml:134
+#: contents/explorer/WidgetExplorer.qml:245
+msgid "All Widgets"
+msgstr "Všechny widgety"
+
+#: contents/explorer/WidgetExplorer.qml:199
+msgid "Widgets"
+msgstr "Widgety"
+
+#: contents/explorer/WidgetExplorer.qml:207
+msgid "Get New Widgets…"
+msgstr "Získat nové widgety…"
+
+#: contents/explorer/WidgetExplorer.qml:256
+msgid "Categories"
+msgstr "Kategorie"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets matched the search terms"
+msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets available"
+msgstr "Nejsou dostupné žádné widgety"

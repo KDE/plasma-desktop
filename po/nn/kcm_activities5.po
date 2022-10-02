@@ -1,0 +1,180 @@
+# Translation of kcm_activities5 to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2019, 2020.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2021-12-15 12:28+0100\n"
+"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "Aktivitetar"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Slett aktivitet"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Er du sikker på at du vil sletta «%1»?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"Feil ved lasting av QML-filer. Sjå til at alt er rett installert.\n"
+"Manglar %1"
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "Generelt"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Legg til ny aktivitet"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Aktivitetsoppsett"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Opprett"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "Namn:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "Skildring:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr "Personvern:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Ikkje spor bruk i denne aktiviteten"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Snøggtast for byte:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Kor mange månadar å lagra i aktivitetsloggen"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Kva data som skal lagrast i aktivitetsloggen"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Oversikt over program å lagra aktivitetslogg for"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Oversikt over program aktivitetslogg ikkje skal lagrast for"
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "Byte"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Set opp %1-aktivitet"
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Slett %1-aktivitet"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr "Lag ny …"
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "Aktivitetsbyte"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "Bla gjennom aktivitetar"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "Bla gjennom aktivitetar (baklengs)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Hugs for kvar aktivitet (treng omstart)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Gjeldande virtuelle skrivebord:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Snarvegar:"

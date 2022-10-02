@@ -1,0 +1,713 @@
+# Traducerea kcmkonq.po în Română
+# translation of kcmkonq.po to Romanian
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2022-02-04 16:00+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Birou"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Documente"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Descărcări"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Muzică"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Poze"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Video"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Căi</h1>\n"
+"Acest modul vă permite să alegeți locul în care vor fi salvate fișierele de "
+"pe biroul dumneavoastră. \n"
+"Folosiți „Ce înseamnă aceasta?” (Shift+F1) pentru a obține ajutor pentru "
+"opțiunile individuale."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Cale birou:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Acest dosar conține toate fișierele pe care le vedeți pe ecran. Puteți "
+"schimba locul acestui dosar dacă doriți, iar conținutul lui va fi mutat "
+"automat la noua amplasare."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Cale documente:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva "
+"documente."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Cale descărcări:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a vă salva elementele "
+"descărcate."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Cale videoclipuri:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva filme."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Cale poze:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Cale muzică:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva muzică."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Cale autostart:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Acest dosar conține aplicații sau legături către aplicații (scurtături) "
+#~ "care doriți să fie executate automat la pornirea sesiunii. Puteți schimba "
+#~ "locul acestui dosar dacă doriți, iar conținutul lui va fi mutat automat "
+#~ "la noua amplasare."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Filme"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Calea pentru „%1” a fost modificată.\n"
+#~ "Doriți să mut fișierele din „%2” în „%3”?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Mută"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Nu muta"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Calea pentru „%1” a fost modificată.\n"
+#~ "Doriți să mutați dosarul „%2” la „%3”?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Mută"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Nu muta"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Cerere de confirmare"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Comportament Konqueror</h1> Aici configurați modul în care lucrează "
+#~ "Konqueror ca gestionar de fișiere."
+
+#~ msgid "Misc Options"
+#~ msgstr "Opțiuni diverse"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Deschide dosarele în ferestre separate"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Dacă această opțiune este bifată, Konqueror va deschide o fereastră nouă "
+#~ "atunci când deschideți un dosar, în loc să afișeze conținutul dosarului "
+#~ "în fereastra curentă."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Afișează elemente de me&niu „Șterge” ce ocolesc coșul de gunoi"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Selectați opțiunea dacă doriți ca itemi de meniu „Șterge” să fie afișați "
+#~ "în meniurile normale și contextuale ale ecranului și managerului de "
+#~ "fișiere. Oricând puteți șterge fișiere dacă tineți tasta SHIFT apăsată în "
+#~ "timp ce apelați „Mută la gunoi\"."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Editor meniuri"
+
+#~ msgid "Menu"
+#~ msgstr "Meniu"
+
+#~ msgid "New..."
+#~ msgstr "Nou..."
+
+#~ msgid "Remove"
+#~ msgstr "Elimină"
+
+#~ msgid "Move Up"
+#~ msgstr "Mută în sus"
+
+#~ msgid "Move Down"
+#~ msgstr "Mută în jos"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Cere confirmarea pentru"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Această opțiune spune Konqueror ce să facă atunci când „ștergeți” un "
+#~ "fișier.<ul><li><em>Mută la gunoi:</em> mută fișierul în dosarul "
+#~ "dumneavoastră de gunoi de unde poate fi recuperat cu ușurință</li> "
+#~ "<li><em>Șterge:</em> pur și simplu șterge fișierul</li> </ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Mută la gunoi"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Ș&terge"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Comportament"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Previzualizări și metainformații"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Permite previzualizări, \"Iconițele dosar reflectă conținutul\" și "
+#~ "obținerea de metainformații pentru protocoalele:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Opțiuni de previzualizare</h1> Aici puteți modifica comportamentul "
+#~ "Konqueror când afișează fișierele dintr-un dosar.<h2>Lista de protocoale</"
+#~ "h2> Selectați protocoalele pentru care vor fi activate previzualizările "
+#~ "și deselectați-le pe cele pentru care nu ar trebui activată această "
+#~ "operație. De exemplu, ar putea fi eficient să afișați previzualizări "
+#~ "folosind protocolul SMB dacă rețeaua locală este suficient de rapidă, dar "
+#~ "ar trebui să dezactivați protocolul FTP dacă vizitați site-uri FTP lente "
+#~ "și cu imagini mari. <h2>Mărimea maximă a fișierului</h2> Selectați "
+#~ "mărimea maximă a fișierului pentru care să fie generată previzualizarea. "
+#~ "De exemplu, dacă o setați la 1 Mo (implicit), atunci nu vor fi generate "
+#~ "previzualizări pentru fișiere mai mari de 1 Mo, din motive de viteză."
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column Header of a colum where the user has to select in which "
+#~| "protocols he wants to see file previews"
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Selectare protocoale"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Protocoale locale"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Protocoale de rețea"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Această opțiune vă permite să alegeți când vor fi activate "
+#~ "previzualizarea de fișiere, pictogramele de dosar inteligente și "
+#~ "metainformațiile în managerul de fișiere.\n"
+#~ "În lista de protocoale care apare selectați care din ele sunt suficient "
+#~ "de rapide pentru a vă permite generarea previzualizărilor."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "Mărimea ma&ximă a fișierului:"
+
+#~ msgid " MB"
+#~ msgstr " Mo"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&Crește mărimea previzualizării în funcție de iconițe"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Utilizează &miniimaginile înglobate în fișiere"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Selectați această opțiune pentru a utiliza miniimaginile care există de "
+#~ "obicei în unele tipuri de fișiere (de exemplu JPEG). Acest lucru va "
+#~ "crește viteza și va reduce accesul la disc. Deselectați opțiunea dacă "
+#~ "aveți fișiere care au fost procesate de programe care creează miniimagini "
+#~ "necorespunzătoare, precum ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Fișiere sunet"
+
+#~ msgid "&Left button:"
+#~ msgstr "Buton &stânga:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Puteți alege ce se întâmplă când dați clic stânga pe ecran cu "
+#~ "dispozitivul de indicare:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Buton &dreapta:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Puteți alege ce se întâmplă când dați clic dreapta pe ecran cu "
+#~ "dispozitivul de indicare:"
+
+#, fuzzy
+#~| msgid ""
+#~| " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~| "showing all windows on all virtual desktops pops up. You can click on "
+#~| "the desktop name to switch to that desktop, or on a window name to shift "
+#~| "focus to that window, switching desktops if necessary, and restoring the "
+#~| "window if it is hidden. Hidden or minimized windows are represented with "
+#~| "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~| "menu for the desktop pops up. Among other things, this menu has options "
+#~| "for configuring the display, locking the screen, and logging out of KDE."
+#~| "</li> <li><em>Application menu:</em> the \"K\" menu pops up. This might "
+#~| "be useful for quickly accessing applications if you like to keep the "
+#~| "panel (also known as \"Kicker\") hidden from view.</li></ul>"
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Fără acțiune:</em> <li><em>Meniul listei de ferestre:</em> "
+#~ "apare un meniu care afișează toate ferestrele din toate birourile "
+#~ "virtuale. Puteți da clic pe numele ecranului pentru a comuta la acel "
+#~ "birou sau pe numele unei ferestre pentru a comuta focalizarea pe acea "
+#~ "fereastră, schimbând biroul dacă este necesar și restaurând fereastra "
+#~ "dacă era ascunsă. Ferestrele ascunse sau minimizate sunt reprezentate cu "
+#~ "numele lor între paranteze.</li> <li><em>Meniul biroului:</em> apare un "
+#~ "meniu contextual pentru birou. Pe lângă alte lucruri, acest meniu are "
+#~ "opțiuni pentru configurareaafișajului, blocarea lui și ieșirea din KDE.</"
+#~ "li> <li><em>Meniul de aplicații:</em> apare meniul „K”. Această opțiune "
+#~ "poate fi foarte utilă pentru accesarea rapidă a aplicațiilor dacă vă "
+#~ "place să țineți ascuns panoul (cunoscut și sub numele de „Kicker”).</li></"
+#~ "ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "You can choose what happens when you click the middle button of your "
+#~| "pointing device on the desktop: <ul><li><em>No action</em></li> "
+#~| "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~| "desktops pops up. You can click on the desktop name to switch to that "
+#~| "desktop, or on a window name to shift focus to that window, switching "
+#~| "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~| "or minimized windows are represented with their names in parentheses.</"
+#~| "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~| "Among other things, this menu has options for configuring the display, "
+#~| "locking the screen, and logging out of KDE.</li> <li><em>Application "
+#~| "menu:</em> the \"K\" menu pops up. This might be useful for quickly "
+#~| "accessing applications if you like to keep the panel (also known as "
+#~| "\"Kicker\") hidden from view.</li></ul>"
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Puteți alege ce se întâmplă când dați clic pe birou cu butonul din mijloc "
+#~ "al dispozitivului dumneavoastră de indicare: <ul><li><em>Fără acțiune:</"
+#~ "em> </li> <li><em>Meniul listei de ferestre:</em> apare un meniu care "
+#~ "afișează toate ferestrele din toate birourile virtuale. Puteți da clic pe "
+#~ "numele biroului pentru a comuta la acel birou sau pe numele unei ferestre "
+#~ "pentru a comuta focalizarea pe acea fereastră, schimbând biroul dacă este "
+#~ "necesar și refăcând fereastra dacă era ascunsă. Ferestrele ascunse sau "
+#~ "minimizate sunt reprezentate cu numele lor între paranteze.</li> "
+#~ "<li><em>Meniul buroului:</em> apare un meniu contextual pentru birou. Pe "
+#~ "lângă alte lucruri, acest meniu are opțiuni pentru configurarea "
+#~ "afișajului, blocarea lui și ieșirea din KDE.</li> <li><em>Meniul de "
+#~ "aplicații:</em> apare meniul „K”. Aceasta poate fi foarte util pentru "
+#~ "accesarea rapidă a aplicațiilor dacă vă place să țineți ascuns panoul "
+#~ "(cunoscut și sub numele de „Kicker”).</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "<ul><li><em>Fără acțiune:</em> așa cum vă puteți da seama, nu se întâmplă "
+#~ "nimic!</li> <li><em>Meniul listei de ferestre:</em> apare un meniu care "
+#~ "afișează toate ferestrele din toate birourile virtuale. Puteți da clic pe "
+#~ "numele ecranului pentru a comuta la acel birou sau pe numele unei "
+#~ "ferestre pentru a comuta focusul pe acea fereastră, schimbând ecranul "
+#~ "dacă este necesar și restaurând fereastra dacă era ascunsă. Ferestrele "
+#~ "ascunse sau minimizate sunt reprezentate cu numele lor între paranteze.</"
+#~ "li> <li><em>Meniul biroului:</em> apare un meniu contextual pentru birou. "
+#~ "Pe lângă alte lucruri, acest meniu are opțiuni pentru configurarea "
+#~ "afișajului, blocarea lui și ieșirea din KDE.</li> <li><em>Meniul de "
+#~ "aplicații:</em> apare meniul \"K\". Această opțiune poate fi foarte utilă "
+#~ "pentru accesarea rapidă a aplicațiilor dacă vă place să țineți ascuns "
+#~ "panoul (cunoscut și sub numele de \"Kicker\").</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Fără acțiune"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Meniul listei de ferestre"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Meniul biroului"
+
+#~ msgid "Application Menu"
+#~ msgstr "Meniul de aplicații"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Meniu semne de carte"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Meniu personalizat 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Meniu personalizat 2"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Behavior</h1>\n"
+#~| "This module allows you to choose various options\n"
+#~| "for your desktop, including the way in which icons are arranged and\n"
+#~| "the pop-up menus associated with clicks of the middle and right mouse\n"
+#~| "buttons on the desktop.\n"
+#~| "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Comportament</h1>\n"
+#~ "Acest modul vă permite să stabiliți o mulțime de opțiuni pentru biroul "
+#~ "dumneavoastră,\n"
+#~ " incluzând modul în care sunt aranjate pictogramele și meniurile-balon "
+#~ "asociate la clicuri pe ecran cu butonul de mijloc sau dreapta al "
+#~ "mausului.\n"
+#~ "Utilizați „Ce înseamnă aceasta?” (Shift+F1) pentru a obține ajutor pentru "
+#~ "opțiunile corespunzătoare."
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Dezactivați această opțiune dacă nu doriți să aveți iconițe pe ecran. "
+#~ "Fără iconițe ecranul va fi ceva mai rapid, dar nu veți mai putea să "
+#~ "puneți fișiere pe ecran."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "Afișează &pictogramele pe ecran"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Selectați această opțiune dacă doriți să rulați programe X11 care "
+#~ "afișează imagini direct pe ecran, precum xsnow, xpenguin sau xmountain. "
+#~ "Dacă aveți probleme cu aplicații precum Netscape, care verifică fereastra "
+#~ "ecran pentru instanțe proprii care rulează, dezactivați această opțiune."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Permite &programe în fereastra ecran"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "&Afișează baloane de ajutor"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Bara de meniu în susul ecranului"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr ""
+#~ "Dacă această opțiune este selectată, nu va exista nici o bară de meniu în "
+#~ "partea de sus a ecranului."
+
+#~ msgid "&None"
+#~ msgstr "&Nimic"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Dacă această opțiune este selectată, va fi afișată o bară de meniu în "
+#~ "partea de sus, care afișează meniurile ecranului."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "&Bară de meniu pentru birou"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Dacă această opțiune este selectată, aplicațiile nu vor mai avea atașată "
+#~ "bara de meniu. În schimb va exista o singură bară de meniu în partea de "
+#~ "sus a ecranului care afișează meniul aplicației active. Acest mod de "
+#~ "lucru este similar cu cel din Mac OS."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Bara de meniu a aplicației &curente (stil Mac OS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Acțiuni buton mouse"
+
+#~ msgid "Middle button:"
+#~ msgstr "Buton mijloc:"
+
+#~ msgid "Left button:"
+#~ msgstr "Buton stânga:"
+
+#~ msgid "Right button:"
+#~ msgstr "Buton dreapta:"
+
+#~ msgid "Edit..."
+#~ msgstr "Editează..."
+
+#~ msgid "File Icons"
+#~ msgstr "Iconițe fișier"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Selectați această opțiune dacă doriți să aveți pictogramele aliniate "
+#~ "automat la grilă atunci când le mutați."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "A&liniază automat pictogramele"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>Dacă selectați această opțiune, atunci vor fi afișate și fișierele din "
+#~ "directorul corespunzător ecranului, al căror nume începe cu un punct (.). "
+#~ "În mod uzual aceste fișiere conțin fișiere de configurare și rămân "
+#~ "ascunse vederii. </p><p>De exemplu, fișierele cu numele \".directory\" "
+#~ "sunt simple fișiere text care conțin informații pentru Konqueror, cum ar "
+#~ "fi iconița la afișarea directorului, ordinea în care vor fi sortate "
+#~ "fișierele etc. Nu ștergeți aceste fișiere dacă nu sunteți sigur de ceea "
+#~ "ce doriți să faceți.</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Afișează &fișierele ascunse"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "Selectați tipurile de fișiere pentru care doriți să activați "
+#~ "previzualizarea de imagini."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Afișează previzualizări pentru"
+
+#~ msgid "Device Icons"
+#~ msgstr "Iconițe dispozitive"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "&Afișează iconițe dispozitiv:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "Deselectați tipurile de dispozitive pe care nu doriți să le vedeți pe "
+#~ "ecran."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Tipuri de dispozitive de afișat"
+
+#~ msgid "Show file &tips"
+#~ msgstr "&Afișează indicii fișiere"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Aici puteți controla dacă atunci când mutați mausul deasupra unui fișier "
+#~ "va fi afișat un balon de ajutor cu informații adiționale."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "&Afișează previzualizări în indiciile pentru fișier"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Aici puteți controla dacă doriți ca indiciul să conțină o previzualizare "
+#~ "mai mare a fișierului atunci când mutați mausul deasupra lui."

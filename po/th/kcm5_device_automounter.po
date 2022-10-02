@@ -1,0 +1,270 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2010-07-07 15:20+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "ตัวช่วยเมานท์อุปกรณ์โดยอัตโนมัติ"
+
+#: DeviceAutomounterKCM.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 Trever Fischer"
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "สงวนลิขสิทธิ์ (c) 2009 Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to KDE. If \"Automount on "
+#| "Login\" is checked, the device will be automatically mounted even though "
+#| "\"Mount all removable media at login\" is unchecked. The same applies for "
+#| "\"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"รายการนี้บรรจุอุปกรณ์จัดเก็บข้อมูลต่าง ๆ ที่ KDE รู้จัก หากตัวเลือก \"เมานท์อัตโนมัติเมื่อล็อกอิน\" "
+"ถูกกาเลือก อุปกรณ์จะถูกทำการเมานท์ให้โดยอัตโนมัติ แม้ว่าจะไม่ได้กาเลือกตัวเลือก "
+"\"เมานท์สื่อแบบถอดได้ทั้งหมดเมื่อทำการล็อกอิน\" ไว้ก็ตาม ทั้งนี้จะมีผลเช่นเดียวกับตัวเลือก  "
+"\"เมานท์อัตโนมัติเมื่อมีการเสียบอุปกรณ์\"\n"
+"\n"
+"หากไม่ได้กาเลือกตัวเลือก \"เปิดใช้การเมาทน์ให้โดยอัตโนมัติกับสื่อแบบถอด/เสียบได้\" "
+"การควบคุมเหนืออุปกรณ์จะไม่ถูกปรับใช้ และจะไม่มีอุปกรณ์ใด ๆ ถูกทำการเมานท์ให้โดยอัตโนมัติ"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking this button causes KDE to 'forget' that the selected devices "
+#| "ever existed. This is only useful if \"Only automatically mount removable "
+#| "media that has been manually mounted before\" is checked. Once a device "
+#| "is forgotten and KDE is set to only automatically mount familiar devices, "
+#| "the device will not be automatically mounted."
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"คลิกที่ปุ่มนี้ จะทำให้ KDE 'ไม่สนใจ' อุปกรณ์ที่เลือกไว้แม้ว่าจะยังมีอุปกรณ์อยู่ในระบบ "
+"ซึ่งจะมีประโยชน์หากกาเลือกตัวเลือก "
+"\"ทำการเมานท์สื่อแบบถอดได้ที่เคยถูกเมานท์ด้วยตัวผู้ใช้เองมาก่อนเท่านั้น\" เท่านั้น "
+"หากอุปกรณ์เคยถูกตั้งให้ไม่จดจำและ KDE ได้ถูกตั้งให้ทำการเมานท์อัตโนมัติกับอุปกรณ์ที่คล้ายกันนี้เท่านั้น, "
+"จะทำให้อุปกรณ์นั้นจะไม่ถูกทำการเมานท์ให้โดยอัตโนมัติ"
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "ไม่จดจำอุปกรณ์นี้"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, KDE will only automatically mount devices it "
+#| "remembers. A device is 'remembered' if it has ever been mounted before. "
+#| "For instance, plugging in a USB media player to charge is not sufficient "
+#| "to 'remember' it - if the files are not accessed, KDE will not "
+#| "automatically mount the player next time it is seen. Once they have been "
+#| "accessed, however, KDE will remember to automatically make the contents "
+#| "accessible to your system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"หากกาเลือกตัวเลือกนี้ KDE จะทำการเมานท์อุปกรณ์ให้โดยอัตโนมัติเฉพาะกับอุปกรณ์ที่จดจำได้เท่านั้น "
+"อุปกรณ์ที่ถูก 'จดจำได้' หมายถึงอุปกรณ์ที่ต้องเคยถูกเมานท์มาก่อน กรณีเช่น "
+"มีการเสียบเครื่องเล่นสื่อเพียงเพื่อทำการประจุไฟผ่านทางพอร์ต USB นั้น "
+"จะยังไม่ถือว่าเครื่องเล่นสื่อนั้นเป็นอุปกรณ์ที่ถูก 'จดจำได้' - ตราบใดที่ยังไม่เคยมีการเข้าถึงแฟ้มต่าง ๆ "
+"ที่อยู่ภายใน นั่นคือ KDE "
+"จะไม่ทำการเมานท์เครื่องเล่นสื่อดังกล่าวให้โดยอัตโนมัติแม้ว่าจะถูกพบว่ามีการเสียบอุปกรณ์เข้ามาในภายหลัง "
+"แต่เมื่อใดที่อุปกรณ์เคยถูกเข้าถึงแฟ้มต่าง ๆ มาก่อนแล้ว KDE จะทำการจดจำอุปกรณ์นั้น "
+"และจะทำการสร้างส่วนที่สื่อถึงอุปกรณ์จัดเก็บข้อมูลให้โดยอัตโนมัติเมื่อมีการเสียบสื่อหรือป้อนสื่อเข้ามา "
+"เพื่อให้สามารถเข้าใช้งานอุปกรณ์ได้ภายในระบบของคุณ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "ทำการเมานท์สื่อแบบถอดได้ที่เคยถูกเมานท์ด้วยตัวผู้ใช้เองมาก่อนเท่านั้น"
+
+#: DeviceModel.cpp:52
+#, fuzzy, kde-format
+#| msgid "Automount on Login"
+msgid "Automount Device"
+msgstr "เมานท์อัตโนมัติเมื่อล็อกอิน"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr ""
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr ""
+
+#: DeviceModel.cpp:258
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "All Devices"
+msgstr "อุปกรณ์"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr ""
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "อุปกรณ์ที่ถูกเสียบเข้ามา"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "อุปกรณ์ที่เลิกเชื่อมต่อแล้ว"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "ค่า UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "อุปกรณ์นี้จะถูกเมานท์ให้โดยอัตโนมัติเมื่อทำการล็อกอิน"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "อุปกรณ์นี้จะไม่ถูกเมานท์ให้โดยอัตโนมัติเมื่อทำการล็อกอิน"
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "อุปกรณ์นี้จะถูกเมานท์ให้โดยอัตโนมัติเมื่อมีการเสียบอุปกรณ์"
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "อุปกรณ์นี้จะไม่ถูกเมานท์ให้โดยอัตโนมัติเมื่อมีการเสียบอุปกรณ์"
+
+#, fuzzy
+#~| msgid ""
+#~| "If any removable storage devices are connected to your system when you "
+#~| "login to your desktop, KDE will automatically make the contents "
+#~| "available to your system for other programs to read."
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "หากมีอุปกรณ์จัดเก็บข้อมูลใด ๆ ก็ตามที่ถูกป้อนให้หรือเสียบเข้ามาในระบบ "
+#~ "เมื่อคุณทำการล็อกอินเข้าใช้พื้นที่ทำงาน KDE "
+#~ "จะทำการสร้างส่วนที่สื่อถึงอุปกรณ์จัดเก็บข้อมูลให้โดยอัตโนมัติ เมื่อมีการเสียบสื่อหรือป้อนสื่อเข้ามา "
+#~ "เพื่อให้สามารถใช้งานได้ภายในโปรแกรมต่าง ๆ"
+
+#, fuzzy
+#~| msgid "Mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "เมานท์สื่อแบบถอดได้ทั้งหมดเมื่อทำการล็อกอิน"
+
+#, fuzzy
+#~| msgid ""
+#~| "When this is checked, KDE will automatically make the contents of any "
+#~| "storage device available to the system when it is plugged in or attached."
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "หากกาเลือกตัวเลือกนี้ KDE จะทำการสร้างส่วนที่สื่อถึงอุปกรณ์จัดเก็บข้อมูลให้โดยอัตโนมัติ "
+#~ "เมื่อมีการเสียบสื่อหรือป้อนสื่อเข้ามา เพื่อให้ผู้ใช้สามารถใช้งานได้ภายในระบบ"
+
+#, fuzzy
+#~| msgid "Automatically mount removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "ทำการเมานท์สื่อแบบถอดได้ให้โดยอัตโนมัติเมื่อมีการป้อนสื่อเข้ามา"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "หากยกเลิกการกาเลือกตัวเลือกนี้ จะไม่มีการทำการเมานท์อุปกรณ์ใด ๆ ให้โดยอัตโนมัติ "
+#~ "โดยไม่คำนึงถึงอะไรก็ตามที่ถูกเลือกไว้ในส่วน \"ควบคุมเหนืออุปกรณ์\""
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "เปิดใช้การเมาทน์ให้โดยอัตโนมัติกับสื่อแบบถอด/เสียบได้"
+
+#~ msgid "Device Overrides"
+#~ msgstr "ควบคุมเหนืออุปกรณ์"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "เมานท์อัตโนมัติเมื่อเสียบอุปกรณ์"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "ช่วยเมานท์อุปกรณ์ให้โดยอัตโนมัติเมื่อทำการล็อกอินหรือเมื่อมีการเสียบอุปกรณ์"

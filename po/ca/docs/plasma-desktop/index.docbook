@@ -1,0 +1,1033 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>23 de juliol de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>El &plasma; és la interfície d'usuari base a l'escriptori. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoide</keyword>
+<keyword
+>Giny (widget)</keyword>
+<keyword
+>Contenidors</keyword>
+<keyword
+>Escriptori</keyword>
+<keyword
+>Executor</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<para
+>El &plasma; té un disseny modern i personalitzable per a executar les vostres aplicacions preferides i accedir a la vostra informació allà on es trobi. Altres atributs comuns de l'escriptori &plasma; inclouen una gestió avançada de les finestres i dels efectes de l'escriptori, una implementació per a ginys &plasma; del &kde;, una cerca integrada, gestió del maquinari i un alt grau de personalització. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Ús del &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>Components del &plasma;</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Els ginys i contenidors del &plasma;</title>
+
+<para
+>L'essència del &plasma; gira al voltant de dos conceptes bàsics: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Els ginys del &plasma;</term>
+<listitem>
+<para
+>Miniaplicacions o aplicacions petites que viuen a l'escriptori. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Contenidors</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Miniaplicacions que actuen com a contenidor per als ginys del &plasma; </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>En un escriptori predeterminat, hi ha dos elements principals: el Plafó i el mateix Escriptori. Tots dos són els elements de contenció en el sentit del &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Escriptori &plasma; predeterminat</title>
+
+<para
+><note
+><para
+>L'escriptori &plasma; es pot configurar de moltes maneres. La captura de pantalla que es mostra a continuació mostra un escriptori força estàndard. Algunes distribucions apliquen grans personalitzacions, així que el vostre escriptori podria ser diferent. </para>
+<para
+>De manera similar, l'aparença gràfica dels elements de la interfície pot ser d'estil. Aquestes captures de pantalla utilitzen l'estil predeterminat del &plasma;, Brisa.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Un escriptori &plasma; força estàndard</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>El programa d'arrencada. En general serà el <link linkend="panel-launcher"
+>Llançador d'aplicacions</link
+>.</para
+></listitem>
+<listitem
+><para
+>Un parell d'icones que ofereixen un fàcil accés a les aplicacions d'ús freqüent</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+>El <link linkend="panel-taskbar"
+>Gestor de tasques</link
+>, mostra els títols de les finestres que pertanyen a les aplicacions actualment en execució. No tenia oberta cap finestra d'aplicació quan es va prendre la captura de pantalla</para
+></listitem>
+<listitem
+><para
+>La <link linkend="panel-system-tray"
+>safata del sistema</link
+></para
+></listitem>
+<listitem
+><para
+>El giny <link linkend="panel-digital-clock"
+>rellotge digital</link
+></para
+></listitem>
+<listitem
+><para
+>El <link linkend="panel-toolbox"
+>quadre d'eines del plafó</link
+></para
+></listitem>
+<listitem
+><para
+>El <link linkend="desktop"
+>quadre d'eines del plafó</link
+></para
+></listitem>
+<listitem
+><para
+>El giny Vista de carpeta, mostrant el contingut de la carpeta Escriptori</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>El plafó</title>
+
+<para
+>El plafó predeterminat té uns ginys del &plasma;: començant per l'esquerra, hi ha el llançador d'aplicacions.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Llançador d'aplicacions</title>
+
+<screenshot>
+<screeninfo
+>Llançador d'aplicacions</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Llançador d'aplicacions</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Podeu utilitzar-lo per a iniciar aplicacions, obrir fitxers oberts recentment i utilitzar les opcions habituals de surt/apaga. També hi ha una estructura que permet navegar a través de les aplicacions. El disseny ha estat optimitzat per als casos d'ús més comuns: iniciar una aplicació. La pestanya predeterminada <guilabel
+>Preferits</guilabel
+>, conté la majoria de les entrades més utilitzades. En començar, probablement utilitzareu més sovint la pestanya <guilabel
+>Aplicacions</guilabel
+>. Una vegada trobeu les aplicacions més emprades, feu clic <mousebutton
+>dret</mousebutton
+> en els elements i seleccioneu <guimenuitem
+>Afegeix a Preferits</guimenuitem
+> per a afegir-los-hi (o directament al plafó o a l'escriptori. Cal tenir en compte que necessitareu <quote
+>desbloquejar</quote
+> el &plasma; fent clic <mousebutton
+>dret</mousebutton
+> a l'escriptori per a qualsevol mena de modificació).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Menú d'aplicacions</title>
+
+<para
+>Si preferiu l'estil clàssic per al menú llançador d'aplicacions, canvieu-lo fent clic <mousebutton
+>dret</mousebutton
+> sobre el botó del menú i seleccioneu <guimenuitem
+>Alternatives</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Menú d'aplicacions</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Menú d'aplicacions</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Arranjament del llançador d'aplicacions</title>
+
+<para
+>Si voleu configurar el llançador d'aplicacions, feu clic <mousebutton
+>dret</mousebutton
+> sobre el botó del menú i seleccioneu <guimenuitem
+>Configura el connector llançador d'aplicacions</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Arranjament del llançador d'aplicacions</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Arranjament del llançador d'aplicacions</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Barra de tasques</title>
+
+<para
+>La barra de tasques és un altre giny al plafó. De manera predeterminada, mostra una àrea per a totes les finestres obertes en tots els escriptoris. Podeu fer que només mostri totes les finestres obertes a l'escriptori actual marcant <guimenuitem
+>Mostra només les tasques de l'escriptori actual</guimenuitem
+> en fer clic al gestor de tasques, entre dues finestres. La mida del text als elements de la barra de tasques es pot establir a &systemsettings; sota <menuchoice
+><guimenu
+>Aparença</guimenu
+><guisubmenu
+>Tipus de lletra</guisubmenu
+></menuchoice
+>. Fent clic dret a la barra de tasques apareixerà el diàleg de configuració, on podreu triar diverses opcions per a personalitzar la barra de tasques. <screenshot>
+<screeninfo
+>Aquí hi ha una captura de pantalla del diàleg d'arranjament de la barra de tasques</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>El diàleg d'arranjament de la barra de tasques</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Safata del sistema</title>
+
+<para
+>Un altre element del plafó predeterminat és la <application
+>Safata del sistema</application
+>, la qual és utilitzada per les aplicacions tradicionals i els ginys acoblats. Un clic dret sobre la <application
+>Safata del sistema</application
+> permet obrir el diàleg de configuració, on podeu establir les entrades a mostrar i la seva visibilitat. </para>
+<screenshot>
+<screeninfo
+>Diàleg de configuració de la safata del sistema</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Diàleg de configuració de la safata del sistema</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Notificador de dispositius</title>
+
+<para
+>Una icona situada normalment a la safata del sistema és el <application
+>Notificador de dispositius</application
+>. Connecteu un disc &USB; i s'obrirà un diàleg permetent-vos obrir el dispositiu al &dolphin; o en una altra aplicació associada. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>El <application
+>Notificador de dispositius</application
+> s'utilitza per al maneig de dispositius extraïbles com ara memòries &USB; (també anomenats unitats de memòria flaix o unitats flaix), càmeres digitals, discs durs externs &USB;, &etc; També entra en joc quan un suport com un &CD; o DVD es carrega en una unitat òptica. </para>
+<para
+>Quan es connecta un dispositiu extern, o es carrega un nou suport en una unitat, apareixerà la finestra <guilabel
+>Notificador</guilabel
+> (també es pot obrir de forma explícita fent clic a la icona del plafó). Es mantindrà oberta mentre el cursor resti sobre seu, en cas contrari s'ocultarà després d'uns pocs segons. </para>
+<para
+>La finestra <guilabel
+>Notificador</guilabel
+> mostra una llista de tots els dispositius que actualment coneix. En moure el cursor del ratolí sobre un dispositiu ressaltarà quantes accions possibles estan associades amb aquest dispositiu. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En fer clic sobre qualsevol part del quadre ombrejat al voltant del nom del dispositiu (però no a la icona expulsa/desmunta, si està present) s'expandirà aquesta per a veure la llista d'accions possibles per a aquest dispositiu. El conjunt d'accions dependrà del dispositiu, és configurable des del menú contextual del <application
+>Notificador de dispositius</application
+> o des dels mòduls a &systemsettings;, <ulink url="help:/kcontrol/solid-actions/index.html"
+>Accions de dispositiu</ulink
+> i <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Dispositius extraïbles</ulink
+>. Només heu de seleccionar-ne un amb el ratolí o el teclat per a llançar aquesta acció. </para>
+<para
+>També hi ha una petita icona a la dreta de cada entrada mostrant si el dispositiu és accessible (o <emphasis
+>muntat</emphasis
+>) o no. Només quan un dispositiu no està muntat és segur físicament desconnectar-lo de l'ordinador. En fer clic sobre la icona fareu que el dispositiu es desmunti i/o el suport sigui expulsat si està actualment muntat, i el muntarà si no ho està. Cal tenir en compte que desmuntar/expulsar pot fallar si encara teniu fitxers oberts en el dispositiu, &pex;, si la còpia de fitxers grans encara no ha acabat. En la majoria dels casos només cal esperar una mica i tornar a intentar-ho. Quan s'ha aconseguit desmuntar, es mostrarà una icona d'èxit sobre la icona del <application
+>Notificador de dispositius</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Elements ocults</title>
+
+<para
+>La <application
+>Safata del sistema</application
+> normalment conté algunes entrades més com &klipper;, &kmix;, &etc;</para>
+
+<para
+>Algunes de les entrades predeterminades a la <application
+>Safata del sistema</application
+> estan ocultes per a estalviar espai a la barra. Per a mostrar-les, feu clic sobre el petit triangle blanc <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, llavors utilitzeu el &BER; per a llançar un giny o el &BDR; per a obrir el seu diàleg de configuració.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Rellotge digital</title>
+
+<para
+>El giny del &plasma; que hi ha més a la dreta en el plafó predeterminat, és el <application
+>Rellotge digital</application
+>. Aquest rellotge pot mostrar l'hora en diferents zones horàries, així com canviar la seva grandària. El rellotge ajusta la mida del tipus de lletra indicada pel contenidor que l'envolta (que en aquest cas és el plafó). Si escolliu mostrar la data, aquesta es representarà amb l'opció <guimenuitem
+>Tipus de lletra petita</guimenuitem
+> en el diàleg <guilabel
+>Tipus de lletra</guilabel
+> a &systemsettings;. L'hora s'emportarà la resta de l'espai. Així que al final, trieu la quantitat d'informació a mostrar, i si aquesta s'ajusta. Si voleu visualitzar més informació, feu el plafó més gran o poseu el rellotge a l'escriptori on podrà créixer amb llibertat. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Paginador</title>
+
+<para
+>Un element opcional en el plafó és el <application
+>Paginador</application
+>. Us permet canviar entre els escriptoris virtuals. Si canvieu el seu disseny a través de l'opció <guimenuitem
+>Nombre de files</guimenuitem
+>, el qual també afectarà el disseny i les animacions que es mostren a l'efecte <guimenuitem
+>Graella de l'escriptori</guimenuitem
+> del &kwin;. Per a paginadors grans, seleccionar <guimenuitem
+>Mostra les icones</guimenuitem
+> té sentit. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Els quadre d'eines del plafó</title>
+
+<para
+>Si el vostre escriptori està desbloquejat (ho podeu fer amb un clic <mousebutton
+>dret</mousebutton
+> sobre l'escriptori, o quan cap aplicació obtingui el focus, amb <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), apareixerà un petit logotip del &plasma; a la part inferior dreta del plafó. Feu clic en aquest quadre d'eines, i obriu el control del plafó.</para>
+
+<screenshot>
+<screeninfo
+>Arranjament del plafó</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Arranjament del plafó</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>El control del plafó permet canviar la posició, mida i tornar a alinear-lo. Els ginys del &plasma; que hi resideixen ajustaran la seva mida automàticament. Els ginys del &plasma; tenen un coneixement bàsic sobre la mida, proveïda pel contenidor. Estan programats per a aprofitar aquesta mida, i informar-ne a la miniaplicació a sobre de quant espai possiblement necessita. Al final, el contenidor dona una mida possible a les miniaplicacions, i aquestes obeeixen.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Afegir miniaplicacions</title>
+
+<para
+>Desbloquegeu l'escriptori i sereu capaç d'afegir i eliminar ginys del &plasma; del plafó o de l'escriptori. Afegiu ginys del &plasma;, simplement arrossegant-los cap on vulgueu. Feu clic <mousebutton
+>dret</mousebutton
+> sobre un giny per a eliminar-lo. <screenshot
+> <screeninfo
+>Afegeix ginys</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Afegeix ginys</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> El botó <guibutton
+>Obtén ginys nous</guibutton
+> permet afegir ginys que heu baixat, i baixar-ne de nous. Actualment és compatible amb paquets &plasmagik; nadius i alguns ginys del tauler de &Mac; OS&nbsp;X. Als ginys instal·lats d'aquesta manera s'hi pot accedir de manera regular, ginys preinstal·lats. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>L'escriptori</title>
+
+<para
+>L'escriptori és en realitat un altre contenidor. No posa restriccions de mida a les miniaplicacions. Aquestes poden moure i canviar la mida lliurement. Amb l'escriptori desbloquejat, els ginys del &plasma; mostraran una imatge quan es mou el ratolí sobre seu. Aquesta nansa de la miniaplicació permet moure, canviar la mida, la ubicació i torna a alinear el plafó. També permet arrossegar els ginys del &plasma; a l'escriptori. Els botons a la cantonada s'utilitzen per a canviar la mida, girar, configurar i eliminar la miniaplicació. Quan es gira, un giny del &plasma; actuarà magnèticament cap a les 12 hores, de manera que és fàcil tornar a la posició assenyada. De manera predeterminada, la majoria de les miniaplicacions mantenen la seva relació d'aspecte quan es canvia de mida. Si voleu canviar lliurement la mida d'una miniaplicació, manteniu premuda la tecla &Ctrl; mentre li canvieu la mida. </para>
+
+<para
+>En fer clic dret a l'escriptori també se us ofereix configurar aspectes com el fons de pantalla i la disposició utilitzada, i les accions del ratolí. També ofereix baixar nous fons de pantalla a través del &knewstuff;. </para>
+<para
+>A la pàgina <guilabel
+>Ajustos</guilabel
+> podreu configurar ocultar el quadre d'eines a l'escriptori i ajustar el maneig dels ginys. </para>
+
+<screenshot>
+<screeninfo
+>Arranjament de l'escriptori</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Arranjament de l'escriptori</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Per a canviar el tema del &plasma; o baixar-ne un de nou a través del &knewstuff;, obriu la pàgina <menuchoice
+><guimenu
+>Aparença</guimenu
+> <guimenuitem
+>Tema d'escriptori</guimenuitem
+></menuchoice
+> a &systemsettings;.</para>
+
+<para
+>Amb les aplicacions obertes, podeu veure ràpidament els ginys del &plasma; a l'escriptori. El <emphasis role="bold"
+>Tauler</emphasis
+> presenta aquests ginys del &plasma;, com la funcionalitat <guilabel
+>Ullada a l'escriptori</guilabel
+> tal com s'utilitza en els escriptoris tradicionals. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Vista de carpeta</title>
+<para
+>El giny <guilabel
+>Vista de carpeta</guilabel
+> s'utilitza per a mostrar les entrades com les carpetes o fitxers en una carpeta, de manera predeterminada des de <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>Podeu triar veure o bé tots els fitxers, o filtrar per expressions regulars específiques (&pex;, tots els fitxers amb una certa extensió) o per tipus de fitxer (&pex;, només les imatges). </para>
+<para
+>Aquest giny també implementa les propietats bàsiques de la gestió de fitxers (moure, copiar, tallar i enganxar, per exemple), i en podeu tenir tants com vulgueu al vostre escriptori. </para>
+
+<screenshot>
+<screeninfo
+>Vista de carpeta</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Vista de carpeta</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Si seleccioneu la disposició <guilabel
+>Vista de carpeta</guilabel
+> a <guilabel
+>Arranjament de l'escriptori</guilabel
+>, podreu utilitzar una Vista de carpeta com tot l'escriptori, reproduir de manera eficaç el paradigma de l'escriptori «al vell estil». </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>El &krunner; és una minilínia d'ordres versàtil. El podeu utilitzar per a iniciar aplicacions, obrir pàgines web, accedir a les adreces d'interès, la cerca de dades a través de l'escriptori, calcular equacions curtes, i molt més. Prement <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> o <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> s'obrirà el diàleg del &krunner;. Comenceu-hi a escriure i aquest començarà a cercar coincidències una vegada introduïts més de dos caràcters. Podeu obrir el diàleg de configuració per a aprendre més sobre la funcionalitat del &krunner;, proporcionada pels connectors. Podeu navegar a través de les coincidències amb les tecles de tabulació i de direcció (les tecles de fletxa). </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Diàleg del &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Diàleg del &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Utilitzeu el botó <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> per a obrir el mòdul <guilabel
+>KRunner</guilabel
+> a &systemsettings; i configurar on i què cercar al &krunner;. </para>
+
+<para
+>El &krunner; implementa les <quote
+>Accions de l'escriptori</quote
+> que són les accions addicionals que una aplicació pot oferir per a realitzar accions comunes o saltar directament a una determinada tasca des del Gestor de tasques. Els exemples més comuns són <guilabel
+>Obre una finestra d'incògnit nova</guilabel
+> per a obrir el navegador directament en el mode privat, <guilabel
+>Edita un correu</guilabel
+> sense llançar tot el client de correu o les accions proporcionades per l'&spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>Accions d'escriptori del &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Accions d'escriptori del &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Si premeu la tecla &Down; en un &krunner; buit, es mostrarà un historial de les entitats recents. Després s'invocarà un resultat de cerca, la consulta es mourà a la part superior, de manera que les ordres utilitzades en repetides ocasions mai no cauran a la llista. </para>
+<para
+>Elimineu entrades individuals de la llista utilitzant el botó <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> o netegeu tot l'historial a la configuració del &krunner;. </para>
+
+<para
+>Si voleu saber el que està passant en el sistema, prémer <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> us donarà accés ràpid a una llista de finestres i de processos, amb opcions per a controlar la seva sortida i matar els processos. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Activitats</title>
+
+<para
+>Al quadre d'eines de l'escriptori, s'hi accedeix a través de la cantonada superior esquerra amb un botó per a mostrar les vostres activitats, de les quals &plasma; permet tenir-ne més d'una. Bàsicament, l'escriptori és un contenidor que pot allotjar diversos conjunts de ginys del &plasma;. Per a mostrar la barra <quote
+>Activitats</quote
+>, seleccioneu-ne una de les predefinides o escolliu <guilabel
+>Crea una activitat</guilabel
+> per a crear un nou contenidor, seleccioneu el nou contenidor i personalitzeu-lo perquè s'adapti al vostre gust. Les activitats del &plasma; i la graella de l'escriptori del &kwin; són similars en aquest aspecte, però hi ha una diferència fonamental. Mentre a l'escriptori virtual s'utilitza per a agrupar i organitzar les finestres, les activitats del &plasma; s'utilitzen per a agrupar i organitzar els ginys del &plasma;. D'aquesta manera, podeu canviar entre les activitats i tenir rellevància en els ginys del &plasma; suportant la tasca que mireu d'aconseguir. Podeu crear una activitat <quote
+>Temps de lleure</quote
+>, amb les tires còmiques, un trencaclosques i altres ginys de &plasma;, i una activitat de <quote
+>Treball</quote
+>, amb les fonts <acronym
+>RSS</acronym
+> pertinents, calculadora i calendari, per exemple. </para>
+
+<para
+>Per a eliminar una activitat, premeu el botó <guibutton
+>Atura l'activitat</guibutton
+> en la barra <quote
+>Activitats</quote
+> bar (premeu <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> i després <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> per a obrir aquesta barra) i després feu clic a la «X» vermella (o premeu <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> després <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) i confirmeu l'eliminació. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Dreceres</title>
+
+<para
+>La majoria de la funcionalitat &plasma; també és accessible a través de les dreceres de teclat. Les diverses combinacions s'han de prémer en seqüència, això serà, per exemple <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> vol dir: Prémer &Alt; i <keycap
+>D</keycap
+>, deixar anar i prémer <keycap
+>A</keycap
+>. </para>
+<para
+>En l'actualitat, es poden utilitzar les següents dreceres predeterminades: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Afegeix ginys</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Suprimeix un giny</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Des/bloqueja els ginys</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Allunya</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Apropa</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Giny següent</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Giny anterior</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Arranjament del giny</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Activitats</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Elimina aquesta activitat</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Arranjament de l'escriptori</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Activitat següent</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Maj;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Activitat anterior</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Ullada a l'escriptori</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Executa l'aplicació associada</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Obre el plafó Activitats</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Crèdits i llicència</title>
+
+<para
+>&plasma; </para>
+<para
+>Copyright del programa 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Copyright de la documentació &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Traductor/Revisor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

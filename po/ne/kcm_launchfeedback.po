@@ -1,0 +1,136 @@
+# translation of kcmlaunch.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2007-08-19 16:36+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "व्यस्त कर्सर"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "झिम्किने कर्सर"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "उफ्रिने कर्सर"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "कार्यपट्टी सूचना सक्षम पार्नुहोस्"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "सुरुआत सूचना समयसमाप्ति:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " सेकेन्ड"
+msgstr[1] " सेकेन्ड"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>पृष्ठपोषण सुरुआत</h1> तपाईँले यहाँ अनुप्रयोग सुरुआत पृष्ठपोषण कन्फिगर गर्न सक्नुहुन्छ ।"
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>व्यस्त कर्सर</h1>\n"
+#~ "केडीई ले अनुप्रयोगको सुरुआतमा व्यस्त कर्सर प्रदर्शन गर्छ ।\n"
+#~ "व्यस्त कर्सर सक्षम पार्न, कम्बो बाकसबाट\n"
+#~ "एक प्रकारको दृश्य पृष्ठपोषण चयन गर्नुहोस् ।\n"
+#~ "यो सुरुआत सूचनाबाट\n"
+#~ "केही अनुप्रयोग, सचेत नहुने पनि हुन\n"
+#~ "सक्छ । यो अवस्थामा, 'सुरुआत सूचना समयसमाप्ति' मा दिएको \n"
+#~ "केही समय पछि कर्सर झिम्कन छाड्छ"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "व्यस्तता विहिन कर्सर"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "निस्क्रिय व्यस्त कर्सर"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "कार्यपट्टी सूचना"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>कार्यपट्टी सूचना</H1>\n"
+#~ "तपाईँले कार्यपट्टीद्वारा प्रयोग हुने सुरुआत सूचनाको दोस्रो विधि\n"
+#~ "सक्षम पार्न सक्नुहुन्छ जहाँ तपाईँले सुरुआत गरेको अनुप्रोग लोड भइराखेको\n"
+#~ "सङ्केत दिने, घुम्ने आउर ग्लाससँग बटन देखा पर्छ ।\n"
+#~ "यो सुरुआत सूचनाबाट, केही अनुप्रयोग सचेत\n"
+#~ "नहुने हुन सक्छ । यस अवस्थामा, बटन 'सुरुआत सूचना समयसमाप्ति' खण्डमा\n"
+#~ "केही समयपछि देखापर्छ"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "सुरुआत सूचना समयसमाप्ति:"

@@ -1,0 +1,213 @@
+# translation of kcmkonq.po to Telugu
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-01-16 22:16+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "రంగస్ఠలం"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents"
+msgstr "(&o) పత్రముల దారి:"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads"
+msgstr "(&o) పత్రముల దారి:"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music"
+msgstr "(&o) పత్రముల దారి:"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures"
+msgstr "(&o) పత్రముల దారి:"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos"
+msgstr "(&o) పత్రముల దారి:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Des&ktop path:"
+msgid "Desktop path:"
+msgstr "(&k) రంగస్థలం దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents path:"
+msgstr "(&o) పత్రముల దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads path:"
+msgstr "(&o) పత్రముల దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos path:"
+msgstr "(&o) పత్రముల దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures path:"
+msgstr "(&o) పత్రముల దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music path:"
+msgstr "(&o) పత్రముల దారి:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+
+#, fuzzy
+#~| msgid "A&utostart path:"
+#~ msgid "Autostart path:"
+#~ msgstr "(&u) స్వయంచాలకప్రారంభం దారి:"
+
+#~ msgid "Autostart"
+#~ msgstr "స్వయంచాలకప్రారంభం"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgid "Movies"
+#~ msgstr "కదుపు"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "కదుపు"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "కదుపు"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "నిర్ధారణ అవసరమైంది"
+
+#~ msgid "Misc Options"
+#~ msgstr "Misc ఐచ్చికాలు"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "(&w) ఫోల్డర్లను ప్రత్యే విండోలనందు తెరువుము"
+
+#~ msgid "Menu Editor"
+#~ msgstr "పట్టి ఎడిటర్"
+
+#~ msgid "Menu"
+#~ msgstr "మెనూ"
+
+#~ msgid "New..."
+#~ msgstr "కొత్త..."
+
+#~ msgid "Remove"
+#~ msgstr "తొలగించు"
+
+#~ msgid "Move Up"
+#~ msgstr "పైకి కదుపు"
+
+#~ msgid "Move Down"
+#~ msgstr "క్రిందికి కదుపు"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "దీనికొరకు నిర్ధారణను అడుగుము"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "(&M) ట్రాష్‌కు కదుపుము"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "(&e) తొలగించు"

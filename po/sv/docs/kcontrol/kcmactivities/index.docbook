@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Aktiviteter</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-12</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>aktivitet</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Aktiviteter</title>
+<sect2 id="activities-intro">
+
+<title
+>Inledning</title>
+
+<para
+>Modulen gör det möjligt att anpassa aktiviteter. Aktiviteter är ett sätt att ha flera inställningar av &plasma;, var och en med olika uppsättningar komponenter och teman. Vissa aktiviteter kan vara privata. Sådana aktiviteter följer inte dina åtgärder. Exempelvis lagrar de inte vilka dokument du senast öppnade. </para>
+
+<para
+>Modulen är uppdelad i tre flikar: <link linkend="activities-main"
+><guilabel
+>Aktiviteter</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Byte</guilabel
+></link
+> och <link linkend="activities-privacy"
+><guilabel
+>Integritet</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Aktiviteter</guilabel
+></title>
+
+<para
+>Fliken listar dina nuvarande aktiviteter. Håll muspekaren över objekt i listan för att visa knappar för att anpassa eller ta bort aktiviteter. </para>
+
+<para
+>Använd den överlagrade knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> för att anpassa aktiviteten. Du kan ändra följande aktivitetsparametrar: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Ikon</guilabel
+></term>
+        <listitem>
+            <para
+>Aktivitetens ikon syns i aktivitetshanterarens väljare i &plasma;s panel. Klicka på den nuvarande ikonen för att välja någon systemomfattande ikon eller bläddra i filsystemet för att välja en egen ikon. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Namn</guilabel
+></term>
+        <listitem>
+            <para
+>Ge aktiviteten ett igenkännbart namn. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Beskrivning</guilabel
+></term>
+        <listitem>
+            <para
+>En godtycklig beskrivning av aktiviteten som visas under namnet i aktivitetshanterarens väljare i &plasma;s panel. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Integritet</guilabel
+></term>
+        <listitem>
+            <para
+>Markera alternativet <guilabel
+>Följ inte användning av aktiviteten</guilabel
+> för att stänga av all följning av aktiviteten. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Genväg för att byta</guilabel
+></term>
+        <listitem>
+            <para
+>Klicka på den första knappen för att mata in den nya genvägen för att byta till aktiviteten. Klicka på den andra knappen för att ta bort den nuvarande genvägen. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Att klicka på knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> tar bort aktiviteten. </para>
+<para
+>Att klicka på knappen <guibutton
+>Skapa ny...</guibutton
+> under listan visar dialogrutan <guilabel
+>Skapa en ny aktivitet</guilabel
+>, som liknar inställningsdialogrutan för aktiviteter som beskrivits ovan. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Byte</guilabel
+></title>
+
+<para
+>Här kan du anpassa om &plasma; ska komma ihåg <guilabel
+>Nuvarande virtuella skrivbord</guilabel
+> för varje aktivitet (kräver omstart). Det är också möjligt att anpassa genvägar för att gå igenom aktivitetslistan. </para>
+<para
+>För mer information om hur &kde;:s genvägssystem används, se <ulink url="help:/fundamentals/shortcuts.html"
+>avsnittet <emphasis
+>Använda och anpassa genvägar</emphasis
+> i dokumentet <emphasis
+>&kde;:s grunder</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Integritet</guilabel
+></title>
+
+<para
+>Fliken gör det möjligt att anpassa tid för <guilabel
+>Behåll historik</guilabel
+> i aktiviteter och rensa en del följningsdata. Använd kombinationsknappen <guibutton
+>Rensa historik</guibutton
+> för att tala om <guimenuitem
+>Glöm senaste timmen</guimenuitem
+>, <guimenuitem
+>Glöm senaste två timmarna</guimenuitem
+>, <guimenuitem
+>Glöm en dag</guimenuitem
+> eller <guimenuitem
+>Glöm allt</guimenuitem
+> för &plasma;. </para>
+<para
+>Nedan kan du anpassa uppsättningen program som ska komma ihåg öppnade dokument i dina aktiviteter. Använd alternativet <guilabel
+>För alla program</guilabel
+> för att lagra all data, <guilabel
+>Kom inte ihåg</guilabel
+> för att stänga av att lagra data, eller <guilabel
+>Bara för specifika program</guilabel
+> för finkornigt urval (att klicka på programobjektet ändrar dess nuvarande inställning). </para>
+<para
+>Markera alternativet <guilabel
+>Svartlista program som inte finns i listan</guilabel
+> för att stänga av följning för alla program som inte finns i listan. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

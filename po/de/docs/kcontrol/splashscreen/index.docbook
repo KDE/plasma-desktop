@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Startbildschirm</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Startbildschirm</keyword>
+<keyword
+>Design</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In diesem Modul finden Sie eine Schnittstelle zur Vorschau und Installation von Programmstart-Grafiken und -Designs.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto der Verwaltung für Startbildschirmdesigns</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Das Modul Verwaltung für Startbildschirmdesigns</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Auf dieser Seite sehen Sie eine Liste der bereits installierten Startbildschirme, der gerade verwendete ist hervorgehoben.</para>
+
+<para
+>Halten Sie den Mauszeiger auf ein Vorschaubild, dann wird rechts unten im Bild der Knopf <guilabel
+>Vorschau für den Startbildschirm</guilabel
+> angezeigt. Drücken Sie diesen Knopf, um den Startbildschirm in Aktion zu sehen.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Neue Startbildschirme holen ...</guilabel
+></term>
+<listitem>
+<para
+>Damit dies funktioniert, muss eine Verbindung zum Internet bestehen. Es erscheint ein Fenster, in dem verfügbare Designs von <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+> angezeigt werden. Klicken Sie auf <guibutton
+>Installieren</guibutton
+>, um das jeweilige Design herunterzuladen und auf Ihrem Rechner zu installieren. </para>
+<para>
+<screenshot>
+<screeninfo
+>Installation eines neuen Designs</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Installation eines neuen Designs</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Das neue Design ist sofort verfügbar und wird hervorgehoben, wenn Sie den Installationsdialog geschlossen haben. Das Vorschaubild des neuen Designs wird angezeigt. Um das neue Design als Startbildschirm zu verwenden, müssen Sie den Knopf <guibutton
+>Anwenden</guibutton
+> drücken. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

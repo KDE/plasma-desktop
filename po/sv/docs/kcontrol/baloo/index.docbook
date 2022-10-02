@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Filsökning</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>sökning</keyword>
+<keyword
+>fil</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Den här modulen i systeminställningar låter dig anpassa vilka filer som ska indexeras för snabb sökning. Internt använder den en teknologi som kallas Baloo för att söka igenom filer effektivt. </para>
+
+<para
+>Lägg till den grafiska komponenten <guilabel
+>Sök</guilabel
+> i panelen och aktivera sökning i Kör program för att använda indexeringsresultaten för snabbare åtkomst av dokument. </para>
+
+<para
+>Markera alternativet <guilabel
+>Aktivera filsökning</guilabel
+> om du vill använda skrivbordssökningsmöjligheterna i &dolphin; och andra &kde;-program. Avmarkera alternativet om du inte vill använda filsökning med Baloo (det är möjligt att använda andra sökteknologier, t.ex. &kfind;). </para>
+
+<para
+>Använd <guilabel
+>Indexera också filinnehåll</guilabel
+> för att också indexera filernas innehåll förutom filnamnen. </para>
+
+<para
+>Markera alternativet <guilabel
+>Indexera dolda filer och kataloger</guilabel
+> för att få Baloo att indexera de dolda filerna och katalogerna. </para>
+
+<note>
+    <para
+>Alla fil- och katalognamn som börjar med en punkt (<literal
+>.</literal
+>) är normalt dolda. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Katalogspecifik inställning</guilabel
+></term>
+<listitem>
+    <para
+>En lista med kataloger visas som kan indexeras. Normalt indexeras hela hemkatalogen <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, men inga andra kataloger eller diskar indexeras. </para>
+    <para
+>Flyttbara medier indexeras aldrig normalt. De kan tas bort explicit från listan med undantagna kataloger och kommer då att indexeras. </para>
+    <para
+>Det är möjligt att använda kombinationsrutan intill varje rad i listan för att ställa in om den är <guimenuitem
+>indexerad</guimenuitem
+> eller <guimenuitem
+>inte indexerad</guimenuitem
+>. </para>
+    <para
+>Använd papperskorgsknappen för att ta bort en rad från listan. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Lägg till kataloginställning...</guibutton
+></term>
+<listitem>
+    <para
+>Klicka på knappen för att visa en väljare med två alternativ, närmare bestämt <guimenuitem
+>Starta indexering av en katalog...</guimenuitem
+> och <guimenuitem
+>Stoppa indexering av en katalog...</guimenuitem
+>. </para>
+    <para
+>Att klicka på något av ovannämnda alternativ visar den vanliga dialogrutan <guilabel
+>Välj en katalog att filtrera</guilabel
+> i &plasma;, som låter dig välja katalogen som ska behandlas på motsvarande sätt. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>För mer information om ytterligare inställningsalternativ, t.ex. hur man lägger till en disk monterad utanför katalogen <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, se <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

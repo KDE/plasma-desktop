@@ -1,0 +1,141 @@
+# translation of kcmlaunch.po to Icelandic
+# Icelandic Translation of kcmlaunch.po
+# Copyright (C) 2001, 2004 Free Software Foundation, Inc.
+# Þórarinn R. Einarsson <thori@mindspring.com>, 2001.
+# Richard Allen <ra@ra.is>, 2001-2004.
+# Svanur Palsson <svanur@tern.is>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2004-02-26 22:13+0000\n"
+"Last-Translator: Svanur Palsson <svanur@tern.is>\n"
+"Language-Team: Icelandic <en@li.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "&Biðbendill"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "Blikkandi biðbendill"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "Skoppandi biðbendill"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "Virkja &tilkynningu á tækjaslá"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "Tímatakmark ræ&singar:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " sek"
+msgstr[1] " sek"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Ræsitilkynning</h1> Stillingar á því hvernig forrit láta þig vita "
+#~ "þegar þau eru ræst."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Biðbendill</h1>\n"
+#~ "KDE býður upp á biðbendil til að láta vita þegar verið er\n"
+#~ "að ræsa forrit.  Til að virkja hann, veldu þá eina tegund úr\n"
+#~ "fellivalmyndinni.\n"
+#~ "Það getur gerst að sum forrit viti ekki af ræsitilkynningunni.\n"
+#~ "Í þeim tilvikum hættir bendillinn að blikka eftir þann tíma sem\n"
+#~ "gefinn er upp í 'Tímatakmark ræsingar'."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Enginn biðbendill"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Rólegur biðbendill"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "&Tilkynning á tækjaslá"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Tilkynning á tækjaslá</H1>\n"
+#~ "Þú getur notað aðra aðferð til að láta vita af ræsingu og hún\n"
+#~ "notar tækjaslána með því að sýna takka með disk sem snýst.\n"
+#~ "Þetta táknar að forritið sem var beðið um er í ræsingu.\n"
+#~ "Hinsvegar getur verið að sum forrit viti ekki af þessum\n"
+#~ "möguleika. Í því tilviki hverfur takkinn eftir þann tíma\n"
+#~ "sem gefinn er upp í 'Tímatakmark ræsingar'."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Tímatakmark ræ&singar:"

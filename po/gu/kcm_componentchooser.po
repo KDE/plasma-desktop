@@ -1,0 +1,271 @@
+# translation of kcmcomponentchooser.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2009-05-17 18:08+0530\n"
+"Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "વિવિધ મેઇલ ક્લાઇન્ટને વાપરો (&e):"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "અધિમાન્ય મેઇલ ક્લાઇન્ટને પસંદ કરો:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "અધિમાન્ય મેઇલ ક્લાઇન્ટને પસંદ કરો:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "અધિમાન્ય ટર્મિનલ કાર્યક્રમને પસંદ કરો:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "અધિમાન્ય ટર્મિનલ કાર્યક્રમને પસંદ કરો:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "અધિમાન્ય ટર્મિનલ કાર્યક્રમને પસંદ કરો:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "શ્ર્વેતા કોઠારી, કાર્તિક મિસ્ત્રી"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "swkothar@redhat.com, kartik.mistry@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "જોસેફ વેનિંગર"
+
+#~ msgid "Unknown"
+#~ msgstr "અજાણ્યુ"
+
+#~ msgid "Component Chooser"
+#~ msgstr "ઘટક પસંદકરનાર"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), ૨૦૦૨ જોસેફ વેનિંગર"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "નીચેની યાદીમાંથી પસંદ કરો જે %1 સેવા માટે મૂળભૂત રીતે વપરાયેલા ઘટક ક્યા હોવા જોઇએ."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>તમે તમારા પસંદગીના મૂળભૂત ઘટકને બદલેલ છે, શું તે બદલાવનો સંગ્રહ કરવા માંગો છો ?</"
+#~ "qt>"
+
+#~ msgid "No description available"
+#~ msgstr "વર્ણન ઉપલબ્ધ નથી"
+
+#~ msgid "Default Component"
+#~ msgstr "મૂળભૂત ઘટક"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "URL નાં સમાવિષ્ટો પર આધારિત કાર્યક્રમ માં"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "નીચેના બ્રાઉઝર માં:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "નીચેના બ્રાઉઝર માં:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "અધિમાન્ય વેબ બ્રાઉઝર કાર્યક્રમને પસંદ કરો:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail એ KDE ડેસ્કટોપ માટે મૂળ મેઇલ પ્રક્રિયા છે."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "મેઇલ ક્લાઇન્ટ તરીકે KMail ને વાપરો"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "આ વિકલ્પને પસંદ કરો જો તમે કોઇપણ બીજા મેઇલ પ્રક્રિયાને વાપરવા માંગતા હોય તો."
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "મેઇલ પ્રક્રિયા ફાઇલ માટે અહિંયા બ્રાઉઝ પર ક્લિક કરો."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "ટર્મિનલમાં ચલાવો (&R)"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "નીચેનાં ફાઇલ વ્યવસ્થાપકનો ઉપયોગ કરી ડિરેક્ટરીઓ જુઓ:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "બીજુ: ઉમેરો પર ક્લિક કરો... અહીં બતાવેલ સંવાદ પર:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "ટર્મિનલ કાર્યક્રમ તરીકે કોન્સોલ ને વાપરો (&U)"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "વિવિધ ટર્મિનલ પ્રક્રિયાને વાપરો (&t):"
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "ટર્મિનલ પ્રક્રિયા માટે અહિંયા બ્રાઉઝ પર ક્લિક કરો."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "૧ સેકન્ડ બાકી છે:"
+#~ msgstr[1] "%1 સેકન્ડો બાકી છે:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "KDE જ્યારે આવતી વખતે શરૂ થશે ત્યારે નવો વિન્ડો વ્યવસ્થાપક વાપરવામાં આવશે."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "વિન્ડો વ્યવસ્થાપક ફેરફાર"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "વિન્ડો વ્યવસ્થાપક ચાલી રહ્યો છે.\n"
+#~ "આ ફેરફાર સાથે બધાં કાર્યક્રમોને અનુરૂપ કરવા માટે એ સલાહભર્યું છે કે આ KDE સત્રને ફરી શરૂ "
+#~ "કરવામાં આવે."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "વિન્ડો વ્યવસ્થાપક બદલેલ"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "તમારો ચાલી રહેલ વિન્ડો વ્યવસ્થાપક નવાં રૂપરેખાંકિત કરેલ વડે બદલવામાં આવશે."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "વિન્ડો વ્યવસ્થાપક ફેરફાર રૂપરેખાંકિત કરો"
+
+#~ msgid "&Accept Change"
+#~ msgstr "ફેરફારો લાગુ પાડો (&A)"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "પાછળનાં પર જાવ (&R)"
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "ચાલી રહેલ વિન્ડો વ્યવસ્થાપક હવે KDE નાં મૂળભૂત વિન્ડો વ્યવસ્થાપક KWin સાથે પાછો બદલી "
+#~ "દેવામાં આવ્યો છે."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "નવો વિન્ડો વ્યવસ્થાપક શરૂ થવામાં નિષ્ફળ ગયો છે.\n"
+#~ "ચાલી રહેલ વિન્ડો વ્યવસ્થાપક હવે KDE નાં મૂળભૂત વિન્ડો વ્યવસ્થાપક KWin સાથે બદલી દેવામાં "
+#~ "આવશે."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "રૂપરેખાંકન સાધન ચલાવવાનું નિષ્ફળ ગયું"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "મૂળભૂત KDE વિન્ડો વ્યવસ્થાપક (KWin) વાપરો (&U)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "બીજું વિન્ડો વ્યવસ્થાપક વાપરો (&w):"
+
+#~ msgid "Configure"
+#~ msgstr "રૂપરેખાંકિત કરો"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "નોંધ: મોટાભાગનાં વિન્ડો વ્યવસ્થાપકોને તેમનું પોતાનું રૂપરેખાંકન હોય છે અને તે KDE ગોઠવણીઓને "
+#~ "અનુસરતા નથી."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid "Component Description"
+#~ msgstr "ઘટક વર્ણન"

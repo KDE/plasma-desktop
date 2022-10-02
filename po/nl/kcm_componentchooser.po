@@ -1,0 +1,362 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2016, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-10 17:00+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Standaard webbrowser"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Overig…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Standaard browser selecteren"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Standaard e-mailclient selecteren"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Standaard bestandsbeheerder selecteren"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Standaard kaart selecteren"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Standaard telefoonkiezerprogramma selecteren"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Standaard terminalprogramma selecteren"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Webbrowser:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Bestandsbeheerder:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "E-mailprogramma:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Terminalemulator:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Kaart:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Telefoonkiezer:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Freek de Kruijf - t/m 2022"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "freekdekruijf@kde.nl"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Standaard toepassingen"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Onbekend"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Componentenkiezer"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Kies uit de lijst hieronder het component dat u standaard wilt gebruiken "
+#~ "als %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>U hebt een nieuwe standaardcomponent uitgezocht. Wilt u nu uw "
+#~ "wijziging opslaan?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Geen beschrijving beschikbaar"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Hier kunt u uw voorkeuren instellen voor belangrijke KDE-componenten. "
+#~ "Verschillende KDE-toepassingen roepen soms een terminalvenster aan, "
+#~ "willen een e-mail opstellen of wat tekst weergeven. Hier kunt u bepalen "
+#~ "welke programma's KDE hiervoor zal gebruiken."
+
+#~ msgid "Default Component"
+#~ msgstr "Standaardcomponent"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Deze lijst toont de beschikbare componenten. Klik op de component die "
+#~ "u wilt instellen.</p>\n"
+#~ "<p>In dit scherm kunt u uw voorkeuren instellen voor belangrijke KDE-"
+#~ "componenten. Verschillende KDE-toepassingen kunnen soms een "
+#~ "terminalvenster openen, een e-mail opstellen of wat tekst weergeven. Hier "
+#~ "kunt u instellen welke programma's u voor die diensten wilt gebruiken.</"
+#~ "p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Open <b>http</b>- en <b>https</b>-URL-adressen</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "in een programma gebaseerd op de inhoud van het URL-adres"
+
+#~ msgid "in the following application:"
+#~ msgstr "in de volgende toepassing:"
+
+#~ msgid "with the following command:"
+#~ msgstr "in het volgende commando:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Standaard-webbrowser selecteren:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "KMail is het standaard e-mailprogramma voor het Plasma-bureaublad."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "KMail als standaard e-mailprogramma gebr&uiken"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Selecteer deze optie als u een ander e-mailprogramma wilt gebruiken."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Optionele plaatshouders: <ul> <li>%t: geadresseerde</li> <li>%s: "
+#~ "onderwerp</li> <li>%c: CC (Carbon Copy) kopie</li> <li>%b: BCC (Blind "
+#~ "Carbon Copy) blinde kopie</li> <li>%B: sjabloontekst</li> <li>%A: bijlage "
+#~ "</li> <li>%u: volledig 'mailto:'-adres</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Klik op deze knop om uw favoriete e-mailprogramma te selecteren. "
+#~ "Opmerking: alleen bestanden met het attribuut 'is uitvoerbaar' worden "
+#~ "geaccepteerd.<br/>U kunt diverse plaatshouders gebruiken. Deze zullen "
+#~ "worden vervangen door de werkelijke waardes als het e-mailprogramma wordt "
+#~ "aangeroepen: <ul><li>%t: geadresseerde</li> <li>%s: onderwerp</li> <li>"
+#~ "%c: CC (Carbon Copy) kopie</li> <li>%b: BCC (Blind Carbon Copy) blinde "
+#~ "kopie</li> <li>%B: sjabloontekst</li> <li>%A: bijlage </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Klik hier om te bladeren naar het e-mailprogramma."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Selecteer deze optie als u wilt dat het opgegeven e-mailprogramma wordt "
+#~ "uitgevoerd in een terminal (bijv. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "In een terminal uitvoe&ren"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Door mappen bladeren met behulp van de volgende bestandsbeheerder:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Anders: klik op toevoegen in de hier getoonde dialoog:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Konsole als terminalprogramma gebr&uiken"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Ander &terminalprogramma gebruiken:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Klik op deze knop om uw favoriete terminalprogramma te selecteren. Zorg "
+#~ "er voor dat het bestand dat u selecteert uitvoerbaar is. Het bestand "
+#~ "wordt anders niet geaccepteerd. <br/>Let er ook op dat sommige "
+#~ "programma's die terminalemulatie gebruiken niet zullen werken als u "
+#~ "argumenten mee geeft (Bijvoorbeeld: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Klik hier om te bladeren naar het terminalprogramma."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 seconde resterend:"
+#~ msgstr[1] "%1 seconden resterend:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "De nieuwe windowmanager zal worden gebruikt bij de volgende start van "
+#~ "Plasma."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Wijziging van windowmanager"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Er draait een nieuwe windowmanager.\n"
+#~ "Het is nog steeds aanbevolen om deze KDE-sessie te herstarten om er zeker "
+#~ "van te zijn dat alle draaiende programma's zich aan de nieuwe situatie "
+#~ "hebben aangepast."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Windowmanager vervangen"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Uw draaiende windowmanager zal nu worden vervangen door de ingestelde "
+#~ "windowmanager."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Wijzigen van windowmanager"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Wijziging &accepteren"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "Te&rug naar vorige"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "De ingestelde windowmanager is opgestart.\n"
+#~ "Controleer of deze correct is opgestart en bevestig de wijziging.\n"
+#~ "De wijziging zal automatisch ongedaan worden gemaakt na 20 seconden."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "De draaiende windowmanager is teruggezet naar de standaard KDE-"
+#~ "windowmanager KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "De nieuwe windowmanager kon niet worden gestart.\n"
+#~ "De draaiende windowmanager is teruggezet naar de standaard KDE-"
+#~ "windowmanager KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Het draaien van het configuratieprogramma is mislukt"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Standaard KDE-windowmanager (KWin) gebr&uiken"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Andere &windowmanager gebruiken:"
+
+#~ msgid "Configure"
+#~ msgstr "Instellen"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Opmerking: de meeste windowmanagers hebben hun eigen configuratie en "
+#~ "volgen niet de KDE-instellingen op."

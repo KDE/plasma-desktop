@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportamento generale</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18/05/2022</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>desktop</keyword>
+<keyword
+>spazio di lavoro</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Questo è un modulo per configurare il comportamento dello spazio di lavoro. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Visualizza i suggerimenti informativi al passaggio del mouse</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è marcata, verranno mostrati dei suggerimenti quando si passa col mouse sopra gli elementi nel pannello di &plasma; o nel desktop.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Visualizza un riscontro visivo per i cambiamenti di stato</guilabel
+></term>
+<listitem>
+<para
+>I cambiamenti di stato, ad esempio la modifica della luminosità o del volume da tastiera, vengono visualizzati in un OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocità di animazione</guilabel
+></term>
+<listitem>
+    <para
+>Ti permette di impostare le velocità delle animazioni degli effetti del desktop, da <guilabel
+>Lenta</guilabel
+> to <guilabel
+>Istantanea</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clic singolo per aprire file e cartelle</guilabel
+></term>
+<listitem>
+<para
+>Questa è l'impostazione predefinita. Facendo clic su un'icona, si aprirà. Per selezionare puoi trascinare intorno le icone o usare <keycombo action="simul"
+>&Ctrl;<mousebutton
+>destro</mousebutton
+></keycombo
+> del mouse, oppure semplicemente fare clic e tenere premuto per trascinarla. La selezione può essere effettuata anche facendo clic sul marcatore di selezione degli elementi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Doppio clic per aprire file e cartelle</guilabel
+></term>
+<listitem>
+<para
+>Se quest'opzione non è selezionata, i file e le icone verranno aperti con un clic singolo sul pulsante <mousebutton
+>sinistro</mousebutton
+> del mouse. Questo comportamento predefinito è coerente con quello che si aspetta facendo clic sui collegamenti nella maggior parte dei browser. Tuttavia, se quest'opzione è selezionata, i file e le icone verranno aperti con un doppio clic; uno singolo, invece, li selezionerà solamente. Questo comportamento lo puoi conoscere se hai usato altri desktop o sistemi operativi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Facendo clic nella traccia della barra di scorrimento</guimenu
+><guimenuitem
+>scorre in su o in giù di una pagina</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Questa è l'impostazione predefinita: facendo clic sulla traccia della barra di scorrimento, la barra di scorrimento si sposta di una pagina.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Facendo clic nella traccia della barra di scorrimento</guimenu
+><guimenuitem
+>scorre alla posizione su cui si è fatto clic</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Attiva il comportamento per cui la posizione della maniglia di scorrimento passa alla posizione nel documento in cui hai fatto clic. Questo è il comportamento che potresti conoscere da altri desktop o sistemi operativi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modalità tattile</guimenu
+><guimenuitem
+>Abilita automaticamente se necessaria/Non abilitare mai</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>La modalità tattile verrà attivata automaticamente se il sistema rileva uno schermo tattile, ma non un mouse o una tastiera. Ad esempio, quando la tastiera di un computer portatile convertibile viene capovolta o staccata.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Sempre abilitata (predefinito)/Non abilitare mai</guimenuitem
+></term>
+<listitem>
+<para
+>In modalità tattile molti elementi dell'interfaccia utente diventeranno più grandi, per adattarsi più facilmente all'interazione al tocco.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

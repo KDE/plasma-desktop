@@ -1,0 +1,562 @@
+# Malayalam translation of kcmkeyboard.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmkeyboard package.
+# Manu S Madhav <manusmad@gmail.com>, 2008.
+# Anish A <anish.nl@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkeyboard trunk\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2019-12-12 22:30+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Manu S Madhav, Anish A (അനീഷ് എ)"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#: bindings.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "അടുത്ത കീബോര്‍ഡു് വിന്യാസത്തിലേയ്ക്കു് മാറ്റുക"
+
+#: bindings.cpp:26
+#, fuzzy, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "അടുത്ത കീബോര്‍ഡു് വിന്യാസത്തിലേയ്ക്കു് മാറ്റുക"
+
+#: bindings.cpp:49
+#, fuzzy, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "'%1' കീബോര്‍ഡു് വിന്യാസത്തിലേയ്ക്കു് മാറ്റുന്നതില്‍ പിശകു്"
+
+#: flags.cpp:122
+#, fuzzy, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr "%1 | %2"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, fuzzy, kde-format
+msgid "Add Layout"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ്"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr ""
+
+#: kcm_keyboard.cpp:32
+#, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "കെഡിഇ കീബോര്‍ഡു് ഘടന മാറ്റലുപാധി"
+
+#: kcm_keyboard.cpp:36
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr "പകര്‍പ്പവകാശം (C) 2006-2007 ആന്‍ഡ്രി റിസിന്‍"
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+"<h1>കീബോര്‍ഡ് </h1> ഈ നിയന്ത്രണ മോഡ്യൂള്‍ കീബോര്‍ഡ് പരാമീറ്ററുകളും വിന്യാസങ്ങളും പരിഷ്ക്കരിക്കാന്‍ "
+"ഉപയോഗിക്കാവന്നതാണ്."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, fuzzy, kde-format
+msgid "Keyboard &model:"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ്"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, kde-format
+msgid "Layouts"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, kde-format
+msgid "&Desktop"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, kde-format
+msgid "&Application"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, fuzzy, kde-format
+msgid "Configure layouts"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, fuzzy, kde-format
+msgid "Spare layouts"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, fuzzy, kde-format
+msgid "&Configure keyboard options"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr "അറിഞ്ഞുകൂടാത്ത"
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: kcm_keyboard_widget.cpp:643
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "ഒന്നുമില്ല"
+
+#: kcm_keyboard_widget.cpp:657
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr "മാപ്പ്"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Layout"
+msgstr "വിന്യാസം"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Variant"
+msgstr "മാറ്റമുള്ള"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr "പേരു്"
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+msgid "Shortcut"
+msgstr "%1 കുറുക്കുവഴി"
+
+#: kcm_view_models.cpp:273
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr "സഹജമായ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, fuzzy, kde-format
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"പിന്തുണയുണ്ടെങ്കില്‍, കെഡിഇ തുടങ്ങിക്കഴിഞ്ഞുള്ള നംലോക്കിന്റെ സ്ഥിതി സജ്ജീകരിക്കാന്‍ ഈ ഐച്ഛികം "
+"നിങ്ങളെ അനുവദിക്കും.<p> നംലോക്ക് ഓണാക്കാനോ, ഓഫാക്കാനോ, കെഡിഇ നംലോക്കിന്റെ സ്ഥിതി "
+"സജ്ജീകരിക്കാതിരിക്കാനോ നിങ്ങള്‍ക്ക് ക്രമീകരിക്കാം."
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, fuzzy, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr "കെഡിഇ തുടങ്ങുമ്പോള്‍ നംലോക്ക് (NumLock)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "&ഓണാക്കുക"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, fuzzy, kde-format
+msgid "&Turn off"
+msgstr "ഓ&ഫാക്കുക"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "&മാറ്റാതെ വിടുക"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr "&വേഗം:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+"പിന്തുണയുണ്ടെങ്കില്‍, ഒരു കീ അമര്‍ത്തിക്കഴിഞ്ഞ് കീക്കോഡുകള്‍ ഉല്‍പാദിപ്പിക്കാനെടുക്കുന്ന സമയം "
+"സജ്ജീകരിക്കാന്‍ ഈ ഐച്ഛികം നിങ്ങളെ അനുവദിക്കും. 'റിപ്പീറ്റ് വേഗം' ഐച്ഛികം ഈ കീക്കോഡുകളുടെ "
+"ആവൃത്തി നിയന്ത്രിക്കുന്നു."
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+"പിന്തുണയുണ്ടെങ്കില്‍, ഒരു കീ അമര്‍ത്തിക്കൊണ്ടിരിക്കുമ്പോള്‍ കീക്കോഡുകള്‍ ഉല്‍പാദിപ്പിക്കുന്ന വേഗം "
+"സജ്ജീകരിക്കാന്‍ ഈ ഐച്ഛികം നിങ്ങളെ അനുവദിക്കും."
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr " ആവര്‍ത്തനം/സെ"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr " മി. സെ"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, kde-format
+msgid "&Delay:"
+msgstr "&വൈകല്‍:"
+
+#: tastenbrett/main.cpp:57
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ്"
+
+#: tastenbrett/main.cpp:59
+#, fuzzy, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "അടുത്ത കീബോര്‍ഡു് വിന്യാസത്തിലേയ്ക്കു് മാറ്റുക"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+
+#, fuzzy
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "അടുത്ത കീബോര്‍ഡു് വിന്യാസത്തിലേയ്ക്കു് മാറ്റുക"
+
+#~ msgid "Any language"
+#~ msgstr "ഏതു ഭാഷയും"
+
+#, fuzzy
+#~ msgctxt "short layout label - full layout name"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 | %2"
+
+#, fuzzy
+#~ msgid "Show for single layout"
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#, fuzzy
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ്"
+
+#, fuzzy
+#~ msgid "Configure Layouts..."
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#~ msgid "Keyboard Repeat"
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ്"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "ഓ&ഫാക്കുക"
+
+#, fuzzy
+#~ msgid "&Leave unchanged"
+#~ msgstr "&മാറ്റാതെ വിടുക"
+
+#, fuzzy
+#~ msgid "Configure..."
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"
+
+#~ msgid ""
+#~ "If supported, this option allows you to hear audible clicks from your "
+#~ "computer's speakers when you press the keys on your keyboard. This might "
+#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
+#~ "that the keys make is very soft.<p>You can change the loudness of the key "
+#~ "click feedback by dragging the slider button or by clicking the up/down "
+#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
+#~ msgstr ""
+#~ "പിന്തുണയുണ്ടെങ്കില്‍, കീബോര്‍ഡിലെ കീകള്‍ അമര്‍ത്തിയാല്‍ കമ്പ്യൂട്ടറിന്റെ സ്പീക്കറില്‍നിന്നും കേള്‍"
+#~ "ക്കാവുന്ന ക്ലിക്കുകള്‍ ശ്രവിക്കാന്‍ ഈ ഐച്ഛികം നിങ്ങളെ അനുവദിക്കും. നിങ്ങളുടെ കീബോര്‍ഡിന് "
+#~ "യാന്ത്രിക കീകള്‍ ഇല്ലെങ്കിലോ, അവയുണ്ടാക്കുന്ന സ്വരം വളരെ മൃദുവാണെങ്കിലോ ഇത് "
+#~ "ഉപയോഗപ്രദമായേക്കാം. സ്ലൈഡര്‍ ബട്ടണ്‍ വലിച്ചോ, സ്പിന്‍ പെട്ടിയിലെ മുകളിലേക്കും താഴേക്കുമുള്ള "
+#~ "ആരോകള്‍ ക്ലിക്ക് ചെയ്തോ, കീ ക്ലിക്ക് ഫീഡ്ബാക്കിന്റെ ഒച്ച നിങ്ങള്‍ക്ക് മാറ്റാവുന്നതാണ്. ഒച്ച 0% "
+#~ "ആക്കിയാല്‍ കീ ക്ലിക്ക് ഓഫാകും."
+
+#, fuzzy
+#~ msgid "&Key click volume:"
+#~ msgstr "കീ ക്ലിക്ക് &ഒച്ച:"
+
+#~ msgid "XKB extension failed to initialize"
+#~ msgstr "XKB എക്സ്റ്റന്‍ഷന്‍ തുടങ്ങുന്നതില്‍ പരാജയപ്പെട്ടു."
+
+#~ msgid ""
+#~ "If you check this option, pressing and holding down a key emits the same "
+#~ "character over and over again. For example, pressing and holding down the "
+#~ "Tab key will have the same effect as that of pressing that key several "
+#~ "times in succession: Tab characters continue to be emitted until you "
+#~ "release the key."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ ഈ ഐച്ഛികം ചെക്ക് ചെയ്താല്‍, ഒരു കീ അമര്‍ത്തിപ്പിടിച്ചാല്‍ ഒരേ അക്ഷരരൂപം വീണ്ടും വീണ്ടും "
+#~ "പുറത്തുവരും. ഉദാഹരണത്തിന്, ടാബ് കീ അമര്‍ത്തിപ്പിടിച്ചാല്‍ ആ കീ ഒന്നിനു പിറകേ ഒന്നായി അമര്‍"
+#~ "ത്തുന്ന ഫലമുണ്ടാകും: ടാബ് അക്ഷരരൂപങ്ങള്‍ കീ വിടുന്നതുവരെ പുറത്തുവന്നുകൊണ്ടിരിക്കും."
+
+#~ msgid "&Enable keyboard repeat"
+#~ msgstr "കീബോര്‍ഡ് റിപ്പീറ്റ് &പ്രാവര്‍ത്തികമാക്കുക"

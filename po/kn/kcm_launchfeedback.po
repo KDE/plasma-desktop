@@ -1,0 +1,138 @@
+# translation of kcmlaunch.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2008-12-26 11:17+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕ(&y)"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "ಮಿನುಗುವ ತೆರೆಸೂಚಕ"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "ಪುಟಿಯುವ ತೆರೆಸೂಚಕ"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "ಕಾರ್ಯಪಟ್ಟಿಕೆ ಸೂಚನೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು(&t)"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "ಆರಂಭಗೊಳಿಕಾ ಸೂಚನೆಯ ಕಾಲಾವಧಿಯ ಮಿತಿ(&S):"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " ಸೆಕೆಂಡು"
+msgstr[1] " ಸೆಕೆಂಡು"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>ಆರಂಭಗೊಳಿಕೆಯ ಅಭಿಪ್ರಾಯ</h1> ಅನ್ವಯ ಆರಂಭಗೊಳಿಕಾ ಅಭಿಪ್ರಾಯವನ್ನು ಇಲ್ಲಿ ನೀವು "
+#~ "ಸಂರಚಿಸಬಹುದು."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕ</h1>\n"
+#~ "KDE ಯು ಅನ್ವಯದ ಆರಂಭದ ಸೂಚನೆಗಾಗಿ ಒಂದು ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕವನ್ನು ಒದಗಿಸುತ್ತದೆ.\n"
+#~ "ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕವನ್ನು ಶಕ್ತಗೊಳಿಸಲು, ಕಾಂಬೋಬಾಕ್ಸಿನಿಂದ ಒಂದು ಬಗೆಯ ಅಭಿಪ್ರಾಯವನ್ನು \n"
+#~ "ಆಯ್ಕೆ ಮಾಡಿ\n"
+#~ "ಕೆಲವೊಂದು ಅನ್ವಯಗಳಿಗೆ ಈ ಆರಂಭ ಸೂಚನೆಯ ಬಗ್ಗೆ ತಿಳಿದಿರುವುದಿಲ್ಲ.\n"
+#~ "ಇಂತಹ ಸಂದರ್ಭಗಳಲ್ಲಿ, 'ಆರಂಭಗೊಳಿಕಾ ಸೂಚನೆಯ ಕಾಲಾವಧಿ ಮಿತಿ' ವಿಭಾಗದಲ್ಲಿ \n"
+#~ "ನೀಡಲಾದ ಸಮಯವು ಮುಗಿದ ನಂತರ ತೆರೆಸೂಚಕವು ಮಿನುಗುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "ಯಾವುದೆ ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕವಿಲ್ಲ"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "ಜಡಗೊಂಡಿರುವ ಕಾರ್ಯನಿರತ ತೆರೆಸೂಚಕ"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "ಕಾರ್ಯಪಟ್ಟಿಕೆ ಸೂಚನೆ(&N)"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>ಕಾರ್ಯಪಟ್ಟಿಕೆ ಸೂಚನೆ</H1>\n"
+#~ "ನೀವು ಆರಂಭಿಸಿದ ಅನ್ವಯವು ಲೋಡ್‌ ಆಗುತ್ತಿದೆ ಎಂದು ಸೂಚಿಸುವ, ಕಾರ್ಯಪಟ್ಟಿಕೆಯು ಬಳಸುವಂತಹ \n"
+#~ "ತಿರುಗುವ ಮರಳು ಗಡಿಯಾರ (hourglass) ಅನ್ನು ಹೊಂದಿರುವ ಗುಂಡಿಯು ಕಾಣಿಸಿಕೊಳ್ಳುವಂತಹ "
+#~ "ಆರಂಭಿಸುವ \n"
+#~ "ಇನ್ನೊಂದು ಕ್ರಮವನ್ನು ಶಕ್ತಗೊಳಿಸಬಹುದಾಗಿದೆ. ಕೆಲವೊಂದು ಅನ್ವಯಗಳಿಗೆ ಈ ಆರಂಭ ಸೂಚನೆಯ ಬಗ್ಗೆ "
+#~ "ತಿಳಿದಿರುವುದಿಲ್ಲ.\n"
+#~ "ಇಂತಹ ಸಂದರ್ಭಗಳಲ್ಲಿ, 'ಆರಂಭಗೊಳಿಕಾ ಸೂಚನೆಯ ಕಾಲಾವಧಿ ಮಿತಿ' ವಿಭಾಗದಲ್ಲಿ \n"
+#~ "ನೀಡಲಾದ ಸಮಯವು ಮುಗಿದ ನಂತರ ಗುಂಡಿಯು ಮರೆಯಾಗುತ್ತದೆ."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "ಆರಂಭಗೊಳಿಕಾ ಸೂಚನೆಯ ಕಾಲಾವಧಿಯ ಮಿತಿ(&u):"

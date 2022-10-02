@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Поиск файлов</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>06 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>поиск</keyword>
+<keyword
+>файл</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Этот модуль программы &systemsettings; позволяет задать параметры индексирования файлов. Индексирование файлов основано на технологии Baloo, которая позволяет выполнять быстрый поиск содержимого файлов. </para>
+
+<para
+>Добавление виджета <guilabel
+>Поиск</guilabel
+> в панель позволяет выполнять быстрый поиск нужных документов и переход к ним. Также возможно использовать модуль поиска в строке поиска и запуска &krunner;. </para>
+
+<para
+>Активируйте пункт <guilabel
+>Включить службу поиска файлов</guilabel
+> для использования возможностей поиска &dolphin; и других приложений &kde;. Снимите флажок, если поиск файлов не следует выполнять с помощью Baloo (возможно использовать другие технологии поиска, например, &kfind;). </para>
+
+<para
+>Чтобы индексировать не только имена файлов, но и их содержимое, следует включить параметр <guilabel
+>Также индексировать содержимое файлов</guilabel
+>. </para>
+
+<para
+>Установите флажок <guilabel
+>Индексировать скрытые файлы и папки</guilabel
+>, чтобы программа Baloo индексировала скрытые файлы и папки. </para>
+
+<note>
+    <para
+>Любой файл или папка с именем, начинающимся с точки (<literal
+>.</literal
+>), является скрытым по умолчанию. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Параметры для отдельных папок</guilabel
+></term>
+<listitem>
+    <para
+>Здесь приведён список папок, которые могут быть проиндексированы. По умолчанию индексируется только папка <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> целиком; остальные папки и диски не индексируются. </para>
+    <para
+>Индексирование внешних носителей по умолчанию отключено. При удалении внешнего носителя из списка папок-исключений он будет индексироваться. </para>
+    <para
+>Раскрывающееся меню рядом с каждым элементом списка позволяет указать, следует ли <guimenuitem
+>Индексировать</guimenuitem
+> или <guimenuitem
+>Не индексировать</guimenuitem
+>. </para>
+    <para
+>Используйте кнопку с изображением корзины для удаления элемента из списка. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Настроить параметры папки…</guibutton
+></term>
+<listitem>
+    <para
+>Нажмите эту кнопку, чтобы открыть меню с двумя вариантами: <guimenuitem
+>Индексировать папку...</guimenuitem
+> и <guimenuitem
+>Не индексировать папку...</guimenuitem
+>. </para>
+    <para
+>Выбор любого из вышеупомянутых вариантов вызовет стандартный диалог &plasma; <guilabel
+>Выбор папки для фильтрации</guilabel
+> и позволит указать папку, к которой будут применены соответствующие параметры настройки. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Более подробные сведения о дополнительных параметрах конфигурации, в том числе о добавлении диска, который смонтирован не в папку <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, можно найти по ссылке <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

@@ -1,0 +1,198 @@
+# translation of kcmkonq.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2007.
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2008-12-16 06:32+0100\n"
+"Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
+"Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Sermase"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Documents"
+msgstr "Guhêze Jor"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Downloads"
+msgstr "Guhêze Jor"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Music"
+msgstr "Guhêze Jor"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Pictures"
+msgstr "Guhêze Jor"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Videos"
+msgstr "Guhêze Jor"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Desktop"
+msgid "Desktop path:"
+msgstr "Sermase"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Documents path:"
+msgstr "Guhêze Jor"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Downloads path:"
+msgstr "Guhêze Jor"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Videos path:"
+msgstr "Guhêze Jor"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Pictures path:"
+msgstr "Guhêze Jor"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Music path:"
+msgstr "Guhêze Jor"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Autostart path:"
+#~ msgstr "Guhêze Jor"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgid "Movies"
+#~ msgstr "Guhestin"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Guhestin"
+
+#, fuzzy
+#~| msgctxt "Move desktop files from old to new place"
+#~| msgid "Move"
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Guhestin"
+
+#~ msgid "Menu Editor"
+#~ msgstr "Edîtorê Pêşekê"
+
+#~ msgid "Menu"
+#~ msgstr "Pêşek"
+
+#~ msgid "New..."
+#~ msgstr "Nû..."
+
+#~ msgid "Remove"
+#~ msgstr "Rakirin"
+
+#~ msgid "Move Up"
+#~ msgstr "Guhêze Jor"
+
+#~ msgid "Move Down"
+#~ msgstr "Guhêze Jêr"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Bi&avêje çopê"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "&Jêbirin "

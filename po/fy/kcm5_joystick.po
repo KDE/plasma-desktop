@@ -1,0 +1,338 @@
+# translation of joystick.po to Frysk
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2009-12-19 18:27+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Johannes Peeringa, Berend Ytsma"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ",berendy@bigfoot.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "Kalibraasje"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "Fierder"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "In amerijke, de krektens wurdt berekkene"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(meastal X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(meastal Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibraasje giet it weardeberik fan jo joystick fêststelle.<br /><br /"
+">Beweech <b>as %1 %2</b> op jo joystick nei de <b>minimale</b> posysje.<br /"
+"><br />Druk dan samar op in knop fan de joystick of op de knop 'Fierder' om "
+"nei de neikommende stap te gean.</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibraasje giet it weardeberik fan jo joystick fêststelle.<br /><br /"
+">Beweech <b>as %1 %2</b> op jo joystick nei de <b>midden</b>posysje.<br /"
+"><br />Druk dan samar op in knop fan de joystick of op de knop 'Fierder' om "
+"nei de neikommende stap te gean.</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibraasje giet it weardeberik fan jo joystick fêststelle.<br /><br /"
+">Beweech <b>as %1 %2</b> op jo joystick nei de <b>maksimale</b> posysje.<br /"
+"><br />Druk dan samar op in knop fan de joystick of op de knop 'Fierder' om "
+"nei de neikommende stap te gean.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "Kommunikaasjeflater"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "Jo apparaat is suksesfol kalibrearre."
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "Suksesfol kalibrearre"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "Wearde %1-as: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "It opjûne apparaat (%1) kin net iepene wurde: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "It opjûne apparaat (%1) is gjin joystick."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "Kin kernelstjoerprogramma foar joystick %1 net fine: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"De no brûkte kernelsjoerprogrammaferzje (%1.%2.%3) is net gelyk oan de "
+"ferzje wêr't dizze module foar kompileard is (%4.%5.%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "Kin it tal knoppen fan joystick %1 net fêststelle: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "Kin it tal assen fan joystick %1 net fêststelle: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "Kin de kalibraasjewearden fan joystick %1 net fêststelle: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "Kin de kalibraasjewearden fan joystick %1 net wer meitsje: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr "Kin de kalibraasjewearden fan joystick %1 net inisjaliseare: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "Kin de kalibraasjewearden fan joystick %1 net tapasse: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "Unbekende ynterne flater (%1)"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "KDE Joystick-konfiguraasjemodule"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "KDE Systeem ynstellingsmodule om joysticks te testen"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "(c) 2004, Martin Koller"
+
+# msgid ""
+# "<h1>Joystick</h1>This module helps to check if your joystick is working "
+# "correctly.<br>If it delivers wrong values for the axes, you can try to "
+# "solve this with the calibration.<br>This module tries to find all "
+# "available joystick devices by checking /dev/js[0-4] and /dev/input/js[0-4]"
+# "<br>If you have another device file, enter it in the combobox.<br>The "
+# "Buttons list shows the state of the buttons on your joystick, the Axes "
+# "list shows the current value for all axes.<br>NOTE: the current Linux "
+# "device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-"
+# "button joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-"
+# "button joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For "
+# "details you can check your Linux source/Documentation/input/joystick.txt)"
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>Joystick</h1>Dizze module helpt te kontrolearjen oft jo joystick it goed "
+"docht.<br />Wannear't it ferkearde wearden werom jout foar de ûnderskate "
+"assen, kinne jo dit middels kalibraasje oplosse.<br />Dizze module besiket "
+"alle joysticks te finen troch de apparaten /dev/js[0-4] en /dev/input/"
+"js[0-4] te kontrolearjen.<br />Wannear't in oar apparaat brûkt wurdt, kinne "
+"jo dat ynfolje yn it ynfolfjild.<br />De list mei knoppen lit de  status "
+"sjen fan de knoppen fan de joystick. De list mei assen lit de no brûkte "
+"wearden sjen fan alle assen.<br />Tink derom: de no brûkte Linux "
+"stjoerprogramma's (kernel 2.4, 2.6) werkenne allinnich de folgjende "
+"joysticks automatysk:<ul><li>2 assen, 4 knoppen</li><li>3 assen, 4 knoppen</"
+"li><li>4 assen, 4 knoppen</li><li>Saitek Cyborg digital</li></ul>Foar mear "
+"ynformaasje kunne jo de dokumentaasje yn in submap fan jo Linux-boarnkoade "
+"rieplachtsje (Documentation/input/joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "Apparaat:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "Posysje:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "Ofleine paad sjen litte"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "YNDRUKT"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "Knoppen:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "Tastân"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "Assen:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "Wearde"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "Kalibrearje"
+
+# msgid ""
+# "No joystick device automatically found on this computer.<br>Checks were "
+# "done in /dev/js[0-4] and /dev/input/js[0-4]<br>If you know that there is "
+# "one attached, please enter the correct device file."
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"Der is gjin joystick op jo kompjûter fûn.<br />It ûndekken is bard op /dev/"
+"js[0-4] en /dev/input/js[0-4]<br />As jo wis binne dat de joystick oansluten "
+"sit kinne jo it juste apparaat ynfiere."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"De opjûne apparaatnamme is net jildich (hat gjin /dev).\n"
+"Kies in apparaat út de list of\n"
+"folje in apparaatnamme yn, bygelyks /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "Unbekend apparaat"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "Apparaatflater"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+# msgid ""
+# "<qt>Calibration is about to check the precision.<br><br><b>Please move "
+# "all axes to their center position and then do not touch the joystick "
+# "anymore.</b><br><br>Click OK to start the calibration.</qt>"
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>Kalibraasje sil de krektens kontrolearje.<br /><br /><b>Fersko alle "
+"assen nei de midden posysje en lit de joystick dêrnei hielendal los</b><br /"
+"><br />Klik op OK om de kalibraasje te starten.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "Kalibraasjewearden fan  joystick %1 bin wer makke."

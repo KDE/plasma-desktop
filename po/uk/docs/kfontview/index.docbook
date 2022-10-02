@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Переглядач шрифтів</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>31 березня 2018 року</date>
+<releaseinfo
+>Плазма 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>fontview</keyword>
+<keyword
+>шрифти</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; — програма для перегляду та встановлення шрифтів різних типів: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; type 1 (суфікс назв файлів у &Windows; і OS/2 — <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; у &UNIX;/&Linux; — <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, суфікс назв файлів — <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, суфікс назв файлів — <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Ви можете скористатися цією програмою окремо для перегляду і встановлення шрифтів, отриманих з Інтернету. За допомогою панелі перегляду програми ви зможете перевірити, чи є у шрифті всі потрібні вам символи. </para>
+<para
+>Крім того, &kfontview; можна запустити з вікна модуля «Системних параметрів» <ulink url="help:/kcontrol/fontinst/index.html"
+><guilabel
+>Керування шрифтами</guilabel
+></ulink
+>. Подібний спосіб запуску надасть вам змогу скористатися додатковими можливостями з перегляду, передбаченими у &kfontview;.</para>
+
+<para
+>Крім того, ви можете скористатися модулем <guilabel
+>Керування шрифтами</guilabel
+> для встановлення, вилучення, попереднього перегляду та керування усіма шрифтами у вашій системі.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>Програма &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Програма &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>У режимі <guilabel
+>Стандартний перегляд</guilabel
+> &kfontview; на панелі перегляду програми буде показано зразок тексту поданий шрифтом декількох розмірів у форматі панграми (речення, у якому використано всі літери відповідної абетки), що надасть вам змогу ознайомитися з виглядом шрифту. За допомогою спадного списку панелі інструментів ви можете отримати доступ до додаткових режимів перегляду: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Всі символи</guilabel
+>: показати всі символи у шрифті у одному розмірі. </para
+></listitem>
+<listitem
+><para
+>Блок Unicode: показ блоку або групи символів, на які, відповідно до стандарту Unicode, поділено всі символи.</para
+></listitem>
+<listitem
+><para
+>Запис Unicode: у Unicode записом є зібрання літер та інших письмових знаків, які використовуються для подання текстової інформації однією або декількома системами писемності.</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Змінити текст</guibutton
+>: за допомогою цієї кнопки можна відкрити діалогове вікно <guilabel
+>Зразка тексту</guilabel
+>, за допомогою якого ви можете змінити текст зразка для перегляду. За допомогою цього діалогового вікна ви зможете перевірити, чи підтримуються у шрифті потрібні вам символи. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Ви можете скористатися кнопками зміни масштабу або коліщатком миші для того, щоб змінити розміри символів шрифту у всіх типах панелей попереднього перегляду.</para>
+<para
+>У режимах перегляду <guilabel
+>Блок Unicode</guilabel
+> та <guilabel
+>Запис Unicode</guilabel
+> при наведенні вказівника миші на позначку символу програма показує додаткове інформаційне вікно підказки з такими даними: <guilabel
+>Категорія</guilabel
+> і значення символу Unicode у <guilabel
+> UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> та як <guilabel
+>Десяткового об’єкта XML</guilabel
+>.</para>
+
+<para
+>Щоб встановити отриманий вами з Інтернету шрифт, натисніть кнопку <guibutton
+>Встановити</guibutton
+>, розташовану у нижньому правому куті вікна програми. </para>
+
+<para
+>Ви можете встановити шрифти для особистого використання (для використання лише вами) чи загалом у системі (для всіх користувачів). Встановлення шрифтів за останнім варіантом потребує прав доступу адміністратора.</para>
+
+<para
+>Шрифти часто поширюються у форматі архівів, наприклад архівів <literal role="extension"
+>zip</literal
+>. Якщо такі архіви відкрити за допомогою програми &ark;, ви зможете скористатися простим інструментом попереднього перегляду шрифту. Щоб скористатися усіма можливостями, які надає &kfontview;, спочатку розпакуйте шрифти, а потім вже відкрийте їх за допомогою &kfontview;. </para
+><para
+>Для того, щоб новими встановленими шрифтами можна було скористатися у вже запущених програмах, ці програми слід перезапустити.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

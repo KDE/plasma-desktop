@@ -1,0 +1,227 @@
+# translation of kcmkded.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Hari Vishnu <harivishnu@gmail.com>, 2008
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2019-12-12 22:26+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "അനി പീറ്റര്‍"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#: kcmkded.cpp:48
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Background Services"
+msgstr "പ്രാരംഭ സേവനങ്ങള്‍"
+
+#: kcmkded.cpp:52
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Daniel Molkentin"
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 ഡാനിയേല്‍ മോല്‍കെന്റിന്‍"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "ഡാനിയേല്‍ മോല്‍കെന്റിന്‍"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmkded.cpp:125
+#, fuzzy, kde-format
+msgid "Failed to stop service: %1"
+msgstr "സെര്‍വര്‍  <em>%1</em> നിര്‍ത്തുവാന്‍ സാധ്യമായില്ല."
+
+#: kcmkded.cpp:127
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "സെര്‍വര്‍ <em>%1</em> ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല "
+
+#: kcmkded.cpp:134
+#, fuzzy, kde-format
+msgid "Failed to stop service."
+msgstr "സെര്‍വര്‍  <em>%1</em> നിര്‍ത്തുവാന്‍ സാധ്യമായില്ല."
+
+#: kcmkded.cpp:136
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "സെര്‍വര്‍ <em>%1</em> ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല "
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>സേവന മാനേജര്‍</h1><p> നിങ്ങള്‍ക്കു് കെഡിഇ ഡെമണിലുള്ള എല്ലാ പ്ലഗിനുകളെപ്പറ്റിയുമുള്ള വിവരം "
+"ഈ ഘടകം നല്‍കുന്നു. കെഡിഇ സേവനങ്ങള്‍ എന്ന പേരിലും അറിയപ്പെടുന്ന ഇവ രണ്ടു് രീതിയില്‍ ലഭ്യമാണു്: </"
+"p><ul><li> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്ന സേവനങ്ങള്‍</li><li>ആവശ്യമനുസരിച്ചു് ലഭ്യമാകുന്ന സേവനങ്ങള്‍</"
+"li></ul><p> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്നവ ആരംഭിക്കുവാനും നിര്‍ത്തുവാനും സാധ്യമാകുന്നു. എന്നാല്‍ "
+"ആവശ്യാനുസരണമുള്ള സേവനങ്ങള്‍ നിങ്ങളുടെ സൌകര്യത്തിനു് മാത്രമുള്ളവയാകുന്നു. സേവനങ്ങള്‍ പ്രാരംഭത്തില്‍ "
+"ലഭ്യമാകണമെങ്കില്‍, അഡ്മിനിസ്ട്രേഷന്‍ മോഡില്‍ അവ വ്യക്തമാക്കേണ്ടതാകുന്നു. </p><p><b>ചില സേവനങ്ങള്‍ "
+"കെഡിഇയ്ക്കു് വളരെ പ്രധാനപ്പെട്ടവയാകുന്നു, അതിനാല്‍ അവ നിര്‍ജ്ജീവമാക്കുന്നതിനു് മുമ്പ് പ്രത്യേകം "
+"ശ്രദ്ധിക്കുക.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "സേവനം"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "പ്രവര്‍ത്തിക്കുന്നു"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "പ്രവര്‍ത്തിക്കുന്നില്ല"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "പ്രാരംഭ സേവനങ്ങള്‍"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "ആവശ്യാനുസരണം ലഭ്യമാക്കുന്ന സേവനങ്ങള്‍"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "പ്രവര്‍ത്തിക്കുന്നില്ല"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "പ്രവര്‍ത്തിക്കുന്നു"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "സേവനം"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "സേവനം"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "കെഡിഇയിലെ സേവനങ്ങളുടെ നടത്തിപ്പുകാരന്‍"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "ആവശ്യാനുസരണം ആരംഭിക്കുന്ന കെഡിഇ സേവനങ്ങളുടെ ഒരു പട്ടികയാണിത്. ഇതു നിങ്ങളുടെ സൌകര്യാര്‍ത്ഥം "
+#~ "മാത്രമാണ് ലഭ്യമാക്കിയിരിക്കുന്നത് . ഇവയില്‍ നിങ്ങള്‍ക്കു് മാറ്റങ്ങള്‍ വരുത്തുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid "Status"
+#~ msgstr "അവസ്ഥ"
+
+#~ msgid "Description"
+#~ msgstr "വിവരണം"
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "കെഡിഇയുടെ ആരംഭത്തില്‍ ലഭ്യമാകുന്ന എല്ലാ കെഡിഇ സേവനങ്ങളും ഇവിടെ കാണാം. ഇപ്പോള്‍ നിങ്ങള്‍ "
+#~ "തിരഞ്ഞെടുക്കുന്നവ അടുത്ത തവണ ആരംഭിക്കുമ്പോള്‍ ലഭ്യമാകുന്നു. അപരിചിതമായ സേവനങ്ങള്‍ നിര്‍"
+#~ "ജ്ജീവമാക്കുന്നതിനെപ്പറ്റി പ്രത്യേകം ശ്രദ്ധിക്കേണ്ടതുണ്ടു്."
+
+#~ msgid "Use"
+#~ msgstr "ഉപയോഗം"
+
+#~ msgid "Start"
+#~ msgstr "ആരംഭിക്കുക"
+
+#~ msgid "Stop"
+#~ msgstr "നിര്‍ത്തുക"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED-യുമായി ബന്ധപ്പെടുവാന്‍ സാധ്യമായില്ല."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "<em>%1</em> എന്ന സേവനം ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല .<br /><br /><i>പിശക്: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "<em>%1</em> എന്ന സേവനം നിര്‍ത്താന്‍ കഴിഞ്ഞില്ല .<br /><br /><i>Error: %2</i>"

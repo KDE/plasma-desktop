@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Fecha y hora</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+>de Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Pablo</firstname
+><surname
+>de Vicente</surname
+><affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>reloj</keyword>
+<keyword
+>fecha</keyword>
+<keyword
+>hora</keyword>
+<keyword
+>poner</keyword>
+<keyword
+>configuración</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Fecha y hora</title>
+
+<para
+>Puede utilizar para modificar la fecha y hora del sistema, usando un interfaz gráfico conveniente.</para>
+
+<note
+><para
+>Puesto que estas preferencias no solo afectan a su usuario, sino a todo el sistema, ebe tener permisos de administrador (<systemitem class="username"
+>root</systemitem
+>) para cambiar la fecha y hora del sistema. Si no tiene este nivel de acceso, este módulo le mostrará las preferencias actuales, pero no se guardarán los cambios.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Fecha y hora</title>
+
+<para
+>Si marca <guilabel
+>Establecer fecha y hora automáticamente</guilabel
+> este módulo usará <acronym
+>systemd</acronym
+> para obtener la fecha y la hora.</para>
+
+<para
+>En un equipo sin <acronym
+>systemd</acronym
+> se usan las utilidades <acronym
+>NTP</acronym
+> <command
+>rdate</command
+> o <command
+>ntpdate</command
+>. Ni estas utilidades no están presentes, instálelas. </para>
+
+<para
+>Si ya está en línea cuando inicie sesión en &plasma;, o cuando se conecte posteriormente a Internet, se accederá a uno o más servidores <acronym
+>NTP</acronym
+>.</para>
+<para
+>Sin embargo, esto no es suficiente para mantener un reloj preciso a largo plazo. Esto resulta útil para establecer la hora de manera ocasional en equipos que no están conectados a la red todo el tiempo, como los portátiles. </para>
+
+<para
+>Si decide no usar un servidor horario, podrá definir la fecha de forma manual en el calendario.</para>
+<para
+>Utilice los controles en la parte inferior del calendario para seleccionar la fecha actual, introdúzcala en el cuadro de texto o seleccione la semana del año en la caja desplegable.</para>
+
+<para
+>Establezca la hora mediante los selectores numéricos en la parte inferior del reloj analógico, o bien introduciéndola directamente.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Zona horaria</title>
+<para
+>Para establecer una nueva zona horaria, solo tiene que seleccionar una zona de la lista. Utilice el cuadro de filtro para encontrar la <guilabel
+>Zona</guilabel
+> o la <guilabel
+>región</guilabel
+> deseada.</para>
+</sect2>
+
+</sect1>
+
+</article>

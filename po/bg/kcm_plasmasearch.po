@@ -1,0 +1,246 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-06-19 19:54+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Налични приставки"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Активиране или деактивиране на приставки (използвани в KRunner, Стартер на "
+"приложение и Визуализация)"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Конфигуриране на KRunner…"
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Изтегляне на нови приставки…"
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr "Неуспешно изпълнение на инсталационния скрипт в терминал \"%1\""
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "Инсталирането е успешно, можете да затворите този прозорец"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "Деинсталирането е успешно, можете да затворите този прозорец"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "Инсталирането на приставка за KRunner е неуспешно"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Команда за изпълнение: install или uninstall."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Път до архив."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Няма PackageKit поддръжка"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Потвърждаване на инсталирането"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"На път сте да инсталирате двоичен пакет. Трябва да ги инсталирате само от "
+"доверен автор / дистрибутор."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Приемане на риска и продължаване"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Преглед на файл"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "Mime тип %1 не се поддържа от packagekit бекенд"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка не предоставя скрипт за деинсталиране. Моля, свържете се с "
+"автора. Можете да опитате да инсталирате приставката ръчно. <nl/> Ако не се "
+"чувствате способни или комфортно с това, щракнете върху <interface> Отказ </"
+"interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка не предоставя скрипт за деинсталиране. Моля, свържете се с "
+"автора. Можете да опитате да инсталирате приставката ръчно. Моля, погледнете "
+"README за инструкции от автора. <nl/> Ако не се чувствате способни или "
+"комфортно с това, щракнете върху <interface> Отказ </interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка не предоставя скрипт за инсталиране. Моля, свържете се с "
+"автора. Можете да опитате да инсталирате приставката ръчно. <nl/> Ако не се "
+"чувствате способни или комфортно с това, щракнете върху <interface> Отказ </"
+"interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка не предоставя скрипт за инсталиране. Моля, свържете се с "
+"автора. Можете да опитате да инсталирате приставката ръчно. Моля, погледнете "
+"README за инструкции от автора. <nl/> Ако не се чувствате способни или "
+"комфортно с това, щракнете върху <interface> Отказ </interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка използва скрипт за инсталация, който може да представлява "
+"риск за сигурността. Моля, разгледайте цялото съдържание на приставката, "
+"преди да я инсталирате, или поне прегледайте изходния код на скрипта. <nl/> "
+"Ако не се чувствате способни или комфортно с това, щракнете върху "
+"<interface> Отказ </interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Тази приставка използва скрипт за инсталация, който може да представлява "
+"риск за сигурността. Моля, разгледайте цялото съдържание на приставката, "
+"преди да инсталирате, или поне прочетете файла README и изходния код на "
+"скрипта. <nl/> Ако не се чувствате способни или комфортно с това, щракнете "
+"върху <interface> Отказ </interface> сега."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Отбелязване на записа като деинсталиран"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Отбелязване на записа като инсталиран"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Преглед на скрипт"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Преглед на директорията на изходен код"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "Преглед %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Неуспешно получаване на име на пакет от %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "Неуспешно изпълнение на инсталиращата програма: <message>%1</message>"

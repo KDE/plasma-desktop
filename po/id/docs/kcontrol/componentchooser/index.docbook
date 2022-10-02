@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Aplikasi Baku</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-01-2017</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>komponen</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dalam modul ini kamu bisa mengubah komponen baku &kde;.</para>
+
+<para
+>Komponen adalah program yang menangani tugas-tugas dasar, seperti emulator terminal, editor teks, dan klien email. Aplikasi &kde; yang berbeda kadang-kadang perlu memanggil emulator konsol, mengirim email atau mendisplaikan beberapa teks.</para
+> 
+
+<para
+>Untuk melakukannya secara konsisten, aplikasi ini selalu memanggil komponen yang sama. Di sini kamu bisa memilih program mana untuk komponen-komponen tersebut.</para>
+
+<para
+>Daftar pada sebelah kiri menampilkan tipe komponen yang dapat dikonfigurasi:</para>
+<itemizedlist>
+<listitem>
+<para
+>Klien Email</para>
+</listitem>
+<listitem>
+<para
+>Pengelola File</para>
+</listitem>
+<listitem>
+<para
+>Emulator Terminal</para>
+</listitem>
+<listitem>
+<para
+>Penelusur Web</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Klik komponen yang ingin kamu konfigurasi. Di bagian kanan dialog, semua layanan yang tersedia ditampilkan dan kamu bisa memilih emulator terminal favoritmu, editor teks dan klien email dll. (&etc;)</para>
+
+</article>

@@ -1,0 +1,435 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-27 08:14+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Splošno"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Odstrani iz priljubljenih"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj med priljubljene"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Na vseh dejavnostih"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Na trenutni dejavnosti"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Pokaži v priljubljenih"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Izberi…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Počisti ikono"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Pokaži programe kot:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Samo ime"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Samo opis"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Ime (Opis)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Opis (Ime)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Obnašanje:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Razvrsti po abecedi"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Splošči pod-menije na en sam nivo"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Prikažite ikone na korenski ravni menija"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Prikaži kategorije:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Nedavni programi"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Pogosto uporabljeni programi"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Nedavne datoteke"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Pogosto uporabljane datoteke"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Nedavni stiki"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Pokaži pogosto rabljene stike"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Razvrsti postavke v kategorijah po:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Nedavno uporabljeno"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Pogosto uporabljano"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Poišči:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Razširi iskanje na zaznamke, datoteke in e-pošto"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Poravnaj rezultate iskanja na dno"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Iskanje '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Tipkajte za iskanje…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Priljubljene"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Gradniki"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Programi in dokumentacija"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Uredi aplikacije…"
+
+#~ msgid "Search…"
+#~ msgstr "Poišči…"
+
+#~ msgid "Search..."
+#~ msgstr "Poišči..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Pogosto rabljeni dokumenti"
+
+#~ msgid "Open with:"
+#~ msgstr "Odpri z:"
+
+#~ msgid "Properties"
+#~ msgstr "Lastnosti"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Dodaj na namizje"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Dodaj na pult (gradnik)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Pripni v upravljalnik opravil"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Nedavni dokumenti"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Pozabi nedavne dokumente"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Uredi program ..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Skrij program"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Programi"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Pokaži vse programe v tem podmeniju"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Pokaži vse programe v »%1«"
+
+#~ msgid "Computer"
+#~ msgstr "Računalnik"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Pokaži podrobnosti o stiku ..."
+
+#~ msgid "Contacts"
+#~ msgstr "Stiki"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Pozabi stik"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Pozabi vse stike"
+
+#~ msgid "Recently Used"
+#~ msgstr "Nedavno uporabljeno"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenti"
+
+#~ msgid "Forget Application"
+#~ msgstr "Pozabi program"
+
+#~ msgid "Forget Document"
+#~ msgstr "Pozabi dokument"
+
+#~ msgid "Forget All"
+#~ msgstr "Pozabi vse"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Pozabi vse programe"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Pozabi vse dokumente"
+
+#~ msgid "Hide %1"
+#~ msgstr "Skrij %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Vsi programi"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Nedavni stiki"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Pogosto uporabljeni dokumenti"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Nedavni programi"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Pogosto uporabljeni programi"
+
+#~ msgid "Power / Session"
+#~ msgstr "Energija / seja"
+
+#~ msgid "Search results"
+#~ msgstr "Rezultati iskanja"
+
+#~ msgid "Lock"
+#~ msgstr "Zakleni"
+
+#~ msgid "Save Session"
+#~ msgstr "Shrani sejo"
+
+#~ msgid "Switch User"
+#~ msgstr "Preklopi uporabnika"
+
+#~ msgid "Hibernate"
+#~ msgstr "V mirovanje"
+
+#~ msgid "Restart"
+#~ msgstr "Znova zaženi"
+
+#~ msgid "Shut Down"
+#~ msgstr "Izklopi"
+
+#~ msgid "Session"
+#~ msgstr "Seja"
+
+#~ msgid "System"
+#~ msgstr "Sistem"
+
+#~ msgid "Lock screen"
+#~ msgstr "Zakleni zaslon"
+
+#~ msgid "End session"
+#~ msgstr "Končaj sejo"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Zaženi vzporedno sejo kot drug uporabnik"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Zaustavi v pomnilnik"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Zaustavi na disk"
+
+#~ msgid "Restart computer"
+#~ msgstr "Znova zaženi računalnik"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Izklopi računalnik"
+
+#~ msgid "System actions"
+#~ msgstr "Sistemska dejanja"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Upravljaj »%1« ..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Zaženi ukaz ..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Zaženi ukaz ali iskalno poizvedbo"
+
+#~ msgid "Show:"
+#~ msgstr "Pokaži:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Pokaži nedavne programe"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Pokaži pogosto uporabljene programe"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Pokaži nedavne dokumente"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Pokaži pogosto uporabljene dokumente"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Pokaži nedavne stike"
+
+#~ msgid "Logout"
+#~ msgstr "Odjava"
+
+#~ msgid "Reboot"
+#~ msgstr "Znova zaženi"
+
+#~ msgid "Suspend"
+#~ msgstr "V pripravljenost"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Odstranljivi nosilci"
+
+#~ msgid "Places"
+#~ msgstr "Mesta"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Uporabi sliko po meri:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Izberi sliko"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Datoteke s sliko (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Dodaj kot zaganjalnik"
+
+#~ msgid "New Session"
+#~ msgstr "Nova seja"
+
+#~ msgid "(Empty)"
+#~ msgstr "(prazno)"

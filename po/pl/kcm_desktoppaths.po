@@ -1,0 +1,270 @@
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# Version: $Revision: 1623908 $
+# translation of kcmkonq.po to Polish
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2002,2003.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2006, 2008, 2009.
+# Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005, 2006.
+# Marta Rybczynska <kde-i18n@rybczynska.net>, 2009.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-05-02 07:28+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+">\n"
+">\n"
+">\n"
+"X-Generator: Lokalize 20.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Pulpit"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokumenty"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Pobrane"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Muzyka"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Obrazy"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Filmy"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Ścieżki</h1>\n"
+"Moduł pozwala na konfigurację katalogów, w których\n"
+"przechowywane są różne pliki pulpitu.\n"
+"Użyj \"Co to jest?\" (Shift+F1), by uzyskać pomoc o konkretnych opcjach."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Ścieżka do pulpitu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Katalog ten zawiera wszystkie pliki, widoczne na pulpicie. Można zmienić "
+"położenie tego katalogu, jego zawartość zostanie automatycznie przeniesiona "
+"na nowe miejsce."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Ścieżka do dokumentów:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
+"dokumentów."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Ścieżka do pobranych:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce zapisywania pobieranych "
+"elementów."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Ścieżka do filmów:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
+"filmów."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Ścieżka do obrazów:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
+"obrazków."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Ścieżka do muzyki:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
+"muzyki."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Ścieżka do programów Autostartu:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Ten katalog zawiera programy i skróty do programów, uruchamiane "
+#~ "samoczynnie przy każdym rozpoczęciu sesji. Można zmienić położenie tego "
+#~ "katalogu, jego zawartość zostanie samoczynnie przeniesiona na nowe "
+#~ "miejsce."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Filmy"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Ścieżka dla '%1' uległa zmianie.\n"
+#~ "Czy przenieść pliki z '%2' do '%3'?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Przenieś"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Nie przenoś"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Ścieżka dla '%1' uległa zmianie.\n"
+#~ "Czy przenieść pliki z '%2' do '%3'?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Przenieś"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Nie przenoś"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Spytaj o potwierdzenie"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Zachowanie Konquerora</h1> Tu możesz skonfigurować zachowanie "
+#~ "Konquerora jako menedżera plików."
+
+#~ msgid "Misc Options"
+#~ msgstr "Inne ustawienia"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Otwieraj katalogi w osobnych oknach"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Jeśli ta opcja jest włączona, foldery będą przeglądane w nowych oknach. W "
+#~ "przeciwnym razie wykorzystane zostanie aktualne okno."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Pokaż w menu pozycję '&Usuń', która omija kosz"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Wyłącz tę opcję. jeśli nie chcesz, by poleceniu 'Usuń' było wyświetlane w "
+#~ "menu pulpitu i menedżera plików. Zawsze możesz usunąć pliki, wciskając "
+#~ "Shift podczas wywoływania polecenia 'Przenieś do kosza'."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Edytor menu"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "New..."
+#~ msgstr "Nowy..."
+
+#~ msgid "Remove"
+#~ msgstr "Usuń"
+
+#~ msgid "Move Up"
+#~ msgstr "Przesuń w górę"
+
+#~ msgid "Move Down"
+#~ msgstr "Przesuń w dół"

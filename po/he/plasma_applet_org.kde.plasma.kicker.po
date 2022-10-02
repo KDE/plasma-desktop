@@ -1,0 +1,447 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2017-05-22 05:23-0400\n"
+"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "הסר ממועדפים"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "הוסף למועדפים"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:134
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgid "Show in Favorites"
+msgstr "מועדפים"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, fuzzy, kde-format
+#| msgid "Icon"
+msgid "Icon:"
+msgstr "סמל"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "הראה יישומים כ:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "שם בלבד"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "תיאור בלבד"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "שם (תיאור)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "תיאור (שם)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgid "Behavior:"
+msgstr "התנהגות"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Sort alphabetically"
+msgid "Sort applications alphabetically"
+msgstr "סדר לפי שם"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, fuzzy, kde-format
+#| msgid "Flatten menu to a single level"
+msgid "Flatten sub-menus to a single level"
+msgstr "שטח תפריט לרמה אחת"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, fuzzy, kde-format
+#| msgid "Categories"
+msgid "Show categories:"
+msgstr "קטגוריות"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, fuzzy, kde-format
+#| msgid "Recent Applications"
+msgid "Recent applications"
+msgstr "יישומים אחרונים"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, fuzzy, kde-format
+#| msgid "Often Used Applications"
+msgid "Often used applications"
+msgstr "יישומים בשימוש נפוץ"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent files"
+msgstr "מסמכים אחרונים"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, fuzzy, kde-format
+#| msgid "Often used"
+msgid "Often used files"
+msgstr "בשימוש לעיתים קרובות"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, fuzzy, kde-format
+#| msgid "Recent Contacts"
+msgid "Recent contacts"
+msgstr "אנשי קשר אחרונים"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, fuzzy, kde-format
+#| msgid "Show often used contacts"
+msgid "Often used contacts"
+msgstr "הצג אנשי קשר בשימוש נפוץ"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recently used"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "בשימוש לאחרונה"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Often used"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "בשימוש לעיתים קרובות"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search:"
+msgstr "חיפוש"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "הרחב חיפוש ל־סמניות, קבצים והודעות דואר אלקטרוני"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "ישר תוצאות חיפוש לתחתית"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "מחפש \"%1\""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, fuzzy, kde-format
+#| msgid "Type to search."
+msgid "Type to search…"
+msgstr "הקלד כדי לחפש."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "מועדפים"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "יישומונים"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "יישומים ומסמכים"
+
+#: package/contents/ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "ערוך יישומים..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "חיפוש"
+
+#~ msgid "Search..."
+#~ msgstr "חפש..."
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "מסמכים בשימוש נפוץ"
+
+#~ msgid "Open with:"
+#~ msgstr "פתח באמצעות:"
+
+#~ msgid "Properties"
+#~ msgstr "מאפיינים"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "הוסף לשולחן עבודה"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "הוסף ללוח (יישומון)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "הצמדה למנהל המשימות"
+
+#~ msgid "Recent Documents"
+#~ msgstr "מסמכים אחרונים"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "נקה יישומים אחרונים"
+
+#~ msgid "Edit Application..."
+#~ msgstr "ערוך יישום..."
+
+#~ msgid "Hide Application"
+#~ msgstr "הסתר יישום"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "יישומים"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "בטל הסתרת יישומים בתת־תפריט זה"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "בטל יישומים מוסתרים ב־\"%1\""
+
+#~ msgid "Computer"
+#~ msgstr "מחשב"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "הראה נתוני איש קשר..."
+
+#~ msgid "Contacts"
+#~ msgstr "אנשי קשר"
+
+#~ msgid "Forget Contact"
+#~ msgstr "שכח אנשי קשר"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "שכח את כל האנשי קשר"
+
+#~ msgid "Recently Used"
+#~ msgstr "היו בשימוש לאחרונה"
+
+#~ msgid "Documents"
+#~ msgstr "מסמכים"
+
+#~ msgid "Forget Application"
+#~ msgstr "שכח יישומים"
+
+#~ msgid "Forget Document"
+#~ msgstr "שכח מסמכים"
+
+#~ msgid "Forget All"
+#~ msgstr "שכח הכל"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "שכח את כל היישומים"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "שכח את כל המסמכים"
+
+#~ msgid "Hide %1"
+#~ msgstr "הסתר %1"
+
+#~ msgid "All Applications"
+#~ msgstr "כל היישומים"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "אנשי קשר אחרונים"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "מסמכים בשימוש נפוץ"
+
+#~ msgid "Recent Applications"
+#~ msgstr "יישומים אחרונים"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "יישומים בשימוש נפוץ"
+
+#~ msgid "Power / Session"
+#~ msgstr "יציאה"
+
+#~ msgid "Search results"
+#~ msgstr "תוצאות חיפוש"
+
+#~ msgid "Lock"
+#~ msgstr "נעילה"
+
+#~ msgid "Save Session"
+#~ msgstr "שמור הפעלה"
+
+#~ msgid "Switch User"
+#~ msgstr "החלף משתמש"
+
+#~ msgid "Hibernate"
+#~ msgstr "שינה"
+
+#, fuzzy
+#~| msgid "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "הפעל מחדש את המחשב"
+
+#~ msgid "Shut Down"
+#~ msgstr "כיבוי"
+
+#~ msgid "Session"
+#~ msgstr "הפעלה"
+
+#~ msgid "System"
+#~ msgstr "מערכת"
+
+#~ msgid "Lock screen"
+#~ msgstr "מסך נעילה"
+
+#~ msgid "End session"
+#~ msgstr "סיים הפעלה"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "התחל הפעלה מקבילה כמשתמש אחר"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "השהה לזיכרון ה־RAM"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "השהה לכונן אחסון"
+
+#~ msgid "Restart computer"
+#~ msgstr "הפעל מחדש את המחשב"
+
+#~ msgid "Turn off computer"
+#~ msgstr "כבה את המחשב"
+
+#~ msgid "System actions"
+#~ msgstr "פעולות מערכת"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "נהל את \"%1\"..."
+
+#~ msgid "Run Command..."
+#~ msgstr "הרץ פקודה..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "הרץ פקודה או חיפוש"
+
+#~ msgid "Show:"
+#~ msgstr "הצג:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "הראה יישומים אחרונים"
+
+#~ msgid "Show often used applications"
+#~ msgstr "הצג יישומים בשימוש נפוץ"
+
+#~ msgid "Show recent documents"
+#~ msgstr "הראה מסמכים אחרונים"
+
+#~ msgid "Show often used documents"
+#~ msgstr "הצג מסמכים בשימוש נפוץ"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "הראה אנשי קשר אחרונים"
+
+#~ msgid "Logout"
+#~ msgstr "התנתקות"
+
+#~ msgid "Reboot"
+#~ msgstr "הפעלה מחדש"
+
+#~ msgid "Suspend"
+#~ msgstr "השהיה"
+
+#~ msgid "Removable Storage"
+#~ msgstr "אחסון נשלף"
+
+#~ msgid "Places"
+#~ msgstr "מקומות"
+
+#~ msgid "Use custom image:"
+#~ msgstr "השתמש בתמונה מותאמת אישית"
+
+#~ msgid "Choose an image"
+#~ msgstr "במר תמונה"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "קבצי תמונה (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"

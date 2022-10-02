@@ -1,0 +1,240 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Danishka Navin <danishka@gmail.com>, 2009.
+# Gayan Kalhara <gkgkalhara@gmail.com> 2009.
+# Danishka Navin <danishka@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-11-11 12:32+0530\n"
+"Last-Translator: gayankalhara <gkgkalhara@gmail.com>\n"
+"Language-Team: Sinhalese <danishka@gmail.com>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 0.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: kcmkded.cpp:48
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Background Services"
+msgstr "ආරම්භක සේවාවන්"
+
+#: kcmkded.cpp:52
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Daniel Molkentin"
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmkded.cpp:125
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "සේවාව නැවතිය නොහැකි විය<em>%1</em>."
+
+#: kcmkded.cpp:127
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr " ධාරකය ආරම්භ කිරීමට නොහැකි විය<em>%1</em>."
+
+#: kcmkded.cpp:134
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "සේවාව නැවතිය නොහැකි විය<em>%1</em>."
+
+#: kcmkded.cpp:136
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr " ධාරකය ආරම්භ කිරීමට නොහැකි විය<em>%1</em>."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
+#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
+#| "listed for convenience. The startup services can be started and stopped. "
+#| "In Administrator mode, you can also define whether services should be "
+#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
+#| "for KDE; do not deactivate services if you do not know what you are doing."
+#| "</b></p>"
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>සේවා පාලක</h1><p>මෙම මොඩියුලය ඔබට KDE ඩීමනය සතු සියළු ප්ලගින වල පෙර දැක්මක් පෙන්වයි "
+"ඒ අතරම KDE සේවා ලෙසද යෙදේ. සාමාන්‍යයෙන්, සේවා වර්‍ග දෙකක් ඇත:</p><ul><li>ආරම්භයේදී "
+"ඉල්ලා සිටින සේවා</li><li>ඉල්ලුම අනුව ක්‍රියාත්මක වන සේවා</li></ul><p> දෙවෙනියට සඳහන් කල "
+"සේවා දැක්ම සඳහා පමණක් ලැයිසතුගත කර ඇත.ආරම්භයේදී ක්‍රියාකරන සේවා ඇරඹීම හා නැවතීම කල හැක. "
+"පාලක ප්‍රකාරයේදී, ආරම්භයේදී එම සේවා ක්‍රියාත්මක විය යුතුද යන්නත් යෙදිය හැක.</p><p><b> මෙය ප්‍"
+"රමේශමෙන් භාවිත කරන්න: ඇතැම් සේවා KDE සඳහා අත්‍යාවශ්‍යයි; ඔබ කරන්නේ කුමක්ද යන්න නිවැරදිව "
+"නොදන්නේ නම් සේවා අක්‍රීය නොකරන්න.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "සේවාව"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "ධාවනය වෙමින්"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "ධාවනය නොවේ"
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "ආරම්භක සේවාවන්"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "ඉල්ලුමට-අනුව-සේවා පූර්ණය කරන්න"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "ධාවනය නොවේ"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "ධාවනය වෙමින්"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "සේවාව"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "සේවාව"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE සේවා පාලක"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "මෙය ඉල්ලා සිටින විට ආරම්භ වන KDE සේවා ලැයිස්තුවකි.මේවා ලැයිස්තු ගත කර ඇත්තේ පහසුව සඳහා "
+#~ "පමණි, ඔබට මෙම  සේවා හැසිරවිය නොහැක."
+
+#~ msgid "Status"
+#~ msgstr "තත්වය"
+
+#~ msgid "Description"
+#~ msgstr "විස්තරය"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "මෙහිදී KDEආරම්භයේදී ක්‍රියාත්මක විය යුතු KDE සේවා සියල්ල දැකිය හැක. ලකුණු කර ඇති සේවා ඊලඟ "
+#~ "ආරම්භයේදී ඉල්ලා සිටිනු ඇත. නොදන්නා සේවා අක්‍රීය කිරීමේදී ප්‍රවේශම් වන්න"
+
+#~ msgid "Use"
+#~ msgstr "භාවිත කරන්න"
+
+#~ msgid "Start"
+#~ msgstr "ආරම්භ කරන්න"
+
+#~ msgid "Stop"
+#~ msgstr "නවතන්න"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED සම්බන්ධ කරගැනීමට නොහැකිවිය"
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "සේවාව ආරම්භ කල නොහැකි විය <em>%1</em>.<br /><br /><i>වරදක්: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "සේවාව නැවැත්විය නොහැකි විය <em>%1</em>.<br /><br /><i>වරදක්: %2</i>"

@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Tastiera</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Samuele</firstname
+><surname
+>Kaplun</surname
+><affiliation
+><address
+><email
+>kaplun@aliceposta.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>tastiera</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo ti permette di impostare il funzionamento della tua tastiera.</para>
+
+<para
+>Ci sono tre schede in questo modulo.</para>
+
+<sect1 id="hardware">
+<title
+>La scheda Hardware</title>
+<para
+>L'effettivo risultato dell'impostazione di queste opzioni dipende dalle caratteristiche fornite dall'hardware della tua tastiera e dal server X sul quale è in esecuzione &plasma;. Potresti scoprire, ad esempio, che cambiare il volume del clic dei tasti non ha alcun effetto perché non è disponibile questa funzionalità sul tuo sistema. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Modello della tastiera:</guilabel
+></term>
+<listitem>
+<para
+>Qui puoi scegliere il modello della tastiera. Questa impostazione non dipende dalla mappatura della tastiera e fa riferimento al modello &quot;hardware&quot;, &ie; a come è costruita la tastiera. Le tastiere moderne fornite con i computer normalmente dispongono di due tasti aggiuntivi e sono dette modelli a &quot;104 tasti&quot;, e questa è probabilmente la scelta che ti interessa se non conosci il tipo della tua tastiera. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>BlocNum all'avvio di Plasma</guilabel
+></term>
+<listitem>
+<para
+>Puoi scegliere di attivare (<guilabel
+>Acceso</guilabel
+>) o disattivare (<guilabel
+>Spento</guilabel
+>) BlocNum ad ogni avvio di &plasma; o puoi indicare a &plasma; di lasciarlo in qualsiasi stato fosse prima dell'avvio di &plasma;.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Quando un tasto viene premuto:</guilabel
+></term>
+<listitem>
+<para
+>È possibile selezionare una delle tre opzioni, precisamente</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Mostra i caratteri accentati o simili</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, quando un testo viene tenuto premuto durante l'inserimento del testo, sarà mostrata una finestra che permette di scegliere tra le varianti del carattere con segni diacritici.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Non fare nulla</guilabel
+></term>
+<listitem>
+<para
+>Questa opzione permette di disattivare qualsiasi attività quando i tasti sono tenuti premuti.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ripeti il tasto</guilabel
+></term>
+<listitem>
+<para
+>Quando questa opzione viene selezionata, il tener premuto un tasto causa l'emissione dello stesso carattere ripetutamente fino al rilascio. Tener premuto avrà lo stesso effetto di premere molte volte in successione.</para>
+<tip
+><para
+>Quasi tutti gli utenti vorranno abilitare questa opzione, perché permette di navigare attraverso i documenti con i tasti freccia in maniera molto più semplice. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ritardo</guilabel
+></term>
+<listitem>
+<para
+>Questa opzione permette di impostare l'intervallo dopo il quale un tasto premuto inizia a generare dei codici di tastiera (keycode).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Frequenza</guilabel
+></term>
+<listitem>
+<para
+>Questa opzione permette di impostare la frequenza con cui vengono generati i codici di tastiera (keycode) quando viene premuto un tasto.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Digita alcuni caratteri nella casella di testo <guilabel
+>Area di prova</guilabel
+> per verificare le impostazioni.</para>
+<para
+>Molti computer non dispongono di questa opzione.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>La scheda Mappature</title>
+<para
+>Questa scheda ti permetta di scegliere la mappatura di tastiera che vuoi usare, quale indicatore desideri nel vassoio di sistema, come vuoi cambiare modello e quali scorciatoie di tastiera userai.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indicatore di mappatura</guilabel
+></term>
+<listitem>
+<para
+>Puoi attivare <guilabel
+>Mostra indicatore di mappatura</guilabel
+> che mostrerà il nome ISO della lingua nel vassoio di sistema. Puoi scegliere di mostrare l'indicatore anche se è attiva una sola mappatura e puoi mostrare la bandiera della lingua invece del solo codice ISO marcando <guilabel
+>Mostra bandiera</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Politica di scambio</guilabel
+></term>
+<listitem>
+<para
+>Se selezioni <guilabel
+>Applicazione</guilabel
+> o <guilabel
+>Finestra</guilabel
+> come politica di scambio, la modifica della mappatura di tastiera avrà affetto solo sulla applicazione o finestra in uso rispettivamente. <guilabel
+>Globale</guilabel
+> modificherà la mappa di tastiera globalmente e <guilabel
+>Desktop</guilabel
+> la cambierà solo per nel desktop virtuale in uso. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Scorciatoia per cambiare mappatura</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Scorciatoie principali</guilabel
+> è una scorciatoia per cambiare le mappatura gestita da X.org. <guilabel
+>Scorciatoie di terzo livello</guilabel
+> è una scorciatoia per passare a un terzo livello della mappatura attiva (se ne ha uno), gestita da X.org. Permette scorciatoie di soli tasti modificatori. <guilabel
+>Scorciatoia alternativa</guilabel
+> è una scorciatoia per cambiare le mappature gestita da &plasma;. Non supporta le scorciatoie di soli tasti modificatori e inoltre potrebbe non funzionare in alcune situazioni (&eg; se c'è una finestra a comparsa o un salvaschermo). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Configura le mappature</guilabel
+></term>
+<listitem>
+<para
+>Se selezioni <guilabel
+>Configura le mappature</guilabel
+> potrai aggiungere e rimuovere mappature di tastiera per passare dall'una all'altra quando ne hai bisogno. </para>
+<para
+>Facendo clic su <guilabel
+>Aggiungi</guilabel
+> si aprirà una finestra di dialogo dove potrai scegliere la nuova mappatura di tastiera che vuoi aggiungere, così come la sua variante, l'etichetta e la scorciatoia di tastiera. </para>
+<para
+>L'elenco delle mappature a destra dell'etichetta <guilabel
+>Mappatura</guilabel
+> nella finestra di dialogo <guilabel
+>Aggiungi mappatura</guilabel
+> può essere ristretto usando l'elenco a comparsa <guilabel
+>Limita la selezione per lingua</guilabel
+>. Puoi fare clic sul pulsante <guibutton
+>Anteprima</guibutton
+> per vedere, in una finestra separata, l'anteprima della mappatura scelta. </para>
+<para
+>Puoi riordinare le mappature con i tasti freccia in alto/freccia in basso, quella più in cima è quella predefinita. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mappature di riserva</guilabel
+></term>
+<listitem>
+<para
+>Questa opzione può essere abilitata solo se hai configurato più di due mappature.</para>
+<para
+>Le mappature di riserva consentono di passare facilmente da una mappatura all'altra in un gruppo di mappature, tenendo al tempo stesso altre mappature a portata di mano. Ad esempio, potresti aver bisogno di usare tre lingue: inglese, ucraino e tedesco, ma le prime due usate più spesso mentre la terza solo occasionalmente. In questo caso puoi configurare le prime due come mappature principali (impostando <guilabel
+>Conto delle mappature principali</guilabel
+> a 2) e quella tedesca come riserva - quando commuterai con la tastiera ed il tasto sinistro del mouse, lo scambio sarà effettuato solo tra le mappature principali, ma potrai sempre scegliere la terza mappatura tramite il menu contestuale.</para>
+<para
+>Quando una mappatura di riserva viene scelta, essa sostituisce l'ultima mappatura principale (questo succede per motivi tecnici, normalmente le scorciatoie globali funzionano sulla base della prima mappatura attiva, quindi è più affidabile preservare la prima mappatura quando si vogliono attivare le mappature di riserva).</para>
+<!-- context menu ?-->
+<para
+>Dato che X.org consente di cambiare tra quattro mappature, la funzione <quote
+>mappature di riserva</quote
+> consente anche di superare questo limite: gli utenti possono avere fino a quattro mappature principali (gestite da X.org) e inoltre quattro ulteriori mappature di riserve (gestite dal selettore di mappature). In questo modo l'utente può opportunamente lavorare con al più otto mappature )anche se il limite di quattro mappature di riserva potrà essere alzato in futuro). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>La scheda Avanzate</title>
+<para
+>In questa scheda, se marchi <guilabel
+>Configura le opzioni della tastiera</guilabel
+>, potrai impostare alcune opzioni che riguardano le impostazioni di alcuni tasti speciali. Puoi espandere queste opzioni facendo clic sul simbolo &gt; a sinistra dell'opzione, e successivamente selezionando l'impostazione desiderata nella lista che comparirà.</para>
+<para
+>Questa è una &GUI; che aiuta a creare mappature di tastiera personalizzate per &X11; usando XKB. </para>
+<para
+>Per maggiori informazioni fai riferimento alla sezione <emphasis
+>Links</emphasis
+> nella <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>pagina di XKeyboardConfig su freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

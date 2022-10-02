@@ -1,0 +1,1344 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011.
+# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2012, 2013, 2020, 2021, 2022.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2022-04-04 09:59+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Amplasare"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Pictograme"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Filtru"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Înapoi"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "Fișiere:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Arată tot"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Arată cele potrivite"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Ascunde cele potrivite"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Șablon denumiri:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Tipuri de fișier:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Tip fișier"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Descriere"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Selectează tot"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Deselectează tot"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Buton panou:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Folosește pictogramă personalizată"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Alege…"
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Șterge pictograma"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Aranjament:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "De sus în jos, de la stânga la dreapta"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "De sus în jos, de la dreapta la stânga"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "De sus în jos, de la stânga la dreapta"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Aliniază la stânga"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Aliniază la dreapta"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Blochează în loc"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Sortare:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Manuală"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Denumire"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Dimensiune"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Tip"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Dată"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Descrescător"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Întâi dosarele"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Regim vizualizare:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Listă"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr "Grilă"
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Dimensiune pictograme:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, kde-format
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Mică"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, kde-format
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Mare"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Lățime etichete:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Îngustă"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Medie"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Lată"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Linii textuale:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr "La planarea peste pictograme:"
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr "Arată indicii"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr "Arată marcatori de selecție"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, kde-format
+msgid "Show folder preview popups"
+msgstr "Arată bule cu previzualizări de dosare"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, kde-format
+msgid "Rename:"
+msgstr "Redenumire:"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr "Redenumește în linie apăsând pe textul elementului ales"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, kde-format
+msgid "Previews:"
+msgstr "Previzualizări:"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, kde-format
+msgid "Show preview thumbnails"
+msgstr "Arată miniaturi cu previzualizări"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "Configurează extensii de previzualizare…"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Arată:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Dosarul biroului"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "Fișiere legate de activitatea curentă"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Element în panoul Locuri:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Amplasare personalizată:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "Tastează o cale sau URL…"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Titlu:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Niciunul"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Implicit"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Cale completă"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Titlu personalizat"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "Introdu titlu personalizat…"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Rotește"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Deschide extern"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Ascunde fundalul"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Arată fundalul"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Elimină"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Extensii de previzualizare"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "Bine"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Renunță"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Configurează birou și tapet…"
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Alege dosarul"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "&Reîmprospătează biroul"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "&Reîmprospătează vizualizarea"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "Gol&ește gunoiul"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Restabilește"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Deschide"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "Li&pește"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Proprietăți"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Sortează după"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Nesortat"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Denumire"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Dimensiune"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Tip"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Dată"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Descrescător"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Întâi dosarele"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Dimensiune pictograme"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Minusculă"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Foarte mică"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Mică"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Medie-mică"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Medie"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Mare"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Imensă"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange In"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Aranjează în"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "De sus în jos, de la stânga la dreapta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "De sus în jos, de la dreapta la stânga"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "De sus în jos, de la stânga la dreapta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Aliniază"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Stânga"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Dreapta"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Arată previzualizări"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Blocat"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Rânduri"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Coloane"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Rânduri"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Coloane"
+
+#~ msgid "Features:"
+#~ msgstr "Caracteristici:"
+
+#~ msgid "Search…"
+#~ msgstr "Caută…"
+
+#~ msgid "&Create Folder"
+#~ msgstr "&Creează dosar"
+
+#, fuzzy
+#~| msgid "Show the Desktop folder"
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Afișează dosarul biroului"
+
+#~ msgid "Show All Files"
+#~ msgstr "Arată toate fișierele"
+
+#~ msgid "Size:"
+#~ msgstr "Dimensiune:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "Dosar de birou"
+
+#, fuzzy
+#~| msgid "Arrange In:"
+#~ msgid "Arrange in"
+#~ msgstr "Aranjează în:"
+
+#, fuzzy
+#~| msgid "Sort By"
+#~ msgid "Sort by"
+#~ msgstr "Sortează după"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Title of the page that lets the user choose which location should the "
+#~| "folderview show"
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "Amplasare"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Afișează dosarul biroului"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Specifică un dosar:"
+
+#~ msgid "&Reload"
+#~ msgstr "&Reîncarcă"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Mută la gunoi"
+
+#~ msgid "&Delete"
+#~ msgstr "Ș&terge"
+
+#~ msgid "Align:"
+#~ msgstr "Aliniază:"
+
+#~ msgid "Sorting"
+#~ msgstr "Sortare"
+
+#~ msgid "Title"
+#~ msgstr "Titlu"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Arată dosarul original"
+
+#, fuzzy
+#~| msgid "Show All Files"
+#~ msgid "Show Original File"
+#~ msgstr "Arată toate fișierele"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "Gol&ește coșul de gunoi"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "În&semnează această pagină"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "În&semnează această locație"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "În&semnează acest dosar"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "În&semnează această legătură"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "În&semnează acest fișier"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Copiere la"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Mutare la"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Dosar de birou"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Dosar de birou"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Răsfoire..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Copiază aici"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Mută aici"
+
+#~ msgid "Share"
+#~ msgstr "Partajare"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "Pictograme"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Nu puteți pune un dosar în el însuși"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Șablon denumire:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Mută aici"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Copiază aici"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Creează legătură aici"
+
+#~ msgid "C&ancel"
+#~ msgstr "R&enunță"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Sta&bilește ca fundal"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Creează dosar"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Introdu denumire diferită"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "Denumirea „%1” începe cu un punct, de aceea dosarul va fi ascuns implicit."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Creați dosar ascuns?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Dosar de birou"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Dosar de birou"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Introduceți numele dosarului:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Dosar de birou"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Lipește un fișier"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "Lipește conținutul clipboard-ului..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "Li&pește"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr ""
+#~ "Restabilește acest fișier sau dosar înapoi la locația de unde a fost "
+#~ "șters inițial"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Deschide o nouă fereastră a gestionarului de fișiere afișând ținta "
+#~ "acestei legături în dosarul-părinte al său."
+
+#~ msgid "Behavior"
+#~ msgstr "Comportament"
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "Clic pentru vizualizarea dosarului:"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Pictograme"
+
+#~ msgid "Network is not reachable"
+#~ msgstr "Rețeaua nu este disponibilă"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Aliniază la grilă"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Blochează pe loc"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "1 dosar"
+#~ msgstr[1] "%1 dosare"
+#~ msgstr[2] "%1 de dosare"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 fișier"
+#~ msgstr[1] "%1 fișiere"
+#~ msgstr[2] "%1 de fișiere"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "1 fișier."
+#~ msgstr[1] "%1 fișiere."
+#~ msgstr[2] "%1 de fișiere."
+
+#~ msgid "Sort By:"
+#~ msgstr "Sortează după:"
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "Utilizați acest control pentru a alege criteriul după care vor fi sortate "
+#~ "pictogramele în vizualizare."
+
+#~ msgid "Descending:"
+#~ msgstr "Descrescător:"
+
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Bifați acestă opțiune dacă doriți ca dosarele să aibă prioritate la "
+#~ "sortare. Când această opțiune este debifată, dosarele vor fi tratate ca "
+#~ "fișiere obișnuite în ceea ce privește sortarea."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Utilizați acest control pentru a alege dacă pictogramele să fie aranjate "
+#~ "orizontal (în rânduri) sau vertical (în coloane)."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Utilizați acest control pentru a alege dacă pictogramele să fie aliniate "
+#~ "la marginea stângă sau la marginea dreaptă a ecranului."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Bifați această opțiune dacă doriți ca pictogramele să nu poată fi mutate "
+#~ "în vizualizare.\n"
+#~ "\n"
+#~ "Această opțiune este utilă dacă doriți să evitați mutarea accidentală a "
+#~ "pictogramelor în timpul lucrului cu acestea."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Aliniază la grilă:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Bifați acestă opțiune dacă doriți ca pictogramele să fie afișate într-o "
+#~ "grilă.\n"
+#~ "\n"
+#~ "Când această opțiune este bifată, pictogramele se vor agăța de cea mai "
+#~ "apropiată celulă a grilei atunci când le mutați în vizualizare."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr ""
+#~ "Utilizați acest glisor pentru a mări sau micșora dimensiunea "
+#~ "pictogramelor în vizualizare."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr ""
+#~ "Bifați această opțiune dacă doriți să vedeți previzualizări ale "
+#~ "conținutului fișierului în pictograme."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Apăsați acest buton pentru a alege pentru ce tipuri de fișiere vor fi "
+#~ "afișate previzualizări."
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Bifați acestă opțiune dacă doriți ca previzualizările dosarelor să fie "
+#~ "afișate la clic. Când această opțiune este debifată, previzualizările "
+#~ "dosarelor vor fi afișate automat atunci când mausul se va afla deasupra "
+#~ "vreunui dosar."
+
+#~ msgid "Icon Text"
+#~ msgstr "Text pictogramă"
+
+#~ msgid "Lines:"
+#~ msgstr "Linii:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "Utilizați acest control pentru a alege câte linii de text vor fi afișate "
+#~ "sub pictograme."
+
+#~ msgid "1 line"
+#~ msgstr "1 linie"
+
+#~ msgid "Color:"
+#~ msgstr "Culoare:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "Apăsați acest buton pentru a alege culoarea utilizată pentru etichetele "
+#~ "textuale în vizualizare."
+
+#~ msgid "Shadows:"
+#~ msgstr "Umbre:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Bifați această opțiune dacă doriți ca etichetele textuale "
+#~ "să lase o umbră pe fundal.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Umbrele fac textul mai ușor de citit scoțându-l mai mult în fața "
+#~ "fundalului.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Rețineți că utilizând culori întunecate pentru text, această "
+#~ "opțiune va genera o aură luminoasă în jurul textului, în loc ca acesta să "
+#~ "lase o umbră.</i></p></body></html>"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr ""
+#~ "Bifați această opțiune dacă doriți ca pictogramele să fie sortate în "
+#~ "ordine descrescătoare."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Dacă ați selectat "
+#~ "\"Afișează fișierele ce se potrivesc\" sau \"Ascunde fișierele ce se "
+#~ "potrivesc\", doar fișierele care satisfac AMBELE condiții vor fi afișate "
+#~ "sau respectiv ascunse.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">De exemplu, dacă aveți "
+#~ "\"*\" ca tipar, dar nu ați ales nimic în tipul MIME, nu va fi afișat nici "
+#~ "un fișier.</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Rețineți că dacă ați selectat \"Afișează fișierele ce se potrivesc\" sau "
+#~ "\"Ascunde fișierele ce se potrivesc\",\n"
+#~ "doar fișierele care satisfac AMBELE condiții vor fi afișate sau respectiv "
+#~ "ascunse.\n"
+#~ "De exemplu, dacă aveți \"*\" ca tipar, dar nu ați ales nimic în tipul "
+#~ "MIME, nu va fi afișat nici un fișier."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Nu vedeți niciun fișier?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "Listă de extensii separate prin spațiu, de ex. *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Listă de extensii separate prin spațiu, de ex. *.txt *.od* pentru a afișa "
+#~ "numai fișierele textuale și Office"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Filtru mostră:"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:400;\">Title:</span></"
+#~ "p></body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:400;\">Titlu:</span></"
+#~ "p></body></html>"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "Bifați tipurile de fișier pentru care doriți previzualizări:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "Acest dosar este gol."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Interpret:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Album:"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 MPixeli"
+
+#~ msgid "Camera:"
+#~ msgstr "Aparat foto:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "35 mm echivalent: %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Distanță focală:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Timp de expunere:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 s"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "Viteză ISO:"
+
+#~ msgid "Time:"
+#~ msgstr "Oră:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "1 pagină"
+#~ msgstr[1] "%1 pagini"
+#~ msgstr[2] "%1 de pagini"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "1 cuvânt"
+#~ msgstr[1] "%1 cuvinte"
+#~ msgstr[2] "%1 de cuvinte"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "1 element"
+#~ msgstr[1] "%1 elemente"
+#~ msgstr[2] "%1 de elemente"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "De la stânga la dreapta, de sus în jos"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "De la dreapta la stânga, de sus în jos"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Afișaj"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "După dimensiune"
+
+#~ msgctxt "Sort icons"
+#~ msgid "Ascending"
+#~ msgstr "Crescător"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Utilizați acest control pentru a alege dacă doriți ca pictogramele să fie "
+#~ "aranjate de sus în jos începând cu partea stângă a vizualizării, sau "
+#~ "aranjate de la stânga la dreapta începând cu partea de sus a vizualizării."
+
+#~ msgid "Header"
+#~ msgstr "Antet"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "Acest câmp de editare conține eticheta afișată la vârful miniaplicației.\n"
+#~ "\n"
+#~ "Implicit, aceasta conține denumirea locului afișat în miniaplicație, dar "
+#~ "dacă doriți să aveți o etichetă personalizată, o puteți introduce aici."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Header</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Antet</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icons</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Pictograme</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icon Text</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Text pictogramă</span></p></body></html>"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Opțiuni avansate"
+
+#~ msgid "Text Settings"
+#~ msgstr "Configurări text"
+
+#~ msgid "Text color:"
+#~ msgstr "Culoarea textului:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "Număr de linii:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "Afișează umbrele textelor"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "Aliniază pictogramele în grilă"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "Blochează pictogramele pe loc"
+
+#~ msgid "Add Panel"
+#~ msgstr "Adaugă panou"
+
+#~ msgid "Run Command..."
+#~ msgstr "Executare comandă..."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Blochează ecranul"
+
+#~ msgid "Leave..."
+#~ msgstr "Pleacă..."
+
+#~ msgid ""
+#~ "<html><body><b>Note: The Desktop folder currently does not exist.<br />If "
+#~ "you select this option and click OK it will be created for you.</b></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><body><b>Notă: Dosarul Birou nu există.<br />Dacă alegeți acestă "
+#~ "opțiune și apăsați OK, acesta va fi creat pentru dumneavoastră.</b></"
+#~ "body></html>"

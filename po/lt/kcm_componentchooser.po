@@ -1,0 +1,372 @@
+# translation of kcmcomponentchooser.po to Lithuanian
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004-2009.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2021-06-10 12:30+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Numatytoji saityno naršyklė"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Kita…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Pasirinkti numatytąją naršyklę"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Pasirinkti numatytąją pašto kliento programą"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Pasirinkti numatytąją failų tvarkytuvę"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select default file manager"
+msgid "Select default map"
+msgstr "Pasirinkti numatytąją failų tvarkytuvę"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select default terminal emulator"
+msgid "Select default dialer application"
+msgstr "Pasirinkti numatytąjį terminalo emuliatorių"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Pasirinkti numatytąjį terminalo emuliatorių"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Saityno naršyklė:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Failų tvarkytuvė:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "El. pašto kliento programa:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Terminalo emuliatorius:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ričardas Čepas, Donatas Glodenis, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rch@richard.eu.org, dgvirtual@akl.lt, <>"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Numatytosios programos"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Nežinoma"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentų parinkiklis"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Pasirinkite iš sąrašo žemiau, kuris komponentas turėtų būti pagal "
+#~ "numatymą naudojamas %1 tarnybai."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs pakeitėte savo pasirinktą numatytąjį komponentą. Ar norite "
+#~ "įrašyti pakeitimą?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Nėra prieinamo aprašo"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Čia galite pakeisti komponentų programą. Komponentai yra programos, "
+#~ "tokios, kaip terminalo emuliatorius, tekstų redaktorius ir el. pašto "
+#~ "kliento programa, kurios atlieka pagrindines užduotis. Skirtingos KDE "
+#~ "programos kartais naudoja pulto emuliatorių, siunčia paštą ar rodo kokį "
+#~ "nors tekstą. Siekiant išlaikyti nuoseklumą, šios programos visuomet "
+#~ "iškviečia tuos pačius komponentus. Čia galite nurodyti, kokios programos "
+#~ "atlieka šių komponentų funkcijas."
+
+#~ msgid "Default Component"
+#~ msgstr "Numatytasis komponentas"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Šiame sąraše matote konfigūruojamus komponentų tipus. Spustelėkite ant "
+#~ "komponento, kurį norite konfigūruoti.</p>\n"
+#~ "<p>Šiame dialoge galite pakeisti numatytuosius KDE komponentus. "
+#~ "Komponentai yra programos, tokios kaip terminalo emuliatorius, tekstų "
+#~ "redaktorius ir el. pašto kliento programa, kurios atlieka pagrindines "
+#~ "užduotis. Skirtingos KDE programos kartais naudoja pulto emuliatorių, "
+#~ "siunčia paštą ar rodo kokį nors tekstą. Siekiant išlaikyti nuoseklumą, "
+#~ "šios programos visuomet iškviečia tuos pačius komponentus. Čia galite "
+#~ "nurodyti, kokios programos atlieka šių komponentų funkcijas.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Atverti <b>http</b> ir <b>https</b> URL adresus</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "programoje atsižvelgiant į URL turinį"
+
+#~ msgid "in the following application:"
+#~ msgstr "šioje programoje:"
+
+#~ msgid "with the following command:"
+#~ msgstr "naudojant šią komandą:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Pasirinkite pageidaujamą saityno naršyklės programą:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail yra standartinė Plasma darbalaukio pašto programa."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Naudoti KMail kaip pageidaujamą pašto kliento programą"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Pažymėkite šią parinktį jei norite naudoti kitą pašto programą."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Pasirinktini pakaitos simboliai: <ul> <li>%t: Gavėjo adresas</li> <li>%s: "
+#~ "Tema</li> <li>%c: Kopija (CC)</li> <li>%b: Slapta kopija (BCC)</li> <li>"
+#~ "%B: Šablono laiško tekstas</li> <li>%A: Priedas </li> <li>%u: Pilnas "
+#~ "mailto: URL </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Norėdami pasirinkti pageidaujamą el. pašto kliento programą, paspauskite "
+#~ "šį mygtuką. Turėkite omenyje, kad pasirinktas failas turi būti "
+#~ "vykdomasis, kitaip jis nebus priimtas.<br/> Jūs taip pat galite naudoti "
+#~ "keletą pakaitos simbolių, kurie, iškviečiant pašto programą, bus pakeisti "
+#~ "konkrečiomis reikšmėmis: <ul> <li>%t: Gavėjo adresas</li> <li>%s: Tema</"
+#~ "li> <li>%c: Kopija (CC)</li> <li>%b: Slapta kopija (BCC)</li> <li>%B: "
+#~ "Šablono laiško tekstas</li> <li>%A: Priedas </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Spustelėkite čia, norėdami ieškoti pašto programos failo."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktyvuokite šią parinktį, jei norite, kad pasirinkta el. pašto kliento "
+#~ "programa būtų paleista terminale (pvz., <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Paleisti terminale"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Naršyti katalogus naudojant šią failų tvarkytuvę:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Kita: spustelėkite „Pridėti...“ čia rodomame dialoge:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Naudoti &Konsole kaip terminalo programą"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Naudoti kitą &terminalo programą:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Spustelėkite šį mygtuką, norėdami pasirinkti savo mėgstamą terminalo "
+#~ "kliento programą. Atkreipkite dėmesį, kad failas, kurį pasirinksite, turi "
+#~ "būti vykdomasis, kitaip jis nebus priimtas. <br/> Taip pat atkreipkite "
+#~ "dėmesį, kad kai kurios programos, naudojančios Terminalo emuliatorių "
+#~ "neveiks, jei nurodysite komandų eilutės argumentus (pvz., konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Spustelėkite čia, norėdami naršyti terminalo programos."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Liko %1 sekundė:"
+#~ msgstr[1] "Liko %1 sekundės:"
+#~ msgstr[2] "Liko %1 sekundžių:"
+#~ msgstr[3] "Liko %1 sekundė:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "Naujoji langų tvarkyklė bus naudojama paleidus KDE iš naujo."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Langų tvarkyklės keitimas"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Nauja langų tvarkyklė veikia.\n"
+#~ "Vis tiek rekomenduojama paleisti KDE sesiją iš naujo, būsite tikri, kad "
+#~ "visos programos prisitaikė prie šio pasikeitimo."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Langų tvarkyklė pakeista"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Dabar veikianti langų tvarkytuvė bus pakeista čia konfigūruojama "
+#~ "tvarkytuve."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Konfigūruoti langų tvarkyklės pakeitimą"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Priimti pakeitimą"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Grįžti prie ankstesnės"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Nurodyta langų tvarkyklė paleidžiama. \n"
+#~ "Prašome patikrinti, ar ji buvo teisingai paleista ir patvirtinti "
+#~ "pakeitimą.\n"
+#~ "Paleista langų tvarkyklė bus automatiškai pakeista anksčiau buvusiąja po "
+#~ "20 sekundžių."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Veikianti langų tvarkyklė buvo pakeista numatytąja KDE langų tvarkykle "
+#~ "KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Naujos langų tvarkyklės paleisti nepavyko.\n"
+#~ "Veikianti langų tvarkyklė buvo pakeista į numatytąją KDE langų tvarkyklę "
+#~ "KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Nepavyko paleisti konfigūravimo įrankio"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Naudoti numatytą KDE langų tvarkyklę (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Naudoti kitą &langų tvarkyklę:"
+
+#~ msgid "Configure"
+#~ msgstr "Konfigūruoti"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Pastaba: daugelis langų tvarkytuvių turi savo konfigūravimo įrankius ir "
+#~ "nekreipia dėmesio į KDE nuostatas."

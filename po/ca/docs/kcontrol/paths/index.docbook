@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Ubicacions</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>5 de setembre de 2021</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>escriptori</keyword>
+<keyword
+>camins</keyword>
+<keyword
+>ubicació</keyword>
+<keyword
+>arranjament del sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest, és un mòdul per a configurar els camins essencials per a l'escriptori &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configuració d'alguns dels camins del &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configuració d'alguns dels camins del &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Les unitats que es muten automàticament a l'inici de la sessió, no es poden utilitzar com a camins. Aquestes unitats es revertiran als valors predeterminats durant el reinici del &plasma;. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Camí de l'escriptori:</guilabel
+></term>
+<listitem
+><para
+>La carpeta «Desktop» conté tots els fitxers que veieu en un giny <guilabel
+>Vista de carpeta</guilabel
+> a l'escriptori. El camí predeterminat sol ser <filename class="directory"
+>~/Desktop</filename
+>, però podeu canviar aquí la ubicació d'aquesta carpeta. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Camí dels documents:</guilabel
+></term>
+<listitem
+><para
+>Aquesta carpeta s'utilitzarà de manera predeterminada per a carregar o desar els documents.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Camí de les baixades:</guilabel
+></term>
+<listitem
+><para
+>Aquesta carpeta s'utilitzarà de manera predeterminada per a desar els elements baixats.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Camí dels vídeos:</guilabel
+></term>
+<listitem
+><para
+>Aquesta carpeta s'utilitzarà de manera predeterminada per a carregar o desar les pel·lícules.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Camí de les imatges:</guilabel
+></term>
+<listitem
+><para
+>Aquesta carpeta s'utilitzarà de manera predeterminada per a carregar o desar les imatges.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Camí de la música:</guilabel
+></term>
+<listitem
+><para
+>Aquesta carpeta s'utilitzarà de manera predeterminada per a carregar o desar la música.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Si canvieu un camí d'accés i feu clic a <guibutton
+>Aplica</guibutton
+>, apareixerà un diàleg on es pot optar per moure el contingut a la carpeta nova o utilitzar la carpeta nova sense moure els fitxers.</para>
+
+</article>

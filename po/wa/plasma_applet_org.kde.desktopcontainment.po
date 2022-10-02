@@ -1,0 +1,1411 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@base.be>, 2008, 2009, 2010, 2011.
+# Jean Cayron <jean.cayron@base.be>, 2008, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2012-11-02 23:29+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose which location should the "
+#| "folderview show"
+#| msgid "Location"
+msgid "Location"
+msgstr "Eplaeçmint"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Imådjetes"
+
+#: package/contents/config/config.qml:30
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose how to filter the folderview "
+#| "contents"
+#| msgid "Filter"
+msgid "Filter"
+msgstr "Passete"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "Files:"
+msgstr "Sôres des fitchîs :"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgid "Show all"
+msgstr "Mostrer ene plaece :"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show Files Matching"
+msgid "Show matching"
+msgstr "Mostrer les fitchîs ki corespondèt"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Hide Files Matching"
+msgid "Hide matching"
+msgstr "Catchî les fitchîs ki corespondèt"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Patron do no do fitchî :"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Sôres des fitchîs :"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "File type"
+msgstr "Sôres des fitchîs :"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Tchoezi totafwait"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Distchoezi totafwait"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Use a custom icon"
+msgstr "Tite da vosse :"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@title:menu in Copy To or Move To submenu"
+#| msgid "Browse..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Foyter..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Sort Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Arindjî les imådjetes"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgid "Arrangement:"
+msgstr "Arindjmint :"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "Do dzeu viè l' dizo, di hintche a droete"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "Do dzeu viè l' dizo, di droete a hintche"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Do dzeu viè l' dizo, di hintche a droete"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Aroyî sol grile :"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Aroyî sol grile :"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, fuzzy, kde-format
+#| msgid "Lock in place:"
+msgid "Lock in place"
+msgstr "Eclawer so plaece :"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sorting:"
+msgstr "Relére :"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Sol no"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Grandeu :"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Sol sôre"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Sol date"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Discrexhant"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Ridants aprume"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgid "Icon size:"
+msgstr "Grandeu des imådjetes:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Pitites"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Grandes"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, fuzzy, kde-format
+#| msgid "Label:"
+msgid "Label width:"
+msgstr "Etikete:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, fuzzy, kde-format
+#| msgid " lines"
+msgid "Text lines:"
+msgstr " royes"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Show selection markers"
+msgstr "Tchoezi totafwait"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show folder preview popups"
+msgstr "Prévoeyaedjes :"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "&Rilomer"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Previews:"
+msgstr "Prévoeyaedjes :"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show preview thumbnails"
+msgstr "Prévoeyaedjes :"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "More Preview Options..."
+msgid "Configure Preview Plugins…"
+msgstr "Pus di tchuzes pol prévoeyaedje..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "Show the Desktop folder"
+msgid "Desktop folder"
+msgstr "Mostrer l' ridant do scribanne"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, fuzzy, kde-format
+#| msgid "Show the files related to the current activity"
+msgid "Files linked to the current activity"
+msgstr "Mostrer les fitchîs aloyîs a l' activité do moumint"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom location:"
+msgstr "Tite da vosse :"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, fuzzy, kde-format
+#| msgid "Type a path or a URL here"
+msgid "Type path or URL…"
+msgstr "Tapez chal on tchmin ou ene URL"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, fuzzy, kde-format
+#| msgctxt "Music"
+#| msgid "Title:"
+msgid "Title:"
+msgstr "Tite :"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Nouk"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Prémetou"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "Full path"
+msgid "Full path"
+msgstr "Tot l' tchimin"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom title"
+msgstr "Tite da vosse :"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Enter a customized title"
+msgid "Enter custom title…"
+msgstr "Dinez on tite tchoezi par vos"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Preview Plugins"
+msgstr "Prévoeyaedjes :"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "&Refresh Desktop"
+msgid "Configure Desktop and Wallpaper…"
+msgstr "&Rafrister li scribanne"
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Select Folder"
+msgstr "Tchoezi totafwait"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "&Rafrister li scribanne"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "&Rafrister l' vuwe"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "&Vudî l' batch"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "&Rapexhî"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Drovi"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&Aclaper"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Prôpietés"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort By"
+msgstr "Relére :"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "Sort Icons"
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Nén relî"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Sol no"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Grandeu :"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Sol sôre"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Sol date"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Discrexhant"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Ridants aprume"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgid "Icon Size"
+msgstr "Grandeu des imådjetes:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Pitites"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Pitites"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Grandes"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange icons:"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Arindjî les imådjetes:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "Do dzeu viè l' dizo, di hintche a droete"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "Do dzeu viè l' dizo, di droete a hintche"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Do dzeu viè l' dizo, di hintche a droete"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgid "Align"
+msgstr "Aroyî sol grile :"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show Previews"
+msgstr "Prévoeyaedjes :"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "On a camera"
+#~| msgid "Aperture:"
+#~ msgid "Features:"
+#~ msgstr "Drovaedje del båkete :"
+
+#, fuzzy
+#~| msgid "Search file type"
+#~ msgid "Search…"
+#~ msgstr "Trover l' sôre do fitchî"
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "Fé on r&idant..."
+
+#, fuzzy
+#~| msgid "Show the Desktop folder"
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Mostrer l' ridant do scribanne"
+
+#~ msgid "Show All Files"
+#~ msgstr "Mostrer tos les fitchîs"
+
+#~ msgid "Size:"
+#~ msgstr "Grandeu :"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "Ridant do scribanne"
+
+#, fuzzy
+#~| msgid "Arrange icons:"
+#~ msgid "Arrange in"
+#~ msgstr "Arindjî les imådjetes:"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sort by"
+#~ msgstr "Relére :"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Title of the page that lets the user choose which location should the "
+#~| "folderview show"
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "Eplaeçmint"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Mostrer l' ridant do scribanne"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Sipecifyî on ridant :"
+
+#~ msgid "&Reload"
+#~ msgstr "&Ritcherdjî"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Mete e batch"
+
+#~ msgid "&Delete"
+#~ msgstr "&Disfacer"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgid "Align:"
+#~ msgstr "Aroyî sol grile :"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sorting"
+#~ msgstr "Relére :"
+
+#~ msgid "Title"
+#~ msgstr "Tite"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Mostrer l' ridant d' oridjinne"
+
+#, fuzzy
+#~| msgid "Show All Files"
+#~ msgid "Show Original File"
+#~ msgstr "Mostrer tos les fitchîs"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&Vudî l' batch"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "Fé ene &rimåke po ci pådje ci"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "Fé ene &rimåke po ci eplaeçmint ci"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "Fé ene &rimåke po ç' ridant ci"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "Fé ene &rimåke po ç' hårdêye ci"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "Fé ene &rimåke po ç' fitchî ci"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Copyî viè"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Bodjî viè"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Ridant do scribanne"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Ridant do scribanne"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Foyter..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Copyî chal"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Bodjî chal"
+
+#~ msgid "Share"
+#~ msgstr "Pårtaedjî"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "Imådjetes"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Vos n' poloz nén bodjî on ridant so lu minme"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Patron do no do fitchî :"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Bodjî Chal"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Copyî Chal"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Loyî Chal"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Rinoncî"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Prinde come &tapisreye"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Ahiver on ridant"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Dinez èn ôte no"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "Li no \"%1\" atake avou on pont, d' abôrd li ridant srè prémetou catchî."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Ahiver on ridant catchî ?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Ridant do scribanne"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Ridant do scribanne"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Tapez li no do ridant :"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Ridant do scribanne"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Aclaper on fitchî"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "Aclaper çki gn a e presse-papî..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "&Aclaper"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr ""
+#~ "Rapexhe ci fitchî ou c' ridant, e l' rimetant al plaece k' il esteut "
+#~ "dvant d' esse disfacé"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Drove ene novele finiesse do manaedjeu des fitchîs mostrant l' såme di c' "
+#~ "loyén ci, dins s' ridant parint."
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "Clitchîz po vey li ridant :"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Imådjetes"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Aroyî sol grile"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Eclawer so plaece"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "1 ridant"
+#~ msgstr[1] "%1 ridants"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 fitchî"
+#~ msgstr[1] "%1 fitchîs"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "1 fitchî."
+#~ msgstr[1] "%1 fitchîs."
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "Siervoz vs di c' controle co po tchoezi les criteres k' ons arindjrè les "
+#~ "imådjetes el vuwe avou."
+
+#, fuzzy
+#~| msgctxt "Sort icons"
+#~| msgid "Descending"
+#~ msgid "Descending:"
+#~ msgstr "Discrexhant"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want folder previews to appear only when "
+#~| "clicked. When this option is turned off, folder previews will appear "
+#~| "automatically when the mouse hovers over a folder."
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze cial si vs voloz k' les prévoeyaedjes des ridants "
+#~ "aparexhexhe seulmint cwand i sont clitchîz.Si cisse tchuze la est "
+#~ "disclitcheye, les prévoeyaedjes des ridants aparexhèt otomaticmint cwand "
+#~ "l' sori passe pa dzeu on ridant."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Siervoz vs di c' controle co po tchoezi les criteres k' ons arindjrè les "
+#~ "imådjetes el vuwe avou."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Siervoz vs di c' controle co po tchoezi les criteres k' ons arindjrè les "
+#~ "imådjetes el vuwe avou."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze si vos n' voloz nén k' les imådjetes savexhe esse "
+#~ "bodjeyes el vuwe.\n"
+#~ "\n"
+#~ "Cisse tchuze ci est ahessåve si vos n' voloz nén bodjî ls imådjetes sins "
+#~ "l' voleur cwand vos vs endè siervoz."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Aroyî sol grile :"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze si vs voloz k' les imådjetes fuxhexhe arindjeyes "
+#~ "dins ene grile.\n"
+#~ "\n"
+#~ "Cwand cisse tchuze rerè clitcheye, les imådjetes s' iront mete djusse sol "
+#~ "cwåré del grile k' est a costé cwand vs les bodjroz el vuwe."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr ""
+#~ "Siervoz vs di c' boton d' acinseu pos agrandi ou raptiti l' grandeu des "
+#~ "imådjetes dins l' vuwe."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze si vs voloz vey ezès imådjetes des prévoeyaedjes di "
+#~ "ç' k' i gn a ezès fitchîs."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Clitchîz ç' boton po tchoezi po kénès sôres di fitchîs des prévoeyaedjes "
+#~ "seront mostrés."
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze cial si vs voloz k' les prévoeyaedjes des ridants "
+#~ "aparexhexhe seulmint cwand i sont clitchîz.Si cisse tchuze la est "
+#~ "disclitcheye, les prévoeyaedjes des ridants aparexhèt otomaticmint cwand "
+#~ "l' sori passe pa dzeu on ridant."
+
+#~ msgid "Icon Text"
+#~ msgstr "Tecse di l' imådjete"
+
+#~ msgid "Lines:"
+#~ msgstr "Royes :"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "Siervoz vs di c' controle ci po tchoezi cobén d' royes di tecse seront "
+#~ "mostrêye pa dzo ls imådjetes."
+
+#~ msgid "1 line"
+#~ msgstr "1 roye"
+
+#~ msgid "Color:"
+#~ msgstr "Coleur :"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "Clitchîz so c' boton ci po tchoezi l' coleut k' est eployeye po ls "
+#~ "etiketes di tecse el vuwe."
+
+#~ msgid "Shadows:"
+#~ msgstr "Ombions :"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Clitchîz cisse tchuze si vs voloz ki les etiketes di tecse "
+#~ "åyexhe èn ombion sol fond</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Les ombions aidèt a rinde les scrijhaedjes pus åjhey a lére e les "
+#~ "fjhant pus a pårt do fond.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Mins nerén, avou des foncêyès coleurs di tecse, ça frè on clair "
+#~ "halo, al plaece d' èn ombion.</i></p></body></html>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want to see previews of the file contents in "
+#~| "the icons."
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr ""
+#~ "Clitchîz cisse tchuze si vs voloz vey ezès imådjetes des prévoeyaedjes di "
+#~ "ç' k' i gn a ezès fitchîs."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Si vs avoz tchoezi "
+#~ "« Mostrer fitchîs corespondant » oudon-bén « Catchî fitchîs "
+#~ "corespondant », i gn årè k' les fitchîs ki corespondèt ås DEUS condicions "
+#~ "ki sront mostrêyes ou catcheyes, sorlon.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Si vs avoz, metans, "
+#~ "« * » come patron mins k' vos n' avoz rén d' tchoezi come sôre MIME, nou "
+#~ "fitchî n' serè mostré.</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Notez ki si vs avoz tchoezi « Mostrer fitchîs corespondant » oudon-bén "
+#~ "« Catchî fitchîs corespondant »,\n"
+#~ "i gn årè k' les fitchîs ki corespondèt ås DEUS condicions ki sront "
+#~ "mostrêyes ou catcheyes, sorlon.\n"
+#~ "Si vs avoz, metans, « * » come patron mins k' vos n' avoz rén d' tchoezi "
+#~ "come sôre MIME, nou fitchî n' serè mostré."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Èn savoz nén vey di fitchî?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr ""
+#~ "Djivêye di cawetes metowes a pårt pa des espåçes, metans *.txt* .od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Djivêye di cawetes metowes a pårt pa des espåces, metans *.txt* .od* po "
+#~ "n' mostrer ki des fitchîs d' burotike oudonbén tecse"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Passete so les patrons"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr ""
+#~ "Waitî les sôres des fitchîs ki voloz les prévoeyaedjes des imådjetes:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "Çou ridant est vude."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Årtisse :"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Albom :"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 MPicsels"
+
+#~ msgid "Camera:"
+#~ msgstr "Camera :"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "Ewal a 35 mm : %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Longueur focåle :"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Tins d' espozicion :"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 s"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "Raddisté ISO:"
+
+#~ msgid "Time:"
+#~ msgstr "Tins/eure :"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "1 pådje"
+#~ msgstr[1] "%1 pådjes"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "1 mot"
+#~ msgstr[1] "%1 mots"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "1 cayet"
+#~ msgstr[1] "%1 cayets"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "Di hintche a droete, do dzeu viè l' dizo"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "Di droete a hintche, do dzeu viè l' dizo"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Håynaedje"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "Sol grandeu"
+
+#~ msgctxt "Sort icons"
+#~ msgid "Ascending"
+#~ msgstr "Crexhant"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Siervoz vs di c' controle ci po tchoezi si vs voloz k' les imådjetes "
+#~ "soeyexhe arindjeyes del copete al valêye en atacant pal costé hintche del "
+#~ "vuwe oudonbén k' ele soeyexhe arindjeyes del hintche al droete en atacant "
+#~ "al copete del vuwe."
+
+#~ msgid "Header"
+#~ msgstr "Tiestire"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "I gn a dins c' tchamp d' aspougnaedje ci l' etikete k' est mostrêye al "
+#~ "copete di l' aplikete.\n"
+#~ "\n"
+#~ "Prémetou, i gn a ddins l' no del plaece k' est mostrêye e l' aplikete, "
+#~ "mins si vs inmez mia d' awè ene etikete da vosse, vos l' poloz stitchî "
+#~ "chal."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Header</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Tiestire</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icons</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Imådjetes</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icon Text</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Tecse des imådjete</span></p></body></html>"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Sipepieusès tchuzes"
+
+#~ msgid "Text Settings"
+#~ msgstr "Tchuzes do tecse"
+
+#~ msgid "Text color:"
+#~ msgstr "Coleur do tecse:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "Nombe di royes:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "Mostrer l' ombion do scrijhaedje"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "Aroyî sos ene grile"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "Aclawer ls imådjetes so plaece"
+
+#~ msgid "Advanced..."
+#~ msgstr "Sipepieus..."
+
+#~ msgid "Show a custom folder"
+#~ msgstr "Mostrer on ridant tchoezi par vos"
+
+#~ msgid "Select:"
+#~ msgstr "Tchoezi:"
+
+#~ msgid "Home"
+#~ msgstr "Måjhon"

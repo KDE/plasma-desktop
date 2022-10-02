@@ -1,0 +1,232 @@
+# translation of knetattach.po to Finnish
+# translation of knetattach.po to
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Lliehu
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2012, 2014.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"PO-Revision-Date: 2014-11-08 04:16+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:14+0000\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ilpo Kantonen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ilpo@iki.fi"
+
+#: knetattach.cpp:79
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"Anna tälle <i>webkansiolle</i> nimi, määritä palvelimen osoite, portti sekä "
+"käytettävän kansion sijainti palvelimella ja paina sitten <b>Tallenna ja "
+"yhdistä</b> -painiketta."
+
+#: knetattach.cpp:82
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Anna tälle <i>ssh-yhteydelle</i> nimi, määritä palvelimen osoite, portti "
+"sekä käytettävän verkkokansion sijainti ja paina sitten <b>Tallenna ja "
+"yhdistä</b> -painiketta."
+
+#: knetattach.cpp:86
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Anna tälle <i>FTP-yhteydelle</i> nimi, määritä palvelimen osoite sekä "
+"käytettävän verkkokansion sijainti ja paina sitten <b>Tallenna ja yhdistä</"
+"b> -painiketta."
+
+#: knetattach.cpp:90
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Anna tälle <i>Microsoft Windows -verkkolevylle</i> nimi, määritä palvelimen "
+"osoite sekä käytettävän verkkokansion sijainti ja paina sitten <b>Tallenna "
+"ja yhdistä</b> -painiketta."
+
+#: knetattach.cpp:208
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr "Palvelimeen ei saatu yhteyttä. Tarkista asetukset ja yritä uudelleen."
+
+#: knetattach.cpp:336
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "Tallenna ja &yhdistä"
+
+#: knetattach.cpp:338
+#, kde-format
+msgid "C&onnect"
+msgstr "&Yhdistä"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Opastettu verkkokansion lisäys"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Lisää verkkokansio"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "Valitse haluamasi verkkokansion tyyppi ja paina Seuraava-painiketta."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Viimeaikainen yhteys:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Webkansio (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Secure shell (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® -verkkolevy"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Verkkokansion tiedot"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Nimi:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Käyttäjä:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Pal&velin:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Portti:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Yhteyskäytäntö:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Kansio:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Merkistö:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "Luo kuvake tälle &etäkansiolle"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Käytä salausta"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "KDE:n opastettu verkkokansiotoiminto"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "© 2004 George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "Päätekijä ja ylläpitäjä"
+
+#~ msgid ""
+#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
+#~ "folder path to use and press the Next button."
+#~ msgstr ""
+#~ "Anna tälle <i>%1</i> nimi, määritä käytettävän palvelimen osoite, portti "
+#~ "sekä käytettävän verkkokansion sijainti ja paina sitten Seuraava-"
+#~ "painiketta."

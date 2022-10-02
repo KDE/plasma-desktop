@@ -1,0 +1,440 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron|gmail.com>, 2008.
+# Jean Cayron <jean.cayron@gmail.com>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2010-10-22 18:26+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Sicribanne"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Documints"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Aberwetaedjes"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Muzike"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Imådjes"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "Tchimin des fimes:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Tchimins</h1>\n"
+"Ci module ci vs permet d' tchoezi ewou ç' ki les fitchîs dvrént esse wårdés "
+"e sistinme di fitchîs so vosse sicribanne.\n"
+"Siervoz vs do \"Cwè ç' ki c' est d' ça\" (Maj+F1) pos awè d' l' aidance so "
+"des tchuzes di dnêyes."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Tchimin do scribanne"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"I gn a dins ç' ridant tos les fitchîs ki vs veyoz so vosse sicribanne. Vos "
+"ploz candjî l' eplaeçmint di ç' ridant si vos l' voloz eyet l' ådvins srè "
+"bodjî otomaticmint viè l' novele plaece, eto."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Tchimin des documints:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les documints."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Tchimin des aberwetaedjes:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "Çou ridant srè eployî (prémetou) po schaper vos cayets aberwetés."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "Tchimin des fimes:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les fimes."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Tchimin des imådjes:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Tchimin del muzike:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les muzikes."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Tchimin d' enondaedje otomatike:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "I gn a dins ç' ridant la les programes ou hårdêyes viè des programes "
+#~ "(rascourtis) ki vs voloz k' fuxhexhe enondés otomaticmint cwand KDE est "
+#~ "enondé. Vos ploz candjî l' eplaeçmint di ç' ridant si vs voloz eyet l' "
+#~ "ådvins srè bodjî otomaticmint viè l' novele plaece, eto."
+
+#~ msgid "Autostart"
+#~ msgstr "Enonde tot seu"
+
+#~ msgid "Movies"
+#~ msgstr "Fimes"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Li tchmin po «%1» a candjî;\n"
+#~ "Voloz vs kel fitchî soeye bodjî di «%2» viè «%3»?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Bodjî"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Èn nén bodjî"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Li tchmin po « %1 » a candjî;\n"
+#~ "Voloz vs bodjî l' ridant di « %2 » viè « %3 »?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Bodjî"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Èn nén bodjî"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "I fåt racertiner"
+
+#~ msgid "Misc Options"
+#~ msgstr "Totes sôres di tchuzes"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Drovi ridant dins on ôte &purnea"
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Mostrer el &dressêye di contecse des intrêyes «Disfacer» ki passèt hoûte "
+#~ "li batch"
+
+#~ msgid "Menu Editor"
+#~ msgstr "Aspougneu del dressêye"
+
+#~ msgid "Menu"
+#~ msgstr "Dressêye"
+
+#~ msgid "New..."
+#~ msgstr "Novea..."
+
+#~ msgid "Remove"
+#~ msgstr "Oister"
+
+#~ msgid "Move Up"
+#~ msgstr "Monter"
+
+#~ msgid "Move Down"
+#~ msgstr "Dischinde"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Dimande d' acertinaedje po"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Taper å batch"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Disfac&er"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Dujhance"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Prévoeyaedjes && Meta-dnêyes"
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Tchoezi protocoles"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Locås protocoles"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Protocole del daegntoele"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "Grandeu &macismom di fitchî:"
+
+#~ msgid " MB"
+#~ msgstr "Mb"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&Agrandi l' grandeu des prévoeyaedje sorlon ls imådjetes"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "&Eployî les prévoeyaedje ravalés ezès fitchîs"
+
+#~ msgid "Sound Files"
+#~ msgstr "Fitchîs son"
+
+#~ msgid "&Left button:"
+#~ msgstr "Boton &hintche"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Boton &droet"
+
+#~ msgid "No Action"
+#~ msgstr "Pont d' accion"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Dressêye djivêye des purneas"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Dressêye sicribannes"
+
+#~ msgid "Application Menu"
+#~ msgstr "Dressêye programes"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Dressêyes rimåkes"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Dressêye da vosse 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Dressêye da vosse 2"
+
+#~ msgid "General"
+#~ msgstr "Djenerå"
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "Mo&strer imådjete sol sicribanne"
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Permete les pro&grames sol purnea scribanne"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "Mostrer &racsegnes"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Båre di dressêye sol hôt del waitroûle"
+
+#~ msgid "&None"
+#~ msgstr "&Nole"
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "&Båre di dressêye sicribanne"
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Dresssêye des programes do mo&umint (stîle Mac OS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Accions des botons d' sori"
+
+#~ msgid "Middle button:"
+#~ msgstr "Boton do mitan:"
+
+#~ msgid "Left button:"
+#~ msgstr "Boton hintche:"
+
+#~ msgid "Right button:"
+#~ msgstr "Boton droet:"
+
+#~ msgid "Edit..."
+#~ msgstr "Candjî..."
+
+#~ msgid "File Icons"
+#~ msgstr "Imådjetes di fitchîs"
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Mete otomaticmint les imådjetes e &royes"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Håyner les fitchîs catc&hîs"
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Mostrer prévuwes d' imådjetes po"
+
+#~ msgid "Device Icons"
+#~ msgstr "Imådjetes d' éndjins"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "Mo&strer imådjetes d' éndjins:"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Sôre d' éndjin a håyner"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Mostrer &racsegnes do fitchî"
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "Mostrer &prévoeyaedjes dins les racsegnes des fitchîs"
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "Mo&strer operåcions rantoele dins on simpe purnea"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "Rilomer imådjetes e c&litchant"
+
+#~ msgid "Home &URL:"
+#~ msgstr "Adresse Måjhon:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Tchoezi ridant Måjhon"
+
+#~ msgid "&Appearance"
+#~ msgstr "&Rivnance"
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "N&ombe di scribannes:"
+
+#~ msgid "Desktop &Names"
+#~ msgstr "&Nos des scribannes"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Sicribanne %1:"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Sicribanne %1"
+
+#~ msgid "&Standard font:"
+#~ msgstr "Fonte &sitandård:"
+
+#~ msgid "Font si&ze:"
+#~ msgstr "&Grandeu fonte:"
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Normåle coleur do &tecse:"
+
+#~ msgid "&Text background color:"
+#~ msgstr "Coleur do fond do t&ecse:"
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&Hôteu do tecse d' imådjete:"
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "Lå&rdjeu do tecse d' imådjete:"
+
+#~ msgid "&Underline filenames"
+#~ msgstr "&Sorlignî nos d' fitchîs"
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Håynet l' grandeu des fitchîs e &bites"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "roye"
+#~ msgstr[1] "royes"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "picsel"
+#~ msgstr[1] "picsels"
+
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Qt::DockLeft button:"
+
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Qt::DockRight button:"

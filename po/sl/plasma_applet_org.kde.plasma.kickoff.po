@@ -1,0 +1,439 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-08-15 06:10+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Splošno"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Odstrani iz priljubljenih"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj med priljubljene"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "Na vseh dejavnostih"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Na trenutni dejavnosti"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Pokaži v priljubljenih"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Izberi…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr "Ponovno nastavi na privzeto ikono"
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr "Odstrani ikono"
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Besedilna oznaka:"
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "Tu vtipkajte za dodajanje besedilne oznake"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "Besedilne oznake ni mogoče nastaviti, kadar je plošča navpična."
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr "Splošno:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Vedno razvrsti aplikacije po abecedi"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr "Uporabi slog kompaktnega seznama"
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr "Samodejno onemogočeno v načinu dotikanja"
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Nastavi omogočene vtičnike za iskanje…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Pokaži priljubljene:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "V mreži"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "V seznamu"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Prikaži ostale aplikacije:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "V mreži"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "V seznamu"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Prikaži gumbe za:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Moč"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Sejo"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Izklop in sejo"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Prikaži napise gumbov aktivnosti"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programi"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Mesta"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Odpri nastavitve uporabnika"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Ohranjaj odprte"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Uredi aplikacije…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Mreža z %1 vrsticami %2 stolpci"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Zapusti"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Več"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Računalnik"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Zgodovina"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Pogosto uporabljeno"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Počisti ikono"
+
+#~ msgid "Search…"
+#~ msgstr "Iskanje…"
+
+#~ msgid "Primary actions:"
+#~ msgstr "Primarne dejavnosti:"
+
+#~ msgid "Power actions"
+#~ msgstr "Močne dejavnosti"
+
+#~ msgid "Session actions"
+#~ msgstr "Dejavnosti seje"
+
+#~ msgid "Leave…"
+#~ msgstr "Zapusti…"
+
+#~ msgid "Power…"
+#~ msgstr "Napajanje…"
+
+#~ msgid "More…"
+#~ msgstr "Več…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "Posodabljam aplikacije…"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Dovoli do dve vrstici za oznako"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Seznam z %1 postavko"
+#~ msgstr[1] "Seznam z %1 postavkama"
+#~ msgstr[2] "Seznam s %1 postavkami"
+#~ msgstr[3] "Seznam s %1 postavkami"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 podmeni"
+
+#~ msgid "Leave..."
+#~ msgstr "Zapusti..."
+
+#~ msgid "Power..."
+#~ msgstr "Moč..."
+
+#~ msgid "More..."
+#~ msgstr "Več..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Programi posodobljeni."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Preklopi zavihke ob prehodu"
+
+#~ msgid "All Applications"
+#~ msgstr "Vsi programi"
+
+#~ msgid "Favorites"
+#~ msgstr "Priljubljeni"
+
+#~ msgid "Often Used"
+#~ msgstr "Pogosto uporabljeno"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Dejavni zavihki"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Nedejavni zavihki"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Povlecite zavihke med okvirji, da jih pokažete/skrijete. Z vlečenjem "
+#~ "vidnih zavihkov jim lahko spremenite vrstni red."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Razširi iskanje na zaznamke, datoteke in e-pošto"
+
+#~ msgid "Appearance"
+#~ msgstr "Videz"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Gumbi menija"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Vidni zavihki"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Priljubljene"
+
+#~ msgid "Log out"
+#~ msgstr "Odjavi"
+
+#~ msgid "Lock"
+#~ msgstr "Zakleni"
+
+#~ msgid "Lock screen"
+#~ msgstr "Zakleni zaslon"
+
+#~ msgid "Switch user"
+#~ msgstr "Preklopi uporabnika"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Zaženi vzporedno sejo kot drug uporabnik"
+
+#~ msgid "Shut down"
+#~ msgstr "Izklopi"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Izklopi računalnik"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Znova zaženi"
+
+#~ msgid "Restart computer"
+#~ msgstr "Znova zaženi računalnik"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Shrani trenutno sejo za naslednjo prijavo"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "V pripravljenost"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Naredi premor brez odjave"
+
+#~ msgid "Hibernate"
+#~ msgstr "V mirovanje"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Zaustavi na disk"
+
+#~ msgid "Suspend"
+#~ msgstr "V pripravljenost"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Zaustavi v pomnilnik"
+
+#~ msgid "System"
+#~ msgstr "Sistem"
+
+#~ msgid "Home Folder"
+#~ msgstr "Domača mapa"
+
+#~ msgid "Network Folders"
+#~ msgstr "Omrežne mape"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenti"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Nedavno uporabljeni dokumenti"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Nedavno uporabljeni programi"
+
+#~ msgid "Run Command..."
+#~ msgstr "Zaženi ukaz ..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Zaženi ukaz ali iskalno poizvedbo"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Odstranljivi nosilci"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Pokaži 'Nedavno nameščeno'"
+
+#~ msgid "Uninstall"
+#~ msgstr "Odstrani"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Razvrsti po abecedi (Ž do A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Počisti nedavne programe"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Počisti nedavne dokumente"
+
+#~ msgid "Sleep"
+#~ msgstr "V pripravljenost"
+
+#~ msgid "Add To Favorites In This Activity Only"
+#~ msgstr "Dodaj med priljubljene samo v tej dejavnosti"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "KDE Plasma"

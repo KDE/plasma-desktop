@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Cerca de fitxers</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>6 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>cerca</keyword>
+<keyword
+>fitxer</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul de l'&systemsettings; permet configurar quins fitxers s'hauran d'indexar per a una cerca ràpida. Internament s'empra una tecnologia anomenada Baloo per a cercar de manera eficient a través dels fitxers. </para>
+
+<para
+>Afegiu el giny <guilabel
+>Cerca</guilabel
+> al vostre plafó o activeu la cerca al &krunner; per a utilitzar els resultats de la indexació per a un accés més ràpid als vostres documents. </para>
+
+<para
+>Activeu l'opció <guilabel
+>Activa la cerca de fitxers</guilabel
+> si voleu utilitzar les capacitats de cerca d'escriptori en el &dolphin; i en les altres aplicacions del &kde;. Desmarqueu-la si no voleu utilitzar la cerca de fitxers amb el Baloo (és possible utilitzar altres tecnologies de cerca, &pex;, el &kfind;). </para>
+
+<para
+>Utilitzar <guilabel
+>Indexa també el contingut dels fitxers</guilabel
+> per a indexar addicionalment el contingut dels fitxers als noms de fitxer. </para>
+
+<para
+>Marqueu l'opció <guilabel
+>Indexa els fitxers i carpetes ocults</guilabel
+> per a fer que el Baloo indexi els fitxers i carpetes ocults. </para>
+
+<note>
+    <para
+>De manera predeterminada, restarà ocult qualsevol element on el nom de fitxer o de carpeta comenci amb un punt (<literal
+>.</literal
+>). </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Configuració específica de carpeta</guilabel
+></term>
+<listitem>
+    <para
+>Presentarà una llista de les carpetes on es podrà indexar. De manera predeterminada, s'indexarà tota la carpeta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, i no les altres carpetes o unitats. </para>
+    <para
+>Els suports extraïbles predeterminats no s'indexaran mai. Es poden suprimir de la llista de carpetes a excloure i després seran indexats. </para>
+    <para
+>És possible utilitzar el quadre combinat que hi ha al costat de cada element de la llista per a configurar si serà <guimenuitem
+>Indexada</guimenuitem
+> o <guimenuitem
+>No indexada</guimenuitem
+>. </para>
+    <para
+>Utilitzeu el botó de la paperera per a eliminar un element de la llista. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Afegeix una configuració de carpeta...</guibutton
+></term>
+<listitem>
+    <para
+>Premeu aquest botó per a obrir el selector amb dues opcions, nomenades <guimenuitem
+>Inicia la indexació d'una carpeta...</guimenuitem
+> i <guimenuitem
+>Atura la indexació d'una carpeta...</guimenuitem
+>. </para>
+    <para
+>En fer clic a qualsevol de les opcions esmentades anteriorment, es mostrarà el diàleg <guilabel
+>Seleccioneu una carpeta a incloure/excloure</guilabel
+> estàndard del &plasma; i us permetrà triar la carpeta que es tractarà en conseqüència. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Per a obtenir més informació sobre les opcions de configuració addicionals, &pex;, com afegir una unitat muntada fora de la vostra carpeta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, llegiu <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

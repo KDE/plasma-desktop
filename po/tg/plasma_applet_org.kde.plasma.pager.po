@@ -1,0 +1,190 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2009, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2020-09-19 11:37+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Умумӣ"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Умумӣ:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Тарҳбандӣ:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Бе матн"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Рақами мизи корӣ"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Номи мизи корӣ"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr ""
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Номи мизи корӣ"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager..."
+msgid "Show Activity Manager…"
+msgstr "Намоиш додани мудири фаъолият..."
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr ""
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr ""
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "Configure Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "Танзимоти мизҳои корӣ..."
+
+#~ msgid "Display icons:"
+#~ msgstr "Намоиши нишонаҳо:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Иловаи мизи кории виртуалӣ"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Нобуд сохтани мизи кории виртуалии охирин"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Танзимоти пейҷер"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Миқдори қаторҳо:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Миқдори қаторҳо:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Тағйири миқдори қаторҳо"

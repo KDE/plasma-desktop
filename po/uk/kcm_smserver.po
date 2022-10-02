@@ -1,0 +1,288 @@
+# Translation of kcm_smserver.po to Ukrainian
+# Copyright (C) 2002-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Andriy Rysin <rysin@kde.org>, 2002, 2003, 2004.
+# Eugene Onischenko <oneugene@ukr.net>, 2005.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_smserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-22 09:15+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Менеджер сеансів</h1> Тут ви можете налаштувати менеджер сеансів. "
+"Налаштувати можна такі параметри, як підтвердження виходу із системи, "
+"відновлення попереднього сеансу при вході та чи потрібно автоматично "
+"вимикати комп'ютер після завершення сеансу."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+"Не вдалося створити запит щодо перезавантаження для налаштовування "
+"мікропрограми: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Під час наступного перезапуску комп'ютер запустить засіб налаштовування UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Під час наступного перезапуску комп'ютер запустить засіб налаштовування "
+"мікропрограми."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Перезавантажити зараз"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Загальне:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Підтверджувати вихід"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Інші варіанти виходу з системи"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Типовий варіант виходу з системи:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Завершити поточний сеанс"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Перезавантажити компʼютер"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Вимкнути комп'ютер"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "При вході:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Відновлювати попередній сеанс"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Відновлювати попередній збережений вручну сеанс"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Запускати з порожнім сеансом"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Не відновлювати такі програми:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Тут ви можете ввести розділений двокрапками або комами список програм, які "
+"не слід зберігати у сеансах, тобто ці програми не будуть запускатися при "
+"відновленні сеансу. Наприклад, «xterm:xconsole» або «xterm,konsole»."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Налаштовування мікропрограми під час наступного перезавантаження"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Підтверджувати вихід"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Інші варіанти виходу з системи"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Типовий варіант виходу з системи"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "При вході"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Програми, що мають бути вилучені з сеансів"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Юрій Чорноіван"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yurchor@ukr.net"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Сеанс стільниці"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Вхід та вихід із робочого сеансу"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "© Команда розробників стільничного сеансу, 2000–2020"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Відновлювати попередній збережений сеанс"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "Налаштування UEFI"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Налаштувати UEFI під час наступного перезапуску"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Позначте цей пункт, якщо хочете, щоб менеджер сеансу показував вікно "
+#~ "підтвердження виходу із системи."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Підтверджувати &вихід"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "І&нші варіанти виходу з системи"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Тут ви можете вибрати, яку дію буде виконано після того, як ви вийдете з "
+#~ "системи. Це має значення, лише якщо реєстрація відбувалася за допомогою "
+#~ "KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Типовий варіант виходу з системи"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Відновлювати попередній сеанс:</b> Зберігає всі працюючі програми "
+#~ "при виході та відновлює їх при наступному запуску</li>\n"
+#~ "<li><b>Відновлювати збережений вручну сеанс:</b> Дозволяє зберігати "
+#~ "сеанси в будь-який момент за допомогою пункту «Зберегти сеанс» K-меню. Це "
+#~ "означає, що програми, що зараз працюють, з'являться знову при наступному "
+#~ "запуску.</li>\n"
+#~ "<li><b>Запускати з порожнім сеансом:</b> Не зберігати нічого. "
+#~ "Запускається порожня стільниця.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "При вході"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Програми, що мають бути ви&лучені з сеансів:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Налаштовування мікропрограми"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Під час наступного перезавантаження комп'ютера запустити засіб для "
+#~ "налаштовування мікропрограми (наприклад засіб налаштовування UEFI або "
+#~ "BIOS)"

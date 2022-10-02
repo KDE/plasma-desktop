@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Applicazioni predefinite</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione in italiano</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-01-12</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>componente</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In questo modulo puoi cambiare i componenti predefiniti di &kde;.</para>
+
+<para
+>I componenti sono programmi che gestiscono compiti fondamentali, come il browser web, l'emulatore di terminale, il gestore dei file, il programma di posta elettronica, la mappa elettronica e il compositore delle chiamate. Diverse applicazioni di &kde; devono occasionalmente richiamare un emulatore di terminale, inviare un messaggio di posta elettronica, gestire file e cartelle, mostrare la mappa o chiamare un numero sul tuo telefono.</para
+> 
+
+<para
+>Per farlo consistentemente, queste applicazioni chiamano sempre gli stessi componenti. Qui puoi selezionare quali programmi faranno la funzione di questi componenti.</para>
+
+<para
+>L'elenco a sinistra mostra i tipi di componenti configurabili:</para>
+<itemizedlist>
+<listitem>
+<para
+>Browser Web</para>
+</listitem>
+<listitem>
+<para
+>Gestore di file</para>
+</listitem>
+<listitem>
+<para
+>Programma di posta elettronica</para>
+</listitem>
+<listitem>
+<para
+>Emulatore di terminale</para>
+</listitem>
+<listitem>
+<para
+>Mappa</para>
+</listitem>
+<listitem>
+<para
+>Compositore chiamate</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Fai clic sulla casella combinata del componente che vuoi configurare. Nell'elenco seleziona il tuo browser web, gestore di file, programma di posta elettronica, emulatore di terminale, mappa e compositore chiamate preferiti. Scegli <guimenuitem
+>Altro...</guimenuitem
+> per aprire la finestra <guilabel
+>Scegli applicazione</guilabel
+> e selezionare la tua applicazione manuale.</para>
+
+</article>

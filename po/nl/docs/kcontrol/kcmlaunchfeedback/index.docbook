@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Opstartnotificatie</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>Soms is het handig om te weten dat de computer uw commando niet heeft genegeerd en dat er iets achter de schermen gebeurt. In deze module kunt u de visuele terugkoppeling instellen zodat u kunt zien dat u het pictogram ook echt hebt aangeklikt.</para>
+	
+<para
+>De traditionele manier om aan te geven dat uw computer bezig is, is om de muiscursor aan te passen. U kunt dit activeren door het vakje <guilabel
+>Cursor</guilabel
+> in te schakelen.</para>
+
+<para
+>Als deze instelling is geactiveerd zal voor een korte tijd een pictogram aan de muiscursor worden geplakt wanneer een nieuwe toepassing wordt gestart. U kunt aangeven hoe lang dit pictogram wordt getoond met het draaischakelaar <guilabel
+>Animatie stoppen na:</guilabel
+>. De standaardtijd is 5 seconden.</para>
+
+<para
+>Er zijn diverse variaties mogelijk voor een cursor voor bezig, waaronder een <guilabel
+>Geen notificatie</guilabel
+>, een <guilabel
+>Knipperend</guilabel
+>, een <guilabel
+>Stuiterend</guilabel
+> of een <guilabel
+>Statisch</guilabel
+> cursorpictogram zonder animatie.</para>
+
+<para
+>De traditionele opstartnotificatie van plasma heeft een andere vorm aangenomen. Deze kan hier ook aan en uit worden ingesteld. Normaal als u een toepassing start, krijgt deze onmiddellijk een knop op de taakbalk met het pictogram vervangen door een zandloper om u te laten weten dat er iets gaande is. U kunt dit in- en uitschakelen met het keuzevakje <guilabel
+>Animatie inschakelen</guilabel
+></para>
+
+<para
+>Niet alle toepassingen die u start zullen uiteindelijk een venster openen of een knop op de taakbalk tonen. Sommige van hen worden bijvoorbeeld in het &plasma;-systeemvak geplaatst, of het kan zijn dat u het naar een ander virtueel bureaublad heeft gestuurd en in de sectie <guilabel
+>Gedrag</guilabel
+> van de <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Instellingen taakbeheerder</guilabel
+></ulink
+> de optie <guilabel
+>Van het huidige bureaublad</guilabel
+> is ingeschakeld voor de schakelaar <guilabel
+>Alleen taken tonen</guilabel
+>. Het instellen van een maximale tijd verzekert u ervan dat u in deze gevallen toch een opstartmelding krijgt, maar ook dat het weg gaat zodra het opstarten van de taak is voltooid.</para>
+
+</article>

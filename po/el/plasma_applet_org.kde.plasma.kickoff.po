@@ -1,0 +1,442 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Dimitrios Glentadakis <dglent@free.fr>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2017-05-22 17:24+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Αφαίρεση από τα αγαπημένα"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Προσθήκη στα αγαπημένα"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:131
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgid "Show in Favorites"
+msgstr "Αγαπημένα"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Εικονίδιο:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open icon chooser dialog"
+#| msgid "Choose..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Επιλογή..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, fuzzy, kde-format
+#| msgid "Sort alphabetically"
+msgid "Always sort applications alphabetically"
+msgstr "Ταξινόμηση αλφαβητικά"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgid "Show favorites:"
+msgstr "Αγαπημένα"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgid "Show other applications:"
+msgstr "Εμφάνιση εφαρμογών κατά όνομα"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, fuzzy, kde-format
+#| msgid "Save Session"
+msgid "Session"
+msgstr "Αποθήκευση συνεδρίας"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, fuzzy, kde-format
+#| msgid "End session"
+msgid "Power and session"
+msgstr "Τέλος συνεδρίας"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr ""
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Τοποθεσίες"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr ""
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/Kickoff.qml:283
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "Επεξεργασία εφαρμογών..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr ""
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Έξοδος"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr ""
+
+#: package/contents/ui/PlacesPage.qml:49
+#, fuzzy, kde-format
+#| msgid "Computer"
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, fuzzy, kde-format
+#| msgid "History"
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Ιστορικό"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, fuzzy, kde-format
+#| msgid "Recently Installed"
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Πρόσφατα εγκατεστημένα"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Καθαρισμός εικονιδίου"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgid "Search…"
+#~ msgstr "Αναζήτηση:"
+
+#, fuzzy
+#~| msgid "Session"
+#~ msgid "Session actions"
+#~ msgstr "Συνεδρία"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave…"
+#~ msgstr "Έξοδος"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Updating applications…"
+#~ msgstr "Επεξεργασία εφαρμογών..."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#, fuzzy
+#~| msgctxt "Search field placeholder text"
+#~| msgid "Search"
+#~ msgid "Search..."
+#~ msgstr "Αναζήτηση"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave..."
+#~ msgstr "Έξοδος"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Open icon chooser dialog"
+#~| msgid "Choose..."
+#~ msgid "More..."
+#~ msgstr "Επιλογή..."
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Applications updated."
+#~ msgstr "Εφαρμογές"
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Εναλλαγή καρτελών με πέρασμα από πάνω"
+
+#~ msgid "All Applications"
+#~ msgstr "Όλες οι εφαρμογές"
+
+#~ msgid "Favorites"
+#~ msgstr "Αγαπημένα"
+
+#~ msgid "Often Used"
+#~ msgstr "Χρησιμοποιούνται συχνά"
+
+#, fuzzy
+#~| msgid "Hidden Tabs"
+#~ msgid "Active Tabs"
+#~ msgstr "Κρυμμένες καρτέλες"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Σύρετε τις καρτέλες μεταξύ των κουτιών για να τις εμφανίσετε/κρύψετε, ή "
+#~ "αναδιατάξτε τις ορατές με σύρσιμο."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Επέκταση της αναζήτησης σε σελιδοδείκτες, αρχεία και αλληλογραφία"
+
+#~ msgid "Appearance"
+#~ msgstr "Εμφάνιση"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Κουμπιά μενού"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Ορατές καρτέλες"
+
+#~ msgctxt "Type is a verb here, not a noun"
+#~ msgid "Type to search..."
+#~ msgstr "Πληκτρολογήστε για αναζήτηση..."
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Αγαπημένα"
+
+#~ msgid "Log out"
+#~ msgstr "Αποσύνδεση"
+
+#~ msgid "Lock"
+#~ msgstr "Κλείδωμα"
+
+#~ msgid "Lock screen"
+#~ msgstr "Κλείδωμα οθόνης"
+
+#~ msgid "Switch user"
+#~ msgstr "Εναλλαγή χρήστη"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Έναρξη μιας παράλληλης συνεδρίας σαν διαφορετικός χρήστης"
+
+#~ msgid "Shut down"
+#~ msgstr "Τερματισμός"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Κλείσιμο του υπολογιστή"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Επανεκκίνηση"
+
+#~ msgid "Restart computer"
+#~ msgstr "Επανεκκίνηση υπολογιστή"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Αποθήκευση τρέχουσας συνεδρίας για την επόμενη σύνδεση"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Αναμονή"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Παύση χωρίς αποσύνδεση"
+
+#~ msgid "Hibernate"
+#~ msgstr "Νάρκη"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Αναστολή στον δίσκο"
+
+#~ msgid "Suspend"
+#~ msgstr "Αναστολή"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Αναστολή στη μνήμη"
+
+#~ msgid "System"
+#~ msgstr "Σύστημα"
+
+#~ msgid "Home Folder"
+#~ msgstr "Προσωπικός φάκελος"
+
+#~ msgid "Network Folders"
+#~ msgstr "Φάκελοι δικτύου"
+
+#~ msgid "Documents"
+#~ msgstr "Έγγραφα"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Πρόσφατα έγγραφα"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Πρόσφατες εφαρμογές"
+
+#~ msgid "Run Command..."
+#~ msgstr "Εκτέλεση εντολής..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Εκτέλεση μιας εντολής ή ενός ερωτήματος αναζήτησης"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Αφαιρούμενο μέσο"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Εμφάνιση των «Πρόσφατα εγκατεστημένων»"
+
+#~ msgid "Uninstall"
+#~ msgstr "Απεγκατάσταση"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Ταξινόμηση αλφαβητικά (Ω σε Α)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Καθαρισμός πρόσφατων εφαρμογών"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Καθαρισμός πρόσφατων εγγράφων"
+
+#~ msgid "Sleep"
+#~ msgstr "Κοίμηση"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plasma από το KDE"

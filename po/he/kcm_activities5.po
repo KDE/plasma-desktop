@@ -1,0 +1,284 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_activities5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 11:33-0400\n"
+"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "פעילויות"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "מחק פעילות"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "למחוק את '%1'?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"נכשל בטעינת קובצי QML. בדוק את ההתקנה.\n"
+"%1 חסר"
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "צור פעילות חדשה"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "הגדרות פעילות"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "צור"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, fuzzy, kde-format
+#| msgid "Icon"
+msgid "Icon:"
+msgstr "סמל"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "שם:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "תיאור:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, fuzzy, kde-format
+#| msgid "Privacy"
+msgid "Privacy:"
+msgstr "פרטיות"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, fuzzy, kde-format
+#| msgid "Private - do not track usage for this activity"
+msgid "Do not track usage for this activity"
+msgstr "פרטי – אל תעקוב אחר השימוש בפעילות זו"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching to this activity:"
+msgid "Shortcut for switching:"
+msgstr "קיצור דרך להחלפת פעילויות:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "How many months keep the activity history"
+msgstr "נקה היסטוריה"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "Which data to keep in activity history"
+msgstr "נקה היסטוריה"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr ""
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "החלף"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr ""
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "מחק פעילות"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, fuzzy, kde-format
+#| msgid "Create activity..."
+msgid "Create New…"
+msgstr "צור פעילות..."
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "החלפת פעילות"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "עבור בין פעילויות"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "עבור בין פעילויות (בסדר הפוך)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remember the current virtual desktop for each activity (needs restart)"
+msgid "Remember for each activity (needs restart)"
+msgstr "זכור את השולחן העבודה הוירטואלי לכל פעילות (דורש הפעלה מחדש)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Shortcuts:"
+msgstr "קיצורי דרך"
+
+#~ msgid "Privacy"
+#~ msgstr "פרטיות"
+
+#, fuzzy
+#~| msgctxt "unlimited number of months"
+#~| msgid "forever"
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "לתמיד"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "שכח את השעה האחרונה"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "שכח את השעתיים האחרונות"
+
+#~ msgid "Forget a day"
+#~ msgstr "שכח את היום"
+
+#~ msgid "Forget everything"
+#~ msgstr "שכח הכל"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] "חודש"
+#~ msgstr[1] "חודשים"
+
+#, fuzzy
+#~| msgid "Clear recent history"
+#~ msgid "Cleared the activity history."
+#~ msgstr "נקה היסטוריה"
+
+#, fuzzy
+#~| msgid "Keep history"
+#~ msgid "Keep history:"
+#~ msgstr "שמור היסטוריה"
+
+#, fuzzy
+#~| msgid "Clear recent history"
+#~ msgid "Clear History"
+#~ msgstr "נקה היסטוריה"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "לכל הישומים"
+
+#~ msgid "&Do not remember"
+#~ msgstr "אל תזכור"
+
+#, fuzzy
+#~| msgid "O&nly for specific applications"
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "לישומים נבחרים"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "זכור מסמכים פתוחים:"
+
+#, fuzzy
+#~| msgid "Blacklist all applications not on this list"
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "הוסף לרשימה השחורה את כל היישומים שאינם ברשימה הזו"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "מחק פעילות"
+
+#~ msgid "Other"
+#~ msgstr "אחרים"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "החל"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "בטל"
+
+#~ msgid "Activity information"
+#~ msgstr "מידע פעילות"
+
+#~ msgid "Wallpaper"
+#~ msgstr "תמונת רקע"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "שנה..."
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "של"

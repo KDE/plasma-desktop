@@ -1,0 +1,190 @@
+# translation of plasma_applet_org.kde.plasma.pager.po to Slovak
+# Jozef Vydra <vydrajojo@gmail.com>, 2008.
+# Peter Mihalik <udavac@inmail.sk>, 2008, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009.
+# Roman Paholík <wizzardsk@gmail.com>, 2013, 2014, 2016.
+# Mthw <jari_45@hotmail.com>, 2018, 2019.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-04-28 08:31+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Všeobecné:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Zobraziť ikony aplikácií na obrysoch okien"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Zobraziť iba aktuálnu obrazovku"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Navigácia stránok sa vracia na začiatok"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Rozloženie:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Predvolené"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Horizontálne"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Vertikálne"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Zobrazenie textu:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Žiadny text"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Číslo aktivity"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Číslo plochy"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Názov aktivity"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Názov plochy"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Výber aktuálnej aktivity:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Výber aktuálnej virtuálnej plochy:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Nerobí nič"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Zobrazí plochu"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "...a %1 iné okno"
+msgstr[1] "...a %1 iné okná"
+msgstr[2] "...a %1 iné okien"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 okno:"
+msgstr[1] "%1 okná:"
+msgstr[2] "%1 okien:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 minimalizované okno:"
+msgstr[1] "%1 minimalizované okná:"
+msgstr[2] "%1 minimalizované okien:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "Plocha %1"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Ukázať správcu aktivít..."
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Pridať virtuálnu plochu"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Odstrániť virtuálnu plochu"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Nastaviť virtuálne plochy..."
+
+#~ msgid "Activate %1"
+#~ msgstr "Aktivovať %1"
+
+#~ msgid "Icons"
+#~ msgstr "Ikony"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Zobrazí nástenku"
+
+#~ msgid "Display icons:"
+#~ msgstr "Zobraziť ikony:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "Prid&ať virtuálnu plochu"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "Ods&trániť poslednú virtuálnu plochu"

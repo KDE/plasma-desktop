@@ -1,0 +1,68 @@
+# Irish translation of plasma_runner_plasma-desktop
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_runner_plasma-desktop package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"PO-Revision-Date: 2009-12-24 06:59-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: plasma-desktop-runner.cpp:24
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console"
+msgstr "consól"
+
+#: plasma-desktop-runner.cpp:25
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console"
+msgstr "wm consól"
+
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#, kde-format
+msgid ""
+"Opens the Plasma desktop interactive console with a file path to a script on "
+"disk."
+msgstr ""
+"Osclaíonn sé seo consól idirghníomhach na deisce Plasma le conair scripte ar "
+"an diosca."
+
+#: plasma-desktop-runner.cpp:31
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console :q:"
+msgstr "consól :q:"
+
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#, kde-format
+msgid ""
+"Opens the KWin interactive console with a file path to a script on disk."
+msgstr ""
+"Osclaíonn sé seo consól idirghníomhach KWin le conair scripte ar an diosca."
+
+#: plasma-desktop-runner.cpp:37
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console :q:"
+msgstr "wm consól :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Oscail consól idirghníomhach na deisce Plasma"
+
+#: plasma-desktop-runner.cpp:62
+#, kde-format
+msgid "Open KWin interactive console"
+msgstr "Oscail consól idirghníomhach KWin"

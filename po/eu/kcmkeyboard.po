@@ -1,0 +1,667 @@
+# Translation for kcmkeyboard.po to Euskara/Basque (eu).
+# Copyright (C) 2007-2018, The Free Software Foundation, Inc.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# marcos <marcos@euskalgnu.org>, 2007.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2014, 2018, 2020, 2021.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-11-13 22:42+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Iñigo Salvador Azurmendi,Hizkuntza Politikarako Sailburuordetza,Asier Urio "
+"Larrea,Marcos Goyeneche"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus,hizpol@ej-gv.es,asieriko@gmail.com,marcos@euskalgnu.org"
+
+#: bindings.cpp:24
+#, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "Teklatu diseinuaren aldatzailea"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Aldatu hurrengo teklatu-diseinura"
+
+#: bindings.cpp:49
+#, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "Aldatu teklatu-diseinua: %1"
+
+#: flags.cpp:122
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, kde-format
+msgid "Add Layout"
+msgstr "Gehitu diseinua"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr "Bilatu..."
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr "Lasterbidea:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr "Etiketa:"
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr "Aurrebista"
+
+#: kcm_keyboard.cpp:32
+#, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "KDEren teklatuaren aginte-modulua"
+
+#: kcm_keyboard.cpp:36
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr "(c) 2010 Andriy Rysin"
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+"<h1>Teklatua</h1> Aginte-modulu hau teklatuen parametroak eta diseinuak "
+"konfiguratzeko erabil daiteke."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr "Hardwarea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, kde-format
+msgid "Keyboard &model:"
+msgstr "Teklatu-&eredua:"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+"Hemen, teklatu-eredu bat hauta dezakezu. Ezarpen hori zure teklatu "
+"antolamendutik apartekoa da, eta hardware-ereduari dagokio, hau da, zure "
+"teklatua fabrikatzeko moduari. Zure ordenagailuarekin datozen teklatu "
+"modernoek bi tekla gehigarri izaten dituzte normalean, eta \"104-tekla\" "
+"eredu esaten zaie; seguru asko, hura nahiko duzu, zein teklatu mota daukazun "
+"ez badakizu.\n"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, kde-format
+msgid "Layouts"
+msgstr "Diseinuak"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+"\"Aplikazioa\" edo \"Leihoa\" aldatzeko politika hautatuz gero, teklatuaren "
+"diseinua aldatzeak uneko aplikazioari edo leihoari soilik eragingo dio."
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr "Aldaketa-politika"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr "&Orokorra"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, kde-format
+msgid "&Desktop"
+msgstr "&Mahaigaina"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, kde-format
+msgid "&Application"
+msgstr "&Aplikazioa"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr "&Leihoa"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr "Diseinua aldatzeko lasterbideak"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr "Lasterbide nagusiak:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+"Diseinuak aldatzeko lasterbide bat da hau, X.org-ek kudeatua. Aldatzaile "
+"hutseko lasterbideak onartzen ditu."
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr "Bat ere ez"
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr "…"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr "3. mailako lasterbideak:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+"Diseinu aktiboaren hirugarren mailara (halakorik izango balu) aldatzeko "
+"lasterbide bat da hau, X.org-ek kudeatua. Aldatzaile hutseko lasterbideak "
+"onartzen ditu."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr "Ordezko lasterbidea:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+"Diseinuak aldatzeko lasterbide bat da hau. Ez ditu onartzen aldatzaile "
+"hutseko lasterbideak, eta baliteke zenbait egoeratan ez ibiltzea (adibidez, "
+"leiho gainerakorren bat edo pantaila-babeslea aktibo badago)."
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, kde-format
+msgid "Configure layouts"
+msgstr "Konfiguratu diseinuak"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, kde-format
+msgid "Add"
+msgstr "Gehitu"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr "Eraman gora"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr "Eraman behera"
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, kde-format
+msgid "Spare layouts"
+msgstr "Ordezko diseinuak"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr "Diseinu nagusiaren kontaketa:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr "Aurreratua"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, kde-format
+msgid "&Configure keyboard options"
+msgstr "&Konfiguratu teklatuaren aukerak"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: kcm_keyboard_widget.cpp:643
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Bat ere ez"
+
+#: kcm_keyboard_widget.cpp:657
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "Lasterbide %1"
+msgstr[1] "%1 lasterbide"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr "Mapa"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Layout"
+msgstr "Diseinua"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Variant"
+msgstr "Aldaera"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr "Etiketa"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Shortcut"
+msgstr "Lasterbidea"
+
+#: kcm_view_models.cpp:273
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr "Lehenetsia"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr "Tekla bati eusten zaionean:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr "Erakut&si azentudun eta antzeko karaktereak"
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr "E&rrepikatu tekla"
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr "Ez e&gin ezer"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr "Proba-area:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+"Aukera ematen du teklatuaren errepikapena eta klik-bolumena probatzeko (ez "
+"ahaztu aldaketak aplikatzea)."
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, kde-format
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"Onartzen bada, aukera honen bidez, Plasma hasi eta gero BlokZenb teklaren "
+"egoera zehaztu daiteke.<p>Konfiguratu dezakezu BlokZenb piztuta edo itzalita "
+"egotea, edo Plasmak BlokZenb teklaren egoera ez ezartzea."
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr "BlokZenb Plasma abiaraztean"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "&Aktibatu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, kde-format
+msgid "&Turn off"
+msgstr "&Desaktibatu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "Utzi aldatu &gabe"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr "&Maiztasuna:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+"Onartuz gero, aukera honen bidez, ezar dezakezu sakatutako tekla bat zer "
+"atzerapenekin hasiko den kodeak sortzen. 'Errepikatze-maiztasuna' aukerak "
+"tekla-kode horien maiztasuna kontrolatzen du."
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+"Onartzen bada, aukera honen bidez, tekla bat sakatuta dagoen bitartean tekla-"
+"kodeak zer maiztasunekin sortuko diren zehazten da."
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr " errepikapen/s"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr " ms"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, kde-format
+msgid "&Delay:"
+msgstr "&Atzerapena:"
+
+#: tastenbrett/main.cpp:57
+#, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Teklatuaren aurreikuspegia"
+
+#: tastenbrett/main.cpp:59
+#, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Teklatuaren antolamendua ikustea"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+"Teklatuaren geometria ezin izan da zamatu. Horrek askotan adierazten du, "
+"hautatutako ereduak, zehaztutako antolamendua edo antolamenduaren aldaera ez "
+"duela onartzen. Arazo hori, seguruenik, eredu, antolamendu eta aldaera "
+"konbinazio hori erabiltzen saiatzean ere gertatuko da."
+
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "KDEren teklatu-diseinuaren aldatzailea"
+
+#~ msgid "Only up to %1 keyboard layout is supported"
+#~ msgid_plural "Only up to %1 keyboard layouts are supported"
+#~ msgstr[0] "Soilik teklatu diseinu %1 onartzen da"
+#~ msgstr[1] "Soilik %1 teklatu diseinu onartzen dira"
+
+#~ msgid "Any language"
+#~ msgstr "Edozein hizkuntza"
+
+#~ msgid "Layout:"
+#~ msgstr "Diseinua:"
+
+#~ msgid "Variant:"
+#~ msgstr "Aldaera:"
+
+#~ msgid "Limit selection by language:"
+#~ msgstr "Mugatu hautapena hizkuntzaren arabera:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "short layout label - full layout name"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
+
+#~ msgid "Layout Indicator"
+#~ msgstr "Diseinu-adierazlea"
+
+#~ msgid "Show layout indicator"
+#~ msgstr "Erakutsi diseinu-adierazlea"
+
+#~ msgid "Show for single layout"
+#~ msgstr "Erakutsi diseinu bakarrerako"
+
+#~ msgid "Show flag"
+#~ msgstr "Erakutsi bandera"
+
+#~ msgid "Show label"
+#~ msgstr "Erakutsi etiketa"
+
+#~ msgid "Show label on flag"
+#~ msgstr "Erakutsi etiketa banderan"
+
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Teklatuaren diseinua"
+
+#~ msgid "Configure Layouts..."
+#~ msgstr "Konfiguratu diseinuak..."
+
+#~ msgid "Keyboard Repeat"
+#~ msgstr "Teklatuaren errepikapena"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "&Desaktibatu"
+
+#~ msgid "&Leave unchanged"
+#~ msgstr "&Utzi aldatu gabe"
+
+#, fuzzy
+#~| msgid "Configure layouts"
+#~ msgid "Configure..."
+#~ msgstr "Konfiguratu diseinuak"
+
+#~ msgid "Key Click"
+#~ msgstr "Tekla-sakatzeak"
+
+#~ msgid ""
+#~ "If supported, this option allows you to hear audible clicks from your "
+#~ "computer's speakers when you press the keys on your keyboard. This might "
+#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
+#~ "that the keys make is very soft.<p>You can change the loudness of the key "
+#~ "click feedback by dragging the slider button or by clicking the up/down "
+#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
+#~ msgstr ""
+#~ "Onartzen bada, aukera honen bidez, teklatuan teklak sakatzean "
+#~ "bozgorailuetatik sakatze-soinua entzun daiteke. Hori erabilgarria izan "
+#~ "daiteke teklatuak tekla mekanikoak ez baditu, edo egiten duten soinua oso "
+#~ "baxua bada.<p>Teklen sakatze-soinuaren bolumena alda dezakezu "
+#~ "graduatzailearen botoia arrastatuz edo biratze-koadroko gora/behera "
+#~ "geziak erabiliz. Bolumena % 0ra ezarriz gero, tekla-sakatzea desaktibatu "
+#~ "egiten da."
+
+#, fuzzy
+#~| msgid "Key click &volume:"
+#~ msgid "&Key click volume:"
+#~ msgstr "Tekla-sakatzeen &bolumena:"
+
+#~ msgid "No layout selected "
+#~ msgstr "Ez da diseinurik hautatu"
+
+#~ msgid "XKB extension failed to initialize"
+#~ msgstr "XKB luzapenaren hasieratzeak huts egin du"
+
+#~ msgid "Backspace"
+#~ msgstr "Atzera-tekla"
+
+#~ msgctxt "Tab key"
+#~ msgid "Tab"
+#~ msgstr "Tabulatzekoa"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Maius Blok"
+
+#~ msgid "Enter"
+#~ msgstr "Sartu"
+
+#~ msgid "Ctrl"
+#~ msgstr "Ktrl"
+
+#~ msgid "Alt"
+#~ msgstr "Alt"
+
+#~ msgid "AltGr"
+#~ msgstr "AltGr"
+
+#~ msgid "Esc"
+#~ msgstr "Ihes"
+
+#~ msgctxt "Function key"
+#~ msgid "F%1"
+#~ msgstr "F%1"
+
+#~ msgid "Shift"
+#~ msgstr "Maius"
+
+#~ msgid "No preview found"
+#~ msgstr "Aurrebistarik ez"
+
+#~ msgid "Close"
+#~ msgstr "Itxi"
+
+#~ msgid ""
+#~ "If you check this option, pressing and holding down a key emits the same "
+#~ "character over and over again. For example, pressing and holding down the "
+#~ "Tab key will have the same effect as that of pressing that key several "
+#~ "times in succession: Tab characters continue to be emitted until you "
+#~ "release the key."
+#~ msgstr ""
+#~ "Aukera hau gaituz gero, tekla bat sakatuz eta sakatuta mantenduta "
+#~ "karaktere bera etengabe igortzen du. Adibidez, tabuladorea sakatuz eta "
+#~ "mantenduta izanda, tekla hau aldi batzuetan sakatuz gero izango zuen "
+#~ "efektu bera lortuko zen: Tabuladore karaktereak igortzen jarraitzen dira "
+#~ "zuk tekla askatu arte."
+
+#~ msgid "&Enable keyboard repeat"
+#~ msgstr "&Gaitu teklatuaren errepikapena"

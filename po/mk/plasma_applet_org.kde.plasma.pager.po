@@ -1,0 +1,209 @@
+# translation of plasma_applet_pager.po to Macedonian
+# Copyright (C) 2002,2003,2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Danko Ilik <danko@on.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2005, 2006, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2008-12-23 22:11+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Општо"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Општо"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display text:"
+msgid "Text display:"
+msgstr "Текст на приказот:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Без текст"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Број на раб. површина"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Име на раб. површина"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgid "Selecting current virtual desktop:"
+msgstr "&Конфигурирај ги површините..."
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr ""
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and 1 other"
+#| msgid_plural "and %1 others"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "и %1 друг"
+msgstr[1] "и %1 друг"
+msgstr[2] "и %1 друг"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "One window:"
+#| msgid_plural "%1 windows:"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 прозорец:"
+msgstr[1] "%1 прозорец:"
+msgstr[2] "%1 прозорец:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Име на раб. површина"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgid "Add Virtual Desktop"
+msgstr "&Конфигурирај ги површините..."
+
+#: package/contents/ui/main.qml:600
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgid "Remove Virtual Desktop"
+msgstr "&Конфигурирај ги површините..."
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "&Конфигурирај ги површините..."
+
+#, fuzzy
+#~| msgid "Configure Desktops..."
+#~ msgid "Configure Desktops..."
+#~ msgstr "Конфигурирање на површините..."
+
+#~ msgid "Display icons:"
+#~ msgstr "Икони на приказот:"
+
+#, fuzzy
+#~| msgid "&Configure Desktops..."
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Конфигурирај ги површините..."
+
+#~ msgid "Configure Pager"
+#~ msgstr "Конфигурација на пејџерот"
+
+#, fuzzy
+#~| msgid "Number of rows:"
+#~ msgid "Number of columns:"
+#~ msgstr "Број на редици:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Број на редици:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Сменете го бројот на редици"

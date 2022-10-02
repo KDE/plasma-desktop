@@ -1,0 +1,216 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Corrector ortográfico</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+> <affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Ortografía</keyword>
+<keyword
+>diccionario</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Corrector ortográfico</title>
+<para
+>Las opciones de configuración aquí disponibles se utilizan de manera predeterminada por todas las aplicaciones de &kde; que hacen uso de &sonnet;, una interfaz para varios correctores ortográficos libres.</para>
+
+<para
+>Para usar &sonnet; debe instalar correctores ortográficos, como <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> o <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+>, así como los correspondientes diccionarios para su idioma.</para>
+
+<para
+>Las opciones de configuración seleccionadas aquí se pueden anular en cada aplicación.</para>
+
+<para
+>En el cuadro desplegable, <guilabel
+>Idioma predeterminado</guilabel
+>, elija de entre los diccionarios disponibles, cual usar con &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Opciones</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Activar la detección automática del idioma</guilabel
+></term>
+<listitem>
+<para
+>Esta función se basa en varias técnicas heurísticas (guion usado, coincidencia de trigramas y jerarquía del idioma sobre los idiomas disponibles en el motor de corrección ortográfica). Lo que le permite cambiar automáticamente de idioma en un documento que contenga varios idiomas. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Corrección ortográfica activada por omisión</guilabel
+></term>
+<listitem>
+<para
+>Si se marca esta casilla de verificación, se comprobará la ortografía de las palabras de su documento a medida que las vaya escribiendo. Las que tengan algún error, se subrayarán en rojo. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Saltar todas las palabras en mayúsculas</guilabel
+></term>
+<listitem>
+<para
+>Si marca esta casilla de verificación, no se comprobará la ortografía de ninguna palabra que se componga únicamente de letras mayúsculas.</para>
+<tip
+><para
+>Esto resulta útil en documentos que utilizan un gran número de acrónimos. Si esta casilla no se marca, la mayoría de dichos acrónimos se marcarán de manera incorrecta. Al marcar esta casilla de verificación, los acrónimos no se marcarán como palabras incorrectas.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Saltar palabras juntas</guilabel
+></term>
+<listitem
+><para
+>Si no marca esta casilla, las palabras que aparecen en el diccionario de modo separado, pero que se han escrito juntas, se consideran errores de ortografía. Por ejemplo, aunque «auto» y «detección» puede que estén en su diccionario, si «autodetección» no lo está, será considerado un error. </para>
+
+<tip
+><para
+>Al marcar esta casilla, se evita que las aplicaciones marquen las direcciones web y las de correo como erróneas. Dichas direcciones suelen contener palabras juntas.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Palabras ignoradas</title>
+<para
+>La mitad inferior del cuadro de diálogo le permite indicar palabras específicas (pueden ser terminología específica, nombres propios, &etc;) que se deberían ignorar por parte del programa de comprobación ortográfica.</para>
+
+<sect3
+><title
+>Añadir una palabra a la lista de ignoradas</title>
+<para
+>Para añadir una palabra, escríbala en el área de texto y pulse el botón <guibutton
+>Añadir</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Eliminar una palabra de la lista de ignoradas</title>
+<para
+>Para eliminar una palabra, selecciónela en el cuadro de lista que contiene todas las palabras ignoradas actualmente pulsando en ella con el &LMB;. Después, pulse el botón <guibutton
+>Eliminar</guibutton
+>.</para>
+
+<para
+>Cuando esté satisfecho con los cambios, simplemente pulse el botón <guibutton
+>Aplicar</guibutton
+>.</para>
+
+<para
+>Si se pulsa el botón <guibutton
+>Valores predeterminados</guibutton
+> todas las opciones vuelven a sus valores predeterminados.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

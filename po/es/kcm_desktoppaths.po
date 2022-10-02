@@ -1,0 +1,211 @@
+# Translation of kcmkonq to Spanish
+# translation of kcmkonq.po to Spanish
+# traducción de kcmkonq.po a Español
+# Translation to spanish.
+# Copyright (C) 2000-2002.
+#
+# Pablo de Vicente <vicente@oan.es>,2000-2002.
+# Jaime Robles <jaime@kde.org>, 2003, 2007, 2008.
+# Pablo de Vicente <vicnte@oan.es>, 2003.
+# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
+# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
+# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
+# Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006.
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2009, 2014, 2017, 2020, 2021.
+# Javier Vinal <fjvinal@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-03-19 12:51+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"com>\n"
+"First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Documentos"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Descargas"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Música"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Imágenes"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Vídeos"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Rutas</h1>\n"
+"Este módulo le permite elegir en qué parte del sistema de archivos se "
+"almacenan los archivos del escritorio.\n"
+"Use «¿Qué es esto?» (Mayúsculas+F1) para obtener ayuda sobre las opciones "
+"específicas."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Ruta del escritorio:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Esta carpeta contiene todos los archivos que ve en su escritorio. Se puede "
+"cambiar la ubicación de esta carpeta si así lo desea, y los contenidos "
+"también serán transferidos automáticamente a la nueva dirección."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Ruta para documentos:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "Esta carpeta será la predeterminada para cargar o guardar documentos."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Ruta para descargas:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Esta carpeta será la predeterminada para guardar los elementos que descargue."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Ruta para los vídeos:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "Esta carpeta será la predeterminada para cargar o guardar películas."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Ruta para imágenes:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "Esta carpeta será la predeterminada para cargar o guardar imágenes."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Ruta para música:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "Esta carpeta será la predeterminada para cargar o guardar música."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Ruta de inicio automático:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Esta carpeta contiene aplicaciones o enlaces a aplicaciones (accesos "
+#~ "rápidos) que se iniciarán automáticamente cuando arranque la sesión. Se "
+#~ "puede cambiar la ubicación de esta carpeta si así lo desea, y los "
+#~ "contenidos también serán transferidos automáticamente a la nueva "
+#~ "dirección."
+
+#~ msgid "Autostart"
+#~ msgstr "Inicio automático"
+
+#~ msgid "Movies"
+#~ msgstr "Películas"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "La ruta de «%1» ha cambiado.\n"
+#~ "¿Desea mover los archivos de «%2» a «%3»?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Mover"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "No mover"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "La ruta de «%1» ha cambiado.\n"
+#~ "¿Desea mover la carpeta «%2» a «%3»?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Mover"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "No mover"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Se necesita confirmación"

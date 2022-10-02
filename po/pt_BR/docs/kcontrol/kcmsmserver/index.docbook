@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Gerenciamento de sessão</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Centro de Controle</keyword>
+<keyword
+>sessão</keyword>
+<keyword
+>Configurações do Sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Gerenciamento de sessão</title>
+
+<sect2 id="sessions-use">
+<title
+>Uso</title>
+
+<para
+>Neste módulo do &systemsettings;, o usuário pode configurar o gerenciador de sessões e as opções de encerramento do &kde;.</para>
+
+<para
+>O gerenciamento de sessão refere-se a capacidade do &kde; de salvar o estado dos aplicativos e janelas quando você desconectar-se do &kde; e restaurá-lo, quando você acessá-lo novamente.</para>
+
+<sect3 id="sessions-general">
+<title
+>Geral</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Confirmar saída</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver selecionada, ao sair do &kde; será exibido um diálogo, pedindo por confirmação. Neste diálogo você pode também escolher se deseja restaurar sua sessão atual, quando acessar sua área na próxima vez.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mostrar as opções de desligamento</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, o &kde; irá oferecer uma seleção de ações quando finalizar a sessão. Elas incluem a finalização simples da sessão atual (a ação efetuada, se as opções para desligar não estiverem ativas), para desligar o computador ou para reiniciá-lo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opção de encerramento padrão</title>
+<para
+>Você pode configurar o que deverá acontecer por padrão, sempre que sai do &kde;. Esta opções não são possíveis em todos os sistemas operacionais e necessitam da utilização do &kdm; como o seu gerenciador de autenticações.</para>
+
+<para
+>As opções disponíveis são auto-explicativas; se você tiver dúvida, deixa a configuração padrão. São elas:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Finalizar a sessão atual</guilabel
+> (esta é a opção por padrão)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Desligar o computador</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Reiniciar o computador</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Na Inicialização</title>
+<para
+>Você pode escolher uma das três opções, dependendo do que você deseja que aconteça ao acessar o &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Restaurar sessão anterior</guilabel
+></term>
+<listitem
+><para
+>Se esta opção estiver marcada, o &kde; salvará o estado atual da sua sessão quando você sair. O &kde; restaurará sua sessão no próximo login, assim você pode continuar a trabalhar com a sua área de trabalho, exatamente como você a deixou.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Restaurar a sessão que foi salva manualmente</guilabel
+></term>
+<listitem
+><para
+>Ao invés de restaurar o &kde; para o estado que ele estava quando você logou-se pela última vez, ele será restaurado para um estado específico, que você salvou manualmente.</para>
+<para
+>Se esta opção estiver assinalada, o menu inicial oferece um item adicional <menuchoice
+><guimenu
+>Sair</guimenu
+><guimenuitem
+>Salvar a Sessão</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Iniciar com a sessão vazia</guilabel
+></term>
+<listitem>
+<para
+>Se você escolher esta opção, o &kde; nunca restaurará as sessões que foram salvas.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Finalmente, você pode inserir uma lista separada por dois pontos (<literal
+>:</literal
+>) ou vírgula (<literal
+>,</literal
+>) dos aplicativos que você deseja que não sejam salvos nas sessões, e que não serão iniciados ao restaurar a sessão. Por exemplo <userinput
+>xterm:konsole</userinput
+> ou <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

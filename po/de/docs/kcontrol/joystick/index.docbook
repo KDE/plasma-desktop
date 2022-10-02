@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Gamecontroller</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Thomas</firstname
+><surname
+>Reitelbach</surname
+><affiliation
+><address
+><email
+>tr@erdfunkstelle.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Joystick</keyword>
+<keyword
+>Controller</keyword>
+<keyword
+>Gamepad</keyword>
+<keyword
+>Einstellen/Kalibrieren</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Gamecontroller kalibrieren</title>
+
+<para
+>Mit diesem Einstellungsmodul können Sie Ihren Gamecontroller kalibrieren und ermitteln, welche Funktionen Ihres Gamecontrollers welchen logischen Knöpfen und Achsen zugeordnet sind.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto des Gamecontroller-Einrichtungsmoduls</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Das Modul Gamecontroller</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Gerät</guilabel
+></term>
+<listitem>
+<para
+>Hier sehen Sie den logischen Anschluss Ihres Joysticks. Wenn Sie mehrere Gamecontroller angeschlossen haben, können Sie auswählen, welches Gerät Sie einrichten möchten. </para>
+<para
+>Wenn kein Gamecontroller automatisch an Ihrem Rechner gefunden wird und Sie aber sicher sind, dass ein entsprechendes Gerät angeschlossen ist, geben Sie bitte hier die korrekte Gerätedatei an. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Position</guilabel
+></term>
+<listitem>
+<para
+>Hier wird die Position der X- und Y-Achsen Ihres Gamecontrollers dargestellt. Aktivieren Sie die Schaltfläche <guibutton
+>Spur anzeigen</guibutton
+>, um den Joystick-Pfad von einem Punkt zum anderen aufzuzeichnen. </para>
+<tip
+><para
+>Wenn Sie mit Ihrem Joystick nicht alle Bereiche der Grafik ansteuern können oder er nicht korrekt mittig zentriert ist, so müssen Sie den Joystick neu kalibrieren. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Bedienknöpfe:</guilabel
+></term>
+<listitem>
+<para
+>Hier sehen Sie den Status der Knöpfe auf Ihrem Gamecontroller und ob diese den korrekten logischen Funktionen zugeordnet sind. Wenn ein Knopf gedrückt wird, sollte der Text <guilabel
+>Gedrückt</guilabel
+> neben der Knopf-Nummer erscheinen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Achsen</guilabel
+></term>
+<listitem>
+<para
+>Hier werden die Zahlenwerte der Achsenpositionen angezeigt. 0 bedeutet zentriert; die Minimal- und Maximalwerte sind von Gamecontroller zu Gamecontroller unterschiedlich sowie von der Achse abhängig. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Einstellen/Kalibrieren</guilabel
+></term>
+<listitem>
+<para
+>Ein Klick auf den Knopf <guibutton
+>Kalibrieren</guibutton
+> öffnet die Kalibierungsdialog, mit dessen Hilfe Sie die Achsen und Ihres Gamecontrollers neu einstellen können. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Kalibrierung des Gamecontrollers</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Kalibrierung des Gamecontrollers</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Jede Achse des Joysticks muss zunächst auf die Minimum-Position, anschließend mittig und dann auf die Maximum-Position verschoben werden. Mit der Anzeige links unten im Dialogfenster können Sie feststellen, welche Richtung die richtige für die Minimal- und Maximal-Einstellung ist. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

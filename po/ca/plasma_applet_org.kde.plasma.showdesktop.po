@@ -1,0 +1,73 @@
+# Translation of plasma_applet_org.kde.plasma.showdesktop.po to Catalan
+# Copyright (C) 2008-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2015, 2016, 2018, 2021, 2022.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"PO-Revision-Date: 2022-09-16 09:51+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: package/contents/ui/MinimizeAllController.qml:17
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore All Minimized Windows"
+msgstr "Restaura totes les finestres minimitzades"
+
+#: package/contents/ui/MinimizeAllController.qml:18
+#, kde-format
+msgctxt "@action:button"
+msgid "Minimize All Windows"
+msgstr "Minimitza totes les finestres"
+
+#: package/contents/ui/MinimizeAllController.qml:20
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Restores the previously minimized windows"
+msgstr "Restaura les finestres minimitzades anteriorment"
+
+#: package/contents/ui/MinimizeAllController.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Desktop by minimizing all windows"
+msgstr "Mostra l'escriptori minimitzant totes les finestres"
+
+#: package/contents/ui/PeekController.qml:13
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "Atura l'ullada a l'escriptori"
+
+#: package/contents/ui/PeekController.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Peek at Desktop"
+msgstr "Ullada a l'escriptori"
+
+#: package/contents/ui/PeekController.qml:16
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Moves windows back to their original positions"
+msgstr "Retorna les finestres a les seves posicions originals"
+
+#: package/contents/ui/PeekController.qml:17
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgstr ""
+"Mostra temporalment l'escriptori en moure les finestres obertes cap a les "
+"cantonades de la pantalla"

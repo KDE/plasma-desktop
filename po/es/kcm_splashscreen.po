@@ -1,0 +1,101 @@
+# Spanish translations for kcm_splashscreen.po package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2014.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_splashscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-05-27 00:52+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Ninguna"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "No se mostrará ninguna pantalla de bienvenida"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "No puede borrar la pantalla de bienvenida actual"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "Este módulo le permite escoger el tema de la pantalla de bienvenida."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "No se ha podido mostrar la vista previa de la pantalla de bienvenida."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Vista previa de la pantalla de bienvenida"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "&Obtener nuevas pantallas de bienvenida..."
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Para uso futuro"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Nombre del tema de pantalla de bienvenida actual"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eloy Cuadra"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ecuadra@eloihr.net"
+
+#~ msgid "Splash Screen"
+#~ msgstr "Pantalla de bienvenida"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Get New Icons..."
+#~ msgstr "Obtener nuevos iconos..."
+
+#~ msgid "Splash Screens"
+#~ msgstr "Pantallas de bienvenida"
+
+#~ msgid "Error"
+#~ msgstr "Error"
+
+#~ msgid "Choose the splash screen theme"
+#~ msgstr "Escoger el tema de la pantalla de bienvenida"
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "Configurar los detalles de la pantalla de bienvenida"

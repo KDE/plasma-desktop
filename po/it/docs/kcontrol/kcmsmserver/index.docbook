@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Gestione della sessione</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Riccardo</firstname
+><surname
+>Iaconelli</surname
+> <contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Manutenzione della traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22/03/2022</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Centro di controllo</keyword>
+<keyword
+>sessione</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Sessione desktop</title>
+
+<sect2 id="sessions-use">
+<title
+>Uso</title>
+
+<para
+>In questo modulo delle &systemsettings; puoi configurare il gestore della sessione e le impostazioni di uscita da &plasma;.</para>
+
+<para
+>La gestione delle sessione si riferisce alla capacità di &plasma; di salvare lo stato delle applicazioni e le finestre all'uscita da &plasma;, e di ripristinarlo al successivo accesso.</para>
+
+<sect3 id="sessions-general">
+<title
+>Generale</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Conferma l'uscita</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, in occasione dell'uscita &plasma; visualizzerà una finestra con un tempo rimanente di 30 secondi, e ti chiederà la conferma. In questa finestra potrai scegliere se vuoi ripristinare la sessione al prossimo accesso.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Offri le opzioni di spegnimento</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, all'uscita &plasma; ti offrirà una scelta tra alcune azioni. Queste includono la semplice conclusione della sessione (l'azione che viene eseguita se non sono abilitate le opzioni di spegnimento), lo spegnimento del computer o il riavvio.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opzione di uscita predefinita</title>
+<para
+>Puoi configurare cosa dovrebbe succedere normalmente quando esci da &plasma;. Queste opzioni non sono possibili su tutti i sistemi operativi, inoltre alcune richiedono l'uso di &SDDM; come gestore degli accessi.</para>
+<para
+>Le opzioni disponibili sono autoesplicative, ma se hai dei dubbi lascia le impostazioni predefinite. Esse sono:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Termina la sessione corrente</guilabel
+> (l'opzione predefinita)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Spegni il computer</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Riavvia il computer</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>All'accesso</title>
+<para
+>Quello che accade quando accedi a &plasma; è regolato da queste tre opzioni:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ripristina la sessione precedente</guilabel
+></term>
+<listitem
+><para
+>Se questa opzione è selezionata, all'uscita &plasma; salverà lo stato della sessione e la ripristinerà al prossimo accesso. In questo modo potrai continuare a lavorare in un desktop uguale a quello che avevi lasciato.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ripristina l'ultima sessione salvata manualmente</guilabel
+></term>
+<listitem
+><para
+>Invece di ripristinare &plasma; allo stato che aveva quando sei uscito l'ultima volta, la sessione sarà ripristinata ad uno stato specifico che hai salvato manualmente.</para>
+<para
+>Se questa opzione è selezionata, il menu dell'applicazione presenta un elemento <menuchoice
+><guimenu
+>Alimentazione / Sessione</guimenu
+><guimenuitem
+>Salva sessione</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Avvia una sessione vuota</guilabel
+></term>
+<listitem>
+<para
+>Se scegli questa opzione, &plasma; non ripristinerà mai le sessioni che ha salvato.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Infine puoi inserire una serie di applicazioni separate dai due punti (<literal
+>:</literal
+>) o dalle virgole (<literal
+>,</literal
+>) che dovranno essere escluse dalle sessioni, e che quindi non dovranno essere avviate al ripristino di una sessione, ad esempio <userinput
+>xterm:konsole</userinput
+> oppure <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

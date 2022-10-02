@@ -1,0 +1,286 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Toetsenbord</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>toetsenbord</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module geeft u de mogelijkheid om aan te geven hoe uw toetsenbord moet werken.</para>
+
+<para
+>Er zijn drie tabbladen in deze module.</para>
+
+<sect1 id="hardware">
+<title
+>Het tabblad Hardware</title>
+<para
+>Wat deze opties nu werkelijk doen hangt af van de mogelijkheden van uw toetsenbord en de X server waarop &plasma; draait. Het veranderen van het toetsklikvolume zou bijvoorbeeld geen effect kunnen hebben als deze mogelijkheid niet beschikbaar is op uw systeem. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Toetsenbordmodel:</guilabel
+></term>
+<listitem>
+<para
+>Hier kunt u een toetsenbordmodel instellen. Deze instelling is onafhankelijk van uw toetsenbordindeling en refereert aan het &quot;hardwaremodel&quot;, oftewel de wijze waarop uw toetsenbord is gemaakt. Moderne toetsenborden die met computers worden meegeleverd hebben twee extra toetsen en worden &quot;104-key&quot; modellen genoemd. Als u niet weet welk model u hebt, dan is dit waarschijnlijk het juiste type. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock bij Plasma-start</guilabel
+></term>
+<listitem>
+<para
+>U kunt kiezen om de toets NumLock bij het opstarten van &plasma; op <guilabel
+>Inschakelen</guilabel
+> of op <guilabel
+>Uitschakelen</guilabel
+> te zetten, of u kunt kiezen om de NumLock-status onveranderd te laten.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Wanneer een toets blijft ingedrukt:</guilabel
+></term>
+<listitem>
+<para
+>Het is mogelijk om een van de drie opties hier te selecteren, namelijk</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tekens met accenten en soortgelijke tonen</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is geselecteerd, wanneer een toets blijft ingedrukt bij invoeren van tekst, wordt een pop-up getoond waarmee men kan kiezen tussen verschillende vormen van tekens met accenten.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Niets doen</guilabel
+></term>
+<listitem>
+<para
+>Deze optie stelt u in staat om activiteiten af te schakelen bij ingedrukt houden van de toetsen.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>De toets herhalen</guilabel
+></term>
+<listitem>
+<para
+>WAnneer deze optie geselecteerd is, zal een toets ingedrukt houden hetzelfde teken herhaald uitzenden totdat de toets losgelaten wordt. Een toets ingedrukt houden heeft dan dus hetzelfde effect als de toets verschillende opeenvolgende keren aanslaan.</para>
+<tip
+><para
+>Bijna alle gebruikers zullen deze optie willen aanzetten, omdat hierdoor het navigeren door documenten met behulp van de pijltjestoetsen aanmerkelijk gemakkelijker wordt. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Vertraging</guilabel
+></term>
+<listitem>
+<para
+>Deze optie stelt u in staat om de vertraging in te stellen waarna een ingedrukte toets begint met het maken van toetscodes.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Snelheid</guilabel
+></term>
+<listitem>
+<para
+>Deze optie stelt u in staat om de snelheid in te stellen waarmee toetscodes worden gegenereerd terwijl een toets wordt ingedrukt.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Type enige tekens in het tekstvak <guilabel
+>Testgebied</guilabel
+> om de instellingen die u hebt geselecteerd te verifiëren.</para>
+<para
+>Veel computers ondersteunen deze functie niet.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Het tabblad Indelingen</title>
+<para
+>Dit tabblad laat u kiezen welke toetsenbordindeling u wilt gebruiken, welke aanduiding u wilt in het systeemvak, hoe u wilt omschakelen en welke sneltoetsen u wilt gebruiken.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indelingsindicator</guilabel
+></term>
+<listitem>
+<para
+>Met het kiezen van <guilabel
+>Indelingsaanduiding tonen</guilabel
+> wordt de iso-taalnaam in het systeemvak getoond. U kunt er voor kiezen deze aanduiding te tonen zelfs als u één enkele indeling hebt geactiveerd en u kunt de taalvlag tonen in plaats van alleen de ISO-code door <guilabel
+>Vlag tonen</guilabel
+> te activeren.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Wisselbeleid</guilabel
+></term>
+<listitem>
+<para
+>Als u wisselbeleid <guilabel
+>Toepassing</guilabel
+> of <guilabel
+>Venster</guilabel
+> kiest zal het wisselen van indeling alleen effect hebben binnen de huidige toepassing of venster. <guilabel
+>Globaal</guilabel
+> zal de toetsenbordindeling globaal wijzigen en <guilabel
+>Bureaublad</guilabel
+> alleen voor het huidige virtuele bureaublad. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sneltoetsen voor wisselen van indeling</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Hoofdsneltoetsen</guilabel
+> is een sneltoets voor het omschakelen van indelingen die afgehandeld wordt door X.org. <guilabel
+>3de niveau sneltoetsen</guilabel
+> is een sneltoets voor omschakelen naar een derde niveau van de actieve indeling (als het er een heeft) die wordt behandeld door X.org. Het staat alleen sneltoetsen met een modifier toe. <guilabel
+>Alternatieve sneltoets</guilabel
+> is een sneltoets voor omschakelen van indelingen die door &plasma; wordt behandeld. Het ondersteunt geen met alleen een modifier en zou ook niet kunnen werken in bepaalde situaties (&eg; als er een popup actief is of in een schermbeveiliger). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Indelingen instellen</guilabel
+></term>
+<listitem>
+<para
+>Als u <guilabel
+>Indelingen instellen</guilabel
+> activeert dan zult u in staat zijn om toetsenbordindelingen toe te voegen of te verwijderen om er tussen te schakelen als dat nodig is. </para>
+<para
+>Klikken op <guibutton
+>Toevoegen</guibutton
+> opent een dialoog waarmee u in staat bent de nieuwe toetsenbordindeling, die u wilt toevoegen, te kiezen, evenals zijn variant, label en sneltoets. </para>
+<para
+>De lijst met indelingen rechts van het label <guilabel
+>Indeling</guilabel
+> in de dialoog <guilabel
+>Indeling toevoegen</guilabel
+> kan verminderd worden met de afrollijst <guilabel
+>Selectie per taal beperken</guilabel
+>. U kunt klikken op de knop <guibutton
+>Voorbeeld</guibutton
+> om de gekozen indeling in een apart venster te bekijken. </para>
+<para
+>U kunt de volgorde van de indelingen wijzigen met de Omhoog en Omlaag knoppen, de bovenste in de standaard. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Reserve-indelingen</guilabel
+></term>
+<listitem>
+<para
+>Deze optie kan alleen worden ingeschakeld als u meer dan twee indelingen hebt.</para>
+<para
+>Reserve indelingen stelt u in staat om gemakkelijk tussen een klein aantal indelingen te wisselen terwijl er meer indelingen klaar staan. U kunt bijvoorbeeld 3 talen gebruiken: Engels, Oekraïens en Duits, maar de eerste twee worden het meest gebruikt en de derde slechts af en toe. In dat geval kunt u de eerste twee als hoofdindelingen instellen (instelling <guilabel
+>Aantal hoofdindelingen</guilabel
+>: 2) en Duits als een reserve indeling - wanneer u met het toetsenbord of de linker muisknop wisselt, zal de wisseling alleen tussen de hoofdindelingen zijn, maar u kunt de derde indeling met het contextmenu kiezen.</para>
+<para
+>Wanneer de reserve indeling wordt gekozen vervangt het de laatste hoofdindeling (dit is gedaan om technische redenen, gewoonlijk werken globale sneltoetsen gebaseerd op de 1st actieve indeling zodat het betrouwbaarder werkt om de 1ste indeling te behouden bij het activeren van de reserve indeling).</para>
+<!-- context menu ?-->
+<para
+>Omdat X.org slechts 4 indelingen om tussen te schakelen toestaat, biedt de mogelijkheid <quote
+>reserve indelingen</quote
+> ook een uitweg uit deze beperking: de gebruiker kan tot 4 hoofdindelingen hebben (beheerd door X.org) maar nog eens 4 reserve indelingen zijn toegestaan (beheerd door indelingsschakelaar). De gebruiker kan gemakkelijk werken met een totaal van 8 indelingen (de limiet van 4 reserve indelingen kan in de toekomst groter worden). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Het tabblad Geavanceerd</title>
+<para
+>In dit tabblad, als u <guilabel
+>Toetsenbordopties instellen</guilabel
+> activeert, bent u in staat een paar opties met betrekking tot enkele speciale toetsinstellingen in te stellen. U kunt deze opties uitbreiden door op het &gt; symbool te klikken links van de optie, daarna kiest u uw instelling in de uitgebreide lijst.</para>
+<para
+>Dit is een &GUI; om u te helpen bij het maken van eigen toetsenbordindelingen voor &X11; met XKB. </para>
+<para
+>Voor meer informatie ga naar de sectie <emphasis
+>Koppelingen</emphasis
+> op de <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>pagina XKeyboardConfig op freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

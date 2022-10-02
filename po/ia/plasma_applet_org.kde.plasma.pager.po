@@ -1,0 +1,191 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2013, 2021, 2022.
+# Giovanni Sora <g.sora@tioscali.it>, 2014, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-02-16 22:42+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "General:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Monstra icones de application sur contornos de fenestra"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Monstra solmente schermo currente"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Inveloppamento (wrap around) de navigation"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Disposition:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Predefinite"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Vertical"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Monstra texto:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Nulle texto"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Numero de activitate"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Numero de Scriptorio"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Nomine de activitate"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Nomine de scriptorio"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Seligente Activitate currente:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Seligente currente scriptorio virtual:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Il face nihil"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Il monstra scriptorio"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "...e %1 altere fenestras"
+msgstr[1] "e %1 altere fenestras"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 Fenestra:"
+msgstr[1] "%1 Fenestras:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "Fenestra minimisate %1:"
+msgstr[1] "Fenestrar minimisate %1:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "Scriptorio %1"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Monstra Gerente de activitate..."
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Adde Scriptorio Virtual"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Remove Scriptorio Virtual"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Configura Scriptorios virtual ..."
+
+#~ msgid "Activate %1"
+#~ msgstr "Activa %1"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Il monstra le pannello de instrumentos"
+
+#~ msgid "Display icons:"
+#~ msgstr "Monstra icones:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Adde Scriptorio Virtual"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Remove Ultime Scriptorio Virtual"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Numero de columnas:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Nume&ro de lineas:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Cambia le numero de lineas"

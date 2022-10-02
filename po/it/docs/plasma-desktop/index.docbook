@@ -1,0 +1,1071 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Manuale di &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>23/07/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma; è l'interfaccia principale per il desktop. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoide</keyword>
+<keyword
+>Oggetto</keyword>
+<keyword
+>Contenitori</keyword>
+<keyword
+>Desktop</keyword>
+<keyword
+>Esecutore</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+
+<para
+>&plasma; fornisce un ambiente moderno e personalizzabile per eseguire le proprie applicazione preferite e accedere alle proprie informazioni ovunque siano. Altri attributi comuni di &plasma; Desktop includono la gestione avanzata delle finestre e gli effetti del desktop, supporto per gli oggetti di &kde; &plasma;, ricerca integrata, gestione dell'hardware e un alto grado di personalizzazione. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Usare &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>Componenti di &plasma;</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Oggetti e contenitori di &plasma;</title>
+
+<para
+>L'essenza di &plasma; ruota intorno a due concetti basilari: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Oggetti di &plasma;</term>
+<listitem>
+<para
+>Piccole applicazioni che risiedono sul desktop. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Contenitori</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Applet che fanno da contenitori per gli oggetti di &plasma; </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Su un desktop predefinito, ci sono due elementi principali: il pannello e il desktop stesso. Entrambi sono dei contenitori nel senso di &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Il desktop di &plasma; predefinito</title>
+
+<para
+><note
+><para
+>Il desktop di &plasma; può essere configurato in diversi modi. La schermata in basso mostra un desktop abbastanza standard. Alcune distribuzioni applicano profonde personalizzazioni, perciò il vostro desktop potrebbe essere diverso. </para>
+<para
+>In maniera simile, l'aspetto grafico degli elementi dell'interfaccia può essere reso nello stesso stile. Queste schermate utilizzano lo stile predefinito di &kde;, Breeze.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Un desktop di &plasma; abbastanza standard</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>L'avviatore dei programmi. Normalmente sarà <link linkend="panel-launcher"
+>Lanciatore di applicazioni</link
+>.</para
+></listitem>
+<listitem
+><para
+>Un paio di icone che semplificano l'accesso alle applicazioni utilizzate spesso</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+>Il <link linkend="panel-taskbar"
+>Gestore dei processi</link
+>, che mostra i titoli delle finestre delle applicazioni in esecuzione. Nessuna applicazione aveva aperto una finestra nel momento in cui la schermata è stata acquisita</para
+></listitem>
+<listitem
+><para
+>Il <link linkend="panel-system-tray"
+>vassoio di sistema</link
+></para
+></listitem>
+<listitem
+><para
+>L'oggetto <link linkend="panel-digital-clock"
+>Orologio digitale</link
+></para
+></listitem>
+<listitem
+><para
+>Gli <link linkend="panel-toolbox"
+>Strumenti del pannello</link
+></para
+></listitem>
+<listitem
+><para
+>Gli strumenti del <link linkend="desktop"
+>Desktop</link
+></para
+></listitem>
+<listitem
+><para
+>L'oggetto Vista delle cartelle, che mostra il contenuto della cartella Desktop</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Il pannello</title>
+
+<para
+>Il pannello predefinito contiene alcuni oggetti predefiniti di &plasma;: partendo da sinistra, si trova il lanciatore delle applicazioni.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Lanciatore delle applicazioni</title>
+
+<screenshot>
+<screeninfo
+>Lanciatore delle applicazioni</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Lanciatore applicazioni</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>È possibile utilizzarlo per avviare le applicazioni, aprire i file usati di recente e per le normali opzioni di uscita e spegnimento. C'è anche una struttura che permette di sfogliare le applicazioni. La disposizione è stata ottimizzata per il caso d'uso più comune: avviare un'applicazione. La scheda predefinita è <guilabel
+>Preferiti</guilabel
+>, contenente le voci usate più spesso. All'inizio, probabilmente, userete più spesso la scheda <guilabel
+>Applicazioni</guilabel
+>. Una volta che avrete scoperto quali sono le applicazioni che avviate più spesso, è possibile fare clic con il tasto <mousebutton
+>destro</mousebutton
+> sui loro elementi e selezionare <guimenuitem
+>Aggiungi ai preferiti</guimenuitem
+> per aggiungerle ai <guilabel
+>Preferiti</guilabel
+> (o direttamente sul pannello o sul desktop. Nota che dovrai <quote
+>sbloccare</quote
+>; &plasma; facendo clic con il tasto <mousebutton
+>destro</mousebutton
+> sul desktop prima di fare qualsiasi modifica).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Menu applicazioni</title>
+
+<para
+>Se si preferisce il lanciatore di applicazioni del tipo menu tradizionale, cambiarlo facendo clic con il tasto <mousebutton
+>destro</mousebutton
+> del mouse  sul pulsante del menu e selezionando <guimenuitem
+>Alternative</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Menu applicazioni</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Menu applicazioni</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Impostazioni lanciatore delle applicazioni</title>
+
+<para
+>Se si desidera configurare il lanciatore delle applicazioni, cambiarlo facendo clic con il tasto <mousebutton
+>destro</mousebutton
+> del mouse sul pulsante del menu e selezionando <guimenuitem
+>Configura il lanciatore dell'applicazione</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Impostazioni del lanciatore delle applicazioni</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Impostazioni del lanciatore delle applicazioni</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Barra delle applicazioni</title>
+
+<para
+>La barra delle applicazioni è un altro oggetto del pannello. Come impostazione predefinita, mostra un'area per tutte le finestre aperte su tutti i desktop. Puoi farle mostrare solo le finestre aperte sul desktop attuale selezionando <guimenuitem
+>Mostra solo le applicazioni del desktop attuale</guimenuitem
+> quando fai clic con il tasto destro del mouse sul gestore delle applicazioni, tra due finestre. La dimensione del testo degli elementi nella barra delle applicazioni può essere impostata in &systemsettings; sotto <menuchoice
+><guimenu
+>Aspetto</guimenu
+><guisubmenu
+>Caratteri</guisubmenu
+></menuchoice
+>. Il clic con il tasto destro sulla barra fa apparire la finestra Impostazioni, in cui è possibile scegliere diverse opzioni per personalizzare la barra. <screenshot>
+<screeninfo
+>Ecco una schermata della finestra delle impostazioni della barra delle applicazioni</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>La finestra delle impostazioni della barra delle applicazioni</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Vassoio di sistema</title>
+
+<para
+>Un altro oggetto del pannello predefinito è il <application
+>vassoio di sistema</application
+>, usato dalle applicazioni tradizionali come un aggancio. Il clic con il tasto destro sul <application
+>vassoio di sistema</application
+> permette di aprire la finestra delle impostazioni, dove è possibile impostare le voci da visualizzare e la loro visibilità. </para>
+<screenshot>
+<screeninfo
+>Finestra delle impostazioni Vassoio di sistema</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Finestra delle impostazioni Vassoio di sistema</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Notificatore dei dispositivi</title>
+
+<para
+>Un'icona posizionata normalmente nel vassoio di sistema è il <application
+>Notificatore dei dispositivi</application
+>. Se si inserisce un disco &USB;, apparirà una finestra che permette di aprire il dispositivo in &dolphin; o in un'altra applicazione associata. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Il <application
+>Notificatore dei dispositivi</application
+> è utilizzato per gestire i dispositivi collegabili come chiavette &USB; (anche chiamate flash drive o thumb drive), fotocamere digitali, dischi fissi &USB; esterni, &etc;. Entra in gioco anche quando si carica un &CD; o un DVD nel lettore ottico. </para>
+<para
+>Quando si collega un dispositivo esterno, o si carica un nuovo supporto in un lettore, apparirà la finestra del <guilabel
+>Notificatore</guilabel
+> (è possibile aprirla manualmente facendo clic sull'icona del pannello). Rimarrà aperta mentre il puntatore è su di essa, altrimenti si nasconderà dopo pochi secondi. </para>
+<para
+>La finestra del <guilabel
+>Notificatore</guilabel
+> mostra un elenco di tutti i dispositivi conosciuti. Lo spostamento del puntatore su un dispositivo evidenzierà le possibili azioni associate a quel dispositivo. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Il clic in un punto qualsiasi nel riquadro sfumato che contiene il nome del dispositivo (ma non sull'icona di espulsione/smontaggio, se presente) espande la voce per mostrare l'elenco delle possibili azioni per quel dispositivo. Le azioni dipendono dal dispositivo; è configurabile dal menu contestuale del <application
+>Notificatore dei dispositivi</application
+> o dai moduli di &systemsettings; <ulink url="help:/kcontrol/solid-actions/index.html"
+>Azioni dei dispositivi</ulink
+> e <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Dispositivi rimovibili</ulink
+>. Basta selezionarne una con il mouse o con la tastiera ed eseguire tale azione. </para>
+<para
+>C'è anche una piccola icona a destra di ogni voce che mostra se quel dispositivo è attualmente accessibile (o <emphasis
+>montato</emphasis
+>) o meno. È sicuro scollegare fisicamente un dispositivo dal computer solo se non è montato. Il clic sull'icona smonterà il dispositivo e/o il supporto sarà espulso se montato, e lo monterà in caso contrario. Notare che l'operazione di smontaggio/espulsione potrebbe non riuscire se ci sono file aperti sul dispositivo, &eg; se la copia di un file di grandi dimensioni non è stata completata. Nella maggior parte dei casi, è sufficiente attendere un po' e riprovare. Quando un'operazione di smontaggio è avvenuta correttamente, un'icona di conferma sarà mostrata nell'icona del <application
+>Notificatore dei dispositivi</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Elementi nascosti</title>
+
+<para
+>Il <application
+>vassoio di sistema</application
+> di solito contiene altre voci come &klipper;, &kmix; &etc;</para>
+
+<para
+>Alcune delle voci predefinite nel <application
+>vassoio di sistema</application
+> sono nascoste per risparmiare spazio nella barra. Per visualizzare queste voci, fare clic sul piccolo triangolo bianco <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, poi utilizzare il &LMB; per aprire un oggetto o il &RMB; per aprire la finestra delle impostazioni.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Orologio digitale</title>
+
+<para
+>L'oggetto di &plasma; più a destra nel pannello predefinito contiene l'<application
+>orologio digitale</application
+>. Questo orologio può visualizzare l'ora in diversi fusi orari ed essere ridimensionato. L'orologio regolerà le dimensioni dei suoi caratteri in base all'area del contenitore circostante (cioè il pannello, in questo caso). Se scegli di visualizzare la data, essa sarà resa usando l'opzione <guimenuitem
+>Carattere piccolo</guimenuitem
+> della finestra <guilabel
+>Carattere</guilabel
+> delle &systemsettings;. L'ora occuperà il resto dello spazio. In conclusione, sceglierai tu quante informazioni mostrare, e se sono appropriate. Se vuoi visualizzare più informazioni, ingrandisci il pannello o metti l'orologio sul desktop, dove può crescere liberamente. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Paginatore</title>
+
+<para
+>Un elemento facoltativo sul pannello è il <application
+>Cambiadesktop</application
+>. Consente di passare da un desktop virtuale all'altro. Se cambi la struttura del <application
+>Cambiadesktop</application
+> con l'opzione <guimenuitem
+>Numero di righe</guimenuitem
+>, ciò avrà effetto anche sulla disposizione e sulle animazioni dell'effetto <guimenuitem
+>Griglia dei desktop</guimenuitem
+> di &kwin;. Con cambiadesktop di grandi dimensioni, ha senso utilizzare l'opzione <guimenuitem
+>Mostra icone delle finestre</guimenuitem
+>. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Gli strumenti del pannello</title>
+
+<para
+>Se il desktop è sbloccato (puoi farlo facendo clic con il tasto <mousebutton
+>destro</mousebutton
+> sul desktop, o, quando nessuna applicazione è attiva, con <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), apparirà un piccolo logo di &plasma; nell'angolo in basso a destra. Fai clic su questo oggetto e si aprirà il controllo del pannello.</para>
+
+<screenshot>
+<screeninfo
+>Impostazioni del pannello</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Impostazioni del pannello</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Il controllo del pannello permette di riposizionare, ridimensionare e riallineare il pannello. Gli oggetti di &plasma; di questo pannello regoleranno le loro dimensioni automaticamente.Gli oggetti di &plasma; hanno una conoscenza di base delle dimensioni che vengono date loro dai contenitori. Sono programmati per usare quelle dimensioni, e informare l'oggetto su quanto spazio possono richiedere. Insomma, il contenitore dà una dimensione possibile agli oggetti, e loro obbediscono.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Aggiungere oggetti</title>
+
+<para
+>Sblocca il desktop e potrai aggiungere e rimuovere gli oggetti di &plasma; dal pannello o dal desktop. Gli oggetti di &plasma; si aggiungono semplicemente trascinandoli dove vuoi posizionarli. Fai clic con il tasto <mousebutton
+>destro</mousebutton
+> su un oggetto per rimuoverlo. <screenshot
+> <screeninfo
+>Aggiungi oggetti</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Aggiungi oggetti</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Il pulsante <guibutton
+>Ottieni nuovi oggetti</guibutton
+> permette di aggiungere oggetti scaricati in precedenza e scaricare nuovi oggetti di &plasma;. Attualmente supporta i pacchetti nativi &plasmagik; e alcuni oggetti della dashboard di &Mac; OS&nbsp;X. Gli oggetti così installati possono quindi essere ritrovati come i normali oggetti preinstallati. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Il desktop</title>
+
+<para
+>Il desktop è in realtà un altro contenitore, uno che non impone vincoli di dimensione agli oggetti. Essi possono essere spostati e ridimensionati liberamente. Sul desktop sbloccato, gli oggetti di &plasma; mostreranno una cornice quando passi sopra con il puntatore. Questa maniglia permette di spostare, ridimensionare, riposizionare e riallineare il pannello; permette anche di trascinare gli oggetti di &plasma; sul desktop. I pulsanti nell'angolo si usano per ridimensionare, ruotare, configurare e rimuovere l'oggetto. Quando viene ruotato, un oggetto di &plasma; sarà magnetico rispetto alla posizione normale (a ore 12), per facilitarne il raddrizzamento quando necessario. Come impostazione predefinita, la maggior parte degli oggetti mantengono le loro proporzioni durante il ridimensionamento. Se vuoi ridimensionare liberamente un oggetto, tieni premuto il tasto &Ctrl; mentre lo ridimensioni. </para>
+
+<para
+>Fare clic con il tasto destro sul desktop dà anche la possibilità di configurare aspetti come lo sfondo e la disposizione utilizzata. Permette inoltre di scaricare nuovi sfondi attraverso &knewstuff;. </para>
+<para
+>Nella pagina <guilabel
+>Regolazioni</guilabel
+>, è possibile configurare gli strumenti del desktop e regolare la gestione degli oggetti. </para>
+
+<screenshot>
+<screeninfo
+>Impostazioni del desktop</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Impostazioni del desktop</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Per cambiare il tema di &plasma; o scaricarne uno nuovo tramite &knewstuff;, aprire la pagina <menuchoice
+><guimenu
+>Aspetto</guimenu
+> <guimenuitem
+>Tema del desktop</guimenuitem
+></menuchoice
+> in &systemsettings;.</para>
+
+<para
+>Quando ci sono applicazioni aperte, diventa subito difficile vedere gli oggetti di &plasma; sul desktop. Il <emphasis role="bold"
+>quadro degli strumenti</emphasis
+> li porta in primo piano, in modo simile alla funzionalità <guilabel
+>Dai un'occhiata al desktop</guilabel
+> che dovresti aver già visto nei desktop tradizionali. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Vista delle cartelle</title>
+<para
+>L'oggetto <guilabel
+>Vista delle cartelle</guilabel
+> è utilizzato per visualizzare gli elementi come cartelle o file di una cartella, in modo predefinito da <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>È possibile scegliere di vedere tutti i file o filtrare tramite un'espressione regolare (&eg;, tutti i file con una certa estensione) o tramite il tipo di file (&eg; solo immagini). </para>
+<para
+>Questo oggetto supporta anche le proprietà di gestione dei file di base (spostare, copiare, tagliare e incollare, ad esempio), ed è possibile averne sul desktop tutti quelli che si desiderano. </para>
+
+<screenshot>
+<screeninfo
+>Vista delle cartelle</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Vista delle cartelle</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Se si seleziona la disposizione <guilabel
+>Vista delle cartelle</guilabel
+> nelle <guilabel
+>Impostazioni del desktop</guilabel
+>, è possibile utilizzare una vista delle cartelle come intero desktop, replicando il paradigma del desktop "vecchio stile". </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; è una mini-riga di comando versatile. È possibile utilizzarlo per avviare applicazioni, aprire pagine web, accedere ai segnalibri, cercare nei dati del desktop, calcolare semplici equazioni, e molto altro. La pressione di <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> o <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> apre la finestra di &krunner;. Basta iniziare a scrivere e &krunner; comincerà a cercare corrispondenze dal momento in cui saranno stati inseriti più di due caratteri. È possibile aprire la finestra delle impostazioni per saperne di più sulle funzionalità di &krunner; fornite da estensioni. Si può navigare attraverso le corrispondenze usando il tasto di tabulazione e le frecce direzionali. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>La finestra di &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>La finestra di &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Utilizzare il pulsante <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> per aprire il modulo <guilabel
+>KRunner</guilabel
+> di &systemsettings; e configurare dove e cosa cercare con &krunner;. </para>
+
+<para
+>&krunner; supporta le <quote
+>Azioni del desktop</quote
+> che sono azioni aggiuntive che un'applicazione è in grado di offrire per eseguire azioni comuni o passare direttamente a una determinata attività dal gestore delle applicazioni. Esempi comuni sono <guilabel
+>Apri nuova finestra di in modalità Incognito</guilabel
+> per aprire il proprio browser direttamente in modalità privata, <guilabel
+>Componi messaggio</guilabel
+> senza avviare il client di posta elettronica o le azioni fornite da &spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>Azioni del desktop di &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Azioni del desktop di &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Se si preme il tasto &Down; in un &krunner; vuoto, sarà mostrata una cronologia delle entità recenti. Dopo aver invocato un risultato di ricerca, la sua interrogazione sarà spostata in alto, così i comandi utilizzati ripetutamente non usciranno mai dall'elenco. </para>
+<para
+>Rimuovere singole voci dall'elenco utilizzando il pulsante <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> o cancellare l'intera cronologia nelle impostazioni di &krunner; </para>
+
+<para
+>Se vuoi sapere cosa succede sul sistema, la pressione di <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> fornisce rapidamente accesso a un elenco di finestre e processi, con opzioni per sorvegliarne il risultato e terminare i processi. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Attività</title>
+
+<para
+>Gli strumenti del desktop, accessibili tramite l'angolo in alto a sinistra, forniscono un pulsante per visualizzare le attività. &plasma; consente di avere più di un'attività, cioè diversi contenitori desktop che ospitano insiemi di oggetti di &plasma;. Visualizza la barra <quote
+>Attività</quote
+>, seleziona una delle attività predefinite o scegli <guilabel
+>Crea attività</guilabel
+> per creare un nuovo contenitore, selezionare il nuovo contenitore e personalizzarlo a tuo piacimento. Le attività di &plasma; e la griglia dei desktop di &kwin; sono simili in questa prospettiva, ma c'è una differenza fondamentale: mentre i desktop virtuali si usano per raggruppare e organizzare le finestre, le attività di &plasma; si usano per raggruppare e organizzare gli oggetti di &plasma;. In questo modo puoi cambiare attività e avere gli oggetti di &plasma; utili a ciò che stai facendo. Ad esempio, puoi creare un'attività <quote
+>Tempo libero</quote
+>, con i fumetti, un puzzle, e un'altra <quote
+>Lavoro</quote
+>, con fonti <acronym
+>RSS</acronym
+>, calcolatrice e calendario. </para>
+
+<para
+>Per eliminare un'attività, premere il pulsante <guibutton
+>Ferma attività</guibutton
+> nella barra <quote
+>Attività</quote
+> (premere <keycombo action="simul"
+>&Alt; <keycap
+>D</keycap
+></keycombo
+> quindi <keycombo action="simul"
+>&Alt;<keycap
+> A</keycap
+></keycombo
+> per aprire la barra) poi premere la «X» rossa (o premere <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> quindi <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) e confermare l'eliminazione. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Scorciatoie</title>
+
+<para
+>La maggior parte delle funzionalità di &plasma; è accessibile anche tramite scorciatoie da tastiera. Le varie combinazioni devono essere premute in sequenza, ad esempio <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> significa: premi &Alt; e <keycap
+>D</keycap
+>, rilascia e premi <keycap
+>A</keycap
+>. </para>
+<para
+>Attualmente, possono essere utilizzate le seguenti scorciatoie: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Aggiungi oggetti</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Rimuovi oggetto</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Blocca/Sblocca oggetti</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Riduci zoom</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Ingrandisci</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Oggetto successivo</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Oggetto precedente</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Impostazioni dell'oggetto</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Attività</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Rimuovi questa attività</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Impostazioni del desktop</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Attività successiva</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Attività precedente</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Dai un'occhiata al desktop</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Esegui l'applicazione associata</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Apre il pannello Attività</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&plasma; </para>
+<para
+>Copyright del programma 2008 di &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Copyright della documentazione &copy; 2008&ndash;2010 di Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Traduzione: Vincenzo Reale <email
+>smart2128vr@gmail.com</email
+></para
+><para
+>Traduzione: Federico Zenith <email
+>federico.zenith@member.fsf.org</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

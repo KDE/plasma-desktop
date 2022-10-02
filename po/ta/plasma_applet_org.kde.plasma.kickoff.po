@@ -1,0 +1,274 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-08-16 21:50+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.90\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "பொது"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "பிடித்தவற்றிலிருந்து நீக்கு"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "பிடித்தவற்றில் சேர்"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "அனைத்து செயல்பாடுகளிலும்"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "தற்போதைய செயல்பாட்டில்"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "பிடித்தவற்றில் காட்டு"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "சின்னம்:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "தேர்வு செய்…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr "இயல்பிருப்பு சின்னத்தை மீட்டமை"
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr "சின்னத்தை நீக்கு"
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "காட்சிப்பெயர்:"
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "காட்சிப்பெயரை சேர்க்க இங்கு கிளிக் செய்யுங்கள்"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "பலகை செங்குத்தாக இருக்கும்போது காட்சிப்பெயரை அமைக்கு முடியாது."
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr "பொதுவானவை:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "செயலிகளை எப்போதும் அகரவரிசையாக வகைப்படுத்து"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "இயக்கியுள்ள தேடல் செருகுநிரல்களை அமை…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "பிடித்தவற்றை காட்டு:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "நெடுவரிசைகளில்"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "பட்டியலாக"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "மற்ற செயலிகளை காட்டு:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "நெடுவரிசைகளில்"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "பட்டியலாக"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "ஆற்றல்"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "அமர்வு"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "ஆற்றல் மற்றும் அமர்வு"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "பட்டன்களுக்கு கருவித்துப்புகளை காட்டு"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "செயலிகள்"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "இடங்கள்"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "பயனர் அமைப்புகளை திற"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "திறந்தே வைத்திரு"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "செயலிகளை திருத்து…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "%1 வரிசைகளும் %2 நெடுவரிசைகளும் கொண்ட கிரிட்"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "வெளியேறு"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "மேலும்"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "கணினி"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "வரலாறு"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "அடிக்கடி பயன்படுபவை"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "சின்னத்தை நீக்கு"
+
+#~ msgid "Search…"
+#~ msgstr "தேடு..."
+
+#~ msgid "Primary actions:"
+#~ msgstr "முக்கிய செயல்கள்:"
+
+#~ msgid "Leave…"
+#~ msgstr "வெளியேறு..."
+
+#~ msgid "Power…"
+#~ msgstr "ஆற்றல்…"
+
+#~ msgid "More…"
+#~ msgstr "மேலும்…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "செயலிகள் புதுப்பிக்கப்படுகின்றன..."
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "பெயர்களில் இரண்டு வரிகளை அனுமதி"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "1 உருப்படி கொண்ட பட்டியல்"
+#~ msgstr[1] "%1 உருப்படிகள் கொண்ட பட்டியல்"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 துணைப்பட்டி"

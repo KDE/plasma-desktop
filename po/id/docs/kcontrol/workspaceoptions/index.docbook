@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Perilaku Umum</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>01-08-2019</date>
+
+<releaseinfo
+>&plasma; 5.16</releaseinfo>
+
+<keywordset>
+<keyword
+>System Settings</keyword>
+<keyword
+>desktop</keyword>
+<keyword
+>workspace</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Ini adalah modul untuk mengonfigurasikan perilaku workspace umum. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Tampilkan penginformasian tooltips saat mouse melayang</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini dicentang, tip-alat akan didisplaikan melayangi item-item di dalam panel &plasma; atau di desktop.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tampilkan feedback visual untuk status perubahan</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu mengubah &eg; kecerahan dan volume menggunakan keyboard perubahan status tersebut akan didisplaikan dalam sebuah OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Klik tunggal untuk membuka file dan folder</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah pengaturan baku. Mengeklik sesuatu pada ikon akan membukanya. Untuk memilih, kamu bisa seret di sekitar ikon-ikon atau klik <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Kanan</mousebutton
+></keycombo
+>, atau cukup klik dan tahan untuk menyeretnya.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Klik ganda untuk membuka file dan folder (pilih ikon saat pertama klik)</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini tidak dicentang, ikon/file akan dibuka dengan satu klik tombol mouse <mousebutton
+>kiri</mousebutton
+>. Perilaku baku ini konsisten dengan apa yang kamu harapkan ketika kamu mengeklik tautan di sebagian besar browser web. Namun jika dicentang, ikon/file akan dibuka dengan klik ganda, sedangkan klik tunggal hanya akan memilih ikon atau file. Ini adalah perilaku yang mungkin kamu ketahui dari desktop atau sistem operasi lain.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

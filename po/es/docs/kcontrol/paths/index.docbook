@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Ubicaciones</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>escritorio</keyword>
+<keyword
+>rutas</keyword>
+<keyword
+>ubicación</keyword>
+<keyword
+>preferencia del sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo le permite configurar rutas esenciales del escritorio &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configurar algunas rutas de &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurar algunas rutas de &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ruta del escritorio:</guilabel
+></term>
+<listitem
+><para
+>La carpeta «Escritorio» contiene todos los archivos que verá en un elemento gráfico de <guilabel
+>Vista de carpeta</guilabel
+> en el escritorio. La ruta predeterminada suele ser <filename class="directory"
+>~/Escritorio</filename
+>, aunque aquí puede cambiar la dirección de esta carpeta. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de inicio automático:</guilabel
+></term>
+<listitem
+><para
+>La carpeta de inicio automático contiene aplicaciones o enlaces a aplicaciones o guiones que desee iniciar cuando inicie &plasma;. Puede cambiar la dirección de esta carpeta si lo desea. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de documentos:</guilabel
+></term>
+<listitem
+><para
+>Esta carpeta se utilizará de forma predeterminada para cargar o guardar documentos de o en.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de descargas:</guilabel
+></term>
+<listitem
+><para
+>Esta carpeta se utilizará de forma predeterminada para guardar los elementos que haya descargado.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de vídeos:</guilabel
+></term>
+<listitem
+><para
+>Esta carpeta se utilizará de forma predeterminada para cargar o guardar películas.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de imágenes:</guilabel
+></term>
+<listitem
+><para
+>Esta carpeta se utilizará de forma predeterminada para cargar o guardar imágenes.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ruta de música:</guilabel
+></term>
+<listitem
+><para
+>Esta carpeta se utilizará de forma predeterminada para cargar o guardar música.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Si cambia una ruta y hace clic en <guibutton
+>Aplicar</guibutton
+>, aparece un diálogo donde puede elegir mover el contenido a la nueva carpeta o utilizar la nueva carpeta sin mover los archivos.</para>
+
+</article>

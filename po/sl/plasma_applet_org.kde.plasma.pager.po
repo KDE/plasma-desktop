@@ -1,0 +1,196 @@
+# translation of plasma_applet_pager.po to Slovenian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2007.
+# Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-09-07 07:34+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Splošno"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Splošno:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Prikažite ikone aplikacij na obrisih oken"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Prikaži samo trenutni zaslon"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Krmarjenje je ovito okoli"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Postavitev:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Privzeto"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Vodoravno"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Navpično"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Prikaz besedila:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Brez besedila"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Številka dejavnosti"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Številka namizja"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Ime dejavnosti"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Ime namizja"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Izbor trenutnega namizja:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Izbor trenutnega navideznega namizja:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Ne naredi nič"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Pokaži namizje"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "…in %1 drugo okno"
+msgstr[1] "…in %1 druga okna"
+msgstr[2] "…in %1 druga okna"
+msgstr[3] "…in %1 druga okna"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 okno:"
+msgstr[1] "%1 okni:"
+msgstr[2] "%1 okna:"
+msgstr[3] "%1 okna:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 skrčeno okno:"
+msgstr[1] "%1 skrčeni okni:"
+msgstr[2] "%1 skrčena okna:"
+msgstr[3] "%1 skrčenih oken:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "Namizje %1"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr "Preklopi na %1"
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Prikaži upravljalnika dejavnosti…"
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Dodaj navidezno namizje"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Odstrani navidezno namizje"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Nastavi navidezna namizja…"
+
+#~ msgid "Activate %1"
+#~ msgstr "Aktiviraj %1"
+
+#~ msgid "Icons"
+#~ msgstr "Ikone"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Prikaže nadzorno ploščo"
+
+#~ msgid "Display icons:"
+#~ msgstr "Pokaži ikone:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "Dod&aj navidezno namizje"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "Odst&rani zadnje navidezno namizje"

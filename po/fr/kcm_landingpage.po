@@ -1,0 +1,191 @@
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"PO-Revision-Date: 2022-09-24 14:42+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Nom du thème de couleurs"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Un simple clic pour ouvrir des fichiers"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Un ensemble global d'apparence et d'ergonomie"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Un ensemble global alternatif d'apparence et d'ergonomie"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Vitesse d'animation"
+
+#: package/contents/ui/FeedbackControls.qml:64
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/FeedbackControls.qml:72
+#, kde-format
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you."
+msgstr ""
+"Vous pouvez aider KDE à améliorer Plasma en fournissant des informations sur "
+"la façon dont vous l'utilisez. Ainsi, les équipes de KDE pourront se "
+"concentrer sur les choses comptant pour vous.<br/><br/>La fourniture de ces "
+"informations est facultative et entièrement anonyme. KDE ne collecte jamais "
+"vos données personnelles, les fichiers que vous utilisez, les sites Internet "
+"que vous visitez ou des informations qui pourraient vous identifier."
+
+#: package/contents/ui/FeedbackControls.qml:75
+#, kde-format
+msgid "No data will be sent."
+msgstr "Aucune donnée ne sera envoyée."
+
+#: package/contents/ui/FeedbackControls.qml:77
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Les informations suivantes seront envoyées :"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "Theme:"
+msgstr "Thème :"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Animation speed:"
+msgstr "Vitesse d'animation :"
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Lent"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Instantané"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "Changer de fond d'écran..."
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "Plus de paramètres d'apparence..."
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Un clic sur les fichiers ou les dossiers :"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Les ouvre"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Sélectionner en cliquant sur le marqueur de sélection de l'élément"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Les sélectionne"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Ouvrir plutôt par un double clic"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Send User Feedback:"
+msgstr "Envoyer un retour utilisateur :"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "Plus de paramètres de comportement..."
+
+#: package/contents/ui/main.qml:211
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "Pages les plus utilisées :"
+
+#~ msgctxt "Adjective; as in, 'light theme'"
+#~ msgid "Light"
+#~ msgstr "Clair"
+
+#~ msgctxt "Adjective; as in, 'dark theme'"
+#~ msgid "Dark"
+#~ msgstr "Sombre"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xavier Besnard"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xavier.besnard@neuf.fr"
+
+#~ msgid "Quick Settings"
+#~ msgstr "Paramètres rapides"
+
+#~ msgid "Landing page with some basic settings."
+#~ msgstr "Page d'accueil avec certains paramétrages basiques."
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Most used module number %1"
+#~ msgstr "Numéro du module le plus utilisé %1"
+
+#~ msgid "Enable file indexer"
+#~ msgstr "Activer l'indexeur de fichiers"
+
+#~ msgid "File Indexing:"
+#~ msgstr "Indexation des fichiers :"
+
+#~ msgid "Enabled"
+#~ msgstr "Activé"

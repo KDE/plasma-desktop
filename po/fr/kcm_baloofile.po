@@ -1,0 +1,185 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vincent PINON <vpinon@kde.org>, 2013.
+# Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2014.
+# Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
+# William Oprandi <william.oprandi@gmail.com>, 2020.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-09-01 08:19+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.08.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Ce module vous permet de configurer l'indexeur de fichiers et les "
+"fonctionnalités de recherche."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Ceci désactivera la recherche de fichiers dans KRunner et les menus du "
+"lanceur et supprimera l'affichage des métadonnées étendues de toutes les "
+"applications de KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Voulez-vous vraiment supprimer les données enregistrées d'indexation ? Un "
+"espace de %1 sera libéré. Mais, si l'indexation est ré-activée "
+"ultérieurement, le fichier d'index devra être totalement re-créé. Cela "
+"pourra prendre du temps, selon le nombre de fichiers vous avez."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Supprimer les données d'indexation"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"La recherche sur le bureau vous permet de localiser rapidement tous vos "
+"fichiers à partir de leur contenu."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Activer la recherche de fichiers"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indexer également le contenu des fichiers"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indexer les fichiers et dossiers cachés"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "État : %1, %2% terminé"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Mettre en pause l'outil d'indexation"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Reprendre l'indexation"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Indexation en cours actuellement : %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Configuration dossier spécifique :"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Commencer l'indexation du dossier..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Arrêter l'indexation du dossier..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Non indexé"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexé"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Supprimer l'entrée"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Sélectionner un dossier à inclure"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Sélectionner un dossier à exclure"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Geoffray Levasseur, Vincent Pinon, Johan Claude-Breuninger, Simon Depiets"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "geoffray.levasseurbrandin@numericable.fr, vpinon@kde.org, johan."
+#~ "claudebreuninger@gmail.com, sdepiets@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Recherche de fichiers"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Ajouter une configuration de dossier..."
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 est inclus."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 est exclu."
+
+#~ msgid "Disable indexing"
+#~ msgstr "Désactiver l'indexation"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Ne pas chercher dans ces emplacements :"

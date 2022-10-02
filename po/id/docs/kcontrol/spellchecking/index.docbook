@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Pemeriksa Ejaan</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Pengejaan</keyword>
+<keyword
+>kamus</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Pemeriksa Ejaan</title>
+<para
+>Opsi-opsi konfigurasi yang tersedia di sini adalah digunakan sebagai baku oleh semua aplikasi &kde; yang menggunakan &sonnet;, yang mana adalah sebuah frontend untuk berbagai pemeriksa ejaan yang bebas.</para>
+
+<para
+>Untuk menggunakan &sonnet; kamu perlu menginstal pemeriksa ejaan &eg; seperti <ulink url="http://aspell.net/"
+>GNU Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> atau <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> dan selain itu kamus-kamus yang sesuai dengan bahasamu.</para>
+
+<para
+>Opsi-opsi konfigurasi yang dipilih di sini bisa ditimpa oleh setiap aplikasi.</para>
+
+<para
+>Di dalam kotak tarik turun memilih <guilabel
+>Bahasa baku</guilabel
+> dari kamus yang tersedia, yang mana salah satu yang digunakan untuk &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Opsi Ejaan</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Fungsikan auto-deteksi bahasa</guilabel
+></term>
+<listitem>
+<para
+>Fitur ini adalah berdasarkan pada bermacam heuristik (skrip yang digunakan, pencocokan trigram dan peringkat bahasa pada bahasa yang tersedia di backend pemeriksa ejaan). Ini memungkinkannya untuk secara otomatis mengalihkan bahasa dalam sebuah dokumen multi bahasa. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pemeriksaan ejaan otomatis, difungsikan secara baku</guilabel
+></term>
+<listitem>
+<para
+>Jika sebuah tanda telah ditempatkan di kotak-centang ini, maka pengejaan kata akan diperiksa di dokumenmu sebagaimana kamu mengetiknya. Kesalahan ejaan akan memiliki sebuah garis merah tergambar di bawahnya. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Lewati semua kata berhuruf-besar</guilabel
+></term>
+<listitem>
+<para
+>Jika sebuah tanda telah ditempatkan di kotak-centang ini, maka pengejaan kata apa pun yang terdiri dari semua huruf kapital tidak akan diperiksa.</para>
+<tip
+><para
+>Ini berguna untuk dokumen yang menggunakan sejumlah besar akronim. Jika kotak ini dibiarkan tak tercentang, sebagian besar akronim tersebut akan ditandai secara tidak benar. Dengan menempatkan sebuah tanda di kotak-centang ini, maka akronim tidak akan ditandai sebagai kesalahan ejaan.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Lewati kata majemuk</guilabel
+></term>
+<listitem
+><para
+>Jika kotak ini tidak dicentang, maka kata yang muncul dalam kamus secara terpisah, tetapi menjadi majemuk, yang dianggap sebagai kesalahan ejaan. Contoh kata tersebut adalah shutout, cannot, dan blackout. </para>
+
+<tip
+><para
+>Mencentang kotak ini akan menunjang aplikasi dari kelesuan website dan alamat email untuk kesalahan pengejaan. Alamat-alamat ini sering berisi kata-kata majemuk.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Mengabaikan kata</title>
+<para
+>Setengah bagian bawah kotak dialog memungkinkanmu untuk menunjuk kata-kata tertentu (itu mungkin terminologi yang dikhususkan, nama yang tepat, &etc;) yang harus diabaikan oleh program ejaan.</para>
+
+<sect3
+><title
+>Menambah sebuah kata ke daftar abai</title>
+<para
+>Untuk menambahkan sebuah kata, ketiklah kata di dalam kotak teks dan klik tombol <guibutton
+>Tambah</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Menghapus sebuah kata dari daftar abai"</title>
+<para
+>Untuk menghapus sebuah kata, pilihlah kata di dalam kotak-daftar yang berisi semua kata yang diabaikan saat ini dengan mengeklik padanya dengan &LMB;. Sekarang kliklah tombol <guibutton
+>Hapus</guibutton
+>.</para>
+
+<para
+>Ketika kamu puas dengan perubahanmu, cukup klik <guibutton
+>Terapkan</guibutton
+>.</para>
+
+<para
+>Mengeklik pada tombol <guibutton
+>Baku</guibutton
+> mengembalikan semua nilai ke nilai-nilai bakunya.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

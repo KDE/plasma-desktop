@@ -1,0 +1,211 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-06-29 22:30+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Визуално поведение:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:25 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Показване на информационни подсказки при посочване с мишката"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Показване на визуална обратна връзка за промени в състоянието"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgid "Animation speed:"
+msgstr "Скорост на анимация:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Бавно"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Незабавно"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Кликването на файлове или папки:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "ги отваря"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Избиране чрез кликване върху маркера за избор на елемент"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "ги избира"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Вместо това да се отварят с двойно кликване"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Кликване в лентата за превъртане:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Превъртане една страница нагоре или надолу"
+
+#: package/contents/ui/main.qml:164
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Кликване със среден бутон за превъртане до избраното място"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Превъртане до мястото на кликване"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Middle Click:"
+msgstr "Кликване със среден бутон:"
+
+#: package/contents/ui/main.qml:196
+#, kde-format
+msgid "Paste selected text"
+msgstr "Поставяне на избрания текст"
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Таблетен режим:"
+
+#: package/contents/ui/main.qml:215
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Автоматично активиране при необходимост"
+
+#: package/contents/ui/main.qml:215 package/contents/ui/main.qml:244
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Без активиране"
+
+#: package/contents/ui/main.qml:227
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Таблетният режим ще се активира автоматично, когато системата открие "
+"сензорен екран, но не и мишка или тъчпад. Например: когато клавиатурата на "
+"трансформиращ се лаптоп е обърната или отделена."
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Винаги активиран"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"В режим на таблет много елементи на потребителския интерфейс се уголемяват "
+"за по-лесно адаптиране на действията с докосване."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Единично кликване за отваряне на файлове"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Скорост на анимация"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Кликване с ляв бутон в лентата за превъртане за преместване с една страница"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Автоматично преминаване в режим, оптимизиран за таблет"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Активиране на поставяне с кликване със среден бутон"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "Показване на OSD при промяна на състоянието на яркост или звук"
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Показване на OSD при промяна оформлението"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Показване на изскачащо съобщение при промяна на оформлението"

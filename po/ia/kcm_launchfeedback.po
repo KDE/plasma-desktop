@@ -1,0 +1,146 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-08-04 22:06+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Tempore limite in secundas"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Retorno de lanceamento"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Cursor:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Nulle retorno"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Static"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Palpebrante"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Pulsante"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Gerente de carga:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Habilita animation"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Stoppa animation postea:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 secunda"
+msgstr[1] "%1 secundas"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "Configura retorno de lanceamento de application"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Retorno de lanceamento</h1>Tu ci pote configurar le retorno de "
+#~ "lanceamento de application."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Cursor de occupate</h1>\n"
+#~ "KDE offere un cursor de occupate pro notification de initio de "
+#~ "application.\n"
+#~ "Pro habilitar le cursor de occupate, tu selectiona un genere de retorno "
+#~ "visual\n"
+#~ "ex le quadro combo.\n"
+#~ "Il pote occurrer que alcun applicationes non es avisate de iste "
+#~ "notification\n"
+#~ "de initio. In iste caso, le cursor stoppa de palpebrar postea le tempore\n"
+#~ "date in le section 'Tempore de Expiration de Indication de Initio'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Nulle cursor de occupate"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Cursor de occupate passive"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "&Notification de barra de cargas"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Notification de barra de cargas</H1>\n"
+#~ "Tu pote habilitar un secunde methodo de notification de initio que es\n"
+#~ "usate per le barra de cargas ubi le button con le horologio rotante "
+#~ "appare,\n"
+#~ "symbolizante que tu application que initiava es cargante.\n"
+#~ "Il pote occurrer que alcun applicationes non es avisate de iste "
+#~ "notification\n"
+#~ "de initio. In iste caso, le button dispare postea le tempore date in\n"
+#~ "le section 'Tempore de Expiration de Indication de Initio'"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "E&xpiration de tempore de indication pro  Initiar "

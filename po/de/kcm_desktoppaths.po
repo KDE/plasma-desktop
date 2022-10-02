@@ -1,0 +1,855 @@
+# Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
+# Thomas Diehl <th.diehl@gmx.net>, 2004.
+# Stephan Johach <hunsum@gmx.de>, 2005.
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
+# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2017, 2020, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoppaths\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-04-19 13:50+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Arbeitsfläche"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokumente"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Downloads"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Musik"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Bilder"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Videos"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Pfade</h1>\n"
+"Hier können Sie festlegen, wo die Dateien gespeichert werden sollen, die auf "
+"Ihrer Arbeitsfläche angezeigt werden. Verwenden Sie die Funktion „Was ist "
+"das?“ (Umschalt+F1), um Hilfe zu bestimmten Einstellungsmöglichkeiten zu "
+"erhalten."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Pfad zur Arbeitsfläche:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Dieser Ordner enthält alle Dateien, die Sie auf der Arbeitsfläche sehen. Sie "
+"können die Position dieses Ordners ändern, wenn Sie möchten. Der Inhalt wird "
+"dabei automatisch an den neuen Platz verschoben."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Pfad für Dokumente:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
+"Dokumenten benutzt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Pfad für heruntergeladene Dateien:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Speichern von heruntergeladenen "
+"Dateien benutzt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Pfad für Videos:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
+"benutzt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Pfad für Bilder:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern "
+"benutzt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Pfad für Musik:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Musik "
+"benutzt."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Pfad zu Autostart:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Dieser Ordner enthält Programme oder Verknüpfungen zu Programmen, die "
+#~ "automatisch zusammen mit der Sitzung gestartet werden sollen. Sie können "
+#~ "die Position dieses Ordners ändern, wenn Sie möchten. Der Inhalt wird "
+#~ "dabei automatisch an den neuen Platz verschoben."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Filme"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Der Pfad für %1 wurde geändert.\n"
+#~ "Sollen die Dateien von „%2“ nach „%3“ verschoben werden?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Verschieben"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Nicht verschieben"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Der Pfad für %1 wurde geändert.\n"
+#~ "Soll der Ordner „%2“ nach „%3“ verschoben werden?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Verschieben"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Nicht verschieben"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Bestätigung erforderlich"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror-Verhalten</h1> Hier können Sie das Verhalten von Konqueror "
+#~ "als Dateimanager festlegen."
+
+#~ msgid "Misc Options"
+#~ msgstr "Verschiedenes"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Ordner in e&igenen Fenstern öffnen"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiviert ist, öffnet Konqueror beim Klicken auf "
+#~ "einen Ordner ein neues Fenster, statt den Ordnerinhalt im aktuellen "
+#~ "Fenster anzuzeigen."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Eintrag „Löschen“ anzeigen (übergeht Papierkorb!)"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Deaktivieren Sie diese Einstellung, wenn Sie nicht möchten, dass der "
+#~ "Eintrag „Löschen“ in Menü-Einträgen für die Arbeitsfläche und den "
+#~ "Dateimanager erscheint. Sie können Dateien jederzeit löschen, indem Sie "
+#~ "die Umschalt-Taste gedrückt halten und „In den Papierkorb werfen“ "
+#~ "auswählen."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menü-Editor"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "New..."
+#~ msgstr "Neu ..."
+
+#~ msgid "Remove"
+#~ msgstr "Entfernen"
+
+#~ msgid "Move Up"
+#~ msgstr "Nach oben"
+
+#~ msgid "Move Down"
+#~ msgstr "Nach unten"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Um Bestätigung nachfragen bei:"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Diese Einstellung Konquerors Verhalten fest, wenn Sie in einem "
+#~ "Kontextmenü „löschen“ auswählen. <ul> <li><em>In den Papierkorb werfen</"
+#~ "em> verschiebt die Datei in den Papierkorb-Ordner, von wo sie leicht "
+#~ "wieder herausgeholt werden kann</li> <li><em>Löschen</em> löscht die "
+#~ "Datei einfach</li></ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "In den &Papierkorb werfen"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "&Löschen"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Verhalten"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Vorschaubilder && Metadaten"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Vorschaubilder zulassen, inhalts-orientierte Ordnersymbole und "
+#~ "Einlesen von Metadaten zu Protokollen für:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Vorschau-Einstellungen</h1> Hier können Sie das Verhalten von "
+#~ "Konqueror festlegen, soweit es mit der Anzeige von Dateien in Ordnern zu "
+#~ "tun hat.<h2>Liste der Protokolle:</h2> Kreuzen Sie diejenigen Protokolle "
+#~ "an, mit deren Hilfe Vorschaubilder angezeigt werden sollen und "
+#~ "deaktivieren Sie alle, die dafür nicht in Frage kommen. Zum Beispiel "
+#~ "können Sie Vorschaubilder über das SMB-Protokoll zulassen, falls Ihr "
+#~ "lokales Netzwerk schnell genug dazu ist. Aber vielleicht möchten Sie die "
+#~ "Anzeige über FTP deaktivieren, falls Sie öfter FTP-Server mit größeren "
+#~ "Bildern aufsuchen, für die nur eine langsame Verbindung zur Verfügung "
+#~ "steht.<h2>Maximale Dateigröße:</h2> Geben Sie hier die äußerste "
+#~ "Dateigröße an, für die Vorschauen erstellt werden sollen. Zum Beispiel "
+#~ "wird bei einem Wert von 1 MB (Voreinstellung) auf Vorschaubilder bei "
+#~ "Dateien verzichtet, deren Umfang ein Megabyte übersteigt. Dies geschieht "
+#~ "zugunsten der Verarbeitungsgeschwindigkeit. "
+
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Protokolle auswählen"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Lokale Protokolle"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Internet-Protokolle"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Diese Einstellung ermöglicht die Festlegung, für welche Fälle "
+#~ "Dateivorschauen, Metadaten und animierte Ordnersymbole in Konqueror "
+#~ "aktiviert werden sollen.\n"
+#~ "Wählen Sie aus der Liste der Protokolle diejenigen aus, die auf Ihrem "
+#~ "Rechner schnell genug ablaufen, um für solche Vorschaubilder verwendbar "
+#~ "zu sein."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "Ma&ximale Dateigröße:"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&Größe der Vorschaubilder entsprechend zur Größe der Symbole"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "&Vorschaubilder verwenden, die in die Dateien eingebettet sind"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, wenn Sie Minibilder benutzen möchten, "
+#~ "die sich in manchen Dateitypen befinden (z. B. in JPEGs). Das erhöht die "
+#~ "Arbeitsgeschwindigkeit und verringert den Platzbedarf. Deaktivieren Sie "
+#~ "die Einstellung, wenn Sie mit Programmen arbeiten, die ungenaue "
+#~ "Minibilder erstellen wie z. B. ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Sound-Dateien"
+
+#~ msgid "&Left button:"
+#~ msgstr "&Linke Taste:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Sie können wählen, was geschieht, wenn Sie mit der linken Taste Ihres "
+#~ "Zeigegeräts auf die Arbeitsfläche klicken."
+
+#~ msgid "Right b&utton:"
+#~ msgstr "&Rechte Taste:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Sie können wählen, was geschieht, wenn Sie mit der rechten Taste Ihres "
+#~ "Zeigegeräts auf die Arbeitsfläche klicken."
+
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Keine Aktion:</em> wie nicht schwer zu erraten: es passiert "
+#~ "nichts.</li> <li><em>Fensterliste:</em> ein Menü mit allen Fenstern auf "
+#~ "allen virtuellen Arbeitsflächen erscheint. Sie können auf den Namen der "
+#~ "Arbeitsfläche klicken, um dorthin umzuschalten oder auf den Namen des "
+#~ "Fensters, um es auszuwählen. Dabei wird die andere Arbeitsfläche auf den "
+#~ "Bildschirm geholt, falls nötig, bzw. das Fenster wiederhergestellt, falls "
+#~ "es ausgeblendet ist. Die Namen von ausgeblendeten oder minimierten "
+#~ "Fenstern werden in Klammern dargestellt.</li> <li><em>Arbeitsflächenmenü:"
+#~ "</em> ein Kontextmenü für die Arbeitsfläche. Unter anderem enthält es "
+#~ "Einstellungen zur Einrichtung der Bildschirmanzeige, das Sperren des "
+#~ "Bildschirms und die Abmeldung aus KDE.</li> <li><em>Programmmenü:</em> "
+#~ "das K-Menü öffnet sich. Das kann nützlich sein, wenn Sie die "
+#~ "Kontrollleiste ausgeblendet lassen, aber dennoch rasch auf Ihre Programme "
+#~ "zugreifen möchten.</li></ul>"
+
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Sie können selbst bestimmen, was geschieht, wenn Sie die mittlere Taste "
+#~ "Ihres Zeigegeräts auf der Arbeitsfläche betätigen: <ul><li><em>Keine "
+#~ "Aktion:</em> Es passiert nichts.</li> <li><em>Fensterliste:</em> ein Menü "
+#~ "mit allen Fenstern auf allen virtuellen Arbeitsflächen erscheint. Sie "
+#~ "können auf den Namen der Arbeitsfläche klicken, um dorthin umzuschalten "
+#~ "oder auf den Namen des Fensters, um es auszuwählen. Dabei wird die andere "
+#~ "Arbeitsfläche auf den Bildschirm geholt, falls nötig, bzw. das Fenster "
+#~ "wiederhergestellt, falls es ausgeblendet ist. Die Namen von "
+#~ "ausgeblendeten oder minimierten Fenstern werden in Klammern dargestellt.</"
+#~ "li> <li><em>Arbeitsflächenmenü:</em> ein Kontextmenü für die "
+#~ "Arbeitsfläche. Unter anderem enthält es Einstellungen zur Einrichtung der "
+#~ "Bildschirmanzeige, das Sperren des Bildschirms und die Abmeldung aus KDE."
+#~ "</li> <li><em>Programmmenü:</em> das K-Menü öffnet sich. Das kann "
+#~ "nützlich sein, wenn Sie die Kontrollleiste ausgeblendet lassen, aber "
+#~ "dennoch rasch auf Ihre Programme zugreifen möchten.</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Keine Aktion:</em> wie nicht schwer zu erraten: es passiert "
+#~ "nichts.</li> <li><em>Fensterliste:</em> ein Menü mit allen Fenstern auf "
+#~ "allen virtuellen Arbeitsflächen erscheint. Sie können auf den Namen der "
+#~ "Arbeitsfläche klicken, um dorthin umzuschalten oder auf den Namen des "
+#~ "Fensters, um es auszuwählen. Dabei wird die andere Arbeitsfläche auf den "
+#~ "Bildschirm geholt, falls nötig, bzw. das Fenster wiederhergestellt, falls "
+#~ "es ausgeblendet ist. Die Namen von ausgeblendeten oder minimierten "
+#~ "Fenstern werden in Klammern dargestellt.</li> <li><em>Arbeitsflächenmenü:"
+#~ "</em> ein Kontextmenü für die Arbeitsfläche. Unter anderem enthält es "
+#~ "Einstellungen zur Einrichtung der Bildschirmanzeige, das Sperren des "
+#~ "Bildschirms und die Abmeldung aus KDE.</li> <li><em>Programmmenü:</em> "
+#~ "das K-Menü öffnet sich. Das kann nützlich sein, wenn Sie die "
+#~ "Kontrollleiste ausgeblendet lassen, aber dennoch rasch auf Ihre Programme "
+#~ "zugreifen möchten.</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Keine Aktion"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Fensterliste"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Arbeitsflächenmenü"
+
+#~ msgid "Application Menu"
+#~ msgstr "Programmmenü"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Lesezeichenmenü"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Benutzerdefiniertes Menü 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Benutzerdefiniertes Menü 2"
+
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Verhalten</h1>\n"
+#~ "Dieses Modul ermöglicht Ihnen die Auswahl verschiedener Einstellungen für "
+#~ "die Arbeitsfläche, einschließlich der Art, wie die Symbole angeordnet "
+#~ "werden und der Kontextmenüs, die mit der Betätigung der mittleren oder "
+#~ "rechten Maustaste auf der Arbeitsfläche verknüpft sind. Verwenden Sie die "
+#~ "Funktion „Was ist das?“ (Umschalt+F1), um Hilfe zu bestimmten "
+#~ "Einstellungsmöglichkeiten zu erhalten."
+
+#~ msgid "General"
+#~ msgstr "Allgemein"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Deaktivieren Sie diese Einstellung, falls Sie keine Symbole auf der "
+#~ "Arbeitsfläche haben möchten. Ohne diese Symbole steigt die "
+#~ "Verarbeitungsgeschwindigkeit ein wenig, aber Sie können keine Dateien "
+#~ "mehr auf der Arbeitsfläche ablegen."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Symbole auf der Arbeitsfläche anzeigen"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, falls Sie Programme verwenden möchten, "
+#~ "die Bilder auf der Arbeitsfläche erstellen wie z. B. xsnow, xpenguin oder "
+#~ "xmountain. Falls das zu Problemen mit anderen Programmen führt (wie etwa "
+#~ "Netscape), die das Hintergrundfenster (root window) auf bereits laufende "
+#~ "Ausgaben überprüfen, dann deaktivieren Sie diese Einstellung."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "&Programme im Arbeitsflächenfenster unterstützen"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "Datei-Infos &anzeigen"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Menüleiste am oberen Bildschirmrand"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr ""
+#~ "Nach Aktivierung dieser Einstellung erscheint keine Menüleiste am oberen "
+#~ "Bildschirmrand."
+
+#~ msgid "&None"
+#~ msgstr "&Keine"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, erscheint eine Leiste mit "
+#~ "Arbeitsflächenmenüs am oberen Bildschirmrand."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Arbeitsflächen&menü"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, weisen Programmfenster keine eigenen "
+#~ "Menüleisten mehr auf. Stattdessen erscheint eine entsprechende Leiste für "
+#~ "das gerade aktive Programmfenster am oberen Bildschirmrand. Sie kennen "
+#~ "dieses Verhalten vielleicht von Mac OS."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Menüleiste für &aktuelles Programm (im Stil von Mac OS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Maustasten-Aktionen"
+
+#~ msgid "Middle button:"
+#~ msgstr "Mittlere Taste:"
+
+#~ msgid "Left button:"
+#~ msgstr "Linke Taste:"
+
+#~ msgid "Right button:"
+#~ msgstr "Rechte Taste:"
+
+#~ msgid "Edit..."
+#~ msgstr "Bearbeiten ..."
+
+#~ msgid "File Icons"
+#~ msgstr "Dateisymbole"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, wenn Sie Symbole automatisch an einem "
+#~ "unsichtbaren Gitter ausgerichtet haben möchten, sobald Sie sie "
+#~ "verschieben."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Symbole &automatisch anordnen"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>Wenn diese Einstellung aktiv ist, werden alle Dateien in Ihrem "
+#~ "Arbeitsflächenordner angezeigt, die mit einem Punkt (.) beginnen. "
+#~ "Normalerweise enthalten solche Dateien Information zu Ihren "
+#~ "Benutzereinstellungen und werden nicht angezeigt.</p>\n"
+#~ "<p>Zum Beispiel sind Dateien namens „.directory“ einfache Texte, die "
+#~ "Informationen für Konqueror enthalten (welches Symbol zur Darstellung "
+#~ "eines Ordners benutzt, wie die Dateien angeordnet werden sollen usw.). "
+#~ "Sie sollten solche Dateien nicht löschen, falls Sie nicht genau wissen, "
+#~ "was Sie tun.</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "&Versteckte Dateien anzeigen"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "Wählen Sie, für welche Dateitypen Sie Vorschaubilder aktivieren möchten."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Symbolvorschau anzeigen für:"
+
+#~ msgid "Device Icons"
+#~ msgstr "Gerätesymbole"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "&Gerätesymbole anzeigen:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "Deaktivieren Sie hier diejenigen Gerätetypen, die Sie nicht auf der "
+#~ "Arbeitsfläche dargestellt haben möchten."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Anzuzeigende Gerätetypen"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Datei-Infos &anzeigen"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Hier können Sie festlegen, ob ein kleines Feld mit Informationen "
+#~ "angezeigt werden soll, sobald Sie ein Dateisymbol mit dem Mauszeiger "
+#~ "berühren."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "Vorschau in Datei-Infos &anzeigen"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Hier können Sie festlegen, ob das Infofeld ein größeres Vorschaubild der "
+#~ "Datei enthalten soll, wenn die Maus das Symbol berührt."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>Mehrere Arbeitsflächen</h1> In diesem Modul können Sie festlegen, wie "
+#~ "viele virtuelle Arbeitsflächen Sie haben möchten und wie sie benannt sein "
+#~ "sollen."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "&Anzahl der Arbeitsflächen: "
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "Hier können Sie festlegen, wie viele virtuelle Arbeitsflächen KDE zur "
+#~ "Verfügung stellen soll. Verschieben Sie den Regler, um den Wert zu ändern."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "Arbeitsflächen&namen"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Arbeitsfläche %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Hier können Sie den Namen für Arbeitsfläche %1 angeben"
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "Mausrad über fensterfreiem Bereich wechselt die Arbeitsfläche"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Arbeitsfläche %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "Symbole &direkt umbenennen"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, können Dateien umbenannt werden, indem "
+#~ "Sie auf den Symbolnamen klicken. "
+
+#~ msgid "&Appearance"
+#~ msgstr "&Erscheinungsbild"
+
+#~ msgid "&Standard font:"
+#~ msgstr "&Standardschrift:"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Die Schrift, die Konqueror benutzt, um Text in Fenstern darzustellen."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "Schrift&größe:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Die Schriftgröße, die Konqueror benutzt, um Text in Fenstern darzustellen."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Farbe für &Normaltext:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr "Die Farbe, die Konqueror benutzt, um Text in Fenstern darzustellen."
+
+#~ msgid "&Text background color:"
+#~ msgstr "&Hintergrundfarbe für Text:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr ""
+#~ "Mit dieser Farbe wird der Text der Arbeitsflächensymbole hinterlegt."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&Höhe von Symboltexten:"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "Die ist die maximale Zeilenzahl für Symboltexte. Bezeichnungen, die diese "
+#~ "Grenze überschreiten, werden abgeschnitten."
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Breite für Symboltexte:"
+
+#~ msgid ""
+#~ "This is the maximum width for the icon text when konqueror is used in "
+#~ "multi column view mode."
+#~ msgstr ""
+#~ "Dies ist die maximale Breite für Symboltext in der mehrspaltigen Ansicht "
+#~ "von Konqueror."
+
+#~ msgid "&Underline filenames"
+#~ msgstr "Dateinamen &unterstreichen"
+
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "Die Aktivierung dieser Einstellung bewirkt eine Unterstreichung von "
+#~ "Dateinamen, die dann aussehen wie Verknüpfungen auf einer Webseite. "
+#~ "Beachten Sie: Wenn Sie die Analogie perfekt machen möchten, dann "
+#~ "aktivieren Sie die Einzelklick-Option in den Einstellungen für die Maus."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Dateigröße in &Byte angeben"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "Die Aktivierung dieser Einstellung bewirkt, dass Dateigrößen in Byte "
+#~ "angegeben werden. Sonst erscheinen sie in Kilobyte (KB) bzw. Megabyte "
+#~ "(MB)."
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " Zeile"
+#~ msgstr[1] " Zeilen"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " Pixel"
+#~ msgstr[1] " Pixel"
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>Erscheinungsbild</h1> Hier können Sie die Optik von Konqueror als "
+#~ "Dateimanager festlegen."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Netzwerkvorgänge in einem einzigen Fenster anzeigen"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Die Aktivierung dieser Einstellung gruppiert die Informationen zu allen "
+#~ "Netzwerk-Vorgängen in eine einzige Liste innerhalb desselben Fensters. "
+#~ "Wenn die Einstellung nicht aktiviert ist, erscheint für jeden Vorgang ein "
+#~ "separates Fenster."
+
+#~ msgid "Home &URL:"
+#~ msgstr "St&artseite:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Persönlichen Ordner auswählen"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Dies ist die Adresse (z. B. ein Ordner oder eine Webseite), zu der "
+#~ "Konqueror springt, wenn der Knopf „Startseite“ angeklickt wird. "
+#~ "Üblicherweise ist dies Ihr Persönlicher Ordner. Das Zeichen dafür ist "
+#~ "eine Tilde (~)."
+
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Linke Taste:"
+
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Rechte Taste:"

@@ -1,0 +1,146 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Sergiu Bivol <sergiu@cip.md>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2022-02-04 15:59+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Primary (default)"
+msgstr "Primar (implicit)"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Portrait"
+msgstr "Portret"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Landscape"
+msgstr "Peisaj"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "Portret inversat"
+
+#: kcmtablet.cpp:37
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "Peisaj inversat"
+
+#: kcmtablet.cpp:70
+#, kde-format
+msgid "Follow the active screen"
+msgstr "Urmează ecranul activ"
+
+#: kcmtablet.cpp:78
+#, fuzzy, kde-format
+#| msgctxt "model - (x,y widthxheight)"
+#| msgid "%1 - (%2,%3 %4x%5)"
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4x%5)"
+
+#: kcmtablet.cpp:116
+#, kde-format
+msgid "Fit to Output"
+msgstr ""
+
+#: kcmtablet.cpp:117
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr ""
+
+#: kcmtablet.cpp:118
+#, kde-format
+msgid "Custom size"
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "Nicio tabletă grafică găsită."
+
+#: package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Dispozitiv:"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "Target display:"
+msgstr "Afișaj țintă:"
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientare:"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "Regim pentru stângaci:"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Area:"
+msgstr ""
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Resize the tablet area"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr ""
+
+#: package/contents/ui/main.qml:204
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr ""
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr ""
+
+#: package/contents/ui/RebindButtons.qml:43
+#, kde-format
+msgid "Button %1:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "Tablet"
+#~ msgstr "Tabletă"
+
+#~ msgid "Configure drawing tablets"
+#~ msgstr "Configurează tabletele grafice"

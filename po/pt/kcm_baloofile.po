@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_baloofile\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-07 15:28+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: Handa mails Sebastian Vishesh Trüg Tomaz Canabrava\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: KRunner\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Este módulo permite-lhe configurar a funcionalidade de indexação e pesquisa "
+"de ficheiros."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Isto irá desactivar a pesquisa de ficheiros no KRunner e nos menus de "
+"lançamento, assim como remover a apresentação dos meta-dados estendidos de "
+"todas as aplicações do KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Deseja remover os dados do índice gravados? Serão libertados %1 de espaço, "
+"mas se a indexação for reactivada mais tarde, todo o índice terá de ser "
+"recriado do zero. Isto poderá levar algum tempo, dependendo de quantos "
+"ficheiros tem."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Apagar os Dados do Índice"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"A Pesquisa de Ficheiros ajuda-o a localizar rapidamente todos os seus "
+"ficheiros com base no seu conteúdo."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Activar a Pesquisa de Ficheiros"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indexar também o conteúdo do ficheiro"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indexar os ficheiros e pastas escondidos"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Estado: %1, %2% completo"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Pausar a Indexação"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Retomar a Indexação"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "A indexar de momento: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Configuração específica da pasta:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Iniciar a indexação de uma pasta…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Parar a indexação de uma pasta…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Não indexada"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexado"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Apagar o item"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Seleccione uma pasta a incluir"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Seleccione uma pasta a excluir"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "José Nuno Pires"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zepires@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Pesquisa de Ficheiros"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Adicionar uma configuração da pasta…"

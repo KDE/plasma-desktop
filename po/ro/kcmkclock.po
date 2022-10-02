@@ -1,0 +1,248 @@
+# Traducerea kcmkclock.po în Română
+# translation of kcmkclock.po to Romanian
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2015, 2020, 2021.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2021-07-25 12:48+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Claudiu Costin"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "claudiuc@kde.org"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Data și ora"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Stabilește data și ora &automat"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Server de oră:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Aici puteți schimba ziua lunii, luna și anul pentru data sistemului."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Fus orar"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Pentru a schimba fusul orar local, alegeți o zonă din lista de mai jos."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Fusul orar local curent:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Caută…"
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"Nu a fot găsit un utilitar NTP (protocol de timp pe rețea). Instalați "
+"aplicațiile 'ntpdate' sau 'rdate' pentru a activa actualizarea automată a "
+"datei și orei."
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Aici puteți schimba ora sistemului. Apăsați în câmpurile de ore, minute sau "
+"secunde pentru a schimba valoarea corespunzătoare, fie utilizând butoanele "
+"sus și jos din dreapta, fie introducând o valoare nouă."
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Fusul orar local curent: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Fusul orar local curent: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Server de Oră Public (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Imposibil de contactat serverul de timp: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Nu se poate stabili data."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "Eroare la stabilirea fusului orar nou."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "Eroare fus orar"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Data și ora</h1> Acest modul din Configurări de sistem poate fi utilizat "
+"pentru a stabili data și ora sistemului. Deoarece aceste configurări nu vă "
+"afectează numai pe dumneavoastră ca utilizator, ci întregul sistem, le "
+"puteți modifica numai dacă ați pornit Configurări de sistem KDE cu drepturi "
+"de root. Dacă nu aveți parola de root, dar credeți că data și/sau ora "
+"sistemului ar trebui corectate, contactați administratorul de sistem."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "Modul de control KDE pentru ceas"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Autor original"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Responsabil actual"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "A adăugat suport NTP"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>Data și ora</h1> Acest modul de control poate fi utilizat pentru a "
+"stabili data și ora sistemului. Deoarece aceste setări nu vă afectează numai "
+"pe dumneavoastră ca utilizator, ci întregul sistem, le puteți modifica numai "
+"dacă ați pornit Configurări de sistem KDE cu drepturi de root. Dacă nu aveți "
+"parola de root, dar credeți că data și/sau ora sistemului ar trebui "
+"modificate, contactați administratorul dumneavoastră de sistem."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Nu se poate autentifica/executa acțiunea: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Configurările NTP nu au putut fi modificate"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Nu s-a putut stabili ora curentă"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Nu s-a putut stabili fusul orar"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "NTP"
+#~ msgstr "NTP"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "Eșec la stabilirea datei/orei/fusului orar al sistemului."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Eroare dată/oră"

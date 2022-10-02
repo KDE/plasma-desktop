@@ -1,0 +1,189 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2017, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-10-04 14:05+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Этот модуль позволяет настроить индексирование файлов и возможности поиска."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Это действие приведёт к отключению поиска файлов в строке поиска и запуска "
+"KRunner и в меню запуска приложений, а также к отключению показа "
+"дополнительных сведений во всех приложениях KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Удалить данные индексирования? Это позволит освободить %1 дискового "
+"пространства, но потребует заново проиндексировать все файлы, если "
+"индексирование снова будет позже активировано. Такая операция сможет занять "
+"продолжительное время, зависящее от количества файлов."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Удалить данные индексирования"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "Система поиска позволяет быстро находить файлы по их содержимому."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Включить службу поиска файлов"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Также индексировать содержимое файлов"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Индексировать скрытые файлы и папки"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Состояние: %1, завершено %2%"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Приостановить индексирование"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Возобновить индексирование"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Выполняется индексирование: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Параметры для отдельных папок:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Индексировать папку…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Не индексировать папку…"
+
+# BUGME: Do not index? --ayavorsky  20200412
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Не индексировать"
+
+# BUGME: Do not index? --ayavorsky  20200412
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Индексировать"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Удалить запись"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Выбор папки для индексирования"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Выбор папки для исключения из индексирования"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Александр Поташев"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aspotashev@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Поиск файлов"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "© Sebastian Trüg, 2007-2010"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Настроить параметры папки…"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Папка %1 уже исключена из поиска"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Исключить следующие папки из поиска:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Выбор папки для исключения из поискового индекса"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Нельзя исключить из поиска корневой каталог, при необходимости выключите "
+#~ "поиск полностью"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr ""
+#~ "Из поиска уже исключена родительская папка %1 по отношению к выбранной "
+#~ "папке."
+
+#~ msgid "Configure File Search"
+#~ msgstr "Настройка службы поиска файлов"

@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY kfontview "<application
+>KFontview</application
+>">
+  <!ENTITY kappname "&kfontview;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Visualizador de fontes</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Luiz Fernando</firstname
+><surname
+>Ranghetti</surname
+><affiliation
+><address
+><email
+>elchevive@opensuse.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>visualizador de fontes</keyword>
+<keyword
+>fontes</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>O &kfontview; é um aplicativo para visualizar e instalar diferente tipos de fontes: <itemizedlist>
+<listitem
+><para
+>TrueType (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>Postscript tipo 1 (extensão de arquivo no &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; no &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>BDF (Bitmap Distribution Format, extensão de arquivo <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, extensão de arquivo <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Você pode usá-lo como um programa autônomo para antever e instalar uma fonte baixada da Internet. Na antevisão, você poderá verificar se a fonte possui todos os caracteres que precisa. </para>
+<para
+>Adicionalmente, o &kfontview; poderá ser lançado a partir do módulo do &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Instalador de fontes</guilabel
+></ulink
+> para usar as capacidades de antevisão estendidas do &kfontview;.</para>
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>Aplicativo &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Aplicativo &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>A <guilabel
+>Visualização padrão</guilabel
+> do &kfontview; mostra sua fonte com diferentes tamanhos usando um pantograma (sentença que usa todas as letras do alfabeto). Assim você pode ter uma boa noção de como será a aparência de cada letra. Na lista da barra de ferramentas, poderá escolher os tipos de visualização adicionais: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Todos os caracteres</guilabel
+> mostra todos os caracteres disponíveis na fonte com um tamanho. </para
+></listitem>
+<listitem
+><para
+>Bloco Unicode: A norma Unicode organiza os grupos de caracteres por diferentes blocos</para
+></listitem>
+<listitem
+><para
+>Programa Unicode: No Unicode, um programa é uma coleção de fontes e outros símbolos escritos, usados para representar a informação textual em um ou mais sistemas de escrita</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Alterar o texto</guibutton
+>: Ao usar este botão, será aberta a janela de <guilabel
+>Texto de visualização</guilabel
+>, onde poderá inserir um texto definido pelo próprio usuário. Esta funcionalidade permite-lhe verificar se uma fonte suporta os caracteres que você precisa. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Você pode usar os botões de zoom ou a roda do mouse para alterar o tamanho da fonte em todos os tipos de visualização.</para>
+<para
+>No modo de antevisão do <guilabel
+>Bloco Unicode</guilabel
+> e <guilabel
+>Texto Unicode</guilabel
+>, os dados adicionais da dica serão apresentados, quando passar com o cursor do mouse sobre um determinado caractere: a <guilabel
+>Categoria</guilabel
+> Unicode do caractere e o valor em <guilabel
+> UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8 </guilabel
+> e como <guilabel
+>Entidade Decimal de XML</guilabel
+>.</para>
+
+<para
+>Para instalar uma fonte que tenha baixado da Internet, clique no botão <guibutton
+>Instalar</guibutton
+>, no canto inferior direito. </para>
+
+<para
+>Você pode instalar a fonte para uso pessoal, ficando disponível apenas você ou em nível de sistema para uso por todos os usuários. A última opção requer privilégios administrativos.</para>
+
+<para
+>As fontes normalmente são fornecidas em um formato de arquivo compactado, como por exemplo, o <literal role="extension"
+>zip</literal
+>. Abra esse arquivo com o &ark;, que lhe fornecerá uma visualização simples das fontes. Para usar as funcionalidades adicionais do programa, extraia as fontes e abra-os no &kfontview;. </para
+><para
+>É necessário reiniciar os aplicativos para usarem as novas fontes instaladas.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

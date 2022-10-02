@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Teclado</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18/03/2016</date>
+<releaseinfo
+>Plasma 5.7</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+<keyword
+>Teclado</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo permite escolher como teclado seu trabalha.</para>
+
+<para
+>Existem três páginas neste módulo.</para>
+
+<sect1 id="hardware">
+<title
+>Aba Hardware</title>
+<para
+>O efeito real da configuração destas opções depende das características fornecidas pelo seu teclado e pelo servidor X, no qual o &plasma; está sendo executado. Como exemplo, você pode achar que mudar o volume do clique de uma tecla não tem efeito, pois esta característica não está disponível em seu sistema. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Modelo do teclado:</guilabel
+></term>
+<listitem>
+<para
+>Aqui você poderá definir o modelo do seu teclado. Esta opção é independente da disposição do teclado e diz respeito ao modelo de &quot;hardware&quot;, i.e., a forma como o seu teclado foi fabricado. Os teclados modernos, que vêm hoje em dia com o seu computador, têm normalmente duas teclas extra, sendo referidos como modelos de &quot;104-teclas&quot;, que será o que provavelmente irá querer, caso não saiba qual o tipo de teclado que tem. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock ao iniciar o Plasma</guilabel
+></term>
+<listitem>
+<para
+>Você pode escolher entre sempre <guilabel
+>Ligar</guilabel
+> ou sempre <guilabel
+>Desligar</guilabel
+> a tecla NumLock, quando o &plasma; iniciar. Pode ainda escolher a opção onde o &plasma; deixe o NumLock do mesmo jeito em que foi configurado antes do &plasma; iniciar.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Repetição do teclado</guilabel
+></term>
+<listitem>
+<para
+>Quando esta opção estiver ativada, ao manter uma tecla pressionada será emitido o mesmo caractere repetidamente, até que a tecla seja solta, ou seja, manter pressionada uma tecla terá o mesmo efeito que pressioná-la várias vezes sucessivamente.</para>
+<tip
+><para
+>Quase todos os usuários desejam ter esta opção habilitada, pois ela torna a navegação em documentos, com as teclas de flecha, significativamente mais fácil. </para
+></tip>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Atraso</guilabel
+></term>
+<listitem>
+<para
+>Esta opção permite-lhe definir o atraso ao fim do qual uma tecla pressionada irá começar a gerar códigos de teclas.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Taxa</guilabel
+></term>
+<listitem>
+<para
+>Esta opção permite-lhe definir a frequência com que são gerados os códigos de teclas ao pressionar em uma.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Digite alguns caracteres na caixa da <guilabel
+>Área de teste</guilabel
+> para verificar a configuração.</para>
+<para
+>Muitos computadores não possuem suporte para esta função.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>A página de disposições</title>
+<para
+>Esta página permite-lhe escolher as disposições de teclado que deseja usar, qual o indicador que deseja na área de notificação, como deseja mudar de disposições e que atalhos de teclado irá usar para isso.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indicador da Disposição</guilabel
+></term>
+<listitem>
+<para
+>Você pode optar por <guilabel
+>Mostrar o indicador de disposição</guilabel
+>, o qual irá mostrar o nome ISO do idioma na área de notificação. É possível selecionar a opção para mostrar o indicador, mesmo que tenha apenas um único leiaute ativo e poderá também mostrar a bandeira do idioma, em vez de mostrar apenas o código ISO, assinalando a opção <guilabel
+>Mostrar a bandeira</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Política de Mudança</guilabel
+></term>
+<listitem>
+<para
+>Se você selecionar a política de mudança <guilabel
+>Aplicação</guilabel
+> ou <guilabel
+>Janela</guilabel
+>, a alteração da disposição do teclado só irá afetar a aplicação ou janela atuais. A política <guilabel
+>Global</guilabel
+> irá alterar a disposição do teclado a nível global e a <guilabel
+>Área de Trabalho</guilabel
+> irá mudá-la apenas para a área de trabalho virtual atual. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Atalhos para mudança de leiaute</guilabel
+></term>
+<listitem>
+<para
+>Os <guilabel
+>Atalhos principais</guilabel
+> são atalhos para mudar os layouts gerenciados pelo X.org. Os <guilabel
+>Atalhos de 3º nível</guilabel
+> são atalhos para mudar para um terceiro nível do layout ativo (se tiver um), sendo também tratado pelo X.org e permite atalhos apenas com teclas modificadoras. O <guilabel
+>Atalho alternativo</guilabel
+> é um atalho para mudar o layout tratado pelo &plasma;. Ele não suporta atalhos apenas com teclas modificadoras e poderá não funcionar em algumas situações (&eg;, se uma mensagem estiver ativa ou se estiver no protetor de tela). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Configurar as disposições</guilabel
+></term>
+<listitem>
+<para
+>Se você assinalar a opção <guilabel
+>Configurar as disposições</guilabel
+>, poderá adicionar e remover as disposições de teclado, de modo a poder mudar entre elas, quando for necessário. </para>
+<para
+>Ao clicar em <guibutton
+>Adicionar</guibutton
+>, será aberta uma janela onde poderá escolher o novo leiaute de teclado que deseja adicionar, assim como a sua variante, etiqueta e atalho. </para>
+<para
+>A lista de leiautes à direita do campo <guilabel
+>Leiaute</guilabel
+> na janela <guilabel
+>Adicionar leiaute</guilabel
+> poderá ser reduzida com a lista <guilabel
+>Limitar a seleção por idioma</guilabel
+>. Você pode clicar no botão <guibutton
+>Visualizar</guibutton
+> para ver o leiaute escolhido em uma janela separada. </para>
+<para
+>Você poderá ordenar as disposições com as teclas para cima e para baixo, sendo a que estiver no topo a padrão. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Disposições adicionais</guilabel
+></term>
+<listitem>
+<para
+>Esta opção poderá ficar ativa apenas se tiver mais de duas disposições.</para>
+<para
+>As disposições adicionais permitem-lhe mudar de disposição de forma simples, dentro de um conjunto relativamente pequeno, mantendo as mesmas disposições acessíveis rapidamente. Por exemplo, pode usar 3 línguas: Inglês, Ucraniano e Alemão, sendo que as duas primeiras são usadas com mais frequência e a terceira é usada apenas ocasionalmente. Neste caso, poderá configurar as duas primeiras como principais (definir o valor de <guilabel
+>Número de disposições principais</guilabel
+>: 2) e o Alemão como uma adicional - quando mudar com o teclado e o botão esquerdo, a mudança irá ocorrer apenas entre as disposições principais, podendo ainda escolher a terceira com o menu de contexto.</para>
+<para
+>Quando é escolhida uma disposição adicionado, ela irá substituir a última principal (isto é feito por razões técnicas - normalmente os atalhos globais funcionam com base na primeira disposição ativa, assim será mais confiável preservá-la, quando permitir a ativação de disposições adicionais).</para>
+<!-- context menu ?-->
+<para
+>Como o X.org só permite ter 4 disposições para escolha, a funcionalidade das <quote
+>disposições adicionais</quote
+> permite também ultrapassar essa limitação: o usuário poderá ter até 4 disposições principais (gerenciadas pelo X.org) mas ainda mais 4 disposições adicionais (gerenciadas pelo seletor de disposições). Deste modo, o usuário poderá funcionar convenientemente com um máximo de 8 disposições (se bem que o limite de 4 disposições adicionais poderá ser aumentado no futuro). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>A página Avançado</title>
+<para
+>Nesta página, se assinalar a opção <guilabel
+>Configurar as opções do teclado</guilabel
+>, poderá definir algumas opções referentes a diferentes configurações especiais das teclas. Você poderá expandir essas opções ao clicar no símbolo &gt; que aparece à esquerda da opção, quando seleciona a sua definição na lista expandida.</para>
+<para
+>Esta é uma &GUI; para ajudar na criação de leiautes de teclado padrão para X11 usando XKB. </para>
+<para
+>Para mais informações, consulte a seção <emphasis
+>Links</emphasis
+> na <ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>página XKeyboardConfig do freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

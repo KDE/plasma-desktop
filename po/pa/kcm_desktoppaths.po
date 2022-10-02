@@ -1,0 +1,283 @@
+# translation of kcmkonq.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2012, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-10-09 07:46-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "ਡੈਸਕਟਾਪ"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "ਡੌਕੂਮੈਂਟ"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "ਡਾਊਨਲੋਡ"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "ਸੰਗੀਤ"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "ਤਸਵੀਰਾਂ"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "ਵਿਡੀਓ"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>ਪਾਥ</h1>\n"
+"ਇਹ ਮੋਡੀਊਲ ਤੁਹਾਨੂੰ ਚੋਣ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਜਿੱਥੇ ਤੁਹਾਡੇ ਡੈਸਕਟਾਪ ਉੱਤੇ ਫਾਈਲਾਂ ਨੂੰ ਫਾਈਲ ਸਿਸਟਮ ਉੱਤੇ "
+"ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ।\n"
+"ਖਾਸ ਚੋਣਾਂ ਬਾਰੇ ਮਦਦ ਲੈਣ ਲਈ \"ਇਹ ਕੀ ਹੈ?\" (Shift+F1) ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "ਡੈਸਕਟਾਪ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"ਇਹ ਫੋਲਡਰ ਵਿੱਚ ਸਭ ਫਾਈਲਾਂ ਹਨ, ਜੋ ਕਿ ਤੁਸੀਂ ਆਪਣੇ ਡੈਸਕਟਾਪ ਵਿੱਚ ਵੇਖਾਉਦੇ ਹੋ। ਤੁਸੀਂ ਇਹ ਫੋਲਡਰ ਦਾ "
+"ਟਿਕਾਣਾ ਬਦਲ ਸਕਦੇ ਹੋ, ਜੇ ਤੁਹਾਨੂੰ ਲੋੜ ਪਵੇ, ਅਤੇ ਸਮੱਗਰੀ ਨੂੰ ਵੀ ਆਟੋਮੈਟਿਕ ਨਵੇਂ ਟਿਕਾਣੇ ਉੱਤੇ ਭੇਜ ਦਿੱਤਾ "
+"ਜਾਵੇਗਾ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "ਡੌਕੂਮੈਂਟ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਦਸਤਾਵੇਜ਼ ਸੰਭਾਲ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "ਡਾਊਨਲੋਡ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤੁਹਾਡੀਆਂ ਡਾਊਨਲੋਡ ਆਈਟਮਾਂ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "ਵੀਡਿਓ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਮੂਵੀ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "ਤਸਵੀਰ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤਸਵੀਰਾਂ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "ਸੰਗੀਤ ਪਾਥ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਸੰਗੀਤ ਸੰਭਾਲ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#~ msgid "Autostart path:"
+#~ msgstr "ਆਟੋ-ਸਟਾਰਟ ਪਾਥ:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "ਇਹ ਫੋਲਡਰ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਲਿੰਕ (ਸ਼ਾਰਟਕੱਟ) ਰੱਖਦਾ ਹੈ, ਜੋ ਕਿ ਤੁਸੀਂ ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ ਕਰਨ ਸਮੇਂ "
+#~ "ਆਪਣੇ-ਆਪ ਸ਼ੁਰੂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ। ਤੁਸੀਂ ਇਹ ਫੋਲਡਰ ਦਾ ਟਿਕਾਣਾ ਆਪਣੀ ਲੋੜ ਮੁਤਾਬਕ ਬਦਲ ਸਕਦੇ ਹੋ ਅਤੇ "
+#~ "ਸਮੱਗਰੀ ਨੂੰ ਆਪਣੇ-ਆਪ ਹੀ ਨਵੇਂ ਟਿਕਾਣੇ ਉੱਤੇ ਭੇਜ ਦਿੱਤਾ ਜਾਵੇਗਾ।"
+
+#~ msgid "Autostart"
+#~ msgstr "ਆਟੋ-ਸਟਾਰਟ"
+
+#~ msgid "Movies"
+#~ msgstr "ਮੂਵੀ"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' ਲਈ ਪਾਥ ਬਦਲਿਆ ਗਿਆ ਹੈ।\n"
+#~ "ਕੀ ਤੁਸੀਂ ਤੁਸੀਂ ਫਾਈਲਾਂ ਨੂੰ '%2' ਤੋਂ '%3' ਵਿੱਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "ਭੇਜੋ"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "ਨਾ ਭੇਜੋ"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' ਲਈ ਪਾਥ ਬਦਲਿਆ ਗਿਆ ਹੈ।\n"
+#~ "ਕੀ ਤੁਸੀਂ ਡਾਇਰੈਕਟਰੀ '%2' ਨੂੰ '%3' ਲਈ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "ਭੇਜੋ"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "ਨਾ ਭੇਜੋ"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "ਪੁਸ਼ਟੀ ਲਾਜ਼ਮੀ ਹੈ"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>ਕੋਨਕਿਉਰੋਰ ਰਵੱਈਆ</h1> ਤੁਸੀਂ ਕੋਨਕਿਊਰੋਰ ਦੀ ਫਾਈਲ ਮੈਨੇਜਰ ਦੇ ਤੌਰ ਉੱਤੇ ਸੰਰਚਨਾ ਇੱਥੇ ਕਰ ਸਕਦੇ ਹੋ।"
+
+#~ msgid "Misc Options"
+#~ msgstr "ਫੁਟਕਲ ਚੋਣਾਂ"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "ਫੋਲਡਰਾਂ ਨੂੰ ਵੱਖ ਵੱਖ ਵਿੰਡੋਜ਼ ਵਿੱਚ ਖੋਲ੍ਹੋ(&w)"
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "ਮੇਨੂ ਐਂਟਰੀਆਂ ਵਿੱਚ 'ਹਟਾਓ' ਵੇਖੋ, ਜੋ ਕਿ ਰੱਦੀ 'ਚ ਭੇਜਣ ਨੂੰ ਬਾਏਪਾਸ ਕਰ ਸਕੇ(&n)"
+
+#~ msgid "Menu Editor"
+#~ msgstr "ਮੇਨੂ ਐਡੀਟਰ"
+
+#~ msgid "Menu"
+#~ msgstr "ਮੇਨੂ"
+
+#~ msgid "New..."
+#~ msgstr "ਨਵਾਂ..."
+
+#~ msgid "Remove"
+#~ msgstr "ਹਟਾਓ"
+
+#~ msgid "Move Up"
+#~ msgstr "ਉੱਤੇ ਭੇਜੋ"
+
+#~ msgid "Move Down"
+#~ msgstr "ਹੇਠਾਂ ਭੇਜੋ"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "ਪੁਸ਼ਟੀ ਲਈ ਪੁੱਛੋ"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "ਇਹ ਚੋਣ ਕੋਨਕਿਊਰੋਰ ਨੂੰ ਦੱਸਦੀ ਹੈ ਕਿ ਕਿ ਇੱਕ ਫਾਈਲ \"ਹਟਾਉਣ\" ਸਮੇਂ ਪੁਸ਼ਟੀ ਕਰਵਾਉਣੀ ਹੈ।"
+#~ "<ul><li><em> ਰੱਦੀ ਵਿੱਚ ਭੇਜੋ:</em>ਫਾਈਲ ਨੂੰ ਤੁਹਾਡੇ ਰੱਦੀ ਫੋਲਡਰ ਵਿੱਚ ਭੇਜੋ, ਜਿੱਥੋਂ ਕਿ ਤੁਸੀਂ "
+#~ "ਆਸਾਨੀ ਨਾਲ ਮੁੜ-ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ।</li><li><em> ਹਟਾਓ:</em>ਫਾਈਲ ਨੂੰ ਸਿੱਧਾ ਹਟਾ ਦਿਓ।</"
+#~ "li></ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "ਰੱਦੀ ਵਿੱਚ ਭੇਜੋ(&M)"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "ਹਟਾਓ(&e)"
+
+#~ msgid "&Behavior"
+#~ msgstr "ਰਵੱਈਆ(&B)"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "ਝਲਕ ਅਤੇ ਮੈਟਾ ਡਾਟਾ(&P)"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column Header of a colum where the user has to select in which "
+#~| "protocols he wants to see file previews"
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "ਪਰੋਟੋਕਾਲ ਚੁਣੋ"
+
+#~ msgid "Local Protocols"
+#~ msgstr "ਲੋਕਲ ਪਰੋਟੋਕਾਲ"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "ਇੰਟਰਨੈੱਟ ਪਰੋਟੋਕੋਲ"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "ਵੱਧੋ-ਵੱਧ ਫਾਈਲ ਸਾਇਜ਼(&M):"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "ਆਈਕਾਨ ਦੇ ਅਨੁਸਾਰ ਝਸਕ ਦਾ ਸਾਇਜ਼ ਵਧਾਓ(&I)"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "ਫਾਈਲਾਂ ਵਿੱਚ ਇੰਬੈੱਡ ਥੰਮਨੇਲ ਵਰਤੋਂ(&U)"

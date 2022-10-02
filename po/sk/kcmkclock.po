@@ -1,0 +1,237 @@
+# translation of kcmkclock.po to Slovak
+# Branislav Gajdos <brian@linuxee.sk>, 2000.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2001.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2004.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Miroslav David <mirodav@gmail.com>, 2009.
+# Michal Sulek <misurel@gmail.com>, 2010, 2011.
+# Roman Paholík <wizzardsk@gmail.com>, 2013, 2015.
+# Mthw <jari_45@hotmail.com>, 2019.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2021-06-26 19:40+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Branislav Gajdoš,Stanislav Višňovský,Miroslav Dávid"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "brian@linuxee.sk,visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Dátum a čas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Nastaviť dátum a čas &automaticky"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Časový server:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Tu môžete zmeniť deň v mesiaci, mesiac a rok."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Časové pásmo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "Pre zmenu časového pásma si vyberte vašu oblasť zo zoznamu dole."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Aktuálne časové pásmo:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Hľadať..."
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"Nebol nájdený žiadny NTP nástroj. Pre automatickú aktualizáciu dátumu a času "
+"nainštalujte príkaz 'ntpdate' alebo 'rdate'."
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Tu môžete zmeniť systémový čas. Kliknite na hodinové, minútové alebo "
+"sekundové políčko, aby ste zmenili príslušnú hodnotu, buď použitím tlačidiel "
+"Hore a Dole alebo priamym zadaním novej hodnoty."
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Aktuálne miestne časové pásmo: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Aktuálne miestne časové pásmo: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Verejný časový server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+"north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Nepodarilo sa kontaktovať časový server: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Nedá sa nastaviť dátum."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "Chyba pri nastavovaní nového časového pásma."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "Chyba časového pásma"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Dátum a čas</h1> Tento modul môže byť použitý na nastavenie systémového "
+"dátumu a času. Keďže tieto nastavenia neovplyvňujú len vás ako užívateľa, "
+"ale celý systém, tak môžete zmeniť tieto nastavenia, len ak ste spustili "
+"Systémové nastavenia ako root. Ak nemáte heslo roota, ale máte pocit, že "
+"systémový čas by mal byť upravený, prosím kontaktujte správcu systému."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "Modul ovládacie centra KDE pre hodiny"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Pôvodný autor"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Súčasný správca"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "Pridaná podpora pre NTP"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>Dátum a čas</h1> Tento modul môže byť použitý na nastavenie systémového "
+"dátumu a času. Keďže tieto nastavenia neovplyvňujú len vás ako užívateľa, "
+"ale celý systém, tak môžete zmeniť tieto nastavenia, len ak ste spustili "
+"Systémové nastavenia ako root. Ak nemáte heslo roota, ale máte pocit, že "
+"systémový čas by mal byť upravený, prosím kontaktujte správcu systému."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Nepodarilo sa overiť/spustiť akciu: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Nemôžem zmeniť NTP nastavenia"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Nepodarilo sa nastaviť aktuálny čas"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Nepodarilo sa nastaviť časové pásmo"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

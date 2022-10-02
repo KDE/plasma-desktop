@@ -1,0 +1,539 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Accessibilità</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Aggiornamento e revisione della traduzione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Andrea</firstname
+><surname
+>Di Menna</surname
+><affiliation
+><address
+><email
+>a.dimenna@libero.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>accessibilità</keyword>
+<keyword
+>tasti</keyword>
+<keyword
+>campanella</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Accessibilità</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Introduzione</title>
+
+<para
+>Questo modulo è progettato per aiutare gli utenti che hanno difficoltà nell'ascoltare segnali, oppure ad usare una tastiera. </para>
+
+<para
+>Il modulo è diviso in sei schede: <link linkend="access-bell"
+><guilabel
+>Campanella</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Tasti modificatori</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtri tastiera</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Gesti di attivazione</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Navigazione con mouse</guilabel
+></link
+> e <guilabel
+>Lettore dello schermo</guilabel
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Campanella</guilabel
+></title>
+
+<para
+>Questo pannello è diviso nella sezione <guilabel
+>Campanella udibile</guilabel
+> e nella sezione <guilabel
+>Campanella visibile</guilabel
+>. </para>
+
+<para
+>La casella in alto etichettata, con <guilabel
+>Usa campanella di sistema</guilabel
+>, determina se deve suonare la normale campanella di sistema. Se questa opzione è disabilitata, la campanella di sistema verrà resa silenziosa. </para>
+
+<para
+>La casella successiva in basso può essere utilizzata per riprodurre un suono diverso se viene attivata la campanella di sistema. Per attivarla metti una spunta nella casella etichettata con <guilabel
+>Usa campanella personalizzata</guilabel
+> ed inserisci il percorso completo di un file sonoro nella casella di testo <guilabel
+>Suono da riprodurre</guilabel
+>. Se vuoi, puoi selezionare il pulsante <guibutton
+>Sfoglia</guibutton
+> per per trovare il file voluto navigando tra le cartelle. </para>
+
+<para
+>Per quegli utenti che hanno difficoltà a udire la campanella di sistema, o per quelli che hanno un computer che non emette suoni, &kde; offre una <emphasis
+>campanella visiva</emphasis
+>. Questa fornisce un segnale visibile (invertendo lo schermo, oppure facendo apparire un colore su di esso) nel momento in cui normalmente suonerebbe la campanella di sistema. </para>
+
+<para
+>Per usare la campanella visibile, metti, per prima cosa, una spunta sulla casella etichettata con <guilabel
+>Usa la campanella visiva</guilabel
+>. </para>
+
+<para
+>In seguito puoi effettuare una selezione uno tra <guilabel
+>Inverti lo schermo</guilabel
+> o <guilabel
+>Fa lampeggiare lo schermo</guilabel
+>: selezionando <guilabel
+>Inverti lo schermo</guilabel
+> tutti i colori sullo schermo verranno invertiti, mentre con <guilabel
+>Fa lampeggiare lo schermo</guilabel
+> puoi selezionare il colore facendo clic sul pulsante alla destra della selezione <guilabel
+>Fa lampeggiare lo schermo</guilabel
+>. </para>
+
+<para
+>La casella numerica può essere usata per regolare la durata della campanella visibile. Il valore predefinito è di 500 ms, cioè mezzo secondo. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Tasti modificatori</guilabel
+></title>
+
+<para
+>Ci sono due sezioni in questo pannello, <guilabel
+>Permanenza dei tasti</guilabel
+> e <guilabel
+>Tasti di blocco</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usa la permanenza dei tasti</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è abilitata puoi premere e rilasciare i tasti &Shift;, &Alt; oppure &Ctrl; e poi premere un altro tasto per ottenere una combinazione di tasti (esempio: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> può essere ottenuto con &Ctrl;, quindi &Alt; e poi &Del;). </para>
+
+<para
+>In questa sezione c'è anche una casella etichettata con <guilabel
+>Blocca la permanenza dei tasti</guilabel
+>. Se questa casella è abilitata, i tasti &Alt;, &Ctrl; e &Shift; rimangono <quote
+>selezionati</quote
+> finché non li <quote
+>deselezioni</quote
+>. </para>
+
+<para
+>Ad esempio: </para>
+<variablelist>
+<varlistentry>
+<term
+>Con <guilabel
+>Blocca la permanenza dei tasti</guilabel
+> disabilitato:</term>
+<listitem>
+<para
+>Se premi il tasto &Shift; e poi il tasto <keycap
+>F</keycap
+>, il computer lo interpreta come <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Ora, se premi una <keycap
+>P</keycap
+>, il computer la interpreta come la lettera p (senza shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Con <guilabel
+>Blocca la permanenza dei tasti</guilabel
+> abilitato:</term>
+<listitem>
+<para
+>Se premi il tasto &Shift; <emphasis
+>due volte</emphasis
+>e poi premi il tasto <keycap
+>F</keycap
+>, il computer lo interpreta come <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Se ora premi una <keycap
+>p</keycap
+>, il computer lo interpreta come una lettera P (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Per deselezionare il tasto &Shift; premilo di nuovo. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtri tastiera</guilabel
+></title>
+
+<para
+>Ci sono due sezioni in questo pannello.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usa il rallentamento dei tasti</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione viene abilitata devi tenere premuto il tasto per un periodo di tempo specificato (regolabile con la casella numerica) prima che la pressione del tasto venga accettata. Questo aiuta a prevenire la pressione accidentale dei tasti. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Usa la pressione ravvicinata dei tasti</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione viene abilitata devi attendere un intervallo di tempo specificato (configurabile con la casella numerica) prima che venga accettata la prossima pressione di un tasto. Questo previene la pressione accidentale e multipla di tasti. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gesti di attivazione</guilabel
+></title>
+
+<para
+>Ci sono due sezioni in questo pannello.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gesti di attivazione</guilabel
+> con le seguenti opzioni:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa i gesti per attivare il rallentamento o la permanenza dei tasti</guilabel
+></member>
+<member
+>Qui puoi attivare i gesti della tastiera, che abiliteranno le seguenti caratteristiche:</member>
+<member
+>Tasti del mouse: Premi &Shift;+BlocNum</member>
+<member
+>Tasti permanenti: Premi &Shift; per 5 volte consecutive</member>
+<member
+>Rallentamento tasti: Tieni premuto &Shift; per 8 secondi</member>
+<member
+><guilabel
+>Disattiva la permanenza o il rallentamento dei tasti dopo un certo periodo di inattività</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notifiche</guilabel
+> con le seguenti opzioni:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa la campanella di sistema ogni volta che vengono usati i gesti per attivare o per disattivare una funzione di accessibilità</guilabel
+></member>
+
+<member
+><guilabel
+>Mostra una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
+></member>
+<member
+>Se questa opzione è marcata &kde; mostrerà una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata.</member>
+<member
+>Assicurati di sapere ciò che stai facendo quando deselezioni quest'opzione: le impostazioni di accessibilità della tastiera vengono sempre applicate senza conferma.</member>
+
+<member
+><guilabel
+>Usa il sistema di notifiche di &kde; ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Fai clic sul pulsante <guibutton
+>Configura notifiche</guibutton
+> per aprire una finestra che permette di modificare le notifiche per il cambiamento di stato di tutti i tasti.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Navigazione con mouse</title>
+
+<para
+>Questa scheda ti permette di configurare i numeri del tastierino numerico come un dispositivo di tipo mouse. Questo può essere utile se stai lavorando su un computer senza un dispositivo di puntamento o se non hai un altro uso per il tastierino numerico. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Sposta il puntatore con la tastiera (utilizzando il tastierino numerico)</guilabel
+></term>
+<listitem>
+<para
+>Per abilitare la modalità mouse con tastiera devi selezionare la casella etichettata <guilabel
+>Sposta il puntatore con la tastiera (utilizzando il tastierino numerico)</guilabel
+>. Così facendo verranno abilitate le altre impostazioni e potrai, se necessario, personalizzare il comportamento del puntatore a tastiera. </para>
+<para
+>I vari tasti sul tastierino numerico sposteranno il puntatore nella direzione che ti aspetti. Nota che puoi muoverti tanto in diagonale quanto in su, giù, destra e sinistra. Il tasto <keycap
+>5</keycap
+> simula il clic con un pulsante del puntatore, tipicamente il &LMB;. Puoi cambiare quale pulsante viene emulato attraverso i tasti <keycap
+>/</keycap
+> (che imposta il &LMB;), <keycap
+>*</keycap
+> (che imposta il &MMB;) e <keycap
+>-</keycap
+> (che imposta il &RMB;). Utilizzando il tasto <keycap
+>+</keycap
+> verrà emulato un doppio clic con il pulsante del dispositivo di puntamento selezionato. Puoi utilizzare il tasto <keycap
+>0</keycap
+> per emulare il tener premuto il pulsante del dispositivo di puntamento selezionato (per un semplice trascinamento) e utilizzare quindi il tasto <keycap
+>.</keycap
+> per emulare il rilascio del pulsante del dispositivo di puntamento selezionato. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Attesa per l'accelerazione</guilabel
+></term>
+<listitem>
+<para
+>Questo è il tempo (in millisecondi) tra la pressione iniziale del tasto ed il primo evento di spostamento ripetuto per l'accelerazione del mouse a tastiera. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervallo di ripetizione</guilabel
+></term>
+<listitem>
+<para
+>Questo è il tempo in millisecondi tra eventi di spostamento ripetuti per l'accelerazione del mouse a tastiera. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo di accelerazione</guilabel
+></term>
+<listitem>
+<para
+>Questo è il tempo in millisecondi prima che il puntatore raggiunga una velocità massima per il mouse a tastiera. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocità massima</guilabel
+></term>
+<listitem>
+<para
+>Questa è la velocità massima in pixel per secondo che il puntatore potrà raggiungere per l'accelerazione del mouse a tastiera. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Profilo di accelerazione</guilabel
+></term>
+<listitem>
+<para
+>Questa è la pendenza della curva di accelerazione per l'accelerazione del mouse a tastiera. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Lettore dello schermo</guilabel
+></title>
+
+<para
+>Installa un'applicazione per la lettura dello schermo come <ulink url="https://it.wikipedia.org/wiki/Orca_(software)"
+>Orca</ulink
+> insieme a <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Prova se il suono dell'agente di pronuncia funziona mediante il comando <command
+>spd-say hello</command
+> in un terminale. </para>
+
+<para
+>Hai bisogno inoltre di un sintetizzatore di pronuncia, ad esempio <application
+>espeak</application
+>. </para>
+
+<para
+>Abilita il lettore dello schermo nella casella, disconnettiti e riavvia la sessione desktop. </para>
+
+<para
+>Per &plasma; stesso sii sicuro di utilizzare il tradizionale<guilabel
+>Menu dell'applicazione</guilabel
+>, e controlla che esso abbia una scorciatoia da tastiera associata (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Alla pressione di questa scorciatoia il menu dovrebbe aprirsi ed essere letto nella navigazione del menu con i tasti freccia. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

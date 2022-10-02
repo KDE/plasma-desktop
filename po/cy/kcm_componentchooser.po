@@ -1,0 +1,317 @@
+# translation of kcmcomponentchooser.po to Cymraeg
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# KGyfieithu <kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2004-07-03 06:59+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Defnyddio dibynnydd &ebost arall:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Dewiswch eich hoff ddibynnydd ebost:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Dewiswch eich hoff ddibynnydd ebost:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Dewiswch eich hoff gymhwysiad terfynnell:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Dewiswch eich hoff gymhwysiad terfynnell:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Dewiswch eich hoff gymhwysiad terfynnell:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Owain Green drwy KGyfieithu"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kyfieithu@dotmon.com"
+
+#, fuzzy
+#~| msgid "(c), 2002 Joseph Wenninger"
+#~ msgid "Joseph Wenninger"
+#~ msgstr "(h)(c), 2002 Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Anhysbys"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Dewisydd Cydrannau"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(h)(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Dewiswch o'r restr isod pa gydrannau y dylid eu defnyddio'n ragosod ar "
+#~ "gyfer y gwasanaeth %1."
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Newidioch gydran ragosod eich dewis, ydych am gadw'r newid yna nawr? "
+#~ "<BR><BR>Bydd dewis <B>Na</B> yn taflu'ch newidiadau</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Dim disgrifiad ar gael"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Yma gallwch newid y rhaglen gydrannau.  Mae cydrannau yn raglenni sy'n "
+#~ "trin tasgiau gwahanol, fel yr efelychydd terfynell, y golygydd testun, "
+#~ "a'r dibynnydd ebost.  Weithiau mae'n rhaid i gymhwysiadau gwahanol KDE "
+#~ "ymgychywn efelychydd terfynell, anfon ebost, neu dangos testun.  Er mwyn "
+#~ "gwneud hyn yn gyson, mae'r cymhwysiadau yma o hyd yn galw'r un un "
+#~ "gydran.  Gallwch ddewis yma pa raglenni y mae'r cydrannau yma.   "
+
+#~ msgid "Default Component"
+#~ msgstr "Cydran Ragosodedig"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Ymddengys y rhestr yma y mathau o gydran a ellir ffurfweddu.  Cliciwch "
+#~ "y gydran yr hoffech ffurfweddu.</p>\n"
+#~ "<p>Yn yr ymgom yma, gallwch newid cydrannau rhagosod KDE.  Mae cydrannau "
+#~ "yn raglenni sy'n trin tasgiau sylfaenol, fel yr efelychydd terfynell, y "
+#~ "golygydd testun, a'r dibynnydd ebost.  Weithiau mae'n rhaid i "
+#~ "gymhwysiadau gwahanol KDE ymgychywn efelychydd terfynell, anfon ebost, "
+#~ "neu dangos testun.  Er mwyn gwneud hyn yn gyson, mae'r cymhwysiadau yma o "
+#~ "hyd yn galw'r un un gydran.  Gallwch ddewis yma pa raglenni y mae'r "
+#~ "cydrannau yma.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Agor URLau <b>http</b> ac <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "mewn cymhwysiad a seilir ar gynnwys yr URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "yn y porydd gwe yma:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "yn y porydd gwe yma:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Dewiswch eich hoff gymhwysiad i bori'r we:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr " Kmail yw'r rhaglen safonol ebost ar gyfer y penbwrdd KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Defnyddio KMail yn hoff ddibynnydd ebost"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Dewiswch y dewisiad yma os hoffech ddefnyddio rhyw rhaglen ebost arall."
+
+#, fuzzy
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Cyfeiriad y derbynnydd</li> <li>%s: Pwnc</li> <li>%c: Copi "
+#~ "Carbon (CC)</li> <li>%b: Copi Carbon Dall (BCC)</li> <li>%B: Testun corff "
+#~ "patrymlun</li> <li>%A: Atodiad </li> </ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite email client. Please note that "
+#~| "the file you select has to have the executable attribute set in order to "
+#~| "be accepted.<br> You can also use several placeholders which will be "
+#~| "replaced with the actual values when the email client is called:<ul> <li>"
+#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~| "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Gwasgwch y botwm yma i ddewis eich hoff ddibynnydd ebost. Noder bod rhaid "
+#~ "bod y briodwedd weithredadwy wedi'i gosod ar y ffeil y dewiswch er mwyn "
+#~ "ei derbyn.<br> Gallwch hefyd ddefnyddio sawl daliwr lle i'w hamnewid â'r "
+#~ "gwerthoedd gwir pan elwir y dybynnydd ebost:<ul> <li>%t: Cyfeiriad y "
+#~ "derbynnydd</li> <li>%s: Pwnc</li> <li>%c: Copi Carbon (CC)</li> <li>%b: "
+#~ "Copi Carbon Dall (BCC)</li> <li>%B: Testun corff patrymlun</li> <li>%A: "
+#~ "Atodiad </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Cliciwch yma i bori am y ffeil rhaglen ebost."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Gweithredolwch y dewisiad yma os ydych am redeg y dibynnydd ebost "
+#~ "dewisiedig mewn terfynnell (e.e. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Rhedeg mewn terfynnell"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Defnyddio Konsole yn gymhwysiad terfynnell"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Defnyddio rhaglen d&erfynnell arall:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite terminal client. Please note "
+#~| "that the file you select has to have the executable attribute set in "
+#~| "order to be accepted.<br> Also note that some programs that utilize "
+#~| "Terminal Emulator will not work if you add command line arguments "
+#~| "(Example: konsole -ls)."
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Gwasgwch y botwm yma i ddewis eich hoff ddibynnydd terfynnell.  Noder bod "
+#~ "rhaid gosod y priodoledd gweithredadwy ar y ffeil a ddewisir iddi gael ei "
+#~ "derbyn. <br>Noder hefyd na fydd rhai rhaglenni sy'n defnyddio Efelychydd "
+#~ "Terfynnell yn gweithio os ychwanegwch ymresymiadau llinell orchymyn "
+#~ "(Enghraifft: knonsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Cliciwch yma i bori am y rhaglen derfynnell."
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Defnyddio rhaglen d&erfynnell arall:"
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Defnyddio rhaglen d&erfynnell arall:"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Yma gallwch darllen disgrifiad bach o'r gydran a ddewisir ar hyn o bryd.  "
+#~ "Er mwyn newid y gydran benodol, cliciwch ar y rhestr i'r chwith.  Er mwyn "
+#~ "newid y rhaglen gydran, dewiswch hi isod."
+
+#~ msgid "Component Description"
+#~ msgstr "Disgrifiad y Gydran"

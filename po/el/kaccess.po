@@ -1,0 +1,748 @@
+# translation of kaccess.po to
+# translation of kaccess.po to Greek
+# Copyright (C) 2000, 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
+# Dimitris Kamenopoulos <el97146@mail.ntua.gr>, 2000-2001.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2003-2004.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007.
+# Toussis Manolis <koppermind@yahoo.com>, 2005.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2008.
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Petros <pvidalis@gmail.com>, 2010.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2016-12-18 20:00+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Δημήτρης Καμενόπουλος,Στέργιος Δράμης,Σπύρος Γεωργαράς,Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"el97146@mail.ntua.gr,sdramis@egnatia.ee.auth.gr,sngeorgaras@otenet.gr,"
+"manolis@koppermind.homelinux.org"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Shift έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Το πλήκτρο Shift είναι τώρα ενεργό."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Το πλήκτρο Shift είναι τώρα ανενεργό."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Control έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Το πλήκτρο Control είναι τώρα ενεργό."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Το πλήκτρο Control είναι τώρα ανενεργό."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Alt έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Το πλήκτρο Alt είναι τώρα ενεργό."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Το πλήκτρο Alt είναι τώρα ανενεργό."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Win έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Το πλήκτρο Win είναι τώρα ενεργό."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Το πλήκτρο Win είναι τώρα ανενεργό."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Meta έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Το πλήκτρο Meta είναι τώρα ενεργό."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Το πλήκτρο Meta είναι τώρα ανενεργό."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Super έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Το πλήκτρο Super είναι τώρα ενεργό."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Το πλήκτρο Super είναι τώρα ανενεργό."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Hyper έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Το πλήκτρο Hyper είναι τώρα ενεργό."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Το πλήκτρο Hyper είναι τώρα ανενεργό."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Το πλήκτρο Alt Graph έχει κλειδώσει και τώρα είναι ενεργό για όλα τα επόμενα "
+"πατήματα πλήκτρων."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Το πλήκτρο Alt Graph είναι τώρα ενεργό."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Το πλήκτρο Alt Graph είναι τώρα ανενεργό."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Το πλήκτρο Num Lock ενεργοποιήθηκε."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Το πλήκτρο Num Lock είναι τώρα ανενεργό."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Το πλήκτρο Caps Lock ενεργοποιήθηκε."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Το πλήκτρο Caps Lock είναι τώρα ανενεργό."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Το πλήκτρο Scroll Lock ενεργοποιήθηκε."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Το πλήκτρο Scroll Lock είναι τώρα ανενεργό."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Εναλλαγή του αναγνώστη οθόνης σε ενεργό/ανενεργό"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Προσβασιμότητα"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&Όταν χρησιμοποιηθεί μια χειρονομία:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Αλλαγή ρυθμίσεων χωρίς ερώτηση"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Εμφάνισε αυτό το διάλογο επιβεβαίωσης"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Απενεργοποίηση όλων των AccessX Χαρακτηριστικών & Χειρονομιών"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Αργά πλήκτρα"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Πλήκτρα αναπήδησης"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Κολλημένα πλήκτρα"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Πλήκτρα ποντικιού"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Θέλετε πραγματικά να απενεργοποιήσετε το \"%1\";"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\" και \"%2\";"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\";"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr ""
+"Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\", \"%2\", \"%3\" και \"%4\";"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\";"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε το "
+"\"%2\";"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε τα "
+"\"%2\" και \"%3\";"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε τα "
+"\"%2\", \"%3\" και \"%4\";"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\";"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\" και να "
+"απενεργοποιήσετε το \"%3\";"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\" και να "
+"απενεργοποιήσετε τα \"%3\" και \"%4\";"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\";"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\" και να "
+"απενεργοποιήσετε το \"%4\";"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr ""
+"Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\", \"%3\" και \"%4\";"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Ένα πρόγραμμα ζήτησε την αλλαγή αυτής της ρύθμισης."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Κρατήσατε πατημένο το πλήκτρο Shift για 8 δευτερόλεπτα ή ένα πρόγραμμα "
+"ζήτησε την αλλαγή αυτής της ρύθμισης."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Πατήσατε το πλήκτρο Shift 5 φορές ή ένα πρόγραμμα ζήτησε την αλλαγή αυτής "
+"της ρύθμισης."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr ""
+"Πατήσατε το πλήκτρο %1 ή ένα πρόγραμμα ζήτησε την αλλαγή αυτής της ρύθμισης."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Μια εφαρμογή ζήτησε να αλλάξει αυτές τις ρυθμίσεις, ή χρησιμοποιήσατε έναν "
+"συνδυασμό πολλών χειρονομιών με το πληκτρολόγιο."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Ένα πρόγραμμα ζήτησε την αλλαγή αυτών των ρυθμίσεων."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Οι ρυθμίσεις AccessX χρειάζονται από χρήστες με κινητικά προβλήματα και "
+"μπορούν να ρυθμιστούν από τις ρυθμίσεις συστήματος του KDE. Μπορείτε να τα "
+"(απ)ενεργοποιήσετε με τυποποιημένες χειρονομίες πλήκτρων.\n"
+"\n"
+"Αν δεν τα χρειάζεστε, μπορείτε να επιλέξετε \"Απενεργοποίηση όλων των "
+"AccessX χαρακτηριστικών και χειρονομιών.\"."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Τα αργά πλήκτρα ενεργοποιήθηκαν. Από δω και στο εξής, πρέπει να πιέσετε κάθε "
+"πλήκτρο για κάποιο χρονικό διάστημα πριν αυτό γίνει αποδεκτό."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Τα αργά πλήκτρα απενεργοποιήθηκαν."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Τα πλήκτρα αναπήδησης ενεργοποιήθηκαν. Από εδώ και πέρα, κάθε πλήκτρο θα "
+"μπλοκάρεται για ένα καθορισμένο χρονικό διάστημα μετά τη χρήση τους."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Τα πλήκτρα αναπήδησης απενεργοποιήθηκαν."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Τα κολλημένα πλήκτρα ενεργοποιήθηκαν. Από δω και στο εξής, τα πλήκτρα "
+"τροποποίησης θα παραμένουν ενεργοποιημένα μετά την απελευθέρωσή τους."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Τα κολλημένα πλήκτρα απενεργοποιήθηκαν."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Τα πλήκτρα ποντικιού ενεργοποιήθηκαν. Από δω και στο εξής, μπορείτε να "
+"χρησιμοποιήσετε το αριθμητικό πληκτρολόγιο για να ελέγξετε το ποντίκι."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Τα πλήκτρα ποντικιού απενεργοποιήθηκαν."
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgctxt "Name for kaccess shortcuts category"
+#| msgid "Accessibility"
+msgid "Accessibility"
+msgstr "Προσβασιμότητα"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Συγγραφέας"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "Εργαλείο προσιτότητας του KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "&Bell"
+#~ msgstr "&Ειδοποίηση"
+
+#~ msgid "Audible Bell"
+#~ msgstr "Ακουστική ειδοποίηση"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Αν αυτή η επιλογή είναι ενεργοποιημένη, θα χρησιμοποιηθεί η "
+#~ "προκαθορισμένη ειδοποίηση συστήματος. Συνήθως, είναι ένα απλό \"μπιπ\"."
+
+#~ msgid "Use &system bell"
+#~ msgstr "Χρήση ειδοποίησης &συστήματος"
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτή την επιλογή αν θέλετε να χρησιμοποιήσετε μια "
+#~ "προσαρμοσμένη ειδοποίηση, που θα αναπαράγει ένα αρχείο ήχου. Αν το κάνετε "
+#~ "αυτό, μάλλον θα θέλετε να απενεργοποιήσετε την ειδοποίηση του συστήματος."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Χρήση προσαρμοσμένης &ειδοποίησης"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Αν η επιλογή \"Χρήση προσαρμοσμένης ειδοποίησης\" ενεργοποιηθεί, μπορείτε "
+#~ "να επιλέξετε εδώ κάποιο αρχείο ήχου. Κάντε κλικ στο \"Περιήγηση...\" για "
+#~ "επιλογή ενός αρχείου ήχου χρησιμοποιώντας τον διάλογο αρχείων."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Ήχος &προς αναπαραγωγή:"
+
+#~ msgid "Browse..."
+#~ msgstr "Περιήγηση..."
+
+#~ msgid "Visible Bell"
+#~ msgstr "Οπτική ειδοποίηση"
+
+#~ msgid ""
+#~ "This option will turn on the \"visible bell\", i.e. a visible "
+#~ "notification shown every time that normally just a bell would occur. This "
+#~ "is especially useful for deaf people."
+#~ msgstr ""
+#~ "Με την επιλογή αυτή θα ενεργοποιηθεί η \"οπτική ειδοποίηση\", π.χ. μία "
+#~ "οπτική προειδοποίηση που θα εμφανίζεται κάθε φορά που κανονικά θα "
+#~ "συνέβαινε απλά μια ειδοποίηση. Είναι ιδιαίτερα χρήσιμη για ανθρώπους με "
+#~ "προβλήματα ακοής."
+
+#~ msgid "&Use visible bell"
+#~ msgstr "&Χρήση οπτικής ειδοποίησης"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Η οθόνη θα παίρνει ένα προσαρμοσμένο χρώμα για το χρονικό διάστημα που "
+#~ "καθορίζεται παρακάτω."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Αναλαμπή οθόνης"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "Όλα τα χρώματα της οθόνης θα αντιστρέφονται για το χρονικό διάστημα που "
+#~ "καθορίζεται παρακάτω."
+
+#~ msgid "I&nvert screen"
+#~ msgstr "&Αντιστροφή χρωμάτων οθόνης"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Κάντε κλικ εδώ για να επιλέξετε το χρώμα που θα χρησιμοποιηθεί για την "
+#~ "οπτική ειδοποίηση \"αναλαμπή οθόνης\"."
+
+#~ msgid "&Duration:"
+#~ msgstr "&Διάρκεια:"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να προσαρμόσετε τη διάρκεια της \"οπτικής ειδοποίησης\" που "
+#~ "θα εμφανίζεται."
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Modifier Keys"
+#~ msgstr "Πλήκτρα τροποποιητή"
+
+#~ msgid "Sticky Keys"
+#~ msgstr "Κολλημένα πλήκτρα"
+
+#~ msgid "Use &sticky keys"
+#~ msgstr "Χρήση &κολλημένων πλήκτρων"
+
+#~ msgid "&Lock sticky keys"
+#~ msgstr "&Κλείδωμα κολλημένων πλήκτρων"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "Απενεργοποίηση των κολλημένων πλήκτρων όταν δύο πλήκτρα πατηθούν "
+#~ "ταυτόχρονα"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Χρήση της ειδοποίησης συστήματος κάθε φορά που ένας τροποποιητής "
+#~ "ασφαλιστεί, κλειδωθεί ή ξεκλειδωθεί"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Πλήκτρα κλειδώματος"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Χρήση της ειδοποίησης συστήματος κάθε φορά που ένα πλήκτρο κλειδώματος "
+#~ "ενεργοποιηθεί ή απενεργοποιηθεί"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a modifier or "
+#~| "locking key changes its state"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism for modifier or locking key state "
+#~ "changes"
+#~ msgstr ""
+#~ "Χρήση του μηχανισμού ειδοποίησης συστήματος του Plasma κάθε φορά που ένας "
+#~ "τροποποιητής ή πλήκτρο κλειδώματος αλλάξει κατάσταση"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Διαμόρφωση &ειδοποιήσεων..."
+
+#~ msgid "&Keyboard Filters"
+#~ msgstr "Φίλτρα πλη&κτρολογίου"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&Αργά πλήκτρα"
+
+#~ msgid "&Use slow keys"
+#~ msgstr "&Χρήση αργών πλήκτρων"
+
+#~ msgid "&Use system bell whenever a key is pressed"
+#~ msgstr "&Χρήση της ειδοποίησης συστήματος κάθε φορά που ένα πλήκτρο πατηθεί"
+
+#~ msgid "&Use system bell whenever a key is accepted"
+#~ msgstr ""
+#~ "&Χρήση της ειδοποίησης συστήματος κάθε φορά που ένα πλήκτρο γίνει αποδεκτό"
+
+#~ msgid "&Use system bell whenever a key is rejected"
+#~ msgstr ""
+#~ "&Χρήση της ειδοποίησης συστήματος κάθε φορά που ένα πλήκτρο απορριφθεί"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Πλήκτρα αναπήδησης"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Χρήση πλήκτρων α&ναπήδησης"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr ""
+#~ "Χρήση της ειδοποίησης συστήματος κάθε φορά που ένα πλήκτρο απορριφθεί"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "&Χειρονομίες ενεργοποίησης"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Χειρονομίες ενεργοποίησης"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Χρήση χειρονομιών για την ενεργοποίηση των κολλημένων πλήκτρων και των "
+#~ "αργών πλήκτρων"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Απενεργοποίηση των κολλημένων και αργών πλήκτρων μετά από συγκεκριμένο "
+#~ "χρόνο αδράνειας."
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid "Notification"
+#~ msgstr "Ειδοποίηση"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Χρήση της ειδοποίησης συστήματος κάθε φορά που μία χειρονομία "
+#~ "χρησιμοποιηθεί για την ενεργοποίηση ή απενεργοποίηση ενός χαρακτηριστικού "
+#~ "προσβασιμότητας"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Αν αυτή η επιλογή ενεργοποιηθεί, το KDE θα εμφανίσει ένα διάλογο "
+#~ "επιβεβαίωσης κάθε φορά που ένα χαρακτηριστικό προσβασιμότητας του "
+#~ "πληκτρολογίου ενεργοποιηθεί ή απενεργοποιηθεί. \n"
+#~ "Σημειώστε ότι αν η επιλογή απενεργοποιηθεί οι ρυθμίσεις προσβασιμότητας "
+#~ "πληκτρολογίου θα εφαρμόζονται χωρίς επιβεβαίωση."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Εμφάνιση ενός διαλόγου επιβεβαίωσης κάθε φορά που ένα χαρακτηριστικό "
+#~ "προσβασιμότητας του πληκτρολογίου ενεργοποιηθεί ή απενεργοποιηθεί"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Χρήση του μηχανισμού ειδοποίησης συστήματος του Plasma κάθε φορά που ένα "
+#~ "χαρακτηριστικό προσβασιμότητας πληκτρολογίου ενεργοποιηθεί ή "
+#~ "απενεργοποιηθεί"
+
+#~ msgid "Screen Reader"
+#~ msgstr "Αναγνώστης οθόνης"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Ενεργοποίηση αναγνώστη οθόνης"

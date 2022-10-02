@@ -1,0 +1,137 @@
+# translation of kcmlaunch.po to Khmer
+# translation of kcmlaunch.po to
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2005, 2007, 2008.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007.
+# Sokun <sokun_poch@khmeros.info>, 2007.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2008-01-24 10:11+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "ទស្សន៍​ទ្រនិច​ជាប់​រវល់"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "ទស្សន៍​ទ្រនិច​លោត​ភ្លឹប​ភ្លែតៗ"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "ទស្សន៍​ទ្រនិច​លោត"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "អនុញ្ញាត​ឲ្យ​មាន​ការ​ជូន​ដំណឹង​របារ​ភារកិច្ច"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "ពេល​សម្រាក​ជូន​ដំណឹង​ពេល​ចាប់ផ្ដើម ៖"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " វិ."
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>ប្រតិកម្ម​ពេល​ចាប់ផ្ដើម</h1> អ្នក​អាច​កំណត់​រចនាសម្ព័ន្ធ​ប្រតិកម្ម​ពេល​ចាប់ផ្ដើម​កម្មវិធី​នៅ​ទីនេះ ។"
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>ទស្សន៍​ទ្រនិច​ជាប់​រវល់</h1>\n"
+#~ "KDE ផ្ដល់​ទស្សន៍​ទ្រនិច​ជាប់​រវល់​មួយ ​សម្រាប់​ការ​ជូន​ដំណឹង​ពេល​កម្មវិធី​ចាប់​ផ្តើម ។\n"
+#~ "ដើម្បី​អនុញ្ញាត​ឲ្យ​មាន​ទស្សន៍​ទ្រនិច​ជាប់​រវល់ ជ្រើស​ប្រភេទ​មួយ​នៃ​មតិ​អ្នក​ប្រើ​ដែល​អាច​មើល​ឃើញ\n"
+#~ "ពី​ប្រអប់​បន្សំ ។\n"
+#~ "វា​អាច​កើត​ឡើង ដែល​កម្មវិធី​មួយ​ចំនួន មិន​ដឹង​អំពី​ការ​ជូន​ដំណឹង​នៅ​ពេល​ចាប់ផ្តើម​នេះ ។\n"
+#~ "ក្នុង​ករណី​នេះ ទស្សន៍​ទ្រនិច​បញ្ឈប់​ការ​លោត​ភ្លឹប​ភ្លែត​ៗ បន្ទាប់​ពី​ពេល\n"
+#~ "ដែល​បាន​ផ្តល់​ឲ្យ​ក្នុង​ផ្នែក 'ចាប់ផ្តើម​ជូន​ដំណឹង​ពេល​សម្រាក​'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "គ្មាន​ទស្សន៍​ទ្រនិច​ជាប់​រវល់"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "ទស្សន៍​ទ្រនិច​ជាប់​រវល់​អកម្ម"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "ការ​ជូន​ដំណឹង​របារ​ភារកិច្ច"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>ការ​ជូន​ដំណឹង​របារ​ភារកិច្ច</H1>\n"
+#~ "អ្នក​អាច​អនុញ្ញាត​ឲ្យ​មាន​វិធីសាស្ត្រ​ទី ២ នៃ​ការ​ជូន​ដំណឹង​នៅ​ពេល​ចាប់ផ្តើម ដែល​\n"
+#~ "ត្រូវ​បាន​ប្រើ​ដោយ​របារភារកិច្ច ហើយ​​ប៊ូតុង​ដែល​មាន​នាឡិកា​នឹង​លេច​ឡើង\n"
+#~ "ជា​និមិត្ត​សញ្ញា​បញ្ជាក់​ថា កម្មវិធី​ដែល​បាន​ចាប់​ផ្ដើម​កំពុង​ផ្ទុក ។\n"
+#~ "វា​អាច​កើត​ឡើង ពេល​កម្មវិធី​មួយ​ចំនួន​មិន​ដឹង​ការ​ជូន​ដំណឹង​នៅ​ពេល​ចាប់ផ្ដើម​នេះ ។\n"
+#~ "ក្នុង​ករណី​នេះ ប៊ូតុង​នឹង​លេច​បាត់ បន្ទាប់​ពី​ពេល\n"
+#~ "ដែល​បាន​ផ្ដល់​ឲ្យ​ក្នុង​ផ្នែក 'ចាប់​ផ្តើម​ជូន​ដំណឹង​ពេល​សម្រាក'"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "ចាប់ផ្តើម​ជូន​ដំណឹង​ពេល​ចាប់ផ្តើម​សម្រាក ៖"

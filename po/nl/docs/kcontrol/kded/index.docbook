@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Achtergrondservices</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>Service</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>De module <guilabel
+>Servicebeheerder</guilabel
+> stelt u in staat om een overzicht te hebben van alle plugins van de &kde; -daemon, ook gerefereerd als &kde;-services. In het algemeen zijn er twee typen services:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Diensten die op verzoek worden geladen</guilabel
+></term>
+<listitem
+><para
+>Dit is een lijst van beschikbare &kde;-services die op verzoek zal worden gestart. Zij worden alleen voor het gemak getoond, omdat u deze services niet kan manipuleren. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Opstartdiensten</guilabel
+></term>
+<listitem
+><para
+>Dit toont alle &kde;-services die bij het opstarten van &kde; geladen kunnen worden. Services die aangevinkt zijn in de <guilabel
+>Gebruiken</guilabel
+> kolom zullen worden gestart bij de volgende keer opstarten.</para>
+<para
+>Wees voorzichtig met het deactiveren van onbekende services: somige services zijn vitaal voor &kde;; de-activeer geen services als u niet weet wat u doet. </para>
+<para
+>Om de <guilabel
+>Status</guilabel
+> van een service te wijzigen, selecteer het in de lijst. Daarna kunt u de knop <guibutton
+>Start</guibutton
+> en <guibutton
+>Stop</guibutton
+> gebruiken om de status van een service te wijzigen van <guilabel
+>Niet actief</guilabel
+> naar <guilabel
+>Actief</guilabel
+> en omgekeerd. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

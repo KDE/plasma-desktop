@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Запуск приложений</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Сергей</firstname
+><surname
+>Ефремов</surname
+><affiliation
+><address
+><email
+>predator@ukrtop.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>Иногда необходимо убедиться, что компьютер воспринял команду пользователя и исполняет её. Этот модуль приложения &systemsettings; позволяет настроить визуальное подтверждение факта запуска программ пользователем.</para>
+	
+<para
+>Обычным способом показать, что система занята, является изменение вида курсора мыши.Для включения этой функции выберите подходящее значение параметра <guilabel
+>Курсор занятости</guilabel
+>.</para>
+
+<para
+>Если курсор занятости включён, при запуске приложения рядом с курсором некоторое время будет находиться соответствующий значок. Поле ввода числа <guilabel
+>Время индикации запуска</guilabel
+> служит для настройки длительности отображения значка приложения рядом с курсором; по умолчанию установлено значение 5 секунд.</para>
+
+<para
+>Курсор занятости может отображаться несколькими способами: <guilabel
+>Без отклика запуска</guilabel
+>, <guilabel
+>Мигающий курсор</guilabel
+>, <guilabel
+>Прыгающий курсор</guilabel
+> и обычный (без анимации) <guilabel
+>Статический курсор занятости</guilabel
+>.</para>
+
+<para
+>Доступно включение и отключение способа отображения запуска приложений, который использовался в &plasma; ранее. Обычно при запуске приложения в панели задач сразу появлялась соответствующая приложению кнопка, в которой на месте значка вращались песочные часы, показывая, что выполняется запуск. Флажок <guilabel
+>Разрешить уведомление панели задач</guilabel
+> служит для включения или отключения этого способа, а поле ввода числа <guilabel
+>Время индикации запуска</guilabel
+>, если разрешён этот способ уведомления, позволяет установить длительность индикации запуска.</para>
+
+<para
+>Не все запущенные приложения в итоге выведут на экран окно или отобразятся в панели задач. Например, некоторые из них встраиваются в системный лоток &plasma;. Либо приложение могло быть запущено на другом рабочем столе (если в разделе <guilabel
+>Поведение</guilabel
+> <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Параметров панели задач</guilabel
+></ulink
+> для переключателя <guilabel
+>Показывать приложения</guilabel
+> установлен флажок <guilabel
+>С текущего рабочего стола</guilabel
+>). Установка времени индикации позволит получить визуальную индикацию запуска и в этих случаях.</para>
+
+</article>

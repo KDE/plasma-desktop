@@ -1,0 +1,330 @@
+# Translation of kcm_activities5.po to Catalan
+# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2018, 2019, 2020, 2021.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2019, 2020, 2022.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2022-03-26 20:28+0100\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "Activitats"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Suprimeix una activitat"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Esteu segur que voleu suprimir «%1»?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"Error en carregar els fitxers QML. Verifiqueu la instal·lació.\n"
+"Manca %1"
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Crea una activitat nova"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Configuració de l'activitat"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Crea"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr "Icona:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "Nom:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "Descripció:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr "Privadesa:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "No segueixis l'ús d'aquesta activitat"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Drecera per a alternar:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Quants mesos cal mantenir l'historial d'activitat"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Quines dades cal mantenir a l'historial d'activitat"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Llista de les aplicacions de les quals es desarà l'historial"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Llista de les aplicacions de les quals no es desarà l'historial"
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "Canvi"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Configura l'activitat %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Suprimeix l'activitat %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr "Crea nova…"
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "Canvi d'activitats"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "Recorre les activitats"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "Recorre les activitats (invers)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Recorda per a cada activitat (cal reiniciar)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Escriptori virtual actual:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Dreceres:"
+
+#~ msgid "Privacy"
+#~ msgstr "Privadesa"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Per sempre"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Oblida la darrera hora"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Oblida les dues darreres hores"
+
+#~ msgid "Forget a day"
+#~ msgstr "Oblida un dia"
+
+#~ msgid "Forget everything"
+#~ msgstr "Oblida-ho tot"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " mes"
+#~ msgstr[1] " mesos"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "Per a "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Neteja l'historial de l'activitat."
+
+#~ msgid "Keep history:"
+#~ msgstr "Mantén l'historial:"
+
+#~ msgid "Clear History"
+#~ msgstr "Neteja l'historial"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "Per a &totes les aplicacions"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&No ho recordis"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "No&més per a aplicacions específiques:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Recorda els documents oberts:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Bloqueja les aplicacions que no estiguin a la llista"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Suprimeix"
+
+#~ msgid "Other"
+#~ msgstr "Altres"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Aplica"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"
+
+#~ msgid "Activity information"
+#~ msgstr "Informació de l'activitat"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Fons de pantalla"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Canvia..."
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "durant "
+
+#~ msgid "Form"
+#~ msgstr "Formulari"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Josep M. Ferrer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "txemaq@gmail.com"
+
+#~ msgid "Default"
+#~ msgstr "Per defecte"
+
+#~ msgctxt "@action"
+#~ msgid "Switch to activity \"%1\""
+#~ msgstr "Canvia a l'activitat «%1»"
+
+#~ msgctxt "Header title for activity data model"
+#~ msgid "Activity"
+#~ msgstr "Activitat"
+
+#~ msgid "Loading..."
+#~ msgstr "Sestà carregant..."
+
+#~ msgid "The Activity Manager is not running"
+#~ msgstr "El gestor d'activitats no s'està executant"
+
+#~ msgid "Link to the current activity"
+#~ msgstr "Enllaça amb l'activitat actual"
+
+#~ msgid "Unlink from the current activity"
+#~ msgstr "Separa de l'activitat actual"
+
+#~ msgid "Link to:"
+#~ msgstr "Enllaça a:"
+
+#~ msgid "Unlink from:"
+#~ msgstr "Separa de:"
+
+#~ msgid "Activity"
+#~ msgstr "Activitat"
+
+#~ msgid "Activity name"
+#~ msgstr "Nom de l'activitat"
+
+#~ msgid "Available Features"
+#~ msgstr "Funcionalitats disponibles"
+
+#~ msgid "Plugins"
+#~ msgstr "Connectors"
+
+#~ msgid "Enable activities management"
+#~ msgstr "Activa el gestor d'activitats"
+
+#~ msgid "Activity manager is not running properly."
+#~ msgstr "El gestor d'activitats no s'està executant adequadament."
+
+#~ msgid "Activities..."
+#~ msgstr "Activitats..."
+
+#~ msgid "(c) 2012 Ivan Cukic"
+#~ msgstr "(c) 2012 Ivan Cukic"

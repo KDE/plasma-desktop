@@ -1,0 +1,136 @@
+# translation of kcmlaunch.po to Thai
+# Copyright (C) 2003, 2005 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003, 2005.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2008-04-26 11:57+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: LoKalize 0.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "แจ้งทางเคอร์เซอร์"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "กระพริบเคอร์เซอร์"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "กระเด้งเคอร์เซอร์"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "เปิดใช้การแจ้งให้ทราบทางแถบงาน"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "ช่วงเวลาให้แสดงว่าเริ่มทำงาน:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " วินาที"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>เรียกทำงาน</h1> คุณสามารถปรับแต่ง การตอบกลับ การเรียกให้โปรแกรมทำงานได้ที่นี่"
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>แสดงการแจ้งทางเคอร์เซอร์</h1>\n"
+#~ "KDE แนะนำให้ใช้การแจ้งทางเคอร์เซอร์ เมื่อมีการเริ่มโปรแกรม\n"
+#~ "เพื่อเปิดใช้การแสดงการแ่จ้งทางเคอร์เซอร์ ให้เลือกที่\n"
+#~ "'เปิดใช้การแจ้งให้ทราบทางเคอร์เซอร์' และหากต้องการให้เคอร์เซอร์กระพริบ\n"
+#~ "เลือกที่ 'เปิดใช้การกระพริบ' ทางด้านล่าง ซึ่งมันอาจจะทำงานได้\n"
+#~ "แต่บางครั้ง บางโปรแกรม อาจจะไม่แจ้งถึงการเริ่มทำงานนี้\n"
+#~ "ในกรณีนี้ เคอร์เซอร์จะหยุดกระพริบ หลังจากช่วงเวลาที่กำหนดในส่วน\n"
+#~ "'ช่วงเวลาให้แสดงว่าเริ่มทำงาน'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "ไม่ต้องแจ้งทางเคอร์เซอร์"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "เคอร์เซอร์แบบไม่ว่าง"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "การแจ้งให้ทราบทางแถบงาน"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>การแจ้งให้ทราบทางแถบงาน</H1>\n"
+#~ "คุณสามารถเปิดใช้งานวิธีที่สอง ในการแจ้งให้ทราบว่ามีการเริ่มโปรแกรมแล้ว\n"
+#~ "โดยแสดงผ่านทางแถบงาน โดยปุ่มงานจะมีภาพนาฬิกาทรายหมุนปรากฎอยู่\n"
+#~ "เพื่อแสดงว่าโปรแกรมกำลังเริ่มการทำงาน ซึ่งมันอาจจะทำงานได้\n"
+#~ "แต่บางครั้ง บางโปรแกรมอาจจะไม่แจ้งให้ทราบถึงการเริ่มทำงานนี้\n"
+#~ "ในกรณีนี้ ปุ่มจะหายไป หลังจากช่วงเวลาที่กำหนดในส่วน\n"
+#~ "'ช่วงเวลาให้แสดงว่าเริ่มทำงาน'"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "ช่วงเวลาให้แสดงว่าเริ่มทำงาน:"

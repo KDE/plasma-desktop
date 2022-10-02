@@ -1,0 +1,80 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Sergiu Bivol <sergiu@cip.md>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2020-08-31 22:37+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: sortedactivitiesmodel.cpp:316
+#, kde-format
+msgid "Used some time ago"
+msgstr "Folosită cu ceva timp în urmă"
+
+#: sortedactivitiesmodel.cpp:332
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "Folosită cu mai mult de un an în urmă"
+
+#: sortedactivitiesmodel.cpp:333
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "Folosită acum o lună"
+msgstr[1] "Folosită acum %1 luni"
+msgstr[2] "Folosită acum %1 de luni"
+
+#: sortedactivitiesmodel.cpp:334
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "Folosită acum o zi"
+msgstr[1] "Folosită acum %1 zile"
+msgstr[2] "Folosită acum %1 de zile"
+
+#: sortedactivitiesmodel.cpp:335
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "Folosită acum o oră"
+msgstr[1] "Folosită acum %1 ore"
+msgstr[2] "Folosită acum %1 de ore"
+
+#: sortedactivitiesmodel.cpp:336
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "Folosită acum un minut"
+msgstr[1] "Folosită acum %1 minute"
+msgstr[2] "Folosită acum %1 de minute"
+
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used a moment ago"
+msgstr "Folosită acum o clipă"
+
+#: switcherbackend.cpp:166
+#, kde-format
+msgid "Walk through activities"
+msgstr "Traversează activitățile"
+
+#: switcherbackend.cpp:171
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "Traversează activitățile (invers)"

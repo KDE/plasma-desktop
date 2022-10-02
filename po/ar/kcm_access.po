@@ -1,0 +1,822 @@
+# translation of kcmaccess.po to Arabic
+# translation of kcmaccess.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ossama Khayat <okhayat@yahoo.com>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2022-04-28 12:36+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "فائق"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "ممتاز"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "اضغط %1 بينما NumLock ، CapsLock  و  ScrollLock في وضع نشط "
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "اضغط %1 بينما CapsLock  و  ScrollLock في وضع نشط"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "اضغط %1 بينما NumLock   و  ScrollLock في وضع نشط"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "اضغط %1 بينما ScrollLock في وضع نشط"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "اضغط %1 بينما NumLock  و CapsLock في وضع نشط"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "اضغط %1 بينما CapsLock في وضع نشط"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "اضغط %1 بينما NumLock  في وضع نشط"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "اضغط %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "لا يمكن وضع gsettings لـOrca: فشل \"%1\""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "خطأ: لا يمكن تشغيل \"orca --setup\""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "استخدم جرس النظام"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "خصص جرس النظام"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "ملف الصوت للجرس"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "استخدم جرس مرئي عوضا عن الصوت"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "اعكس ألوان النظام على الجرس"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "لون الجرس المرئي"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "مدة الجرس المرئي"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "استخدم مثبتات المفاتيح"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "اقفل مثبتات المفاتيح"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "أوقف مثبتات المفاتيح عند ضغط مفتاحين في نفس الوقت"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "صفّر عن ضغط مفتاح تثبيت"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "صفير تبديل المفاتيح"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "إعلام عند الضغط على مغيِّر لوحة المفاتيح"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "استخدم تأخير المهلة"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "استخدم صفير للوصول"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "استخدم ضغطات مفاتيح بطيئة"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "التأخير لضغطة المفاتيح"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "صفّر عند ضغطة مفتاح بطيئة"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "صفر عند قبول ضغطة مفتاح"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "صفّر عند رفض ضغطة مفتاح"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "تجاهل المفاتيح"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "استخدم مهلة للتجاهل"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "صفر إذا رُفض حدث تجاهل مفتاح"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "استخدم مفاتيح للتحكم بالفأرة"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "مهلة لحركة الفأرة"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "فاصل التكرار لحركة الفأرة"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "وقت الوصول إلى أقصى سرعة"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "أقصى سرعة"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "أقصى سرعة"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "منحنى مفتاح الفأرة"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "استخدم الإيماءات"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "اطلب تأكيدًا لإيماءة"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "أكد الوصول إلى لوحة المفاتيح"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "مكن قارئ الشاشة"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "رجاءً اختر ملف صوتي"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "الملفات الصوتية (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "جرس مسموع:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "صوت مخصص:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "ابحث في ملف صوتي عن جرس النظام"
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "زر بحث ملف الصوت"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "جرس مرئي:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "اعكس الشاشة"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "أومض"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "اللون"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "المدة:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "مفاتيح بطيئة:"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "التأخير:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "قرع جرس النظام:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "&عند ضغط أي مفتاح"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "عند &قبول أي مفتاح"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "عند &رفض أي مفتاح"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "تجاهل المفاتيح:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "التأخير:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "قرع جرس النظام عند الرفض"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr "تتيح لك هذه الوحدة ضبط ميزات إمكانية الوصول مثل قارئ الشاشة."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "الجرس"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "المفاتيح المغيِّرة"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "مرشحات لوحة المفاتيح"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "التنقل بالفأرة"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "قارئ الشاشة"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "المفاتيح المثبتة:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "اقفل"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "عطل عندما يضغط على مفتاحين معا"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "اقرع جرس النظام عند استخدام المفاتيح المغيِّرة"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "المؤشر:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr "اقرع جرس النظام عند تبديل مفاتيح القفل"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr "أظهر إشعار عند استخدام مفاتيح المغيِّرة أو مفاتيح القفل "
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "ضبط الإشعارات..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "استخدم لوحة الأرقام لتحريك المؤشر:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "مكّن"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "عند استخدام الإيماءة:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "اعرض حواري التأكيد"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "اقرع جرس النظام"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "أظهر إشعار"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "مهلة التسارع:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "فترة التكرار:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "وقت التسارع:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "السرعة القصوى:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "نمط التسارع:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "شغِّل ضبط قارئ شاشة اورك..."
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"يرجى ملاحظة أنه قد يتعين عليك تسجيل الخروج أو إعادة التشغيل مرة واحدة للسماح "
+"لقارئ الشاشة بالعمل بشكل صحيح."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"يبدو أن قارئ الشاشة Orca غير مثبت. يرجى تثبيته قبل محاولة استخدام هذه "
+"الميزة ، ثم تسجيل الخروج أو إعادة التشغيل "
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD  محمد سعد ,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "Accessibility"
+#~ msgstr "الإتاحة"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "المؤلف"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation:"
+#~ msgstr "حركات التنشيط"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is checked, the default system bell will be used. See the "
+#~| "\"System Bell\" control module for how to customize the system bell. "
+#~| "Normally, this is just a \"beep\"."
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "عند التأشير على هذا الخيار، سيتم استخدام جرس النظام المبدئي. القِ نظرة على "
+#~ "وحدة تحكم \"جرس النظام\" لكيفية تخصيص جرس النظام. عادة، ما تكون هذه مجرد "
+#~ "\"تصفيره\"."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>Check this option if you want to use a customized bell, playing a "
+#~| "sound file. If you do this, you will probably want to turn off the "
+#~| "system bell.</p><p> Please note that on slow machines this may cause a "
+#~| "\"lag\" between the event causing the bell and the sound being played.</"
+#~| "p>"
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "<p>اختر هذا الخيار إذا رغبت في استخدام جرس مخصص يشغل ملف صوتي.إذا فعلت "
+#~ "ذلك فأنت على الأرجح تريد تعطيل جرس النظام.</p><p>الرجاء ملاحظة أن هذا قد "
+#~ "يحدث \"تأخر\" بينالحدث الذي سبب الجرس والصوت الذي سوف يشغل في الأجهزة "
+#~ "البطئية.</p>"
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "استخدم جرس &مخصص"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "عند تمكين خيار \"استخدم جرس مخصص \" , يمكنك اختيار الملف الصوتي هنا. انقر "
+#~ "على  \"استعرض...\" لاختيار ملف صوتي باستخدام مربع حوار الملفات."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "الصوت الم&طلوب تشغيله:"
+
+#~ msgid "Browse..."
+#~ msgstr "استعرض..."
+
+#, fuzzy
+#~| msgid ""
+#~| "This option will turn on the \"visible bell\", i.e. a visible "
+#~| "notification shown every time that normally just a bell would occur. "
+#~| "This is especially useful for deaf people."
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "هذا الخيار سيقوم بتشغيل \"جرس مرئي\", أي إشعار مرئي يظهر في الوقت الذي "
+#~ "يفترض به لجرس النظام أن يعمل. هذا الخيار مفيد جداً للمصابين بالصمم."
+
+#, fuzzy
+#~| msgid "&Use visible bell"
+#~ msgid "&Use visual bell"
+#~ msgstr "ا&ستخدم جرس مرئي"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "ستقوم الشاشة بالتحول إلى لون مخصص حسب كمية الوقت المحدد بالأسفل."
+
+#~ msgid "F&lash screen"
+#~ msgstr "بري&ق الشاشة"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "كلّ ألوان الشاشة سيتم عكسها حسب كمية الوقت المحدد بالأسفل."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr "انقر هنا لاختيار اللون المستخدم للجرس المرئي \"بريق الشاشة\" ."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "تستطيع هنا تخصيص المدة التي سيفعّل فيه خيار \"جرس مرئي\"."
+
+#~ msgid " msec"
+#~ msgstr "مللي ثانية"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "استخدم جرس النظام حينما يقوم المغيير بالإغلاق، الإقفال أو فك الإقفال"
+
+#~ msgid "Locking Keys"
+#~ msgstr "مفاتيح الإقفال"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr "استخدم جرس النظام حينما يصبح مفتاح الإقفال منشطاً أو خاملاً"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "مفاتيح ب&طيئة"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "استخدم مفاتيح &قافزة"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "استخدم جرس النظام حيثما رفض زر"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation &Gestures"
+#~ msgstr "حركات التنشيط"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "استخدم حركات لتنشيط مثبتات المفاتيح والمفاتيح البطيئة"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr "أوقف مثبتات المفاتيح والمفاتيح البطيئة بعد وقت محقق من الخمول "
+
+#~ msgid " min"
+#~ msgstr " دقيقة"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "استخدم جرس النظام حينما تستخدم حركة لتشغيل ميزة إتاحة وصول أو إيقافها"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "إذا اختير هذا الخيار ، فإن الكيدي ستعرض حوار التأكيد كلما أطفئت أو شغلت "
+#~ "ميزة إتاحة الوصول للوحة المفاتيح.\n"
+#~ "أزل هذا الخيار إذا كنت تعرف ماذا تفعل ، حيث أن إعدادات إتاحة الوصول للوحة "
+#~ "المفاتيح سوف تطبق بدون طلب تأكيد."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "أظهر حوار التأكيد حينما تكون ميزة إتاحة الوصول للوحة المفاتيح في وضع "
+#~ "تشغيل أو إيقاف"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use KDE's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "استخدم آلية إشعارات النظام لكيدي حينما تصبح ميزة إتاحة الوصول للوحة "
+#~ "المفاتيح في وضع تشغيل أو إيقاف"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "هنا يمكنك تنشيط حركات لوحة المفاتيح عند تشغيل الميّزات التالية: \n"
+#~ "مثبتات المفاتيح: اضغط مفتاح Shift خمس مرات متتالية\n"
+#~ "مفاتيح بطيئة: ابقِ ضاغطاً Shift لمدة 8 ثوان"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "هنا يمكنك تنشيط حركات لوحة المفاتيح عند تشغيل الميّزات التالية: \n"
+#~ "مفاتيح الفأرة: %1\n"
+#~ "مثبتات المفاتيح: اضغط مفتاح Shift خمس مرات متتالية\n"
+#~ "مفاتيح بطيئة: ابقِ ضاغطاً Shift لمدة 8 ثوان"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "&Activation Gestures"
+#~ msgstr "حركات التنشيط"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "وقت تعطيل القفز:"
+
+#~ msgid "Timeout:"
+#~ msgstr "المهلة:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|ملفات WAV"

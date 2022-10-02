@@ -1,0 +1,280 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-07-03 13:56+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Sessiya meneceri</h1>Burada siz sessiya menecerini ayarlaya bilərsiniz. "
+"Buraya sessiyadan çıxışın (çıxışı) təsdiqlənib-təsdiqlənməməsi, sesiya "
+"açarkən yenidən bərpa ediləcəyi və standart olaraq sesiyadan çıxdıqdan sonra "
+"kompüterin avtomatik sönüb, sönməməməsi kimi variantlar daxildir."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+"Proqram təminatını ayarlanması ekranında yenidən başlatmaq üçün sorğu "
+"gondərilmədi: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr "Komputerin növbəti açılması zamanı UEFİ ayarlar ekranı göstəriləcək."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Komputerin növbəti dəfə açılması zamanı proqram təminatı ayarları ekranı "
+"görünəcək."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Yenidən başlat"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Əsas:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Çıxışı təsdiqləyin"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Digər söndürmə parametrləri"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Standart çıxış seçimi:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Cari sesiyanı sonlandırın"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Komputeri yenidən başladın"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "komputeri söndürün"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Daxil olduqda:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Sonuncu sessiyanı bərpa etmək"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Sonuncu əllə saxlanılmış sesiyanı bərpa etmək"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Boş sesiya ilə başlamaq"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Bu tətbiqləri bərpa etməmək:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Burada siz seanslarda saxlanılmayacaq tətbiqlərin biri biri ilə qoşa nöqtə "
+"və ya vergüllə ayrılmış siyahısını tərtib edə bilərsiniz. ki, həmin "
+"tətbiqlər seans bərpa edilərkən başladılmayacaq. Məsələn, 'xterm: konsole' "
+"or 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Növbəti yenidən başlatmada mikroproqram ayarları ekranına daxil olmaq"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Çıxışı təsdiqləmək"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Söndürmə seçimləri təklifi"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Standart çıxış seçimi"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Girişdə"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Sesiyalardan istisna ediləcək tətbiqlər"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "Desktop Session"
+#~ msgstr "İş masası sesiyası"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Giriş və Şıxış seanslarının idarə olunması"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Müəllif Hüquqları © 2000–2020 İş masası sesiyası komandası"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Əvvəlki saxlanılmış sesiyanı bərpa etmək"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "UEFI ayarlanması"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Növbəti başlamada UEFİ ayarlarını daxil etmək"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Seansdan çıxışı təsdiq etmə dialoqununun göstərilməsini istəyirsinizsə bu "
+#~ "seçimi edin."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Çıxışı təsd&iq etmək"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Söndürmə qaydalarını təkli&f etmək"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Buradan çıxdığınız zaman standart olaraq nə baş verə biləcəyini seçə "
+#~ "bilərsiniz. Yalnız, KDM vasitəsi ilə daxil olsanız bu işləyəcəkdir."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Standart çıxış seçimi"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Əvvəlki sesiyanı bərpa etmək:</b> Çıxışda bütün işlək tətbiqlər "
+#~ "saxlanılacaq və növbəti girişdə onlar bərpa oluncaq</li>\n"
+#~ "<li><b>Əllə saxlanılan sisyanı bərpa etmək:</b> İstənilən vaxt K-Menu -da "
+#~ "\"Sesiyanı saxla\" ilə sesiyanı saxlamağa imkan verir. Bu o deməkdir ki, "
+#~ "hazırda işlək olan tətbiqlər növbəti başladılmada bərpa olunacaqdır.</"
+#~ "li>\n"
+#~ "<li><b>Boş sesiya ilə başlatmaq:</b>Heç nəyi saxlamamaq. Növbəti girişdə "
+#~ "sesiya boş İş Masası ilə açılacaq.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Girişdə"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Sesiyalardan i&şə salınacaq tətbiqlər:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Proqram təminatı qurulması"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Komputer növbəti dəfə başladıldıqda, proqram təminatını qurulması "
+#~ "ekranını daxil etmək (məs., UEFİ və ya BİOS)"

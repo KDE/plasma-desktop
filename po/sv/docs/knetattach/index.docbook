@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Handbok &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2015-04-10</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; är en guide som gör det enklare att integrera nätverksresurser med &kde;:s skrivbord. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Nätverkskataloger</keyword>
+<keyword
+>Nätverkskatalogguide</keyword>
+<keyword
+>KDE:s nätverkskatalogguide</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<para
+>Guiden &knetattach;, hädanefter tillgivet känt som Nätverkskatalogguiden, gör det möjligt att enkelt lägga till och integrera olika nätverkskataloger på &kde;:s skrivbord. Rapportera eventuella problem och önskemål angående programmet till &kde;:s webbplats för felrapporter. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Att använda &knetattach;</title>
+
+<para
+>Som du ser på skärmbilden nedan, tillåter Nätverkskatalogguiden för närvarande att du lägger till fyra typer av nätverkskataloger. WebDav, &FTP;, &Microsoft; &Windows; nätverksenheter (&Samba;) och SSH. Dessutom kan du välja senaste anslutning för listrutan. <screenshot>
+<screeninfo
+>Här är en skärmbild av &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+<caption>
+<para
+>Nätverkskatalogguidens huvudfönster</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Lägga till nätverkskataloger</title>
+
+<para
+>Nätverkskataloger visas på en speciell plats i &konqueror; och &dolphin; som kallas en <emphasis
+>virtuell katalog</emphasis
+>. Den virtuella katalogen kan kommas åt genom att skriva <userinput
+>remote:/</userinput
+> i platsraden eller genom att välja <guilabel
+>Nätverk</guilabel
+> i panelen <guilabel
+>Platser</guilabel
+>. Därefter kan du se alla kataloger som tidigare har lagts till, eller använda guiden för att lägga till nya. <screenshot>
+<screeninfo
+>Här är en skärmbild av &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+<caption>
+<para
+>Den virtuella katalogen i Nätverkskatalogguiden</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>På tal om guider, så är målet med Nätverkskatalogguiden att vara mycket enkel att använda. Efter du har startat guiden, måste du välja vilken typ av nätverkskatalog du vill komma åt. När du går vidare till nästa skärm behöver du bara fylla i begärd information. Det sista steget är att mata in ditt användarnamn och inloggningslösenord för den delade nätverkskatalogen du har valt att komma åt. </para>
+<para
+>Nedan finns en lista med informationen som behövs av guiden för att skapa nätverkskatalogerna. Om ett alternativ inte är tillgängligt för en viss katalog behöver det inte skrivas in, &Samba;-kataloger kräver t.ex. inte alternativet <guilabel
+>Port</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Namn:</guilabel
+></term>
+<listitem>
+<para
+>Det är här du ger ett namn till nätverksanslutningen. Det begränsas bara av din fantasi (eller alfabetet). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Användare:</guilabel
+></term>
+<listitem>
+<para
+>Det här är användarnamnet som kommer att användas för att upprätta anslutningen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Server:</guilabel
+></term>
+<listitem>
+<para
+>Det här är adressen till servern som du försöker lägga till. Det kan vara en IP-adress eller ett domännamn. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Port:</guilabel
+></term>
+<listitem>
+<para
+>Här skriver du in portnumret som du vill ansluta till. Standardvärden duger oftast. <note
+> <para
+>Inte tillgänglig för &Microsoft; &Windows; (&Samba;) kataloger. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Katalog:</guilabel
+></term>
+<listitem>
+<para
+>Sökväg till katalogen du vill ansluta till ska skrivas in här. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kodning:</guilabel
+></term>
+<listitem>
+<para
+>Använd objekten i listrutan för att välja en kodning för &FTP;- och ssh-anslutningar. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Skapa en ikon för fjärrkatalogen</guilabel
+></term>
+<listitem>
+<para
+>Om den här rutan är markerad, skapas en ikon som gör åtkomst via den virtuella katalogen remote:/. Om den inte är markerad, är en anslutning möjlig, men den är inte tillgänglig från remote:/. <note
+> <para
+>Alternativet <guilabel
+>Senaste anslutning:</guilabel
+> gör det möjligt att återansluta till den senaste monteringspunkten på nätverket som du anslöt till med guiden, vare sig en ikon skapades eller inte. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Använd kryptering</guilabel
+></term>
+<listitem>
+<para
+>Om markerad, aktiveras möjligheten att göra en säker anslutning. <note
+> <para
+>Bara tillgänglig för WebDav-kataloger.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Genomgång av &knetattach;</title>
+
+
+<para
+>Det här är en kort genomgång av nätverkskatalogguiden. Blinka inte, annars kan du missa den. </para>
+
+<para
+>Nedan ser du huvudfönstret i nätverkskatalogguiden. Det är här vi väljer vilken sorts katalog vi vill lägga till eller ansluta till. För syftet med den här genomgången använder vi &FTP;. Det innehåller de flesta alternativ du stöter på när du använder guiden. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Här är en skärmbild av &knetattach;s huvudfönster</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Ok, så vi (alltså jag) har valt att lägga till en &FTP;-katalog. Nedan ser du ett exempel på den typ av information du måste lägga till för din speciella &FTP;-server. Efter att ha fyllt i det, trycker vi på <guibutton
+>Spara och anslut</guibutton
+> och väntar på magiken. Just det, om din server kräver validering av något slag blir du vid detta tillfälle tillfrågad om det innan du tillåts ansluta. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild som visar tillägg av &FTP;-katalogen i &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Nu är vi alltså anslutna och kan navigera i vår nya delade katalog. Njut! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av den anslutna &FTP;-katalogen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>För att komma tillbaka till våra nätverkskataloger är allt som krävs att skriva in <action
+>remote:/</action
+> i &konqueror;s eller &dolphin;s platsrad, eller välja <guilabel
+>Nätverk</guilabel
+> i panelen <guilabel
+>Platser</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av den virtuella katalogen remote:/ med den tillagda anslutningen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Skärmbild</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Du kan till och med lägga till nya kataloger från samma plats genom att använda länken <guilabel
+>Lägg till nätverkskatalog</guilabel
+>. Detta för oss till slutet av vår genomgång (jag sa att den skulle vara kort). Jag önskar dig lycka till med dina egna äventyr bland nätverkskatalogerna! </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&knetattach; </para>
+<para
+>Program copyright 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Dokumentation Copyright &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

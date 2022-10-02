@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Dispositius extraïbles</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2021</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>muntatge automàtic</keyword>
+<keyword
+>dispositiu</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest diàleg us permet configurar l'administració automàtica de suports d'emmagatzematge extraïbles. </para>
+
+<para
+>Si habiliteu les característiques de muntat automàtic en aquest mòdul, no us caldrà utilitzar la miniaplicació notificadora de dispositiu o el plafó de navegació en el gestor de fitxers per a tenir accés a un dispositiu connectat recentment. </para>
+
+<para
+>A la part superior del diàleg trobareu les opcions globals, les quals es poden suprimir per a cada dispositiu en la llista de <guilabel
+>Substitució dels dispositius</guilabel
+>. Per a un escriptori d'un sol usuari, es recomana habilitar totes les caselles de selecció a sobre d'aquesta llista. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Habilita el muntatge automàtic dels suports extraïbles</guilabel
+></term>
+<listitem
+><para
+>Quan no està marcada, cap dispositiu disposarà de muntatge automàtic, sense importar la selecció en la secció de <guilabel
+>Substitució dels dispositius</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Munta automàticament només els suports extraïbles que s'hagin muntat manualment abans</guilabel
+></term>
+<listitem
+><para
+>Quan es marca aquesta opció, el &plasma; només munta automàticament els dispositius que recorda. Un dispositiu es <quote
+>recorda</quote
+> si ha estat muntat abans, &pex; connectar un reproductor de suports &USB; per a carregar-lo no és suficient per a <quote
+>recordar-ho</quote
+>. Si els fitxers no són accessibles, el &plasma; no muntarà automàticament el reproductor la pròxima vegada que el vegi. Una vegada s'ha accedit, però, el &plasma; se'n recorda de fer accessible el contingut de forma automàtica. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Munta automàticament tots els suports extraïbles en iniciar la sessió</guilabel
+></term>
+<listitem
+><para
+>Si qualsevol dispositiu d'emmagatzematge extraïble està connectat al vostre sistema quan entreu a l'escriptori, el &plasma; farà accessible el contingut de forma automàtica perquè altres programes el puguin llegir. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Munta automàticament els suports extraïbles quan es connectin</guilabel
+></term>
+<listitem
+><para
+>Quan es marca aquesta opció, el &plasma; posarà automàticament a disposició del sistema el contingut de qualsevol dispositiu d'emmagatzematge disponible. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Muntatge automàtic</guilabel
+></term>
+<listitem
+><para
+>Aquesta llista conté els dispositius d'emmagatzematge coneguts al &plasma;. Si està muntada <guilabel
+>En iniciar la sessió</guilabel
+>, el dispositiu serà muntat automàticament encara que <guilabel
+>Munta automàticament tots els suports extraïbles en iniciar la sessió</guilabel
+> resti sense marcar. El mateix s'aplica per a <guilabel
+>En connectar</guilabel
+>.</para>
+<para
+>Si <guilabel
+>Habilita el muntatge automàtic dels suports extraïbles</guilabel
+> està marcat, els arguments no seran d'aplicació i a la llista no hi haurà cap dispositiu per a muntar automàticament. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Oblida el dispositiu</guibutton
+></term>
+<listitem
+><para
+>Fer clic en aquest botó fa que el &plasma; <quote
+>oblidi</quote
+> que els dispositius seleccionats mai van existir. Això només és útil si <guilabel
+>Munta automàticament només els suports extraïbles que s'hagin muntat manualment abans</guilabel
+> està marcat. Una vegada s'ha oblidat el dispositiu i el &plasma; resta establert per a muntar automàticament els dispositius coneguts, el dispositiu no serà muntat automàticament. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

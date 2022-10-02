@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2020-07-04 13:16+0100\n"
+"Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: kcmkded KDED Molkentin Kai kded Uwe Broulik\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-IgnoreConsistency: Status\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "José Nuno Pires"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zepires@gmail.com"
+
+#: kcmkded.cpp:48
+#, kde-format
+msgid "Background Services"
+msgstr "Serviços em Segundo-Plano"
+
+#: kcmkded.cpp:52
+#, kde-format
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmkded.cpp:125
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Não foi possível parar o serviço: %1"
+
+#: kcmkded.cpp:127
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Não foi possível iniciar o serviço: %1"
+
+#: kcmkded.cpp:134
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Não foi possível parar o serviço."
+
+#: kcmkded.cpp:136
+#, kde-format
+msgid "Failed to start service."
+msgstr "Não foi possível iniciar o serviço."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Não foi possível notificar o Gestor de Serviços do KDE (kded5) da alteração "
+"gravada: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Este módulo permite-lhe ter uma visão geral de todos os 'plugins' do "
+"Servidor do KDE, também referidos como Serviços do KDE. De um modo geral, "
+"existem dois tipos de serviços:</p> <ul><li>Serviços invocados no arranque</"
+"li><li>Serviços invocados a pedido</li></ul> <p>Os últimos só são "
+"apresentados por conveniência. Os serviços no arranque poderão ser iniciados "
+"e parados. Também poderá definir quais os serviços que devem ser carregados "
+"no arranque.</p> <p><b>Use isto com cuidado: alguns serviços são vitais para "
+"o Plasma; não desactive os serviços se não souber o que está a fazer.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"O gestor de serviços em segundo plano (kded5) não está de momento em "
+"execução. Certifique-se que está instalado correctamente."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Alguns serviços desactivam-se quando são iniciados manualmente se não forem "
+"úteis no ambiente actual."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Alguns serviços foram iniciados/interrompidos automaticamente quando o "
+"gestor de serviços em segundo plano (kded5) foi reiniciado para aplicar as "
+"suas modificações."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Todos os Serviços"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Em Execução"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Parados"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Serviços do Arranque"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Serviços Carregados a Pedido"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Activa/desactiva o carregamento automático deste serviço no arranque"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Parados"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Em execução"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Parar o Serviço"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Iniciar o Serviço"

@@ -1,0 +1,353 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-06-01 19:30+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "Position på skärmen:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "Längst upp"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "I mitten"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "Aktivering:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "Aktivera när någon tangent på skrivbordet trycks ner"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "Historik:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "Kom ihåg senaste sökningar"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "Behåll senaste sökning vid återöppna"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "Aktivitetsmedveten (senaste sökning och historik)"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "Rensa historik"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "Rensa historik för aktivitet \"%1\""
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "Rensa historik…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "För alla aktiviteter"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "För aktivitet \"%1\""
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "Insticksprogram:"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Anpassa aktiverade sökinsticksprogram…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "Tillgängliga insticksprogram"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "Aktivera eller inaktivera insticksprogram (använda i Kör program, Starta "
+#~ "program och översiktseffekten)"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "Anpassa Kör program..."
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "Hämta nya insticksprogram…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr ""
+#~ "Misslyckades köra installationsskript i terminal <message>%1</message>"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "Installationen utfördes med lyckat resultat, du kan nu stänga fönstret"
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "Avinstallationen utfördes med lyckat resultat, du kan nu stänga fönstret"
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "Installation av insticksprogram för Kör program misslyckades"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "Kommando att köra: installera eller avinstallera."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Sökväg till arkiv."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "Inget stöd för PackageKit"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "Bekräfta installation"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "Du bör bara installera ett binärpaket. Du bör bara installera dem från en "
+#~ "pålitliga upphovsman eller paketerare."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "Acceptera risken och fortsätt"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "Visa fil"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "Mime-typen %1 stöds inte av Packagekit-gränssnittet"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något avinstallationsskript. "
+#~ "Kontakta gärna upphovsmannen. Du kan försöka avinstallera "
+#~ "insticksprogrammet manuellt.<nl/>Om du inte känner dig kapabel eller "
+#~ "bekväm med det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något avinstallationsskript. "
+#~ "Kontakta gärna upphovsmannen. Du kan försöka att avinstallera "
+#~ "insticksprogrammet manuellt. Ta en titt i filen README för instruktioner "
+#~ "från upphovsmannen.<nl/>Om du inte känner dig kapabel eller bekväm med "
+#~ "det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något installationsskript. "
+#~ "Kontakta gärna upphovsmannen. Du kan försöka att installera "
+#~ "insticksprogrammet manuellt.<nl/>Om du inte känner dig kapabel eller "
+#~ "bekväm med det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något installationsskript. "
+#~ "Kontakta gärna upphovsmannen. Du kan försöka att installera "
+#~ "insticksprogrammet manuellt. Ta en titt i filen README för instruktioner "
+#~ "från upphovsmannen.<nl/>Om du inte känner dig kapabel eller bekväm med "
+#~ "det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet använder ett skript för installation som kan utgöra en "
+#~ "säkerhetsrisk. Undersök helst hela insticksprogrammets innehåll innan det "
+#~ "installeras, eller läs åtminstone skriptets källkod.<nl/>Om du inte "
+#~ "känner dig kapabel eller bekväm med det, klicka på <interface>Avbryt</"
+#~ "interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet använder ett skript för installation som kan utgöra en "
+#~ "säkerhetsrisk. Undersök helst hela insticksprogrammets innehåll innan det "
+#~ "installeras, eller läs åtminstone filen README och skriptets källkod.<nl/"
+#~ ">Om du inte känner dig kapabel eller bekväm med det, klicka på "
+#~ "<interface>Avbryt</interface> nu."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "Markera posten som ej installerad"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "Markera posten som installerad"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "Visa skript"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "Visa källkatalog"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "Visa %1"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "Kunde inte identifiera paketnamn för %1"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr "Misslyckades köra installationskommando: <message>%1</message>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stefan Asserhäll"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "stefan.asserhall@bredband.net"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Anpassa sökinställningar"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "Position för Kör program:"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivera"
+
+#~ msgid "KRunner history:"
+#~ msgstr "Historik i Kör program:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Behåll föregående sökning"
+
+#~ msgid "Clear History..."
+#~ msgstr "Rensa historik..."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstall script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något avinstallationsskript. "
+#~ "Kontakta gärna upphovsmannen. Du kan försöka att avinstallera "
+#~ "insticksprogrammet manuellt.<nl/>Om du inte känner dig kapabel eller "
+#~ "bekväm med det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author.<nl/>You can try to install the plugin manually; please have a "
+#~ "look at the README for instructions from the author.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Insticksprogrammet tillhandahåller inte något installationsskript. "
+#~ "Kontakta gärna upphovsmannen.<nl/>Du kan försöka att avinstallera "
+#~ "insticksprogrammet manuellt. Ta en titt i filen README för instruktioner "
+#~ "från upphovsmannen.<nl/>Om du inte känner dig kapabel eller bekväm med "
+#~ "det, klicka på <interface>Avbryt</interface> nu."
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "Aktivera eller inaktivera insticksprogram i Kör program:"
+
+#~ msgid "Top of screen"
+#~ msgstr "Längst upp på skärmen"
+
+#~ msgid "Free-floating window"
+#~ msgstr "Fritt fönster"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Välj sökinsticksprogram:"

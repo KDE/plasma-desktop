@@ -1,0 +1,174 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2019, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2020-10-07 22:37+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Selles moodulis saab seadistada failide indekseerimise ja otsimise võimalusi."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgid "Delete Index Data"
+msgstr "Kustuta kirje"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "Failiotsing aitab kiiresti leida vajalikud failid nende sinu põhjal."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Failiotsingu lubamine"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Failisisu indekseerimine"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Peidetud failide ja kataloogide indekseerimine"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgid "Pause Indexer"
+msgstr "Indekseeritud"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: package/contents/ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Full content indexing"
+msgid "Currently indexing: %1"
+msgstr "Sisu täielik indekseerimine"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Kataloogipõhine seadistus:"
+
+#: package/contents/ui/main.qml:186
+#, fuzzy, kde-format
+#| msgid "Start indexing a folder..."
+msgid "Start indexing a folder…"
+msgstr "Kataloogi indekseerimise alustamine ..."
+
+#: package/contents/ui/main.qml:197
+#, fuzzy, kde-format
+#| msgid "Stop indexing a folder..."
+msgid "Stop indexing a folder…"
+msgstr "Kataloogi indekseerimise peatamine ..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Ei ole indekseeritud"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indekseeritud"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Kustuta kirje"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select a folder to filter"
+msgid "Select a folder to include"
+msgstr "Kataloogi valimine filtreerimiseks"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select a folder to filter"
+msgid "Select a folder to exclude"
+msgstr "Kataloogi valimine filtreerimiseks"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Failiotsing"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Autoriõigus 2007-2010: Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#, fuzzy
+#~| msgid "Add folder configuration..."
+#~ msgid "Add folder configuration…"
+#~ msgstr "Lisa kataloogiseadistus ..."
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 kaasa arvatud."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 välja arvatud."
+
+#~ msgid "Disable indexing"
+#~ msgstr "Indekseerimise keelamine"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Ei otsita asukohtadest:"

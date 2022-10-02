@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Flyttbara enheter</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>automatisk montering</keyword>
+<keyword
+>enhet</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dialogrutan låter dig anpassa automatisk hantering av flyttbara lagringsmedia. </para>
+
+<para
+>Genom att aktivera den automatiska monteringsfunktionen i den här modulen behöver du inte använda miniprogrammet för underrättelse om enhet eller navigeringspanelen i filhanteraren för att komma åt enheter som just har kopplats in. </para>
+
+<para
+>Längst upp i dialogrutan finns de allmänna inställningarna, som kan överskridas för varje enskild enhet i listan <guilabel
+>Överskridna enheter</guilabel
+>. För enanvändarskrivbord rekommenderas att alla kryssrutorna ovanför listan med överskridna enheter aktiverade. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Aktivera automatisk montering av flyttbara medier</guilabel
+></term>
+<listitem
+><para
+>När det här inte är markerat, sker ingen automatiskt montering för enheter av något slag, oberoende av vad som är valt under <guilabel
+>Överskridna enheter</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montera bara automatiskt flyttbara medier som tidigare har monterats för hand</guilabel
+></term>
+<listitem
+><para
+>När det här är markerat, monterar &plasma; bara enheter som är ihågkomna automatiskt En enhet är <quote
+>ihågkommen</quote
+> om den någonsin har monterats tidigare, t.ex. är det inte tillräckligt att koppla in en &USB;-mediaspelare för laddning för att <quote
+>komma ihåg</quote
+> den. Om filerna inte används, kommer inte &plasma; montera spelaren automatiskt nästa gång den syns. När de väl har använts, kommer  &plasma; dock ihåg att automatiskt göra innehållet tillgängligt i systemet. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montera automatiskt alla flyttbara medier vid inloggning</guilabel
+></term>
+<listitem
+><para
+>Om några flyttbara lagringsenheter är anslutna till systemet när du loggar in till skrivbordet, gör &plasma; automatiskt innehållet tillgänglig i systemet så att andra program kan läsa det. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montera automatiskt alla flyttbara medier vid anslutning</guilabel
+></term>
+<listitem
+><para
+>När det här är markerat, gör &plasma; automatiskt innehållet i alla lagringsenheter tillgängligt i systemet när de kopplas in eller ansluts. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Automatisk montering</guilabel
+></term>
+<listitem
+><para
+>Listan innehåller lagringsenheterna som &plasma; känner till Om <guilabel
+>Vid inloggning</guilabel
+> är markerat, monteras enheten automatiskt även om <guilabel
+>"Montera automatiskt alla flyttbara medier vid inloggning</guilabel
+> inte är markerat. Samma sak gäller för <guilabel
+>Vid anslutning</guilabel
+>.</para>
+<para
+>Om <guilabel
+>Aktivera automatisk montering av flyttbara medier</guilabel
+> inte är markerad, gäller inte några överskridningar och inga enheter monteras automatiskt. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Glöm enhet</guibutton
+></term>
+<listitem
+><para
+>Att klicka på knappen gör att &plasma; <quote
+>glömmer</quote
+> att de markerade enheterna någonsin fanns. Det är bara användbart om <guilabel
+>Montera bara automatiskt flyttbara medier som tidigare har monterats för hand</guilabel
+> är markerad. När en enhet väl har glömts, och &plasma; ställs in att bara montera kända enheter automatiskt, blir inte enheten automatiskt monterad. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

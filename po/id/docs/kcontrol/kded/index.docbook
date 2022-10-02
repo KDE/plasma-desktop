@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Layanan Latarbelakang</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>Layanan</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modul <guilabel
+>Pengelola Layanan</guilabel
+> memungkinkanmu memiliki ikhtisar semua plugin dari &kde; Daemon, juga disebut sebagai &kde; Services. Secara umum, ada dua jenis layanan:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Layanan Load-on-Demand</guilabel
+></term>
+<listitem
+><para
+>Ini adalah daftar layanan &kde; yang tersedia yang akan dimulai berdasarkan permintaan. Layanan-layanan itu hanya terdaftar untuk kenyamanan, karena kamu tidak dapat memanipulasi layanan ini. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Layanan Pemulaian</guilabel
+></term>
+<listitem
+><para
+>Ini menampilkan semua layanan &kde; yang bisa dimuat saat pemulaian &kde;. Layanan dicentang dalam kolom <guilabel
+>Gunakan</guilabel
+> akan dipanggil saat pemulaian selanjutnya.</para>
+<para
+>Hati-hati dengan menonaktifkan layanan yang tidak diketahui: beberapa layanan adalah vital untuk &kde;; jangan menonaktifkan layanan jika kamu tidak mengetahui apa yang kamu lakukan. </para>
+<para
+>Untuk mengubah <guilabel
+>Status</guilabel
+> dari suatu layanan, pilih dalam daftar. Kemudian kamu bisa menggunakan tombol <guibutton
+>Mulai</guibutton
+> dan <guibutton
+>Hentikan</guibutton
+> untuk mengubah status suatu layanan dari <guilabel
+>Tidak berjalan</guilabel
+> ke <guilabel
+>Berjalan</guilabel
+> dan sebaliknya. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Pencarian File</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>28-07-2017</date>
+<releaseinfo
+>Plasma 5.10</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemsetting</keyword>
+<keyword
+>cari</keyword>
+<keyword
+>file</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modul &systemsettings; ini memungkinkan kamu untuk mengkonfigurasi apakah file harus diindeks untuk mempercepat pencarian. Ini secara internal menggunakan sebuah teknologi yang disebut Baloo untuk secara efisien mencari melalui file. </para>
+
+<para
+>Tambahkan <guilabel
+>Pencarian</guilabel
+> ke panelmu atau memfungsikan pencarian di &krunner; untuk menggunakan hasil indexing agar akses lebih cepat ke dokumenmu. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Jangan cari di lokasi ini</guilabel
+></term>
+<listitem>
+    <para
+>Kamu disuguhkan dengan sebuah daftar folder yang mana seharusnya tidak dicari. Secara baku hanya seluruh folder <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> yang diindeks, dan tidak ada folder lain atau drive yang diindeks. </para>
+    <para
+>Media dapat dilepas tidaklah pernah diindeks secara baku. Itu bisa secara gamblang dihapus dari daftar kecuali folder dan itu kemudian akan diindeks. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Secara baku <guilabel
+>Fungsikan Pencarian File</guilabel
+> telah diaktifkan, takcentang settingan ini jika kamu tidak menginginkan untuk menggunakan pencarian file di semuanya. </para>
+
+<para
+>Gunakan <guilabel
+>Juga mengindeks konten file</guilabel
+> untuk juga mengindeks konten file tambahan ke nama-nama file. </para>
+
+<para
+>Untuk info selebihnya tentang opsi konfigurasi tambahan yaitu bagaimana cara menambahkan sebuah drive yang dikaitkan di sisi luar folder <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>-mu silakan baca <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema del cursor</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+>Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Esta es la documentación del módulo de &systemsettings; que le permite personalizar el aspecto del cursor del ratón. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>ratón</keyword>
+<keyword
+>cursor</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo le permite seleccionar el tema del cursor de entre los que tenga instalados desde una pantalla de vista previa del cursor. </para>
+
+<para
+>Es posible que las características proporcionadas por este módulo no estén disponibles en algunos sistemas. También es posible que tenga que actualizar su sistema para poder usar temas de cursores. </para>
+
+<para
+>Si dispone de temas de cursor adicionales, puede eliminarlos usando el botón de la papelera que aparece al pasar el puntero del ratón sobre los elementos de la lista. Tenga en cuenta que no puede eliminar los temas predeterminados. </para>
+
+<para
+>Algunos temas permiten elegir el tamaño del cursor. Use el campo <guilabel
+>Tamaño</guilabel
+> para seleccionar el tamaño apropiado. Los tamaños disponibles se muestran al pasar el cursor por el elemento del tema en la lista. </para>
+
+<para
+>Si dispone de temas de cursores adicionales, puede instalarlos usando el botón <guibutton
+>Instalar de archivo...</guibutton
+> que hay debajo de la lista. Consulte <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>estas instrucciones</ulink
+> sobre los detalles para crear el tema de cursores personalizado. </para>
+
+<para
+>Use el botón <guibutton
+>Obtener nuevos cursores...</guibutton
+> para lanzar el diálogo <guilabel
+>Obtener nuevos cursores</guilabel
+> y descargar temas adicionales de Internet.</para>
+
+</article>

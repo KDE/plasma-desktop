@@ -1,0 +1,105 @@
+# Translation for kcm_splashscreen.po to Euskara/Basque (eu).
+# Copyright (C) 2018, Free Software Foundation, Inc.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE Euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-07-02 21:26+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Bat ere ez"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "Ez da Plasta pantailarik erakutsiko"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "Ezin duzu kendu unean hautatuta dagoen plasta pantaila"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "Modulu honek Plasta pantailaren gaia aukeratzen uzten dizu."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Plasta pantailaren aurreikuspegia erakustea huts egin du."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Aurreikusi Plasta pantaila"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "Desinstalatu"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "&Lortu Plasta pantaila berriak..."
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Etorkizunean erabiltzeko"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Uneko plasta gaiaren izena"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xalba@euskalnet.net"
+
+#~ msgid "Splash Screen"
+#~ msgstr "Plasta pantaila"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Get New Icons..."
+#~ msgstr "Lortu ikono berriak..."
+
+#~ msgid "Splash Screens"
+#~ msgstr "Plast pantailak"
+
+#~ msgid "Error"
+#~ msgstr "Errorea"
+
+#, fuzzy
+#~| msgid "This module lets you configure the splash screen theme."
+#~ msgid "Choose the splash screen theme"
+#~ msgstr "Modulu honek Plast pantaila gaia konfiguratzen uzten dizu."
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "Konfiguratu Plast pantailaren xehetasunak"

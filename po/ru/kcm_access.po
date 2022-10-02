@@ -1,0 +1,844 @@
+# KDE3 - kcmaccess.po Russian translation
+# Copyright (C) 2005, KDE Team.
+#
+# Hermann Zheboldov <Hermann.Zheboldov@shq.ru>, 2000.
+# Leonid Kanter <leon@asplinux.ru>, 2005.
+# Ivan Kashukov <dolphin210@yandex.ru>, 2005.
+# Nick Shaforostoff <shafff@ukr.net>, 2006, 2016.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2011, 2015, 2016, 2017, 2018.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021, 2022.
+# Дронова Ю <juliette.tux@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2022-05-03 22:32+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "Alt Gr"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "Нажатие %1, когда активны NumLock, CapsLock и ScrollLock"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "Нажатие %1, когда активны CapsLock и ScrollLock"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "Нажатие %1, когда активны NumLock и ScrollLock"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Нажатие %1, когда активен ScrollLock"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "Нажатие %1, когда активны NumLock и CapsLock"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Нажатие %1, когда активен CapsLock"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Нажатие %1, когда активен NumLock"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Нажатие %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "Не удалось изменить конфигурацию Orca при помощи команды «%1»."
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "Не удалось запустить «orca --setup»."
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Использовать системный сигнал"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Настроить системный сигнал"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Звуковой файл сигнала"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Использовать визуальное уведомление вместо звука"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Инвертировать системные цвета при уведомлении"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Цвет системного сигнала"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Длительность системного сигнала"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Использовать «залипающие» клавиши"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Закрепить залипающие клавиши"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Выключать залипающие клавиши при одновременном нажатии двух клавиш"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Проигрывать звук при нажатии залипающих клавиш"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Вкл/выкл звук залипающих клавиш"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Уведомлять при нажатии клавиши-модификатора"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Применять задержку"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Применять звуковой сигнал для доступа"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Использовать замедленное нажатие клавиш"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Задержка при нажатии"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Проигрывать звук при замедленном нажатии"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Проигрывать звук при принятом нажатии"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Проигрывать звук при отклонённом нажатии"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "«Прыгающие» клавиши"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Задержка для «прыгающих» клавиш"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Проигрывать звук, если событие «прыгающих» клавиш будет отклонено"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Управлять мышкой при помощи клавиш"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Задержка для движений мыши"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Интервал для повторных движений мыши"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Время для достижения максимальной скорости перемещения"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "Максимальная скорость перемещения"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Максимальная скорость перемещения"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Кривая кнопки мыши"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "Использовать жесты"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Запрашивать подтверждение жеста"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Подтверждать доступ к клавиатуре"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Включить средство чтения с экрана"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "Выберите звуковой файл"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "Звуковые файлы (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "Слышимый сигнал:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "Включить"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "Свой звук:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "Поиск звукового файла для сигнала"
+
+# тут неясно, что имеется в виду, лениво разрабам писать
+# ЮДр
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "Кнопка поиска звукового файла"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "Визуальный сигнал:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "Включить"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "Инвертировать экран"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "Мигание экрана"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "Цвет"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Длительность:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "Замедленные клавиши:"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "включить"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "Задержка:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "Проигрывать системный сигнал:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "при &нажатии любой клавиши"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "при &принятом нажатии любой клавиши"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "при &отклонённом нажатии любой клавиши"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "«Прыгающие» клавиши:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "включить"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "Задержка:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "Проигрывать системный сигнал при отклонении"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+"Данный модуль помогает настроить такие специальные возможности, как чтение с "
+"экрана"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "Сигнал"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Клавиши-модификаторы"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Фильтры клавиатуры"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "Навигация мыши"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Средство чтения с экрана"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "Залипающие клавиши:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "Включить"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "Закрепить"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "Отключить при удерживании двух клавиш"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "Проигрывать системный сигнал при использовании клавиш-модификаторов"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "Обратная связь:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr ""
+"Проигрывать системный сигнал при включении/выключении закрепляющих клавиш"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"Выводить уведомление при использовании клавиш-модификаторов или закрепляющих "
+"клавиш"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Настроить уведомления..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "Использовать цифровую клавиатуру для перемещения курсора:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "Включить"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "При использовании жеста:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Показывать диалог подтверждения"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Проигрывать системный сигнал"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "Показывать уведомление"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "Задержка ускорения:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "Интервал повтора:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "Время ускорения:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "Максимальная скорость:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Профиль ускорения:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Запустить настройку средства чтения с экрана «Orca»…"
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Обратите внимание, что для корректной работы чтения с экрана, возможно, "
+"придётся выполнить выход из системы или перезагрузку."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"Кажется, средство чтения с экрана «Orca» не установлено. Установите "
+"программу прежде, чем пытаться использовать эти возможности. После установки "
+"необходимо будет выполнить выход из системы или перезагрузку."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Герман Жеболдов,Дронова Юлия"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Hermann.Zheboldov@shq.ru"
+
+#~ msgid "Accessibility"
+#~ msgstr "Специальные возможности"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "© Matthias Hoelzer-Kluepfel, 2000"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Автор"
+
+#~ msgid "Automatically turn off the sticky keys after an interval"
+#~ msgstr "Автоматически отключать залипающие клавиши через промежуток времени"
+
+#~ msgid "Ring when toggling accessibility features with gestures"
+#~ msgstr ""
+#~ "Проигрывать при включении-выключении специальных возможностей жестами"
+
+#~ msgid "Activation:"
+#~ msgstr "Активация:"
+
+#~ msgid "Use gestures to activate"
+#~ msgstr "Для активации использовать жесты"
+
+#~ msgid "Disable After:"
+#~ msgstr "Отключить после:"
+
+#~ msgid "Color of the System bell"
+#~ msgstr "Цвет системного сигнала"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Если этот параметр включён, то используется сигнал системного звукового "
+#~ "динамика. Обычно он звучит просто как «пик»."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Включите этот параметр, если хотите использовать собственный звуковой "
+#~ "сигнал (звуковой файл). При этом, возможно, вам придётся отключить "
+#~ "использование системного динамика."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "С&обственный звуковой сигнал"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "В параметре «Собственный звуковой сигнал» вы можете выбрать звуковой "
+#~ "файл. Нажмите «Обзор...» для выбора файла."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Проигрывать &звук:"
+
+#~ msgid "Browse..."
+#~ msgstr "Обзор..."
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Этот параметр включает показ «видимого сигнала», то есть изображения, "
+#~ "появляющегося всякий раз, когда в обычных условиях звучит только звуковой "
+#~ "сигнал. Это полезно для глухих людей."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "&Видимый сигнал"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Экран будет закрашен выбранным цветом на указанный ниже промежуток "
+#~ "времени."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Мигание экрана"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "Все цвета экрана будут инвертированы в течение указанного ниже промежутка "
+#~ "времени."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Нажмите здесь для выбора цвета, использующегося в визуальном сигнале в "
+#~ "виде «Мигания экрана»."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Здесь вы сможете настроить длительность эффекта «видимого сигнала»."
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Подавать звуковой сигнал при активации, нажатии или отпускании клавиш-"
+#~ "модификаторов"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Клавиши индикаторов"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Подавать звуковой сигнал при включении и выключении клавиш-переключателей"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "За&медленные клавиши"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "И&спользовать «прыгающие» клавиши"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Подавать системный сигнал при отклонении ввода клавиши"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Ж&есты активации"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Использовать жесты для активации залипающих и медленных клавиш"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Отключать залипающие и замедленные клавиши через некоторое время "
+#~ "бездействия."
+
+#~ msgid " min"
+#~ msgstr " мин"
+
+# BUGME: how long this string should be to be visible in the UI? --aspotashev
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Подавать системный сигнал при использовании жеста, включающего или "
+#~ "отключающего специальные возможности клавиатуры"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Если флажок установлен, при включении или отключении специальных "
+#~ "возможностей клавиатуры KDE покажет диалог подтверждения.\n"
+#~ "Будьте осторожны — если вы отключите этот параметр, специальные "
+#~ "возможности клавиатуры всегда будут применяться без подтверждения."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Запрашивать подтверждение при включении и выключении специальных "
+#~ "возможностей клавиатуры"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Показывать уведомление Plasma при включении и отключении специальных "
+#~ "возможностей клавиатуры"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Управлять курсором мыши с цифрового блока &клавиатуры"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пикселов/с"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Включить зачитывание текста с экрана"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Здесь вы можете активировать жесты клавиатуры, которые включают следующие "
+#~ "функции: \n"
+#~ "Залипающие клавиши: Нажатие клавиши Shift 5 раз подряд\n"
+#~ "Медленные клавиши: Удерживание клавиши Shift нажатой 8 секунд"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Здесь вы можете активировать жесты клавиатуры, которые включают следующие "
+#~ "функции: \n"
+#~ "Клавиши мыши: %1\n"
+#~ "Залипающие клавиши: Нажатие клавиши Shift 5 раз подряд\n"
+#~ "Медленные клавиши: Удерживание клавиши Shift нажатой 8 секунд"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "Ж&есты активации"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "О&тключение при задержке:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Время бездействия:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|WAV-файлы"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Герман Жеболдов"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "Hermann.Zheboldov@shq.ru"

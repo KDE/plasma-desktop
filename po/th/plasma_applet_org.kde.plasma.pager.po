@@ -1,0 +1,213 @@
+# translation of plasma_applet_pager.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2010-02-11 22:18+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "ค่าทั่วไป"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "ค่าทั่วไป"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display text:"
+msgid "Text display:"
+msgstr "ข้อความที่แสดง:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "ไม่มีข้อความ"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "หมายเลขพื้นที่ทำงาน"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "ชื่อพื้นที่ทำงาน"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "กำลังเลือกพื้นที่ทำงานปัจจุบัน:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "กำลังเลือกพื้นที่ทำงานปัจจุบัน:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "ไม่ต้องทำอะไร"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "แสดงพื้นที่ทำงาน"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and 1 other"
+#| msgid_plural "and %1 others"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "และอื่น ๆ %1 ตัว"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "One window:"
+#| msgid_plural "%1 windows:"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 หน้าต่าง:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "ชื่อพื้นที่ทำงาน"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, fuzzy, kde-format
+#| msgid "&Add Virtual Desktop"
+msgid "Add Virtual Desktop"
+msgstr "เ&พิ่มพื้นที่ทำงานเสมือน"
+
+#: package/contents/ui/main.qml:600
+#, fuzzy, kde-format
+#| msgid "&Remove Last Virtual Desktop"
+msgid "Remove Virtual Desktop"
+msgstr "&ลบพื้นที่ทำงานเสมือนตัวล่าสุด"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Virtual Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "&ปรับแต่งพื้นที่ทำงานเสมือน..."
+
+#, fuzzy
+#~| msgid "Configure Desktops..."
+#~ msgid "Configure Desktops..."
+#~ msgstr "ปรับแต่งพื้นที่ทำงาน..."
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "แสดงแดชบอร์ด"
+
+#~ msgid "Display icons:"
+#~ msgstr "แสดงไอคอน:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "เ&พิ่มพื้นที่ทำงานเสมือน"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&ลบพื้นที่ทำงานเสมือนตัวล่าสุด"
+
+#~ msgid "Configure Pager"
+#~ msgstr "ปรับแต่งตัวสลับพื้นที่ทำงาน"
+
+#~ msgid "Number of columns:"
+#~ msgstr "จำนวนคอลัมน์:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "จำนวนแถว:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "เปลี่ยนจำนวนแถว"
+
+#~ msgid "None"
+#~ msgstr "ไม่มี"
+
+#~ msgid "What will appear when the mouse is over a desktop miniature"
+#~ msgstr "จะให้ปรากฏอะไรเมื่อเคลื่อนเมาส์มาอยู่เหนือ miniature ของพื้นที่ทำงาน"

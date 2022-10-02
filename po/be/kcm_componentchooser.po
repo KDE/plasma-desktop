@@ -1,0 +1,317 @@
+# translation of kcmcomponentchooser.po to Belarusian
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2007-08-21 07:46+0000\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Выкарыстоўваць іншы &паштовы кліент:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Выберыце паштовы кліент:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Выберыце паштовы кліент:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Выберыце ўлюбёную тэрмінальную праграму:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Выберыце ўлюбёную тэрмінальную праграму:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Выберыце ўлюбёную тэрмінальную праграму:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ігар Грачышка"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ihar.hrachyshka@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Джозэф Венінгер"
+
+#~ msgid "Unknown"
+#~ msgstr "Невядомы"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Выбар кампанентаў"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Джозэф Венінгер"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Выберыце са спісу, які кампанент неабходна зрабіць стандартным для "
+#~ "сервісу %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr "<qt>Вы змянілі стандартны кампанент. Хочаце запісаць змены?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Апісанне адсутнічае"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Тут вы можаце змніць праграмы кампанентаў. Кампаненты - праграмы, якія "
+#~ "займаюцца базавымі задачамі, такімі, як эмуляцы тэрміналу, тэкставы "
+#~ "рэдактар ці паштовы кліент. Розныя праграмама KDE час ад часц трэба "
+#~ "запусціць эмулятар тэрміналу, адаслаць ліст або паказаць нейкі тэкст. Каб "
+#~ "выглядаць, як адзінае цэлае, ім трэба заўсёды выклікаць аднолькавыя "
+#~ "кампаненты. Тут вы можаце назначцыь на кожны кампанент патрэбную праграму."
+
+#~ msgid "Default Component"
+#~ msgstr "Стандартны кампанент"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Гэты спіс паказвае тыпы кампанентаў, якія магчыма наставіць. Націсніце "
+#~ "на той, што вы хочаце наставіць.</p>\n"
+#~ "<p>У гэтым дыялогу можна наставіць кампаненты KDE па змаўчанні. "
+#~ "Кампаненты - праграмы, якія займаюцца базавымі працамі, такімі, як "
+#~ "эмуляцыя тэрміналу, рэдагаванне тэксту ці праца з электронная поштай.  "
+#~ "Розныя праграмама KDE час ад часц трэба запусціць эмулятар тэрміналу, "
+#~ "адаслаць ліст або паказаць нейкі тэкст. Каб выглядаць, як адзінае цэлае, "
+#~ "ім трэба заўсёды выклікаць аднолькавыя кампаненты. Тут вы можаце "
+#~ "назначыць на кожны кампанент патрэбную праграму.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Адкрываць URL тыпу <b>http</b> і <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "у праграме, заснаванай на змесце URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "у наступным вандроўніку:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "у наступным вандроўніку:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Выберыце вандроўнік па Сеціве:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr ""
+#~ "Kmail з'яўляецца стандартным паштовым кліентам працоўнага асяроддзя KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Зрабіць KMail улюбёным паштовым кліентам"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Уключыце гэтую опцыю, каб выкарыстоўваць іншую паштовую праграму."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Адрасат</li> <li>%s: Тэма</li> <li>%c: Копія (CC)</li> <li>"
+#~ "%b: Схаваная копія (BCC)</li> <li>%B: Шаблонны тэкст</li> <li>%A: "
+#~ "Далучаны файл </li> <li>%u: Поўны адрас mailto: </li></ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite email client. Please note that "
+#~| "the file you select has to have the executable attribute set in order to "
+#~| "be accepted.<br> You can also use several placeholders which will be "
+#~| "replaced with the actual values when the email client is called:<ul> <li>"
+#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~| "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Націсніце кнопку, каб выбраць ваш кліент электроннай пошты. Заўважце, што "
+#~ "ыайл павінен быць выканальным, каб быць прынятым.<br> Акрамя таго, вы "
+#~ "можаце карыстацца наступнымі меткамі, якія будуць замененыя на адпаведныя "
+#~ "значэнні пры выкліку паштовага кліенту:<ul> <li>%t: каму</li> <li>%s: "
+#~ "тэма</li> <li>%c: копія (CC)</li> <li>%b: схаваная копія (BCC)</li> <li>"
+#~ "%B: шаблонны тэкст паведамлення</li> <li>%A: далучэнне </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Націснціе, каб шукаць файл паштовай праграмы."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Уключыце гэтую опцыю, каб запускаць выбраны паштовы кліент у акне "
+#~ "тэрміналу (напр., <em>Кансолі</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Запускаць у тэрмінале"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Зрабіць &Кансоль улюбёнай тэрмінальнай праграмай"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Выкарыстоўваць іншую &тэрмінальную праграму:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite terminal client. Please note "
+#~| "that the file you select has to have the executable attribute set in "
+#~| "order to be accepted.<br> Also note that some programs that utilize "
+#~| "Terminal Emulator will not work if you add command line arguments "
+#~| "(Example: konsole -ls)."
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Націсніце гэтую кнопку, каб выбраць ваш любімы тэрмінальны кліент. "
+#~ "Заўважце, што файл павінен быць выканальным, каб яго было магчыма выбраць."
+#~ "<br> Таксама заўважце, што некаторыя праграмы, якія карыстаюцца "
+#~ "эмулятарам тэрміналу, не будуць працаваць, калі вы дададзіце параметры "
+#~ "(Напрыклад: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Націсніце тут, каб шукаць тэрмінальную праграму."
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Выкарыстоўваць іншую &тэрмінальную праграму:"
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Выкарыстоўваць іншую &тэрмінальную праграму:"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Тут вы можаце прачытаць невялікае апісанне выбранага зараз кампаненту. "
+#~ "Каб замяніць выбраны кампанент, пстрыкніце па спісы злева. Каб змяніць "
+#~ "праграму кампаненту, выберыце яе ніжэй."
+
+#~ msgid "Component Description"
+#~ msgstr "Апісанне кампаненту"

@@ -1,0 +1,359 @@
+# translation of kcmcomponentchooser.po to Korean
+# Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+# Sung-Du Hong <hkde@hancom.com>, 2003, 2004.
+# 유규형 <khyu@haansoft.com>, 2004.
+# Kyuhyong <root@localhost.localdomain>, 2004.
+# Hongsoo Byun <hsbyun@haansoft.com>, 2005.
+# Youngbin Park <shrike@nate.com>, 2005.
+# Sung-Jae, Cho <jachin@hanafos.com>, 2005.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022.
+# JungHee Lee <daemul72@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-02-20 20:55+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "기본 웹 브라우저 사용"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "기타…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "기본 브라우저 선택"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "기본 이메일 클라이언트 선택"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "기본 파일 관리자 선택"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "기본 지도 선택"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "기본 다이얼러 선택"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "기본 터미널 에뮬레이터 선택"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "웹 브라우저:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "파일 관리자:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "이메일 클라이언트:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "터미널 에뮬레이터:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "지도:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "다이얼러:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "기본 프로그램"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "알 수 없음"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "구성 요소 선택기"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "%1 서비스에서 사용할 기본 구성 요소를 선택하십시오."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr "<qt>기본 구성 요소 설정을 변경했습니다. 저장하시겠습니까?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "설명 없음"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "이 곳에서 구성 요소 프로그램을 변경할 수 있습니다. 구성 요소들은 터미널 에"
+#~ "뮬레이터나 텍스트 편집기 등 기본적인 작업을 수행하는 프로그램입니다. 여러 "
+#~ "KDE 프로그램들은 콘솔 에뮬레이터를 불러오거나 이메일을 보내거나, 텍스트를 "
+#~ "표시할 수 있습니다. 이 작업을 일관성있게 하기 위해서 이들 프로그램에서는 "
+#~ "항상 같은 구성 요소를 불러옵니다. 이 곳에서 사용할 구성 요소를 선택할 수 "
+#~ "있습니다."
+
+#~ msgid "Default Component"
+#~ msgstr "기본 구성 요소"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>이 목록은 설정할 수 있는 구성 요소의 종류를 보여 줍니다. 설정하고 싶은 "
+#~ "구성 요소를 선택하십시오.</p>\n"
+#~ "<p>이 대화 상자에서 구성 요소 프로그램을 변경할 수 있습니다. 구성 요소들"
+#~ "은 터미널 에뮬레이터나 텍스트 편집기 등 기본적인 작업을 수행하는 프로그램"
+#~ "입니다. 여러 KDE 프로그램들은 콘솔 에뮬레이터를 불러오거나 이메일을 보내거"
+#~ "나, 텍스트를 표시할 수 있습니다. 이 작업을 일관성있게 하기 위해서 이들 프"
+#~ "로그램에서는 항상 같은 구성 요소를 불러옵니다. 이 곳에서 사용할 구성 요소"
+#~ "를 선택할 수 있습니다.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b>와 <b>https</b> URL을 열 때</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "URL의 내용을 기반으로 한 프로그램 사용하기"
+
+#~ msgid "in the following application:"
+#~ msgstr "다음 프로그램 사용하기:"
+
+#~ msgid "with the following command:"
+#~ msgstr "다음 명령 사용하기:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "기본으로 사용할 웹 브라우저 선택:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail은 Plasma 데스크톱의 기본 이메일 프로그램입니다."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "KMail을 이메일 클라이언트로 사용하기(&U)"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "다른 이메일 프로그램을 사용하시려면 이 설정을 사용하십시오."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "선택적 자리 비움자: <ul> <li>%t: 받는 사람 주소</li> <li>%s: 제목</li> "
+#~ "<li>%c: 참조 주소(CC)</li> <li>%b: 숨은 참조 주소(BCC)</li> <li>%B: 템플"
+#~ "릿 본문</li> <li>%A: 첨부 파일</li> <li>%u: 전체 mailto: URL</li> </ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "이 단추를 눌러서 좋아하는 이메일 클라이언트를 선택하십시오. 이것은 실행 가"
+#~ "능한 파일이어야 합니다.<br/>몇몇 자리 비움 문자열을 사용하면 이메일 클라이"
+#~ "언트를 실행할 때 실제 값으로 대체됩니다. <ul> <li>%t: 받는 사람 주소</li> "
+#~ "<li>%s: 제목</li> <li>%c: 참조 주소(CC)</li> <li>%b: 숨은 참조 주소(BCC)</"
+#~ "li> <li>%B: 편지 본문</li> <li>%A: 첨부할 파일</li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "이메일 프로그램 파일을 찾아 보시려면 여기를 누르십시오."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "이 설정을 사용하면 이메일 클라이언트를 터미널에서 실행시합니다. (예: "
+#~ "<em>Konsole</em>)"
+
+#~ msgid "&Run in terminal"
+#~ msgstr "터미널에서 실행(&R)"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "다음 파일 관리자를 통해서 디렉터리 탐색하기:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "기타: 여기에 나타난 대화 상자에서 추가...를 누르십시오:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Konsole을 터미널 프로그램으로 사용하기(&U)"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "다른 터미널 프로그램 사용하기(&T):"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "이 단추를 눌러서 좋아하는 터미널 클라이언트를 선택하십시오. 이것은 실행 가"
+#~ "능한 파일이어야 합니다.<br/>터미널 에뮬레이터를 사용하는 일부 프로그램들"
+#~ "은 명령행 인자가 추가되었을 때 실행되지 않을 수 있습니다. (예: konsole -"
+#~ "ls)"
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "터미널 프로그램을 찾으려면 누르십시오."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "%1초 남음:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "다음에 KDE를 시작할 때 이 창 관리자를 사용합니다."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "창 관리자 바꾸기"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "새 창 관리자가 실행 중입니다.\n"
+#~ " 모든 프로그램에서 창 관리자가 바뀐 것을 알 수 있도록 KDE 세션을 다시 시작"
+#~ "하는 것을 추천합니다."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "창 관리자 변경됨"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "실행 중인 창 관리자를 선택한 것으로 바꿉니다."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "창 관리자 변경 설정"
+
+#~ msgid "&Accept Change"
+#~ msgstr "변경 사항 적용하기(&A)"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "이전으로 되돌리기(&R)"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "설정한 창 관리자가 실행 중입니다.\n"
+#~ " 제대로 시작되었는지 확인하시고 변경 여부를 결정하십시오.\n"
+#~ " 20초 후에 이전 창 관리자로 돌아갑니다."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr "실행 중인 창 관리자가 기본 KDE 창 관리자 KWin으로 변경되었습니다."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "새 창 관리자를 시작할 수 없습니다.\n"
+#~ " 실행 중인 창 관리자가 기본 KDE 창 관리자 KWin으로 변경되었습니다."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "설정 도구 실행 실패"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "기본 KDE 창 관리자 KWin 사용하기(&U)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "다른 창 관리자 사용하기(&W):"
+
+#~ msgid "Configure"
+#~ msgstr "설정"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "메모: 대부분의 창 관리자는 개별적으로 설정되며 KDE 설정을 따르지 않습니다."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"

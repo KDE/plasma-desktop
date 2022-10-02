@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Algemeen gedrag</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2022-05-18</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>bureaublad</keyword>
+<keyword
+>werkruimte</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Dit is een module om algemeen gedrag van de werkruimte te configureren. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Informatieve tekstballonnen tonen bij erboven zweven met de muis</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is geactiveerd, dan worden tekstballonnen getoond bij zweven boven items in het &plasma; paneel of op het bureaublad.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Visuele terugkoppeling voor statuswijzigingen tonen</guilabel
+></term>
+<listitem>
+<para
+>Als u &eg; helderheid en volume wijzigt met het toetsenbord dan zullen deze wijzigingen in status getoond worden in een OSD (op het scherm).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Animatiesnelheid</guilabel
+></term>
+<listitem>
+    <para
+>Biedt u het instellen van de snelheid van animaties van bureaubladeffecten van <guilabel
+>Langzaam</guilabel
+> tot <guilabel
+>Onmiddellijk</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Enkele klik opent bestanden en mappen</guilabel
+></term>
+<listitem>
+<para
+>Dit is de standaardinstelling. U hoeft maar één keer op een pictogram te klikken om het te openen. Om het te selecteren kunt u met de muis rond het pictogram slepen, met <keycombo action="simul"
+>&Ctrl;<mousebutton
+>rechts</mousebutton
+></keycombo
+> klikken of alleen klikken en de knop ingedrukt houden. Selectie kan ook gedaan worden door te klikken op de selectiemarkering van het item.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Dubbelklik opent bestanden en mappen</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie niet is geselecteerd, worden pictogrammen/bestanden geopend door een enkele klik met de <mousebutton
+>linker</mousebutton
+> muisknop. Dit standaardgedrag is consistent met wat u kunt verwachten wanneer u op een koppeling klikt in de meeste browsers. Als dit is geselecteerd, worden bestanden/pictogrammen geopend met een dubbele klik terwijl een enkelklik het bestand of pictogram alleen maar selecteert. Dit is het gedrag dat u misschien kent van andere bureaubladen of besturingssystemen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikken in het schuifbalkvak</guimenu
+><guimenuitem
+>Schuift een pagina omhoog en omlaag</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Dit is de standaard instelling. Linkerklik in het schuifbalkvak verplaatst de schuifbalk met een pagina.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikken in het schuifbalkvak</guimenu
+><guimenuitem
+>Schuift naar de aangeklikte locatie</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Schakelt het gedrag aan wanneer de schuifhendelpositie direct naar de positie in het document springt waar u hebt geklikt. Dit is het gedrag dat u zou kennen op andere bureaubladen of besturingssystemen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aanraakmodus</guimenu
+><guimenuitem
+>Automatisch inschakelen indien nodig/Nooit inschakelen</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Aanraakmodus zal automatisch geactiveerd worden wanneer het systeem een aanraakscherm detecteert maar geen muis of touchpad. Bijvoorbeeld: wanneer een te transformeren toetsenbord van een laptop wordt afgekoppeld.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Altijd ingeschakeld (standaard)/Nooit ingeschakeld</guimenuitem
+></term>
+<listitem>
+<para
+>In aanraakmodus zullen veel elementen van het gebruikersinterface groter worden om gemakkelijker interactie met aanraken te kunnen doen.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

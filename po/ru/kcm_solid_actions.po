@@ -1,0 +1,352 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2014.
+# Nick Shaforostoff <shafff@ukr.net>, 2009.
+# Yuri Efremov <yur.arh@gmail.com>, 2011.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2021-05-29 13:34+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Александр Поташев,Стёпа Семенуха"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aspotashev@gmail.com, semenukha@gmail.com"
+
+#: ActionEditor.cpp:60
+#, kde-format
+msgid "Editing Action '%1'"
+msgstr "Редактирование действия «%1»"
+
+#: ActionEditor.cpp:162
+#, kde-format
+msgid ""
+"It appears that the action name, command, icon or condition are not valid.\n"
+"Therefore, changes will not be applied."
+msgstr ""
+"Введены недопустимые параметры действия (название, значок или\n"
+"условие выполнения), изменения не будут сохранены."
+
+#: ActionEditor.cpp:163
+#, kde-format
+msgid "Invalid action"
+msgstr "Неверное действие"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Редактирование условия"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Тип условия:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Проверка характеристики"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Конъюнкция вложенных условий"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Дизъюнкция вложенных условий"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Проверка интерфейса устройства"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Тип устройства:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Характеристика:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Равна"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Содержит"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Сбросить условие"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Сохранить условие"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Значок действия, нажмите для изменения"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Название действия"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Команда: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Команда, которая выполнит действие\n"
+"Она может содержать следующие специальные символы:\n"
+"\n"
+"%f: Точка монтирования - только для устройств хранения информации\n"
+"%d: Путь к блочному устройству - только для блочных устройств\n"
+"%i: Идентификатор устройства"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Для выполнения действия устройства должны удовлетворять следующим условиям:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Название действия:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Введите название для нового действия"
+
+#: DesktopFileGenerator.cpp:25
+#, kde-format
+msgid "Solid Action Desktop File Generator"
+msgstr "Генератор ярлыков для действий Solid"
+
+#: DesktopFileGenerator.cpp:27
+#, kde-format
+msgid ""
+"Tool to automatically generate Desktop Files from Solid DeviceInterface "
+"classes for translation"
+msgstr ""
+"Программа для автоматического создания ярлыков из классов DeviceInterface "
+"инфраструктуры Solid для перевода"
+
+#: DesktopFileGenerator.cpp:29
+#, kde-format
+msgid "(c) 2009, Ben Cooksley"
+msgstr "© Ben Cooksley, 2009"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Ben Cooksley"
+msgstr "Ben Cooksley"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Сопровождающий"
+
+#: PredicateItem.cpp:119
+#, kde-format
+msgid "The device must be of the type %1"
+msgstr "Устройство должно иметь тип %1"
+
+# Контейнер может содержать не только проверки параметров, но и такие же контейнеры, поэтому вложенными являются именно _условия_.
+#: PredicateItem.cpp:122
+#, kde-format
+msgid "Any of the contained properties must match"
+msgstr "Хотя бы одно из вложенных условий должно выполняться"
+
+# Контейнер может содержать не только проверки параметров, но и такие же контейнеры, поэтому вложенными являются именно _условия_.
+#: PredicateItem.cpp:125
+#, kde-format
+msgid "All of the contained properties must match"
+msgstr "Все вложенные условия должны выполняться"
+
+#: PredicateItem.cpp:134
+#, kde-format
+msgid "The device property %1 must equal %2"
+msgstr "Свойство устройства %1 должно равняться %2"
+
+#: PredicateItem.cpp:137
+#, kde-format
+msgid "The device property %1 must contain %2"
+msgstr "Свойство устройства %1 должно содержать %2"
+
+#: SolidActions.cpp:33
+#, kde-format
+msgid "Solid Device Actions Editor"
+msgstr "Редактор действий для устройств Solid"
+
+#: SolidActions.cpp:35
+#, kde-format
+msgid "Solid Device Actions Control Panel Module"
+msgstr "Настройка действий для устройств Solid"
+
+#: SolidActions.cpp:37
+#, kde-format
+msgid "(c) 2009, 2014 Solid Device Actions team"
+msgstr "© Разработчики «Действий для устройств», 2009, 2014"
+
+#: SolidActions.cpp:39
+#, kde-format
+msgid "Port to Plasma 5"
+msgstr "Перенос на Plasma 5"
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "It appears that the predicate for this action is not valid."
+msgstr "Предикат этого действия неверный."
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "Error Parsing Device Conditions"
+msgstr "При анализе требований к устройствам произошла ошибка."
+
+#: SolidActions.cpp:200
+#, kde-format
+msgid "No Action Selected"
+msgstr "Действие не выбрано"
+
+#: SolidActions.cpp:221
+#, kde-format
+msgid "Cannot be deleted"
+msgstr "Не может быть удалено"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Удалить"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Изменить…"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Добавить…"
+
+#~ msgid "Edit..."
+#~ msgstr "Изменить..."
+
+#~ msgid "Add..."
+#~ msgstr "Добавить..."
+
+#~ msgid "Contains Other Requirements"
+#~ msgstr "Содержит другие требования"
+
+#~ msgid "Is A Requirement"
+#~ msgstr "Требование к устройству"
+
+#~ msgid "Logic type:"
+#~ msgstr "Требование:"
+
+#~ msgid "All Contained Requirements Must Match"
+#~ msgstr "Должны соблюдаться все вложенные условия"
+
+#~ msgid "Any Contained Required Must Match"
+#~ msgstr "Должно соблюдаться хотя бы одно вложенное условие"
+
+#~ msgid "Restriction type:"
+#~ msgstr "Тип требования:"
+
+#~ msgid "Is Value Type"
+#~ msgstr "Проверка типа устройства"
+
+#~ msgid "Compare Value To"
+#~ msgstr "Сравнения значения"
+
+#~ msgid "Does Not Equal"
+#~ msgstr "не равно"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Add a new requirement"
+#~ msgstr "Добавить новое требование"
+
+#~ msgid "Edit current requirement"
+#~ msgstr "Редактировать выбранное требование"
+
+#~ msgid "Remove current requirement"
+#~ msgstr "Удалить выбранное требование"
+
+#~ msgid ""
+#~ "It appears that the device conditions for this action are not valid. \n"
+#~ "If you previously used this utility to make changes, please revert them "
+#~ "and file a bug"
+#~ msgstr ""
+#~ "Требования к устройствам для данного действия являются недопустимыми.\n"
+#~ "Если ранее Вы пользовались только этой программой настройки, пожалуйста, "
+#~ "отмените изменения и сообщите об ошибке."
+
+#~ msgid "Editing Requirement"
+#~ msgstr "Редактирование требования к устройству"

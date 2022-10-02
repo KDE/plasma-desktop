@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Tanggal &amp; Waktu</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25-03-2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsetting</keyword>
+<keyword
+>jam</keyword>
+<keyword
+>tanggal</keyword>
+<keyword
+>waktu</keyword>
+<keyword
+>set</keyword>
+<keyword
+>konfigurasi</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Tanggal &amp; Waktu</title>
+
+<para
+>Kamu bisa menggunakan modul ini untuk mengubah tanggal dan waktu sistem, menggunakan sebuah kenyamanan antarmuka grafis.</para>
+
+<note
+><para
+>Karena settingan ini tidak hanya mempengaruhi kamu sebagai pengguna, tetapi lebih pada keseluruhan sistem, kamu harus memiliki akses administrator sistem (<systemitem class="username"
+>root</systemitem
+>) untuk mengubah tanggal dan waktu sistem. Jika kamu tidak memiliki tingkat akses ini, modul ini hanya akan menunjukkan kepadamu settingan saat ini, tetapi perubahanmu tidak akan disimpan.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Tanggal dan Waktu</title>
+
+<para
+>Jika kamu mencentang <guilabel
+>Seting tanggal dan waktu secara otomatis</guilabel
+> modul ini akan menggunakan <acronym
+>systemd</acronym
+> untuk mengambil tanggal dan waktu.</para>
+
+<para
+>Pada komputer yang tanpa <acronym
+>systemd</acronym
+> si utilitas <acronym
+>NTP</acronym
+> <command
+>rdate</command
+> atau <command
+>ntpdate</command
+> akan digunakan. Jika utilitas tersebut hilang silakan menginstalnya. </para>
+
+<para
+>Ketika kamu login ke sesi &plasma; saat sedang online atau ketika kamu sedang terkonek ke internet akses ke satu atau lebih server NTP terjadi.</para>
+<para
+>Ini tidaklah cukup, bagaimanapun, untuk mempertahankan jam yang akurat dalam jangka panjang. Ini berguna untuk sesekali mengatur waktu pada mesin yang tidak memiliki akses jaringan sepenuh waktu, sepertihalnya laptop. </para>
+
+<para
+>Jika kamu tidak mau menggunakan server waktu, kamu bisa mengeset tanggal secara manual di dalam kalender.</para>
+<para
+>Gunakan kendali di bagian bawah kalender untuk memilih tanggal saat ini, masukkan tanggal di dalam kotak edit atau memilih pekan pada tahun dari kotak tarik-turun.</para>
+
+<para
+>Kamu set waktu menggunakan kotak putar di bagian bawah pada jam analoh. Kamu juga bisa secara langsung memasukkan nilai yang kamu inginkan.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Zona Waktu</title>
+<para
+>Untuk mengeset zona waktu, cukup pilih areamu dari daftar di bawah ini. Gunakan kotak filter untuk menemukan <guilabel
+>Area</guilabel
+> atau <guilabel
+>Region</guilabel
+> yang diinginkan.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,895 @@
+# translation of libkonq.po to
+# translation of libkonq.po to
+# translation of libkonq.po to
+# translation of libkonq.po to Tamil
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+#  FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Vasee Vaseeharan <vasee@ieee.org>, 2004.
+# Ambalam <tamilpc@ambalam.com>, 2004.
+# root <root@localhost.localdomain>, 2004.
+# Kishore G <kishore96@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2022-06-30 21:52+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "இடம்"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "நுண்படங்கள்"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "வடிகட்டி"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "பின்னே செல்"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "கோப்புகள்:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "அனைத்தையும் காட்டு"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "பொருந்தியவற்றை காட்டு"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "பொருந்தியவற்றை மறை"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "கோப்புப் பெயர் பாங்கு:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "கோப்பு வகைகள்:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "கோப்பு வகை:"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "விவரணம்"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "அனைத்தையும் தேர்வு செய்"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "அனைத்து தேர்வுகளை நிராகரி"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "பலகை பட்டன்:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "விருப்ப நுண்படத்தை தேர்ந்தெடு"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "தேர்வு செய்…"
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "சின்னத்தை நீக்கு"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "அமைப்பு:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "இடதிலிருந்து வலது"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "வலதிலிருந்து இடது"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "மேலிலிருந்து கீழ்"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "இடது பக்கமாக சீரமை"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "வலது பக்கமாக சீரமை"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "இருப்பிடத்தை பூட்டு"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "வரிசைப்படுத்துதல்:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "கைமுறையாக"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "பெயர் படி"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "அளவு படி"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "வகை படி"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "தேதி படி"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "இறங்குவரிசையாக"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "அடைவுகள் முதலில்"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "காட்சிமுறை:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "பட்டியலாக"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr "கிரிடாக"
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "சின்னத்தின் அளவு:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, kde-format
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "சிறியது"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, kde-format
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "பெரியது"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "பெயர்களின் அகலம்:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "குறுகியது"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "நடுத்தரமானது"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "அகலமானது"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "உரை வரிகள்:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr "சின்னங்களின் மேல் சுட்டியை வைக்கும்போது:"
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr "கருவித் துப்புகளை காட்டு"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr "தேர்வுக் குறிகளை காட்டு"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, kde-format
+msgid "Show folder preview popups"
+msgstr "தெரித்தெழும் அடைவு முன்னோட்டத்தை காட்டு"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, kde-format
+msgid "Rename:"
+msgstr "மறுபெயரிடுவது:"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr "தேர்ந்தெடுக்கப்பட்ட உருப்படியின் பெயரை க்ளிக் செய்து மறுபெயரிட விடு"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, kde-format
+msgid "Previews:"
+msgstr "முன்தோற்றங்கள்:"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, kde-format
+msgid "Show preview thumbnails"
+msgstr "முன்னோட்ட சிறுபடங்களை காட்டு"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "முன்னோட்ட செருகுநிரல்களை அமை…"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "காட்டு:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "முகப்பு அடைவு"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "தற்போதைய செயல்பாட்டிற்கு இணைக்கப்பட்டுள்ள கோப்புகள்"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "இடங்கள் பலகையிலுள்ள பதிவு:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "விருப்பமான இடம்:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "பாதையை அல்லது முகவரியை உள்ளிடுக…"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "தலைப்பு"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "இயல்பிருப்பு"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "முழு பாதை"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "விருப்ப தலைப்பு"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "விருப்ப தலைப்பபை உள்ளிடுக…"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "திருப்பு"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "வெளியமைவாக திற"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "பின்புலத்தை காட்டாதே"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "பின்புலத்தை காட்டு"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "நீக்கு"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "முன்னோட்ட செருகுநிரல்கள்"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "சரி"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "பின்னணியையும் பணிமேடையையும் அமை…"
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "அடைவை தேர்வு செய்"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "பணிமேடையை &புதுப்பி"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "காட்சிப்பகுதியை &புதுப்பி"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "&அகற்றிடத்தை காலியாக்கு"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "மீட்டெடு"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&திற"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "ஒட்டு"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&பண்புகள்"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "வரிசைப்படுத்துதல் முறை"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "வரிசைப்படுத்த வேண்டாம்"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "பெயர் படி"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "அளவு படி"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "வகை படி"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "தேதி படி"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "இறங்குவரிசையாக"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "அடைவுகள் முதலில்"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "சின்னத்தின் அளவு"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "இருப்பதில் சிறியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "மிகச்சிறியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "சிறியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "நடுத்தரமானதைவிட சிறியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "நடுத்தரமானது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "பெரியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "மிகப்பெரியது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "அடுக்கும் முறை"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "இடதிலிருந்து வலது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "வலதிலிருந்து இடது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "மேலிலிருந்து கீழ்"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "சீரமைப்பது"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "இடதாக"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "வலதாக"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "முன்தோற்றங்களை காட்டு"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "பூட்டு"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "வரிசைகள்வரிசைகள்"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "நெடுவரிசைகள்"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "வரிசைகளாக"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "நெடுவரிசைகளாக"
+
+#~ msgid "Features:"
+#~ msgstr "அம்சங்கள்:"
+
+#~ msgid "Search…"
+#~ msgstr "தேடு…"
+
+#~ msgid "&Create Folder"
+#~ msgstr "&அடைவை உருவாக்கு"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "புதிய அடைவு"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgid "&Move to Trash"
+#~ msgstr "குப்பைக்கு நகர்த்து"
+
+#, fuzzy
+#~| msgid "Delete Files"
+#~ msgid "&Delete"
+#~ msgstr "கோப்புகளை நீக்கு"
+
+#, fuzzy
+#~| msgid "Shred Files"
+#~ msgid "Show Original File"
+#~ msgstr "கோப்புகளை உதிர்"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&குப்பைத் தொட்டியைக் காலியாக்கு"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&இந்த பக்கத்திற்கு புத்தகக் குறியிடவும்"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&இந்த இடத்திற்கு புத்தக குறியிடவும்"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&இந்த ஆவணத்திற்கு புத்தகக் குறியிடவும்"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&இந்த இணைப்பிற்கு புத்தக குறியிடவும்"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&இந்த கோப்பிற்கு புத்தகக் குறியிடவும்"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "&இங்கே நகலெடு"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "குப்பைக்கு நகர்த்து"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "புதிய அடைவு"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "புதிய அடைவு"
+
+#, fuzzy
+#~| msgid "&Copy Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "&இங்கே நகலெடு"
+
+#, fuzzy
+#~| msgid "&Move Here"
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "&இங்கே நகர்த்து"
+
+#~ msgid "Share"
+#~ msgstr "பகிர்"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "ஒரு அடைவை அதன் மேலேயே உள்ளிட இயலாது"
+
+#~ msgid "File name for dropped contents:"
+#~ msgstr "விடப்பட்ட உள்ளடக்கங்களுகான கோப்பு பெயர்:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&இங்கே நகர்த்து"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&இங்கே நகலெடு"
+
+#~ msgid "&Link Here"
+#~ msgstr "&இங்கே இணை"
+
+#~ msgid "C&ancel"
+#~ msgstr "ரத்து செய்"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "வால்பேப்பராக அமை"
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "புதிதாக உருவாக்கு"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "அடைவு பெயரைத் உள்ளிடவும்:"
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "புதிதாக உருவாக்கு"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "புதிய அடைவு"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "புதிய அடைவு"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "அடைவு பெயரைத் உள்ளிடவும்:"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "புதிய அடைவு"
+
+#~ msgid "Create New"
+#~ msgstr "புதிதாக உருவாக்கு"
+
+#~ msgid "Link to Device"
+#~ msgstr "சாதனத்திற்கு இணை"
+
+#~ msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+#~ msgstr "<qt>உருவரைக்கோப்பு<b>%1</b>இல்லை.</qt>"
+
+#, fuzzy
+#~| msgid "&Open With"
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With"
+#~ msgstr "&இதனுடன் திற"
+
+#, fuzzy
+#~| msgid "&Other..."
+#~ msgctxt "@action:inmenu Open With"
+#~ msgid "&Other..."
+#~ msgstr "&மற்றவை..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With..."
+#~ msgstr "&இதனுடன் திற..."
+
+#, fuzzy
+#~ msgid "Open &with %1"
+#~ msgstr "&இதனுடன் திற"
+
+#~ msgid "Open in New &Window"
+#~ msgstr "புதிய சாளரத்தில் & திற"
+
+#~ msgid "Open the trash in a new window"
+#~ msgstr "குப்பைத்தொட்டியைப் புதிய சாளரத்தில் திற"
+
+#~ msgid "Open the medium in a new window"
+#~ msgstr "புதிய சாளரத்தில் மீடியத்தை திற"
+
+#~ msgid "Open the document in a new window"
+#~ msgstr "ஆவணத்தைப் புதிய சாளரத்தில் திற"
+
+#~ msgid "Und&o"
+#~ msgstr "செயல் நீக்கு"
+
+#~ msgid "Und&o: Copy"
+#~ msgstr "நகல் எடுக்காதே"
+
+#~ msgid "Und&o: Link"
+#~ msgstr "இணைக்காதே"
+
+#~ msgid "Und&o: Move"
+#~ msgstr "நகர்த்தாதே"
+
+#~ msgid "Und&o: Trash"
+#~ msgstr "செய்யாதே: குப்பைத்தொட்டி"
+
+#~ msgid "Und&o: Create Folder"
+#~ msgstr "அடைவை உருவாக்காதே"
+
+#, fuzzy
+#~ msgid "Do you really want to delete this item?"
+#~ msgid_plural "Do you really want to delete these %1 items?"
+#~ msgstr[0] " உருப்படியை  நிஜமாக நீக்க வேண்டுமா?"
+#~ msgstr[1] "%1 உருப்படகளைளை நிஜமாக நீக்க வேண்டுமா?"
+
+#~ msgid "Delete Files"
+#~ msgstr "கோப்புகளை நீக்கு"
+
+#, fuzzy
+#~ msgid "Do you really want to move this item to the trash?"
+#~ msgid_plural "Do you really want to move these %1 items to the trash?"
+#~ msgstr[0] "நீங்கள் உண்மையாகவே இந்த உருப்படிகளை குப்பைக்கு நகர்த்த விரும்புகிறீர்களா?"
+#~ msgstr[1] "நீங்கள் உண்மையாகவே இந்த %1 உருப்படிகளை குப்பைக்கு நகர்த்த விரும்புகிறீர்களா?"
+
+#, fuzzy
+#~ msgctxt "Verb"
+#~ msgid "&Trash"
+#~ msgstr ""
+#~ "_: Verb\n"
+#~ "&குப்பைத்தொட்டி"
+
+#, fuzzy
+#~| msgid "Und&o"
+#~ msgid "Und&o: %1"
+#~ msgstr "செயல் நீக்கு"
+
+#~ msgid "Background Settings"
+#~ msgstr "பின்னணி அமைப்புகள்"
+
+#~ msgid "Co&lor:"
+#~ msgstr "வண்ணம்"
+
+#~ msgid "&Picture:"
+#~ msgstr "&சித்திரம்:"
+
+#~ msgid "Shrink Icons"
+#~ msgstr "குறும்படங்களை சுருக்கு"
+
+#~ msgid "&Very Large"
+#~ msgstr "மிகப்்ப் பெரிய"
+
+#~ msgid "Allows choosing of background settings for this view"
+#~ msgstr "இக்காட்சிக்குரிய பின்னணி அமைப்புகளை தேர்ந்தெடுக்க அனுமதிக்கிறது"
+
+#~ msgid "<p>You do not have enough permissions to read <b>%1</b></p>"
+#~ msgstr "<p><b>%1</b>ஐ வாசிக்க உங்களுக்கு போதுமான அனுமதி இல்லை"
+
+#~ msgid "<p><b>%1</b> does not seem to exist anymore</p>"
+#~ msgstr "<p><b>%1</b> தற்போது எதுவும் இல்லை</p>."
+
+#~ msgid "Search result: %1"
+#~ msgstr "தேடல் முடிவு: %1"
+
+#~ msgid "Do you really want to shred this item?"
+#~ msgid_plural "Do you really want to shred these %1 items?"
+#~ msgstr[0] "நீங்கள் உண்மையாகவே இந்த உருப்படிகளை உதிர்க்க விரும்புகிறீர்களா?"
+#~ msgstr[1] "நீங்கள் உண்மையாகவே இந்த %1 உருப்படிகளை உதிர்க்க விரும்புகிறீர்களா?"
+
+#~ msgid "Shred"
+#~ msgstr "உதிர்த்திடு"

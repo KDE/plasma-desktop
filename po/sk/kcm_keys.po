@@ -1,0 +1,281 @@
+# translation of kcm_keys.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2020.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_keys\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2022-01-02 17:09+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: globalaccelmodel.cpp:113
+#, kde-format
+msgid "Applications"
+msgstr "Aplikácie"
+
+#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
+#, kde-format
+msgid "System Services"
+msgstr "Systémové služby"
+
+#: globalaccelmodel.cpp:187
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Chyba počas ukladania skratky %1: %2"
+
+#: globalaccelmodel.cpp:295
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "Chyba pri pridávaní %1, zdá sa, že nemá žiadne akcie."
+
+#: globalaccelmodel.cpp:338
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Chyba počas komunikácie so službou globálnych skratiek"
+
+#: kcm_keys.cpp:50
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Zlyhala komunikácia s démonom globálnych skratiek"
+
+#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
+#: standardshortcutsmodel.cpp:29
+#, kde-format
+msgid "Common Actions"
+msgstr "Spoločné akcie"
+
+#: kcm_keys.cpp:230
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Skratka %1 je už priradená k bežnej %2 akcii '%3'.\n"
+"Chcete ju znova priradiť?"
+
+#: kcm_keys.cpp:234
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Skratka %1 je už priradená k akcii '%2' z %3.\n"
+"Chcete ju znova priradiť?"
+
+#: kcm_keys.cpp:235
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "Nájdený konflikt"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Nie je možné exportovať schému pokým existujú neuložené zmeny"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Vyberte nižšie uvedené komponenty, ktoré sa majú zahrnúť do exportovanej "
+"schémy"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "Save scheme"
+msgstr "Uložiť schému"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Odstrániť všetky skratky pre %1"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Undo deletion"
+msgstr "Vrátiť odstránenie"
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Hľadaným výrazom nezodpovedajú žiadne položky"
+
+#: package/contents/ui/main.qml:224
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Vyberte položku zo zoznamu na zobrazenie jej skratiek"
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgid "Add Application…"
+msgstr "Pridať aplikáciu..."
+
+#: package/contents/ui/main.qml:242
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Importovať schému..."
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Cancel Export"
+msgstr "Zrušiť Export"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Exportovať schému..."
+
+#: package/contents/ui/main.qml:268
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Exportovať schému skratiek"
+
+#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Importovať schému skratiek"
+
+#: package/contents/ui/main.qml:270
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Schéma skratiek (*.kksrc)"
+
+#: package/contents/ui/main.qml:296
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Vyberte schému na import:"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Vlastná schéma"
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Select File…"
+msgstr "Vybrať súbor..."
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Import"
+msgstr "Importovať"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:26
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Úprava skratky: %1"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:38
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:51
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Žiadne aktívne skratky"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:90
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Predvolený odkaz"
+msgstr[1] "Predvolené odkazy"
+msgstr[2] "Predvolených odkazov"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:92
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Žiadne predvolené skratky"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "Predvolená skratka %1 je povolená."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "Predvolená skratka %1 je zakázaná."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:121
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Vlastné skratky"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:145
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Odstrániť túto skratku"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:151
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Pridať vlastnú skratku"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:185
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Zrušiť zachytávanie novej skratky"
+
+#: standardshortcutsmodel.cpp:33
+#, kde-format
+msgid "File"
+msgstr "Súbor"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "Edit"
+msgstr "Upraviť"
+
+#: standardshortcutsmodel.cpp:36
+#, kde-format
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "View"
+msgstr "Zobraziť"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Help"
+msgstr "Pomocník"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com"
+
+#~ msgid "Shortcuts"
+#~ msgstr "Klávesové skratky"
+
+#~ msgid "David Redondo"
+#~ msgstr "David Redondo"

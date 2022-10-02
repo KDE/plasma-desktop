@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Дії з пристроями</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10 грудня 2018 року</date>
+<releaseinfo
+>Плазма 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Плазма</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>дії</keyword>
+<keyword
+>пристрої</keyword>
+<keyword
+>обладнання</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Дії для нових пристроїв</title>
+<sect2 id="icons-intro">
+<title
+>Вступ</title>
+
+<para
+>За допомогою цього модуля ви зможете налаштувати дії, які ви бажаєте пов’язати зі з’єднанням нових пристроїв.</para>
+<para>
+<screenshot>
+<screeninfo
+>Знімок вікна менеджера дій над пристроями</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Знімок вікна менеджера дій над пристроями</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Тут ви побачите список всіх дій, які може бути виконано після з’єднання пристрою. Будь ласка, зауважте, що доступ до цих дій можна буде отримати лише за певних обставин.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Додати</guibutton
+> за натискання цієї кнопки програма запросить вас до введення назви вашої нової дії, після цього відкриє вікно редагування дії. Якщо ви не введете всіх потрібних параметрів у цьому діалоговому вікні, вашу дію буде вилучено. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Редагувати</guibutton
+> за натискання цієї кнопки буде відкрито вікно, у якому ви зможете змінити назву, піктограму, команду, яку буде виконано, і умови, яким має відповідати дія для того, щоб її було показано. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Відкинути / Не можна вилучати / Вилучити</guibutton
+> за допомогою цієї кнопки можна виконати різні дії, залежно від того, було дію вказано вашою системою чи створено вами. Скасовувати зміни можна лише для загальносистемних дій. Якщо змін не було внесено, вилучення є неможливим. Створені користувачем дії можна вилучити повністю, разом з усіма змінами. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Додати дію</title>
+
+<para
+>Натискання кнопки <guibutton
+>Додати</guibutton
+> відкриє перед вами діалогове вікно, у якому ви зможете ввести назву нової дії. </para>
+<para>
+<screenshot>
+<screeninfo
+>Знімок діалогового вікна додавання дії</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Знімок діалогового вікна додавання дії</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Назва дії має відповідати її змісту. Після введення назви і натискання кнопки <guibutton
+>Гаразд</guibutton
+> буде відкрито діалогове вікно редагування дії, за допомогою якого ви зможете налаштувати властивості дії. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Редагувати дію</title>
+
+<para
+>За допомогою цього діалогового вікна ви зможете змінити параметри обраної вами дії.</para>
+<para>
+<screenshot>
+<screeninfo
+>Знімок діалогового вікна редагування дії</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Знімок діалогового вікна редагування дії</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Тут буде показано піктограму, назву дії, команду дії та різноманітні параметри. Змінити піктограму можна після її натискання.</para>
+<para
+>Ієрархію параметрів буде показано як деревоподібну структуру. Щоб пункт дії було показано, верхній елемент має бути увімкнено.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Редагування параметра</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Тип параметра</guilabel
+></term>
+<listitem>
+<para
+>Ця властивість визначає вміст параметра або тип перевірки на відповідність, яку має бути виконано для набуття ним чинності. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Підбір властивостей</guilabel
+></term>
+<listitem>
+<para
+>Порівнює вказану властивість пристрою (за допомогою значень <guilabel
+>Тип пристрою</guilabel
+> і <guilabel
+>Назва значення</guilabel
+>) за допомогою інструменту порівняння з вказаним текстовим рядком.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Кон’юнкція вмісту</guilabel
+></term>
+<listitem>
+<para
+>Щоб було встановлено відповідність властивості, всі її підвластивості мають бути відповідними.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Диз’юнкція вмісту</guilabel
+></term>
+<listitem>
+<para
+>Щоб було встановлено відповідність властивості, всі хоча б одна з її підвластивостей має бути відповідною.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Підбір інтерфейсів пристроїв</guilabel
+></term>
+<listitem>
+<para
+>Виконує перевірку належності пристрою до вказаного типу пристроїв.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Тип пристрою</guilabel
+></term>
+<listitem>
+<para
+>Тут буде наведено список усіх можливих пристроїв, підтримку яких передбачено у Плазмі вашої системи. Ці пристрої буде використано під час встановлення відповідності як за властивістю, так і за інтерфейсом. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Назва значення</guilabel
+></term>
+<listitem>
+<para
+>Тут буде показано список всіх можливих назв властивостей для вказаного типу пристроїв. Ви також зможете обрати спосіб перевірки значення (можна обрати між <guilabel
+>Дорівнює</guilabel
+> та <guilabel
+>Містить</guilabel
+>) і вказати текст, з яким слід виконувати порівняння.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Відновити початковий параметр</guibutton
+></term>
+<listitem>
+<para
+>Скасовує всі незбережені зміни, які було внесено до поточного параметра.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Зберегти зміни до параметра</guibutton
+></term>
+<listitem>
+<para
+>Зберігає зміни, які було внесено до параметра.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

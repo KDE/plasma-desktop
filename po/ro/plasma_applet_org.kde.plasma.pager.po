@@ -1,0 +1,214 @@
+# Traducerea plasma_applet_pager.po în Română
+# translation of plasma_applet_pager to Romanian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_pager package.
+# Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-02-04 15:41+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generale"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Generale:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Arată pictogramele aplicațiilor pe conturul ferestrelor"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Arată numai ecranul actual"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Navigarea o ia de la capăt"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Aranjament:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Implicit"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Orizontal"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Vertical"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Afișare text:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Fără text"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Număr activitate"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Numărul biroului"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Denumire activitate"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Numele biroului"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Alegerea activității curente:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Alegerea biroului virtual curent:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Nu face nimic"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Arată biroul"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "…și încă 1% fereastră"
+msgstr[1] "…și încă %1 ferestre"
+msgstr[2] "…și încă %1 de ferestre"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 fereastră:"
+msgstr[1] "%1 ferestre:"
+msgstr[2] "%1 de ferestre:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 fereastră minimizată:"
+msgstr[1] "%1 ferestre minimizate:"
+msgstr[2] "%1 de ferestre minimizate:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "Biroul %1"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Arată gestionarul de activități…"
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Adaugă birou virtual"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Elimină birou virtual"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Configurare birouri virtuale…"
+
+#~ msgid "Activate %1"
+#~ msgstr "Activează %1"
+
+#, fuzzy
+#~| msgid "Configure Desktops..."
+#~ msgid "Configure Desktops..."
+#~ msgstr "Configurare birouri..."
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Arată tabloul de bord"
+
+#~ msgid "Display icons:"
+#~ msgstr "Afișare pictograme:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Adaugă birou virtual"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Elimină ultimul birou virtual"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Configurare paginator"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Număr de coloane:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Număr de rânduri:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Schimbă numărul de rânduri"
+
+#~ msgid "buttonGroupText"
+#~ msgstr "buttonGroupText"
+
+#~ msgid "buttonGroupAction"
+#~ msgstr "buttonGroupAction"
+
+#~ msgid "None"
+#~ msgstr "Nici unul"

@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Простори дій</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>простір дій</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Простори дій</title>
+<sect2 id="activities-intro">
+
+<title
+>Вступ</title>
+
+<para
+>За допомогою цього модуля ви можете налаштувати простори дій. Простори дій — можливість користуватися декількома профілями Плазми, кожний з яких матиме свій набір віджетів і теми. Деякі з просторів дій можуть бути конфіденційними, у них не вестиметься стеження за вашими діями. Наприклад, не зберігатиметься список відкритих вами документів. </para>
+
+<para
+>Модуль поділено на три вкладки: <link linkend="activities-main"
+><guilabel
+>Простори дій</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Перемикання</guilabel
+></link
+> і <link linkend="activities-privacy"
+><guilabel
+>Конфіденційність</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Простори дій</guilabel
+></title>
+
+<para
+>На цій вкладці буде наведено список поточних просторів дій. Наведіть вказівник миші на список, щоб побачити кнопки для налаштовування або вилучення просторів дій. </para>
+
+<para
+>Скористайтеся накладною кнопкою <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+>, щоб налаштувати простір дій. Ви можете змінити такі параметри простору дій: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Піктограма</guilabel
+></term>
+        <listitem>
+            <para
+>Піктограму простору дій буде показано на панелі вибору простору дій, яка відкривається засобом керування просторами дій панелі Плазми. Клацніть на поточній піктограмі, щоб вибрати якусь із загальносистемних піктограма або вибрати нетипову піктограму у файловій системі вашого комп'ютера. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Назва</guilabel
+></term>
+        <listitem>
+            <para
+>Надайте вашому простору дій відповідної назви. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Опис</guilabel
+></term>
+        <listitem>
+            <para
+>Опис простору дій у довільній формі. Його буде показано під назвою на панелі вибору простору дій засобу керування просторами дій панелі Плазми. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Конфіденційність</guilabel
+></term>
+        <listitem>
+            <para
+>Позначте пункт <guilabel
+>Не стежити за діями у цьому просторі</guilabel
+>, щоб вимкнути стеження за діями для вашого простору дій. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Скорочення для перемикання</guilabel
+></term>
+        <listitem>
+            <para
+>Натисніть першу кнопку, щоб вести нове скорочення для перемикання на простір дій. Натисніть другу кнопку, щоб вилучити поточне скорочення. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Натискання кнопки <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> вилучає простір дій. </para>
+<para
+>Натисканням кнопки <guibutton
+>Створити...</guibutton
+> під списком можна відкрити вікно <guilabel
+>Створення простору дій</guilabel
+>, яке є подібним до вікна налаштовування простору дій, яке описано вище. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Перемикання</guilabel
+></title>
+
+<para
+>Тут ви можете налаштувати, чи слід Плазмі запам'ятовувати <guilabel
+>Поточну віртуальну стільницю</guilabel
+> для усіх просторів дій (потребує перезапуску). Також можна налаштувати клавіатурні скорочення для переходу списком просторів дій. </para>
+<para
+>Щоб дізнатися більше про те, як користуватися системою клавіатурних скорочень &kde;, ознайомтеся із <ulink url="help:/fundamentals/shortcuts.html"
+>розділом <emphasis
+>Використання та налаштовування клавіатурних скорочень</emphasis
+> <emphasis
+>Підручника з основ роботи у &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Конфіденційність</guilabel
+></title>
+
+<para
+>За допомогою цієї вкладки можна налаштувати час, протягом якого простори дій <guilabel
+>Зберігатимуть журнал</guilabel
+> і вилучити деякі зібрані дані. Скористайтеся спадним списком <guibutton
+>Спорожнити журнал</guibutton
+>, щоб змусити Плазму <guimenuitem
+>Забути останню годину</guimenuitem
+>, <guimenuitem
+>Забути дві останні години</guimenuitem
+>, <guimenuitem
+>Забути день</guimenuitem
+> або <guimenuitem
+>Забути все</guimenuitem
+>. </para>
+<para
+>Нижче, ви можете налаштувати діапазон програм для запам'ятовування даних щодо відкритих документів у ваших просторах дій. Скористайтеся пунктом <guilabel
+>Для всіх програм</guilabel
+>, щоб зберігалися усі дані, пунктом <guilabel
+>Не запам'ятовувати</guilabel
+>, щоб вимкнути зберігання даних, або пунктом <guilabel
+>Лише для вказаних програм</guilabel
+> для точнішого налаштовування (клацання на пункті програми у списку перемикає її поточний режим). </para>
+<para
+>Позначте пункт <guilabel
+>Не запам’ятовувати дані для програм поза цим списком</guilabel
+>, щоб вимкнути стеження для усіх програм, яких немає у списку. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

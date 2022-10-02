@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportament general</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>18 de maig de 2022</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>escriptori</keyword>
+<keyword
+>espai de treball</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Aquest és un mòdul per a configurar el comportament general de l'espai de treball. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra els consells informatius en passar-hi per sobre amb el ratolí</guilabel
+></term>
+<listitem>
+<para
+>Si aquesta opció està marcada, es mostraran consells emergents sobre els elements que hi ha sobre el plafó del &plasma; o sobre l'escriptori.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra retroalimentació visual per als canvis d'estat</guilabel
+></term>
+<listitem>
+<para
+>Si canvieu, &pex;, la lluminositat i el volum utilitzant el teclat, aquests canvis d'estat es mostraran en un OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocitat de l'animació</guilabel
+></term>
+<listitem>
+    <para
+>Permet establir la velocitat de les animacions dels efectes d'escriptori des de <guilabel
+>Lenta</guilabel
+> a <guilabel
+>Instantània</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clic únic per a obrir fitxers i carpetes</guilabel
+></term>
+<listitem>
+<para
+>Aquesta és l'opció predeterminada. Fent clic una sola vegada sobre la icona l'obrireu. Per a seleccionar-la/es podeu arrossegar-la/es o fer <keycombo action="simul"
+>&Ctrl;<mousebutton
+>clic dret</mousebutton
+></keycombo
+>, o simplement fer clic i mantenir-la/es premuda/es per arrossegar-la/es. La selecció també es pot fer fent clic sobre el marcador de selecció de l'element.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Doble clic per a obrir fitxers i carpetes</guilabel
+></term>
+<listitem>
+<para
+>Si aquesta opció no està marcada, les icones/fitxers s'obriran amb un sol clic del &BER;. Aquest comportament predeterminat és el que esperaríeu quan feu clic sobre els enllaços a la majoria dels navegadors. Encara que si la marqueu, les icones/fitxers s'obriran amb un doble clic, mentre que un sol clic només seleccionarà la icona o fitxer. Aquest és el comportament al qual esteu acostumat en altres escriptoris o sistemes operatius.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>En fer clic a la via de la barra de desplaçament</guimenu
+><guimenuitem
+>Desplaça una pàgina amunt o avall</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Aquesta és l'opció predeterminada. En fer clic esquerre a la barra de desplaçament es desplaçarà una pàgina.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>En fer clic a la via de la barra de desplaçament</guimenu
+><guimenuitem
+>Desplaça a la ubicació clicada</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Activa el comportament quan la posició de la nansa de desplaçament salta directament a la posició en el document on heu fet clic. Aquest és el comportament que podríeu conèixer d'altres escriptoris o sistemes operatius.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mode tàctil</guimenu
+><guimenuitem
+>Activa automàticament quan calgui/Mai activat</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>El mode tàctil s'activarà automàticament quan el sistema detecti una pantalla tàctil però sense ratolí ni ratolí tàctil. Per exemple: quan el teclat d'un ordinador portàtil transformable es giri o se separi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Sempre activat (predeterminat)/Mai activat</guimenuitem
+></term>
+<listitem>
+<para
+>En el mode tàctil, molts elements de la interfície d'usuari es faran més grans per adaptar-se més fàcilment a la interacció tàctil.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

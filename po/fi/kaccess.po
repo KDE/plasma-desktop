@@ -1,0 +1,710 @@
+# translation of kaccess.po to Finnish
+# Copyright © 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005, 2006.
+# Mikko Ikola <ikola@iki.fi>, 2005.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <tpr@d5k.net>, 2008.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2014, 2015, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2012, 2021.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2021-01-04 16:39+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:18+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Tommi Nieminen,Teemu Rytilahti,Ilpo Kantonen,Mikko Ikola,Kim Enkovaara,Mikko "
+"Piippo,Jorma Karvonen,Lasse Liehu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"translator@legisign.org,tpr@d5k.net,ilpo@iki.fi,ikola@iki.fi,kim."
+"enkovaara@iki.fi,piippo@cc.helsinki.fi,karvonen.jorma@gmail.com,lasse."
+"liehu@gmail.com"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Vaihtonäppäin on lukittu ja se on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Vaihtonäppäin on nyt aktiivinen."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Vaihtonäppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Ctrl-näppäin on lukittu ja on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Ctrl-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Ctrl-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Alt-näppäin on lukittu ja on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Alt-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Alt-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Win-näppäin on lukittu ja on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Win-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Win-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Meta-näppäin on lukittu ja on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Meta-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Meta-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Super-näppäin on lukittu ja on nyt aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Super-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Super-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Hyper-näppäin on lukittu ja on aktiivinen kaikille seuraaville näppäilyille."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Hyper-näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Hyper-näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Alt Gr -näppäin on lukittu ja on aktiivinen kaikille seuraaville "
+"näppäilyille."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Alt Gr -näppäin on nyt aktiivinen."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Alr Gr -näppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Numerolukkonäppäin on nyt aktiivinen."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Numerolukkonäppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Vaihtolukko on nyt aktiivinen."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Vaihtolukko ei ole nyt aktiivinen."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Vierityslukkonäppäin on nyt aktiivinen."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Vierityslukkonäppäin ei ole nyt aktiivinen."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Ota näyttölukija käyttöön tai poista se käytöstä"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Esteettömyys"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGr"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Varoitus"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&Milloin hiirielettä käytettiin:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Muuta asetukset kysymättä"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Näytä tämä vahvistusikkuna"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Passivoi kaikki AccessX-ominaisuudet ja hiirieleet"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Hitaat näppäimet"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Ponnahdusnäppäimet"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Alas jäävät näppäimet"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Hiirinäppäimet"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Haluatko varmasti passivoida ”%1”?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Haluatko varmasti passivoida ”%1” ja ”%2”?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Haluatko varmasti passivoida ”%1”, ”%2” ja ”%3”?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Haluatko varmasti passivoida ”%1”, ”%2”, ”%3” ja ”%4”?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Haluatko aktivoida ”%1”?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Haluatko aktivoida ”%1” ja passivoida ”%2”?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "Haluatko varmasti aktivoida ”%1” ja passivoida ”%2” ja ”%3”?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr "Haluatko varmasti aktivoida ”%1” ja passivoida ”%2”, ”%3” ja ”%4”?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Haluatko varmasti aktivoida ”%1” ja ”%2”?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "Haluatko varmasti aktivoida ”%1” ja ”%2” ja passivoida ”%3”?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr "Haluatko varmasti aktivoida ”%1”, ja ”%2” ja passivoida ”%3” ja ”%4”?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Haluatko varmasti aktivoida ”%1”, ”%2” ja ”%3”?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr "Haluatko varmasti aktivoida ”%1”, ”%2” ja ”%3” ja passivoida ”%4”?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Haluatko varmasti aktivoida ”%1”, ”%2”, ”%3” ja ”%4”?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Jokin sovellus on pyytänyt muuttamaan tätä asetusta."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Olet pitänyt vaihtonäppäintä painettuna 8 sekuntia tai jokin sovellus on "
+"pyytänyt muuttamaan tätä asetusta."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Olet painanut vaihtonäppäintä 5 kertaa tai jokin sovellus on pyytänyt "
+"muuttamaan tätä asetusta."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr "Painoit %1 tai jokin sovellus on pyytänyt muuttamaan tätä asetusta."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Jokin sovellus on pyytänyt muuttamaan tätä asetusta tai käytit useiden "
+"näppäimistötoimintojen yhdistelmää."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Jokin sovellus on pyytänyt muuttamaan näitä asetuksia."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Jotkut käyttäjät tarvitsevat näitä AccessX-asetuksia rajoituksilla ja ne "
+"voidaan asettaa KDE:n järjestelmäasetuksissa. Voit ottaa ne käyttöön tai "
+"pois käytöstä standardinäppäimistön toiminnoilla.\n"
+"\n"
+"Jos et tarvitse niitä, voit valita ”Deaktivoi kaikki AccessX-ominaisuudet ja "
+"toiminnot”."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Hitaat näppäimet on otettu käyttöön. Tästä eteenpäin sinun täytyy painaa "
+"jokaista näppäintä määrätty aika, ennen kuin näppäily hyväksytään."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Hitaat näppäimet eivät ole käytössä."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Ponnahdusnäppäimet on otettu käyttöön. Nyt kukin näppäin on estetty tietyksi "
+"ajaksi käytön jälkeen."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Ponnahdusnäppäimet on estetty."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Alas jäävät näppäimet on asetettu. Nyt kukin muuntonäppäin jää teljetyksi "
+"kun vapautat sen."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Alas jäävät näppäimet estetty."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Hiirinäppäimet on otettu käyttöön. Voit nyt ohjata hiirtä "
+"numeronäppäimistöltä."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Hiirinäppäimet on poistettu käytöstä."
+
+#: main.cpp:49
+#, kde-format
+msgid "Accessibility"
+msgstr "Esteettömyys"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "© 2000, Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Tekijä"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "KDE:n esteettömyystyökalu"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "&Bell"
+#~ msgstr "&Äänimerkki"
+
+#~ msgid "Audible Bell"
+#~ msgstr "Visuaalinen äänimerkki"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Jos tämä on valittuna, käytetään järjestelmän äänimerkkiä. Yleensä "
+#~ "äänimerkki on yksinkertainen ”piip”."
+
+#~ msgid "Use &system bell"
+#~ msgstr "Käytä &järjestelmän äänimerkkiä"
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Valitse, jos haluat käyttää omaa äänitiedostoa äänimerkkinä. Jos valitset "
+#~ "tämän, haluat todennäköisesti poistaa käytöstä järjestelmän varoitusäänen."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Käytä &omaa äänimerkkiä"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "jos valinta ”Käytä omaa ääntä” on valittuna, voit valita soitettavan "
+#~ "äänitiedoston tässä kohdassa. Paina ”Selaa…” valitaksesi äänitiedoston."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "&Soitettava ääni:"
+
+#~ msgid "Browse..."
+#~ msgstr "Selaa…"
+
+#~ msgid "Visible Bell"
+#~ msgstr "Visuaalinen äänimerkki"
+
+#~ msgid ""
+#~ "This option will turn on the \"visible bell\", i.e. a visible "
+#~ "notification shown every time that normally just a bell would occur. This "
+#~ "is especially useful for deaf people."
+#~ msgstr ""
+#~ "Ottaa käyttöön visuaalisen äänimerkin. Tässä kohdassa määrittelemäsi "
+#~ "tehoste näytetään aina, kun normaali äänimerkki soitettaisiin. Tämä "
+#~ "asetus on hyödyllinen varsinkin kuuroille."
+
+#~ msgid "&Use visible bell"
+#~ msgstr "&Käytä visuaalista äänimerkkiä"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "Näyttö välähtää määrätyn ajan määrätyllä värillä."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Väläytä näyttöä"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Kaikki näytön värit käännetään määrätyksi ajaksi."
+
+#~ msgid "I&nvert screen"
+#~ msgstr "&Käänteiset värit"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Napsauta tästä, jos haluat valita värin, jota käytetään ”Väläytä näyttöä” "
+#~ "-huomautuksessa."
+
+#~ msgid "&Duration:"
+#~ msgstr "&Kesto:"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Tässä voit määritellä ”Näkyvä äänimerkki” -tehosteen keston."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Modifier Keys"
+#~ msgstr "Muuntonäppäimet"
+
+#~ msgid "Sticky Keys"
+#~ msgstr "Alas jäävät näppäimet"
+
+#~ msgid "Use &sticky keys"
+#~ msgstr "Käytä &alas jääviä näppäimiä"
+
+#~ msgid "&Lock sticky keys"
+#~ msgstr "&Lukitse alas jäävät näppäimet"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "Poista alas jäävien näppäinten tila kun kahta näppäintä painetaan samaan "
+#~ "aikaan"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä aina kun muuntonäppäin teljetään, lukitaan "
+#~ "tai vapautetaan"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Lukkiutuvat näppäimet"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä kun lukitseva näppäin aktivoidaan tai "
+#~ "aktivointi poistetaan"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism for modifier or locking key state "
+#~ "changes"
+#~ msgstr ""
+#~ "Käytä Plasman ilmoitusmekanismia kun muuntonäppäimen tai lukitsevan "
+#~ "näppäimen tila muuttuu"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Järjestelmäilmoi&tusten asetukset…"
+
+#~ msgid "&Keyboard Filters"
+#~ msgstr "&Näppäimistösuodattimet"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&Näppäimien toiston suodatus"
+
+#~ msgid "&Use slow keys"
+#~ msgstr "Käytä n&äppäinten toiston suodatusta"
+
+#~ msgid "&Use system bell whenever a key is pressed"
+#~ msgstr "Käytä järjestelmän äänimerkkiä k&un näppäintä painetaan"
+
+#~ msgid "&Use system bell whenever a key is accepted"
+#~ msgstr "Käytä järjestelmän äänimerkkiä k&un näppäin tunnistetaan"
+
+#~ msgid "&Use system bell whenever a key is rejected"
+#~ msgstr "Käytä järjestelmän äänimerkkiä k&un näppäin vapautetaan"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Toistavat näppäimet"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Käytä &toistavia näppäimiä"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Käytä järjestelmän äänimerkkiä kun näppäin kimpoaa takaisin"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "&Aktivointitoimet"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Aktivointitoimet"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Käytä toimintatapoja aktivoidaksesi alas jääviä ja hitaita näppäimiä"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Poista alas jäävät ja hitaat näppäimet tietyn ajan jälkeen, jos niitä ei "
+#~ "ole käytetty."
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid "Notification"
+#~ msgstr "Ilmoittaminen"
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Käytä järjestelmän äänimerkkiä kun tavoitettavuustoiminto asetetaan "
+#~ "päälle tai pois käyttäen elettä"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Jos tämä valittuna, KDE näyttää vahvistusikkunan aina, kun "
+#~ "helppokäyttöasetusten ominaisuuksia vaihdetaan.\n"
+#~ "Ole varovainen tämän valinnan kanssa, sillä jos tämä ei ole valittuna, "
+#~ "niin helppokäyttöasetukset otetaan käyttöön ilman vahvistusta."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Näytä vahvistusdialogi aina kun toimintatapaa muutetaan päälle tai pois"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Käytä Plasman ilmoitusmekanismia aina kun toimintatapaa muutetaan päälle "
+#~ "tai pois"
+
+#~ msgid "Screen Reader"
+#~ msgstr "Näyttölukija"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Näyttölukija käytössä"
+
+#~ msgid ""
+#~ "Please note that you may have to log out once to allow the screen reader "
+#~ "to work properly."
+#~ msgstr ""
+#~ "Huomaa, että sinun täytyy kirjautua uudelleen sisään, jotta näyttölukija "
+#~ "toimii oikein."

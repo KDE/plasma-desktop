@@ -1,0 +1,113 @@
+# translation of plasma_applet_trash.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2008-12-26 01:52+0200\n"
+"Last-Translator: Omer Ensari <oensari@gmail.com>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Poedit-Language: Kurdish\n"
+
+#: contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "a verb"
+msgid "Open"
+msgstr "&Vekirin"
+
+#: contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Vala"
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Trash Settings…"
+msgstr ""
+
+#: contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Trash"
+msgid ""
+"Trash\n"
+"Empty"
+msgstr "Çop"
+
+#: contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] "Hêmanek"
+msgstr[1] "%1 hêman"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Çop"
+
+#: contents/ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgid "Empty"
+msgstr "Vala"
+
+#: contents/ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "Hêmanek"
+msgstr[1] "%1 hêman"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgid "Empty Trash"
+#~ msgstr "Copê Vala Bike"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Do you really want to empty the trash? All items will be deleted."
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr "Tu ji dil dixwazî çopê vala bikî? Hemû hêman wê bên jê birin."
+
+#~ msgid "&Empty Trashcan"
+#~ msgstr "Copê &Vala Bike"
+
+#~ msgid "&Menu"
+#~ msgstr "&Pêşek"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgctxt "@title:window"
+#~ msgid "Empty Trash"
+#~ msgstr "Copê Vala Bike"
+
+#, fuzzy
+#~| msgid "&Empty Trashcan"
+#~ msgid "Emptying Trashcan..."
+#~ msgstr "Copê &Vala Bike"

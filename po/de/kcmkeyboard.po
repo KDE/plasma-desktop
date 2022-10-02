@@ -1,0 +1,665 @@
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2016, 2022.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
+# Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012, 2013, 2014, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkeyboard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2022-07-14 00:32+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Thomas Reitelbach,Thomas Diehl,Panagiotis Papadopoulos"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tr@erdfunkstelle.de,thd@kde.org,pano_90@gmx.net"
+
+#: bindings.cpp:24
+#, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "Umschaltung der Tastaturbelegung"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Auf nächste Tastaturbelegung umschalten"
+
+#: bindings.cpp:49
+#, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "Tastaturbelegung zu %1 umschalten"
+
+#: flags.cpp:122
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, kde-format
+msgid "Add Layout"
+msgstr "Belegung hinzufügen"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr "Suchen ..."
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr "Kurzbefehl:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr "Beschriftung:"
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr "Vorschau"
+
+#: kcm_keyboard.cpp:32
+#, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "KDE-Modul zur Einrichtung der Tastatur"
+
+#: kcm_keyboard.cpp:36
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr "(c) 2010 Andriy Rysin"
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+"<h1>Tastatur</h1> Dieses Modul kann zum Einstellen der Tastaturparameter und "
+"-belegung verwendet werden."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr "Hardware"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, kde-format
+msgid "Keyboard &model:"
+msgstr "Tastatur-&Modell:"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+"Hier können Sie das Modell Ihrer Tastatur auswählen. Diese Auswahl ist "
+"unabhängig von Ihrer Tastaturbelegung und bezieht sich auf das tatsächliche "
+"physikalische Modell. Neuere Tastaturen haben zwei zusätzliche Tasten, diese "
+"nennt man „104-Tasten“-Tastaturen. Falls Sie das genaue Modell Ihrer "
+"Tastatur nicht kennen, ist dies vermutlich die richtige Auswahl.\n"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, kde-format
+msgid "Layouts"
+msgstr "Belegungen"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+"Falls Sie die Umschaltregelung „Anwendung“ oder „Fenster“ wählen, gilt die "
+"Änderung der Tastaturbelegung nur für das aktuelle Programm oder Fenster."
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr "Umschaltregelung"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr "&Global"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, kde-format
+msgid "&Desktop"
+msgstr "&Arbeitsfläche"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, kde-format
+msgid "&Application"
+msgstr "An&wendung"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr "&Fenster"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr "Kurzbefehle zum Belegungswechsel"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr "Haupt-Kurzbefehle:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+"Dies ist ein Kurzbefehl zum Wechseln von Belegungen. Er wird von X.Org "
+"erkannt. Modifizierer-Kurzbefehle sind zulässig."
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr "Keiner"
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr "Kurzbefehle für 3. Ebene:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+"Dies ist ein Kurzbefehl für den Wechsel auf die dritte Ebene der aktiven "
+"Belegung (falls vorhanden). Er wird von X.Org erkannt. Modifizierer-"
+"Kurzbefehle sind zulässig."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr "Alternativer Kurzbefehl:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+"Dies ist ein Kurzbefehl für den Wechsel von Belegungen. Er unterstützt keine "
+"Modifizierer-Kurzbefehle und funktioniert möglicherweise in bestimmten "
+"Situationen nicht (z. B. wenn ein Kurzinfo-Fenster angezeigt wird oder wenn "
+"der Bildschirmschoner aktiv ist)."
+
+# bearbeiten?
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, kde-format
+msgid "Configure layouts"
+msgstr "Belegungen einrichten"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, kde-format
+msgid "Add"
+msgstr "Hinzufügen"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, kde-format
+msgid "Remove"
+msgstr "Entfernen"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr "Nach oben"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr "Nach unten"
+
+# bearbeiten?
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, kde-format
+msgid "Spare layouts"
+msgstr "Zusätzliche Belegungen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr "Anzahl Haupt-Belegungen:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr "Erweitert"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, kde-format
+msgid "&Configure keyboard options"
+msgstr "&Tastatureinstellungen ändern"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: kcm_keyboard_widget.cpp:643
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Keine"
+
+#: kcm_keyboard_widget.cpp:657
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 Kurzbefehl"
+msgstr[1] "%1 Kurzbefehle"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr "Zuordnen"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Layout"
+msgstr "Belegung"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Variant"
+msgstr "Variante"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr "Bezeichnung"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Shortcut"
+msgstr "Kurzbefehl"
+
+#: kcm_view_models.cpp:273
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr "Voreinstellung"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr "Wenn eine Taste gedrückt wird:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr "Akzent-Zeichen und ähnliche Zeichen anzeigen"
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr "&Tastendruck wiederholen"
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr "&Keine Aktion"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr "Testbereich:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+"Hier können Tastenwiederholung und Klickgeräusch getestet werden. (Vergessen "
+"Sie nicht, die Änderungen anzuwenden.)"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, kde-format
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"Falls diese Funktion unterstützt wird, können Sie über diese Einstellung den "
+"Status der Sperre für den Zahlenblock (NumLock) nach dem Plasma-Start "
+"bestimmen.<p>Sie können festlegen, dass die Zahlenblocksperre ein- oder "
+"ausgeschaltet ist oder dass Plasma die aktuelle Einstellung beibehält."
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr "Zahlenblock beim Plasma-Start"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "Ein&schalten"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, kde-format
+msgid "&Turn off"
+msgstr "&Ausschalten"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "&Unverändert lassen"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr "&Geschwindigkeit:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+"Falls vom System unterstützt, ermöglicht Ihnen diese Einstellung, die "
+"Verzögerung festzulegen, nach der Zeichen ausgegeben werden, wenn Sie eine "
+"Taste gedrückt halten. Die Wiederholrate gibt die Frequenz der "
+"Zeichenausgabe vor."
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+"Falls vom System unterstützt, ermöglicht Ihnen diese Einstellung, die "
+"Wiederholrate festzulegen, mit der Zeichen ausgegeben werden, solange Sie "
+"eine Taste gedrückt halten."
+
+# Ausgeschriebene Übersetzung (Wiederholungen/Sek.) zu lang für Spinbox
+# TODO: Bugreport schreiben
+#
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr " Wdh./Sek."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr " ms"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, kde-format
+msgid "&Delay:"
+msgstr "&Verzögerung:"
+
+#: tastenbrett/main.cpp:57
+#, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Tastaturvorschau"
+
+#: tastenbrett/main.cpp:59
+#, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Anzeige der Tastaturbelegung"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+"Die Tastaturgeometrie konnte nicht geladen werden. Dies zeigt oft an, dass "
+"das ausgewählte Modell eine bestimmte Belegung oder eine Variante nicht "
+"unterstützt. Dieses Problem tritt wahrscheinlich auch auf, wenn Sie "
+"versuchen, die Kombination aus Modell, Belegung und Variante zu verwenden."
+
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "Umschaltung der Tastaturbelegung für KDE"
+
+#~ msgid "Only up to %1 keyboard layout is supported"
+#~ msgid_plural "Only up to %1 keyboard layouts are supported"
+#~ msgstr[0] "Es wird nur bis zu %1 Tastaturbelegung unterstützt"
+#~ msgstr[1] "Es werden nur bis zu %1 Tastaturbelegungen unterstützt"
+
+#~ msgid "Any language"
+#~ msgstr "Beliebige Sprache"
+
+#~ msgid "Layout:"
+#~ msgstr "Belegung:"
+
+#~ msgid "Variant:"
+#~ msgstr "Variante:"
+
+#~ msgid "Limit selection by language:"
+#~ msgstr "Auswahl nach Sprache beschränken:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "short layout label - full layout name"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
+
+#~ msgid "Layout Indicator"
+#~ msgstr "Belegungsanzeige"
+
+#~ msgid "Show layout indicator"
+#~ msgstr "Belegungsanzeige aktivieren"
+
+#~ msgid "Show for single layout"
+#~ msgstr "Selbst bei nur einer Belegung anzeigen"
+
+#~ msgid "Show flag"
+#~ msgstr "Flagge anzeigen"
+
+#~ msgid "Show label"
+#~ msgstr "Beschriftung anzeigen"
+
+#~ msgid "Show label on flag"
+#~ msgstr "Beschriftung auf Flagge anzeigen"
+
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Tastaturbelegung"
+
+# bearbeiten?
+#~ msgid "Configure Layouts..."
+#~ msgstr "Belegungen einrichten ..."
+
+#~ msgid "Keyboard Repeat"
+#~ msgstr "Tastenwiederholung"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "&Ausschalten"
+
+#~ msgid "&Leave unchanged"
+#~ msgstr "&Unverändert lassen"
+
+# bearbeiten?
+#~ msgid "Configure..."
+#~ msgstr "Einrichten ..."
+
+#~ msgid "Key Click"
+#~ msgstr "Tastenklick"
+
+#~ msgid ""
+#~ "If supported, this option allows you to hear audible clicks from your "
+#~ "computer's speakers when you press the keys on your keyboard. This might "
+#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
+#~ "that the keys make is very soft.<p>You can change the loudness of the key "
+#~ "click feedback by dragging the slider button or by clicking the up/down "
+#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
+#~ msgstr ""
+#~ "Wenn vom System unterstützt und aktiviert, erlaubt Ihnen diese "
+#~ "Einstellung ein hörbares Klicken aus Ihrem Computer-Lautsprecher, sobald "
+#~ "Sie eine Taste drücken. Das kann nützlich sein, wenn Ihre Tastatur keine "
+#~ "mechanischen Tasten besitzt oder Sie beim Tippen eine ausreichende "
+#~ "akustische Rückmeldung vermissen.<p>Sie können die Lautstärke des "
+#~ "Klickens verändern, indem Sie auf den Pfeil hoch oder runter klicken. "
+#~ "Wenn Sie die Lautstärke auf 0 % setzen, wird der Klick ausgeschaltet."
+
+#~ msgid "&Key click volume:"
+#~ msgstr "&Klicklautstärke:"
+
+#~ msgid "No layout selected "
+#~ msgstr "Keine Tastaturbelegung ausgewählt "
+
+#~ msgid "XKB extension failed to initialize"
+#~ msgstr "Die Initialisierung der XKB-Erweiterung ist fehlgeschlagen"
+
+#~ msgid "Backspace"
+#~ msgstr "Rücktaste"
+
+#~ msgctxt "Tab key"
+#~ msgid "Tab"
+#~ msgstr "Tabulator"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Hochstelltaste"
+
+#~ msgid "Enter"
+#~ msgstr "Eingabetaste"
+
+#~ msgid "Ctrl"
+#~ msgstr "Strg"
+
+#~ msgid "Alt"
+#~ msgstr "Alt"
+
+#~ msgid "AltGr"
+#~ msgstr "AltGr"
+
+#~ msgid "Esc"
+#~ msgstr "Esc"
+
+#~ msgctxt "Function key"
+#~ msgid "F%1"
+#~ msgstr "F%1"
+
+#~ msgid "Shift"
+#~ msgstr "Umschalttaste"
+
+#~ msgid "No preview found"
+#~ msgstr "Keine Vorschau gefunden"
+
+#~ msgid "Close"
+#~ msgstr "Schließen"
+
+#~ msgid ""
+#~ "If you check this option, pressing and holding down a key emits the same "
+#~ "character over and over again. For example, pressing and holding down the "
+#~ "Tab key will have the same effect as that of pressing that key several "
+#~ "times in succession: Tab characters continue to be emitted until you "
+#~ "release the key."
+#~ msgstr ""
+#~ "Wenn Sie diese Einstellung aktivieren, wird beim Gedrückthalten einer "
+#~ "Taste immer wieder derselbe Buchstabe ausgegeben. Zum Beispiel wird das "
+#~ "Gedrückthalten der Tabulatortaste denselben Effekt haben wie das "
+#~ "mehrmalige Drücken eben dieser Taste. Es werden also solange Tab-Zeichen "
+#~ "ausgegeben, bis Sie die Taste loslassen."
+
+#~ msgid "&Enable keyboard repeat"
+#~ msgstr "Tasten&wiederholung aktivieren"

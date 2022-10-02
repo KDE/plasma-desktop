@@ -1,0 +1,527 @@
+# translation of kaccess.po to Belarusian
+#
+# Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
+# Siarhei Liantsevich <serzh.by@gmail.com>, 2007.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2007-08-21 06:56+0000\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Дарафей Праляскоўскі, Сяржук Лянцэвіч"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "symbol@akeeri.tk, serzh.by@gmail.com"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Shift актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Клавіша Shift націснутая."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Клавіша Shift адпушчаная."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Control актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Клавіша Control націснутая."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Клавіша Control адпушчаная."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Alt актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Клавіша Alt націснутая."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Клавіша Alt адпушчаная."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Win актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Клавіша Win націснутая."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Клавіша Win адпушчаная."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Meta актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Клавіша Meta націснутая."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Клавіша Meta адпушчаная."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Super актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Клавіша Super націснутая."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Клавіша Super адпушчаная."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Hyper актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Клавіша Hyper націснутая."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Клавіша Hyper адпушчаная."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавіша Alt Gr актываваная. Яна будзе выкарыстоўвацца пры ўсіх далейшых "
+"націсках."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Клавіша Alt Gr націснутая."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Клавіша Alt Gr адпушчаная."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Num Lock уключаны."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Num Lock выключаны."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Caps Lock уключаны."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Caps Lock выключаны."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Scroll Lock уключаны."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Scroll Lock выключаны."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr ""
+
+#: kaccess.cpp:333
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Даступнасць KDE"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Папярэджанне"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "Калі выкарыстоўваўся жэст:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Змяняць параметры без пацверджання"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Выводзіць дыялог пацверджання"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Дэактываваць усе магчымасці і жэсты AccessX"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Павольныя клавішы"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Пругкія клавішы"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Заліпаючыя клавішы"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Кнопкі мышы"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Вы сапраўды жадаеце дэактываваць \"%1\"?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Вы сапраўды жадаеце дэактываваць \"%1\" і %2\"?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Вы сапраўды жадаеце дэактываваць \"%1\", \"%2\" і \"%3\"?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Вы сапраўды жадаеце дэактываваць \"%1\", \"%2\", \"%3\" і \"%4\"?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\"?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\" і дэактываваць \"%2\"?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\" і дэактываваць \"%2\" і \"%3\"?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr ""
+"Вы сапраўды жадаеце актываваць \"%1\" і дэактываваць \"%2\", \"%3\" і \"%4\"?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\" і \"%2\"?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\" і \"%2\" і дэактываваць \"%3\"?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr ""
+"Вы сапраўды жадаеце актываваць \"%1\" і \"%2\" і дэактываваць \"%3\" і "
+"\"%4\"?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\", \"%2\" і \"%3\"?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr ""
+"Вы сапраўды жадаеце актываваць \"%1\", \"%2\" і \"%3\" і дэактываваць \"%4\"?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Вы сапраўды жадаеце актываваць \"%1\", \"%2\", \"%3\" і \"%4\"?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Праграма запытала змену гэтага параметру."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Вы ўтрымлівалі клавішу Shift у плыні 8 секунд або праграма запытала змену "
+"гэтага параметру."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Вы націснулі клавішу Shift 5 раз запар або праграма запытала змену гэтых "
+"параметраў."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr "Вы націснулі %1 або праграма запытала змену гэтага параметру."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Праграма запытала змену гэтых параметраў, або вы выкарысталі некалькі жэстаў "
+"клавіятуры."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Праграма запытала змену гэтых параметраў."
+
+#: kaccess.cpp:852
+#, fuzzy, kde-format
+#| msgid ""
+#| "These AccessX settings are needed for some users with motion impairments "
+#| "and can be configured in the KDE Control Center. You can also turn them "
+#| "on and off with standardized keyboard gestures.\n"
+#| "\n"
+#| "If you do not need them, you can select \"Deactivate all AccessX features "
+#| "and gestures\"."
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Параметры AccessX неабходныя для некаторых карыстальнікаў з паразай "
+"рухальнай функцыі і могуць быць наладжаныя ў Цэнтры кіравання KDE. Вы "
+"таксама можаце ўключыць і выключыць стандартызаваныя жэсты клавіятуры.\n"
+"\n"
+"Калі яны вам не патрабуются, вы можаце вылучыць пункт \"Дэактываваць усе "
+"функцыі і жэсты AccessX\"."
+
+#: kaccess.cpp:873
+#, fuzzy, kde-format
+#| msgid ""
+#| "Slow keys has been enabled. From now on, you need to press each key a "
+#| "certain time before it gets accepted."
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Уключаная падтрымка \"павольных\" клавіш. Зараз для выкарыстання клавішы яе "
+"неабходна націскаць даволі доўга."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Павольныя клавішы выключаныя."
+
+#: kaccess.cpp:879
+#, fuzzy, kde-format
+#| msgid ""
+#| "Bounce keys has been enabled. From now on, each key will be blocked a "
+#| "certain time after it was used."
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Уключана падтрымка анці-паўтору клавіш. Зараз пасля некаторай колькасці "
+"націскаў клавішы яна будзе заблакаваная."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Анці-паўтор клавіш выключаны."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Заліпаючыя клавішы ўключаныя. Зараз клавішы-мадыфікатары будуць "
+"выкарыстоўвацца нават пасля таго, як вы іх адпусцілі."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Заліпаючыя клавішы выключаныя."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Кнопкі мышы ўключаныя. Зараз для кіравання мышшу можна выкарыстаць клавішы "
+"лічбавага блока клавіятуры."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Кнопкі мышы выключаныя."
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgid "Accessibility"
+msgstr "Даступнасць KDE"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Матыяс Хёльцэр-Клюпфэл"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Аўтар"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "Даступнасць KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Sticky Keys"
+#~ msgstr "Заліпаючыя клавішы"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Use &sticky keys"
+#~ msgstr "Заліпаючыя клавішы"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "&Lock sticky keys"
+#~ msgstr "Заліпаючыя клавішы"
+
+#, fuzzy
+#~| msgid "Slow keys"
+#~ msgid "&Use slow keys"
+#~ msgstr "Павольныя клавішы"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Bounce Keys"
+#~ msgstr "Пругкія клавішы"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Пругкія клавішы"

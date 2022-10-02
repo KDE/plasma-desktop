@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Пути</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+> <firstname
+>Александр</firstname
+> <surname
+>Яворский</surname
+> <contrib
+>Рецензирование</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>05 сентября 2021 г.</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>рабочий стол</keyword>
+<keyword
+>пути</keyword>
+<keyword
+>расположение</keyword>
+<keyword
+>systemsetting</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Этот модуль позволяет настроить пути к личным файлам в окружении рабочего стола &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Настройка путей &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Настройка путей &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Носители, автоматически подключаемые при входе в систему, не могут использоваться в качестве путей. При перезапуске &plasma; параметры настройки таких носителей будут возвращены в исходные значения. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Папка рабочего стола</guilabel
+></term>
+<listitem
+><para
+>Папка «Рабочий стол» содержит все файлы, которые можно видеть на рабочем столе компьютера. Путь по умолчанию для этой папки следующий: <filename class="directory"
+>~/Рабочий стол</filename
+>, но его можно изменить в описываемом модуле настройки. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка документов</guilabel
+></term>
+<listitem
+><para
+>Эта папка используется по умолчанию для открытия или сохранения документов.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка загрузок</guilabel
+></term>
+<listitem
+><para
+>Эта папка используется по умолчанию для сохранения загружаемых файлов.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка видеозаписей</guilabel
+></term>
+<listitem
+><para
+>Эта папка используется по умолчанию для открытия и сохранения видеофайлов.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка изображений</guilabel
+></term>
+<listitem
+><para
+>Эта папка используется по умолчанию для открытия и сохранения изображений.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка музыки</guilabel
+></term>
+<listitem
+><para
+>Эта папка используется по умолчанию для открытия и сохранения музыки.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>После внесения изменений и нажатия кнопки <guibutton
+>Применить</guibutton
+> откроется диалог, в котором можно указать, нужно ли переносить уже имеющееся содержимое в новую папку или нет.</para>
+
+</article>

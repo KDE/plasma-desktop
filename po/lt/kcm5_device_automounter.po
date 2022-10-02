@@ -1,0 +1,235 @@
+# Lithuanian translations for plasma-desktop package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-12-12 14:15+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Moo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "<>"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Automatinis įrenginių prijungimo įrankis"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Pradinis autorius"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 realizavimas"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Šiame sąraše yra sistemai žinomi saugyklos įrenginiai. Jeigu yra pažymėta "
+"„Automatiškai prijungti prisijungus prie paskyros“, tuomet įrenginys bus "
+"automatiškai prijungtas netgi tuomet, kai yra nuimtas žymėjimas nuo "
+"„Prijungti visas keičiamąsias laikmenas prisijungus prie paskyros“. Tas pats "
+"yra taikoma „Automatiškai prijungti prijungus įrenginį prie kompiuterio“."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Spustelėjus šį mygtuką, pasirinktas įrenginys bus „pamirštas“. Tai yra "
+"naudinga tik tuo atveju, jei yra pažymėta „Prijungti automatiškai tik tas "
+"keičiamąsias laikmenas, kurioms anksčiau teko būti prijungtoms rankiniu "
+"būdu“. Kai įrenginys pamirštamas, o sistema nustatyta automatiškai prijungti "
+"tik pažįstamus įrenginius, tuomet įrenginys nebus automatiškai prijungiamas."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Pamiršti įrenginį"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Kai tai nėra pažymėta, automatiškai bus prijungiami tik atsimenami "
+"įrenginiai. Įrenginys yra „atsimenamas“, jeigu jam yra tekę būti prijungtam "
+"anksčiau. Pavyzdžiui, nėra pakankama įkišti įkrovimui USB medijos leistuvę, "
+"kad ji būtų „atsimenama“ - jeigu nėra prieinama prie failų, tuomet "
+"įrenginys, kitą kartą jį pamačius, nebus automatiškai prijungiamas. Vis "
+"dėlto, gavus prieigą prie failų, įrenginio turinys taps automatiškai "
+"prieinamas sistemai."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Prijungti automatiškai keičiamąsias laikmenas, kurios anksčiau niekada "
+"nebuvo prijungtos"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Automatiškai prijungti įrenginį"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Prisijungus prie paskyros"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Prijungus įrenginį prie kompiuterio"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Visi įrenginiai"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Visi žinomi įrenginiai"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Įdėti įrenginiai"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Atjungti įrenginiai"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Šis įrenginys bus automatiškai prijungtas prisijungimo metu."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Šis įrenginys prisijungimo metu nebus automatiškai prijungtas."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Šis įrenginys bus automatiškai prijungtas, jį įdėjus."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Šis įrenginys, jį įdėjus, nebus automatiškai prijungtas."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Jeigu jūsų prisijungimo prie darbalaukio metu, prie sistemos yra "
+#~ "prijungti kokie nors keičiamieji saugyklos įrenginiai, tuomet jų turinys "
+#~ "taps automatiškai prieinamas skaityti jūsų sistemai ir jos programoms."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr ""
+#~ "Automatiškai prijungti visas keičiamąsias laikmenas prisijungimo metu"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Kai tai yra pažymėta, bet kurios saugyklos, ją įdėjus ar įkišus, turinys "
+#~ "taps automatiškai prieinamas jūsų sistemai."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr ""
+#~ "Automatiškai prijungti visas keičiamąsias laikmenas, kai jos įdedamos"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Automatinis įrenginio prijungimas"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Kai čia žymėjimas nuimtas, automatiškai nebus prijungiamas joks "
+#~ "įrenginys, nepaisant to, ar yra kas nors pasirinkta sekcijoje \"Įrenginių "
+#~ "nustelbimai\", ar ne."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Įjungti automatinį keičiamųjų laikmenų prijungimą"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Įrenginių nustelbimai"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Automatiškai prijungti įdėjus"

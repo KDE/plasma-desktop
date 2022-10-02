@@ -1,0 +1,340 @@
+# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2022.
+# Burkhard Lück <lueck@hube-lueck.de>, 2015, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-07-14 00:33+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Verfügbare Module"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, fuzzy, kde-format
+#| msgid "Enable or disable plugins (used in KRunner and Application Launcher)"
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Module aktivieren oder deaktivieren, wird in KRunner und im "
+"Anwendungsstarter benutzt"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "KRunner einrichten ..."
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Neue Module holen ..."
+
+#: plugininstaller/AbstractJob.cpp:18
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Failed to run install script in terminal \"%1\""
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr "Fehler beim Ausführen  des Skripts „%1“ im Terminal"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr ""
+"Die Installation wurde erfolgreich ausgeführt, Sie können dies Fenster jetzt "
+"schließen"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr ""
+"Die Deinstallation wurde erfolgreich ausgeführt, Sie können dies Fenster "
+"jetzt schließen"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "Die Installation des KRunner-Moduls ist fehlgeschlagen"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Auszuführender Befehl: install oder uninstall."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Pfad zum Archiv."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Keine Unterstützung für PackageKit"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Installation bestätigen"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Sie sind im Begriff, ein Binärpaket zu installieren. Sie sollten dieses nur "
+"von einem vertrauenswürdigen Autor oder Paketquelle installieren."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Risiko akzeptieren und fortsetzen"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Datei anzeigen"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "Der MIME-Typ %1 wird vom Packagekit-Backend nicht unterstützt"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul stellt kein Deinstallationsskript zur Verfügung. Bitte "
+"kontaktieren Sie den Autor. Sie können versuchen, das Modul manuell zu "
+"deinstallieren.<nl/>Wenn Sie dazu nicht in der Lage sind oder Bedenken "
+"haben, klicken Sie jetzt auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul stellt kein Deinstallationsskript zur Verfügung. Bitte "
+"kontaktieren Sie den Autor. Sie können versuchen, das Modul manuell zu "
+"deinstallieren. Lesen Sie bitte dazu die Anweisungen des Autors in der Datei "
+"README.<nl/>Wenn Sie dazu nicht in der Lage sind oder Bedenken haben, "
+"klicken Sie jetzt auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul stellt kein Installationsskript zur Verfügung. Bitte "
+"kontaktieren Sie den Autor. Sie können versuchen, das Modul manuell zu "
+"installieren.<nl/>Wenn Sie dazu nicht in der Lage sind oder Bedenken haben, "
+"klicken Sie jetzt auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul stellt kein Installationsskript zur Verfügung. Bitte "
+"kontaktieren Sie den Autor. Sie können versuchen, das Modul manuell zu "
+"installieren. Lesen Sie bitte dazu die Anweisungen des Autors in der Datei "
+"README.<nl/>Wenn Sie dazu nicht in der Lage sind oder Bedenken haben, "
+"klicken Sie jetzt auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul verwendet zur Installation ein Skript, das ein "
+"Sicherheitsrisiko darstellen kann. Bitte prüfen Sie vor der Installation den "
+"gesamten Inhalt des Moduls, oder lesen Sie zumindest den Quelltext. Wenn Sie "
+"sich dazu nicht in der Lage fühlen oder Bedenken haben, klicken Sie bitte "
+"auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Dieses Modul verwendet zur Installation ein Skript, das ein "
+"Sicherheitsrisiko darstellen kann. Bitte prüfen Sie vor der Installation den "
+"gesamten Inhalt des Moduls, oder lesen Sie zumindest die Datei README und "
+"den Quelltext. Wenn Sie sich dazu nicht in der Lage fühlen oder Bedenken "
+"haben, klicken Sie bitte auf <interface>Abbrechen</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Eintrag als nicht installiert markieren"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Eintrag als installiert markieren"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Skript anzeigen"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Quellordner anzeigen"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "%1 anzeigen"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Der Paketname von %1 kann nicht aufgelöst werden"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr ""
+
+#~ msgid "Position on screen:"
+#~ msgstr "Position auf dem Bildschirm"
+
+#~ msgid "Top"
+#~ msgstr "Oben"
+
+#~ msgid "Center"
+#~ msgstr "Mittig"
+
+#~ msgid "History:"
+#~ msgstr "Verlauf:"
+
+#, fuzzy
+#~| msgid "Activity aware (previous search and history)"
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "Aktivität berücksichtigen (vorherige Suche und Verlauf)"
+
+#~ msgid "Clear History"
+#~ msgstr "Verlauf leeren"
+
+#, fuzzy
+#~| msgctxt "delete history for this activity"
+#~| msgid "For activity \"%1\""
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "Für Aktivität „%1“"
+
+#~ msgid "Clear History…"
+#~ msgstr "Verlauf leeren …"
+
+#, fuzzy
+#~| msgctxt "delete history for all activities"
+#~| msgid "For all activities"
+#~ msgctxt "@item:inmenu delete krunner history for all activities"
+#~ msgid "For all activities"
+#~ msgstr "Für alle Aktivitäten"
+
+#, fuzzy
+#~| msgctxt "delete history for this activity"
+#~| msgid "For activity \"%1\""
+#~ msgctxt "@item:inmenu delete krunner history for this activity"
+#~ msgid "For activity \"%1\""
+#~ msgstr "Für Aktivität „%1“"
+
+#, fuzzy
+#~| msgctxt "kcm name for About dialog"
+#~| msgid "Configure Search Bar"
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Suchleiste einrichten"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Deutsches KDE-Übersetzerteam"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-i18n-de@kde.org"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Einstellungen für Suche ändern"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivieren"
+
+#, fuzzy
+#~| msgid "Clear History"
+#~ msgid "KRunner history:"
+#~ msgstr "Verlauf leeren"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Vorherige Suche behalten"
+
+#~ msgid "Clear History..."
+#~ msgstr "Verlauf leeren ..."
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "KRunner-Module ein- oder ausschalten"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Such-Module auswählen:"

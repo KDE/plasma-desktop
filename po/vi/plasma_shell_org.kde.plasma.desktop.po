@@ -1,0 +1,491 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-10-01 17:44+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: contents/activitymanager/ActivityItem.qml:212
+msgid "Currently being used"
+msgstr "Đang dùng"
+
+#: contents/activitymanager/ActivityItem.qml:252
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Di chuyển sang\n"
+"Hoạt động này"
+
+#: contents/activitymanager/ActivityItem.qml:282
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Hiện cả trong\n"
+"Hoạt động này"
+
+#: contents/activitymanager/ActivityItem.qml:342
+msgid "Configure"
+msgstr "Cấu hình"
+
+#: contents/activitymanager/ActivityItem.qml:359
+msgid "Stop activity"
+msgstr "Dừng Hoạt động"
+
+#: contents/activitymanager/ActivityList.qml:143
+msgid "Stopped activities:"
+msgstr "Các Hoạt động đã dừng:"
+
+#: contents/activitymanager/ActivityManager.qml:127
+msgid "Create activity…"
+msgstr "Tạo Hoạt động…"
+
+#: contents/activitymanager/Heading.qml:61
+msgid "Activities"
+msgstr "Hoạt động"
+
+#: contents/activitymanager/StoppedActivityItem.qml:133
+msgid "Configure activity"
+msgstr "Cấu hình Hoạt động"
+
+#: contents/activitymanager/StoppedActivityItem.qml:148
+msgid "Delete"
+msgstr "Xoá"
+
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr "Rất tiếc! Có lỗi khi tải %1."
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr "Chép vào bảng nháp"
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr "Xem chi tiết về lỗi…"
+
+#: contents/applet/CompactApplet.qml:70
+msgid "Open %1"
+msgstr "Mở %1"
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:240
+msgid "About"
+msgstr "Thông tin"
+
+#: contents/configuration/AboutPlugin.qml:45
+msgid "Send an email to %1"
+msgstr "Gửi thư đến %1"
+
+#: contents/configuration/AboutPlugin.qml:59
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr "Mở địa điểm web %1"
+
+#: contents/configuration/AboutPlugin.qml:107
+msgid "Copyright"
+msgstr "Bản quyền"
+
+#: contents/configuration/AboutPlugin.qml:127 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Giấy phép:"
+
+#: contents/configuration/AboutPlugin.qml:140
+msgid "Authors"
+msgstr "Tác giả"
+
+#: contents/configuration/AboutPlugin.qml:150
+msgid "Credits"
+msgstr "Ghi nhận"
+
+#: contents/configuration/AboutPlugin.qml:161
+msgid "Translators"
+msgstr "Người dịch"
+
+#: contents/configuration/AboutPlugin.qml:175
+msgid "Report a Bug…"
+msgstr "Báo lỗi…"
+
+#: contents/configuration/AppletConfiguration.qml:55
+msgid "Keyboard Shortcuts"
+msgstr "Phím tắt"
+
+#: contents/configuration/AppletConfiguration.qml:288
+msgid "Apply Settings"
+msgstr "Áp dụng thiết lập"
+
+#: contents/configuration/AppletConfiguration.qml:289
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr ""
+"Thiết lập cho khối hiện tại đã thay đổi. Bạn muốn áp dụng hay loại bỏ các "
+"thay đổi?"
+
+#: contents/configuration/AppletConfiguration.qml:319
+msgid "OK"
+msgstr "OK"
+
+#: contents/configuration/AppletConfiguration.qml:327
+msgid "Apply"
+msgstr "Áp dụng"
+
+#: contents/configuration/AppletConfiguration.qml:333
+#: contents/explorer/AppletAlternatives.qml:179
+msgid "Cancel"
+msgstr "Huỷ"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr "Mở trang cấu hình"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:19
+msgid "Left-Button"
+msgstr "Nút trái"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:20
+msgid "Right-Button"
+msgstr "Nút phải"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Middle-Button"
+msgstr "Nút giữa"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Back-Button"
+msgstr "Nút lùi"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Forward-Button"
+msgstr "Nút tiến"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Vertical-Scroll"
+msgstr "Cuộn dọc"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:26
+msgid "Horizontal-Scroll"
+msgstr "Cuộn ngang"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:29
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:73
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Thêm hành động"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+msgid "Layout changes have been restricted by the system administrator"
+msgstr "Các thay đổi về bố cục đã bị giới hạn bởi quản trị viên hệ thống"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+msgid "Layout:"
+msgstr "Bố cục:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+msgid "Wallpaper type:"
+msgstr "Kiểu phông nền:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
+msgstr "Lấy phần cài cắm mới…"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+msgid "Layout changes must be applied before other changes can be made"
+msgstr ""
+"Thay đổi về bố cục phải được áp dụng trước khi tạo ra các thay đổi khác"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+msgid "Apply Now"
+msgstr "Áp dụng ngay"
+
+#: contents/configuration/ConfigurationShortcuts.qml:16
+msgid "Shortcuts"
+msgstr "Phím tắt"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr "Phím tắt này sẽ kích hoạt tiểu ứng dụng như thể nó được bấm vào."
+
+#: contents/configuration/ContainmentConfiguration.qml:29
+msgid "Wallpaper"
+msgstr "Phông nền"
+
+#: contents/configuration/ContainmentConfiguration.qml:34
+msgid "Mouse Actions"
+msgstr "Hành động chuột"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Nhập vào đây"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+msgid "Remove Panel"
+msgstr "Xoá bỏ bảng"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
+msgid "Panel Alignment"
+msgstr "Căn lề cho bảng"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Top"
+msgstr "Trên"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Left"
+msgstr "Trái"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+msgid "Center"
+msgstr "Giữa"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Bottom"
+msgstr "Dưới"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Right"
+msgstr "Phải"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+msgid "Visibility"
+msgstr "Khả kiến"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+msgid "Always Visible"
+msgstr "Luôn hiện"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+msgid "Auto Hide"
+msgstr "Tự động ẩn"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
+msgid "Windows Can Cover"
+msgstr "Cửa sổ có thể che"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
+msgid "Windows Go Below"
+msgstr "Cửa sổ đi xuống dưới"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr "Độ mờ đục"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr "Thích ứng"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr "Đục"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr "Trong mờ"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid "Maximize Panel"
+msgstr "Phóng to bảng"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+msgid "Floating Panel"
+msgstr "Bảng trôi"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+msgid "Shortcut"
+msgstr "Phím tắt"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr "Kéo để thay đổi độ cao tối đa."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr "Kéo để thay đổi độ rộng tối đa."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr "Bấm đúp để đặt lại."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr "Kéo để thay đổi độ cao tối thiểu."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr "Kéo để thay đổi độ rộng tối thiểu."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+"Kéo để thay đổi vị trí trên cạnh này của màn hình.\n"
+"Bấm đúp để đặt lại."
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+msgid "Add Widgets…"
+msgstr "Thêm phụ kiện…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
+msgid "Add Spacer"
+msgstr "Thêm khoảng trống"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
+msgid "More Options…"
+msgstr "Lựa chọn thêm…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr "Kéo để di chuyển"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr "Dùng các phím mũi tên để di chuyển bảng"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel width:"
+msgstr "Độ rộng bảng:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel height:"
+msgstr "Độ cao bảng:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:397
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Đóng"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Quản lí các bảng và bàn làm việc"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+"Bạn có thể kéo các bảng và các bàn làm việc để di chuyển chúng sang các màn "
+"hình khác nhau."
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
+msgid "%1 (primary)"
+msgstr "%1 (chính)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
+msgid "%1 (disabled)"
+msgstr "%1 (vô hiệu)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+msgid "Swap with Desktop on Screen %1"
+msgstr "Hoán đổi với bàn làm việc ở màn hình %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+msgid "Move to Screen %1"
+msgstr "Chuyển đến màn hình %1"
+
+#: contents/explorer/AppletAlternatives.qml:63
+msgid "Alternative Widgets"
+msgstr "Phụ kiện thay thế"
+
+#: contents/explorer/AppletAlternatives.qml:163
+msgid "Switch"
+msgstr "Chuyển"
+
+#: contents/explorer/AppletDelegate.qml:175
+msgid "Undo uninstall"
+msgstr "Đảo ngược gỡ cài đặt"
+
+#: contents/explorer/AppletDelegate.qml:176
+msgid "Uninstall widget"
+msgstr "Gỡ cài đặt phụ kiện"
+
+#: contents/explorer/Tooltip.qml:102
+msgid "Author:"
+msgstr "Tác giả:"
+
+#: contents/explorer/Tooltip.qml:110
+msgid "Email:"
+msgstr "Thư điện tử:"
+
+#: contents/explorer/Tooltip.qml:129
+msgid "Uninstall"
+msgstr "Gỡ cài đặt"
+
+#: contents/explorer/WidgetExplorer.qml:134
+#: contents/explorer/WidgetExplorer.qml:245
+msgid "All Widgets"
+msgstr "Tất cả phụ kiện"
+
+#: contents/explorer/WidgetExplorer.qml:199
+msgid "Widgets"
+msgstr "Phụ kiện"
+
+#: contents/explorer/WidgetExplorer.qml:207
+msgid "Get New Widgets…"
+msgstr "Lấy phụ kiện mới…"
+
+#: contents/explorer/WidgetExplorer.qml:256
+msgid "Categories"
+msgstr "Các loại"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets matched the search terms"
+msgstr "Không có phụ kiện nào khớp với các từ khoá tìm kiếm"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets available"
+msgstr "Không có phụ kiện nào"
+
+#~ msgid "Appearance"
+#~ msgstr "Diện mạo"
+
+#~ msgid "Search…"
+#~ msgstr "Tìm kiếm…"
+
+#~ msgid "Screen Edge"
+#~ msgstr "Cạnh màn hình"
+
+#~ msgid "Click and drag the button to a screen edge to move the panel there."
+#~ msgstr "Bấm và kéo cái nút sang một cạnh màn hình để di chuyển bảng đến đó."
+
+#, fuzzy
+#~| msgid "Apply Settings"
+#~ msgid "Settings"
+#~ msgstr "Áp dụng thiết lập"

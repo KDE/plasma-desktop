@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Reacció en iniciar</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>7 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>Algunes vegades haureu d'assegurar-vos per a saber amb certesa que el vostre ordinador no ha ignorat l'ordre introduïda i que està succeint quelcom. En aquest mòdul podreu configurar la reacció visible per a ajudar-vos a saber si realment heu accionat o no la icona.</para>
+	
+<para
+>El mode tradicional d'indicar que el vostre ordinador està ocupat és modificant el cursor i ho podeu fer escollint un <guilabel
+>Cursor</guilabel
+>.</para>
+
+<para
+>Amb aquesta opció activada, el vostre cursor tindrà una icona adjunta durant un petit interval quan s'iniciï una aplicació. També podreu configurar quant de temps es mostrarà aquesta icona al costat del cursor amb el botó de selecció de valors <guilabel
+>Atura l'animació després de:</guilabel
+>. El valor predeterminat és de 5 segons.</para>
+
+<para
+>Hi ha diverses variacions disponibles del cursor ocupat, incloent-hi una icona de cursor <guilabel
+>Sense reacció</guilabel
+>, <guilabel
+>Parpellejant</guilabel
+>, <guilabel
+>Botant</guilabel
+> o <guilabel
+>Estàtic</guilabel
+> sense animació.</para>
+
+<para
+>La notificació d'inici tradicional del &plasma; prendrà una altra forma, el qual podreu activar i desactivar des d'aquí. Normalment quan engegueu una aplicació, obteniu una entrada immediata a la barra de tasques, amb la icona substituïda per una rodeta dentada en rotació per a indicar-vos que quelcom està succeint. Podeu activar/desactivar aquest comportament amb la casella de selecció <guilabel
+>Habilita l'animació</guilabel
+>.</para>
+
+<para
+>No totes les aplicacions que engegueu mostraran una finestra o una entrada a la barra de tasques. Algunes, per exemple, s'acoblen a la safata del sistema del &plasma;. Alternativament, podria ser que s'enviïn a un altre escriptori virtual, si a la secció <guilabel
+>Comportament</guilabel
+> de la <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Configuració de la barra de tasques</guilabel
+></ulink
+> està seleccionada l'opció <guilabel
+>Des de l'escriptori actual</guilabel
+> per al commutador <guilabel
+>Mostra només les tasques</guilabel
+>. Establint un temps d'expiració es garanteix que, fins i tot en aquests casos, encara podreu rebre informació de llançament, però també desapareixerà una vegada hagi finalitzat la tasca.</para>
+
+</article>

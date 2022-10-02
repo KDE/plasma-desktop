@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Bakgrundstjänster</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>Tjänst</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modulen <guilabel
+>Tjänsthanterare</guilabel
+> låter dig få en överblick av alla insticksprogram i &kde;:s demon, också kallade &kde;:s tjänster. I allmänhet finns det två typer av tjänst:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Tjänster som laddas vid behov</guilabel
+></term>
+<listitem
+><para
+>Detta är en lista med tillgängliga tjänster i &kde;, som startas vid behov. De listas bara av bekvämlighetsskäl, eftersom du inte kan påverka tjänsterna. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Starttjänster</guilabel
+></term>
+<listitem
+><para
+>Detta visar alla tjänster i &kde; som kan laddas när &kde; startas. Tjänster med en markering i kolumnen <guilabel
+>Använd</guilabel
+> kommer att aktiveras vid nästa start.</para>
+<para
+>Var försiktig med att inaktivera okända tjänster: Vissa tjänster är väsentliga för &kde;. Inaktivera inte tjänster om du inte vet vad du gör. </para>
+<para
+>För att ändra <guilabel
+>Status</guilabel
+> för en tjänst, markera den i listan. Därefter kan du använda <guibutton
+>Starta</guibutton
+> och <guibutton
+>Stoppa</guibutton
+> för att ändra tjänstens status från <guilabel
+>Inte startad</guilabel
+> till <guilabel
+>Startad</guilabel
+> och tvärtom. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

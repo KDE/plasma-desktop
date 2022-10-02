@@ -1,0 +1,244 @@
+# translation of kcm_device_automounter.po to Français
+# translation of kcm_device_automounter.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Joëlle Cornavin <jcorn@free.fr>, 2009, 2010, 2012.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Maxime Corteel <mcorteel@gmail.com>, 2015.
+# William Oprandi <william.oprandi@gmail.com>, 2020.
+# Simon Depiets <sdepiets@gmail.com>, 2020.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2022-09-24 14:45+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Joëlle Cornavin, Maxime Corteel"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jcorn@free.fr, mcorteel@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Monteur automatique de périphériques"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Auteur original"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Port Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Cette liste contient les périphériques de stockage connus du système. Si "
+"l'option « Montage automatique lors de la connexion » est cochée, le "
+"périphérique sera automatiquement monté, même si l'option « Monter tous les "
+"média amovibles lors de la connexion » est décoché. Il en va de même pour le "
+"paramètre « Montage automatique lors de la connexion »."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Cliquer sur ce bouton amène les périphériques sélectionnés à être "
+"« oubliés ». Cette fonction n'est utile que si l'option « Ne monter "
+"automatiquement que le média amovible ayant été monté manuellement "
+"auparavant » est cochée. Dès lors qu'un périphérique est oublié et que le "
+"système est paramétré pour ne monter automatiquement que les périphériques "
+"habituels, le périphérique ne sera pas monté automatiquement."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Oublier un périphérique"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Lorsque cette option est cochée, seuls les périphériques mémorisés seront "
+"automatiquement montés. Un périphérique est « mémorisé » s'il a déjà été "
+"monté auparavant. Par exemple, la connexion à chaud d'un lecteur multimédia "
+"« USB » à charger n'est pas suffisant pour le « mémoriser ». S'il n'y a "
+"aucun accès aux fichiers, il ne sera pas automatiquement monté la prochaine "
+"fois qu'il sera détecté. Cependant, dès qu'un accès aux fichiers est "
+"effectué, le contenu du périphérique sera automatiquement mis à la "
+"disposition du système."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Ne monter automatiquement des média amovibles que s'ils ont été montés "
+"manuellement auparavant"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Périphérique avec montage automatique"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "À la connexion"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "À la connexion"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Tous les périphériques"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Tous les périphériques connus"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Périphériques attachés"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Périphériques déconnectés"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI : %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Ce périphérique sera monté automatiquement lors de la connexion."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr ""
+"Ce périphérique ne sera pas monté automatiquement lors de la connexion."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Ce périphérique sera monté automatiquement lors de son raccordement."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr ""
+"Ce périphérique ne sera pas monté automatiquement lors de son raccordement."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Si un média de stockage amovible quelconque est raccordé à votre système "
+#~ "lorsque vous vous connectez à votre environnement de bureau, son contenu "
+#~ "sera automatiquement mis à la disposition de votre système pour que "
+#~ "d'autres programmes puissent le lire."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Monter automatiquement les média amovibles lors de la connexion"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Lorsque cette option est cochée, le contenu de tout périphérique de "
+#~ "stockage sera automatiquement mis à la disposition du système quand il "
+#~ "sera branché à chaud ou raccordé."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr ""
+#~ "Monter automatiquement les médias amovibles lors de leurs connexions"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Montage automatique"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Lorsque cette case est décochée, aucun montage automatique d'un type "
+#~ "quelconque n'aura lieu, qu'il y ait ou non une section sélectionnée dans "
+#~ "« Le périphérique est prioritaire »."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Autoriser le montage automatique des média amovibles"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Le périphérique est prioritaire"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Montage automatique lors du raccordement"

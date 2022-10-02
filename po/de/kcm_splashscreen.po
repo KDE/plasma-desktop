@@ -1,0 +1,98 @@
+# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2018.
+# Burkhard Lück <lueck@hube-lueck.de>, 2015, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-05-26 06:35+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Keiner"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "Es wird kein Startbildschirm angezeigt"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "Sie können den gerade ausgewählten Startbildschirm nicht löschen"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "Mit diesem Modul können Sie das Startbildschirm-Design auswählen."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Die Anzeige der Vorschau des Startbildschirms ist fehlgeschlagen."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Vorschau für den Startbildschirm"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "Deinstallieren"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "&Neue Startbildschirme holen ..."
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Für die künftige Verwendung"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Name des aktuellen Startbildschirms"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Frederik Schwarzer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "schwarzer@kde.org"
+
+#~ msgid "Splash Screen"
+#~ msgstr "Startbildschirm"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#, fuzzy
+#~| msgid "&Get New Splash Screens..."
+#~ msgid "Get New Icons..."
+#~ msgstr "&Neue Startbildschirme herunterladen ..."
+
+#~ msgid "Splash Screens"
+#~ msgstr "Startbildschirme"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Choose the splash screen theme"
+#~ msgstr "Startbildschirm-Design auswählen"
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "Startbildschirm-Details einrichten"

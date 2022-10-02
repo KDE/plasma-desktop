@@ -1,0 +1,1300 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2008.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2015, 2019.
+# Balázs Úr <urbalazs@gmail.com>, 2013.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2021-12-09 08:04+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Hely"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Ikonok"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Szűrő"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Vissza"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "Fájlok:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Összes megjelenítése"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Illeszkedők megjelenítése"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Illeszkedők elrejtése"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Fájlnévminta:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Fájltípusok:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Fájltípus"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Leírás"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Összes kijelölése"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "A kijelölés megszüntetése"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Panelgomb:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Egyedi ikon használata"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Kiválasztás…"
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Ikon visszaállítása"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Elrendezés:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "Balról jobbra"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "Fentről lefelé, jobbról balra"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Fentről lefelé, balról jobbra"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Balra"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align right"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Jobbra"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Rögzítés"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Rendezés:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, fuzzy, kde-format
+#| msgid "Manual"
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Kézi"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Név"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Méret"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Típus"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Dátum"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Csökkenő"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgid "Folders first"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Mappák előre"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Nézetmód:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, fuzzy, kde-format
+#| msgid "List"
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Lista"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Ikonméret:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Kicsi"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Nagy"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Címkeszélesség:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, fuzzy, kde-format
+#| msgid "Narrow"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Keskeny"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Közepes"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, fuzzy, kde-format
+#| msgid "Wide"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Széles"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Szövegsorok:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, fuzzy, kde-format
+#| msgid "Tooltips"
+msgid "Show tooltips"
+msgstr "Buboréksúgók"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Selection markers"
+msgid "Show selection markers"
+msgstr "Kijelölésjelzők"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Folder preview popups"
+msgid "Show folder preview popups"
+msgstr "Felugró előnézet"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "Átne&vezés"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr "Átneezés helyben a kijelölt elem szövegére kattintva"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Previews:"
+msgstr "Előnézet itt"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Preview thumbnails"
+msgid "Show preview thumbnails"
+msgstr "Bélyegképek előnézete"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "Előnézet bővítmény beállítása…"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Megjelenítés:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Asztali mappa"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "A jelenlegi aktivitáshoz linkelt fájlok"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Helyek panel elemei:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Egyéni hely:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "Elérési út vagy URL…"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Cím:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Nincs"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Alapértelmezés"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Teljes elérési út"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Egyéni cím"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "Egyéni cím megadása…"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Forgatás"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Megnyitás külsőleg"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Háttér elrejtése"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Háttér megjelenítése"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Bővítmények előnézete"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "OK"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Mégse"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Az asztal és a háttérkép beállítása…"
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Mappa kiválasztása"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "Az asztal &frissítése"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "A né&zet frissítése"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "A Kuka ü&rítése"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "Megny&itás"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&Beillesztés"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Tulajdonságok"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Rendezés"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Rendezetlen"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Név"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Méret"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Típus"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Dátum"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Csökkenő"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Mappák előre"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Ikonméret"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Apró"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Very Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Nagyon kicsi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Kicsi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "Small-Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Kicsi-közepes"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Közepes"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Nagy"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Hatalmas"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange In"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Elrendezés"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "Balról jobbra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "Fentről lefelé, jobbról balra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Fentről lefelé, balról jobbra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Igazítás"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Balra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Jobbra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Előnézet mutatása"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, fuzzy, kde-format
+#| msgid "Locked"
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Zárolt"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Sorok"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Oszlopok"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Sorok"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Oszlopok"
+
+#~ msgid "Features:"
+#~ msgstr "Funkciók:"
+
+#~ msgid "Search…"
+#~ msgstr "Keresés…"
+
+#~ msgid "&Create Folder"
+#~ msgstr "Mappa léttre&hozása"
+
+#~ msgid "Tweaks"
+#~ msgstr "Finomhangolások"
+
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Asztali eszközkészlet megjelenítése"
+
+#~ msgid "Press and hold widgets to move them and reveal their handles"
+#~ msgstr ""
+#~ "Elemek lenyomása és tartása a mozgatáshoz és a kezelők megjelenítéséhez"
+
+#~ msgid "Widgets unlocked"
+#~ msgstr "Elemek feloldva"
+
+#~ msgid ""
+#~ "You can press and hold widgets to move them and reveal their handles."
+#~ msgstr ""
+#~ "Lenyomhatja és tarthatja az elemeket a mozgatásukhoz és a kezelőik "
+#~ "megjelenítéséhez."
+
+#~ msgid "Got it"
+#~ msgstr "Értem"
+
+#~ msgid "Resize"
+#~ msgstr "Átméretezés"
+
+#~ msgid "Show All Files"
+#~ msgstr "Összes fájl megjelenítése"
+
+#~ msgid "Size:"
+#~ msgstr "Méret:"
+
+#~ msgid "Desktop Layout"
+#~ msgstr "Asztali elrendezés"
+
+#~ msgid "Widget Handling"
+#~ msgstr "Elemkezelés"
+
+#, fuzzy
+#~| msgid "Arrange in:"
+#~ msgid "Arrange in"
+#~ msgstr "Elrendezés ebben:"
+
+#, fuzzy
+#~| msgid "Sort By"
+#~ msgid "Sort by"
+#~ msgstr "Rendezés"
+
+#, fuzzy
+#~| msgid "Appearance"
+#~ msgid "Appearance:"
+#~ msgstr "Megjelenés"
+
+#, fuzzy
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "Hely"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Az asztali mappa mutatása"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Mappa:"
+
+#~ msgid "&Reload"
+#~ msgstr "Új&ratöltés"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Áthelyezés a Kukába"
+
+#~ msgid "&Delete"
+#~ msgstr "&Törlés"
+
+#~ msgid "Align:"
+#~ msgstr "Igazítás:"
+
+#~ msgid "Sorting"
+#~ msgstr "Rendezés"
+
+#~ msgid "Title"
+#~ msgstr "Cím"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Eredeti mappa megjelenítése"
+
+#~ msgid "Show Original File"
+#~ msgstr "Eredeti fájl megjelenítése"
+
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "A &Kuka beállítása"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "Könyvjel&ző erre az oldalra"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "Könyvj&elző erre a címre"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "Könyvjelző erre a &könyvtárra"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "Könyvjelző erre a l&inkre"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "Könyvjelző erre a &fájlra"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Másolás"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Átmozgatás"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Saját mappa"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Gyökérmappa"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Tallózás..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Másolás ide"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Átmozgatás ide"
+
+#~ msgid "Share"
+#~ msgstr "Megosztás"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "Ikonok"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Nem lehet saját magára ejteni egy könyvtárat."
+
+#~ msgid "File name for dropped contents:"
+#~ msgstr "A leejtett adatok fájlneve:"
+
+#~ msgid "&Move Here"
+#~ msgstr "Mo&zgatás ide"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Másolás ide"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Link ide"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Mégsem"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Beállítás há&ttérképként"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Könyvtár létrehozása"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Adjon más nevet"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "A(z) „%1” név ponttal kezdődik, ezért a mappa rejtett lesz "
+#~ "alapértelmezésben."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Rejtett mappa létrehozása?"
+
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Új mappa"
+
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Új mappa"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "A könyvtár neve:"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Egy mappa beillesztése"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Egy fájl beillesztése"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Item"
+#~ msgid_plural "Paste %1 Items"
+#~ msgstr[0] "Egy elem beillesztése"
+#~ msgstr[1] "%1 elem beillesztése"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "A vágólap tartalmának beillesztése…"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "Beillesztés"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr "Visszaállítja a fájlt vagy mappát a törlés előtti helyére"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Új fájlkezelő ablak megnyitása a link céljának megjelenítésével, annak "
+#~ "szülőkönyvtárában."
+
+#~ msgid "Behavior"
+#~ msgstr "Viselkedés"
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "Kattintson a mappa megjelenítéséhez:"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Ikonok"
+
+#~ msgid "Network is not reachable"
+#~ msgstr "A hálózat nem érhető el"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Igazítás rácshoz"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Rögzítés"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "1 mappa"
+#~ msgstr[1] "%1 mappa"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 fájl"
+#~ msgstr[1] "%1 fájl"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "1 fájl."
+#~ msgstr[1] "%1 fájl."
+
+#~ msgid "Sort By:"
+#~ msgstr "Rendezés:"
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "Itt lehet kiválasztani, hogyan legyenek rendezve az ikonok a nézetben."
+
+#~ msgid "Descending:"
+#~ msgstr "Csökkenő:"
+
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Ha be van jelölve, a mappák rendezése elsőbbséget élvez. Ha a beállítás "
+#~ "ki van kapcsolva, a mappák úgy fognak viselkedni, mint a szabályos fájlok "
+#~ "a rendezéskor."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Itt lehet kiválasztani, hogy az ikonok vízszintesen (sorokban) vagy "
+#~ "függőlegesen (oszlopokban) legyenek rendezve."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Itt lehet kiválasztani, hogy az ikonok a képernyő bal vagy jobb oldalára "
+#~ "legyenek igazítva."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Ha be van jelölve, a nézetben nem lehet elmozgatni az ikonokat a "
+#~ "helyükről.\n"
+#~ "\n"
+#~ "Ez akkor lehet előnyös, ha azt szeretné, hogy ne lehessen könnyen "
+#~ "felborítani az ikonelrendezést."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Igazítás rácshoz:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Ha be van jelölve, az ikonok rácsszerűen lesznek elrendezve.\n"
+#~ "\n"
+#~ "Ilyenkor az ikonok automatikusan úgy rendeződnek el, hogy elmozgatás után "
+#~ "a legközelebbi rácscellába ugranak."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr ""
+#~ "Ezzel a csúszkával lehet a nézet ikonok méretét növelni vagy csökkenteni "
+#~ "a nézetben."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr ""
+#~ "Ha be van jelölve, a fájltartalmak előnézete lesz látható az ikonokon."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Ha erre a gombra kattint, kiválaszthatja, milyen típusú fájloknál "
+#~ "jelenjen meg gyorsnézet."
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Ha be van jelölve, a mappák előnézete csak kattintásra jelenik meg. Ha a "
+#~ "beállítás ki van kapcsolva, a mappák előnézete automatikusan megjelenik, "
+#~ "amint föléjük viszi az egeret."
+
+#~ msgid "Icon Text"
+#~ msgstr "Ikonszöveg"
+
+#~ msgid "Lines:"
+#~ msgstr "Sorok:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr "Itt lehet beállítani, hány szövegsor jelenjen meg az ikonok alatt."
+
+#~ msgid "1 line"
+#~ msgstr "1 sor"
+
+#~ msgid "Color:"
+#~ msgstr "Szín:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "Ha erre a gombra kattint, kiválaszthatja, milyen színűek legyenek a "
+#~ "szövegcímkék a nézetben."
+
+#~ msgid "Shadows:"
+#~ msgstr "Árnyékok:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Ha be van jelölve, a szövegcímkék árnyékot vetnek majd a "
+#~ "háttérre.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Árnyékok használatakor a szövegek jobban elütnek a háttértől, ezért "
+#~ "sokaknak könnyebben olvashatóak.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Sötét szövegszín használatakor ennek hatására világos színnel lesz "
+#~ "körvonalazva szöveg árnyék helyett.</i></p></body></html>"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr "Ha be van jelölve, az ikonok csökkenő sorrendben lesznek rendezve."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Vegye figyelembe, hogy "
+#~ "ha az „Illeszkedő fájlok megjelenítése” vagy „Illeszkedő fájlok "
+#~ "elrejtése”opciót választotta, csak a mindkét feltételnek megfelelő fájlok "
+#~ "lesznek megjelenítve vagy elrejtve.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Például, ha a minta a "
+#~ "„*”, de nincs kiválasztva MIME-típus, egy fájl sem jelenik meg.</p></"
+#~ "body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Vegye figyelembe, hogy ha az „Illeszkedő fájlok megjelenítése” vagy "
+#~ "„Illeszkedő fájlok elrejtése”\n"
+#~ "opciót választotta, csak a mindkét feltételnek megfelelő fájlok lesznek "
+#~ "megjelenítve vagy elrejtve.\n"
+#~ "Például, ha a minta a „*”, de nincs kiválasztva MIME-típus, egy fájl sem "
+#~ "jelenik meg."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Nem lát egyetlen fájlt sem?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "Kiterjesztések felsorolása szóközzel elválasztva, pl.: *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Kiterjesztések felsorolása szóközzel elválasztva, pl.: *.txt *.od* "
+#~ "szöveges és irodai fájlok megjelenítéséhez"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Szűrés"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:400;\">Title:</span></"
+#~ "p></body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:400;\">Cím:</span></p></"
+#~ "body></html>"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr ""
+#~ "Jelölje ki azokat a fájltípusokat, amelyekhez ikon előnézetet szeretne:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "A mappa üres."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Előadó:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Album:"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 MPixel"
+
+#~ msgid "Camera:"
+#~ msgstr "Fényképezőgép:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "35 mm-essel ekvivalens: %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Fókusztávolság:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Exponálási idő:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 s"
+
+#~ msgctxt "On a camera"
+#~ msgid "Aperture:"
+#~ msgstr "Rekesz:"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "ISO-sebesség:"
+
+#~ msgid "Time:"
+#~ msgstr "Idő:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "1 oldal"
+#~ msgstr[1] "%1 oldal"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "1 szó"
+#~ msgstr[1] "%1 szó"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "1 elem"
+#~ msgstr[1] "%1 elem"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "Balról jobbra, fentről lefelé"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "Jobbról balra, fentről lefelé"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Megjelenítési mód"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "Méret"
+
+#~ msgctxt "Sort icons"
+#~ msgid "Ascending"
+#~ msgstr "Növekvő"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Itt lehet kiválasztani, hogy az ikonok fentről lefelé, vagy balról jobbra "
+#~ "haladva legyenek-e rendezve."
+
+#~ msgid "Header"
+#~ msgstr "Fejléc"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "Ez a címke jelenik meg a kisalkalmazás tetején.\n"
+#~ "\n"
+#~ "Alapértelmezés szerint a mutatott hely neve, de ha kívánja, tetszőleges "
+#~ "nevet megadhat itt."
+
+#~ msgid "Advanced Options"
+#~ msgstr "Speciális beállítások"
+
+#~ msgid "Text Settings"
+#~ msgstr "Szövegbeállítások"
+
+#~ msgid "Text color:"
+#~ msgstr "Szövegszín:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "A sorok száma:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "Szövegárnyékok"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "Rácshoz igazítás"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "Rögzített ikonok"

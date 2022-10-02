@@ -1,0 +1,305 @@
+# translation of kcmcomponentchooser.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2007, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2009-01-06 14:06+0200\n"
+"Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
+"Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Kurdish\n"
+"X-Poedit-SourceCharset: utf8\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "&Daxwazkerekî emailê din bikar bîne:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Daxwazkerê epeyamê yê xwestî hilbijêre:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Daxwazkerê epeyamê yê xwestî hilbijêre:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Sepanê terminal yê xwestî hilbijêre:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Sepanê terminal yê xwestî hilbijêre:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Sepanê terminal yê xwestî hilbijêre:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ezadin Mahmoud"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ezadin76@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr " Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Nenas"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Hilbijêrê beşan"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Ji vê lîsta jêr beşa ya ku  jibo bikaranina Standard jibo servîsa %1 "
+#~ "bibijêre."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Te pêkhênanê standard yê te bijartiye guhert, tu dixwaze vê guhertinê "
+#~ "tomarbike ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Ravek ne berdest e"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Li vir tu dikarî programa pêkhênan biguherînî. Pêkhênan program in ku "
+#~ "peywirên bingehîn çareser dikin, nemûne emulatorê termînal, sererastkerê "
+#~ "nivîsê û daxwazkerê emailê. Sepanen KDE yên cuda divên carcaran "
+#~ "emûlatoreke konsolê vexwînin an emailan bişînin an jî nivîsan bide "
+#~ "xwîyakirin. Jibo ku ev kar bi lehev bê kirin, divêt ev sepanan hercar "
+#~ "heman pêkhênanan vexwîne. Livir tu dikare van programê pêkhênanan "
+#~ "hibijêre. "
+
+#~ msgid "Default Component"
+#~ msgstr "Pêkhênanê Standard"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Ev lîste cureyên pêkhênanan yên mîhengbarin, dide nîşan. Li ser "
+#~ "pêkhênanê ku dixwazî mîheng bikî, bitikîne.</p>\n"
+#~ "<p> Di vê diyalogê de tu dikarî pêkhênanê standard yê KDE biguherînî. "
+#~ "Pêkhênan programin ku peywirên bingehîn çareser dikin, nemûne emulatorê "
+#~ "termînal, sererastkerê nivîsê û daxwazkerê emailê. Sepanen KDE yên cuda "
+#~ "divên carcaran emûlator vexwînin an emailan bişînin anjî nivîsan bidin "
+#~ "xwîyakirin. Ji bo ku ev kar bi lehev bê kirin, divêt ev sepanan hercar "
+#~ "heman pêkhênanan vexwîne. Livir tu dikare van programê pêkhênanan "
+#~ "hibijêrî.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>URL'yên <b>http</b> û <b>https</b> veke</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "di sepanekî bingeha naveroka vî URL de"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "di vî gerokî de:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "di vî gerokî de:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Sepanê gerokê torê yê xwestî hilbijêre:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail programa Mail ya standard e ji bo sermaseya KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&KMail wekî daxwezkerê email yê xwestî bikar bîne."
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Vê opsyonê hilbijêre heke tu bixwaze programekî emailê dî bi kar bînî."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Navnîşana wergir</li> <li>%s: Mijar</li> <li>%c: Kopî (CC)</"
+#~ "li> <li>%b: Kopî ya kor (BCC)</li> <li>%B: Şablona nivîsê</li> <li>%A: "
+#~ "Pêvek </li> <li>%u: mailto ya temam: URL </li> </ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Jibo hilbijartina daxwazkerê emailê yê hevyaz livir bitekîne. Gelek "
+#~ "giringe ku pel bikarbar be ji bo ku were bipejirîn. <br/> Tu dikare çend "
+#~ "guhêrbaran bikar bîne, yê ku wên cihê nirxin rastî bigirin dema ku "
+#~ "daxwazkerê emailê bêt vexwendin:<ul> <li>%t: Navnîşana wergir</li> <li>"
+#~ "%s: Mijar</li> <li>%c: Kopî (CC)</li> <li>%b: Kopî ya kor (BCC)</li> <li>"
+#~ "%B: Şablona nivîsê</li> <li>%A: Pêvek </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Jibo lêgerîna li pela programa Mailê livir bitekîne."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Heke tu bixwaze daxwezkerê emailê bi rîya termina bi kar bê (wekî "
+#~ "<em>Konsole</em>), tekaye vê opsyonê çalak bike."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Di terminalê de bi&xebitîne"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Konsol wekî sepanê termînal bikar bîne"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "P&rogrameke termînalî cuda bikar bîne:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Ji bo hilbijartina terminalê hevyaz livir bitekîne. Gelek girîng e ku ev "
+#~ "pel bikarbar be ji bo ku were bipejirîn.<br/> Tebînî, çend program hene "
+#~ "yê ku emûlatorê termînalê bikar tîinin, wê kar nekin dema ku tu "
+#~ "argumentin fermanerêz bide (Nemûne: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Ji bo lêgerina li programa terminal li vir bitikîne."
+
+#, fuzzy
+#~| msgid "Use a different &window manager:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Gerînendeyê &paceyan yê cuda bikar bîne:"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Gerînendeyê &paceyan yê cuda bikar bîne:"
+
+#~ msgid "Configure"
+#~ msgstr "Mîheng Bike"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Livir tu dikarî rava yekî biçûk liser pêkhênanê ku anha hilbijartî ye,  "
+#~ "bixwînî. Ji bo guhertina ev pêkhênanê hilbijartî, li ser lista çepê "
+#~ "bitikîne. Ji bo guhertina programa pêkhênan,  tekaye li jêr hilbijêre."
+
+#~ msgid "Component Description"
+#~ msgstr "Raveka Pêkhênan"

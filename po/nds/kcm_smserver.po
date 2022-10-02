@@ -1,0 +1,284 @@
+# Translation of kcmsmserver.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2006, 2007, 2008, 2009.
+# Manfred Wiese <m.j.wiese@web.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-02-10 22:53+0100\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Törnpleger</h1> Mit dit Moduul kannst Du den Törnpleger instellen. Dat "
+"bargt t.B. Optschonen för dat Nafragen bi't Afmellen ut KDE, för dat "
+"Wedderherstellen vun den lesten Törn bi't Anmellen un wat de Reekner na't "
+"Afmellen automaatsch daalfohrt warrn schall."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "Reekner &nieg starten"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Allgemeen"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Nafragen bi't &Afmellen"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "&Optschonen för't Utmaken wiesen"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "Standardinstellen bi't Weggahn"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Dissen Törn &beennen"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Reekner &nieg starten"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Reekner &utmaken"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Vun &Hand sekerten Törn wedderherstellen"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Vun &Hand sekerten Törn wedderherstellen"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Mit leddig &Törn starten"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Hier kannst Du en List vun Programmen angeven, trennt mit Kommas oder "
+"Dubbelpünkt, de nich in Törns sekert warrn schöölt. Disse Programmen warrt "
+"bi't Wedderherstellen vun Törns nich nieg start. As Bispill: \"xterm,xconsole"
+"\" oder \"xterm:konsole\""
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Nafragen bi't &Afmellen"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "&Optschonen för't Utmaken wiesen"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "Standardinstellen bi't Weggahn"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Bi't Anmellen"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "Vun Törns &utslaten Programmen:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "&Lesten Törn wedderherstellen"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "Vun &Hand sekerten Törn wedderherstellen"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn de Törnpleger bi't Afmellen nafragen schall, wat Du Di "
+#~ "redig afmellen wullt."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Nafragen bi't &Afmellen"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "&Optschonen för't Utmaken wiesen"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Hier kannst Du instellen, wat bi't Afmellen standardwies passeren schall. "
+#~ "Dat funkscheneert bloots, wenn Du Di över KDM anmeldt hest."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Standardinstellen bi't Weggahn"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Lesten Törn wedderherstellen:</b> Sekert all lopen Programmen un "
+#~ "stellt se bi den nakamen KDE-Start wedder her.</li>\n"
+#~ "<li><b>Vun Hand sekerten Törn wedderherstellen:</b> De Törn kann jümmers "
+#~ "mit de \"Törn sekern\"-Optschoon vun't K-Menü sekert warrn. De bi't "
+#~ "Sekern aktiven Programmen warrt bi den nakamen KDE-Start wedderherstellt."
+#~ "</li>\n"
+#~ "\n"
+#~ "<li><b>Mit leddig Törn starten:</b> Nix sekern. Bi den nakamen KDE-Start "
+#~ "blifft de Schriefdisch leddig.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Bi't Anmellen"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Vun Törns &utslaten Programmen:"
+
+#~ msgid "Session Manager"
+#~ msgstr "Törnpleger"
+
+#~ msgid "Advanced"
+#~ msgstr "Verwiedert"
+
+#~ msgid ""
+#~ "The new window manager will be used when KDE is started the next time."
+#~ msgstr ""
+#~ "De niege Finsterpleger warrt bruukt, wenn Du KDE dat nakamen Maal starten "
+#~ "deist."
+
+#~ msgid "Window manager change"
+#~ msgstr "Finsterpleger wesselt"
+
+#~ msgid "KWin (KDE default)"
+#~ msgstr "KWin (KDE-Standard)"
+
+#~ msgid "Window Manager"
+#~ msgstr "Finsterpleger"

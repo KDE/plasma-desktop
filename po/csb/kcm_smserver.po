@@ -1,0 +1,279 @@
+# translation of kcmsmserver.po to Kaszëbsczi
+# Version: $Revision: 464363 $
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2007, 2008.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2008.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-05-13 19:49+0200\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Menadżera sesëji</h1> Mòduł kònfigùracëji menadżera sesëji pòzwôlô na "
+"òpisanié, czë pòcwierdzac wëlogòwanié, czë zrëszac znowa znowa pòprzédną "
+"sesëjã przë logòwanim ë czë wëłączac kòmpùtr pò zakùńczenim robòtë."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "Zrëszë &znowa"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Òglowé"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Pòcwierdzë &wëlogòwanié"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Ù&przistãpni òptacëjã zamëkaniô systemë"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "Domëszlné òptacëje òpùszczaniô systemë"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "&Zakùńczë biéżną sesëjã"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Zrëszë &znowa"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Wëłączë &kòmpùtr"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Przëwrócë &zapisóną sesëjã"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Przëwrócë &zapisóną sesëjã"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Zrëszë &pùstą sesëjã"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Tuwò mòże pòdac lëstã programów, co nie mdą zapisywóné w sesëjach, a w parce "
+"z tim nie mdą przëwracóné przë pòstãpnym logòwanim. Zôstné programë nót je "
+"òddzelec dwapùnktã, abò pùnktã np 'xterm:xconsole' czë 'xterm,konsole'."
+"xconsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Pòcwierdzë &wëlogòwanié"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "Ù&przistãpni òptacëjã zamëkaniô systemë"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "Domëszlné òptacëje òpùszczaniô systemë"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Przë wlogòwaniu"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "&Programë wëłączoné ze sprôwiania sesëjama:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "Przëwrócë &pòprzédną sesëjã"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "Przëwrócë &zapisóną sesëjã"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Włączë nã òptacëjã, eżlë chcesz, żebë menadżer sesëji wëskrzëniwôł "
+#~ "pëtanié ò pòcwierdzenié wëlogòwaniô."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Pòcwierdzë &wëlogòwanié"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Ù&przistãpni òptacëjã zamëkaniô systemë"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Tuwò mòżesz rozpòrządzëc, co mô sã stac przë wëlowgòwanim. Mô to "
+#~ "znaczënk, eżlë logùjesz sã brëkùjąc KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Domëszlné òptacëje òpùszczaniô systemë"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Przëwrócë pòprzédną sesëjã:</b> przë wëchòdzenim zapisëje wszëtczé "
+#~ "zrëszoné programë ë przëwraca je przë zôstnym logòwanim</li>\n"
+#~ "<li><b>Przëwrócë rãczno zapisóną sesëjã:</b> pòzwôlô na zapisënk sesëji w "
+#~ "równo jaczim sztërkù pòlétã \"Zapiszë sesëjã\" w menu KDE ë pòzdniészi ji "
+#~ "zrëszenié.</li>\n"
+#~ "<li><b>Nie przëwracôj sesëji:</b> ùsôdzô pùsti pùlt KDE przë logòwanim.</"
+#~ "li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Przë wlogòwaniu"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "&Programë wëłączoné ze sprôwiania sesëjama:"
+
+#~ msgid "Session Manager"
+#~ msgstr "Menadżera sesëji"
+
+#~ msgid "Advanced"
+#~ msgstr "Awansowóné"
+
+#~ msgid ""
+#~ "The new window manager will be used when KDE is started the next time."
+#~ msgstr "Nowi menadżer òknów bãdze w ùżëcym pò zrëszenim KE znôwa."
+
+#~ msgid "Window manager change"
+#~ msgstr "Menedżer òknów zmieniony"
+
+#~ msgid "KWin (KDE default)"
+#~ msgstr "KWin (domëslny dlô KDE)"
+
+#~ msgid "Window Manager"
+#~ msgstr "Menedżer òknów"

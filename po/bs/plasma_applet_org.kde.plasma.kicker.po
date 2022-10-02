@@ -1,0 +1,451 @@
+# Bosnian translations for kde package.
+# Copyright (C) 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde package.
+# Samir Ribic <megaribi@epn.ba>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kde 49i410\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2015-02-04 15:12+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-02-05 07:28+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Ukloni iz omiljenih"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj u omiljene"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:134
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Show in Favorites"
+msgstr "Dodaj u omiljene"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, fuzzy, kde-format
+#| msgid "Icon"
+msgid "Icon:"
+msgstr "Ikona"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Prikaži aplikaciju kao:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Samo ime"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Samo opis"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Ime (Opis)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Opis (ime)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgid "Behavior:"
+msgstr "Ponašanje"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgid "Sort applications alphabetically"
+msgstr "Prikaži aplikaciju kao:"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, fuzzy, kde-format
+#| msgid "Flatten menu to a single level"
+msgid "Flatten sub-menus to a single level"
+msgstr "Izravnajte menu na jedan nivo"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Show categories:"
+msgstr "Dodaj u omiljene"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, fuzzy, kde-format
+#| msgid "Recent Applications"
+msgid "Recent applications"
+msgstr "Skorašnji programi"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, fuzzy, kde-format
+#| msgid "Recent Applications"
+msgid "Often used applications"
+msgstr "Skorašnji programi"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent files"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used files"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent contacts"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used contacts"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Skorašnji dokumenti"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search:"
+msgstr "Pretraživanje"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Proširi pretragu na zabilješke, datoteke i e-poštu"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Svrstajte rezultate pretrage na dno"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Type to search…"
+msgstr "Traži..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Dodaj u omiljene"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr ""
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr ""
+
+#: package/contents/ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "Izmijeni programe..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "Pretraživanje"
+
+#~ msgid "Search..."
+#~ msgstr "Traži..."
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#~ msgid "Open with:"
+#~ msgstr "Otvori sa:"
+
+#~ msgid "Properties"
+#~ msgstr "Podešavanja"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Dodaj na površ"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Dodaj na panel"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Podesavanje aplikacije..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Sakrij aplikaciju"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 ( %2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 ( %2)"
+
+#, fuzzy
+#~| msgid "Hide Application"
+#~ msgid "Applications"
+#~ msgstr "Sakrij aplikaciju"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Prikaži aplikacije u podmenu-u"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Prikaži aplikacije u '%1'"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Contacts"
+#~ msgstr "Skorašnji dokumenti"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget Contact"
+#~ msgstr "Zaboravi dokument"
+
+#, fuzzy
+#~| msgid "Forget All Documents"
+#~ msgid "Forget All Contacts"
+#~ msgstr "Zaboravi sve dokumente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#~ msgid "Forget Application"
+#~ msgstr "Zaboravi aplikaciju"
+
+#~ msgid "Forget Document"
+#~ msgstr "Zaboravi dokument"
+
+#, fuzzy
+#~| msgid "Forget All Documents"
+#~ msgid "Forget All"
+#~ msgstr "Zaboravi sve dokumente"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Zaboravi sve aplikacije"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Zaboravi sve dokumente"
+
+#, fuzzy
+#~| msgid "Forget All Applications"
+#~ msgid "All Applications"
+#~ msgstr "Zaboravi sve aplikacije"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent Contacts"
+#~ msgstr "Skorašnji dokumenti"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Skorašnji programi"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "Skorašnji programi"
+
+#~ msgid "Power / Session"
+#~ msgstr "Napajanje / Sesija"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search results"
+#~ msgstr "Pretraživanje"
+
+#~ msgid "Lock"
+#~ msgstr "Zaključaj"
+
+#~ msgid "Save Session"
+#~ msgstr "Sačuvaj sesiju"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernacija"
+
+#~ msgid "Restart"
+#~ msgstr "Ponovo pokreni"
+
+#, fuzzy
+#~| msgid "Shutdown"
+#~ msgid "Shut Down"
+#~ msgstr "Ugasi"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "Session"
+#~ msgstr "Nova sesija"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "End session"
+#~ msgstr "Nova sesija"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspenduj"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspenduj"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart computer"
+#~ msgstr "Ponovo pokreni"
+
+#, fuzzy
+#~| msgid "Remove '%1'..."
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Ukloni '%1'..."
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show recent applications"
+#~ msgstr "Skorašnji programi"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show often used applications"
+#~ msgstr "Skorašnji programi"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show often used documents"
+#~ msgstr "Skorašnji dokumenti"
+
+#~ msgid "Logout"
+#~ msgstr "Odjava"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspenduj"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Vlastita slika:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Izaberite sliku"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Tip slikovne datoteke (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Dodaj kao pokretac"
+
+#~ msgid "New Session"
+#~ msgstr "Nova sesija"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Prazno)"

@@ -1,0 +1,367 @@
+# translation of kcmcomponentchooser.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2013-02-25 14:04+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "वेगळ्या इमेल ग्राहकचा वापर करा (&E):"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "सूचविलेला इमेल ग्राहक निवडा :"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "सूचविलेला इमेल ग्राहक निवडा :"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "सूचविलेले टर्मिनल अनुप्रयोग निवडा:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "सूचविलेले टर्मिनल अनुप्रयोग निवडा:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "सूचविलेले टर्मिनल अनुप्रयोग निवडा:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "संदिप शेडमाके, \n"
+#~ "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sandeep.shedmake@gmail.com, \n"
+#~ "chetan@kompkin.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "जोसेफ वेनिन्गर"
+
+#~ msgid "Unknown"
+#~ msgstr "अपरिचीत"
+
+#~ msgid "Component Chooser"
+#~ msgstr "विभाग निवडक"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 जोसेफ वेनिन्गर"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "%1 सेवे करिता खालील सूची मधून कोणता घटक मूलभूत म्हणून वापरावा ते निवडा."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr "<qt> तुम्ही पसंतीचे मूलभूत घटक बदलविले आहे, बदल आता साठवायला आवडेल का?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "वर्णन उपलब्ध नाही"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "इथे तुम्ही कॉम्पोनंन्ट प्रोग्रॅम बदलू शकता. कॉम्पोनंन्टस  हे असे प्रोग्रॅमस असतात जे मूळ "
+#~ "टास्क्स पार पाडतात.जसे कि टर्मिनल एम्युलेटर, टेक्स्ट संपादन व ई मेल ग्राहक.विविध  केडीई "
+#~ "अप्लिकेशन्सना काही वेळा कन्सोल एम्युलेटरचा उपयोग करण्याची गरज भासते.  हेच काम सारखेच "
+#~ "करण्यासाठी या अप्लिकेशन्स नेहमी त्याच कॉम्पोनंन्टस ची मदत घेतात."
+
+#~ msgid "Default Component"
+#~ msgstr "मूलभूत विभाग"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>ही सूची कोन्फ़िगरेबल कॉम्पोनंन्ट प्रकार दाखवते.अश्या कॉम्पोनंन्टस वर क्लिक करा जे "
+#~ "तुम्ही कोन्फ़िगर करू शकता</p>\n"
+#~ "<p>या चौकटीत तुम्ही केडीई डीफॉल्ट कॉम्पोनंन्टस बदलू शकता. कॉम्पोनंन्टस हे प्रोग्रॅमस "
+#~ "असतात.जे मूळ कामे हाताळतात,जसे कि टर्मिनल एम्युलेटर,लेखी संपादन व इमेल ग्राहक."
+#~ "वेगवेगळ्या  केडीई अप्लिकेशन्सना  काहीवेळा कन्सोल एम्युलेटरच्या मदतीची मेल पाठवणे गरज  "
+#~ "भासते.नियमितपणे काम करण्यासाठी या अप्लिकेशन्सना नेहमीच कॉम्पोनंन्टसची मदत घ्यावी "
+#~ "लागते.इथे तुम्ही जे  प्रोग्रॅम या कॉम्पोनंन्टसमध्ये आहेत ते निवडू शकता.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b> व <b>https</b> URLs उघडा</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "URL च्या मजकूरावर आधारित अनुप्रयोगा अंतर्गत"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "खालील ब्राऊजर अंतर्गत:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "खालील ब्राऊजर अंतर्गत:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "सूचविलेले वेब ब्राऊजर अनुप्रयोग निवडा:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "के-मेल केडीई डेस्कटॉप करिता मानक मेल कार्यक्रम आहे."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "के-मेल ला पसंतीचा इमेल ग्राहक म्हणून वापरा (&U)"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "इतर इमेल कार्यक्रम वापरायचे असल्यास या पर्याय निवडा."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: पत्ता </li> <li>%s: विषय </li> <li>% कार्बन कॉपी(CC)</li> <li>"
+#~ "%b: ब्लाइंड कार्बन कॉपी(BCC)</li> <li>%B टेम्पलेट बॉडी  टेक्स्ट</li> <li>%A: "
+#~ "अटॅचमेंट</li> <li>%u: फुल mailto: URL</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "तुमचा  आवडता इमेल ग्राहक निवडण्यासाठी हे बटन दाबा. कृपया नोंद घ्या कि जी फ़ाइल "
+#~ "तुम्ही निवडली आहेत. तिच्यात एक्सीक्युटेबल अँट्रीब्युटस स्विकार्य स्थितीत ठेवण्यात आलेले "
+#~ "असावेत.<br/>जेव्हा इमेल ग्राहकाला <ul><li>%t: कॉल केले जाते तेव्हा प्रत्यक्ष व्हँल्यू "
+#~ "असणारे विविध प्लेसहोल्डर्स  तुम्ही वापरू शकता.प्राप्तकर्त्याचा पत्ता </li> <li>%s: "
+#~ "विषय</li> <li>%c: कार्बन कॉपी (CC)</li> <li>%b: ब्लाइंड कार्बन कॉपी(BCC)</li> "
+#~ "<li>%B: टेम्पलेट बॉडी टेक्स्ट</li> <li>%A: अटॅचमेंट</li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "इमेल कार्यक्रम फाईल करिता येथे संचारण करा."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "निवडलेला इमेल ग्राहक टर्मिनल अंतर्गत चालवायचे असल्यस हा पर्याय सक्रिय करा (उ.दा. "
+#~ "<em>कंसोल</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "टर्मिनल अंतर्गत चालवा (&R)"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "खालील फाईल व्यवस्थापकाचा वापर करून संचयीकांचे संचारण करा :"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "इतर: येथे दर्शविलेले संवाद नुरूप जोडा... यावर क्लिक करा:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "कंसोलला टर्मिनल अनुप्रयोग म्हणून वापरा (&U)"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "वेगळ्या टर्मिनल कार्यक्रमाचा वापर करा (&T):"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "तुमचा  आवडता टर्मिनल ग्राहक निवडण्यासाठी हे बटन दाबा.कृपया नोंद घ्या कि जी फाईल "
+#~ "तुम्ही निवडली आहेत. तिच्यात एक्सीक्युटेबल अँट्रीब्युटस स्विकार्य स्थितीत ठेवण्यात आलेले "
+#~ "असावेत.<br/>याचीही नोंद घ्या कि काही कार्यक्रम जे टर्मिनल इम्युलेटरला उपयोगात आणतात "
+#~ "त्या काम करणार नाहीत जर तुम्ही कमांड लाईन आर्ग्युमेंट अँड केलीत. (उदा; Konsole -"
+#~ "ls)   "
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "टर्मिनल कार्यक्रमा करिता येथे संचारण करा."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 सेकंद बाकी :"
+#~ msgstr[1] "%1 सेकंद बाकी :"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "केडीई पुढच्यावेळी सुरु केल्यावर नवीन चौकट व्यवस्थापकाचा वापर केला जाईल."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "चौकट व्यवस्थापक बदल"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "नवीन चौकट व्यवस्थापक सुरु आहे.\n"
+#~ "तरीही असे सुचवण्यात येते कि केडीई सत्र पुन्हा चालू करण्यापूर्वी सर्व चालू अप्लिकेशन्स या "
+#~ "बदलाशी जुळवून घेतील."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "चौकट व्यवस्थापक बदलविले"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "कार्यरत चौकट व्यवस्थापक आता संयोजीत व्यवस्थापाशी बदलविले जाईल."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "संयोजना चौकट व्यवस्थापक बदल"
+
+#~ msgid "&Accept Change"
+#~ msgstr "बदल स्वीकारा (&A)"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "पूर्वीचे स्वीकारा (&R)"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "कॉनफिगर चौकट व्यवस्थापक सुरु करण्यात आला आहे.\n"
+#~ "कृपया तपासा नीट सुरु झाला आहे कि नाही व बदला ची पुष्टी करा.\n"
+#~ "२० सेकंदात आपोआप प्रारंभ होऊन प्रतिसाद देईल."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "चालू चौकट व्यवस्थापक मूलभूत केडीई चौकट व्यवस्थापक के-विन मध्ये परिवर्तित झाला आहे. "
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "नवीन चौकट चालू होऊ शकत नाही.\n"
+#~ "चालू चौकट मूलभूत केडीई चौकट व्यवस्थापक के-विन मध्ये परिवर्तित झाली आहे."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "संयोजना साधनला चालविणे अपयशी ठरले"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "मूलभूत केडीई चौकट व्यवस्थापकाचा वापर करा (के-विन) (&U)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "वेगळ्या चौकट व्यवस्थापकाचा वापर करा (&W):"
+
+#~ msgid "Configure"
+#~ msgstr "संयोजीत करा"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "सूचना : बहुतेक सर्व चौकट व्यवस्थापकांकडे त्यांचे स्वतःचे कॉन्फीगरेशन असते व ते केडीई सेटिंगचा "
+#~ "वापर करत नाही."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid "Component Description"
+#~ msgstr "विभाग वर्णन"

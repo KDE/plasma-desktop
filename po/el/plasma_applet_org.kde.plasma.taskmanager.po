@@ -1,0 +1,892 @@
+# translation of plasma_applet_tasks.po to greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011.
+# Antonis Geralis <capoiosct@gmail.com>, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_tasks\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2017-03-24 14:33+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Behavior"
+msgstr "Συμπεριφορά"
+
+#: package/contents/ui/AudioStream.qml:101
+#, kde-format
+msgctxt "@action:button"
+msgid "Unmute"
+msgstr ""
+
+#: package/contents/ui/AudioStream.qml:101
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@action:button"
+msgid "Mute"
+msgstr "Σίγαση"
+
+#: package/contents/ui/AudioStream.qml:102
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Unmute %1"
+msgstr "Σίγαση"
+
+#: package/contents/ui/AudioStream.qml:102
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Mute %1"
+msgstr "Σίγαση"
+
+#: package/contents/ui/Badge.qml:54
+#, kde-format
+msgctxt "Invalid number of new messages, overlay, keep short"
+msgid "—"
+msgstr ""
+
+#: package/contents/ui/Badge.qml:56
+#, kde-format
+msgctxt "Over 9999 new messages, overlay, keep short"
+msgid "9,999+"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:33
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Γενικά"
+
+#: package/contents/ui/ConfigAppearance.qml:34
+#, kde-format
+msgid "Show tooltips"
+msgstr "Εμφάνιση υποδείξεων"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Highlight windows when hovering over task tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:50
+#, kde-format
+msgid "Mark applications that play audio"
+msgstr "Σημείωση εφαρμογών που αναπαράγουν ήχο"
+
+#: package/contents/ui/ConfigAppearance.qml:58
+#, kde-format
+msgctxt "@option:check"
+msgid "Fill free space on Panel"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Maximum columns:"
+msgstr "Μέγιστος αριθμός στηλών:"
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Maximum rows:"
+msgstr "Μέγιστος αριθμός γραμμών:"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, fuzzy, kde-format
+#| msgid "Always arrange tasks in columns of as many rows"
+msgid "Always arrange tasks in rows of as many columns"
+msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgid "Always arrange tasks in columns of as many rows"
+msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
+
+#: package/contents/ui/ConfigAppearance.qml:83
+#, kde-format
+msgid "Spacing between icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:87
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Μικρό"
+
+#: package/contents/ui/ConfigAppearance.qml:91
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:95
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Μεγάλο"
+
+#: package/contents/ui/ConfigAppearance.qml:119
+#, kde-format
+msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:47
+#, fuzzy, kde-format
+#| msgid "Grouping:"
+msgid "Group:"
+msgstr "Ομαδοποίηση:"
+
+#: package/contents/ui/ConfigBehavior.qml:50
+#, fuzzy, kde-format
+#| msgid "Do Not Group"
+msgid "Do not group"
+msgstr "Χωρίς ομαδοποίηση"
+
+#: package/contents/ui/ConfigBehavior.qml:50
+#, fuzzy, kde-format
+#| msgid "By Program Name"
+msgid "By program name"
+msgstr "Κατά όνομα προγράμματος"
+
+#: package/contents/ui/ConfigBehavior.qml:55
+#, kde-format
+msgid "Clicking grouped task:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:62
+#, fuzzy, kde-format
+#| msgid "Cycle through tasks with mouse wheel"
+msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
+msgid "Cycles through tasks"
+msgstr "Περιήγηση στις εργασίες με τη ροδέλα του ποντικιού"
+
+#: package/contents/ui/ConfigBehavior.qml:63
+#, kde-format
+msgctxt ""
+"Completes the sentence 'Clicking grouped task shows tooltip window "
+"thumbnails' "
+msgid "Shows tooltip window thumbnails"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:64
+#, kde-format
+msgctxt ""
+"Completes the sentence 'Clicking grouped task shows windows side by side' "
+msgid "Shows windows side by side"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:65
+#, kde-format
+msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
+msgid "Shows textual list"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:73
+#, kde-format
+msgid ""
+"Tooltips are disabled, so the windows will be displayed side by side instead."
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:80
+#, kde-format
+msgid ""
+"Tooltips are disabled, and the compositor does not support displaying "
+"windows side by side, so a textual list will be displayed instead"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:87
+#, kde-format
+msgid ""
+"The compositor does not support displaying windows side by side, so a "
+"textual list will be displayed instead."
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:97
+#, kde-format
+msgid "Combine into single button"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:104
+#, fuzzy, kde-format
+#| msgid "Only group when the task manager is full"
+msgid "Group only when the Task Manager is full"
+msgstr "Ομαδοποίηση μόνο όταν ο διαχειριστής εργασιών έχει γεμίσει"
+
+#: package/contents/ui/ConfigBehavior.qml:115
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort:"
+msgstr "Ταξινόμηση:"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Do not sort"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Manually"
+msgstr "Χειροκίνητα"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, kde-format
+msgid "Alphabetically"
+msgstr "Αλφαβητικά"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, fuzzy, kde-format
+#| msgid "By Desktop"
+msgid "By desktop"
+msgstr "Κατά επιφάνεια εργασίας"
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, fuzzy, kde-format
+#| msgid "By Activity"
+msgid "By activity"
+msgstr "Κατά δραστηριότητα"
+
+#: package/contents/ui/ConfigBehavior.qml:124
+#, kde-format
+msgid "Keep launchers separate"
+msgstr "Διατήρηση των εκτελεστών ξεχωριστά"
+
+#: package/contents/ui/ConfigBehavior.qml:135
+#, kde-format
+msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Clicking active task:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:136
+#, kde-format
+msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Minimizes the task"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:141
+#, kde-format
+msgid "Middle-clicking any task:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:145
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+msgid "Does nothing"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:146
+#, fuzzy, kde-format
+#| msgid "Close Window or Group"
+msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
+msgid "Closes window or group"
+msgstr "Κλείσιμο παραθύρου ή ομάδας"
+
+#: package/contents/ui/ConfigBehavior.qml:147
+#, fuzzy, kde-format
+#| msgid "New Instance"
+msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
+msgid "Opens a new window"
+msgstr "Νέο στιγμιότυπο"
+
+#: package/contents/ui/ConfigBehavior.qml:148
+#, fuzzy, kde-format
+#| msgid "Minimize/Restore Window or Group"
+msgctxt ""
+"Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
+"group'"
+msgid "Minimizes/Restores window or group"
+msgstr "Ελαχιστοποίηση/Επαναφορά παραθύρου ή ομάδας"
+
+#: package/contents/ui/ConfigBehavior.qml:149
+#, kde-format
+msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
+msgid "Toggles grouping"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:150
+#, fuzzy, kde-format
+#| msgid "Show only tasks from the current desktop"
+msgctxt ""
+"Part of a sentence: 'Middle-clicking any task brings it to the current "
+"virtual desktop'"
+msgid "Brings it to the current virtual desktop"
+msgstr "Εμφάνιση εργασιών μόνο της τρέχουσας επιφάνειας εργασίας"
+
+#: package/contents/ui/ConfigBehavior.qml:160
+#, kde-format
+msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+msgid "Mouse wheel:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:161
+#, fuzzy, kde-format
+#| msgid "Cycle through tasks with mouse wheel"
+msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+msgid "Cycles through tasks"
+msgstr "Περιήγηση στις εργασίες με τη ροδέλα του ποντικιού"
+
+#: package/contents/ui/ConfigBehavior.qml:170
+#, kde-format
+msgid "Skip minimized tasks"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:181
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgid "Show only tasks:"
+msgstr "Εμφάνιση υποδείξεων"
+
+#: package/contents/ui/ConfigBehavior.qml:182
+#, fuzzy, kde-format
+#| msgid "Show only tasks from the current screen"
+msgid "From current screen"
+msgstr "Εμφάνιση εργασιών μόνο της τρέχουσας οθόνης"
+
+#: package/contents/ui/ConfigBehavior.qml:187
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgid "From current desktop"
+msgstr "Μετακίνηση στην τρέ&χουσα επιφάνεια εργασίας"
+
+#: package/contents/ui/ConfigBehavior.qml:192
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgid "From current activity"
+msgstr "Προσθήκη στην τρέχουσα δραστηριότητα"
+
+#: package/contents/ui/ConfigBehavior.qml:197
+#, fuzzy, kde-format
+#| msgid "Show only tasks that are minimized"
+msgid "That are minimized"
+msgstr "Εμφάνιση μόνο ελαχιστοποιημένων εργασιών"
+
+#: package/contents/ui/ConfigBehavior.qml:206
+#, kde-format
+msgid "When panel is hidden:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:207
+#, kde-format
+msgid "Unhide when a window wants attention"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:219
+#, kde-format
+msgid "New tasks appear:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:229
+#, kde-format
+msgid "To the right"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:229
+#, kde-format
+msgid "To the left"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:93
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:98
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Files"
+msgstr "Πρόσφατα έγγραφα"
+
+#: package/contents/ui/ContextMenu.qml:103
+#, fuzzy, kde-format
+#| msgid "More Actions"
+msgid "Actions"
+msgstr "Περισσότερες ενέργειες"
+
+#: package/contents/ui/ContextMenu.qml:168
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Προηγούμενο κομμάτι"
+
+#: package/contents/ui/ContextMenu.qml:182
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Παύση"
+
+#: package/contents/ui/ContextMenu.qml:182
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+#: package/contents/ui/ContextMenu.qml:200
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Επόμενο κομμάτι"
+
+#: package/contents/ui/ContextMenu.qml:211
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: package/contents/ui/ContextMenu.qml:231
+#, kde-format
+msgctxt "Quit media player app"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: package/contents/ui/ContextMenu.qml:246
+#, kde-format
+msgctxt "Open or bring to the front window of media player app"
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#: package/contents/ui/ContextMenu.qml:272
+#, kde-format
+msgid "Mute"
+msgstr "Σίγαση"
+
+#: package/contents/ui/ContextMenu.qml:283
+#, kde-format
+msgid "Open New Window"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:299
+#, fuzzy, kde-format
+#| msgid "Move To &Desktop"
+msgid "Move to &Desktop"
+msgstr "Μετακίνηση στην επι&φάνεια εργασίας"
+
+#: package/contents/ui/ContextMenu.qml:323
+#, kde-format
+msgid "Move &To Current Desktop"
+msgstr "Μετακίνηση στην τρέ&χουσα επιφάνεια εργασίας"
+
+#: package/contents/ui/ContextMenu.qml:332
+#, kde-format
+msgid "&All Desktops"
+msgstr "&Όλες τις επιφάνειες"
+
+#: package/contents/ui/ContextMenu.qml:346
+#, kde-format
+msgctxt "1 = number of desktop, 2 = desktop name"
+msgid "&%1 %2"
+msgstr "&%1 %2"
+
+#: package/contents/ui/ContextMenu.qml:360
+#, kde-format
+msgid "&New Desktop"
+msgstr "&Νέα επιφάνεια εργασίας"
+
+#: package/contents/ui/ContextMenu.qml:380
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgid "Show in &Activities"
+msgstr "Όλες τις δραστηριότητες"
+
+#: package/contents/ui/ContextMenu.qml:404
+#, kde-format
+msgid "Add To Current Activity"
+msgstr "Προσθήκη στην τρέχουσα δραστηριότητα"
+
+#: package/contents/ui/ContextMenu.qml:414
+#, kde-format
+msgid "All Activities"
+msgstr "Όλες τις δραστηριότητες"
+
+#: package/contents/ui/ContextMenu.qml:471
+#, fuzzy, kde-format
+#| msgid "Move To &Desktop"
+msgid "Move to %1"
+msgstr "Μετακίνηση στην επι&φάνεια εργασίας"
+
+#: package/contents/ui/ContextMenu.qml:498
+#: package/contents/ui/ContextMenu.qml:515
+#, kde-format
+msgid "&Pin to Task Manager"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:567
+#, kde-format
+msgid "On All Activities"
+msgstr "Σε όλες τις δραστηριότητες"
+
+#: package/contents/ui/ContextMenu.qml:573
+#, kde-format
+msgid "On The Current Activity"
+msgstr "Στην τρέχουσα δραστηριότητα"
+
+#: package/contents/ui/ContextMenu.qml:597
+#, kde-format
+msgid "Unpin from Task Manager"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:612
+#, kde-format
+msgid "More"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:621
+#, kde-format
+msgid "&Move"
+msgstr "&Μετακίνηση"
+
+#: package/contents/ui/ContextMenu.qml:630
+#, kde-format
+msgid "Re&size"
+msgstr "&Αλλαγή μεγέθους"
+
+#: package/contents/ui/ContextMenu.qml:644
+#, kde-format
+msgid "Ma&ximize"
+msgstr "Με&γιστοποίηση"
+
+#: package/contents/ui/ContextMenu.qml:658
+#, kde-format
+msgid "Mi&nimize"
+msgstr "&Ελαχιστοποίηση"
+
+#: package/contents/ui/ContextMenu.qml:668
+#, kde-format
+msgid "Keep &Above Others"
+msgstr "Διατήρηση &πάνω από τα άλλα"
+
+#: package/contents/ui/ContextMenu.qml:678
+#, kde-format
+msgid "Keep &Below Others"
+msgstr "Διατήρηση &κάτω από τα άλλα"
+
+#: package/contents/ui/ContextMenu.qml:690
+#, kde-format
+msgid "&Fullscreen"
+msgstr "&Πλήρης οθόνη"
+
+#: package/contents/ui/ContextMenu.qml:702
+#, kde-format
+msgid "&Shade"
+msgstr "&Τύλιγμα"
+
+#: package/contents/ui/ContextMenu.qml:718
+#, kde-format
+msgid "Allow this program to be grouped"
+msgstr "Να επιτρέπεται η ομαδοποίηση του προγράμματος"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, kde-format
+msgid "&Close"
+msgstr "&Κλείσιμο"
+
+#: package/contents/ui/Task.qml:74
+#, kde-format
+msgctxt "@info:usagetip %1 application name"
+msgid "Launch %1"
+msgstr ""
+
+#: package/contents/ui/Task.qml:79
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "There is %1 new message."
+msgid_plural "There are %1 new messages."
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/Task.qml:88
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgctxt "@info:usagetip %1 task name"
+msgid "Show Task tooltip for %1"
+msgstr "Εμφάνιση υποδείξεων"
+
+#: package/contents/ui/Task.qml:94
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Show windows side by side for %1"
+msgstr ""
+
+#: package/contents/ui/Task.qml:99
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Open textual list of windows for %1"
+msgstr ""
+
+#: package/contents/ui/Task.qml:103
+#, kde-format
+msgid "Activate %1"
+msgstr ""
+
+#: package/contents/ui/ToolTipInstance.qml:326
+#, kde-format
+msgctxt "button to unmute app"
+msgid "Unmute %1"
+msgstr ""
+
+#: package/contents/ui/ToolTipInstance.qml:327
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "button to mute app"
+msgid "Mute %1"
+msgstr "Σίγαση"
+
+#: package/contents/ui/ToolTipInstance.qml:350
+#, kde-format
+msgctxt "Accessibility data on volume slider"
+msgid "Adjust volume for %1"
+msgstr ""
+
+#: package/contents/ui/ToolTipInstance.qml:366
+#, fuzzy, kde-format
+#| msgctxt "@title:group Name of a group of windows"
+#| msgid "%1"
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1"
+
+#: package/contents/ui/ToolTipInstance.qml:369
+#, kde-format
+msgctxt "only used for sizing, should be widest possible string"
+msgid "100%"
+msgstr ""
+
+#: package/contents/ui/ToolTipInstance.qml:393
+#, fuzzy, kde-format
+#| msgid "On %1"
+msgctxt "Comma-separated list of desktops"
+msgid "On %1"
+msgstr "Σε %1"
+
+#: package/contents/ui/ToolTipInstance.qml:396
+#, kde-format
+msgctxt "Comma-separated list of desktops"
+msgid "Pinned to all desktops"
+msgstr ""
+
+#: package/contents/ui/ToolTipInstance.qml:407
+#, kde-format
+msgctxt "Which virtual desktop a window is currently on"
+msgid "Available on all activities"
+msgstr "Διαθέσιμο σε όλες τις δραστηριότητες"
+
+#: package/contents/ui/ToolTipInstance.qml:429
+#, kde-format
+msgctxt "Activities a window is currently on (apart from the current one)"
+msgid "Also available on %1"
+msgstr "Επίσης διαθέσιμο σε %1"
+
+#: package/contents/ui/ToolTipInstance.qml:433
+#, kde-format
+msgctxt "Which activities a window is currently on"
+msgid "Available on %1"
+msgstr "Διαθέσιμο σε %1"
+
+#: plugin/backend.cpp:326
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "%1 επιπλέον τοποθεσία"
+msgstr[1] "%1 επιπλέον τοποθεσίες"
+
+#: plugin/backend.cpp:422
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Downloads"
+msgstr "Πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:424
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Connections"
+msgstr "Πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:426
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Places"
+msgstr "Πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:435
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:437
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:439
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#: plugin/backend.cpp:441
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#~ msgid "Icon size:"
+#~ msgstr "Μέγεθος εικονιδίων:"
+
+#~ msgid "Start New Instance"
+#~ msgstr "Εκκίνηση νέας διεργασίας"
+
+#~ msgid "More Actions"
+#~ msgstr "Περισσότερες ενέργειες"
+
+#, fuzzy
+#~| msgid "Cycle through tasks with mouse wheel"
+#~ msgid "Cycle through tasks"
+#~ msgstr "Περιήγηση στις εργασίες με τη ροδέλα του ποντικιού"
+
+#~ msgid "On middle-click:"
+#~ msgstr "Στο μεσαίο κλικ:"
+
+#~ msgctxt "The click action"
+#~ msgid "None"
+#~ msgstr "Καμία"
+
+#~ msgctxt "When clicking it would toggle grouping windows of a specific app"
+#~ msgid "Group/Ungroup"
+#~ msgstr "Ομαδοποίηση/αναίρεση ομαδοποίησης"
+
+#~ msgid "Open groups in popups"
+#~ msgstr "Άνοιγμα των ομάδων σε αναδυόμενα"
+
+#, fuzzy
+#~| msgid "Filters"
+#~ msgid "Filter:"
+#~ msgstr "Φίλτρα"
+
+#~ msgid "Show only tasks from the current desktop"
+#~ msgstr "Εμφάνιση εργασιών μόνο της τρέχουσας επιφάνειας εργασίας"
+
+#~ msgid "Show only tasks from the current activity"
+#~ msgstr "Εμφάνιση εργασιών μόνο της τρέχουσας δραστηριότητας"
+
+#, fuzzy
+#~| msgid "Always arrange tasks in rows of as many columns"
+#~ msgid "Always arrange tasks in as many rows as columns"
+#~ msgstr "Διάταξη των εργασιών πάντοτε σε γραμμές με όσες στήλες χρειαστούν"
+
+#, fuzzy
+#~| msgid "Always arrange tasks in rows of as many columns"
+#~ msgid "Always arrange tasks in as many columns as rows"
+#~ msgstr "Διάταξη των εργασιών πάντοτε σε γραμμές με όσες στήλες χρειαστούν"
+
+#, fuzzy
+#~| msgid "Move To &Activity"
+#~ msgid "Move to &Activity"
+#~ msgstr "Μετακίνηση στη &δραστηριότητα"
+
+#~ msgid "Show progress and status information in task buttons"
+#~ msgstr ""
+#~ "Εμφάνιση προόδου και πληροφοριών κατάστασης στα κουμπιά των εργασιών"
+
+#~ msgctxt ""
+#~ "Toggle action for showing a launcher button while the application is not "
+#~ "running"
+#~ msgid "&Pin"
+#~ msgstr "&Καρφίτσωμα"
+
+#~ msgid "&Pin"
+#~ msgstr "&Καρφίτσωμα"
+
+#~ msgctxt ""
+#~ "Remove launcher button for application shown while it is not running"
+#~ msgid "Unpin"
+#~ msgstr "Ξεκαρφίτσωμα"
+
+#~ msgid "Arrangement"
+#~ msgstr "Διάταξη"
+
+#~ msgid "Highlight windows"
+#~ msgstr "Τονισμός παραθύρων"
+
+#~ msgid "Grouping and Sorting"
+#~ msgstr "Ομαδοποίηση και ταξινόμηση"
+
+#~ msgid "Do Not Sort"
+#~ msgstr "Χωρίς ταξινόμηση"
+
+#~ msgctxt "Go to previous song"
+#~ msgid "Previous"
+#~ msgstr "Προηγούμενο"
+
+#~ msgctxt "Pause player"
+#~ msgid "Pause"
+#~ msgstr "Παύση"
+
+#~ msgctxt "Start player"
+#~ msgid "Play"
+#~ msgstr "Αναπαραγωγή"
+
+#~ msgctxt "Go to next song"
+#~ msgid "Next"
+#~ msgstr "Επόμενο"
+
+#~ msgctxt "close this window"
+#~ msgid "Close"
+#~ msgstr "Κλείσιμο"
+
+#~ msgid "&Show A Launcher When Not Running"
+#~ msgstr "Εμ&φάνιση εκτελεστή όταν δεν εκτελείται"
+
+#~ msgid "Remove Launcher"
+#~ msgstr "Αφαίρεση εκτελεστή"
+
+#~ msgid "Force row settings"
+#~ msgstr "Εξαναγκασμός ρυθμίσεων γραμμής"
+
+#~ msgid "Collapse Group"
+#~ msgstr "Σύμπτυξη ομάδας"
+
+#~ msgid "Expand Group"
+#~ msgstr "Ανάπτυξη ομάδας"
+
+#~ msgid "Edit Group"
+#~ msgstr "Επεξεργασία ομάδας"
+
+#~ msgid "New Group Name: "
+#~ msgstr "Νέο όνομα ομάδας:"
+
+#~ msgid "Collapse Parent Group"
+#~ msgstr "Σύμπτυξη γονικής ομάδας"
+
+#~ msgid "Sorting Strategy"
+#~ msgstr "Στρατηγική ταξινόμησης"
+
+#~ msgid "Configure Taskbar"
+#~ msgstr "Ρύθμιση γραμμής εργασιών "

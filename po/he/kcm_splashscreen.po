@@ -1,0 +1,106 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_splashscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "ללא"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr ""
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr ""
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Failed to successfully test the splash screen."
+msgid "Failed to show the splash screen preview."
+msgstr "נכשל בבדיקת מסך הפתיחה."
+
+#: package/contents/ui/main.qml:71
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "Preview Splash Screen"
+msgstr "נסה מסך פתיחה"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr ""
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "&Get New Splash Screens…"
+msgstr "נסה מסך פתיחה"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr ""
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "אלקנה ברדוגו"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ttv200@gmail.com"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Splash Screen"
+#~ msgstr "נסה מסך פתיחה"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Get New Icons..."
+#~ msgstr "נסה מסך פתיחה"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Splash Screens"
+#~ msgstr "נסה מסך פתיחה"
+
+#~ msgid "Error"
+#~ msgstr "שגיאה"
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "הגדרות פרטי מסך פתיחה"

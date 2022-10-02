@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Estonian  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Kuupäev &amp; kellaaeg</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@online.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2013-12-05</date>
+<releaseinfo
+>4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Süsteemi seadistused</keyword>
+<keyword
+>kell</keyword>
+<keyword
+>kuupäev</keyword>
+<keyword
+>aeg</keyword>
+<keyword
+>määramine</keyword>
+<keyword
+>seadistamine</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Kuupäev &amp; kellaaeg</title>
+
+<para
+>Selle mooduli abil võid mugavat graafilist liidest kasutades muuta süsteemi kellaaega ja kuupäeva.</para>
+
+<note
+><para
+>Et need seadistused ei puuduta ainult sind kui kasutajat, vaid kogu süsteemi, pead olema süsteemi kuupäeva ja kellaaja muutmiseks süsteemi administraator (<systemitem class="username"
+>root</systemitem
+>). Kui see ei ole võimalik, saad siin ainult vaadata parajasti kehtivat seadistust, kuid ühtegi sinu muudatust ei salvestata.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Kuupäev ja kellaaeg</title>
+
+<para
+>Kui märkida valik <guilabel
+>Kuupäeva ja kellaaja määramine automaatselt</guilabel
+>, saab rippmenüüst valida <guilabel
+>ajaserveri</guilabel
+>, kõik teised dialoogi valikud on aga välja lülitatud.</para>
+
+<note>
+<para
+>Rakendusi <command
+>rdate</command
+> või <command
+>ntpdate</command
+> kasutatakse selles moodulis kuupäeva ja kellaaja hankimiseks ajaserverist. See toimub &kde;-sse sisselogimisel, kui oled siis juba võrgus, või hiljem, kui ühendud internetiga ja ajaserveritele pääseb ligi.</para
+> 
+<para
+>Mõlemad rakendused on lihtsad <acronym
+>NTP</acronym
+> kliendid, mis määravad süsteemi kella vastavusse ajaga, mis saadi mõnelt <acronym
+>NTP</acronym
+> serverist. Pikemas perspektiivis sellest siiski täpse kella säilimiseks ei piisa. See on kasulik aeg-ajalt kellaaja määramiseks masinates, millel puudub pidev võrguühendus, näiteks sülearvutite puhul.</para>
+</note>
+
+<para
+>Kui sa ajaserverit ei kasuta, saab kuupäeva käsitsi määrata kaardi alumises osas. Vali seal lihtsalt kuu (ülal asuvast hüpikkastist), aasta (ülal asuvast kerimiskastist) ja kuupäev (klõpsuga kalendris toodud päeval).</para>
+<para
+>Kalendri allosas olevate juhistega saab valida aktiivse kuupäeva, samuti võib sisestada kuupäeva tekstikasti või valida nummerdatud nädala rippmenüüst.</para>
+
+<para
+>Kellaaja saab määrata kerimiskastide abil kella all. Vajaliku kellaaja võib ka otse sisestada.</para>
+<!--Outdated
+<note
+><para
+>The time is represented in 24 hour format.  If you want
+the system time to be set to 8:00 PM, you need to set the hour spinbox
+to <guilabel
+>20</guilabel
+> (8 + 12).  If you want the system time set
+to 8:00 AM, you should set the hour spinbox to
+<guilabel
+>8</guilabel
+>.</para
+></note>
+-->
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Ajavöönd</title>
+<para
+>Uue ajavööndi määramiseks vali allolevast nimekirjast oma piirkond. Kasuta filtrikasti vajaliku <guilabel
+>piirkonna</guilabel
+> leidmiseks.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,361 @@
+# translation of kcmcomponentchooser.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2011-12-28 00:41+0330\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
+"Language-Team: Farsi (Persian) <>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "استفاده از کارخواه &رایانامه متفاوت:‌"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "برگزیدن کارخواه رایانامه ارجح:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "برگزیدن کارخواه رایانامه ارجح:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "برگزیدن کاربرد پایانه ارجح:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "برگزیدن کاربرد پایانه ارجح:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "برگزیدن کاربرد پایانه ارجح:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "محمدرضا میردامادی , نازنین کاظمی"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "ناشناخته"
+
+#~ msgid "Component Chooser"
+#~ msgstr "انتخاب‌کننده مؤلفه"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(ح)، ۲۰۰۲ Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "مؤلفه‌ای را که باید به طور پیش‌فرض برای خدمت %1 استفاده شود را از این فهرست "
+#~ "انتخاب کنید."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>شما مؤلفه پیش‌فرض انتخاب خود را تغییر دادید، الان می‌خواهید آن تغییر را "
+#~ "ذخیره کنید؟</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "توصیفی وجود ندارد"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "در اینجا می‌توانید برنامه مؤلفه را تغییر دهید. مؤلفه‌ها برنامه‌هایی هستند که "
+#~ "تکالیف پایه‌ای مانند مقلد پایانه، ویرایشگر متن و کارخواه رایانامه را اداره "
+#~ "می‌کنند. کاربردهای مختلف KDE، گاهی نیاز به درخواست یک مقلد پیشانه، ارسال "
+#~ "یک نامه یا نمایش چند متن دارند. برای سازگاری، این کاربردها همیشه مؤلفه‌های "
+#~ "یکسان را فراخوانی می‌کنند. می‌توانید برنامه‌های مربوط به این مؤلفه‌ها را در "
+#~ "اینجا انتخاب کنید."
+
+#~ msgid "Default Component"
+#~ msgstr "مؤلفه پیش‌فرض"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>این فهرست، انواع مؤلفه قابل پیکربندی را نمایش می‌دهد. روی مؤلفه‌ای که "
+#~ "می‌خواهید پیکربندی کنید، فشار دهید.</p>\n"
+#~ "<p>در این محاوره می‌توانید مؤلفه‌های پیش‌فرض KDE را تغییر دهید. مؤلفه‌ها "
+#~ "برنامه‌هایی هستند که تکالیف پایه‌ای مانند مقلد پایانه، ویرایشگر متن و "
+#~ "کارخواه رایانامه را می‌گردانند. گاهی کاربردهای مختلف KDE نیاز به درخواست "
+#~ "مقلد پیشانه، ارسال یک نامه یا نمایش متن دارند. برای سازگاری، این کاربردها "
+#~ "همیشه مؤلفه یکسانی را فراخوانی می‌کنند. در اینجا می‌توانید برنامه‌های مربوط "
+#~ "به این مؤلفه‌ها را انتخاب نمایید.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>باز کردن نشانیهای وب <b>http</b> و <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "در یک کاربرد بر اساس محتوای نشانی وب"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "در مرورگر زیر:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "در مرورگر زیر:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "برگزیدن کاربرد مرورگر وب ارجح:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail برنامه استاندارد نامه برای رومیزی KDE می‌باشد."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&استفاده از KMail به عنوان کارخواه رایانامه ارجح‌"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "اگر می‌خواهید از هر برنامه نامه دیگری استفاده کنید، این گزینه را برگزینید."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t:نشانی گیرنده </li> <li >%s: موضوع</li> <li>%c: رونوشت )ر.ن(</"
+#~ "li><li>%b: رونوشت محرمانه )ر.ن.م(</li> <li>%B: متن بدنه قالب</li> <li>%A: "
+#~ "پیوست </li> <li>%u: رایانامه کامل به: نشانی وب </li></ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite email client. Please note that "
+#~| "the file you select has to have the executable attribute set in order to "
+#~| "be accepted.<br> You can also use several placeholders which will be "
+#~| "replaced with the actual values when the email client is called:<ul> <li>"
+#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~| "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "برای انتخاب کارخواه رایانامه مورد علاقه خود، این دکمه را فشار دهید. لطفاً، "
+#~ "توجه کنید که پرونده‌ای که انتخاب می‌کنید، باید دارای مجموعه صفات قابل اجرا "
+#~ "باشد تا پذیرفته شود.<br> همچنین، می‌توانید از چندین جاگیرنده که هنگام "
+#~ "فراخوانی کارخواه رایانامه با مقادیر واقعی جایگزین می‌شوند، استفاده کنید:"
+#~ "<ul> <li>%t:نشانی گیرنده </li> <li>%s:موضوع </li> <li>%c: رونوشت )ر.ن(</"
+#~ "li> <li>%b: رونوشت پنهان )ر.ن.م(</li> <li>%B:متن بدنه قالب</li> <li>%A: "
+#~ "پیوست </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "برای مرور پرونده برنامه نامه، اینجا را فشار دهید."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "اگر می‌خواهید کارخواه رایانامه برگزیده در پایانه اجرا شود، این گزینه را "
+#~ "فعال کنید ) برای مثال <em>Konsole</em>(."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&اجرا در پایانه‌"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&استفاده از Konsole به عنوان کاربرد پایانه‌"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "استفاده از برنامه &پایانه متفاوت:‌"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite terminal client. Please note "
+#~| "that the file you select has to have the executable attribute set in "
+#~| "order to be accepted.<br> Also note that some programs that utilize "
+#~| "Terminal Emulator will not work if you add command line arguments "
+#~| "(Example: konsole -ls)."
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "برای برگزیدن کارخواه پایانه مورد نظر خود این دکمه را فشار دهید. لطفاً، "
+#~ "توجه کنید پرونده‌ای که انتخاب می‌کنید، باید دارای مجموعه صفات قابل اجرا "
+#~ "باشد تا پذیرفته شود.<br> همچنین توجه داشته باشید که برخی برنامه‌ها که از "
+#~ "مقلد پایانه استفاده می‌کنند، اگر نشانوندهای خط فرمان را اضافه کنید کار "
+#~ "نخواهند کرد )مثلاً:  konsole -ls(."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "برای مرور برنامه پایانه اینجا را فشار دهید."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "%1 ثانیه باقی‌مانده:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "مدیر پنجره جدید دفعه بعدی که کی‌دی‌ای آغاز شد مورد استفاده قرار میگیرد."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "تغییر مدیر پنجره‌ها"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "مدیر پنجره جدیدی درحال اجراست.\n"
+#~ "توصیه میشود که نشست کی‌دی‌ای را بازآغازی کنید تا مطمئن شوید همه برنامه‌ها "
+#~ "برای این تغییر هماهنگ شده‌اند."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "مدیر پنجره‌ها جایگزین شد"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "مدیر پنجره‌های فعلی شما با مدیر پنجره‌ی پیکربندی شده جایگزین خواهد شد."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "پیکربندی تغییر مدیر پنجره‌ها"
+
+#~ msgid "&Accept Change"
+#~ msgstr "قبول تغییر"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "برگشت به قبلی"
+
+#, fuzzy
+#~| msgid "Use a different &window manager:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "استفاده از مدیر پنجره‌ی متفاوت:‌"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "استفاده از مدیر پنجره‌ی متفاوت:‌"
+
+#~ msgid "Configure"
+#~ msgstr "پیکربندی"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "در اینجا می‌توانید شرح مختصری از مؤلفه انتخاب‌شده جاری را بخوانید. برای "
+#~ "تغییر این مؤلفه برگزیده، بر روی فهرست سمت چپ فشار دهید. برای تغییر برنامه "
+#~ "مؤلفه، لطفاً، آن را در زیر انتخاب کنید."
+
+#~ msgid "Component Description"
+#~ msgstr "توصیف مؤلفه"

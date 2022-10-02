@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema dei puntatori</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Samuele</firstname
+> <surname
+>Kaplun</surname
+> <affiliation
+><address
+><email
+>samuele.kaplun@collegiodimilano.it</email
+></address
+></affiliation
+> <contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Questa è la documentazione per il modulo di &systemsettings; per la personalizzazione dell'aspetto del puntatore del mouse. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>mouse</keyword>
+<keyword
+>puntatore</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questa scheda permette di scegliere tra vari temi di puntatori installati da un'anteprima del puntatore. </para>
+
+<para
+>La funzionalità offerta da questo modulo potrebbe non essere disponibile su alcuni sistemi. Potrebbe essere necessario un aggiornamento del tuo sistema per supportare i temi dei puntatori. </para>
+
+<para
+>Se hai dei temi di puntatori aggiuntivi, puoi rimuoverli utilizzando il pulsante del cestino che appare quando passi il puntatore del mouse sull'elemento del tema nell'elenco. Nota che non puoi rimuovere i temi predefiniti. </para>
+
+<para
+>Alcuni temi permettono di scegliere la dimensione del puntatore. Usa il campo <guilabel
+>Dimensione</guilabel
+> per selezionare la dimensione appropriata. Le dimensioni disponibili sono mostrate quando passi il puntatore del mouse sull'elemento del tema nell'elenco. </para>
+
+<para
+>Se hai dei temi di puntatori aggiuntivi puoi installarli usando il pulsante <guibutton
+>Installa da file...</guibutton
+> sotto l'elenco. Vedi le <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>istruzioni del tema</ulink
+> per i dettagli su come creare un tema di puntatori personalizzato. </para>
+
+<para
+>Usa il pulsante <guibutton
+>Scarica nuovi puntatori</guibutton
+> per avviare la finestra delle <guilabel
+>Scarica nuovi/e Puntatori</guilabel
+> e scaricare altri temi da Internet.</para>
+
+</article>

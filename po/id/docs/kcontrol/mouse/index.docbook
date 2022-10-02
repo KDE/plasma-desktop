@@ -1,0 +1,347 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Mouse</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18-05-2018</date>
+<releaseinfo
+>Plasma 5.13</releaseinfo>
+
+<abstract>
+<para
+>Dokumentasi ini untuk modul &systemsettings; yang mengkonfigurasikan mouse dan perangkat pointer lainnya. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>mouse</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_mouse">
+<title
+>Mouse</title>
+
+<para
+>Modul ini memungkinkanmu untuk mengkonfigurasikan perangkat penunjukmu. Perangkat penunjukmu mungkin adalah mouse, track ball, touch-pad, atau hardware bentuk lain yang melakukan fungsi yang serupa.</para>
+
+<para
+>Modul ini dibagi ke dalam bermacam tab: <link linkend="mouse-general"
+>Umum</link
+>, <link linkend="mouse-advanced"
+>Tingkat-lanjut</link
+> dan <link linkend="keyboard-navigation"
+>Navigasi Keyboard</link
+>. </para>
+
+<sect2 id="mouse-general">
+<title
+>Umum</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Urutan Tombol</guilabel
+></term>
+<listitem
+><para
+>Jika kamu kidal tangan kiri, mungkin kamu bisa menukar fungsi tombol <mousebutton
+>kiri</mousebutton
+> dan <mousebutton
+>kanan</mousebutton
+> pada perangkat penunjukmu dengan memilih opsi <guilabel
+>Tangan kiri</guilabel
+>. Jika perangkat penunjukmu memiliki lebih dari dua tombol, hanyalah tombol yang berfungsi sebagai tombol <mousebutton
+>kiri</mousebutton
+> dan <mousebutton
+>kanan</mousebutton
+> yang terpengaruh. Misalnya, jika kamu memiliki mouse tiga tombol, tombol <mousebutton
+>tengah</mousebutton
+> tidak terpengaruh.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Kebalikan arah gulir</guilabel
+></term>
+<listitem
+><para
+>Dengan kotak centang yang dipilih ini, roda gulir (jika ada) akan bekerja dalam arah yang berlawanan (sehingga jika menggulirkan roda gulir ke atas ke arah kamu sebelumnya menyebabkan gulir turun, kemudian sekarang akan menyebabkan gulir naik). Ini mungkin berguna untuk menangani pengaturan X server yang tidak biasa. </para>
+</listitem>
+</varlistentry>
+<!--FIXME http://kdeblog.mageprojects.com/2016/06/24/plasma-5-6-clean-installation-impression/
+Just tick the “reverse scroll direction” in your mouse settings (in the system settings under “Input Devices”). That did the trick, but not completely. It only seems to be applied for the Qt applications! Yay, we have a good old setting per UI Toolkit again… But that’s wrong., we have libinput now and we can set “natural sorting” there. Why isn’t the settings page doing that under the hood if libinput is being used? Anyway, the fix here (comes from this link) was to do:
+
+xinput set-prop 11 282 1
+-->
+</variablelist>
+
+<note
+><para
+>Dalam &plasma; 5.13 kamu temukan pengaturan untuk menggunakan mouse pengeklikan tunggal atau ganda untuk membuka file dan folder di dalam modul <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Workspace</ulink
+>. </para
+></note>
+</sect2>
+
+<sect2 id="mouse-advanced">
+<title
+>Tingkat lanjut</title>
+
+<variablelist>
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Akselerasi pointer</guilabel
+></term>
+<listitem>
+<para
+>Opsi ini memungkinkanmu untuk mengubah hubungan antara jarak pindahan pointer mouse pada layar dan perpindahan yang relatif terhadap fisik perangkat itu sendiri yang mungkin berupa mouse, track-ball, atau beberapa perangkat pointer lainnya).</para>
+
+<para
+>Sebuah nilai tinggi untuk multiplier akselerasi akan menyebabkan perpindahan besar pada pointer mouse pada layar, bahkan ketika kamu hanya melakukan perpindahan kecil dengan perangkat fisik.</para>
+
+<tip
+><para
+>Sebuah multiplier antara <guilabel
+>1x</guilabel
+> dan <guilabel
+>3x</guilabel
+> akan bekerja dengan baik untuk semua sistem. Dengan multiplier melebihi <guilabel
+>3x</guilabel
+> pointer mouse mungkin menjadi sulit dikendalikan.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ambang pointer</guilabel
+></term>
+<listitem>
+<para
+>Ambang adalah jarak terkecil yang pointer mouse harus pindah pada layar sebelum akselerasi memiliki efek apa pun. Jika perpindahan adalah dengan ambang, pointer mouse pindah sebagaimana akselerasi yang telah diset ke <guilabel
+>1x</guilabel
+>.</para>
+
+<para
+>Dengan demikian, ketika kamu membuat perpindahan kecil dengan perangkat fisik (&eg; mouse), kamu masih memiliki kendali yang baik pada pointer mouse di layar  yang mana perpindahan besar pada perangkat fisik akan memindah pointer mouse dengan cepat untuk area yang berbeda di layar.</para>
+
+<para
+>Kamu bisa mengeset si ambang dengan memasukkan sebuah nilai ke dalam kotak edit atau dengan mengeklik arah naik/turun yang ada di sebelah kanan kotak.</para>
+
+<tip
+><para
+>Pada umumnya, tingginya nilai yang kamu atur pada <guilabel
+>Akselerasi pointer</guilabel
+>, tingginya nilai yang kamu inginkan untuk mengatur nilai <guilabel
+>Ambang pointer</guilabel
+>. Misalnya, <guilabel
+>Ambang pointer</guilabel
+> 4x pixel mungkin sesuai untuk <guilabel
+>Akselerasi Pointer</guilabel
+> 2x, tetapi 10 pixel mungkin lebih baik untuk 3x.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Interval klik ganda</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah jumlah waktu maksimum antara klik untuk mendaftarkan klik ganda. Jika kamu mengeklik dua kali, dan waktu antara dua klik itu kurang dari angka ini, itu dikenali sebagai klik ganda. Jika waktu antara dua klik ini lebih besar dari angka ini, itu dikenali sebagai dua klik tunggal yang <emphasis
+>terpisah</emphasis
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Waktu mulai seret</guilabel
+> dan<guilabel
+>Jarak mulai seret</guilabel
+></term>
+
+<listitem>
+<para
+>Jika kamu <itemizedlist
+> <listitem
+><para
+>klik dengan mouse</para
+></listitem
+> <listitem
+><para
+>menyeret sesuai waktu yang ditentukan dalam <guilabel
+>Waktu mulai seret</guilabel
+>, dan </para
+></listitem
+> <listitem
+><para
+>memindahkan sebuah jarak yang sama-dengan atau yang lebih-besar dari jumlah (pixel) yang ditentukan dalam <guilabel
+>Jarak mulai seret</guilabel
+></para
+> </listitem
+> </itemizedlist
+> si butir yang dipilih akan diseret.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Menggulir roda mouse dengan</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu memiliki mouse yang beroda, gunakan kotak spin untuk menentukan berapa banyak baris teks suatu <quote
+>langkah</quote
+> terhadap roda mouse yang akan digulir.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="keyboard-navigation">
+<title
+>Navigasi Keyboard</title>
+
+<para
+>Tab ini memungkinkanmu untuk mengkonfigurasi key pad nomor keyboard sebagai perangkat tipe mouse. Ini mungkin berguna ketika kamu bekerja pada perangkat tanpa perangkat pointer lain, atau di mana kamu tidak menggunakan pad nomor. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Pindahkan pointer dengan keyboard (menggunakan num pad)</guilabel
+></term>
+<listitem>
+<para
+>Untuk memfungsikan mode mouse keyboard, kamu harus memilih kotak centang berlabel <guilabel
+>Pindahkan pointer dengan keyboard (menggunakan num pad)</guilabel
+>. Ketika kamu melakukan ini, pengaturan lain akan difungsikan, dan kamu bisa menyesuaikan perilaku pointer keyboard lebih lanjut, jika diperlukan. </para>
+<para
+>Berbagai tuts pada pad nomor bergerak ke arah yang kamu harapkan. Perhatikan bahwa kamu bisa bergerak secara diagonal serta atas, bawah, kiri dan kanan. Tuts <keycap
+>5</keycap
+> mengemulasikan sebuah klik terhadap tombol pointer, biasanya &LMB;. Kamu mengubah tombol mana yang diemulasikan dengan menggunakan tuts <keycap
+>/</keycap
+> (yang membuatnya &LMB;), tuts <keycap
+>*</keycap
+> (yang membuatnya &MMB;) dan <keycap
+>-</keycap
+> (yang membuatnya &RMB;). Menggunakan tuts <keycap
+>+</keycap
+> mengemulasikan klik ganda untuk tombol pointer yang dipilih. Kamu bisa menggunakan tuts <keycap
+>0</keycap
+> untuk mengemulasikan menahan tombol pointer yang dipilih (untuk  memudahkan penyeretan), dan kemudian menggunakan tuts <keycap
+>.</keycap
+> untuk mengemulasikan pelepasan tombol pointer yang dipilih. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tundaan akselerasi</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah waktu (dalam milidetik) antara penekanan tuts awal dan peristiwa gerakan berulang pertama untuk akselerasi tombol mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Interval pengulangan</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah waktu dalam milidetik antara peristiwa gerakan berulang untuk akselerasi tuts mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Waktu akselerasi</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah waktu dalam milidetik sebelum pointer mencapai kecepatan maksimum untuk akselerasi tuts mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Kecepatan maksimum</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah kecepatan maksimum dalam pixel per detik yang dapat dijangkau pointer untuk akselerasi tuts mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Profil akselerasi</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah kemiringan kurva akselerasi untuk akselerasi tuts mouse. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

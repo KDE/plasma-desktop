@@ -1,0 +1,213 @@
+# Translation of plasma_applet_org.kde.plasma.kicker to Norwegian Bokmål
+#
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2014.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2018-06-24 21:56+0100\n"
+"Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generelt"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Fjern fra favoritter"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Legg til i favoritter"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "På alle aktiviteter"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Fjern ikon"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Vis programmer som:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Bare navn"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Bare beskrivelse"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Navn (beskrivelse)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Beskrivelse (navn)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Utvid søket til bokmerker, filer og e-poster"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Plasser søkeresultater nederst"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Søker etter «%1»"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritter"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Skjermelementer"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Programmer og hjelp"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr ""

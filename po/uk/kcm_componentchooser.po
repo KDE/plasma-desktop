@@ -1,0 +1,370 @@
+# Translation of kcm_componentchooser.po to Ukrainian
+# Copyright (C) 2002-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Andriy Rysin <rysin@kde.org>, 2002, 2003, 2006.
+# Eugene Onischenko <oneugene@ukr.net>, 2004.
+# Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2005, 2007.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2016, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_componentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-09 09:42+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Типова програма для перегляду інтернету"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Інше…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Виберіть типову програму для перегляду інтернету"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Виберіть типову клієнтську програму електронної пошти"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Виберіть типову програму для керування файлами"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Виберіть типову програму-карту"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Виберіть типову програму для набору номерів"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Виберіть типовий емулятор термінала"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Переглядач інтернету"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Керування файлами:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Клієнт електронної пошти:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Емулятор термінала:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Карта:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Засіб набирання:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andriy Rysin,Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rysin@kde.org,ivanpetrouchtchak@yahoo.com"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Типові програми"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Невідомо"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Селектор компонентів"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© Joseph Wenninger, 2002"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Виберіть зі списку внизу, який компонент буде типовим для служби %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Ви змінили типовий компонент вашого вибору. Хочете зберегти цю зміну?"
+#~ "</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Немає опису"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Тут ви можете змінити програму-компонент. Компоненти — це програми, що "
+#~ "виконують основні задачі, наприклад емуляцію термінала, редагування "
+#~ "текстів або роботу з електронною поштою. Різні програми KDE деколи мають "
+#~ "викликати емулятор консолі, надсилати листи або відображати деякий текст. "
+#~ "Для цього використовуються вказані компоненти. Тут ви можете встановити "
+#~ "відповідність програм і компонентів."
+
+#~ msgid "Default Component"
+#~ msgstr "Типовий компонент"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>У цьому списку наведено налаштовані типи компонент. Натисніть пункт "
+#~ "компонента, яку ви хочете налаштувати.</p>\n"
+#~ "<p>За допомогою діалогового вікна ви можете змінити типові компоненти "
+#~ "KDE. Типовими компонентами є програми, що виконують базові задачі, "
+#~ "наприклад емуляцію термінала, редагування текстів або роботу з "
+#~ "електронною поштою. Різні програми KDE повинні деколи викликати емулятор "
+#~ "термінала, редагувати текст або відправляти електронні листи. Для того, "
+#~ "щоб це робилось узгоджено, використовуються вказані компоненти. Тут ви "
+#~ "можете налаштувати, які програми будуть виконувати роль компонент.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Відкривати <b>http</b> та <b>https</b>-адреси</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "у програмі, що відповідає тексту адреси"
+
+#~ msgid "in the following application:"
+#~ msgstr "у такій програмі:"
+
+#~ msgid "with the following command:"
+#~ msgstr "за допомогою такої команди:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Виберіть основний навігатор інтернетом:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail — типова поштова програма для стільниці Плазми."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Використовувати KMail, як основний клієнт пошти"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Позначте цей пункт, якщо ви хочете використовувати іншу програму пошти."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Додаткові замінники: <ul> <li>%t: Адреса отримувача</li> <li>%s: Тема</"
+#~ "li> <li>%c: Копія (CC)</li> <li>%b: Потайна копія (BCC)</li> <li>%B: "
+#~ "Текст шаблону повідомлення</li> <li>%A: Долучення </li> <li>%u: Повна "
+#~ "адреса URL mailto:</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Натисніть цю кнопку, щоб вибрати ваш улюблений клієнт пошти. Зауважте, що "
+#~ "для файла, який ви виберете має бути встановлено біт виконання.<br/> Ви "
+#~ "також можете вибрати різні шаблони для заміни при запуску клієнта пошти:"
+#~ "<ul> <li>%t: Адреса отримувача</li> <li>%s: Тема</li> <li>%c: Копія (CC)</"
+#~ "li> <li>%b: Потайна копія (BCC)</li> <li>%B: Шаблон тексту повідомлення</"
+#~ "li> <li>%A: Долучення</li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Натисніть, щоб безпосередньо вказати файл поштової програми."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Позначте цей пункт, якщо ви хочете, щоб вибраний клієнт пошти було "
+#~ "запущено в терміналі (наприклад <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Зап&устити в терміналі"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Переглядати каталоги за допомогою такого менеджера файлів:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Інший: натисніть кнопку «Додати...» у показаному тут вікні:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Використовувати Konsole, як програму термінала"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Використовувати іншу програму &термінала:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Натисніть цю кнопку для вибору вашого улюбленого емулятора термінала. "
+#~ "Будь ласка, зауважте, що для файла, який ви виберете, має бути "
+#~ "встановлено біт дозволу виконання.<br/> Також зауважте, що деякі "
+#~ "програми, що використовують емулятор термінала, не будуть працювати, якщо "
+#~ "додати аргументи командного рядка (приклад: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Натисніть, щоб безпосередньо вказати файл програми термінала."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Лишилась %1 секунда:"
+#~ msgstr[1] "Лишилось %1 секунди:"
+#~ msgstr[2] "Лишилось %1 секунд:"
+#~ msgstr[3] "Лишилась одна секунда:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Новий віконний менеджер буде використовуватися після наступного запуску "
+#~ "Плазми."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Зміна менеджера вікон"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Запущено новий засіб керування вікнами.\n"
+#~ "Ми все ж рекомендуємо перезапустити сеанс KDE, щоб переконатися, що всі "
+#~ "запущені програми сприйняли цю зміну."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Зміна віконного менеджера"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Поточний засіб керування вікнами буде зараз замінено на налаштований вами."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Зміна віконного менеджера"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Прийняти зміну"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Повернутися до попереднього"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Було запущено тільки-но встановлений засіб керування вікнами.\n"
+#~ "Будь ласка, переконайтеся, що не виникло помилок, і підтвердьте зміну.\n"
+#~ "Якщо ви цього не зробите, стільниця повернеться до попереднього засобу за "
+#~ "20 секунд."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Стільницю було повернуто до використання типового засобу керування "
+#~ "вікнами KDE (KWin)."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Спроба запуску нового засобу керування вікнами була невдалою.\n"
+#~ "Стільниця повертається до типового засобу керування вікнами KDE — KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Спроба запуску інструмента налаштування завершилася невдало"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Використовувати типовий менеджер вікон KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Використовувати інший менеджер &вікон:"
+
+#~ msgid "Configure"
+#~ msgstr "Налаштувати"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Зауваження: більшість з засобів керування вікнами мають власні "
+#~ "налаштування і не сприймають параметри KDE."

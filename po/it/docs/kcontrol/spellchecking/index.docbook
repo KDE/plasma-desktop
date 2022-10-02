@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Controllo ortografico</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Manutenzione della traduzione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Luciano</firstname
+><surname
+>Montanaro</surname
+><contrib
+>Traduzione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Manutenzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Ortografia</keyword>
+<keyword
+>dizionario</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Controllo ortografico</title>
+<para
+>Le opzioni di configurazione qui disponibili sono usate come predefinite da tutte le applicazioni di &kde; che usano &sonnet;, un'interfaccia per molti programmi liberi di correzione ortografica.</para>
+
+<para
+>Per usare &sonnet; devi installare dei correttori ortografici, come per esempio <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+>, <ulink url="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
+>ISpell</ulink
+> o <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+>, oltre ai corrispondenti dizionari per la tua lingua.</para>
+
+<para
+>Le opzioni di configurazione qui selezionate possono essere cambiate da ogni applicazione.</para>
+
+<para
+>Nella casella a cascata <guilabel
+>Lingua predefinita</guilabel
+>, scegli tra i dizionari disponibili quello da usare con &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Opzioni</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Abilita il rilevamento automatico della lingua</guilabel
+></term>
+<listitem>
+<para
+>Questa funzionalità si basa su diversi metodi euristici (alfabeto usato, corrispondenza dei trigrammi e classificazione delle lingue rispetto a quelle disponibili nel motore di correzione ortografica). Ciò permette di cambiare automaticamente la lingua in un documento multilingue. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Controllo ortografico automatico abilitato come impostazione predefinita</guilabel
+></term>
+<listitem>
+<para
+>Se questa casella è spuntata, l'ortografia delle parole sarà controllata durante la digitazione. Le parole con errori di ortografia saranno sottolineate in rosso. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Salta le parole tutte maiuscole</guilabel
+></term>
+<listitem>
+<para
+>Se questa casella è spuntata, l'ortografia delle parole scritte tutte in maiuscolo non sarà controllata.</para>
+<tip
+><para
+>Ciò è utile per i documenti che contengono molti acronimi: se questa casella non viene spuntata, la maggior parte di questi sarà erroneamente sottolineata. Spuntandola, gli acronimi non saranno considerati errori di ortografia.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Salta le parole consecutive</guilabel
+></term>
+<listitem
+><para
+>Se questa casella non è segnata, le singole parole presenti nel dizionario, ma che sono attaccate nel testo, vengono considerate errori di ortografia. Un esempio di queste parole può essere autoscuola. </para>
+
+<tip
+><para
+>Spuntare questa casella aiuterà ad evitare che le applicazioni indichino tra gli errori d'ortografia i siti Web e gli indirizzi di posta elettronica, che contengono spesso delle parole consecutive.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Parole ignorate</title>
+<para
+>La metà inferiore del riquadro ti permette di indicare delle parole particolari (possono essere espressioni tecniche, nomi propri, eccetera) che dovrebbero essere ignorate dal programma di correzione ortografica.</para>
+
+<sect3
+><title
+>Aggiungere una parola all'elenco di quelle da ignorare</title>
+<para
+>Per aggiungere una parola, scrivila nella casella di testo, quindi fai clic sul pulsante <guibutton
+>Aggiungi</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Eliminare una parola dall'elenco di quelle da ignorare</title>
+<para
+>Per rimuovere una parola, selezionala dall'elenco che contiene tutte le parole da ignorare facendoci clic con il &LMB;. Adesso fai clic sul pulsante <guibutton
+>Rimuovi</guibutton
+>.</para>
+
+<para
+>Quando sei soddisfatto delle modifiche, fai semplicemente clic su <guibutton
+>Applica</guibutton
+>.</para>
+
+<para
+>Facendo clic su <guibutton
+>Valori predefiniti</guibutton
+> ripristinerai tutti i valori a quelli predefiniti.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

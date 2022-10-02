@@ -1,0 +1,1364 @@
+# Indonesian translations for plasma_applet_folderview package.
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_folderview package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2021, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2022-06-03 10:41+0700\n"
+"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Lokasi"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Ikon"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Filter"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Mundur"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "File-file:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Tampilkan semua"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Tampilkan yang cocok"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Sembunyikan yang cocok"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Pola nama file:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Tipe file:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Tipe file"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Deskripsi"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Pilih Semua"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Nonpilih Semua"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Tombol panel:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Gunakan ikon kustom"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Pilih..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Bersihkan Ikon"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Penempatan:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "Atas ke Bawah, Kanan ke Kiri"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Sejajar kiri"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Sejajar kanan"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Kunci di tempat"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Pengurutan:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Manual"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Nama"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Ukuran"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Tipe"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Tanggal"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Menurun"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Folder dulu"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Mode tampilan:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Daftar"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr "Kisi"
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Ukuran ikon:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, kde-format
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Kecil"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, kde-format
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Besar"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Lebar label:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Sempit"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Sedang"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Luas"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Baris teks:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr "Saat mengarahkan kursor ke ikon:"
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr "Tampilkan tip alat"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr "Tampilkan penanda pilihan"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, kde-format
+msgid "Show folder preview popups"
+msgstr "Tampilkan sembulan pratinjau folder"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, kde-format
+msgid "Rename:"
+msgstr "Ubah Nama:"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr "Ubah nama sebaris dengan mengeklik teks item yang dipilih"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, kde-format
+msgid "Previews:"
+msgstr "Pratinjau:"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, kde-format
+msgid "Show preview thumbnails"
+msgstr "Tampilkan gambar mini pratinjau"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "Konfigurasi Plugin Pratinjau..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Tampilkan:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Folder desktop"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "File-file yang ditautkan ke aktivitas saat ini"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Item panel tempat:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Lokasi kustom:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "Ketik alur atau URL..."
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Judul:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Nihil"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Baku"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Alur penuh"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Judul kustom"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "Masukkan judul kustom..."
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Rotasikan"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Buka Secara Eksternal"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Sembunyikan Latarbelakang"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Tampilkan Latarbelakang"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Hapus"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Plugin Pratinjau"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "Oke"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Batal"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Konfigurasi Desktop dan Wallpaper..."
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Pilih Folder"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "&Segarkan Desktop"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "&Segarkan Tampilan"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "&Bersihkan Tong Sampah"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Kembalikan"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Buka"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&Tempel"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Properti"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Urutkan Berdasarkan"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Tak diurut"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Nama"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Ukuran"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Tipe"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Tanggal"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Menurun"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Folder Dulu"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Ukuran Ikon"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Mungil"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Sangat Kecil"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Kecil"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Agak Kecil"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Sedang"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Besar"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Besar Banget"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange In"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Penempatan Di"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "Atas ke Bawah, Kanan ke Kiri"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Sejajar"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Kiri"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Kanan"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Tampilkan Pratinjau"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Dikunci"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Baris"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Kolom"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Baris"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Kolom"
+
+#~ msgid "Features:"
+#~ msgstr "Fitur:"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Search…"
+#~ msgstr "Cari..."
+
+#~ msgid "&Create Folder"
+#~ msgstr "&Ciptakan Folder"
+
+#~ msgid "Tweaks"
+#~ msgstr "Uprekan"
+
+#~ msgid ""
+#~ "With the Desktop Toolbox hidden, right-click on the desktop and choose "
+#~ "'Configure Desktop...' to access this configuration window in the future"
+#~ msgstr ""
+#~ "Dengan Desktop Toolbox tersembunyi, klik kanan di desktop dan pilihlah "
+#~ "'Konfigurasikan Desktop...' untuk mengakses konfigurasi window ini di "
+#~ "kemudian nanti"
+
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Tampilkan kotak alat desktop"
+
+#~ msgid "Press and hold widgets to move them and reveal their handles"
+#~ msgstr ""
+#~ "Tekan dan tahan widget untuk memindahnya dan menampakkan pegangannya"
+
+#~ msgid "Widgets unlocked"
+#~ msgstr "Widget dilepas-kunci"
+
+#~ msgid ""
+#~ "You can press and hold widgets to move them and reveal their handles."
+#~ msgstr ""
+#~ "Kamu bisa tekan dan tahan widget untuk memindahnya dan menampakkan "
+#~ "pegangannya"
+
+#~ msgid "Got it"
+#~ msgstr "Mengerti"
+
+#~ msgid "Resize"
+#~ msgstr "Ubah Ukuran"
+
+#~ msgid "Show All Files"
+#~ msgstr "Tampilkan Semua File"
+
+#~ msgid "Size:"
+#~ msgstr "Ukuran:"
+
+#~ msgid "Desktop Layout"
+#~ msgstr "Tataletak Desktop"
+
+#~ msgid "Widget Handling"
+#~ msgstr "Pegangan Widget"
+
+#~ msgid "Arrange in"
+#~ msgstr "Penempatan di"
+
+#~ msgid "Sort by"
+#~ msgstr "Urut berdasarkan"
+
+#~ msgid "Appearance:"
+#~ msgstr "Penampilan:"
+
+#~ msgid "Location:"
+#~ msgstr "Lokasi:"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Tampilkan folder Desktop"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Tentukan sebuah folder:"
+
+#~ msgid "&Reload"
+#~ msgstr "&Muat Ulang"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Pindah ke Tong Sampah"
+
+#~ msgid "&Delete"
+#~ msgstr "&Hapus"
+
+#~ msgid "Align:"
+#~ msgstr "Ratakan:"
+
+#~ msgid "Sorting"
+#~ msgstr "Pengurutan"
+
+#~ msgid "Title"
+#~ msgstr "Judul"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Tampilkan Direktori Asli"
+
+#~ msgid "Show Original File"
+#~ msgstr "Tampilkan Berkas Asli"
+
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&Atur Tempat Sampah"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&Tandai Halaman Ini"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&Tandai Lokasi Ini"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&Tandai Folder Ini"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&Tandai Tautan Ini"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&Tandai Berkas Ini"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Salin Ke"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Pindah Ke"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Folder Rumah"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Folder Root"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Ramban..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Salin ke Sini"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Pindah ke Sini"
+
+#~ msgid "Share"
+#~ msgstr "Bagi"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "Ikon"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Anda tak dapat menaruh folder di dalamnya sendiri"
+
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Nama berkas untuk isi yang ditaruh:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Pindah ke Sini"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Salin ke Sini"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Taut ke Sini"
+
+#~ msgid "C&ancel"
+#~ msgstr "B&atal"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Atur Sebagai &Gambar Belakang"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Buat direktori"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Masukkan nama yang lain"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "Nama \"%1\" dimulai dengan titik, sehingga direktori akan disembunyikan "
+#~ "standarnya."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Buat direktori tersembunyi?"
+
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Folder Baru"
+
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Folder Baru"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Masukkan nama folder:"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Tempel Satu Folder"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Tempel Satu Berkas"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Item"
+#~ msgid_plural "Paste %1 Items"
+#~ msgstr[0] "Tempel %1 Item"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "Tempel Isi Papan Klip..."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "Tempel"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr ""
+#~ "Kembalikan berkas atau direktori ini, kembali ke lokasi tempat dihapus "
+#~ "pertama kali"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Buka jendela manajer berkas baru yang menampilkan target tautan ini, "
+#~ "dalam direktori induknya."
+
+#~ msgctxt "@info"
+#~ msgid "Close"
+#~ msgstr "Tutup"
+
+#~ msgid "Close"
+#~ msgstr "Tutup"
+
+#~ msgid "Error: %1"
+#~ msgstr "Galat: %1"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "Behavior"
+#~ msgstr "Perilaku"
+
+#~ msgid "Click to view folder"
+#~ msgstr "Klik untuk melihat folder"
+
+#~ msgid " bytes"
+#~ msgstr " bita"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Ikon"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Ratakan ke Petak"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Kunci di Tempat"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "%1 folder"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "%1 berkas"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "%1 berkas."
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "Gunakan kontrol ini untuk memilih kriteria seperti apa ikon akan "
+#~ "diurutkan di tampilan."
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want the icons to be arranged in a grid.\n"
+#~| "\n"
+#~| "When this option is checked, icons will automatically snap to the "
+#~| "nearest grid cell when you move them around in the view."
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda ingin ikon untuk ditempatkan di dalam petak.\n"
+#~ "\n"
+#~ "Jika opsi ini dicentang, ikon akan secara otomatis diletakkan ke sel "
+#~ "petak terdekat jika anda memindahkan ikon di sekeliling tampilan."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Gunakan kontrol ini untuk memilih kriteria seperti apa ikon akan "
+#~ "diurutkan di tampilan."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Gunakan kontrol ini untuk memilih kriteria seperti apa ikon akan "
+#~ "diurutkan di tampilan."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda tidak ingin agar ikon dapat dipindahkan di "
+#~ "tampilan.\n"
+#~ "\n"
+#~ "Opsi ini berguna jika anda ingin menghindari tidak sengaja memindahkan "
+#~ "ikon ketika berinteraksi dengan ikon."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Ratakan ke petak:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda ingin ikon untuk ditempatkan di dalam petak.\n"
+#~ "\n"
+#~ "Jika opsi ini dicentang, ikon akan secara otomatis diletakkan ke sel "
+#~ "petak terdekat jika anda memindahkan ikon di sekeliling tampilan."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr ""
+#~ "Gunakan penggeser ini untuk memperbesar atau memperkecil ukuran ikon di "
+#~ "tampilan."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda ingin melihat pratilik isi berkas di dalam "
+#~ "ikon."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Klik tombol ini untuk memilih tipe pratilik berkas apa yang akan "
+#~ "ditampilkan."
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want the icons to be arranged in a grid.\n"
+#~| "\n"
+#~| "When this option is checked, icons will automatically snap to the "
+#~| "nearest grid cell when you move them around in the view."
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda ingin ikon untuk ditempatkan di dalam petak.\n"
+#~ "\n"
+#~ "Jika opsi ini dicentang, ikon akan secara otomatis diletakkan ke sel "
+#~ "petak terdekat jika anda memindahkan ikon di sekeliling tampilan."
+
+#~ msgid "Icon Text"
+#~ msgstr "Teks Ikon"
+
+#~ msgid "Lines:"
+#~ msgstr "Baris:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "Gunakan kontrol ini untuk memilih berapa banyak teks yang akan "
+#~ "ditampilkan di bawah ikon."
+
+#~ msgid "1 line"
+#~ msgstr "1 baris"
+
+#~ msgid "Color:"
+#~ msgstr "Warna:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "Klik tombol ini untuk memilih warna yang akan digunakan untuk label teks "
+#~ "di tampilan."
+
+#~ msgid "Shadows:"
+#~ msgstr "Bayangan:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Centang opsi ini jika anda ingin label teks untuk "
+#~ "menampilkan bayangan di latar belakang.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Bayangan membuat teks lebih mudah terbaca dengan membuatnya tampil "
+#~ "lebih mencolok dibanding latar belakang.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Perlu dicatat bahwa dengan warna teks gelap, opsi ini akan "
+#~ "menyebabkan teks bersinar dengan halo yang terang, ketimbang menampilkan "
+#~ "bayangan.</i></p></body></html>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want to see previews of the file contents in "
+#~| "the icons."
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr ""
+#~ "Centang opsi ini jika anda ingin melihat pratilik isi berkas di dalam "
+#~ "ikon."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Jika anda telah memilih "
+#~ "\"Tampilkan Berkas Yang Cocok\" atau \"Sembunyikan Berkas Yang Cocok\", "
+#~ "hanya berkas yang cocok dengan KEDUA kondisi yang akan ditampilkan atau "
+#~ "disembunyikan.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Misalnya, jika anda "
+#~ "memiliki tanda \"*\" sebagai pola anda, tapi tidak ada yang terpilih di "
+#~ "tipe MIME, maka tidak ada yang akan ditampilkan.</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Perlu dicatat bahwa jika anda telah memilih \"Tampilkan Berkas Yang Cocok"
+#~ "\" atau \"Sembunyikan Berkas Yang Cocok\",\n"
+#~ "hanya berkas yang cocok dengan KEDUA kondisi yang akan ditampilkan atau "
+#~ "disembunyikan.\n"
+#~ "Misalnya, jika anda memiliki tanda \"*\" sebagai pola anda, tapi tidak "
+#~ "ada yang terpilih di tipe MIME, tak ada berkas yang akan ditampilkan."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Tak Dapat Melihat Berkas Apapun?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "Senarai ekstensi yang dipisahkan oleh spasi, misalnya *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Senarai ekstensi yang dipisahkan oleh spasi, misalnya *.txt *.od* agar "
+#~ "hanya menampilkan berkas perkantoran dan teks"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Filter pola"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "Cek tipe berkas yang ingin anda buat pratilik ikon:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "Foldr ini kosong."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Artis:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Album:"
+
+#, fuzzy
+#~| msgid "1 MPixel"
+#~| msgid_plural "%1 MPixels"
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 MPixel"
+
+#~ msgid "Camera:"
+#~ msgstr "Kamera:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "Ekuivalen 35 mm: %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Jarak Fokus:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Waktu Pajanan:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 d"
+
+#~ msgctxt "On a camera"
+#~ msgid "Aperture:"
+#~ msgstr "Diafragma:"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "Kecepatan ISO:"
+
+#~ msgid "Time:"
+#~ msgstr "Waktu:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "%1 halaman"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "%1 kata"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "%1 item"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "Kiri ke Kanan, Atas ke Bawah"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "Kanan ke Kiri, Atas ke Bawah"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Tampilan"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "Menurut Ukuran"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Gunakan kontrol ini untuk memilih jika anda ingin ikon untuk diurutkan "
+#~ "dari atas ke bawah dimulai dari sisi kiri tampilan, atau diurutkan kiri "
+#~ "ke kanan dimulai dari atas tampilan."
+
+#~ msgid "Header"
+#~ msgstr "Tajuk"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "Area penyuntingan ini berisi label yang ditampilkan di atas applet.\n"
+#~ "\n"
+#~ "Standarnya area berisi nama dari tempat yang sedang ditampilkan di "
+#~ "applet, tapi jika anda memilih untuk memiliki label suai anda dapat "
+#~ "memasukkannya di sini."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Header</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Tajuk</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icons</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Ikon</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icon Text</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Teks Ikon</span></p></body></html>"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Opsi Lanjutan"
+
+#~ msgid "Text Settings"
+#~ msgstr "Pengaturan Teks"
+
+#~ msgid "Text color:"
+#~ msgstr "Warna teks:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "Jumlah baris:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "Tampilkan bayangan teks"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "Ratakan ikon dalam sebuah petak"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "Kunci ikon di tempat"
+
+#~ msgid "Add Panel"
+#~ msgstr "Tambah Panel"
+
+#~ msgid "Run Command..."
+#~ msgstr "Jalankan Perintah..."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Kunci Layar"
+
+#~ msgid "Leave..."
+#~ msgstr "Tinggalkan..."

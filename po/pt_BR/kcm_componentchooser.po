@@ -1,0 +1,292 @@
+# Translation of kcmcomponentchooser.po to Brazilian Portuguese
+# Copyright (C) 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016 Free Software Foundation, Inc.
+#
+# Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003.
+# Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
+# Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
+# Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2005.
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2015, 2016.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-17 15:16-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Navegador Web padrão"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Outro..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Selecionar navegador padrão"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Selecionar cliente de e-mail padrão"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Selecionar gerenciador de arquivos padrão"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Selecionar mapa padrão"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Selecionar aplicativo discador padrão"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Selecionar emulador de terminal padrão"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Navegador Web:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Gerenciador de arquivos:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Cliente de e-mail:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Emulador de terminal:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Mapa:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Discador:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lisiane Sztoltz Teixeira, André Marcelo Alvarenga"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lisiane@kdemail.net, alvarenga@kde.org"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Aplicativos padrão"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Desconhecido"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Seleção de componentes"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Escolha na lista abaixo, qual o componente deve ser usado por padrão para "
+#~ "o serviço %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Você mudou o componente padrão de sua escolha, deseja salvar esta "
+#~ "mudança agora?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Nenhuma descrição disponível"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Aqui você pode modificar o programa do componente. Componentes são "
+#~ "programas que manipulam tarefas básicas, como o emulador de terminal, o "
+#~ "editor de textos e o cliente de e-mail. Diferentes aplicativos do KDE "
+#~ "precisam, algumas vezes, invocar um emulador de console, enviar um e-mail "
+#~ "ou exibir algum texto. Para fazer algo consistentemente, estes "
+#~ "aplicativos sempre chamam os mesmos componentes. Você pode escolher aqui "
+#~ "quais são os programas para estes componentes."
+
+#~ msgid "Default Component"
+#~ msgstr "Componente padrão"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Esta lista mostra os tipos de componentes configuráveis. Clique sobre "
+#~ "o componente que deseja configurar.</p>\n"
+#~ "<p>Neste diálogo você pode modificar os componentes padrão do KDE. "
+#~ "Componentes são programas que manipulam tarefas básicas, como um emulador "
+#~ "de terminal, o editor de texto e o cliente de e-mail. Diferentes "
+#~ "aplicativos precisam, algumas vezes, invocar um emulador de console, "
+#~ "enviar um e-mail ou exibir algum texto. Para fazer isto consistentemente, "
+#~ "estes aplicativos chamam sempre os mesmos componentes. Aqui você pode "
+#~ "selecionar quais programas são estes.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Abre URLs <b>http</b> e <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "em um aplicativo baseado nos conteúdos da URL"
+
+#~ msgid "in the following application:"
+#~ msgstr "no seguinte aplicativo:"
+
+#~ msgid "with the following command:"
+#~ msgstr "com o seguinte comando:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Selecione seu navegador preferido:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr ""
+#~ "O KMail é o programa de e-mail padrão para a área de trabalho Plasma."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Usar o KMail como cliente de e-mail preferido"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Selecione esta opção se deseja usar qualquer outro programa de e-mail."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>Campos opcionais:</li> <li>%s: Assunto</li> <li>%c: Cópia (Cc)</"
+#~ "li> <li>%b: Cópia oculta (Cco)</li> <li>%B: Modelo de corpo de texto</li> "
+#~ "<li>%A: Anexo </li> <li>%u: URL mailto: Completa </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Pressione este botão para selecionar o seu cliente de e-mail favorito. "
+#~ "Por favor, note que o arquivo que você selecionou tem que possuir o "
+#~ "atributo de executável definido para ser aceito.<br/>Você também pode "
+#~ "usar vários campos que serão substituídos pelos valores reais quando o "
+#~ "cliente de e-mail for chamado: <ul> <li>%t: Endereço do destinatário</li> "
+#~ "<li>%s: Assunto</li> <li>%c: Cópia (Cc)</li> <li>%b: Cópia oculta (Cco)</"
+#~ "li> <li>%B: Modelo do corpo de texto</li> <li>%A: Anexo </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Clique aqui para navegar para o arquivo do programa de e-mail."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Ative esta opção se desejar que o cliente de e-mail seja executado em um "
+#~ "terminal (por ex., o <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "E&xecutar no terminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Navegar pelas pastas usando o seguinte gerenciador de arquivos:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Outro: Clique em Adicionar... no diálogo mostrado aqui:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Usar o &Konsole como aplicativo de terminal"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Usar um programa de &terminal diferente:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Pressione este botão para selecionar o seu cliente de terminal favorito. "
+#~ "Por favor, note que o arquivo que você selecionar deve o atributo de "
+#~ "executável definido para que seja aceito.<br/>Note também que alguns "
+#~ "programas que utilizam o emulador de terminal não funcionarão, se você "
+#~ "adicionar argumentos de linha de comando (Exemplo: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Clique aqui para localizar o aplicativo de terminal."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 segundo restante:"
+#~ msgstr[1] "%1 segundos restantes:"

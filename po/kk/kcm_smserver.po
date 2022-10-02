@@ -1,0 +1,269 @@
+# translation of kcmsmserver.po to Karakh
+#
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2010-01-05 06:59+0600\n"
+"Last-Translator: \n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+"\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Сеанс менеджері</h1> Мұнда сеанс менеджерін баптай аласыз. Баптайтыны: "
+"сеансты аяқтауын құптауы керек пе, келесі кіргенде өткен сеансты қалпына "
+"келтіру керек пе, сеанстан шыққанда компьютерді автоматты түрде өшіруі керек "
+"пе деген мәселелер."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "Компьютер жаңадан &жүктелсін"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Жалпы"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Аяқтауда құп&тау сұралсын"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Өшіру мүмкіндігі ұс&ынылсын"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "Сеанс аяқталғанда әдетте"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Сеанс &бітсін"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Компьютер жаңадан &жүктелсін"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Компьютер ө&шірілсін"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "&Әдейі сақталған сеанс қалпына келтірілсін"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "&Әдейі сақталған сеанс қалпына келтірілсін"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "&Бос сеанстан басталсын"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Мұнда, кос нүктемен не үтірмен бөліктеп, орындалуы сақталмайтын қолданбалар "
+"тізімін келтіре аласыз, мысалы, 'xterm:konsole' немесе 'xterm,konsole'. "
+"Сонымен осы қолданбалар келесіде, сеансты қалпына келтіргенде, автоматты "
+"түрде жегілмейді."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Аяқтауда құп&тау сұралсын"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "Өшіру мүмкіндігі ұс&ынылсын"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "Сеанс аяқталғанда әдетте"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Сеансты бастағанда"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "Орындалуы сақтал&майтын қолданбалар:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "&Өткен сеанс қалпына келтірілсін"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "&Әдейі сақталған сеанс қалпына келтірілсін"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Егер сеанс менеджері жүйеден шығарда құптау диалогын көрсетсін десеңіз, "
+#~ "осы құсбелгісін қойыңыз."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Аяқтауда құп&тау сұралсын"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Өшіру мүмкіндігі ұс&ынылсын"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Мұнда сеансты аяқтағанда әдетте не болатынын таңдай аласыз. Бұл тек қана "
+#~ "KDM арқылы жүйеге кіргенде болатын істер."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Сеанс аяқталғанда әдетте"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Өткен сеанс қалпына келтірілсін:</b> Шыққанда орындалып жатқан "
+#~ "қолданбаларды жаттап, келесі сеансты басталғанда олар қалпына "
+#~ "келтіріледі</li>\n"
+#~ "<li><b>Әдейі сақталған сеанс қалпына келтірілсін:</b> Қалаған кезде, K-"
+#~ "мәзірдегі \"Сеансты сақтау\" арқылы сеанстың күйін сақтау мүмкіндігін "
+#~ "беріп, келесі басталған сеанста сол күйінде орындалған қолданбалар "
+#~ "қалыпына келтіріледі.</li>\n"
+#~ "<li><b>Бос сеанстан басталсын:</b> Ештеңе сақталмай, келесі сеанс бос "
+#~ "үстелден басталады.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Сеансты бастағанда"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Орындалуы сақтал&майтын қолданбалар:"
+
+#~ msgid "Session Manager"
+#~ msgstr "Сеанс менеджері"
+
+#~ msgid "Advanced"
+#~ msgstr "Косымша"

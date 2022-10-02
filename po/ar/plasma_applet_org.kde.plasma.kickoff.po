@@ -1,0 +1,442 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٥, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-08-14 18:33+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "عام"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "أزل من المفضّلة"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "أضف إلى المفضّلة"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "في كلّ الأنشطة"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "في النّشاط الحاليّ"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "أظهر في المفضّلة"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "الأيقونة:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "اختر..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr "صفّر إلى الأيقونة المبدئية"
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr "أزل الأيقونة"
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "اللصيقة النصية:"
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "اكتب هنا لتضيف لصيقة نصية"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "لا يمكن وضع لصيقة نصية عندما تكون اللوحة عمودية"
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr "عام:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "افرز أبجديًّا دائما"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr "استخدم قائمة العناصر المتراصة"
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr "يعطل آليا في وضع اللوحي"
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "اضبط ملحقات البحث المفعلة"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "أظهر المفضّلات"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "في شبكة"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "في قائمة"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "أظهر التّطبيقات الأخرى:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "في شبكة"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "في قائمة"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "أظهر أزرار لـ:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "الطاقة"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "الجلسة"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "الطاقة والجلسة"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "أظهر عناوين أزرار الإجراءات"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "التّطبيقات"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "الأماكن"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "افتح إعدادات المستخدم"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "أبقه مفتوحاً"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "حرّر التّطبيقات..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "شبكة بـ %1 سطر و %2 عمود"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "اترك"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "المزيد"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "الحاسوب"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "التّأريخ"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "كثير ما تستخدم"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "امسح الأيقونة"
+
+#~ msgid "Search…"
+#~ msgstr "ابحث..."
+
+#~ msgid "Primary actions:"
+#~ msgstr "الإجراءات الأساسية:"
+
+#~ msgid "Power actions"
+#~ msgstr "إجراءات الطاقة"
+
+#~ msgid "Session actions"
+#~ msgstr "إجراءات الجلسة"
+
+#~ msgid "Leave…"
+#~ msgstr "اترك..."
+
+#~ msgid "Power…"
+#~ msgstr "الطّاقة…"
+
+#~ msgid "More…"
+#~ msgstr "المزيد…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "يحدث التّطبيقات..."
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "اسمح للاصقات أن تكون في سطرين"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2 على %3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1 على %2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "اعرض بـ ٠ عنصر"
+#~ msgstr[1] "اعرض بعنصر"
+#~ msgstr[2] "اعرض بعنصرين"
+#~ msgstr[3] "اعرض بـ%1 عناصر"
+#~ msgstr[4] "اعرض بـ%1 عنصرا"
+#~ msgstr[5] "اعرض بـ%1 عنصر"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 قائمة فرعية"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave..."
+#~ msgstr "اترك"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Open icon chooser dialog"
+#~| msgid "Choose..."
+#~ msgid "More..."
+#~ msgstr "اختر..."
+
+#~ msgid "Applications updated."
+#~ msgstr "حُدّثت التّطبيقات."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "بدّل الألسنة عند المرور عليها"
+
+#~ msgid "All Applications"
+#~ msgstr "كلّ التّطبيقات"
+
+#~ msgid "Favorites"
+#~ msgstr "المفضّلة"
+
+#, fuzzy
+#~| msgid "Recently Used"
+#~ msgid "Often Used"
+#~ msgstr "آخر المستخدم"
+
+#, fuzzy
+#~| msgid "Hidden Tabs"
+#~ msgid "Active Tabs"
+#~ msgstr "الألسنة المخفيّة"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "اسحب الألسنة داخل المربّعات لإظهارها أو إخفائها، أو أعد ترتيب الألسنة "
+#~ "المرئيّة بسحبها."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "وسّع البحث ليشمل العلامات، والملفّات والبُرد الإلكترونيّة"
+
+#~ msgid "Appearance"
+#~ msgstr "المظهر"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "أزرار القائمة"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "الألسنة المرئيّة"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "المفضّلة"
+
+#~ msgid "Log out"
+#~ msgstr "اخرج"
+
+#~ msgid "Lock"
+#~ msgstr "اقفل"
+
+#~ msgid "Lock screen"
+#~ msgstr "اقفل الشّاشة"
+
+#~ msgid "Switch user"
+#~ msgstr "بدّل المستخدم"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "ابدأ جلسة موازية كمستخدم مختلف"
+
+#~ msgid "Shut down"
+#~ msgstr "أوقف التّشغيل"
+
+#~ msgid "Turn off computer"
+#~ msgstr "أطفئ الحاسوب"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "أعد التّشغيل"
+
+#~ msgid "Restart computer"
+#~ msgstr "أعد تشغيل الحاسوب"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "احفظ الجلسة الحاليّة للولوج التّالي"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "علّق"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "ألبث دون الخروج"
+
+#~ msgid "Hibernate"
+#~ msgstr "أسبت"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "علّق إلى القرص"
+
+#, fuzzy
+#~| msgid "Suspend to RAM"
+#~ msgid "Suspend"
+#~ msgstr "علّق إلى الذّاكرة العشوائيّة"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "علّق إلى الذّاكرة العشوائيّة"
+
+#~ msgid "System"
+#~ msgstr "النّظام"
+
+#~ msgid "Home Folder"
+#~ msgstr "المجلّد المنزل"
+
+#~ msgid "Network Folders"
+#~ msgstr "مجلّدات الشّبكة"
+
+#~ msgid "Documents"
+#~ msgstr "المستندات"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "آخر المستندات المستخدمة"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "آخر التّطبيقات المستخدمة"
+
+#~ msgid "Run Command..."
+#~ msgstr "شغّل أمرًا..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "شغّل أمرًا أو استعلام بحث"
+
+#~ msgid "Removable Storage"
+#~ msgstr "تخزين يمكن فصله"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "أظهر \"آخر التّطبيقات المثبّتة\""
+
+#~ msgid "Uninstall"
+#~ msgstr "أزل التّثبيت"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "افرز أبجديًّا (من ي إلى ا)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "امحُ آخر التّطبيقات"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "امحُ آخر المستندات"
+
+#~ msgid "Sleep"
+#~ msgstr "نَم"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "بلازما كدي"

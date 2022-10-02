@@ -1,0 +1,321 @@
+# translation of joystick.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2012-01-12 16:51+0330\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
+"Language-Team: Farsi (Persian) <>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "محمدرضا میردامادی , نازنین کاظمی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "درجه‌بندی"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "بعدی"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "لطفاً، چند لحظه صبر کنید تا دقت محاسبه شود"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr ")معمولاً X("
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr ")معمولاً Y("
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>درجه‌بندی، درباره بررسی گستره مقداری است که دستگاه شما تحویل می‌دهد.<br /"
+"><br />لطفاً <b>محور %1 %2</b> را در دستگاه خود به موقعیت <b>کمینه</b> حرکت "
+"دهید<br /><br />.برای ادامه مرحله بعدی، هر دکمه روی دستگاه، یا دکمه »بعدی« "
+"را فشار دهید.</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>درجه‌بندی، درباره بررسی گستره مقداری است که دستگاه شما تحویل می‌دهد.<br /"
+"><br />لطفاً <b>محور %1 %2</b> را در دستگاه خود به موقعیت <b>مرکز</b>حرکت "
+"دهید.<br /><br />برای ادامه مرحله بعدی، هر دکمه روی دستگاه، یا دکمه »بعدی« "
+"را فشار دهید.</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>درجه‌بندی، درباره بررسی گستره مقداری است که دستگاه شما تحویل می‌دهد.<br /"
+"><br />لطفاً <b>محور %1 %2</b> را در دستگاه خود به موقعیت <b>بیشینه</b>حرکت "
+"دهید.<br /><br />برای ادامه مرحله بعدی، هر دکمه روی دستگاه، یا دکمه »بعدی« "
+"را فشار دهید.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "خطای ارتباط"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "دستگاه خود را با موفقیت درجه‌بندی کرده‌اید"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "درجه‌بندی موفق"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "محور مقدار %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "دستگاه مفروض %1 را نمی‌توان باز کرد:%2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "دستگاه مفروض %1 اهرم کنترل نیست."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr ""
+"نتوانست نسخه گرداننده هسته را برای دستگاه اهرم کنترل %1 به دست آورد: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"نسخه گرداننده هسته در حال اجرای جاری )%1.%2.%3(، یکی از این پیمانه‌های "
+"ترجمه‌شده برای )%4.%5.%6( نیست."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "تعداد دکمه‌ها را نتوانست برای دستگاه اهرم کنترل %1 به دست آورد: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "نتوانست تعداد محورها را برای دستگاه اهرم کنترل %1 به دست آورد: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "نتوانست مقادیر درجه‌بندی را برای دستگاه اهرم کنترل %1 به دست آورد: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "نتوانست مقادیر درجه‌بندی را برای دستگاه اهرم کنترل %1 بازگرداند: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr ""
+"نتوانست مقادیر درجه‌بندی را برای دستگاه اهرم کنترل %1 مقداردهی اولیه کند: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "نتوانست مقادیر درجه‌بندی را برای دستگاه اهرم کنترل %1 اعمال کند: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "خطای درونی - کد ناشناخته %1"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "پیمانه کنترل اهرم کنترل KDE"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "پیمانه مرکز کنترل KDE برای آزمایش اهرمهای کنترل"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "(ح) ۲۰۰۴، Martin Koller"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>اهرم کنترل</h1>این پیمانه، در صورتی که اهرم کنترل شما درست کار کند، به "
+"بررسی کمک می‌کند.<br />اگر مقادیر اشتباه را برای محورها تحویل دهد، می‌توانید "
+"این مشکل را با درجه‌بندی حل کنید.<br />این پیمانه‌ها سعی می‌کنند همه دستگاههای "
+"اهرم کنترل را با بررسی  /dev/js[0-4] و /dev/input/js[0-4] پیدا کنند.<br /"
+">اگر پرونده دستگاه دیگری دارید، آن را در جعبه ترکیب وارد کنید.<br />فهرست "
+"دکمه‌ها، وضعیت دکمه‌های روی اهرم کنترل شما را نمایش می‌دهد؛ فهرست محورها، مقدار "
+"جاری برای همه محورها را نشان می‌دهد.<br />توجه: گرداننده دستگاه لینوکس جاری "
+"(Kernel 2.4, 2.6) فقط می‌تواند <ul><li>دو محور، ۴ دکمه اهرم کنترل </li><li>سه "
+"محور، ۴ دکمه اهرم کنترل</li><li>چهار محور، ۴ دکمه اهرم کنترل</li><li>Saitek "
+"Cyborg »قیاسی« اهرمهای کنترل</li></ul> را آشکارسازی خودکار کند )برای جزئیات "
+"source/Documentation/input/joystick.txt لینوکس خود را بررسی کنید.("
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "دستگاه:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "موقعیت:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "نمایش ردیابی"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "فشار داده‌شده"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "دکمه‌ها:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "وضعیت"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "محورها:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "مقدار"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "درجه‌بندی"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"دستگاه اهرم کنترل به طور خودکار در این رایانه پیدا نشد.<br />بررسیها در /dev/"
+"js[0-4] و  /dev/input/js[0-4] انجام‌ شده است<br />اگر می‌دانید که پیوستی وجود "
+"دارد، لطفاً پرونده دستگاه صحیح را وارد کنید."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"نام دستگاه داده‌شده نامعتبر است )شامل dev/ نیست(.\n"
+"لطفاً از فهرست دستگاهی را انتخاب‌ کرده یا\n"
+"پرونده دستگاه را وارد کنید، مانند dev/js0/."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "دستگاه ناشناخته"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "خطای دستگاه"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "۱(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "۲(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>درجه‌بندی، درباره بررسی موقعیت می‌باشد<br /><br /><b>لطفاً محورها را به "
+"موقعیت مرکزیشان حرکت داده، و دیگر به اهرم کنترل دست نزنید.</b><br /><br /"
+">برای آغاز درجه‌بندی، تأیید را فشار دهید.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "همه مقادیر درجه‌بندی برای دستگاه اهرم کنترل %1 بازگردانده شد."

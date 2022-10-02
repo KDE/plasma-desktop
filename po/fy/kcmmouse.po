@@ -1,0 +1,903 @@
+# translation of kcminput.po to Frysk
+# translation of kcminput.po to
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006, 2007.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"PO-Revision-Date: 2010-07-16 13:14+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Berend Ytsma"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "berendy@bigfoot.com"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:86
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:36
+#, kde-format
+msgid "Pointer device KCM"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:38
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:40
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
+#, kde-format
+msgid "Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:110
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:115
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:146
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:168
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:192
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:194
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr ""
+
+#: kcm/libinput/main.qml:79
+#, kde-format
+msgid "Device:"
+msgstr ""
+
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General:"
+msgstr "Al&gemien"
+
+#: kcm/libinput/main.qml:105
+#, kde-format
+msgid "Device enabled"
+msgstr ""
+
+#: kcm/libinput/main.qml:124
+#, kde-format
+msgid "Accept input through this device."
+msgstr ""
+
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
+msgid "Left handed mode"
+msgstr "&Loftshandich"
+
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr ""
+
+#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+
+#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Pointer speed:"
+msgstr "Pylkje drompelwearde:"
+
+#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#, fuzzy, kde-format
+#| msgid "Acceleration &profile:"
+msgid "Acceleration profile:"
+msgstr "Fersnellings&profyl:"
+
+#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#, kde-format
+msgid "Flat"
+msgstr ""
+
+#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr ""
+
+#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#, kde-format
+msgid "Adaptive"
+msgstr ""
+
+#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+
+#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "Skú&frjochting omkeare"
+
+#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr ""
+
+#: kcm/libinput/main.qml:295
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Scrolling speed:"
+msgstr "Pylkje drompelwearde:"
+
+#: kcm/libinput/main.qml:343
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: kcm/libinput/main.qml:349
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr ""
+
+#: kcm/libinput/main.qml:395
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr ""
+
+#: kcm/libinput/main.qml:427
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+
+#: kcm/libinput/main.qml:428
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr ""
+
+#: kcm/libinput/main.qml:432
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: kcm/libinput/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Press Connect Button"
+msgctxt "@action:button"
+msgid "Press a mouse button "
+msgstr "Druk op de knop Ferbine"
+
+#: kcm/libinput/main.qml:450
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr ""
+
+#: kcm/libinput/main.qml:479
+#, kde-format
+msgctxt "@action:button"
+msgid "Go back"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<h1>Mûs</h1> Mei dizze module kinne jo ferskate opsjes ynstelle foar de wize "
+"wêrop jo oanwiisapparaat wurket. Jo oanwiisapparaat kin in mûs of trackball "
+"wêze, of in oar apparaat dat deselde funksje hat."
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "Al&gemien"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"As jo lofts binne, dan wolle jo miskien wol dat de funksjes fan de rjochter "
+"en de lofter mûsknop omwiksele wurde. Dit kinne jo dwaan troch te kiezen "
+"foar de opsje \"Loftshandich\". As jo oanwiisapparaat mear dan twa knoppen "
+"hat, dan hat dy opsje allinne effekt foar de lofter en rjochter mûsknop, as "
+"jo bygelyks in trije-knops mûs hawwe dan feroaret de middelste knop net."
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "Knopfolchoarder"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "Rjoch&tshandich"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "&Loftshandich"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr "Keart de skúfrjochting foar it mûstsjil of de 4de en 5de mûsknop om."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "Skú&frjochting omkeare"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "Avansearre"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Pylkje-akseleraasje:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "Pylkje drompelwearde:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "Dûbelklik tuskenskoft:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "Begjintiid foar ferslepen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "begjinôfstân foar ferslepen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "Mûstsjil rôlje de:"
+
+# msgid ""
+# "This option allows you to change the relationship between the distance "
+# "that the mouse pointer moves on the screen and the relative movement of "
+# "the physical device itself (which may be a mouse, trackball, or some "
+# "other pointing device.)<p> A high value for the acceleration will lead to "
+# "large movements of the mouse pointer on the screen even when you only "
+# "make a small movement with the physical device. Selecting very high "
+# "values may result in the mouse pointer flying across the screen, making "
+# "it hard to control."
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<p>Dizze opsje jout dy de mooglikheid om de relaasje te bepalen tusken de "
+"ôfstân dy de mûsoanwizer oer it skerm ôfleit en de relative ôfstân dan it "
+"fysike apparaat sels. (Dat kin in mûs, trackball of in oar oanwiisapparaat "
+"wêze.)</p><p> In hege fersnellingswearde soarget foar in grutte beweging fan "
+"de mûsoanwizer op it skerm, wylst jo lytse bewegings meitsje mei de it "
+"apparaat sels. As jo hiele hege wearden kieze, dan fljocht de mûsoanwizer "
+"oer it skerm hinne, wêrtroch hy swier yn twang te hâlden is.</p>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr " x"
+
+# msgid ""
+# "The threshold is the smallest distance that the mouse pointer must move "
+# "on the screen before acceleration has any effect. If the movement is "
+# "smaller than the threshold, the mouse pointer moves as if the "
+# "acceleration was set to 1X;<p> thus, when you make small movements with "
+# "the physical device, there is no acceleration at all, giving you a "
+# "greater degree of control over the mouse pointer. With larger movements "
+# "of the physical device, you can move the mouse pointer rapidly to "
+# "different areas on the screen."
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<p>De fersnellingsdrompel is de lytste ôfstân dy de mûsoanwizer ôflizze moat "
+"foardat de fersnelling mar ienich effekt hat. As de beweging lytser is dan "
+"de drompel, dan beweegd de mûs har as is de fersnellings op 1x ynsteld. </"
+"p><p>Dus as jo mei jo fysike apparaat lytse bewegings meitsje, dan is der "
+"gjin inkele fersnelling, wêrtroch jo mear kontrôle hawwe oer de mûsoanwizer. "
+"By grutter bewegings fan it fysike apparaat kinne jo de mûsoanwizer fluch "
+"nei oare gebieden op it skerm bringe.</p>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"De dûbelkliktuskenskoft is de maksimum tiid (yn millisekonden) tusken twa "
+"mûsklikken dy dizze yn in dûbelklik feroaret As de twadde klik nei’t "
+"tuskenskoft bard, dan wurde se werkend as twa losse klikken."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " msek"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"As jo mei de mûs klikke (bgl. yn in multyrigel-bewurker) en jo begjinne "
+"mei't bewegen fan de mûs binnen de begjintiid foar it ferslepen, dan wurdt "
+"de fersleep aksje yn wurking setten."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"As jo mei de mûs klikke en dizze yn elts gefal duorjende de begjinôfstân "
+"foar ferslepen bewege, dan wurdt de fersleep aksje yn wurking setten."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"As jo it tsjil fan de mûs brûke, dan stelle jo hjir it oantal troch te "
+"fytsen rigels mei yn tsjilbeweging yn. As dit oantal it oantal sichtbere "
+"rigels te boppe giet, dan wurde dizze negearre en sil de mûsbeweging "
+"ôfhandele wurde as in side op/del beweging."
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, fuzzy, kde-format
+#| msgid "Mouse Navigation"
+msgid "Keyboard Navigation"
+msgstr "Mûsnavigaasje"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "&Mûs mei toetseboerd ferpleatse (fia it nûm. klavier)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "Akseleraasjefertr&aging:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "W&erhellingstuskenskoft:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "Akseleraasje&tiid:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "Ma&ksimum fluggens:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " piksel/sek"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "Fersnellings&profyl:"
+
+#: kcm/xlib/xlib_config.cpp:79
+#, kde-format
+msgid "Mouse"
+msgstr "Mûs"
+
+#: kcm/xlib/xlib_config.cpp:83
+#, fuzzy, kde-format
+#| msgid "(c) 1997 - 2005 Mouse developers"
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr "(c) 1997 - 2005 de ûntwikkelders fan Mouse"
+
+#: kcm/xlib/xlib_config.cpp:84
+#, kde-format
+msgid "Patrick Dowler"
+msgstr "Patrick Dowler"
+
+#: kcm/xlib/xlib_config.cpp:85
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr "Dirk A. Mueller"
+
+#: kcm/xlib/xlib_config.cpp:86
+#, kde-format
+msgid "David Faure"
+msgstr "David Faure"
+
+#: kcm/xlib/xlib_config.cpp:87
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr "Bernd Gehrmann"
+
+#: kcm/xlib/xlib_config.cpp:88
+#, kde-format
+msgid "Rik Hemsley"
+msgstr "Rik Hemsley"
+
+#: kcm/xlib/xlib_config.cpp:89
+#, kde-format
+msgid "Brad Hughes"
+msgstr "Brad Hughes"
+
+#: kcm/xlib/xlib_config.cpp:90
+#, kde-format
+msgid "Brad Hards"
+msgstr "Brad Hards"
+
+#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#, kde-format
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] " piksel"
+msgstr[1] " piksels"
+
+#: kcm/xlib/xlib_config.cpp:293
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] "  line"
+msgstr[1] " linen"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgid "Acceleration &time:"
+#~ msgid "Acceleration:"
+#~ msgstr "Akseleraasje&tiid:"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration Profile:"
+#~ msgstr "Fersnellings&profyl:"
+
+#~ msgid "Icons"
+#~ msgstr "Byldkaikes"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Yn KDE selektearje en aktivearje jo byldkaikes standert mei in "
+#~ "inkelfâldige klik fan jo oanwiisapparaat. Dit gedrach is ferlykber mei "
+#~ "wat jo ferwachte kinne as jo op keppelings klikke yn de measte "
+#~ "webblêders. As jo leaver mei in inkelfâldige selektearje en mei in dûbele "
+#~ "klik aktivearje, brûk dan dizze opsje."
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Dû&belklik op triemmen en mappen te iepenjen (earste klik selektearret se)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktivearret en iepent in triem of map mei in inkelfâldige mûsklik."
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Inkele klik iepent triemmen en mappen"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Kies de styl fan it rinnerke dy't jo wolle brûke:"
+
+#~ msgid "Name"
+#~ msgstr "Namme"
+
+#~ msgid "Description"
+#~ msgstr "Beskriuwing"
+
+#~ msgid "You have to restart KDE for these changes to take effect."
+#~ msgstr "Start KDE op 'e nij om de feroarings te aktivearjen."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Oanwizerynstellings feroarje"
+
+#~ msgid "Small black"
+#~ msgstr "Lyts swart"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Lytse swarte rinnerkes"
+
+#~ msgid "Large black"
+#~ msgstr "Grut swart"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Grutte swarte rinnerkes"
+
+#~ msgid "Small white"
+#~ msgstr "Lyts wit"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Lytse wite rinnerkes"
+
+#~ msgid "Large white"
+#~ msgstr "Grut wit"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Grutte wite rinnerkes"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Oa&nwizeruterlik boppe byldkaikes feroarje"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Byldkaikes a&utomatysk selektearje"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Fertraging"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msek"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "As jo dizze opsje ynskeakelje, dan wurdt in byldkaike automatysk "
+#~ "selektearre sadree jo de mûsoanwizer der op pleatst wurdt. Dit kin "
+#~ "handich wêze as in inkelfâldige klik it byldkaike aktivearret, wylst jo "
+#~ "it byldkaike allinne mar selektearje wolle sûnder it te aktivearjen."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "As jo de opsje \"Byldkaikes automatysk selektearje\" ynskeakele hawwe, "
+#~ "dan kinne jo mei de skúfregelder fêstlizze hoelang de mûsoanwizer op in "
+#~ "byldkaike stean moat foardat dizze selektearre wurdt."
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Mûstype: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-kanaal 1 is set. Druk op de mûs op deknop Ferbine  om de keppeling "
+#~ "opnij te meitsjen"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-kanaal 2 is set. Druk op de mûs op de knop Ferbine  om de keppeling "
+#~ "opnij te meitsjen"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "gjint"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Triedleaze mûs"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Triedleaze tsjilmûs"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Triedleaze MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Triedleaze TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Unbekende mûs"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Triedleaze namme"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Sensorresolúsje"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 tellings de tomme"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 tellings de tomme"
+
+#~ msgid "Battery Level"
+#~ msgstr "Batterijnivo"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF-kanaal"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanaal 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanaal 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Jo ha in Logitech-muis ferbûn en libusb is meikompilearre, mar it wie net "
+#~ "mooglik om dizze mûs te benaderjen. Dit kin in swierrichheid wêze fan de "
+#~ "tagongsrjochten. Les it hânboek oer permisjes en tagongsrjochten om dit "
+#~ "op te lossen."
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursor Theme"
+#~ msgstr "&Rinnerketema"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "In styl URL-adres ynfiere of slepe"
+
+#~ msgid "Unable to find the cursor theme archive %1."
+#~ msgstr "It oanwizerstylargyf %1 is net fûn."
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "It oanwizerstylargyf kin net ynladen wurde. Soargje dat it adres %1 just "
+#~ "is."
+
+#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
+#~ msgstr "De triem %1 is gjin jildich oanwizersstyltriem."
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Jo kinne it tema dat jo no brûke net wiskje.<br />Skeakel earst oer "
+#~ "nei in oar tema</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Binne jo wis dat jo it rinnerketema <strong>%1</strong> fuortsmite "
+#~ "wolle?<br />Alle triemmen hokker ynstallearre binne mei dit tema sille "
+#~ "wiske wurde.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Befêstiging"
+
+#~ msgid ""
+#~ "A theme named %1 already exists in your icon theme folder. Do you want "
+#~ "replace it with this one?"
+#~ msgstr ""
+#~ "In styl mei de namme %1 bestiet al yn jo byldkaikestylmap. Wolle jo it "
+#~ "ferfange mei dizze?"
+
+#~ msgid "Overwrite Theme?"
+#~ msgstr "Styl oerskriuwe?"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Kies de styl fan it rinnerke dy't jo wolle brûke (Sweef boppe foarbyld "
+#~ "foar in test):"
+
+#, fuzzy
+#~| msgid "Install New Theme..."
+#~ msgid "Get New Theme..."
+#~ msgstr "Nij tema ynstallearje..."
+
+#, fuzzy
+#~| msgid "Install New Theme..."
+#~ msgid "Install From File..."
+#~ msgstr "Nij tema ynstallearje..."
+
+#~ msgid "Remove Theme"
+#~ msgstr "Tema fuortsmite"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE klassyk"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "It standert rinnerketema fan KDE 2 en 3"
+
+#~ msgid "No description available"
+#~ msgstr "Gjin beskriuwing beskikber"
+
+#~ msgid "Short"
+#~ msgstr "Koart"
+
+#~ msgid "Long"
+#~ msgstr "Lang"

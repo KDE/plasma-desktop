@@ -1,0 +1,1039 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Das Handbuch zu &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Thomas</firstname
+><surname
+>Reitelbach</surname
+><affiliation
+><address
+><email
+>tr@erdfunkstelle.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma; ist Haupt-Schnittstelle zur Arbeitsfläche. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Bedienelement</keyword>
+<keyword
+>Container</keyword>
+<keyword
+>Arbeitsfläche</keyword>
+<keyword
+>Starter</keyword>
+<keyword
+>Kontrollleiste</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einführung</title>
+
+<para
+>&plasma; bietet eine moderne und anpassungsfähige Umgebung für die Ausführung Ihrer bevorzugten Anwendungen und für den Zugriff auf Ihre Information unabhängig vom Ort der Speicherung. Die &plasma;-Arbeitsfläche enthält eine erweiterte Fensterverwaltung und Effekte, &kde;-&plasma;-Miniprogramme, eine integrierte Suche, Verwaltung der Hardware und kann in großem Umfang angepasst werden. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>&plasma; verwenden</title>
+
+<sect1 id="plasma-components">
+<title
+>&plasma;-Komponenten</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>&plasma;-Miniprogramme und Container</title>
+
+<para
+>Im Wesentlichen dreht sich bei &plasma; alles um zwei grundlegende Konzepte: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>&plasma;-Miniprogramme</term>
+<listitem>
+<para
+>Miniprogramme, die auf der Arbeitsfläche ausgeführt werden. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Container</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Miniprogramme, die als Container für &plasma;-Miniprogramme fungieren. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>In der Voreinstellung von KDE befinden sich auf der Arbeitsfläche zwei Hauptelemente: Die Kontrollleiste und die Arbeitsfläche als solche. Beide sind Container im Sinne von &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>&plasma;-Standardarbeitsfläche</title>
+
+<para
+><note
+><para
+>Die &plasma;-Arbeitsfläche kann auf vielfache Weise eingerichtet werden. Auf den folgenden Bildschirmfotos wird eine normale Standardarbeitsfläche angezeigt. Einige Distributionen ändern diese Arbeitsfläche erheblich, so dass Ihre Arbeitsfläche anders aussehen kann. </para>
+<para
+>Das grafische Erscheinungsbild der Bedienelemente der Oberfläche kann gleichermaßen in vielen unterschiedlichen Stilen angezeigt werden. In diesem Bildschirmfotos wird der &plasma;-Standardstil Breeze benutzt.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Eine normale &plasma;-Standardarbeitsfläche</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Der Programmstarter. Normalerweise ist das <link linkend="panel-launcher"
+>Anwendungs-Starter</link
+>.</para
+></listitem>
+<listitem
+><para
+>Einige Symbole, die einen einfachen Zugriff auf häufig benutzte Anwendungen ermöglichen.</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+>Die <link linkend="panel-taskbar"
+>Fensterleiste</link
+>, in der die Titel der gerade laufenden Anwendungen angezeigt werden. Alle Anwendungen waren minimiert und kein Fenster war geöffnet, als das Bildschirmfoto aufgenommen wurde.</para
+></listitem>
+<listitem
+><para
+>Der <link linkend="panel-system-tray"
+>Systemabschnitt der Kontrollleiste</link
+></para
+></listitem>
+<listitem
+><para
+>Die <link linkend="panel-digital-clock"
+>Digitale Uhr</link
+></para
+></listitem>
+<listitem
+><para
+>Der <link linkend="panel-toolbox"
+>Werkzeugkasten der Kontrollleiste</link
+></para
+></listitem>
+<listitem
+><para
+>Der <link linkend="desktop"
+>Werkzeugkasten der Kontrollleiste</link
+></para
+></listitem>
+<listitem
+><para
+>Eine Ordneransicht, die den Inhalt des Arbeitsflächenordners anzeigt</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Die Kontrollleiste</title>
+
+<para
+>Die Kontrollleiste beinhaltet einige &plasma;-Miniprogramme. Links finden Sie dort den Anwendungsstarter.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Anwendungsstarter</title>
+
+<screenshot>
+<screeninfo
+>Anwendungsstarter</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Anwendungsstarter</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Die Kontrollleiste beinhaltet einige &plasma;-Miniprogramme. Von Links an finden Sie dort den Programmstarter. Mit ihm können Sie unter anderem Anwendungen starten, kürzlich verwendete Dateien öffnen, KDE beenden und den Rechner herunterfahren. Das Layout von &kickoff; ist auf den Hauptanwendungszweck optimiert: das Starten von Anwendungen. Das Voreingestellte Unterfenster <guilabel
+>Favoriten</guilabel
+> enthält die meist verwendeten Einträge. Zu Beginn werden Sie wahrscheinlich hauptsächlich im Unterfenster <guilabel
+>Programme</guilabel
+> arbeiten. Wenn Sie aber wissen, welche Programme Sie recht häufig verwenden, so klicken Sie mit der &RMBn; darauf und wählen den Menüeintrag <guimenuitem
+>Zu Favoriten hinzufügen</guimenuitem
+>, um den Programmeintrag in das Unterfenster <guilabel
+>Favoriten</guilabel
+> zu übernehmen. Ebenso können Sie einen Programmeintrag auch auf die Arbeitsfläche oder in die Kontrollleiste übernehmen. Um Einträge auf die Arbeitsfläche oder in die Kontrollleiste zu übernehmen, müssen Miniprogramme zunächst <quote
+>entsperrt</quote
+> werden. Klicken Sie dazu mit der &RMBn; auf die Arbeitsfläche und wählen Sie aus dem Menü <guilabel
+>Miniprogramme entsperren</guilabel
+>.</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Anwendungsmenü</title>
+
+<para
+>Vielleicht bevorzugen Sie eher das traditionelle Startmenü? Dann klicken Sie mit der &RMBn; auf den Start-Knopf und wählen aus dem Menü <guimenuitem
+>Alternativen</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Anwendungsmenü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Anwendungsmenü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Einstellungen des Anwendungs-Starters</title>
+
+<para
+>Möchten Sie die Einstellungen für das Anwendungsmenü ändern, klicken Sie mit der &RMBn; auf den Menüknopf und wählen Sie dann <guimenuitem
+>Anwendungsmenü einrichten</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Einstellungen des Anwendungs-Starters</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Einstellungen des Anwendungs-Starters</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Fensterleiste</title>
+
+<para
+>Die Fensterleiste ist ein weiteres Element in der Kontrollleiste. In diesem Bereich werden alle offenen Fenster aller Arbeitsfläche angezeigt. Klicken Sie mit der rechten Maustaste auf den Umschalter, dann können Sie mit der Einstellung <guimenuitem
+>Nur Fenster der aktuellen Arbeitsfläche anzeigen</guimenuitem
+> festlegen, dass nur die Fenster auf der aktuellen Arbeitsfläche angezeigt werden. Die Textgröße von Fenstereinträgen in der Fensterleiste ist einstellbar. Sie finden diese Einstellung in den &systemsettings; unter <menuchoice
+><guimenu
+>Erscheinungsbild</guimenu
+><guisubmenu
+>Schriftarten</guisubmenu
+></menuchoice
+>. Den Einrichtungsdialog für den Arbeitsflächen-Umschalter öffnen Sie durch Klicken mit der rechten Maustaste darauf. <screenshot>
+<screeninfo
+>Einrichtungsdialog der Fensterleiste</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Einrichtungsdialog der Fensterleiste</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Systemabschnitt der Kontrollleiste</title>
+
+<para
+>Ein anderes Standard-Element in der Kontrollleiste ist der  <application
+>Systembereich der Kontrollleiste</application
+>. Dieser dient herkömmlichen Programmen als Andockbereich. Mit einem Rechtsklick auf den <application
+>Systembereich der Kontrollleiste</application
+> können Sie den Einrichtungsdialog öffnen. Darin wählen Sie die angezeigten Elemente und deren Sichtbarkeit aus. </para>
+<screenshot>
+<screeninfo
+>Einstellungsdialog „Systemabschnitt der Kontrollleiste“</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Einstellungsdialog „Systemabschnitt der Kontrollleiste“</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Geräteüberwachung</title>
+
+<para
+>Ein Standardsymbol im Systemabschnitt der Kontrollleiste ist die <application
+>Geräteüberwachung</application
+>. Wenn Sie beispielsweise eine &USB;-Festplatte anschließen, erscheint ein Dialogfenster, mit dessen Hilfe Sie das Gerät in &dolphin; oder einer anderen zugeordneten Anwendung öffnen können. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Die <application
+>Geräteüberwachung</application
+> ist für den Umgang mit ansteckbaren Geräten wie &USB;-Pendrives (auch Flash-Laufwerke oder USB-Sticks genannt), Digitalkameras, externe &USB;-Festplatten &etc; zuständig. Sie kommt auch zum Einsatz, wenn ein Medium wie beispielsweise eine &CD; oder DVD in ein optisches Laufwerk eingelegt wird. </para>
+<para
+>Wenn Sie ein externes Gerät anstecken oder ein neues Medium in ein Laufwerk einlegen, erscheint die Überwachungsfenster. Sie können es auch direkt öffnen,  in dem Sie auf das Symbol im Systembereich der Kontrollleiste klicken. Das Fenster bleibt solange sichtbar wie der Mauszeiger sich darüber befindet, sonst schließt sie sich nach ein paar Sekunden von selbst.  </para>
+<para
+>Die <guilabel
+>Geräteüberwachung</guilabel
+> zeigt eine Liste aller bekannten Geräte. Wenn man den Mauszeiger über ein Gerät bewegt, werden die möglichen  Aktionen für dieses Gerät angezeigt. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ein Klick irgendwo im schattierten Feld um den Namen des Geräts (aber nicht auf die Auswurftaste / Auswurf-Symbol falls vorhanden) erweitert den Eintrag um eine Liste der möglichen Aktionen für dieses Gerät. Die Liste der möglichen Aktionen hängt vom Gerät ab, dies kann im Kontextmenü der  <guilabel
+>Geräteüberwachung</guilabel
+> oder in den &systemsettings; in den Modulen <ulink url="help:/kcontrol/solid-actions/index.html"
+>Geräte-Aktionen</ulink
+> und <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Wechselmedien</ulink
+> eingerichtet werden. Wählen Sie eine Aktion mit der Maus oder Tastatur aus, um sie auszuführen. </para>
+<para
+>Es gibt auch ein kleines Symbol, das rechts neben jedem Eintrag angezeigt wird. Es zeigt an, ob das Gerät derzeit eingebunden ist oder nicht. Nur wenn ein Gerät nicht eingebunden ist, kann es sicher physikalisch vom Rechner getrennt werden. Wenn man auf das Symbol klickt, wird das Gerät getrennt und/oder das Medium ausgeworfen, wenn es gerade eingebunden ist. Anderenfalls wird das Gerät eingebunden. Beachten Sie, dass das Trennen/Auswerfen möglicherweise misslingt, wenn noch Dateien geöffnet sind, &eg; weil der Kopiervorgang einer großen Datei noch nicht abgeschlossen ist. In den meisten Fällen können Sie etwas warten und es noch einmal probieren. Wenn das Trennen erfolgreich war, wird das durch ein Symbol in der <guilabel
+>Geräteüberwachung</guilabel
+>  angezeigt. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Ausgeblendete Einträge</title>
+
+<para
+>Üblicherweise enthält der Systemabschnitt der Kontrollleiste weiter Elemente wie &klipper;, &kmix; &etc;</para>
+
+<para
+>Einige Standardelemente im <application
+>Systemabschnitt der Kontrollleiste</application
+> werden ausgeblendet, um den Platz für die Anzeige zu begrenzen. Um diese Elemente anzuzeigen, klicken Sie auf das kleine weiße Dreieck <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Dann können Sie die Miniprogramme mit der &LMBn; starten oder mit der &RMBn; den Einrichtungsdialog öffnen.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Digitale Uhr</title>
+
+<para
+>Ganz rechts in der Kontrollleiste befindet sich die <application
+>digitale Uhr</application
+>. Die Uhr kann die Zeit in verschiedenen Zeitzonen darstellen; ebenso ist die Größe der Uhr einstellbar. Normalerweise passt sich die Uhr der Größe ihres Containers an (in diesem Fall der Kontrollleiste). Wenn Sie einstellen, dass neben der Uhrzeit auch das Datum angezeigt werden soll, so wird dieses mit der Schrift des Typs <guimenuitem
+>Klein</guimenuitem
+> aus den Systemeinstellungen unter <guilabel
+>Schriftarten</guilabel
+> angezeigt. Der restliche verfügbare Platz wird zur Anzeige der Uhrzeit verwendet. Schlussendlich entscheiden Sie, wie viele Informationen die Uhr anzeigen soll und ob es Ihnen so gefällt. Wenn Sie mehr Informationen anzeigen lassen möchten, so vergrößern Sie bei Bedarf die Kontrollleiste, oder verschieben Sie die Uhr auf die Arbeitsfläche, wo sie mehr Platz einnehmen kann. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Arbeitsflächen-Umschalter</title>
+
+<para
+>Als weiteres optionales Symbol finden Sie den <application
+>Arbeitsflächen-Umschalter</application
+> vor. Dieser ermöglicht Ihnen den schnellen Wechsel von einer Arbeitsfläche zu einer anderen. Wenn Sie das Aussehen des <application
+>Arbeitsflächen-Umschalters</application
+> über die Einstellung <guimenuitem
+>Zeilenanzahl</guimenuitem
+> ändern, so ändern Sie gleichzeitig auch das Aussehen der Effekte und Animationen beim Arbeitsflächen-Wechsel. Bei großen Ansichten des Arbeitsflächen-Umschalters ist es oft sinnvoll, die Einstellung <guimenuitem
+>Fenstersymbole anzeigen</guimenuitem
+> zu aktivieren. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Werkzeugkasten der Kontrollleiste</title>
+
+<para
+>Wenn Ihre Plasma-Miniprogramme entsperrt sind (klicken Sie dazu mit der &RMBn; auf die Arbeitsfläche und wählen Sie den passenden Menüeintrag oder die Kurzwahl <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>, wenn keine Anwendung den Fokus hat), erscheint an der rechten Seite der Kontrollleiste das &plasma;-Logo. Klicken Sie darauf, so öffnet sich der Einstellungsbereich der Kontrollleiste.</para>
+
+<screenshot>
+<screeninfo
+>Kontrollleisten-Einstellungen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Kontrollleisten-Einstellungen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Hier können Sie die Größe, Platzierung und Ausrichtung der Kontrollleiste ändern. Die &plasma;-Miniprogramme der Kontrollleiste werden ihre Größe und Positionierung automatisch anpassen. Die &plasma;Miniprogramme sind so programmiert, dass sie den vorhandenen Platz möglichst gut ausnutzen. Außerdem informieren sie ihren Wirt-Container darüber, wieviel Platz sie voraussichtlich benötigen.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Miniprogramme hinzufügen</title>
+
+<para
+>Sobald Sie Miniprogramme entsperrt haben, können Sie neue hinzufügen oder vorhandene &plasma;-Miniprogramme von der Arbeitsfläche oder der Kontrollleiste entfernen. Sie können Miniprogramme hinzufügen, indem Sie sie an die gewünschte Stelle ziehen. Klicken Sie mit der &RMBn; auf ein Miniprogramm, um es zu entfernen. <screenshot
+> <screeninfo
+>Miniprogramme hinzufügen</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Miniprogramme hinzufügen</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Der Knopf <guibutton
+>Neue Miniprogramme holen</guibutton
+> ermöglicht es Ihnen, bereits heruntergeladene Miniprogramme zu installieren und neue Miniprogramme herunterzuladen. Derzeit werden Pakete des Typs &plasmagik; sowie einige &Mac; OS&nbsp;X Übersichts-Miniprogramme unterstützt. Miniprogramme, die Sie auf diese Weise installieren, können genau wie alle anderen vorinstallierten Miniprogramme verwendet werden. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Die Arbeitsfläche</title>
+
+<para
+>Auch die Arbeitsfläche ist nur ein Container. Allerdings beschränkt die Arbeitsfläche die installierten Miniprogramme nicht in ihrer Größe. Daher können Miniprogramme auf der Arbeitsfläche frei verschoben und in der Größe geändert werden. Wenn &plasma;-Miniprogramme entsperrt sind, erscheint um sie ein Rahmen, sobald Sie mit der Maus darüber fahren. Der Rahmen dient als Anfasser und ermöglicht es Ihnen, das &plasma;-Miniprogramm zu verschieben, die Größe zu ändern usw. Außerdem können Sie die Kontrollleiste neu ausrichten und auf der Arbeitsfläche verschieben, wenn Miniprogramme entsperrt sind. Die Knöpfe in dem Miniprogramm-Anfasser dienen dazu, die Größe zu ändern, das Miniprogramm zu drehen, einzurichten und zu entfernen. Wenn Sie ein &plasma;-Miniprogramm drehen, so verhält es sich in der 12-Uhr-Stellung <quote
+>magnetisch</quote
+>, sodass es Ihnen leicht fallen wird, es wieder in eine aufrechte Position zu bringen. Die meisten Miniprogramm behalten übrigens bei der Größenänderung ihr Seitenverhältnis bei. Wenn Sie das Seitenverhältnis übergehen möchten, so halten Sie während der Größenänderung die &Ctrl;-Taste gedrückt. </para>
+
+<para
+>Mit einem Rechtsklick auf die Arbeitsfläche erhalten Sie außerdem die Möglichkeit, das verwendete Hintergrundbild und das Layout einzustellen. Zusätzliche Hintergrundbilder können Sie über das Internet herunterladen. </para>
+<para
+>Auf der Seite <guilabel
+>Optimierungen</guilabel
+> können Sie einstellen, ob der Werkzeugkasten für die Arbeitsfläche ausgeblendet wird und wie Miniprogramme behandelt werden. </para>
+
+<screenshot>
+<screeninfo
+>Arbeitsflächen-Einstellungen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Arbeitsflächen-Einstellungen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Um das &plasma;-Design zu ändern oder ein neues Design herunterzuladen, öffnen Sie die Seite <menuchoice
+><guimenu
+>Erscheinungsbild</guimenu
+> <guimenuitem
+>Arbeitsflächen-Design</guimenuitem
+></menuchoice
+> in den &systemsettings;.</para>
+
+<para
+>Haben Sie mehrere Fenster geöffnet, so verschwinden die &plasma;-Miniprogramme der Arbeitsfläche im Hintergrund. Die <emphasis role="bold"
+>Übersichtsseite</emphasis
+> holt Ihnen diese wieder vor Augen, so wie Sie es von der Funktion <guilabel
+>Arbeitsfläche anzeigen</guilabel
+> traditioneller Arbeitsumgebungen gewohnt sind. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Ordneransicht</title>
+<para
+>Das Miniprogramm <guilabel
+>Ordneransicht</guilabel
+> kann benutzt werden, um Einträge eines Ordners wie Dateien und Unterordner anzuzeigen. In der Voreinstellung wird der Ordner <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+> angezeigt. </para>
+<para
+>Sie können einstellen, ob alle Dateien angezeigt werden oder die Ansicht mit regulären Ausdrücken, &eg; alle Dateien mit einer bestimmten Erweiterung) oder nach Dateityp, &eg; nur Bilder, filtern. </para>
+<para
+>In diesem Miniprogramm sind auch einfache Dateiverwaltungsaufgaben möglich, zum Beispiel Verschieben, Kopieren, Ausschneiden und Einfügen. Sie können beliebig viele Ordneransichten auf Ihrer Arbeitsfläche verwenden. </para>
+
+<screenshot>
+<screeninfo
+>Ordneransicht</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Ordneransicht</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Wenn Sie das Layout <guilabel
+>Ordneransicht</guilabel
+> in den <guilabel
+>Einstellungen für die Arbeitsfläche</guilabel
+> auswählen, wird die gesamte Arbeitsfläche als Ordneransicht verwendet. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; ist eine vielfältige Mini-Befehlszeile. Hiermit können Sie Programme starten, Webseiten und Lesezeichen aufrufen, den Rechner durchsuchen, einfache Berechnungen durchführen und vieles mehr. Die Mini-Befehlszeile wird über die Tastenkombination <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> oder <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> aufgerufen und es öffnet sich der &krunner;-Dialog. Beginnen Sie einfach damit, etwas einzugeben, und &krunner; wird mit der Suche nach passenden Anwendungen beginnen, sobald Sie mehr als zwei Zeichen eingegeben haben. Öffnen Sie den Einstellungen-Dialog von &krunner;, um mehr über die vielfältigen Möglichkeiten durch Erweiterungen zu erfahren. Wenn &krunner; Ihnen die Suchergebnisse präsentiert, können Sie mit der Tabulator- und den Pfeiltasten durch sie navigieren. </para>
+<!-- whitout tab no arrow keys-->
+<screenshot>
+<screeninfo
+>&krunner;-Dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner;-Dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Verwenden Sie den Knopf <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, um in den &systemsettings; das Modul <guilabel
+>KRunner</guilabel
+> zu öffnen, in dem Sie einstellen können, welche Art der Suche in &krunner; benutzt wird. </para>
+
+<para
+>&krunner; unterstützt <quote
+>Arbeitsflächen-Aktionen</quote
+>, d. h. zusätzliche Aktionen von Anwendungen für häufig benutzte Aufgaben oder von der Fensterleiste. Das sind zum Beispiel Aktionen wie das Öffnen eines <guilabel
+>Neues Privaten Fensters</guilabel
+> im Webbrowser, <guilabel
+>E-Mail schreiben</guilabel
+> ohne zuerst das E-Mail-Programm zu starten oder Aktionen von &spectacle;. </para>
+
+<screenshot>
+<screeninfo
+>Arbeitsflächen-Aktionen in &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Arbeitsflächen-Aktionen in &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Wenn Sie die Taste &Down; in einem leeren &krunner; drücken, dann wird der Verlauf der zuletzt gewählten Einträge angezeigt. Nach der Ausführung eines Suchergebnisses wird dieser Eintrag in der Liste als erstes Element verschoben, so dass wiederholt benutzte Befehle immer in der Liste bleiben. </para>
+<para
+>Entfernen Sie einzelne Einträge in der Liste mit dem Knopf <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> oder löschen Sie den gesamten Verlauf in den Einstellungen von &krunner;. </para>
+
+<para
+>Wenn Sie wissen möchten, was in Ihrem System vorgeht, so starten Sie mal die <guibutton
+>Systemüberwachung</guibutton
+> mit dem Kurzbefehl <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+>. Sie erhalten eine Liste der Fenster und laufenden Prozesse auf Ihrem Rechner und haben die Möglichkeit, deren Ausgaben zu überwachen oder Prozesse zu beenden. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Aktivitäten</title>
+
+<para
+>In den Arbeitsflächen-Werkzeugen in der linken oberen Ecke der Arbeitsfläche finden Sie einen Knopf, mit dem Sie Ihre Aktivitäten anzeigen können. Mit &plasma; ist es möglich, mehrere Aktivitäten einzurichten. Einfach gesagt handelt es sich dabei um mehrere Arbeitsflächen-Container mit verschiedenen Kombinationen von Miniprogrammen. Wählen Sie aus dem Werkzeugkasten <quote
+>Aktivitäten</quote
+>, um eine der vordefinierten Aktivitäten auszuwählen oder <guilabel
+>Aktivität erstellen</guilabel
+>, um einen neuen Container zu erzeugen, und passen Sie ihn mit neuen Miniprogrammen Ihren Vorstellungen an. &plasma;&apos;s Aktivitäten und die virtuellen Arbeitsflächen von &kwin; sind sich in ihrer Funktionsweise ähnlich, aber es gibt einen grundlegenden Unterschied: Virtuelle Arbeitsflächen werden verwendet, um Fenster zu organisieren, während &plasma;-Aktivitäten zur Organisation von &plasma;-Miniprogrammen dienen. Sie können zwischen Aktivitäten wechseln und haben gleich die passenden Miniprogramme verfügbar, die für diese Aktivität eingerichtet sind. Sie können beispielsweise eine Aktivität für <quote
+>Freizeit</quote
+> einrichten, in der Comics und ein Puzzle angezeigt werden. Oder Sie richten sich eine Aktivität <quote
+>Arbeit</quote
+> ein, und haben Miniprogramme für <acronym
+>RSS</acronym
+>-Nachrichten, einen Taschenrechner und den Kalender auf der Arbeitsfläche. </para>
+
+<para
+>Um eine Aktivität zu löschen, klicken Sie auf den Knopf <guibutton
+>Aktivität anhalten</guibutton
+> in der <quote
+>Aktivitätenverwaltung</quote
+>, die mit <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> und dann <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> geöffnet wird. Klicken Sie dann das rote „X“ oder drücken Sie <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, dann <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+> und bestätigen Sie das Löschen der Aktivität. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Kurzbefehle</title>
+
+<para
+>Die meisten &plasma;-Funktionen sind auch über Kurzbefehle erreichbar. Die verschiedenen Kombinationen müssen nacheinander gedrückt werden. Bei dem Kurzbefehl <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> zum Beispiel muss zuerst &Alt; und <keycap
+>D</keycap
+> gedrückt und dann losgelassen werden, dann die Taste <keycap
+>A</keycap
+>. </para>
+<para
+>Zurzeit gibt es folgende Standard-Kurzbefehle: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Miniprogramme hinzufügen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Miniprogramme entfernen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Miniprogramme sperren/entsperren</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Verkleinern</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Vergrößern</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Nächstes Miniprogramm</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Vorheriges Miniprogramm</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Miniprogramm-Einstellungen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Aktivitäten</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Diese Aktivität entfernen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Arbeitsflächen-Einstellungen</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Nächste Aktivität</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Vorherige Aktivität</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Arbeitsfläche anzeigen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Die zugewiesene Anwendung starten</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Öffnet die Aktivitätenleiste</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&plasma; </para>
+<para
+>Programm Copyright 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Dokumentation Copyright &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Übersetzung Thomas Reitelbach <email
+>tr@erdfunkstelle.de</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

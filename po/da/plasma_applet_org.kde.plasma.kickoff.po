@@ -1,0 +1,432 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2017, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-08-08 17:19+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generelt"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Fjern fra favoritter"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Føj til favoritter"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "På alle aktiviteter"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "På den aktuelle aktivitet"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Vis i favoritter"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Vælg…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "Generelt:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Sortér altid programmer alfabetisk"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Indstil aktiverede søge-plugins…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Vis favoritter:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "Som et gitter"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "Som en liste"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Vis andre programmer:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "Som et gitter"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "Som en liste"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Vis knapper til:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Tænd/sluk"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Session"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Tænd/sluk og session"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Vis tekst for handlingsknapper"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programmer"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Steder"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Åbn brugerindstillinger"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Hold åben"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Redigér programmer…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Gitter med %1 rækker, %2 kolonner"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Forlad"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Mere"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Computer"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Historik"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Hyppigt anvendt"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Ryd ikon"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgid "Search…"
+#~ msgstr "Søg:"
+
+#, fuzzy
+#~| msgid "Session"
+#~ msgid "Session actions"
+#~ msgstr "Session"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave…"
+#~ msgstr "Forlad"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Updating applications…"
+#~ msgstr "Redigér programmer..."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "Search..."
+#~ msgstr "Søg..."
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave..."
+#~ msgstr "Forlad"
+
+#, fuzzy
+#~| msgctxt "@item:inmenu Open icon chooser dialog"
+#~| msgid "Choose..."
+#~ msgid "More..."
+#~ msgstr "Vælg..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Programmer opdateret."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Skift faneblad under mus"
+
+#~ msgid "All Applications"
+#~ msgstr "Alle programmer"
+
+#~ msgid "Favorites"
+#~ msgstr "Favoritter"
+
+#~ msgid "Often Used"
+#~ msgstr "Ofte anvendt"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Aktive faneblade"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Inaktive faneblade"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Træk faneblade mellem boksene for at vise/skjule dem, eller ændr "
+#~ "rækkefølge på de synlige faneblade ved at trække."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Udvid søgning til bogmærker, filer og e-mails"
+
+#~ msgid "Appearance"
+#~ msgstr "Udseende"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Menuknapper"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Synlige faneblade"
+
+#~ msgctxt "Type is a verb here, not a noun"
+#~ msgid "Type to search..."
+#~ msgstr "Skriv for at søge..."
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Favoritter"
+
+#~ msgid "Log out"
+#~ msgstr "Log ud"
+
+#~ msgid "Lock"
+#~ msgstr "Lås"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lås skærmen"
+
+#~ msgid "Switch user"
+#~ msgstr "Skift bruger"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Start en parallel session som en anden bruger"
+
+#~ msgid "Shut down"
+#~ msgstr "Luk ned"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Sluk computeren"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Genstart"
+
+#~ msgid "Restart computer"
+#~ msgstr "Genstart computeren"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Gem nuværende session til næste login"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Sove"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Pause uden at logge ud"
+
+#~ msgid "Hibernate"
+#~ msgstr "Dvale"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspendér til disk"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspendér"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspendér til ram"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Home Folder"
+#~ msgstr "Hjemmemappe"
+
+#~ msgid "Network Folders"
+#~ msgstr "Netværksmapper"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenter"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Nyligt anvendte dokumenter"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Nyligt anvendte programmer"
+
+#~ msgid "Run Command..."
+#~ msgstr "Kør kommando..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Kør kommando eller søgeforespørgsel"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Flytbare lagringsmedier"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Vis \"Nyligt installeret\""
+
+#~ msgid "Uninstall"
+#~ msgstr "Afinstallér"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Sortér alfabetisk (Å til A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Ryd nylige programmer"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Ryd nylige dokumenter"
+
+#~ msgid "Sleep"
+#~ msgstr "Slumre"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plasma fra KDE"
+
+#~ msgid "%1 on %2"
+#~ msgstr "%1 på %2"
+
+#~ msgid "Searching %1..."
+#~ msgstr "Søger %1..."

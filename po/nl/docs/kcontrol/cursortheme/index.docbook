@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Cursorthema</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Dit is de documentatie voor de module &systemsettings;, die het uiterlijk van de muiscursor instelt. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>muis</keyword>
+<keyword
+>cursor</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module stelt u in staat uit verschillende geïnstalleerde cursorthema's te kiezen uit een voorbeeld van getoonde cursors. </para>
+
+<para
+>De opties in deze module zijn op sommige systemen wellicht niet beschikbaar. Uw systeem moet wellicht bijgewerkt worden om cursorthema's te ondersteunen. </para>
+
+<para
+>Als u aanvullende cursorthema's tot uw beschikking hebt, kunt u deze verwijderen met de prullenbakknop die verschijnt als u zweeft boven het thema-item in de lijst. Merk op dat u de standaard stijlen niet kunt verwijderen. </para>
+
+<para
+>Sommige thema's bieden u het kiezen van de grootte van de cursor. Gebruik het veld <guilabel
+>Grootte</guilabel
+> om de toepasselijke grootte te selecteren. Beschikbare groottes worden getoond wanneer u met de muisaanwijzer boven het thema-item in het lijstvak zweeft. </para>
+
+<para
+>Als u extra cursorthema's beschikbaar hebt kunt u ze installeren met de knop <guibutton
+>Uit bestand installeren...</guibutton
+> onder het lijstvak. Zie <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>deze instructies</ulink
+> over de details over hoe het aangepaste cursorthema aan te maken. </para>
+
+<para
+>Gebruik de knop <guibutton
+>Nieuwe cursors ophalen</guibutton
+> om de dialoog <guilabel
+>Nieuwe cursors downloaden</guilabel
+> te starten en download extra thema's van het internet.</para>
+
+</article>

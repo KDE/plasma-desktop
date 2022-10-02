@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Attività</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>attività</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Attività</title>
+<sect2 id="activities-intro">
+
+<title
+>Introduzione</title>
+
+<para
+>Questo modulo tu permette di configurare le attività. Queste sono un modo di avere più impostazioni di &plasma;, ciascuno con un diverso insieme di oggetti e di temi. Alcune attività possono essere private: esse non tengono traccia delle tue azioni, ad esempio non memorizzano quali documenti hai aperto. </para>
+
+<para
+>Questo modulo è diviso in tre schede: <link linkend="activities-main"
+><guilabel
+>Attività</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Passa a</guilabel
+></link
+> e <link linkend="activities-privacy"
+><guilabel
+>Riservatezza</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Attività</guilabel
+></title>
+
+<para
+>Questa scheda elenca le attività correnti. Passa sopra agli elementi nella lista col puntatore del mouse per visualizzare il pulsante che serve per configurare o per rimuovere le attività. </para>
+
+<para
+>Usa il pulsante <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> in sovrapposizione per configurare l'attività. Puoi modificare i seguenti parametri: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Icona</guilabel
+></term>
+        <listitem>
+            <para
+>L'icona dell'attività può essere vista nel selettore del gestore delle attività nel pannello di &plasma;. Fai clic sull'icona corrente per scegliere alcune icone di sistema o per navigare nel file system per selezionare un'icona personalizzata. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Nome</guilabel
+></term>
+        <listitem>
+            <para
+>Dai un nome riconoscibile alla tua attività. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Descrizione</guilabel
+></term>
+        <listitem>
+            <para
+>Una descrizione in formato libero che viene mostrata nel selettore del gestore delle attività nel pannello di &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Riservatezza</guilabel
+></term>
+        <listitem>
+            <para
+>Controlla l'elemento <guilabel
+>Non tracciare l'utilizzo di questa attività</guilabel
+> per disattivare ogni tracciamento della tua attività. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Scorciatoia per cambiare</guilabel
+></term>
+        <listitem>
+            <para
+>Premi il primo pulsante per inserire la nuova scorciatoia per passare all'attività, oppure il secondo per rimuovere la scorciatoia attuale. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Un clic sul pulsante <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> rimuove l'attività. </para>
+<para
+>Un clic sul pulsante <guibutton
+>Crea nuova...</guibutton
+> sotto all'elenco apre la finestra <guilabel
+>Crea una nuova attività</guilabel
+>, che è simile a quella di configurazione dell'attività descritta sopra. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Passa a</guilabel
+></title>
+
+<para
+>Qui puoi configurare se &plasma; debba ricordare il <guilabel
+>Desktop virtuale attuale</guilabel
+> per ciascuna attività (richiede un riavvio). È anche possibile configurare delle scorciatoie per muoversi nell'elenco delle attività. </para>
+<para
+>Per maggiori informazioni su come utilizzare il sistema di scorciatoie, vedi la sezione <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Uso e personalizzazione delle scorciatoie</emphasis
+> della documentazione sui <emphasis
+>Fondamentali di &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Riservatezza</guilabel
+></title>
+
+<para
+>Questa scheda ti permette di configurare l'intervallo di tempo in cui <guilabel
+>Mantieni la cronologia</guilabel
+> prima che vengano eliminati i dati traccianti. Usa il pulsante a discesa <guibutton
+>Cancella la cronologia</guibutton
+> prima che &plasma; <guimenuitem
+>Dimentica l'ultima ora</guimenuitem
+>, <guimenuitem
+>Dimentica le ultime due ore</guimenuitem
+>, <guimenuitem
+>Dimentica un giorno</guimenuitem
+> o <guimenuitem
+>Dimentica tutto</guimenuitem
+>. </para>
+<para
+>Sotto puoi configurare quali applicazioni possono memorizzare i documenti aperti nelle attività. Usa l'elemento <guilabel
+>Per tutte le applicazioni</guilabel
+> per salvare tutti i dati, <guilabel
+>Non ricordare</guilabel
+>per inibire il salvataggio dei dati, oppure <guilabel
+>Solo per certe applicazioni</guilabel
+> per una selezione più fine (facendo clic sull'elemento dell'applicazione si cambia la sua modalità corrente). </para>
+<para
+>Controlla l'elemento <guilabel
+>Aggiungi alla lista nera le applicazioni non nell'elenco</guilabel
+> per inibire il tracciamento da tutte le applicazioni che non sono nell'elenco. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

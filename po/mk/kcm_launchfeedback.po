@@ -1,0 +1,143 @@
+# translation of kcmlaunch.po to Macedonian
+# Copyright (C) 2002,2003, 2004, 2006 Free Software Foundation, Inc.
+# , 2002
+# , 2003
+# Novica Nakov <novica@bagra.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2006-05-21 13:14+0200\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "З&афатен курсор"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "Трепкачки курсор"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "Скокачки курсор"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "Овозможи &известување во лентата со програми"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "Истек на време на индикацијата за &стартување:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " сек"
+msgstr[1] " сек"
+msgstr[2] " сек"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Повратна информација за стартување</h1> Тука може да ја конфигурирате "
+#~ "повратната информација од стартувањето на апликациите."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Зафатен курсор</h1>\n"
+#~ "KDE нуди приказ на зафатен курсор за известување при стартување на "
+#~ "апликации.\n"
+#~ "За да го овозможите зафатениот курсор изберете еден вид на повратна "
+#~ "визуелна информација од комбо полето.\n"
+#~ "Може да се случи некои апликации да не се свесни за ова известување.\n"
+#~ "Во тој случај курсорот престанува да трепка после времето\n"
+#~ "зададено во делот „Истек на време на индикацијата за стартување“"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Без зафатен курсор"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Пасивен зафатен курсор"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "Известување во &лентата со програми"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Известување во лентата со програми</H1>\n"
+#~ "Може да овозможите втор вид на известување за стартување кое се\n"
+#~ "користи од лентата со програми. Таму се појавува копче со ротирачки "
+#~ "песочен часовник,\n"
+#~ "кое симболизира дека стартуваната апликација се вчитува.\n"
+#~ "Може да се случи некои апликации да не се свесни за ова известување.\n"
+#~ "Во тој случај копчето исчезнува после времето\n"
+#~ "зададено во делот „Истек на време на индикацијата за стартување“"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Истек на време на индикацијата за &стартување:"

@@ -1,0 +1,1377 @@
+# translation of plasma_applet_folderview.po to Estonian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2008, 2009, 2010, 2011, 2012, 2014, 2016, 2019.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2020-10-08 11:43+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Asukoht"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Ikoonid"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Filter"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Tagasi"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "Failid:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Kõigi näitamine"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Vastete näitamine"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Vasted peidetakse"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Failinime muster:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Failitüübid:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Failitüüp"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Vali kõik"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Tühista kõigi valik"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Paneelinupp:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Kohandatud ikooni kasutamine"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open icon chooser dialog"
+#| msgid "Choose..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Vali..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Puhasta ikoon"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Paigutus:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "Ülalt alla, vasakult paremale"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "Ülalt alla, paremalt vasakule"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Ülalt alla, vasakult paremale"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Joondamine vasakule"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align right"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Joondamine paremale"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Lukustamine asukohale"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Sortimine:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, fuzzy, kde-format
+#| msgid "Manual"
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Käsitsi"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Nime järgi"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Suuruse järgi"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Tüübi järgi"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Kuupäeva järgi"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Alanevalt"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgid "Folders first"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Kataloogid esimesena"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Vaaterežiim:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, fuzzy, kde-format
+#| msgid "List"
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Loend"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Ikooni suurus:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Väike"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Suur"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Pealdise laius:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, fuzzy, kde-format
+#| msgid "Narrow"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Kitsas"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Keskmine"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, fuzzy, kde-format
+#| msgid "Wide"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Lai"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Tekstiread:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, fuzzy, kde-format
+#| msgid "Tooltips"
+msgid "Show tooltips"
+msgstr "Kohtspikrid"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Selection markers"
+msgid "Show selection markers"
+msgstr "Valikumarkerid"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Folder preview popups"
+msgid "Show folder preview popups"
+msgstr "Kataloogi hüpikeelvaatlused"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "&Nimeta ümber"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgid "Previews:"
+msgstr "Eelvaatlus rakenduses"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Preview thumbnails"
+msgid "Show preview thumbnails"
+msgstr "Eelvaatluse pisipildid"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "Configure Preview Plugins..."
+msgid "Configure Preview Plugins…"
+msgstr "Seadista eelvaatluse pluginaid ..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Näidatakse:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Töölauakataloog"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "Aktiivse tegevusega seotud failid"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Asukohapaneeli element:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Kohandatud asukoht:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, fuzzy, kde-format
+#| msgid "Type path or URL..."
+msgid "Type path or URL…"
+msgstr "Kirjuta siia asukoht või URL ..."
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Pealkiri:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Puudub"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Täielik asukoht"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Kohandatud pealdis"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Enter custom title..."
+msgid "Enter custom title…"
+msgstr "Sisesta kohandatud pealdis ..."
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Pööra"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Ava väliselt"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Peida taust"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Näita tausta"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Eemalda"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Eelvaatluse pluginad"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "OK"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Loobu"
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "Configure Desktop and Wallpaper..."
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Seadista töölauda ja taustapilti ..."
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Kataloogi valimine"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "Vä&rskenda töölauda"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "Vä&rskenda vaadet"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "Tühj&enda prügikast ..."
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Taasta"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Ava"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&Aseta"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Omadused"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Sortimine"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Sortimata"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Nime järgi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Suuruse järgi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Tüübi järgi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgid "Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Kuupäeva järgi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Alanevalt"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Kataloogid esimesena"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Ikooni suurus"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Tilluke"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Väike"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Väike"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "Small Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "Keskmiselt väike"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Keskmine"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Suur"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Hiiglaslik"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange In"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Paigutus"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "Ülalt alla, vasakult paremale"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "Ülalt alla, paremalt vasakule"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Ülalt alla, vasakult paremale"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Joondamine"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Vasakule"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Paremale"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Eelvaatluse näitamine"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, fuzzy, kde-format
+#| msgid "Locked"
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Lukustatud"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Ridades"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Veergudes"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Ridades"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Veergudes"
+
+#~ msgid "Features:"
+#~ msgstr "Omadused:"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Search…"
+#~ msgstr "Otsi ..."
+
+#~ msgid "&Create Folder"
+#~ msgstr "Loo kataloo&g ..."
+
+#~ msgid "Tweaks"
+#~ msgstr "Trikid"
+
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Töölaua tööriistakasti näitamine"
+
+#~ msgid "Press and hold widgets to move them and reveal their handles"
+#~ msgstr ""
+#~ "Vidinate liigutamiseks ja pidemete nähtavale toomiseks vajuta ja hoia all"
+
+#~ msgid "Widgets unlocked"
+#~ msgstr "Vidinad on lahtilukustatud"
+
+#~ msgid ""
+#~ "You can press and hold widgets to move them and reveal their handles."
+#~ msgstr ""
+#~ "Vidinate liigutamiseks ja pidemete nähtavale toomiseks vajuta ja hoia all."
+
+#~ msgid "Got it"
+#~ msgstr "Selge"
+
+#~ msgid "Resize"
+#~ msgstr "Muuda suurust"
+
+#~ msgid "Show All Files"
+#~ msgstr "Kõigi failide näitamine"
+
+#~ msgid "Size:"
+#~ msgstr "Suurus:"
+
+#~ msgid "Desktop Layout"
+#~ msgstr "Töölaua kujundus"
+
+#~ msgid "Widget Handling"
+#~ msgstr "Vidinate käitlemine"
+
+#, fuzzy
+#~| msgid "Arrange in:"
+#~ msgid "Arrange in"
+#~ msgstr "Paigutus::"
+
+#, fuzzy
+#~| msgid "Sort By"
+#~ msgid "Sort by"
+#~ msgstr "Sortimine"
+
+#, fuzzy
+#~| msgid "Appearance"
+#~ msgid "Appearance:"
+#~ msgstr "Välimus"
+
+#, fuzzy
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "Asukoht"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Töölauakataloogi näitamine"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Kataloog:"
+
+#~ msgid "&Reload"
+#~ msgstr "Laa&di uuesti"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Viska prügikasti"
+
+#~ msgid "&Delete"
+#~ msgstr "&Kustuta"
+
+#~ msgid "Align:"
+#~ msgstr "Joondamine:"
+
+#~ msgid "Sorting"
+#~ msgstr "Sortimine"
+
+#~ msgid "Title"
+#~ msgstr "Nimi"
+
+#~ msgid "Up"
+#~ msgstr "Üles"
+
+#~ msgid ""
+#~ "Tweaks are experimental options that may become defaults depending on "
+#~ "your feedback."
+#~ msgstr ""
+#~ "Trikid on eksperimentaalsed valikud, mis sõltuvalt sinu tagasisidest "
+#~ "võivad muutuda vaikimisi võimalusteks."
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Näita algset kataloogi"
+
+#~ msgid "Show Original File"
+#~ msgstr "Näita algset faili"
+
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "Sea&dista prügikasti"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "Lis&a see lehekülg järjehoidjatesse"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "Lis&a see asukoht järjehoidjatesse"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "Lis&a see kataloog järjehoidjatesse"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "Lis&a see viit järjehoidjatesse"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "Lis&a see fail järjehoidjatesse"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Kopeeri"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Liiguta"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Kodukataloog"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Juurkataloog"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Sirvi..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Kopeeri siia"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Liiguta siia"
+
+#~ msgid "Share"
+#~ msgstr "Jagamine"
+
+#~ msgid "Icon:"
+#~ msgstr "Ikoon:"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Sa ei saa kataloogi iseendasse lohistada"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Failinime muster:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Liiguta siia"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Kopeeri siia"
+
+#~ msgid "&Link Here"
+#~ msgstr "&Lingi siia"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Loobu"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Sea &taustapildiks"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Loo kataloog"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Sisesta muu nimi"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "Nimi \"%1\" algab punktiga, mistõttu kataloog on vaikimisi peidetud."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Kas luua peidetud kataloog?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Töölauakataloog"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Töölauakataloog"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Kataloogi nimi:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Töölauakataloog"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Aseta üks fail"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "Aseta lõikepuhvri sisu..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "&Aseta"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr "Faili või kataloogi taastamine asukohta, kust see algselt kustutati"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Uue failihalduri akna avamine, mis näitab lingi sihtmärki selle "
+#~ "eellaskataloogis."
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "Klõps kataloogi näitamiseks:"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Ikoonid"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Joonda alusvõrgule"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Lukusta asukohale"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "1 kataloog"
+#~ msgstr[1] "%1 kataloogi"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 fail"
+#~ msgstr[1] "%1 faili"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "1 fail."
+#~ msgstr[1] "%1 faili."
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr "Siin saab määrata, mille järgi sorteeritakse vaates ikoonid."
+
+#~ msgid "Descending:"
+#~ msgstr "Kahanev:"
+
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Märkimisel seatakse sortimisel kataloogid ettepoole. Kui see valik pole "
+#~ "märgitud, käsitletakse katalooge sortimisel samamoodi nagu faile."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Siin saab määrata, kas ikoonid paigutatakse rõhtsalt (ridades) või "
+#~ "püstiselt (veergudes)."
+
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Siin saab määrata, kas ikoonid joondatakse ekraani vasaku või parema "
+#~ "külje järgi."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Märkimisel ei ole ikoonid vaates liigutatavad.\n"
+#~ "\n"
+#~ "See on kasulik juhul, kui tahad vältida ikoonide juhuslikku liigutamist "
+#~ "nende kasutamisel."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Joondamine alusvõrgule:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Märkimisel joondatakse ikoonid alusvõrgule.\n"
+#~ "\n"
+#~ "Kui see on valitud, tõmmatakse ikoonid automaatselt lähima alusvõrgujoone "
+#~ "külge, kui liigutad vaates ikoone."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr "Liuguriga saab vaate ikoonide suurust suurendada või vähendada."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr "Märkimisel näidatakse ikoonides faili sisu eelvaatlust."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Sellele nupule klõpsates saab valida, milliste failitüüpidel eelvaatlust "
+#~ "näidata."
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Märkimisel näeb kataloogi eelvaatlust ainult klõpsamisel. Kui see valik "
+#~ "pole märgitud, näeb kataloogi eelvaatlust kohe, kui hiir selle kohale "
+#~ "viia."
+
+#~ msgid "Icon Text"
+#~ msgstr "Ikooni tekst"
+
+#~ msgid "Lines:"
+#~ msgstr "Read:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr "Siin saab määrata, mitu tekstirida näidatakse ikoonide all."
+
+#~ msgid "1 line"
+#~ msgstr "1 rida"
+
+#~ msgid "Color:"
+#~ msgstr "Värv:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr "Sellele nupule klõpsates saab valida vaate tekstipealdiste värvi."
+
+#~ msgid "Shadows:"
+#~ msgstr "Varjud:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Märkimisel heidavad tekstipealdised taustale varju.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Varjud muudavad teksti lugemise hõlpsamaks, tõstes selle taustalt "
+#~ "esile.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Pane tähele, et tumeda tekstivärvi puhul paneb see teksti "
+#~ "helendama, tekitades ereda halo, mitte aga varju.</i></p></body></html>"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr "Märkimisel sorditakse ikoonid kahanevas järjekorras."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Kui valida \"Sobivate "
+#~ "failide näitamine\" või \"Sobivate failidepeitmine\", näidatakse või "
+#~ "peidetakse ainult failid, mis sobivad MÕLEMA tingimusega.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Kui näiteks mustriks on "
+#~ "määratud \"*\", aga MIME tüüpide seast pole midagi valitud, ei näidata "
+#~ "ühtegi faili.</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Kui valida \"Sobivate failide näitamine\" või \"Sobivate failidepeitmine"
+#~ "\",\n"
+#~ "näidatakse või peidetakse ainult failid, mis sobivad MÕLEMA tingimusega.\n"
+#~ "Kui näiteks mustriks on määratud \"*\", aga MIME tüüpide seast pole "
+#~ "midagi valitud, ei näidata ühtegi faili."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Kas ühtegi faili pole näha?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "Tühikutega eraldatud laiendite nimekiri, nt. *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Tühikutega eraldatud laiendite nimekiri, nt. *.txt * .od* ainult "
+#~ "kontoritöö- ja tekstifailide näitamiseks"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Mustrifilter"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "Failitüübid, mille puhul näidatakse ikoonil eelvaatlust:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "See kataloog on tühi."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Esitaja:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Album:"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 megapikslit"
+
+#~ msgid "Camera:"
+#~ msgstr "Kaamera:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "35-mm vaste: %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Fookuskaugus:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Säritusaeg:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 sek"
+
+#~ msgctxt "On a camera"
+#~ msgid "Aperture:"
+#~ msgstr "Ava:"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "ISO kiirus:"
+
+#~ msgid "Time:"
+#~ msgstr "Aeg:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "1 lehekülg"
+#~ msgstr[1] "%1 lehekülge"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "1 sõna"
+#~ msgstr[1] "%1 sõna"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "1 element"
+#~ msgstr[1] "%1 elementi"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "Vasakult paremale, ülalt alla"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "Paremalt vasakule, ülalt alla"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Kuvamine"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "Suuruse järgi"
+
+#~ msgctxt "Sort icons"
+#~ msgid "Ascending"
+#~ msgstr "Kasvav"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Siin saab määrata, kas ikoonid tuleb paigaldada alates vaate vasakust "
+#~ "servast ülalt alla või alates vaate ülaservast vasakult paremale."
+
+#~ msgid "Header"
+#~ msgstr "Päis"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "See väli sisaldab pealdist, mida näidatakse apleti ülaserval.\n"
+#~ "\n"
+#~ "Vaikimisi sisaldab see apletis näidatava asukoha nime, aga kui "
+#~ "eelistadmidagi muud, saab selle just siin kindlaks määrata."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Header</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Päis</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icons</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Ikoonid</span></p></body></html>"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Icon Text</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Ikooni tekst</span></p></body></html>"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Muud valikud"
+
+#~ msgid "Text Settings"
+#~ msgstr "Teksti seadistused"
+
+#~ msgid "Text color:"
+#~ msgstr "Teksti värv:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "Ridade arv:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "Teksti varju näitamine"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "Ikoonide joondamine alusvõrgule"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "Ikoonide lukustamine asukohale"
+
+#~ msgid "Add Panel"
+#~ msgstr "Lisa paneel"
+
+#~ msgid "Run Command..."
+#~ msgstr "Käivita käsk..."
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lukusta ekraan"
+
+#~ msgid "Leave..."
+#~ msgstr "Väljumine..."
+
+#~ msgid ""
+#~ "<html><body><b>Note: The Desktop folder currently does not exist.<br />If "
+#~ "you select this option and click OK it will be created for you.</b></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><body><b>Märkus: töölauakataloogi ei ole praegu olemas.<br />Kui "
+#~ "valid selle võimaluse ja klõpsad OK, see luuakse.</b></body></html>"

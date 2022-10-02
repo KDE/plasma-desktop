@@ -1,0 +1,289 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2014-05-08 15:36+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr ""
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid ""
+#| "Desktop Search helps you quickly locate all your files based on their "
+#| "content"
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"De Schriefdischsöök hölpt Di, all Dien Dateien na ehr Inholt to finnen."
+
+#: package/contents/ui/main.qml:80
+#, fuzzy, kde-format
+#| msgid "Enable Desktop Search"
+msgid "Enable File Search"
+msgstr "Schriefdischsöök anmaken"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+#| msgid "Show hidden folders"
+msgid "Index hidden files and folders"
+msgstr "Versteken Ornern wiesen"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "Index Audio"
+msgid "Pause Indexer"
+msgstr "Klangdateien indizeren"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: package/contents/ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "File Indexing"
+msgid "Currently indexing: %1"
+msgstr "Dateiindizeren"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr ""
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr ""
+
+#: package/contents/ui/main.qml:249
+#, fuzzy, kde-format
+#| msgid "Index Audio"
+msgid "Indexed"
+msgstr "Klangdateien indizeren"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr ""
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to include"
+msgstr "Den Orner fastleggen, den Du utsluten wullt"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to exclude"
+msgstr "Den Orner fastleggen, den Du utsluten wullt"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de"
+
+#, fuzzy
+#~| msgid "Enable Desktop Search"
+#~ msgid "File Search"
+#~ msgstr "Schriefdischsöök anmaken"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Orner %1 is al utslaten"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Dateiindizeren"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "An disse Steden nich söken"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Böverorner %1 is al utslaten"
+
+#, fuzzy
+#~| msgid "Configure Desktop Search"
+#~ msgid "Configure File Search"
+#~ msgstr "Schriefdischsöök instellen"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "De Wörtelorner is nienich sichtbor"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Programmschriever-Bedrief anmaken"
+
+#~ msgid "Settings"
+#~ msgstr "Instellen"
+
+#~ msgid "Enable Tags and Ratings"
+#~ msgstr "Slötelwöör un Beweerten anmaken"
+
+#~ msgid "Suspend"
+#~ msgstr "Utsetten"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "De Dateien un Ornern topassen, de Du indizeren wullt"
+
+#~ msgid "Index Documents"
+#~ msgstr "Dokmenten indizeren"
+
+#~ msgid "Index Images"
+#~ msgstr "Biller indizeren"
+
+#~ msgid "Index Videos"
+#~ msgstr "Videos indizeren"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Bornkode indizeren"
+
+#~ msgid "Advanced"
+#~ msgstr "Verwiedert"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Ornern topassen"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Verwiedert Dateifilter"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "MIME-Typ utsluten"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Indizeer-Utslutfilter"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Utdrück fastleggen, de dat Indizeren verhöden doot, wenn se op de "
+#~ "Dateinaams passt"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (Symboolsch Links warrt <emphasis>nich</"
+#~ "emphasis> för de Schriefdischsöök indizeert)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(warrt för de Schriefdischsöök indizeert)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (warrt <emphasis>nich</emphasis> för de "
+#~ "Schriefdischsöök indizeert)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Dörkiekornern topassen"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "De lokalen Ornern utsöken, de Du för de gau Schriefdischsöök indizeren "
+#~ "wullt"
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr "Maak dit an, wenn Du versteken Ornern utsöken wullt"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "Dateiindizeerdeenst löppt nich."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Datei-Indizeermoduul lett sik nich ansnacken (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Wiedermaken"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Utsetten"

@@ -1,0 +1,265 @@
+# translation of kcmkclock.po to Belarusian
+# translation of kcmkclock.po to
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+# Symbol <symbol@akeeri.tk>, 2006.
+# Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2007-08-01 10:22+0000\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ігра Грачышка"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ihar.hrachyshka@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "Вызначаць дату і час &аўтаматычна:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Тут вы можаце змяніць дзень, месяц і год."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgid "Time Zone"
+msgstr "Памылка часавай зоны"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, fuzzy, kde-format
+#| msgid "To change the timezone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr "Каб змяніць часавую зону, выберыце ваш рэгіён са спісу"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "Актыўная часавая зона: %1 (%2)"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Тут вы можаце змяніць сістэмны час. Вызначце правільны час у палях гадзінаў, "
+"хвілінаў і секундаў."
+
+#: dtime.cpp:113
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Актыўная часавая зона: %1 (%2)"
+
+#: dtime.cpp:116
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Актыўная часавая зона: %1 (%2)"
+
+#: dtime.cpp:203
+#, fuzzy, kde-format
+#| msgid ""
+#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Публічны сервер часу(pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+"north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Немагчыма злучыцца з серверам часу: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Немагчыма змяніць час."
+
+#: dtime.cpp:281
+#, fuzzy, kde-format
+#| msgid "Error setting new timezone."
+msgid "Error setting new time zone."
+msgstr "Памылка змены часавай зоны."
+
+#: dtime.cpp:281
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgid "Time zone Error"
+msgstr "Памылка часавай зоны"
+
+#: dtime.cpp:299
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Date & Time</h1> This control module can be used to set the system "
+#| "date and time. As these settings do not only affect you as a user, but "
+#| "rather the whole system, you can only change these settings when you "
+#| "start the Control Center as root. If you do not have the root password, "
+#| "but feel the system time should be corrected, please contact your system "
+#| "administrator."
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Дата і час</h1> Гэты модуль існуе, каб наставіць бягучую дату і час. "
+"Гэтыя змены кранаюць не толькі бягучага карыстальніка, але і ўсю сістэму, "
+"таму рабіць тут змены можна толька з-пад адміністратарскага рахунка. Калі вы "
+"не ведаеце пароля адміністратара, але лічыце, што час трэба наставіць, "
+"звяжыцеся з вашым сістэмным адміністратарам."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "Модуль наладкі гадзінніка KDE"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 Лука Мантэччыяні"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Лука Мантэччыяні"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Аўтар ідэі"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Пол Кэмбэл"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Адказны за выпуск"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Бенджамін Мэйер"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "Падтрымка NTP"
+
+#: main.cpp:60
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Date & Time</h1> This control module can be used to set the system "
+#| "date and time. As these settings do not only affect you as a user, but "
+#| "rather the whole system, you can only change these settings when you "
+#| "start the Control Center as root. If you do not have the root password, "
+#| "but feel the system time should be corrected, please contact your system "
+#| "administrator."
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>Дата і час</h1> Гэты модуль існуе, каб наставіць бягучую дату і час. "
+"Гэтыя змены кранаюць не толькі бягучага карыстальніка, але і ўсю сістэму, "
+"таму рабіць тут змены можна толька з-пад адміністратарскага рахунка. Калі вы "
+"не ведаеце пароля адміністратара, але лічыце, што час трэба наставіць, "
+"звяжыцеся з вашым сістэмным адміністратарам."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: main.cpp:144
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set current time"
+msgstr "Немагчыма злучыцца з серверам часу: %1."
+
+#: main.cpp:154
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set timezone"
+msgstr "Немагчыма злучыцца з серверам часу: %1."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Date/Time Error"
+#~ msgstr "Памылка часавай зоны"

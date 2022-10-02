@@ -1,0 +1,250 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Chetan Khona <chetan@kompkin.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2013-02-08 15:14+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "chetan@kompkin.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "स्वयंचलित साधन जुळवणीकार"
+
+#: DeviceAutomounterKCM.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 Trever Fischer"
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 ट्रेव्हेर फिशर"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "ट्रेव्हेर फिशर"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"यात प्रणालीला माहित उपलब्ध साठवणूक साधनाची सूची असते. जर \"स्वयंचलितरित्या जुळवणी "
+"कार्यान्वित करा\" निवडले तरी \"प्रवेश करताना सर्व काढता येणारी साधने जुळवा\" हे निवडले "
+"जात नाही. हेच  \"काढता येण्याजोगे साधन जोडल्यास स्वयंचलितरित्या जुळवितो\" या पर्यायाला "
+"लागु होते.\n"
+" \n"
+" जर \"काढता येणाऱ्या साधनांची स्वयंचलितरित्या जुळवणी कार्यान्वित करा\" तपासले गेले नाही "
+"तर \"साधन वर चढवा\" लागु होत नाही व कोणतेही साधन आपोआप उघडणार अथवा चालू होणार "
+"नाही."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"हे बटन दाबल्यास निवडलेले साधन विसरले जाईल. हे तेव्हाच उपयोगी आहे जेव्हा \"जी काढता "
+"येण्याजोगी साधने पूर्वी स्वहस्ते जुळवली होती फक्त तीच साधने स्वयंचलितरित्या जुळवा\" हे निवडले "
+"जाते. एकदा साधन विसरले गेले व प्रणाली फक्त आपोआप सुरु होणाऱ्या परिचीत साधनांना सेट करते, "
+"ती साधने आपोआप जुळविली जात नाहीत."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "साधन विसरा"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"जेव्हा निवडले जाते तेव्हा  फक्त लक्षात ठेवण्यात आलेली साधने आपोआप चालू होतात. एखादे साधन "
+"तेव्हाच लक्षात ठेवले जाते जेव्हा यापूर्वी ते वापरण्यात आलेले असते. जसे कि लक्षात ठेवून फक्त USB "
+"मीडिया प्लेअर जोडणे पुरेसे नसते तर ती फाईल उघडणे गरजेचे असते नंतर जेव्हा ती पाहिली जाईल "
+"तेव्हा आपोआप उघडेल.एकदा या फाईल उघडल्या कि  त्या साधनातील मजकूर आपोआप प्रणाली ला "
+"उपलब्ध करून दिला जातो."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"जी काढता येण्याजोगी साधने पूर्वी स्वहस्ते जुळवली होती फक्त तीच साधने स्वयंचलितरित्या जुळवा"
+
+#: DeviceModel.cpp:52
+#, fuzzy, kde-format
+#| msgid "Automount on Login"
+msgid "Automount Device"
+msgstr "प्रवेश करताना स्वयंचलितरित्या जुळवणी करा"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr ""
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr ""
+
+#: DeviceModel.cpp:258
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "All Devices"
+msgstr "साधन"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr ""
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "जोडलेली साधने"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "तोडलेली साधने"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "प्रवेश करताना हे साधन स्वयंचलितरित्या जुळविले जाईल."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "प्रवेश करताना हे साधन स्वयंचलितरित्या जुळविले जाणार नाही."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "जोडताना हे साधन स्वयंचलितरित्या जुळविले जाईल."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "जोडताना हे साधन स्वयंचलितरित्या जुळविले जाणार नाही."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "तुम्ही प्रवेश करतेवेळी जर कोणतेही संचयन साधन तुमच्या प्रणालीला जोडलेले असेल तर, त्यातील "
+#~ "सामग्री इतर अनुप्रयोगांस स्वयंचलितरित्या उपलब्ध होईल."
+
+#, fuzzy
+#~| msgid "Mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "प्रवेश करताना सर्व काढता येणारी साधने जुळवा"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "जर हे निवडलेले असेल तर, कोणत्याही संचयन साधनातील सामग्री ते साधन जोडताच "
+#~ "स्वयंचलितरित्या उपलब्ध होईल."
+
+#, fuzzy
+#~| msgid "Automatically mount removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "काढता येण्याजोगे साधन जोडल्यास स्वयंचलितरित्या जुळवा"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "जर हे निवडलेले नसेल, तर कोणत्याही साधनाची स्वयंचलितरित्या जुळवणी होणार नाही. जरी "
+#~ "\"साधन वर चढवा\" मध्ये काहीही निवडले असेल तरी."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "काढता येणाऱ्या साधनांची स्वयंचलितरित्या जुळवणी कार्यान्वित करा"
+
+#~ msgid "Device Overrides"
+#~ msgstr "साधन वर चढवा"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "जोडताना स्वयंचलितरित्या जुळवणी करा"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "प्रवेश करताना किंवा जोडल्यास स्वयंचलितरित्या साधने जुळवितो."

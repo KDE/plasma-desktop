@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Buku Petunjuk &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; adalah asisten yang membuat kemudahan untuk mengintegrasikan sumberdaya jaringanmu dengan Desktop &kde;-mu. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Folder Jaringan</keyword>
+<keyword
+>Asisten Folder Jaringan</keyword>
+<keyword
+>Asisten Folder Jaringan KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Pengenalan</title>
+
+<para
+>Asisten &knetattach;, ramah dan dikenal sebagai Asisten Folder Jaringan, memungkinkan penambahan dan integrasi berbagai folder jaringan dengan mudah dengan desktop &kde;-mu. Silakan laporkan masalah apa pun atau permintaan fitur untuk itu ke situs web bug &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Penggunaan &knetattach;</title>
+
+<para
+>Seperti yang akan kamu lihat pada cuplikan di bawah ini, Asisten Folder Jaringan saat ini memungkinkan kamu untuk menambahkan empat jenis folder jaringan: drive jaringan WebDav, &FTP;, &Microsoft; &Windows; (Samba) dan SSH. Selain itu kamu bisa memilih koneksi baru-baru ini untuk kotak daftar. <screenshot>
+<screeninfo
+>Ini adalah cuplikan-nya &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+<caption>
+<para
+>Window utama Asisten Folder Jaringan</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Penambahan folder-folder jaringan</title>
+
+<para
+>Folder-folder jaringan yang ditampilkan di sebuah lokasi spesialnya &konqueror; dan &dolphin; disebut <emphasis
+>virtual folder</emphasis
+>. Virtual folder ini bisa diakses dengan mengetikkan <userinput
+>remote:/</userinput
+> di dalam bilah lokasi atau dengan memilih <guilabel
+>Jaringan</guilabel
+> dari panel <guilabel
+>Tempat</guilabel
+>. Kemudian kamu akan bisa melihat folder apa pun yang mana telah ditambahkan sebelumnya dan kamu juga akan bisa menggunakan asisten untuk menambahkan yang baru. <screenshot>
+<screeninfo
+>Ini adalah cuplikan-nya &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+<caption>
+<para
+>Virtual folder dengan Asisten Folder Jaringan</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Berbicara soal asisten, Asisten Folder Jaringan bertujuan menjadi sangat mudah digunakan. Setelah membuka asisten kamu harus memilih tipenya folder jaringan yang kamu inginkan untuk diakses. Ketika kamu pindah ke layar selanjutnya kamu hanya perlu mengisi di dalam informasi yang diminta. Langkah terakhir adalah memasukkan nama-pengguna kamu dan kata-sandi login untuk berbagi jaringan yang telah kamu pilih untuk diakses. </para>
+<para
+>Di bawah ini adalah daftar informasi yang dibutuhkan oleh asisten untuk membuat folder jaringan. Jika opsi tidak tersedia untuk folder tertentu, itu tidak harus dimasukkan. Folder Samba &eg; tidak memerlukan entri <guilabel
+>Port</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nama:</guilabel
+></term>
+<listitem>
+<para
+>Di sinilah kamu memberikan sebuah nama pada koneksi jaringan. Hanya terbatas dengan imajinasimu (atau alfabet). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pengguna:</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah nama pengguna yang akan digunakan untuk mendirikan koneksi. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Server:</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah alamat server yang ingin kamu tambahkan. Ini bisa menjadi alamat IP atau nama domain. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Porta:</guilabel
+></term>
+<listitem>
+<para
+>Di sini kamu memasukkan nomor port yang ingin kamu koneksikan. Baku biasanya sudah cukup. <note
+> <para
+>Tidak tersedia untuk folder-folder &Microsoft; &Windows; (Samba). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Folder:</guilabel
+></term>
+<listitem>
+<para
+>Alur terhadap folder yang kamu inginkan untuk pengkoneksian seharusnya di sini. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pengenkodean:</guilabel
+></term>
+<listitem>
+<para
+>Gunakan butir di kotak-daftar ini untuk memilih sebuah pengenkodean untuk koneksi &FTP; dan ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ciptakan ikon untuk folder jarak jauh ini</guilabel
+></term>
+<listitem>
+<para
+>Jika kotak ini dicentang, sebuah ikon akan diciptakan memungkinkan akses melalui folder virtual remote:/. Jika ini tidak dicentang,  sebuah koneksi kemungkinan iya, tetapi itu tidak akan dapat-diakses dari remote:/. <note
+> <para
+>Opsi <guilabel
+>Koneksi baru-baru ini:</guilabel
+> memungkinkan kamu untuk terkoneksi kembali ke titik kait jaringan terakhir yang kamu koneksikan menggunakan asisten apakah sebuah ikon diciptakan atau tidak. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Gunakan enkripsi</guilabel
+></term>
+<listitem>
+<para
+>Jika dicentang mampu untuk membuat sebuah koneksi aman yang akan difungsikan. <note
+> <para
+>Hanya tersedia untuk folder WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Bimbingan &knetattach;</title>
+
+
+<para
+>Ini akan menjadi bimbingan cepat Asisten Folder Jaringan. Jangan berkedip atau kamu melewatkannya. </para>
+
+<para
+>Di bawah ini kamu melihat window utama Asisten Folder Jaringan. Di sinilah kita memilih tipe folder yang ingin kita tambahkan atau koneksikan. Untuk keperluan atas bimbingan ini kita akan menggunakan &FTP;. Ini berisi sebagian besar opsi-opsi yang akan kamu temui saat menggunakan asisten. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ini ada screenshoot-nya window utama &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Oke, jadi kita (seperti punyaku) sudah memilih untuk menambahkan folder &FTP;. Di bawah ini kamu melihat sebuah contoh jenis informasi yang perlu kamu tambahkan untuk informasi server &FTP; tertentu. Setelah mengisinya kita tekan <guibutton
+>Simpan &amp; Koneksikan</guibutton
+> dan tunggu keajaibannya. Oh ya, jika servermu membutuhkan validasi semacamnya, kamu akan diminta pada saat ini sebelum diizinkan untuk terkoneksi. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Cuplikan menampilkan tambahan Folder &FTP; menggunakan &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Jadi kini kita semua sekarang sudah terkoneksi dan dapat menavigasi berbagi yang baru saja ditambahkan. Cihui! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Cuplikan folder &FTP; yang terkoneksi</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Untuk mendapatkan kembali ke folder jaringan kita semua yang perlu, adalah dengan mengetikkan <action
+>remote:/</action
+> di dalam bilah lokasi &konqueror; atau &dolphin; atau pilih <guilabel
+>Jaringan</guilabel
+> dari panel <guilabel
+>Tempat</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Cuplikan folder virtual remote:/ dengan koneksi yang ditambahkan</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Kamu bahkan bisa menambahkan folder baru dari lokasi yang sama dengan menggunakan tautan <guilabel
+>Tambahkan Folder Jaringan</guilabel
+>. Ya, itu membawa kita ke akhir dari perjalanan (bilang itu akan cepat). Aku berharap yang terbaik untukmu di petualangan folder jaringanmu sendiri ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Pujian dan Lisensi</title>
+
+<para
+>&knetattach; </para>
+<para
+>Hakcipta program 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Hakcipta Dokumentasi &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Wantoyo<email
+>wantoyek@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

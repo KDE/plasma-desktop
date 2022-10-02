@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Gestió de sessions</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>22 de març de 2022</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>sessió</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Sessió d'escriptori</title>
+
+<sect2 id="sessions-use">
+<title
+>Ús</title>
+
+<para
+>En aquest mòdul de l'&systemsettings; podreu configurar les opcions del gestor de sessions i sortida del &plasma;.</para>
+
+<para
+>La gestió de sessions es refereix a la capacitat del &plasma; per a desar l'estat de les aplicacions i finestres quan sortiu del &plasma; i restaurar-les quan hi torneu a accedir.</para>
+
+<sect3 id="sessions-general">
+<title
+>General</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Confirma la sortida</guilabel
+></term>
+<listitem>
+<para
+>Si aquesta opció ha estat seleccionada, en sortir del &plasma; se us mostrarà un diàleg amb un temps d'espera predeterminat de 30 segons per a la seva confirmació. En aquest diàleg podeu escollir si desitgeu restaurar la vostra sessió actual quan la inicieu la pròxima vegada.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ofereix les opcions d'aturada</guilabel
+></term>
+<listitem>
+<para
+>Si està marcada aquesta opció, el &plasma; mostrarà la possibilitat d'escollir entre diverses opcions d'apagada. Això inclou finalitzar la sessió actual (l'opció utilitzada si les opcions d'apagada no estan disponibles), l'apagada de l'ordinador o reiniciar-lo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opció predeterminada de sortida</title>
+<para
+>Finalment podeu configurar què haurà de passar de manera predeterminada quan sortiu del &plasma;. Aquestes opcions no són possibles en tots els sistemes operatius i requereixen l'ús de l'&SDDM; com al vostre gestor d'accés.</para>
+<para
+>Les opcions disponibles són autoexplicatives. Si teniu cap dubte, deixeu l'opció predeterminada. Són les següents:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Finalitza la sessió actual</guilabel
+> (aquesta és la predeterminada)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Apaga l'ordinador</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Torna a engegar l'ordinador</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>En connectar-se</title>
+<para
+>Podeu escollir una de les tres opcions per a com s'haurà d'accedir al &plasma;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Restaura l'última sessió</guilabel
+></term>
+<listitem
+><para
+>Si seleccioneu aquesta opció, el &plasma; desarà l'estat de la vostra sessió actual quan en sortiu. El &plasma; la restaurarà en el següent accés, de manera que pugueu continuar amb la vostra tasca amb l'escriptori en el mateix estat en el qual el vàreu deixar.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Restaura manualment l'última sessió desada</guilabel
+></term>
+<listitem
+><para
+>En comptes de restaurar el &plasma; l'estat en el qual estava quan vàreu accedir-hi l'última vegada, es restaurarà a un estat específic que hàgiu desat manualment.</para>
+<para
+>Si aquesta opció està marcada, el menú de l'aplicació oferirà un element addicional <menuchoice
+><guimenu
+>Energia / Sessió</guimenu
+><guimenuitem
+>Desa la sessió</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Comença amb una sessió buida</guilabel
+></term>
+<listitem>
+<para
+>Si seleccioneu aquesta opció, el &plasma; mai restaurarà les sessions que hàgiu desat.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Finalment podeu introduir un llistat d'aplicacions separades per dos punts (<literal
+>:</literal
+>) o coma (<literal
+>,</literal
+>) que s'haurien d'excloure de les sessions, de manera que en accedir a una nova sessió no es restauraran. Per exemple, <userinput
+>xterm:konsole</userinput
+> o <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

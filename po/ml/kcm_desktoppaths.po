@@ -1,0 +1,196 @@
+# Malayalam translation of kcm_desktoppaths.
+# Copyright (C) 2008, 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmkonq package.
+#
+# Manu S Madhav <manusmad@gmail.com>, 2008.
+# arkarjun <arkarjun@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq trunk\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2010-06-29 16:06+0530\n"
+"Last-Translator: arkarjun <arkarjun@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: desktoppathssettings.cpp:173
+#, fuzzy, kde-format
+msgid "Desktop"
+msgstr "പണിയിടം"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+msgid "Documents"
+msgstr "രേഖകള്‍"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+msgid "Downloads"
+msgstr "ഡൌണ്‍ലോഡുക്കള്‍"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+msgid "Music"
+msgstr "സംഗീതം"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+msgid "Pictures"
+msgstr "ചിത്രങ്ങള്‍"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "ചലചിത്രങ്ങളുടെ പാത:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>പാതകള്‍</h1>\n"
+"നിങ്ങളുടെ പണിയിടത്തിലെ ഫയലുകള്‍ ഫയല്‍സിസ്റ്റത്തില്‍ എവിടെ സൂക്ഷിക്കണമെന്നു തീരുമാനിക്കാന്‍ ഈ മൊഡ്യൂള്‍ "
+"നിങ്ങളെ അനുവദിക്കുന്നു.\n"
+"പ്രത്യേക ഐച്ഛികങ്ങളെക്കുറിച്ചുള്ള സഹായത്തിനായി \"എന്താണിതു്?\" (Shift+F1) ഉപയോഗിക്കുക."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "പണിയിട പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"പണിയിടത്തില്‍ കാ​ണുന്ന എല്ലാ ഫയലുകളും ഈ അറയിലാണുള്ളതു്. നിങ്ങള്‍ക്കു് ഈ അറയുടെ സ്ഥാനം മാറ്റാം, "
+"അതിലുള്ളവയും പുതിയ സ്ഥാനത്തേക്കു് സ്വയം മാറും."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "രേഖകളുടെ പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "രചനകള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "ഡൌണ്‍ലോഡുകളുടെ പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "ഡൌണ്‍ലോഡു ചെയ്ത ഇനങ്ങള്‍ സൂക്ഷിക്കാന്‍ ഈ അറ സഹജമായി ഉപയോഗിക്കപ്പെടും."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "ചലചിത്രങ്ങളുടെ പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "ചലചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും ലോഡു ചെയ്യാനും ഈ അറ സഹജമായി ഉപയോഗിക്കപ്പെടും."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "ചിത്രങ്ങളുടെ പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "സംഗീതത്തിലേക്കുള്ള പാത:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "സംഗീത സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
+
+#~ msgid "Autostart path:"
+#~ msgstr "സ്വയാരംഭ പാത:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "കെഡിഇ തുടങ്ങുമ്പോള്‍ സ്വയം തുടങ്ങേണ്ട പ്രയോഗങ്ങളോ അവയിലേക്കുള്ള കണ്ണികളോ (കുറുക്കുവഴികള്‍) ഈ "
+#~ "അറയില്‍ അടങ്ങിയിരിക്കുന്നു. ഈ അറയുടെ സ്ഥാനം യഥേഷ്ടം മാറ്റാം, ഉള്ളടക്കങ്ങളുടെ സഥാനവും "
+#~ "അതനുസരിച്ചു് മാറും."
+
+#~ msgid "Autostart"
+#~ msgstr "സ്വയാരംഭം"
+
+#~ msgid "Movies"
+#~ msgstr "ചലചിത്രങ്ങള്‍"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' എന്നതിന്റെ പാത മാറിയിരിക്കുന്നു;\n"
+#~ "'%2'-ല്‍ നിന്നും '%3'-ലേക്കു് ഫയലുകള്‍ മാറ്റണോ?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "നീക്കുക"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "നീക്കരുത്"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' എന്നതിന്റെ പാത മാറിയിരിക്കുന്നു.\n"
+#~ "'%2'-ല്‍ നിന്നും '%3'-ലേക്കു് ഫയലുകള്‍ മാറ്റണോ?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "നീക്കുക"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "നീക്കരുത്"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "ഉറപ്പാക്കല്‍ ആവശ്യമാണു്"

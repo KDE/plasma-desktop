@@ -1,0 +1,599 @@
+# Translation of kcmkeyboard.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkeyboard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-04 02:15+0200\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: bindings.cpp:33
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Пребаци на следећи распоред тастера"
+
+#: bindings.cpp:34
+#, kde-format
+msgid "KDE Keyboard Layout Switcher"
+msgstr "КДЕ‑ов мењач распореда тастатуре"
+
+#: bindings.cpp:41
+#, fuzzy, kde-format
+#| msgid "KDE Keyboard Layout Switcher"
+msgid "Keyboard Layout Switcher"
+msgstr "КДЕ‑ов мењач распореда тастатуре"
+
+#: bindings.cpp:68
+#, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "Пребаци распоред тастатуре на %1"
+
+#: flags.cpp:168
+#, kde-format
+msgctxt "short layout label - full layout name"
+msgid "%1 - %2"
+msgstr "%1 — %2"
+
+#: flags.cpp:176
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr "%1 — %2"
+
+# >> @item:inlistbox
+#: kcm_add_layout_dialog.cpp:60
+#, kde-format
+msgid "Any language"
+msgstr "било који језик"
+
+# >> @item:inlistbox layout variant
+#: kcm_add_layout_dialog.cpp:141 kcm_view_models.cpp:311
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr "подразумевани"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, kde-format
+msgid "Add Layout"
+msgstr "Додавање распореда"
+
+# >> @label:listbox
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_add_layout_dialog.ui:30
+#, kde-format
+msgid "Layout:"
+msgstr "Распоред:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel_2)
+#: kcm_add_layout_dialog.ui:47
+#, kde-format
+msgid "Shortcut:"
+msgstr "Пречица:"
+
+# >> @label:listbox
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_add_layout_dialog.ui:54
+#, kde-format
+msgid "Variant:"
+msgstr "Варијанта:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:64
+#, kde-format
+msgid "Label:"
+msgstr "Етикета:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_add_layout_dialog.ui:71
+#, kde-format
+msgid "Limit selection by language:"
+msgstr "Ограничи избор по језику:"
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:101 kcm_keyboard.ui:352
+#, kde-format
+msgid "Preview"
+msgstr "Преглед"
+
+#: kcm_keyboard.cpp:48
+#, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "КДЕ контролни модул тастатуре"
+
+#: kcm_keyboard.cpp:50
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr "© 2010, Андриј Рисин"
+
+#: kcm_keyboard.cpp:53
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+"<h1>Тастатура</h1><p>Ова контролни модул служи за подешавање параметара и "
+"распореда тастатуре.</p>"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr "Хардвер"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, kde-format
+msgid "Keyboard &model:"
+msgstr "&Модел тастатуре:"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+"Овде можете изабрати модел тастатуре. Ова поставка не зависи од распореда "
+"тастатуре, већ се тиче „хардверског“ модела, тј. начина на који је тастатура "
+"произведена. Модерне тастатуре обично имају два додатна тастера и познате су "
+"као „104‑тастерски“ модели, што је добар основни избор ако не знате тачно "
+"какву тастатуру имате.\n"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, kde-format
+msgid "Layouts"
+msgstr "Распореди"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kbuttongroup)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid "Layout Indicator"
+msgstr "Показатељ распореда"
+
+# >> @option:checkbox Layout Indicator
+# rewrite-msgid: /layout//
+#. i18n: ectx: property (text), widget (QCheckBox, showIndicatorChk)
+#: kcm_keyboard.ui:108
+#, kde-format
+msgid "Show layout indicator"
+msgstr "Прикажи показатељ"
+
+# >> @option:checkbox Layout Indicator
+# rewrite-msgid: /layout//
+#. i18n: ectx: property (text), widget (QCheckBox, showSingleChk)
+#: kcm_keyboard.ui:115
+#, kde-format
+msgid "Show for single layout"
+msgstr "И при једном распореду"
+
+# >> @option:checkbox Layout Indicator
+#. i18n: ectx: property (text), widget (QRadioButton, showFlagRadioBtn)
+#: kcm_keyboard.ui:122
+#, kde-format
+msgid "Show flag"
+msgstr "Са заставом"
+
+# >> @option:checkbox Layout Indicator
+#. i18n: ectx: property (text), widget (QRadioButton, showLabelRadioBtn)
+#: kcm_keyboard.ui:129
+#, kde-format
+msgid "Show label"
+msgstr "Са етикетом"
+
+# >> @option:checkbox Layout Indicator
+#. i18n: ectx: property (text), widget (QRadioButton, showLabelOnFlagRadioBtn)
+#: kcm_keyboard.ui:136
+#, kde-format
+msgid "Show label on flag"
+msgstr "Са етикетом на застави"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:146
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+"Ако изаберете смерницу мењања по програму или по прозору, промена распореда "
+"ће утицати само на текући програм или прозор."
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:149
+#, kde-format
+msgid "Switching Policy"
+msgstr "Смерница мењања"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:155
+#, kde-format
+msgid "&Global"
+msgstr "&Глобално"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:168
+#, kde-format
+msgid "&Desktop"
+msgstr "По по&врши"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:178
+#, kde-format
+msgid "&Application"
+msgstr "По &програму"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:188
+#, kde-format
+msgid "&Window"
+msgstr "По про&зору"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:201
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr "Пречице за пребацивање распореда"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:207
+#, kde-format
+msgid "Main shortcuts:"
+msgstr "Главне пречице:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:220
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+"Ово је пречица за мењање распореда коју обрађује Икс. Допушта чисто "
+"модификаторске пречице."
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:223 kcm_keyboard.ui:253
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr "Никаква"
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:230 kcm_keyboard.ui:260
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:237
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr "Пречице за трећи ниво:"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:250
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+"Ово је пречица за прелазак на трећи ниво активног распореда (ако постоји) "
+"коју обрађује Икс. Допушта чисто модификаторске пречице."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:267
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr "Алтернативна пречица:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:280
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+"Ово је пречица за мењање распореда. Не подржава чисто модификаторске пречице "
+"и може да не ради у неким случајевима (нпр. ако је активан искакач или на "
+"чувару екрана)."
+
+#. i18n: ectx: property (title), widget (QGroupBox, layoutsGroupBox)
+#: kcm_keyboard.ui:298
+#, kde-format
+msgid "Configure layouts"
+msgstr "Подеси распореде"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:312
+#, kde-format
+msgid "Add"
+msgstr "Додај"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:322
+#, kde-format
+msgid "Remove"
+msgstr "Уклони"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:332
+#, kde-format
+msgid "Move Up"
+msgstr "Помери нагоре"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:342
+#, kde-format
+msgid "Move Down"
+msgstr "Помери надоле"
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:387
+#, kde-format
+msgid "Spare layouts"
+msgstr "Резервни распореди"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:419
+#, kde-format
+msgid "Main layout count:"
+msgstr "Број главних распореда:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:449
+#, kde-format
+msgid "Advanced"
+msgstr "Напредно"
+
+#. i18n: ectx: property (text), widget (QCheckBox, configureKeyboardOptionsChk)
+#: kcm_keyboard.ui:455
+#, kde-format
+msgid "&Configure keyboard options"
+msgstr "&Подеси опције тастатуре"
+
+#: kcm_keyboard_widget.cpp:214
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr "непознат"
+
+#: kcm_keyboard_widget.cpp:216
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: kcm_keyboard_widget.cpp:226
+#, kde-format
+msgid "Only up to %1 keyboard layout is supported"
+msgid_plural "Only up to %1 keyboard layouts are supported"
+msgstr[0] "Могуће је додати највише %1 распоред"
+msgstr[1] "Могуће је додати највише %1 распореда"
+msgstr[2] "Могуће је додати највише %1 распореда"
+msgstr[3] "Могуће је додати највише %1 распоред"
+
+#: kcm_keyboard_widget.cpp:606
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "ништа"
+
+#: kcm_keyboard_widget.cpp:622
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 пречица"
+msgstr[1] "%1 пречице"
+msgstr[2] "%1 пречица"
+msgstr[3] "%1 пречица"
+
+# >> @title:column
+#: kcm_view_models.cpp:220
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr "мапа"
+
+# >> @title:column
+#: kcm_view_models.cpp:220
+#, kde-format
+msgid "Layout"
+msgstr "распоред"
+
+# >> @title:column
+#: kcm_view_models.cpp:220
+#, kde-format
+msgid "Variant"
+msgstr "варијанта"
+
+# >> @title:column
+#: kcm_view_models.cpp:220
+#, kde-format
+msgid "Label"
+msgstr "етикета"
+
+# >> @title:column
+#: kcm_view_models.cpp:220
+#, kde-format
+msgid "Shortcut"
+msgstr "пречица"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:17
+#, kde-format
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"<p>Ако је подржана, овом опцијом одређујете стање тастера NumLock по "
+"покретању Плазме.</p><p>Можете подесити да је NumLock укључен или искључен, "
+"или да Плазма не мења затечено стање.</p>"
+
+# rewrite-msgid: /Plasma//
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:20
+#, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr "NumLock на покретању"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#. i18n: ectx: property (text), widget (QRadioButton, keyboardRepeatOnRadioButton)
+#: kcmmiscwidget.ui:32 kcmmiscwidget.ui:71
+#, kde-format
+msgid "T&urn on"
+msgstr "&Укључи"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:39
+#, kde-format
+msgid "&Turn off"
+msgstr "&Искључи"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:46
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "&Не дирај"
+
+# >> @title:group
+#. i18n: ectx: property (title), widget (QGroupBox, keyboardRepeatGroupBox)
+#: kcmmiscwidget.ui:59
+#, kde-format
+msgid "Keyboard Repeat"
+msgstr "Понављање тастера"
+
+#. i18n: ectx: property (text), widget (QRadioButton, keyboardRepeatOffRadioButton)
+#: kcmmiscwidget.ui:78
+#, kde-format
+msgid "Turn o&ff"
+msgstr "&Искључи"
+
+#. i18n: ectx: property (text), widget (QRadioButton, keyboardRepeatUnchangedRadioButton)
+#: kcmmiscwidget.ui:85
+#, kde-format
+msgid "&Leave unchanged"
+msgstr "&Не дирај"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:123
+#, kde-format
+msgid "&Delay:"
+msgstr "&Застој:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, delay)
+#: kcmmiscwidget.ui:133 kcmmiscwidget.ui:161
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+"<html>Ако је подржана, овом опцијом задајете застој пре него што притиснути "
+"тастер почне да шаље знакове. Брзину издавања знакова контролише опција "
+"<i>Учестаност:</i>.</html>"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, delay)
+#: kcmmiscwidget.ui:164
+#, kde-format
+msgid " ms"
+msgstr " ms"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:177
+#, kde-format
+msgid "&Rate:"
+msgstr "&Учестаност:"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, rate)
+#: kcmmiscwidget.ui:187 kcmmiscwidget.ui:215
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+"Ако је подржана, овом опцијом задајете учестаност којом се знакови шаљу док "
+"је тастер притиснут."
+
+# well-spelled: сек
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, rate)
+#: kcmmiscwidget.ui:218
+#, kde-format
+msgid " repeats/s"
+msgstr " знак./сек."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:236
+#, kde-format
+msgid "Test area:"
+msgstr "Пробна зона:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:243
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+"Омогућава да се испроба понављање тастатуре и гласност клика (не заборавите "
+"да претходно примените измене)."
+
+#: layout_tray_icon.cpp:46 layout_tray_icon.cpp:47
+#, kde-format
+msgctxt "tooltip title"
+msgid "Keyboard Layout"
+msgstr "Распоред тастера"
+
+#: layouts_menu.cpp:135
+#, kde-format
+msgid "Configure Layouts..."
+msgstr "Подеси распореде..."
+
+# >> @title:group
+#: tastenbrett/main.cpp:64
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Понављање тастера"
+
+#: tastenbrett/main.cpp:66
+#, fuzzy, kde-format
+#| msgctxt "tooltip title"
+#| msgid "Keyboard Layout"
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Распоред тастера"

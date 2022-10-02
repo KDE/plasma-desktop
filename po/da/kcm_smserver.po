@@ -1,0 +1,264 @@
+# Danish translation of kcmsmserver
+# Copyright (C).
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2005.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2019, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-08-20 17:45+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Sessionshåndtering</h1> Her kan du indstille sessionshåndteringen. Dette "
+"inkluderer valg, såsom hvorvidt du vil bekræfte, at du vil logge af, om den "
+"sidste session skal genskabes når du logger på igen, og om computeren skal "
+"lukke ned automatisk efter sessionsafslutning som standard."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Kunne ikke anmode genstart af firmware-opsætning: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Computeren vil gå ind i UEFI-opsætningsskærmen næste gang den genstartes."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Computeren vil gå ind i firmware-opsætningsskærmen næste gang den genstartes."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Genstart nu"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Generelt:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Bekræft når der logges ud"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Tilbyd nedlukningsmuligheder"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Standardvalg for Forlad:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Afslut denne session"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Genstart computeren"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Sluk computeren"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Ved log ind:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Genskab seneste session"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Genskab seneste manuelt gemt session"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Start med en tom session"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Genskab ikke disse programmer:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Her kan du indtaste en kolon- eller komma-adskilt liste over programmer der "
+"ikke skal gemmes i sessioner, og derfor ikke vil blive startet når sessionen "
+"genskabes. For eksempel \"xterm:xconsole\" eller \"xterm,konsole\"."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Gå ind i firmware-opsætningen ved næste genstart"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Bekræft når der logges ud"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Tilbyd nedlukningsmuligheder"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Standardvalg for Forlad"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Ved login"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Programmer der skal udelukkes fra session"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "Genskab &forrige session"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "Genskab &manuelt gemt session"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "UEFI-opsætning"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Gå ind i UEFI-opsætningen ved næste genstart"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Markér denne indstilling, hvis du ønsker at sessionshåndteringen skal "
+#~ "vise en log ud-bekræftelsesdialog."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Bekræft når der logges &ud"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "&Tilbyd nedlukningsmuligheder"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Her kan du vælge hvad der skal ske som standard når du logger ud. Dette "
+#~ "har kun betydning hvis du er logget ind gennem KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Standardvalg for \"Forlad\""
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Genskab forrige session:</b> Vil gemme alle programmer der kører "
+#~ "ved afslutning og genskabe dem ved næste opstart</li>\n"
+#~ "<li><b>Genskab manuelt gemt session: </b> Lader sessionen blive gemtnår "
+#~ "som helst via \"Gem session\" i K-Menuen. Dette betyder at de programmer "
+#~ "der kører på dette tidspunkt vil komme tilbage ved næste opstart.</li>\n"
+#~ "<li><b>Start med en tom session:</b> Gem intet. Vil komme op med et "
+#~ "tomtskrivebord ved næste opstart.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Når der logges ind"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Programmer der skal &udelukkes fra sessioner:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Opsætning af firmware"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Gå ind i firmware-opsætning (f.eks. UEFI- eller BIOS-opsætning) når "
+#~ "computeren genstartes næste gang"
+
+#~ msgid "Session Manager"
+#~ msgstr "Sessionshåndtering"

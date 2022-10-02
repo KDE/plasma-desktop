@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Дата і час</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25 березня 2018 року</date>
+<releaseinfo
+>Плазма 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>годинник</keyword>
+<keyword
+>дата</keyword>
+<keyword
+>час</keyword>
+<keyword
+>встановлення</keyword>
+<keyword
+>налаштування</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Дата і час</title>
+
+<para
+>За допомогою цього модуля ви у зручному графічному середовищі зможете змінити системні дату і час.</para>
+
+<note
+><para
+>Оскільки ці параметри стосуватимуться не лише вас, як користувача системи, але і всієї системи, для зміни системних дати і часу вам потрібно мати привілеї адміністратора системи (користувача <systemitem class="username"
+>root</systemitem
+>). Якщо ви не маєте доступу до цих привілеїв, за допомогою цього модуля можна буде лише побачити поточні параметри, — внесені вами зміни збережено не буде.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Дата і час</title>
+
+<para
+>Якщо ви позначите пункт <guilabel
+>Встановити дату та час автоматично</guilabel
+>, цей модуль використовуватиме <acronym
+>systemd</acronym
+> для отримання даних щодо дати і часу.</para>
+
+<para
+>На комп'ютерах, де не встановлено <acronym
+>systemd</acronym
+>, використовуватимуться програма <acronym
+>NTP</acronym
+> <command
+>rdate</command
+> або <command
+>ntpdate</command
+>. Якщо цих програм не встановлено, встановіть якусь з них. </para>
+
+<para
+>Після входу до сеансу Плазми, якщо встановлено зв'язок з інтернетом, або після встановлення зв'язку під час сеансу, система з'єднується із одним або декількома серверами <acronym
+>NTP</acronym
+>.</para>
+<para
+>Цього, однак, недостатньо, щоб підтримувати точний час доволі довго. Ця можливість є корисною для одноразового встановлення точного часу на комп’ютерах, які не мають постійного зв’язку з інтернетом, зокрема портативних комп’ютерах. </para>
+
+<para
+>Якщо ви не використовуєте сервер часу, ви можете встановити дату вручну у календарі.</para>
+<para
+>За допомогою пунктів, розташованих під панеллю календаря ви зможете обрати поточну дату, ввести дату до поля редагування або обрати тиждень року зі спадного списку.</para>
+
+<para
+>Час можна встановити за допомогою віконець лічильників під зображенням аналогового годинника. Ви також можете ввести час напряму.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Часовий пояс</title>
+<para
+>Щоб встановити часовий пояс, просто оберіть відповідний пункт у спадному списку внизу панелі. Скористайтеся полем фільтрування, щоб визначити бажану для вас <guilabel
+>Місцевість</guilabel
+> та <guilabel
+>Регіон</guilabel
+>.</para>
+</sect2>
+
+</sect1>
+
+</article>

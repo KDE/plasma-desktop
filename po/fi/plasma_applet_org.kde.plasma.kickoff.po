@@ -1,0 +1,437 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Tommi Nieminen <translator@legisign.org>, 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-04-04 13:46+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Perusasetukset"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Poista suosikeista"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Lisää suosikkeihin"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "Kaikissa aktiviteeteissa"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Nykyisessä aktiviteetissa"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Näytä suosikeissa"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Kuvake:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Valitse…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "Yleistä:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Aakkosta sovellukset aina"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Aseta käytössä olevat hakuliitännäiset…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Näytä suosikit:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "Ruudukkona"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "Luettelona"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Näytä muut sovellukset:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "Ruudukkona"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "Luettelona"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Näytä painikkeet:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Virta"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Istunto"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Virta ja istunto"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Näytä toimintopainikkeiden selitteet"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Sijainnit"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Avaa käyttäjäasetukset"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Pidä avoinna"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Muokkaa sovelluksia…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Ruudukko, jossa %1 riviä × %2 saraketta"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Poistu"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Lisää"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Tietokone"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Historia"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Usein käytetyt"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Tyhjennä kuvake"
+
+#~ msgid "Search…"
+#~ msgstr "Etsi…"
+
+#~ msgid "Primary actions:"
+#~ msgstr "Ensisijaiset toiminnot:"
+
+# *** TARKISTA: Onko ”power” tässä virranhallinta vai esim. teho(käyttäjä)asetukset?
+#~ msgid "Power actions"
+#~ msgstr "Virtatoiminnot"
+
+#~ msgid "Session actions"
+#~ msgstr "Istuntotoiminnot"
+
+#~ msgid "Leave…"
+#~ msgstr "Poistu…"
+
+#~ msgid "Power…"
+#~ msgstr "Virta…"
+
+#~ msgid "More…"
+#~ msgstr "Lisää…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "Päivitetään sovelluksia…"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Salli kaksiriviset selitteet"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Yhden kohdan luettelo"
+#~ msgstr[1] "%1 kohdan luettelo"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1-alivalikko"
+
+#~ msgid "Leave..."
+#~ msgstr "Poistu…"
+
+#~ msgid "Power..."
+#~ msgstr "Virta…"
+
+#~ msgid "More..."
+#~ msgstr "Lisää…"
+
+#~ msgid "Applications updated."
+#~ msgstr "Sovellukset päivitetty."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Vaihda välilehteä osoitettaessa"
+
+#~ msgid "All Applications"
+#~ msgstr "Kaikki sovellukset"
+
+#~ msgid "Favorites"
+#~ msgstr "Suosikit"
+
+# Suomennoshetkellä ”Äskettäin käytetyt” ei mahtunut kunnolla näkyviin, joten valitsin lyhyemmän ”Äskettäiset”.
+#~ msgid "Often Used"
+#~ msgstr "Usein käytetyt"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Aktiiviset välilehdet"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Passiiviset välilehdet"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Vedä välilehteä laatikosta toiseen näyttääksesi tai piilottaaksesi niitä "
+#~ "tai muuta näkyvien välilehtien järjestystä vetämällä."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Laajenna haku kirjanmerkkeihin, tiedostoihin ja sähköposteihin"
+
+#~ msgid "Appearance"
+#~ msgstr "Ulkoasu"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Valikkopainikkeet"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Näkyvät välilehdet"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Suosikit"
+
+#~ msgid "Log out"
+#~ msgstr "Kirjaudu ulos"
+
+#~ msgid "Lock"
+#~ msgstr "Lukitse"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lukitse näyttö"
+
+#~ msgid "Switch user"
+#~ msgstr "Vaihda käyttäjää"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Aloita rinnakkaisistunto toisena käyttäjänä"
+
+#~ msgid "Shut down"
+#~ msgstr "Sammuta"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Sammuta tietokone"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Käynnistä uudelleen"
+
+#~ msgid "Restart computer"
+#~ msgstr "Käynnistä tietokone uudelleen"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Tallenna nykyinen istunto seuraavaan kirjautumiseen"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Keskeytä kirjautumatta ulos"
+
+#~ msgid "Hibernate"
+#~ msgstr "Lepotila"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Keskeytä levylle"
+
+#~ msgid "Suspend"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Keskeytä muistiin"
+
+#~ msgid "System"
+#~ msgstr "Järjestelmä"
+
+#~ msgid "Home Folder"
+#~ msgstr "Kotikansio"
+
+#~ msgid "Network Folders"
+#~ msgstr "Verkkokansiot"
+
+#~ msgid "Documents"
+#~ msgstr "Tiedostot"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Äskettäin käytetyt tiedostot"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Äskettäin käytetyt sovellukset"
+
+#~ msgid "Run Command..."
+#~ msgstr "Suorita komento…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Etsi tai suorita"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Irrotettava tallennusväline"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Näytä ”Äskettäin asennetut”"
+
+#~ msgid "Uninstall"
+#~ msgstr "Poista asennus"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Aakkosta (Z–A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Tyhjennä äskettäiset sovellukset"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Tyhjennä äskettäiset tiedostot"
+
+#~ msgid "Sleep"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Add To Favorites In This Activity Only"
+#~ msgstr "Lisää suosikkeihin vain tässä aktiviteetissa"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "KDE:n Plasma"

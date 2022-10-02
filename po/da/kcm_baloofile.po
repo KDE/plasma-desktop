@@ -1,0 +1,388 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Martin Schlander <mschlander@opensuse.org>, 2013, 2014, 2015, 2017, 2019, 2020, 2021.
+# scootergrisen, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-09-05 20:53+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "Dette modul lader dig indstille filindekseringen og søgefunktionen."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Dette vil deaktivere filsøgning in KRunner og startmenuer og fjerne visning "
+"af udvidede metadata fra alle KDE-programmer."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Vil du slette de gemte indekseringsdata? Der vil blive frigjort %1 plads, "
+"men hvis indeksering aktiveres igen senere, vil hele indekset skulle "
+"gendannes fra bunden. Dette kan tage nogen tid afhængigt af hvor mange filer "
+"du har."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Slet indekseringsdata"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Filsøgning hjælper dig med hurtigt at finde alle dine filer baseret på deres "
+"indhold."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Aktivér filsøgning"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indeksér også filindhold"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indeksér skjulte filer og mapper"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Status: %1, %2% gennemført"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Sæt indeksering på pause"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Genoptag indeksering"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Indekserer aktuelt: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Mappespecifik  konfiguration:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Start indeksering af en mappe..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Stop indeksering af en mappe..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Ikke indekseret"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indekseret"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Slet indgang"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Vælg en mappe der skal medtages"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Vælg en mappe der skal udelades"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
+#~ msgid "File Search"
+#~ msgstr "Filsøgning"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Ophavsret 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Tilføj mappekonfiguration..."
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Mappen %1 er allerede undtaget"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Filindeksering"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Søg ikke på disse placeringer:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Vælg den mappe som skal medtages"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Det er ikke tilladt er ekskluderer rodmappen. Deaktivér venligst "
+#~ "filsøgning hvis du ikke vil have det"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Mappens overmappe %1 er allerede undtaget"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Indstil filsøgning"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Rodmappen er altid skjult"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Aktivér udviklertilstand"
+
+#, fuzzy
+#~| msgid "Basic Settings"
+#~ msgid "Settings"
+#~ msgstr "Basale indstillinger"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspendér"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "Vælg hvilke filer og mapper der skal indekseres"
+
+#~ msgid "Index Documents"
+#~ msgstr "Indeksér dokumenter"
+
+#~ msgid "Index Images"
+#~ msgstr "Indeksér billeder"
+
+#~ msgid "Index Videos"
+#~ msgstr "Indeksér videofiler"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Indeksér kildekode"
+
+#~ msgid "Advanced"
+#~ msgstr "Avanceret"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Tilpasning af mapper"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Avanceret filfiltrering"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "Undtag MIME-type"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Eksluderingsfiltre for indeks"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Vælg udtryk for at udelade filer fra indeksering ved at matche deres "
+#~ "filnavne"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(symbolske links vil <emphasis>ikke</"
+#~ "emphasis> blive indekseret til skrivebordssøgning)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(vil blive indekseret til skrivebordssøgning)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(vil <emphasis>ikke</emphasis> blive "
+#~ "indekseret til skrivebordssøgning)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Tilpasning af indeksmapper"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "Vælg de lokale mapper som indeholder filer, der skal indekseres til "
+#~ "hurtig skrivebordssøgning"
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr "Markér for at kunne vælge skjulte mapper"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "Filindekseringstjenesten kører ikke."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Kunne ikke kontakte filindekseringstjenesten (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Genoptag"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Suspendér"
+
+#~ msgid "File Metadata"
+#~ msgstr "Filmetadata"
+
+#~ msgid ""
+#~ "File metadata enables tagging and rating of files integrated with the "
+#~ "Desktop Search."
+#~ msgstr ""
+#~ "Filmetadata aktiverer mærkning og vurdering af filer med integration til "
+#~ "skrivebordssøgning."
+
+#~ msgid "Enable File metadata"
+#~ msgstr "Aktivér filmetadata"
+
+#~ msgid "Details..."
+#~ msgstr "Detaljer..."
+
+#~ msgid ""
+#~ "Desktop search allows searching for files by content instead of just by "
+#~ "name."
+#~ msgstr ""
+#~ "Skrivebordssøgning muliggør søgning efter filer efter indhold i stedet "
+#~ "for blot efter navn."
+
+#~ msgid "Indexing"
+#~ msgstr "Indeksering"
+
+#~ msgid "Removable media handling:"
+#~ msgstr "Håndtering af flytbare medier:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Indexing of files on removable media"
+#~ msgstr "Indeksering af filer på flytbare medier"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "<para>Nepomuk can index files on removable devices like USB keys or "
+#~ "external hard-disks for fast desktop searches.</para>\n"
+#~ "<para>By default no files are indexed. Here this behaviour can be changed "
+#~ "to one of two options:</para>\n"
+#~ "<para><list><item><interface>Index files on all removable devices</"
+#~ "interface> - Files on removable media are indexed as soon as the medium "
+#~ "is mounted. Caution: this does not include media which have been rejected "
+#~ "via the second option.</item>\n"
+#~ "<item><interface>Ask individually when newly mounted</interface> - The "
+#~ "user will be asked to decide if files on the newly mounted medium should "
+#~ "be indexed or not. Once decided Nepomuk will not ask again.</item></"
+#~ "list></para>"
+#~ msgstr ""
+#~ "<para>Nepomuk kan indeksere filer på flytbare enheder såsom USB-nøgler "
+#~ "eller eksterne harddiske til hurtig skrivebordssøgning.</para>\n"
+#~ "<para>Som standard indekseres ingen filer. Denne opførsel kan ændres her "
+#~ "til en af to indstillinger:</para>\n"
+#~ "<para><list><item><interface>Indeksér filer på alle flytbare enheder</"
+#~ "interface> - Filer på flytbare medier indekseres så snart mediet "
+#~ "monteres. Bemærk: Dette omfatter ikke medier som er blevet afvist via den "
+#~ "anden indstilling.</item>\n"
+#~ "<item><interface>Spørg ved hver ny montering</interface> - Brugeren vil "
+#~ "blive spurgt om filerne på det nymonterede medie skal indekseres eller "
+#~ "ej. Når dette er besluttet vil Nepomuk ikke spørge igen.</item></list></"
+#~ "para>"
+
+#~ msgid "Ignore all removable media"
+#~ msgstr "Ignorér alle flytbare medier"
+
+#~ msgid "Index files on all removable devices"
+#~ msgstr "Indeksér filer på alle flytbare medier"
+
+#~ msgid "Ask individually when newly mounted"
+#~ msgstr "Spørg ved hver ny montering"
+
+#~ msgid "Refresh"
+#~ msgstr "Genopfrisk"
+
+#~ msgid "Files"
+#~ msgstr "Filer"
+
+#~ msgid "Emails"
+#~ msgstr "E-mails"
+
+#~ msgid "Calculating"
+#~ msgstr "Beregner"
+
+#~ msgid "Desktop Search Configuration Module"
+#~ msgstr "Konfigurationsmodul til skrivebordssøgning"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are active"
+#~ msgstr "Filmetadata-tjenesterne er aktive"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are disabled"
+#~ msgstr "Filmetadata-tjenesterne er deaktiveret"

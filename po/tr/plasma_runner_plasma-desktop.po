@@ -1,0 +1,68 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2009, 2012.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_plasma-desktop_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"PO-Revision-Date: 2022-03-11 14:40+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: plasma-desktop-runner.cpp:24
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console"
+msgstr "masaüstü konsolu"
+
+#: plasma-desktop-runner.cpp:25
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console"
+msgstr "pencere yöneticisi konsolu"
+
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#, kde-format
+msgid ""
+"Opens the Plasma desktop interactive console with a file path to a script on "
+"disk."
+msgstr ""
+"Diskteki bir betiğin yolu ile etkileşimli Plasma masaüstü konsolunu açar."
+
+#: plasma-desktop-runner.cpp:31
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console :q:"
+msgstr "masaüstü konsolu :q:"
+
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#, kde-format
+msgid ""
+"Opens the KWin interactive console with a file path to a script on disk."
+msgstr ""
+"Diskteki bir betiğin yolu ile etkileşimli KWin etkileşimli konsolunu açar."
+
+#: plasma-desktop-runner.cpp:37
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console :q:"
+msgstr "pencere yöneticisi konsolu :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Etkileşimli Plasma masaüstü konsolu aç"
+
+#: plasma-desktop-runner.cpp:62
+#, kde-format
+msgid "Open KWin interactive console"
+msgstr "Etkileşimli KWin konsolunu aç"

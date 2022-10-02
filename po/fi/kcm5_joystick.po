@@ -1,0 +1,335 @@
+# translation of joystick.po to
+# Copyright © 2004, 2005, 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdebase package.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2014.
+# Copyright © 2010 This_file_is_part_of_KDE
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2014-11-08 23:25+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:18+0000\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Teemu Rytilahti, Tapio Kautto, Ilpo Kantonen, Mikko Piippo, Jorma Karvonen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"teemu.rytilahti@kde-fi.org,eleknader@phnet.fi,ilpo@iki.fi,piippo@cc.helsinki."
+"fi,karvonen.jorma@gmail.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "Kalibrointi"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "Seuraava"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "Odota hetki, lasketaan tarkkuutta"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(tavallisesti X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(tavallisesti Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibrointi tarkistaa ohjaimen antaman arvoalueen.<br /><br />Liikuta "
+"laitetta <b>akselilla %1 %2</b> <b>pienimpään</b> kohtaan.<br /><br />Paina "
+"jotakin ohjaimen painiketta tai napsauta Seuraava-painiketta, kun olet "
+"valmis seuraavaan vaiheeseen.</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibrointi tarkistaa ohjaimen antaman arvoalueen.<br /><br />Liikuta "
+"laitetta <b>akselin %1 %2</b> <b>keskikohtaan</b>.<br /><br />Paina jotakin "
+"ohjaimen näppäintä tai 'Seuraava'-painiketta, kun olet valmis seuraavaan "
+"vaiheeseen.</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Kalibrointi tarkistaa ohjaimen antaman arvoalueen.<br /><br />Liikuta "
+"laitetta <b>akselin %1 %2</b> <b>suurimpaan</b> kohtaan.<br /><br />Paina "
+"jotakin ohjaimen näppäintä tai 'Seuraava'-painiketta, kun olet valmis "
+"seuraavaan vaiheeseen.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "Viestintävirhe"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "Ohjain on kalibroitu onnistuneesti"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "Kalibrointi onnistui"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "Arvoalue %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "Valittua laitetta ”%1” ei voitu avata: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "Annettu laite ”%1” ei ole peliohjain."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "Peliohjaimen %1 ajuriversiota ei voitu hakea: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"Nykyinen ydin (%1.%2.%3) ei ole sama, jolle tämä moduuli on käännetty (%4.%5."
+"%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "Peliohjaimen %1 painikkeiden lukumäärää ei voitu hakea: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "Ei saatu akseleiden lukumäärää peliohjaimelta ”%1”: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "Peliohjaimen %1 kalibrointiarvoja ei voitu hakea: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "Peliohjaimen %1 kalibrointiarvoja ei voi palauttaa: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr "Peliohjaimen %1 kalibrointiarvoja ei voi alustaa: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "Peliohjaimen %1 kalibrointiarvoja ei voitu ottaa käyttöön: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "sisäinen virhe - koodi %1 on tuntematon"
+
+# pmap: =/elat=Peliohjainten hallinnasta/
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "Peliohjainten hallinta"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "KDE-järjestelmäasetusosio peliohjaimien testaamiseen"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "© 2004, Martin Koller"
+
+# skip-rule: orthography-number-range
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>Peliohjain</h1>Tästä voit tarkistaa peliohjaimen toiminnan.<br />Voit "
+"tarvittaessa myös kalibroida peliohjaimesi.<br />Käytettävissä olevat "
+"peliohjaimet haetaan tarkistamalla laitteet /dev/js[0-4] ja /dev/input/"
+"js[0-4]<br />Jos laitetiedostosi on jokin muu, voit kirjoittaa sen "
+"yhdistelmäruutuun.<br />Painikkeiden luettelossa näkyy painikkeiden tila, ja "
+"Akselit -luettelossa näkyy peliohjaimen akseleiden nykyiset arvot.<br /"
+">HUOM: nykyinen Linuxin ajuri (ytimille 2.4, 2.6) voi tunnistaa "
+"automaattisesti vain seuraavat peliohjaimet:<ul><li>kaksiakselinen, neljän "
+"painikkeen joystick</li><li>kolmiakselinen, neljän painikkeen joystick</"
+"li><li>neliakselinen, neljän painikkeen joystick</li><li>Saitek Cyborg -"
+"valmistajan digitaaliset peliohjaimet</li></ul>(Näet lisätietoja Linuxin "
+"ytimen lähdekoodien tiedostosta Documentation/input/joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "Laite:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "Sijainti:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "Näytä jälki"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "PAINETTU"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "Painikkeet:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "Tila"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "Akselit:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "Arvo"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "Kalibroi"
+
+# skip-rule: orthography-number-range
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"Tietokoneesta ei löytynyt peliohjainta.\n"
+"<br />Ohjainta etsittiin laitteista ”/dev/js[0-4]” ja ”/dev/input/js[0-4]”. "
+"<br />Jos olet varma, että koneessa on peliohjain, syötä oikean laitteen "
+"tiedosto."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"Laitteen nimi on virheellinen (se ei ala /dev -hakemistolla).\n"
+"Valitse laite luettelosta, tai\n"
+"anna laitetiedoston nimi, esim. /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "Tuntematon laite"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "Laitevirhe"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>Kalibrointi tarkistaa kohdistusta.<br /><br /><b>Siirrä ohjain kaikilla "
+"akseleilla keskelle, äläkä koske laitteeseen.</b><br /><br />Napsauta OK, "
+"niin kalibrointi aloitetaan.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "Palautettiin kaikki kalibrointiarvot peliohjaimelle ”%1”."

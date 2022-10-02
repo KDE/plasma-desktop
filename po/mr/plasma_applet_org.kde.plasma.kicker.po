@@ -1,0 +1,654 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2013-04-13 16:15+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "सामान्य"
+
+#: package/contents/ui/code/tools.js:42
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgid "Remove from Favorites"
+msgstr "पसंत मधून काढून टाका"
+
+#: package/contents/ui/code/tools.js:46
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgid "Add to Favorites"
+msgstr "पसंत मध्ये जोडा"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:134
+#, fuzzy, kde-format
+#| msgid "Favorite Places"
+msgid "Show in Favorites"
+msgstr "पसंत जागा"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgid "Icon:"
+msgstr "चिन्ह :"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, fuzzy, kde-format
+#| msgid "Tab Icon:"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "टॅब चिन्ह :"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Show applications as:"
+msgstr "अनुप्रयोग"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Sort applications alphabetically"
+msgstr "अनुप्रयोग"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, fuzzy, kde-format
+#| msgid "Favorite Places"
+msgid "Show categories:"
+msgstr "पसंत जागा"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Recent applications"
+msgstr "अनुप्रयोग"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, fuzzy, kde-format
+#| msgid "Installed Applications"
+msgid "Often used applications"
+msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent files"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used files"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent contacts"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used contacts"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "अलिकडील दस्तऐवज"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, fuzzy, kde-format
+#| msgid "Favorite Places"
+msgid "Favorites"
+msgstr "पसंत जागा"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr ""
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr ""
+
+#: package/contents/ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Edit Applications…"
+msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#~ msgid "Open with:"
+#~ msgstr "यामध्ये उघडा :"
+
+#~ msgid "Properties"
+#~ msgstr "गुणधर्म"
+
+#, fuzzy
+#~| msgid "Add to favorites"
+#~ msgid "Add to Desktop"
+#~ msgstr "पसंत मध्ये जोडा"
+
+#, fuzzy
+#~| msgid "Add to favorites"
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "पसंत मध्ये जोडा"
+
+#~ msgid "Recent Documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget Recent Documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Edit Application..."
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Hide Application"
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgctxt "Tab title"
+#~| msgid "Applications"
+#~ msgid "Applications"
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Favorite Applications"
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "पसंत अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "KRunner"
+#~ msgid "Show KRunner"
+#~ msgstr "के-रनर"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Contacts"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget Contact"
+#~ msgstr "दस्तऐवज विसरा"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget All Contacts"
+#~ msgstr "दस्तऐवज विसरा"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Favorite Applications"
+#~ msgid "Forget Application"
+#~ msgstr "पसंत अनुप्रयोग"
+
+#~ msgid "Forget Document"
+#~ msgstr "दस्तऐवज विसरा"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget All"
+#~ msgstr "दस्तऐवज विसरा"
+
+#, fuzzy
+#~| msgid "Favorite Applications"
+#~ msgid "Forget All Applications"
+#~ msgstr "पसंत अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget All Documents"
+#~ msgstr "दस्तऐवज विसरा"
+
+#~ msgid "All Applications"
+#~ msgstr "सर्व अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent Contacts"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Recent Applications"
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Installed Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "New Session"
+#~ msgid "Power / Session"
+#~ msgstr "नवीन सत्र"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Lock"
+#~ msgid "Lock"
+#~ msgstr "कुलूपबंद करा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "New Session"
+#~ msgid "Save Session"
+#~ msgstr "नवीन सत्र"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Hibernate"
+#~ msgid "Hibernate"
+#~ msgstr "संगणक गोठवा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Restart"
+#~ msgid "Restart"
+#~ msgstr "पुन्हा सुरु करा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Shutdown"
+#~ msgid "Shut Down"
+#~ msgstr "बंद करा"
+
+#~ msgid "Session"
+#~ msgstr "सत्र"
+
+#, fuzzy
+#~| msgid "Opened Sessions"
+#~ msgid "End session"
+#~ msgstr "उघडलेले सत्र"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Suspend"
+#~ msgid "Suspend to RAM"
+#~ msgstr "अकार्यक्षम करा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Suspend"
+#~ msgid "Suspend to disk"
+#~ msgstr "अकार्यक्षम करा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Restart"
+#~ msgid "Restart computer"
+#~ msgstr "पुन्हा सुरु करा"
+
+#, fuzzy
+#~| msgid "&Safely Remove '%1'"
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "'%1' सुरक्षितरित्या बाहेर काढा (&S)"
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Show recent applications"
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Show often used applications"
+#~ msgstr "अनुप्रयोग"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show often used documents"
+#~ msgstr "अलिकडील दस्तऐवज"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Logout"
+#~ msgid "Logout"
+#~ msgstr "बाहेर पडा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Suspend"
+#~ msgid "Suspend"
+#~ msgstr "अकार्यक्षम करा"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "New Session"
+#~ msgid "New Session"
+#~ msgstr "नवीन सत्र"
+
+#~ msgid "(Empty)"
+#~ msgstr "(रिकामी)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "chetan@kompkin.com"
+
+#~ msgid "Runner: %1"
+#~ msgstr "रनर : %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग विभागाप्रमाणे संचारण करा"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
+
+#~ msgid ""
+#~ "List all installed applications in a flat list, grouped by categories"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग विभागाप्रमाणे समूहात यादी करा"
+
+#, fuzzy
+#~| msgid "All Installed Applications"
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
+
+#, fuzzy
+#~| msgid ""
+#~| "List all installed applications in a flat list, grouped by categories"
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग विभागाप्रमाणे समूहात यादी करा"
+
+#~ msgid "Folder"
+#~ msgstr "संचयीका"
+
+#~ msgid "List applications marked as favorite"
+#~ msgstr "पसंत केलेले अनुप्रयोगांची यादी करा"
+
+#~ msgid "Power Management"
+#~ msgstr "वीज व्यवस्थापन"
+
+#~ msgid "Folder to show:"
+#~ msgstr "दर्शविण्याची संचयीका :"
+
+#~ msgid "Title:"
+#~ msgstr "शिर्षक :"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "मुख्य"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "संजाळ"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "रूट"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "कचरापेटी"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "'%1' सोडा (&R)"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "अनमाऊंट करा (&U) '%1'"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "बाहेर काढा (&E) '%1'"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "'%1' हे साधन डिस्क नाही. त्यामुळे ते बाहेर काढता येत नाही."
+
+#, fuzzy
+#~| msgid "Remove from favorites"
+#~ msgid "Remove from Sidebar"
+#~ msgstr "पसंत मधून काढून टाका"
+
+#, fuzzy
+#~| msgid "Add to favorites"
+#~ msgid "Add to Sidebar"
+#~ msgstr "पसंत मध्ये जोडा"
+
+#~ msgid "Power"
+#~ msgstr "पॉवर"
+
+#~ msgid "Hello"
+#~ msgstr "हेल्लो"
+
+#~ msgid "World"
+#~ msgstr "वर्ल्ड"
+
+#~ msgid "Hello World"
+#~ msgstr "हेलो वर्ल्ड"
+
+#~ msgid "Text Color:"
+#~ msgstr "मजकूर रंग :"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "मजकूर सावली :"
+
+#~ msgid "None"
+#~ msgstr "काही नाही"
+
+#~ msgid "Automatic"
+#~ msgstr "स्वयंचलित"
+
+#~ msgid "Custom:"
+#~ msgstr "ऐच्छिक :"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<विनाशिर्षक>"
+
+#~ msgid "Search in current tab..."
+#~ msgstr "वर्तमान टॅब मध्ये शोधा..."
+
+#, fuzzy
+#~| msgid "End Configure"
+#~ msgid "End Configure Tabs"
+#~ msgstr "संयोजना बंद करा"
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgid "Configure Tabs"
+#~ msgstr "संयोजीत करा"
+
+#~ msgid "Restore Tabs to Default"
+#~ msgstr "टॅब्स मूलभूतरित्या पुन्हस्थापित करा"
+
+#~ msgid "Restore Tabs"
+#~ msgstr "टॅब्स पुन्हस्थापित करा"
+
+#~ msgid "About %1"
+#~ msgstr "%1 विषयी"
+
+#~ msgid "Broken source '%1'"
+#~ msgstr "तुटलेला स्रोत '%1'"
+
+#~ msgid "Tab Label:"
+#~ msgstr "टॅब लेबल :"
+
+#~ msgid "Report Error"
+#~ msgstr "त्रुटी अहवाल दाखल करा"
+
+#~ msgid "Use a plain window (for debug purposes)"
+#~ msgstr "साधी चौकट वापरा (डिबग कार्यपध्दती करिता)"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "होमरन"
+
+#, fuzzy
+#~| msgid "(C) 2012 Blue Systems"
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "(C) 2012 ब्लू सिस्टीम्स"
+
+#~ msgid "Shaun Reich"
+#~ msgstr "शोन राइश"
+
+#~ msgid "Developer"
+#~ msgstr "विकासकर्ता"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "ओरेलीन गेत्यू"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "मुख्य"
+
+#~ msgctxt "Tab title"
+#~ msgid "Files"
+#~ msgstr "फाईल्स"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "पॉवर"
+
+#, fuzzy
+#~| msgctxt "Program name"
+#~| msgid "Homerun"
+#~ msgid "Homerun Kicker"
+#~ msgstr "होमरन"
+
+#, fuzzy
+#~| msgctxt "KFile System Bookmarks"
+#~| msgid "Trash"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "कचरापेटी"
+
+#~ msgid "Show on screen <screen>"
+#~ msgstr "स्क्रीन वर दर्शवा <screen>"

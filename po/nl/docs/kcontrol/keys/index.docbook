@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Sneltoetsen</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>toetsenbindingen</keyword>
+<keyword
+>bindingen</keyword>
+<keyword
+>sneltoetsen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Sneltoetsen</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Inleiding</title
+> 
+
+<para
+>Hoewel de meeste functionaliteit van &plasma; toegankelijk is door een eenvoudige <quote
+>aanwijzen en klikken</quote
+>-interface, zullen veel mensen verkiezen het toetsenbord te gebruiken voor sommige taken. <keycombo action="simul"
+>&Ctrl;<keycap
+>F</keycap
+></keycombo
+> indrukken is veelal sneller dan uw handen van het toetsenbord halen, het menu <guimenu
+>Bewerken</guimenu
+> openen en <guimenuitem
+>Zoeken</guimenuitem
+> selecteren. </para>
+
+<para
+>Omdat mensen verschillende voorkeuren hebben omtrent toetsenbordsneltoetsen, biedt &plasma; volledig instelbare <quote
+>toetsenbindingen</quote
+>. Een toetsenbinding is een combinatie van een actie met een toets of toetsencombinatie.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Standaard toepassingssneltoetsen en globale sneltoetsen</title>
+
+<para
+><guilabel
+>Standaard toepassingssneltoetsen</guilabel
+> en <guilabel
+>Globale sneltoetsen</guilabel
+> werken op de zelfde manier. Eigenlijk zijn toepassingssneltoetsen ook <quote
+>globaal</quote
+>. Het enige verschil is: </para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Standaard sneltoetsen</quote
+> verwijzen naar acties die meestal beschikbaar zijn in toepassingen, zoals Opslaan, Afdrukken, Kopiëren, &etc;</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Globale sneltoetsen</quote
+> zijn sneltoetsen voor acties die zin hebben zelfs als er geen toepassingen openstaan. Deze sneltoetsen zullen gewoonlijk verwijzen naar acties als het omschakelen van bureaublad, het manipuleren van vensters, &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Hou er a.u.b. rekening mee dat de toepassingssneltoetsen <emphasis
+>enkel</emphasis
+> de standaardacties zijn veel gevonden worden in toepassingen. De meeste toepassingen zullen ook hun eigen sneltoetsen definiëren, die u kunt aanpassen met het sneltoets-dialoogvenster van de toepassing zelf.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Pagina voor standaard sneltoetsen</title>
+<para
+>Bovenaan deze dialoog ziet u een invoerveld, waarmee u interactief kunt zoeken naar sneltoetsnamen (&eg; Kopiëren) of combinaties van toetsen (&eg; <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) door deze hier letterlijk in te typen.</para>
+<para
+>Onder het zoekveld ziet u een lijst met toetsverbindingen, &ie; associaties tussen acties (&eg; Kopiëren) getoond in de <guilabel
+>Actie</guilabel
+> kolom en toetsen of combinaties van toetsen (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) getoond in de <guilabel
+>Sneltoets</guilabel
+> of <guilabel
+>Alternatief</guilabel
+> kolom. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Pagina voor globale sneltoetsen</title>
+<para
+>Aan de linkerkant van deze pagina is lijstvak dat u in staat stelt om een <guilabel
+>Component</guilabel
+> te selecteren zoals KWin, Plasma Bureaublad &etc; De gedefinieerde sneltoetsen voor de geselecteerde component worden weergegeven in de <guilabel
+>Actie</guilabel
+> en <guilabel
+>Globaal</guilabel
+> kolom in de getoonde lijst.</para>
+<para
+>Deze pagina heeft hetzelfde zoekvak als het tabblad <guilabel
+>Standaard sneltoetsen</guilabel
+>.</para>
+<para
+><guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> gebruiken of <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> om een component toe te voegen of te verwijderen. </para>
+
+<para
+>Een component toevoegen opent een dialoog om toepassingen te pakken uit de startmenustructuur om starters toe te voegen om ze bruikbaar te maken als sneltoetsen. Als een toepassing een optie spronglijst heeft dan zijn deze beschikbaar als acties. </para>
+
+<para
+>Klikken op het afrolvak <guilabel
+>Bestand</guilabel
+> rechts een schema te im- of exporteren, stelt alle sneltoetsen op geen.</para>
+<para
+>Globale sneltoetsen kunnen nu geconfigureerd worden door te springen naar specifieke taken binnen een toepassing.</para>
+
+<para
+>Standaard kunt u het toepassingsmenu openen door gewoon op de toets &Meta; te drukken. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Toetsenbindingen instellen</title>
+
+<para
+>Toetsenbindingen instellen is vrij gemakkelijk. In het midden van de &systemsettings;-modules vindt u een lijst met beschikbare acties. Als er een toetsbinding geconfigureerd is voor acties zult u deze in de kolommen rechts vinden. Selecteer eenvoudigweg de actie die u wilt instellen.</para>
+
+<para
+>Na een actie uit de lijst te hebben geselecteerd, zult u zien dat dit item oplicht en u ziet twee extra keuzevakjes onder dit item in de lijst. U kunt daar een combinatie van toetsen instellen of misschien helemaal geen toetsbinding voor de geselecteerde actie. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Standaard</guilabel
+>: de geselecteerde actie zal geassocieerd worden met de standaard waarde van &kde;. Dit is een goede keuze voor de meeste acties, omdat &kde; toetsenbindingen voorziet waarover is nagedacht. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Aangepast</guilabel
+>: als deze optie is ingeschakeld, kunt u een toetscombinatie voor de geselecteerd actie aanmaken. Klik op de knop met ofwel het label <guibutton
+>Geen</guibutton
+> of het label dat de eerder geselecteerde aangepaste sneltoets droeg. Nu verandert het label op de knop naar <guibutton
+>Invoer</guibutton
+>. Druk daarna op een modificatietoets (&ie; &Shift;, &Ctrl; of &Alt;) en dan een normale toets of een functietoets (&eg; <keycap
+>F11</keycap
+>) waaraan u deze toetscombinatie wilt toekennen.</para>
+<para
+>Klikken op de <guilabel
+>Alternatief</guilabel
+> kolom van een rij in de lijst stelt u in staat om de tweede sneltoets voor de actie te bewerken.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

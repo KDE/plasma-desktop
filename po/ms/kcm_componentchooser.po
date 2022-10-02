@@ -1,0 +1,348 @@
+# kcmcomponentchooser Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008, 2009 K Desktop Environment
+#
+# Muhammad Najmi bin Ahmad Zabidi <md_najmi@yahoo.com>, 2003.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2004, 2008, 2009, 2010.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2011-05-15 23:36+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Guna kli&en email berlainan:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Pilih klien email digemari"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Pilih klien email digemari"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Pilih terminal aplikasi digemari."
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Pilih terminal aplikasi digemari."
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Pilih terminal aplikasi digemari."
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Muhammad Najmi bin Ahmad Zabidi, Sharuzzaman Ahmat Raslan"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "md_najmi@yahoo.com, sharuzzaman@myrealbox.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Tidak Diketahui"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Pemilih Komponen"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Pilih dari senarai di bawah komponen mana yang patut dijadikan sebagai "
+#~ "default untuk servis %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Anda telah mengubah komponen default pilihan anda, adakah anda ingin "
+#~ "simpan perubahan itu sekarang ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Tidak keterangan didapati"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Disini anda boleh menukar program komponen. Komponen adalah program yang "
+#~ "mengendali tugas asas, seperti emulator terminal, penyunting teks dan "
+#~ "klien emel. Aplikasi KDE berlainan kadangkala perlu untuk memulakan "
+#~ "emulator konsol, menghantar emel atau memaparkan beberapa teks. Untuk "
+#~ "melakukannya dengan konsisten, aplikasi ini sentiasa memanggil komponen "
+#~ "yang sama. Anda boleh memilih disini program yang mana adalah komponen "
+#~ "tersebut."
+
+#~ msgid "Default Component"
+#~ msgstr "Komponen Default"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Senarai ini menayangkan jenis komponen boleh konfigur. Klik komponen "
+#~ "yang anda ingin konfigur.</p>\n"
+#~ "<p>Dalam dialog ini anda boleh ubah komponen piawai KDE. Komponen adalah "
+#~ "program yang menangani tugas asas, seperti pelagak terminal, editor teks "
+#~ "dan klien e-mel. Aplikasi KDE yang berbeza kadang-kadang perlu meminta "
+#~ "pelagak konsol, hantar e-mel atau papar teks. Untuk melakukan secara "
+#~ "konsisten, aplikasi ini sentiasa memanggil komponen yang sama. Sudahkah "
+#~ "anda memilih program mana yang membentuk komponen ini.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Buka URL <b>http</b> dan <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "dalam aplikasi berdasarkan kandungan URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "dalam pelayar berikut:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "dalam pelayar berikut:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Pilih aplikasi pelayar Web digemari:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail adalah program Mel standard untuk desktop KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "G&una KMail sebagai klien emel utama"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Pilih pilihan ini jika anda mahu menggunakan sebarang program mel lain."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Alamat penerima</li> <li>%s: Subjek</li> <li>%c: Salinan "
+#~ "Karbon (CC)</li> <li>%b: Salinan Karbon Blind (BCC)</li> <li>%B: Teks "
+#~ "badan templat</li> <li>%A: Lampiran </li> <li>%u: URL mailto: penuh </"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Tekan butang ini untuk memilih klien emel kesukaan anda. Sila ambil "
+#~ "perhatian bahawa fail yang anda pilih hendaklah mempunyai atribut boleh "
+#~ "laksana ditetapkan sebelum diterima.<br /> Anda boleh gunakan beberapa "
+#~ "pemegang tanda yang akan digantikan dengan dengan nilai sebenar apabila "
+#~ "klien emel dipanggil:<ul> <li>%t: Alamat penerima </li> <li>%s: Subjek</"
+#~ "li> <li>%c: Salinan Karbon (CC)</li> <li>%b: Salinan Karbon Blind (BCC)</"
+#~ "li> <li>%B: Templat badan teks</li> <li>%A: Lampiran </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Klik disini untuk melayari untuk fail program mel."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktifkan pilihan ini jika anda mahu klien emel dipilih untuk dilaksanakan "
+#~ "di terminal (spt. <em> Konsole</em> )."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Laksana pada te&rminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Lungsur direktori menggunakan pengurus fail berikut:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Lain: klik Tambah... dalam dialog dipaparkan disini:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "G&una Konsole sebagai aplikasi terminal"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Guna program &terminal berlainan:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Tekan butang ini untuk memilih klien terminal kegemaran anda. Perhatian "
+#~ "bahawa fail yang anda pilih perlu ada mempunyai atribut boleh laksana "
+#~ "ditetapkan agar diterima.<br /> Perhatian juga bahawa sesetengah program "
+#~ "yang menggunakan Emulator Terminal tidak akan berfungsi jika anda "
+#~ "menambah hujah baris arahan (Contoh: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Klik disini untuk melayari program terminal."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 saat lagi:"
+#~ msgstr[1] "%1 saat lagi:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Pengurus tetingkap baru akan digunakan apabila KDE dimulakan lain kali."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Tukar Pengurus Tetingkap"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Pengurus tetingkap baru telah dilaksanakan.\n"
+#~ "Adalah disyorkan untuk mengulangmula sesi KDE ini untuk memastikan semua "
+#~ "aplikasi terlaksana disesuaikan untuk perubahan ini."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Pengurus Tetingkap Diganti"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Pengurus tetingkap terlaksana anda akan sekarang diganti dengan yang "
+#~ "telah ditetapkan."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Tetapkan Perubahan Pengurus Tetingkap"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Terim&a Perubahan"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "Kembalikan ke Te&rdahulu"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "G&una pengurus tetingkap KDE default (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "&Guna pengurus tetingkap berlainan:"
+
+#~ msgid "Configure"
+#~ msgstr "Tetapkan"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Perhatian: Kebanyakan pengurus tetingkap tidak mempunyai tetapam mereka "
+#~ "sendiri dan tidak mengikut tetapan KDE."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"

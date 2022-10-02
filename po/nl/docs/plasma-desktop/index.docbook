@@ -1,0 +1,1029 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+&Kristof.Bal; 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma;, het  voornaamste interface van het bureaublad. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Widget</keyword>
+<keyword
+>Containers</keyword>
+<keyword
+>Bureaublad</keyword>
+<keyword
+>Starter</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&plasma; biedt een moderne en aanpasbare omgeving voor het uitvoeren van uw favoriete toepassingen en toegang tot uw informatie waar deze ook mag zijn. Andere gezamenlijke attributen van het &plasma;-bureaublad inclusief geavanceerd windowmanagement en bureaubladeffecten, ondersteuning voor &kde; &plasma;-widgets, geïntegreerd zoeken, hardwaremanagement en een hoge graad van aanpasbaarheid. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>&plasma; gebruiken</title>
+
+<sect1 id="plasma-components">
+<title
+>&plasma; componenten</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>&plasma; widgets en containers</title>
+
+<para
+>De essentie van &plasma; is opgebouwd rond twee concepten: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>&plasma; widgets</term>
+<listitem>
+<para
+>Applets, of kleine programma's die actief zijn op het bureaublad. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Containers</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Applets die dienen als container voor de &plasma; widgets </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Op een standaard bureaublad zijn er twee hoofdelementen: het paneel en het bureaublad zelf. Beiden zijn containers in de terminologie van &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Standaard &plasma; bureaublad</title>
+
+<para
+><note
+><para
+>Het &plasma; bureaublad kan op oneindig veel manieren worden ingesteld. De onderstaande schermafdruk toont een tamelijk standaard bureaublad. Sommige distributies passen uitgebreide aanpassingen toe, zodat uw bureaublad er anders uit kan zien. </para>
+<para
+>Ook kan het grafische uiterlijk van de interface-elementen een eigen stijl hebben. Deze schermafdrukken gebruiken de standaard &plasma; stijl, Breeze.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Een tamelijk standaard &plasma; bureaublad</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>De programmastarter. Gewoonlijk is dit de <link linkend="panel-launcher"
+>Programmastarter</link
+>.</para
+></listitem>
+<listitem
+><para
+>Een aantal pictogrammen die gemakkelijk toegang geven tot vaak gebruikte toepassingen</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+>De <link linkend="panel-taskbar"
+>Taakbeheerder</link
+>, die de titels van vensters behorende bij de toepassingen die nu actief zijn toont. Geen van de toepassingen hebben een geopend venster, toen de schermafdruk was genomen</para
+></listitem>
+<listitem
+><para
+>Het <link linkend="panel-system-tray"
+>Systeemvak</link
+></para
+></listitem>
+<listitem
+><para
+>Het widget <link linkend="panel-digital-clock"
+>Digitale klok</link
+></para
+></listitem>
+<listitem
+><para
+>De <link linkend="panel-toolbox"
+>Paneelhulpmiddelen</link
+></para
+></listitem>
+<listitem
+><para
+>De hulpmiddelen van het <link linkend="desktop"
+>Bureaublad</link
+></para
+></listitem>
+<listitem
+><para
+>Een widget voor mapweergave, die de inhoud van de map Bureaublad toont</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Het paneel</title>
+
+<para
+>Het standaard paneel bevat een paar &plasma; widgets: vanaf links, is er de programmastarter.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Programmastarter</title>
+
+<screenshot>
+<screeninfo
+>Programmastarter</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Programmastarter</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>U kan deze gebruiken om programma's te starten, recent geopende bestanden te openen en de gebruikelijke opties voor afmelden/afsluiten. Er bestaat ook een structuur die u door uw programma's laat bladeren. De opmaak van het menu is aangepast voor het meest voorkomende gebruik: een programma starten. Het standaard tabblad is <guilabel
+>Favorieten</guilabel
+>, dat de meest gebruikte dingen bevat. In het begin zal u waarschijnlijk vooral het tabblad <guilabel
+>Toepassingen</guilabel
+> gebruiken. Vanaf het moment dat u weet welke programma's u het meest gebruikt, klikt u met <mousebutton
+>rechts</mousebutton
+> op de te selecteren items en selecteert u op <guimenuitem
+>Aan favorieten toevoegen</guimenuitem
+> om ze aan uw <guilabel
+>Favorieten</guilabel
+> toe te voegen (of onmiddellijk op het bureaublad of paneel. Hiervoor moet u wel &plasma; <quote
+>ontgrendelen</quote
+> door met <mousebutton
+>rechts</mousebutton
+> op het bureaublad te klikken).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Menu Toepassingen</title>
+
+<para
+>Als u liever de traditionele menustijl van de programmastarter heeft, dan kunt u deze kiezen door met de &RMB; op de menuknop te klikken en te kiezen voor <guimenuitem
+>Alternatieven</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Menu Toepassingen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Menu Toepassingen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Instellingen van de programmastarter</title>
+
+<para
+>Als u de programmastarter wilt instellen, dan kunt u deze wijzigen door met de &RMB; op de menuknop te klikken en te kiezen voor <guimenuitem
+>Programmastarter configureren</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Instellingen van de programmastarter</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Instellingen van de programmastarter</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Taakbalk</title>
+
+<para
+>De taakbalk is een ander widget op het paneel. Het toont standaard een ruimte voor alle open vensters. U kunt het ook zo instellen dat dat het alle open vensters op het huidig bureaublad toont door <guimenuitem
+>Alleen taken van het huidige bureaublad tonen</guimenuitem
+> aan te vinken wanneer u rechts klikt op de taakbeheerder, tussen twee vensters. De grootte van de tekst op de items van de taakbalk zijn instelbaar in &systemsettings; onder <menuchoice
+><guimenu
+>Uiterlijk</guimenu
+><guisubmenu
+>Lettertypen</guisubmenu
+> <guimenuitem
+>Taakbalk</guimenuitem
+></menuchoice
+>. Rechtsklikken op de taakbalk toont ook de instellingsdialoog waar u verschillende opties kan kiezen om uw taakbalk in te stellen. <screenshot>
+<screeninfo
+>Dit is een schermafdruk van de instellingendialoog van de taakbalk</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>De instellingendialoog van de taakbalk</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Systeemvak</title>
+
+<para
+>Een ander standaard paneel is het <application
+>Systeemvak</application
+>, wat door gewone programma's als dok wordt gebruikt. Door rechts te klikken op het <application
+>Systeemvak</application
+> kunt u de instellingendialoog openen, waar u te tonen items kunt instellen en hun zichtbaarheid. </para>
+<screenshot>
+<screeninfo
+>Instellingendialoog voor Systeemvak</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Instellingendialoog voor Systeemvak</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Apparaatmelder</title>
+
+<para
+>Een pictogram die gewoonlijk in het systeemvak zit is de <application
+>Apparaatmelder</application
+>. Als u een &USB;-schijf verbindt met de computer zal een dialoog openen die u het apparaat laat openen in &dolphin; of een andere verbonden toepassing. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>De <application
+>Apparaatmelder</application
+> wordt gebruikt voor het behandelen van in te pluggen apparaten zoals &USB;-sticks (ook genoemd flashdrives of thumb-drives), digitale cameras, externe &USB; harde schijven, &etc; Het wordt ook actief wanneer er een medium zoals een &CD; of dvd wordt geladen in een optisch apparaat. </para>
+<para
+>Wanneer u een extern apparaat inplugt of een nieuw medium in een apparaat laadt, dan zal het venster van de <guilabel
+>Melder</guilabel
+> verschijnen (u kunt het ook expliciet openen door op het pictogram in het paneel te klikken.) Het blijft open wanneer de cursor er boven is, anders verbergt het zichzelf na een paar seconden. </para>
+<para
+>Het <guilabel
+>Melder</guilabel
+>-venster toont een lijst met alle apparaten die het nu kent. Met de muiscursor over een apparaat gaan zal aangeven hoeveel mogelijke acties er zijn geassocieerd met dat apparaat. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ergens klikken in het donkere vak rond de apparaatnaam (maar niet op het uitwerp/afkoppel-pictogram indien aanwezig) breidt het item uit zodat de lijst met mogelijke acties voor dat apparaat wordt getoond. De set acties hangt af van het apparaat; het is in te stellen met het contextmenu van <application
+>Apparaatmelder</application
+> of met de modules in &systemsettings; <ulink url="help:/kcontrol/solid-actions/index.html"
+>Apparaatacties</ulink
+> en <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Verwijderbare apparaten</ulink
+>. Selecteer er eenvoudig één met de muis of het toetsenbord om die actie te starten. </para>
+<para
+>Er is ook een klein pictogram rechts van elk item die toont of dat apparaat nu toegankelijk is (ofwel <emphasis
+>aangekoppeld</emphasis
+>) of niet. Alleen wanneer een apparaat niet is aangekoppeld is het veilig om het fysiek los te koppelen van de computer. Klikken op het pictogram maakt dat het apparaat wordt afgekoppeld en/of het medium wordt uitgeworpen als het nu is aangekoppeld en zal aangekoppeld worden als het dat niet is. Merk op dat afkoppelen/uitwerpen kan mislukken als het apparaat nog steeds open bestanden heeft, &eg; als het kopiëren van een groot bestand nog niet gereed is. In de meeste gevallen kunt u gewoon even wachten en het opnieuw proberen. Wanneer het afkoppelen is gelukt, dan verschijnt er een pictogram voor gelukt in het pictogram van de <application
+>Apparaatmelder</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Verborgen items</title>
+
+<para
+>Het <application
+>Systeemvak</application
+> bevat normaal nog wat meer items, zoals &klipper;, &kmix; &etc;</para>
+
+<para
+>Sommige van de standaard items in het <application
+>Systeemvak</application
+> zijn verborgen om ruimte in de balk te sparen. Om deze items te tonen klikt u op de kleine witte driehoek <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> en daarna gebruikt u de &LMB; om een widget te starten of de &RMB; om zijn instellingendialoog te openen.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Digitale klok</title>
+
+<para
+>De meeste rechtse &plasma;-widget in het standaard paneel is de <application
+> Digitale klok</application
+>. Deze klok kan verschillende tijdzones tonen en zijn grootte aanpassen. De klok past zijn grootte aan aan de gegeven ruimte (dat is het paneel in dit geval). Als u de datum wil tonen, zal deze getoond worden in een <guimenuitem
+>Klein lettertype</guimenuitem
+> uit &systemsettings;. De tijd neemt de rest van de ruimte in. Dus uiteindelijk kiest u zelf hoeveel informatie wordt getoond en of dat past. Als u meer wil zien, maak dan het paneel groter of zet de klok op het bureablad waar deze vrij kan groeien. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Pager</title>
+
+<para
+>Een optioneel item in uw paneel is de <application
+>Pager</application
+>. Hiermee kan u tussen uw virtuele bureaubladen wisselen. Als u de opmaak van de <application
+>Pager</application
+> aanpast met de optie <guimenuitem
+>Aantal rijen</guimenuitem
+> zal dit ook de opmaak en animaties veranderen die &kwin; toont bij het effect<guimenuitem
+>Bureaubladraster</guimenuitem
+>. Voor grotere pagers is het het beste om <guimenuitem
+>Vensterpictogrammen tonen</guimenuitem
+> te kiezen. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>De Paneelhulpmiddelen</title>
+
+<para
+>Indien uw bureaublad ontgrendeld is (dat kunt u doen door <mousebutton
+>rechts</mousebutton
+> te klikken op het bureaublad, of wanneer geen programma focus heeft met <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), dan zal een klein pictogram van &plasma; rechtsonder verschijnen. Klik op dit hulpmiddelenvak en de besturing voor het paneel zal zich openen.</para>
+
+<screenshot>
+<screeninfo
+>Paneelinstellingen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Paneelinstellingen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Met die besturing kunt u het paneel verslepen, herschalen en uitlijnen. De &plasma;-widgets op het paneel zullen vanzelf hun grootte aanpassen. &plasma;-widgets hebben een basale kennis van grootte, verkregen van de container. Ze zijn geprogrammeerd om hun voordeel te doen met die grootte en het applet te informeren over hoeveel ruimte nodig is. Uiteindelijk geeft de container een mogelijke grootte aan de applets en de applets gehoorzamen.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Applets toevoegen</title>
+
+<para
+>Ontgrendel het bureaublad en u zult &plasma;-widgets aan het paneel of bureaublad kunnen toevoegen of verwijderen. U kan &plasma;-widgets eenvoudig toevoegen door ze naar de plaats waar u ze wil hebben te slepen. Klik <mousebutton
+>rechts</mousebutton
+> op een applet om het te verwijderen. <screenshot
+> <screeninfo
+>Widgets toevoegen</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Widgets toevoegen</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Met de knop <guibutton
+>Nieuwe widgets verkrijgen</guibutton
+>  kunt u widgets toevoegen die u eerder heeft gedownload en nieuwe &plasma;-widgets downloaden. Momenteel kan dat met &plasmagik;-pakketten en widgets van Dashboard uit &Mac; OS X. Widgets die u op deze manier installeert kunt u op dezelfde manier gebruiken als gewone voorgeïnstalleerde widgets. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Het bureaublad</title>
+
+<para
+>Het bureaublad is een andere container. Deze keer één die geen begrenzingen aan de applets stelt. Applets kunnen vrij verplaatst en herschaald worden. Op een ontgrendeld bureaublad tonen &plasma;-widgets een frame wanneer de muis erover zweeft. Hiermee kunt u het paneel verplaatsen, herschalen, erin hergroeperen en opnieuw uitlijnen. U kunt er ook &plasma;-widgets mee op het bureaublad slepen. De knoppen in de hoek worden gebruikt om het applet de herschalen, roteren, configureren en te verwijderen. Indien geroteerd zal een &plasma;-widget automatisch op twaalf uur draaien zodat het eenvoudig is om het terug in een normale positie te krijgen. Standaard behouden &plasma;-widgets hun beeldverhouding wanneer ze worden herschaald. Als u een applet vrij wil herschalen, hou dan de &Ctrl;-toets ingedrukt tijdens het herschalen. </para>
+
+<para
+>Rechtsklikken op het bureaublad laat u aspecten instellen zoals de gebruikte achtergrond, de gebruikte indeling en de muisacties. U kunt ook nieuwe achtergronden downloaden met &knewstuff;. </para>
+<para
+>Op de pagina <guilabel
+>Tweaks</guilabel
+> kunt u instellen om het hulpmiddelenvak van het bureaublad te verbergen en de behandeling van widgets aan te passen. </para>
+
+<screenshot>
+<screeninfo
+>Bureaubladinstellingen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Bureaubladinstellingen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Om  het &plasma;-thema te wijzigen of een nieuwe via &knewstuff; te downloaden, opent u <menuchoice
+><guimenu
+>Uiterlijk</guimenu
+> <guimenuitem
+>Bureaubladthema</guimenuitem
+></menuchoice
+> in &systemsettings;.</para>
+
+<para
+>Als er programma's geopend zijn is het vaak moeilijk om de &plasma;-widgets op het bureaublad te zien. Het <emphasis role="bold"
+>Dashboard</emphasis
+> zet deze &plasma;-widgets vooraan, net zoals de functie <guilabel
+>Op het bureaublad gluren</guilabel
+> zoals bekend van traditionele bureaubladen. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Mapweergave</title>
+<para
+>Het widget <guilabel
+>Mapweergave</guilabel
+> wordt gebruikt om items zoals mappen of bestanden in een map te tonen, standaard uit <filename class="directory"
+>$<envar
+>HOME</envar
+>/Bureaublad</filename
+>. </para>
+<para
+>U kunt kiezen om ofwel alleen alle bestanden te bekijken of te filteren ofwel met specifieke reguliere expressies (&eg;, alle bestanden met een bepaalde extensie) of op type bestand (&eg; alleen afbeeldingen). </para>
+<para
+>Dit widget ondersteunt ook basis eigenschappen van bestandsbeheer (bijvoorbeeld: verplaatsen, kopiëren, knippen en plakken), en u kunt er zoveel als u wilt op uw bureaublad hebben. </para>
+
+<screenshot>
+<screeninfo
+>Mapweergave</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Mapweergave</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Als u de indeling <guilabel
+>Mapweergave</guilabel
+> selecteert in de <guilabel
+>Bureaublad-instellingen</guilabel
+> dan kunt u één Mapweergave gebruiken als het gehele bureaublad, effectief een kopie van het bureaublad "oude stijl". </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; is een veelzijdige mini commandoprompt. U kan het gebruiken om programma's de starten, webpagina's te openen, bladwijzers te openen, uw gegevens te doorzoeken, korte expressies te berekenen, en nog veel meer. Als u <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> of <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> indrukt wordt &krunner; geopend. Begin gewoon te typen en &krunner; zal beginnen met het zoeken van overeenkomsten vanaf het moment dat meer dan twee tekens zijn ingevoerd. U kunt meer te weten komen over de mogelijkheden van &krunner; door de instellingen te openen. U kunt door de overeenkomsten navigeren door de tab- en pijltoetsen te gebruiken. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>&krunner;-dialoog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner;-dialoog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Gebruik de knop <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> om de module <guilabel
+>KRunner</guilabel
+> &systemsettings; en configureer waar en wat naar te zoeken in &krunner;. </para>
+
+<para
+>&krunner; ondersteunt <quote
+>Bureaublad-acties</quote
+> die extra acties zijn die een toepassing kan bieden om algemene acties uit te voeren of direct naar een zekere taak te gaan vanuit de taakbeheerder. Algemene voorbeelden zijn <guilabel
+>Open nieuw incognito venster</guilabel
+> om uw browser direct in modus privé te openen, <guilabel
+>E-mailbericht opstellen</guilabel
+> zonder eerst de volledige e-mailclient te starten of de acties geleverd door &spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>Bureaublad-acties van &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Bureaublad-acties van &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Als u de toets &Down; indrukt in een lege &krunner; dan wordt een geschiedenis getoond van de recent items getoond. Na het starten van een zoekresultaat, zal zijn query zich verplaatsen naar de top, dus herhaaldelik gebruikte commando's vallen nooit van de lijst. </para>
+<para
+>Verwijder de enkele items uit de lijst met de knop <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> of wis de complete geschiedenis in de instellingen van &krunner;. </para>
+
+<para
+>Als u wil weten wat er op uw systeem gebeurt dan geeft <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> u snelle toegang tot een lijst met vensters en processen, met opties om de uitvoer van processen te volgen of ze te stoppen. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Activiteiten</title>
+
+<para
+>De hulpmiddeldialoog van het bureaublad, bereikbaar via de linkerbovenhoek heeft een knop om activiteiten te tonen. &plasma; laat u meer dan één knop hebben. In zich zijn dit verschillende bureaubladcontainers met elk een ander set &plasma;-widgets. Toon de balk <quote
+>Activiteiten</quote
+>, kies één van de voorgedefinieerde activiteiten of kies <guilabel
+>Activiteit aanmaken</guilabel
+> om een nieuwe container te maken en in te stellen naar uw smaak. De activiteiten van &plasma; en het bureaubladraster van &kwin; zijn gelijkaardig in dat opzicht, maar er is een fundamenteel verschil. Terwijl virtuele bureaubladen worden gebruikt om vensters te groeperen en te organiseren, worden die van &plasma; gebruikt om hetzelfde te doen met &plasma;-widgets. Op deze manier kan u wisselen tussen activiteiten en daarbij relevante &plasma;-widgets gebruiken om de taak te ondersteunen die u op dat moment wil uitvoeren. U een activiteit <quote
+>Vrije tijd</quote
+> kunt maken, met stripverhalen, een puzzel en andere ontspannende &plasma;-widgets, en een activiteit om te werken met relevante <acronym
+>RSS</acronym
+>-feeds, rekenmachine en kalender bijvoorbeeld. </para>
+
+<para
+>Om een activiteit te verwijderen, druk op de knop <guibutton
+>Activiteit stoppen</guibutton
+> op de balk <quote
+>Activiteiten</quote
+> (druk op <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> daarna <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> om deze balk te openen) en klik daarna op de rode 'X' (of druk op <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> daarna op <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) en bevestig de verwijdering. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Sneltoetsen</title>
+
+<para
+>Het meeste van de functionaliteit van &plasma; is ook toegankelijk via sneltoetsen. De verschillende combinaties moeten worden in volgorde worden ingedrukt, dat is bijvoorbeeld <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> betekent: Druk &Alt; en <keycap
+>D</keycap
+>, laat los en druk <keycap
+>A</keycap
+> in. </para>
+<para
+>Op dit moment kunnen de standaard sneltoetsen worden gebruikt: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Widgets toevoegen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Widget verwijderen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Widgets vergrendelen/ontgrendelen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Uitzoomen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Inzoomen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Volgend widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Vorig widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Widget-instellingen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Activiteiten</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Deze activiteit verwijderen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Bureaubladinstellingen</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Volgende activiteit</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Vorige activiteit</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Naar het bureaublad gluren</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Draai het geassocieerde programma</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Open het paneel Activiteiten</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&plasma; </para>
+<para
+>Programma copyright 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Documentatie Copyright &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+&meld.fouten;&vertaling.kristof; &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

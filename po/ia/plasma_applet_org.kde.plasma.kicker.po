@@ -1,0 +1,406 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2022-06-03 09:35+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Remove ex favoritos"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Adde a favoritos"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Sur omne  Activitates"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Sur le activitate currente"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Monstra in Favoritos"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Icone:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Selige…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Netta icones"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Monstra applicationes como:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Solo nomine"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Solo description"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nomine (Description)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Description (Nomine)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Comportamento:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Ordina applicatiopnes alphabeticamente"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Applatta sub-menus a un singule nivello"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Monstra icones sur le nivello radice del menu"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Monstra categorias:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Applicationes recente"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Applicationes frequentemente usate"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Files recente"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Files frequentemente usate"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Contactos recente"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Contactos soventemente usate"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Ordina elementos in categorias per:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Recentemente usate"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Soventemente usate"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Cerca:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Expande cerca a marcatores de libro, files e messages de e-posta"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Alinea resultatos de cerca a basso"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Cercante '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Typo de cerca..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Widgets"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Apps & Docs"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Modifica applicationes..."
+
+#~ msgid "Search…"
+#~ msgstr "Cerca…"
+
+#~ msgid "Search..."
+#~ msgstr "Il cerca ..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Documentos frequentemente usate"
+
+#~ msgid "Open with:"
+#~ msgstr "Aperi con:"
+
+#~ msgid "Properties"
+#~ msgstr "Proprietates"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Adde a Scriptorio"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Adde a Pannello"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Edit Application..."
+#~ msgstr "Modifica applicationes"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Hide Application"
+#~ msgstr "Modifica applicationes"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Applications"
+#~ msgstr "Modifica applicationes"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Contacts"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget All Contacts"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget All"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Forget All Applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget All Documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "All Applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent Contacts"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "Documentos recente"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search results"
+#~ msgstr "Cerca"
+
+#~ msgid "Lock"
+#~ msgstr "Bloca"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "Save Session"
+#~ msgstr "Nove session"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hiberna"
+
+#~ msgid "Restart"
+#~ msgstr "Re-Initia"
+
+#, fuzzy
+#~| msgid "Shutdown"
+#~ msgid "Shut Down"
+#~ msgstr "Stoppa (Shutdown)"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "Session"
+#~ msgstr "Nove session"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "End session"
+#~ msgstr "Nove session"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspende"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspende"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart computer"
+#~ msgstr "Re-Initia"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show recent applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show often used applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show often used documents"
+#~ msgstr "Documentos recente"
+
+#~ msgid "Logout"
+#~ msgstr "Clausura de session"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspende"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Usa imagine personalisate:"
+
+#~ msgid "New Session"
+#~ msgstr "Nove session"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Vacue)"

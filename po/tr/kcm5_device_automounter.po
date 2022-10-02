@@ -1,0 +1,234 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Gökçen Eraslan <gokcen@pardus.org.tr>, 2010.
+# obsoleteman <tulliana@gmail.com>, 2009-2010.
+# obsoleteman <tulliana@gmail.com>, 2010.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2017, 2021.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kde-runtime-kde4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2022-03-12 16:21+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Serdar Soytetir, Mesut ÖZTÜRK"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tulliana@gmail.com, doktormesut@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Otomatik Aygıt Bağlayıcı"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Özgün Yazar"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 Portu"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Bu liste, sistem tarafından bilinen depolama aygıtlarını gösterir. Eğer, "
+"\"Girişte otomatik bağla\" seçiliyse \"Tüm çıkarılabilir ortamları girişte "
+"otomatik olarak bağla\" seçili olmasa dahi aygıt otomatik olarak "
+"bağlanacaktır. Aynı şey \"Takıldığında otomatik bağla\" seçeneği için de "
+"geçerlidir."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Bu düğmeye tıklamak, seçili olan aygıtı 'unutturur'. Bu eylem yalnızca "
+"\"Yalnızca daha önce takılmış olan çıkarılabilir ortamları takıldıklarında "
+"otomatik olarak bağla\" seçildiğinde işe yarar. Bir aygıt bir kere "
+"unutulduysa ve sistem yalnızca daha önceden takılı aygıtları bağlayacak "
+"şekilde ayarlandıysa aygıt otomatik bağlanmayacaktır."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Aygıtı Unut"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Bu seçenek işaretli değilse yalnızca hatırlanan aygıtlar otomatik olarak "
+"bağlanacaktır. Bir aygıt, eğer daha önce bağlandıysa 'hatırlanacaktır'. "
+"Örneğin, bir USB müzik çaları şarj etmek için bağlayıp dosyalarına "
+"erişmediyseniz bir sonraki takılışında müzik çalar otomatik "
+"bağlanmayacaktır. Fakat, bir kere dosyalarına eriştiğinizde, aygıt "
+"hatırlanır ve otomatik olarak dosyalar erişilebilir yapılır."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Daha önce hiç takılmamış çıkarılabilir ortamları otomatik olarak bağla"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Aygıtı Otomatik Bağla"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Giriş Esnasında"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Takıldığında"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Tüm Aygıtlar"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Bilinen Tüm Aygıtlar"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Eklenen Aygıtlar"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Ayrılmış Aygıtlar"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Bu aygıt oturum açıldığında otomatik olarak bağlanacak."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Bu aygıt oturum açıldığında otomatik olarak bağlanmayacak."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Bu aygıt takıldığında otomatik olarak bağlanacak."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Bu aygıt takıldığında otomatik olarak bağlanmayacak."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Eğer sisteme giriş yaptığınızda herhangi bir depolama aygıtı bağlıysa, "
+#~ "uygulamaların aygıttaki içeriğe erişebilmesi için otomatik olarak aygıtı "
+#~ "bağlanır."
+
+#, fuzzy
+#~| msgid "Mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Tüm çıkarılabilir ortamları girişte otomatik olarak bağla"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Bu seçenek işaretliyse, tüm depolama aygıtlarının içerikleri, "
+#~ "takıldıkları ya da eklendikleri anda sistem tarafından erişilebilir hale "
+#~ "getirilir."
+
+#, fuzzy
+#~| msgid "Automatically mount removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Çıkarılabilir ortamları takıldıklarında otomatik olarak bağla"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Bu seçenek işaretli değilse, \"Aygıta Özel Ayarlar\" bölümünde yapılan "
+#~ "ayarlardan bağımsız olarak, hiçbir şekilde otomatik aygıt bağlama "
+#~ "yapılmayacaktır."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Çıkarılabilir aygıtı otomatik olarak bağlanmayı etkinleştir"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Aygıta Özel Ayarlar"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Takıldığında Otomatik Bağla"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Aygıtları girişte ya da takıldıklarında otomatik olarak bağlar"

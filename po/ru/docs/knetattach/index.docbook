@@ -1,0 +1,425 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Руководство пользователя &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Новгородов</firstname
+><surname
+>Сергей</surname
+><affiliation
+><address
+><email
+>ximen@tsu.tmb.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10 апреля 2015 г.</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; — это приложение, облегчающее интеграцию сетевых ресурсов с рабочим столом &kde;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Сетевые папки</keyword>
+<keyword
+>Мастер добавления сетевых папок</keyword>
+<keyword
+>Мастер сети KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<para
+>Программа &knetattach;, известная также как мастер добавления сетевых папок, позволяет легко создавать сетевые папки и интегрировать их с рабочим столом &kde;. О найденных ошибках и недостающих функциях программы сообщайте через систему отслеживания ошибок &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Использование мастера добавления сетевых папок &knetattach;</title>
+
+<para
+>Как видно на снимке экрана ниже, на данный момент мастер добавления сетевых папок позволяет добавлять сетевые папки четырёх типов: WebDav, &FTP;, сетевые диски &Microsoft; &Windows; (&Samba;) и SSH. Помимо этого имеется возможность выбора последнего соединения из списка. <screenshot>
+<screeninfo
+>Снимок экрана &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+<caption>
+<para
+>Главное окно мастера добавления сетевых папок</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Добавление сетевых папок</title>
+
+<para
+>Сетевые папки отображаются в специальном месте в диспетчере файлов &konqueror; или &dolphin;, которое называется<emphasis
+>виртуальная папка</emphasis
+>. Открыть эту папку можно, введя <userinput
+>remote:/</userinput
+> в строке адреса или выбрав пункт <guilabel
+>Сеть</guilabel
+> на панели <guilabel
+>Точки доступа</guilabel
+>. В открывшейся папке можно видеть все ранее добавленные папки, а также при помощи маcтера добавить новые. <screenshot>
+<screeninfo
+>Снимок экрана &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+<caption>
+<para
+>Виртуальная папка мастера добавления сетевых папок</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>В основе работы мастера добавления сетевых папок лежит простота его использования. После открытия мастера выберите тип сетевой папки, доступ к которой необходимо получить. Перейдя к следующему экрану, введите требуемую информацию. И, наконец, укажите имя пользователя и пароль к сетевому ресурсу, к которому производится доступ. </para>
+<para
+>Ниже приведён список данных, необходимых мастеру для создания сетевой папки. Если какой-то пункт не отображается при добавлении конкретной папки, значит эти данные указывать не нужно. Например, для добавления папки &Samba; указывать данные в строке <guilabel
+>Порт</guilabel
+> не требуется. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Имя:</guilabel
+></term>
+<listitem>
+<para
+>Укажите здесь имя сетевого соединения. Оно ограничено только вашей фантазией (или алфавитом). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Пользователь:</guilabel
+></term>
+<listitem>
+<para
+>Укажите здесь имя пользователя, которое будет использоваться для установления соединения. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Сервер:</guilabel
+></term>
+<listitem>
+<para
+>Укажите адрес добавляемого сервера. Это может быть IP адрес или доменное имя. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Порт:</guilabel
+></term>
+<listitem>
+<para
+>Укажите здесь номер порта, к которому производится подсоединение. Обычно достаточно оставить значения по умолчанию. <note
+> <para
+>Не применяется к папкам &Microsoft; &Windows; (&Samba;). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Папка:</guilabel
+></term>
+<listitem>
+<para
+>Укажите здесь путь к папке, к которой производится подключение. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Кодировка:</guilabel
+></term>
+<listitem>
+<para
+>Выберите из списка кодировку для соединений &FTP; и ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Создать значок для сетевой папки</guilabel
+></term>
+<listitem>
+<para
+>Если этот параметр включён, будет создан значок, обеспечивающий доступ через виртуальную папку remote:/. В противном случае соединение будет возможно, но не будет доступно из remote:/. <note
+> <para
+>Параметр <guilabel
+>Последние соединения:</guilabel
+> позволяет заново подключиться к последней сетевой точке монтирования, с которой устанавливалось соединение через мастер, независимо от того, был ли создан значок или нет. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Использовать шифрование</guilabel
+></term>
+<listitem>
+<para
+>При включении этого параметра соединение будет защищённым. <note
+> <para
+>Параметр доступен только для папок WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Обзор мастера добавления сетевых папок &knetattach;</title>
+
+
+<para
+>В этой главе приводится краткий обзор мастера добавления сетевых папок. Ознакомьтесь с ним внимательно, чтобы ничего не упустить. </para>
+
+<para
+>Ниже показано главное окно мастера добавления сетевых папок. Именно в нём нужно выбрать тип папки, которая будет добавляться, или к которой будет осуществляться подключение. В рамках этого обзора мы будем использовать тип &FTP;. Для него применяется большинство параметров, которые встречаются при работе с мастером. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Главное окно мастера добавления сетевых папок &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Итак, мы решили добавить папку &FTP;. Ниже показан пример информации, которую потребуется указать для подключения к конкретному &FTP;-серверу. После заполнения всех полей нажимаем кнопку <guibutton
+>Сохранить и подключиться</guibutton
+>. Если для работы с сервером требуется какого-либо подтверждение, соответствующий запрос будет показан до начала соединения. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Добавление папки &FTP; при помощи мастера добавления сетевых папок &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Итак, соединение установлено, и можно начать работу с подключённой папкой. Наслаждайтесь! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Подключённая папка &FTP;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Для возврата к сетевым папкам в строке адреса диспетчера файлов &konqueror; или &dolphin; введите <action
+>remote:/</action
+> или выберите пункт <guilabel
+>Сети</guilabel
+> в панели <guilabel
+>Точки доступа</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Новое соединение в виртуальной папке remote:/</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимок экрана</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Возможно даже добавить новую папку из этого места, используя ссылку <guilabel
+>Добавить сетевую папку</guilabel
+>. На этом обзор закончен (как и было заявлено, он был коротким). Желаю вам удачи в сетевых приключениях ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&knetattach; </para>
+<para
+>Программа: &copy; &George.Staikos; &George.Staikos.mail;, 2004 </para>
+
+<para
+>Документация: &copy; &Orville.Bennett; &Orville.Bennett.mail;, 2005 </para>
+
+<para
+>Ольга Миронова<email
+>omiro@basealt.ru</email
+></para
+><para
+>Перевод на русский - Новгородов Сергей<email
+>ximen@tsu.tmb.ru</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

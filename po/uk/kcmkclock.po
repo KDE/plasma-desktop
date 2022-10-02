@@ -1,0 +1,241 @@
+# Translation of kcmkclock.po to Ukrainian
+# Copyright (C) 2002-2019 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Dmytro Kovalov <kov@tokyo.email.ne.jp>, 2002.
+# Andriy Rysin <rysin@kde.org>, 2002, 2004.
+# Eugene Onischenko <oneugene@ukr.net>, 2003, 2005.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2021-05-26 09:26+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andriy Rysin,Іван Петрущак"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "rysin@kde.org,ivanpetrouchtchak@yahoo.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Дата і час"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Встановити дату та час &автоматично"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Сервер служби &часу:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Тут можна змінити день, місяць та рік в системної дати."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Часовий пояс"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Щоб змінити місцевий часовий пояс, виберіть свою область зі списку нижче."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Поточний місцевий часовий пояс:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Шукати…"
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"Не виявлено допоміжної програми NTP. Встановіть пакунок з програмою "
+"«ntpdate» або «rdate», щоб уможливити автоматичне оновлення даних щодо дати "
+"і часу."
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Тут можна встановити системний час. Клацніть на полі годин, хвилин чи "
+"секунд, щоб змінити відповідне значення або за допомогою кнопок зі стрілками "
+"вгору-вниз, або безпосереднім введенням значення у поле."
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Поточний місцевий часовий пояс: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Поточний місцевий часовий пояс: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Публічний сервер часу (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+"north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Неможливо зв’язатися з сервером часу: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Не вдається встановити дату."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "Помилка під час встановлення нового часового поясу."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "Помилка встановлення часового поясу"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1> Дата і час </h1> Цим модулем Системних параметрів може скористатися для "
+"того, щоб встановлювати системні дату та час. Через те, що ці зміни "
+"впливають не тільки на вас, як на користувача системи, а діють на всю "
+"систему в цілому, ви можете внести ці зміни лише у тому випадку, якщо ви "
+"запустили Системні параметри від імені користувача root. Якщо ви не маєте "
+"пароля root, але думаєте, що час у системі треба скоригувати, зверніться за "
+"допомогою до свого системного адміністратора."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "Модуль керування годинником KDE"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "© Luca Montecchiani, 1996–2001"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Перший автор"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Поточний супровід"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "Додав підтримку NTP"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1> Дата і час </h1> Цей модуль керування може використовуватися для того, "
+"щоб встановлювати системні дату та час. Через те, що ці зміни впливають не "
+"тільки на вас, як на користувача системи, а діють на всю систему в цілому, "
+"ви можете внести ці зміни лише у тому випадку, якщо ви запустили Системні "
+"параметри від імені користувача root. Якщо ви не маєте пароля root, але "
+"думаєте, що час у системі треба скоригувати, зверніться за допомогою до "
+"свого системного адміністратора."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Не вдалося розпізнати/виконати дію: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Не вдалося змінити параметри NTP"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Не вдалося встановити поточний час"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Не вдалося встановити часовий пояс"

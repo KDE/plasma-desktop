@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Startskärm</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>startskärm</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Den här modulen tillhandahåller ett gränssnitt för att visa och välja teman för startskärmen.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Här är en skärmbild av startskärmshanteraren</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modulen för hantering av startskärmen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>På den här sidan visas förhandsgranskningar av redan installerade startskärmar. Förhandsgranskningen av den nuvarande startskärmen är markerad.</para>
+
+<para
+>Hålls muspekaren över en förhandsgranskningsbild dyker knappen <guilabel
+>Förhandsgranska startskärm</guilabel
+> upp längst ner till höger av bilden. Klicka på knappen för att se startskärmen i arbete.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Hämta nya startskärmar...</guilabel
+></term>
+<listitem>
+<para
+>Du måste vara ansluten till Internet för att använda åtgärden. En dialogruta visar en lista med teman från webbplatsen <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Genom att klicka på knappen <guibutton
+>Installera</guibutton
+> som hör ihop med ett visst tema, installeras temat lokalt. </para>
+<para>
+<screenshot>
+<screeninfo
+>Installera ett nytt tema</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Installera ett nytt tema</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Det nya temat är omedelbart tillgängligt efter Systeminställningarnas dialogruta för att ladda ner nya startskärmar, och det är markerat. Förhandsgranskningen visar bilden. Du måste klicka på knappen <guibutton
+>Verkställ</guibutton
+> för att göra temat till nuvarande startskärmstema. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

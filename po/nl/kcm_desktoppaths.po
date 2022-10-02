@@ -1,0 +1,297 @@
+# translation of kcmkonq.po to Dutch
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# Nederlandse vertaling van kcmkonq.
+# Copyright (C) 2000 - 2002 KDE e.v..
+# Rinse de Vries <rinse@kde.nl>
+# Gelezen, Rinse
+# KDE-vertaalgroep Nederlands <i18n@kde.nl>, 2000 - 2002.
+# Rinse de Vries <rinse@kde.nl>, 2003, 2004.
+# Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007, 2008, 2009.
+# Tom Albers <tomalbers@kde.nl>, 2004.
+# Sander Koning <sanderkoning@kde.nl>, 2005.
+# Bram Schoenmakers <bramschoenmakers@kde.nl>, 2005, 2006.
+# Kristof Bal <kristof.bal@gmail.com>, 2008.
+# Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-03-19 10:05+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Documenten"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Downloads"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Muziek"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Afbeeldingen"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Video's"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Paden</h1>\n"
+"In deze module kunt u bepalen waar de bestanden op uw bureaublad zullen "
+"worden opgeslagen.\n"
+"Gebruik de \"Wat is dit?\" (Shift+F1) om meer info over een specifieke optie "
+"te krijgen."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Bureaubladpad:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Deze map bevat alle bestanden die zich op uw bureaublad bevinden. Als u wilt "
+"kunt u de locatie hiervan wijzigen. De inhoud van het bureaublad verhuist "
+"dan automatisch mee naar de nieuwe locatie."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Documentenpad:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Deze map wordt standaard gebruikt om documenten uit te laden of in op te "
+"slaan."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Downloadpad:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Deze map wordt standaard gebruikt om gedownloade documenten in op te slaan."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Pad naar video's:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Deze map wordt standaard gebruikt om films uit te laden of in op te slaan."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Afbeeldingenpad:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Deze map wordt standaard gebruikt om afbeeldingen uit te laden of in op te "
+"slaan."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Muziekpad:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Deze map wordt standaard gebruikt om muziek uit te laden of in op te slaan."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Autostartpad:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Deze map bevat toepassingen of koppelingen naar toepassingen "
+#~ "(snelkoppelingen) die u automatisch wilt laten opstarten wanneer u de "
+#~ "sessies opstart. Als u dat wilt kunt u de locatie hiervan wijzigen. De "
+#~ "inhoud van deze map verhuist dan automatisch mee naar de nieuwe locatie."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Films"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Het pad voor '%1' is gewijzigd.\n"
+#~ "Wilt u dat de bestanden van '%2' naar '%3 verplaatst worden?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Verplaatsen"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Niet verplaatsen"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Het pad voor '%1' is gewijzigd.\n"
+#~ "Wilt u de map '%2' naar '%3 verplaatsen?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Verplaatsen"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Niet verplaatsen"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Bevestiging vereist"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror-gedrag</h1> Hier kunt u instellen hoe Konqueror zich als "
+#~ "bestandsbeheerder gedraagt."
+
+#~ msgid "Misc Options"
+#~ msgstr "Diverse opties"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Mappen in aparte &vensters openen"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Als deze optie is ingeschakeld, dan opent Konqueror een nieuw venster "
+#~ "wanneer u een map opent, in plaats van de inhoud van deze map te tonen in "
+#~ "het huidige venster."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "De me&nuoptie 'Verwijderen', die de prullenbak omzeilt, tonen in "
+#~ "contextmenu's"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Selecteer deze optie als u wilt dat menuoptie 'Verwijderen' wordt getoond "
+#~ "in de (context)menu's van de bestandsbeheerder en het bureaublad. U kunt "
+#~ "altijd bestanden permanent verwijderen door de toets 'Shift' ingedrukt te "
+#~ "houden terwijl u ze naar de prullenbak verplaatst."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menubewerker"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "New..."
+#~ msgstr "Nieuw..."
+
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
+
+#~ msgid "Move Up"
+#~ msgstr "Omhoog"
+
+#~ msgid "Move Down"
+#~ msgstr "Omlaag"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Bevestiging vragen voor"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Deze optie vertelt Konqueror of hij om een bevestiging dient te vragen "
+#~ "als u een bestand \"verwijdert\". <ul><li><em>Naar prullenbak:</em> "
+#~ "verplaatst een bestand naar de prullenbakmap, zodat u deze eenvoudig kunt "
+#~ "terugzetten.</li><li><em>Verwijderen:</em>verwijdert het bestand.</li></"
+#~ "ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Naar prullenbak"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "V&erwijderen"

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Servicios en segundo plano</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+><affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias_del_sistema</keyword>
+<keyword
+>Servicio</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>El módulo <guilabel
+>Gestor de servicios</guilabel
+> le permite tener una vista general de todos los complementos de los demonios de &kde;, también referidos como servicios de &kde;. Generalmente, hay dos tipos de servicios:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Servicios de carga bajo demanda</guilabel
+></term>
+<listitem
+><para
+>Esta es una lista de los servicios de &kde; disponibles que serán iniciados bajo demanda. Son listados solo por conveniencia y no puede manipularlos. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Servicios de inicio</guilabel
+></term>
+<listitem
+><para
+>Esto muestra todos los servicios de &kde; que pueden ser cargados durante el inicio de &kde;. Los servicios marcados en la columna <guilabel
+>Usar</guilabel
+> serán invocados en el siguiente inicio.</para>
+<para
+>Tenga cuidado con la desactivación de los servicios que no conozca: algunos servicios son vitales para &kde;; no desactive servicios si no sabe lo que hacen. </para>
+<para
+>Para cambiar el <guilabel
+>Estado</guilabel
+> de un servicio, seleccionelo en la lista. Puede utilizar los botones <guibutton
+>Iniciar</guibutton
+> y <guibutton
+>Parar</guibutton
+> para cambiar el estado de un servicio de <guilabel
+>No ejecutándose</guilabel
+> a <guilabel
+>Ejecutándose</guilabel
+> y viceversa. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

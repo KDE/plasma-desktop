@@ -1,0 +1,821 @@
+#
+# Tamas Szanto <tszanto@interware.hu>, 2000.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2015, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2021-09-04 09:20+0200\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGr"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hiper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Szuper"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr ""
+"Nyomja meg a(z) %1 billentyűt úgy, hogy a NumLock, a CapsLock és a "
+"ScrollLock mind bekapcsolt legyen"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr ""
+"Nyomja meg a(z) %1 billentyűt úgy, hogy a CapsLock és a ScrollLock mind "
+"bekapcsolt legyen"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr ""
+"Nyomja meg a(z) %1 billentyűt úgy, hogy a NumLock és a ScrollLock mind "
+"bekapcsolt legyen"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Nyomja meg a(z) %1 billentyűt úgy, hogy a ScrollLock bekapcsolt legyen"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr ""
+"Nyomja meg a(z) %1 billentyűt úgy, hogy a NumLock és a CapsLock mind "
+"bekapcsolt legyen"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Nyomja meg a(z) %1 billentyűt úgy, hogy a CapsLock bekapcsolt legyen"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Nyomja meg a(z) %1 billentyűt úgy, hogy a NumLock bekapcsolt legyen"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Nyomja meg a(z) %1 billentyűt"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "Nem lehet beállítani a gsettings-et az Orcához: a(z) „%1” sikertelen"
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "Hiba: nem lehet futtatni az „orca --setup” parancsot"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "A rendszercsengő használata"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "A rendszercsengő testreszabása"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Hangfájl a csengőhöz"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Vizuális csengő használata hang helyett"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Rendszerszínek invertálása csengetéskor"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "A vizuális csengő színe"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "A vizuális csengő időtartama"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Ragadó billentyűk használata"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "A ragadó billentyűk zárolása"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "A ragadós billentyűk kikapcsolása két billentyű együttes lenyomásakor"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Hangjelzés ragadó billentyű lenyomásakor"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Billentyűhang be/ki"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Értesítés módosítóbillentyű lenyomásakor"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Időtúllépési késleltetés"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Hangjelzés hozzáféréskor"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Lassú billentyűk használata"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "A billentyűnyomás késleltetése"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Hangjelzés lassú billentyű nyomásakor"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Hangjelzés elfogadott billentyű nyomásakor"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Hangjelzés elutasított billentyű nyomásakor"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Visszaugró billentyűk"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Késleltetés a visszaugráshoz"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Hangjelzés visszaugró billentyű elutasításakor"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Billentyűk használata az egér vezérléséhez"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Egérmozgás késleltetése"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Egérmozgatás ismétlési időköze"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Maximális sebesség eléréséhez szükséges idő"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "Maximális sebesség"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Maximális sebesség"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Egérbillentyű-görbe"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "Kézmozdulatok használata"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Megerősítés kérése kézmozdulatkor"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Hozzáférés megerősítése a billentyűzethez"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Képernyőolvasó bekapcsolása"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "Válasszon ki egy hangfájlt"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "Hangfájlok (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "Hallható csengő:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "Egyéni hang:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "Hangfájl keresése a rendszercsengőhöz"
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "Hangfájl keresése"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "Vizuális csengő:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "Képernyő invertálása"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "Villogás"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "Szín"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Időtartam:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "Lassú billentyűk:"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "Késleltetés:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "A rendszercsengő megszólaltatása:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "&when any key is pressed"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "Billentyű megny&omásakor"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is accepted"
+#| msgid "&when any key is accepted"
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "Billentyű &elfogadásakor"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "&when any key is rejected"
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "Billentyű &visszautasításakor"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "Visszaugró billentyűk:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "Késleltetés:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "Csengetés visszautasításkor"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+"Ebben a modulban beállíthatja az akadálymentesítési szolgáltatásokat, mint "
+"például a képernyőolvasás."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "Csengő"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Módosítóbillentyűk"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Billentyűzetszűrők"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "Egeres navigáció"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Képernyőolvasó"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "Ragadó billentyűk:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "Zárolás"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "Kikapcsolás, ha két billentyű van lenyomva tartva"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "Csengetés módosítóbillentyűk használatakor"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "Visszajelzés:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr "Csengetés zárolóbillentyűk be- és kikapcsolásakor"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr "Értesítés megjelenítése módosító- vagy zárolóbillentyű használatakor"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Az értesítések beállítása…"
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "Kurzor mozgatása a számbillentyűzettel:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Kézmozdulat használatakor:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Megerősítéskérő ablak megjelenítése"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "A rendszercsengő megszólaltatása"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "Értesítés megjelenítése"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "Gyorsítási késleltetés:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "Ismétlési időköz:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "Gyorsítási idő:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "Maximális sebesség:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Gyorsítási profil:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Az Orca beállításainak betöltése…"
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Fontos tudni, hogy a képernyőolvasó megfelelő működéséhez valószínűleg ki- "
+"és bejelentkezés vagy újraindítás szükséges."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"Az Orca képernyőolvasó valószínűleg nincs telepítve. Telepítse a "
+"szolgáltatás használata előtt, majd jelentkezzen ki és be, vagy indítsa újra "
+"a rendszert"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#~ msgid "Accessibility"
+#~ msgstr "Akadálymentesítés"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(C) Matthias Hölzer-Klüpfel, 2000."
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hölzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Szerző"
+
+#~ msgid "Automatically turn off the sticky keys after an interval"
+#~ msgstr "A ragadó billentyűk automatikus kikapcsolása egy időköz után"
+
+#~ msgid "Ring when toggling accessibility features with gestures"
+#~ msgstr ""
+#~ "Csengetés az akadálymentesítési szolgáltatások kézmodulattal be- és "
+#~ "kikapcsolásakor"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktiválás:"
+
+#~ msgid "Use gestures to activate"
+#~ msgstr "Aktiválás kézmozdulattal"
+
+#~ msgid "Disable After:"
+#~ msgstr "Kikapcsolás ennyi idő után:"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Ha ez az opció be van jelölve, az alapértelmezett csengő lesz használva. "
+#~ "Ez általában egy „beep”."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Jelölje be ezt a beállítást, ha saját csengőt szeretne használni. Ha így "
+#~ "dönt, kapcsolja ki a rendszercsengőt."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "&Egyéni csengetés használata"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Ha az „Egyéni csengetés használata” opciót jelölte be, itt választhatja "
+#~ "ki a hozzá tartozó hangfájlt. Kattintson a „Tallózás…” gombra a fájl "
+#~ "kényelmes kiválasztásához."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "A lejátszandó &hang:"
+
+#~ msgid "Browse..."
+#~ msgstr "Tallózás…"
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Ez az opció bekapcsolja a „vizuális csengőt”, azaz egy látható jelzést "
+#~ "akkor, amikor egy csengetés történne. Ez az opció elsősorban a "
+#~ "hallássérültek segítését szolgálja."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "&Vizuális jelzés bekapcsolva"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "A képernyő egy megadott színre vált az alább megadott ideig."
+
+#~ msgid "F&lash screen"
+#~ msgstr "A &képernyő villogtatása"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Az összes szín inverzbe vált az alább megadott ideig."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Kattintson ide a „képernyővillogtatás” jellegű vizuális jelzés színének "
+#~ "beállításához."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Itt állíthatja be a „vizuális csengetés” effektus időtartamát."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Csengetés módosító billentyű lenyomva tartásakor, zárolásakor vagy "
+#~ "feloldásakor"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Zároló billentyűk"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr "Csengetés zároló billentyű be- vagy kikapcsolásakor"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "Lassú b&illentyűk"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "&Visszaugró billentyűk használata"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Csengetés billentyű visszautasításakor"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Aktiválási so&rozat"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Mozdulatsorozat használata a ragadós és lassú billentyűk bekapcsolásához"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "A ragadós és lassú billentyűk kikapcsolása adott idejű inaktivitás után."
+
+#~ msgid " min"
+#~ msgstr " perc"
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Csengetés történjen, ha mozdulatsorral kapcsolt ki- vagy be egy "
+#~ "billentyűzetkezelést segítő funkciót"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Ha ez be van jelölve, megerősítést kérő párbeszédablak jelenik meg a "
+#~ "billentyűzetkezelést segítő funkciók ki- vagy bekapcsolásakor.\n"
+#~ "Ha nincs bejelölve, akkor körültekintéssel használja a segítő funkciókat, "
+#~ "mert azok rákérdezés nélkül végrehajtódnak."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Megerősítést kérő ablak jelenjen meg kezelést segítő funkció ki- vagy "
+#~ "bekapcsolásakor"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "A Plasma értesítési rendszerének használata, ha egy billentyűzet-"
+#~ "akadálymentesítési szolgáltatás ki-/bekapcsolásra kerül"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Az egérmutató moz&gatható legyen a numerikus billentyűkkel"
+
+#~ msgid " pixel/sec"
+#~ msgstr " képpont/s"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Képernyőolvasó bekapcsolva"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Itt lehet az alábbi funkciókat bekapcsoló mozdulatsorokat megadni: \n"
+#~ "Ragadó billentyűk: nyomja meg a Shiftet egymás után ötször\n"
+#~ "Lassú billentyűk: tartsa lenyomva a Shiftet 8 másodpercig"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Itt lehet az alábbi funkciókat bekapcsoló billentyűsorozatot megadni: \n"
+#~ "Egérmozgató billentyűk: %1\n"
+#~ "Lassú billentyűk: tartsa lenyomva a Shiftet 8 másodpercig"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "&Aktiválási sorozat"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "Vissza&ugrási idő:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Várakozási idő:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|WAV-fájlok"

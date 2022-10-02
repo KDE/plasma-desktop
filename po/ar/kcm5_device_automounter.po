@@ -1,0 +1,228 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Tariq AlWarhi <tariq.alwarhi@gmail.com>, 2010.
+# Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2012.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-11-16 20:08+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "طارق الورهي,عبدالرحيم الفاخوري,زايد السعيدي"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tariq.alwarhi@gmail.com,abdilra7eem@yahoo.com,zayed.alsaidi@gamil.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "موصل الأجهزة التلقائي"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "المؤلف الأصلي"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "نقل إلى بلازما ٥"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"هذه القائمة تحتوي على الأجهزة المعروفة لكدي إذا كان \"اوصل عند الولوج\" مُعلم "
+"عليه فإن الأجهزة ستوصل تلقائياً  حتى لو كان \"اوصل الأجهزة القابلة للحمل عند "
+"الولوج\" غير مُعلم عليه، وسيتم تطبيق الإجراء نفسه على \"إلحاق الإجهزة تلقائياً"
+"\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"النقر على هذا الزر يجعل كدي 'تنسى' الأجهزة المحدّدة. هذا مفيد فقط إذا كان "
+"الخيار \"أوصل فقط الأجهزة القابلة للحمل التي سبق وصلها يدوياً من قبل\" مُحدّداً. "
+"في حال نسيان الجهاز وضبط كدي على الوصل التلقائي للأجهزة المألوفة فقط، فلن "
+"يتم وصل الجهاز المنسي تلقائياً."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "انس الجهاز"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"عند عدم تعيين هذا الخيار، سيتم ضمّ الأجهزة التي تتذكرها كدي فقط.الأجهزة "
+"\"المُتذكرة\" هي التي سبق وصلها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط USB "
+"لتذكرها طالما لم يتم النفاذ إلى الملفات بداخلها. ستقوم كدي بضمّ الجهاز "
+"تلقائيًّا في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، "
+"فسيصير محتوى الجهاز متوفّراً للنظام."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "أوصل آليا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "جهاز قابل للوصل تلقائياً"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "عند الخروج"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "عند الإدخال بالجهاز"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "كلّ الأجهزة"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "كل الأجهزة المعروفة"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "إلحاق الأجهزة"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "فصل الأجهزة"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "هذا الجهاز سيوصل تلقائياً عند الولوج."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "هذا الجهاز لن يوصل تلقائياً عند الولوج."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "هذا الجهاز سيوصل تلقائياً عند الإلحاق"
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "هذا الجهاز لن يوصل تلقائياً عند الإلحاق"
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "إذا سبق وتم توصيل أجهزة تخزين قابلة للحمل في النظام عند الولوج لسطح "
+#~ "المكتب، فسيصير المحتوى متوفر في نظامك لتقرأه البرامج الأخرى."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "أوصل آليا الأجهزة القابلة للحمل عند الولوج"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "عند تعيين هذا الخيار فسيصير المحتوى في أي جهاز قابل للحمل متوافراً تلقائياً "
+#~ "للنظام عند وصله أو إلحاقه."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "أوصل الأجهزة القابلة للحمل تلقائياً عند إلحاقها"
+
+#~ msgid "Automatic mount"
+#~ msgstr "وصل تلقائي"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "عند إلغاء تعيين هذا الخيار لن يتم وصل أي جهاز بأي طريقة، بغض النظر عن أي "
+#~ "خيار محدد في جزء \"الأجهزة المحيدة\"."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "فعل الوصل التلقائي للأجهزة القابلة للحمل"
+
+#~ msgid "Device Overrides"
+#~ msgstr "الأجهزة المحيدة"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "أوصل تلقائياً عند الإلحاق"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "اوصل الأجهزة تلقائياً عند الولوج أو عند إلحاقها"

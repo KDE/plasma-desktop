@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Lokasi</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-12-2018</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>desktop</keyword>
+<keyword
+>alur</keyword>
+<keyword
+>lokasi</keyword>
+<keyword
+>systemsetting</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ini adalah modul untuk mengkonfigurasi alur yang pokok untuk desktop &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Konfigurasikan beberapa alur &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Konfigurasikan beberapa alur &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Alur Desktop:</guilabel
+></term>
+<listitem
+><para
+>Folder Desktop yang berisi semua file yang dapat kamu lihat di sebuah widget <guilabel
+>Tampilan Folder</guilabel
+> di desktopmu. Alur baku biasanya <filename class="directory"
+>~/Desktop</filename
+> tetapi kamu bisa mengubah lokasi folder ini di sini. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Automulai:</guilabel
+></term>
+<listitem
+><para
+>Folder Automulai berisi aplikasi atau tautan ke aplikasi atau skrip yang ingin kamu mulaikan kapan pun &plasma; mulai. kamu bisa mengubah lokasi folder ini jika kamu menginginkannya. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Dokumen:</guilabel
+></term>
+<listitem
+><para
+>Folder ini akan digunakan secara baku untuk memuat atau menyimpan dokumen dari atau ke.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Unduhan:</guilabel
+></term>
+<listitem
+><para
+>Folder ini akan digunakan secara baku untuk menyimpan butir(-butir) unduhanmu.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Film:</guilabel
+></term>
+<listitem
+><para
+>Folder ini akan digunakan secara baku untuk memuat atau menyimpan film-film dari atau ke.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Gambar:</guilabel
+></term>
+<listitem
+><para
+>Folder ini akan digunakan secara baku untuk memuat atau menyimpan gambar-gambar dari atau ke.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alur Musik:</guilabel
+></term>
+<listitem
+><para
+>Folder ini akan digunakan secara baku untuk memuat atau menyimpan musik dari atau ke.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Jika kamu mengubah alur dan mengeklik <guibutton
+>Terapkan</guibutton
+> sebuah dialog muncul yang mana kamu bisa memilih untuk memindahkan konten ke folder baru atau menggunakan folder baru tanpa memindahkan file.</para>
+
+</article>

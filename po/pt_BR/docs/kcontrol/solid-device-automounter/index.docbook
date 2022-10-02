@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Dispositivos removíveis</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+> Gama</surname
+><affiliation
+><address
+><email
+> marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>05/12/2012</date>
+<releaseinfo
+>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do Sistema</keyword>
+<keyword
+>montagem automática</keyword>
+<keyword
+>dispositivo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Esta janela permite-lhe configurar o tratamento automático dos dispositivos removíveis. </para>
+
+<para
+>Se ativar as funcionalidades de montagem automática neste módulo, você não precisará usar o miniaplicativo de notificação dos dispositivos ou o painel de navegação do gerenciador de arquivos para que você possa obter acesso a um dispositivo conectado recentemente. </para>
+
+<para
+>No topo da janela, você irá encontrar a configuração global, que poderá ser substituída para cada dispositivo individual, na lista de <guilabel
+>Substituições do dispositivo</guilabel
+>. Para um ambiente mono-usuário, recomenda-se que tenha ativas todas as opções acima da lista de substituições. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Habilitar a montagem automática de mídia removível</guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver desligada, não irá ocorrer qualquer montagem automática de nenhum dispositivo, seja de que tipo for, independentemente do que tiver selecionado na seção de <guilabel
+>Substituições do dispositivo</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automaticamente apenas as mídias removíveis que foram montadas manualmente</guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver assinalada, o &kde; irá apenas montar automaticamente os dispositivos de que se lembre. Um dispositivo é <quote
+>lembrado</quote
+> se tiver alguma vez sido montado; &eg;, se conectar um reprodutor de música USB para carregá-lo, isso não será suficiente para o <quote
+>lembrar</quote
+>. Se os arquivos não tiverem sido acessados, o &kde; não irá montar automaticamente o reprodutor da próxima vez que ele for visto. No entanto, assim que eles tenham sido acessados alguma vez o &kde; irá recordar este dispositivo para disponibilizar o seu conteúdo no sistema. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar todas as mídias removíveis no início da sessão</guilabel
+></term>
+<listitem
+><para
+>Se qualquer dispositivo de armazenamento removível estivar conectado ao seu sistema quando se logar no seu ambiente de trabalho, o &kde; irá disponibilizar automaticamente o seu conteúdo no seu sistema, para que os outros programas os possam ler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automaticamente as mídias removíveis quando conectadas</guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver assinalada, o &kde; irá disponibilizar automaticamente o conteúdo dos dispositivos de armazenamento ao sistema, quando estes forem conectados. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Substituições do dispositivo</guilabel
+></term>
+<listitem
+><para
+>Esta lista contém os dispositivos de armazenamento conhecidos do &kde;. Se a opção <guilabel
+>Montar automaticamente no início da sessão</guilabel
+> estiver assinalada, o dispositivo será montado automaticamente, mesmo que a opção <guilabel
+>Montar todos as mídias removíveis no início da sessão</guilabel
+> esteja desligada. O mesmo se aplica para o <guilabel
+>Montar automaticamente ao conectar</guilabel
+>.</para>
+<para
+>Se a opção <guilabel
+>Habilitar a montagem automática de mídia removível</guilabel
+> estiver desligada, as substituições não serão aplicadas, e nenhum dispositivo será montado automaticamente. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Omitir o dispositivo</guibutton
+></term>
+<listitem
+><para
+>Clicar neste botão fará com que o &kde; <quote
+>esqueça</quote
+> que os dispositivos selecionados já existiram alguma vez. Isto só é útil se a opção <guilabel
+>Montar automaticamente apenas as mídias removíveis que foram montadas manualmente</guilabel
+> estiver assinalada. Assim que um dispositivo tenha sido esquecido e o &kde; seja configurado para montar automaticamente apenas os dispositivos conhecidos, o dispositivo já não será mais montado automaticamente. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

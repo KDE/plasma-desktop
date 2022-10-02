@@ -1,0 +1,523 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Zugangshilfen</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Thomas</firstname
+><surname
+>Reitelbach</surname
+><affiliation
+><address
+><email
+>tr@erdfunkstelle.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>zugangshilfen</keyword>
+<keyword
+>Tasten</keyword>
+<keyword
+>Signalton</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Zugangshilfen</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Einleitung</title>
+
+<para
+>Dieses Modul soll Benutzern helfen, die Schwierigkeiten dabei haben, akustische Signale zu hören oder die Maus zu benutzen. </para>
+
+<para
+>Das Modul ist in sechs Karteikarten aufgeteilt: <link linkend="access-bell"
+><guilabel
+>Signale</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Sondertasten</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Verlangsamte Tasten</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Aktivierungsgesten</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Mausnavigation</guilabel
+></link
+> und <link linkend="access-screenreader"
+><guilabel
+>Screenreader</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Signale</guilabel
+></title>
+
+<para
+>Diese Karte ist aufgeteilt in die Abschnitte <guilabel
+>Hörbares Signal</guilabel
+> und <guilabel
+>Sichtbares Signal</guilabel
+>. </para>
+
+<para
+>Das oberste Ankreuzfeld <guilabel
+>Signalton des Systems verwenden</guilabel
+> legt fest, ob der normale Signalton Ihres Systems benutzt werden soll. Falls die Option deaktiviert ist, ist der Signallautsprecher des Rechners stillgelegt. </para>
+
+<para
+>Mit dem nächsten Ankreuzfeld können Sie festlegen, dass ein beliebiger Klang abgespielt wird, wenn der Systemton ausgelöst wird. Um dies zu einzuschalten, aktivieren Sie das Ankreuzfeld <guilabel
+>Benutzerdefiniertes Signal verwenden</guilabel
+> und geben den kompletten Pfad zur gewünschten Klangdatei im Eingabefeld hinter dem Text <guilabel
+>Abzuspielender Klang</guilabel
+> ein. Mit dem Knopf <guibutton
+>Durchsuchen</guibutton
+> können Sie die gewünschte Datei in einem Dateiauswahldialog festlegen. </para>
+
+<para
+>Für Benutzer, die Schwierigkeiten haben, den Signalton zu hören, oder die an einem Rechner ohne Sound-Unterstützung arbeiten, bietet &kde; die Möglichkeit an, stattdessen ein <emphasis
+>sichtbares Signal</emphasis
+> zu verwenden. Dieses kann entweder kurzzeitig die Farben des Bildschirms invertieren oder die Arbeitsfläche in einer wählbaren Farbe aufleuchten lassen, anstatt den Signalton auszugeben. </para>
+
+<para
+>Um das sichtbare Signal zu benutzen, aktivieren Sie zuerst das Ankreuzfeld <guilabel
+>Sichtbares Signal verwenden</guilabel
+> an. </para>
+
+<para
+>Sie können dann auswählen zwischen <guilabel
+>Bildschirm invertieren</guilabel
+>, oder <guilabel
+>Aufleuchten des Bildschirms</guilabel
+>. Wenn Sie <guilabel
+>Bildschirm invertieren</guilabel
+> wählen, werden alle Farben auf dem Bildschirm kurzzeitig invertiert. Wenn Sie <guilabel
+>Aufleuchten des Bildschirms</guilabel
+> wählen, können Sie die Farbe, in der der Bildschirm aufleuchten soll, mit dem daneben liegenden Knopf auswählen. </para>
+
+<para
+>Mit dem Drehfeld können Sie die Dauer des sichtbaren Signals verändern. Der Standardwert beträgt 500 msek, also eine halbe Sekunde. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Klebende Tasten</guilabel
+></title>
+
+<para
+>Auf dieser Karte gibt es die Abschnitte <guilabel
+>„Klebende“ Tasten</guilabel
+> und <guilabel
+>Sperrtasten</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>„Klebende“ Tasten verwenden</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Einstellung aktiviert ist, müssen Sie die Tasten &Shift;, &Alt; oder &Ctrl; nicht gedrückt halten, um zusammen mit einer anderen Taste eine Tastenkombination zu bilden. Sie können dann zuerst eine der Tasten drücken, wieder loslassen und dann die weiteren Tasten drücken. Beispiel: <keycombo action="simul"
+>&Ctrl; &Alt; &Del;</keycombo
+> könnte erreicht werden durch &Ctrl; dann &Alt; dann &Del;. </para>
+
+<para
+>In diesem Abschnitt gibt es noch ein Ankreuzfeld <guilabel
+>Klebende Tasten einrasten</guilabel
+>. Wenn dieses Feld markiert ist, bleiben die Tasten &Ctrl;, &Alt; und &Shift; so lange <quote
+>aktiv</quote
+>, bis sie vom Benutzer wieder <quote
+>freigegeben</quote
+> werden. Beachten Sie: Um eine klebende Taste einzurasten muss sie zweimal gedrückt werden. </para>
+
+<para
+>Zum Beispiel: </para>
+<variablelist>
+<varlistentry>
+<term
+>Mit nicht markiertem Feld <guilabel
+>Klebende Tasten einrasten</guilabel
+>:</term>
+<listitem>
+<para
+>Der Benutzer betätigt die Taste &Shift; und dann die Taste <keycap
+>F</keycap
+>. Daraus macht der Rechner <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Danach betätigt der Benutzer die Taste <keycap
+>P</keycap
+>. Der Rechner interpretiert das als Buchstabe p (ohne Umschalttaste). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Mit markiertem Feld <guilabel
+>Klebende Tasten einrasten</guilabel
+>:</term>
+<listitem>
+<para
+>Der Benutzer drückt zweimal &Shift; und dann <keycap
+>F</keycap
+>. Daraus macht der Rechner <keycombo action="simul"
+>&Shift; <keycap
+>F</keycap
+></keycombo
+>. Danach drückt der Benutzer die Taste <keycap
+>P</keycap
+>. Der Rechner interpretiert das als Buchstabe P (<keycombo action="simul"
+>&Shift; <keycap
+>P</keycap
+></keycombo
+>). Um die Umschalttaste wieder freizugeben, drücken Sie sie erneut. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Verlangsamte Tasten</guilabel
+></title>
+
+<para
+>Auf dieser Seite befinden sich zwei Abschnitte.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Verlangsamte Tasten verwenden</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Einstellung aktiviert ist, müssen Sie eine Taste für eine bestimmte Zeitspanne gedrückt halten, bevor der Tastendruck akzeptiert wird. Die Zeitspanne kann mit dem Drehfeld an Ihre Bedürfnisse angepasst werden. Diese Funktion hilft Ihnen, unbeabsichtigtes Tastendrücken zu vermeiden. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Zurückschnellende Tasten verwenden</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Einstellung aktiviert ist, müssen Sie nach einem Tastendruck eine gewisse Zeit warten, damit der nächste Tastendruck akzeptiert wird. Die Zeitspanne kann mit dem Drehfeld an Ihre Bedürfnisse angepasst werden. Diese Funktion hilft, unbeabsichtigtes Tastendrücken bei Menschen zu vermeiden, die &eg; Zuckungen haben. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Aktivierungsgesten</guilabel
+></title>
+
+<para
+>Auf dieser Seite befinden sich zwei Abschnitte.</para>
+
+<variablelist>
+<varlistentry>
+<term
+>Im Abschnitt <guilabel
+>Aktivierungsgesten</guilabel
+> gibt es diese Optionen:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Gesten zur Aktivierung klebender und verlangsamter Tasten verwenden</guilabel
+></member>
+<member
+>Hier können Sie Tastaturgesten aktivieren, die folgende Funktionen einschalten:</member>
+<member
+>Maustasten: Drücken Sie &Shift; + Zahlen-Feststelltaste</member>
+<member
+>Klebende Tasten: Drücken Sie fünfmal hintereinander die &Shift;taste</member>
+<member
+>Verlangsamte Tasten: Halten Sie die &Shift;taste für 8 Sekunden gedrückt</member>
+<member
+><guilabel
+>Klebende und verlangsamte Tasten bei Inaktivität automatisch deaktivieren</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Im Abschnitt <guilabel
+>Benachrichtigung</guilabel
+> gibt es diese Optionen:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Signalton verwenden, wenn eine Aktivierungsgeste für die Zugangshilfen verwendet wurde</guilabel
+></member>
+
+<member
+><guilabel
+>Bestätigungsdialog anzeigen, wenn eine Geste angewendet wird</guilabel
+></member>
+<member
+>Ist diese Einstellung aktiviert, zeigt &kde; einen Bestätigungsdialog an, sobald eine Geste angewendet wird.</member>
+<member
+>Sie sollten wissen, was sie tun, wenn Sie diese Einstellung deaktivieren. In diesem Fall werden Einstellungen der Tastatur für Zugangshilfen ohne Rückfrage angewendet.</member>
+
+<member
+><guilabel
+>&kde;-Systemnachrichten verwenden, wenn eine Tastatur-Zugangshilfe aktiviert/deaktiviert wurde</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Klicken Sie auf den Knopf <guibutton
+>Benachrichtigungen festlegen</guibutton
+>, um einen Dialog zur Bearbeitung von Benachrichtigungen über Statusänderungen aller Tasten zu öffnen.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Mausnavigation</title>
+
+<para
+>Auf dieser Karteikarte können Sie den Zahlenblock auf der Tastatur wie ein mausähnliches Gerät einrichten. Das kann nützlich sein, wenn es keine Anschlußmöglichkeit für ein Zeigegerät gibt oder der Zahlenblock ansonsten nicht genutzt wird. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Maus per Tastatur bewegen (Zahlenblock)</guilabel
+></term>
+<listitem>
+<para
+>Um den Zahlenblock im Mausmodus zu verwenden, müssen Sie das Ankreuzfeld <guilabel
+>Maus per Tastatur bewegen (Zahlenblock)</guilabel
+> aktivieren. Daraufhin werden die anderen Einstellungen freigeschaltet, und Sie können das Verhalten der Tastatur im Mausmodus, wenn nötig, an Ihre Bedürfnisse anpassen. </para>
+<para
+>Die Tasten auf dem Zahlenblock führen eine Bewegung in die Richtung aus, die Sie auch erwarten würden. Beachten Sie, dass Aufwärts, Abwärts, Links und Rechts auch eine Bewegung in diagonaler Richtung möglich ist. Die Taste <keycap
+>5</keycap
+> simuliert das Betätigen einer Maustaste, normalerweise ist das die linke Maustaste. Sie können die simulierte Maustaste mit <keycap
+>/</keycap
+> (linke Maustaste), <keycap
+>*</keycap
+> (mittlere Maustaste) und <keycap
+>-</keycap
+> (rechte Maustaste) umschalten. Das Betätigen von <keycap
+>+</keycap
+> simuliert einen Doppelklick mit der gewählten Maustaste. Über die Taste <keycap
+>0</keycap
+> können Sie eine gedrückte Maustaste (&eg; für Ziehen und Fallenlassen) simulieren und die Taste <keycap
+>,</keycap
+> für das Loslassen der Maustaste. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zeigerverzögerung</guilabel
+></term>
+<listitem>
+<para
+>Das ist der Zeitraum (in Millisekunden) zwischen der ersten Tastenbetätigung und dem ersten Signal, das eine wiederholte Mausbewegung anzeigt, um die Zeigerbewegung zu beschleunigen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Wiederholungsabstand</guilabel
+></term>
+<listitem>
+<para
+>Dies ist der Abstand in Millisekunden, der bei der Beschleunigung der Tastaturmaus zwischen den Signalen für eine wiederholte Bewegung vergeht. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zeigerbeschleunigung</guilabel
+></term>
+<listitem>
+<para
+>Dies ist die Zeit in Millisekunden, bis die Beschleunigung des Mauszeigers ihren maximalen Wert erreicht. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Maximale Geschwindigkeit</guilabel
+></term>
+<listitem>
+<para
+>Dies ist die maximale Geschwindigkeit in Pixeln pro Sekunde, die bei der Beschleunigung der Tastaturmaus erreicht werden kann. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Beschleunigungsprofil</guilabel
+></term>
+<listitem>
+<para
+>Dies ist die Steigung der Beschleunigungskurve für die Tastaturmausbeschleunigung. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Screenreader</guilabel
+></title>
+
+<para
+>Installieren Sie einen Screenreader wie <ulink url="https://de.wikipedia.org/wiki/Orca_(Screenreader)"
+>Orca</ulink
+> zusammen mit dem Programm <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Überprüfen Sie, ob die Soundausgabe von speech-dispatcher funktioniert, indem Sie den Befehl <command
+>spd-say hello</command
+> in einem eingeben. </para>
+
+<para
+>Zusätzlich benötigen Sie einen Sprachsynthesizer wie &eg; <application
+>espeak</application
+>. </para>
+
+<para
+>Aktivieren Sie den Screenreader im Ankreuzfeld, melden Sie sich ab und starten Sie Ihre Arbeitsfläche neu. </para>
+
+<para
+>In &plasma; müssen Sie das traditionelle <guilabel
+>Anwendungsmenü</guilabel
+> verwenden und überprüfen, das diesem Menü der Kurzbefehl (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>) zugewiesen ist. Wenn Sie diesen Kurzbefehl benutzen, sollte dieses Menü geöffnet werden und die Navigation im Menü mit den Cursortasten möglich sein. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

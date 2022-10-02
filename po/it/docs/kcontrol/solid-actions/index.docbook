@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Azioni dei dispositivi</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>azioni</keyword>
+<keyword
+>dispositivi</keyword>
+<keyword
+>hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Azioni per nuovi dispositivi</title>
+<sect2 id="icons-intro">
+<title
+>Introduzione</title>
+
+<para
+>Questo modulo permette di configurare le azioni da associare al collegamento di nuovi dispositivi.</para>
+<para>
+<screenshot>
+<screeninfo
+>Schermata del gestore delle azioni dei dispositivi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermata del gestore delle azioni dei dispositivi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Vedrai elencate tutte le azioni possibili disponibili al quando i dispositivi vengono collegati. Nota che saranno disponibili solo in certe situazioni.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Aggiungi</guibutton
+>: questo ti chiederà di dare un nome per la nuova azione, e quindi l'aprirà per modificarla. Se non fornisci tutti i dettagli necessari in quella finestra, l'azione verrà eliminata. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Modifica</guibutton
+>: questo permette di cambiare nome, icona, comando da eseguire e le condizioni a cui deve corrispondere l'azione per essere visualizzata. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Scarta</guibutton
+>, <guibutton
+>Non può essere eliminata</guibutton
+> e <guibutton
+>Rimuovi</guibutton
+>: questo pulsante farà cose diverse, a seconda che l'azione sia di sistema o sia stata creata da te. Puoi scartare solo le modifiche alle azioni di sistema; se non ce ne sono, queste azioni non possono essere eliminate. Le azioni create dall'utente vengono completamente rimosse, modifiche incluse. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Aggiungi azione</title>
+
+<para
+>Il pulsante <guibutton
+>Aggiungi</guibutton
+> fa apparire una finestra per inserire il nuovo nome dell'azione. </para>
+<para>
+<screenshot>
+<screeninfo
+>Schermata della finestra di aggiunta di azioni</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermata della finestra di aggiunta di azioni</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Il nome dell'azione dovrebbe descriverla correttamente. Dopo aver inserito un nome e aver fatto clic su <guibutton
+>OK</guibutton
+>, apparirà la finestra di modifica dell'azione per configurarne le proprietà. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Modifica azione</title>
+
+<para
+>Questa finestra permette di modificare le impostazioni dell'azione selezionata.</para>
+<para>
+<screenshot>
+<screeninfo
+>Schermata della finestra di modifica dell'azione</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermata della finestra di modifica dell'azione</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ciò include l'icona, il nome e il comando dell'azione, e i vari parametri. Puoi cambiare l'icona facendoci clic.</para>
+<para
+>I parametri sono visualizzati in un albero, con l'elemento in cima che deve essere vero per poter visualizzare l'azione.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Modifica parametro</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tipo del parametro</guilabel
+></term>
+<listitem>
+<para
+>Questo controlla cosa può esserci contenuto, o quale corrispondenza viene cercata per controllare se è vero. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Corrispondenza della proprietà</guilabel
+></term>
+<listitem>
+<para
+>Confronta la proprietà specificata del dispositivo (usando <guilabel
+>Tipo di dispositivo</guilabel
+> e <guilabel
+>Nome del valore</guilabel
+>), e usando il valutatore lo confronta con il testo dato.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Congiunzione di contenuti</guilabel
+></term>
+<listitem>
+<para
+>Tutte le sotto-proprietà di questa devono essere vere perché sia essa stessa vera.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Disgiunzione di contenuti</guilabel
+></term>
+<listitem>
+<para
+>Una qualsiasi delle sotto-proprietà di questa deve essere vera perché sia essa stessa vera.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Corrispondenza dell'interfaccia del dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Controlla se il dispositivo può essere classificato nel tipo di dispositivo selezionato.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tipo di dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Questi sono i tipi di dispositivo possibili supportati da &plasma; su questo sistema. Sono usati nelle corrispondenze sia di proprietà che di dispositivi. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nome del valore</guilabel
+></term>
+<listitem>
+<para
+>Questo è un elenco di tutti i nomi di proprietà possibili per il tipo di dispositivo selezionato. Fornisce anche la selezione del valutatore di valori (che è o <guilabel
+>Uguale a</guilabel
+> o <guilabel
+>Contiene</guilabel
+>), e permette l'inserimento del testo di confronto.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Ripristina parametro</guibutton
+></term>
+<listitem>
+<para
+>Annulla tutte le modifiche non salvate fatte a questo parametro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Salva modifiche al parametro</guibutton
+></term>
+<listitem>
+<para
+>Salva le modifiche apportate al parametro.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

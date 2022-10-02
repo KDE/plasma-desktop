@@ -1,0 +1,452 @@
+# Translation of plasma_applet_org.kde.plasma.kicker.po to Ukrainian
+# Copyright (C) 2014-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-26 09:26+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Загальне"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Вилучити з улюбленого"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Додати до улюбленого"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "На усіх просторах дій"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "На поточному просторі дій"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Показати в «Улюбленому»"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Піктограма:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Вибрати…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Спорожнити піктограму"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Показ програм:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "лише назви"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "лише описи"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "назва (опис)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "опис (назва)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Поведінка:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Впорядкувати програми за абеткою"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Спрощення підменю до однорівневого"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Показувати піктограми на кореневому рівні меню"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Показувати такі категорії:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Недавні програми"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Часто використовувані програми"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Нещодавні файли"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Часто використовувані файли"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Недавні контакти"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Часто використовувані контакти"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Критерій упорядкування записів у категоріях:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Недавно використані"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Часто використовувані"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Пошук:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Розширення пошуку на закладки, файли та електронну пошту"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Вирівнювати результати пошуку вниз"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Шукаємо «%1»"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Введіть текст для пошуку…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Улюблене"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Віджети"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Програми і документація"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Змінити список програм…"
+
+#~ msgid "Search…"
+#~ msgstr "Шукати…"
+
+#~ msgid "Search..."
+#~ msgstr "Шукати…"
+
+#~ msgid "Often used documents"
+#~ msgstr "Часто використовувані документи"
+
+#~ msgid "Open with:"
+#~ msgstr "Відкрити за допомогою:"
+
+#~ msgid "Properties"
+#~ msgstr "Властивості"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Додати на стільницю"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Додати на панель (віджет)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Пришпилити до панелі керування завданнями"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Недавні документи"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Забути недавні документи"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Змінити запис програми…"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Uninstall or Manage Add-Ons..."
+#~ msgstr "Вилучити додатки або керувати ними…"
+
+#~ msgid "Hide Application"
+#~ msgstr "Приховати програму"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Програми"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Скасувати приховування програм у цьому підменю"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Скасувати приховування програм у «%1»"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Показати KRunner"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Пошук, обчислення або надсилання команди"
+
+#~ msgid "Computer"
+#~ msgstr "Комп’ютер"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Показати дані щодо контакту…"
+
+#~ msgid "Contacts"
+#~ msgstr "Контакти"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Забути про контакт"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Забути про усі контакти"
+
+#~ msgid "Recently Used"
+#~ msgstr "Недавно використані"
+
+#~ msgid "Documents"
+#~ msgstr "Документи"
+
+#~ msgid "Forget Application"
+#~ msgstr "Забути про програму"
+
+#~ msgid "Forget Document"
+#~ msgstr "Забути про документ"
+
+#~ msgid "Forget All"
+#~ msgstr "Забути всі"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Забути про усі програми"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Забути про усі документи"
+
+#~ msgid "Hide %1"
+#~ msgstr "Сховати %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Всі програми"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Недавні контакти"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Часто використовувані документи"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Недавні програми"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Часто використовувані програми"
+
+#~ msgid "Power / Session"
+#~ msgstr "Живлення/Сеанс"
+
+#~ msgid "Search results"
+#~ msgstr "Результати пошуку"
+
+#~ msgid "Lock"
+#~ msgstr "Заблокувати"
+
+#~ msgid "Log Out"
+#~ msgstr "Вийти"
+
+#~ msgid "Save Session"
+#~ msgstr "Зберегти сеанс"
+
+#~ msgid "Switch User"
+#~ msgstr "Перемкнути користувача"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Призупинити"
+
+#~ msgid "Hibernate"
+#~ msgstr "Приспати"
+
+#~ msgid "Restart"
+#~ msgstr "Перезапустити"
+
+#~ msgid "Shut Down"
+#~ msgstr "Вимкнути"
+
+#~ msgid "Session"
+#~ msgstr "Сеанс"
+
+#~ msgid "System"
+#~ msgstr "Система"
+
+#~ msgid "Lock screen"
+#~ msgstr "Заблокувати екран"
+
+#~ msgid "End session"
+#~ msgstr "Завершити сеанс"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Почати паралельний сеанс як інший користувач"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Сон зі збереженням до RAM"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Сон зі збереженням на диск"
+
+#~ msgid "Restart computer"
+#~ msgstr "Перезавантажити комп’ютер"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Вимкнути комп’ютер"
+
+#~ msgid "System actions"
+#~ msgstr "Системні дії"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Керувати «%1»…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Виконати команду…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Виконати команду або запит на пошук"
+
+#~ msgid "Show:"
+#~ msgstr "Показати:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Показувати недавні програми"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Показувати часто використовувані програми"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Показувати недавні документи"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Показувати часто використовувані документи"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Показувати недавні контакти"
+
+#~ msgid "Logout"
+#~ msgstr "Вийти"
+
+#~ msgid "Reboot"
+#~ msgstr "Перезавантажити"
+
+#~ msgid "Suspend"
+#~ msgstr "Призупинити"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Портативні носії"
+
+#~ msgid "Places"
+#~ msgstr "Місця"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Використовувати нетипове зображення:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Виберіть зображення"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "файли зображень (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Додати як кнопку запуску"
+
+#~ msgid "New Session"
+#~ msgstr "Новий сеанс"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Порожньо)"

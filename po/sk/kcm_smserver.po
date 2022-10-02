@@ -1,0 +1,279 @@
+# translation of kcmsmserver.po to Slovak
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000,2002.
+# Stanislav Visnovsky <stano@ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-05-28 15:50+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Správca sedenia</h1> Tento modul umožňuje konfigurovať správcu sedenia. "
+"Je možné nastaviť potvrdzovanie pri odhlásení a či sa má pri odhlásení "
+"uložiť sedenie a pri ďalšom prihlásení obnoviť. Navyše môžete určiť, či sa "
+"má po ukončení sedenia počítač automaticky vypnúť."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Zlyhalo vyžiadanie reštartovania do nastavení firmvéru: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Keď sa počítač najbližšie reštartuje, vojde na obrazovku nastavení UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Keď sa počítač najbližšie reštartuje, vojde na obrazovku nastavení firmvéru."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Reštartovať teraz"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Všeobecné:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Potvrdiť odhlásenie"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Ponúknuť možnosti vypnutia"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Predvolená možnosť odchodu:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Ukončiť aktuálne sedenie"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Reštartovať počítač"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Vypnúť počítač"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Pri prihlasovaní:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Obnoviť posledné sedenie"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Obnoviť ručne uložené sedenie"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Spustiť prázdne sedenie"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Neobnovovať tieto aplikácie:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Tu môžete zadať zoznam aplikácií (oddelených čiarkami alebo dvojbodkou), "
+"ktoré sa nemajú ukladať ako súčasť sedenia a preto nebudú znovu spustené pri "
+"obnove sedenia. Napríklad 'xterm:konsole' alebo 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Vojsť do nastavení firmvéru pri najbližšom reštarte"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Potvrdiť odhlásenie"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Ponúknuť možnosti vypnutia"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Predvolená možnosť odchodu"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Pri prihlásení"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Aplikácie vylúčené zo sedenia"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matej Mrenica"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matejm98mthw@gmail.com"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Sedenie pracovnej plochy"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Prihlásenie a odhlásenie z pracovnej plochy"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Copyright © 2000–2020 Tím sedenia pracovnej plochy"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Obnoviť predtým uložené sedenie"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "UEFI Nastavenia"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Vstúpiť do nastavení UEFI pri najbližšom reštarte"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Povoľte túto možnosť ak chcete, aby správca sedenia zobrazoval dialógové "
+#~ "okno pre potvrdenie odhlásenia."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Potvrdiť &odhlásenie"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Po&núknuť možnosti pre vypnutie"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Tu si môžete vybrať čo sa štandardne stane po odhlásení. Toto nastavenie "
+#~ "má zmysel iba v prípade, že ste prihlásený pomocou KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Štandardná možnosť opustenia"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Obnoviť predchádzajúce sedenie:</b> Uloží všetky bežiace aplikácie "
+#~ "pri ukončení a obnoví ich pri ďalšom štarte</li>\n"
+#~ "<li><b>Obnoviť ručne uložené sedenie: </b> Umožňuje uložiť sedenie "
+#~ "kedykoľvek pomocou voľby \"Uložiť sedenie\" v K-Menu. To znamená že "
+#~ "aktuálne bežiace aplikácie budú obnovené pri ďalšom štarte.</li>\n"
+#~ "<li><b>Spustiť prázdne sedenie:</b> Nič neukladať. Spustí sa nové sedenie "
+#~ "s prázdnou plochou.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Pri prihlásení"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Aplikácie &vylúčené zo sedení:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Nastavenia Firmvéru"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Keď sa počitač najbližšie reštartuje, vojsť do obrazovky nastavení "
+#~ "firmvéru (napr. nastavenia UEFI alebo BIOS)"

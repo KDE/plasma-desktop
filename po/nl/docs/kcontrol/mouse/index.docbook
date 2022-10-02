@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Muis</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Dit is de documentatie voor de module &systemsettings; die muizen en andere aanwijsapparaten instelt. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>muis</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module geeft u de mogelijkheid om uw aanwijsapparaat te configureren. Uw aanwijsapparaat kan een muis, een trackball, een touchpad of andere hardware zijn die een soortgelijke functie heeft.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Algemeen</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Linkshandige muis</guilabel
+></term>
+<listitem
+><para
+>Als u linkshandig bent dan hebt u misschien liever dat de muisknoppen <mousebutton
+>links</mousebutton
+> en <mousebutton
+>rechts</mousebutton
+> omgedraaid zijn. Dat kunt u veranderen door deze optie te activeren. Als uw aanwijsapparaat meer dan twee knoppen heeft, worden alleen de knoppen die functioneren als <mousebutton
+>links</mousebutton
+> en <mousebutton
+>rechts</mousebutton
+> beïnvloed. Bijvoorbeeld als u een drieknopsmuis hebt, heeft dit geen invloed op de knop <mousebutton
+>midden</mousebutton
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Linker en rechter knoppen indrukken voor middelste muisklik</guilabel
+></term>
+<listitem
+><para
+>Activeer dit item als u geen &MMB; hebt. U kunt de linker en rechter muisknoppen tegelijk indrukken om de middenklik te emuleren. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Snelheid van aanwijzer</guilabel
+></term>
+<listitem
+><para
+>Deze optie geeft u de mogelijkheid om de relatie tussen de afstand die de muis aflegt over het scherm en de relatieve verplaatsing van het fysieke apparaat zelf (dat een muis, een trackball, of een ander apparaat kan zijn) in te stellen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Versnellingsprofiel</guilabel
+></term>
+<listitem
+><para
+>Het profiel <guilabel
+>Adaptief</guilabel
+> is het standaard profiel voor alle apparaten en neemt de huidige snelheid van het apparaat in rekening bij het bepalen van de versnelling. Het profiel <guilabel
+>Vlak</guilabel
+> is eenvoudig een constante factor toegepast op alle apparaatdelta's, ongeacht de snelheid van bewegen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Schuiven: schuifrichting omdraaien</guilabel
+></term>
+<listitem
+><para
+>Als deze optie geselecteerd is, zal het schuifwiel (als u dat hebt) in omgekeerde richting werken. Als bijvoorbeeld eerst het wiel naar u toe draaien een verschuiving naar beneden veroorzaakte, zal de verschuiving nu naar boven zijn. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>In &plasma; 5.13 vindt u de instelling om enkele of dubbele muisklikken te gebruiken om bestanden en mappen te openen in de module <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Werkruimte</ulink
+>. </para
+></note>
+
+</article>

@@ -1,0 +1,320 @@
+# translation of joystick.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2007-11-05 13:31+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nabin Gautam,श्यामकृष्ण बल"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nabingautam2001@yahoo.com,shyamkrishna_bal@yahoo.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "क्यालिब्रेसन"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "पछिल्लो"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "कृपया यथार्थ गणना गर्न केही क्षण प्रतिक्षा गर्नुहोस्"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(प्राय: X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(प्राय Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>क्यालिब्रेसनले तपाईँको यन्त्र वितरण मान दायरा जाँच गर्छ ।<br /><br />कृपया <b>अक्ष "
+"%1 %2</b> तपाईँको यन्त्रको <b>न्यूनतम</b>स्थितिमा सार्नुहोस् ।<br /><br />पछिल्लो "
+"चरणको निरन्तरताका लागि यन्त्रको कुनै बटन थिच्नुहोस् वा 'पछिल्लो' बटनमा क्लिक गर्नुहोस् ।</"
+"qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>क्यालिब्रेसनले तपाईँको यन्त्र वितरण मान दायरा जाँच गर्छ ।<br /><br />कृपया <b>अक्ष "
+"%1 %2</b> तपाईँको यन्त्रको <b>केन्द्र</b> स्थितिमा सार्नुहोस् ।<br /><br />पछिल्लो "
+"चरणको निरन्तरताका लागि यन्त्रको कुनै बटन थिच्नुहोस् वा 'पछिल्लो' बटनमा क्लिक गर्नुहोस् ।</"
+"qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>क्यालिब्रेसनले तपाईँको यन्त्र वितरण मान दायरा जाँच गर्छ ।<br /><br />कृपया <b>अक्ष "
+"%1 %2</b> तपाईँको यन्त्रको<b>अधिकतम</b> स्थितिमा सार्नुहोस् ।<br /><br />पछिल्लो "
+"चरणको निरन्तरताका लागि यन्त्रको कुनै बटन थिच्नुहोस् वा 'पछिल्लो' बटनमा क्लिक गर्नुहोस् ।</"
+"qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "सञ्चार त्रुटि"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "तपाईँले सफलतापूर्वक यन्त्र क्यालिब्रेट गर्नुभयो"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "क्यालिब्रेसन सफल भयो"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "मान अक्ष %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "दिएको यन्त्र %1 खोल्न सकिने छैन: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "दिएको यन्त्र %1 जोइस्टिक हैन ।"
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि कर्नेल ड्राइभर संस्करण प्राप्त गर्न सकेन: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"हाल चलिरहेको कर्नेल ड्राइभर संस्करण (%1.%2.%3) मोड्युल (%4.%5.%6) लागि कम्पाइल गरिएको "
+"होइन ।"
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि बटनको नम्बर प्राप्त गर्न सकेन: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि अक्षको नम्बर प्राप्त गर्न सकेन: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि क्यालिब्रेसन मानहरू प्राप्त गर्न सकेन: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि क्यालिब्रेसन मानहरू पूर्वावस्थामा ल्याउन सकेन: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि क्यालिब्रेसन मानहरू थालनी गर्न सकेन: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "जोइस्टिक यन्त्र %1 का लागि क्यालिब्रेसन मानहरू लागू गर्न सकेन: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "आन्तरिक त्रुटि  - %1 सङ्केत अज्ञात छ"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "केडीई जोइस्टिक नियन्त्रण मोड्युल"
+
+#: joystick.cpp:31
+#, fuzzy, kde-format
+#| msgid "KDE Control Center Module to test Joysticks"
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "जोइस्टिक परीक्षण गर्न केडीई नियन्त्रण केन्द्र मोड्युल"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "(c) 2004, मार्टिन कोलर"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"यो<h1>जोइस्टिक</h1>मोड्युलले तपाईँको जोइस्टिकले ठीक तरिकाले कार्य गरको जाँच गर्न मद्दत "
+"गर्छ ।<br />यदि  यसले अक्षहरूमा गलत मानहरू पठाएमा, तपाईँले यसलाई क्यालिब्रेसनद्वारा "
+"समाधान गर्ने प्रयास गर्न सक्नुहुन्छ ।<br />यो मोड्युलले /dev/js[0-4] र /dev/input/"
+"js[0-4] जाँचद्वारा सबै उपलब्ध जोइस्टिक यन्त्रहरू फेला पार्ने प्रयास गर्छ<br />यदि तपाईँसँग "
+"अन्य यन्त्र फाइल भएमा, यसलाई कम्बोबाकसमा प्रबिष्ट गर्नुहोस् ।<br />बटनहरूको सूचीले "
+"तपाईँको जोइस्टिकमा बटनहरूको अवस्था देखाउछ, अक्ष सूचीले सबै अक्षहरूका लागि हालको मान "
+"देखाउछ ।<br />द्रष्टब्य: हालको लिनक्स यन्त्र चालकले (कर्नेल 2.4, 2.6) <ul><li>2-अक्ष, 4-"
+"बटन जोइस्टिक</li><li>3-अक्ष, 4-बटन जोइस्टिक</li><li>4-अक्ष, 4-बटन जोइस्टिक</"
+"li><li>साइटेल साइबर्ग 'डिजिटल' जोइस्टिकहरू</li></ul>(तपाईँले बिवरणहरूका लागि लिनक्स "
+"स्रोत/लेख्यपत्रिकरण/आगत/जोइस्टिक.txt) मात्र स्वत: पत्ता लगाउन सक्छ"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "यन्त्र:"
+
+#: joywidget.cpp:84
+#, fuzzy, kde-format
+#| msgid "Position:"
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "स्थिति:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "पदचिन्ह देखाउनुहोस्"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "थिचिएको"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "बटन:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "अवस्था"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "अक्ष:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "मान"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "क्यालिब्रेट"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"यो कम्प्युटरमा जोइस्टिक यन्त्र स्वचालित तरिकाले फेला पर्दैन ।<br />/dev/js[0-4] र /dev/"
+"input/js[0-4] मा जाँच गरियो<br />तपाईँलाई सङ्लग्न गरेको थाहा भएमा, कृपया ठीक यन्त्र "
+"फाइल प्रविष्ट गर्नुहोस् ।"
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"दिएको यन्त्र नाम अवैध छ (समावेश गर्दैन /dev)\n"
+"कृपया सूचीबाट यन्त्र चयन गर्नुहोस् वा\n"
+"/dev/js0 जस्तै यन्त्र फाइल प्रविष्ट गर्नुहोस् ।"
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "अज्ञात यन्त्र"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "यन्त्र त्रुटि"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>क्यालिब्रेसनले निश्चितताको बारेमा जाँच गर्छ ।<br /><br /><b>कृपया सबै अक्षहरूलाई "
+"तीनिहरूको केन्द्र स्थितिमा सार्नुहोस् र त्यसपछि जोइस्टिकलाई कत्तिपनि नछुनुहोस् ।</b><br /"
+"><br />क्यालिब्रेसन सुरु गर्न ठीक छ बटनमा क्लिक गर्नुहोस् ।</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "जोइस्टिक यन्त्र %1का लागि सबै क्यालिब्रेसन मानहरू पूर्वावस्थामा ल्याइयो ।"

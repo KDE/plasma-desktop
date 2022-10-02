@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Игровой контроллер</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 апреля 2015 г.</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>джойстик</keyword>
+<keyword
+>контроллер</keyword>
+<keyword
+>геймпад</keyword>
+<keyword
+>калибровка</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Калибровка игрового контроллера</title>
+
+<para
+>Этот модуль программы &systemsettings; позволяет выполнять настройку игрового контроллера: его калибровку и привязку назначаемых действий кнопкам и осям.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана модуля игрового контроллера</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Модуль игрового контроллера</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Устройство</guilabel
+></term>
+<listitem>
+<para
+>В этой строке показан путь к логическому расположению устройства. Если к системе подключено несколько игровых контроллеров, можно выбрать тот, который необходимо настроить. </para>
+<para
+>Если подключение игрового контроллера не удалось обнаружить автоматически (но пользователь уверен, что он подключён), в этой строке можно указать, какому логическому устройству соответствует этот игровой контроллер. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Положение</guilabel
+></term>
+<listitem>
+<para
+>Текущее положение джойстика игрового контроллера в осях X и Y отображено на графике. Для отслеживания перемещения джойстика включите параметр <guibutton
+>Показывать след</guibutton
+>. </para>
+<tip
+><para
+>Если при перемещении джойстика перекрестие на графике не достигает границ поля, либо в нейтральном положении джойстика перекрестие не находится в центре поля графика, следует выполнить калибровку устройства. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Кнопки</guilabel
+></term>
+<listitem>
+<para
+>В этом списке перечислены кнопки игрового контроллера и их текущее состояние. При нажатии кнопки рядом с логическим номером (тем, который определён системой) этой кнопки появится надпись <guilabel
+>НАЖАТА</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Оси</guilabel
+></term>
+<listitem>
+<para
+>В этом списке перечислены оси джойстика и значения текущего положения по этим осям. Значение «0» означает центральное положение, а минимальное и максимальное значения зависят от игрового контроллера и конкретной оси. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Калибровка</guilabel
+></term>
+<listitem>
+<para
+>Нажатие кнопки <guibutton
+>Калибровка</guibutton
+> открывает диалог калибровки всех осей джойстиков. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Калибровка игрового контроллера</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Калибровка игрового контроллера</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Для выполнения калибровки необходимо выполнить перемещение по каждой из осей джойстика в минимальное, центральное и в максимальное положения. В нижнем левом углу диалога отображается значение текущего положения на выбранной оси, которое помогает определить верное направление перемещения джойстика. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,254 @@
+# translation of kcmkonq.po to
+# Danish translation of kcmkonq
+# Copyright (C)
+# Bo Thorsen <gobo@imada.sdu.dk>, 1999.
+# Erik Kjær Pedersen <erik@binghamton.edu>, 1999, 2002, 2003, 2004, 2005, 2006.
+# Lars K. Schunk <lars@schunk.dk>, 2001.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2017, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2022-08-20 17:18+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Skrivebord"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokumenter"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Download"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Musik"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Billeder"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Videoer"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Stier</h1>\n"
+"Dette modul tillader dig at vælge hvor i filsystemet filerne på dit "
+"skrivebord gemmes.\n"
+"Brug \"Hvad er dette?\" (Skift+F1) for at få hjælp til bestemte tilvalg."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Sti til skrivebordet:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Denne mappe indeholder alle de filer, du ser på dit skrivebord. Du kan ændre "
+"stedet for denne mappe, hvis du ønsker det. Indholdet vil automatisk følge "
+"med til det nye sted."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Sti til dokumenter:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Denne mappe vil blive brugt som standard til at indlæse og gemme dokumenter."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Sti til download:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Denne mappe vil blive brugt som standard til gemme downloadede elementer."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Sti til videoer:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Denne mappe vil blive brugt som standard til at gemme fil fra eller til."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Sti til billeder:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Denne mappe vil blive brugt som standard til at indlæse og gemme billeder."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Sti til musik:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Denne mappe vil blive brugt som standard til at indlæse og gemme musik."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Sti til autostart:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Denne mappe indeholder programmer eller link til programmer (genveje) som "
+#~ "du ønsker skal starte automatisk når sessionen starter. Du kan ændre "
+#~ "stedet for denne mappe hvis du ønsker det. Indholdet vil automatisk følge "
+#~ "med til det nye sted."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Film"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Stien til \"%1\" er blevet ændret.\n"
+#~ "Skal jeg flytte filerne fra \"%2\" til \"%3\"?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Flyt"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Flyt ikke"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Stien til \"%1\" er blevet ændret.\n"
+#~ "Vil du flytte mappen \"%2\" til \"%3\"?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Flyt"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Flyt ikke"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Bekræftelse er krævet"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror opførsel</h1> Her kan du indstille hvordan Konqueror "
+#~ "opfører sig som en filhåndtering."
+
+#~ msgid "Misc Options"
+#~ msgstr "Diverse indstillinger"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Åbn mapper i separate &vinduer"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Hvis dette er afkrydset, vil Konqueror åbne et nyt vindue, når du åbner "
+#~ "en mappe i stedet for at vise mappens indhold i det nuværende vindue."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Vis \"Slet\"-punkter i kontekstmenuer som forbigår affaldsspanden"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Markér dette hvis du ønsker at \"Slet\"-menukommandoer skal vises i "
+#~ "skrivebordets og filhåndteringens kontekstmenuer. Du kan altid slette "
+#~ "filer ved at holde Skift-tasten nede mens du trykker på \"Flyt til affald"
+#~ "\"."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menuredigering"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "New..."
+#~ msgstr "Ny..."
+
+#~ msgid "Remove"
+#~ msgstr "Fjern"
+
+#~ msgid "Move Up"
+#~ msgstr "Flyt op"
+
+#~ msgid "Move Down"
+#~ msgstr "Flyt ned"

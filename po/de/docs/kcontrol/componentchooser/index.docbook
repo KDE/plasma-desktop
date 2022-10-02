@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Standard-Komponenten</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Komponente</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In diesem Modul können die Standard-Komponenten für &kde; eingestellt werden.</para>
+
+<para
+>„Komponenten“ sind Programme, die elementare Aufgaben erledigen, so etwa der Webbrowser, der Terminal-Emulator, die Dateiverwaltung oder das E-Mail-Programm. &kde;-Programme müssen gelegentlich einen Terminal-Emulator aufrufen, eine E-Mail verschicken oder Dateien und Ordner verwalten</para
+> 
+
+<para
+>Um die Einheitlichkeit zu wahren, verwenden die Anwendungen dieselben Standardkomponenten. Hier können Sie die Programme für diese Komponenten auswählen.</para>
+
+<para
+>Die Liste auf der linken Seite zeigt alle Arten von Komponenten, die eingerichtet werden können: </para>
+<itemizedlist>
+<listitem>
+<para
+>Webbrowser</para>
+</listitem>
+<listitem>
+<para
+>Dateiverwaltung</para>
+</listitem>
+<listitem>
+<para
+>E-Mail-Programm</para>
+</listitem>
+<listitem>
+<para
+>Terminal-Emulator</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Klicken Sie auf das Kombinationsfeld der Komponente, die Sie einrichten möchten. Wählen Sie aus der Liste Ihren bevorzugten Webbrowser, Dateimanager, E-Mail-Client und Terminal-Emulator. Wählen Sie <guimenuitem
+>Andere...</guimenuitem
+>, um den Dialog <guilabel
+>Anwendung auswählen</guilabel
+> zu öffnen und Ihre Anwendung manuell auszuwählen.</para>
+
+</article>

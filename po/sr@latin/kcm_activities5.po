@@ -1,0 +1,297 @@
+# Translation of kcm_activities.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_activities\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-03-28 03:54+0100\n"
+"PO-Revision-Date: 2016-04-03 12:10+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >> @title:tab
+#: ExtraActivitiesInterface.cpp:44 MainConfigurationWidget.cpp:46
+#, kde-format
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#: imports/activitysettings.cpp:63
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Brisanje aktivnosti"
+
+#: imports/activitysettings.cpp:64
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Želite li zaista da obrišete „%1“?"
+
+#: imports/dialog.cpp:88
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"Greška pri učitavanju QML fajlova. Proverite instalaciju.\n"
+"Nedostaje %1."
+
+#: imports/dialog.cpp:153
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#: imports/dialog.cpp:170
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Stvaranje nove aktivnosti"
+
+#: imports/dialog.cpp:171
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Postavke aktivnosti"
+
+#: imports/dialog.cpp:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Napravi"
+
+#: imports/qml/activityDialog/GeneralTab.qml:54
+#, fuzzy, kde-format
+#| msgid "Icon"
+msgid "Icon:"
+msgstr "Ikonica"
+
+#: imports/qml/activityDialog/GeneralTab.qml:68
+#, kde-format
+msgid "Name:"
+msgstr "Ime:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:73
+#, kde-format
+msgid "Description:"
+msgstr "Opis:"
+
+# >> @title:tab
+#: imports/qml/activityDialog/GeneralTab.qml:82
+#, fuzzy, kde-format
+#| msgid "Privacy"
+msgid "Privacy:"
+msgstr "Privatnost"
+
+#: imports/qml/activityDialog/GeneralTab.qml:83
+#, fuzzy, kde-format
+#| msgid "Private - do not track usage for this activity"
+msgid "Do not track usage for this activity"
+msgstr "Privatna — ne prati korišćenje ove aktivnosti"
+
+#: imports/qml/activityDialog/GeneralTab.qml:88
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching to this activity:"
+msgid "Shortcut for switching:"
+msgstr "Prečica za prebacivanje na ovu aktivnost:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr ""
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr ""
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr ""
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+
+# >> @title:tab
+#: MainConfigurationWidget.cpp:47
+#, kde-format
+msgid "Switching"
+msgstr "Menjanje"
+
+# >> @title:tab
+#: MainConfigurationWidget.cpp:48
+#, kde-format
+msgid "Privacy"
+msgstr "Privatnost"
+
+#: PrivacyTab.cpp:80
+#, fuzzy, kde-format
+#| msgctxt "unlimited number of months"
+#| msgid "forever"
+msgctxt "unlimited number of months"
+msgid "Forever"
+msgstr "zauvek"
+
+#: PrivacyTab.cpp:90
+#, kde-format
+msgid "Forget the last hour"
+msgstr "Zaboravi protekli sat"
+
+#: PrivacyTab.cpp:92
+#, kde-format
+msgid "Forget the last two hours"
+msgstr "Zaboravi protekla dva sata"
+
+#: PrivacyTab.cpp:94
+#, kde-format
+msgid "Forget a day"
+msgstr "Zaboravi protekli dan"
+
+#: PrivacyTab.cpp:96
+#, kde-format
+msgid "Forget everything"
+msgstr "Zaboravi sve"
+
+#: PrivacyTab.cpp:185
+#, kde-format
+msgctxt "unit of time. months to keep the history"
+msgid " month"
+msgid_plural " months"
+msgstr[0] " mesec"
+msgstr[1] " meseca"
+msgstr[2] " meseci"
+msgstr[3] " mesec"
+
+#: PrivacyTab.cpp:189
+#, kde-format
+msgctxt "for in 'keep history for 5 months'"
+msgid "For "
+msgstr ""
+
+#: qml/activitiesTab/ActivitiesView.qml:68
+#, fuzzy, kde-format
+#| msgid "Create activity..."
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Napravi aktivnost..."
+
+#: qml/activitiesTab/ActivitiesView.qml:75
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Brisanje aktivnosti"
+
+#: qml/activitiesTab/ActivitiesView.qml:86
+#, fuzzy, kde-format
+#| msgid "Create activity..."
+msgid "Create New..."
+msgstr "Napravi aktivnost..."
+
+#: SwitchingTab.cpp:66
+#, kde-format
+msgid "Activity switching"
+msgstr "Menjanje aktivnosti"
+
+#: SwitchingTab.cpp:70
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "Šetaj kroz aktivnosti"
+
+#: SwitchingTab.cpp:73
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "Šetaj kroz aktivnosti (obrnuto)"
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/PrivacyTabBase.ui:17
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "Cleared the activity history."
+msgstr "Očisti nedavni istorijat"
+
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/PrivacyTabBase.ui:36
+#, fuzzy, kde-format
+#| msgid "Keep history"
+msgid "Keep history:"
+msgstr "Pamti istorijat"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/PrivacyTabBase.ui:48
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "Clear History"
+msgstr "Očisti nedavni istorijat"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/PrivacyTabBase.ui:70
+#, kde-format
+msgid "For a&ll applications"
+msgstr "u &svim programima"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/PrivacyTabBase.ui:80
+#, kde-format
+msgid "&Do not remember"
+msgstr "&nigde"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/PrivacyTabBase.ui:87
+#, fuzzy, kde-format
+#| msgid "O&nly for specific applications"
+msgid "O&nly for specific applications:"
+msgstr "samo u nekim &programima"
+
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/PrivacyTabBase.ui:97
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "Pamti otvorene dokumente:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/PrivacyTabBase.ui:121
+#, fuzzy, kde-format
+#| msgid "Blacklist all applications not on this list"
+msgid "Blacklist applications not on the list"
+msgstr "Svi programe van ove liste na crnu listu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remember the current virtual desktop for each activity (needs restart)"
+msgid "Remember for each activity (needs restart)"
+msgstr ""
+"Zapamti tekuću virtuelnu površ za svaku aktivnost (zahteva ponovno "
+"pokretanje)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Shortcuts:"
+msgstr "Prečice"

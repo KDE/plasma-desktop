@@ -1,0 +1,624 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-09-04 09:23+0200\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Általános"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Eltávolítás a kedvencekből"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Hozzáadás a kedvencekhez"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Minden aktivitáson"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "A jelenlegi aktivitáson"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Megjelenítés a Kedvenceknél"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Kiválasztás…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Ikon visszaállítása"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Alkalmazások megjelenítése mint:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Csak név"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Csak leírás"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Név (leírás)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Leírás (név)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Működés:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Alkalmazások rendezése ABC sorrendben"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Almenük összenyomása egyetlen szintre"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Ikonok megjelenítése a menü legfelső szintjén"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Kategóriák:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Legutóbbi alkalmazások"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Gyakran használt alkalmazások"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Legutóbbi fájlok"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Gyakran használt fájlok"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Legutóbbi névjegyek"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Gyakran használt névjegyek"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Elemek kategóriába sorolási szempontja:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Legutóbb használt"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Gyakran használt"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Keresés:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Keresés kiterjesztése könyvjelzőkre, fájlokra és e-mailekre"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Találatok igazítása alulra "
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "„'%1” keresése"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Kezdjen el gépelni a kereséshez…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Elemek"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Alkalmazások és dokumentumok"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Alkalmazások szerkesztése…"
+
+#~ msgid "Search…"
+#~ msgstr "Keresés…"
+
+#~ msgid "Search..."
+#~ msgstr "Keresés…"
+
+#~ msgid "Often used documents"
+#~ msgstr "Gyakran használt dokumentumok"
+
+#~ msgid "Open with:"
+#~ msgstr "Megnyitás ezzel:"
+
+#~ msgid "Properties"
+#~ msgstr "Tulajdonságok"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Hozzáadás az asztalhoz"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Hozzáadás a panelhez (widget)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Rögzítés a panelen"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Legutóbbi dokumentumok"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Legutóbbi dokumentumok elfelejtése"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Alkalmazás szerkesztése…"
+
+#~ msgid "Hide Application"
+#~ msgstr "Alkalmazás elrejtése"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Alkalmazások"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Alkalmazások rejtésének megszüntetése ebben az almenüben"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Alkalmazások rejtésének megszüntetése itt: „%1”"
+
+#, fuzzy
+#~| msgid "KRunner"
+#~ msgid "Show KRunner"
+#~ msgstr "KRunner"
+
+#~ msgid "Computer"
+#~ msgstr "Számítógép"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Névjegy adatainak megjelenítése…"
+
+#~ msgid "Contacts"
+#~ msgstr "Névjegyek"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Névjegy elfelejtése"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Összes névjegy elfelejtése"
+
+#~ msgid "Recently Used"
+#~ msgstr "Legutóbb használt"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumentumok"
+
+#~ msgid "Forget Application"
+#~ msgstr "Alkalmazás elfelejtése"
+
+#~ msgid "Forget Document"
+#~ msgstr "Dokumentum elfelejtése"
+
+#~ msgid "Forget All"
+#~ msgstr "Összes elfelejtése"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Összes alkalmazás elfelejtése"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Összes dokumentum elfelejtése"
+
+#~ msgid "Hide %1"
+#~ msgstr "%1 elrejtése"
+
+#~ msgid "All Applications"
+#~ msgstr "Minden alkalmazás"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Legutóbbi névjegyek"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Gyakran használt dokumentumok"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Legutóbbi alkalmazások"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Gyakran használt alkalmazások"
+
+#~ msgid "Power / Session"
+#~ msgstr "Energiakezelés / Munkamenet"
+
+#~ msgid "Search results"
+#~ msgstr "Keresési eredmények"
+
+#~ msgid "Lock"
+#~ msgstr "Zárolás"
+
+#~ msgid "Save Session"
+#~ msgstr "Munkamenet mentése"
+
+#~ msgid "Switch User"
+#~ msgstr "Felhasználóváltás"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernálás"
+
+#~ msgid "Restart"
+#~ msgstr "Újraindítás"
+
+#~ msgid "Shut Down"
+#~ msgstr "Leállítás"
+
+#~ msgid "Session"
+#~ msgstr "Munkamenet"
+
+#~ msgid "System"
+#~ msgstr "Rendszer"
+
+#~ msgid "Lock screen"
+#~ msgstr "Képernyő zárolása"
+
+#~ msgid "End session"
+#~ msgstr "Munkamenet befejezése"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Párhuzamos munkamenet indítása másik felhasználóként"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Felfüggesztés memóriába"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Felfüggesztés lemezre"
+
+#~ msgid "Restart computer"
+#~ msgstr "Számítógép újraindítása"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Számítógép kikapcsolása"
+
+#~ msgid "System actions"
+#~ msgstr "Rendszerműveletek"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "„%1” kezelése…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Parancs futtatása…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Parancs vagy keresés futtatása"
+
+#~ msgid "Show:"
+#~ msgstr "Megjelenítés:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Legutóbbi alkalmazások megjelenítése"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Gyakran használt alkalmazások megjelenítése"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Legutóbbi dokumentumok megjelenítése"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Gyakran használt dokumentumok megjelenítése"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Legutóbbi névjegyek megjelenítése"
+
+#~ msgid "Logout"
+#~ msgstr "Kijelentkezés"
+
+#~ msgid "Reboot"
+#~ msgstr "Újraindítás"
+
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Eltávolítható háttértár"
+
+#~ msgid "Places"
+#~ msgstr "Helyek"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Egyéni kép:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Válasszon egy képet"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Képfájlok (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Hozzáadás az indítóhoz"
+
+#~ msgid "New Session"
+#~ msgstr "Új munkamenet"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Üres)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Úr Balázs"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "urbalazs@gmail.com"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Futtató: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Telepített alkalmazások böngészése kategóriák szerint"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Minden telepített alkalmazás"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Minden telepített alkalmazás szűrőkkel"
+
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr ""
+#~ "Minden telepített alkalmazás és szűrő listázása az oldalsávon keresztül"
+
+#~ msgid "Folder"
+#~ msgstr "Mappa"
+
+#~ msgid "Power Management"
+#~ msgstr "Energiakezelés"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Megjelenítendő mappa:"
+
+#~ msgid "Title:"
+#~ msgstr "Cím:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Ha a cím üresen van hagyva, a mappanév lesz használva"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Saját mappa"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Hálózat"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Gyökér"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Kuka"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "„%1” &elengedése"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "„%1” &leválasztása"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "„%1” ki&adása"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "A(z) „%1” eszköz nem lemez, ezért nem adható ki."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr "Hiba történt „%1” elérése közben, a rendszerüzenet: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "Hiba történt „%1” elérése közben"
+
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Eltávolítás az oldalsávról"
+
+#~ msgid "Add to Sidebar"
+#~ msgstr "Hozzáadás az oldalsávhoz"
+
+#~ msgid "Power"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "Hello"
+#~ msgstr "Helló"
+
+#~ msgid "World"
+#~ msgstr "Világ"
+
+#~ msgid "Hello World"
+#~ msgstr "Helló, világ"
+
+#~ msgid "Text Color:"
+#~ msgstr "Szövegszín:"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Szövegárnyék:"
+
+#~ msgid "None"
+#~ msgstr "Nincs"
+
+#~ msgid "Automatic"
+#~ msgstr "Automatikus"
+
+#~ msgid "Custom:"
+#~ msgstr "Egyéni:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Ugrás az előző lapra"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Ugrás a következő lapra"
+
+#~ msgid "Go back"
+#~ msgstr "Ugrás vissza"
+
+#~ msgid "Go forward"
+#~ msgstr "Ugrás előre"
+
+#~ msgid "Go up"
+#~ msgstr "Ugrás felfelé"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Névtelen>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Kész"
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Lapok beállítása"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Gyorsbillentyűk beállítása…"
+
+#~ msgid "About %1"
+#~ msgstr "%1 névjegye"
+
+#~ msgid "Report Error"
+#~ msgstr "Hiba jelentése"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "© Blue Systems, 2012-2014."
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Fejlesztő"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgid "Eike Hein"
+#~ msgstr "Eike Hein"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Saját mappa"
+
+#~ msgctxt "Tab title"
+#~ msgid "Files"
+#~ msgstr "Fájlok"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "Appearance"
+#~ msgstr "Megjelenés"
+
+#~ msgid "*.jpg *.png *.xpm *.gif *.webp"
+#~ msgstr "*.jpg *.png *.xpm *.gif *.webp"
+
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun kirúgó"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Kuka ürítése"

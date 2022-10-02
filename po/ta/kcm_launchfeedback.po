@@ -1,0 +1,141 @@
+# translation of kcmlaunch.po to Tamil
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Vasee Vaseeharan <vasee@ieee.org>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2022-04-02 21:34+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.03.80\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "காலாவதியாகும் நேரம், நொடிகளில்"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "தொடக்கப் பின்னூட்டம்"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "சுட்டிக்குறி:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "பின்னூட்டம் வேண்டாம்"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "நிலையானது"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "சிமிட்டுவது"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "துள்ளுவது"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "பணி மேலாளர்:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "அசைவூட்டத்தை இயக்கு"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "இவ்வளவு நேரத்துக்கு பின் அசைவூட்டத்தை நிறுத்து"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 நொடி"
+msgstr[1] "%1 நொடிகள்"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "கோ. கிஷோர்"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Kde-l10n-ta@kde.org"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "செயலிகளை தொடக்கும்போது காட்டப்படும் பின்னூட்டத்தை அமையுங்கள்"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr "<h1>ஏவு</h1> நிரல்-ஏவற் செய்திகளை இங்கு வடிவமைக்கலாம்."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>வேலையில் உள்ள இடம் காட்டி</h1>\n"
+#~ "KDE பயன்பாட்டைத் துவக்குவதற்க்கான அறிவிக்கைத் தரும் வேலையில் உள்ள இடம் காட்டியை "
+#~ "வழங்குகிறது.\n"
+#~ "இந்த வேலையில் உள்ள செயலாக்க, ஏதேனும் ஒரு வகை காட்சிப் பின்னோட்டத்தைக் காம்போ "
+#~ "பெட்டியிலிருந்துத் \n"
+#~ "தேர்ந்தெடுங்கள்.\n"
+#~ "சிலப் பயன்பாடுகள் துவக்கத்தைப் பற்றிய விழிப்புணர்வு அறிவிக்கை இல்லாமல் இருக்கலாம்\n"
+#~ "இந்நிலையில் இடம் காட்டி சிமிட்டுவதை சிறிதுக் காலத்திற்க்குப் பிறகு\n"
+#~ "\"தொடக்கக் குறிப்பு வெளியேற்ற நேரம்\" பகுதியில் கொடுக்கப்படும்"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "இடம் காட்டி வேலையில் இல்லை"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "நிலைத்த வேலையில் உள்ள இடம் காட்டி"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "பணிப்பட்டை&அறிவிப்பு"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>செயற்பட்டி அறிவிப்பு</h1>\n"
+#~ "kசாளரமைப்பு பயன்பாடுகள் தொடக்கக் குறிப்பை உணர்த்த செயற்பட்டி அறிவிப்பையும் "
+#~ "அளிக்கிறது.\n"
+#~ "இது ஒரு மனிக்கூண்டின் மூலம் உணர்த்தப்படும்.\n"
+#~ "ஆனால் சில பயன்பாடுகள் இந்த வசதியைப் பயன்படுத்தாமல் இருக்கலாம்.\n"
+#~ "அந்நேரங்களில்  குறிப்பிட்ட வெளியேற்ற நேரம் முடிந்தவுடன் இது நின்றுவிடும்"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "காலங்கடந்ததை குறிப்பெடுக்கும் சுட்டியை துவக்கு."

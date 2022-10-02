@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Data e ora</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Giovanni</firstname
+><surname
+>Venturi</surname
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Manutenzione della traduzione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Aggiornamento della traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25/03/2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>orologio</keyword>
+<keyword
+>data</keyword>
+<keyword
+>ora</keyword>
+<keyword
+>imposta</keyword>
+<keyword
+>configura</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Data e ora</title>
+
+<para
+>Puoi usare questo modulo per cambiare la data e l'ora del sistema usando una comoda interfaccia grafica.</para>
+
+<note
+><para
+>Siccome queste impostazioni non riguardano solo te come utente ma tutto il sistema, devi avere accesso come amministratore del sistema (<systemitem class="username"
+>root</systemitem
+>) per cambiarle. Se non lo fai questo modulo mostrerà soltanto le impostazioni correnti, ma non salverà le tue modifiche.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Data e ora</title>
+
+<para
+>Se spunti <guilabel
+>Imposta data e ora automaticamente</guilabel
+> questo modulo userà <acronym
+>systemd</acronym
+> per recuperare la data e l'ora.</para>
+
+<para
+>In un computer senza <acronym
+>systemd</acronym
+> vengono usate le utilità di <acronym
+>NTP</acronym
+>, <command
+>rdate</command
+> oppure <command
+>ntpdate</command
+>. Se non ci sono, installale. </para>
+
+<para
+>Quando accedi alla sessione di &plasma; mentre sei online, oppure quando ti colleghi in seguito a internet, si realizza l'accesso ad uno o più server <acronym
+>NTP</acronym
+>.</para>
+<para
+>Ciò non è tuttavia sufficiente per mantenere un orario accurato nel lungo periodo, è utile per impostare occasionalmente l'ora su macchine che non hanno accesso permanente alla rete, come i portatili. </para>
+
+<para
+>Se non usi un server dell'ora puoi regolare manualmente la data nel calendario.</para>
+<para
+>Usa i controlli in fondo al calendario per selezionare la data corrente, inserisci la data nella casella di testo o seleziona la settimana dell'anno dalla casella a cascata.</para>
+
+<para
+>Imposta l'ora con le caselle numeriche sotto l'orologio. Puoi anche scriverci direttamente.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Fuso orario</title>
+<para
+>Seleziona la tua area dall'elenco sottostante per impostare un nuovo fuso orario. Usa la casella di filtro per trovare l'<guilabel
+>Area</guilabel
+> o la <guilabel
+>Regione</guilabel
+> desiderata.</para>
+</sect2>
+
+</sect1>
+
+</article>

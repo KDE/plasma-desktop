@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Controlador de jocs</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>palanca de control</keyword>
+<keyword
+>controlador</keyword>
+<keyword
+>comandament de joc</keyword>
+<keyword
+>calibra</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Calibratge del controlador de jocs</title>
+
+<para
+>Aquest mòdul proporciona una interfície per a calibrar el controlador de jocs, així com veure quines funcions d'aquesta s'assignen a quin botó lògic o eix.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aquesta és una captura de pantalla del mòdul Controlador de jocs</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El mòdul Controlador de jocs</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dispositiu</guilabel
+></term>
+<listitem>
+<para
+>Aquí podeu veure la ubicació lògica del dispositiu. Si teniu més d'un controlador de jocs, també el podeu seleccionar per a configurar. </para>
+<para
+>Si no es troba automàticament cap controlador de jocs al vostre ordinador i sabeu que n'hi ha un de connectat, podreu introduir aquí el fitxer de dispositiu correcte. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Posició</guilabel
+></term>
+<listitem>
+<para
+>La ubicació de la traça dels eixos X i Y del controlador de jocs. Activeu <guibutton
+>Mostra la traça</guibutton
+> per a traçar el camí de la palanca de control d'un punt cap a un altre. </para>
+<tip
+><para
+>Si la palanca de control no pot arribar a qualsevol punt en aquest gràfic, o si no se centra correctament, cal calibrar el dispositiu. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Botons</guilabel
+></term>
+<listitem>
+<para
+>Un lloc per a veure l'estat pressionant els botons en la palanca de control i si els botons s'assignen correctament. Quan es prem un botó, <guilabel
+>PREMUT</guilabel
+> apareixerà al costat del número lògic (com el veu l'ordinador) del botó que s'ha premut. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eixos</guilabel
+></term>
+<listitem>
+<para
+>Aquí és on es mostren els valors numèrics de les posicions de l'eix. 0 és centrat i els valors màxim i mínim dependran del controlador de jocs i l'eix en particular. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Calibra</guilabel
+></term>
+<listitem>
+<para
+>En fer clic a <guibutton
+>Calibra</guibutton
+> s'obrirà un diàleg per a calibrar tots els eixos del controlador de jocs. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Calibrant el controlador de jocs</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Calibrant el controlador de jocs</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Cada eix ha de ser mogut a la posició mínima, llavors el centre, i finalment a la posició màxima. Un comptador a la cantonada inferior esquerra del diàleg us ajudarà a determinar la manera d'incrementar i disminuir els valors. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

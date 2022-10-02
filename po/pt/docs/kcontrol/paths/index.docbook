@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Locais</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-08-21</date>
+<releaseinfo
+>Plasma 5.7</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>ecrã</keyword>
+<keyword
+>localizações</keyword>
+<keyword
+>localização</keyword>
+<keyword
+>configuração do sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este é um módulo para configurar alguns locais essenciais para o ambiente de trabalho &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configurar alguns locais do &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurar alguns locais do &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Localização do ecrã:</guilabel
+></term>
+<listitem
+><para
+>A pasta do Ecrã contém todos os ficheiros que você vê numa <guilabel
+>Área de Pastas</guilabel
+> no seu ecrã. O local por omissão é normalmente o <filename class="directory"
+>~/Desktop</filename
+>, mas poderá alterar aqui a localização dessa pasta. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Localização do Arranque:</guilabel
+></term>
+<listitem
+><para
+>A pasta de Arranque contém aplicações ou atalhos para as aplicações e programas que deseja iniciar sempre que o &plasma; arrancar. Poderá alterar a localização dessa pasta se o desejar. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Localização dos documentos:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por omissão para gravar ou ler os documentos.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Localização das transferências:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por omissão para gravar os itens transferidos por si.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Localização dos filmes:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por omissão para gravar ou ler os filmes.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Localização das imagens:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por omissão para gravar ou ler as imagens.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Local das músicas:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por omissão para gravar ou ler as músicas.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Se alterar um local e carregar em <guibutton
+>Aplicar</guibutton
+>, irá aparecer uma janela onde poderá optar por mover o conteúdo para a pasta nova ou usar a nova pasta sem mover os ficheiros.</para>
+
+</article>

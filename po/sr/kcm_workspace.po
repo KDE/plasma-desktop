@@ -1,0 +1,129 @@
+# Translation of kcmworkspaceoptions.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmworkspaceoptions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-04-24 04:00+0200\n"
+"PO-Revision-Date: 2017-12-03 22:53+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "Visual behavior:"
+msgstr ""
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Информациони облачићи при лебдењу мишем"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Визуелни одзив при променама стања"
+
+#: package/contents/ui/main.qml:68
+#, kde-format
+msgid "Animation speed:"
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr ""
+
+#: package/contents/ui/main.qml:114
+#, kde-format
+msgid "Click behavior:"
+msgstr ""
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Single-click to open files and folders"
+msgstr ""
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "Double-click to open files and folders"
+msgstr ""
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr ""
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Select by single-clicking"
+msgstr ""
+
+#: package/contents/ui/main.qml:148
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr ""
+
+#: package/contents/ui/main.qml:149
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr ""
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr ""
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr ""
+
+#: workspaceoptions.cpp:44
+#, kde-format
+msgid "General Behavior"
+msgstr ""
+
+#: workspaceoptions.cpp:46
+#, fuzzy, kde-format
+#| msgid "Global options for the Plasma Workspace"
+msgid "System Settings module for configuring general workspace behavior."
+msgstr "Глобалне опције за плазма радни простор"
+
+#: workspaceoptions.cpp:49
+#, kde-format
+msgid "Furkan Tokac"
+msgstr ""

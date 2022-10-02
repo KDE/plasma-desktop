@@ -1,0 +1,436 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-08-16 20:36+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Ogólne"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Usuń z ulubionych"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj do ulubionych"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "Na wszystkich aktywnościach"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Na bieżącej aktywności"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Pokaż w ulubionych"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Wybierz..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr "Przywróć domyślną ikonę"
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr "Usuń ikonę"
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Etykieta tekstowa:"
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "Zacznij pisać tutaj, aby dodać etykietę tekstową"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "Nie można ustawić etykiety tekstowej, gdy panel jest w pionie."
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr "Ogólne:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Zawsze szereguj programy alfabetycznie"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr "Przedstaw rzeczy zwarcie na liście"
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr "Wyłączone w trybie dotykowym"
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Ustawienia włączonych wtyczek wyszukiwania…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Pokaż ulubione:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "W siatce"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "Na liście"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Pokazuj inne programy:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "W siatce"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "Na liście"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Pokaż przyciski dla:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Zasilanie"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Sesja"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Zasilanie i sesja"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Pokaż podpisy pod przyciskami działań"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programy"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Miejsca"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Przejdź do ustawień użytkownika"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Pozostaw otwartym"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Edytuj programy..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Siatka o %1 wierszach, %2 kolumnach"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Wyjdź"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Więcej"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Komputer"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Historia"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Często używane"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Wyczyść ikonę"
+
+#~ msgid "Search…"
+#~ msgstr "Szukaj..."
+
+#~ msgid "Primary actions:"
+#~ msgstr "Działania główne:"
+
+#~ msgid "Power actions"
+#~ msgstr "Działania zasilania"
+
+#~ msgid "Session actions"
+#~ msgstr "Działania sesji"
+
+#~ msgid "Leave…"
+#~ msgstr "Wyjdź..."
+
+#~ msgid "Power…"
+#~ msgstr "Zasilanie..."
+
+#~ msgid "More…"
+#~ msgstr "Więcej..."
+
+#~ msgid "Updating applications…"
+#~ msgstr "Uaktualnianie programów..."
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Zezwól na dwa wiersze w etykietach"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Lista o 1 wierszu"
+#~ msgstr[1] "Lista o %1 wierszach"
+#~ msgstr[2] "Lista o %1 wierszach"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 podmenu"
+
+#~ msgid "Leave..."
+#~ msgstr "Wyjdź..."
+
+#~ msgid "Power..."
+#~ msgstr "Zasilanie"
+
+#~ msgid "More..."
+#~ msgstr "Więcej..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Uaktualnione programy."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Przełączaj na kartę po najechaniu"
+
+#~ msgid "All Applications"
+#~ msgstr "Wszystkie programy"
+
+#~ msgid "Favorites"
+#~ msgstr "Ulubione"
+
+#~ msgid "Often Used"
+#~ msgstr "Najczęściej używane"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Włączone karty"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Wyłączone karty"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Przeciągaj karty pomiędzy polami, aby je pokazać/ukryć lub przeszereguj "
+#~ "widoczne karty poprzez ich przeciąganie. "
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Rozszerz wyszukiwanie na zakładki, pliki i pocztę"
+
+#~ msgid "Appearance"
+#~ msgstr "Wygląd"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Przyciski menu"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Widoczne karty"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Ulubione"
+
+#~ msgid "Log out"
+#~ msgstr "Wyloguj"
+
+#~ msgid "Lock"
+#~ msgstr "Zablokuj"
+
+#~ msgid "Lock screen"
+#~ msgstr "Zablokuj ekran"
+
+#~ msgid "Switch user"
+#~ msgstr "Przełącz użytkownika"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Rozpocznij sesję innego użytkownika"
+
+#~ msgid "Shut down"
+#~ msgstr "Wyłącz"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Wyłącz komputer"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgid "Restart computer"
+#~ msgstr "Uruchom komputer ponownie"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Zapisz bieżącą sesję do następnego logowania"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Uśpij"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Wstrzymaj bez wylogowywania"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernuj"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Zapisz na dysk i uśpij"
+
+#~ msgid "Suspend"
+#~ msgstr "Uśpij"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Zapisz do pamięci i uśpij"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Home Folder"
+#~ msgstr "Katalog domowy"
+
+#~ msgid "Network Folders"
+#~ msgstr "Katalogi sieciowe"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Ostatnio używane dokumenty"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Ostatnio używane programy"
+
+#~ msgid "Run Command..."
+#~ msgstr "Wykonaj polecenie..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Wykonuje polecenie lub wyszukuje"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Nośniki wymienne"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Pokaż 'Ostatnio wgrane'"
+
+#~ msgid "Uninstall"
+#~ msgstr "Odinstaluj"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Uszereguj alfabetycznie (od Z do A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Wyczyść ostatnie programy"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Wyczyść ostatnie dokumenty"
+
+#~ msgid "Sleep"
+#~ msgstr "Uśpij"
+
+#~ msgid "Add To Favorites In This Activity Only"
+#~ msgstr "Dodaj do ulubionych tylko w tym działaniu"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plazma dzięki KDE"

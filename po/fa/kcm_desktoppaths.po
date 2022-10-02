@@ -1,0 +1,897 @@
+# translation of kcmkonq.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2011-08-22 13:08+0430\n"
+"Last-Translator: Mohamad Reza Mirdamadi <mohi@linuxshop.ir>\n"
+"Language-Team: Farsi (Persian) <kde-i18n-doc@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "رومیزی"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "اسناد"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "بارگیری‌ها‌"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "موسیقی"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "عکس‌ها"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "مسیر فیلمها:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>مسیرها</h1>\n"
+"این پیمانه به شما اجازه انتخاب جایی در سیستم پرونده، که پرونده‌های رومیزی شما "
+"باید آنجا ذخیره شوند را می‌دهد.\n"
+"برای کمک گرفتن در مورد گزینه‌های مشخص از «این چیست» (کلید تبدیل+F1) استفاده "
+"کنید."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "مسیر رومیزی:‌"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"این پوشه شامل همه پرونده‌هاست که بر روی رومیزی خود می‌بینید. می‌توانید محل این "
+"پوشه را در صورت تمایل تغییر داده، و محتویات هم به طور خودکار به محل جدید "
+"حرکت می‌کنند."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "مسیر اسناد:‌"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "این گزینه به طور پیش‌فرض برای بارگذاری یا ذخیره اسناد استفاده می‌شود."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "مسیر بارگیری‌ها:‌"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"این پوشه به طور پیش‌فرض برای ذخیره مواردی که بارگیری کرده‌اید استفاده می‌شود."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "مسیر فیلمها:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره فیلمهای شما استفاده می‌شود."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "مسیر عکسها:‌"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "مسیر موسیقی‌ها:‌"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره موسیقی‌ها استفاده می‌شود."
+
+#~ msgid "Autostart path:"
+#~ msgstr "مسیر خودآغاز:‌"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "این پوشه شامل کاربردها یا پیوند به کاربردهایی است (میانبرها) که می‌خواهید "
+#~ "به طور خودکار هنگام آغاز KDE آغاز شده باشد. در صورت تمایل می‌توانید مسیر "
+#~ "این  پوشه را تغییر دهید، و محتویات نیز به طور خودکار به محل جدید حرکت "
+#~ "می‌کنند."
+
+#~ msgid "Autostart"
+#~ msgstr "آغاز خودکار"
+
+#~ msgid "Movies"
+#~ msgstr "فیلم‌ها"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "مسیر «%1» تغییر یافته است.\n"
+#~ "آیا می‌خواهید پرونده‌ها از «%2» به «%3» انتقال داده شوند؟"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "انتقال"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "منقل نشود"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "مسیر «%1» تغییر یافته است؛\n"
+#~ "آیا می‌خواهید پرونده‌ها از «%2» به «%3» حرکت داده شوند؟"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "انتقال"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "منتقل نشود"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "نیاز به تأیید"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>رفتار Konqueror</h1> در اینجا می‌توانید پیکر‌بندی کنید که Konqueror به "
+#~ "عنوان یک مدیر پرونده چگونه رفتار می‌کند."
+
+#~ msgid "Misc Options"
+#~ msgstr "گزینه‌های متفرقه"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "باز کردن پوشه‌ها در &پنجره‌های جداگانه‌"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "اگر این گزینه علامت زده شود، Konqueror هنگام باز کردن یک پوشه، به جای "
+#~ "نمایش محتویات پوشه‌ها در پنجره جاری، پنجره جدیدی را باز می‌کند."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "نمایش »حذف« مدخلهای &گزینگان متن که به زباله‌دان می‌روند.‌"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "اگر می‌خواهید فرمانهای گزینگان را »حذف« کنید تا در رومیزی و گزینگان متن "
+#~ "مدیر پنجره نمایش داده شوند، این گزینه را علامت بزنید. همیشه می‌توانید "
+#~ "پرونده‌ها را با نگه داشتن کلید تبدیل، هنگام فراخوانی »حرکت به زباله« حذف "
+#~ "کنید."
+
+#~ msgid "Menu Editor"
+#~ msgstr "ویرایشگر گزینگان"
+
+#~ msgid "Menu"
+#~ msgstr "گزینگان"
+
+#~ msgid "New..."
+#~ msgstr "جدید..."
+
+#~ msgid "Remove"
+#~ msgstr "حذف"
+
+#~ msgid "Move Up"
+#~ msgstr "حرکت به بالا"
+
+#~ msgid "Move Down"
+#~ msgstr "حرکت به پایین"
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "درخواست تأیید برای"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "این گزینه به Konqueror می‌گوید که آیا هنگام »حذف« یک پرونده، درخواست تأیید "
+#~ "کند یا خیر. <ul><li><em>حرکت به زباله:</em> پرونده‌ها را به پوشه زباله شما "
+#~ "حرکت می‌دهد. از آنجا به آسانی می‌تواند بازیافت شود.</li> <li><em>حذف:</em> "
+#~ "به سادگی پرونده را حذف می‌کند.</li> </ul>"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&حرکت به زباله‌"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "&حذف‌"
+
+#~ msgid "&Behavior"
+#~ msgstr "&رفتار‌"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&پیش‌نمایشها و فراداده‌ها‌"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>اجازه دادن پیش‌نمایشها، »شمایلهای پوشه محتویات را منعکس می‌کنند«، و "
+#~ "بازیابی فراداده‌ها در قراردادها:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>گزینه‌های پیش‌نمایش</h1>در اینجا می‌توانید رفتار  Konqueror را هنگام "
+#~ "نمایش پرونده‌ها در یک پوشه تغییر دهید.<h2>فهرست قراردادها:</h2> بررسی "
+#~ "قراردادهایی که پیش‌نمایشها باید روی آن نمایش داده شوند؛ عدم بررسی آنهایی "
+#~ "که نباید نمایش داده شوند. برای نمونه، اگر شبکه محلی به اندازه کافی سریع "
+#~ "است، ممکن است بخواهید پیش‌نمایشها را روی SMB نمایش دهید، ولی شاید آن را "
+#~ "برای FTP غیرفعال کنید، اگر اغلب پایگاههای بسیارکند FTP را با تصاویر بزرگ "
+#~ "مشاهده می‌کنید.<h2>بیشینه اندازه پرونده:</h2> گزینش بیشینه اندازه برای "
+#~ "پیش‌نمایشهایی که باید تولید شوند. برای نمونه، اگر با ۱  مگابایت تنظیم "
+#~ "شود )پیش‌فرض(، به خاطر سرعت، پیش‌نمایش بزرگ‌تر از ۱مگابایت، تولید نمی‌شود."
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "برگزیدن قراردادها"
+
+#~ msgid "Local Protocols"
+#~ msgstr "قراردادهای محلی"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "قراردادهای اینترنت"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "این گزینه، انتخاب هنگامی که پیش‌نمایشهای پرونده، شمایلهای پوشه‌های هوشمند، "
+#~ "و فراداده‌ها در مدیر پنجره باید فعال شوند را ممکن می‌سازد. \n"
+#~ "در فهرست قراردادهایی که ظاهر می‌شود، آنهایی را گزینش کنید که به اندازه "
+#~ "کافی برای شما سریع بوده و اجازه تولید پیش‌نمایشها را بدهد."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "اندازه &بیشینه پرونده:‌"
+
+#~ msgid " MB"
+#~ msgstr " مگابایت"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&افزایش اندازه پیش‌نمایشهای مربوط به شمایلها‌"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "&استفاده از ریزنقشهای نهفته در پرونده‌ها‌"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "برای استفاده از ریزنقشهایی که در برخی انواع پرونده یافت می‌شوند، این را "
+#~ "برگزینید. )مثلا،ً JPEG ( . این کار باعث افزایش سرعت و کاهش کاربرد دیسک "
+#~ "می‌شود. اگر دارای پرونده‌هایی هستید که توسط برنامه‌هایی نظیر ImageMagick، که "
+#~ "ریزنقشهای غلط را ایجاد می‌کنند، پردازش شده‌اند، آن را از انتخاب خارج کنید."
+
+#~ msgid "Sound Files"
+#~ msgstr "پرونده‌های صوتی"
+
+#~ msgid "&Left button:"
+#~ msgstr "دکمه &چپ:‌"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "می‌توانید انتخاب کنید هنگامی که دکمه چپ موشی خود را بر روی رومیزی فشار "
+#~ "می‌دهید، چه اتفاقی می‌افتد:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "&دکمه راست:‌"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "می‌توانید انتخاب کنید هنگامی که دکمه چپ موشی خود را بر روی رومیزی فشار "
+#~ "می‌دهید، چه اتفاقی می‌افتد:"
+
+#, fuzzy
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>بدون کنش:</em></li> <li><em>گزینگان فهرست پنجره:</"
+#~ "em>گزینگانی که همه پنجره‌های روی همه رومیزیهای مجازی را نمایش می‌دهد، بالا "
+#~ "می‌پرد. می‌توانید نام رومیزی را برای سودهی به آن رومیزی، یا نام پنجره را "
+#~ "برای تغییر مکان کانون به آن پنجره فشار دهید. سودهی رومیزی در صورت لزوم، و "
+#~ "بازگرداندن پنجره در صورت مخفی بودن آن. پنجره‌های مخفی یا بیشینه‌شده با "
+#~ "نامشان در پرانتز بازنمایی می‌شوند.</li> <li><em>گزینگان رومیزی:</em> "
+#~ "گزینگان متن برای رومیزی بالا می‌پرد. در میان سایر چیزها، این گزینگان، "
+#~ "گزینه‌هایی برای پیکربندی صفحه نمایش، قفل پرده، و خروج از KDE  دارند.</li> "
+#~ "<li><em>گزینگان کاربرد:</em> گزینگان «K» بالا می‌پرد. این ممکن است برای "
+#~ "دستیابی سریع کاربردها مفید باشد، اگر مایلید تابلو را ) به عنوان «Kicker» "
+#~ "نیز شناخته‌شده( از نما مخفی نگه دارید.</li></ul>"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "می‌توانید انتخاب کنید هنگامی که دکمه میانی موشی را بر روی رومیزی فشار "
+#~ "می‌دهید چه اتفاقی می‌افتد: <ul><li><em>بدون کنش</em></li> <li><em>گزینگان "
+#~ "فهرست پنجره:</em> گزینگانی که همه پنجره‌های روی همه رومیزیهای مجازی بالا "
+#~ "می‌پرد. می‌توانید روی نام رومیزی برای سودهی به آن رومیزی، یا روی نام یک "
+#~ "پنجره برای تغییر مکان کانون به آن پنجره، برای سودهی رومیزی در صورت لزوم و "
+#~ "بازگرداندن پنجره در صورت مخفی بودن آن فشار دهید. پنجره‌های مخفی یا "
+#~ "بیشینه‌شده توسط نامشان در پرانتزها بازنمایی می‌شوند.</li> <li><em>گزینگان "
+#~ "رومیزی:</em> یک گزینگان متن برای رومیزی بالا می‌پرد. در میان سایر موارد، "
+#~ "این گزینگان دارای گزینه‌هایی برای پیکربندی صفحه نمایش، قفل پرده، و خروج از "
+#~ "KDE  دارد.</li> <li><em>گزینگان کاربرد:</em> گزینگان »K« بالا می‌پرد. این "
+#~ "ممکن است برای دستیابی سریع کاربردها مفید باشد، اگر مایلید تابلو را ) به "
+#~ "عنوان »Kicker« نیز شناخته‌شده( از نما مخفی نگه‌ دارید.</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>بدون کنش:</em>همان‌طور که حدس می‌زنید هیچ اتفاقی نمی‌افتد!</li> "
+#~ "<li><em>گزینگان فهرست پنجره:</em>گزینگانی که همه پنجره‌های روی همه "
+#~ "رومیزیهای مجازی را نمایش می‌دهد، بالا می‌پرد. می‌توانید نام رومیزی را برای "
+#~ "سودهی به آن رومیزی، یا نام پنجره را برای تغییر مکان کانون به آن پنجره "
+#~ "فشار دهید. سودهی رومیزی در صورت لزوم، و بازگرداندن پنجره در صورت مخفی "
+#~ "بودن آن. پنجره‌های مخفی یا بیشینه‌شده با نامشان در پرانتز بازنمایی می‌شوند.</"
+#~ "li> <li><em>گزینگان رومیزی:</em> گزینگان متن برای رومیزی بالا می‌پرد. در "
+#~ "میان سایر چیزها، این گزینگان، گزینه‌هایی برای پیکربندی صفحه نمایش، قفل "
+#~ "پرده، و خروج از KDE  دارند.</li> <li><em>گزینگان کاربرد:</em> گزینگان «K» "
+#~ "بالا می‌پرد. این ممکن است برای دستیابی سریع کاربردها مفید باشد، اگر مایلید "
+#~ "تابلو را ) به عنوان «Kicker» نیز شناخته‌شده( از نما مخفی نگه دارید.</li></"
+#~ "ul>"
+
+#~ msgid "No Action"
+#~ msgstr "بدون کنش"
+
+#~ msgid "Window List Menu"
+#~ msgstr "گزینگان فهرست پنجره"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "گزینگان رومیزی"
+
+#~ msgid "Application Menu"
+#~ msgstr "گزینگان کاربرد"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "گزینگان چوب الفها"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "گزینگان سفارشی ۱"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "گزینگان سفارشی ۲"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>رفتار</h1>\n"
+#~ "این پیمانه به شما اجازه انتخاب گزینه‌های گوناگونی را\n"
+#~ "برای رومیزی خود می‌دهد، که شامل روشهای آرایش شمایلها و\n"
+#~ "گزینگان بالاپر مربوط به فشارهای دکمه‌های میانی و راست موشی\n"
+#~ "بر روی رومیزی می‌باشد.\n"
+#~ "برای کمک گرفتن در مورد گزینه‌های مشخص از »این چیست؟« )کلید تبدیل"
+#~ "+F1(  استفاده کنید."
+
+#~ msgid "General"
+#~ msgstr "عمومی"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "اگر نمی‌خواهید شمایلهای روی رومیزی را داشته باشید، این گزینه را علامت "
+#~ "نزنید. بدون شمایلها رومیزی تا حدی سریع‌تر می‌باشد، اما شما خیلی قادر به "
+#~ "کشیدن پرونده‌ها به رومیزی نیستید."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&نمایش شمایلهای روی رومیزی‌"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "اگر می‌خواهید برنامه‌های X11را که در رومیزی رسم می‌شوند، مانند xsnow، "
+#~ "xpenguin یا xmountain  را اجرا کنید، این گزینه را علامت بزنید. اگر با "
+#~ "کاربردهایی نظیر نت اسکیپ که پنجره ریشه را برای اجرای نمونه‌ها بررسی می‌کند "
+#~ "مشکل دارید، این گزینه را غیرفعال کنید."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "اجازه دادن &برنامه‌ها در پنجره رومیزی‌"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "نمایش &نکته ابزارها‌"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "میله گزینگان در بالای پرده"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr "اگر این گزینه انتخاب شود، میله گزینگان در بالای پرده وجود ندارد."
+
+#~ msgid "&None"
+#~ msgstr "&هیچ‌کدام‌"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "اگر این گزینه انتخاب شود، یک میله گزینگان در بالای پرده‌ای که گزینگان "
+#~ "رومیزی را نمایش می‌دهد وجود دارد."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "میله گزینگان &رومیزی‌"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "اگر این گزینه انتخاب شود، کاربرها دیگر دارای میله گزینگان پیوست‌شده به "
+#~ "پنجره‌شان نیستند. در عوض، یک میله گزینگان در بالای پرده‌ای است که گزینگان "
+#~ "کاربرد فعال جاری را نمایش می‌دهد. ممکن است شما این رفتار را از سیستم عامل "
+#~ "مکینتاش تشخیص دهید."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "میله گزینگان کاربرد &جاری )سبک سیستم عامل مکینتاش(‌"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "کنشهای دکمه موشی"
+
+#~ msgid "Middle button:"
+#~ msgstr "دکمه میانی:"
+
+#~ msgid "Left button:"
+#~ msgstr "دکمه چپ:"
+
+#~ msgid "Right button:"
+#~ msgstr "دکمه راست:"
+
+#~ msgid "Edit..."
+#~ msgstr "ویرایش..."
+
+#~ msgid "File Icons"
+#~ msgstr "شمایل پرونده‌ها"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "اگر می‌خواهید شمایلها را به طور خودکار هنگام حرکت بر روی آنها، همترازشده "
+#~ "با توری ببینید، این گزینه را علامت بزنید."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "&مرتب کردن خودکار شمایلها‌"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>اگر این گزینه را علامت بزنید، هر پرونده در فهرست راهنمای رومیزی که با "
+#~ "یک نقطه ).( شروع می‌شود، نمایش داده خواهد شد. معمولاً، مانند پرونده‌های شامل "
+#~ "اطلاعات پیکربندی، و پرونده‌های مخفی‌مانده از نمایش.</p>\n"
+#~ "<p>برای مثال، پرونده‌هایی که «.directory» نامیده می‌شوند، پرونده‌های متن "
+#~ "ساده هستند که شامل اطلاعاتی برای Konqueror می‌باشند، نظیر شمایل مورد "
+#~ "استفاده در نمایش یک فهرست راهنما، ترتیبی که پرونده‌ها باید ذخیره شوند و "
+#~ "غیره. نباید این پرونده‌ها را تغییر داده یا حذف کنید، مگر این که بدانید چه "
+#~ "کار می‌کنید.</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "نمایش پرونده‌های &مخفی‌"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "برگزیدن انواع پرونده‌هایی که می‌خواهید تصاویر پیش‌نمایش را برای آنها فعال "
+#~ "سازید."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "نمایش پیش‌نمایشهای شمایل برای"
+
+#~ msgid "Device Icons"
+#~ msgstr "شمایل دستگاهها"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "&نمایش شمایل دستگاهها:‌"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "انواع دستگاهی که نمی‌خواهید بر روی رومیزی ببینید را از انتخاب خارج کنید."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "نمایش انواع دستگاه"
+
+#~ msgid "Show file &tips"
+#~ msgstr "نمایش &نکات پرونده‌"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "در اینجا می‌توانید کنترل کنید که می‌خواهید هنگام حرکت موشی بر روی یک "
+#~ "پرونده، پنجره بالاپر کوچکی همراه با اطلاعات اضافی در مورد آن پرونده را "
+#~ "ببینید"
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "نمایش &پیش‌نمایشها در نکات پرونده‌"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "در اینجا، می‌توانید کنترل کنید که می‌خواهید هنگام حرکت موشی بر روی پرونده، "
+#~ "پنجره بالاپر کوچکی شامل یک پیش‌نمایش بزرگ برای پرونده باشد."
+
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "(also known as \"Kicker\") hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>بدون کنش:</em></li> <li><em>گزینگان فهرست پنجره:</"
+#~ "em>گزینگانی که همه پنجره‌های روی همه رومیزیهای مجازی را نمایش می‌دهد، بالا "
+#~ "می‌پرد. می‌توانید نام رومیزی را برای سودهی به آن رومیزی، یا نام پنجره را "
+#~ "برای تغییر مکان کانون به آن پنجره فشار دهید. سودهی رومیزی در صورت لزوم، و "
+#~ "بازگرداندن پنجره در صورت مخفی بودن آن. پنجره‌های مخفی یا بیشینه‌شده با "
+#~ "نامشان در پرانتز بازنمایی می‌شوند.</li> <li><em>گزینگان رومیزی:</em> "
+#~ "گزینگان متن برای رومیزی بالا می‌پرد. در میان سایر چیزها، این گزینگان، "
+#~ "گزینه‌هایی برای پیکربندی صفحه نمایش، قفل پرده، و خروج از KDE  دارند.</li> "
+#~ "<li><em>گزینگان کاربرد:</em> گزینگان «K» بالا می‌پرد. این ممکن است برای "
+#~ "دستیابی سریع کاربردها مفید باشد، اگر مایلید تابلو را ) به عنوان «Kicker» "
+#~ "نیز شناخته‌شده( از نما مخفی نگه دارید.</li></ul>"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the middle button of your "
+#~ "pointing device on the desktop: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "می‌توانید انتخاب کنید هنگامی که دکمه میانی موشی را بر روی رومیزی فشار "
+#~ "می‌دهید چه اتفاقی می‌افتد: <ul><li><em>بدون کنش</em></li> <li><em>گزینگان "
+#~ "فهرست پنجره:</em> گزینگانی که همه پنجره‌های روی همه رومیزیهای مجازی بالا "
+#~ "می‌پرد. می‌توانید روی نام رومیزی برای سودهی به آن رومیزی، یا روی نام یک "
+#~ "پنجره برای تغییر مکان کانون به آن پنجره، برای سودهی رومیزی در صورت لزوم و "
+#~ "بازگرداندن پنجره در صورت مخفی بودن آن فشار دهید. پنجره‌های مخفی یا "
+#~ "بیشینه‌شده توسط نامشان در پرانتزها بازنمایی می‌شوند.</li> <li><em>گزینگان "
+#~ "رومیزی:</em> یک گزینگان متن برای رومیزی بالا می‌پرد. در میان سایر موارد، "
+#~ "این گزینگان دارای گزینه‌هایی برای پیکربندی صفحه نمایش، قفل پرده، و خروج از "
+#~ "KDE  دارد.</li> <li><em>گزینگان کاربرد:</em> گزینگان »K« بالا می‌پرد. این "
+#~ "ممکن است برای دستیابی سریع کاربردها مفید باشد، اگر مایلید تابلو را ) به "
+#~ "عنوان »Kicker« نیز شناخته‌شده( از نما مخفی نگه‌ دارید.</li></ul>"
+
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated with clicks of the middle and right mouse\n"
+#~ "buttons on the desktop.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>رفتار</h1>\n"
+#~ "این پیمانه به شما اجازه انتخاب گزینه‌های گوناگونی را\n"
+#~ "برای رومیزی خود می‌دهد، که شامل روشهای آرایش شمایلها و\n"
+#~ "گزینگان بالاپر مربوط به فشارهای دکمه‌های میانی و راست موشی\n"
+#~ "بر روی رومیزی می‌باشد.\n"
+#~ "برای کمک گرفتن در مورد گزینه‌های مشخص از »این چیست؟« )کلید تبدیل"
+#~ "+F1(  استفاده کنید."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>رومیزیهای چندگانه</h1>در این پیمانه، می‌توانید پیکربندی کنید که چند "
+#~ "رومیزی مجازی می‌خواهید، و چگونه باید برچسب‌گذاری شوند."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "&تعداد رومیزیها:‌ "
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "در اینجا می‌توانید تنظیم کنید که چند رومیزی مجازی بر رومیزی KDE خود "
+#~ "می‌خواهید. برای تغییر مقدار، لغزان را حرکت دهید."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "&نامهای رومیزی‌"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "رومیزی %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "در اینجا می‌توانید نام رومیزی %1 را وارد کنید"
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "چرخش موشی بر روی زمینه رومیزی، رومیزی را سودهی می‌کند"
+
+#~ msgid "Desktop %1"
+#~ msgstr "رومیزی %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "تغییر نام شمایلهای &درون برنامه‌ای‌"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "با علامت زدن این گزینه، پرونده‌ها اجازه می‌یابند که با فشار مستقیم روی نام "
+#~ "شمایل، تغییر نام بدهند."
+
+#~ msgid "&Appearance"
+#~ msgstr "&ظاهر‌"
+
+#~ msgid "&Standard font:"
+#~ msgstr "قلم &استاندارد:‌"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr "این قلم استفاده‌شده برای نمایش متن در پنجره‌های Konqueror  می‌باشد."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "&اندازه قلم:‌"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "این اندازه قلم استفاده‌شده برای نمایش متن در پنجره‌های  Konqueror  می‌باشد."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "رنگ &متن عادی:‌"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr "رنگ استفاده‌شده برای نمایش متن در پنجره‌های Konqueror  می‌باشد."
+
+#~ msgid "&Text background color:"
+#~ msgstr "رنگ زمینه &متن:‌"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr "رنگ استفاده‌شده پشت متن برای شمایلهای روی رومیزی می‌باشد."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&ارتفاع متن شمایل:‌"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "تعداد بیشینه خطوطی است که می‌تواند برای ترسیم متن شمایل استفاده شود. "
+#~ "نامهای طولانی پرونده در پایان آخرین خط برش زده می‌شوند."
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "&عرض متن شمایل:‌"
+
+#~ msgid ""
+#~ "This is the maximum width for the icon text when konqueror is used in "
+#~ "multi column view mode."
+#~ msgstr ""
+#~ "وقتی konqueror در حالت نمای چند ستونی استفاده می‌شود، بیشینه عرض برای متن "
+#~ "شمایل می‌باشد."
+
+#~ msgid "&Underline filenames"
+#~ msgstr "&زیر خط‌دار کردن نام پرونده‌ها‌"
+
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "با علامت زدن این گزینه، نام پرونده‌ها زیرخط‌دار می‌شوند؛ بنابراین، مانند "
+#~ "پیوندهای صفحه وب به نظر می‌رسند. توجه: برای تکمیل قیاس، مطمئن شوید که "
+#~ "فعال‌سازی تک فشار در پیمانه کنترل موشی فعال است."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "نمایش اندازه پرونده‌ها برحسب &بایت‌"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "با علامت زدن این گزینه، اندازه پرونده‌ها برحسب بایت نمایش داده می‌شوند. در "
+#~ "غیر این صورت، اندازه پرونده‌ها بر حسب کیلوبایت یا در صورت مناسب، مگابایت "
+#~ "نمایش داده شود."
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " خط"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " تصویردانه"
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>ظاهر</h1>در اینجا می‌توانید پیکربندی کنید که Konqueror  به عنوان یک "
+#~ "مدیر، چگونه به نظر برسد."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&نمایش عملیات شبکه در یک تک پنجره‌"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "علامت زدن این گزینه، اطلاعات پیشرفت را برای همه انتقالات پرونده شبکه، در "
+#~ "یک تک پنجره همراه با یک فهرست گروه‌بندی می‌کند. اگر این گزینه علامت زده "
+#~ "نشود، همه انتقالات در یک پنجره مجزا ظاهر می‌شود."
+
+#~ msgid "Home &URL:"
+#~ msgstr "&نشانی وب آغازه:‌"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "برگزیدن پوشه آغازه"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "این نشانی وب )مثلاً یک پوشه یا صفحه وب ( جایی است که Konqueror  هنگامی که "
+#~ "دکمه »آغازه« فشار داده می‌شود، به آنجا می‌پرد. معمولاً پوشه آغازه شما با "
+#~ "علامت »مد« )~( نمادگذاری می‌شود."

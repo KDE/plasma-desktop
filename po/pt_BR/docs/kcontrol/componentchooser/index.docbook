@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Aplicativos padrão</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>componente</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Neste módulo, você poderá alterar os componentes padrão do &kde;.</para>
+
+<para
+>Os componentes são programas que conseguem lidar com algumas tarefas básicas, como um emulador de terminal, um editor de texto ou o cliente de e-mail. As diferentes aplicações do &kde; precisam às vezes de invocar um determinado emulador de console, enviar um e-mail ou mostrar algum texto.</para
+> 
+
+<para
+>Para fazer isso de forma consistente, estas aplicações chamam sempre os mesmos componentes. Aqui você poderá selecionar os programas que representam esses componentes.</para>
+
+<para
+>A lista à esquerda mostra os tipos de componentes configuráveis:</para>
+<itemizedlist>
+<listitem>
+<para
+>Cliente de e-mail</para>
+</listitem>
+<listitem>
+<para
+>Gerenciador de arquivos</para>
+</listitem>
+<listitem>
+<para
+>Emulador de terminal</para>
+</listitem>
+<listitem>
+<para
+>Navegador Web</para>
+</listitem>
+<listitem>
+<para
+>Gerenciador de janelas</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Clique no componente que deseja configurar. Na parte direita da janela, todos os aplicativos disponíveis para esse serviço serão mostrados, de modo que você possa selecionar seu emulador de terminal, editor de texto, cliente de e-mail, &etc;, favoritos.</para>
+
+</article>

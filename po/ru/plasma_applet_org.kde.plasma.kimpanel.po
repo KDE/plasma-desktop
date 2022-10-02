@@ -1,0 +1,252 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2015, 2018, 2019.
+# Artem Sereda <overmind88@gmail.com>, 2010.
+# Julia Dronova <juliette.tux@gmail.com>, 2012.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2021-12-28 15:33+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr "(пусто)"
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, kde-format
+msgid "Input method list:"
+msgstr "Список методов ввода:"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, kde-format
+msgid "Vertical"
+msgstr "Вертикальный"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, kde-format
+msgid "Horizontal"
+msgstr "Горизонтальный"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr "Шрифт:"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr "Использовать другой шрифт:"
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr " "
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Select Font…"
+msgstr "Выбор шрифта"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Размер значков:"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr "Маленькие"
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Масштабировать по высоте панели"
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Масштабировать по ширине панели"
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Выбор шрифта"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr "Показать"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr "Скрыть %1"
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Настроить метод ввода"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Обновить параметры"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Закрыть метод ввода"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Input Method Panel"
+msgstr "Панель метода ввода"
+
+#~ msgid "Search"
+#~ msgstr "Поиск"
+
+#~ msgid "Clear History"
+#~ msgstr "Очистить журнал"
+
+#~ msgid "No recent Emojis"
+#~ msgstr "Нет недавних эмодзи"
+
+#~ msgid "%1 copied to the clipboard"
+#~ msgstr "%1 скопирован в буфер обмена"
+
+#~ msgid "Recent"
+#~ msgstr "Последние"
+
+#~ msgid "All"
+#~ msgstr "Все"
+
+#~ msgid "Categories"
+#~ msgstr "Категории"
+
+#~ msgid "Search…"
+#~ msgstr "Поиск…"
+
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
+
+#~ msgid "Select Font..."
+#~ msgstr "Выбрать шрифт..."
+
+#~ msgid "Use Default Font"
+#~ msgstr "Использовать стандартный шрифт"
+
+#~ msgid "Custom Font:"
+#~ msgstr "Используемый шрифт:"
+
+#~ msgid "Reverse display order when at screen border"
+#~ msgstr "Обратный порядок отображения при попадании на границу экрана"
+
+#~ msgid "Select Application"
+#~ msgstr "Выбрать приложение"
+
+#~ msgctxt "General configuration page"
+#~ msgid "General"
+#~ msgstr "Основное"
+
+#~ msgid "Start Input Method"
+#~ msgstr "Запустить метод ввода"
+
+#~ msgid "Icon Filter"
+#~ msgstr "Фильтр значков"
+
+#~ msgid "Blur Behind"
+#~ msgstr "Размытый фон"
+
+#~ msgid "IM Panel Settings"
+#~ msgstr "Настройка панели метода ввода"
+
+#~ msgid "kimpanel"
+#~ msgstr "kimpanel"
+
+#~ msgid "Expand out"
+#~ msgstr "Развернуть"
+
+#~ msgid "Expand out from the panel to a floating widget"
+#~ msgstr "Развернуть в перемещаемую панель"
+
+#~ msgid "Collapse to panel"
+#~ msgstr "Свернуть в панель"
+
+#~ msgid "Embed into the panel"
+#~ msgstr "Встроить в панель"
+
+#~ msgid "Generic input method panel"
+#~ msgstr "Панель основного метода ввода"
+
+#~ msgid "Copyright (C) 2009, Wang Hoi"
+#~ msgstr "© Wang Hoi, 2009"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Александр Поташев"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aspotashev@gmail.com"
+
+#~ msgid "Defines your preferred status bar icon size."
+#~ msgstr "Укажите предпочитаемый размер значка в панели"
+
+#~ msgid "Properties hidden in status bar"
+#~ msgstr "Параметры скрытия в строке состояния"
+
+#~ msgid "Position of floating status bar"
+#~ msgstr "Расположение на плавающей строке состояния"
+
+#~ msgid "Defines how icons are positioned in the floating status bar."
+#~ msgstr ""
+#~ "Указывает как будут расположены значки на плавающей строке состояния."
+
+#~ msgid "Expand vertically."
+#~ msgstr "Увеличивать по вертикали."
+
+#~ msgid "Use multiple rows/cols."
+#~ msgstr "Несколько строк/столбцов"
+
+#~ msgid "Defines the layout of the list of candidate words."
+#~ msgstr "Способ расположения списка вариантов слов."
+
+#~ msgid "Put all words in one row."
+#~ msgstr "Все слова в одной строке."
+
+#~ msgid "Put all words in one col."
+#~ msgstr "Все слова в одном столбце."
+
+#~ msgid "Multiple rows/cols, but fixed rows."
+#~ msgstr "Фиксированная длина строк."
+
+#~ msgid "Multiple rows/cols, but fixed columns."
+#~ msgstr "Фиксированная высота столбцов."
+
+#~ msgid "Restricts the layout of the list of candidate words."
+#~ msgstr "Максимальная длина строки или высота столбца из предлагаемых слов."

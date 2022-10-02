@@ -1,0 +1,144 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2022-09-22 22:40+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: app/emojier.cpp:84 app/emojier.cpp:86
+#, kde-format
+msgid "Emoji Selector"
+msgstr "منتقي الإيموجي"
+
+#: app/emojier.cpp:88
+#, kde-format
+msgid "(C) 2019 Aleix Pol i Gonzalez"
+msgstr "(C) 2019 Aleix Pol i Gonzalez"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "زايد السعيدي"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zayed.alsaidi@gmail.com"
+
+#: app/emojier.cpp:105
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "استبدل نسخة موجودة"
+
+#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:57
+#, kde-format
+msgid "Search"
+msgstr "ابحث"
+
+#: app/ui/CategoryPage.qml:74
+#, kde-format
+msgid "Clear History"
+msgstr "امح التاريخ"
+
+#: app/ui/CategoryPage.qml:153
+#, kde-format
+msgid "No recent Emojis"
+msgstr "لا يوجد إموجي حديثة"
+
+#: app/ui/emojier.qml:36
+#, kde-format
+msgid "%1 copied to the clipboard"
+msgstr "‏%1 نُسخ للحافظة"
+
+#: app/ui/emojier.qml:47
+#, kde-format
+msgid "Recent"
+msgstr "الحديثة"
+
+#: app/ui/emojier.qml:68
+#, kde-format
+msgid "All"
+msgstr "الكلّ"
+
+#: app/ui/emojier.qml:76
+#, kde-format
+msgid "Categories"
+msgstr "الفئات"
+
+#: emojicategory.cpp:11
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Smileys and Emotion"
+msgstr "تعبيرات وأحاسيس"
+
+#: emojicategory.cpp:12
+#, kde-format
+msgctxt "Emoji Category"
+msgid "People and Body"
+msgstr "الناس و الجسم"
+
+#: emojicategory.cpp:13
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Component"
+msgstr "مكون"
+
+#: emojicategory.cpp:14
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Animals and Nature"
+msgstr "حيوانات وطبيعة"
+
+#: emojicategory.cpp:15
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Food and Drink"
+msgstr "طعام وشراب"
+
+#: emojicategory.cpp:16
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Travel and Places"
+msgstr "سفر وأماكن"
+
+#: emojicategory.cpp:17
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Activities"
+msgstr "الأنشطة"
+
+#: emojicategory.cpp:18
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Objects"
+msgstr "أشياء"
+
+#: emojicategory.cpp:19
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Symbols"
+msgstr "رموز"
+
+#: emojicategory.cpp:20
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Flags"
+msgstr "أعلام"
+
+#~ msgid "Search…"
+#~ msgstr "ابحث…"

@@ -1,0 +1,201 @@
+# translation of plasma_applet_pager.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2007, 2009, 2018, 2020, 2021, 2022.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-06-11 09:46-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "ਆਮ"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "ਆਮ:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "ਵਿੰਡੋ ਬਾਹਰਲੀ ਹੱਦ ਉੱਤੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਵੇਖਾਓ"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "ਸਿਰਫ਼ ਮੌਜੂਦਾ ਸਕਰੀਨ ਵੇਖਾਓ"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "ਨੇਵੀਗੇਸ਼ਨ ਪਾਸਿਓ ਸਮੇਟੋ"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "ਖ਼ਾਕਾ:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "ਮੂਲ"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "ਲੇਟਵਾਂ"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "ਖੜ੍ਹਵਾਂ"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "ਲਿਖਤ ਡਿਸਪਲੇਅ:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "ਕੋਈ ਲਿਖਤ ਨਹੀਂ"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "ਸਰਗਰਮੀ ਨੰਬਰ"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "ਡੈਸਕਟਾਪ ਨੰਬਰ"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "ਸਰਗਰਮੀ ਨਾਂ"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "ਡੈਸਕਟਾਪ ਨਾਂ"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ ਚੁਣਨੀ:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਚੁਣਨਾ:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "ਕੁਝ ਨਾ ਕਰੋ"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "ਡੈਸਕਟਾਪ ਵੇਖਾਓ"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "…ਅਤੇ %1 ਹੋਰ ਵਿੰਡੋ"
+msgstr[1] "…ਅਤੇ %1 ਹੋਰ ਵਿੰਡੋ"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 ਵਿੰਡੋ:"
+msgstr[1] "%1 ਵਿੰਡੋ:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 ਘੱਟੋ-ਘੱਟ ਕੀਤੀ ਵਿੰਡੋ:"
+msgstr[1] "%1 ਘੱਟੋ-ਘੱਟ ਕੀਤੀਆਂ ਵਿੰਡੋ:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "ਡੈਸਕਟਾਪ %1"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "ਸਰਗਰਮੀ ਮੈਨੇਜਰ ਵੇਖੋ…"
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਜੋੜੋ"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਹਟਾਓ"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਸੰਰਚਨਾ…"
+
+#~ msgid "Activate %1"
+#~ msgstr "%1 ਸਰਗਰਮ ਕਰੋ"
+
+#~ msgid "Icons"
+#~ msgstr "ਆਈਕਾਨ"
+
+#~ msgid "Configure Desktops..."
+#~ msgstr "...ਡੈਸਕਟਾਪ ਸੰਰਚਨਾ"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "ਡੈਸ਼ਬੋਰਡ ਵੇਖੋ"
+
+#~ msgid "Display icons:"
+#~ msgstr "ਵੇਖਾਏ ਆਈਕਾਨ:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "ਵੁਰਚੁਅਲ ਡੈਸਕਟਾਪ ਸ਼ਾਮਲ(&A)"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "ਆਖਰੀ ਵੁਰਚੁਅਲ ਡੈਸਕਟਾਪ ਹਟਾਓ(&R)"
+
+#~ msgid "Configure Pager"
+#~ msgstr "ਪੇਜ਼ਰ ਸੰਰਚਨਾ"
+
+#~ msgid "Number of columns:"
+#~ msgstr "ਕਾਲਮਾਂ ਦੀ ਗਿਣਤੀ:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "ਕਤਾਰਾਂ ਦੀ ਗਿਣਤੀ:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "ਕਤਾਰਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ"

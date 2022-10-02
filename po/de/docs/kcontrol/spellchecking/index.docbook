@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Rechtschreibprüfung</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+> <affiliation
+><address
+><email
+>F.Schuette@t-online.de</email
+></address
+></affiliation
+> <contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Rechtschreibung</keyword>
+<keyword
+>Wörterbuch</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Rechtschreibprüfung</title>
+<para
+>Die Einstellungen in diesem Modul werden als Voreinstellung von allen &kde;-Anwendungen benutzt, die &sonnet; verwenden. &sonnet; ist eine Benutzeroberfläche für verschiedene freie Rechtschreibprüfungen.</para>
+
+<para
+>Um &sonnet; benutzen zu können, müssen Sie Rechtschreibprogramme wie &eg; <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+>,  oder <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> und zusätzlich auch die zugehörigen Wörterbücher für Ihre Sprache installieren.</para>
+
+<para
+>Einstellungen in diesen Modul können in jeder Anwendung überschrieben werden.</para>
+
+<para
+>Wählen Sie aus dem Auswahlfeld <guilabel
+>Standardsprache</guilabel
+> aus den verfügbaren Wörterbüchern eines aus, das &sonnet; verwenden soll. </para>
+
+<sect2 id="spell-options">
+<title
+>Einstellungen</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Automatische Erkennung der Sprache aktivieren</guilabel
+></term>
+<listitem>
+<para
+>Diese Funktion basiert auf mehreren heuristischen Methoden, verwendetes Skript, Trigramm-Übereinstimmung und Rangordnung der Sprach in den verfügbaren Sprachen des Moduls zur Rechtschreibprüfung. Damit ist es möglich, in einem mehrsprachigen Dokument automatisch die Sprache für die Rechtschreibprüfung zu wechseln. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Automatische Rechtschreibprüfung in der Voreinstellung aktiviert</guilabel
+></term>
+<listitem>
+<para
+>Wenn Sie dieses Ankreuzfeld markiert haben werden die Wörter in Ihrem Dokument auf richtige Schreibweise überprüfen, während Sie schreiben. Falsch geschriebene Wörter werden rot unterstrichen dargestellt. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Durchgehend groß geschriebene Wörter überspringen</guilabel
+></term>
+<listitem>
+<para
+>Wenn dieses Ankreuzfeld markiert ist, werden keine vollständig in Großbuchstaben geschrieben Wörter überprüft.</para>
+<tip
+><para
+>Das ist dann nützlich, wenn Sie ein Dokument mit vielen Abkürzungen schreiben. Wenn dieses Ankreuzfeld nicht markiert ist, werden die meisten Abkürzungen fälschlicherweise als fehlerhaft markiert. Wenn Sie diese Einstellung aktivieren, werden diese Abkürzungen nicht als fehlerhaft geschrieben markiert.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zusammengezogene Wörter überspringen</guilabel
+></term>
+<listitem
+><para
+>Ist diese Option markiert, werden Wörter, die im Wörterbuch getrennt auftauchen und im Text zusammengeschrieben erscheinen, als Rechtschreibfehler betrachtet. Zum Beispiel wird <quote
+>Armbanduhr</quote
+> auch dann als Rechtschreibfehler betrachtet, wenn es nicht im Wörterbuch auftaucht, die Wörter <quote
+>Armband</quote
+> und <quote
+>Uhr</quote
+>aber einzeln im Wörterbuch vorhanden sind. </para>
+
+<tip
+><para
+>Mit dieser Einstellung werden Wörter wie Webseiten- und E-Mail-Adressen nicht als Fehler markieren. Diese Adressen enthalten oft zusammengeschriebene Wörter.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Ignorierte Wörter</title>
+<para
+>In der unteren Hälfte des Dialogs können Sie besondere Wörter festlegen (z. B. Fachbegriffe, Eigennamen &etc;) die von der Rechtschreibprüfung ignoriert werden.</para>
+
+<sect3
+><title
+>Ein Wort zur Ignorieren-Liste hinzufügen</title>
+<para
+>Um hier ein Wort hinzuzufügen, geben Sie das Wort im Textfeld ein und klicken auf den Knopf <guibutton
+>Hinzufügen</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Ein Wort aus der Ignorieren-Liste entfernen</title>
+<para
+>Ein Wort in der aktuellen Ignorieren-Liste wird entfernt, indem Sie es mit einem Klick mit der &LMBn; markieren und anschließend auf den Knopf <guibutton
+>Entfernen</guibutton
+> klicken.</para>
+
+<para
+>Nachdem Sie alle Einstellungen angepasst haben, klicken sie auf <guibutton
+>Anwenden</guibutton
+>, um die Änderungen zu übernehmen.</para>
+
+<para
+>Mit dem Knopf <guibutton
+>Voreinstellungen</guibutton
+> setzen Sie alle Einstellungen auf ihre Standardwerte zurück.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

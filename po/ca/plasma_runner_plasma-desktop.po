@@ -1,0 +1,71 @@
+# Translation of plasma_runner_plasma-desktop.po to Catalan
+# Copyright (C) 2009-2019 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2012, 2015.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"PO-Revision-Date: 2015-05-19 17:46+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: plasma-desktop-runner.cpp:24
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console"
+msgstr "desktop console"
+
+#: plasma-desktop-runner.cpp:25
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console"
+msgstr "wm console"
+
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#, kde-format
+msgid ""
+"Opens the Plasma desktop interactive console with a file path to a script on "
+"disk."
+msgstr ""
+"Obre la consola interactiva de l'escriptori Plasma amb un camí a un script "
+"del disc."
+
+#: plasma-desktop-runner.cpp:31
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console :q:"
+msgstr "desktop console :q:"
+
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#, kde-format
+msgid ""
+"Opens the KWin interactive console with a file path to a script on disk."
+msgstr "Obre la consola interactiva del KWin amb un camí a un script del disc."
+
+#: plasma-desktop-runner.cpp:37
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console :q:"
+msgstr "wm console :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Obre una consola interactiva de l'escriptori Plasma"
+
+#: plasma-desktop-runner.cpp:62
+#, kde-format
+msgid "Open KWin interactive console"
+msgstr "Obre una consola interactiva del KWin"

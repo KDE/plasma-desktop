@@ -1,0 +1,91 @@
+# Translation of plasmaactivitymanager.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasmaactivitymanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-12 03:59+0200\n"
+"PO-Revision-Date: 2016-04-15 23:42+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used some time ago"
+msgstr "korišćeno pre nekog vremena"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:349
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "korišćeno pre više od godine"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:350
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "korišćeno pre %1 mesec"
+msgstr[1] "korišćeno pre %1 meseca"
+msgstr[2] "korišćeno pre %1 meseci"
+msgstr[3] "korišćeno mesec ranije"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:351
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "korišćeno pre %1 dan"
+msgstr[1] "korišćeno pre %1 dana"
+msgstr[2] "korišćeno pre %1 dana"
+msgstr[3] "korišćeno dan ranije"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:352
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "korišćeno pre %1 sat"
+msgstr[1] "korišćeno pre %1 sata"
+msgstr[2] "korišćeno pre %1 sati"
+msgstr[3] "korišćeno sat ranije"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:353
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "korišćeno pre %1 minut"
+msgstr[1] "korišćeno pre %1 minuta"
+msgstr[2] "korišćeno pre %1 minuta"
+msgstr[3] "korišćeno minut ranije"
+
+# >> @item
+#: sortedactivitiesmodel.cpp:354
+#, kde-format
+msgid "Used a moment ago"
+msgstr "samo što je korišćeno"
+
+#: switcherbackend.cpp:256
+#, kde-format
+msgid "Walk through activities"
+msgstr "Šetaj kroz aktivnosti"
+
+#: switcherbackend.cpp:261
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "Šetaj kroz aktivnosti (obrnuto)"

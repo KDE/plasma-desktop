@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Perangkat Dapat-Dilepas</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>24-08-2016</date>
+<releaseinfo
+>&plasma; 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>automount</keyword>
+<keyword
+>perangkat</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dialog ini memungkinkanmu untuk mengkonfigurasikan penanganan otomatis media penyimpanan dapat-dilepas. </para>
+
+<para
+>Jika kamu memfungsikan fitur pengaitan otomatis dalam modul ini, kamu tidak akan membutuhkan untuk peggunaan aplet penotifikasi perangkat atau panel navigasi di dalam pengelola file untuk mendapatkan akses ke sebuah perangkat yang dicolokkan saat ini. </para>
+
+<para
+>Di bagian teratas pada dialog, kamu bisa temukan pengaturan global, yang bisa ditimpa untuk setiap perangkat tunggal di dalam daftar <guilabel
+>Penimpaan Perangkat</guilabel
+>. Untuk desktop pengguna tunggal, ini dianjurkan untuk memiliki semua kotak centang di bagian atas daftar penimpaan yang difungsikan. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Fungsikan pengaitan otomatis media dapat-dilepas</guilabel
+></term>
+<listitem
+><para
+>Ketika ini tak tercentang, tidak ada auto-pengaitan perangkat dalam bentuk apa pun yang akan terjadi, meskipun ada yang dipilih di dalam bagian <guilabel
+>Penimpaan Perangkat</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Hanya mengaitkan secara otomatis media dapat-dilepas yang telah dikaitkan secara manual sebelumnya</guilabel
+></term>
+<listitem
+><para
+>Ketika ini dicentang, &plasma; hanya akan secara otomatis mengaitkan perangkat yang diingatnya. Sebuah perangkat akan <quote
+>diingat</quote
+> jika pernah dikaitkan sebelumnya; &eg; pencolokkan USB pemutar media untuk tujuan pengecasan adalah tidak cukup untuk meng<quote
+>ingat</quote
+>nya. Jika file tidak diakses, &plasma; tidak akan secara otomatis mengaitkan pemutar apabila lain kali terlihat. Namun, begitu mereka diakses, &plasma; akan mengingat dengan secara otomatis membuat konten dapat diakses oleh sistem kamu. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kaitkan semua media dapat-dilepas saat login</guilabel
+></term>
+<listitem
+><para
+>Jika apa pun perangkat penyimpanan dapat-dilepas terkoneksikan oleh sistemmu saat kamu login ke desktopmu, &plasma; akan secara otomatis membuat konten tersedia untuk sistemmu terhadap program lain untuk dibaca. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Secara otomatis mengaitkan media dapat-dilepas ketika dilampirkan</guilabel
+></term>
+<listitem
+><para
+>Ketika ini dicentang, &plasma; akan secara otomatis membuat konten dari perangkat penyimpanan apa pun yang tersedia ke sistem, saat ia dicolokkan atau dilampirkan. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Penimpaan Perangkat</guilabel
+></term>
+<listitem
+><para
+>Daftar ini berisi perangkat penyimpanan yang dikenal &plasma;. Jika <guilabel
+>Automount saat Login</guilabel
+> dicentang, perangkat akan dikaitkan secara otomatis bahkan melalui <guilabel
+>Kaitkan semua media dapat-dilepas saat login</guilabel
+> tak tercentang. Penerapan yang sama pula untuk <guilabel
+>Automount saat Lampir</guilabel
+>.</para>
+<para
+>Jika <guilabel
+>Fungsikan pengaitan otomatis media dapat-dilepas</guilabel
+> adalah tak tercentang, penimpaan tidaklah diterapkan dan tidak ada perangkat yang akan secara otomatis dikaitkan. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Lupakan Perangkat</guibutton
+></term>
+<listitem
+><para
+>Mengeklik tombol ini menyebabkan &plasma; <quote
+>lupa</quote
+> bahwa perangkat-perangkat yang dipilih pernah ada. Ini hanya berguna jika <guilabel
+>Hanya mengaitkan secara otomatis media dapat-dilepas yang telah dikaitkan secara manual sebelumnya</guilabel
+> telah tercentang. Setelah perangkat sudah dilupakan dan &plasma; diset ke hanya mengaikan secara otomatis perangkat-perangkat yang familiar, maka perangkat tidak akan dikaitkan secara otomatis. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

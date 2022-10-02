@@ -1,0 +1,912 @@
+# Translation of kcmmouse.po to Ukrainian
+# Copyright (C) 2002-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Dmytro Kovalov <kov@tokyo.email.ne.jp>, 2002.
+# Andriy Rysin <rysin@kde.org>, 2002, 2003, 2004, 2006.
+# Eugene Onischenko <oneugene@ukr.net>, 2003, 2005.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmmouse\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"PO-Revision-Date: 2022-08-25 09:26+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Dmytro Kovalov,Andriy Rysin,Eugene Onischenko,Іван Петрущак,Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kov@tokyo.email.ne.jp,rysin@kde.org,oneugene@ukr.net,ivanpetrouchtchak@yahoo."
+"com,yurchor@ukr.net"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+"Не вдалося опитати пристрої введення. Будь ласка, закрийте це вікно модуля, "
+"а потім знову його відкрийте."
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:86
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr ""
+"Критична помилка під час читання основних відомостей щодо пристрою для %1."
+
+#: kcm/libinput/libinput_config.cpp:36
+#, kde-format
+msgid "Pointer device KCM"
+msgstr "Модуль керування координатними пристроями"
+
+#: kcm/libinput/libinput_config.cpp:38
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr ""
+"Модуль «Системних параметрів» для керування мишами та координатними "
+"пристроями."
+
+#: kcm/libinput/libinput_config.cpp:40
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr "© Roman Gilg, 2016"
+
+#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
+#, kde-format
+msgid "Roman Gilg"
+msgstr "Roman Gilg"
+
+#: kcm/libinput/libinput_config.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Розробник"
+
+#: kcm/libinput/libinput_config.cpp:110
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+"Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
+"журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
+
+#: kcm/libinput/libinput_config.cpp:115
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr "Не знайдено координатного пристрою. З'єднайте пристрій з комп'ютером."
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+"Не вдалося зберегти усі зміни. Докладнішу інформацію можна знайти у журналі. "
+"Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
+"повторіть спробу."
+
+#: kcm/libinput/libinput_config.cpp:146
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+"Помилка під час спроби завантажити типові значення. Не вдалося встановити "
+"типові значення для усіх параметрів."
+
+#: kcm/libinput/libinput_config.cpp:168
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+"Помилка під час спроби додати щойно з’єднаний пристрій. Будь ласка, "
+"спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
+"керування сенсорними панелями."
+
+#: kcm/libinput/libinput_config.cpp:192
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr ""
+"Координатний пристрій від’єднано. Діалогове вікно його параметрів закрито."
+
+#: kcm/libinput/libinput_config.cpp:194
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr "Координатний пристрій від’єднано. Інших пристроїв не знайдено."
+
+#: kcm/libinput/main.qml:79
+#, kde-format
+msgid "Device:"
+msgstr "Пристрій:"
+
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#, kde-format
+msgid "General:"
+msgstr "Загальне:"
+
+#: kcm/libinput/main.qml:105
+#, kde-format
+msgid "Device enabled"
+msgstr "Пристрій увімкнено"
+
+#: kcm/libinput/main.qml:124
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Приймати вхідні дані з цього пристрою."
+
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#, kde-format
+msgid "Left handed mode"
+msgstr "Режим шульги"
+
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Поміняти місцями ліву і праву кнопки."
+
+#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr "Натискати ліву і праву кнопки для клацання середньою"
+
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
+"середньою кнопкою."
+
+#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#, kde-format
+msgid "Pointer speed:"
+msgstr "Швидкість вказівника:"
+
+#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Профіль прискорення:"
+
+#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#, kde-format
+msgid "Flat"
+msgstr "Нейтральний"
+
+#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr "Вказівник зсувається на ту саму відстань, що і миша."
+
+#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#, kde-format
+msgid "Adaptive"
+msgstr "Адаптивний"
+
+#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+"Вказівник зсувається на відстань, яка залежить від швидкості руху мишею."
+
+#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Scrolling:"
+msgstr "Гортання:"
+
+#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Інвертувати напрямок гортання"
+
+#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Гортання як на сенсорній панелі."
+
+#: kcm/libinput/main.qml:295
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Швидкість гортання:"
+
+#: kcm/libinput/main.qml:343
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Повільніше"
+
+#: kcm/libinput/main.qml:349
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Швидше"
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr "Повторно прив'язати додаткові кнопки…"
+
+#: kcm/libinput/main.qml:395
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr "Додаткова кнопка %1:"
+
+#: kcm/libinput/main.qml:427
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+"Натисніть кнопку миші, для якої ви хочете додати прив'язку до клавіатури"
+
+#: kcm/libinput/main.qml:428
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr "Введіть нову комбінацію клавіш для %1"
+
+#: kcm/libinput/main.qml:432
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: kcm/libinput/main.qml:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Press a mouse button "
+msgstr "Натисніть кнопку миші"
+
+#: kcm/libinput/main.qml:450
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr "Додати прив'язку…"
+
+#: kcm/libinput/main.qml:479
+#, kde-format
+msgctxt "@action:button"
+msgid "Go back"
+msgstr "Назад"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<h1>Мишка</h1> За допомогою цього модуля ви зможете встановити різноманітні "
+"режими роботи вказівного пристрою. Вказівним пристроєм може бути мишка, "
+"кулька або інший фізичний пристрій, який здійснює аналогічну функцію."
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "&Загальне"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"Якщо ви — шульга, вам, мабуть, буде зручніше поміняти функції лівої та "
+"правої клавіш мишки за допомогою пункту «Шульга». Якщо вказівний пристрій "
+"має більше, ніж три кнопки, це буде стосуватися тільки лівої та правої його "
+"кнопок. Наприклад, якщо ви маєте мишку з трьома кнопками, функція середньої "
+"кнопки залишається без змін."
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "Послідовність кнопок"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "Пр&авша"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "&Шульга"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr ""
+"Змінює напрям прокручування для коліщатка мишки або 4ї та 5ї кнопок мишки."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "З&воротній напрям прокручування"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "Додатково"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Прискорення вказівника:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "Чутливість пересування:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "Інтервал подвійного клацання:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "Час початку перетягування:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "Відстань початку перетягування:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "Коліщатко миші прокручує на:"
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<p>За допомогою цього пункту ви можете змінити відношення між відстанню, яку "
+"проходить вказівник мишки на екрані і відносною відстанню, яку проходить сам "
+"фізичний пристрій (яким може бути мишка, куля або деякий інший вказівний "
+"пристрій.)</p><p> Великі значення прискорення призводять до розмашистих "
+"рухів вказівника на екрані, навіть при маленьких рухах фізичного пристрою. "
+"Вибір занадто великого значення вказівника може призвести до того, що "
+"вказівник мишки буде літати з одного краю екрана до іншого, роблячи "
+"надзвичайно важким користування мишкою.</p>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr " x"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<p>Чутливість — це найменша відстань, яку має пройти показник перш, ніж дає "
+"про себе знати прискорення. Якщо рух показника менший за встановлену зону "
+"чутливості, показник мишки рухається так, ніби прискорення встановлене в 1x."
+"</p><p> Таким чином, коли ви робите невеличкі рухи фізичного пристрою, "
+"вказівник рухається зовсім без прискорення, і це дає вам кращий контроль над "
+"вказівником мишки. Більшими рухами мишки ви можете швидко пересувати "
+"вказівник між ділянками екрана.</p>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"Інтервал подвійного клацання — це максимальний час (в мілісекундах) між "
+"двома послідовними клацаннями мишки, при якому вони сприймаються як одне "
+"подвійне клацання. Якщо друге клацання буде після закінчення цього відрізку "
+"часу, вони сприймаються як два окремих одинарних клацання."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " мс"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"Якщо ви клацнете мишкою (наприклад в редакторі) і почнете пересувати після "
+"цього мишку поки не закінчився період початкового пересування, буде "
+"започаткована операція перетягування."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"Якщо ви клацнете мишкою і почнете пересувати після цього мишку не менше, ніж "
+"на відстань що дорівнює проміжку початкового пересування, буде виконуватися "
+"операція перетягування."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"Якщо ви використовуєте коліщатко миші, це значення визначає кількість "
+"рядків, на які прокручує кожне пересування коліщатка. Зауважте, що якщо це "
+"число перевищує кількість видимих ліній, воно буде відкинуте, пересування "
+"коліщатка будуть прирівняні до пересування сторінки (вгору/вниз)."
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, kde-format
+msgid "Keyboard Navigation"
+msgstr "Навігація за допомогою клавіатури"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "&Пересувати мишку цифровою частиною клавіатури"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "Затримка &прискорення:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "Інтервал &повторення:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "&Час прискорення:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "&Максимальна швидкість:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " пікселів/сек"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "П&рофіль прискорення:"
+
+#: kcm/xlib/xlib_config.cpp:79
+#, kde-format
+msgid "Mouse"
+msgstr "Мишка"
+
+#: kcm/xlib/xlib_config.cpp:83
+#, kde-format
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr "© Розробники Mouse, 1997–2018"
+
+#: kcm/xlib/xlib_config.cpp:84
+#, kde-format
+msgid "Patrick Dowler"
+msgstr "Patrick Dowler"
+
+#: kcm/xlib/xlib_config.cpp:85
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr "Dirk A. Mueller"
+
+#: kcm/xlib/xlib_config.cpp:86
+#, kde-format
+msgid "David Faure"
+msgstr "David Faure"
+
+#: kcm/xlib/xlib_config.cpp:87
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr "Bernd Gehrmann"
+
+#: kcm/xlib/xlib_config.cpp:88
+#, kde-format
+msgid "Rik Hemsley"
+msgstr "Rik Hemsley"
+
+#: kcm/xlib/xlib_config.cpp:89
+#, kde-format
+msgid "Brad Hughes"
+msgstr "Brad Hughes"
+
+#: kcm/xlib/xlib_config.cpp:90
+#, kde-format
+msgid "Brad Hards"
+msgstr "Brad Hards"
+
+#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#, kde-format
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] " піксель"
+msgstr[1] " пікселі"
+msgstr[2] " пікселів"
+msgstr[3] " піксель"
+
+#: kcm/xlib/xlib_config.cpp:293
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] " рядок"
+msgstr[1] " рядки"
+msgstr[2] " рядків"
+msgstr[3] " рядок"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "General settings:"
+#~ msgstr "Загальні параметри:"
+
+#~ msgid "Emulate middle button"
+#~ msgstr "Імітувати середню кнопку"
+
+#~ msgid "Acceleration:"
+#~ msgstr "Прискорення:"
+
+#~ msgid "Acceleration Profile:"
+#~ msgstr "Профіль прискорення:"
+
+#~ msgid "Icons"
+#~ msgstr "Піктограми"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Типова поведінка KDE — вибір і активація піктограми за одинарним "
+#~ "клацанням лівої кнопки вказівного пристрою. Такий принцип роботи "
+#~ "збігається з тим, що б ви мали очікувати, коли ви клацаєте на посиланні у "
+#~ "більшості навігаторів інтернетом. Якщо вам зручніше вибирати одинарним "
+#~ "клацанням, а активізовувати подвійним, позначте цей пункт."
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr "Подві&йне клацання відкриває файли та теки (перше клацання — вибір)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Позначає і відкриває файли та теки одним клацанням мишки."
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Одинарне клацання відкриває файли та теки"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Виберіть тему курсорів:"
+
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgid "You have to restart KDE for these changes to take effect."
+#~ msgstr "Щоб зміни кольору курсору почали діяти, потрібно перезапустити KDE."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Параметри курсора було змінено"
+
+#~ msgid "Small black"
+#~ msgstr "Маленькі чорні"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Маленькі чорні курсори"
+
+#~ msgid "Large black"
+#~ msgstr "Великі чорні"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Великі чорні курсори"
+
+#~ msgid "Small white"
+#~ msgstr "Маленькі білі"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Малі білі курсори"
+
+#~ msgid "Large white"
+#~ msgstr "Великі білі"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Великі білі курсори"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Змінювати форм&у курсора над піктограмами"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "А&втоматично вибирати піктограми"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Затримка"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Якщо позначити цей пункт, невелика зупинка вказівника над піктограмою "
+#~ "буде спричиняти автоматичний вибір цієї піктограми. Це може бути "
+#~ "корисним, коли одне клацання мишки активізує піктограми, а ви б хотіли "
+#~ "тільки вибрати піктограму без її активізації."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Якщо ви позначили пункт автоматичного вибору піктограм, за допомогою "
+#~ "цього повзунка ви зможете встановити затримку вказівника мишки над "
+#~ "піктограмою, після якої ця піктограма стає вибраною."
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Тип мишки: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Встановлено канал RF 1. Натисніть кнопку «з'єднатися» на миші для "
+#~ "повторного встановлення з'єднання."
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Встановлено канал RF 2. Натисніть кнопку «з'єднатися» на миші для "
+#~ "повторного встановлення з'єднання."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "немає"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Бездротова мишка"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Бездротова мишка з коліщатком"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Бездротова MouseMan з коліщатком"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Бездротова TrackMan з коліщатком"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Бездротова TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Бездротова оптична MouseMan"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Бездротова оптична мишка"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Бездротова оптична MouseMan (другий канал)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Бездротова оптична мишка (другий канал)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Бездротова мишка (другий канал)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Бездротова оптична TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Бездротова оптична мишка MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "Бездротова оптична мишка MX700 (другий канал)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Невідомий тип мишки"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Назва бездротової мишки"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Роздільна здатність датчика"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 сигналів на дюйм"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 сигналів на дюйм"
+
+#~ msgid "Battery Level"
+#~ msgstr "Заряд батарей"
+
+#~ msgid "RF Channel"
+#~ msgstr "Канал RF"
+
+#~ msgid "Channel 1"
+#~ msgstr "Канал 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Канал 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Неможливо отримати доступ до мишки не зважаючи на те, що під'єднано мишку "
+#~ "Logitech та бібліотека libusb була використана при компіляції. Скоріше за "
+#~ "все проблеми з правами доступу. Перегляньте довідник для виправлення цієї "
+#~ "проблеми."
+
+#~ msgid "Cursor Theme"
+#~ msgstr "Тема в&казівника"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "© Fredrik Höglund, 2003–2007"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "залежний від роздільності"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Перетягніть або введіть URL для теми"
+
+#~ msgid "Unable to find the cursor theme archive %1."
+#~ msgstr "Неможливо знайти архів теми курсорів %1."
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Неможливо отримати архів теми курсорів. Будь ласка, перевірте, що адреса "
+#~ "%1 є правильною."
+
+#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
+#~ msgstr "Файл %1, здається, не є архівом теми курсорів."
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Не можна вилучити тему, яку ви зараз використовуєте.<br />Спочатку "
+#~ "перемкніть на іншу тему.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ви дійсно хочете вилучити тему курсорів <strong>%1</strong>? <br />Це "
+#~ "вилучить всі файли, встановлені темою.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Підтвердження"
+
+#~ msgid ""
+#~ "A theme named %1 already exists in your icon theme folder. Do you want "
+#~ "replace it with this one?"
+#~ msgstr ""
+#~ "Тема з назвою %1 вже існує у вашій теці тем піктограм. Замінити її новою?"
+
+#~ msgid "Overwrite Theme?"
+#~ msgstr "Перезаписати тему?"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Виберіть тему курсорів (наведіть курсор для перегляду результату):"
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Отримати схему кольорів з інтернету"
+
+#~ msgid "Get New Theme..."
+#~ msgstr "Отримати нову тему…"
+
+#~ msgid "Install From File..."
+#~ msgstr "Встановити з файла…"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Вилучити тему"
+
+#~ msgctxt "@label:listbox cursor size"
+#~ msgid "Size:"
+#~ msgstr "Розмір:"
+
+#~ msgctxt ""
+#~ "@info The argument is the list of available sizes (in pixel). Example: "
+#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#~ msgid "(Available sizes: %1)"
+#~ msgstr "(Можливі розміри: %1)"

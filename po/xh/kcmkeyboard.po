@@ -1,0 +1,941 @@
+# translation of kxkb.po to Xhosa
+# K Desktop Environment - kdebase
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kxkb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2002-10-26 11:54SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Lwandle Mgidlana"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lwandle@translate.org.za"
+
+#: bindings.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "Ibhodi yezitshixo"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Tshintsha Kubeko Lwebhodi yezitshixho Elandelayo"
+
+#: bindings.cpp:49
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch keyboard layout to %1"
+msgstr "Tshintsha Kubeko Lwebhodi yezitshixho Elandelayo"
+
+#: flags.cpp:122
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgid "Add Layout"
+msgstr "Ubeko"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr ""
+
+#: kcm_keyboard.cpp:32
+#, fuzzy, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "Isixhobo Sebodi yezitshixo ye KDE"
+
+#: kcm_keyboard.cpp:36
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr ""
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, fuzzy, kde-format
+msgid "Keyboard &model:"
+msgstr "Isixhobo Sebodi yezitshixo ye KDE"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, fuzzy, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+"Apha ungakhetha uhlobo lwebhodi yezitshixo. Olu cwangciso luxhomekeke kubeko "
+"lwebhodi yezitshixo yakho kwaye ibhekisa  kwindlela ye \"hardware\", ithetha "
+"ukuba indlela ibhodi yakho yezitshixo eyenziwe ngayo. Iibhodi zezitshixo "
+"zexesha langoku eziza nekhompyutha yakho ziqhele ukuba nezitshixo "
+"ezongezelelweyo ezimbini kwaye zibhekiswa njenge \"104-key\"iintlobo, apho "
+"iyeyona nto uyifunayo ukuba awulazi udidi lwebhodi yezitshixo onayo."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgid "Layouts"
+msgstr "Ubeko"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr "Ukutshintshela Inkqubo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr "&Okwamazwe"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, kde-format
+msgid "&Desktop"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, fuzzy, kde-format
+#| msgid "Application"
+msgid "&Application"
+msgstr "Isicelo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr "&Window"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, kde-format
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, fuzzy, kde-format
+msgid "Configure layouts"
+msgstr "Ubeko olongezelelweyo"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, fuzzy, kde-format
+msgid "Spare layouts"
+msgstr "Ubeko olongezelelweyo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard layouts"
+msgid "&Configure keyboard options"
+msgstr "&Yenza ubeko lwebhodi yezitshixo"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:643
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:657
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Layout"
+msgstr "Ubeko"
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+msgid "Variant"
+msgstr "Bulgarian"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Shortcut"
+msgstr ""
+
+#: kcm_view_models.cpp:273
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, fuzzy, kde-format
+#| msgid ""
+#| "If supported, this option allows you to setup the state of NumLock after "
+#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
+#| "configure KDE not to set NumLock state."
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+"Ukuba ixhasiwe, olu khetho lukuvumela ukuba ucwangcise indawo yotshixo "
+"lwamanani emva kwe KDE isiqalo.<p>  Ungaqwalasela utshixo lwamanani "
+"anokuvulwa okanye acinywe, okanye qwalasela i KDE ingabeki indawo yotshixo "
+"lwamanani."
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, fuzzy, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr "Numlock kuqaliso lwe KDE:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "Y&ivulele"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgid "&Turn off"
+msgstr "Cim&a"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "Yishiye ingatshintshwa&nga"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, fuzzy, kde-format
+msgid "&Delay:"
+msgstr "Ukulibazisa:"
+
+#: tastenbrett/main.cpp:57
+#, fuzzy, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Ibhodi yezitshixo"
+
+#: tastenbrett/main.cpp:59
+#, fuzzy, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Ibhodi yezitshixo"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+
+#, fuzzy
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "Ibhodi yezitshixo"
+
+#, fuzzy
+#~| msgid "Layout"
+#~ msgid "Layout:"
+#~ msgstr "Ubeko"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Bulgarian"
+
+#, fuzzy
+#~| msgid "Layout"
+#~ msgid "Layout Indicator"
+#~ msgstr "Ubeko"
+
+#, fuzzy
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Ibhodi yezitshixo"
+
+#, fuzzy
+#~ msgid "Configure Layouts..."
+#~ msgstr "Ubeko olongezelelweyo"
+
+#, fuzzy
+#~ msgid "Keyboard Repeat"
+#~ msgstr "Ibhodi yezitshixo"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "Cim&a"
+
+#, fuzzy
+#~| msgid "Leave unchan&ged"
+#~ msgid "&Leave unchanged"
+#~ msgstr "Yishiye ingatshintshwa&nga"
+
+#~ msgid "Configure..."
+#~ msgstr "Qwalasela..."
+
+#, fuzzy
+#~ msgid ""
+#~ "If supported, this option allows you to hear audible clicks from your "
+#~ "computer's speakers when you press the keys on your keyboard. This might "
+#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
+#~ "that the keys make is very soft.<p>You can change the loudness of the key "
+#~ "click feedback by dragging the slider button or by clicking the up/down "
+#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
+#~ msgstr ""
+#~ "Ukuba ixhasiwe, olu khetho likuvumela ukuba uve unqakrazo oluvakalayo "
+#~ "ukusuka kweyakho intetho ye computer xa ucinezela izitshixo kwibhodi "
+#~ "yakho yezitshixo. Oku kunokuba luncedo ukuba ibhodi yezitshixo "
+#~ "ayinazitshixo zokulungisa, okanye ukuba isandi esenziwa zizitshixo "
+#~ "kuyenza ithambe.<p> Ungatshintsha ingxolo yengxelo engundoqo yonqakrazo "
+#~ "ngokutsala iqhosha lesityibilikisi oaknye unqakraze phezulu/ezantsi "
+#~ "iintolo kwi qhosha-lokujikeleza. Ucwangcisa umqulu ku 0 % icima isitshixo "
+#~ "esingundoqo."
+
+#, fuzzy
+#~| msgid "Key click &volume:"
+#~ msgid "&Key click volume:"
+#~ msgstr "Izinga lesandi sonqakrazo &olungundoqo:"
+
+#, fuzzy
+#~| msgid "Layout"
+#~ msgid "Layout Name"
+#~ msgstr "Ubeko"
+
+#, fuzzy
+#~ msgid "A utility to switch keyboard maps"
+#~ msgstr "Into eluncedo yokucima nolulayita iimaphu zebhodi yezitshixo."
+
+#, fuzzy
+#~| msgid "Switch to Next Keyboard Layout"
+#~ msgid "KDE will not configure or show keyboard layouts"
+#~ msgstr "Tshintsha Kubeko Lwebhodi yezitshixho Elandelayo"
+
+#, fuzzy
+#~| msgid "&Enable keyboard layouts"
+#~ msgid "Disable keyboard layouts"
+#~ msgstr "&Yenza ubeko lwebhodi yezitshixo"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Keyboard Layout</h1> Here you can choose your keyboard layout and "
+#~ "model. The 'model' refers to the type of keyboard that is connected to "
+#~ "your computer, while the keyboard layout defines \"which key does what\" "
+#~ "and may be different for different countries."
+#~ msgstr ""
+#~ "<h1>Ubeko lwebhodi yezitshixo & Indlela</h1> Apha ungakhetha ubeko lwakho "
+#~ "lwebhodi yezitshixo kunye nendlela. I 'ndlela' ibhekisa kudidi lwebhodi "
+#~ "yezitshixo edityaniswe kwi computer yakho, ngexesha ubeko lwebhodi "
+#~ "yezitshixo ichaza \"istshixo esenza ntoni\" kwaye inokuba nomahluko "
+#~ "kumazwe awahlukeneyo.<p> Ukongezelela kubeko  'Olusezantsi', "
+#~ "oluzakusetyenziswa njengoku ngagqibekanga, ungakhankanya ubeko "
+#~ "olongeziweyo, ongalucima ululayite ngokulula phakathi usebenzisa iqela "
+#~ "lenjongo ethile le KDE."
+
+#, fuzzy
+#~ msgid "Layout variant:"
+#~ msgstr "isiLatvian"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can choose a variant of selected keyboard layout. Layout "
+#~ "variants usually represent different key maps for the same language. For "
+#~ "example, Ukrainian layout might have four variants: basic, winkeys (as in "
+#~ "Windows), typewriter (as in typewriters) and phonetic (each Ukrainian "
+#~ "letter is placed on a transliterated latin one).\n"
+#~ msgstr ""
+#~ "Apha uyakwazi ukukhetha uhlobo olukhethiweyo eyongeziweyo lobeko lwe "
+#~ "sitshixo sebhodi. Umehluko wobeko ngokuqhelekileyo ibonisa kwakhona "
+#~ "umehluko wesitshixo seemephu zolwimi olufanayo. Umzekelo, Ubeko lwe "
+#~ "Ukrainian ubeko lwe Ukrainian lunee ntlobo ezine:okuba inentlobo ezine: "
+#~ "basic, winkeys (njenga kwi Windows), umashini wokuchwetheza (as in "
+#~ "typewriters) ne phonetic (unobumba ngamnye wase Ukrainian obekwe kwi "
+#~ "transliterated latin one)."
+
+#, fuzzy
+#~ msgid "Switching Options"
+#~ msgstr "Ukutshintshela Inkqubo"
+
+#~ msgid "&Reset old options"
+#~ msgstr "&Cwangcisa ukheto oludala"
+
+#~ msgid "Xkb Options"
+#~ msgstr "Iinketho ze Xkb"
+
+#, fuzzy
+#~ msgid "&Enable xkb options"
+#~ msgstr "&Yenza ubeko lwebhodi yezitshixo"
+
+#, fuzzy
+#~ msgid "Keyboard"
+#~ msgstr "Ibhodi yezitshixo"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Iinketho ze Xkb"
+
+#, fuzzy
+#~ msgid ""
+#~ "If more than one layout is present in this list, the KDE panel will offer "
+#~ "a docked flag. By clicking on this flag you can easily switch between "
+#~ "layouts. The first layout will be default one."
+#~ msgstr ""
+#~ "Ungakhetha inani njee kubeko lwebhodi zezitshixo. Ukuba enye okanye "
+#~ "ngaphezulu kobeko longezelelwe lukhethiwe, iwindow yeenkcukacha ye KDE "
+#~ "iza kunikeza iflegi ye dokhethi.tshane. Ngokunqakraza kule flegi unga "
+#~ "tshintsela ngokulula phakathi kobeko."
+
+#~ msgid "Keymap"
+#~ msgstr "Keymap"
+
+#~ msgid ""
+#~ "If you check this option, pressing and holding down a key emits the same "
+#~ "character over and over again. For example, pressing and holding down the "
+#~ "Tab key will have the same effect as that of pressing that key several "
+#~ "times in succession: Tab characters continue to be emitted until you "
+#~ "release the key."
+#~ msgstr ""
+#~ "Ukuba ukhangela olu khetho, ukucinezela nokubamba phantsi isitshixo "
+#~ "lunikezela umsebenzi omnye oko na oko kwakhona. Umzekelo, ukucinezela "
+#~ "nokubamba phantsi isitshixo sesithuba kuzakuba nesiphumo esinye "
+#~ "sokucinezela eso sitshixo amaxesha amaninzi kwimpumelelo: Abasebenzi "
+#~ "besithuba baqhubeka ukunikezela ude ube uyasikhupha isitshixo."
+
+#, fuzzy
+#~ msgid "&Enable keyboard repeat"
+#~ msgstr "&Yenza ubeko lwebhodi yezitshixo"
+
+#~ msgid "Belgian"
+#~ msgstr "Belgian"
+
+#~ msgid "Brazilian"
+#~ msgstr "Brazilian"
+
+#~ msgid "Canadian"
+#~ msgstr "Canadian"
+
+#~ msgid "Czech"
+#~ msgstr "Czech"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Czech (qwerty)"
+
+#~ msgid "Danish"
+#~ msgstr "Danish"
+
+#~ msgid "Estonian"
+#~ msgstr "Estonian"
+
+#~ msgid "Finnish"
+#~ msgstr "isiFinnish"
+
+#~ msgid "French"
+#~ msgstr "Isifrentshisi"
+
+#~ msgid "German"
+#~ msgstr "Isijamani"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hungarian"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "isiHungarian (qwerty)"
+
+#~ msgid "Italian"
+#~ msgstr "isiTaliyane"
+
+#~ msgid "Japanese"
+#~ msgstr "Isijapani"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Isilithuanian"
+
+#~ msgid "Norwegian"
+#~ msgstr "Isinowijiyeni"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx Iimpawu"
+
+#~ msgid "Polish"
+#~ msgstr "Isipolish"
+
+#~ msgid "Portuguese"
+#~ msgstr "Isiphuthukesi"
+
+#~ msgid "Romanian"
+#~ msgstr "isiRoma"
+
+#~ msgid "Russian"
+#~ msgstr "Isirashiya"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovak"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "isiSlovak (qwerty)"
+
+#~ msgid "Spanish"
+#~ msgstr "Isipanishi"
+
+#~ msgid "Swedish"
+#~ msgstr "Isiswidishi"
+
+#~ msgid "Swiss German"
+#~ msgstr "Swiss German"
+
+#~ msgid "Swiss French"
+#~ msgstr "isiFrentshi sase Swiss"
+
+#~ msgid "Thai"
+#~ msgstr "Isithai"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Ubukumkani Obumanyeneyo"
+
+#~ msgid "U.S. English"
+#~ msgstr "U.S. isiNgesi"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "U.S. isiNgesi w/ deadkeys"
+
+#~ msgid "U.S. English w/ISO9995-3"
+#~ msgstr "U.S. isiNgesi w/ISO9995-3"
+
+#~ msgid "Armenian"
+#~ msgstr "isi-Armenian"
+
+#, fuzzy
+#~ msgid "Azerbaijani"
+#~ msgstr "isi-Azerbaidjani"
+
+#~ msgid "Icelandic"
+#~ msgstr "isi-Icelandic"
+
+#~ msgid "Israeli"
+#~ msgstr "Israyeli"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr ""
+#~ "Umgangatho we azerty Wonaselithuanian #-#-#-#-#  kxkb.po (kxkb)  #-#-#-#-"
+#~ "#\n"
+#~ "Umgangatho wesi Lithuarian azerty"
+
+#~ msgid "Lithuanian querty \"numeric\""
+#~ msgstr "Lithuanian querty \"amanani\""
+
+#~ msgid "Lithuanian querty \"programmer's\""
+#~ msgstr "Lithuanian querty \"umdwelisi wenkqubo\""
+
+#~ msgid "Macedonian"
+#~ msgstr "isiMacedonian"
+
+#~ msgid "Serbian"
+#~ msgstr "isiSerbian"
+
+#~ msgid "Slovenian"
+#~ msgstr "Umslovakisa"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamese"
+
+#~ msgid "Arabic"
+#~ msgstr "Isi-Arabhu"
+
+#~ msgid "Belarusian"
+#~ msgstr "Belarusian"
+
+#~ msgid "Bengali"
+#~ msgstr "isiBengali"
+
+#~ msgid "Croatian"
+#~ msgstr "isiCroatian"
+
+#~ msgid "Greek"
+#~ msgstr "IsiGrike"
+
+#~ msgid "Lithuanian qwerty \"numeric\""
+#~ msgstr "Lithuanian qwerty \"amanani\""
+
+#~ msgid "Lithuanian qwerty \"programmer's\""
+#~ msgstr "Lithuanian qwerty \"umdwelisi nkqubo\""
+
+#~ msgid "Turkish"
+#~ msgstr "Isitheki"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Isiukraniya"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanian"
+
+#~ msgid "Burmese"
+#~ msgstr "Burmese"
+
+#~ msgid "Dutch"
+#~ msgstr "Isidatshi"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Georgian (isilatin)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Georgian (russian)"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukhi"
+
+#~ msgid "Hindi"
+#~ msgstr "isiHindi"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Iranian"
+#~ msgstr "Iranian"
+
+#~ msgid "Latin America"
+#~ msgstr "Isilatin eAmerica"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltese"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Maltese (US layout)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Northern Saami (Finland)"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Northern Saami (Norway)"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Northern Saami (Sweden)"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Polish (qwertz)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Russian (cyrillic phonetic)"
+
+#~ msgid "Tajik"
+#~ msgstr "Tajik"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turkish (F)"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "U.S. English w/ ISO9995-3"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Yugoslavian"
+
+#, fuzzy
+#~ msgid "Bosnian"
+#~ msgstr "isiRoma"
+
+#, fuzzy
+#~ msgid "Croatian (US)"
+#~ msgstr "isiCroatian"
+
+#, fuzzy
+#~ msgid "French Canadian"
+#~ msgstr "Canadian"
+
+#, fuzzy
+#~ msgid "Kannada"
+#~ msgstr "Canadian"
+
+#, fuzzy
+#~ msgid "Mongolian"
+#~ msgstr "isiMacedonian"
+
+#, fuzzy
+#~ msgid "Syriac"
+#~ msgstr "isiSerbian"
+
+#, fuzzy
+#~ msgid "Hungarian (US)"
+#~ msgstr "Hungarian"
+
+#, fuzzy
+#~ msgid "Irish"
+#~ msgstr "Isitheki"
+
+#, fuzzy
+#~ msgid "Israeli (phonetic)"
+#~ msgstr "Russian (cyrillic phonetic)"
+
+#, fuzzy
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Georgian (isilatin)"
+
+#, fuzzy
+#~ msgid "Swiss"
+#~ msgstr "Isiswidishi"

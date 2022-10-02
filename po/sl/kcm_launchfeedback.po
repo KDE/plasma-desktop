@@ -1,0 +1,151 @@
+# Translation of kcmlaunch.po to Slovenian
+# SLOVENIAN TRANSLATION OF K DESKTOP ENVIRONMENT.
+# Copyright (C) 2001, 2003 Free Software Foundation, Inc.
+# $Id: kcm_launchfeedback.po 1633641 2022-09-13 01:32:50Z scripty $
+# $Source$
+#
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2001.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2022-09-07 07:35+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Časovna omejitev v sekundah"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Zagon odziva"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Kazalka:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Brez odziva"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Statična"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Utripajoča"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Skakajoča"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Upravljalnik aktivnosti:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Omogoči animacijo"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Ustavi animacijo po:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekundo"
+msgstr[1] "%1 sekundi"
+msgstr[2] "%1 sekunde"
+msgstr[3] "%1 sekund"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matjaž Jeran"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matjaz.jeran@amis.net"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "Nastavi odziv zagona programa"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Odziv zagona</h1> Tu lahko nastavite odziv programa, ki se zaganja."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Kazalka za zaposlenost</h1>\n"
+#~ "KDE ponuja kazalko za zaposlenost kot obvestilo ob zagonu\n"
+#~ "programa. Da bi kazalko za zaposlenost omogočili, izberite\n"
+#~ "eno vrsto vidnega odziva iz spustnega polja.\n"
+#~ "Zgodi se lahko, da se nekateri programi ne zavedajo tega obvestila\n"
+#~ "ob zagonu. V tem primeru kazalka preneha utripati po času\n"
+#~ "navedenem v odseku »Časovni pretek obvestila o zagonu«."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Brez kazalke za zaposlenost"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Pasivna kazalka za zaposlenost"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "Obvestilo v opravil&ni vrstici"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Obvestilo v opravilni vrstici</H1>\n"
+#~ "Omogočite lahko tudi drugo metodo za obvestilo o zagonu, ki jo\n"
+#~ "uporablja opravilna vrstica, pri kateri se prikaže vrteča se peščena "
+#~ "ura,\n"
+#~ "ki simbolizira zagon programa.\n"
+#~ "Zgodi se lahko, da se nekateri programi ne zavedajo tega obvestila\n"
+#~ "ob zagonu. V tem primeru kazalka preneha utripati po času\n"
+#~ "navedenem v odseku »Časovni pretek obvestila o zagonu«."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Časovni pretek obvestila o zagon&u:"

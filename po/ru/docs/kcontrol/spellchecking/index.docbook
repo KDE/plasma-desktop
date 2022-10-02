@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Проверка орфографии</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+> <affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>проверка орфографии</keyword>
+<keyword
+>словарь</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Проверка орфографии</title>
+<para
+>Параметры настройки, доступные в этом модуле, по умолчанию используются во всех приложениях &kde;, которые задействуют &sonnet; (механизм для работы с различными средствами проверки орфографии, распространяемыми под свободными лицензиями).</para>
+
+<para
+>Для использования &sonnet; необходимо установить программу для проверки орфографии, например: <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> или <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+>, а также соответствующие словари для необходимых языков.</para>
+
+<para
+>Параметры настройки, определённые с помощью этого модуля, возможно изменить на уровне отдельных приложений.</para>
+
+<para
+>Раскрывающийся список <guilabel
+>Язык по умолчанию</guilabel
+> позволяет выбрать словарь для использования с &sonnet;.  </para>
+
+<sect2 id="spell-options">
+<title
+>Параметры</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Включить автоматическое определение языка</guilabel
+></term>
+<listitem>
+<para
+>Эта функция основана на эвристическом анализе (используемый сценарий, совпадение триграмм, ранжирование языков, доступных в модуле, который реализует проверку орфографии). Она позволяет автоматически переключать языки в многоязычных документах. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>По умолчанию использовать проверку орфографии на лету</guilabel
+></term>
+<listitem>
+<para
+>Если это флажок отмечен, проверка орфографии выполняется по мере набора слов в документе. Слова с ошибками подчёркиваются красной линией. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Пропускать слова в верхнем регистре</guilabel
+></term>
+<listitem>
+<para
+>Если этот флажок отмечен, проверка орфографии слов, которые целиком состоят из прописных букв, не выполняется.</para>
+<tip
+><para
+>Эта функция полезна для документов, в которых много аббревиатур. Если флажок не отмечен, большинство аббревиатур будут ошибочно подчёркнуты, как содержащие орфографические ошибки.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Пропускать слова, написанные слитно</guilabel
+></term>
+<listitem
+><para
+>Если этот флажок не отмечен, слова, присутствующие в словаре по отдельности, но написанные слитно, считаются орфографической ошибкой. Например: «shutout», «cannot», «blackout». </para>
+
+<tip
+><para
+>Если отметить этот флажок, приложения не будут выделять адреса веб-сайтов и электронной почты как орфографические ошибки. В таких адресах часто присутствуют слова, написанные слитно.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Игнорируемые слова</title>
+<para
+>Текстовое поле в нижней части диалогового окна позволяет задать определённые слова (специальные термины, имена собственные и так далее), которые программа будет пропускать при проверке орфографии.</para>
+
+<sect3
+><title
+>Добавление слова в список игнорируемых</title>
+<para
+>Чтобы добавить слово, введите его в текстовое поле и нажмите кнопку <guibutton
+>Добавить</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Удаление слова из списка игнорируемых</title>
+<para
+>Чтобы удалить слово, выберите его в списке игнорируемых щелчком левой кнопки мыши и нажмите кнопку <guibutton
+>Удалить</guibutton
+>.</para>
+
+<para
+>По завершении внесения изменений нажмите кнопку <guibutton
+>Применить</guibutton
+>.</para>
+
+<para
+>Нажатие кнопки <guibutton
+>По умолчанию</guibutton
+> восстанавливает значения по умолчанию для всех параметров.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

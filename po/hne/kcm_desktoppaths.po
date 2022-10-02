@@ -1,0 +1,535 @@
+# translation of kcmkonq.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-02-10 12:00+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
+"Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
+"Language: hne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 0.2\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "डेस्कटाप"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+msgid "Documents"
+msgstr "कागद के रस्ता: (&o)"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+msgid "Downloads"
+msgstr "कागद के रस्ता: (&o)"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+msgid "Music"
+msgstr "कागद के रस्ता: (&o)"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+msgid "Pictures"
+msgstr "कागद के रस्ता: (&o)"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+msgid "Videos"
+msgstr "कागद के रस्ता: (&o)"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+msgid "Desktop path:"
+msgstr "डेस्कटाप रस्ता: (&k)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+msgid "Documents path:"
+msgstr "कागद के रस्ता: (&o)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+msgid "Downloads path:"
+msgstr "कागद के रस्ता: (&o)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, fuzzy, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+msgid "Videos path:"
+msgstr "कागद के रस्ता: (&o)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, fuzzy, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+msgid "Pictures path:"
+msgstr "कागद के रस्ता: (&o)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, fuzzy, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+msgid "Music path:"
+msgstr "कागद के रस्ता: (&o)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, fuzzy, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
+
+#, fuzzy
+#~ msgid "Autostart path:"
+#~ msgstr "अपने अपन चालू रस्ता: (&u)"
+
+#~ msgid "Autostart"
+#~ msgstr "अपने अपन चालू"
+
+#, fuzzy
+#~ msgid "Movies"
+#~ msgstr "खिसकाव"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ " '%1' बर रस्ता बदल दे गे हे;\n"
+#~ "का आप मन चाहथो कि फाइल मन ल '%2' से '%3' मं ले जाय?"
+
+#, fuzzy
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "खिसकाव"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed.\n"
+#~| "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ " '%1' बर रस्ता बदल दे गे हे;\n"
+#~ "का आप मन चाहथो कि फाइल मन ल '%2' से '%3' मं ले जाय?"
+
+#, fuzzy
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "खिसकाव"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "पुस्टि जरूरी"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>कान्करर बर्ताव</h1> आप मन कान्फिगर कर सकथो कि इहां कान्करर फाइल प्रबंधक के "
+#~ "जइसन कइसन बर्ताव करे."
+
+#~ msgid "Misc Options"
+#~ msgstr "विविध विकल्प"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "फोल्डर अलग विंडो मं खोलव (&w)"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "यदि ए विकल्प चुने जाथे,  तहां जब आप मन कोनो फोल्डर खोलहू तहां बदला मा ओही विंडो मं "
+#~ "फोल्डर के सामान ल देखाय के, कान्करर एक नवा विंडो मं खुलही."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "'मेटाव' संदर्भित मेन्यू देखाव जऊन घुरुवा ल बायपास करही (&n)"
+
+#~ msgid "Menu Editor"
+#~ msgstr "मेन्यू संपादक "
+
+#~ msgid "Menu"
+#~ msgstr "मेन्यू"
+
+#~ msgid "New..."
+#~ msgstr "नवा..."
+
+#~ msgid "Remove"
+#~ msgstr "हटाव"
+
+#~ msgid "Move Up"
+#~ msgstr "ऊपर जाव"
+
+#~ msgid "Move Down"
+#~ msgstr "नीचे जाव"
+
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "पुस्टि बर पूछव"
+
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "घुरुवा मं ले जाव (&M)"
+
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "मेटाव (&e)"
+
+#~ msgid "&Behavior"
+#~ msgstr "बरताव (&B)"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "प्रिव्यू अउ मेटा-डाटा (&P)"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>प्रिव्यू स्वीकारव, \"फोल्डर आइकन रीफ्लेक्ट कंटेंट्स\", अउ प्रोटोकाल मं मेटा डाटा "
+#~ "रीट्राइवल:</p>"
+
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a colum where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "प्रोटोकाल चुनव"
+
+#~ msgid "Local Protocols"
+#~ msgstr "लोकल प्रोटोकाल"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "इंटरनेट प्रोटोकाल"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "सबसे अधिक फाइल आकारः (&M)"
+
+#~ msgid " MB"
+#~ msgstr "मे.बा."
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "चिनहा मन के सापेक्छ प्रिव्यू के आकार बढ़ाव (&I)"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "फाइल मन मं भीतर मं बने छोटेफोटू उपयोग मं लेव (&U)"
+
+#~ msgid "Sound Files"
+#~ msgstr "अवाज फाइल मन ल"
+
+#~ msgid "&Left button:"
+#~ msgstr "डेरी बटनः (&L)"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "आप चुन सकथो कि का हो जब आप मन डेस्कटाप मं अपन पाइंटिंग उपकरन के डेरी बटन ल किलिक "
+#~ "करथो :"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "जेवनी बटनः (&u)"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "आप चुन सकथो कि का हो जब आप मन डेस्कटाप मं अपन पाइंटिंग उपकरन के जेवनी बटन ल किलिक "
+#~ "करथो :"
+
+#~ msgid "No Action"
+#~ msgstr "कोई काम नइ"
+
+#~ msgid "Window List Menu"
+#~ msgstr "विंडोज सूची मेन्यू"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "डेस्कटाप मेन्यू "
+
+#~ msgid "Application Menu"
+#~ msgstr "अनुपरयोग मेन्यू "
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "निसानी मेन्यू"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "मनमाफिक मेन्यू 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "मनमाफिक मेन्यू 1"
+
+#~ msgid "General"
+#~ msgstr "सामान्य"
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "डेस्कटाप मं चिनहा देखाव (&S)"
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "डेस्कटाप विंडो मं प्रोग्राम स्वीकारव (&g)"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "औजार नुस्खे देखाव (&t)"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "स्क्रीन के सीर्स मं मेन्यू पट्टी"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr "यदि ए विकल्प चुने जाथे , स्क्रीन के सीर्स तिर कोनो मेन्यू पट्टी नइ होही."
+
+#~ msgid "&None"
+#~ msgstr "कुछ नइ (&N)"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "यदि ए विकल्प चुने जाथे , स्क्रीन के सीर्स तिर कोनो मेन्यू पट्टी नइ होही जऊन डेस्कटाप "
+#~ "मेन्यू दर्साथे ."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "डेस्कटाप मेन्यूपट्टी (&D)"
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "अभी हाल के अनुपरयोग के मेन्यू पट्टी (मैक ओएस सैली) (&C)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "मुसुवा बटन काम"
+
+#~ msgid "Middle button:"
+#~ msgstr "बीच के बटनः"
+
+#~ msgid "Left button:"
+#~ msgstr "डेरी बटनः"
+
+#~ msgid "Right button:"
+#~ msgstr "जेवनी बटनः"
+
+#~ msgid "Edit..."
+#~ msgstr "संपादन..."
+
+#~ msgid "File Icons"
+#~ msgstr "फाइल चिनहा"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "ये विकल्प ल चुनव यदि आप मन चाहथो कि चिनहा अपने अपन एक ग्रिड मं पंक्तिबद्ध हो जब आप "
+#~ "मन ओ मन ल खिसकाव."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "चिनहा मन ल अपने अपन पंक्तिबद्ध करव (&l)"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "लुकाए फाइल मन ल देखाव (&h)"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr "चुनव कि कऊन फाइल किसिम बर आप मन फोटू प्रिव्यू सक्छम करना चाहथो ."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "बर चिनहा प्रिव्यू देखाव"
+
+#~ msgid "Device Icons"
+#~ msgstr "उपकरन चिनहा"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "उपकरन चिनहा देखाव (&S)"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr "डेस्कटाप मं उपकरन किसिम डिसल्क्ट करव जऊन ल आप मन देखना नइ चाहथो ."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "प्रदर्सन बर उपकरन किसिम"
+
+#~ msgid "Show file &tips"
+#~ msgstr "फाइल नुस्खा देखाव (&t)"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "इहां आप मन ए नियंत्रित कर सकथो कि जब आप मन कोनो फाइल के ऊपर मुसुवा ल लाथें तहां उस "
+#~ "फाइल परिचय अतिरिक्त जानकारी बताता एक छोटा पापअप विंडो देखना चाहथो ."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "फाइल नुस्खों मं प्रिव्यू देखाव (&p)"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "इहां आप मन नियंत्रित कर सकथो कि जब आप मन फाइल के ऊपर मुसुवा लाव तहां ओखर बड़े आकार "
+#~ "मं प्रिव्यू पाप अप विंडो मं दिखाई दे."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "एकल विंडो मं नेटवर्क आपरेसन्स देखाव (&S)"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "लकीर मं चिनहा ल नवा नाम देव (&l)"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "ये विकल्प ल चेक करे से चिनहा नाम के ऊपर किलिक करे मं फाइल मन के नाम सीधे ही बदले जा "
+#~ "सकही."
+
+#~ msgid "&Appearance"
+#~ msgstr "सक्ल-सूरत (&A)"
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>बहु डेस्कटाप</h1>ये माड्यूल मं आप मन कान्फिगर कर सकथो कि आप मन कतका आभासी "
+#~ "डेस्कटाप चाहथो अउ ओमां कऊन किसम लेबल लगाए जाव."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "डेस्कटाप के संख्याः (&u)"
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "इहां आप मन सेट कर सकथो कि आप मन अपन केडीई डेस्कटाप मं कतका आभासी डेस्कटाप चाहथो . "
+#~ "मूल्य बदले बर स्लाइडर खिसकाव."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "डेस्कटाप नाम (&N)"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "डेस्कटाप %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "इहां आप मन डेस्कटाप %1 बर नाम भर सकथो "
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "डेस्कटाप के ऊपर मुसुवा चकरी चलाय से डेस्कटाप बदलथे "
+
+#~ msgid "Desktop %1"
+#~ msgstr "डेस्कटाप %1"
+
+#~ msgid "&Standard font:"
+#~ msgstr "मानक फोंट (&S)"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr "ये फोंट कान्करर विंडो मं पाठ प्रदर्सन बर उपयोग मं आही."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "फोंट आकारः (&z)"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr "ये फोंट आकार कान्करर विंडो मं पाठ प्रदर्सन बर उपयोग मं आही."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "सामान्य पाठ रंगः (&x)"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr "ये वो रंग हे जऊन कान्करर विंडो मं पाठ प्रदर्सन बर उपयोग मं आही."
+
+#~ msgid "&Text background color:"
+#~ msgstr "पाठ पिछोत अंगना रंगः (&T)"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr "ये वो रंग हे जऊन पाठ के पीछू डेस्कटाप मं चिनहा मन बर उपयोग मं आही."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "चिनहा पाठ के ऊंचाई: (&e)"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "चिनहा पाठ लिखे बर ए लकीर मन के सबसे अधिक संख्या हे. लंबे फाइल नांव मन ल आखरी लकीर "
+#~ "के आखरी मं काट दे जाही."
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "चिनहा पाठ के चौड़ाई (&W)"
+
+#~ msgid ""
+#~ "This is the maximum width for the icon text when konqueror is used in "
+#~ "multi column view mode."
+#~ msgstr "जब कान्करर बहु खंभा दृस्य मोड मं होही तब ए चिनहा पाठ के चौड़ाई होगी"
+
+#~ msgid "&Underline filenames"
+#~ msgstr "फाइल नाम रेखांकित करव (&U)"
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "फाइल आकार बाइट्स मं देखाव (&y)"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " लाइन"
+#~ msgstr[1] " लाइन"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "पिक्सेल"
+#~ msgstr[1] "पिक्सेल"
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>सक्ल-सूरत</h1> आप मन इहां कान्फिगर कर सकथो कि कइसन इहां कान्करर फाइल प्रबंधक "
+#~ "के तरह कइसन दिखे."

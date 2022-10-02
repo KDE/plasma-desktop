@@ -1,0 +1,276 @@
+# translation of kcmsmserver.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# shyam krishna ball <shyam@mpp.org.np>, 2006.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2007-08-20 10:23+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>सत्र प्रबन्धक</h1> तपाईँ यहाँ सत्र प्रबन्धक कन्फिगर गर्न सक्नुहुन्छ । यसले यी विकल्प "
+"समावेश गर्दछ जस्तै सत्रको अन्त्य (लगआउट) निश्चित हुन्छ या हुँदैन, लग इन गर्दा सत्र फेरि "
+"पूर्वावस्थामा जान्छ या जाँदैन र पूर्वानिर्धारित रूपमा सत्रको अन्त्य पछि कम्प्युटर स्वचालित "
+"रूपमा बन्द हुन्छ या हुँदैन ।"
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "कम्प्युटर पुन: सुरु गर्नुहोस्"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "सामान्य"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "लगआउट यकीन गर्नुहोस्"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "बन्द विकल्प प्रस्ताव गर्नुहोस्"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "पूर्वानिर्धारित बन्द विकल्प"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "हालको सत्र अन्त्य गर्नुहोस्"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "कम्प्युटर पुन: सुरु गर्नुहोस्"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "कम्प्युटर बन्द गर्नुहोस्"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "म्यानुअल तरिकाले बचत गरिएको सत्र पूर्वावस्थामा ल्याउनुहोस्"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "म्यानुअल तरिकाले बचत गरिएको सत्र पूर्वावस्थामा ल्याउनुहोस्"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "एउटा खाली सत्रसँग सुरु गर्नुहोस्"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, fuzzy, kde-format
+#| msgid ""
+#| "Here you can enter a comma-separated list of applications that should not "
+#| "be saved in sessions, and therefore will not be started when restoring a "
+#| "session. For example 'xterm,xconsole'."
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"यहाँ तपाईँले अनुप्रयोगहरूको अल्पविराम-विभाजित सूची प्रविष्ट गर्न सक्नुहुन्छ जुन सत्रहरूमा बचत "
+"गर्नुहुँदैन, र तसर्थ सत्र पूर्वावस्थामा लैजाँदा सुरु हुने छैन । उदाहरणका लागि 'xterm,"
+"xconsole' ।"
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "लगआउट यकीन गर्नुहोस्"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "बन्द विकल्प प्रस्ताव गर्नुहोस्"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "पूर्वानिर्धारित बन्द विकल्प"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "लगइनमा"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "सत्रबाट असामाहित गरिने अनुप्रयोग:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "अघिल्लो सत्र पूर्वावस्थामा ल्याउनुहोस्"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "म्यानुअल तरिकाले बचत गरिएको सत्र पूर्वावस्थामा ल्याउनुहोस्"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "यदि तपाईँ लगआउट यकीन संवाद बाकस प्रदर्शन गर्न सत्र प्रबन्धक चाहनुहुन्छ भने यो विकल्प "
+#~ "चिनो लगाउनुहोस् ।"
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "लगआउट यकीन गर्नुहोस्"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "बन्द विकल्प प्रस्ताव गर्नुहोस्"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "यहाँ तपाईँ लगआउट हुँदा पूर्वानिर्धारित रूपमा के हुन्छ भन्ने रोज्न सक्नुहुन्छ । यदि तपाईँले "
+#~ "केडीई मार्फत लग गर्नुभयो भने, मात्र यसको अर्थ हुन्छ ।"
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "पूर्वानिर्धारित बन्द विकल्प"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>अघिल्लो सत्र पूर्वावस्थामा ल्याउनुहोस्:</b> ले 'अन्त्य गर्नुहोस्' चलाइरहको सबै "
+#~ "अनुप्रयोगहरू बचत गर्दछ र पछिल्लो सुरुआत हुँदा तिनीहरूलाई पूर्वावस्थामा ल्याउनुहोस्</li>\n"
+#~ "<li><b>म्यानुअल तरिकाले बचत गरिएको सत्र पूर्वावस्थामा ल्याउनुहोस्: </b> के-मेनुमा "
+#~ "\"सत्र बचत गर्नुहोस्\" मार्फत कुनै समयमा सत्रहरू बचत गर्न अनुमति दिनुहोस् । यसको मतलब "
+#~ "हालै सुरु गरिएको अनुप्रयोगहरू पछिल्लो सुरुआत हुँदा पुन: देखा पर्छ ।</li>\n"
+#~ "<li><b>एउटा खाली सत्रसँग सुरु गर्नुहोस्:</b> केही पनि बचत नगर्नुहोस् । पछिल्लो सुरुआतमा "
+#~ "एउटा खाली डेस्कटपसँग माथि आउँछ ।</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "लगइनमा"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "सत्रबाट असामाहित गरिने अनुप्रयोग:"
+
+#~ msgid "Session Manager"
+#~ msgstr "सत्र प्रबन्धक"
+
+#~ msgid "Advanced"
+#~ msgstr "उन्नत"
+
+#, fuzzy
+#~| msgid "Session Manager"
+#~ msgid "Window Manager"
+#~ msgstr "सत्र प्रबन्धक"

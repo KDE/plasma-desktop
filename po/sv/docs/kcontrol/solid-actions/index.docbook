@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Enhetsåtgärder</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>åtgärder</keyword>
+<keyword
+>enheter</keyword>
+<keyword
+>Hårdvara</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Åtgärder för nya enheter</title>
+<sect2 id="icons-intro">
+<title
+>Inledning</title>
+
+<para
+>Den här modulen låter dig ställa in åtgärder du vill koppla när du ansluter nya enheter.</para>
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av enhetsåtgärdshantering</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Skärmbild av enhetsåtgärdshantering</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Du ser en lista med alla möjliga åtgärder tillgängliga när enheter ansluts. Observera att de bara är tillgängliga med vissa villkor.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Lägg till</guibutton
+>: Detta frågar efter ett namn på den nya åtgärden, och öppnar därefter åtgärden för redigering. Om du inte tillhandahåller alla nödvändiga värden i dialogrutan, kommer åtgärden att tas bort. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Redigera</guibutton
+>: Detta gör det möjligt att ändra namn, ikon, kommando att köra och villkoren som åtgärden måste matcha för att visas. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Ångra / Kan inte tas bort / Ta bort</guibutton
+>: Detta utför olika åtgärder, beroende på om det tillhandahölls med systemet eller skapades av dig. Du kan bara ångra ändringar av åtgärder för hela systemet, och om det inte finns några åtgärder kan de inte tas bort. Åtgärder skapade av användaren tas bort fullständigt, inklusive alla ändringar. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Lägg till åtgärd</title>
+
+<para
+>Knappen <guibutton
+>Lägg till</guibutton
+> visar en dialogruta för att skriva in den nya åtgärdens namn. </para>
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av dialogrutan Lägg till åtgärd</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Skärmbild av dialogrutan Lägg till åtgärd</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Åtgärdsnamnet ska beskriva åtgärden korrekt. Dialogrutan Redigera åtgärd visas för att låta dig ställa in åtgärdens egenskaper, efter att du har angett ett namn och klickat på <guibutton
+>Ok</guibutton
+>. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Redigera åtgärd</title>
+
+<para
+>Den här dialogrutan låter dig ändra inställningarna för åtgärden du markerade.</para>
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av dialogrutan Redigera åtgärd</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Skärmbild av dialogrutan Redigera åtgärd</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Det omfattar ikonen, åtgärdens namn, åtgärdens kommando och de diverse parametrarna. Du kan ändra ikonen genom att klicka på den.</para>
+<para
+>Parametrarna visas i ett träd, där det översta objektet måste vara sant för att åtgärden ska visas.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Redigera parameter</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Parametertyp</guilabel
+></term>
+<listitem>
+<para
+>Styr vad som kan finnas inne i den, eller vilken matchning som utförs för att kontrollera om den är sann. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Egenskap matchar</guilabel
+></term>
+<listitem>
+<para
+>Jämför enhetens angivna egenskap (med användning av <guilabel
+>Enhetstyp</guilabel
+> och <guilabel
+>Värdenamn</guilabel
+>) och jämför den med den tillhandahållna texten genom att använda utvärderingen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Innehållskonjunktion</guilabel
+></term>
+<listitem>
+<para
+>Alla delegenskaper av denna måste vara sanna för att den själv ska vara sann.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Innehållsdisjunktion</guilabel
+></term>
+<listitem>
+<para
+>Vilken delegenskaper som helst av denna kan vara sann för att den själv ska vara sann.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Enhetsgränssnitt matchar</guilabel
+></term>
+<listitem>
+<para
+>Kontrollerar för att se om enheten kan klassificeras som den valda enhetstypen.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Enhetstyp</guilabel
+></term>
+<listitem>
+<para
+>Detta är de möjliga enhetstyper som stöds av &plasma; på systemet. De används både vid matchning av egenskap och enhet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Värdenamn</guilabel
+></term>
+<listitem>
+<para
+>Detta är en lista med alla möjliga egenskapsnamn för den valda enhetstypen. Det tillhandahåller också val av värdeutvärdering (vilket antingen är <guilabel
+>Är lika med</guilabel
+> eller <guilabel
+>Innehåller</guilabel
+>), och gör det möjligt att mata in texten som ska jämföras med.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Återställ parameter</guibutton
+></term>
+<listitem>
+<para
+>Återställer alla osparade ändringar av parametern som du har gjort.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Spara parameterändringar</guibutton
+></term>
+<listitem>
+<para
+>Sparar ändringarna du har gjort av parametern.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

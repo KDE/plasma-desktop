@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Atalhos</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Centro de Controle</keyword>
+<keyword
+>Combinação de teclas</keyword>
+<keyword
+>combinações</keyword>
+<keyword
+>atalhos</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Atalhos</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Introdução</title
+> 
+
+<para
+>Enquanto a maioria das funcionalidades oferecidas pelo &kde; podem ser acessadas usando-se uma interface simples de <quote
+>apontar e clicar</quote
+>, muitas pessoas preferem o teclado para algumas tarefas. Pressionar algo como <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> é frequentemente mais rápido do que mover suas mãos para o mouse, abrir o menu <guimenu
+>Editar</guimenu
+> e selecionar a opção <guimenuitem
+>Procurar</guimenuitem
+>.</para>
+
+<para
+>Como as pessoas possuem preferências diferentes sobre os atalhos de teclado, o &kde; oferece personalização total para as <quote
+>combinações de teclas</quote
+>. Uma combinação de tecla ou atalho é a combinação de uma ação com uma tecla ou combinação de teclas.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Atalhos Padrão e Atalhos Globais</title>
+
+<para
+>Os atalhos padrão e atalhos globais funcionam do mesmo modo. Na verdade, de um certo modo, os atalhos de um aplicativos ou padrão são <quote
+>globais</quote
+>. A única diferença é:</para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Atalhos de teclado padrão</quote
+> referem-se a ações que frequentemente estão disponíveis nos aplicativos, tais como Salvar, Imprimir, Copiar, &etc;</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Atalhos de teclado globais</quote
+> são atalhos para ações que fazem sentido mesmo quando nenhum aplicativo está aberto. Estes atalhos referem-se geralmente a ações como alternar entre ambientes de trabalho, manipular janelas, &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Observe que os atalhos de aplicativos configurados aqui são somente ações <emphasis
+>padrão</emphasis
+>, encontradas frequentemente nos aplicativos. A maioria destes definirão suas próprias ações, e por isso você pode personalizar a combinação de teclas usando o diálogo de atalhos do aplicativo.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Página Atalhos de Teclado Padrão</title>
+<para
+>No topo desta janela você pode observar uma caixa de entrada, onde você pode buscar de maneira interativa por nomes de atalhos (&eg; Copiar) ou combinação de teclas (&eg; <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) digitando-os literalmente aqui.</para>
+<para
+>Abaixo da caixa de busca você pode ver uma lista de atalhos de teclado, &ie; associações entre ações (&eg; Copiar) mostradas na coluna <guilabel
+>Ações</guilabel
+> e teclas ou combinações de teclas (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) mostradas na coluna <guilabel
+>Atalho</guilabel
+> ou <guilabel
+>Alternativo</guilabel
+>. </para>
+<!-- Global column is empty what's that???-->
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Página Atalhos de Teclado Globais</title>
+<para
+>No topo desta página existe uma caixa combinada que lhe permite selecionar um <guilabel
+>Componente do KDE</guilabel
+> como o KWin, o Plasma Desktop &etc; Os atalhos definidos para o componente selecionado são exibidos nas colunas <guilabel
+>Ação</guilabel
+> e <guilabel
+>Global</guilabel
+> na visão da lista. Clique a caixa combinada <guilabel
+>Arquivo</guilabel
+> à direita para importar/exportar um Esquema, configurar todos os atalhos para nenhum e remover um componente.</para>
+<para
+>Esta página possui a mesma caixa de busca usada na página <guilabel
+>Atalhos de Teclado Padrão</guilabel
+>.</para>
+
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Configurando as Combinações de Teclas</title>
+
+<para
+>Configurar combinações de teclas é muito fácil. No meio deste módulo do &systemsettings; você encontrará uma lista de ações disponíveis. Se existir um atalho configurado para aquela ação, você irá encontrá-lo do lado direito da ação. Basta selecionar a ação que deseja configurar.</para>
+
+<para
+>Após selecionar a ação na lista você notará que este item é realçado e você verá duas caixas de opção adicionais abaixo do item na visão da lista. Ali você pode configurar uma combinação de teclas ou se for possível, não configurar um atalho, para a ação selecionada. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+>A opção <guilabel
+>Padrão</guilabel
+>: faz com que o atalho para a ação selecionada seja associado ao valor padrão do &kde;. Esta é uma boa escolha para a maioria das ações, pois o &kde; já vem com um número razoável de atalhos configurados. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Personalizado</guilabel
+>: se esta opção estiver habilitada, você pode criar uma combinação para a ação selecionada. Clique no botão rotulado <guibutton
+>Nenhum</guibutton
+> ou com o atalho previamente configurado. Após isso, o rótulo do botão se altera para <guibutton
+>Inserir</guibutton
+>. Agora pressione uma tecla modificadora (&ie; &Shift;, &Ctrl; ou &Alt;) e então uma tecla normal ou de função (&eg; <keycap
+>F11</keycap
+>) que você deseja atribuir para esta combinação.</para>
+<para
+>Clicar na coluna <guilabel
+>Alternativo</guilabel
+> da linha na lista permite que você edite o segundo atalho para a ação.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+<!-- changed in kde4
+<sect3 id="key-bindings-use-confschemes">
+<title
+>Configuring Schemes</title>
+
+<para
+>A key binding scheme is a set of key bindings that you can
+select by name. &kde; comes with several pre-defined key binding
+schemes. In addition to these bundled schemes, you will always see a scheme named
+<guilabel
+>Current scheme</guilabel
+> that represents the set of key
+bindings you are using right now (&ie; not the current settings you
+are playing with, but what you've been using up to now). </para>
+
+<para
+>When you are playing with the key bindings for the first time
+you don't have to be afraid of changing the default bindings: &kde;
+won't let you overwrite the defaults, so you can always switch back to
+the factory presets. By choosing <guilabel
+>Current scheme</guilabel>
+you can return to the set of key bindings you've been using up to
+now. However, be careful not to select a scheme when you've made
+changes to the key bindings you don't want to lose.</para>
+
+<para
+>When you are satisfied with a set of key bindings you've
+created, you may want to save them to a scheme of your own, so that
+you can still experiment with the bindings and always return to a
+certain scheme. You can always do this by clicking on the
+<guibutton
+>Add</guibutton
+> button.  You will be prompted for a name
+and then the new scheme will appear in the key schemes listbox. You
+can remove your own schemes again by selecting a scheme and clicking
+the <guibutton
+>Remove</guibutton
+> button. Click the <guibutton
+>Save
+changes</guibutton
+> button to save any changes you have made to the
+currently selected scheme. Note that you can not remove or save
+changes to <guilabel
+>KDE default</guilabel
+> or to <guilabel
+>Current
+scheme</guilabel
+>.</para>
+
+<important
+><para
+>If you want to save your changes while a read-only
+scheme is selected, you always have to add a new scheme first! If you
+select one of your own schemes because you want to save the changes to
+that one, the control module will switch to the key bindings of that
+scheme, discarding your changes.</para
+></important
+> 
+</sect3>
+-->
+<!--not in kde 4
+</sect2>
+<sect2>
+<title
+>Modifier Keys</title>
+
+<para
+>Different keyboards offer different sets of modifier keys.  A
+&Mac; keyboard, for example, does not have a &Ctrl; key, and instead
+has an <keycap
+>Option</keycap
+> key.  Here you can see what the
+available modifier keys for the current keyboard are.</para>
+
+<para
+>If you enable <guilabel
+>Macintosh keyboard</guilabel
+> the list
+of modifiers will change.</para>
+
+<para
+>If you have enabled the &Mac; keyboard, you can further enable
+<guilabel
+>MacOS-style modifier usage</guilabel
+>, to make &kde; behave
+more like &MacOS;.</para>
+
+<para
+>Finally, you can change what a keypress sends to the &X-Server;
+in the <guilabel
+>X Modifier Mapping</guilabel
+> section.  A common
+example is to reconfigure the <keycap
+>Caps Lock</keycap
+> key, which is
+rarely used, to be another &Ctrl; key.  This is especially nice if you
+are a touch typist, as <keycap
+>Caps Lock</keycap
+> is much easier to
+reach than either of the &Ctrl; keys on a standard keyboard.</para>
+
+</sect2>
+-->
+</sect2>
+</sect1>
+
+</article>

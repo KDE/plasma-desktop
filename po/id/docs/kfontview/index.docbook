@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Penampil Font</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>31-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>tampilan font</keyword>
+<keyword
+>font</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; adalah sebuah aplikasi untuk menampilkan dan menginstal tipe-tipe font yang berbeda: <itemizedlist>
+<listitem
+><para
+>TrueType (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>Postscript tipe 1 (ekstensi file pada &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; pada &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>BDF (Bitmap Distribution Format,  ekstensi file <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format,  ekstensi file <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Kamu bisa menggunakannya sebagai program tersendiri untuk mempratinjau dan menginstal sebuah font yang diunduh dari internet. Di dalam pratinjau kamu bisa periksa bahwa font tersebut memiliki semua karakter yang kamu perlukan. </para>
+<para
+>Selain itu &kfontview; bisa diluncurkan dari modul &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Pengelolaan Font</guilabel
+></ulink
+> untuk menggunakan kemampuan &kfontview; pratinjau yang luas.</para>
+
+<para
+>Selain itu kamu bisa menggunakan modul <guilabel
+>Pengelolaan Font</guilabel
+> untuk menginstal, menghapus, mempratinjau, dan mengelola font-font pada sistem kamu.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>Aplikasi &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Aplikasi &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+><guilabel
+>Pratinjau Standar</guilabel
+> &kfontview; mendisplaikan fontmu dalam bermacam ukuran yang berbeda menggunakan sebuah pangram (sebuah kalimat yang menggunakan setiap huruf alfabet minimal satu huruf). Sehingga kamu bisa mendapatkan gagasan yang bagus seperti apa tampilannya. Dari kotak tarik turun di dalam bilah alat kamu bisa memilih tipe-tipe pratinjau tambahan. <itemizedlist>
+<listitem
+><para
+><guilabel
+>Semua Karakter</guilabel
+> mendisplaikan semua karakter yang disediakan oleh font dalam satu ukuran. </para
+></listitem>
+<listitem
+><para
+>Blok Kodeunik: Kodeunik standar mengatur grup karakter bersama dalam blok</para
+></listitem>
+<listitem
+><para
+>Skrip Kodeunik: Dalam Kodeunik, skrip adalah sebuah koleksi huruf dan tanda tertulis lainnya yang digunakan untuk mewakili informasi tekstual dalam satu atau lebih sistem penulisan.</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Ubah Teks</guibutton
+>: Menggunakan tombol ini membukakan dialog <guilabel
+>String Pratinjau</guilabel
+> di mana kamu bisa memasukkan teks yang ditentukan pengguna. Fitur ini memungkinkan kamu untuk memeriksa apakah font mendukung karakter yang kamu butuhkan. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Kamu bisa menggunakan tombol zoom atau roda mouse untuk mengubah ukuran font di semua tipe pratinjau.</para>
+<para
+>Dalam <guilabel
+>Blok Kodeunik</guilabel
+> dan <guilabel
+>Skrip Kodeunik</guilabel
+> mode  pratinjau info tooltip tambahan yang didisplaikan melayangi satu karakter dengan penunjuk mouse: Kodeunik karakter <guilabel
+>Kategori</guilabel
+> dan nilai dalam <guilabel
+>UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> dan sebagai <guilabel
+>Entitas Desimal XML</guilabel
+>.</para>
+
+<para
+>Untuk menginstal sebuah font yang kamu unduh dari Internet, klik tombol <guibutton
+>Instal</guibutton
+> di sudut kanan bawah. </para>
+
+<para
+>Kamu bisa menginstal font untuk penggunaan personal yang hanya tersedia untukmu atau seluruh sistem yang tersedia bagi semua pengguna, ini akan memerlukan hak istimewa administrator.</para>
+
+<para
+>Font yang sering disediakan dalam sebuah format arsip seperti <literal role="extension"
+>zip</literal
+>. Buka arsip tersebut menggunakan &ark; yang menyediakan pempratinjau sederhana untuk font-font. Untuk memanfaatkan kemampuan yang luas dari &kfontview;, ekstraklah font dan bukalah dalam &kfontview;. </para
+><para
+>Aplikasi perlu dijalankan-ulang untuk penggunaan font-font yang baru saja diinstal.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

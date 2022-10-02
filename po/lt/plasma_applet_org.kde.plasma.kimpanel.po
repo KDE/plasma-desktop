@@ -1,0 +1,155 @@
+# Lithuanian translations for kimpanel package.
+# This file is distributed under the same license as the kimpanel package.
+#
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_kimpanel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2021-12-12 13:26+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Išvaizda"
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr "(Tuščias)"
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, kde-format
+msgid "Input method list:"
+msgstr "Įvesties metodų sąrašas:"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, kde-format
+msgid "Vertical"
+msgstr "Vertikaliai"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, kde-format
+msgid "Horizontal"
+msgstr "Horizontaliai"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr "Šriftas:"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr "Naudoti tinkintą:"
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr " "
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Select Font…"
+msgstr "Pasirinkti šriftą…"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Piktogramų skydelyje dydis:"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr "Mažas"
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Keisti mastelį pagal skydelio aukštį"
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Keisti mastelį pagal skydelio plotį"
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Pasirinkti šriftą"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr "Rodyti"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr "Slėpti %1"
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Konfigūruoti įvesties metodą"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Įkelti konfigūraciją iš naujo"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Išeiti iš įvesties metodo"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Input Method Panel"
+msgstr "Įvesties metodų skydelis"
+
+#~ msgid "Search"
+#~ msgstr "Ieškoti"
+
+#~ msgid "Clear History"
+#~ msgstr "Išvalyti istoriją"
+
+#~ msgid "No recent Emojis"
+#~ msgstr "Nėra paskiausių jaustukų"
+
+#~ msgid "%1 copied to the clipboard"
+#~ msgstr "%1 nukopijuota į iškarpinę"
+
+#~ msgid "Recent"
+#~ msgstr "Paskiausi"
+
+#~ msgid "All"
+#~ msgstr "Visi"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorijos"
+
+#~ msgid "Search…"
+#~ msgstr "Ieškoti…"
+
+#~ msgid "Search..."
+#~ msgstr "Ieškoti..."
+
+#~ msgid "Select Font..."
+#~ msgstr "Pasirinkti šriftą..."
+
+#~ msgid "Emoji Picker"
+#~ msgstr "Jaustukų parinkiklis"

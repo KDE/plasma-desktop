@@ -1,0 +1,1571 @@
+# Lithuanian translations for l package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the l package.
+#
+# Automatically generated, 2014.
+# Liudas Ališauskas <liudas@aksioma.lt>, 2014, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-03 00:47+0000\n"
+"PO-Revision-Date: 2021-06-10 12:22+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Liudas Ališauskas, Moo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "liudas@akmc.lt, <>"
+
+#: actions.cpp:19
+#, kde-format
+msgid "Touchpad"
+msgstr "Jutiklinis kilimėlis"
+
+#: actions.cpp:22
+#, kde-format
+msgid "Enable Touchpad"
+msgstr "Įjungti jutiklinį kilimėlį"
+
+#: actions.cpp:30
+#, kde-format
+msgid "Disable Touchpad"
+msgstr "Išjungti jutiklinį kilimėlį"
+
+#: actions.cpp:38
+#, kde-format
+msgid "Toggle Touchpad"
+msgstr "Perjungti jutiklinį kilimėlį"
+
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:63
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+"Nepavyko užklausti įvesties įrenginių. Atverkite šį nuostatų modulį iš naujo."
+
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:78
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Kritinė klaida skaitant %1 jutiklinio kilimėlio pagrindinio įrenginio "
+"informaciją."
+
+#: backends/x11/xlibbackend.cpp:74
+#, kde-format
+msgid "Cannot connect to X server"
+msgstr "Nepavyksta prisijungti prie X serverio"
+
+#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
+#, kde-format
+msgid "No touchpad found"
+msgstr "Nerasta jokio jutiklinio kilimėlio"
+
+#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#, kde-format
+msgid "Cannot apply touchpad configuration"
+msgstr "Nepavyksta taikyti jutiklinio kilimėlio konfigūracijos"
+
+#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#, kde-format
+msgid "Cannot read touchpad configuration"
+msgstr "Nepavyksta perskaityti jutiklinio kilimėlio konfigūracijos"
+
+#: backends/x11/xlibbackend.cpp:190
+#, kde-format
+msgid "Cannot read default touchpad configuration"
+msgstr ""
+"Nepavyksta perskaityti numatytosios jutiklinio kilimėlio konfigūracijos"
+
+#: kcm/libinput/touchpad.qml:112
+#, kde-format
+msgid "Device:"
+msgstr "Įrenginys:"
+
+#: kcm/libinput/touchpad.qml:137
+#, kde-format
+msgid "General:"
+msgstr "Bendri:"
+
+#: kcm/libinput/touchpad.qml:139
+#, kde-format
+msgid "Device enabled"
+msgstr "Įrenginys įjungtas"
+
+#: kcm/libinput/touchpad.qml:143
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Priimti įvestį per šį įrenginį."
+
+#: kcm/libinput/touchpad.qml:167
+#, kde-format
+msgid "Disable while typing"
+msgstr "Išjungti renkant tekstą"
+
+#: kcm/libinput/touchpad.qml:171
+#, kde-format
+msgid "Disable touchpad while typing to prevent accidental inputs."
+msgstr ""
+"Išjungti jutiklinį kilimėlį, kol yra renkamas tekstas, siekiant neleisti "
+"atsitiktinių įvesčių."
+
+#: kcm/libinput/touchpad.qml:195
+#, kde-format
+msgid "Left handed mode"
+msgstr "Kairės rankos veiksena"
+
+#: kcm/libinput/touchpad.qml:199
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
+
+#: kcm/libinput/touchpad.qml:223
+#, kde-format
+msgid "Press left and right buttons for middle click"
+msgstr ""
+"Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
+"mygtukus kartu"
+
+#: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:859
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Spustelėjus vienu metu kairįjį ir dešinįjį mygtuką, bus siunčiamas "
+"viduriniojo mygtuko spustelėjimas."
+
+#: kcm/libinput/touchpad.qml:258
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Rodyklės pagreitis:"
+
+#: kcm/libinput/touchpad.qml:353
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Pagreičio profilis:"
+
+#: kcm/libinput/touchpad.qml:385
+#, kde-format
+msgid "Flat"
+msgstr "Plokščias"
+
+#: kcm/libinput/touchpad.qml:389
+#, kde-format
+msgid "Cursor moves the same distance as finger."
+msgstr "Žymeklis persikelia tokiu pačiu atstumu kaip ir pirštas."
+
+#: kcm/libinput/touchpad.qml:398
+#, kde-format
+msgid "Adaptive"
+msgstr "Prisitaikantis"
+
+#: kcm/libinput/touchpad.qml:402
+#, kde-format
+msgid "Cursor travel distance depends on movement speed of finger."
+msgstr "Žymeklio kelio atstumas priklauso nuo piršto judesio greičio."
+
+#: kcm/libinput/touchpad.qml:416
+#, kde-format
+msgid "Tapping:"
+msgstr "Bakstelėjimas:"
+
+#: kcm/libinput/touchpad.qml:418
+#, kde-format
+msgid "Tap-to-click"
+msgstr "Bakstelėti, norint spustelėti"
+
+#: kcm/libinput/touchpad.qml:422
+#, kde-format
+msgid "Single tap is left button click."
+msgstr "Vienkartis bakstelėjimas yra kairiojo mygtuko spustelėjimas."
+
+#: kcm/libinput/touchpad.qml:451
+#, kde-format
+msgid "Tap-and-drag"
+msgstr "Bakstelėti ir tempti"
+
+#: kcm/libinput/touchpad.qml:455
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr ""
+"Braukiant per jutiklinį kilimėlį po bakstelėjimo, bus atliekamas tempimas."
+
+#: kcm/libinput/touchpad.qml:482
+#, kde-format
+msgid "Tap-and-drag lock"
+msgstr "Bakstelėjimo ir tempimo užraktas"
+
+#: kcm/libinput/touchpad.qml:486
+#, kde-format
+msgid "Dragging continues after a short finger lift."
+msgstr "Po trumpo piršto pakėlimo, tempimas bus tęsiamas."
+
+#: kcm/libinput/touchpad.qml:505
+#, kde-format
+msgid "Two-finger tap:"
+msgstr "Bakstelėjimas dviem pirštais:"
+
+#: kcm/libinput/touchpad.qml:514
+#, kde-format
+msgid "Right-click (three-finger tap to middle-click)"
+msgstr ""
+"Dešinysis spustelėjimas (viduriniajam spustelėjimui bakstelėti trimis "
+"pirštais)"
+
+#: kcm/libinput/touchpad.qml:515
+#, kde-format
+msgid ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
+msgstr ""
+"Dešiniajam spustelėjimui bakstelėti dviem pirštais, viduriniajam "
+"spustelėjimui bakstelėti trimis pirštais."
+
+#: kcm/libinput/touchpad.qml:517
+#, kde-format
+msgid "Middle-click (three-finger tap right-click)"
+msgstr ""
+"Vidurinysis spustelėjimas (dešiniajam spustelėjimui bakstelėti trimis "
+"pirštais)"
+
+#: kcm/libinput/touchpad.qml:518
+#, kde-format
+msgid ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
+msgstr ""
+"Viduriniajam spustelėjimui bakstelėti dviem pirštais, dešiniajam "
+"spustelėjimui bakstelėti trimis pirštais."
+
+#: kcm/libinput/touchpad.qml:520
+#, kde-format
+msgid "Right-click"
+msgstr "Dešinysis spustelėjimas"
+
+#: kcm/libinput/touchpad.qml:521
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr "Dešiniajam spustelėjimui bakstelėti dviem pirštais."
+
+#: kcm/libinput/touchpad.qml:523
+#, kde-format
+msgid "Middle-click"
+msgstr "Vidurinysis spustelėjimas"
+
+#: kcm/libinput/touchpad.qml:524
+#, kde-format
+msgid "Tap with two fingers to middle-click."
+msgstr "Viduriniam spustelėjimui bakstelėti dviem pirštais."
+
+#: kcm/libinput/touchpad.qml:582
+#, kde-format
+msgid "Scrolling:"
+msgstr "Slinkimas:"
+
+#: kcm/libinput/touchpad.qml:612
+#, kde-format
+msgid "Two fingers"
+msgstr "Du pirštai"
+
+#: kcm/libinput/touchpad.qml:616
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Slinkti naudojant slinkimą dviem pirštais."
+
+#: kcm/libinput/touchpad.qml:624
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Jutiklinio kilimėlio kraštai"
+
+#: kcm/libinput/touchpad.qml:628
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Slinkti slenkant jutiklinio kilimėlio kraštuose."
+
+#: kcm/libinput/touchpad.qml:638
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Invertuoti slinkties kryptį (Natūralus slinkimas)"
+
+#: kcm/libinput/touchpad.qml:654
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Jutiklinio ekrano tipo slinkimas."
+
+#: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Išjungti horizontalųjį slinkimą"
+
+#: kcm/libinput/touchpad.qml:687
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Slinkimo greitis:"
+
+#: kcm/libinput/touchpad.qml:736
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Lėtesnis"
+
+#: kcm/libinput/touchpad.qml:742
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Greitesnis"
+
+#: kcm/libinput/touchpad.qml:751
+#, kde-format
+msgid "Right-click:"
+msgstr "Dešinysis spustelėjimas:"
+
+#: kcm/libinput/touchpad.qml:784
+#, kde-format
+msgid "Press bottom-right corner"
+msgstr "Paspausti apatinį dešinyjį kampą"
+
+#: kcm/libinput/touchpad.qml:788
+#, kde-format
+msgid ""
+"Software enabled buttons will be added to bottom portion of your touchpad."
+msgstr ""
+"Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėti programinės įrangos "
+"įgalinti mygtukai."
+
+#: kcm/libinput/touchpad.qml:796
+#, kde-format
+msgid "Press anywhere with two fingers"
+msgstr "Paspausti bet kur dviem pirštais"
+
+#: kcm/libinput/touchpad.qml:800
+#, kde-format
+msgid "Tap with two finger to enable right click."
+msgstr ""
+"Bakstelėti dviem pirštais, kad būtų inicijuotas dešinysis spustelėjimas."
+
+#: kcm/libinput/touchpad.qml:813
+#, kde-format
+msgid "Middle-click: "
+msgstr "Vidurinysis spustelėjimas: "
+
+#: kcm/libinput/touchpad.qml:843
+#, kde-format
+msgid "Press bottom-middle"
+msgstr "Paspausti apačioje per vidurį"
+
+#: kcm/libinput/touchpad.qml:847
+#, kde-format
+msgid ""
+"Software enabled middle-button will be added to bottom portion of your "
+"touchpad."
+msgstr ""
+"Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėtas programinės įrangos "
+"įgalintas vidurinysis mygtukas."
+
+#: kcm/libinput/touchpad.qml:855
+#, kde-format
+msgid "Press bottom left and bottom right corners simultaneously"
+msgstr "Vienu metu paspausti apatinį dešinįjį ir kairįjį kampą"
+
+#: kcm/libinput/touchpad.qml:868
+#, kde-format
+msgid "Press anywhere with three fingers"
+msgstr "Paspausti bet kur trimis pirštais"
+
+#: kcm/libinput/touchpad.qml:874
+#, kde-format
+msgid "Press anywhere with three fingers."
+msgstr "Paspausti bet kur trimis pirštais."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:30
+#: kcm/xlib/touchpadconfigxlib.cpp:82
+#, kde-format
+msgid "Touchpad KCM"
+msgstr "Jutiklinio kilimėlio KCM"
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:32
+#, kde-format
+msgid "System Settings module for managing your touchpad"
+msgstr "Sistemos nuostatų modulis, skirtas jutiklinio kilimėlio valdymui"
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:34
+#, kde-format
+msgid "Copyright © 2016 Roman Gilg"
+msgstr "Autorių teisės © 2016 Roman Gilg"
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:37
+#: kcm/xlib/touchpadconfigxlib.cpp:92
+#, kde-format
+msgid "Developer"
+msgstr "Programuotojas"
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:37
+#, kde-format
+msgid "Roman Gilg"
+msgstr "Roman Gilg"
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:92
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+"Klaida įkeliant reikšmes. Išsamesnei informacijai, žiūrėkite žurnalus. "
+"Paleiskite šį konfigūracijos modulį iš naujo."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:95
+#, kde-format
+msgid "No touchpad found. Connect touchpad now."
+msgstr "Nerasta jokio jutiklinio kilimėlio. Prijunkite jį dabar."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+"Nepavyko įrašyti visų pakeitimų. Išsamesnei informacijai, žiūrėkite "
+"žurnalus. Paleiskite šį konfigūracijos modulį iš naujo ir bandykite dar "
+"kartą."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:123
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+"Klaida įkeliant numatytąsias reikšmes. Nepavyko nustatyti kai kurių "
+"parinkčių į jų numatytąsias reikšmes."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:143
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+"Klaida pridedant naujai prijungtą įrenginį. Prijunkite įrenginį iš naujo ir "
+"paleiskite šį konfigūracijos modulį iš naujo."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:166
+#, kde-format
+msgid "Touchpad disconnected. Closed its setting dialog."
+msgstr "Jutiklinis kilimėlis atsijungė. Užvėrė savo nuostatos dialogą."
+
+#: kcm/libinput/touchpadconfiglibinput.cpp:168
+#, kde-format
+msgid "Touchpad disconnected. No other touchpads found."
+msgstr ""
+"Jutiklinis kilimėlis atsijungė. Jokių kitų jutiklinių kilimėlių nerasta."
+
+#: kcm/xlib/testarea.cpp:20
+#, kde-format
+msgid "Drag me"
+msgstr "Tempkite mane"
+
+#: kcm/xlib/testbutton.cpp:29
+#, kde-format
+msgctxt "Mouse button"
+msgid "Left button"
+msgstr "Kairysis mygtukas"
+
+#: kcm/xlib/testbutton.cpp:32
+#, kde-format
+msgctxt "Mouse button"
+msgid "Right button"
+msgstr "Dešinysis mygtukas"
+
+#: kcm/xlib/testbutton.cpp:35
+#, kde-format
+msgctxt "Mouse button"
+msgid "Middle button"
+msgstr "Vidurinysis mygtukas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:84
+#, kde-format
+msgid ""
+"System Settings module, daemon and Plasma applet for managing your touchpad"
+msgstr ""
+"Sistemos nuostatų modulis, tarnyba ir Plasma įskiepis, skirtas jūsų "
+"jutiklinio kilimėlio valdymui"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:86
+#, kde-format
+msgid "Copyright © 2013 Alexander Mezin"
+msgstr "Autorių teisės © 2013 Alexander Mezin"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:87
+#, kde-format
+msgid ""
+"This program incorporates work covered by this copyright notice:\n"
+"Copyright © 2002-2005,2007 Peter Osterlund"
+msgstr ""
+"Į šią programą įtrauktas darbas, kuris saugomas šio autorių teisių "
+"pranešimo:\n"
+"Autorių teisės © 2002-2005,2007 Peter Osterlund"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:92
+#, kde-format
+msgid "Alexander Mezin"
+msgstr "Alexander Mezin"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:93
+#, kde-format
+msgid "Thomas Pfeiffer"
+msgstr "Thomas Pfeiffer"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:93
+#, kde-format
+msgctxt "Credits"
+msgid "Usability, testing"
+msgstr "Tinkamumas, testavimas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:94
+#, kde-format
+msgid "Alex Fiestas"
+msgstr "Alex Fiestas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:94
+#, kde-format
+msgctxt "Credits"
+msgid "Helped a bit"
+msgstr "Šiek tiek padėjo"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:95
+#, kde-format
+msgid "Peter Osterlund"
+msgstr "Peter Osterlund"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:95
+#, kde-format
+msgctxt "Credits"
+msgid "Developer of synclient"
+msgstr "synclient programuotojas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:96
+#, kde-format
+msgid "Vadim Zaytsev"
+msgstr "Vadim Zaytsev"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:96 kcm/xlib/touchpadconfigxlib.cpp:97
+#, kde-format
+msgctxt "Credits"
+msgid "Testing"
+msgstr "Testavimas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:97
+#, kde-format
+msgid "Violetta Raspryagayeva"
+msgstr "Violetta Raspryagayeva"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:116
+#, kde-format
+msgid ""
+"Active settings don't match saved settings.\n"
+"You currently see saved settings."
+msgstr ""
+"Aktyvios nuostatos neatitinka įrašytųjų nuostatų.\n"
+"Šiuo metu matote įrašytąsias nuostatas."
+
+#: kcm/xlib/touchpadconfigxlib.cpp:122
+#, kde-format
+msgid "Show active settings"
+msgstr "Rodyti aktyvias nuostatas"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:159
+#, kde-format
+msgid "These settings won't take effect in the testing area"
+msgstr "Šios nuostatos neįsigalios išbandymo srityje"
+
+#: kcm/xlib/touchpadconfigxlib.cpp:164
+#, kde-format
+msgid "Enable/Disable Touchpad"
+msgstr "Įjungti/Išjungti jutiklinį kilimėlį"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
+#: kcm/xlib/ui/kded.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Enable/Disable Touchpad"
+msgstr "Įjungti/Išjungti jutiklinį kilimėlį"
+
+#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
+#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
+#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
+#, kde-format
+msgid "Configure…"
+msgstr "Konfigūruoti…"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/kded.ui:47
+#, kde-format
+msgid "Keyboard shortcuts:"
+msgstr "Spartieji klavišai:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:60
+#, kde-format
+msgid "Disable touchpad when typing"
+msgstr "Išjungti jutiklinį kilimėlį renkant tekstą"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/kded.ui:75
+#, kde-format
+msgid "Timeout:"
+msgstr "Laiko limitas:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
+#: kcm/xlib/ui/kded.ui:86
+#, kde-format
+msgid ""
+"If there was no keyboard activity for more than specified\n"
+"number of milliseconds, touchpad will be enabled again"
+msgstr ""
+"Jeigu ilgesnį nei nurodytą milisekundžių skaičių nėra jokios veiklos "
+"klaviatūra,\n"
+"tuomet jutiklinis kilimėlis bus įjungtas vėl"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
+#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
+#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
+#, kde-format
+msgid " ms"
+msgstr " ms"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:106
+#, kde-format
+msgid ""
+"Disable click emulation and scrolling.\n"
+"You will be still able to move pointer using touchpad and perform clicks "
+"with hardware buttons."
+msgstr ""
+"Išjungti spustelėjimo emuliaciją ir slinkimą.\n"
+"Jūs vis dar galėsite judinti rodyklę, naudodami jutiklinį kilimėlį bei "
+"inicijuoti spustelėjimus, naudodami aparatinės įrangos mygtukus."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:109
+#, kde-format
+msgid "Disable taps and scrolling only"
+msgstr "Išjungti tik bakstelėjimus ir slinkimą"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
+#: kcm/xlib/ui/kded.ui:119
+#, kde-format
+msgid "Disable touchpad when mouse is plugged in"
+msgstr "Prijungus pelę, išjungti jutiklinį kilimėlį"
+
+#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
+#: kcm/xlib/ui/kded.ui:136
+#, kde-format
+msgid "Notifications:"
+msgstr "Pranešimai:"
+
+#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
+#: kcm/xlib/ui/kded.ui:158
+#, kde-format
+msgid "Ignored devices:"
+msgstr "Nepaisomi įrenginiai:"
+
+#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
+#: kcm/xlib/ui/kded.ui:169
+#, kde-format
+msgid ""
+"Some devices might be incorrectly treated as a mouse.\n"
+"You can add them to this list so that they will be ignored when they're "
+"plugged in."
+msgstr ""
+"Kai kurie įrenginiai gali būti neteisingai traktuojami kaip pelė.\n"
+"Galite juos pridėti į šį sąrašą, kad tokiu būdu, juos prijungus, jų būtų "
+"nepaisoma."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
+#: kcm/xlib/ui/pointermotion.ui:14
+#, kde-format
+msgid "Pointer Motion"
+msgstr "Rodyklės judėjimas"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/pointermotion.ui:20
+#, kde-format
+msgctxt "Mouse pointer motion parameters"
+msgid "Speed"
+msgstr "Greitis"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/pointermotion.ui:29
+#, kde-format
+msgctxt "Minimum pointer movement speed"
+msgid "Minimum:"
+msgstr "Mažiausias:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
+#: kcm/xlib/ui/pointermotion.ui:39
+#, kde-format
+msgid "Minimum pointer speed"
+msgstr "Mažiausias rodyklės greitis"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/pointermotion.ui:52
+#, kde-format
+msgctxt "Maximum pointer movement speed"
+msgid "Maximum:"
+msgstr "Didžiausias:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
+#: kcm/xlib/ui/pointermotion.ui:62
+#, kde-format
+msgid "Maximum pointer speed"
+msgstr "Didžiausias rodyklės greitis"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/pointermotion.ui:75
+#, kde-format
+msgctxt "Pointer acceleration"
+msgid "Acceleration:"
+msgstr "Pagreitis:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
+#: kcm/xlib/ui/pointermotion.ui:85
+#, kde-format
+msgid "Acceleration factor for normal pointer movements"
+msgstr "Pagreičio veiksnys įprastiems rodyklės judesiams"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: kcm/xlib/ui/pointermotion.ui:101
+#, kde-format
+msgctxt "Pointer motion"
+msgid "Pressure-Dependent Motion"
+msgstr "Nuo spaudimo priklausantis judėjimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/pointermotion.ui:113
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Minimum pressure:"
+msgstr "Mažiausias spaudimas:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/pointermotion.ui:123
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Minimum factor:"
+msgstr "Mažiausias veiksnys:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/pointermotion.ui:133
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Maximum pressure:"
+msgstr "Didžiausias spaudimas:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/pointermotion.ui:143
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Maximum factor:"
+msgstr "Didžiausias veiksnys:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
+#: kcm/xlib/ui/pointermotion.ui:153
+#, kde-format
+msgid "Finger pressure at which minimum pressure motion factor is applied"
+msgstr ""
+"Piršto spaudimas, kurio mažiausiam spaudimui esant, bus taikomas judėjimo "
+"veiksnys"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
+#: kcm/xlib/ui/pointermotion.ui:166
+#, kde-format
+msgid "Finger pressure at which maximum pressure motion factor is applied"
+msgstr ""
+"Piršto spaudimas, kurio didžiausiam spaudimui esant, bus taikomas judėjimo "
+"veiksnys"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
+#: kcm/xlib/ui/pointermotion.ui:179
+#, kde-format
+msgid "Lowest setting for pressure motion factor"
+msgstr "Mažiausia spaudimo judėjimo veiksnio nuostata"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
+#: kcm/xlib/ui/pointermotion.ui:189
+#, kde-format
+msgid "Greatest setting for pressure motion factor"
+msgstr "Didžiausia spaudimo judėjimo veiksnio nuostata"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/pointermotion.ui:202
+#, kde-format
+msgctxt "Pointer motion"
+msgid "Noise Cancellation"
+msgstr "Trikdžių malšinimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/pointermotion.ui:214
+#, kde-format
+msgctxt "Noise cancellation"
+msgid "Vertical:"
+msgstr "Vertikaliai:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/pointermotion.ui:224
+#, kde-format
+msgctxt "Noise cancellation"
+msgid "Horizontal:"
+msgstr "Horizontaliai:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:234
+#, kde-format
+msgid ""
+"The minimum vertical hardware distance required to generate motion events"
+msgstr ""
+"Mažiausias reikalingas vertikalus aparatinės įrangos atstumas, kad būtų "
+"generuojami judėjimo įvykiai"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
+#, kde-format
+msgid " units"
+msgstr " vnt."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:250
+#, kde-format
+msgid ""
+"The minimum horizontal hardware distance required to generate motion events"
+msgstr ""
+"Mažiausias reikalingas horizontalus aparatinės įrangos atstumas, kad būtų "
+"generuojami judėjimo įvykiai"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
+#: kcm/xlib/ui/scroll.ui:14
+#, kde-format
+msgid "Scrolling"
+msgstr "Slinkimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/scroll.ui:28
+#, kde-format
+msgid "Edge scrolling:"
+msgstr "Slinkimas kraštuose:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
+#: kcm/xlib/ui/scroll.ui:38
+#, kde-format
+msgid "Enable vertical scrolling when dragging along the right edge"
+msgstr "Įjungti vertikalų slinkimą, kai tempiama palei dešinįjį kraštą"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
+#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
+#, kde-format
+msgctxt "Scrolling direction"
+msgid "Vertical"
+msgstr "Vertikaliai"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
+#: kcm/xlib/ui/scroll.ui:48
+#, kde-format
+msgid "Enable horizontal scrolling when dragging along the bottom edge"
+msgstr "Įjungti horizontalų slinkimą, kai tempiama palei apatinį kraštą"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
+#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
+#, kde-format
+msgctxt "Scrolling direction"
+msgid "Horizontal"
+msgstr "Horizontaliai"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
+#: kcm/xlib/ui/scroll.ui:58
+#, kde-format
+msgid ""
+"Enable vertical scrolling when dragging with two fingers anywhere on the "
+"touchpad"
+msgstr ""
+"Įjungti vertikalų slinkimą, kai dviem pirštais tempiama bet kur jutikliniame "
+"kilimėlyje"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
+#: kcm/xlib/ui/scroll.ui:68
+#, kde-format
+msgid ""
+"Enable horizontal scrolling when dragging with two fingers anywhere on the "
+"touchpad"
+msgstr ""
+"Įjungti horizontalų slinkimą, kai dviem pirštais tempiama bet kur "
+"jutikliniame kilimėlyje"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
+#: kcm/xlib/ui/scroll.ui:78
+#, kde-format
+msgid "Reverse vertical scrolling"
+msgstr "Atvirkštinis vertikalus slinkimas"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
+#: kcm/xlib/ui/scroll.ui:88
+#, kde-format
+msgid "Reverse horizontal scrolling"
+msgstr "Atvirkštinis horizontalus slinkimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/scroll.ui:98
+#, kde-format
+msgid "Two-finger scrolling:"
+msgstr "Slinkimas dviem pirštais:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/ui/scroll.ui:108
+#, kde-format
+msgid "Reverse scrolling:"
+msgstr "Atvirkštinis slinkimas:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/scroll.ui:126
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Scrolling Distance"
+msgstr "Slinkimo atstumas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/scroll.ui:138
+#, kde-format
+msgctxt "Scrolling distance"
+msgid "Vertical:"
+msgstr "Vertikaliai:"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
+#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
+#, kde-format
+msgid "Move distance of the finger for a scroll event"
+msgstr "Piršto judesio atstumas, kad būtų inicijuotas slinkimo įvykis"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
+#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
+#, kde-format
+msgid " mm"
+msgstr " mm"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/scroll.ui:167
+#, kde-format
+msgctxt "Scrolling distance"
+msgid "Horizontal:"
+msgstr "Horizontaliai:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
+#: kcm/xlib/ui/scroll.ui:199
+#, kde-format
+msgid ""
+"Continue scrolling after the finger is released from the edge of the touchpad"
+msgstr ""
+"Tęsti slinkimą po to, kai pirštas atleidžiamas nuo jutiklinio kilimėlio "
+"krašto"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
+#: kcm/xlib/ui/scroll.ui:202
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Coasting"
+msgstr "Lengvas irklavimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/scroll.ui:217
+#, kde-format
+msgctxt "Coasting"
+msgid "Minimum speed:"
+msgstr "Mažiausias greitis:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
+#: kcm/xlib/ui/scroll.ui:227
+#, kde-format
+msgid ""
+"Your finger needs to produce this many scrolls per second in order to start "
+"coasting"
+msgstr ""
+"Jūsų pirštas turi atlikti tiek slinkimų per sekundę, kad būtų pradėtas "
+"lengvas irklavimas"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
+#: kcm/xlib/ui/scroll.ui:233
+#, kde-format
+msgid " scrolls/sec"
+msgstr " slinkimų/sek."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/scroll.ui:240
+#, kde-format
+msgctxt "Coasting"
+msgid "Deceleration:"
+msgstr "Lėtėjimas:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
+#: kcm/xlib/ui/scroll.ui:250
+#, kde-format
+msgid "Number of scrolls/second² to decrease the coasting speed"
+msgstr "Slinkimų/sek.² greitis, kad būtų sumažintas lengvo irklavimo greitis"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
+#: kcm/xlib/ui/scroll.ui:256
+#, kde-format
+msgid " scrolls/sec²"
+msgstr " slinkimai/sek.²"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/ui/scroll.ui:263
+#, kde-format
+msgid "Corner coasting:"
+msgstr "Lengvas irklavimas kampuose:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
+#: kcm/xlib/ui/scroll.ui:273
+#, kde-format
+msgid ""
+"Enable edge scrolling to continue while the finger stays in an edge corner"
+msgstr ""
+"Įjungti, kad slinkimas kraštuose būtų tęsiamas tol, kol pirštas išlieka "
+"krašto kampe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
+#: kcm/xlib/ui/scroll.ui:276
+#, kde-format
+msgctxt "Coasting"
+msgid "Enable"
+msgstr "Įjungti"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
+#: kcm/xlib/ui/scroll.ui:288
+#, kde-format
+msgid ""
+"Scrolling is engaged when a drag starts in the given trigger region.\n"
+"Moving your finger in clockwise circles around the center of the touchpad\n"
+"will scroll down and counter clockwise motion will scroll up"
+msgstr ""
+"Slinkimas yra pradedamas, kai tempimas prasideda nurodytoje inicijavimo "
+"srityje.\n"
+"Judinant pirštą ratu pagal laikrodžio rodyklę aplink jutiklinio kilimėlio "
+"centrą,\n"
+"bus slenkama žemyn, o judinant prieš laikrodžio rodyklę, bus slenkama aukštyn"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
+#: kcm/xlib/ui/scroll.ui:291
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Circular Scrolling"
+msgstr "Apskritas slinkimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/scroll.ui:306
+#, kde-format
+msgctxt "Circular scrolling"
+msgid "Trigger region:"
+msgstr "Inicijavimo sritis:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
+#: kcm/xlib/ui/scroll.ui:316
+#, kde-format
+msgid "Trigger region on the touchpad to start circular scrolling"
+msgstr ""
+"Inicijavimo sritis jutikliniame kilimėlyje, kad būtų pradėtas apskritas "
+"slinkimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/scroll.ui:323
+#, kde-format
+msgctxt "Circular scrolling"
+msgid "Angle:"
+msgstr "Kampas:"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
+#: kcm/xlib/ui/scroll.ui:345
+#, kde-format
+msgid "Move angle (degrees) of finger to generate a scroll event"
+msgstr ""
+"Piršto judesio kampas (laipsniais), kad būtų generuojamas slinkimo įvykis"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
+#: kcm/xlib/ui/scroll.ui:348
+#, kde-format
+msgctxt "suffix - degrees (angle)"
+msgid "°"
+msgstr "°"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/scroll.ui:355
+#, kde-format
+msgid ""
+"When used together with vertical scrolling, hitting the upper or lower right "
+"corner will seamlessly switch over from vertical to circular scrolling"
+msgstr ""
+"Naudojant kartu su vertikaliu slinkimu, pasiekus viršutinį dešinyjį ar "
+"apatinį dešinyjį kampą, bus nepastebimai perjungta iš vertikalaus slinkimo į "
+"apskritą slinkimą"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
+#: kcm/xlib/ui/sensitivity.ui:14
+#, kde-format
+msgid "Sensitivity"
+msgstr "Jautrumas"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/sensitivity.ui:20
+#, kde-format
+msgctxt "Touchpad"
+msgid "Sensitivity"
+msgstr "Jautrumas"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/sensitivity.ui:29
+#, kde-format
+msgid "Pressure for detecting a touch:"
+msgstr "Spaudimas prilietimui nustatyti:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/sensitivity.ui:39
+#, kde-format
+msgid "Pressure for detecting a release:"
+msgstr "Spaudimas atleidimui nustatyti:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
+#: kcm/xlib/ui/sensitivity.ui:49
+#, kde-format
+msgid ""
+"When finger pressure goes above this value, the driver counts it as a touch"
+msgstr ""
+"Kai piršto spaudimas viršija šią reikšmę, tvarkyklę tai traktuos kaip "
+"prilietimą"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
+#: kcm/xlib/ui/sensitivity.ui:62
+#, kde-format
+msgid ""
+"When finger pressure drops below this value, the driver counts it as a "
+"release"
+msgstr ""
+"Kai piršto spaudimas nukrenta žemiau šios reikšmės, tvarkyklė tai traktuos "
+"kaip atleidimą"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
+#: kcm/xlib/ui/sensitivity.ui:78
+#, kde-format
+msgid ""
+"If palm detection should be enabled. Note that this also requires hardware/"
+"firmware support from the touchpad"
+msgstr ""
+"Ar turėtų būti įjungtas delno aptikimas. Turėkite omenyje, kad tai iš "
+"jutiklinio kilimėlio taip pat reikalauja aparatinės įrangos/programinės "
+"aparatinės įrangos palaikymo"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
+#: kcm/xlib/ui/sensitivity.ui:81
+#, kde-format
+msgctxt "Touchpad"
+msgid "Palm Detection"
+msgstr "Delno aptikimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/sensitivity.ui:93
+#, kde-format
+msgctxt "Palm detection"
+msgid "Minimum width:"
+msgstr "Mažiausias plotis:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/sensitivity.ui:103
+#, kde-format
+msgctxt "Palm detection"
+msgid "Minimum pressure:"
+msgstr "Mažiausias spaudimas:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
+#: kcm/xlib/ui/sensitivity.ui:113
+#, kde-format
+msgid "Minimum finger width at which touch is considered a palm"
+msgstr ""
+"Mažiausias piršto plotis ties kuriuo prilietimas yra traktuojamas kaip delnas"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
+#: kcm/xlib/ui/sensitivity.ui:129
+#, kde-format
+msgid "Minimum finger pressure at which touch is considered a palm"
+msgstr ""
+"Mažiausias piršto spaudimas ties kuriuo prilietimas yra traktuojamas kaip "
+"delnas"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
+#: kcm/xlib/ui/tap.ui:14
+#, kde-format
+msgctxt "Touchpad gesture"
+msgid "Taps"
+msgstr "Bakstelėjimai"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
+#: kcm/xlib/ui/tap.ui:28
+#, kde-format
+msgid "Tap to Click"
+msgstr "Bakstelėti, norint spustelėti"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/tap.ui:43
+#, kde-format
+msgctxt "Tapping"
+msgid "One finger:"
+msgstr "Vienas pirštas:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
+#: kcm/xlib/ui/tap.ui:53
+#, kde-format
+msgid "Which mouse button is reported on a non-corner one-finger tap"
+msgstr "Kuris pelės mygtukas bus pranešamas, bakstelėjus vienu pirštu ne kampe"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/tap.ui:60
+#, kde-format
+msgctxt "Tapping"
+msgid "Two fingers:"
+msgstr "Du pirštai:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
+#: kcm/xlib/ui/tap.ui:70
+#, kde-format
+msgid "Which mouse button is reported on a non-corner two-finger tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus dviem pirštais ne kampe"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/tap.ui:77
+#, kde-format
+msgctxt "Tapping"
+msgid "Three fingers:"
+msgstr "Trys pirštai:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
+#: kcm/xlib/ui/tap.ui:87
+#, kde-format
+msgid "Which mouse button is reported on a non-corner three-finger tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus trimis pirštais ne kampe"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/tap.ui:107
+#, kde-format
+msgctxt "Touchpad"
+msgid "Corners"
+msgstr "Kampai"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/tap.ui:131
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Top left:"
+msgstr "Viršutinis kairysis:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
+#: kcm/xlib/ui/tap.ui:144
+#, kde-format
+msgid "Which mouse button is reported on a left top corner tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus kairiajame viršutiniame "
+"kampe"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/tap.ui:151
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Bottom left:"
+msgstr "Apatinis kairysis:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/tap.ui:164
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Top right:"
+msgstr "Viršutinis dešinysis:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
+#: kcm/xlib/ui/tap.ui:177
+#, kde-format
+msgid "Which mouse button is reported on a left bottom corner tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus kairiajame apatiniame kampe"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
+#: kcm/xlib/ui/tap.ui:184
+#, kde-format
+msgid "Which mouse button is reported on a right top corner tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus dešiniajame viršutiniame "
+"kampe"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
+#: kcm/xlib/ui/tap.ui:191
+#, kde-format
+msgid "Which mouse button is reported on a right bottom corner tap"
+msgstr ""
+"Kuris pelės mygtukas bus pranešamas, bakstelėjus dešiniajame apatiniame kampe"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/tap.ui:214
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Bottom right:"
+msgstr "Apatinis dešinysis:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
+#: kcm/xlib/ui/tap.ui:251
+#, kde-format
+msgid ""
+"This gesture is an alternative way of dragging. It is performed by tapping "
+"(touching and releasing the finger), then touching again and moving the "
+"finger on the touchpad"
+msgstr ""
+"Šis gestas yra alternatyvus tempimo būdas. Jis yra atliekamas bakstelėjant "
+"(prieliečiant ir atleidžiant pirštą), o tuomet priliečiant dar kartą ir "
+"judinant pirštą per jutiklinį kilimėlį"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
+#: kcm/xlib/ui/tap.ui:254
+#, kde-format
+msgid "Tap-and-Drag Gesture"
+msgstr "Bakstelėjimo ir tempimo gestas"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
+#: kcm/xlib/ui/tap.ui:266
+#, kde-format
+msgid ""
+"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
+"gesture is active until you tap a second time, or until timeout expires"
+msgstr ""
+"Jei išjungta, bakstelėjimo ir tempimo gestas pasibaigs tuomet, kai atleisite "
+"pirštą. Jei įjungta, gestas bus aktyvus tol, kol bakstelėsite antrą kartą "
+"arba, kol pasibaigs laiko limitas"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
+#: kcm/xlib/ui/tap.ui:269
+#, kde-format
+msgctxt "Touchpad gesture"
+msgid "Locked Drags"
+msgstr "Užrakinti tempimai"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/tap.ui:284
+#, kde-format
+msgctxt "Locked drags"
+msgid "Timeout:"
+msgstr "Laiko limitas:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
+#: kcm/xlib/ui/tap.ui:294
+#, kde-format
+msgid ""
+"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+"automatically turned off after the finger is released from the touchpad"
+msgstr ""
+"Kaip ilgai užtruks (milisekundėmis), kol \"Užrakintų tempimų\" veiksena bus "
+"automatiškai išjungta, kuomet pirštas yra atleidžiamas nuo jutiklinio "
+"kilimėlio"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: kcm/xlib/ui/tap.ui:325
+#, kde-format
+msgid "Tap Detection"
+msgstr "Bakstelėjimo aptikimas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/ui/tap.ui:340
+#, kde-format
+msgid "Maximum time:"
+msgstr "Ilgiausias laikas:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/ui/tap.ui:353
+#, kde-format
+msgid "Maximum finger movement:"
+msgstr "Didžiausias piršto judesys:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: kcm/xlib/ui/tap.ui:366
+#, kde-format
+msgid "Maximum time for double tap:"
+msgstr "Ilgiausias laikas dvikarčiam bakstelėjimui:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: kcm/xlib/ui/tap.ui:379
+#, kde-format
+msgid "Single tap timeout:"
+msgstr "Vienkarčio bakstelėjimo laiko limitas:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
+#: kcm/xlib/ui/tap.ui:389
+#, kde-format
+msgid "Maximum time (in milliseconds) for detecting a tap"
+msgstr "Didžiausias bakstelėjimo aptikimo laikas (milisekundėmis)"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
+#: kcm/xlib/ui/tap.ui:408
+#, kde-format
+msgid "Maximum movement of the finger for detecting a tap"
+msgstr "Didžiausias piršto judesys, kad būtų atpažintas bakstelėjimas"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
+#: kcm/xlib/ui/tap.ui:427
+#, kde-format
+msgid "Maximum time (in milliseconds) for detecting a double tap"
+msgstr "Didžiausias dvikarčio bakstelėjimo aptikimo laikas (milisekundėmis)"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
+#: kcm/xlib/ui/tap.ui:446
+#, kde-format
+msgid "Timeout after a tap to recognize it as a single tap"
+msgstr ""
+"Laiko limitas po bakstelėjimo, kad jis būtų atpažintas kaip vienkartis "
+"bakstelėjimas"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/testarea.ui:20
+#, kde-format
+msgid "Testing area"
+msgstr "Išbandymo sritis"
+
+#. i18n: ectx: property (text), widget (TestButton, pushButton)
+#: kcm/xlib/ui/testarea.ui:29
+#, kde-format
+msgid "Click me"
+msgstr "Spustelėkite mane"
+
+#: kded/kded.cpp:201
+#, kde-format
+msgid "Touchpad was disabled because a mouse was plugged in"
+msgstr "Jutiklinis kilimėlis išjungtas, nes buvo prijungta pelė"
+
+#: kded/kded.cpp:204
+#, kde-format
+msgid "Touchpad was enabled because the mouse was unplugged"
+msgstr "Jutiklinis kilimėlis įjungtas, nes buvo atjungta pelė"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:27
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "No action"
+msgstr "Jokio veiksmo"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:30
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Left button"
+msgstr "Kairysis mygtukas"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:33
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Middle button"
+msgstr "Vidurinysis mygtukas"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:36
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Right button"
+msgstr "Dešinysis mygtukas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:285
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "All edges"
+msgstr "Visi kraštai"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:288
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top edge"
+msgstr "Viršutinis kraštas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:291
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top right corner"
+msgstr "Viršutinis dešinysis kampas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:294
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Right edge"
+msgstr "Dešinysis kraštas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:297
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom right corner"
+msgstr "Apatinis dešinysis kampas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:300
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom edge"
+msgstr "Apatinis kraštas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:303
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom left corner"
+msgstr "Apatinis kairysis kampas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:306
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Left edge"
+msgstr "Kairysis kraštas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:309
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top left corner"
+msgstr "Viršutinis kairysis kampas"
+
+#~ msgid "Pointer speed:"
+#~ msgstr "Rodyklės greitis:"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Pelės spustelėjimų emuliacija"
+
+#~ msgid "Cannot read touchpad's capabilities"
+#~ msgstr "Nepavyksta nuskaityti jutiklinio kilimėlio galimybių"
+
+#~ msgid "Synaptics driver is not installed (or is not used)"
+#~ msgstr "Synaptics tvarkyklė neįdiegta (arba nenaudojama)"

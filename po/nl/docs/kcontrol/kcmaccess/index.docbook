@@ -1,0 +1,509 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Toegankelijkheid</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>toegankelijkheid</keyword>
+<keyword
+>toetsen</keyword>
+<keyword
+>bel</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Toegankelijkheid</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Inleiding</title>
+
+<para
+>Deze module is bedoeld voor mensen met een gehoorprobleem, of gebruikers die moeite hebben met het gebruik van een toetsenbord. </para>
+
+<para
+>Deze module is verdeeld over zes tabbladen: <link linkend="access-bell"
+><guilabel
+>Bel</guilabel
+></link
+> en <link linkend="access-modifier-keys"
+><guilabel
+>Samensteltoetsen</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Toetsenbordfilters</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Activeringsgebaren</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Muisnavigatie</guilabel
+></link
+> en <link linkend="access-screenreader"
+><guilabel
+>Schermlezer</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Bel</guilabel
+></title>
+
+<para
+>Dit paneel is verdeeld in een sectie <guilabel
+>Hoorbare bel</guilabel
+> en een sectie <guilabel
+>Zichtbare bel</guilabel
+>. </para>
+
+<para
+>Het bovenste selectievak met de naam <guilabel
+>Systeembel gebruiken</guilabel
+> bepaalt of de normale systeem bel wordt gebruikt. Als deze optie wordt uitgeschakeld, zal het geluid van de systeembel worden gedempt. </para>
+
+<para
+>Met het volgende selectievak kunt u aangeven dat een ander geluid moet worden gebruikt voor de systeembel. Om dit aan te zetten, selecteert u het vakje <guilabel
+>Aangepaste bel gebruiken</guilabel
+>, en vult u het volledige pad naar een geluidsbestand in, in het lege vak genaamd <guilabel
+>Af te spelen geluid</guilabel
+>. Als u wilt, kunt u de knop <guibutton
+>Bladeren</guibutton
+> gebruiken om naar een bestand op uw systeem op te zoeken. </para>
+
+<para
+>Voor gebruikers die moeite hebben met het horen van de systeembel, of gebruikers met een stille computer, heeft &kde; de zichtbare bel. Deze <quote
+>bel</quote
+> kan in plaats van een geluidssignaal bijvoorbeeld een kleur door het beeld laten flitsen, of alle kleuren omkeren. </para>
+
+<para
+>Om deze zichtbare bel aan te zetten, selecteert u het vakje met de naam <guilabel
+>Gebruik zichtbare bel</guilabel
+>. </para>
+
+<para
+>Vervolgens kunt u kiezen uit <guilabel
+>Scherm omkeren</guilabel
+> en <guilabel
+>Scherm laten knipperen</guilabel
+>.  Als u kiest voor scherm omkeren, zullen alle kleuren op het scherm worden omgekeerd. Als u kiest voor Scherm laten knipperen, kunt u ook nog een kleur uitkiezen door op de knop rechts van <guilabel
+>Scherm laten knipperen</guilabel
+> te drukken. </para>
+
+<para
+>De draaischakelaar kan worden gebruikt om de tijdsduur van de visuele bel in te stellen. De standaard waarde is 500 msec. oftewel een halve seconde. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Samensteltoetsen</guilabel
+></title>
+
+<para
+>Er zijn in dit paneel twee secties <guilabel
+>Plakkende toetsen</guilabel
+> en <guilabel
+>Vergrendelende toetsen</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Plakkende toetsen gebruiken</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is ingeschakeld kunt u de toetsen &Shift;, &Alt; of &Ctrl; indrukken, loslaten, en dan een andere toets indrukken, om zo een toetscombinatie in te geven. (Bijvoorbeeld: <keycombo action="simul"
+>&Ctrl; &Alt;&Del;</keycombo
+> zou kunnen worden gedaan met &Ctrl; dan &Alt; en dan &Del;). </para>
+
+<para
+>In dit gedeelte staat ook een keuzevakje met de naam <guilabel
+>Plakkende toetsen vergrendelen</guilabel
+>. Als deze is geselecteerd, blijven de toetsen &Alt;, &Ctrl; en &Shift; <quote
+>geselecteerd</quote
+> totdat u de selectie <quote
+>ongedaan gemaakt</quote
+>. </para>
+
+<para
+>Bijvoorbeeld: </para>
+<variablelist>
+<varlistentry>
+<term
+>Met <guilabel
+>Plakkende toetsen vergrendelen</guilabel
+> uitgeschakeld:</term>
+<listitem>
+<para
+>Als u op &Shift; drukt, gevolgd door de toets <keycap
+>F</keycap
+>, dan vertaalt de computer dit in <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>.  Als u daarna de toets <keycap
+>P</keycap
+> indrukt, zal de computer dit vertalen naar p (geen shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Met <guilabel
+>Plakkende toetsen vergrendelen</guilabel
+> ingeschakeld:</term>
+<listitem>
+<para
+>Als u <emphasis
+>tweemaal</emphasis
+> op &Shift; drukt, gevolgd door de toets <keycap
+>F</keycap
+>, dan vertaalt de computer dit in <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>.  Als u daarna de toets <keycap
+>P</keycap
+> indrukt  zal de computer dit opvatten als <keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>. Om de &Shift;-toets te deselecteren, drukt u deze opnieuw in. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Toetsenbordfilters</guilabel
+></title>
+
+<para
+>Er zijn twee secties in dit paneel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Langzame toetsen gebruiken</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is ingeschakeld, moet u de toets ingedrukt houden gedurende een bepaalde periode (die kan worden aangepast met behulp van de draaischakelaar) voordat de toetsaanslag zal worden geaccepteerd. Hierdoor kunnen niet-bedoelde toetsaanslagen worden voorkomen. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Stuiterende toetsen gebruiken</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is geselecteerd, moet u een bepaalde tijd (die kan worden aangepast met de draaischakelaar) wachten voordat u een volgende toets kunt indrukken. Dit voorkomt meerdere toetsaanslagen door mensen met ongecontroleerde bewegingen. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Activeringsgebaren</guilabel
+></title>
+
+<para
+>Er zijn twee secties in dit paneel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Activeringsgebaren</guilabel
+> met deze opties:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Gebaren gebruiken voor het activeren van plakkende en langzame toetsen</guilabel
+></member>
+<member
+>Hier kunt u toetsenbordgebaren activeren die de volgende mogelijkheden aanzetten:</member>
+<member
+>Muistoetsen: Druk op &Shift;+NumLock</member>
+<member
+>Plakkende toetsen: Druk 5 keer achterelkaar op &Shift;</member>
+<member
+>Langzame toetsen: &Shift; 8 seconden ingedrukt houden</member>
+<member
+><guilabel
+>Plakkende en langzame toetsen uitschakelen na een bepaalde periode van inactiviteit</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Meldingen</guilabel
+> bij deze opties:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Systeembel gebruiken als een gebaar wordt gebruikt om een toegankelijkheidsfunctie in of uit te schakelen</guilabel
+></member>
+
+<member
+><guilabel
+>Bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld</guilabel
+></member>
+<member
+>Als deze optie is ingeschakeld zal &kde; een bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld.</member>
+<member
+>Weet wat u doet als u dit de-activeert, omdat de toegankelijkheidsinstellingen van het toetsenbord dan altijd zonder bevestiging worden toegepast.</member>
+
+<member
+><guilabel
+>&kde;''s systeemnotificatie gebruiken als er een toegankelijkheidsfunctie van het toetsenbord wordt in- of uitgeschakeld</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Klik op the knop <guibutton
+>Notificaties instellen</guibutton
+> om een dialoog te openen waarin u in staat bent om de notificaties voor statuswijzigingen van alle toetsen te bewerken.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Muisnavigatie</title>
+
+<para
+>Met dit tabblad kunt u het numerieke toetsenblok van uw toetsenbord als een muisachtig apparaat instellen. Dit kan nuttig zijn als u op een apparaat werkt zonder ander aanwijsapparaat, of als u het numerieke toetsenblok nergens anders voor nodig hebt. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Muis met toetsenbord verplaatsen (via het numerieke toetsenblok)</guilabel
+></term>
+<listitem>
+<para
+>Om verplaatsing met het toetsenbord mogelijk te maken, dient u de optie <guilabel
+>Muis met toetsenbord verplaatsen (via het numerieke toetsenblok)</guilabel
+> in te schakelen. Als u dit doet, worden de andere instellingen geactiveerd, en kunt u het gedrag van het toetsenbord verder instellen, indien nodig. </para>
+<para
+>De toetsen op het numerieke blok bewegen in de richting die u zou verwachten. Merk op dat u naast omhoog, omlaag, links en rechts ook diagonaal kunt verplaatsen. De toets <keycap
+>5</keycap
+> bootst een muisklik na, typisch met de &LMB;. Met welke knop de klik wordt nagebootst, stelt u in met de toetsen <keycap
+>/</keycap
+> (&LMB;), <keycap
+>*</keycap
+> key (&MMB;) en <keycap
+>-</keycap
+> (&RMB;). <keycap
+>+</keycap
+> emuleert een dubbelklik op de geselecteerde muisknop. U kunt de toets <keycap
+>0</keycap
+> gebruiken om vasthouden na te bootsen (voor eenvoudig slepen) en dan de toets <keycap
+>.</keycap
+> om loslaten van de knop na te bootsen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Versnellingsdrempel</guilabel
+></term>
+<listitem>
+<para
+>Dit is de tijd (in milliseconden) tussen de eerste toetsaanslag en de eerste herhaalde beweging voor toetsversnelling. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Herhalingsinterval</guilabel
+></term>
+<listitem>
+<para
+>Dit is de tijd (in milliseconden) tussen herhaalde bewegingen voor toetsversnelling. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Versnellingstijd</guilabel
+></term>
+<listitem>
+<para
+>Dit is tijd in milliseconden voordat de aanwijzer de maximumsnelheid behaalt voor toetsversnelling. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Maximum snelheid</guilabel
+></term>
+<listitem>
+<para
+>Dit is de maximumsnelheid in pixels per seconde die de aanwijzer kan behalen voor toetsversnelling. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Versnellingsprofiel</guilabel
+></term>
+<listitem>
+<para
+>Dit is de hellingshoek van de versnellingscurve voor toetsversnelling. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Schermlezer</guilabel
+></title>
+
+<para
+>Installeer een schermlezer-toepassing zoals <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca.</ulink
+> samen met <application
+>spraak-dispatcher</application
+>. </para>
+
+<para
+>Test of het geluid uit de spraak-dispatcher werkt met het commando <command
+>spd-say hello</command
+> in een terminal. </para>
+
+<para
+>BOvendien hebt u een synthesizer voor tekst-naar-spraak nodig zoals &eg; <application
+>espeak</application
+>. </para>
+
+<para
+>Schakel de schermlezer in in het keuzevak, meldt u af en start uw bureaubladsessie opnieuw. </para>
+
+<para
+>Voor &plasma; zelf, ga na om het traditionele <guilabel
+>Toepassingenmenu</guilabel
+> te gebruiken en controleer dat dit menu een sneltoets is toegewezen (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Wanneer op deze sneltoets wordt gedrukt, zou het menu moeten openen en worden gelezen bij navigeren door het menu met de pijltjestoetsen. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

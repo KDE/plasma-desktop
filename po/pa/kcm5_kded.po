@@ -1,0 +1,218 @@
+# translation of kcmkded.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-10-09 09:02-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੧"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alam.yellow@gmail.com"
+
+#: kcmkded.cpp:48
+#, kde-format
+msgid "Background Services"
+msgstr "ਬੈਕਗਰਾਊਂਡ ਸਰਵਿਸਾਂ"
+
+#: kcmkded.cpp:52
+#, kde-format
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "ਡੇਨੀਅਲ ਮੋਲਕੀਟੀਨ"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmkded.cpp:125
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "ਸਰਵਿਸ ਰੋਕਣ ਲਈ ਅਸਫ਼ਲ: %1"
+
+#: kcmkded.cpp:127
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਫ਼ਲ: %1"
+
+#: kcmkded.cpp:134
+#, kde-format
+msgid "Failed to stop service."
+msgstr "ਸਰਵਿਸ ਰੋਕਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
+
+#: kcmkded.cpp:136
+#, kde-format
+msgid "Failed to start service."
+msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>ਇਹ ਮੋਡੀਊਲ ਤੁਹਾਨੂੰ KDE ਡੈਮਨ ਦੀਆਂ ਸਭ ਪਲੱਗਇਨਾਂ ਲਈ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿੰਦਾ ਹੈ, ਜਿੰਨ੍ਹਾਂ ਨੂੰ KDE "
+"ਸਰਵਿਸਾਂ ਵੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਆਮ ਤੌਰ ਉੱਤੇ ਦੋ ਟਾਈਪ ਦੀਆਂ ਸਰਵਿਸਾਂ ਹੁੰਦੀਆਂ ਹਨ: </p><ul><li>ਸਟਾਰਟ "
+"ਅੱਪ ਸਮੇਂ ਚੱਲਣ ਵਾਲੀਆਂ ਸਰਵਿਸਾਂ</li><li>ਲੋੜ ਸਮੇਂ ਕਾਲ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਸਰਵਿਸਾਂ</li></"
+"ul><p>ਬਾਅਦ ਵਾਲੀਆਂ ਕੇਵਲ ਸਹੂਲਤ ਲਈ ਲਿਸਟ ਲਈ ਸ਼ਾਮਲ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ। ਸਟਾਰਟਅੱਪ ਸਰਵਿਸਾ ਨੂੰ "
+"ਸਟਾਰਟ ਅਤੇ ਸਟਾਪ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।  ਤੁਸੀਂ ਇਹ ਸੈੱਟ ਕਰ ਸਕਦੇ ਹੋ ਕਿ ਕੀ ਸਰਵਿਸਾਂ ਨੂੰ ਸਟਾਰਟਅੱਪ ਸਮੇਂ "
+"ਲੋਡ ਕੀਤਾ ਜਾਵੇ। </p><p><b> ਇਹ ਧਿਆਨ ਨਾਲ ਵਰਤੋਂ, ਕੁਝ ਸਰਵਿਸਾਂ ਪਲਾਜ਼ਮਾ ਲਈ ਸਮੱਸਿਆਵਾਂ ਖੜ੍ਹੀਆਂ "
+"ਕਰ ਸਕਦੀਆਂ ਹਨ; ਜੇ ਤੁਸੀਂ ਨਾ ਜਾਣਦੇ ਹੋਵੋ ਤਾਂ ਸਰਵਿਸਾਂ ਨੂੰ ਡਿ-ਐਕਟੀਵੇਟ ਨਾ ਕਰੋ।</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "ਸਾਰੀਆਂ ਸਰਵਿਸਾਂ"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "ਚੱਲ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "ਸਟਾਰਟਅੱਪ ਸਰਵਿਸਾਂ"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "ਲੋੜ 'ਤੇ ਲੋਡ ਸਰਵਿਸਾਂ"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "ਚੱਲ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "ਸਰਵਿਸ ਰੋਕੋ"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰੋ"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE ਸਰਵਿਸ ਮੈਨੇਜਰ"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "ਉਪਲੱਬਧ KDE ਸਰਵਿਸਾਂ ਦੀ ਲਿਸਟ ਹੈ, ਜੋ ਕਿ ਲੋੜ ਪੈਣ ਉੱਤੇ ਸਟਾਰਟ ਕੀਤੀਆਂ ਜਾਣਗੀਆਂ। ਇਹ ਕੇਵਲ ਸਹੂਲਤ "
+#~ "ਲਈ ਇੱਥੇ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ, ਕਿਉਂਕਿ ਤੁਸੀਂ ਇਹ ਸਰਵਿਸਾਂ ਉੱਤੇ ਕਾਰਵਾਈ ਨਹੀਂ ਕਰ ਸਕਦੇ ਹੋ।"
+
+#~ msgid "Status"
+#~ msgstr "ਹਾਲਤ"
+
+#~ msgid "Description"
+#~ msgstr "ਵੇਰਵਾ"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "ਇੱਥੇ ਸਭ KDE ਸਰਵਿਸਾਂ ਨੂੰ ਵੇਖਾਇਆ ਗਿਆ ਹੈ, ਜੋ ਕਿ KDE ਸਟਾਰਟ ਹੋਣ ਸਮੇਂ ਲੋਡ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ "
+#~ "ਹਨ। ਸਹੀਂ ਦੇ ਨਿਸ਼ਾਨ ਵਾਲੀਆਂ ਸਰਵਿਸਾਂ ਸਟਾਰਟ ਹੋਣ ਸਮੇਂ ਸ਼ੁਰੂ ਹੋਣਗੀਆਂ। ਅਣਜਾਣ ਸਰਵਿਸਾਂ ਨੂੰ ਡੀ-"
+#~ "ਐਕਟੀਵੇਟ ਕਰਨ ਸਮੇਂ ਧਿਆਨ ਰੱਖੋ।"
+
+#~ msgid "Use"
+#~ msgstr "ਵਰਤੋਂ"
+
+#~ msgid "Start"
+#~ msgstr "ਸਟਾਰਟ"
+
+#~ msgid "Stop"
+#~ msgstr "ਰੋਕੋ"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "ਸਰਵਿਸ <em>%1</em> ਸਟਾਰਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ।<br /><br /><i>ਗਲਤੀ: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "ਸਰਵਿਸ <em>%1</em> ਰੋਕਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।<br /><br /><i>ਗਲਤੀ: %2</i>"

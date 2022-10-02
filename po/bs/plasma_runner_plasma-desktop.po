@@ -1,0 +1,69 @@
+# Bosnian translation for kdebase-workspace
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"PO-Revision-Date: 2012-10-22 10:02+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-10-21 06:51+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: plasma-desktop-runner.cpp:24
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console"
+msgstr "desktop console"
+
+#: plasma-desktop-runner.cpp:25
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console"
+msgstr "wm console"
+
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#, kde-format
+msgid ""
+"Opens the Plasma desktop interactive console with a file path to a script on "
+"disk."
+msgstr "Otvara Plasma interaktivnu konzolu sa stazom na skriptu na disku."
+
+#: plasma-desktop-runner.cpp:31
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console :q:"
+msgstr "desktop console :q:"
+
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#, kde-format
+msgid ""
+"Opens the KWin interactive console with a file path to a script on disk."
+msgstr ""
+"Otvara  KWin interaktivnu konzolu s datotečnom zakrpom na skriptu na disku."
+
+#: plasma-desktop-runner.cpp:37
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console :q:"
+msgstr "wm console :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Otvori Plasma interaktivnu konzolu"
+
+#: plasma-desktop-runner.cpp:62
+#, kde-format
+msgid "Open KWin interactive console"
+msgstr ")Otvori KWin interaktivnu konzolu"

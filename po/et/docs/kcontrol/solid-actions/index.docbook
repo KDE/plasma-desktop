@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Seadme toimingud</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+> <firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+> <contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2013-12-05</date>
+<releaseinfo
+>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Süsteemi seadistused</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>toimingud</keyword>
+<keyword
+>seadmed</keyword>
+<keyword
+>riistvara</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Uute seadmete toimingud</title>
+<sect2 id="icons-intro">
+<title
+>Sissejuhatus</title>
+
+<para
+>See moodul võimaldab kindlaks määrata toimingud, mida pakutakse siis, kui masinaga ühendatakse uus seade.</para>
+<para>
+<screenshot>
+<screeninfo
+>Seadme toimingute halduri pilt</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Seadme toimingute halduri pilt</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Siin näeb kõiki võimalikke toiminguid, mida saab pakkuda uue seadme ühendamisel. Pane tähele, et need on saadaval ainult teatavatel tingimustel.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Lisa</guibutton
+> palub sisestada uue toimingu nime ning avab siis dialoogi, kus saab toimingu omadused kindlaks määrata. Kui sa ei määra dialoogis kõiki vajalikke üksikasju, toiming kustutatakse. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Muuda</guibutton
+> võimaldab muuta nime, ikooni, käivitatavat käsku ja tingimusi, mis peavad olema täidetud, et toimingut üldse näidataks. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Unusta/Kustutamine ei ole võimalik/Eemalda</guibutton
+> võimaldab erinevaid asju sõltuvalt sellest, kas toimingut pakub süsteem või oled selle ise loonud. Muudatusi saab unustada ainult süsteemsete toimingute puhul ja kui muudatusi ei ole, siis neid toiminguid kustutada ei saa. Kasutaja loodud toiminguid võib aga täielikult eemaldada, kaasa arvatud kõik muudatused, mida neis on tehtud. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Toimingu lisamine</title>
+
+<para
+>Nupp <guibutton
+>Lisa</guibutton
+> avab dialoogi, kus saab sisestada uue toimingu nime. </para>
+<para>
+<screenshot>
+<screeninfo
+>Toimingu lisamise dialoogi pilt</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Toimingu lisamise dialoogi pilt</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Toimingu nimi peaks korrektselt kirjeldama toimingut. Pärast nime sisestamist ja klõpsamist nupule <guibutton
+> OK</guibutton
+> avatakse toimingu muutmise dialoog, kus saab kindlaks määrata toimingu omadused. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Toimingu muutmine</title>
+
+<para
+>See dialoog võimaldab muuta valitud toimingu seadistusi.</para>
+<para>
+<screenshot>
+<screeninfo
+>Toimingu muutmise dialoogi pilt</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Toimingu muutmise dialoogi pilt</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>See hõlmab ikooni, toimingu nime, käsku ja mitmesuguseid parameetreid. Ikooni saab muuta sellel klõpsates.</para>
+<para
+>Parameetreid kuvatakse puuna, kusjuures ülemine neist peab olema tõene, et üldse toimingut näidataks.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Parameetri muutmine</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Parameetri tüüp</guilabel
+></term>
+<listitem>
+<para
+>See määrab, mis saab olla selle sees või millist sobivust tuleb kontrollida, et näha, kas see on tõene. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Omaduse sobivus</guilabel
+></term>
+<listitem>
+<para
+>Võrdleb seadme määratud omadust (kasutades <guilabel
+>seadme tüüpi</guilabel
+> ja <guilabel
+>väärtuse nime</guilabel
+>) hindamisaluse abil määratud tekstiga.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Sisu kattumine</guilabel
+></term>
+<listitem>
+<para
+>Et see oleks tõene, peavad olema tõesed ka kõik alamomadused.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Sisu erinemine</guilabel
+></term>
+<listitem>
+<para
+>Et see oleks tõene, peab mõni alamomadus olema tõene.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Seadme liidese sobivus</guilabel
+></term>
+<listitem>
+<para
+>Kontrollib, kas seadet saab liigitada valitud seadmetüübi alla.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Seadme tüüp</guilabel
+></term>
+<listitem>
+<para
+>Need on võimalikud seadmetüübid, mida &kde; sinu süsteemis toetab. Neid kasutatakse nii omaduse kui ka seadme liidese sobivuse tuvastamisel. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Väärtuse nimi</guilabel
+></term>
+<listitem>
+<para
+>See on valitud seadmetüübi kõigi võimalike omaduste nimede nimekiri. Samuti saab siin valida väärtuse hindamisaluse (see võib olla kas <guilabel
+>võrdub</guilabel
+> või <guilabel
+>sisaldab</guilabel
+>) ning sisestada teksti, millega võrreldakse.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Lähtesta parameeter</guibutton
+></term>
+<listitem>
+<para
+>Lähtestab kõik parameetriga ettevõetud salvestamata muudatused.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Salvesta parameetri muutused</guibutton
+></term>
+<listitem>
+<para
+>Salvestab kõik parameetriga ettevõetud muudatused.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

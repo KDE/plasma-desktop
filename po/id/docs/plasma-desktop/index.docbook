@@ -1,0 +1,1067 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Buku Petunjuk &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>21-08-2016</date>
+<releaseinfo
+>Plasma 5.7</releaseinfo>
+
+<abstract>
+<para
+>&plasma; adalah antarmuka pengguna inti ke desktop. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Widget</keyword>
+<keyword
+>Containment</keyword>
+<keyword
+>Desktop</keyword>
+<keyword
+>Runner</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Pengenalan</title>
+
+<para
+>&plasma; menyediakan lingkungan modern dan dapat disesuaikan untuk menjalankan aplikasi favoritmu dan mengakses informasi di mana pun kamu berada. Atribut umum lain &plasma; Desktop termasuk pengelolaan window tingkat lanjut dan efek desktop, dukungan untuk Widget Plasma KDE, pencarian terintegrasi, pengelolaan hardware dan tingkat kemampuan penyesuaian yang tinggi. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Menggunakan &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>Komponen Plasma</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Containment dan Widget Plasma</title>
+
+<para
+>Esensi &plasma; berkisar di sekitar dua dasar konsep: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Widget Plasma</term>
+<listitem>
+<para
+>Aplet-aplet, atau aplikasi kecil yang hidup di desktop. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Containment</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Applet-applet yang bertindak sebagai wadah untuk widget Plasma </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Pada sebuah deaktop baku, ada dua unsur utama: Panel dan Desktop itu sendiri. Keduanya berisi di dalam rasa &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Desktop &plasma; baku</title>
+
+<para
+><note
+><para
+>Desktop &plasma; bisa dikonfigurasi dalam bermacam cara. Screenshot yang tampak di bagian bawah menampilkan sebuah desktop standar yang cukup. Beberapa distribusi menerapkan kustomisasi yang luas, sehingga desktopmu terlihat berbeda. </para>
+<para
+>Demikian pula, penampilan grafikal pada unsur antarmuka bisa diset gayanya.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Sebuah Desktop &plasma; standar yang cukup</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Pemulai program. Biasanya ini akan menjadi <link linkend="panel-launcher"
+>Peluncur Aplikasi </link
+>.</para
+></listitem>
+<listitem
+><para
+>Beberapa ikon memberikan akses mudah untuk aplikasi yang sering digunakan</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Task Manager</link
+>," yang menampilkan judul-judul pada window yang berhubungan dengan aplikasi yang sedang berjalan saat ini. Tidak ada aplikasi yang membuka sebuah window, ketika cuplikan sedang diambil</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Baki Sistem</link
+></para
+></listitem>
+<listitem
+><para
+>Widget <link linkend="panel-digital-clock"
+>Jam Digital</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>Panel Perkakas</link
+></para
+></listitem>
+<listitem
+><para
+>Perkakas <link linkend="desktop"
+>Desktop</link
+></para
+></listitem>
+<listitem
+><para
+>Sebuah widget Tampilan Folder, menampilkan isinya folder Desktop</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Panel</title>
+
+<para
+>Panel baku menahan beberapa widget &plasma;: bermulai dari kiri, di sini adalah peluncur aplikasi.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Peluncur Aplikasi</title>
+
+<screenshot>
+<screeninfo
+>Peluncur aplikasi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Peluncur aplikasi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Kamu bisa menggunakannya untuk memulai aplikasi, membuka file yang baru-baru ini dibuka dan opsi logout/shutdown yang biasa. Ada juga struktur yang memungkinkan kamu untuk menelusuri aplikasimu. Tataletak telah dioptimalkan untuk penggunaan yang paling umum: memulai aplikasi. Tab baku adalah tab <guilabel
+>Favorit</guilabel
+> yang menyimpan entri-entri yang paling sering digunakan. Pada awalnya, kamu mungkin akan lebih sering menggunakan tab <guilabel
+>Aplikasi</guilabel
+>. Setelah kamu mengetahui apa aplikasi yang paling sering kamu jalankan, klik <mousebutton
+>kanan</mousebutton
+> pada butir dan pilih <guimenuitem
+>Tambahkan ke Favorit</guimenuitem
+> untuk menambahkannya ke <guilabel
+>Favorit</guilabel
+>mu (atau langsung ke panel atau di desktop. Perhatikan bahwa kamu perlu <quote
+>lepas-kunci</quote
+> &plasma; dengan cara mengeklik <mousebutton
+>kanan</mousebutton
+> pada desktop untuk segala jenis modifikasi).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Menu Aplikasi</title>
+
+<para
+>Jika kamu suka peluncur aplikasi gaya menu tradisional, ubahlah dengan mengeklik  <mousebutton
+>kanan</mousebutton
+> pada tombol menu dan memilih <guimenuitem
+>Alternatif</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Menu aplikasi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Menu aplikasi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Pengaturan Peluncur Aplikasi</title>
+
+<para
+>Jika kamu ingin mengkonfigurasi peluncur aplikasi, ubahlah dengan mengeklik <mousebutton
+>kanan</mousebutton
+> pada tombol menu dan memilih <guimenuitem
+>Pengaturan Peluncur Aplikasi</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Pengesetan peluncur aplikasi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pengesetan peluncur aplikasi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>BilahTugas</title>
+
+<para
+>Bilahtugas adalah widget lain di panel. Ini menampilkan area untuk semua window yang terbuka di semua desktop secara baku. Kamu bisa membuatnya tampil di semua window yang terbuka di desktop saat ini hanya dengan mencentang <guimenuitem
+>Hanya menampilkan tugas dari desktop saat ini</guimenuitem
+> saat kamu mengeklik kanan pada pengelola tugas, di antara dua window. Ukuran teks pada butir bilahtugas dapat diset di &systemsettings; di bawah <menuchoice
+><guimenu
+>Penampilan</guimenu
+><guisubmenu
+>Fon</guisubmenu
+> </menuchoice
+>. Mengeklik kanan pada bilahtugas membawa dialog Pengaturan yang mana kamu bisa memilih beberapa opsi untuk menyesuaikan bialahtugasmu. <screenshot>
+<screeninfo
+>Di sini adalah cuplikan dialog pengaturan bilahtugas</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Dialog pengaturan bilahtugas</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Baki Sistem</title>
+
+<para
+>Item panel baku lainnya adalah <application
+>Baki Sistem</application
+>, yang digunakan oleh aplikasi tradisional dan widget sebagai dock. Mengeklik kanan pada <application
+>Baki Sistem</application
+> memungkinkanmu untuk membuka dialog pengaturan, di mana kamu bisa menyiapkan entri-entri untuk didisplaikan dan ditampakkan. </para>
+<screenshot>
+<screeninfo
+>Dialog pengaturan Baki Sistem</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Dialog pengaturan Baki Sistem</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Penotifikasi Perangkat</title>
+
+<para
+>Sebuah ikon yang biasanya berlokasi di dalam baki sistem adalah <application
+>Penotifikasi Perangkat</application
+>. Pencolokan sebuah disk <acronym
+>USB</acronym
+> dan dialog akan terbuka yang memungkinkan kamu untuk membuka perangkat di &dolphin; atau aplikasi yang behubungan lainnya. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+><application
+>Penotifikasi Perangkat</application
+> adalah digunakan untuk menangani perangkat yang dapat-dicolokkan sepertihalnya pendrive <acronym
+>USB</acronym
+> (juga dikenal sebagai flash disk atau thumb drive), kamera digital, hard disk <acronym
+>USB</acronym
+> eksternal, &etc;. Yang juga menghadirkan play ketika sebuah sarana sepertihalnya &CD; atau &DVD; telah termuat di dalam drive optikal. </para>
+<para
+>Ketika kamu mencolokkan perangkat eksternal, atau memuat sebuah sarana yang baru ke dalam drive, window <guilabel
+>Penotifikasi</guilabel
+> menyembul (kamu juga bisa membukanya secara gamblang dengan mengeklik pada ikon Panel). Itu masih tetap terbuka ketika kursor melayang di atasnya, jika tidak ia akan sembunyi sendiri setelah beberapa detik. </para>
+<para
+>Window <guilabel
+>Penotifikasi</guilabel
+> menampilkan sebuah daftar dari semua perangkat yang barusan diketahuinya. Memindahkan kursor mouse melintasi sebuah perangkat akan menyoroti berapa banyak aksi yang mungkin terkait dengan perangkat itu. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Mengeklik di mana saja di kotak berbayang di sekitar nama perangkat (tetapi tidak pada ikon keluarkan/lepaskait jika ada) memperluas entri untuk menampilkan daftar aksi yang mungkin untuk perangkat itu. Serangkaian aksi tergantung pada perangkat; ini dapat dikonfiguraskani dari menu konteks <application
+>Penotifikasi Perangkat</application
+> atau dari modul &systemsettings; <ulink url="help:/kcontrol/solid-actions/index.html"
+>Aksi Perangkat</ulink
+> dan <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Perangkat Dapat Dilepas</ulink
+>. Cukup pilih satu dengan mouse atau keyboard untuk memulai aksi itu. </para>
+<para
+>Ada juga ikon kecil di sebelah kanan setiap entri yang ditampilkan apakah perangkat itu saat ini dapat diakses (atau <emphasis
+>dikaitkan</emphasis
+>) atau tidak. Ketika suatu perangkat tidak dikaitkan maka aman untuk melepaskannya secara fisik dari komputer. Mengeklik pada ikon menyebabkan perangkat tidak dikaitkan dan/atau media dikeluarkan jika saat ini sudah dikaitkan, dan akan dikaitkan jika belum. Perhatikan bahwa pelepasankait/pengeluaran mungkin gagal jika perangkat masih memiliki file terbuka, &eg; jika salinan file besar belum selesai. Dalam kebanyakan kasus, kamu bisa menunggu sebentar dan mencoba lagi. Ketika lepaskait berhasil, ikon sukses akan ditampilkan pada ikon <application
+>Penotifikasi Perangkat</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Butir-butir Tersembunyi</title>
+
+<para
+><application
+>Baki Sistem</application
+> biasanya menangani beberapa entri-entri selebihnya seperti &klipper;, &kmix; &etc;</para>
+
+<para
+>Beberapa entri-entri baku di dalam <application
+>Baki Sistem</application
+> yang disembunyikan untuk menghemat ruang di dalam bilah. Untuk mendisplaikan entri-entrinya klik pada segitiga putih kecil <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, kemudian gunakan &LMB; untuk meluncurkan widget atau &RMB; untuk membuka dialog setingannya.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Jam Digital</title>
+
+<para
+>Widget &plasma; paling kanan di panel baku memiliki aplikasi <application
+>Jam Digital</application
+>. Jam ini dapat menampilkan waktu dalam zona waktu yang berbeda dan juga ukurannya berubah. Jam akan menyesuaikan ukuran font-nya dengan area yang diberikan oleh containment di sekitarnya (dalam hal ini yaitu panel). Jika kamu memilih untuk menampilkan tanggal, tanggal ini akan diberikan menggunakan opsi <guimenuitem
+>Font kecil</guimenuitem
+> dari &systemsettings; dialog <guilabel
+>Font</guilabel
+>. Si waktu akan mengambil sisa ruang. Jadi pada akhirnya, kamu akan memilih sendiri jumlah informasi yang didisplaikan, dan jika itu pas. Jika kamu ingin menampilkan lebih banyak informasi, buatkan panel lebih besar atau letakkan jam di desktop agar dapat bergerak dengan bebas. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Pager</title>
+
+<para
+>Sebuah butir opsional di panel kamu adalah <application
+>Pager</application
+>. Ini memungkinkan kamu untuk beralih di antara desktop virtualmu. Jika kamu mengubah tataletak <application
+>Pager</application
+> melalui opsi <guimenuitem
+>Jumlah baris</guimenuitem
+>, yang juga akan memengaruhi tataletak dan animasi yang ditampilkan dalam &kwin; efek <guimenuitem
+>Desktop Grid</guimenuitem
+>. Untuk pager yang lebih besar, memilih <guimenuitem
+>Displaikan ikon window</guimenuitem
+> biasanya masuk akal. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Perkakas Panel</title>
+
+<para
+>Jika desktopmu telah terlepas-kunci (kamu bisa melakukanya dengan mengeklik <mousebutton
+>kanan</mousebutton
+> pada desktop, atau ketika tidak ada aplikasi yang fokus, dengan <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), sebuah logo &plasma; kecil akan muncul di bagian bawah kanan pojok di panel. klik pada toolbox ini dan pengendali panel terbuka.</para>
+
+<screenshot>
+<screeninfo
+>Pengaturan Panel</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pengaturan Panel</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Kontroler panel memungkinkan kamu mengubah posisi, mengubah ukuran, dan menyejajarkan panel. Widget &plasma; yang hidup di panel ini akan menyesuaikan ukurannya secara otomatis. Widget &plasma; memiliki pengetahuan dasar tentang ukuran, yang disediakan oleh containment. Mereka diprogram untuk memanfaatkan ukuran itu, dan memberi tau applet tentang berapa banyak ruang yang mungkin mereka butuhkan. Pada akhirnya, containmentnya memberikan ukuran yang mungkin untuk applet, si applet patuh.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Penambahan Applet</title>
+
+<para
+>Lepas-kunci desktop dan kamu akan bisa menambah dan menghapus widget &plasma; dari panel atau desktop. Kamu menambahkan widget &plasma; hanya dengan menyeretnya ke tempat yang kamu inginkan. Kliklah <mousebutton
+>Kanan</mousebutton
+> pada widget untuk menghapusnya. <screenshot
+> <screeninfo
+>Tambahkan Widget</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Tambah Widget</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+>. Tombol <guibutton
+>Dapatkan Widget Baru</guibutton
+> memungkinkan kamu untuk menambahkan widget yang sebelumnya kamu unduh dan mengunduh widget &plasma; baru. Saat ini mendukung paket &plasmagik; bawaan dan beberapa widget dashboard &Mac; OS&nbsp;X. Widget-widget yang kamu instal dengan cara ini kemudian bisa diakses seperti widget biasa yang sudah terinstal sebelumnya. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Desktop</title>
+
+<para
+>Desktop sebenarnya adalah dalam faktor containment lain. Salahsatu yang tidak memberi batasan ukuran pada applet. Applet dapat dipindahkan dan diukur dengan bebas. Pada desktop yang dilepas-kuncinya, widget &plasma; akan menampilkan bingkai ketika kamu melintaskan mouse di atasnya. Gagang applet ini memungkinkan kamu untuk memindahkan, mengubah ukuran, menempatkan dan menyejajarkan kembali panel. Ini juga memungkinkan kamu untuk menarik widget &plasma; di desktop. Tombol di sudut digunakan untuk mengubah ukuran, konfigurasi memutar dan menghapus applet. Saat dirotasikan, widget &plasma; akan bertindak magnetis pada pukul 12, sehingga mudah untuk membuatnya kembali ke posisi sewajarnya. Secara baku, sebagian besar applet menjaga rasio aspek ketika ukurannya diubah. Jika kamu ingin mengubah ukuran applet dengan bebas, tekan-tahan tuts &Ctrl; saat mengubah ukuran. </para>
+
+<para
+>Pengeklikan kanan pada desktop juga menawarkan kamu untuk mengkonfigurasi aspek seperti halnya wallpaper dan tataletak yang digunakan, dan aksi mouse. Yang menawarkan untuk mengunduh wallpaper baru melalui &knewstuff;. </para>
+<para
+>Pada halaman <guilabel
+>Uprek</guilabel
+> kamu bisa mengkonfigurasi untuk menyembunyikan desktop. </para>
+
+<screenshot>
+<screeninfo
+>Pengaturan Desktop</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pengaturan Desktop</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Untuk mengubah &plasma; atau mengunduh yang baru melalui &knewstuff; bukalah halaman <menuchoice
+><guimenu
+>Penampilan</guimenu
+> <guimenuitem
+>Tema Desktop</guimenuitem
+></menuchoice
+> di &systemsettings;.</para>
+
+<para
+>Dengan membuka aplikasi, ini secara cepat mendapatkan apa yang sulit untuk melihat widget &plasma; pada desktopmu. <emphasis role="bold"
+>Dashboard</emphasis
+> mendapatkan beberapa widget &plasma; di hadapanmu, fungsionalitas <guilabel
+>Tampilkan desktop</guilabel
+> yang sangat mirip apa yang kamu gunakan dari desktop tradisional. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Tampilan Folder</title>
+<para
+>Widget <guilabel
+>Tampilan Folder</guilabel
+> adalah digunakan untuk mendisplaikan entri-entri seperti folder atau file dari folder, secara baku dari <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>Kamu bisa memilih untuk menampilkan antara semua file, atau pemfilteran baik dengan ekspresi reguler (&eg;, semua file dengan ektensi tertentu) atau berdasarkan tipe file (&eg; hanya citra). </para>
+<para
+>Widget ini juga mendukung dasar properti pengelolaan file (contohnya memindah, menyalin, memotong, dan menempel), dan kamu bisa memiliki beberapa macam yang kamu inginkan pada desktop. </para>
+
+<screenshot>
+<screeninfo
+>Tampilan Folder</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Tampilan Folder</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Jika kamu memilih tataletak <guilabel
+>Tampilan Folder</guilabel
+> dalam <guilabel
+>Pengaturan Desktop</guilabel
+> kamu bisa menggunakan salah satu tampilan folder sebagai keseluruhan desktop, yang secara efektif mereplika paradigma desktop gaya kuno "old style". </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; adalah baris perintah mini serbaguna. Kamu bisa menggunakannya untuk memulai aplikasi, membuka halaman web, mengakses markah, mencari melalui data desktop-mu, menghitung penjumlahan yang singkat, dan banyak lagi. Menekan <keycombo action="simul"
+>&Alt;<keysym
+>Space</keysym
+></keycombo
+> atau <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> membuka dialog &krunner;. Kamu hanya dengan mengetik dan &krunner; akan mulai mencari yang cocok segera setelah kamu memasukkan lebih dari dua karakter. Kamu bisa membuka dialog settingan untuk mempelajari tentang fungsionalitas &krunner; yang disediakan oleh plugin. Kamu bisa menavigasi dengan yang sesuai menggunakan tab dan tombol panah. </para>
+<!-- whitout tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Dialog &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Dialog &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Gunakan tombol <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> untuk membuka modul &systemsettings; <guilabel
+>KRunner</guilabel
+> dan mengkonfigurasi di mana dan apa yang dicari di &krunner; </para>
+
+<para
+>&krunner; mendukung <quote
+>Aksi Desktop</quote
+> yang sebagai aksi tambahan sebuah aplikasi yang bisa menawarkan untuk melakukan tindakan umum atau melompat secara langsung ke tugas tertentu dari Task Manager. Contoh pada umumnya adalah <guilabel
+>Buka Window Penyamaran Baru</guilabel
+> untuk membuka penelusurmu secara langsung dalam mode privasi, <guilabel
+>Menciptakan Email</guilabel
+> tanpa meluncurkan klien email yang-sudah-berkembang duluan atau aksi yang disediakan oleh &spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>Aksi Desktop &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Aksi Desktop &krunner; </phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Jika kamu tekan tuts <keysym
+>Turun</keysym
+> dalam sebuah &krunner; kosong histori pada entitas terkini akan ditampilkan. Setelah meminta hasil pencarian, query-nya akan pindah ke bagian atas, sehingga perintah-perintah yang digunakan secara berulang-ulang tidak pernah luruh dari daftar. </para>
+<para
+>Hapus entri-entri tunggal dari daftar menggunakan tombol <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> atau membersihkan seluruh histori dalam pengaturan &krunner;. </para>
+
+<para
+>Jika kamu ingin tahu apa yang sedang berjalan pada sistem, menekan <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> memberikan akses secara cepat ke sebuah daftar window dan proses, dengan opsi untuk memantau outputnya dan mematikan proses. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Activities</title>
+
+<para
+>Perkakas desktop, diakses melalui sudut kiri atas yang memiliki tombol untuk menampilkan aktivitasmu, yang mana &plasma; memungkinkan kamu memiliki lebih dari satu. Pada dasarnya, itu adalah beberapa penyimpanan desktop yang menampung beberapa set widget &plasma;. Displai bilah  <quote
+>Activities</quote
+>, pilih satu dari aktivitas yang ditentukan atau pilihlah <guilabel
+>Ciptakan Activities</guilabel
+> untuk menciptakan konten baru, pilih konten barumu dan sesuaikan setelan sesuai seleramu. Activities &plasma; dan desktop &kwin; grid serupa dalam hal itu, tetapi ada perbedaan mendasar. Sementara virtual desktop digunakan untuk mengelompokkan dan mengatur window, aktivitas &plasma; digunakan untuk mengelompokkan dan mengatur widget &plasma;. Dengan cara ini, kamu bisa beralih di antara aktivitas dan memiliki widget &plasma; yang relevan yang mendukung tugas yang sedang kamu coba selesaikan. </para>
+
+<para
+>Untuk menghapus sebuah aktivitas, tekan tombol <guibutton
+>Hentikan Activities</guibutton
+> pada bilah <quote
+>Activities</quote
+> (tekan <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> kemudian <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> untuk membuka bilah ini) kemudian klik tanda 'X' merah (atau tekan <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> kemudian <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) dan konfirmasi penghapusan. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Pintasan</title>
+
+<para
+>Beberapa fungsionalitas &plasma; juga dapat diakses melalui pintasan keyboard. Berbagai kombinasi yang harus ditekan dalam serangkai, sebagai contoh <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> caranya: Tekan &Alt; dan <keycap
+>D</keycap
+>, lepas dan tekan  <keycap
+>A</keycap
+>. </para>
+<para
+>Saat ini, pintasan baku berikut ini yang bisa digunakan: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Tambah Widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Hapus Widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Kunci/Lepas-kunci Widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+><keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Zoom perkecil</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+><keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Zoom perbesar</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Widget Selanjutnya</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Widget Sebelumnya</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Pengesetan widget</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Activities</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Hapus Activitas ini</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Pengaturan Desktop</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Tab;</keycombo
+></term>
+<listitem
+><para
+>Aktivitas Selanjutnya</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Aktivitas Sebelumnya</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Tampilkan Desktop</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Jalankan Aplikasi Yang Berhubungan</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+>&Tab;</keycombo
+></term>
+<listitem
+><para
+>Buka panel Activities</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Pujian dan Lisensi</title>
+
+<para
+>&plasma; </para>
+<para
+>Hakcipta program 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Hakcipta dokumentasi &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Wantoyo<email
+>wantoyek@gmail.com</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

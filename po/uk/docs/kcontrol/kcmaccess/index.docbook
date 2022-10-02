@@ -1,0 +1,530 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Доступність</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>доступність</keyword>
+<keyword
+>клавіші</keyword>
+<keyword
+>дзвінок</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Доступність</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Вступ</title>
+
+<para
+>Цей модуль призначено для того, щоб допомогти користувачам, які мають проблеми зі слухом або користуванням клавіатурою. </para>
+
+<para
+>Панель модуля поділено на шість вкладок: <link linkend="access-bell"
+><guilabel
+>Дзвінок</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Клавіші-модифікатори</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Фільтри клавіатури</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Жести активації</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Навігація мишкою</guilabel
+></link
+> і <link linkend="access-screenreader"
+><guilabel
+>Засіб читання з екрана</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Дзвінок</guilabel
+></title>
+
+<para
+>Цю панель поділено на розділ <guilabel
+>Аудіодзвінок</guilabel
+> і розділ <guilabel
+>Видимий дзвінок</guilabel
+>. </para>
+
+<para
+>Верхнє поле для позначки має підпис <guilabel
+>Використовувати системний дзвінок</guilabel
+>, позначка у ньому вказує, чи буде озвучено звичайний системний дзвінок. Якщо позначку буде знято, системний дзвінок озвучуватися не буде. </para>
+
+<para
+>Наступним полем для позначки, що знаходиться трохи нижче, можна скористатися для відтворення різних звуків за запитом на системний дзвінок. Щоб задіяти такий дзвінок, залиште позначку навпроти напису <guilabel
+>Використовувати нетиповий дзвінок</guilabel
+>, а потім введіть повний шлях до звукового файла у поле для введення тексту з міткою <guilabel
+>Відтворити звук</guilabel
+>. Якщо бажаєте, можете скористатися кнопкою <guibutton
+>Відкрити</guibutton
+>, щоб у візуальному режимі знайти файл у вашій файловій системі.guibutton
+>, щоб у візуальному режимі знайти файл у вашій файловій системі. </para>
+
+<para
+>Для користувачів, які мають проблеми зі слухом, або тих користувачів, комп’ютер яких не обладнано гучномовцями, у &kde; додано <emphasis
+>видимий дзвінок</emphasis
+>. За його допомогою можна подати візуальний сигнал (інвертувати кольори екрана або блимнути кольором по його краях) замість звичайного системного дзвінка. </para>
+
+<para
+>Щоб використовувати видимий дзвінок, спочатку залиште позначку у полі з підписом <guilabel
+>Використовувати видимий дзвінок</guilabel
+>. </para>
+
+<para
+>Ви можете обрати один з варіантів: <guilabel
+>Інверсія екрана</guilabel
+> або <guilabel
+>Спалах екрана</guilabel
+>. Якщо ви оберете <guilabel
+>Інверсію екрана</guilabel
+>, замість дзвінка всі кольори на екрані буде інвертовано (обернено). Якщо ж ви скористаєтеся <guilabel
+>Спалахом екрана</guilabel
+>, вам слід буде обрати колір спалаху за допомогою кнопки поряд з міткою <guilabel
+>Спалах екрана</guilabel
+>. </para>
+
+<para
+>Для налаштування тривалості видимого дзвінка можна скористатися полем лічильника. Типовою є тривалість дзвінка у 500 мс або пів секунди. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Клавіші-модифікатори</guilabel
+></title>
+
+<para
+>Цю панель поділено на розділи <guilabel
+>Липкі клавіші</guilabel
+> та <guilabel
+>Фіксувальні клавіші</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Використовувати липкі клавіші</guilabel
+></term>
+<listitem>
+<para
+>Якщо увімкнено цей параметр, ви зможете набирати комбінації клавіш &Shift;, &Alt; або &Ctrl; послідовно натискаючи і відпускаючи ці клавіші, замість одночасного натискання (приклад: комбінацію <keycombo action="simul"
+>&Ctrl; &Alt; <keycap
+>Del</keycap
+></keycombo
+> можна буде набрати як &Ctrl;, потім &Alt;, потім <keycap
+>Del</keycap
+>). </para>
+
+<para
+>Також у цьому розділі ви можете побачити поле для позначки з підписом <guilabel
+>Зафіксувати липкі клавіші</guilabel
+>. Якщо у полі є позначка, клавіші &Alt;, &Ctrl; і &Shift; вважатимуться <quote
+>натиснутими</quote
+> до того часу, поки ви не <quote
+>натиснете</quote
+> їх повторно. </para>
+
+<para
+>Приклад: </para>
+<variablelist>
+<varlistentry>
+<term
+>Якщо зняти позначку <guilabel
+>Зафіксувати липкі клавіші</guilabel
+>:</term>
+<listitem>
+<para
+>Якщо ви натиснете клавішу &Shift;, а слідом за нею клавішу <keycap
+>І</keycap
+>, комп’ютер вважатиме, що введено <keycombo action="simul"
+>&Shift;<keycap
+>І</keycap
+></keycombo
+> (велику літеру «І»). Якщо після цього ви натиснете клавішу <keycap
+>Ж</keycap
+>, комп’ютер вважатиме, що введено символ «ж» (малу літеру). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Якщо поставити позначку <guilabel
+>Зафіксувати липкі клавіші</guilabel
+>:</term>
+<listitem>
+<para
+>Якщо ви натиснете клавішу &Shift;, а слідом за нею клавішу <keycap
+>І</keycap
+>, комп’ютер вважатиме, що введено <keycombo action="simul"
+>&Shift;<keycap
+>І</keycap
+></keycombo
+> (велику літеру «І»). Якщо після цього ви натиснете клавішу <keycap
+>ж</keycap
+>, комп’ютер вважатиме, що введено символ «Ж» (велику літеру). (<keycombo action="simul"
+>&Shift;<keycap
+>Ж</keycap
+></keycombo
+>). Щоб вимкнути додавання &Shift; до натиснутих клавіш, натисніть &Shift; ще раз. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Фільтри клавіатури</guilabel
+></title>
+
+<para
+>Цю панель поділено на два розділи.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Використовувати повільні клавіші</guilabel
+></term>
+<listitem>
+<para
+>Якщо увімкнути цей параметр, для того, щоб ввести символ позначений на клавіші, вам слід буде утримувати натиснутою цю клавішу вказаний проміжок часу (його можна налаштувати за допомогою поля лічильника). Таким чином можна запобігти випадковому натисканню клавіш. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Використовувати пружні клавіші</guilabel
+></term>
+<listitem>
+<para
+>Якщо ви увімкнете цей параметр, система сприйматиме натискання наступної клавіші лише за вказаний час після попередньої (цей час можна налаштувати за допомогою поля лічильника). Таким чином можна уникнути випадкового одночасного натискання декількох клавіш. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Жести активізації</guilabel
+></title>
+
+<para
+>Цю панель поділено на два розділи.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Жести активації</guilabel
+> з такими пунктами:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Використовуйте жести для активізації липких на повільних клавіш</guilabel
+></member>
+<member
+>Тут ви можете задіяти комбінації клавіш, які вмикатимуть такі можливості:</member>
+<member
+>Кнопки миші: Натискання &Shift;+NumLock</member>
+<member
+>Липкі клавіші: Натискання клавіші &Shift; 5 разів підряд</member>
+<member
+>Повільні клавіші: Утримування натиснутою клавіші &Shift; протягом 8 секунд</member>
+<member
+><guilabel
+>Після певного часу бездіяльності вимкнути липкі та повільні клавіші</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Сповіщення</guilabel
+> з такими пунктами:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Використовувати системний гудок під час використання жесту для вмикання/вимикання функцій доступності</guilabel
+></member>
+
+<member
+><guilabel
+>Показувати вікно підтвердження під час вмикання/вимикання будь-якої функції доступності</guilabel
+></member>
+<member
+>Якщо буде позначено цей пункт, &kde; показуватиме вікно підтвердження під час вмикання/вимикання будь-якої функції доступності.</member>
+<member
+>Якщо знімете позначку з цього пункту, будьте обережні у своїх діях: параметри доступності будуть завжди застосовуватись без підтвердження.</member>
+
+<member
+><guilabel
+>Використовувати механізм системи сповіщень &kde; під час вмикання/вимикання функцій доступності на клавіатурі</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Натисніть кнопку <guibutton
+>Налаштувати повідомлення</guibutton
+>, щоб наказати програмі відкрити діалогове вікно, за допомогою якого ви зможете змінити параметри показу сповіщень про зміну режиму роботи клавіатури.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Навігація за допомогою миші</title>
+
+<para
+>За допомогою цієї вкладки ви можете налаштувати як замінник миші цифрову панель клавіатури. Таке налаштування може бути корисним, якщо ви працюєте за комп’ютером, у якого немає координатно-покажчикового пристрою, або за комп’ютером, на якому вам не потрібна цифрова панель клавіатури. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Пересувати мишку цифровою частиною клавіатури</guilabel
+></term>
+<listitem>
+<para
+>Щоб увімкнути режим клавіатурної миші, вам слід позначити пункт з написом <guilabel
+>Пересувати мишку цифровою клавіатурою</guilabel
+>. Після того, як ви це зробите, ви отримаєте доступ до інших параметрів і зможете провести подальше налаштування клавіатурної миші, якщо цього забажаєте. </para>
+<para
+>Клавіші цифрової панелі клавіатури пересуватимуть вказівник миші у напрямках, які очевидні з розташування цих клавіш. Зауважте, що окрім рухів вгору-вниз і ліворуч-праворуч, ви можете пересувати вказівник по діагоналі. Клавішу <keycap
+>5</keycap
+> можна використовувати для імітації клацання, зазвичай, лівою кнопкою миші. Ви можете змінити кнопку, яку імітуватиме «5», за допомогою клавіш <keycap
+>/</keycap
+> (ліва кнопка миші), <keycap
+>*</keycap
+> (середня кнопка миші) і <keycap
+>-</keycap
+> (права кнопка миші). За допомогою клавіші <keycap
+>+</keycap
+> можна імітувати подвійне клацання вибраною для «5» кнопкою миші. Клавішею <keycap
+>0</keycap
+> можна скористатися для імітації утримування натиснутою кнопки, що відповідає «5», (для полегшення перетягування), а потім скористатися клавішею <keycap
+>.</keycap
+> для імітації відпускання кнопки миші. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Затримка прискорення</guilabel
+></term>
+<listitem>
+<para
+>Це час (у мілісекундах) між початковим натисканням клавіші і першим повторним сигналом про натискання клавіші, призначеної для руху вказівника, для прискорення клавіатурної миші. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Інтервал повторення</guilabel
+></term>
+<listitem>
+<para
+>Це час у мілісекундах між повторними сигналами про натискання клавіші, призначеної для руху вказівника, для прискорення клавіатурної миші. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Час прискорення</guilabel
+></term>
+<listitem>
+<para
+>Це час у мілісекундах, який має пройти до досягнення вказівником максимальної швидкості під час прискорення клавіатурної миші. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Максимальна швидкість</guilabel
+></term>
+<listitem>
+<para
+>Це максимальна швидкість у пікселях на секунду, якої вказівник миші може досягти  під час прискорення клавіатурної миші. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Профіль прискорення</guilabel
+></term>
+<listitem>
+<para
+>Це нахил кривої прискорення вказівника клавіатурної миші. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Засіб читання з екрана</guilabel
+></title>
+
+<para
+>Встановіть програму для читання з екрана, наприклад <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> разом із <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Перевірте, чи працює звук від засобу розподілу озвучення тексту, за допомогою команди <command
+>spd-say hello</command
+>, відданої з термінала. </para>
+
+<para
+>Крім того, вам знадобиться синтезатор мовлення з тексту, наприклад <application
+>espeak</application
+>. </para>
+
+<para
+>Увімкніть засіб читання з екрана за допомогою позначення пункту, вийдіть з облікового запису і перезапустіть ваш стільничний сеанс. </para>
+
+<para
+>Для самої Плазми переконайтеся, що використовується традиційне <guilabel
+>Меню програм</guilabel
+>, і перевірте, що це нове меню має клавіатурне скорочення (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Після натискання цього клавіатурного скорочення має бути відкрито меню і прочитано пункти у відповідь на натискання клавіш зі стрілками. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

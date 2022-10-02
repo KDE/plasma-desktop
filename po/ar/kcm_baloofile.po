@@ -1,0 +1,178 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2014.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٥.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-18 23:37+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "هذه الوحدة تضبط مفهرس الملفات و إمكانية البحث فيها"
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"سيؤدي هذا إلى تعطيل البحث عن الملفات في قوائم مشغل.ك و مطلق التطبيقات ،"
+"وإزالة عرض البيانات الوصفية الممتد من جميع تطبيقات كدي."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"هل ترغب في حذف بيانات الفهرس المحفوظة؟ ستحرر %1 من المساحة لكن إذا مكنت "
+"الفهرسة مرة أخرى فإن كامل الفهرس سيعاد تكوينها من الصفر ، سيأخذ هذا بعض "
+"الوقت اعتمادا على عدد الملفات الموجودة."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "احذ بيانات الفهرس"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "يسمح لك بحث الملفّات بإيجاد كلّ ملفّاتك بسرعة وذلك بناءً على محتواها."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "فعّل بحث الملفّات"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "فهرس محتوى الملف أيضا"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "فهرس الملفات و المجلدات المخفية"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "الحالة: انتهت %1، %2%"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "أوقف المفهرس"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "استأنف المفهرس"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "حاليا يفهرس: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "ضبط خاص بمجلد:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "ابدأ بفهرس مجلد..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "أوقف بفهرس مجلد..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "غير مفهرس"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "مفهرس"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "احذف مدخلة"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "حدد مجلد لتضمينه"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "حدّد مجلد ليستثنى"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "عبدالرحيم الفاخوري, زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "abdilra7eem@yahoo.com,zayed.alsaidi@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "بحث الملفّات"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "الحقوق محفوظة 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "أضف ضبط مجلد..."
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "المجلّد %1 مُستثنى بالفعل"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "لا تبحث في هذه الأماكن"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "المجلّد الأبّ %1 مُستثنى بالفعل"
+
+#~ msgid "Configure File Search"
+#~ msgstr "اضبط بحث الملفّات"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "المجلّد الجذر مخفيّ دائمًا"

@@ -1,0 +1,79 @@
+# Translation of plasma_applet_org.kde.plasma.trash.po to Brazilian Portuguese
+# Copyright (C) 2014-2016 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2021-06-04 15:03-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: contents/ui/main.qml:103
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "Abrir"
+
+# Ação de esvaziar a Lixeira (verbo). (Alvarenga).
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Esvaziar"
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Trash Settings…"
+msgstr "Configurações da Lixeira..."
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"Lixeira\n"
+"vazia"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"Lixeira\n"
+"Um item"
+msgstr[1] ""
+"Lixeira\n"
+" %1 itens"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Lixeira"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "Empty"
+msgstr "Vazia"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "Um item"
+msgstr[1] "%1 itens"

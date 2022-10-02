@@ -1,0 +1,449 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-27 18:50+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmänt"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Ta bort från favoriter"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Lägg till i favoriter"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "För alla aktiviteter"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "För aktuell aktivitet"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Visa i favoriter"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Välj…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Rensa ikon"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Visa program som:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Bara namn"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Bara beskrivning"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Namn (Beskrivning)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Beskrivning (Namn)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Beteende:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Sortera program alfabetiskt"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Platta ut undermenyn till en enda nivå"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Visa ikoner på menyns rotnivå"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Visa kategorier:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Senaste program"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Ofta använda program"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Senaste filer"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Ofta använda filer"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Senaste kontakter"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Ofta använda kontakter"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Sortera objekt i kategorier enligt:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Senast använda"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Ofta använda"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Sök:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Expandera sökning till bokmärken, filer och e-post"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Justera sökresultat längst ner"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Söker efter \"%1\""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Skriv för att söka…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoriter"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Grafiska komponenter"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Program och dokument"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Redigera program…"
+
+#~ msgid "Search…"
+#~ msgstr "Sök…"
+
+#~ msgid "Search..."
+#~ msgstr "Sök..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Ofta använda dokument"
+
+#~ msgid "Open with:"
+#~ msgstr "Öppna med:"
+
+#~ msgid "Properties"
+#~ msgstr "Egenskaper"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Lägg till på skrivbordet"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Lägg till i panel (grafisk komponent)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Fäst upp i aktivitetshanteraren"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Senaste dokument"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Glöm senaste dokument"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Redigera program..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Uninstall or Manage Add-Ons..."
+#~ msgstr "Avinstallera eller hantera tillägg..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Dölj program"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Program"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Dölj inte längre program i den här undermenyn"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Dölj inte längre program i '%1'"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Visa Kör program"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Sök, beräkna eller kör ett kommando"
+
+#~ msgid "Computer"
+#~ msgstr "Dator"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Visa kontaktinformation..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakter"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Glöm kontakt"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Glöm alla kontakter"
+
+#~ msgid "Recently Used"
+#~ msgstr "Senast använda"
+
+#~ msgid "Documents"
+#~ msgstr "Dokument"
+
+#~ msgid "Forget Application"
+#~ msgstr "Glöm program"
+
+#~ msgid "Forget Document"
+#~ msgstr "Glöm dokument"
+
+#~ msgid "Forget All"
+#~ msgstr "Glöm alla"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Glöm alla program"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Glöm alla dokument"
+
+#~ msgid "Hide %1"
+#~ msgstr "Dölj %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Alla program"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Senaste kontakter"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Ofta använda dokument"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Senaste program"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Ofta använda program"
+
+#~ msgid "Power / Session"
+#~ msgstr "Strömhantering och session"
+
+#~ msgid "Search results"
+#~ msgstr "Sökresultat"
+
+#~ msgid "Lock"
+#~ msgstr "Lås"
+
+#~ msgid "Log Out"
+#~ msgstr "Logga ut"
+
+#~ msgid "Save Session"
+#~ msgstr "Spara session"
+
+#~ msgid "Switch User"
+#~ msgstr "Byt användare"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Viloläge"
+
+#~ msgid "Hibernate"
+#~ msgstr "Dvala"
+
+#~ msgid "Restart"
+#~ msgstr "Starta om"
+
+#~ msgid "Shut Down"
+#~ msgstr "Stäng av"
+
+#~ msgid "Session"
+#~ msgstr "Session"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lås skärmen"
+
+#~ msgid "End session"
+#~ msgstr "Avsluta session"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Starta en parallell session som en annan användare"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Gå till viloläge i minne"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Gå till viloläge på disk"
+
+#~ msgid "Restart computer"
+#~ msgstr "Starta om datorn"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Stäng av datorn"
+
+#~ msgid "System actions"
+#~ msgstr "Systemåtgärder"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Hantera '%1'..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Kör kommando..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Kör ett kommando eller utför en sökning"
+
+#~ msgid "Show:"
+#~ msgstr "Visa:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Visa senaste program"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Visa ofta använda program"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Visa senaste dokument"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Visa ofta använda dokument"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Visa senaste kontakter"
+
+#~ msgid "Logout"
+#~ msgstr "Logga ut"
+
+#~ msgid "Reboot"
+#~ msgstr "Starta om"
+
+#~ msgid "Suspend"
+#~ msgstr "Gå till viloläge"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Flyttbart lagringsmedia"
+
+#~ msgid "Places"
+#~ msgstr "Platser"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Använd egen bild:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Välj en bild"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Bildfiler (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Lägg till som startprogram"
+
+#~ msgid "New Session"
+#~ msgstr "Ny session"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Tom)"

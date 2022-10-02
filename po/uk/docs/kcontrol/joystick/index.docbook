@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Ігровий контролер</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 квітня 2015 року</date>
+<releaseinfo
+>Плазма 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>джойстик</keyword>
+<keyword
+>контролер</keyword>
+<keyword
+>ігровий пульт</keyword>
+<keyword
+>калібрування</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Калібрування ігрового контролера</title>
+
+<para
+>Цей модуль надасть вам доступ до інтерфейсу, який допоможе вам відкалібрувати пристрій ігрового контролера, а також які з функцій на вашому ігровому контролері відповідають кожній логічній кнопці або осі.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ось знімок вікна модуля ігрового контролера</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Модуль ігрового контролера</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Пристрій</guilabel
+></term>
+<listitem>
+<para
+>Тут ви можете бачити розташування логічного пристрою джойстика. Якщо на вашому комп’ютері встановлено декілька ігрових контролерів, ви також можете вибрати той з них, який слід налаштувати. </para>
+<para
+>Якщо у вашій системі не вдалося автоматично знайти пристрій ігрового контролера, а вам відомо, що такий пристрій з’єднано з комп’ютером, тут ви можете вказати відповідний файл пристрою. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Позиція</guilabel
+></term>
+<listitem>
+<para
+>Креслення розташування осей X і Y джойстика ігрового контролера. Поставте позначку у поле <guibutton
+>Показувати слід</guibutton
+>, щоб накреслити шлях курсора джойстика від однієї точки до іншої. </para>
+<tip
+><para
+>Якщо за допомогою джойстика не можна потрапити у будь-яку точку креслення, або якщо його неправильно центровано, вам слід відкалібрувати ваш пристрій джойстика. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Кнопки</guilabel
+></term>
+<listitem>
+<para
+>Місце, де можна побачити стан натискання на кнопки вашого ігрового контролера і те, чи правильно розпізнано ці кнопки. У разі натискання кнопки поряд з її логічним номером (у тому вигляді, як його бачить комп’ютер) має з’явитися напис <guilabel
+>НАТИСНУТО</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Осі</guilabel
+></term>
+<listitem>
+<para
+>Тут буде показано числові значення позицій осей. 0 знаходитиметься по центру, а максимальне і мінімальне значення залежатимуть від ігрового контролера і окремо взятої осі. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Відкалібрувати</guilabel
+></term>
+<listitem>
+<para
+>Натискання кнопки <guibutton
+>Відкалібрувати</guibutton
+> відкриє діалогове вікно, у якому ви зможете відкалібрувати всі осі джойстика. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Калібрування вашого ігрового контролера</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Калібрування вашого ігрового контролера</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Кожну вісь слід буде пересунути у мінімальну позицію, потім у центр і, нарешті, у максимальну позицію. Лінійка у нижньому лівому куті діалогового вікна допоможе вам визначити наскільки слід збільшити або зменшити значення. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

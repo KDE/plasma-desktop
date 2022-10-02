@@ -1,0 +1,764 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marce Villarino <mvillarino@kde-espana.es>, 2013, 2014.
+# Miguel Branco <mgl.branco@gmail.com>, 2013.
+# Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2019-10-19 21:50+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.11.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Xeral"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Retirar dos favoritos"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Engadir aos favoritos"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "En todas as actividades"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Na actividade actual"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Mostrar nos favoritos"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Icona:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open icon chooser dialog"
+#| msgid "Choose..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Escoller…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Borrar a icona"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Mostrar as aplicacións como:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Só o nome"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Só a descrición"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nome (descrición)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Descrición (Nome)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Comportamento:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Ordenar as aplicacións alfabeticamente"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Desaniñar os menús subordinados a un único nivel"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Mostrar as iconas no nivel raíz do menú"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Mostrar as categorías:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Aplicacións recentes"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Aplicacións usadas habitualmente"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Recent documents"
+msgid "Recent files"
+msgstr "Documentos recentes"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#| msgid "Often used"
+msgid "Often used files"
+msgstr "Usados habitualmente"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Contactos recentes"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Contactos usados habitualmente"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Ordenar os elementos en categorías por:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Usados recentemente"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Usados habitualmente"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Buscar:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Incluír na busca marcadores, ficheiros e correos"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Aliñar no fondo os resultados da busca"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Buscando «%1»"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, fuzzy, kde-format
+#| msgid "Type to search..."
+msgid "Type to search…"
+msgstr "Escriba para buscar…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Trebellos"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Aplicativos e documentos"
+
+#: package/contents/ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "Editar as aplicacións…"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgid "Search…"
+#~ msgstr "Buscar:"
+
+#~ msgid "Search..."
+#~ msgstr "Buscar…"
+
+#~ msgid "Often used documents"
+#~ msgstr "Documentos usados habitualmente"
+
+#~ msgid "Open with:"
+#~ msgstr "Abrir con:"
+
+#~ msgid "Properties"
+#~ msgstr "Propiedades"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Engadir ao escritorio"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Engadir ao panel (trebello)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Fixar no xestor de tarefas"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Documentos recentes"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Esquecer os documentos recentes"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Editar o aplicativo…"
+
+#~ msgid "Hide Application"
+#~ msgstr "Agochar o aplicativo"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicativos"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Mostrar os aplicativos deste submenú"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Mostrar os aplicativos de «%1»"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Mostrar KRunner"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Buscar, calcular ou executar unha orde"
+
+#~ msgid "Computer"
+#~ msgstr "Computador"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Mostrar información do contacto…"
+
+#~ msgid "Contacts"
+#~ msgstr "Contactos"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Esquecer o contacto"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Esquecer todos os contactos"
+
+#~ msgid "Recently Used"
+#~ msgstr "Empregados recentemente"
+
+#~ msgid "Documents"
+#~ msgstr "Documentos"
+
+#~ msgid "Forget Application"
+#~ msgstr "Esquecer o aplicativo"
+
+#~ msgid "Forget Document"
+#~ msgstr "Esquecer o documento"
+
+#~ msgid "Forget All"
+#~ msgstr "Esquecer todo"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Esquecer todos os aplicativos"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Esquecer todos os documentos"
+
+#~ msgid "Hide %1"
+#~ msgstr "Agochar %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Todos os aplicativos"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Contactos recentes"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Documentos usados habitualmente"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Aplicativos recentes"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Aplicativos usados habitualmente"
+
+#~ msgid "Power / Session"
+#~ msgstr "Enerxía / sesión"
+
+#~ msgid "Search results"
+#~ msgstr "Resultados da busca"
+
+#~ msgid "Lock"
+#~ msgstr "Bloquear"
+
+#~ msgid "Log Out"
+#~ msgstr "Saír"
+
+#~ msgid "Save Session"
+#~ msgstr "Gardar a sesión"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar de usuario"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Durmir"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
+
+#~ msgid "Restart"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Shut Down"
+#~ msgstr "Apagar"
+
+#~ msgid "Session"
+#~ msgstr "Sesión"
+
+#~ msgid "System"
+#~ msgstr "Sistema"
+
+#~ msgid "Lock screen"
+#~ msgstr "Bloquear a pantalla"
+
+#~ msgid "End session"
+#~ msgstr "Rematar a sesión"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Comezar unha sesión paralela cun usuario distinto."
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspender na RAM"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspender no disco"
+
+#~ msgid "Restart computer"
+#~ msgstr "Reiniciar o computador"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Apagar o computador"
+
+#~ msgid "System actions"
+#~ msgstr "Accións do sistema"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Xestionar «%1»…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Executar unha orde…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Executa unha orde ou unha busca"
+
+#~ msgid "Show:"
+#~ msgstr "Mostrar:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Mostrar os aplicativos recentes"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Mostrar os aplicativos usados habitualmente"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Mostrar documentos recentes"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Mostrar os documentos usados habitualmente"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Mostrar os contactos recentes"
+
+#~ msgid "Logout"
+#~ msgstr "Saír"
+
+#~ msgid "Reboot"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspender"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Dispositivo extraíbel"
+
+#~ msgid "Places"
+#~ msgstr "Lugares"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Usar unha imaxe personalizada:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Escoller unha imaxe"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Ficheiros de imaxe (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Engadir como iniciador"
+
+#~ msgid "New Session"
+#~ msgstr "Nova sesión"
+
+#~ msgid "(Empty)"
+#~ msgstr "(baleiro)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marce Villarino, Miguel Branco, Adrián Chaves Fernández"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "mvillarino@users.sourceforge.net, mgl.branco@gmail.com, "
+#~ "adriyetichaves@gmail.com"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Executor: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Explorar por categorías os programas instalados"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Todos os programas instalados"
+
+#~ msgid ""
+#~ "List all installed applications in a flat list, grouped by categories"
+#~ msgstr ""
+#~ "Listar todos os programas instalados nunha lista simple, agrupados por "
+#~ "categorías"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Todos os programas instalados e filtrados"
+
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr "Listar todos os programas instalados e fíltraos coa barra lateral"
+
+#~ msgid "Folder"
+#~ msgstr "Cartafol"
+
+#~ msgid "List the content of a folder and let you browse into sub-folders"
+#~ msgstr ""
+#~ "Listar todo o contido dun cartafol e permitir a navegación de "
+#~ "subcartafoles"
+
+#~ msgid "Browse the content of your favorite places"
+#~ msgstr "Explorar o contido dos teus lugares favoritos"
+
+#~ msgid "List applications marked as favorite"
+#~ msgstr "Listar os programas marcados como favoritos"
+
+#~ msgid "Power Management"
+#~ msgstr "Xestión da enerxía"
+
+#~ msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgstr ""
+#~ "Fornecer os botóns de suspender, hibernar, reiniciar a bloquear o teu "
+#~ "ordenador"
+
+#~ msgid ""
+#~ "Provide buttons to lock the screen, log out, or switch to another user"
+#~ msgstr ""
+#~ "Fornecer os botóns para bloquear a pantalla, saír ou cambiar de usuario"
+
+#~ msgid "Provide buttons to switch to opened sessions"
+#~ msgstr "Fornecer botóns para moverse entre as sesións abertas."
+
+#, fuzzy
+#~| msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgid ""
+#~ "Provide buttons to manage your workspace session and the power state of "
+#~ "your computer"
+#~ msgstr ""
+#~ "Fornecer os botóns de suspender, hibernar, reiniciar a bloquear o teu "
+#~ "ordenador"
+
+#~ msgid "Perform searchs using a selection of runners"
+#~ msgstr "Realiza as buscas usando unha escolma de executores"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Cartafol para mostrar:"
+
+#~ msgid "Title:"
+#~ msgstr "Título:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Se o título está baleiro empregarase o nome do cartafol"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Rede"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Raíz"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Lixo"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "&Liberar «%1»"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "&Desmontar «%1»"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "&Expulsar «%1»"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr ""
+#~ "O dispositivo «%1» non é un disco, polo que non é posíbel expulsalo."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr "Produciuse un erro ao acceder a «%1»; o sistema respondeu: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "Produciuse un erro ao acceder a «%1»"
+
+#~ msgid "Pick the application folder to display:"
+#~ msgstr "Selecciona o cartafol de programas para mostrar:"
+
+#, fuzzy
+#~| msgid "Remove from Favorites"
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Retirar dos favoritos"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Sidebar"
+#~ msgstr "Engadir ao panel"
+
+#~ msgid "Power"
+#~ msgstr "Potencia"
+
+#~ msgid "Pick the runners you would like to use in this source:"
+#~ msgstr "Escolle os executores que queres usar para esta fonte:"
+
+#~ msgid "Hello"
+#~ msgstr "Ola"
+
+#~ msgid "World"
+#~ msgstr "Universo"
+
+#~ msgid "Hello World"
+#~ msgstr "Ola mundo"
+
+#~ msgid "Text Color:"
+#~ msgstr "Cor do texto"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Sombra de texto:"
+
+#~ msgid "None"
+#~ msgstr "Ningún"
+
+#~ msgid "Automatic"
+#~ msgstr "Automática"
+
+#~ msgid "Custom:"
+#~ msgstr "Personalizado:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Ir á lapela anterior"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Ir á seguinte lapela "
+
+#~ msgid "Focus search field"
+#~ msgstr "Enfocar o campo de busca"
+
+#~ msgid "Go back"
+#~ msgstr "Atrás"
+
+#~ msgid "Go forward"
+#~ msgstr "Adiante"
+
+#~ msgid "Go up"
+#~ msgstr "Subir"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Untitled>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Feito"
+
+#~ msgid "Search in current tab..."
+#~ msgstr "Buscar na lapela actual…"
+
+#~ msgid "End Configure Tabs"
+#~ msgstr "Rematar a configuración das lapelas"
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Configurar as lapelas"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Configurar os atallos…"
+
+#~ msgid "Show Action List Buttons"
+#~ msgstr "Mostrar os botóns da lista de accións"
+
+#~ msgid "Restore Tabs to Default"
+#~ msgstr "Restaurar as lapelas predeterminadas"
+
+#~ msgid ""
+#~ "Are you sure you want to restore tabs?\n"
+#~ "Restoring tabs will reset your configuration to the default Homerun "
+#~ "tabs.\n"
+#~ "Your lists of favorite applications and places will remain untouched."
+#~ msgstr ""
+#~ "Está seguro de que quere restaurar as lapelas?\n"
+#~ "Ao facelo perderase a configuración de lapelas actual en favor da "
+#~ "configuración predeterminada de Homerun.\n"
+#~ "As listas de programas e lugares favoritos non se verán afectadas."
+
+#~ msgid "Restore Tabs"
+#~ msgstr "Restaurar as lapelas"
+
+#~ msgid "About %1"
+#~ msgstr "Acerca de %1"
+
+#~ msgid "Drag to reorder; release to show menu"
+#~ msgstr "Arrastrar para reordenar, soltar para mostrar o menú."
+
+#~ msgid "Release to show menu"
+#~ msgstr "Soltar para mostrar o menú"
+
+#~ msgid "Drag to reorder"
+#~ msgstr "Arrastrar para reordenar"
+
+#~ msgid "This item has no menu and cannot be dragged"
+#~ msgstr "O elemento carece de menú e non pode arrastrarse."
+
+#~ msgid "%1 has been added to your favorites"
+#~ msgstr "«%1» engadiuse aos favoritos."
+
+#~ msgid "Broken source '%1'"
+#~ msgstr "A fonte «%1» está danada."
+
+#~ msgid "Tab Label:"
+#~ msgstr "Etiqueta da lapela:"
+
+#~ msgid ""
+#~ "<p><b>Sorry, Homerun failed to load</b></p><p>Do you want to report this "
+#~ "error?</p><p>If you decide to report it, please copy and paste the "
+#~ "following output in your report:</p><pre>%1</pre>"
+#~ msgstr ""
+#~ "<p><b>Homerun fallou ao se iniciar</b></p><p>Queres informar deste erro?</"
+#~ "p><p>Se o fas, copia e pega, por favor, a seguinte saída no informe de "
+#~ "erro:</p><pre>%1</pre>"
+
+#~ msgid "Report Error"
+#~ msgstr "Informar sobre do erro"
+
+#~ msgid "Log focused item (for debug purposes)"
+#~ msgstr "Elemento no que centrar o rexistro (con fins de depuración)"
+
+#~ msgid "Use a plain window (for debug purposes)"
+#~ msgstr "Usar unha xanela sinxela (con fins de depuración)"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#, fuzzy
+#~| msgid "(C) 2012-2013 Blue Systems"
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "© 2012-2013, Blue Systems"
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Desenvolvedor"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgctxt "Tab title"
+#~ msgid "Files"
+#~ msgstr "Ficheiros"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Enerxía"
+
+#, fuzzy
+#~| msgctxt "Program name"
+#~| msgid "Homerun"
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Baleirar o lixo"
+
+#~ msgid "Show on screen <screen>"
+#~ msgstr "Mostrar na pantalla <screen>"
+
+#~ msgid "Nightly build using source from: %1"
+#~ msgstr "Compilación nocturna usando as fontes de: %1"

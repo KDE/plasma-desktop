@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Configurações da Pesquisa de Arquivos</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>02/03/2016</date>
+<releaseinfo
+>Plasma 5.5</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do Sistema</keyword>
+<keyword
+>procurar</keyword>
+<keyword
+>arquivo</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo das &systemsettings; permite-lhe configurar quais arquivos devem ser indexados para pesquisa rápida. Ela usa internamente uma tecnologia chamada Baloo para pesquisar nos arquivos de forma eficiente. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Pastas excluídas</guilabel
+></term>
+<listitem>
+    <para
+>Uma lista de pastas que não devem ser pesquisadas. Por padrão, toda a sua pasta $HOME será indexada e mais nenhuma outra unidade. </para>
+    <para
+>Mídias removíveis nunca serão indexadas por padrão. No entanto, elas podem ser explicitamente removidas da lista de pastas excluídas para serem indexadas. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

@@ -1,0 +1,225 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2009, 2010, 2011, 2015, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-11-14 18:02+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "장치 자동 마운터"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "원 작성자"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 이식"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"이 목록은 시스템에서 기억하는 이동식 저장 장치입니다. \"로그인할 때 자동으로 "
+"마운트\"를 선택했다면 \"로그인할 때 모든 장치 마운트\"를 선택하지 않아도 자동"
+"으로 마운트됩니다. \"연결할 때 자동으로 마운트\"에도 같은 규칙이 적용됩니다."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"이 단추를 클릭하면 시스템에서 기억하고 있는 장치별 설정을 삭제합니다. \"이전"
+"에 수동으로 마운트한 장치만 자동으로 마운트\" 옵션을 선택했을 있을 때에만 유"
+"용합니다. 장치별 설정을 삭제하고 기존에 마운트했던 장치만 마운트하기로 설정되"
+"어 있으면 이 장치를 더 이상 자동으로 마운트하지 않습니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "장치별 설정 삭제"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"이 옵션을 선택하지 않으면 기억하는 장치만 자동으로 마운트합니다. 한 번이라도 "
+"마운트된 장치는 자동으로 기억됩니다. 예를 들면 MP3 플레이어를 충전하려고 연결"
+"한 경우에는 파일에 접근하지 않았으므로 기억되지 않습니다. 이 경우에는 다음 번"
+"에 장치를 연결해도 자동으로 마운트하지 않습니다. 파일에 접근한 적이 있다면 이"
+"를 기억해서 다음 연결 시 자동으로 마운트합니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "이전에 수동으로 마운트한 적이 없는 이동식 장치 자동으로 마운트"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "장치 자동으로 마운트"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "로그인할 때"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "연결할 때"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "모든 장치"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "모든 알려진 장치"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "연결된 장치"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "연결되지 않은 장치"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "로그인할 때 이 장치를 자동으로 마운트합니다."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "로그인할 때 이 장치를 자동으로 마운트하지 않습니다."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "연결할 때 이 장치를 자동으로 마운트합니다."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "연결할 때 이 장치를 자동으로 마운트하지 않습니다."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "데스크톱에 로그인할 때 이동식 저장 장치가 연결되어 있다면, 다른 프로그램에"
+#~ "서 접근할 수 있도록 자동으로 마운트합니다."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "로그인할 때 모든 이동식 미디어 마운트"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "이 항목을 선택하면 임의의 이동식 저장소를 연결할 때 저장소를 자동으로 마운"
+#~ "트합니다."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "이동식 미디어를 연결할 때 자동으로 마운트"
+
+#~ msgid "Automatic mount"
+#~ msgstr "자동 마운트"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "이 항목을 선택하지 않으면 \"장치별 설정\"에서 한 설정과는 관계없이 장치를 "
+#~ "자동으로 마운트하지 않습니다."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "이동식 미디어 자동 마운트 사용하기"
+
+#~ msgid "Device Overrides"
+#~ msgstr "장치별 설정"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "연결할 때 자동으로 마운트하기"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "로그인하거나 연결할 때 자동으로 장치 마운트하기"

@@ -1,0 +1,371 @@
+# Finnish messages for kcmcomponentchooser.
+# Copyright © 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdebase package.
+# Tapio Kautto <eleknader@phnet.fi>, 2003, 2004.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2003, 2006.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2013, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2020, 2021, 2022.
+# Copyright © 2010 This_file_is_part_of_KDE
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-28 10:57+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Oletusverkkoselain"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Muu…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Valitse oletusselain"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Valitse oletussähköpostiohjelma"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Valitse oletustiedostonhallinta"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Valitse oletuskartta"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Valitse oletuspuhelusovellus"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Valitse oletuspääteohjelma"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Verkkoselain:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Tiedostonhallinta:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Sähköpostiohjelma:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Pääteohjelma:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Kartta:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Puhelut:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Tapio Kautto, Kim Enkovaara, Teemu Rytilahti, Ilpo Kantonen, Jorma "
+#~ "Karvonen, Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "eleknader@phnet.fi,kim.enkovaara@iki.fi,teemu.rytilahti@kde-fi.org,"
+#~ "ilpo@iki.fi,karvonen.jorma@gmail.com, translator@legisign.org"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Oletussovellukset"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Tuntematon"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponenttivalitsin"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "©, 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "Valitse alla olevasta luettelosta oletuskomponentti palvelulle %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr "<qt>Vaihdoit oletusohjelmaa. Haluatko nyt tallentaa muutoksen?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Kuvausta ei ole saatavilla"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Tästä voit vaihtaa komponenttiohjelmia. Komponentit ovat ohjelmia, jotka "
+#~ "toteuttavat perustehtäviä kuten päätteen, tekstimuokkaimen ja "
+#~ "sähköpostin. Eri KDE-sovellusten pitää joskus avata pääte, lähettää "
+#~ "sähköpostia tai  näyttää jotain tekstiä. Tehdäkseen sen yhdenmukaisesti "
+#~ "ohjelmat käyttävät  aina samoja komponentteja. Tästä voit valita, mitä "
+#~ "ohjelmia nämä komponentit  ovat."
+
+#~ msgid "Default Component"
+#~ msgstr "Oletuskomponentti"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Tässä luettelossa näkyvät muokattavissa olevat komponentit. Napsauta "
+#~ "komponenttia, jota haluat muokata.</p>\n"
+#~ "<p>Tässä valintaikkunassa voit vaihtaa KDE:n oletuskomponentteja. "
+#~ "Komponentit ovat ohjelmia, jotka toteuttavat perustehtäviä kuten "
+#~ "päätteen, tekstimuokkaimen ja sähköpostin. Eri KDE-sovellusten pitää "
+#~ "joskus avata pääte, lähettää sähköpostia tai näyttää jotain tekstiä. "
+#~ "Tehdäkseen sen yhdenmukaisesti ohjelmat käyttävät aina samoja "
+#~ "komponentteja. Tästä voit valita, mitä ohjelmia nämä komponentit ovat.</"
+#~ "p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Avaa <b>http</b>- ja <b>https</b>-osoitteet</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "verkko-osoitteen sisällön mukaiseen sovellukseen"
+
+#~ msgid "in the following application:"
+#~ msgstr "seuraavaan sovellukseen:"
+
+#~ msgid "with the following command:"
+#~ msgstr "seuraavalla komennolla:"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Valitse haluamasi selainohjelma:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Plasma-työpöytäympäristön oletussähköpostiohjelma on KMail."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Käytä sähköpostiohjelmana KMailia"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Valitse tämä, jos haluat käyttää jotakin toista sähköpostiohjelmaa."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Valinnaiset muuttujat:<ul> <li>%t: vastaanottajan osoite</li> <li>%s: "
+#~ "aihe</li> <li>%c: kopio (CC)</li> <li>%b: piilokopio (BCC)</li> <li>%B: "
+#~ "viestin leipäteksti</li> <li>%A: liite</li> <li>%u Kokonainen mailto:-"
+#~ "verkko-osoite </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Valitse haluamasi sähköpostiohjelma napsauttamalla tästä. Huomaa, että "
+#~ "valitsemasi tiedoston täytyy olla ohjelmatiedosto.<br/> Voit myös käyttää "
+#~ "seuraavia muuttujia, jotka korvataan arvoilla sähköpostiohjelmaa "
+#~ "kutsuttaessa. <ul> <li>%t: vastaanottajien osoitteet</li><li>%s: aihe</"
+#~ "li> <li>%c: kopio (CC)</li> <li>%b: piilokopio (BCC)</li> <li>%B: viestin "
+#~ "leipäteksti</li> <li>%A: liite </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Valitse sähköpostiohjelma napsauttamalla tästä."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Valitse tämä, jos haluat että käyttämäsi sähköpostiohjelma käynnistetään "
+#~ "pääteikkunassa (esim. <em>Konsolessa</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Käynnistä pääteikkunassa"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Selaa kansioita seuraavalla tiedostonhallintaohjelmalla:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Muu: Napsauta Lisää-painiketta avautuvasta valintaikkunasta:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Käytä päätteenä Konsolea"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Käytä jotakin toista &päätettä:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Napsauta tätä painiketta, jos haluat valita pääteohjelmasi. Huomaa, että "
+#~ "valitsemasi tiedoston täytyy olla ohjelmatiedosto.<br/> Huomaa myös, "
+#~ "etteivät kaikki pääte-emulaattorit toimi, jos lisäät "
+#~ "komentoriviparametreja (esim: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Valitse pääte napsauttamalla tästä."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 sekunti jäljellä:"
+#~ msgstr[1] "%1 sekuntia jäljellä:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Uusi ikkunointiohjelma otetaan käyttöön, kun Plasma käynnistetään "
+#~ "seuraavan kerran."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Ikkunointiohjelman muutos"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Uusi ikkunointiohjelma on käynnissä.\n"
+#~ "On silti suositeltavaa käynnistää tämä KDE-istunto uudelleen, jotta "
+#~ "kaikki käynnissä olevat ohjelmat varmasti sopeutuvat tähän muutokseen."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Ikkunointiohjelma korvattiin"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "Käytössä oleva ikkunointiohjelma korvataan nyt uudella."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Muokkaa ikkunointiohjelman vaihtoa"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Hyväksy muutos"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Palaa edelliseen"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Uusi ikkunointiohjelma käynnistetään.\n"
+#~ "Tarkista, että se on käynnistynyt oikein ja vahvista muutos.\n"
+#~ "Muutoin vanha ikkunointiohjelma palautetaan 20 sekunnissa."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Käynnissä oleva ikkunointiohjelma on palautettu KDE:n "
+#~ "oletusikkunointiohjelmaksi KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Uuden ikkunointiohjelman käynnistys epäonnistui.\n"
+#~ "Käynnissä oleva ikkunointiohjelma on palautettu KDE:n "
+#~ "oletusikkunointiohjelmaksi KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Asetustyökalun suoritus epäonnistui"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Käytä KDE:n oletusikkunointiohjelmaa (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Käytä eri &ikkunointiohjelmaa:"
+
+#~ msgid "Configure"
+#~ msgstr "Muokkaa"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Huom: useimmilla ikkunointiohjelmilla on omat asetuksensa, eivätkä ne "
+#~ "noudata KDE:n asetuksia."

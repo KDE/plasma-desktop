@@ -1,0 +1,274 @@
+# translation of kcmsmserver.po to Arabic
+# translation of kcmsmserver.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001.
+# Hicham Amaoui <amaoui@altern.org>, 2002.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-28 19:43+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>مدير الجلسة</h1>  يمكنك ضبط مدير الجلسة هنا. هذا يتضمن خيارات مثل ضرورة "
+"أو عدم ضرورة التأكيد على تسجيل الخروج و إذا كان واجباً استعادة الجلسة عند "
+"الدخول أو إيقاف تشغيل الحاسوب تلقائياً عند الخروج من الجلسة."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "فشل طلب إعادة التشغيل لإعداد البرنامج الثابت: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد UEFI. "
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد "
+"البرنامج  الثابت. "
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "أعِد التشغيل الآن"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "عام:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "أكد الخروج"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "اعرض خيارات إيقاف التشغيل"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "خيار  الترك المبدئي:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "أنهِ الجلسة الحالية"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "أعد تشغيل الحاسوب"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "أطفئ الحاسوب"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "عند الولوج:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "استعد أخر جلسة"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "استعد أخر جلسة محفوظة يدوياً"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ابدأ بجلسة فارغة"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "لا تستعد هذه التطبيقات:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"بإمكانك هنا إدخال قائمة من التطبيقات التي لا يجب أن تحفظ في الجلسات مفصولة "
+"بفاصلة (,) أو نقطتين (:) ، ومن ثم لن تبدأ عند استعادة الجلسة. مثلاً 'xterm "
+"أوxconsole' أو 'xterm:konsole' ."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "ادخل شاشة ضبط البرنامج الثابت في إعادة التشغيل القادم"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "أكد الخروج"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "اعرض خيارات إيقاف التشغيل"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "خيار اترك المبدئي"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "عند الولوج"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "التطبيقات المستثناة من الجلسات:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com"
+
+#~ msgid "Desktop Session"
+#~ msgstr "جلسة سطح المكتب"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "الولوج والخروج من جلسة سطح المكتب"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "الحقوق محفوظة © 2000–2020 فريق جلسة سطح المكتب"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "استعد الجلسة المحفوظة السابقة"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "اختر هذا الخيار إذا كنت ترغب في أن يظهر لك مدير الجلسة مربع حوار لتأكيد "
+#~ "الخروج."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "أكد ال&خروج "
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "اع&رض خيارات إيقاف التشغيل"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "هنا يمكنك اختيار ما سيقع افتراضياً عند تسجيل خروجك. هذا فقط له معنى إذا "
+#~ "دخلت من خلال  KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "خيار إيقاف الترك الافتراضي"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>استعد الجلسة السابقة:</b> سيتم حفظ جميع التطبيقات العاملة عند "
+#~ "الخروج ثم سيتم استعادتها عند الدخول في المرة المقبلة</li>\n"
+#~ "<li><b>استعد الجلسة المحفوظة يدوياً: </b> يسمح لك بحفظ الجلسة في أي وقت عن "
+#~ "طريق زر \"احفظ الجلسة\" في قائمة K. هذا يعني أن التطبيقات العاملة حالياً "
+#~ "ستظهر مجدداً في المرة القادمة.</li>\n"
+#~ "<li><b>ابدأ بجلسة فارغة:</b> لا تحفظ شيئاً. سيتم البدء بسطح مكتب فارغ في "
+#~ "المرة القادمة.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "عند الولوج"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "التطبيقات الم&ستثناة من الجلسات:"
+
+#~ msgid "Session Manager"
+#~ msgstr "مدير الجلسة"
+
+#~ msgid "Advanced"
+#~ msgstr "متقدم"

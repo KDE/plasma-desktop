@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Gestão de Sessões</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>sessão</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Gestão de Sessões</title>
+
+<sect2 id="sessions-use">
+<title
+>Utilização</title>
+
+<para
+>Neste módulo do &systemsettings;, o utilizador pode configurar o gestor de sessões e as opções de encerramento do &kde;.</para>
+
+<para
+>A gestão de sessões corresponde à capacidade do &kde; de guardar o estado das aplicações e das janelas quando o utilizador sai do &kde; e de as recuperar quando voltar a ligar-se.</para>
+
+<sect3 id="sessions-general">
+<title
+>Geral</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Confirmar a saída</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver seleccionada, ao sair do &kde; aparecerá uma janela a pedir uma confirmação. Nesta janela também pode escolher se deseja recuperar a sua sessão actual quando se ligar de novo.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Oferecer opções de desligar</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, o &kde; irá oferecer uma selecção de acções quando finalizar a sessão. Estas incluem a finalização simples da sessão actual (a acção efectuada, se as opções para desligar não estiverem activas), para desligar o computador ou para reiniciá-lo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opção de Encerramento Predefinida</title>
+<para
+>Pode configurar o que deverá acontecer por omissão, sempre que sai do &kde;. Esta opções não são possíveis em todos os sistemas operativos e necessitam da utilização do &kdm; como o seu gestor de autenticações.</para>
+
+<para
+>As opções disponíveis são relativamente simples mas, se tiver dúvidas, deixe ficar a opção predefinida. Estas são:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Terminar a sessão actual</guilabel
+> (esta é a opção por omissão)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Desligar o computador</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Reiniciar o computador</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>No Arranque</title>
+<para
+>Pode escolher uma de três opções correspondentes ao que deverá acontecer quando se liga ao &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Recuperar a sessão anterior</guilabel
+></term>
+<listitem
+><para
+>Se esta opção estiver seleccionada, o &kde; irá gravar o estado da sua sessão actual quando sair. O &kde; irá recuperar a sua sessão da próxima vez que se ligar, para que possa continuar a trabalhar com um ambiente como o que deixou.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Recuperar manualmente a sessão gravada</guilabel
+></term>
+<listitem
+><para
+>Em vez de repor o &kde; no estado em que estava quando saiu da última vez, será reposto num estado específico que o utilizador gravou manualmente.</para>
+<para
+>Se esta opção estiver assinalada, o menu inicial oferece um item adicional <menuchoice
+><guimenu
+>Sair</guimenu
+><guimenuitem
+>Gravar a Sessão</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Iniciar com uma sessão vazia</guilabel
+></term>
+<listitem>
+<para
+>Se escolher esta opção, o &kde; nunca irá recuperar as sessões que gravou.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Finalmente, poderá indicar uma lista separada por dois pontos (<literal
+>:</literal
+>) ou vírgulas (<literal
+>,</literal
+>) das aplicações que não deverão ser gravadas nas sessões e, como tal, não serão iniciadas ao repor uma sessão. Por exemplo <userinput
+>xterm:konsole</userinput
+> ou <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

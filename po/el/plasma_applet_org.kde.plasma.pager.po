@@ -1,0 +1,227 @@
+# translation of plasma_applet_pager.po to greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011.
+# Antonis Geralis <capoiosct@gmail.com>, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2016-10-31 15:51+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Γενικά"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Γενικά"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, fuzzy, kde-format
+#| msgid "Only the current screen"
+msgid "Show only current screen"
+msgstr "Τρέχουσα οθόνη μόνο"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Διάταξη:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Προκαθορισμένη"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Οριζόντια"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Κατακόρυφη"
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display:"
+msgid "Text display:"
+msgstr "Εμφάνιση:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Χωρίς κείμενο"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Αριθμός δραστηριότητας"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Αριθμός επιφάνειας εργασίας"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Όνομα δραστηριότητας"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Όνομα επιφάνειας εργασίας"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "Επιλογή τρέχουσας επιφάνειας:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "Επιλογή τρέχουσας επιφάνειας:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Καμία ενέργεια"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "Εμφάνιση επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "...and %1 other window"
+#| msgid_plural "...and %1 other windows"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "...και άλλο %1 παράθυρο"
+msgstr[1] "...και άλλα %1 παράθυρα"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 παράθυρο:"
+msgstr[1] "%1 παράθυρα:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 ελαχιστοποιημένο παράθυρο:"
+msgstr[1] "%1 ελαχιστοποιημένα παράθυρα:"
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Όνομα επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager..."
+msgid "Show Activity Manager…"
+msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων..."
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Προσθήκη εικονικής επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Αφαίρεση εικονικής επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "&Ρύθμιση επιφανειών εργασίας..."
+
+#~ msgid "Icons"
+#~ msgstr "Εικονίδια"
+
+#~ msgid "Configure Desktops..."
+#~ msgstr "Διαμόρφωση επιφανειών εργασίας..."
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Εμφάνιση του πίνακα συστατικών"
+
+#~ msgid "Display icons:"
+#~ msgstr "Εμφάνιση εικονιδίων:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Προσθήκη εικονικής επιφάνειας εργασίας"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Αφαίρεση τελευταίας εικονικής επιφάνειας εργασίας"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Ρύθμιση του επιλογέα σελίδας"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Αριθμός στηλών:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Αριθμός γραμμών:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Τροποποίηση του αριθμού των γραμμών"
+
+#~ msgid "buttonGroupText"
+#~ msgstr "buttonGroupText"
+
+#~ msgid "buttonGroupAction"
+#~ msgstr "buttonGroupAction"
+
+#~ msgid "None"
+#~ msgstr "Κανένα"
+
+#~ msgid "What will appear when the mouse is over a desktop miniature"
+#~ msgstr ""
+#~ "Τί θα εμφανίζεται όταν το ποντίκι βρίσκεται σε μια μικρογραφία επιφάνειας "
+#~ "εργασίας"

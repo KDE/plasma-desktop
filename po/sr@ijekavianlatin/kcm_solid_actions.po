@@ -1,0 +1,295 @@
+# Translation of kcm_solid_actions.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2012, 2014, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_solid_actions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-02-05 03:43+0100\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+# >> @title:window
+#: ActionEditor.cpp:72
+#, kde-format
+msgid "Editing Action '%1'"
+msgstr "Uređivanje radnje „%1“"
+
+#: ActionEditor.cpp:173
+#, kde-format
+msgid ""
+"It appears that the action name, command, icon or condition are not valid.\n"
+"Therefore, changes will not be applied."
+msgstr ""
+"<p>Izgleda da ime, naredba, ikonica ili uslov radnje nisu dobri.</"
+"p><p>Izmjene zato neće biti primijenjene.</p>"
+
+# >> @title:window
+#: ActionEditor.cpp:173
+#, kde-format
+msgid "Invalid action"
+msgstr "Loša radnja"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Uređivanje parametra"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Tip parametra:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "poklapanje svojstva"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "konjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "disjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "poklapanje sučelja uređaja"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Tip uređaja:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Ime vrijednosti:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "jednako"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "sadrži"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Resetuj parametar"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Sačuvaj izmjene parametra"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Ikonica radnje, kliknite da je izmijenite."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Ime radnje."
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Naredba: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"<p>Naredba koja okida radnju. Može sadržati sljedeća proširenja (bez "
+"razlikovanja veličine slova):</p><ul><li><tt>%f</tt> — tačka montiranja "
+"uređaja (samo za skladišne uređaje)</li><li><tt>%d</tt> — putanja do čvora "
+"uređaja (samo za blokovske uređaje)</li><li><tt>%i</tt> — identifikator "
+"uređaja</li></ul>"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Uređaji moraju poklopiti sljedeće parametre za ovu radnju:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Ime radnje:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Unesite ime za novu radnju."
+
+#: DesktopFileGenerator.cpp:37
+#, kde-format
+msgid "Solid Action Desktop File Generator"
+msgstr ""
+"Solidov generator .desktop fajlova za radnje|/|$[svojstva dat 'Solidovom "
+"generatoru .desktop fajlova za radnje']"
+
+#: DesktopFileGenerator.cpp:38
+#, kde-format
+msgid ""
+"Tool to automatically generate Desktop Files from Solid DeviceInterface "
+"classes for translation"
+msgstr ""
+"Alatka za automatsko stvaranje .desktop fajlova iz Solidovih DeviceInterface "
+"klasa, radi prevođenja."
+
+#: DesktopFileGenerator.cpp:39
+#, kde-format
+msgid "(c) 2009, Ben Cooksley"
+msgstr "© 2009, Ben Kuksli"
+
+#: DesktopFileGenerator.cpp:40 SolidActions.cpp:49
+#, kde-format
+msgid "Ben Cooksley"
+msgstr "Ben Kuksli"
+
+#: DesktopFileGenerator.cpp:40 SolidActions.cpp:49
+#, kde-format
+msgid "Maintainer"
+msgstr "Održavalac"
+
+# >> @item
+#: PredicateItem.cpp:132
+#, kde-format
+msgid "The device must be of the type %1"
+msgstr "uređaj mora biti tipa %1"
+
+# >> @item
+#: PredicateItem.cpp:135
+#, kde-format
+msgid "Any of the contained properties must match"
+msgstr "bar jedno sadržano svojstvo mora se poklopiti"
+
+# >> @item
+#: PredicateItem.cpp:138
+#, kde-format
+msgid "All of the contained properties must match"
+msgstr "sva sadržana svojstva moraju se poklopiti"
+
+# >> @item
+#: PredicateItem.cpp:147
+#, kde-format
+msgid "The device property %1 must equal %2"
+msgstr "svojstvo uređaja %1 mora biti jednako %2"
+
+# >> @item
+#: PredicateItem.cpp:150
+#, kde-format
+msgid "The device property %1 must contain %2"
+msgstr "svojstvo uređaja %1 mora sadržati %2"
+
+#: SolidActions.cpp:45
+#, kde-format
+msgid "Solid Device Actions Editor"
+msgstr "Uređivač Solidovih radnji uređaja"
+
+#: SolidActions.cpp:46
+#, kde-format
+msgid "Solid Device Actions Control Panel Module"
+msgstr "Modul kontrolnog panela za Solidove radnje uređaja"
+
+#: SolidActions.cpp:48
+#, kde-format
+msgid "(c) 2009, 2014 Solid Device Actions team"
+msgstr "© 2009, 2014, tim Solidovih radnji uređaja"
+
+#: SolidActions.cpp:50
+#, kde-format
+msgid "Port to Plasma 5"
+msgstr "Prenos na Plasmu 5"
+
+#: SolidActions.cpp:163
+#, kde-format
+msgid "It appears that the predicate for this action is not valid."
+msgstr "Izgleda da je predikat za ovu radnju loš."
+
+#: SolidActions.cpp:163
+#, kde-format
+msgid "Error Parsing Device Conditions"
+msgstr "Greška pri raščlanjivanju uslova uređaja"
+
+#: SolidActions.cpp:211
+#, kde-format
+msgid "No Action Selected"
+msgstr "Nema izabrane radnje"
+
+#: SolidActions.cpp:232
+#, kde-format
+msgid "Cannot be deleted"
+msgstr "Ne može se obrisati"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit..."
+msgstr "Uredi..."
+
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add..."
+msgstr "Dodaj..."

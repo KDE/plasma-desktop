@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Действия для устройств</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+> <firstname
+>Александр</firstname
+> <surname
+>Яворский</surname
+> <contrib
+>Рецензирование</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>10 декабря 2018 г.</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>действия</keyword>
+<keyword
+>устройства</keyword>
+<keyword
+>оборудование</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Действия для подключаемых устройств</title>
+<sect2 id="icons-intro">
+<title
+>Введение</title>
+
+<para
+>Этот модуль программы &systemsettings; позволяет настраивать действия, которые должны выполняться при подключении новых устройств.</para>
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана диалога настройки действий для устройств</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Диалог настройки действий для устройств</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>В списке представлены все действия, которые могут быть выполнены при подключении устройств. Важно учитывать, что их выполнение возможно только при соблюдении определённых условий.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Добавить</guibutton
+> Для добавления нового действия нужно указать его название, после чего открывается диалог редактирования действия. Если в открывшемся диалоге не будут указаны все необходимые данные, действие будет удалено. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Изменить</guibutton
+> Эта кнопка позволяет изменить название, значок, выполняемую команду и условия, которым должно отвечать подключаемое устройство для выполнения действия. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Отклонить / Не может быть удалено / Удалить</guibutton
+> Эта кнопка позволяет выполнять разные действия в зависимости от того, является ли действие системным или было создано пользователем. Системные действия не могут быть удалены, для них возможно только отклонить изменения, внесённые пользователем. Действия, созданные пользователем, могут быть только полностью удалены со всеми изменениями. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Добавление действия</title>
+
+<para
+>Кнопка <guibutton
+>Добавить</guibutton
+> открывает диалог, в котором необходимо указать название нового действия. </para>
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана диалога добавления действия</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Снимок экрана диалога добавления действия</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Название должно точно описывать действие. После ввода названия и нажатия кнопки <guibutton
+>OK</guibutton
+> будет открыт диалог редактирования действия. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Редактирование действия</title>
+
+<para
+>Этот диалог позволяет изменить параметры выбранного действия.</para>
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана диалога редактирования действия</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Снимок экрана диалога редактирования действия</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Диалог редактирования позволяет изменять значок, название действия, выполняемую команду и различные условия выполнения действия. Изменение значка действия выполняется нажатием левой кнопки мыши.</para>
+<para
+>Условия отображаются в виде деревовидного списка, в котором верхний пункт обязательно должен выполняться для отображения действия.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Редактирование условия</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Тип условия</guilabel
+></term>
+<listitem>
+<para
+>Этот параметр условия определяет, что может содержаться внутри условия, или какое сравнение производится для проверки выполнения условия. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Проверка характеристики</guilabel
+></term>
+<listitem>
+<para
+>Сравнивает заданную характеристику с устройством (используя поля <guilabel
+>Тип устройства</guilabel
+> и <guilabel
+>Характеристика</guilabel
+>) и при помощи блока оценки сравнивает её с введённым текстом.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Конъюнкция вложенных условий</guilabel
+></term>
+<listitem>
+<para
+>Для выполнения условия должны выполняться все вложенные условия.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Дизъюнкция вложенных условий</guilabel
+></term>
+<listitem>
+<para
+>Для выполнения условия должно выполняться как минимум одно вложенное условие.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Проверка интерфейса устройства</guilabel
+></term>
+<listitem>
+<para
+>Проверка соответствия подключенного устройства выбранному типу устройства.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Тип устройства</guilabel
+></term>
+<listitem>
+<para
+>В этом списке перечислены все возможные типы устройств, поддерживаемые системой &plasma;. Перечисленные в этом поле типы используются для проверки характеристик и интерфейса устройства. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Характеристика</guilabel
+></term>
+<listitem>
+<para
+>В этом списке перечислены все возможные характеристики для выбранного типа устройства. Расположенный ниже блок оценки (со значениями <guilabel
+>Равна</guilabel
+> или <guilabel
+>Содержит</guilabel
+>) позволяет сравнивать характеристику со значением, которое вводится в соответствующее текстовое поле. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Сбросить условие</guibutton
+></term>
+<listitem>
+<para
+>Отменяет любые несохранённые изменения, внесённые в редактируемое условие.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Сохранить условие</guibutton
+></term>
+<listitem>
+<para
+>Сохраняет изменения, внесённые в редактируемое условие.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

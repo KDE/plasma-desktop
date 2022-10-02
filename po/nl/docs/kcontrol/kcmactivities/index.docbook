@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Activiteiten</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-12</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>activiteit</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Activiteiten</title>
+<sect2 id="activities-intro">
+
+<title
+>Inleiding</title>
+
+<para
+>Deze module biedt het configureren van activiteiten. Activiteiten zijn een manier om meerdere &plasma; opzetten te hebben, elk met een verschillende set widgets en thema's. Sommige activiteiten kunnen privé zijn. Zulke activiteiten volgend uw acties niet. Ze volgen, bijvoorbeeld, niet welke recente documenten u hebt geopend. </para>
+
+<para
+>De module is opgedeeld in drie tabbladen: <link linkend="activities-main"
+><guilabel
+>Activiteiten</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Omschakelen</guilabel
+></link
+> en <link linkend="activities-privacy"
+><guilabel
+>Privacy</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Activiteiten</guilabel
+></title>
+
+<para
+>Dit tabblad heeft een lijst met uw huidige activiteiten. Zweef boven items in de lijst met de muisaanwijzer om de knoppen te laten zien om activiteiten te configureren of te verwijderen. </para>
+
+<para
+>De overlayknop <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> gebruiken om de activiteit te configureren. U kunt de volgende activiteitparameters wijzigen: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Pictogram</guilabel
+></term>
+        <listitem>
+            <para
+>Het pictogram van de activiteit is te zien op de selector van de activiteitenbeheerder van het &plasma;-paneel. Klik op het huidige pictogram om een systeembreed pictogram te kiezen of blader in het bestandssysteem om een eigen pictogram te selecteren. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Naam</guilabel
+></term>
+        <listitem>
+            <para
+>Geef uw activiteit een herkenbare naam. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Beschrijving</guilabel
+></term>
+        <listitem>
+            <para
+>Een beschrijving in vrije vorm van de activiteit die getoond wordt onder de naam op de selector van de activiteitenbeheerder van het &plasma;-paneel. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Privacy</guilabel
+></term>
+        <listitem>
+            <para
+>Activeer het item <guilabel
+>Gebruik voor deze activiteit niet volgen</guilabel
+> om al het volgen van uw activiteiten uit te schakelen. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Sneltoets voor omschakelen</guilabel
+></term>
+        <listitem>
+            <para
+>Druk op de eerste knop om de nieuwe sneltoets in te voeren om naar de activiteit om te schakelen. Druk op de tweede knop om de huidige sneltoets te verwijderen. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Op de knop <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> drukken verwijdert de activiteit. </para>
+<para
+>Op de knop <guibutton
+>Nieuw aanmaken...</guibutton
+> onder de lijst drukken opent de dialoog <guilabel
+>Een nieuwe activiteit aanmaken</guilabel
+> die gelijk is aan de activiteitconfiguratiedialoog zoals boven beschreven. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Schakelen</guilabel
+></title>
+
+<para
+>Hier kunt u configureren of &plasma; het <guilabel
+>Huidige virtuele bureaublad</guilabel
+> voor elke activiteit moet onthouden (heeft een herstart nodig). Het is ook mogelijk om sneltoetsen te configureren voor wandelen door de lijst met activiteiten. </para>
+<para
+>Voor meer informatie over hoe het systeem met sneltoetsen in &kde; is te gebruiken, zie de sectie <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Sneltoetsen gebruiken en aanpassen</emphasis
+> van de documentatie <emphasis
+>&kde; basisbeginselen</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Privacy</guilabel
+></title>
+
+<para
+>Dit tabblad Biedt het configureren van de tijd voor activiteiten om <guilabel
+>Geschiedenis te behouden</guilabel
+> en enige volggegevens te wissen. Gebruik het afrolmenu <guibutton
+>Geschiedenis wissen</guibutton
+> om <guimenuitem
+>Het laatste uur vergeten</guimenuitem
+>, <guimenuitem
+>De laatste twee uur vergeten</guimenuitem
+>, <guimenuitem
+>Een dag vergeten</guimenuitem
+> of <guimenuitem
+>Alles vergeten</guimenuitem
+> te laten door &plasma; . </para>
+<para
+>Hieronder kunt u de reeks toepassingen configureren voor het onthouden van geopende documenten in uw activiteiten. Gebruik het item <guilabel
+>Voor alle toepassingen</guilabel
+> om alle gegevens op te slaan, het item <guilabel
+>Niet onthouden</guilabel
+> om opslaan van gegevens uit te schakelen of het item <guilabel
+>Alleen voor specifieke toepassingen</guilabel
+> voor fijn afgestemde selectie (op het toepassing-item klikken schakelt zijn huidige modus om). </para>
+<para
+>Activeer het item <guilabel
+>Toepassingen op de zwarte lijst niet op de lijst</guilabel
+> om volgen voor alle toepassingen die niet op de lijst staan uit te schakelen. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,78 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"PO-Revision-Date: 2009-12-05 22:53+0200\n"
+"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: plasma-desktop-runner.cpp:24
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console"
+msgstr "darbvirsmas komandrinda"
+
+#: plasma-desktop-runner.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "desktop console"
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console"
+msgstr "darbvirsmas komandrinda"
+
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#, kde-format
+msgid ""
+"Opens the Plasma desktop interactive console with a file path to a script on "
+"disk."
+msgstr ""
+"Atver Plasma darbvirsmas interaktīvo komandrindu ar ceļu uz skripta failu "
+"diskā."
+
+#: plasma-desktop-runner.cpp:31
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "desktop console :q:"
+msgstr "darbvirsmas komandrinda :q:"
+
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#, fuzzy, kde-format
+#| msgid ""
+#| "Opens the Plasma desktop interactive console with a file path to a script "
+#| "on disk."
+msgid ""
+"Opens the KWin interactive console with a file path to a script on disk."
+msgstr ""
+"Atver Plasma darbvirsmas interaktīvo komandrindu ar ceļu uz skripta failu "
+"diskā."
+
+#: plasma-desktop-runner.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "desktop console :q:"
+msgctxt "Note this is a KRunner keyword"
+msgid "wm console :q:"
+msgstr "darbvirsmas komandrinda :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Atvērt Plasma darbvirsmas interaktīvo komandrindu"
+
+#: plasma-desktop-runner.cpp:62
+#, fuzzy, kde-format
+#| msgid "Open Plasma desktop interactive console"
+msgid "Open KWin interactive console"
+msgstr "Atvērt Plasma darbvirsmas interaktīvo komandrindu"

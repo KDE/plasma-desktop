@@ -1,0 +1,850 @@
+# translation of kcmkonq.po to Cymraeg
+# Translation of kcmkonq.po to Cymraeg
+# Bwrdd Gwaith yn Gymraeg.
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# www.kyfieithu.co.uk<kyfieithu@dotmon.com>, www.gyfieithu.co.uk<kyfieithu@dotmon.com>, 2003.
+# KGyfieithu <kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2004-07-03 17:50+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"www.gyfieithu.co.uk<kyfieithu@dotmon.com>\n"
+"X-Generator: KBabel 1.2\n"
+"\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Penbwrdd"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents"
+msgstr "Llwybr do&gfennau:"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads"
+msgstr "Llwybr do&gfennau:"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music"
+msgstr "Llwybr do&gfennau:"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures"
+msgstr "Llwybr do&gfennau:"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos"
+msgstr "Llwybr do&gfennau:"
+
+#: globalpaths.cpp:32
+#, fuzzy, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Llwybrau</h1>\n"
+" Galluoga'r modiwl yma i chi ddewis ble yn y gysawd ffeiliau y dylir cadw'r "
+"ffeiliau ar eich penbwrdd.\n"
+" Defnyddiwch \"Beth yw hyn?\" (Shift+F1) i gael cymorth ar ddewisiadau "
+"penodol."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Des&ktop path:"
+msgid "Desktop path:"
+msgstr "Llwybr pen&bwrdd"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Mae'r blygell yma'n cynnwys yr holl ffeiliau gallwch weld ar eich penbwrdd. "
+"Gallwch newid lleoliad y blygell yma os hoffech, ac fe symuda'r cynnwys i'r "
+"lleoliad newydd hefyd yn ymysgogol."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents path:"
+msgstr "Llwybr do&gfennau:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads path:"
+msgstr "Llwybr do&gfennau:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos path:"
+msgstr "Llwybr do&gfennau:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures path:"
+msgstr "Llwybr do&gfennau:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music path:"
+msgstr "Llwybr do&gfennau:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
+
+#, fuzzy
+#~| msgid "A&utostart path:"
+#~ msgid "Autostart path:"
+#~ msgstr "Llwybr hu&nan-gychwyn:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Mae'r blygell yma'n cynnwys cymhwysiadau, neu gysylltau i gymhwysiadau "
+#~ "(byrlwybrau) rydych am eu dechrau'n ymysgogol pan ddechreua KDE. Gallwch "
+#~ "newid lleoliad y cyfeiriadur yma os hoffech, ac fe symuda'r cynnwys i'r "
+#~ "lleoliad newydd hefyd yn ymysgogol."
+
+#~ msgid "Autostart"
+#~ msgstr "Hunan-ddechrau"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Movies"
+#~ msgstr "Llwybr do&gfennau:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Newidiwyd llwybr '%1';\n"
+#~ " a ydych am i mi symud y ffeiliau o '%2' i '%3'?"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Newidiwyd llwybr '%1';\n"
+#~ " a ydych am i mi symud y ffeiliau o '%2' i '%3'?"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Mynnir Cadarnhad"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Ymddygiad Konqueror</h1> Gallwch ffurfweddu sut y mae Konqueror yn "
+#~ "ymddwyn fel trefnydd ffeiliau yma."
+
+#~ msgid "Misc Options"
+#~ msgstr "Dewisiadau Amrywiol"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Agor plygyll mewn &ffenestri ar wahân"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Os dewisir y dewisiad yma, agora Konqueror ffenestr newydd pan agorwch "
+#~ "gyfeiriadur, yn hytrach na dangos cynnwys y blygell hwnnw yn y ffenestr "
+#~ "gyfredol."
+
+#, fuzzy
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Dangos cofnodion &dewislen 'Dileu' sy'n osgoi'r bin sbwriel"
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Dadfritho hyn os na hoffech gorchmynion dewislen 'Dileu' i'w dangos ar y "
+#~ "penbwrdd ac yn newislenni y trefnydd ffeiliau neu ddewislenni cyd-destun."
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Gofyn Cadarnhad am"
+
+#, fuzzy
+#~| msgid ""
+#~| "This option tells Konqueror whether to ask for a confirmation when you "
+#~| "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to "
+#~| "your trash folder, from where it can be recovered very easily.</li> "
+#~| "<li><em>Delete:</em> simply deletes the file.</li> </li></ul>"
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Dyweda'r dewisiad yma wrth Konqueror ai ddylai ofyn am gadarnhad pan "
+#~ "ydych yn \"dileu\" ffeil. <ul><li><em>Symud i'r Sbwriel:</em> symuda'r "
+#~ "ffeil i'ch plygell sbwriel, o ble gellir ei adfer yn hawdd iawn.</li> "
+#~ "<li><em>Dileu:</em> dilëir y ffeil.</li> </ul>"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Symud i'r sbwriel"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Dil&eu"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Ymddygiad"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Rhagolygon && Metadata"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Caniatáu rhagolygon, \"Adlewyrcha Eiconau Plygell eu Cynnwys\", a nôl "
+#~ "metadata ar brotocolau:</p>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Dewisiadau Rhagolwg</h1> Yma gallwch addasu ymddygiad Konqueror pan "
+#~ "ddengys ffeiliau mewn plygell.<h2>Y rhestr protocolau:</h2> dewiswch y "
+#~ "protocolau y dylid dangos rhagolygon drostynt, datddewiswch y rhai hynny "
+#~ "na ddylid gwneud hynny. Er enghraifft, efallai byddech am ddangos "
+#~ "rhagolygon dros SMB os yw'r rhwydwaith lleol ddigon cyflym, ond efallai "
+#~ "analluogech chi hynny i FTP os ydych yn ymweld â safleoedd FTP araf iawn "
+#~ "â delweddau mawr yn aml.<h2>Uchafswm Maint Ffeil:</h2> dewiswch y maint "
+#~ "ffeil uchaf yr ydych am greu rhagolygon iddynt. Er enghraifft, os gosodir "
+#~ "hwn yn 1 MB (y rhagosodyn), ni grëir rhagolwg i ffeiliau hwy na 1 MB, er "
+#~ "budd cyflymder."
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Dewis Protocolau"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Protocolau Lleol"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Protocolau Rhyngrwyd"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Gwna'r dewisiad yma hi'n bosibl i ddewis pryd y gweithredir rhagolygon "
+#~ "ffeil, eiconau plygell deallus, a metadata yn y Trefnydd Ffeiliau.\n"
+#~ " Yn y restr protocolau a ymddengys, dewiswch pa rai sydd ddigon cyflym i "
+#~ "ganiatáu creu rhagolygon."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Uchafswm maint ffeil:"
+
+#~ msgid " MB"
+#~ msgstr "MB"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "C&ynyddu maint rhagolygon o'u cymharu ag eiconau"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Defnyddio rha&golygon cryno wedi'u mewnadeiladu i ffeiliau"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Dewiswch hwn i ddefnyddio rhagolygon cryno sydd i'w cael o fewn rhai "
+#~ "mathau ffeil (e.e. JPEG). Bydd hyn yn cyflymu pethau ac yn lleihau "
+#~ "defnydd disg. Datddewiswch hwn os oes gennych ffeiliau a grëwyd gan "
+#~ "raglenni sy'n creu rhagolygon cryno gwallus, megis ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Ffeiliau Sain"
+
+#~ msgid "&Left button:"
+#~ msgstr "Botwm &Chwith"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Gallwch ddewis beth ddigwydda pan gliciwch botwm chwith eich dyfais "
+#~ "bwyntio ar y penbwrdd:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Botwm &Dde"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Gallwch ddewis beth ddigwydda pan gliciwch botwm dde eich dyfais bwyntio "
+#~ "ar y penbwrdd:"
+
+#, fuzzy
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "<ul><li><em>Dim gweithrediad:</em> fel y dyfalech efallai, ni ddigwydda "
+#~ "dim!</li> <li><em>Rhestr dewislen ffenestr:</em> ymddengys dewislen yn "
+#~ "dangos pob ffenestr ar bob rhith-benbwrdd. Gallwch glicio ar enw'r "
+#~ "penbwrdd i newid i'r penbwrdd yna, neu ar enw ffenestr i symud y "
+#~ "canolbywnt i'r ffenestr yna, gan newid penbwrdd os oes angen, ac adfer y "
+#~ "ffenestr os yw'n guddiedig. Dengys ffenestri cudd neu lleihäedig a'u "
+#~ "henwau mewn cromfachau.</li> <li><em>Dewislen benbwrdd:</em>  ymddengys "
+#~ "dewislen gyd-destun i'r penbwrdd. Mae gan y ddewislen hon ddewisiadau ar "
+#~ "gyfer ffurfweddu'r golwg, cloi'r sgrîn, ac allgofnodi o KDE ymysg eraill."
+#~ "</li> <li><em>Dewislen cymhwysiadau:</em> ymddengys y ddewislen \"K\". "
+#~ "Gall hon fod yn ddefnyddiol i gyrchu cymhwysiadau'n gyflym os ydych yn "
+#~ "hoffi cadw'r panel (neu'r \"Ciciwr\") yn gudd.</li></ul>"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Gallwch ddewis beth ddigwydda pan gliciwch y botwm canol ar eich dyfais "
+#~ "bwyntio ar y penbwrdd:  <ul><li><em>Dim gweithrediad:</em> fel y dyfalech "
+#~ "efallai, ni ddigwydda dim!</li> <li><em>Rhestr dewislen ffenestr:</em> "
+#~ "ymddengys dewislen yn dangos pob ffenestr ar bob rhith-benbwrdd. Gallwch "
+#~ "glicio ar enw'r penbwrdd i newid i'r penbwrdd yna, neu ar enw ffenestr i "
+#~ "symud y canolbwynt i'r ffenestr yna, gan newid penbwrdd os oes angen, ac "
+#~ "adfer y ffenestr os yw'n guddiedig. Dengys ffenestri cudd neu lleihäedig "
+#~ "a'u henwau mewn cromfachau.</li> <li><em>Dewislen benbwrdd:</em> "
+#~ "ymddengys dewislen gyd-destun i'r penbwrdd. Mae gan y ddewislen hon "
+#~ "ddewisiadau ar gyfer ffurfweddu'r golwg, cloi'r sgrîn, ac allgofnodi o "
+#~ "KDE ymysg eraill.</li> <li><em>Dewislen cymhwysiadau:</em> ymddengys y "
+#~ "ddewislen \"K\". Gall hon fod yn ddefnyddiol i gyrchu cymhwysiadau'n "
+#~ "gyflym os ydych yn hoffi cadw'r panel (neu'r \"Ciciwr\") yn gudd.</li></"
+#~ "ul>\t"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "<ul><li><em>Dim gweithrediad:</em> fel y dyfalech efallai, ni ddigwydda "
+#~ "dim!</li> <li><em>Rhestr dewislen ffenestr:</em> ymddengys dewislen yn "
+#~ "dangos pob ffenestr ar bob rhith-benbwrdd. Gallwch glicio ar enw'r "
+#~ "penbwrdd i newid i'r penbwrdd yna, neu ar enw ffenestr i symud y "
+#~ "canolbywnt i'r ffenestr yna, gan newid penbwrdd os oes angen, ac adfer y "
+#~ "ffenestr os yw'n guddiedig. Dengys ffenestri cudd neu lleihäedig a'u "
+#~ "henwau mewn cromfachau.</li> <li><em>Dewislen benbwrdd:</em>  ymddengys "
+#~ "dewislen gyd-destun i'r penbwrdd. Mae gan y ddewislen hon ddewisiadau ar "
+#~ "gyfer ffurfweddu'r golwg, cloi'r sgrîn, ac allgofnodi o KDE ymysg eraill."
+#~ "</li> <li><em>Dewislen cymhwysiadau:</em> ymddengys y ddewislen \"K\". "
+#~ "Gall hon fod yn ddefnyddiol i gyrchu cymhwysiadau'n gyflym os ydych yn "
+#~ "hoffi cadw'r panel (neu'r \"Ciciwr\") yn gudd.</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Dim Gweithred"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Dewislen Rhestr Ffenestri"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Dewislen Penbwrdd"
+
+#~ msgid "Application Menu"
+#~ msgstr "Dewislen Cymhwysiadau"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Dewislen Addasiedig 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Dewislen Addasiedig 2"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Ymddygiad</h1>\n"
+#~ " Galluoga'r modiwl yma i chi ddewis amryw ddewisiadau\n"
+#~ " i'ch penbwrdd, gan gynnwys y ffordd y trefnir eiconau a\n"
+#~ " cysylltir naidlenni â chliciau'r botymau canol\n"
+#~ " a dde y llygoden ar y penbwrdd.\n"
+#~ " Defnyddiwch \"Beth yw hwn?\" (Shift+F1) i gael cymorth ar ddewisiadau "
+#~ "penodol."
+
+#~ msgid "General"
+#~ msgstr "Cyffredinol"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Datddewiswch y dewisiad yma os nad ydych am gael eiconau ar y penbwrdd. "
+#~ "Heb eiconau bydd y penbwrdd ychydig yn gyflymach ond ni fedrwch lusgo "
+#~ "ffeiliau i'r penbwrdd mwyach."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Dangos eiconau ar y penbwrdd"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Dewiswch y dewisiad yma os ydych am redeg rhaglenni X11 sy'n darlunio i'r "
+#~ "penbwrdd megis xsnow, xpenguin neu xmountain. Os oes problemau gennych â "
+#~ "rhaglenni fel netscape, sy'n gwirio'r ffenestr wraidd am enghreifftiau "
+#~ "rhedegog, datddewiswch y dewisiad yma."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Caniatáu rha&glenni yn y ffenestr benbwrdd"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "Dangos cyng&horion offer"
+
+#, fuzzy
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Bar Dewislen wrth Ben y Sgrîn"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr "Os dewisir y dewisiad yma, nid oes bar dewislen wrth ben y sgrîn."
+
+#~ msgid "&None"
+#~ msgstr "&Dim"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Os dewisir y dewisiad yma, mae un bar dewislen wrth ben y sgrîn sy'n "
+#~ "dangos y dewislenni penbwrdd."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Bar D&ewislen y Penbwrdd"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Os dewisir y dewisiad yma, ni fydd cymwysiadau yn cael bar dewislen a "
+#~ "gysylltir i'w ffenestr ei hunain.  Yn lle, mae un bar dewislen wrth ben y "
+#~ "sgrîn sy'n dangos dewislenni'r cymhwysiad sy'n weithredol yn gyfredol.  "
+#~ "Efallai byddwch yn adnabod y nodwedd yma o Mac OS."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Bar de&wislen y cymhwysiad cyfredol (arddull MacOS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Gweithredoedd Botwm Llygoden"
+
+#~ msgid "Middle button:"
+#~ msgstr "Botwm canol:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "Botwm &Chwith"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "Botwm &Dde"
+
+#~ msgid "Edit..."
+#~ msgstr "Golygu..."
+
+#~ msgid "File Icons"
+#~ msgstr "Eiconau Ffeil"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Dewiswch y dewisiad yma os ydych am weld eich eiconau wedi'u trefnu'n "
+#~ "ymysgogol at grid pan eu symudwch."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Rhes&i eiconau'n ymysgogol"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>Os dewiswch y dewisiad hwn, dangosir unrhyw ffeiliau yn eich "
+#~ "cyfeiriadur penbwrdd sy'n dechrau ag atalnod llawn (.). Fel arfer, "
+#~ "gwybodaeth ffurfweddu sydd yn y ffeiliau yma, ac maent yn guddiedig.</p>\n"
+#~ "<p> Er enghraifft, ffeiliau testun plaen yw ffeiliau o'r enw \".directory"
+#~ "\" sy'n cynnwys gwybodaeth i Konqueror, megis yr eicon i'w ddefnyddio "
+#~ "tra'n dangos y cyfeiriadur, y drefn ddidoli ffeiliau, ayyb. Ni ddylech "
+#~ "ddileu'r ffeiliau yma os nad ydych yn sicr beth rydych yn ei wneud.</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "&Dangos ffeiliau cudd"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "Dewis ar gyfer pa fathau o ffeiliau yr hoffech alluogi delweddau rhagolwg."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Dangos Rhagolygon Eicon Ar Gyfer"
+
+#~ msgid "Device Icons"
+#~ msgstr "Eiconau Dyfeisiau"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "Dang&os eiconau dyfeisiau"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "Dat-ddewis y mathau dyfeisiau nad ydych eisiau eu gweld ar y penbwrdd"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Mathau Dyfeisiau i'w Dangos"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Dangos &cynghorion ffeil"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Yma gallwch reoli os, pan yn symud y lygoden uwchlaw ffeil, rydych am "
+#~ "weld naidlen fach â gwybodaeth ychwanegol am y ffeil yna."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "Dangos &rhagolygon mewn cynghorion ffeil"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Yma gallwch reoli os ydych am i'r naidlen gynnwys rhagolwg mwy i'r ffeil, "
+#~ "pan yn symud y lygoden drosti."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>Aml Benbwrdd</h1> Yn y modiwl yma, gallwch ffurfweddu sawl rhith-"
+#~ "benbwrdd rydych eu heisiau a sut y dylid labeli'r rhain."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "N&ifer penbyrddau:"
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "Yma gallwch osod sawl rhith-benbwrdd rydych eu heisiau ar eich penbwrdd "
+#~ "KDE. Symudwch y llithrydd i newid y werth. "
+
+#~ msgid "Desktop &Names"
+#~ msgstr "&Enwau Penbyrddau"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Penbwrdd %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Yma gallwch roi enw i benbwrdd %1:"
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "Newidia'r olwyn llygoden y penbwrdd pan fo dros y penbwrdd"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Penbwrdd %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "&Ailenwi eiconau mewnlinell  "
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "Bydd britho'r dewisiad yma yn gadael i ffeiliau eu ailenwi gan glicio yn "
+#~ "uniongyrchol ar enw'r eicon."
+
+#~ msgid "&Appearance"
+#~ msgstr "&Golwg"
+
+#~ msgid "&Standard font:"
+#~ msgstr "Wynebfath &safonol: "
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Dyma'r wynebfath a ddefnyddir i ddangos testun mewn ffenestri Konqueror."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "Mai&nt wynebfath:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Dyma maint yr wynebfath a ddefnyddir i ddangos testun mewn ffenestri "
+#~ "Konqueror."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Lliw te&stun arferol:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr "Dyma'r lliw a ddefnyddir i ddangos testun mewn ffenestri Konqueror."
+
+#~ msgid "&Text background color:"
+#~ msgstr "Lliw cefndir &testun:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr "Dyma'r lliw a ddefnyddir tu ôl i'r testun i eiconau ar y penbwrdd."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&Uchder ar gyfer testun yr eicon:"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "Dyma'r nifer uchaf o linellau a ellir ei defnyddio i lunio testun eicon.  "
+#~ "Blaendorrir enwau ffeil hir wrth ddiwedd y linell olaf."
+
+#, fuzzy
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Uchder ar gyfer testun yr eicon:"
+
+#, fuzzy
+#~ msgid "&Underline filenames"
+#~ msgstr "&Tanlinellu enwau ffeil"
+
+#, fuzzy
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "Bydd dewis y dewisiad yma'n achosi tanlinellu enwau ffeil, fel eu bod yn "
+#~ "edrych fel cysylltiadau ar dudalen gwê. Noder: i gwblhau'r gyfatebiaeth, "
+#~ "byddwch yn sicr bod gweithredu clic sengl wedi'i alluogi yn y modiwl "
+#~ "rheoli llygoden."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Dangos meintiau ffeiliau mewn b&eitiau"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "Bydd dewis y dewisiad yma'n achosi dangos meintiau ffeiliau mewn beitiau. "
+#~ "Heblaw hynny dengys eu meintiau mewn cilobeitiau neu megabeitiau os yn "
+#~ "addas."
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>Golwg</h1> Gallwch ffurfweddu yma sut yr edrycha Konqueror fel "
+#~ "trefnydd ffeiliau."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Dangos gweithrediadau rhwydwaith mewn ffenestr unigol"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Bydd dewis y dewisiad yma'n cronni'r wybodaeth gynnydd o bob "
+#~ "trosglwyddiad ffeil rhwydwaith i un ffenestr â rhestr. Pan nad yw wedi'i "
+#~ "ddewis, ymddengys pob trosglwyddiad mewn ffenestr ar wahân."
+
+#~ msgid "Home &URL:"
+#~ msgstr "URL &Gartref:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Dewis Plygwll Cartref"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Dyma'r URL (h.y. plygell neu dudalen gwê) y neidia Konqueror iddi pan "
+#~ "wesgir y botwm \"Cartref\". Eich plygell gartref, wedi'i symbylu gan "
+#~ "'dilde' (~), yw hon gan amlaf."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Botwm chwith"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Botwm dde"
+
+#~ msgid "&Quick Copy && Move"
+#~ msgstr "Copïo && Symud &Cyflym"

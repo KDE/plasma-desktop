@@ -1,0 +1,228 @@
+# translation of kcm_device_automounter.po Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2015.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2022.
+# Dušan Kazik <prescott66@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2022-06-26 14:56+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík,Dušan Kazik"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Automatické pripájanie zariadení"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Pôvodný autor"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Port pre Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Tento zoznam obsahuje úložné zariadenia známe systému. Ak je začiarknuté "
+"\"Automatické pripojenie pri prihlásení\", zariadenie sa automaticky "
+"pripojí, aj keď \"Pripojiť všetky vymeniteľné médiá pri prihlásení\" nie je "
+"začiarknuté. To isté platí pre \"Automatické pripojenie pri pripojení\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Kliknutím na toto tlačidlo KDE 'zabudne', že vybrané zariadenie vôbec "
+"existovalo. Toto je užitočné iba, ak je začiarknuté \"Automaticky pripájať "
+"iba vymeniteľné médiá, ktoré už boli predtým ručne pripojené\". Ak je "
+"zariadenie zabudnuté a KDE je nastavené, že má automaticky pripájať iba "
+"známe zariadenia, zariadenie nebude automaticky pripojené."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Zabudnúť zariadenie"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Keď toto nie je začiarknuté, KDE automaticky pripojí iba zapamätané "
+"zariadenia. Zariadenie je 'zapamätané', ak už bolo predtým pripojené. "
+"Napríklad zapojenie USB prehrávača médií kvôli nabíjaniu nebude zapamätané - "
+"ak nebolo pristúpené k súborom, KDE nabudúce automaticky nepripojí tento "
+"prehrávač. Ak však došlo k prístupu k súborom, KDE si zapamätá, že má obsah "
+"zariadenia automaticky sprístupniť pre váš systém."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Automaticky pripájať vymeniteľné médiá, ktoré neboli nikdy predtým pripojené"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Automaticky pripojiť"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Po prihlásení"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Po pripojení"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Všetky zariadenia"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Všetky známe zariadenia"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Pripojené zariadenia"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Odpojené zariadenia"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Toto zariadenie bude automaticky pripojené pri prihlásení."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Toto zariadenie nebude automaticky pripojené pri prihlásení."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Toto zariadenie bude automaticky pripojené po pripojení."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Toto zariadenie nebude automaticky pripojené po pripojení."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Ak je pripojené do systému akékoľvek vymeniteľné úložné zariadenie počas "
+#~ "vášho prihlásenia, KDE automaticky sprístupní obsah tohto zariadenia pre "
+#~ "váš systém a ďalšie programy."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Automaticky pripájať všetky vymeniteľné médiá po prihlásení"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Ak je toto začiarknuté, KDE po pripojení akéhokoľvek úložného zariadenia "
+#~ "automaticky sprístupní obsah zariadenia pre systém."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Automaticky pripájať všetky vymeniteľné médiá po vložení"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Automatické pripojenie"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Ak táto voľba nie je zaškrtnutá, nebude automaticky pripojené žiadne "
+#~ "zariadenie, bez ohľadu na to, čo je uvedené v sekcie \"Prepísanie "
+#~ "nastavení pre zariadenia\"."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Povoliť automatické pripájanie vymeniteľných médií"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Prepísanie nastavení pre zariadenia"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Automaticky pripojiť po pripojení"

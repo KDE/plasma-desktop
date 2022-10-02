@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Pengelolaan Sesi</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>28-11-2018</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>sesi</keyword>
+<keyword
+>System Settings</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Sesi Desktop</title>
+
+<sect2 id="sessions-use">
+<title
+>Gunakan</title>
+
+<para
+>Dalam modul &systemsettings; ini kamu bisa mengkonfigurasi pengelola sesi &plasma; dan pengaturan logout.</para>
+
+<para
+>Pengelolaan sesi mengacu pada kemampuan &plasma; untuk menyimpan status aplikasi dan window saat kamu logout &plasma; dan mengembalikannya saat kamu login kembali.</para>
+
+<sect3 id="sessions-general">
+<title
+>Umum</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Konfirmasi logout</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini dicentang, saat logout, &plasma; akan menampilkan dialog dengan batas waktu baku 30 detik untuk meminta konfirmasi. Dalam dialog ini kamu juga bisa memilih apakah kamu ingin mengembalikan sesimu saat ini ketika kamu login di lain waktu.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Menawarkan opsi matikan</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini dicentang, &plasma; akan menawarkan pilihan aksi selama logout. Ini termasuk mengakhiri sesi saat ini (aksi dilakukan jika opsi matikan tidak difungsikan) mematikan komputer, atau me-restart komputer.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opsi Baku Tinggalkan</title>
+<para
+>Kamu bisa mengonfigurasi apa yang seharusnya terjadi secara baku saat kamu me-logout &plasma;. Opsi ini tidak memungkinkan pada semua sistem operasi, dan beberapa di antaranya mungkin tidak muncul kecuali jika kamu menggunakan <application
+>SDDM</application
+> sebagai pengelola login-mu.</para>
+<para
+>Opsi yang tersedia cukup jelas, jika kamu ragu, tinggalkan pengaturan baku. Diantaranya adalah:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Akhiri sesi saat ini</guilabel
+> (ini adalah baku)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Mematikan komputer</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Me-restart komputer</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Saat Login</title>
+<para
+>Kamu bisa memilih satu dari tiga opsi tentang apa yang harus terjadi ketika kamu login ke &plasma;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Kembalikan sesi sebelumnya</guilabel
+></term>
+<listitem
+><para
+>Jika opsi ini dicentang, &plasma; akan menyimpan status sesimu saat ini ketika kamu logout. &plasma; akan mengembalikan sesimu pada login selanjutnya, sehingga kamu bisa terus bekerja dengan desktop seperti apa saat kamu  meninggalkannya.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kembalikan sesi yang disimpan secara manual</guilabel
+></term>
+<listitem
+><para
+>Alih-alih mengembalikan &plasma; ke keadaan saat kamu logout terakhir kali, itu akan dikembalikan ke keadaan tertentu yang kamu simpan secara manual.</para>
+<para
+>Jika opsi ini dicentang, menu aplikasi menawarkan butir tambahan <menuchoice
+><guimenu
+>Daya / Sesi</guimenu
+><guimenuitem
+>Simpan Sesi</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mulai dengan sesi kosong</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu memilih opsi ini, &plasma; tidak akan pernah mengembalikan seai yang sudah disimpan.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Yang terakhir, kamu bisa memasukkan tanda-titik-dua (<literal
+>:</literal
+>) atau daftar aplikasi yang dipisahkan dengan koma (<literal
+>,</literal
+>) yang harus dikeluarkan dari sesi, dan dengan demikian tidak akan dijalankan ketika memulihkan sebuah sesi. Misalnya <userinput
+>xterm: konsole</userinput
+> atau <userinput
+>xterm, konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

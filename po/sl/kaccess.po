@@ -1,0 +1,702 @@
+# translation of kaccess.po to Slovenian
+# Translation of kaccess.po to Slovenian
+# SLOVENIAN TRANSLATION OF KACCESS.
+# $Id: kaccess.po 1621950 2022-04-03 01:38:40Z scripty $
+# $Source$
+#
+# Copyright (C) 2000, 2003, 2005, 2006 Free Software Foundation, Inc.
+# Roman Maurer <roman.maurer@amis.net>, 2000.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2005.
+# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007, 2008, 2009.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2015, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2020-11-05 09:21+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Maurer,Jure Repinc,Andrej Mernik"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "roman.maurer@amis.net,jlp@holodeck1.com,andrejm@ubuntu.si"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Shift je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Tipka Shift je sedaj vključena."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Tipka Shift je sedaj izključena."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Control je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Tipka Control je sedaj vključena."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Tipka Control je sedaj izključena."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Alt je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Tipka Alt je sedaj vključena."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Tipka Alt je sedaj izključena."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Win je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Tipka Win je sedaj vključena."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Tipka Win je sedaj izključena."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Meta je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Tipka Meta je sedaj vključena."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Tipka Meta je sedaj izključena."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Super je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Tipka Super je sedaj vključena."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Tipka Super je sedaj izključena."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Hyper je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Tipka Hyper je sedaj vključena."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Tipka Hyper je sedaj izključena."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Tipka Alt Gr je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Tipka Alt Gr je sedaj vključena."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Tipka Alt Gr je sedaj izključena."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Tipka Num Lock je sedaj vključena."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Tipka Num Lock je sedaj izključena."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Tipka Caps Lock je sedaj vključena."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Tipka Caps Lock je sedaj izključena."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Tipka Scroll Lock je sedaj vključena."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Tipka Scroll Lock je sedaj izključena."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Preklopi bralnik zaslona"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Dostopnost"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Opozorilo"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&Kdaj je bila kretnja uporabljena:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Spremeni nastavitve brez vprašanja"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Prikaži to potrditveno okno"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Izključi vse kretnje in možnosti AccessX"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Počasne tipke"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Odbijajoče tipke"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Lepljive tipke"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Miškine tipke"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Ali zares želite izključiti »%1«?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Ali zares želite izključiti »%1« in »%2«?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Ali zares želite izključiti »%1«, »%2« in »%3«?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Ali zares želite izključiti »%1«, »%2«, »%3« in »%4«?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Ali zares želite vključiti »%1«?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Ali zares želite vključiti »%1« in izključiti »%2«?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "Ali zares želite vključiti »%1« in izključiti »%2« ter »%3«?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr "Ali zares želite vključiti »%1« in izključiti »%2«, »%3« ter »%4«?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Ali zares želite vključiti »%1« in »%2«?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3«?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3« ter »%4«?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Ali zares želite vključiti »%1«, »%2« in »%3«?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr "Ali zares želite vključiti »%1«, »%2« ter »%3« in izključiti »%4«?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Ali zares želite vključiti »%1«, »%2«, »%3« in »%4«?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Program je zahteval spremembo te nastavitve."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Imeli ste pritisnjeno tipko Shift (dvigalko) 8 sekund ali pa je program "
+"zahteval spremembo te nastavitve."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Petkrat ste zaporedno pritisnili tipko Shift (dvigalko) ali pa je program "
+"zahteval spremembo te nastavitve."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr ""
+"Pritisnili ste tipko %1 ali pa je program zahteval spremembo te nastavitve."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Program je zahteval spremembo te nastavitve, ali pa ste uporabili "
+"kombinacijo več tipkovnih kretenj."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Program je zahteval spremembo teh nastavitev."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Te nastavitve AccessX so potrebne za nekatere uporabnike z gibalnimi "
+"težavami in se lahko nastavijo v KDE-jevih sistemskih nastavitvah. Lahko jih "
+"tudi vklopite ali izklopite s standardiziranimi tipkovnimi kretnjami.\n"
+"\n"
+"Če jih ne potrebujete, lahko izberete »Izključi vse kretnje in možnosti "
+"AccessX«."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Omogočene so počasne tipke. Od sedaj dalje morate vsako tipko držati daljši "
+"čas, da učinkuje."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Počasne tipke so onemogočene."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Omogočene so odbijajoče tipke. Od sedaj dalje bo vsaka tipka po uporabi za "
+"nekaj časa blokirana."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Odbijajoče tipke so onemogočene."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Omogočene so lepljive tipke. Od sedaj dalje bodo spremenilne tipke v veljavi "
+"tudi po tem ko jih sprostite."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Spremenilne tipke so onemogočene."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Omogočene so miškine tipke. Od sedaj dalje lahko namesto miške uporabljate "
+"številčni del svoje tipkovnice."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Miškine tipke so onemogočene."
+
+#: main.cpp:49
+#, kde-format
+msgid "Accessibility"
+msgstr "Dostopnost"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "© 2000, Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Avtor"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "Orodje za dostopnost KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "&Bell"
+#~ msgstr "Z&vonec"
+
+#~ msgid "Audible Bell"
+#~ msgstr "Slišni zvonec"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Če je izbrana ta možnost, se uporablja privzet sistemski zvonec. Navadno "
+#~ "je to le »pisk«."
+
+#~ msgid "Use &system bell"
+#~ msgstr "Uporabi &sistemski zvonec"
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Označite to možnost, če želite, da zvonec po meri predvaja zvočno "
+#~ "datoteko. Verjetno boste potem tudi želeli izključiti sistemski zvonec."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Uporabi prilagoj&eni zvonec"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Če je omogočena možnost »Uporabi prilagojeni zvonec«, lahko tu izberete "
+#~ "zvočno datoteko. Kliknite »Prebrskaj ...« in izberite zvočno datoteko v "
+#~ "pogovornem oknu."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Predvajaj &zvok:"
+
+#~ msgid "Browse..."
+#~ msgstr "Prebrskaj ..."
+
+#~ msgid "Visible Bell"
+#~ msgstr "Vidni zvonec"
+
+#~ msgid ""
+#~ "This option will turn on the \"visible bell\", i.e. a visible "
+#~ "notification shown every time that normally just a bell would occur. This "
+#~ "is especially useful for deaf people."
+#~ msgstr ""
+#~ "Ta možnost vključi »vidni zvonec«; to je vidno obvestilo, ki se prikaže "
+#~ "vsakič, ko bi sicer slišali zvonjenje. Posebej pripravno je za gluhe."
+
+#~ msgid "&Use visible bell"
+#~ msgstr "&Uporabi vidni zvonec"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Zaslon se bo za spodaj določeni časovni razmik obarval z določeno barvo."
+
+#~ msgid "F&lash screen"
+#~ msgstr "Zab&liskaj zaslon"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Vse barve na zaslonu bodo obrnjene za spodaj podani časovni razmik."
+
+#~ msgid "I&nvert screen"
+#~ msgstr "Obr&ni barve"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr "Kliknite tu, če želite izbrati barvo za »blisk« vidnega zvonca."
+
+#~ msgid "&Duration:"
+#~ msgstr "&Trajanje:"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Tu lahko nastavite trajanje učinka »vidnega zvonca«."
+
+#~ msgid " msec"
+#~ msgstr " msek."
+
+#~ msgid "Modifier Keys"
+#~ msgstr "Spremenilne tipke"
+
+#~ msgid "Sticky Keys"
+#~ msgstr "Lepljive tipke"
+
+#~ msgid "Use &sticky keys"
+#~ msgstr "Uporabi l&epljive tipke"
+
+#~ msgid "&Lock sticky keys"
+#~ msgstr "Zak&leni lepljive tipke"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "Ko sta obenem pritisnjeni dve tipki, izključi lepljive tipke"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Ob vsakem zaklepu ali odklepu spremenilne tipke uporabi sistemski zvonec"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Zaklepanje tipk"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Ob vsakem vklopu ali izklopu tipke za zaklepanje uporabi sistemski zvonec"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a modifier or "
+#~| "locking key changes its state"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism for modifier or locking key state "
+#~ "changes"
+#~ msgstr ""
+#~ "Ob vsaki spremembi stanja tipke za spreminjanje ali zaklepanje uporabi "
+#~ "sistemsko obvestilo Plasma"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Nastavi o&bvestila ..."
+
+#~ msgid "&Keyboard Filters"
+#~ msgstr "Filtri za tip&kovnico"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "Poč&asne tipke"
+
+#~ msgid "&Use slow keys"
+#~ msgstr "&Uporabi počasne tipke"
+
+#~ msgid "&Use system bell whenever a key is pressed"
+#~ msgstr "Ob vsakem pritisku tipke &uporabi sistemski zvonec"
+
+#~ msgid "&Use system bell whenever a key is accepted"
+#~ msgstr "Ob vsakem učinku tipke &uporabi sistemski zvonec"
+
+#~ msgid "&Use system bell whenever a key is rejected"
+#~ msgstr "Ob vsaki zavrnitvi tipke &uporabi sistemski zvonec"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Odbijajoče tipke"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Uporabi od&bijajoče tipke"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Ob vsaki zavrnitvi tipke uporabi sistemski zvonec"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "Kretnje z&a vključitev"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Kretnje za vključitev"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Uporabi kretnje za vključitev lepljivih in počasnih tipk"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr "Po določenem času nedejavnosti izključi lepljive in počasne tipke."
+
+#~ msgid " min"
+#~ msgstr " min."
+
+#~ msgid "Notification"
+#~ msgstr "Obvestilo"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Ob vsaki uporabi kretnje za vklop ali izklop zmožnosti za lažji dostop "
+#~ "uporabi sistemski zvonec"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Če je omogočena ta možnost, bo KDE prikazal potrditveno okno vsakič, ko "
+#~ "bo vključena ali izključena zmožnost za lažji dostop s pomočjo "
+#~ "tipkovnice.\n"
+#~ "Bodite previdni ob izklopu te možnosti, ker bodo nastavitve za lažji "
+#~ "dostop s tipkovnico potem vedno uporabljene brez potrditve."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Ob vsakem vklopu ali izklopu zmožnosti za lažji dostop s pomočjo "
+#~ "tipkovnice prikaži potrditveno pogovorno okno"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Ob vsakem vklopu ali izklopu zmožnosti za lažji dostop s tipkovnico "
+#~ "uporabi sistemsko obvestilo Plasma"
+
+#~ msgid "Screen Reader"
+#~ msgstr "Bralnik zaslona"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Bralnik zaslona omogočen"
+
+#~ msgid ""
+#~ "Please note that you may have to log out once to allow the screen reader "
+#~ "to work properly."
+#~ msgstr ""
+#~ "Zapomnite si, da se boste morda morali vsaj enkrat odjaviti, da bo "
+#~ "bralnik zaslona deloval pravilno."
+
+#~ msgid "Form"
+#~ msgstr "Obrazec"

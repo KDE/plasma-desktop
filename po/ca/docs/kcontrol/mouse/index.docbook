@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Ratolí</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>6 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Aquesta és la documentació per al mòdul d'&systemsettings; que configura el ratolí i d'altres dispositius de punter. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>ratolí</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul us permet configurar el vostre punter. El punter pot ser un ratolí, una bola, un plafó o qualsevol altre peça de maquinari que faci una funció similar.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>General</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ratolí d'esquerrans</guilabel
+></term>
+<listitem
+><para
+>Si sou esquerrà, podríeu preferir intercanviar les funcions dels botons <mousebutton
+>esquerre</mousebutton
+> i <mousebutton
+>dret</mousebutton
+> del punter marcant aquesta opció. Si el punter té més de dos botons, tan sols es veuran afectats els botons <mousebutton
+>esquerre</mousebutton
+> i <mousebutton
+>dret</mousebutton
+>. Per exemple, si disposeu d'un ratolí de tres botons, el botó <mousebutton
+>central</mousebutton
+> no es veurà afectat.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Prémer els botons esquerre i dret per al clic del mig</guilabel
+></term>
+<listitem
+><para
+>Marqueu aquest element si no teniu un &BMR;. Podreu prémer els botons esquerre i dret del ratolí al mateix temps per a emular el clic del mig. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Velocitat de l'apuntador:</guilabel
+></term>
+<listitem
+><para
+>Aquesta opció us permet canviar la relació entre la distància que es mou el punter del ratolí per la pantalla i el moviment relatiu del mateix dispositiu físic (que pot ser un ratolí, una bola o qualsevol altre dispositiu de punter).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil d'acceleració:</guilabel
+></term>
+<listitem
+><para
+>El perfil <guilabel
+>Adaptativa</guilabel
+> és el perfil predeterminat per a tots els dispositius i té en compte la velocitat actual del dispositiu per a decidir l'acceleració. El perfil <guilabel
+>Uniforme</guilabel
+> és senzillament un factor constant que s'aplica a tots els deltes del dispositiu, independentment de la velocitat de moviment. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Inverteix la direcció de desplaçament</guilabel
+></term>
+<listitem
+><para
+>Si es marca aquesta casella de selecció, la roda del ratolí (si n'hi ha cap) funcionarà en la direcció oposada (de manera que si desplaceu cap amunt, l'efecte serà l'invers i s'anirà cap avall). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>En el &plasma; 5.13 trobareu la configuració per a utilitzar clics dobles o simples per a obrir fitxers i carpetes en el mòdul <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Espai de treball</ulink
+>. </para
+></note>
+
+</article>

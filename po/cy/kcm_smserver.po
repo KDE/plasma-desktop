@@ -1,0 +1,280 @@
+# translation of kcmsmserver.po to Cymraeg
+# Translation of kcmsmserver.po to Cymraeg
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# KGyfieithu <kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2004-07-04 17:20+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Rheolydd Sesiynau</h1>Gallwch ffurfweddu'r rheolydd sesiynau yma. Mae "
+"hwn yn cynnwys dewisiadau fel dylid cadarnhau allanfa (allgofnodi) y sesiwn "
+"neu peidio, dylid adfer y sesiwn eto wrth fewngofnodi, a dylid cau'r "
+"cyfrifiadur i lawr yn ymysgogol ar ôl allanfa'r sesiwn fel rhagosodiad."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "&Ail-gychwyn y cyfrifiadur"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Cyffredinol"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Cadarn&hau allgofnodi"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "C&ynnig dewisiadau cau i lawr"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "Dewisiad Cau i Lawr Rhagosodol"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "&Terfynu y sesiwn cyfredol"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "&Ail-gychwyn y cyfrifiadur"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "&Cau'r cyfrifiadur i lawr"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Adfer sesiwn a &gadwyd â llaw."
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Adfer sesiwn a &gadwyd â llaw."
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Cychwyn efo sesiwn g&wag"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, fuzzy, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Gallwch fewnosod yma rhestr o gymwysiadau, wedi'u wahanu gan gorwahannod, na "
+"ddylid cael eu cadw mewn sesiynau, ac felly na ddechreuir wrth adfer sesiwn. "
+"Er enghraifft 'xterm:xconsole'.\n"
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Cadarn&hau allgofnodi"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "C&ynnig dewisiadau cau i lawr"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "Dewisiad Cau i Lawr Rhagosodol"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Ar Fewngofnodi"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "Cymhwysiadau i'w gwa&hardd o sesiynau:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "Adfer y sesiwn &cynt"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "Adfer sesiwn a &gadwyd â llaw."
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Llenwch y blwch cywiro yma os ydych eisiau i'r rheolydd sisiynau ddangos "
+#~ "ymgom cadarnhau allgofnodi."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Cadarn&hau allgofnodi"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "C&ynnig dewisiadau cau i lawr"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Dyma lle gallwch ddewis be ddylai ddigwydd wrth ragosod pan yn "
+#~ "allgofnodi. Nid yw ystyr gan hyn, os nad ydych wedi mewngofnodi drwy KDM."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "Dewisiad Cau i Lawr Rhagosodol"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Adfer y sesiwn cynt:</b> Bydd yn cadw pob cymhwysiant sy'n rhedeg, "
+#~ "a'u hadfer wrth iddynt ymgychwyn nesaf.</li>\n"
+#~ "<li><b>Adfer sesiwn wedi'i gadw â llaw: </b> Gadael i'r sesiwn gael ei "
+#~ "gadw unrhyw amser drwy \"Cadw Sesiwn\" yn y Ddewislen-K. Golyga hyn bydd "
+#~ "y cymhwysiadau sydd wedi'u cychwyn eisioes yn ail-ymddangos wrth iddynt "
+#~ "ymgychwyn nesaf.</li>\n"
+#~ "<li><b>Cychwyn efo sesiwn gwag:</b> Peidio â chadw. Bydd yn cynhyrchu "
+#~ "penbwrdd gwag wrth yr ymgychwyn nesaf.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Ar Fewngofnodi"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Cymhwysiadau i'w gwa&hardd o sesiynau:"
+
+#~ msgid "Session Manager"
+#~ msgstr "Rheolydd Sesiynau"
+
+#~ msgid "Advanced"
+#~ msgstr "Uwch"
+
+#, fuzzy
+#~| msgid "Session Manager"
+#~ msgid "Window Manager"
+#~ msgstr "Rheolydd Sesiynau"
+
+#~ msgid "Default Action After Logout"
+#~ msgstr "Gweithred Rhagosod ar Ôl Allgofnodi"
+
+#~ msgid "&Login as different user"
+#~ msgstr "&Mewngofnodi fel defnyddiwr gwahanol"

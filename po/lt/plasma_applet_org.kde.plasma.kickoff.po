@@ -1,0 +1,436 @@
+# Lithuanian translations for l package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the l package.
+#
+# Automatically generated, 2014.
+# Liudas Ališauskas <liudas@aksioma.lt>, 2014, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2021-12-12 13:22+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Bendri"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Pašalinti iš žymelių"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Įtraukti į žymeles"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "Visose veiklose"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Dabartinėje veikloje"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Rodyti žymelėse"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Piktograma:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Pasirinkti…"
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "Bendra:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Visada rikiuoti programas pagal abėcėlę"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, fuzzy, kde-format
+#| msgid "Configure enabled search plugins"
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Konfigūruoti įjungtus paieškos papildinius"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Rodyti žymeles:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "Tinkleliu"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "Sąrašu"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Rodyti kitas programas:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "Tinkleliu"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "Sąrašu"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Rodyti mygtukus į kuriuos įeina:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Maitinimas"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Seansas"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Maitinimas ir seansas"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "Rodyti veiksmų mygtukų paaiškinimus"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programos"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Vietos"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Atverti naudotojo nuostatas"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Palikti atvertą"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Taisyti programas…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Tinklelis, kuriame eilučių: %1, stulpelių: %2"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Išeiti"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Daugiau"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Kompiuteris"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Istorija"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Dažniausiai naudojami"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Išvalyti piktogramą"
+
+#~ msgid "Search…"
+#~ msgstr "Ieškoti…"
+
+#~ msgid "Primary actions:"
+#~ msgstr "Pirminiai veiksmai:"
+
+#~ msgid "Power actions"
+#~ msgstr "Maitinimo veiksmai"
+
+#~ msgid "Session actions"
+#~ msgstr "Seanso veiksmai"
+
+#~ msgid "Leave…"
+#~ msgstr "Išeiti…"
+
+#~ msgid "Power…"
+#~ msgstr "Maitinimas…"
+
+#~ msgid "More…"
+#~ msgstr "Daugiau…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "Atnaujinamos programos…"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Leisti etiketėms užimti dvi eilutes"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Sąrašas su 1 elementu"
+#~ msgstr[1] "Sąrašas su %1 elementais"
+#~ msgstr[2] "Sąrašas su %1 elementų"
+#~ msgstr[3] "Sąrašas su %1 elementu"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 submeniu"
+
+#~ msgid "Leave..."
+#~ msgstr "Išeiti..."
+
+#~ msgid "Power..."
+#~ msgstr "Maitinimas..."
+
+#~ msgid "More..."
+#~ msgstr "Daugiau..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Programos atnaujintos."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Perjunginėti korteles užvedus ant jų pelę"
+
+#~ msgid "All Applications"
+#~ msgstr "Visos programos"
+
+#~ msgid "Favorites"
+#~ msgstr "Žymelės"
+
+#~ msgid "Often Used"
+#~ msgstr "Dažniausios"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Aktyvios kortelės"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Pasyvios kortelės"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Tempkite korteles tarp langelių, norėdami jas rodyti/slėpti arba "
+#~ "pertvarkykite matomas korteles, jas tempdami."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Įtraukti į paiešką žymeles, failus ir el. laiškus"
+
+#~ msgid "Appearance"
+#~ msgstr "Išvaizda"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Meniu mygtukai"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Matomos kortelės"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Mėgstamiausi"
+
+#~ msgid "Log out"
+#~ msgstr "Atsijungti"
+
+#~ msgid "Lock"
+#~ msgstr "Užrakinti"
+
+#~ msgid "Lock screen"
+#~ msgstr "Užrakinti ekraną"
+
+#~ msgid "Switch user"
+#~ msgstr "Pakeisti naudotoją"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Pradėti lygiagretų seansą kitu naudotoju"
+
+#~ msgid "Shut down"
+#~ msgstr "Išjungti"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Išjungti kompiuterį"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Paleisti iš naujo"
+
+#~ msgid "Restart computer"
+#~ msgstr "Iš naujo paleisti kompiuterį"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Išsaugoti dabartinę sesiją kitam prisijungimui"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Budėti"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Pristabdyti neatsijungiant"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernuoti"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Sustabdyti į diską"
+
+#~ msgid "Suspend"
+#~ msgstr "Sustabdyti"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Sustabdyti į RAM"
+
+#~ msgid "System"
+#~ msgstr "Sistema"
+
+#~ msgid "Home Folder"
+#~ msgstr "Namų aplankas"
+
+#~ msgid "Network Folders"
+#~ msgstr "Tinklo aplankai"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumentai"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Paskiausi dokumentai"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Paskiausios programos"
+
+#~ msgid "Run Command..."
+#~ msgstr "Vykdyti komandą..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Paleisti komandą arba paieškos užklausa"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Keičiamosios laikmenos"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "Rodyti „Neseniai įdiegta“"
+
+#~ msgid "Uninstall"
+#~ msgstr "Išdiegti"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Rikiuoti pagal abėcėlę (nuo Ž iki A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Išvalyti paskiausias programas"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Išvalyti paskiausius dokumentus"
+
+#~ msgid "Sleep"
+#~ msgstr "Užmigdyti"

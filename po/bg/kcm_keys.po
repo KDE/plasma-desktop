@@ -1,0 +1,267 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2022-06-28 09:54+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: globalaccelmodel.cpp:113
+#, kde-format
+msgid "Applications"
+msgstr "Приложения"
+
+#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
+#, kde-format
+msgid "System Services"
+msgstr "Системни услуги"
+
+#: globalaccelmodel.cpp:187
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Грешка при запазване на клавишна комбинация %1:%2"
+
+#: globalaccelmodel.cpp:295
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "Грешка при добавяне на %1, изглежда, че няма действия."
+
+#: globalaccelmodel.cpp:338
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Грешка при комуникация с глобалната услуга за клавишна комбинация"
+
+#: kcm_keys.cpp:50
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Неуспешна комуникация с демона за глобални клавишни комбинации"
+
+#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
+#: standardshortcutsmodel.cpp:29
+#, kde-format
+msgid "Common Actions"
+msgstr "Общи действия"
+
+#: kcm_keys.cpp:230
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Клавишна комбинация %1 вече е присвоена на общото %2 действие '%3'. \n"
+"Искате ли да го пренасочите?"
+
+#: kcm_keys.cpp:234
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Клавишна комбинация %1 вече е присвоена на действие \"%2\" от %3. \n"
+"Искате ли да го пренасочите?"
+
+#: kcm_keys.cpp:235
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "Открит е  конфликт"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Не може да се експортира схема, докато има незапазени промени"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Изберете компонентите по-долу, които трябва да бъдат включени в "
+"експортираната схема"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "Save scheme"
+msgstr "Запазване на схема"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Премахване на всички клавишни комбинации за %1"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Undo deletion"
+msgstr "Отмяна на изтриването"
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Нито една не съответства на думите за търсене"
+
+#: package/contents/ui/main.qml:224
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Изберете елемент от списъка, за да видите тук клавишните комбинации"
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgid "Add Application…"
+msgstr "Добавяне на приложение…"
+
+#: package/contents/ui/main.qml:242
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Схема за импортиране…"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Cancel Export"
+msgstr "Отмяна на експортирането"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Схема за експортиране…"
+
+#: package/contents/ui/main.qml:268
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Експортиране схема на клавишна комбинация"
+
+#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Импортиране схема на клавишна комбинация"
+
+#: package/contents/ui/main.qml:270
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Схема за клавишна комбинация (* .kksrc)"
+
+#: package/contents/ui/main.qml:296
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Избиране на схема за импортиране:"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Потребителска схема"
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Select File…"
+msgstr "Избиране на файл…"
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Import"
+msgstr "Внасяне"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:26
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Редактиране на комбинация: %1"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:38
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:51
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Няма активни клавишни комбинации"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:90
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Комбинация по подразбиране"
+msgstr[1] "Комбинации по подразбиране"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:92
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Няма клавишни комбинации по подразбиране"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "Стандартната комбинация %1 е активирана."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "Стандартната комбинация %1 е деактивирана."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:121
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Потребителски клавишни комбинации"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:145
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Изтриване на клавишната комбинация"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:151
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Добавяне на потребителска клавишна комбинация"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:185
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Анулиране на заснемането на нова клавишна комбинация"
+
+#: standardshortcutsmodel.cpp:33
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "Edit"
+msgstr "Редактиране"
+
+#: standardshortcutsmodel.cpp:36
+#, kde-format
+msgid "Navigation"
+msgstr "Навигация"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "View"
+msgstr "Изглед"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "Settings"
+msgstr "Настройки"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Help"
+msgstr "Помощ"

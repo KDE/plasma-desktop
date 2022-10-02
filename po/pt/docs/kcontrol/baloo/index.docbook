@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Pesquisa de Ficheiros</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-08-26</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>pesquisa</keyword>
+<keyword
+>ficheiro</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo do &systemsettings; permite-lhe configurar os ficheiros que deverão ser indexados para uma pesquisa mais rápida. Ele usa a nível interno uma tecnologia chamada Baloo para pesquisar de forma eficiente pelos ficheiros. </para>
+
+<para
+>Adiciona o elemento de <guilabel
+>Pesquisa</guilabel
+> ao seu painel ou para activar a pesquisa no &krunner; para usar os resultados da indexação para um acesso mais rápido aos seus documentos. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Excluir as Pastas</guilabel
+></term>
+<listitem>
+    <para
+>É-lhe apresentada uma lista das pastas que não deverão ser pesquisadas. Por omissão, é indexada toda a sua pasta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, sem que sejam indexados outros discos ou dispositivos. </para>
+    <para
+>Os dispositivos removíveis nunca são indexados por omissão. Podem ser removidos explicitamente da lista de pastas excluídas para poderem passar a ser indexados. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Por omissão, a opção <guilabel
+>Activar a Pesquisa de Ficheiros</guilabel
+> está activa; desligue esta opção se não quiser usar a pesquisa de ficheiros de todo. </para>
+
+</article>

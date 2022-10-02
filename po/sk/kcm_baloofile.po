@@ -1,0 +1,189 @@
+# translation of kcm_baloofile.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2013, 2014, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+# Dusan Kazik <prescott66@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_baloofile\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-26 19:43+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Tento modul umožňuje konfigurovať indexovanie súborov a funkcie vyhľadávania."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Toto zakáže vyhľadávanie súborov v ponukách KRunner a spúšťači a odstráni "
+"rozšírené zobrazenie metadát zo všetkých aplikácií KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Chcete vymazať uložené údaje indexu? %1 miesta bude uvoľnené, ale ak bude "
+"indexovanie neskôr znova povolené, bude treba znovu vytvoriť celý index "
+"úplne od začiatku. Môže to chvíľu trvať, v závislosti od počtu súborov."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Odstrániť údaje indexu"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Hľadanie súborov vám pomôže rýchlo nájsť všetky vaše súbory podľa obsahu."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Povoliť hľadanie súborov"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indexovať aj obsah súborov"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indexovať skryté súbory a priečinky"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Stav: %1, %2% hotových"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Pozastaviť Indexer"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Pokračovať v indexovaní"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Práve sa indexuje: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Špecifické nastavenie priečinka:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Spustiť indexovanie priečinka..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Zastaviť indexovanie priečinka..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Neindexované"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexované"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Odstrániť položku"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Vyberte priečinok, ktorý chcete zahrnúť"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Vyberte priečinok, ktorý chcete vynechať"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík,Dušan Kazik"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Hľadanie súborov"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Autorské práva 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Pridať nastavenie priečinka..."
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 je zahrnutý."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 je vylúčený."
+
+#~ msgid "Disable indexing"
+#~ msgstr "Zakázať indexovanie"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Neprehľadávať tieto umiestnenia:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Vyberte priečinok, ktorý sa má vylúčiť"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Nie je povolené vylúčiť koreňový priečinok, prosím zakážte Hľadanie "
+#~ "súborov, ak to nechcete"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Rodič priečinka %1 je už vylúčený"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Nastavenie hľadania súborov"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Koreňový adresár je vždy skrytý"

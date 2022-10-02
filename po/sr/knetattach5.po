@@ -1,0 +1,224 @@
+# Translation of knetattach5.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2009, 2010, 2011, 2016, 2017.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-11-14 03:35+0100\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: knetattach.cpp:94
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"Унесите име за ову <i>веб фасциклу</i>, као и адресу сервера, порт и путању "
+"фасцикле који се користе и кликните на <i>Сачувај и повежи се</i>."
+
+#: knetattach.cpp:96
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Унесите име за ову <i>безбедну везу шкољке</i> (ССХ), као и адресу сервера, "
+"порт и путању фасцикле који се користе и кликните на <i>Сачувај и повежи се</"
+"i>."
+
+#: knetattach.cpp:98
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Унесите име за ову <i>везу протокола за пренос фајлова</i> (ФТП), као и "
+"адресу сервера и путању фасцикле који се користе и кликните на <i>Сачувај и "
+"повежи се</i>."
+
+#: knetattach.cpp:100
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"Унесите име за ову <i>Виндоузову мрежну јединицу</i>, као и адресу сервера и "
+"путању фасцикле који се користе и кликните на <i>Сачувај и повежи се</i>."
+
+#: knetattach.cpp:220
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr ""
+"Не могу да се повежем са сервером. Проверите поставке па покушајте поново."
+
+#: knetattach.cpp:356
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "Сачувај и &повежи се"
+
+#: knetattach.cpp:358
+#, kde-format
+msgid "C&onnect"
+msgstr "&Повежи се"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Чаробњак за мрежне фасцикле"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Додај мрежну фасциклу"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"<html>Изаберите тип мрежне фасцикле коју желите да направите и кликните на "
+"<i>Следеће</i>.</html>"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Недавне везе:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Веб фасцикла (вебДАВ)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Безбедна шкољка (ССХ)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "ФТП"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Виндоузова мрежна јединица"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Подаци о мрежној фасцикли"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Име:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Корисник:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "&Сервер:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Порт:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Протокол:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Фасцикла:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Кодирање:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "&Направи иконицу за ову удаљену фасциклу"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Шифруј"
+
+#: main.cpp:33
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr ""
+"КДЕ‑ов чаробњак за мрежу|/|$[својства ген 'КДЕ‑овог чаробњака за мрежу'\n"
+"           дат 'КДЕ‑овом чаробњаку за мрежу'\n"
+"           аку 'КДЕ‑ов чаробњак за мрежу'\n"
+"]"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "© 2004, Џорџ Стајкос"
+
+#: main.cpp:35
+#, kde-format
+msgid "George Staikos"
+msgstr "Џорџ Стајкос"
+
+#: main.cpp:35
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "главни аутор и одржавалац"

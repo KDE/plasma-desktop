@@ -1,0 +1,391 @@
+# Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-03 05:34+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Mit diesem Modul können Sie die Datei.Indizierung und die Suchfunktion "
+"einrichten."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Dadurch wird die Dateisuche in KRunner und den Startmenüs deaktiviert und "
+"die erweiterte Metadatenanzeige aus allen KDE-Anwendungen abgeschaltet."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Möchten Sie die gespeicherten Indexdaten löschen? %1 Speicherplatz wird "
+"freigegeben, aber wenn die Indexierung später wieder aktiviert wird, muss "
+"der gesamte Index von Grund auf neu erstellt werden. Dies kann einige Zeit "
+"dauern, je nachdem, wie viele Dateien Sie haben."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Indexdaten löschen"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Die Dateisuche hilft Ihnen, alle Ihre Dateien auf der Grundlage des Inhalts "
+"zu lokalisieren."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Dateisuche aktivieren"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Auch Dateiinhalt indizieren"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Versteckte Ordner und Dateien indizieren"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Status: %1, %2% fertiggestellt"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Indizierung anhalten"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Indizierung wieder aufnehmen"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "%1 wird gerade indiziert"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Spezielle Ordnereinstellung:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Indizierung eines Ordners starten ..."
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Indizierung eines Ordners anhalten ..."
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Nicht indiziert"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indiziert"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Eintrag löschen"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Ordner zum Einschließen wählen"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Ordner zum Ausschließen wählen"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Burkhard Lück"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lueck@hube-lueck.de"
+
+#~ msgid "File Search"
+#~ msgstr "Dateisuche"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Ordnereinstellung hinzufügen ..."
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Der Ordner %1 ist bereits ausgeschlossen"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Datei-Indizierung"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Nicht in diesen Orten suchen:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr ""
+#~ "Wählen Sie den Ordner, der von der Indizierung ausgeschlossen werden soll"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Es ist nicht möglich, den Basisordner auszuschließen. Bitte deaktivieren "
+#~ "Sie die Dateisuche, wenn Sie sie nicht benutzen möchten"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Der übergeordnete Ordner %1 ist bereits ausgeschlossen"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Dateisuche einrichten"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Der Basisordner ist immer ausgeblendet"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Entwickler-Modus aktivieren"
+
+#~ msgid "Hide these directories from the search results"
+#~ msgstr "Diese Ordner im Suchergebnis ausblenden"
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Enable Tags and Ratings"
+#~ msgstr "Stichwörter und Bewertungen aktivieren"
+
+#~ msgid "Suspend"
+#~ msgstr "Aussetzen"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "Richten Sie die zu indizierenden Dateien und Ordner ein"
+
+#~ msgid "Index Documents"
+#~ msgstr "Dokumente indizieren"
+
+#~ msgid "Index Images"
+#~ msgstr "Bilder indizieren"
+
+#~ msgid "Index Videos"
+#~ msgstr "Video-Dateien indizieren"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Quelltext indizieren"
+
+#~ msgid "Advanced"
+#~ msgstr "Erweitert"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Ordner einrichten"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Erweitertes Dateifiltern"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "MIME-Typ ausschließen"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Ausschlussfilter für den Index"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Wählen Sie Ausdrücke, um Dateien anhand von Mustern für Dateinamen von "
+#~ "der Indizierung auszuschließen."
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (Symbolische Verknüpfungen werden  "
+#~ "<emphasis>nicht</emphasis> für die Desktop-Suche indiziert)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr "<filename>%1</filename><nl/>(wird für die Desktop-Suche indiziert)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(wird <emphasis>nicht</emphasis> für die "
+#~ "Desktop-Suche indiziert)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Benutzerdefinierte Index-Ordner"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "Wählen Sie die lokalen Ordner, deren Dateien für die schnelle Desktop-"
+#~ "Suche indiziert werden sollen."
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr "Aktivieren Sie dies, um versteckte Ordner auswählen zu können"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "Der Datei-Indizierungsdienst läuft nicht."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Fehler bei der Verbindung mit dem Datei-Indizierungsdienst (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Fortsetzen"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Aussetzen"
+
+#~ msgid "File Metadata"
+#~ msgstr "Datei-Metadaten"
+
+#~ msgid ""
+#~ "File metadata enables tagging and rating of files integrated with the "
+#~ "Desktop Search."
+#~ msgstr ""
+#~ "Datei-Metadaten ermöglichen das Verstichworten und Bewerten von Dateien "
+#~ "innerhalb der Suchmaschine."
+
+#~ msgid "Enable File metadata"
+#~ msgstr "Datei-Metadaten aktivieren"
+
+#~ msgid "Details..."
+#~ msgstr "Details ..."
+
+#~ msgid ""
+#~ "Desktop search allows searching for files by content instead of just by "
+#~ "name."
+#~ msgstr ""
+#~ "Die Arbeitsflächensuche findet Dateien anhand des Inhalts anstelle des "
+#~ "Dateinamens."
+
+#~ msgid "Indexing"
+#~ msgstr "Indizierung"
+
+#~ msgid "Removable media handling:"
+#~ msgstr "Umgang mit Wechselmedien:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Indexing of files on removable media"
+#~ msgstr "Dateien auf Wechselmedien werden indiziert"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "<para>Nepomuk can index files on removable devices like USB keys or "
+#~ "external hard-disks for fast desktop searches.</para>\n"
+#~ "<para>By default no files are indexed. Here this behaviour can be changed "
+#~ "to one of two options:</para>\n"
+#~ "<para><list><item><interface>Index files on all removable devices</"
+#~ "interface> - Files on removable media are indexed as soon as the medium "
+#~ "is mounted. Caution: this does not include media which have been rejected "
+#~ "via the second option.</item>\n"
+#~ "<item><interface>Ask individually when newly mounted</interface> - The "
+#~ "user will be asked to decide if files on the newly mounted medium should "
+#~ "be indexed or not. Once decided Nepomuk will not ask again.</item></"
+#~ "list></para>"
+#~ msgstr ""
+#~ "<para>Nepomuk kann Dateien auf Wechselmedien wie USB-Sticks oder externen "
+#~ "Festplatten für die schnelle Desktop-Suche indizieren.</para>\n"
+#~ "<para>Voreingestellt werden keine Dateien indiziert. Hier kann das "
+#~ "Verhalten auf eine der beiden Einstellungen angepasst werden:</para>\n"
+#~ "<para><list><item><interface>Dateien auf allen Wechselmedien indizieren</"
+#~ "interface> - Dateien auf Wechselmedien werden indiziert, sobald das "
+#~ "Medium eingebunden wird. Achtung: Geräte, die unter Verwendung der "
+#~ "zweiten Einstellung ausgeschlossen wurden, sind hiervon nicht betroffen.</"
+#~ "item>\n"
+#~ "<item><interface>Nachfragen, wenn ein Wechselmedium neu eingebunden wird</"
+#~ "interface> - Der Benutzer wird gefragt, ob Dateien auf dem gerade "
+#~ "eingebundenen Medium indiziert werden sollen. Ist dies einmal "
+#~ "entschieden, wird nicht noch einmal nachgefragt.</item></list></para>"
+
+#~ msgid "Ignore all removable media"
+#~ msgstr "Alle Wechselmedien ignorieren"
+
+#~ msgid "Index files on all removable devices"
+#~ msgstr "Dateien auf allen Wechselmedien indizieren"
+
+#~ msgid "Ask individually when newly mounted"
+#~ msgstr "Nachfragen, wenn ein Wechselmedium neu eingebunden wird"
+
+#~ msgid "Refresh"
+#~ msgstr "Aktualisieren"
+
+#~ msgid "Files"
+#~ msgstr "Dateien"
+
+#~ msgid "Emails"
+#~ msgstr "E-Mails"
+
+#~ msgid "Calculating"
+#~ msgstr "Berechnung wird durchgeführt"
+
+#~ msgid "Desktop Search Configuration Module"
+#~ msgstr "Einstellungsmodul für Desktop-Suche"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are active"
+#~ msgstr "Die Dienste für Datei-Metadaten sind aktiv"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are disabled"
+#~ msgstr "Die Dienste für Datei-Metadaten sind abgeschaltet"

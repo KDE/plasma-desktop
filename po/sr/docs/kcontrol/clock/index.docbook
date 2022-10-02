@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Датум и време</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Мајк</firstname
+> <surname
+>Мекбрајд</surname
+></personname
+> &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>5. 12. 2013.</date>
+<releaseinfo
+>4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>Системске поставке</keyword>
+<keyword
+>сат</keyword>
+<keyword
+>датум</keyword>
+<keyword
+>време</keyword>
+<keyword
+>постави</keyword>
+<keyword
+>подеси</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Датум и време</title>
+
+<para
+>Кроз удобно графичко сучеље, у овом модулу можете изменити системски датум и време.</para>
+
+<note
+><para
+>Пошто ове поставке не утичу само на вас као корисника, већ на цео систем, морате имати администраторски (корени) приступ да бисте изменили системски датум и време. Ако немате овај ниво приступа, модул ће вам само приказати тренутне поставке, а измене неће сачувати.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Датум и време</title>
+
+<para
+>Ако попуните <guilabel
+>Постави датум и време аутоматски</guilabel
+>, добићете да изаберете сервер времена из падајућег списка, а све остале поставке у дијалогу биће закључане.</para>
+
+<note>
+<para
+>Овај модул користи програм <command
+>rdate</command
+> или <command
+>ntpdate</command
+> за добављање датума и времена са сервера времена. До овога долази када се пријавите у КДЕ док је рачунар на вези, или када се касније повежете на Интернет и сервери времена су доступни.</para
+> 
+<para
+>Оба ова програма су једноставни НТП клијенти који постављају системски сат на време добављено са једног од НТП сервера. Међутим, ово није довољно за одржавање тачности сата у дужем периоду, већ је корисније за рачунаре који немају стални приступ мрежи, попут лаптопа.</para>
+</note>
+
+<para
+>Ако не користите сервер времена, можете ручно поставити датум у доњем делу језичка. Задајте месец и годину преко контрола на врху календара, а дан у месецу кликом на дан у календару.</para>
+<para
+>Контроле испод календара омогућавају вам да изаберете текући датум, унесете датум у уредиво поље, или изаберете седмицу у години из падајућег списка.</para>
+
+<para
+>Време постављате бројчаницима на дну аналогног сата. Вредност можете и непосредно унети.</para>
+<!--Outdated
+<note
+><para
+>The time is represented in 24 hour format.  If you want
+the system time to be set to 8:00 PM, you need to set the hour spinbox
+to <guilabel
+>20</guilabel
+> (8 + 12).  If you want the system time set
+to 8:00 AM, you should set the hour spinbox to
+<guilabel
+>8</guilabel
+>.</para
+></note>
+-->
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Временска зона</title>
+<para
+>Нову временску зону постављате тако што изаберете подручје са доњег списка. Користите филтерско поље за лакше налажење подручја.</para>
+</sect2>
+
+</sect1>
+
+</article>

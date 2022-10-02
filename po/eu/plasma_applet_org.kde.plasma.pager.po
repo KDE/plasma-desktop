@@ -1,0 +1,204 @@
+# Translation for plasma_applet_org.kde.plasma.pager.po to Euskara/Basque (eu).
+# Copyright (C) 2007-2017, The Free Software Foundation.
+# Copyright (C) 2018-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# marcos <marcos@euskalgnu.org>, 2007.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2017, 2019, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-08-10 13:22+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Orokorra"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Orokorra:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Erakutsi aplikazio ikonoak leihoen ingeradetan"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Erakutsi soilik uneko pantaila"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Nabigazio zirkularra"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Antolamendua:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Lehenetsia"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Horizontala"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Bertikala"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Testu bistaratzea:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Testurik ez"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Jarduera zenbakia"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Mahaigain zenbakia"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Jarduera izena"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Mahaigain izena"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Uneko jarduera hautatzea:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Uneko alegiazko mahaigaina hautatzea:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Ez du ezer egiten"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Mahaigaina erakusten du"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "...eta beste leiho %1"
+msgstr[1] "...eta beste %1 leiho"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "Leiho %1:"
+msgstr[1] "%1 leiho:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "Ikonotutako leiho %1:"
+msgstr[1] "Ikonotutako %1 leiho:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "%1 mahaigaina"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr "Aldatu %1(e)ra"
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Erakutsi jarduera kudeatzailea..."
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Gehitu alegiazko mahaigaina"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Kendu alegiazko mahaigaina"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Konfiguratu alegiazko mahaigainak..."
+
+#~ msgid "Activate %1"
+#~ msgstr "Aktibatu %1"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonoak"
+
+#~ msgid "Configure Desktops..."
+#~ msgstr "Konfiguratu mahaigainak..."
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Aginte taula erakusten du"
+
+#~ msgid "Display icons:"
+#~ msgstr "Ikonoak bistaratu:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Erantsi alegiazko mahaigaina"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Ezabatu azken alegiazko idaztegia"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Orrialdekatzailea"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Zutabe kopurua:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Zutabe kopurua:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Aldatu zutabe kopurua"

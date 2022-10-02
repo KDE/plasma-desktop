@@ -1,0 +1,73 @@
+# Translation of kcm_splashscreen to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2018, 2019, 2020, 2021.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-12-15 12:30+0100\n"
+"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Ingen"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "Velkomstbilete vert ikkje vist"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "Du kan ikkje fjerna det gjeldande velkomstbiletet"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "Med denne modulen kan du velja temaet for velkomstbilete."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Klarte ikkje visa førehandsvising av velkomstbiletet."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Førehandsvising av velkomstbilete"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "Avinstaller"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "&Hent nye velkomstbilete …"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "For framtidig bruk"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Namn på gjeldande tema for velkomstbilete"

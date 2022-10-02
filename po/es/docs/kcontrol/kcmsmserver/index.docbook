@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Gestión de sesiones</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-11-28</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>sesión</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Sesión de escritorio</title>
+
+<sect2 id="sessions-use">
+<title
+>Uso</title>
+
+<para
+>En este módulo de &systemsettings; puede configurar el gestor de sesiones de &plasma; y las preferencias de cierre de sesión.</para>
+
+<para
+>La gestión de sesiones se refiere a la capacidad de &plasma; para guardar el estado de las aplicaciones y ventanas cuando usted abandona &plasma; y restaurarlas cuando vuelve a acceder.</para>
+
+<sect3 id="sessions-general">
+<title
+>General</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Confirmar terminar</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción ha sido seleccionada, al salir de &plasma; se le mostrará un diálogo para su confirmación con una cuenta atrás de 30 segundos por omisión. En este diálogo puede elegir si desea restaurar su sesión actual la siguiente vez que inicie su sesión.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ofrecer opciones de apagado</guilabel
+></term>
+<listitem>
+<para
+>Si está marcada esta opción, &plasma; mostrará la posibilidad de elegir entre varias opciones de apagado. Esto incluye el cierre de la sesión (la opción utilizada si las opciones de apagado no están disponibles), el apagado del ordenador o reiniciar el ordenador.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Opción de salida por omisión</title>
+<para
+>Puede configurar qué ocurriría de forma predeterminada cuando abandone &plasma;. Estas opciones no están accesibles en todos los sistemas operativos, y algunas de ellas no aparecerán a menos que utilice &SDDM; como su administrador de acceso.</para>
+<para
+>Las opciones disponibles son autoexplicativas. Si tiene dudas, deje la opción predefinida. Son las siguientes:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Terminar sesión actual</guilabel
+> (predeterminado)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Apagar el equipo</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Reiniciar el equipo</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Al iniciar sesión</title>
+<para
+>Puede elegir una de las tres opciones siguientes al iniciar sesión en &plasma;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Restaurar sesión previa</guilabel
+></term>
+<listitem
+><para
+>Si selecciona esta opción, &plasma; guardará el estado de su sesión actual cuando termine. &plasma; restaurará su sesión en el siguiente inicio, de modo que pueda continuar con su trabajo con el escritorio en el mismo estado en el que lo dejó.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Restaurar una sesión guardada manualmente</guilabel
+></term>
+<listitem
+><para
+>En lugar de restaurar &plasma; al estado en el que estaba cuando accedió la última vez, se restaurará a un estado específico que usted haya guardado manualmente.</para>
+<para
+>Si activa esta opción, el menú de aplicaciones mostrará el elemento adicional <menuchoice
+><guimenu
+>Apagado / Sesión</guimenu
+><guimenuitem
+>Guardar sesión</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Comenzar con una sesión vacía</guilabel
+></term>
+<listitem>
+<para
+>Si selecciona esta opción, &plasma; nunca restaurará las sesiones que haya guardado.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>También podrá introducir una lista de aplicaciones, separadas por dos puntos (<literal
+>:</literal
+>) o por comas (<literal
+>,</literal
+>), que se deberían excluir de las sesiones, por lo que no se iniciarán al restaurar una sesión. Por ejemplo, <userinput
+>xterm:konsole</userinput
+> o <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

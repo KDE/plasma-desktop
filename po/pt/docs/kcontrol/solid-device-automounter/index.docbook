@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Dispositivos Removíveis</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-08-24</date>
+<releaseinfo
+>&plasma; 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>auto-montagem</keyword>
+<keyword
+>dispositivo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Esta janela permite-lhe configurar o tratamento automático dos dispositivos removíveis. </para>
+
+<para
+>Se activar a funcionalidade de montagem automática neste módulo, não é necessário usar a 'applet' de notificação dos dispositivos ou o painel de navegação do gestor de ficheiros, para que possa obter acesso a um dispositivo ligado recentemente. </para>
+
+<para
+>No topo da janela, irá encontrar a configuração global, a qual poderá ser substituída para cada dispositivo individual, na lista de <guilabel
+>Substituições de Dispositivos</guilabel
+>. Para um ambiente mono-utilizador, recomenda-se que tenha activas todas as opções acima da lista de substituições. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Activar a montagem automática dos dispositivos removíveis</guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver desligada, não irá acontecer qualquer montagem automática de nenhum dispositivo, seja de que tipo for, independentemente do que tiver seleccionado na secção de <guilabel
+>Substituições do Dispositivo</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automaticamente apenas os dispositivos que tenham sido montados manualmente </guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver assinalada, o &plasma; irá apenas montar automaticamente os dispositivos de que se recorde. Um dispositivo é <quote
+>recordado</quote
+> se tiver alguma vez sido montado; &eg;, se ligar um leitor de música USB para o carregar, isso não será suficiente para o <quote
+>recordar</quote
+>. Se os ficheiros não tiverem sido acedidos, o &kde; não irá montar automaticamente o leitor da próxima vez que este for visto. Assim que eles tenham sido acedidos alguma vez, por outro lado, o &plasma; irá recordar este dispositivo para disponibilizar o seu conteúdo no sistema. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar todos os dispositivos multimédia no início da sessão</guilabel
+></term>
+<listitem
+><para
+>Se tiver alguns dispositivos de armazenamento removíveis ligados ao seu sistema, quando se autenticar no seu ambiente de trabalho, o &plasma; irá disponibilizar automaticamente o seu conteúdo no seu sistema, para que os outros programas os possam ler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automaticamente os dispositivos removíveis ao serem ligados</guilabel
+></term>
+<listitem
+><para
+>Quando esta opção estiver assinalada, o &plasma; irá disponibilizar automaticamente o conteúdo dos dispositivos de armazenamento ao sistema, quando estes forem ligados. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Substituições do Dispositivo</guilabel
+></term>
+<listitem
+><para
+>Esta lista contém os dispositivos de armazenamento conhecidos do &plasma;. Se a opção <guilabel
+>Auto-montar no Arranque</guilabel
+> estiver assinalada, o dispositivo será montado automaticamente, mesmo que a opção <guilabel
+>Montar todos os dispositivos removíveis no arranque</guilabel
+> esteja desligada. O mesmo se aplica para o <guilabel
+>Auto-montar ao Ligar</guilabel
+>.</para>
+<para
+>Se a opção <guilabel
+>Activar a montagem automática dos dispositivos removíveis</guilabel
+> estiver desligada, as substituições não serão aplicadas, pelo que nenhum dispositivo será montado automaticamente. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Esquecer o Dispositivo</guibutton
+></term>
+<listitem
+><para
+>Se carregar neste botão, fará com que o &plasma; <quote
+>esqueça</quote
+> que os dispositivos seleccionados já existiram alguma vez. Isto só é útil se a opção <guilabel
+>Montar automaticamente apenas os dispositivos que já tenham sido montados anteriormente</guilabel
+> estiver assinalada. Assim que um dispositivo tenha sido esquecido e o &plasma; seja configurado para montar automaticamente apenas os dispositivos conhecidos, o dispositivo já não será mais montado automaticamente. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

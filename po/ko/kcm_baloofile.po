@@ -1,0 +1,191 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2017, 2019, 2020, 2021.
+# JungHee Lee <daemul72@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-05-28 02:26+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "이 모듈에서 파일 색인과 검색을 설정할 수 있습니다."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"KRunner와 실행기 메뉴에서 파일 검색을 비활성화하고, 모든 KDE 프로그램에서 확"
+"장된 메타데이터를 표시하지 않습니다."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"저장된 색인 데이터를 삭제하시겠습니까? %1 공간은 사용 가능하지만 나중에 인덱"
+"싱이 다시 활성화되면 전체 색인을 처음부터 다시 만들어야 합니다. 파일 수에 따"
+"라 이 작업에는 시간이 걸릴 수 있습니다."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "색인 데이터 삭제"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "파일 검색을 사용하면 내용을 기반으로 파일을 찾을 수 있습니다."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "파일 검색 사용"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "파일 내용도 색인에 추가"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "숨김 파일과 폴더도 색인에 포함"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "상태: %1, %2% 완료"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "색인 도구 일시 중지"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "색인 도구 다시 시작"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "현재 색인 중: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "폴더 지정 설정:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "폴더 색인 시작하는 중…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "폴더 색인 정지하는 중…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "색인에 포함되지 않음"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "색인에 포함됨"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "항목 삭제"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "포함할 폴더 선택"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "제외할 폴더 선택"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "File Search"
+#~ msgstr "파일 검색"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "폴더 설정 추가…"
+
+#~ msgid "%1 is included."
+#~ msgstr "%1이(가) 포함되었습니다."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1이(가) 제외되었습니다."
+
+#~ msgid "Disable indexing"
+#~ msgstr "색인 사용 안 함"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "다음 위치에서 찾지 않기:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "제외할 폴더 선택"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "루트 폴더를 제외할 수 없습니다. 파일 검색 기능이 필요하지 않으면 끌 수 있"
+#~ "습니다"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "폴더의 부모 %1이(가) 이미 제외됨"
+
+#~ msgid "Configure File Search"
+#~ msgstr "파일 검색 설정"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "루트 디렉터리는 항상 숨겨짐"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "개발자 모드 사용"

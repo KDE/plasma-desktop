@@ -1,0 +1,354 @@
+# translation of kimpanel.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2009, 2011, 2012, 2016, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kimpanel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2020-01-13 11:34+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Välimus"
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr "(tühi)"
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, kde-format
+msgid "Input method list:"
+msgstr "Sisestusmeetodite loend:"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, kde-format
+msgid "Vertical"
+msgstr "Vertikaalne"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, fuzzy, kde-format
+msgid "Horizontal"
+msgstr "Horisontaalne"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr "Font:"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr "Kohandatud:"
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr " "
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Font"
+msgid "Select Font…"
+msgstr "Fondi valimine"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, fuzzy, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Eelistus ikoon suurus:"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Fondi valimine"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr "Näita"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr "Peida %1"
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Seadista sisestusviisi"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Laadi seadistus uuesti"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Välju sisestusviisist"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Input Method Panel"
+msgstr "Sisestusviisi paneel"
+
+#~ msgid "Search"
+#~ msgstr "Otsing"
+
+#~ msgid "%1 copied to the clipboard"
+#~ msgstr "%1 kopeeriti lõikepuhvrisse"
+
+#~ msgid "Recent"
+#~ msgstr "Uusimad"
+
+#~ msgid "All"
+#~ msgstr "Kõik"
+
+#~ msgid "Categories"
+#~ msgstr "Kategooriad"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "Otsing"
+
+#~ msgid "Search..."
+#~ msgstr "Otsi ..."
+
+#~ msgid "Select Font..."
+#~ msgstr "Vali font ..."
+
+#~ msgid "Emoji Picker"
+#~ msgstr "Emoji valija"
+
+#~ msgid "Use Default Font"
+#~ msgstr "Vaikefondi kasutamine"
+
+#~ msgid "Custom Font:"
+#~ msgstr "Kohandatud font:"
+
+#~ msgid "Reverse display order when at screen border"
+#~ msgstr "Kuvamine teistpidi ekraani serval"
+
+#~ msgid "Select Application"
+#~ msgstr "Vali rakendus"
+
+#~ msgctxt "General configuration page"
+#~ msgid "General"
+#~ msgstr "Üldine"
+
+#~ msgid "Start Input Method"
+#~ msgstr "Käivita sisestusviis"
+
+#~ msgid "Icon Filter"
+#~ msgstr "Ikoonifilter"
+
+#~ msgid "Blur Behind"
+#~ msgstr "Hägu taustal"
+
+#~ msgid "IM Panel Settings"
+#~ msgstr "IM paneeli seadistused"
+
+#~ msgid "kimpanel"
+#~ msgstr "kimpanel"
+
+#~ msgid "Expand out"
+#~ msgstr "Rebi lahti"
+
+#~ msgid "Expand out from the panel to a floating widget"
+#~ msgstr "Paneelilt lahtirebimine hõljuvaks vidinaks"
+
+#~ msgid "Collapse to panel"
+#~ msgstr "Taanda paneelile"
+
+#~ msgid "Embed into the panel"
+#~ msgstr "Põimitud paneelile"
+
+#~ msgid "Generic input method panel"
+#~ msgstr "Üldine sisestusviisi paneel"
+
+#~ msgid "Copyright (C) 2009, Wang Hoi"
+#~ msgstr "Autoriõigus (C) 2009: Wang Hoi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bald@smail.ee"
+
+#~ msgid "Defines your preferred status bar icon size."
+#~ msgstr "Olekuriba eelistatud ikooni suuruse määramine."
+
+#~ msgid "Properties hidden in status bar"
+#~ msgstr "Olekuribal peidetud omadused"
+
+#~ msgid "Position of floating status bar"
+#~ msgstr "Hõljuva olekuriba asukoht"
+
+#~ msgid "Defines how icons are positioned in the floating status bar."
+#~ msgstr "Ikoonide asukoha määramine hõljuval olekuribal."
+
+#~ msgid "Expand horizontally."
+#~ msgstr "Laienda rõhtselt."
+
+#~ msgid "Expand vertically."
+#~ msgstr "Laienda püstiselt."
+
+#~ msgid "Use multiple rows/cols."
+#~ msgstr "Mitme rea/veeru kasutamine."
+
+#~ msgid "Defines the layout of the list of candidate words."
+#~ msgstr "Kandidaatsõnade nimekirja paigutuse määramine."
+
+#~ msgid "Put all words in one row."
+#~ msgstr "Kõik sõnad seatakse ühte ritta."
+
+#~ msgid "Put all words in one col."
+#~ msgstr "Kõik sõnad seatakse ühte veergu."
+
+#~ msgid "Multiple rows/cols, but fixed rows."
+#~ msgstr "Mitu rida/veergu, aga fikseeritud read."
+
+#~ msgid "Multiple rows/cols, but fixed columns."
+#~ msgstr "Mitu rida/veergu, aga fikseeritud veerud."
+
+#~ msgid "Restricts the layout of the list of candidate words."
+#~ msgstr "Kandidaatsõnade nimekirja paigutuse piiramine."
+
+#, fuzzy
+#~ msgid "Get New Widgets"
+#~ msgstr "Hangi uusi vidinaid"
+
+#, fuzzy
+#~ msgctxt "Arrange icons in multiple rows/cols way"
+#~ msgid "Matrix"
+#~ msgstr "Maatriks"
+
+#, fuzzy
+#~ msgid "Download New KIM Theme"
+#~ msgstr "Laadi alla Uus KIM Teema"
+
+#, fuzzy
+#~ msgid "Install Theme From Local File..."
+#~ msgstr "Paigalda Teema Kellelt Kohalik Fail."
+
+#, fuzzy
+#~ msgid "Installation of <b>%1</b> failed."
+#~ msgstr "Paigaldamine  / <b></b> nurjus."
+
+#, fuzzy
+#~ msgid "Installation Failed"
+#~ msgstr "Paigaldamine nurjus"
+
+#, fuzzy
+#~ msgid "Installation of <b>%1</b> succeds."
+#~ msgstr "Paigaldamine  / <b></b>."
+
+#, fuzzy
+#~ msgid "Installation Succeds"
+#~ msgstr "Paigaldamine"
+
+#, fuzzy
+#~ msgid "Configure QuickLaunch"
+#~ msgstr "Kiirkäivitaja seadistamine"
+
+#, fuzzy
+#~ msgid "Theme:"
+#~ msgstr "Teema:"
+
+#, fuzzy
+#~ msgid "Install New Theme"
+#~ msgstr "Paigalda Uus Teema"
+
+#, fuzzy
+#~ msgid "Choose a theme (preview can be seen here.)"
+#~ msgstr "Vali a teema"
+
+#, fuzzy
+#~ msgid "Status bar"
+#~ msgstr "Olekuriba"
+
+#, fuzzy
+#~ msgid "-"
+#~ msgstr "-"
+
+#, fuzzy
+#~ msgid "+"
+#~ msgstr "+"
+
+#, fuzzy
+#~ msgid ""
+#~ "When the size of the applet's panel is increased, several rows/columns "
+#~ "are used to layout icons."
+#~ msgstr "suurus  /  sek paneel on rida veerud kuni paigutus."
+
+#, fuzzy
+#~ msgid "Automatic size adjustment"
+#~ msgstr "Automaatne suurus"
+
+#, fuzzy
+#~ msgid "Policy:"
+#~ msgstr "Reegel:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Specify how the size of the status bar should change when icons appear or "
+#~ "disappear."
+#~ msgstr "suurus  /  status või."
+
+#, fuzzy
+#~ msgid "Preview area"
+#~ msgstr "Eelvaatlus piirkond"
+
+#, fuzzy
+#~ msgid "Candidate Window"
+#~ msgstr "Aken"
+
+#, fuzzy
+#~ msgid "Candidate word layout"
+#~ msgstr "paigutus"
+
+#, fuzzy
+#~ msgid "Constraint:"
+#~ msgstr "Piirang:"
+
+#, fuzzy
+#~ msgid "Help text"
+#~ msgstr "Abi tekst"
+
+#, fuzzy
+#~ msgid "Defines the current theme."
+#~ msgstr "aktiivne teema."

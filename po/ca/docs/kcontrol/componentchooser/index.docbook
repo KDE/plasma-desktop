@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Aplicacions predeterminades</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>12 de gener de 2022</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>component</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>En aquest mòdul, podreu canviar els components predeterminats del &kde;.</para>
+
+<para
+>Els components són els programes que s'encarreguen de les tasques bàsiques, com el navegador web, l'emulador de terminal, el gestor de fitxers, el client de correu, el mapa electrònic i el marcador. Diferents aplicacions del &kde; de vegades necessiten invocar un emulador de la consola, enviar un correu electrònic, gestionar fitxers i carpetes, mostrar el mapa o marcar un número al telèfon.</para
+> 
+
+<para
+>Per això mateix, constantment, aquestes aplicacions criden sempre a aquests components. Aquí podeu seleccionar quins programes seran aquests components.</para>
+
+<para
+>La llista de l'esquerra mostra els tipus de components a configurar:</para>
+<itemizedlist>
+<listitem>
+<para
+>Navegador web</para>
+</listitem>
+<listitem>
+<para
+>Gestor de fitxers</para>
+</listitem>
+<listitem>
+<para
+>Client de correu</para>
+</listitem>
+<listitem>
+<para
+>Emulador de terminal</para>
+</listitem>
+<listitem>
+<para
+>Mapa</para>
+</listitem>
+<listitem>
+<para
+>Marcador</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Feu clic sobre el quadre combinat del component que voleu configurar. A la llista, seleccioneu el vostre navegador web, gestor de fitxers, client de correu electrònic, emulador de terminal, mapa i marcador preferits. Trieu <guimenuitem
+>Altres...</guimenuitem
+> per a obrir el diàleg <guilabel
+>Tria l'aplicació</guilabel
+> i seleccioneu manualment la vostra aplicació.</para>
+
+</article>

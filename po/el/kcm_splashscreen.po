@@ -1,0 +1,105 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2016-01-22 22:51+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Κανένα"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr ""
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr ""
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Failed to successfully test the splash screen."
+msgid "Failed to show the splash screen preview."
+msgstr "Αποτυχία επιτυχούς δοκιμής της οθόνης εκκίνησης."
+
+#: package/contents/ui/main.qml:71
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "Preview Splash Screen"
+msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr ""
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "&Get New Splash Screens…"
+msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr ""
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Δημήτρης Καρδαράκος"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "dimkard@gmail.com"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Splash Screen"
+#~ msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Get New Icons..."
+#~ msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Splash Screens"
+#~ msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#~ msgid "Error"
+#~ msgstr "Σφάλμα"
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "Διαμόρφωση λεπτομερειών οθόνης εκκίνησης"

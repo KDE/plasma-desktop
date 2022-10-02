@@ -1,0 +1,180 @@
+# Translation of plasma_applet_org.kde.plasma.pager.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2013, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:25+0200\n"
+"PO-Revision-Date: 2016-11-28 01:33+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: package/contents/config/config.qml:25
+#, kde-format
+msgid "General"
+msgstr "Опште"
+
+#: package/contents/ui/configGeneral.qml:84
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Опште"
+
+#: package/contents/ui/configGeneral.qml:86
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+# >> @option:check
+#: package/contents/ui/configGeneral.qml:91
+#, fuzzy, kde-format
+#| msgid "Only the current screen"
+msgid "Show only current screen"
+msgstr "Само текући екран"
+
+#: package/contents/ui/configGeneral.qml:96
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:108
+#, kde-format
+msgid "Layout:"
+msgstr "Распоред:"
+
+# >> @item:inlistbox Layout:
+#: package/contents/ui/configGeneral.qml:110
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "подразумевани"
+
+# >> @item:inlistbox Layout:
+#: package/contents/ui/configGeneral.qml:110
+#, kde-format
+msgid "Horizontal"
+msgstr "водоравни"
+
+# >> @item:inlistbox Layout:
+#: package/contents/ui/configGeneral.qml:110
+#, kde-format
+msgid "Vertical"
+msgstr "усправни"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Display:"
+msgid "Text display:"
+msgstr "Приказ:"
+
+# >> @option:radio Display:
+#: package/contents/ui/configGeneral.qml:127
+#, kde-format
+msgid "No text"
+msgstr "без текста"
+
+# >> @option:radio Display:
+#: package/contents/ui/configGeneral.qml:133
+#, kde-format
+msgid "Activity number"
+msgstr "број активности"
+
+# >> @option:radio Display:
+#: package/contents/ui/configGeneral.qml:133
+#, kde-format
+msgid "Desktop number"
+msgstr "број површи"
+
+# >> @option:radio Display:
+#: package/contents/ui/configGeneral.qml:139
+#, kde-format
+msgid "Activity name"
+msgstr "име активности"
+
+# >> @option:radio Display:
+#: package/contents/ui/configGeneral.qml:139
+#, kde-format
+msgid "Desktop name"
+msgstr "име површи"
+
+#: package/contents/ui/configGeneral.qml:152
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "Бирање текуће површи:"
+
+#: package/contents/ui/configGeneral.qml:152
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "Бирање текуће површи:"
+
+# >> @option:radio Selecting current desktop:
+#: package/contents/ui/configGeneral.qml:155
+#, kde-format
+msgid "Does nothing"
+msgstr "нема ефекта"
+
+# >> @option:radio Selecting current desktop:
+#: package/contents/ui/configGeneral.qml:161
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "приказује површ"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "...and %1 other window"
+msgid_plural "...and %1 other windows"
+msgstr[0] "...и %1 други прозор"
+msgstr[1] "...и %1 друга прозора"
+msgstr[2] "...и %1 других прозора"
+msgstr[3] "...и %1 други прозор"
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 прозор:"
+msgstr[1] "%1 прозора:"
+msgstr[2] "%1 прозора:"
+msgstr[3] "%1 прозор:"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 минимизован прозор:"
+msgstr[1] "%1 минимизована прозора:"
+msgstr[2] "%1 минимизован прозора:"
+msgstr[3] "%1 минимизован прозор:"
+
+#: package/contents/ui/main.qml:537
+#, kde-format
+msgid "Show Activity Manager..."
+msgstr "Прикажи менаџер активности..."
+
+#: package/contents/ui/main.qml:540
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Додај виртуелну површи"
+
+#: package/contents/ui/main.qml:541
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Уклони виртуелну површ"
+
+#: package/contents/ui/main.qml:546
+#, fuzzy, kde-format
+#| msgid "Configure Desktops..."
+msgid "Configure Virtual Desktops..."
+msgstr "Подеси површи..."

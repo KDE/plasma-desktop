@@ -1,0 +1,339 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2021-12-09 08:03+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Elérhető bővítmények"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Bővítmények be- és kikapcsolása (a KRunnerben, az Alkalmazásindítóban és az "
+"Áttekintés effektusban)"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr ""
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Új bővítmények letöltése…"
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr ""
+"A telepítőszkript futtatása a(z) <message>%1</message> terminálban meghiúsult"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr ""
+"A telepítés sikeresen végrehajtódott, most már bezárhatja ezt az ablakot"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr ""
+"Az eltávolítás sikeresen végrehajtódott, most már bezárhatja ezt az ablakot"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "A KRunner bővítmény telepítése meghiúsult"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Végrehajtandó parancs: telepítés vagy eltávolítás."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Az archívum elérési útja."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Nincs PackageKit támogatás"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Telepítés megerősítése"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Bináris csomagot készül telepíteni. Csak olyan forrásból telepítsen "
+"ilyeneket, amiben megbízik!"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Kockázat elfogadása és folytatás"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Fájl megtekintése"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "A packagekit háttérprogram nem  támogatja a(z) %1 MIME-típust"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény nem tartalmaz eltávolítási szkriptet. Vegye fel a kapcsolatot a "
+"szerzővel. Megpróbálhatja kézzel eltávolítani a bővítményt.<nl/>Ha úgy érzi, "
+"nem képes rá, vagy nem szeretné, kattintson a <interface>Mégsem</interface> "
+"gombra most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény nem tartalmaz eltávolítási szkriptet. Vegye fel a kapcsolatot a "
+"szerzővel. Megpróbálhatja kézzel eltávolítani a bővítményt, ehhez olvassa el "
+"a szerző által biztosított README fájlt.<nl/>Ha úgy érzi, nem képes rá, vagy "
+"nem szeretné, kattintson a <interface>Mégsem</interface> gombra most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény nem tartalmaz telepítési szkriptet. Vegye fel a kapcsolatot a "
+"szerzővel. Megpróbálhatja kézzel telepíteni a bővítményt.<nl/>Ha úgy érzi, "
+"nem képes rá, vagy nem szeretné, kattintson a <interface>Mégsem</interface> "
+"gombra most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény nem tartalmaz telepítési szkriptet. Vegye fel a kapcsolatot a "
+"szerzővel. Megpróbálhatja kézzel telepíteni a bővítményt, ehhez olvassa el a "
+"szerző által biztosított README fájlt.<nl/>Ha úgy érzi, nem képes rá, vagy "
+"nem szeretné, kattintson a <interface>Mégsem</interface> gombra most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény egy szkriptet használ a telepítésére, amely biztonsági "
+"kockázatot jelenthet. Vizsgálja meg a bővítmény tartalmát telepítés előtt, "
+"vagy olvassa át legalább a szkript forráskódját.<nl/>Ha úgy érzi, nem képes "
+"erre, vagy nem szeretné, kattintson a <interface>Mégsem</interface> gombra "
+"most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"A bővítmény egy szkriptet használ a telepítésére, amely biztonsági "
+"kockázatot jelenthet. Vizsgálja meg a bővítmény tartalmát telepítés előtt, "
+"vagy olvassa át legalább a README fájlt és a szkript forráskódját.<nl/>Ha "
+"úgy érzi, nem képes erre, vagy nem szeretné, kattintson a <interface>Mégsem</"
+"interface> gombra most."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Megjelölés eltávolítottként"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Megjelölés telepítettként"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Szkript megtekintése"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Forrásmappa megtekintése"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "A(z) %1 megtekintése"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "A(z) %1 csomagnév nem oldható fel"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "A telepítő parancs futtatása meghiúsult: <message>%1</message>"
+
+#~ msgid "Position on screen:"
+#~ msgstr "Pozíció a képernyőn:"
+
+#~ msgid "Top"
+#~ msgstr "Fent"
+
+#~ msgid "Center"
+#~ msgstr "Középen"
+
+#~ msgid "History:"
+#~ msgstr "Előzmények:"
+
+#, fuzzy
+#~| msgid "Activity aware (previous search and history)"
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "Aktivitásfüggő (előző keresés és előzmények)"
+
+#~ msgid "Clear History"
+#~ msgstr "Előzmények törlése"
+
+#, fuzzy
+#~| msgctxt "delete history for this activity"
+#~| msgid "For activity \"%1\""
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "A(z) „%1” aktivitásról"
+
+#~ msgid "Clear History…"
+#~ msgstr "Előzmények törlése…"
+
+#, fuzzy
+#~| msgctxt "delete history for all activities"
+#~| msgid "For all activities"
+#~ msgctxt "@item:inmenu delete krunner history for all activities"
+#~ msgid "For all activities"
+#~ msgstr "Az összes aktivitásról"
+
+#, fuzzy
+#~| msgctxt "delete history for this activity"
+#~| msgid "For activity \"%1\""
+#~ msgctxt "@item:inmenu delete krunner history for this activity"
+#~ msgid "For activity \"%1\""
+#~ msgstr "A(z) „%1” aktivitásról"
+
+#, fuzzy
+#~| msgctxt "kcm name for About dialog"
+#~| msgid "Configure search settings"
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Keresési beállítások módosítása"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ulysses@fsf.hu"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Keresési beállítások módosítása"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "KRunner pozíciója:"
+
+#~ msgid "Enable"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "KRunner history:"
+#~ msgstr "KRunner előzmények:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Előző keresés megőrzése"
+
+#~ msgid "Clear History..."
+#~ msgstr "Előzmények törlése…"
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "KRunner bővítmények be- és kikapcsolása:"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Válassza ki a kereső bővítményeket:"

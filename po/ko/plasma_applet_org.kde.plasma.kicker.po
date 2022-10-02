@@ -1,0 +1,445 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-28 02:29+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "일반"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "책갈피에서 삭제"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "책갈피에 추가"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "모든 활동에"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "현재 활동에만"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "책갈피에 표시"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "아이콘:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "선택…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "아이콘 초기화"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "프로그램 표시 형식:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "이름만"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "설명만"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "이름 (설명)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "설명 (이름)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "행동:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "가나다순으로 프로그램 정렬"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "단일 단계로 하위 메뉴 축소"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "최상위 단계 메뉴 아이콘 표시"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "분류 표시:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "최근 프로그램"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "자주 사용한 프로그램"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "최근 파일"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "자주 사용한 파일"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "최근 연락처"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "자주 사용한 연락처"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "분류별 항목 정렬 기준:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "최근 사용"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "자주 사용"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "검색:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "책갈피, 파일, 이메일에서도 찾기"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "검색 결과를 아래로 정렬"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "'%1' 검색 중"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "입력하여 검색…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "책갈피"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "위젯"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "앱과 문서"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "프로그램 편집…"
+
+#~ msgid "Search…"
+#~ msgstr "검색…"
+
+#~ msgid "Search..."
+#~ msgstr "찾기..."
+
+#~ msgid "Often used documents"
+#~ msgstr "자주 사용한 문서"
+
+#~ msgid "Open with:"
+#~ msgstr "다음으로 열기:"
+
+#~ msgid "Properties"
+#~ msgstr "속성"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "데스크톱에 추가"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "패널에 추가(위젯)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "작업 관리자에 고정"
+
+#~ msgid "Recent Documents"
+#~ msgstr "최근 문서"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "최근 문서 비우기"
+
+#~ msgid "Edit Application..."
+#~ msgstr "프로그램 편집..."
+
+#~ msgid "Hide Application"
+#~ msgstr "프로그램 숨기기"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "프로그램"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "이 하위 메뉴의 프로그램 숨김 해제"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "'%1'의 프로그램 숨김 해제"
+
+#~ msgid "Show KRunner"
+#~ msgstr "KRunner 표시"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "검색, 계산, 명령 실행"
+
+#~ msgid "Computer"
+#~ msgstr "컴퓨터"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "연락처 정보 보기..."
+
+#~ msgid "Contacts"
+#~ msgstr "연락처"
+
+#~ msgid "Forget Contact"
+#~ msgstr "연락처 잊기"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "모든 연락처 잊기"
+
+#~ msgid "Recently Used"
+#~ msgstr "최근 항목"
+
+#~ msgid "Documents"
+#~ msgstr "문서"
+
+#~ msgid "Forget Application"
+#~ msgstr "프로그램 잊기"
+
+#~ msgid "Forget Document"
+#~ msgstr "문서 잊기"
+
+#~ msgid "Forget All"
+#~ msgstr "모두 잊어버리기"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "모든 프로그램 잊기"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "모든 문서 잊기"
+
+#~ msgid "Hide %1"
+#~ msgstr "%1 숨기기"
+
+#~ msgid "All Applications"
+#~ msgstr "모든 프로그램"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "최근 연락처"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "자주 사용한 문서"
+
+#~ msgid "Recent Applications"
+#~ msgstr "최근 프로그램"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "자주 사용한 프로그램"
+
+#~ msgid "Power / Session"
+#~ msgstr "전원/세션"
+
+#~ msgid "Search results"
+#~ msgstr "찾은 결과"
+
+#~ msgid "Lock"
+#~ msgstr "잠금"
+
+#~ msgid "Log Out"
+#~ msgstr "로그아웃"
+
+#~ msgid "Save Session"
+#~ msgstr "세션 저장"
+
+#~ msgid "Switch User"
+#~ msgstr "사용자 전환"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "대기 모드"
+
+#~ msgid "Hibernate"
+#~ msgstr "최대 절전 모드"
+
+#~ msgid "Restart"
+#~ msgstr "다시 시작"
+
+#~ msgid "Shut Down"
+#~ msgstr "컴퓨터 끄기"
+
+#~ msgid "Session"
+#~ msgstr "세션"
+
+#~ msgid "System"
+#~ msgstr "시스템"
+
+#~ msgid "Lock screen"
+#~ msgstr "화면 잠그기"
+
+#~ msgid "End session"
+#~ msgstr "세션 끝내기"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "다른 사용자로 새 세션 시작하기"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "RAM 절전"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "디스크 절전"
+
+#~ msgid "Restart computer"
+#~ msgstr "컴퓨터를 다시 시작합니다"
+
+#~ msgid "Turn off computer"
+#~ msgstr "컴퓨터를 끕니다"
+
+#~ msgid "System actions"
+#~ msgstr "시스템 동작"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "'%1' 관리..."
+
+#~ msgid "Run Command..."
+#~ msgstr "명령 실행..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "명령을 실행하거나 검색을 시작합니다"
+
+#~ msgid "Show:"
+#~ msgstr "표시:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "최근 프로그램 보이기"
+
+#~ msgid "Show often used applications"
+#~ msgstr "자주 사용한 프로그램 보이기"
+
+#~ msgid "Show recent documents"
+#~ msgstr "최근 문서 보이기"
+
+#~ msgid "Show often used documents"
+#~ msgstr "자주 사용한 문서 보이기"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "최근 연락처 보이기"
+
+#~ msgid "Logout"
+#~ msgstr "로그아웃"
+
+#~ msgid "Reboot"
+#~ msgstr "다시 시작"
+
+#~ msgid "Suspend"
+#~ msgstr "대기 모드"
+
+#~ msgid "Removable Storage"
+#~ msgstr "이동식 저장소"
+
+#~ msgid "Places"
+#~ msgstr "위치"
+
+#~ msgid "Use custom image:"
+#~ msgstr "사용자 정의 그림 사용:"
+
+#~ msgid "Choose an image"
+#~ msgstr "그림 선택"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "그림 파일 (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "실행기로 추가"
+
+#~ msgid "New Session"
+#~ msgstr "새 세션"
+
+#~ msgid "(Empty)"
+#~ msgstr "(비어 있음)"

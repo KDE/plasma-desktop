@@ -1,0 +1,834 @@
+# Translation for kcmaccess.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2018, The Free Software Foundation, Inc.
+# Copyright (C) 2019-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002, 2003.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# marcos <marcos@euskalgnu.org>, 2006, 2007, 2008.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2014, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2022-07-05 13:03+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGraph"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "Hiper"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "Sakatu %1, BlokZenb, BlokMaius eta BlokKorr aktibo daudenean"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "Sakatu %1, BlokMaius eta BlokKorr aktibo daudenean"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "Sakatu %1, BlokZenb eta BlokKorr aktibo daudenean"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "Sakatu %1, BlokKorr aktibo dagoenean"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "Sakatu %1, BlokZenb eta BlokMaius aktibo daudenean"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "Sakatu %1, BlokMaius aktibo dagoenean"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "Sakatu %1, BlokZenb aktibo dagoenean"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "Sakatu %1"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr "Ezin izan dira orcarentzako gsettings ezarri: \"%1\" huts egin du"
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr "Errorea: Ezin izan da \"orca --setup\" abiarazi"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Erabili sistemako txirrina"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Sistemako txirrina norbere erara egokitzea"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Txirrinerako soinu-fitxategia"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Erabili irudizko txirrin bat soinu baten ordez"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Irauli sistemaren koloreak txirrina jotzean"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Txirrin ikusgaiaren kolorea"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Txirrin ikusgaiaren iraupena"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Erabili tekla itsaskorrak"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Giltzatu tekla itsaskorrak"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Itzali tekla itsaskorrak, bi tekla aldi berean sakatzean"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Bip egin tekla itsaskor bat sakatzean"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Txandakatu teklek bip"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Jakinarazi teklatuko aldarazle bat  sakatzean"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Erabili denbora-mugako atzerapen bat"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Erabili bip bat sartzeko"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Erabili tekla-sakatze motelak"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Tekla sakatzearen atzerapena"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Bip egin tekla-sakatze motel batekin"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Bip egin onartutako tekla-sakatze batekin"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Bip egin errefusatutako tekla-sakatze batekin"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Errebote-teklak"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Erabili atzerapen bat erreboterako"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Bip egin errebote tekla gertaera bat errefusatzen bada"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Eraili teklak sagua kontrolatzeko"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Sagu-mugimenduen atzerapena"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Saguaren mugimenduaren errepikapen-tartea"
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Abiadura maximoa lortzeko denbora"
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr "Abiadura maximoa"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Abiadura maximoa"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Sagu-teklaren kurba"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr "Erabili keinuak"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Keinu baten berrespena eskatu"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Berretsi teklaturako sarbidea"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Gaitu pantaila-irakurgailua"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr "Hautatu audio fitxategi bat"
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr "Audio fitxategiak (*.mp3 *.ogg *.wav)"
+
+#: package/contents/ui/Bell.qml:31
+#, kde-format
+msgid "Audible bell:"
+msgstr "Audio entzungarria:"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr "Norberak finkatutako soinua:"
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr "Bilatu sistemako txirrinerako audio fitxategia"
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr "Audio-fitxategia bilatzeko botoia"
+
+#: package/contents/ui/Bell.qml:93
+#, kde-format
+msgid "Visual bell:"
+msgstr "Irudizko txirrina:"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/Bell.qml:108
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "Irauli pantaila"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr "Flasha"
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr "Kolorea"
+
+#: package/contents/ui/Bell.qml:147
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Iraupena:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr "Tekla motelak:"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr "Atzerapena:"
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, kde-format
+msgid "Ring system bell:"
+msgstr "Jo sistemako txirrina:"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "edozein tekla sa&katzean"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "edozein tekla on&artzen denean"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "edozein tekla e&rrefusatzen denean"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, kde-format
+msgid "Bounce keys:"
+msgstr "Errebote-teklak:"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr "Atzerapena:"
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr "Jo sistemako txirrina errefusatzean"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+"Modulu honek pantaila-irakurgailua gisako irisgarritasun ezaugarriak "
+"konfiguratzen uzten dizu."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "Txirrina"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "Tekla aldarazleak"
+
+#: package/contents/ui/main.qml:36
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "Teklatu-iragazkiak"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr "Sagu bidez nabigatzea"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Pantaila-irakurgailua"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr "Tekla itsaskorrak:"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr "Giltzatu"
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr "Ezgaitu bi tekla sakatuta mantentzean"
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr "Jo sistemako txirrina tekla aldarazleak erabiltzen direnean"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr "Berrelikadura:"
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr "Jo sistemako txirrina giltzatzeko teklak txandakatzen direnean"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr "Erakutsi jakinarazpena tekla aldarazleak edo giltzatzekoak erabiltzean"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Konfiguratu jakinarazpenak..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr "Erabili zenbakizko teklatua kurtsorea mugitzeko:"
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr "Gaitu"
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Keinu bat erabiltzean:"
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Azaldu berresteko elkarrizketa-koadro bat"
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Jo sistemako txirrina"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr "Erakutsi jakinarazpen bat"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr "Azelerazioaren atzerapena:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr "Errepikatze-tartea:"
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, kde-format
+msgid "Acceleration time:"
+msgstr "Azelerazio-denbora:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr "Gehieneko abiadura:"
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Azelerazio-profila:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Abiarazi Orca pantaila-irakurgailuaren konfigurazioa..."
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Jakizu, pantaila-irakurgailua egoki ibil dadin, behin saio-itxi edo "
+"berrabiarazi behar izan dezakezula."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+"Ematen du Orca pantaila-irakurgailua instalatu gabe dagoela. Instalatu ezazu "
+"ezaugarri hau erabiltzen saiatu aurretik, ondoren saio-itxi eta berrabiarazi "
+"ezazu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Koldo Navarro,Ion Gaztañaga,Marcos Goyeneche,Hizkuntza Politikarako "
+#~ "Sailburuordetza,Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "koldo.np@euskalnet.net,igaztanaga@gmail.com,marcos@euskalgnu.org,"
+#~ "hizpol@ej-gv.es,xalba@euskalnet.net"
+
+#~ msgid "Accessibility"
+#~ msgstr "Irisgarritasuna"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Matthias Hoelzer-Kluepfel"
+
+#~ msgid "Author"
+#~ msgstr "Egilea"
+
+#~ msgid "Automatically turn off the sticky keys after an interval"
+#~ msgstr "Itzali automatikoki tekla itsaskorrak denbora tarte bat igarotakoan"
+
+#~ msgid "Ring when toggling accessibility features with gestures"
+#~ msgstr "Txirrina jo irisgarritasun-ezaugarriak keinuekin txandakatzean"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktibatzea:"
+
+#~ msgid "Use gestures to activate"
+#~ msgstr "Erabili keinuak aktibatzeko"
+
+#~ msgid "Disable After:"
+#~ msgstr "Ezgaitu igaro ondoren:"
+
+#~ msgid "Color of the System bell"
+#~ msgstr "Sistemako txirrinaren kolorea"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Aukera hau gaituta badago, sistemaren txirrin lehenetsia erabiliko da. "
+#~ "Normalean, \"bip\" bat baino ez da."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Markatu aukera hau zuk finkatutako txirrin bat erabili nahi baduzu, soinu "
+#~ "fitxategi bat erabiliz. Hau egiten baduzu, sistemaren txirrina itzali "
+#~ "nahiko duzu."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "&Erabili zuk finkatutako txirrina"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "\"Erabili zuk finkatutako txirrina\" aukera gaitua badago, soinu-"
+#~ "fitxategi bat aukeratu dezakezu hemen. Sakatu \"Arakatu...\", "
+#~ "elkarrizketa-koadroa erabiliz soinu-fitxategi bat aukeratzeko."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "&Jotzeko soinua:"
+
+#~ msgid "Browse..."
+#~ msgstr "Arakatu..."
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Aukera honek, \"irudizko txirrina\" piztuko du; irudizko jakinarazpen bat "
+#~ "erakutsiko da bestela soilik txirrina entzungo litzatekeen aldiro. "
+#~ "Bereziki erabilgarria entzumen arazoa dutenentzat."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "E&rabili irudizko txirrina"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Pantailak kolore pertsonalizatua erabiliko du behean adierazitako denbora-"
+#~ "tartean."
+
+#~ msgid "F&lash screen"
+#~ msgstr "Argi&ztatu pantaila"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "Pantailako kolore guztiak alderantzikatu egingo dira behean adierazten "
+#~ "den denbora-tartean."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Egin klik hemen txirrin ikuskorra adierazteko pantaila-distiraren kolorea "
+#~ "hautatzeko."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "Hemen finkatu dezakezu erakutsi beharreko \"txirrin ikuskor\" efektuaren "
+#~ "iraupena."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Erabili sistemaren txirrina tekla aldatzaile bat atxikitzean, blokeatzean "
+#~ "edo desblokeatzean"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Tekla blokeatzaileak"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Erabili sistemaren txirrina, tekla blokeatzaileak aktibatzean edo "
+#~ "desaktibatzean"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "Tekla &motelak"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Erabili e&rrebote-teklak"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Erabili sistemaren txirrina, tekla bat baztertzean"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Aktibazio &keinuak"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Erabili keinuak tekla itsaskorrak eta motelak aktibatzeko"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Desaktibatu tekla itsaskorrak eta motelak, jarduerarik gabeko tarte baten "
+#~ "ondoren."
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Erabili sistemaren txirrina, keinuak irisgarritasun eginbideak "
+#~ "aktibatzeko edo desaktibatzeko erabiltzen direnean"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Aukera hau hautatuz gero, KDEk berrespen-elkarrizketa bat erakutsiko du, "
+#~ "teklatuaren irisgarritasun-eginbideak aktibatu edo desaktibatutakoan.\n"
+#~ "Kontuz ibili aukerekin; hautamarka kentzen baduzu, teklatuaren "
+#~ "irisgarritasun-ezarpenak berrespenik gabe aplikatuko dira beti."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Erakutsi berrespen elkarrizketa-koadro bat teklatuaren irisgarritasun-"
+#~ "eginbide bat aktibatzean/desaktibatzean"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Erabili Plasmaren jakinarazpen-mekanismoa teklatuaren irisgarritasun-"
+#~ "eginbide bat aktibatzean/desaktibatzean"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Mugitu erakuslea teklatuaren bidez (zk. teklatua erabiliz)"
+
+#~ msgid " pixel/sec"
+#~ msgstr " pixel/seg"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Pantaila irakurlea gaituta"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Hemen, eginbide hauek gaituko dituzten teklatuaren keinuak aktiba "
+#~ "ditzakezu: \n"
+#~ "Tekla itsaskorra: sakatu MAIUS tekla 5 aldiz jarraian\n"
+#~ "Tekla motelak: mantendu MAIUS tekla sakatuta 8 segundoan"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Hemen, eginbide hauek gaituko dituzten teklatuaren keinuak aktiba "
+#~ "ditzakezu: \n"
+#~ "Saguaren botoiak: %1\n"
+#~ "Tekla itsaskorra: sakatu MAIUS tekla 5 aldiz jarraian\n"
+#~ "Tekla motelak: mantendu MAIUS tekla sakatuta 8 segundoan"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "&Activation Gestures"
+#~ msgstr "Aktibazio-keinuak"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "Erre&botatzeari uzteko denbora-muga:"
+
+#~ msgid "Timeout:"
+#~ msgstr "Denbora-muga:"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|WAV Fitxategiak"

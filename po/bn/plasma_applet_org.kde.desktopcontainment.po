@@ -1,0 +1,879 @@
+# translation of libkonq.po to Bengali
+# Deepayan Sarkar <deepayan@bengalinux.org>, 2004, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2006-01-04 13:13-0600\n"
+"Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
+"Language-Team: Bengali <kde-translation@bengalinux.org>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+msgid "Location"
+msgstr "প্রণালী (&প)"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr ""
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "Files:"
+msgstr "ফাইলের নাম:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Shred Files"
+msgid "Show all"
+msgstr "ফাইল ধ্বংস করো"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File name pattern:"
+msgstr "ফাইলের নাম:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File types:"
+msgstr "ফাইলের নাম:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File name:"
+msgid "File type"
+msgstr "ফাইলের নাম:"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Enlarge Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "আইকন বড় করো"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "ছো&ট"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "&বড়"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "[&ম]মাঝারি"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show folder preview popups"
+msgstr "প্রাক্‌দর্শন"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+msgid "Rename:"
+msgstr "বাতি&ল করো: লিঙ্ক"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+msgid "Previews:"
+msgstr "প্রাক্‌দর্শন"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+msgid "Show preview thumbnails"
+msgstr "প্রাক্‌দর্শন"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "প্রাক্‌দর্শন"
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Desktop folder"
+msgstr "নতুন ফোল্ডার"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+msgid "Custom location:"
+msgstr "প্রণালী (&প)"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "কিছু না"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "&Default Size"
+msgid "Default"
+msgstr "ডিফল্ট মা&প"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Hide Background"
+msgstr "পটভূমি"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Show Background"
+msgstr "পটভূমি"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+msgid "Preview Plugins"
+msgstr "প্রাক্‌দর্শন"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, fuzzy, kde-format
+#| msgid "C&ancel"
+msgid "Cancel"
+msgstr "বাতি&ল করো"
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "Configure Background..."
+msgid "Configure Desktop and Wallpaper…"
+msgstr "পটভূমি কনফিগার করো..."
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "New Folder"
+msgid "Select Folder"
+msgstr "নতুন ফোল্ডার"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "&আবর্জনার বাক্স ফাঁকা করো"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "পূর্বাবস্থা&য় ফেরাও"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "খোলো (&খ)"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "বৈশিষ্ট্যা&বলী"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Tiny"
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "[&ক]ক্ষুদ্র"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "ছো&ট"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "&Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "ছো&ট"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "[&ম]মাঝারি"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, fuzzy, kde-format
+#| msgid "&Medium"
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "[&ম]মাঝারি"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "&Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "&বড়"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, fuzzy, kde-format
+#| msgid "&Huge"
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "বিশা&ল"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Show Previews"
+msgstr "প্রাক্‌দর্শন"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "ফোল্ডা&র তৈরী করো..."
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "নতুন ফোল্ডার"
+
+#, fuzzy
+#~| msgid "Move to Trash"
+#~ msgid "&Move to Trash"
+#~ msgstr "আবর্জনা ফোল্ডারে সরাও"
+
+#, fuzzy
+#~ msgid "&Delete"
+#~ msgstr "ফাইলগুলি মুছে ফেলো"
+
+#, fuzzy
+#~| msgid "Shred Files"
+#~ msgid "Show Original File"
+#~ msgstr "ফাইল ধ্বংস করো"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&আবর্জনার বাক্স ফাঁকা করো"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&এই পাতাটি বুকমার্ক করো"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&এই অবস্থানটি বুকমার্ক করো"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&এই ফোল্ডারটি বুকমার্ক করো"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&এই লিঙ্কটি বুকমার্ক করো"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&এই ফাইলটি বুকমার্ক করো"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "এখানে &কপি করো"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "আবর্জনা ফোল্ডারে সরাও"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "নতুন ফোল্ডার"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "নতুন ফোল্ডার"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "এখানে &কপি করো"
+
+#, fuzzy
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "এখানে &সরাও"
+
+#~ msgid "Share"
+#~ msgstr "শেয়ার"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "আপনি একটি ফোল্ডারকে তার নিজের ওপর এনে ফেলতে পারেন না"
+
+#~ msgid "&Move Here"
+#~ msgstr "এখানে &সরাও"
+
+#~ msgid "&Copy Here"
+#~ msgstr "এখানে &কপি করো"
+
+#~ msgid "&Link Here"
+#~ msgstr "&এখানে লিঙ্ক করো"
+
+#~ msgid "C&ancel"
+#~ msgstr "বাতি&ল করো"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "&ওয়ালপেপার হিসেবে বেছে নাও "
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "নতুন তৈরি করো"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "ফোল্ডারের নাম লিখুন:"
+
+#, fuzzy
+#~| msgid "Create New"
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "নতুন তৈরি করো"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "নতুন ফোল্ডার"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "নতুন ফোল্ডার"
+
+#, fuzzy
+#~| msgid "Enter folder name:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "ফোল্ডারের নাম লিখুন:"
+
+#, fuzzy
+#~| msgid "New Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "নতুন ফোল্ডার"
+
+#~ msgid "Create New"
+#~ msgstr "নতুন তৈরি করো"
+
+#~ msgid "Link to Device"
+#~ msgstr "ডিভাইস-এ লিঙ্ক"
+
+#~ msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+#~ msgstr "<qt>টেমপ্লেট ফাইল <b>%1</b>-এর কোন অস্তিত্ব নেই।</qt>"
+
+#, fuzzy
+#~| msgid "&Open With"
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With"
+#~ msgstr "খু&লতে ব্যবহার করো"
+
+#, fuzzy
+#~| msgid "&Other..."
+#~ msgctxt "@action:inmenu Open With"
+#~ msgid "&Other..."
+#~ msgstr "&অন্যান্য..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With..."
+#~ msgstr "খু&লতে ব্যবহার করো..."
+
+#, fuzzy
+#~ msgid "Open &with %1"
+#~ msgstr "%1 ব্যবহার করে খোলো"
+
+#~ msgid "Open in New &Window"
+#~ msgstr "নতুন &উইণ্ডোয় খোলো"
+
+#~ msgid "Open the trash in a new window"
+#~ msgstr "আবর্জনার বাক্স একটি নতুন উইণ্ডোয় খোলো"
+
+#~ msgid "Open the medium in a new window"
+#~ msgstr "মিডিয়াম একটি নতুন উইণ্ডোয় খোলো"
+
+#~ msgid "Open the document in a new window"
+#~ msgstr "নথী নতুন একটি উইণ্ডোয় খোলো"
+
+#~ msgid "Und&o"
+#~ msgstr "বাতি&ল করো"
+
+#~ msgid "Und&o: Copy"
+#~ msgstr "বাতি&ল করো: কপি"
+
+#~ msgid "Und&o: Link"
+#~ msgstr "বাতি&ল করো: লিঙ্ক"
+
+#~ msgid "Und&o: Move"
+#~ msgstr "বাতি&ল করো: সরাও"
+
+#~ msgid "Und&o: Trash"
+#~ msgstr "বাতি&ল করো: আবর্জনায় পাঠানো"
+
+#~ msgid "Und&o: Create Folder"
+#~ msgstr "বাতি&ল করো: ফোল্ডার তৈরি করা"
+
+#, fuzzy
+#~ msgid "Do you really want to delete this item?"
+#~ msgid_plural "Do you really want to delete these %1 items?"
+#~ msgstr[0] "আপনি সত্যিই এই বস্তুটি মুছে ফেলতে চান?"
+#~ msgstr[1] "আপনি সত্যিই এই %1-টি বস্তু মুছে ফেলতে চান?"
+
+#~ msgid "Delete Files"
+#~ msgstr "ফাইলগুলি মুছে ফেলো"
+
+#, fuzzy
+#~ msgid "Do you really want to move this item to the trash?"
+#~ msgid_plural "Do you really want to move these %1 items to the trash?"
+#~ msgstr[0] "আপনি সত্যিই এই বস্তুটি আবর্জনার বাক্সে পাঠাতে চান?"
+#~ msgstr[1] "আপনি সত্যিই এই %1-টি বস্তু আবর্জনার বাক্সে পাঠাতে চান?"
+
+#~ msgctxt "Verb"
+#~ msgid "&Trash"
+#~ msgstr "&বর্জন করো"
+
+#, fuzzy
+#~ msgid "Und&o: %1"
+#~ msgstr "বাতি&ল করো"
+
+#~ msgid "Background Settings"
+#~ msgstr "পটভূমি সেটিংস"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&রঙ:"
+
+#~ msgid "&Picture:"
+#~ msgstr "&ছবি"
+
+#~ msgid "Shrink Icons"
+#~ msgstr "আইকন ছোট করো"
+
+#~ msgid "&Very Large"
+#~ msgstr "&আরো বড়"
+
+#~ msgid "Allows choosing of background settings for this view"
+#~ msgstr "এই ভিউ-এর পটভূমির পছন্দসমূহ বেছে নিতে দেয়"
+
+#~ msgid "<p>You do not have enough permissions to read <b>%1</b></p>"
+#~ msgstr "<p>আপনার <b>%1</b> পড়ার জন্য যথেষ্ট অনুমতি নেই।</p>"
+
+#~ msgid "<p><b>%1</b> does not seem to exist anymore</p>"
+#~ msgstr "<p><b>%1</b> আর আছে বলে মনে হচ্ছে না</p>"
+
+#~ msgid "Search result: %1"
+#~ msgstr "সন্ধান ফলাফল: %1"
+
+#~ msgid "Do you really want to shred this item?"
+#~ msgid_plural "Do you really want to shred these %1 items?"
+#~ msgstr[0] "আপনি সত্যিই এই বস্তুটি ধ্বংস করতে চান?"
+#~ msgstr[1] "আপনি সত্যিই এই %1-টি বস্তু ধ্বংস করতে চান?"
+
+#~ msgid "Shred"
+#~ msgstr "ধ্বংস"

@@ -1,0 +1,393 @@
+# Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
+# Stephan Johach <hunsum@gmx.de>, 2005.
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
+# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+# Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2021-05-26 06:35+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Standard-Webbrowser"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Andere ..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Standard-Webbrowser auswählen"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Standard-E-Mail-Programm auswählen"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Standard-Dateiverwaltungs-Programm auswählen"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select default file manager"
+msgid "Select default map"
+msgstr "Standard-Dateiverwaltungs-Programm auswählen"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select default terminal emulator"
+msgid "Select default dialer application"
+msgstr "Standard-Terminalprogramm auswählen"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Standard-Terminalprogramm auswählen"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Webbrowser:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Dateiverwaltung:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "E-Mail-Programm:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Terminal-Emulator:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thomas Diehl,Thomas Reitelbach"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "thd@kde.org,tr@erdfunkstelle.de"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Standard-Anwendungen"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Unbekannt"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentenauswahl"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© 2002, Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Wählen Sie aus der Liste unten die Standardkomponente für den Dienst %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Sie haben die Standardkomponente geändert. Soll die neue Einstellung "
+#~ "gespeichert werden?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Keine Beschreibung verfügbar"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Hier können Sie das Komponentenprogramm wechseln. „Komponenten“ sind "
+#~ "Programme, die elementare Aufgaben erledigen, so etwa der Terminal-"
+#~ "Emulator, der Texteditor oder das E-Mail-Programm. KDE-Programme müssen "
+#~ "gelegentlich einen Terminal-Emulator aufrufen, eine E-Mail verschicken "
+#~ "oder Text darstellen. Um die Einheitlichkeit zu wahren, verwenden die "
+#~ "Anwendungen dieselben Standardkomponenten. Hier können Sie die Programme "
+#~ "für diese Komponenten auswählen."
+
+#~ msgid "Default Component"
+#~ msgstr "Standard-Komponente"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Diese Liste zeigt die einstellbaren Komponententypen an. Klicken Sie "
+#~ "auf einen der Einträge, wenn Sie Festlegungen dazu treffen möchten.</p>\n"
+#~ "<p>In diesem Dialog können Sie zu anderen KDE-Standardkomponenten "
+#~ "wechseln. „Komponenten“ sind Programme, die elementare Aufgaben "
+#~ "erledigen, so etwa der Terminal-Emulator, der Texteditor oder das E-Mail-"
+#~ "Programm. Einige KDE-Programme müssen gelegentlich einen Terminal-"
+#~ "Emulator aufrufen, eine E-Mail verschicken oder Text darstellen. Um die "
+#~ "Einheitlichkeit zu wahren, verwenden die Anwendungen dieselben "
+#~ "Standardkomponenten. Hier können Sie die Programme für diese Komponenten "
+#~ "auswählen.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr ""
+#~ "<qt>Adressen öffnen, die mit <b>http</b> oder <b>https</b> beginnen</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "in einem Programm, das auf Inhalten der Adresse basiert"
+
+#~ msgid "in the following application:"
+#~ msgstr "in folgendem Programm:"
+
+#~ msgid "with the following command:"
+#~ msgstr "mit dem folgendem Befehl:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Bevorzugten Webbrowser auswählen:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr ""
+#~ "KMail ist das Standard-E-Mail-Programm für die Plasma-Arbeitsfläche."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&KMail als bevorzugtes E-Mail-Programm festlegen"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Wählen Sie diese Einstellung, wenn Sie ein anderes E-Mail-Programm "
+#~ "verwenden möchten."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Optionale Platzhalter: <ul> <li>%t: Empfängeradresse</li> <li>%s: "
+#~ "Betreff</li> <li>%c: Kopie (CC)</li> <li>%b: Blindkopie (BCC)</li> <li>"
+#~ "%B: Textvorlage</li> <li>%A: Dateianhang </li> <li>%u: Vollständige "
+#~ "mailto:-Adresse</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Klicken Sie auf diesen Knopf, um Ihr bevorzugtes E-Mail-Programm "
+#~ "auszuwählen. Bitte beachten Sie, dass es sich um eine ausführbare Datei "
+#~ "handeln muss.<br/>Sie können außerdem verschiedene Variablen verwenden, "
+#~ "die beim Start des E-Mail-Programms mit den übergebenen Werten ausgefüllt "
+#~ "werden:<ul> <li>%t: Empfängeradresse</li> <li>%s: Betreff</li> <li>%c: "
+#~ "Kopie (CC)</li> <li>%b: Blindkopie (BCC)</li> <li>%B: Textvorlage</li> "
+#~ "<li>%A: Dateianhang </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr ""
+#~ "Klicken Sie hier, um nach der ausführbaren Datei des E-Mail-Programms zu "
+#~ "suchen."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, wenn Sie möchten, dass das ausgewählte "
+#~ "E-Mail-Programm in einem Befehlsfenster (also einem Terminalprogramm wie "
+#~ "<em>Konsole</em>) ausgeführt wird."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "In &Terminal ausführen"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Ordner mit der folgenden Dateiverwaltung durchsehen:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Anderer: Klicken Sie auf Hinzufügen in diesem Dialog:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "K&onsole als Terminalprogramm verwenden"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Anderes &Terminalprogramm verwenden:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Drücken Sie diesen Knopf, um Ihr bevorzugtes Terminalprogramm "
+#~ "auszuwählen. Bitte beachten Sie, dass die ausgewählte Datei als "
+#~ "ausführbar gekennzeichnet sein muss, um akzeptiert zu werden.<br/"
+#~ ">Beachten Sie außerdem, dass manche Programme, die Terminalemulatoren "
+#~ "verwenden, nicht korrekt funktionieren, wenn Sie Befehlszeilenargumente "
+#~ "übergeben (wie z. B. konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr ""
+#~ "Klicken Sie hier, um nach der ausführbaren Datei des Terminalprogramms zu "
+#~ "suchen."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Noch 1 Sekunde:"
+#~ msgstr[1] "Noch %1 Sekunden:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Der neue Fenstermanager wird mit dem nächsten Plasma-Start verwendet."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Fenstermanager-Wechsel"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Ein neuer Fenstermanager ist nun aktiv.\n"
+#~ "Es ist ratsam, diese KDE-Sitzung neu zu starten, damit alle Anwendungen "
+#~ "sich an die Änderung anpassen können."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Fenstermanager ersetzt"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Der laufende Fenstermanager wird nun mit dem neu eingerichteten ersetzt."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Einrichtung der Fenstermanager-Änderung"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Änderungen an&wenden"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "Zur &vorherigen Einrichtung zurückkehren"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Der eingestellte Fenstermanager wird nun gestartet.\n"
+#~ "Bitte prüfen Sie, dass er ordnungsgemäß gestartet wurde und bestätigen "
+#~ "Sie dies.\n"
+#~ "Der Start wird ansonsten in 20 Sekunden automatisch rückgängig gemacht."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Der laufende Fenstermanager wurde zurückgesetzt auf die KDE-"
+#~ "Voreinstellung „KWin“."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Der neue Fenstermanager lässt sich nicht starten.\n"
+#~ "Der laufende Fenstermanager wurde zurückgesetzt auf die KDE-"
+#~ "Voreinstellung „KWin“."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Die Ausführung des Einrichtungsprogrammes ist fehlgeschlagen."
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "KDE-&Voreinstellung für den Fenstermanager verwenden (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Einen anderen &Fenstermanager verwenden:"
+
+#~ msgid "Configure"
+#~ msgstr "Einrichten"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Hinweis: Die meisten Fenstermanager haben eine eigene Einrichtung und "
+#~ "richten sich nicht nach KDE-Einstellungen."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Hier können Sie eine kurze Beschreibung der gerade ausgewählten "
+#~ "Komponente lesen. Um zu einer anderen Komponente zu wechseln, klicken Sie "
+#~ "auf einen Eintrag in der Liste auf der linken Seite. Um zu einem anderen "
+#~ "Komponentenprogramm zu gehen, wählen Sie unten eines aus."
+
+#~ msgid "Component Description"
+#~ msgstr "Beschreibung der Komponente"

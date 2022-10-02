@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Eemaldatavad seadmed</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2012-12-05</date>
+<releaseinfo
+>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Süsteemi seadistused</keyword>
+<keyword
+>automaatne ühendamine</keyword>
+<keyword
+>seade</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>See dialoog võimaldab seadistada eemaldatavate andmekandjate automaatset käitlemist. </para>
+
+<para
+>Selles dialoogis automaatse ühendamise võimaluste sisselülitamisel ei ole enam vajalik kasutada seadmete teadustamise apletti või failihalduri liikumispaneeli, et pääseda ligi äsja masinaga ühendatud seadmele. </para>
+
+<para
+>Dialoogi ülaosas leiab globaalsed seadistused, mida saab iga konkreetse seadme puhul tühistada nimekirjaga <guilabel
+>Seadme primaarsätted</guilabel
+>. Ühe kasutajaga arvuti puhul on soovitatav ära märkida kõik primaarsätete nimekirjas olevad märkekastid. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Eemaldatavate andmekandjate automaatse ühendamise lubamine</guilabel
+></term>
+<listitem
+><para
+>Kui see on märkimata, ei toimu üldse mingisugust automaatset ühendamist sõltumata sellest, kas sektsioonis <guilabel
+>Seadme primaarsätted</guilabel
+> on midagi valitud või mitte. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ainult nende eemaldatavate andmekandjate automaatne ühendamine, mis on varem ühendatud käsitsi</guilabel
+></term>
+<listitem
+><para
+>Kui see on märgitud, ühendab &kde; automaatselt ainult seadmed, mida ta mäletab. Seadet <quote
+>mäletatakse</quote
+>, kui seda on varem ühendatud: &eg; USB-meediamängija ühendamisest masinaga pelgalt laadimiseks veel ei piisa. Kui faile ei ole kasutatud, ei ühenda &kde; mängijat järgmisel masinaga ühendamisel automaatselt Kui faile on aga kasutatud, jätab &kde; seadme meelde ning järgmisel ühendamisel masinaga muudetakse selle failid automaatselt kättesaadavaks. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kõigi eemaldatavate andmekandjate ühendamine sisselogimisel</guilabel
+></term>
+<listitem
+><para
+>Kui töölauale sisselogimisel ajal on süsteemiga ühendatud mõni eemaldatav salvesti, muudab &kde; selle sisu automaatselt sinu süsteemi rakendustele kättesaadavaks. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eemaldatavate andmekandjate automaatne ühendamine seadme ühendamisel masinaga</guilabel
+></term>
+<listitem
+><para
+>Kui see on märgitud, muudab &kde; kõigi masinaga ühendatavate seadmete sisu automaatselt kättesaadavaks. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Seadme primaarsätted</guilabel
+></term>
+<listitem
+><para
+>Siin on kirjas kõik &kde;-le tuntud salvestid Kui märgitud on <guilabel
+>Automaatne ühendamine sisselogimisel</guilabel
+>, ühendatakse seade automaatselt ka siis, kui valik <guilabel
+>Kõigi eemaldatavate andmekandjate ühendamine sisselogimisel</guilabel
+> ei ole märgitud. Sama kehtib valiku <guilabel
+>Automaatne ühendamine seadme ühendamisel</guilabel
+> kohta.</para>
+<para
+>Kui valik <guilabel
+>Eemaldatavate andmekandjate automaatse ühendamise lubamine</guilabel
+> on märkimata, siis primaarsätted ei kehti ning ühtegi seadet ei ühendata automaatselt. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Unusta seade</guibutton
+></term>
+<listitem
+><para
+>Klõps sellele nupule paneb &kde; täielikult <quote
+>unustama</quote
+> valitud seadmete olemasolu. See on mõttekas ainult siis, kui märgitud on valik <guilabel
+>Ainult nende eemaldatavate andmekandjate automaatne ühendamine, mis on varem ühendatud käsitsi</guilabel
+>. Kui seade on unustatud ja &kde; on pandud automaatselt ühendama ainult tuntud seadmeid, siis seda seadet enam automaatselt ei ühendata. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

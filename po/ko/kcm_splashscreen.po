@@ -1,0 +1,104 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2018, 2019, 2020, 2021.
+# JungHee Lee <daemul72@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-05-28 02:27+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "없음"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "시작 화면을 표시하지 않음"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "현재 선택한 시작 화면을 삭제할 수 없음"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "이 모듈에서 시작 화면 테마를 선택할 수 있습니다."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "시작 화면 미리 보기를 표시하지 못했습니다."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "시작 화면 미리 보기"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "삭제"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "새 시작 화면 가져오기(&G)…"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "차후에 사용하려고 예약됨"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "현재 시작 화면 테마 이름"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Splash Screen"
+#~ msgstr "시작 화면"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#, fuzzy
+#~| msgid "&Get New Splash Screens..."
+#~ msgid "Get New Icons..."
+#~ msgstr "새 시작 화면 가져오기(&G)..."
+
+#~ msgid "Splash Screens"
+#~ msgstr "시작 화면"
+
+#~ msgid "Error"
+#~ msgstr "오류"
+
+#, fuzzy
+#~| msgid "This module lets you configure the splash screen theme."
+#~ msgid "Choose the splash screen theme"
+#~ msgstr "이 모듈에서 시작 화면 테마를 설정할 수 있습니다."
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "시작 화면 상세 설정"

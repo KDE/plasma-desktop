@@ -1,0 +1,455 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname-n '<application>К‑мрежохват</application>'>
+  <!ENTITY kappname-g '<application>К‑мрежохвата</application>'>
+  <!ENTITY kappname-d '<application>К‑мрежохвату</application>'>
+  <!ENTITY kappname-a '<application>К‑мрежохват</application>'>
+  <!ENTITY kappname-i '<application>К‑мрежохватом</application>'>
+  <!ENTITY kappname-l '<application>К‑мрежохвату</application>'>
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Serbian "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Приручник за <application
+>К‑мрежохват</application
+></title>
+
+<authorgroup>
+<author
+><personname
+><firstname
+>Орвил</firstname
+> <surname
+>Бенет</surname
+></personname
+> &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>Орвил Бенет</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10. 4. 2015.</date>
+<releaseinfo
+>Плазма 5.3</releaseinfo>
+
+<abstract>
+<para
+><application
+>К‑мрежохват</application
+> је чаробњак који олакшава интегрисање мрежних ресурса са радном површи КДЕ‑а. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>К‑мрежохват</keyword>
+<keyword
+>мрежне фасцикле</keyword>
+<keyword
+>чаробњак мрежних фасцикли</keyword>
+<keyword
+>КДЕ‑ов чаробњак мрежних фасцикли</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Увод</title>
+
+<para
+>Чаробњак <application
+>К‑мрежохват</application
+>, из миља зван чаробњаком мрежних фасцикли, омогућава лако додавање и интегрисање мрежних фасцикли у радну површ КДЕ‑а. Молимо да пријавите било какве проблеме или жеље за новим могућностима на КДЕ‑ов веб сајт за праћење грешака. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Коришћење <application
+>К‑мрежохвата</application
+></title>
+
+<para
+>Као што можете видети на доњем снимку екрана, чаробњак мрежних фасцикли тренутно омогућава додавање четири типа мрежних фасцикли: вебДАВ, ФТП, виндоуз мрежне јединице (Самба) и ССХ. За списак такође можете изабрати недавно остварену везу. <screenshot>
+<screeninfo
+>Ево снимка екрана <application
+>К‑мрежохвата</application
+>:</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+<caption>
+<para
+>Главни прозор чаробњака мрежних фасцикли.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Додавање мрежних фасцикли</title>
+
+<para
+>Мрежне фасцикле појављују се на специјалној локацији у <application
+>К‑освајачу</application
+> и <application
+>Делфину</application
+>, званој <emphasis
+>виртуелна фасцикла</emphasis
+>. Виртуелној фасцикли приступа се уношењем <userinput
+>remote:/</userinput
+> у траку локације или избором <guilabel
+>Мрежа</guilabel
+> са панела <guilabel
+>Места</guilabel
+>. Тиме ћете добити преглед свих раније додатих фасцикли, и моћи ћете чаробњаком да додате нове. <screenshot>
+<screeninfo
+>Ево снимка екрана <application
+>К‑мрежохвата</application
+>:</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+<caption>
+<para
+>Виртуелна фасцикла са чаробњаком мрежних фасцикли.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Чаробњак мрежне фасцикле је замишљен као врло лак за употребу. После отварања чаробњака, морате изабрати тип мрежне фасцикле којој бисте хтели да приступите. Кад пређете на следећи екран, треба само да попуните тражене податке. Крајњи корак је уношење вашег корисничког имена и пријавне лозинке за мрежно дељење којем желите да приступате. </para>
+<para
+>Доле је списак података потребних чаробњаку за стварање мрежних фасцикли. Ако за дату фасциклу нека опција није расположива, не мора се уносити; нпр. самба фасцикле не захтевају порт. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Име:</guilabel
+></term>
+<listitem>
+<para
+>Овде дајете име мрежној вези. Ограничено је само вашом маштом (и азбуком). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Корисник:</guilabel
+></term>
+<listitem>
+<para
+>Корисничко име под којим ће се успоставити веза. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Сервер:</guilabel
+></term>
+<listitem>
+<para
+>Адреса сервера који покушавате да додате. То може бити ИП адреса или име домена. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Порт:</guilabel
+></term>
+<listitem>
+<para
+>Број порта на који желите да се повежете. Подразумевани је обично довољан. <note
+> <para
+>Није расположиво за виндоуз (самба) фасцикле. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Фасцикла:</guilabel
+></term>
+<listitem>
+<para
+>Путања до фасцикле на коју желите да се повежете. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Кодирање:</guilabel
+></term>
+<listitem>
+<para
+>Преко ставки на овом списку бирате кодирање за ФТП и ССХ везе. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Направи иконицу за ову удаљену фасциклу</guilabel
+></term>
+<listitem>
+<para
+>Ако је ова кућица попуњена, биће створена иконица за приступ кроз виртуелну фасциклу <literal
+>remote:/</literal
+>. Ако није попуњена, веза ће бити могућа, али неће бити доступна из <literal
+>remote:/</literal
+>. <note
+> <para
+>Опција <guilabel
+>Недавне везе:</guilabel
+> допушта вам поновно повезивање на последњу мрежну тачку монтирања на коју сте се повезали користећи чаробњак, без обзира на то да ли је створена иконица за њу. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шифруј</guilabel
+></term>
+<listitem>
+<para
+>Ако је укључено, биће омогућена способност остваривања безбедне везе. <note
+> <para
+>Расположиво само за вебДАВ фасцикле.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Пролазак кроз <application
+>К‑мрежохват</application
+></title>
+
+
+<para
+>Следи брзи пролазак кроз чаробњак мрежних фасцикли. Не трепћите, иначе бисте га могли пропустити. </para>
+
+<para
+>Испод видите главни прозор чаробњака мрежних фасцикли. У њему се бира тип фасцикле за додавање или повезивање. У сврху проласка употребићемо ФТП, који садржи већину опција које ћете срести у чаробњаку. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимак екрана главног прозора <application
+>К‑мрежохвата</application
+>.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Бирамо, дакле, ФТП фасциклу. Доле видите пример података које треба уписати за додавање једног одређеног ФТП сервера. После попуњавања, притискамо <guibutton
+>Сачувај и повежи се</guibutton
+> и чекамо да се одради посао. Ако сервер тражи некакву оверу, бићете упитани за њу пре него што се повезивање допусти. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимак екрана о додавању ФТП фасцикле <application
+>К‑мрежохватом</application
+>.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Сад кад смо повезани, можемо се бацити у шетњу кроз новододато дељење. Уживајте! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимак екрана повезане ФТП фасцикле.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>За повратак на мрежне фасцикле, све што треба је да упишете <userinput
+>remote:/</userinput
+> у траку локације у <application
+>К‑освајачу</application
+> или <application
+>Делфину</application
+>, или изаберете <guilabel
+>Мрежа</guilabel
+> са панела <guilabel
+>Места</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимак екрана виртуелне фасцикле <literal
+>remote:/</literal
+> са додатом везом.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Снимак екрана.</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Са исте локације такође можете додавати нове фасцикле путем везе <guilabel
+>Додај мрежну фасциклу</guilabel
+>. Овим смо завршили пролазак (рекосмо да ће бити кратак). Све најбоље у вашим будућим авантурама кроз мрежне фасцикле! </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Заслуге и лиценца</title>
+
+<para
+><application
+>К‑мрежохват</application
+> </para>
+<para
+>Ауторска права за програм © 2004, <personname
+><firstname
+>Џорџ</firstname
+> <surname
+>Стајкос</surname
+></personname
+> &George.Staikos.mail; </para>
+
+<para
+>Ауторска права за документацију © 2005, <personname
+><firstname
+>Орвил</firstname
+> <surname
+>Бенет</surname
+></personname
+> &Orville.Bennett.mail; </para>
+
+<para
+>Превео Драган Пантелић <email
+>falcon-10@gmx.de</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

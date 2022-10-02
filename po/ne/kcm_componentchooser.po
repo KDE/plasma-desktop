@@ -1,0 +1,315 @@
+# translation of kcmcomponentchooser.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2007-08-19 16:24+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "एउटा फरक इमेल क्लाइन्ट प्रयोग गर्नुहोस्:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "रूचाइएका इमेल क्लाइन्ट चयन गर्नुहोस्:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "रूचाइएका इमेल क्लाइन्ट चयन गर्नुहोस्:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "रूचाइएका टर्मिनल अनुप्रयोग चयन गर्नुहोस्:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "रूचाइएका टर्मिनल अनुप्रयोग चयन गर्नुहोस्:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "रूचाइएका टर्मिनल अनुप्रयोग चयन गर्नुहोस्:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nabin Gautam, श्यामकृष्ण बल"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nabin@mpp.org.np,shyamkrishna_bal@yahoo.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "जोसेफ वेनइन्गर"
+
+#~ msgid "Unknown"
+#~ msgstr "अज्ञात"
+
+#~ msgid "Component Chooser"
+#~ msgstr "अवयव चयनकर्ता"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(सी), २००२ जोसेफ वेनइन्गर"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "%1 कार्यका लागि पूर्वनिर्धारितद्वारा प्रयोग गर्नुपर्ने अवयव तलको सूचीबाट रोज्नुहोस् ।"
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>तपाईँको रोजाइको पूर्वनिर्धारित अवयव परिवर्तन गर्नुभयो । के तपाईँ अहिले त्यो "
+#~ "परिवर्तन बचत गर्न चाहनुहुन्छ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "विवरण उपलव्ध छैन"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "यहाँ तपाईँले कार्यक्रम अवयव परिवर्तन गर्न सक्नुहुन्छ । अवयव कार्यक्रमहरू हुन् जसले टर्मिनल "
+#~ "यन्त्र, पाठ सम्पादक र इमेल क्लाइन्ट जस्ता आधारभूत कार्य ह्यान्डल गर्छन् । केडीई "
+#~ "अनुप्रयोगले कहिले काँहि विभिन्न कन्सोल यन्त्र आव्हान गर्न, पत्र पठाउँन वा केही पाठ "
+#~ "प्रदर्शन गर्न आवश्यक हुन्छ । निरन्तर रुपमा त्यस्तो गर्न, यि अनुप्रयोगले सधैँ समान अवयवहरू "
+#~ "बोलाउँछन् । तपाईँले यहाँ यि कुन कार्यक्रम अवयव  हुन् चयन गर्न सक्नुहुन्छ ।"
+
+#~ msgid "Default Component"
+#~ msgstr "पूर्वनिर्धारित अवयव"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>यो सूचीले कन्फिगरयोग्य अवयव प्रकारहरू देखाउँछ । तपाईँले कन्फिगर गर्न चाहनुभएको अवयव "
+#~ "कन्फिगर गर्नुहोस् ।</p>\n"
+#~ "<p>यो संवादमा तपाईँले पूर्वनिर्धरित केडीई अवयवहरू परिवर्तन गर्न सक्नुहुन्छ । अवयव "
+#~ "कार्यक्रमहरू हुन् जसले टर्मिनल यन्त्र, पाठ सम्पादक र इमेल क्लाइन्ट जस्तै आधारभूत कार्यहरू "
+#~ "ह्यान्डल गर्छन् । केडीई अनुप्रयोगले कहिले काँहि बिभिन्न कन्सोल यन्त्र आव्हान गर्न, पत्र "
+#~ "पठाउँन वा केही पाठ प्रदर्शन गर्न आवश्यक हुन्छ । निरन्तर रुपमा त्यस्तो गर्न, यि "
+#~ "अनुप्रयोगले सधैँ समान अवयवहरू बोलाउँछन् । तपाईँले यहाँ यी कुन कार्यक्रम अवयवहरू हुन् चयन "
+#~ "गर्न सक्नुहुन्छ ।</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b> र <b>https</b> यूआरएल खोल्नुहोस् </qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "यूआरएलको सामाग्रीहरूमा आधारित एउटा अनुप्रयोगमा"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "निम्न ब्राउजरहरूमा:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "निम्न ब्राउजरहरूमा:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "रूचाइएका वेब ब्राउजर अनुप्रयोग चयन गर्नुहोस्:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "केडीई डेस्कटपका लागि केडीई मेल मानक मेल कार्यक्रम हो ।"
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "इमेल क्लाइन्टले रुचाए अनुरुप के मेल प्रयोग गर्नुहोस्"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "यदि तपाईँ अन्य कुनै पत्र कार्यक्रम प्रयोग गर्न चाहनुहुन्छ भने यो विकल्प चयन गर्नुहोस् ।"
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: प्रापकको ठेगाना</li> <li>%s: विषय</li> <li>%c: बोधार्थ प्रतिलिपि "
+#~ "(CC)</li> <li>%b: गुप्त बोधार्थ प्रतिलिपि (BCC)</li> <li>%B: टेम्प्लेट मुख्य भाग "
+#~ "पाठ</li> <li>%A: संलग्र फाइल </li> </ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite email client. Please note that "
+#~| "the file you select has to have the executable attribute set in order to "
+#~| "be accepted.<br> You can also use several placeholders which will be "
+#~| "replaced with the actual values when the email client is called:<ul> <li>"
+#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~| "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "तपाईँको मन पर्ने इमेल क्लाइन्ट चयन गर्नका लागि यो बटन क्लिक गर्नुहोस् । कृपया त्यो याद "
+#~ "गर्नुहोस् तपाईँले चयन गर्नु भएको फाइल स्विकृत हुनका लागि कार्यान्वयन योग्य बिशेषता सेट "
+#~ "भएको हुनुपर्छ ।<br> तपाईँले भिन्न स्थान बहन कर्ता पनि प्रयोग गर्न सक्नुहुन्छ जुन इमेल "
+#~ "क्लाइन्टले बोलाएको बेलामा वास्तविक मानहरूमा बदलिने छन्:<ul> <li>%t: प्रापकको "
+#~ "ठेगाना</li> <li>%s: विषय</li> <li>%c: बोधर्थ प्रतिलिपि (CC)</li> <li>%b: गुप्त "
+#~ "बोधार्थ प्रतिलिपि (BCC)</li> <li>%B: टेम्प्लेट मुख्य भाग पाठ</li> <li>%A: संलग्र "
+#~ "फाइल </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "पत्र कार्यक्रम फाइलका लागि ब्राउज गर्न यहाँ क्लिक गर्नुहोस् ।"
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "यदि तपाईँ चयन गरिएका इमेल क्लाइन्ट टर्मिनलमा कार्यान्वयन गर्न चाहनुहुन्छ भने यो विकल्प "
+#~ "सक्रिय पार्नुहोस् (उदाहरणका लागि <em>कन्सोल</em>) ।"
+
+#~ msgid "&Run in terminal"
+#~ msgstr "टर्मिनलमा चलाउनुहोस्"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "टर्मिनल अनुप्रयोगक रुपमा कन्सोल प्रयोग गर्नुहोस्"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "एउटा फरक टर्मिनल कार्यक्रम प्रयोग गर्नुहोस्:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite terminal client. Please note "
+#~| "that the file you select has to have the executable attribute set in "
+#~| "order to be accepted.<br> Also note that some programs that utilize "
+#~| "Terminal Emulator will not work if you add command line arguments "
+#~| "(Example: konsole -ls)."
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "तपाईँलाई मनपर्ने टर्मिनल क्लाइन्ट चयन गर्न यो बटन क्लिक गर्नुहोस् । कृपया त्यो याद "
+#~ "गर्नुहोस् तपाईँले चयन गर्नु भएको फाइल स्विकृत हुनका लागि कार्यान्वयन योग्य बिशेषता सेट "
+#~ "भएको हुनु पर्छ ।<br> त्यो पनि याद गर्नुहोस् यदि तापईँले आदेश लाइन तर्कहरू थप्नु भएमा "
+#~ "टर्मिनल यन्त्र उपयोग गर्ने केही कार्यक्रमहरूले कार्य गर्ने छैनन् (उदाहरण: कन्सोल -एल एस) ।"
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "टर्मिनल कार्यक्रम ब्राउज गर्नका लागि यहाँ क्लिक गर्नुहोस् ।"
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "एउटा फरक टर्मिनल कार्यक्रम प्रयोग गर्नुहोस्:"
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "Use a different &window manager:"
+#~ msgstr "एउटा फरक टर्मिनल कार्यक्रम प्रयोग गर्नुहोस्:"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcm अवयव चयनकर्ता"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "तपाईँले यहाँ हालै चयन गरिएका अवयवको एउटा छोटो बर्णन पढ्न सक्नुहुन्छ । चयन गरिएका "
+#~ "अवयव परिवर्तन गर्न, सूचिको बायाँतिर क्लिक गर्नुहोस् । अवयव कार्यक्रम परिवर्तन गर्न, "
+#~ "कृपया यसलाई तल छनौट गर्नुहोस् । "
+
+#~ msgid "Component Description"
+#~ msgstr "अवयव वर्णन"

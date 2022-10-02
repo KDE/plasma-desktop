@@ -1,0 +1,912 @@
+# Indonesian translations for kcminput package.
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcminput package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"PO-Revision-Date: 2022-09-27 15:39+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://matrix.to/#/#i18n_kde_id:matrix.org\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andhika Padmawan,Wantoyo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+"Pengquerian peranti input gagal. Silakan membuka-ulang modul pengaturan ini."
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:86
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr "Error kritis saat membaca asas info-info peranti %1."
+
+#: kcm/libinput/libinput_config.cpp:36
+#, kde-format
+msgid "Pointer device KCM"
+msgstr "Perangkat penunjuk KCM"
+
+#: kcm/libinput/libinput_config.cpp:38
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr "Modul System Settings untuk mengelola mouse dan trackball."
+
+#: kcm/libinput/libinput_config.cpp:40
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr "Hak cipta 2018 Roman Gilg"
+
+#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
+#, kde-format
+msgid "Roman Gilg"
+msgstr "Roman Gilg"
+
+#: kcm/libinput/libinput_config.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Pengembang"
+
+#: kcm/libinput/libinput_config.cpp:110
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+"Error ketika memuat nilai. Lihat log untuk informasi selebihnya. Silakan "
+"restart modul konfigurasi ini."
+
+#: kcm/libinput/libinput_config.cpp:115
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr "Tidak ada peranti penunjuk yang ditemukan. Koneksikan sekarang."
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+"Tidak dapat menyimpan semua perubahan. Lihat log untuk informasi selebihnya. "
+"Silakan restart modul konfigurasi ini dan coba lagi."
+
+#: kcm/libinput/libinput_config.cpp:146
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+"Error ketika memuat nilai baku. Gagal mengeset beberapa opsi ke nilai "
+"bakunya."
+
+#: kcm/libinput/libinput_config.cpp:168
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+"Error ketika menambahkan peranti yang baru terkoneksi. Silakan koneksikan-"
+"ulang dan jalankan-ulang modul konfigurasi ini."
+
+#: kcm/libinput/libinput_config.cpp:192
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr "Perangkat penunjuk terdiskoneksi. Tutuplah dialog pengaturan ini."
+
+#: kcm/libinput/libinput_config.cpp:194
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr ""
+"Perangkat penunjuk terdiskoneksi. Tidak ada peranti lain yang ditemukan."
+
+#: kcm/libinput/main.qml:79
+#, kde-format
+msgid "Device:"
+msgstr "Peranti:"
+
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#, kde-format
+msgid "General:"
+msgstr "Umum:"
+
+#: kcm/libinput/main.qml:105
+#, kde-format
+msgid "Device enabled"
+msgstr "Peranti difungsikan"
+
+#: kcm/libinput/main.qml:124
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Setujui input melalui peranti ini."
+
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#, kde-format
+msgid "Left handed mode"
+msgstr "Mode tangan kiri"
+
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Tukar tombol kiri dan kanan."
+
+#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr "Tekan tombol kiri dan kanan untuk klik-tengah."
+
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Klik tombol kiri dan kanan secara bersamaan mengirimkan klik tombol tengah."
+
+#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#, kde-format
+msgid "Pointer speed:"
+msgstr "Kecepatan penunjuk:"
+
+#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#, kde-format
+msgid "Acceleration profile:"
+msgstr "Profil akselerasi:"
+
+#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#, kde-format
+msgid "Flat"
+msgstr "Rata"
+
+#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr "Pindahan kursor jaraknya sama dengan perpindahan mouse."
+
+#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#, kde-format
+msgid "Adaptive"
+msgstr "Adaptif"
+
+#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+"Perjalanan kursor jaraknya bergantung pada kecepatan perpindahan mouse."
+
+#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Scrolling:"
+msgstr "Pengguliran:"
+
+#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Kebalikan arah gulir"
+
+#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Touchscreen seperti bergulir."
+
+#: kcm/libinput/main.qml:295
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Kecepatan pengguliran:"
+
+#: kcm/libinput/main.qml:343
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Lambat"
+
+#: kcm/libinput/main.qml:349
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Cepat"
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr ""
+
+#: kcm/libinput/main.qml:395
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr ""
+
+#: kcm/libinput/main.qml:427
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+
+#: kcm/libinput/main.qml:428
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr ""
+
+#: kcm/libinput/main.qml:432
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: kcm/libinput/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Press Connect Button"
+msgctxt "@action:button"
+msgid "Press a mouse button "
+msgstr "Tekan Tombol Sambung"
+
+#: kcm/libinput/main.qml:450
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr ""
+
+#: kcm/libinput/main.qml:479
+#, kde-format
+msgctxt "@action:button"
+msgid "Go back"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<h1>Mouse</h1> Modul ini memungkinkan kamu untuk memilih beragam opsi bagi "
+"cara peranti penunjuk kamu bekerja. Perangkat penunjuk kamu dapat berupa "
+"mouse, trackball, atau beberapa peranti keras lainnya yang mempunyai fungsi "
+"serupa."
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "&Umum"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"Jika kamu kidal tangan kiri, mungkin kamu bisa menukar fungsi tombol kiri "
+"dan kanan dari peranti penunjukmu dengan memilih opsi 'tangan kiri'. Jika "
+"peranti penunjukmu memiliki lebih dari dua tombol, hanya tombol yang "
+"berfungsi sebagai tombol kiri dan kanan yang terpengaruh. Misalnya, jika "
+"kamu memiliki mouse tiga tombol, maka tombol tengah tidak terpengaruh."
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "Urutan Tombol"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "Tangan kana&n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "Tangan ki&ri"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr ""
+"Ubah arah pengguliran untuk roda mouse atau tombol mouse keempat dan kelima."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "Kebalikan arah gu&lir"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "Tingkat Lanjut"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Akselerasi penunjuk:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "Ambang penunjuk:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "Interval klik ganda:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "Waktu mulai tarik:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "Jarak mulai tarik:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "Menggulir roda mouse dengan:"
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<p>Opsi ini memungkinkan kamu untuk mengubah hubungan antara jarak dari "
+"pergerakan penunjuk mouse di layar dan pergerakan relatif dari peranti fisik "
+"itu sendiri (yang dapat berupa mouse, trackball, atau beberapa peranti "
+"penunjuk lainnya.)</p><p> Nilai yang tinggi untuk akselerasi akan membawa "
+"pada pergerakan yang jauh dari penunjuk mouse di layar bahkan jika kamu "
+"hanya membuat pergerakan kecil dengan peranti fisik. Memilih nilai yang "
+"sangat tinggi dapat berakibat penunjuk mouse kamu melayang melewati layar, "
+"membuatnya sulit untuk dikendalikan.</p>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr " x"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<p>Ambang adalah jarak terkecil yang penunjuk mouse harus pindah di layar "
+"sebelum akselerasi berpengaruh. Jika pergerakan lebih kecil dari ambang, "
+"penunjuk mouse bergerak seperti akselerasi diset ke 1X;</p><p> sehingga, "
+"ketika kamu membuat pergerakan kecil dengan peranti fisik, tidak ada "
+"akselerasi sama sekali, memberikan kamu kendali yang lebih besar terhadap "
+"penunjuk mouse. Dengan pergerakan yang lebih besar dari peranti fisik, kamu "
+"bisa memindahkan penunjuk mouse secara cepat ke berbagai area yang berbeda "
+"di layar.</p>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"Interval klik ganda adalah waktu maksimal (dalam milidetik) di antara dua "
+"klik ganda yang menjadikan mereka klik ganda. Jika klik yang kedua terjadi "
+"lebih lambat daripada interval waktu ini setelah klik pertama, mereka "
+"dianggap dua klik yang terpisah."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " mdet"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"Jika kamu klik dengan mouse (misalnya di penyunting multi baris) dan mulai "
+"memindahkan mouse di dalam waktu mulai tarik, operasi penarikan akan "
+"dijalankan."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"Jika kamu klik dengan mouse dan mulai untuk memindahkan mouse sekurangnya "
+"jarak mulai tarik, operasi penarikan akan dijalankan."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"Jika kamu menggunakan roda mouse, nilai ini menentukan jumlah baris untuk "
+"menggulir untuk tiap pergerakan roda. Perlu dicatat bahwa jika nomor ini "
+"melampaui jumlah baris terlihat, nomor akan diabaikan dan pergerakan roda "
+"akan ditangani sebagai pergerakan satu halaman ke atas/bawah."
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, kde-format
+msgid "Keyboard Navigation"
+msgstr "Navigasi Keyboard"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "&Pindah penunjuk dengan keyboard (menggunakan num pad)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "&Tundaan akselerasi:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "Int&erval pengulangan:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "Wak&tu akselerasi:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "Kecepatan ma&ksimum:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " pixel/det"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "&Profil akselerasi"
+
+#: kcm/xlib/xlib_config.cpp:79
+#, kde-format
+msgid "Mouse"
+msgstr "Mouse"
+
+#: kcm/xlib/xlib_config.cpp:83
+#, kde-format
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr "(c) 1997 - 2018 Pengembang mouse "
+
+#: kcm/xlib/xlib_config.cpp:84
+#, kde-format
+msgid "Patrick Dowler"
+msgstr "Patrick Dowler"
+
+#: kcm/xlib/xlib_config.cpp:85
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr "Dirk A. Mueller"
+
+#: kcm/xlib/xlib_config.cpp:86
+#, kde-format
+msgid "David Faure"
+msgstr "David Faure"
+
+#: kcm/xlib/xlib_config.cpp:87
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr "Bernd Gehrmann"
+
+#: kcm/xlib/xlib_config.cpp:88
+#, kde-format
+msgid "Rik Hemsley"
+msgstr "Rik Hemsley"
+
+#: kcm/xlib/xlib_config.cpp:89
+#, kde-format
+msgid "Brad Hughes"
+msgstr "Brad Hughes"
+
+#: kcm/xlib/xlib_config.cpp:90
+#, kde-format
+msgid "Brad Hards"
+msgstr "Brad Hards"
+
+#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#, kde-format
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] " pixel"
+msgstr[1] " pixel"
+
+#: kcm/xlib/xlib_config.cpp:293
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] " baris"
+msgstr[1] " baris"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgid "Acceleration &time:"
+#~ msgid "Acceleration:"
+#~ msgstr "Wak&tu akselerasi:"
+
+#~ msgid "Acceleration Profile:"
+#~ msgstr "Profil Akselerasi:"
+
+#~ msgid "Icons"
+#~ msgstr "Ikon"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Perilaku baku di KDE adalah memilih dan mengaktifkan ikon dengan klik "
+#~ "tunggal tombol kiri di perangkat penunjuk anda. Perilaku ini konsisten "
+#~ "dengan apa yang anda harapkan ketika klik pada tautan di kebanyakan "
+#~ "penelusur web. Jika anda memilih untuk memilih dengan klik tunggal, dan "
+#~ "mengaktifkan dengan klik ganda, centang opsi ini."
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Kl&ik ganda untuk membuka file dan folder (pilih ikon saat klik pertama)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktifkan dan buka sebuah file atau folder dengan klik tunggal."
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Klik tunggal untuk membuka file dan folder"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Pilih tema kursor yang ingin anda gunakan:"
+
+#~ msgid "Name"
+#~ msgstr "Nama"
+
+#~ msgid "Description"
+#~ msgstr "Deskripsi"
+
+#~ msgid "You have to restart KDE for these changes to take effect."
+#~ msgstr ""
+#~ "Anda harus menjalankan ulang KDE sebelum perubahan ini mempunyai efek"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Pengaturan Kursor Berubah"
+
+#~ msgid "Small black"
+#~ msgstr "Hitam kecil"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Kursor hitam kecil"
+
+#~ msgid "Large black"
+#~ msgstr "Hitam besar"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Kursor hitam besar"
+
+#~ msgid "Small white"
+#~ msgstr "Putih kecil"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Kursor putih kecil"
+
+#~ msgid "Large white"
+#~ msgstr "Putih besar"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Kursor putih besar"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Ubah bentuk penun&juk di atas ikon"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Se&cara otomatis memilih ikon"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Jeda"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " md"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Jika anda mencentang opsi ini, menahan penunjuk tetikus di atas ikon pada "
+#~ "layar akan secara otomatis memilih ikon tersebut. Hal ini mungkin berguna "
+#~ "jika klik tunggal mengaktifkan ikon, dan anda hanya ingin memilih ikon "
+#~ "tanpa mengaktifkannya."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Jika anda telah mencentang opsi untuk secara otomatis memilih ikon, "
+#~ "penggeser ini memungkinkan anda untuk memilih berapa lama penunjuk "
+#~ "tetikus harus ditahan di atas ikon sebelum terpilih."
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Tipe tetikus: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Kanal RF 1 telah diatur. Silakan tekan tombol Sambung pada tetikus untuk "
+#~ "membangun ulang tautan"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Kanan RF 2 telah diatur. Silakan tekan tombol Sambung pada tetikus untuk "
+#~ "membangun ulang tautan."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "tak ada"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "tetikus tak diketahui"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Nama Nirkabel"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Resolusi Sensor"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 hitungan per inci"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 hitungan per inci"
+
+#~ msgid "Battery Level"
+#~ msgstr "Level Baterai"
+
+#~ msgid "RF Channel"
+#~ msgstr "Kanal RF"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanal 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanal 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Jika anda memiliki Tetikus Logitech tersambung, dan libusb ditemukan saat "
+#~ "waktu kompilasi, tapi tidak mungkin untuk mengakses tetikus ini. Hal ini "
+#~ "mungkin disebabkan oleh masalah hak akses - anda harus berkonsultasi "
+#~ "dengan manual untuk cara memperbaiki ini."
+
+#~ msgid "Cursor Theme"
+#~ msgstr "Tema Kursor"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox size"
+#~| msgid "resolution dependent"
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "ketergantungan resolusi"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Tarik atau Ketik URL Tema"
+
+#~ msgid "Unable to find the cursor theme archive %1."
+#~ msgstr "Tak dapat menemukan arsip tema kursor %1."
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Tak dapat mengunduh arsip tema kursor; silakan cek apakah alamat %1 benar."
+
+#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
+#~ msgstr "Berkas %1 tidak tampak seperti arsip tema kursor yang valid."
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Anda tak dapat menghapus tema yang saat ini anda gunakan.<br />Anda "
+#~ "harus mengganti ke tema lainnya dahulu.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Apakah anda yakin ingin menghapus tema kursor <i>%1</i>?<br />Ini "
+#~ "akan menghapus semua berkas yang diinstal oleh tema ini.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Konfirmasi"
+
+#~ msgid ""
+#~ "A theme named %1 already exists in your icon theme folder. Do you want "
+#~ "replace it with this one?"
+#~ msgstr ""
+#~ "Sebuah tema bernama %1 telah ada di folder tema ikon anda. Apakah anda "
+#~ "ingin menggantinya dengan yang ini?"
+
+#~ msgid "Overwrite Theme?"
+#~ msgstr "Timpa Tema?"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Pilih tema kursor yang ingin anda gunakan (pratilik di atas untuk tes "
+#~ "kursor):"
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Dapatkan skema warna baru dari Internet"
+
+#~ msgid "Get New Theme..."
+#~ msgstr "Dapatkan Tema Baru..."
+
+#~ msgid "Install From File..."
+#~ msgstr "Instal Dari Berkas..."
+
+#~ msgid "Remove Theme"
+#~ msgstr "Hapus Tema"
+
+#~ msgctxt "@label:listbox cursor size"
+#~ msgid "Size:"
+#~ msgstr "Ukuran:"
+
+#~ msgctxt ""
+#~ "@info The argument is the list of available sizes (in pixel). Example: "
+#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#~ msgid "(Available sizes: %1)"
+#~ msgstr "(Ukuran tersedia: %1)"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Klasik"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Tema kursor standar di KDE 2 dan 3"
+
+#~ msgid "No description available"
+#~ msgstr "Tak ada deskripsi yang tersedia"
+
+#~ msgid "Short"
+#~ msgstr "Pendek"
+
+#~ msgid "Long"
+#~ msgstr "Panjang"

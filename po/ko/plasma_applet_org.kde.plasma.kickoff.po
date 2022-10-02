@@ -1,0 +1,445 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2021, 2022.
+# JungHee Lee <daemul72@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-04-16 02:14+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "일반"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "책갈피에서 삭제"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "책갈피에 추가"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "모든 활동에"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "현재 활동에만"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "책갈피에 표시"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "아이콘:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "선택..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "일반:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "항상 가나다순으로 프로그램 정렬"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "사용할 검색 플러그인 설정…"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "책갈피 표시:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "격자로"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "목록으로"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "다른 프로그램 표시:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "격자로"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "목록으로"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "다음 단추 표시:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "전원"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "세션"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "전원과 세션"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr "동작 단추 캡션 표시"
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "프로그램"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "위치"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "사용자 설정 열기"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "열린 상태로 유지"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "프로그램 편집…"
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "%1줄, %2칸 크기 격자"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "떠나기"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "더 보기"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "컴퓨터"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "과거 기록"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "자주 사용함"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "아이콘 초기화"
+
+#~ msgid "Search…"
+#~ msgstr "검색…"
+
+#~ msgid "Primary actions:"
+#~ msgstr "기본 동작:"
+
+#~ msgid "Power actions"
+#~ msgstr "전원 동작"
+
+#~ msgid "Session actions"
+#~ msgstr "세션 동작"
+
+#~ msgid "Leave…"
+#~ msgstr "떠나기…"
+
+#~ msgid "Power…"
+#~ msgstr "전원…"
+
+#~ msgid "More…"
+#~ msgstr "더 보기…"
+
+#~ msgid "Updating applications…"
+#~ msgstr "프로그램 업데이트 중…"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "이름표에 두 줄 허용"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "항목 %1개가 있는 목록"
+
+#~ msgid "%1 submenu"
+#~ msgstr "%1 하위 메뉴"
+
+#~ msgid "Search..."
+#~ msgstr "찾기..."
+
+#~ msgid "Leave..."
+#~ msgstr "떠나기..."
+
+#~ msgid "Power..."
+#~ msgstr "전원..."
+
+#~ msgid "More..."
+#~ msgstr "더 보기..."
+
+#~ msgid "Applications updated."
+#~ msgstr "프로그램 업데이트됨."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "지나다닐 때 탭 전환"
+
+#~ msgid "All Applications"
+#~ msgstr "모든 프로그램"
+
+#~ msgid "Favorites"
+#~ msgstr "책갈피"
+
+#~ msgid "Often Used"
+#~ msgstr "자주 사용됨"
+
+#~ msgid "Active Tabs"
+#~ msgstr "활성 탭"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "비활성 탭"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "상자에서 상자로 탭을 드래그해서 표시 및 숨김 상태를 변경하거나, 표시되는 "
+#~ "탭의 순서를 조정하려면 드래그하십시오."
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "책갈피, 파일, 이메일에서도 찾기"
+
+#~ msgid "Appearance"
+#~ msgstr "모양"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "메뉴 단추"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "표시되는 탭"
+
+#~ msgctxt "Type is a verb here, not a noun"
+#~ msgid "Type to search..."
+#~ msgstr "입력하여 찾기..."
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "즐겨찾기"
+
+#~ msgid "Log out"
+#~ msgstr "로그아웃"
+
+#~ msgid "Lock"
+#~ msgstr "잠금"
+
+#~ msgid "Lock screen"
+#~ msgstr "화면 잠그기"
+
+#~ msgid "Switch user"
+#~ msgstr "사용자 전환"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "다른 사용자로 새 세션 시작하기"
+
+#~ msgid "Shut down"
+#~ msgstr "끄기"
+
+#~ msgid "Turn off computer"
+#~ msgstr "컴퓨터를 끕니다"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "다시 시작"
+
+#~ msgid "Restart computer"
+#~ msgstr "컴퓨터를 다시 시작합니다"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "다음 로그인을 위하여 현재 세션을 저장합니다"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "대기 모드"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "로그아웃하지 않고 일시 정지"
+
+#~ msgid "Hibernate"
+#~ msgstr "최대 절전 모드"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "디스크 절전"
+
+#~ msgid "Suspend"
+#~ msgstr "대기 모드"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "RAM 절전"
+
+#~ msgid "System"
+#~ msgstr "시스템"
+
+#~ msgid "Home Folder"
+#~ msgstr "홈 폴더"
+
+#~ msgid "Network Folders"
+#~ msgstr "네트워크 폴더"
+
+#~ msgid "Documents"
+#~ msgstr "문서"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "최근 사용된 문서"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "최근 사용된 프로그램"
+
+#~ msgid "Run Command..."
+#~ msgstr "명령 실행..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "명령 실행 및 질의 실행"
+
+#~ msgid "Removable Storage"
+#~ msgstr "이동식 저장소"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "'최근 설치됨' 보이기"
+
+#~ msgid "Uninstall"
+#~ msgstr "삭제"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "가나다 역순으로 정렬하기"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "최근 프로그램 비우기"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "최근 문서 비우기"
+
+#~ msgid "Sleep"
+#~ msgstr "대기 모드"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "KDE Plasma"
+
+#~ msgid "%1 on %2"
+#~ msgstr "%2의 %1"
+
+#~ msgid "Searching %1..."
+#~ msgstr "%1 검색 중..."

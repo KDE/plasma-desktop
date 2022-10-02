@@ -1,0 +1,265 @@
+# Vietnamese translation for kcmsmserver.
+# Copyright © 2006 Free Software Foundation, Inc.
+#
+# Nguyễn Hưng Vũ <Vu.Hung@techviet.com>, 2002.
+# Phan Vĩnh Thịnh <teppi82@gmail.com>, 2006.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-04-08 01:02+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Trình quản lí phiên</h1> Bạn có thể cấu hình trình quản lí phiên tại "
+"đây. Nó bao gốm các lựa chọn như việc thoát phiên (đăng xuất) có cần được "
+"xác nhận hay không, phiên có cần được khôi phục lại khi đăng nhập hay không, "
+"và theo mặc định máy tính có tự động tắt sau khi thoát phiên hay không."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Yêu cầu khởi động lại vào phần cài đặt phần sụn thất bại: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Lần tiếp theo máy tính khởi động lại, nó sẽ đi đến màn hình cài đặt UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Lần tiếp theo máy tính khởi động lại, nó sẽ đi đến màn hình cài đặt phần sụn."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Khởi động lại ngay"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Chung:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Xác nhận khi đăng xuất"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Đề xuất các lựa chọn tắt máy"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Lựa chọn thoát mặc định:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Kết thúc phiên hiện tại"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Khởi động lại máy tính"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Tắt máy tính"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Khi đăng nhập:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Khôi phục phiên gần nhất"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Khôi phục phiên đã lưu thủ công gần nhất"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Bắt đầu một phiên mới"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Không khôi phục những ứng dụng này:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Tại đây bạn có thể nhập một danh sách phân cách bởi dấu hai chấm hoặc dấu "
+"phẩy của những ứng dụng sẽ không được nhớ vào các phiên, và do đó sẽ không "
+"được khởi động khi khôi phục phiên. Ví dụ 'xterm:konsole' hoặc 'xterm,"
+"konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Đi vào màn hình cài đặt phần sụn ở lần khởi động lại tiếp theo"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Xác nhận khi đăng xuất"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Đề xuất các lựa chọn tắt máy"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Lựa chọn thoát mặc định"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Khi đăng nhập"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Những ứng dụng sẽ bị loại trừ khỏi phiên"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nguyễn Hùng Phú"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "phu.nguyen@kdemail.net"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Phiên bàn làm việc"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Đăng nhập và đăng xuất phiên bàn làm việc"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Bản quyền © 2000–2020 đội ngũ \"Phiên bàn làm việc\""
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Khôi phục phiên đã lưu lần trước"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Dùng tuỳ chọn này nếu bạn muốn trình quản lí phiên chạy hiển thị hộp "
+#~ "thoại hỏi lại trước khi thoát ra."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "&Xác nhận khi thoát"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Đề n&ghị tuỳ chọn tắt máy"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Ở đây bạn có thể chọn những gì sẽ xảy ra theo mặc định khi thoát ra. Điều "
+#~ "này chỉ có ý nghĩa nếu bạn đăng nhập qua KDM."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "Tuỳ chọn tắt máy mặc định"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Phục hồi phiên chạy trước:</b> Sẽ ghi nhớ mọi ứng dụng đang chạy "
+#~ "khi thoát ra và phục hồi chúng trong lần khởi động tiếp theo.</li>\n"
+#~ "<li><b>Phục hồi phiên chạy tự ghi: </b> Cho phép ghi nhớ các phiên chạy "
+#~ "qua \"Ghi nhớ phiên chạy\" trong thực đơn KDE. Có nghĩa là những ứng dụng "
+#~ "đã chạy sẽ xuất hiện trong lần khởi động tiếp theo.</li>\n"
+#~ "<li><b>Chạy phiên chạy mới:</b> Không ghi nhớ gì. Sẽ khởi động lại với "
+#~ "một màn hình rỗng.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Khi đăng nhập"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Những ứng dụng sẽ loại &bỏ khỏi phiên chạy:"

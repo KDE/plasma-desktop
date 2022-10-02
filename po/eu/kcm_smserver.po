@@ -1,0 +1,288 @@
+# Translation for kcmsmserver.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2014, Free Software Foundation, Inc.
+# Copyright (C) 2015-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002, 2006.
+# Ion Gaztañaga <ion_g_m@hotmail.com>, 2004.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-07-07 13:36+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Saio kudeatzailea</h1>Saio kudeatzailea hemen konfigura dezakezu. "
+"Aukeren tartean hauxek aurkituko dituzu: saiotik irtetea baieztatu behar "
+"duzun edo ez, saioa berezarri nahi duzun sartzen zaren hurrengo aldian edo "
+"konputagailua automatikoki itzaliko den saiotik ateratzean."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Huts egin du firmware ezarpenera berrabiatzeko eskaerak: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Ordenagailua berrabiatzen den hurrengo aldian, UEFI ezarpen pantailan "
+"sartuko da."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Ordenagailua berrabiatzen den hurrengo aldian, firmware ezarpen pantailan "
+"sartuko da."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Berrabiarazi orain"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Orokorra:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Berretsi saio-ixtea"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Eskaini itzaltzeko aukerak"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Irteteko aukera lehenetsia:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Amaitu uneko saioa"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Berrabiarazi ordenagailua"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Itzali ordenagailua"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Saio-hastean:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Leheneratu azken saioa"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Leheneratu eskuz gordetako azken saioa"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Hasi saio huts batekin"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Ez lehengoratu aplikazio hauek:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Hemen, saioetan gordeko ez diren eta, beraz, saio bat leheneratzean "
+"abiaraziko ez diren aplikazio zerrenda bat (koma edo bi puntuen bidez "
+"bereizia) sar dezakezu. Adibidez, 'xterm:xconsole' edo 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Hurrengo berrabiadan sartu firmwarea ezartzeko pantailan"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Berretsi saio-ixtea"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Eskaini itzaltzeko aukerak"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Irteteko aukera lehenetsia"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Saioa-hastean"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Saioetatik baztertu beharreko aplikazioak"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xalba@euskalnet.net"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Mahaigaineko saioa"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Mahaigaineko saioa hastea eta ixtea"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Copyright © 2000–2020 Mahaigaineko-saio taldea"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Leheneratu gordetako aurreko saioa"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "UEFI ezarpena"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Sartu UEFI ezarpenera hurrengo berrabioan"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Hautatu aukera hau, saio-kudeatzaileak saiotik irtetea berresteko "
+#~ "elkarrizketa-koadro bat bistaratzea nahi baduzu."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "&Berretsi saioa amaitzea"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "&Eskaini itzaltzeko aukerak"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Hemen, saioa amaitutakoan zer gertatuko den konfigura dezakezu. Saioa "
+#~ "KDMrekin hasi baduzu bakarrik du zentzua honek."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Irteteko aukera lehenetsiak"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Leheneratu aurreko saioa.</b> Exekutatzen diren aplikazio guztiak "
+#~ "gordetzen ditu, eta leheneratu egiten ditu abiarazten diren hurrengo "
+#~ "aldian</li>\n"
+#~ "<li><b>Eskuz leheneratu gordetako saioa. </b> Aukera ematen du edozein "
+#~ "unetan saioa K-Menu-ko \"Gorde saioa\" aukeraren bidez gordetzeko. Horrek "
+#~ "esan nahi du unean exekutatzen ari diren aplikazioak berriro agertuko "
+#~ "direla abiarazten diren hurrengo aldian.</li>\n"
+#~ "<li><b>Hasi saio huts batekin.</b> Ez du ezer gordetzen. Mahaigain hutsa "
+#~ "izango du abiarazten den hurrengo aldian.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Saioa hastean"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Saioetatik &baztertuko diren aplikazioak:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Firmware ezarpena"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Ordenagailua berrabiatzen den hurrengo aldian, sartu firmware ezarpen "
+#~ "pantailan (adib. UEFI edo BIOS ezarpena)"

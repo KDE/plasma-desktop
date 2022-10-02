@@ -1,0 +1,269 @@
+# Copyright (C) 2021 Free Software Foundation, Inc.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmserver 1.0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-04-02 21:41+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.03.80\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>அமர்வு மேலாளி</h1> இங்கு நீங்கள் அமர்வு மேலாளரை அமைக்கலாம். இதில் அமர்விலிருந்து "
+"வெளியேறுமுன் உறுதிப்படுத்தவேண்டுமா, மற்றும் அடுத்த முறை அமர்வைத் தொடங்கும் போது நடப்பு "
+"அமர்வை மீளத்தர வேண்டுமா என்பவற்றை அமைக்கலாம்."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "சாதனநிரல் அமைப்புகளுக்குள் நுழைவதற்கான மீள்துவக்கம் தோல்வியடைந்தது: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr "அடுத்த முறை கணினி மீள்துவக்கப்படும்போது, UEFI அமைப்புகளுக்குள் நுழையும்."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"அடுத்த முறை கணினி மீள்துவக்கப்படும்போது, சாதனநிரல் (firmware) அமைப்புகளுக்குள் நுழையும்."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "இப்போது மீள்துவக்கு"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "பொது:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "வெளியேறும்போது உறுதி செய்"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "கணினி நிறுத்த விருப்பங்களை அளி"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "இயல்பிருப்பு வெளியேற்ற முறை:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "தற்போதைய அமர்வை முடிப்பது"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "கணினியை மீள்துவக்குவது"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "கணினியை நிறுத்துவது"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "நுழையும்போது:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "கடைசியான அமர்வை மீட்டெடு"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "கைமுறையாக சேமிக்கப்பட்ட கடைசி அமர்வை மீட்டெடு"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "காலியான அமர்வுடன் துவக்கு"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "இந்த செயலிகளை மீட்டெடுக்காதே:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"அமர்வில் சேமிக்கப்படக்கூடாத (அதாவது அமர்வை மீட்டெடுக்கும்போது துவக்கக்கூடாத) செயலிகளை, "
+"காற்புள்ளி அல்லது முக்கால்புள்ளி கொண்டு பிரிக்கப்பட்ட பட்டியலாக இங்கு நீங்கள் உள்ளிடலாம். "
+"எடுத்துக்காட்டாக, 'xterm:konsole' அல்லது 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "அடுத்த மீள்துவக்கத்தின் போது சாதனநிரல் (firmware) அமைப்புகளில் நுழை"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "வெளியேறும்போது உறுதி செய்"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "கணினி நிறுத்த விருப்பங்களை அளி"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "இயல்பிருப்பு வெளியேற்ற முறை"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "நுழையும்போது"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "அமர்வில் உட்படக்கூடாத செயலிகள்"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "கோ. கிஷோர்"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Kde-l10n-ta@kde.org"
+
+#~ msgid "Desktop Session"
+#~ msgstr "பணிமேடை அமர்வு"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "பணிமேடை அமர்வு நுழைவு மற்றும் வெளியேற்றம்"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "பதிப்புரிமை © 2000–2020 பணிமேடை அமர்வுக்குழு"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "ஆஸ்வால்டு புட்டென்ஹெகென்"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "கார்ல் ஷுவான்"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "சேமிக்கப்பட்ட முந்தைய அமர்வை மீட்டெடு"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "அமர்வு மேலாளர் உறுதிப்படுத்தும் உரையாடலைக் காட்ட விரும்பின் இதனைத் தெரிவு செய்க."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "வெளிச்செல்லுதலை உறுதிப்படுத்து"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "சலுகை பணிநிறுத்தம் விருப்ப தேர்வுகள்"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "KDM பயன்படுத்தினால் இங்கு வெளிச்சென்றவுடன் கொடாநிலை செயல் என்னவாக இருக்க வேண்டும் "
+#~ "என்பதை வடிவமைக்கலாம்."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "முன்னிருப்பு பணிநிறுத்தம் விருப்ப தேர்வுகள்"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>முந்தய அமர்வை திருப்பி அமை:</b>உரை ஆரம்பிக்கும் போது பயண்பாடு அனைத்தையும் "
+#~ "சேமி</li>\n"
+#~ "<li><b>தன்னியக்க அமர்வை திருப்பி அமை: </b> Allows the session to be saved at "
+#~ "any time via \"Save Session\" in the K-Menu. This means the currently "
+#~ "started applications will reappear when they next start up.</li>\n"
+#~ "<li><b>காலி பகுதியில் துவங்கு</b> எதையும் சேமிக்காதே.அடுத்த துவக்கத்தில் காலி "
+#~ "மேசையுடன் வரும்.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "தொடங்கியவுடன்"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "அமர்விலிருந்து  வெளியான பயன்பாடுகல்:"
+
+#~ msgid "Session Manager"
+#~ msgstr "அமர்வு மேலாளர்"
+
+#~ msgid "Advanced"
+#~ msgstr "&முன்னேரிய"
+
+#, fuzzy
+#~| msgid "Session Manager"
+#~ msgid "Window Manager"
+#~ msgstr "அமர்வு மேலாளர்"

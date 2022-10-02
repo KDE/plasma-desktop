@@ -1,0 +1,177 @@
+# Vietnamese translation for kcmkded.
+# Copyright © 2007 KDE i18n Project for Vietnamese.
+#
+# Phan Vĩnh Thịnh <teppi82@gmail.com>, 2006.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-07-19 11:40+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nguyễn Hùng Phú,Phan Vĩnh Thịnh"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "phu.nguyen@kdemail.net,teppi82@gmail.com"
+
+#: kcmkded.cpp:48
+#, kde-format
+msgid "Background Services"
+msgstr "Dịch vụ nền"
+
+#: kcmkded.cpp:52
+#, kde-format
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmkded.cpp:125
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Không dừng được dịch vụ: %1"
+
+#: kcmkded.cpp:127
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Không chạy được dịch vụ: %1"
+
+#: kcmkded.cpp:134
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Không dừng được dịch vụ."
+
+#: kcmkded.cpp:136
+#, kde-format
+msgid "Failed to start service."
+msgstr "Không chạy được dịch vụ."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Không thông báo được cho trình quản lí dịch vụ KDE (kded5) về các thay đổi "
+"đã lưu: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Khối này cho phép bạn có một cái nhìn tổng thể về tất cả các phần cài cắm "
+"của Trình nền KDE, còn được gọi là Các Dịch vụ KDE. Nói chung, có hai kiểu "
+"dịch vụ:</p> <ul><li>Dịch vụ được gọi khi khởi động</li><li>Dịch vụ được gọi "
+"khi có yêu cầu</li></ul> <p>Các dịch vụ được gọi khi có yêu cầu chỉ được "
+"liệt kê để tiện xem. Các dịch vụ khi khởi động có thể được chạy và dừng. Bạn "
+"cũng có thể chỉ định các dịch vụ có được tải khi khởi động hay không.</p> "
+"<p><b>Thận trọng khi dùng: một số dịch vụ cần có cho hoạt động của Plasma; "
+"đừng vô hiệu hoá các dịch vụ nếu bạn không chắc về việc mình đang làm.</b></"
+"p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Trình quản lí dịch vụ nền (kded5) hiện đang không chạy. Hãy đảm bảo rằng nó "
+"được cài đặt đúng."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Một số dịch vụ sẽ tự tắt khi được chạy thủ công nếu chúng không có tác dụng "
+"trong môi trường hiện tại."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Một số dịch vụ đã được tự động chạy/dừng khi trình quản lí dịch vụ nền "
+"(kded5) được khởi động lại để áp dụng các thay đổi của bạn."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Tất cả dịch vụ"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Đang chạy"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Không chạy"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Dịch vụ khi khởi động"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Dịch vụ tải khi có yêu cầu"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Bật/tắt việc tải tự động dịch vụ này khi khởi động"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Không chạy"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Đang chạy"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Dừng dịch vụ"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Chạy dịch vụ"

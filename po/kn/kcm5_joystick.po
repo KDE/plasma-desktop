@@ -1,0 +1,327 @@
+# translation of joystick.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ramaprakasha <ramaprakash.b@gmail.com>, 2007.
+# Vasudev Kamath <kamathvasudev@gmail.com>. 2009
+# Shankar Prasad <svenkate@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2009-12-31 12:33+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ರಾಮ್‌ ಪ್ರಕಾಶ್, ಶಂಕರ ಪ್ರಸಾದ್, ವಾಸುದೇವ ಕಾಮತ್"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ramaprakash.b@gmail.com,svenkate@redhat.com,kamathvasudev@gmail.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "ಮಾಪನಾಂಕ ನಿರ್ಣಯ (ಕ್ಯಾಲಿಬ್ರೇಷನ್)"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "ಮುಂದಕ್ಕೆ"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "ನಿಖರತೆಯನ್ನು ಲೆಕ್ಕಹಾಕಲು ದಯವಿಟ್ಟು ಕೆಲ ಕ್ಷಣ ಪ್ರತೀಕ್ಷಿಸು"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(ಸಾಮಾನ್ಯವಾಗಿ X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(ಸಾಮಾನ್ಯವಾಗಿ Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt> ಮಾಪನಾಂಕ ನಿರ್ಣಯವು (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಈಗ ನಿಮ್ಮ ಸಾಧನದ ವ್ಯಾಪ್ತಿಯನ್ನು (ರೇಂಜ್) "
+"ಪರಿಶೀಲಿಸಲಿದೆ. <br /><br />ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನದ <b>ಅಕ್ಷ %1 %2</b> ಗಳನ್ನು "
+"<b>ಕನಿಷ್ಠ</b> ಸ್ಥಳಕ್ಕೆ ಜರುಗಿಸಿ.<br /><br />ಸಾಧನದ ಯಾವುದೇ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಅಥವಾ "
+"ಮುಂದಿನ ಹಂತಕ್ಕೆ ಹೋಗಲು 'ಮುಂದಕ್ಕೆ' ಗುಂಡಿಯನ್ನು ಒತ್ತಿ. </qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt> ಮಾಪನಾಂಕ ನಿರ್ಣಯವು (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಈಗ ನಿಮ್ಮ ಸಾಧನದ ವ್ಯಾಪ್ತಿಯನ್ನು (ರೇಂಜ್) "
+"ಪರಿಶೀಲಿಸಲಿದೆ. <br /><br />ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನದ <b>ಅಕ್ಷ %1 %2</b> ಗಳನ್ನು <b>ಮಧ್ಯ</"
+"b> ಸ್ಥಳಕ್ಕೆ ಜರುಗಿಸು.<br /><br />ಸಾಧನದ ಯಾವುದೇ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಅಥವಾ ಮುಂದಿನ ಹಂತಕ್ಕೆ "
+"ಹೋಗಲು 'ಮುಂದಕ್ಕೆ' ಗುಂಡಿಯನ್ನು ಒತ್ತಿ. </qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>ಮಾಪನಾಂಕ ನಿರ್ಣಯವು (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಈಗ ನಿಮ್ಮ ಸಾಧನದ ವ್ಯಾಪ್ತಿಯನ್ನು (ರೇಂಜ್) "
+"ಪರಿಶೀಲಿಸುತ್ತದೆ. <br /><br />ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನದ <b>ಅಕ್ಷ %1 %2</b> ಅನ್ನು "
+"<b>ಗರಿಷ್ಠ</b> ಸ್ಥಳಕ್ಕೆ ಜರುಗಿಸಿ.<br /><br />ಸಾಧನದ ಯಾವುದೇ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಅಥವಾ "
+"ಮುಂದಿನ ಹಂತಕ್ಕೆ ಹೋಗಲು 'ಮುಂದಕ್ಕೆ' ಗುಂಡಿಯನ್ನು ಒತ್ತಿ. </qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "ಸಂವಹನಾ ದೋಷ"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "ನಿನ್ನ ಸಾಧನದ ಮಾಪನಾಂಕ ನಿರ್ಣಯವು (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಯಶಸ್ವಿಯಾಯಿತು"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "ಮಾಪನಾಂಕ ನಿರ್ಣಯ (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಸಫಲ"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "ಮೌಲ್ಯ ಅಕ್ಷ %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "ಸಾಧನ %1 ನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "ಸಾಧನ %1 ಅಂಕೆಗೋಲು ಅಲ್ಲ."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ತಿರುಳು ಚಾಲಕ (ಕೆರ್ನೆಲ್ ಡ್ರೈವರ್) ಆವೃತ್ತಿಯು ಸಿಗುತ್ತಿಲ್ಲ: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"ಪ್ರಸ್ತುತ ತಿರುಳು ಚಾಲಕ (ಕೆರ್ನೆಲ್ ಡ್ರೈವರ್) ಆವೃತ್ತಿಯು (%1.%2.%3) ಈ ಘಟಕಕ್ಕಾಗಿ (ಮಾಡ್ಯೂಲ್) "
+"ಯಂತ್ರಭಾಷಾಂತರ (ಕಂಪೈಲ್) ಮಾಡಿದ್ದಲ್ಲ  (%4.%5.%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಗುಂಡಿಗಳ ಸಂಖ್ಯೆ ಲಭ್ಯವಿಲ್ಲ: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಅಕ್ಷಗಳ ಸಂಖ್ಯೆ ಲಭ್ಯವಿಲ್ಲ: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಮೌಲ್ಯ (ಕ್ಯಾಲಿಬ್ರೇಷನ್ ವಾಲ್ಯೂ) ಲಭ್ಯವಿಲ್ಲ: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr ""
+"ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಮೌಲ್ಯಗಳನ್ನು (ಕ್ಯಾಲಿಬ್ರೇಷನ್ ವಾಲ್ಯೂ) ಮರುಸ್ಥಾಪಿಸಲು "
+"ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr ""
+"ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಮೌಲ್ಯಗಳನ್ನು (ಕ್ಯಾಲಿಬ್ರೇಷನ್ ವಾಲ್ಯೂ) ಆರಂಭಿಸಲು "
+"ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr ""
+"ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಮೌಲ್ಯಗಳನ್ನು (ಕ್ಯಾಲಿಬ್ರೇಷನ್ ವಾಲ್ಯೂ) ಅನ್ವಯಿಸಲು "
+"ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "ಆಂತರಿಕ ದೋಷ - ಸಂಕೇತ %1 ಅಜ್ಞಾತ"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "ಕೆಡಿಇ ಅಂಕೆಗೋಲು (ಜಾಯ್ ಸ್ಟಿಕ್) ನಿಯಂತ್ರಣ ಘಟಕ"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "ಅಂಕೆಗೋಲುಗಳನ್ನು (ಜಾಯ್ ಸ್ಟಿಕ್) ಪರೀಕ್ಷಿಸಲು ಕೆಡಿಇ ವ್ಯವಸ್ಥೆಯ ಸಂಯೋಜನಾ ಘಟಕ"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "(c) 2004, Martin Koller"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>ಅಂಕೆಗೋಲು (ಜಾಯ್ ಸ್ಟಿಕ್)</h1>ಈ ಘಟಕವು ನಿಮ್ಮ ಅಂಕೆಗೋಲು ಸರಿಯಾಗಿ ಕೆಲಸಮಾಡುತ್ತಿದೆಯೋ "
+"ಎಂದು ಪರೀಕ್ಷಿಸಲು ಸಹಾಯಮಾಡುತ್ತದೆ.<br />ಇದು ಅಕ್ಷಗಳಿಗೆ ತಪ್ಪಾದ ಮೌಲ್ಯಗಳನ್ನು ಕೊಟ್ಟಲ್ಲಿ "
+"ಮಾಪನಾಂಕ ನಿರ್ಣಯದಿಂದ (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಅದನ್ನು ಸರಿಪಡಿಸಬಹುದು.<br />ಈ ಘಟಕವು /dev/js[0-4] "
+"ಹಾಗೂ /dev/input/js[0-4] ಇವುಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ ಎಲ್ಲಾ ಅಂಕೆಗೋಲು ಸಾಧನಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಲು "
+"ಪ್ರಯತ್ನಿಸುತ್ತದೆ.<br />ನೀವು ಇನ್ನೊಂದು ಸಾಧನವನ್ನು ಹೊಂದಿದ್ದಲ್ಲಿ ಅದನ್ನು ಸಂಯುಕ್ತ ಚೌಕದಲ್ಲಿ "
+"(ಕಾಂಬೋ ಬಾಕ್ಸ್) ನಮೂದಿಸಿ.<br />ಗುಂಡಿಗಳ ಪಟ್ಟಿಯು ನಿಮ್ಮ ಅಂಕೆಗೋಲಿನ ಗುಂಡಿಗಳ ಸ್ಥಿತಿಯನ್ನು "
+"ತೋರಿಸುತ್ತದೆ, ಅಕ್ಷಗಳ ಪಟ್ಟಿಯು ಅಕ್ಷಗಳ ಪ್ರಸ್ತುತ ಮೌಲ್ಯವನ್ನು ತೋರಿಸುತ್ತದೆ.<br />ಗಮನಿಸಿ: "
+"ಪ್ರಸ್ತುತ ಲಿನಕ್ಸ್ ಸಾಧನ ಚಾಲಕವು  (Kernel 2.4, 2.6) ಇವುಗಳನ್ನು ಮಾತ್ರವೇ ಸ್ವಯಂ  "
+"ಪತ್ತೆಹಚ್ಚಬಲ್ಲುದು.<ul><li>2-ಅಕ್ಷ, 4-ಗುಂಡಿ ಅಂಕೆಗೋಲು</li><li>3-ಅಕ್ಷ, 4-ಗುಂಡಿ "
+"ಅಂಕೆಗೋಲು</li><li>4-ಅಕ್ಷ, 4-ಗುಂಡಿ ಅಂಕೆಗೋಲು</li><li>Saitek Cyborg 'digital' "
+"ಅಂಕೆಗೋಲುಗಳು</li></ul>(ವಿವರಗಳಿಗಾಗಿ ನೋಡಿ: Linux source/Documentation/input/"
+"joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "ಸಾಧನ:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "ಸ್ಥಾನ:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "ಜಾಡನ್ನು ತೋರಿಸು"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "ಒತ್ತಲ್ಪಟ್ಟಿದೆ"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "ಗುಂಡಿಗಳು:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "ಸ್ಥಿತಿ"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "ಅಕ್ಷಗಳು:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "ಮೌಲ್ಯ"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "ಮಾಪನಾಂಕ ನಿರ್ಣಯಿಸಿ"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"ಈ ಗಣಕದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಯಾವುದೇ ಅಂಕೆಗೋಲು ಸಿಗಲಿಲ್ಲ.<br />/dev/js[0-4] ಹಾಗೂ /dev/"
+"input/js[0-4] ಇವುಗಳಲ್ಲಿ ಪರೀಕ್ಷಿಸಲಾಯಿತು.<br /> ಒಂದು ಸಾಧನವು ಸೇರಿಕೊಂಡಿರುವುದು "
+"ನಿಮಗೆ ತಿಳಿದಿದ್ದರೆ ಸರಿಯಾದ ಸಾಧನ ಕಡತವನ್ನು ನಮೂದಿಸಿ."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"ಸಾಧನದ ಹೆಸರು ಅಮಾನ್ಯ (/dev ನ್ನು ಹೊಂದಿಲ್ಲ ).\n"
+"ದಯವಿಟ್ಟು ಪಟ್ಟಿಯಿಂದ ಸಾಧನವನ್ನು ಆರಿಸು ಅಥವಾ \n"
+"ಸಾಧನದ ಕಡತವನ್ನು ನಮೂದಿಸಿ, ಉದಾ /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "ಅಜ್ಞಾತ ಸಾಧನ"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "ಸಾಧನ ದೋಷ"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>ಮಾಪನಾಂಕ ನಿರ್ಣಯವು (ಕ್ಯಾಲಿಬ್ರೇಷನ್) ಇನ್ನೇನು ನಿಖರತೆಯನ್ನು ಪರೀಕ್ಷಿಸಲಿದೆ.<br /><br /"
+"><b>ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಕ್ಷಗಳನ್ನೂ ಅವುಗಳ ಮಧ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಜರುಗಿಸಿ ಹಾಗೂ ನಂತರ ಅಂಕೆಗೋಲನ್ನು "
+"ಮುಟ್ಟಬೇಡಿ.</b><br /><br />ಮಾಪನಾಂಕ ನಿರ್ಣಯವನ್ನು ಆರಂಭಿಸಲು OK ಗುಂಡಿಯನ್ನು ಒತ್ತಿ.</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "ಅಂಕೆಗೋಲು ಸಾಧನ %1 ರ ಎಲ್ಲಾ ಮಾಪನಾಂಕ ನಿರ್ಣಯದ ಮೌಲ್ಯಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಯಿತು."

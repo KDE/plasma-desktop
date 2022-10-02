@@ -1,0 +1,671 @@
+# Translation of kcmkonq.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2004, 2005, 2006, 2007, 2008, 2009.
+# Manfred Wiese <m.j.wiese@web.de>, 2008, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-12-01 01:18+0100\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Schriefdisch"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokmenten"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Daalladen"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Musik"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Biller"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "Filmen-Orner:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Ornern</h1>\n"
+"Mit dit Moduul kannst Du fastleggen, woneem binnen dat Dateisysteem de "
+"Dateien op Dien Schriefdisch wohrt warrt.\n"
+"Wenn Du Hülp för enkelte Optschonen bruukst, bruuk de Funkschoon \"Wat is "
+"dat?\" (Ümschalt+F1)."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Schriefdisch-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Disse Orner bargt all de Dateien, de op Dien Schriefdisch liggt. Du kannst "
+"em bewegen, wenn Du dat wullt, de Inholt warrt denn automaatsch ok na den "
+"niegen Oort verschaven."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Dokmenten-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Disse Orner warrt standardwies för dat Laden oder Sekern vun Dokmenten "
+"bruukt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Daallaad-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "Binnen disse Orner warrt Dien daallaadt Dokmenten standardwies sekert."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "Filmen-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Disse Orner warrt standardwies för't Laden oder Sekern vun Filmen bruukt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Biller-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Disse Orner warrt standardwies för dat Laden oder Sekern vun Biller bruukt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Musik-Orner:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Disse Orner warrt standardwies för dat Laden oder Sekern vun Musik bruukt."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Autostart-Orner:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Disse Orner bargt Programmen oder Ümledden na Programmen (\"Links\", "
+#~ "\"Afkörten\"), de automaatsch start warrt, wenn KDE start. Du kannst em "
+#~ "bewegen, wenn Du dat wullt, de Inholt warrt denn automaatsch ok na den "
+#~ "niegen Oort verschaven."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Filmen"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "De Padd för \"%1\" wöör ännert.\n"
+#~ "Wullt Du de Dateien vun \"%2\" na \"%3\" verschuven?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Verschuven"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Nich verschuven"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "De Padd för \"%1\" wöör ännert.\n"
+#~ "Wullt Du den Orner \"%2\" na \"%3\" verschuven?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Verschuven"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Nich verschuven"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Nafraag nödig"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror-Bedregen</h1> Du kannst hier instellen, wodennig sik "
+#~ "Konqueror as Dateipleger bedreegt."
+
+#~ msgid "Misc Options"
+#~ msgstr "Anner Optschonen"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Ornern in niege Finstern opmaken"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Wenn anmaakt, maakt Konqueror en nieg Finster op, wenn Du en Orner "
+#~ "opmaakst, anners warrt de Inholt vun den Orner binnen dat aktuelle "
+#~ "Finster wiest."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "\"&Wegdoon\" binnen dat Rechtsklickmenü wiesen (övergeiht de Affalltünn)"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn Du den Befehl \"Wegdoon\" op den Schriefdisch un "
+#~ "binnen dat Rechtsklickmenü vun den Dateipleger hebben wullt. Du kannst "
+#~ "Dateien ok wegdoon, wenn Du de Ümschalttast drückst, wielt Du op \"Na de "
+#~ "Affalltünn verschuven\" klickst."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menü-Editor"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "New..."
+#~ msgstr "Nieg..."
+
+#~ msgid "Remove"
+#~ msgstr "Wegmaken"
+
+#~ msgid "Move Up"
+#~ msgstr "Na baven"
+
+#~ msgid "Move Down"
+#~ msgstr "Na nerrn"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Nafragen bi"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Disse Optschoon leggt fast, wat Konqueror nafraagt, wenn Du en Datei "
+#~ "\"wegdeist\".<ul><li><em>Na de Affalltünn verschuven:</em> beweegt de "
+#~ "Datei na den Affall-Orner, vun wo se licht wedder torüchhaalt warrn kann."
+#~ "</li><li><em>Wegdoon:</em> deit en Datei eenfach weg.</li></ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Na de A&ffalltünn verschuven"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "W&egdoon"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Bedregen"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Vöransichten && Metadaten"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Vöransichten, Ornerbiller na Inholt un Inlesen vun Metadaten för disse "
+#~ "Protokollen anmaken:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Vöransicht-Optschonen</h1> Hier kannst Du dat Bedregen vun Konqueror "
+#~ "instellen, wenn he Dateien binnen Ornern wiest.<h2>De List vun "
+#~ "Protokollen:</h2> krüüz de Protokollen an, över de Vöransichten haalt "
+#~ "warrn schöölt, un maak dat Krüüz bi de weg, över de dat nich maakt warrn "
+#~ "schall. Villicht wullt Du t.B. Vöransichten över SMB halen, wenn dat "
+#~ "lokale Nettwark gau noog is, aver för FTP utmaken, wiel Du faken langsame "
+#~ "FTP-Sieden mit vele grote Biller besöchst.<h2>Maximaal Dateigrött:</h2> "
+#~ "Söök de hööchste Dateigrött ut, för de Vöransichten opstellt warrn "
+#~ "schöölt. Wenn Du dit t.B. op 1MB settst (wat de Vörinstellen is), warrt "
+#~ "för grötter Dateien keen Vöransicht opstellt, wiel dat to lang duert."
+
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Protokollen utsöken"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Lokale Protokollen"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Internet-Protokollen"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Mit disse Optschoon kannst Du fastleggen, wannehr Vöransichten, plietsche "
+#~ "Ornerbiller un Metadaten binnen den Dateipleger verföögbor wesen "
+#~ "schöölt.\n"
+#~ "Söök op de List de Protokollen ut, de bi Di so gau sünd, dat dat "
+#~ "Opstellen vun de Vöransichten sinnvull is."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Maximaal Dateigrött:"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "Vöransichten relativ to de Lüttbiller &grötter maken"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "In Dateien &inbette Vöransichten bruken"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn Du de Vöransichten bruken wullt, de in Dateien vun en "
+#~ "Reeg Dateitypen inbett sünd (t.B. JPEG). Dat maakt dat gauer un föhrt ok "
+#~ "to weniger Bruuk vun de Fastplaat. Maak dit ut, wenn Du Dateien hest, de "
+#~ "mit en Programm bewerkt wöörn, dat schaadhaftige Vöransichten opstellt, t."
+#~ "B. ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Klangdateien"
+
+#~ msgid "&Left button:"
+#~ msgstr "&Linke Knoop:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Du kannst utsöken, wat passeert, wenn Du mit den linken Knoop vun Dien "
+#~ "Wiesreedschap op den Schriefdisch klickst:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "&Rechte Knoop:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Du kannst utsöken, wat passeert, wenn Du mit den rechten Knoop vun Dien "
+#~ "Wiesreedschap op den Schriefdisch klickst:"
+
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "<ul><li><em>Keen Akschoon</em></li> <li><em>Finsterlist:</em> en Menü mit "
+#~ "all Finstern op all Schriefdischen dukt op. Du kannst op den "
+#~ "Schriefdischnaam klicken, wenn Du na den Schriefdisch wesseln wullt, oder "
+#~ "op en Finsterindrag, wenn dat Finster den Fokus kriegen schall. Dor "
+#~ "wesselt ok de Schriefdisch bi, wenn dat noot deit, un dat Finster warrt "
+#~ "wedderherstellt, wenn dat versteken is. De Naams vun versteken oder "
+#~ "minimeert Finstern warrt in Klemmen wiest.</li> <li><em>Schriefdischmenü:"
+#~ "</em> en Rechtsklickmenü för den Schriefdisch dukt op. Blang anner Saken "
+#~ "gifft dat Optschonen för dat Afsluten vun den Schirm, dat Instellen vun "
+#~ "de Dorstellen un dat Afmellen ut KDE.</li> <li><em>Programmmenü:</em> dat "
+#~ "K-Menü dukt op. Dat mag denn goot wesen, wenn Du dat Paneel (ok kennt as "
+#~ "\"Kicker\") utblendt laten wullt.</li></ul>"
+
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Du kannst utsöken, wat passeert, wenn Du mit den Middelknoop vun Dien "
+#~ "Wiesreedschap op den Schriefdisch klickst:<ul><li><em>Keen Akschoon</em></"
+#~ "li> <li><em>Finsterlist:</em> en Menü mit all Finstern op all "
+#~ "Schriefdischen dukt op. Du kannst op den Schriefdischnaam klicken, wenn "
+#~ "Du na den Schriefdisch wesseln wullt, oder op en Finsterindrag, wenn dat "
+#~ "Finster den Fokus kriegen schall. Dor wesselt ok de Schriefdisch bi, wenn "
+#~ "dat noot deit, un dat Finster warrt wedderherstellt, wenn dat versteken "
+#~ "is. De Naams vun versteken oder minimeert Finstern warrt in Klemmen wiest."
+#~ "</li> <li><em>Schriefdischmenü:</em> en Rechtsklickmenü för den "
+#~ "Schriefdisch dukt op. Blang anner Saken gifft dat Optschonen för dat "
+#~ "Afsluten vun den Schirm, dat Instellen vun de Dorstellen un dat Afmellen "
+#~ "ut KDE.</li> <li><em>Programmmenü:</em> dat K-Menü dukt op. Dat mag denn "
+#~ "goot wesen, wenn Du dat Paneel (ok kennt as \"Kicker\") utblendt laten "
+#~ "wullt.</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "<ul><li><em>Keen Akschoon:</em> as Du villicht raden kannst, passeert gor "
+#~ "nix.</li> <li><em>Finsterlist:</em> en Menü mit all Finstern op all "
+#~ "Schriefdischen dukt op. Du kannst op den Schriefdischnaam klicken, wenn "
+#~ "Du na den Schriefdisch wesseln wullt, oder op en Finsterindrag, wenn dat "
+#~ "Finster den Fokus kriegen schall. Dor wesselt ok de Schriefdisch bi, wenn "
+#~ "dat noot deit, un dat Finster warrt wedderherstellt, wenn dat versteken "
+#~ "is. De Naams vun versteken oder minimeert Finstern warrt in Klemmen wiest."
+#~ "</li> <li><em>Schriefdischmenü:</em> en Rechtsklickmenü för den "
+#~ "Schriefdisch dukt op. Blang anner Saken gifft dat Optschonen för dat "
+#~ "Afsluten vun den Schirm, dat Instellen vun de Dorstellen un dat Afmellen "
+#~ "ut KDE.</li> <li><em>Programmmenü:</em> dat K-Menü dukt op. Dat mag denn "
+#~ "goot wesen, wenn Du dat Paneel (ok kennt as \"Kicker\") utblendt laten "
+#~ "wullt.</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Keen Akschoon"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Finsterlist"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Schriefdischmenü"
+
+#~ msgid "Application Menu"
+#~ msgstr "Programmmenü"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Leestekensmenü"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Egen Menü 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Egen Menü 2"
+
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Bedregen</h1>\n"
+#~ "Mit dit Moduul kannst Du en Reeg Instellen för Dien Schriefdisch\n"
+#~ "fastleggen, a.B. wodennig Lüttbiller anornt warrt un wat bi en Klick\n"
+#~ "mit den rechten oder den Middelmuusknoop op den Schriefdisch\n"
+#~ "wiest warrt.\n"
+#~ "Wenn Du Hülp för enkelte Optschonen bruukst, hölpt Di de Funkschoon\n"
+#~ "\"Wat is dat?\" (Ümschalt+F1)."
+
+#~ msgid "General"
+#~ msgstr "Allgemeen"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Maak dit ut, wenn Du keen Lüttbiller op den Schriefdisch hebben wullt. "
+#~ "Ahn Lüttbiller warrt de Schriefdisch wull wat gauer, man Du kannst keen "
+#~ "Dateien mehr na den Schriefdisch trecken."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Lüttbiller op den Schriefdisch wiesen"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn Du Programmen as xsnow, xpenguin oder xmountain lopen "
+#~ "laten wullt, de direktemang na dat Schriefdischfinster teekt. Wenn du "
+#~ "Problemen mit Programmen as Netscape hest, de binnen dat Wörtelfinster "
+#~ "kiekt, wat se al löppt, maak dat ut."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "&Programmen binnen dat Schriefdischfinster tolaten"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "&Knoopinformatschonen wiesen"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Menübalken baven op den Schirm wiesen"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr "Wenn anmaakt, warrt keen Menübalken baven op den Schirm wiest."
+
+#~ msgid "&None"
+#~ msgstr "&Keen"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Wenn anmaakt, warrt en Balken mit de Schriefdischmenüs baven op den "
+#~ "Schirm wiest."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Schrief&disch-Menübalken"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Wenn anmaakt, warrt Programmen den Menübalken nich mehr binnen dat egen "
+#~ "Finster wiesen. Dat gifft denn bloots een Menübalken, baven op den "
+#~ "Schirm, de jümmers de Menüs vun dat aktuelle Programm wiest. Villicht "
+#~ "kennst Du dit Bedregen vun MacOS."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Menübalken vun dat &aktuelle Programm (MacOS-Stil)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Muusknööp-Akschonen"
+
+#~ msgid "Middle button:"
+#~ msgstr "De Middelknoop:"
+
+#~ msgid "Left button:"
+#~ msgstr "Linke Knoop:"
+
+#~ msgid "Right button:"
+#~ msgstr "Rechte Knoop:"
+
+#~ msgid "Edit..."
+#~ msgstr "Bewerken..."
+
+#~ msgid "File Icons"
+#~ msgstr "Lüttbiller för Dateien"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Aktiveer dit, wenn de Lüttbiller automaatsch an en Gadder utricht warrn "
+#~ "schöölt, wenn Du se verschuffst."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "&Lüttbiller automaatsch anornen"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>Wenn anmaakt, warrt ok all Dateien binnen Dien Schriefdischorner "
+#~ "wiest, de mit en Punkt (.) anfangt. Normalerwies bargt disse Dateien "
+#~ "Instellen un blievt nich sichtbor.</p>\n"
+#~ "<p>As Bispill de Dateien mit Naam \".directory\": Dat sünd rene "
+#~ "Textdateien, de Informatschonen för Konqueror bargt, as t.B. dat Lüttbild "
+#~ "för en Orner, de Sorteerreeg, usw. Du schullst disse Dateien nich "
+#~ "bewerken oder wegdoon, wenn Du nich nipp un nau weetst, wat Du dor deist."
+#~ "</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "&Versteken Dateien wiesen"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr "Söök de Dateitypen ut, för de Du Vöransichten aktiveren wullt."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Lüttbildvöransicht wiesen för"
+
+#~ msgid "Device Icons"
+#~ msgstr "Lüttbiller för Reedschapen"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "&Reedschaplüttbiller wiesen:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "Maak dat Krüüz bi de Reedschaptypen weg, de Du nich op den Schriefdisch "
+#~ "hebben wullt."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Reedschaptypen, de wiest warrn schöölt"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Datei-&Informatschonen wiesen"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Hier kannst Du fastleggen, dat en lütt Opdukfinster mit mehr "
+#~ "Informatschonen wiest warrt, wenn de Muus op en Datei wiest"
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "&Vöransicht in Datei-Informatschonen wiesen"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Hier kannst Du fastleggen, wat dat Opdukfinster en gröttere Vöransicht "
+#~ "bargen schall, wenn Du mit de Muus dor op wiest."

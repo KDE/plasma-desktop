@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Notifica di avvio</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Aggiornamento del documento</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Salvatore</firstname
+><surname
+>Brigaglia</surname
+><affiliation
+><address
+><email
+>torebrigaglia@yahoo.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>07/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>A volte è rassicurante sapere che il computer non ha ignorato i tuoi comandi e che qualcosa sta effettivamente accadendo. In questo modulo puoi configurare una notifica visibile, che ti aiuta a capire se hai veramente premuto quell'icona o no.</para>
+	
+<para
+>La modalità tradizionale per indicare che il computer è occupato è la modifica del puntatore, e tu puoi abilitare o meno questa funzione scegliendo un <guilabel
+>Puntatore</guilabel
+>.</para>
+
+<para
+>Con quest'opzione abilitata, al tuo puntatore verrà allegata per un po' di tempo un'icona mentre si sta avviando una nuova applicazione. Puoi configurare per quanto tempo debba essere visibile quest'icona tramite la casella numerica <guilabel
+>Ferma l'animazione dopo:</guilabel
+>. Il valore predefinito è di 5 secondi.</para>
+
+<para
+>Sono disponibili molte versioni di puntatori di occupato, incluso uno <guilabel
+>Nessuna notifica</guilabel
+>, uno <guilabel
+>Lampeggiante</guilabel
+>, uno <guilabel
+>Rimbalzante</guilabel
+> ed infine uno <guilabel
+>Statico</guilabel
+>, senza cioè animazione.</para>
+
+<para
+>La tradizionale notifica di avvio programmi di &plasma; ha preso un'altra forma, che puoi abilitare o disabilitare qui. Di norma un'applicazione entrerà immediatamente nella barra delle applicazioni quando la avvii, e l'icona viene sostituita da una clessidra rotante per avvisarti che sta avvenendo qualcosa. Puoi attivare o meno questo comportamento con la casella <guilabel
+>Abilita animazione</guilabel
+>.</para>
+
+<para
+>Però, non tutte le applicazioni che esegui mostreranno una finestra o un'icona nella barra delle applicazioni: alcune di esse, ad esempio, saranno agganciate nel vassoio di sistema di &plasma;. Può anche accadere che tu le abbia inviate ad un altro desktop virtuale, e che nella sezione <guilabel
+>Comportamento</guilabel
+> delle <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Impostazioni del gestore dei processi</guilabel
+></ulink
+> l'opzione <guilabel
+>Del desktop attuale</guilabel
+> sia selezionata per il cursore <guilabel
+>Mostra solo le applicazioni</guilabel
+>. Impostare un tempo massimo di indicazione avvio ti assicura che, anche in questi casi, tu possa sempre avere una notifica dell'avvio del programma, ma anche che questa sparirà una volta che l'avvio sarà concluso.</para>
+
+</article>

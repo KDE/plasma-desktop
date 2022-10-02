@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Dispositivi rimovibili</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione in italiano</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>montaggio automatico</keyword>
+<keyword
+>dispositivo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questa finestra permette di configurare la gestione automatica dei supporti di memorizzazione rimovibili. </para>
+
+<para
+>Se abiliti le funzionalità di montaggio automatico in questo modulo, non avrai più bisogno di programma di notifica dei dispositivi o il pannello di navigazione nel gestore dei file per accedere a un dispositivo appena collegato. </para>
+
+<para
+>In cima alla finestra trovi le impostazioni globali, che possono essere cambiate per ciascun dispositivo nell'elenco <guilabel
+>Sostituzioni dei dispositivi</guilabel
+>. Per un desktop usato da una sola persona si raccomanda di attivare tutte le caselle sopra l'elenco delle sostituzioni. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Abilita montaggio automatico dei supporti rimovibili</guilabel
+></term>
+<listitem
+><para
+>Quando non è segnato, non avverrà nessun montaggio automatico di qualsiasi tipo, indipendentemente da ciò che è stato selezionato nella sezione <guilabel
+>Sostituzioni dei dispositivi</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Monta automaticamente solo i supporti rimovibili che sono stati montati manualmente in precedenza</guilabel
+></term>
+<listitem
+><para
+>Quando è segnato, &plasma; monterà automaticamente solo i dispositivi di cui si ricorda. Un dispositivo viene <quote
+>ricordato</quote
+> se è stato montato in precedenza: &eg;, collegare un lettore multimediale &USB; per farlo caricare non è sufficiente per farlo <quote
+>ricordare</quote
+>. Se non si effettua un accesso ai file, &plasma; non monterà automaticamente il lettore la prossima volta che lo vedrà. Una volta che si è effettuato un accesso, invece, &plasma; si ricorderà di renderne i contenuti automaticamente accessibili al sistema. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Monta automaticamente tutti i supporti rimovibili all'accesso</guilabel
+></term>
+<listitem
+><para
+>Se dei dispositivi di memorizzazione rimovibili sono collegati al sistema quando accedi al desktop, &plasma; ne renderà automaticamente accessibili i contenuti al sistema perché possano essere usati da altri programmi. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Monta automaticamente i supporti rimovibili al collegamento</guilabel
+></term>
+<listitem
+><para
+>Quando è segnato, &plasma; renderà automaticamente disponibili al sistema i contenuti di qualsiasi dispositivo di memorizzazione quando questo viene inserito o collegato. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montaggio automatico</guilabel
+></term>
+<listitem
+><para
+>Questo elenco contiene i dispositivi di memorizzazione noti a &plasma;. Se <guilabel
+>All'accesso</guilabel
+> è attivato, il dispositivo verrà montato automaticamente anche se <guilabel
+>Monta automaticamente tutti i supporti rimovibili all'accesso</guilabel
+> non lo è. Lo stesso vale per <guilabel
+>Al collegamento</guilabel
+>.</para>
+<para
+>Se <guilabel
+>Abilita montaggio automatico dei supporti rimovibili</guilabel
+> non è segnato, le sostituzioni non hanno effetto e nessun dispositivo verrà montato automaticamente. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Dimentica dispositivo</guibutton
+></term>
+<listitem
+><para
+>Fare clic su questo pulsante fa <quote
+>dimenticare</quote
+> a &plasma; l'esistenza del dispositivo selezionato. Questo è utile solo se l'opzione <guilabel
+>Monta automaticamente solo i supporti rimovibili che sono stati montati manualmente in precedenza</guilabel
+> è attiva. Una volta che un dispositivo è dimenticato e &plasma; è impostato per montare solo dispositivi noti, il dispositivo non sarà montato automaticamente. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

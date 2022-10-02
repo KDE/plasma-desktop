@@ -1,0 +1,145 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# giovanni <g.sora@tiscali.it>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2021-12-27 12:03+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Primary (default)"
+msgstr "Primari (predefinite)"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Portrait"
+msgstr "Vertical"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Landscape"
+msgstr "Orientation horizontal"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "Orientation vertical invertite"
+
+#: kcmtablet.cpp:37
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "Orientation horizontal Invertite"
+
+#: kcmtablet.cpp:70
+#, kde-format
+msgid "Follow the active screen"
+msgstr "Seque le schermo active"
+
+#: kcmtablet.cpp:78
+#, fuzzy, kde-format
+#| msgctxt "model - (x,y widthxheight)"
+#| msgid "%1 - (%2,%3 %4x%5)"
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4x%5)"
+
+#: kcmtablet.cpp:116
+#, kde-format
+msgid "Fit to Output"
+msgstr ""
+
+#: kcmtablet.cpp:117
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr ""
+
+#: kcmtablet.cpp:118
+#, kde-format
+msgid "Custom size"
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "Necun tabletta de designar trovate."
+
+#: package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Dispositivo:"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "Target display:"
+msgstr "Monstrator objectivo:"
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientation:"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "Modo pro usator de mano sinistre"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Area:"
+msgstr ""
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Resize the tablet area"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr ""
+
+#: package/contents/ui/main.qml:204
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr ""
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr ""
+
+#: package/contents/ui/RebindButtons.qml:43
+#, kde-format
+msgid "Button %1:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "Tablet"
+#~ msgstr "Tabletta"
+
+#~ msgid "Configure drawing tablets"
+#~ msgstr "Configura tablettas de designar"

@@ -1,0 +1,189 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014.
+# Jeff Huang <s8321414@gmail.com>, 2017.
+# pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2020-04-12 00:42+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "此模組讓你能設定檔案索引器及搜尋功能。"
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgid "Delete Index Data"
+msgstr "刪除項目"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "檔案搜尋能依據檔案內容協助您快速找到您的檔案。"
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "啟用檔案搜尋"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "也索引檔案內容"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "索引隱藏檔案及資料夾"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgid "Pause Indexer"
+msgstr "未索引"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: package/contents/ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Full content indexing"
+msgid "Currently indexing: %1"
+msgstr "完整內容索引"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "資料夾指定設定："
+
+#: package/contents/ui/main.qml:186
+#, fuzzy, kde-format
+#| msgid "Start indexing a folder..."
+msgid "Start indexing a folder…"
+msgstr "開始索引資料夾…"
+
+#: package/contents/ui/main.qml:197
+#, fuzzy, kde-format
+#| msgid "Stop indexing a folder..."
+msgid "Stop indexing a folder…"
+msgstr "停止索引資料夾…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "未索引"
+
+#: package/contents/ui/main.qml:249
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgid "Indexed"
+msgstr "未索引"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "刪除項目"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select a folder to filter"
+msgid "Select a folder to include"
+msgstr "選擇要過濾的資料夾"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select a folder to filter"
+msgid "Select a folder to exclude"
+msgstr "選擇要過濾的資料夾"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Franklin Weng, Jeff Huang"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "franklin@nospam.goodhorse.idv.tw, s8321414@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "檔案搜尋"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#, fuzzy
+#~| msgid "Add folder configuration..."
+#~ msgid "Add folder configuration…"
+#~ msgstr "新增資料夾設定…"
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 包含在內。"
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 排除在外。"
+
+#~ msgid "Disable indexing"
+#~ msgstr "停用索引"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "排除搜尋位置："
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "選擇要排除的資料夾"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr "不允許排除 root 資料夾，如果你不想要這麼做，請停用檔案搜尋功能。"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "此資料夾的父資料夾 %1 已被排除"
+
+#~ msgid "Configure File Search"
+#~ msgstr "設定檔案搜尋"

@@ -1,0 +1,699 @@
+#
+# Tamas Szanto <tszanto@interware.hu>, 2000.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2015.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2021-11-15 13:44+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Shift zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "A Shift most aktív."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "A Shift most inaktív."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Ctrl zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "A Ctrl most aktív."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "A Ctrl most inaktív."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Az Alt zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Az Alt most aktív."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Az Alt most inaktív."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Win zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "A Win most aktív."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "A Win most inaktív."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Meta zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "A Meta most aktív."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "A Meta most inaktív."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Super zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "A Super most aktív."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "A Super most inaktív."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "A Hyper zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "A Hyper most aktív."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "A Hyper most inaktív."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "Az Alt Gr zárolva lett, ezután minden billentyűleütésnél aktív lesz."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Az Alt Gr most aktív."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Az Alt Gr most inaktív."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "A Num Lock most aktív."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "A Num Lock most inaktív."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "A Caps Lock most aktív."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "A Caps Lock most inaktív."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "A Scroll Lock most aktív."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "A Scroll Lock most inaktív."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Képernyőolvasó ki-/bekapcsolása"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Akadálymentesítés"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "AltGr"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hiper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Szuper"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Figyelem"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "Mo&zdulatsor használatakor:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "A beállítások módosítása rákérdezés nélkül"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Ez a megerősítés kérő ablak jelenjen meg"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Az összes AccessX-funkció és mozdulatsor kikapcsolása"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Lassú billentyűk"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Visszaugró billentyűk"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Ragadó billentyűk"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Egérmozgató billentyűk"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Biztosan ki szeretné kapcsolni ezt: „%1”?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1” és „%2”?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1”, „%2” és „%3”?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1”, „%2”, „%3” és „%4”?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Biztosan be szeretné kapcsolni ezt: „%1”?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezt: „%2”?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr ""
+"Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezeket: „%2” és „%3”?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr ""
+"Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezeket: „%2”, „%3” "
+"és „%4”?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Biztosan be szeretné kapcsolni ezeket: „%1” és „%2”?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr ""
+"Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és kikapcsolni ezt: „%3”?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr ""
+"Biztosan be szeretné kapcsolni ezeket: „%1” és „%2” és kikapcsolni ezeket: "
+"„%3” és „%4”?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és „%3”?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr ""
+"Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és „%3” és kikapcsolni "
+"ezt: „%4”?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2”, „%3” és „%4”?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Egy alkalmazás ennek a beállításnak a megváltoztatását kérte."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"8 másodpercig lenyomva tartotta a Shiftet vagy egy alkalmazás a beállítás "
+"megváltoztatását kérte."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Egymás után ötször megnyomta a Shiftet vagy egy alkalmazás a beállítás "
+"megváltoztatását kérte."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr ""
+"Megnyomta a(z) %1 billentyűt vagy egy alkalmazás a beállítás "
+"megváltoztatását kérte."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Egy alkalmazás a beállítás megváltoztatását kérte, vagy valamilyen "
+"mozdulatsort hajtott végre."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Egy alkalmazás a beállítás megváltoztatását kérte."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Ezek az AccessX-beállítások mozgásukban korlátozott felhasználóknak "
+"szükségesek. A beállításokat a KDE Rendszerbeállításokban lehet megtenni. Az "
+"egyes opciók mozdulatsorozattal is ki-be kapcsolhatók.\n"
+"\n"
+"Ha egyik opcióra sincs szüksége, jelölje be „Az összes AccessX-funkció és "
+"mozdulatsor kikapcsolása”."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"A lassú billentyűk funkció aktiválódott. Mostantól nyomva kell egy kicsit "
+"tartani a billentyűket, hogy a gép leütésként fogadja el őket."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Lassú billentyűk kikapcsolva."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"A visszaugró billentyűk funkció aktiválódott. Mostantól minden leütés után "
+"blokkolva lesznek a billentyűk egy rövid ideig."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Visszaugró billentyűk kikapcsolva."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"A ragadós billentyűk funkció aktiválódott. Mostantól a módosító billentyűk "
+"lenyomva maradnak elengedés után."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Ragadós billentyűk kikapcsolva."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Az egérmozgató billentyűk be lettek kapcsolva. Mostantól a numerikus "
+"billentyűzetről is kezelhető az egér."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Egérmozgatás billentyűkkel kikapcsolva."
+
+#: main.cpp:49
+#, kde-format
+msgid "Accessibility"
+msgstr "Akadálymentesítés"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(C) Matthias Hoelzer-Kluepfel, 2000."
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Szerző"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "KDE segédeszköz fogyatékosoknak"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "&Bell"
+#~ msgstr "&Csengő"
+
+#~ msgid "Audible Bell"
+#~ msgstr "Csengetés"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Ha ez az opció be van jelölve, az alapértelmezett csengő lesz használva. "
+#~ "Ez általában egy „beep”."
+
+#~ msgid "Use &system bell"
+#~ msgstr "A &rendszercsengő használata"
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Jelölje be ezt a beállítást, ha saját csengőt szeretne használni. Ha így "
+#~ "dönt, kapcsolja ki a rendszercsengőt."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "&Egyéni csengetés használata"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Ha az „Egyéni csengetés használata” opciót jelölte be, itt választhatja "
+#~ "ki a hozzá tartozó hangfájlt. Kattintson a „Tallózás…” gombra a fájl "
+#~ "kényelmes kiválasztásához."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "A lejátszandó &hang:"
+
+#~ msgid "Browse..."
+#~ msgstr "Tallózás…"
+
+#~ msgid "Visible Bell"
+#~ msgstr "Vizuális jelzés csengetéskor"
+
+#~ msgid ""
+#~ "This option will turn on the \"visible bell\", i.e. a visible "
+#~ "notification shown every time that normally just a bell would occur. This "
+#~ "is especially useful for deaf people."
+#~ msgstr ""
+#~ "Ez az opció bekapcsolja a „vizuális csengőt”, azaz egy látható jelzést "
+#~ "akkor, amikor egy csengetés történne. Ez az opció elsősorban a "
+#~ "hallássérültek segítését szolgálja."
+
+#~ msgid "&Use visible bell"
+#~ msgstr "&Vizuális jelzés bekapcsolva"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "A képernyő egy megadott színre vált az alább megadott ideig."
+
+#~ msgid "F&lash screen"
+#~ msgstr "A &képernyő villogtatása"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Az összes szín inverzbe vált az alább megadott ideig."
+
+#~ msgid "I&nvert screen"
+#~ msgstr "A képernyő &inverzbe váltása"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Kattintson ide a „képernyővillogtatás” jellegű vizuális jelzés színének "
+#~ "beállításához."
+
+#~ msgid "&Duration:"
+#~ msgstr "I&dőtartam:"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Itt állíthatja be a „vizuális csengetés” effektus időtartamát."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Modifier Keys"
+#~ msgstr "Módosítóbillentyűk"
+
+#~ msgid "Sticky Keys"
+#~ msgstr "Ragadó billentyűk"
+
+#~ msgid "Use &sticky keys"
+#~ msgstr "&Ragadó billentyűk használata"
+
+#~ msgid "&Lock sticky keys"
+#~ msgstr "A ragadó billentyűk &zárolása"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "A ragadós billentyűk kikapcsolása két billentyű együttes lenyomásakor"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Csengetés módosító billentyű lenyomva tartásakor, zárolásakor vagy "
+#~ "feloldásakor"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Zároló billentyűk"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr "Csengetés zároló billentyű be- vagy kikapcsolásakor"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a modifier or "
+#~| "locking key changes its state"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism for modifier or locking key state "
+#~ "changes"
+#~ msgstr ""
+#~ "A Plasma értesítési rendszerének használata, ha egy módosító- vagy "
+#~ "zárolóbillentyű állapota megváltozik"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Értesí&tő üzenetek…"
+
+#~ msgid "&Keyboard Filters"
+#~ msgstr "&Billentyűzetszűrők"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "Lassú b&illentyűk"
+
+#~ msgid "&Use slow keys"
+#~ msgstr "Lassú billentyűk &használata"
+
+#~ msgid "&Use system bell whenever a key is pressed"
+#~ msgstr "Csengetés billentyű megny&omásakor"
+
+#~ msgid "&Use system bell whenever a key is accepted"
+#~ msgstr "Csengetés billentyű &elfogadásakor"
+
+#~ msgid "&Use system bell whenever a key is rejected"
+#~ msgstr "Csengetés billentyű &visszautasításakor"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Visszaugró billentyűk"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "&Visszaugró billentyűk használata"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Csengetés billentyű visszautasításakor"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "&Aktiválási sorozat"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Aktiválási sorozat"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr ""
+#~ "Mozdulatsorozat használata a ragadós és lassú billentyűk bekapcsolásához"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "A ragadós és lassú billentyűk kikapcsolása adott idejű inaktivitás után."
+
+#~ msgid " min"
+#~ msgstr " perc"
+
+#~ msgid "Notification"
+#~ msgstr "Értesítés"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Csengetés történjen, ha mozdulatsorral kapcsolt ki- vagy be egy "
+#~ "billentyűzetkezelést segítő funkciót"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Ha ez be van jelölve, megerősítést kérő párbeszédablak jelenik meg a "
+#~ "billentyűzetkezelést segítő funkciók ki- vagy bekapcsolásakor.\n"
+#~ "Ha nincs bejelölve, akkor körültekintéssel használja a segítő funkciókat, "
+#~ "mert azok rákérdezés nélkül végrehajtódnak."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Megerősítést kérő ablak jelenjen meg kezelést segítő funkció ki- vagy "
+#~ "bekapcsolásakor"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "A Plasma értesítési rendszerének használata, ha egy billentyűzet-"
+#~ "akadálymentesítési szolgáltatás ki-/bekapcsolásra kerül"
+
+#~ msgid "Screen Reader"
+#~ msgstr "Képernyőolvasó"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Képernyőolvasó bekapcsolva"
+
+#~ msgid "Form"
+#~ msgstr "Űrlap"

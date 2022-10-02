@@ -1,0 +1,205 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2018, 2019, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2022-08-05 10:25+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Perusasetukset"
+
+#: package/contents/ui/configGeneral.qml:40
+#, kde-format
+msgid "General:"
+msgstr "Yleistä:"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Näytä ikkunakehyksissä sovelluskuvakkeet"
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr "Näytä vain nykyinen näyttö"
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr "Sivunavigointi kiertää ympäri"
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr "Asettelu:"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr "Oletus"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr "Vaaka"
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr "Pysty"
+
+#: package/contents/ui/configGeneral.qml:80
+#, kde-format
+msgid "Text display:"
+msgstr "Tekstinäyttö:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Ei tekstiä"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr "Aktiviteetin numero"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Työpöydän numero"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr "Aktiviteetin nimi"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Työpöydän nimi"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current Activity:"
+msgstr "Valittaessa nykyinen aktiviteetti:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, kde-format
+msgid "Selecting current virtual desktop:"
+msgstr "Valittaessa nykyinen virtuaalityöpöytä:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Ei tehdä mitään"
+
+#: package/contents/ui/configGeneral.qml:124
+#, kde-format
+msgid "Shows the desktop"
+msgstr "Näytetään työpöytä"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "…ja %1 muu ikkuna"
+msgstr[1] "…ja %1 muuta ikkunaa"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 ikkuna:"
+msgstr[1] "%1 ikkunaa:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] "%1 pienennetty ikkuna:"
+msgstr[1] "%1 pienennettyä ikkunaa:"
+
+#: package/contents/ui/main.qml:449
+#, kde-format
+msgid "Desktop %1"
+msgstr "Työpöytä %1"
+
+# *** TARKISTA: Tässä on ongelma. %1 voi olla paitsi virtuaalinäyttö myös aktiviteetti, mutta kummankin mainitseminen veisi liikaa tilaa. Jokin ”Vaihda: %1” taas olisi turhan epäselvä.
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr "Vaihda virtuaalinäyttöön %1"
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr "Näytä aktiviteettien hallinta…"
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Lisää virtuaalityöpöytä"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Poista virtuaalityöpöytä"
+
+#: package/contents/ui/main.qml:603
+#, kde-format
+msgid "Configure Virtual Desktops…"
+msgstr "Virtuaalityöpöytien asetukset…"
+
+#~ msgid "Activate %1"
+#~ msgstr "Aktivoi %1"
+
+#~ msgid "Icons"
+#~ msgstr "Kuvakkeet"
+
+#~ msgid "Configure Desktops..."
+#~ msgstr "Työpöytien asetukset…"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Näytä kojelauta"
+
+#~ msgid "Display icons:"
+#~ msgstr "Näytä kuvakkeet:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "&Lisää virtuaalityöpöytä"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "&Poista viimeinen virtuaalityöpöytä"
+
+#, fuzzy
+#~ msgid "Configure Pager"
+#~ msgstr "Aseta sivutin"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Rivejä:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Rivejä:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "Muuta rivien määrää"
+
+#~ msgid "None"
+#~ msgstr "Ei mikään"

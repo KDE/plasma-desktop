@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_search\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-06-03 18:10+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: Vishesh Handa KRunner install uninstall Packagekit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: PackageKit\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "Posição no ecrã:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "Topo"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "Centro"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "Activação:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "Activar quando carregar em qualquer tecla no ecrã"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "Histórico:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "Recordar as pesquisas anteriores"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "Reter a última pesquisa ao reabrir"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "Ciente da actividade (pesquisas anteriores e histórico)"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "Limpar o Histórico"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "Limpar o Histórico da Actividade \"%1\""
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "Limpar o Histórico…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "Para todas as actividades"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "Para a actividade \"%1\""
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "'Plugins':"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Configurar os 'Plugins' de Pesquisa Activos…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "'Plugins' Disponíveis"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "Activar ou desactivar os 'plugins' (usado no KRunner, no Lançador de "
+#~ "Aplicações e no efeito de Visão Geral)"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "Configurar o KRunner…"
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "Obter Novos 'Plugins'…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr ""
+#~ "Não foi possível executar o programa de instalação no terminal <message>"
+#~ "%1</message>"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "A instalação foi executada com sucesso; poderá agora fechar esta janela"
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr ""
+#~ "A desinstalação foi executada com sucesso; poderá agora fechar esta janela"
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "Falhou a instalação do 'plugin' do KRunner"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "O comando a executar: 'install' ou 'uninstall'."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "A localização do pacote."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "Sem suporte para o PackageKit"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "Confirmar a Instalação"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "Está prestes a instalar um pacote binário. Só deverá instalar estes a "
+#~ "partir de um autor/criador de pacotes de confiança."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "Aceitar o Risco e Continuar"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "Ver o Ficheiro"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "O tipo MIME %1 não é suportado pela infra-estrutura do PackageKit"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Este 'plugin' não fornece um programa de desinstalação. Por favor "
+#~ "contacte o autor. Poderá tentar desinstalar o pacote manualmente.<nl/>Se "
+#~ "não se sentir capaz ou confortável com isso, carregue agora em "
+#~ "<interface>Cancelar</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Este 'plugin' não fornece um programa de desinstalação. Por favor "
+#~ "contacte o autor. Poderá tentar desinstalar o pacote manualmente. Por "
+#~ "favor, leia o README para obter instruções do autor.<nl/>Se não se sentir "
+#~ "capaz ou confortável com isso, carregue agora em <interface>Cancelar</"
+#~ "interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Este 'plugin' não fornece um programa de instalação. Por favor contacte o "
+#~ "autor. Poderá tentar instalar o pacote manualmente.<nl/>Se não se sentir "
+#~ "capaz ou confortável com isso, carregue agora em <interface>Cancelar</"
+#~ "interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Este 'plugin' não fornece um programa de instalação. Por favor contacte o "
+#~ "autor. Poderá tentar instalar o pacote manualmente. Por favor, leia o "
+#~ "README para obter instruções do autor.<nl/>Se não se sentir capaz ou "
+#~ "confortável com isso, carregue agora em <interface>Cancelar</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "Este 'plugin' usa um programa de instalação que poderá criar riscos de "
+#~ "segurança. Por favor, examine o conteúdo completo do 'plugin' antes de o "
+#~ "instalar, ou pelo menos leia o código-fonte do programa.<nl/>Se não se "
+#~ "sentir capaz ou confortável com isso, carregue agora em "
+#~ "<interface>Cancelar</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Este 'plugin' usa um programa de instalação que poderá criar riscos de "
+#~ "segurança. Por favor, examine o conteúdo completo do 'plugin' antes de o "
+#~ "instalar, ou pelo menos leia o ficheiro README e o código-fonte do "
+#~ "programa.<nl/>Se não se sentir capaz ou confortável com isso, carregue "
+#~ "agora em <interface>Cancelar</interface>."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "Marcar o item como desinstalado"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "Marcar o item como instalado"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "Ver o Programa"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "Ver a Pasta de Código"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "Ver o %1"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "Não foi possível resolver o nome do pacote %1"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr ""
+#~ "Não foi possível executar o comando de instalação: <message>%1</message>"

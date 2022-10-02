@@ -1,0 +1,220 @@
+# translation of knetattach.po to Thai
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2005.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"PO-Revision-Date: 2008-11-24 20:14+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com"
+
+#: knetattach.cpp:79
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"ป้อนชื่อของ <i>โฟลเดอร์เว็บ</i> นี้ โดยใช้รูปแบบ ที่อยู่ของแม่ข่าย, พอร์ต และพาธไปยังโฟลเดอร์ "
+"จากนั้นกดที่ปุ่ม <b>บันทึกและทำการเชื่อมต่อ</b>"
+
+#: knetattach.cpp:82
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"ป้อนชื่อของ <i>การเชื่อมต่อ SSH (Secure shell)</i> นี้ โดยใช้รูปแบบ ที่อยู่ของแม่ข่าย, พอร์ต "
+"และพาธจากนั้นกดที่ปุ่ม <b>บันทึกและทำการเชื่อมต่อ</b>"
+
+#: knetattach.cpp:86
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"ป้อนชื่อของ <i>การเชื่อมต่อแบบ FTP (File Transfer Protocol)</i> นี้ โดยใช้รูปแบบ "
+"ที่อยู่ของแม่ข่าย และพาธไปยังโฟลเดอร์ จากนั้นกดที่ปุ่ม <b>บันทึกและทำการเชื่อมต่อ</b>"
+
+#: knetattach.cpp:90
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"ป้อนชื่อของ <i>ไดรฟ์เครือข่ายของไมโครซอฟต์วินโดว์ส</i> นี้ โดยใช้รูปแบบ ที่อยู่ของแม่ข่าย "
+"และพาธไปยังโฟลเดอร์ จากนั้นกดที่ปุ่ม <b>บันทึกและทำการเชื่อมต่อ</b>"
+
+#: knetattach.cpp:208
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr "ไม่สามารถเชื่อมต่อไปยังเครื่องแม่ข่ายได้ โปรดตรวจสอบการตั้งค่าของคุณแล้วลองใหม่อีกครั้ง"
+
+#: knetattach.cpp:336
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "บันทึกและทำการเชื่อมต่อ"
+
+#: knetattach.cpp:338
+#, kde-format
+msgid "C&onnect"
+msgstr "เ&ชื่อมต่อ"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "ตัวช่วยปรับแต่งโฟลเดอร์เครือข่าย"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "เพิ่มโฟลเดอร์เครือข่าย"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "เลือกประเภทของโฟลเดอร์เครือข่ายที่คุณต้องการจะเชื่อมต่อ จากนั้นกดที่ปุ่ม ถัดไป"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "การเชื่อมต่อที่ใช้&ล่าสุด:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "โฟลเดอร์เ&ว็บ (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "แบบ &Secure shell (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "แบบ FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "ไดรฟ์เครือข่ายของไ&มโครซอฟต์วินโดว์ส®"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "รายละเอียดของโฟลเดอร์เครือข่าย"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&ชื่อ:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "ชื่อ&ผู้ใช้งาน:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "เครื่องแ&ม่ข่าย:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&พอร์ต:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "โ&ฟลเดอร์:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "ชุดรหัสภาษา:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "&สร้างไอคอนของโฟลเดอร์ทางไกลตัวนี้"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "ใ&ช้การเข้ารหัส"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "ตัวช่วยปรับแต่งเครือข่ายของ KDE"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "สงวนลิขสิทธิ์ (c) 2004 George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "George Staikos"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "ผู้เขียนหลักและผู้ดูแล"
+
+#~ msgid ""
+#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
+#~ "folder path to use and press the Next button."
+#~ msgstr ""
+#~ "ป้อนชื่อของ <i>%1</i> นี้ โดยใช้รูปแบบ ที่อยู่ของแม่ข่าย, พอร์ต และพาธไปยังโฟลเดอร์ "
+#~ "จากนั้นกดที่ปุ่ม ถัดไป"

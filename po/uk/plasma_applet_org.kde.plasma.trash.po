@@ -1,0 +1,105 @@
+# Translation of plasma_applet_org.kde.plasma.trash.po to Ukrainian
+# Copyright (C) 2014-2016 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2021-05-26 09:22+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: contents/ui/main.qml:103
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "Відкрити"
+
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Спорожнити"
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Trash Settings…"
+msgstr "Параметри Смітника…"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"Смітник\n"
+"Порожній"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"Смітник\n"
+" %1 об’єкт"
+msgstr[1] ""
+"Смітник\n"
+" %1 об’єкти"
+msgstr[2] ""
+"Смітник\n"
+" %1 об’єктів"
+msgstr[3] ""
+"Смітник\n"
+" Один об’єкт"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Смітник"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "Empty"
+msgstr "Порожній"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "%1 об’єкт"
+msgstr[1] "%1 об’єкти"
+msgstr[2] "%1 об’єктів"
+msgstr[3] "Один об’єкт"
+
+#~ msgid ""
+#~ "Trash \n"
+#~ " Empty"
+#~ msgstr ""
+#~ "Смітник \n"
+#~ " Порожній"
+
+#~ msgid "Empty Trash"
+#~ msgstr "Спорожнити смітник"
+
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr ""
+#~ "Ви справді бажаєте спорожнити смітник? Увесь його вміст буде втрачено."
+
+#~ msgid "Cancel"
+#~ msgstr "Скасувати"

@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Standaard-toepassingen</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2022-01-12</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>component</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In deze module kunt u de standaardcomponenten van &kde; wijzigen.</para>
+
+<para
+>Componenten zijn programma's die basistaken verrichten, zoals de webbrowser, de terminalemulator, de bestandsbeheerder, de e-mailclient, de elektronische kaart en de telefoonkiezer. Verschillende &kde;-toepassingen moeten soms een terminalemulator aanroepen, een e-mail verzenden, bestanden en mappen beheren, een kaart tonen of een telefoon.</para
+> 
+
+<para
+>Om dit consistent te doen, moeten deze applicaties altijd dezelfde componenten aanroepen. Hier kunt u selecteren welke programma's deze componenten zijn.</para>
+
+<para
+>De linker lijst toont de te configureren componenttypen: </para>
+<itemizedlist>
+<listitem>
+<para
+>Webbrowser</para>
+</listitem>
+<listitem>
+<para
+>Bestandsbeheerder</para>
+</listitem>
+<listitem>
+<para
+>E-mailprogramma</para>
+</listitem>
+<listitem>
+<para
+>Terminalemulatieprogramma</para>
+</listitem>
+<listitem>
+<para
+>Kaart</para>
+</listitem>
+<listitem>
+<para
+>Telefoonkiezer</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Klik op de keuzelijst van de component die u wilt configureren. Selecteer in de lijst uw favoriete webbrowser, bestandsbeheerder, e-mailclient, terminalemulator, kaart en telefoonkiezer. Kies <guimenuitem
+>Overige...</guimenuitem
+> om de dialoog <guilabel
+>Toepassing kiezen</guilabel
+> en selecteer uw toepassing handmatig.</para>
+
+</article>

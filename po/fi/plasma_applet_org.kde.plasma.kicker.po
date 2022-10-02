@@ -1,0 +1,446 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-06-07 16:52+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Perusasetukset"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Poista suosikeista"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Lisää suosikkeihin"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Kaikissa aktiviteeteissa"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Nykyisessä aktiviteetissa"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Näytä suosikeissa"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Kuvake:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Valitse…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Poista kuvake"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Näytä sovellukset muodossa:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Vain nimi"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Vain kuvaus"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nimi (Kuvaus)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Kuvaus (Nimi)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Toiminta:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Aakkosta sovellukset"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Tasoita alivalikot yhteen tasoon"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Näytä kuvakkeet valikon alimmalla tasolla"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Näytä luokat:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Viimeisimmät sovellukset"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Usein käytetyt sovellukset"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Viimeisimmät tiedostot"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Usein käytetyt tiedostot"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Viimeisimmät yhteystiedot"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Usein käytetyt yhteystiedot"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Lajittele luokat:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Äskettäin käytetyt"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Usein käytetyt"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Etsi:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Laajenna haku kirjanmerkkeihin, tiedostoihin ja sähköposteihin"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Tasaa hakutulokset alareunaan"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Haetaan: %1"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Hae kirjoittamalla."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Suosikit"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Sovelmat"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Sovellukset ja tiedostot"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Muokkaa sovelluksia…"
+
+#~ msgid "Search…"
+#~ msgstr "Etsi…"
+
+#~ msgid "Search..."
+#~ msgstr "Hae…"
+
+#~ msgid "Often used documents"
+#~ msgstr "Usein käytetyt tiedostot"
+
+#~ msgid "Open with:"
+#~ msgstr "Avaa ohjelmalla:"
+
+#~ msgid "Properties"
+#~ msgstr "Ominaisuudet"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Lisää työpöydälle"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Lisää paneeliin (sovelma)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Kiinnitä tehtävienhallintaan"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Viimeisimmät tiedostot"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Unohda viimeisimmät tiedostot"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Muokkaa sovellusta…"
+
+#~ msgid "Hide Application"
+#~ msgstr "Piilota sovellus"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Sovellukset"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Kumoa sovellusten piilottaminen tässä alivalikossa"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Kumoa sovellusten piilottaminen valikossa ”%1”"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Näytä KRunner"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Etsi, laske tai suorita komento"
+
+#~ msgid "Computer"
+#~ msgstr "Tietokone"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Näytä yhteystiedon tiedot…"
+
+#~ msgid "Contacts"
+#~ msgstr "Yhteystiedot"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Unohda yhteystieto"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Unohda kaikki yhteystiedot"
+
+#~ msgid "Recently Used"
+#~ msgstr "Viimeisimmät"
+
+#~ msgid "Documents"
+#~ msgstr "Tiedostot"
+
+#~ msgid "Forget Application"
+#~ msgstr "Unohda sovellus"
+
+#~ msgid "Forget Document"
+#~ msgstr "Unohda tiedosto"
+
+#~ msgid "Forget All"
+#~ msgstr "Unohda kaikki"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Unohda kaikki sovellukset"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Unohda kaikki tiedostot"
+
+#~ msgid "Hide %1"
+#~ msgstr "Piilota %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Kaikki sovellukset"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Viimeisimmät yhteystiedot"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Usein käytetyt tiedostot"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Viimeisimmät sovellukset"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Usein käytetyt sovellukset"
+
+#~ msgid "Power / Session"
+#~ msgstr "Virta / istunto"
+
+#~ msgid "Search results"
+#~ msgstr "Hakutulokset"
+
+#~ msgid "Lock"
+#~ msgstr "Lukitse"
+
+#~ msgid "Log Out"
+#~ msgstr "Kirjaudu ulos"
+
+#~ msgid "Save Session"
+#~ msgstr "Tallenna istunto"
+
+#~ msgid "Switch User"
+#~ msgstr "Vaihda käyttäjää"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Siirry valmiustilaan"
+
+#~ msgid "Hibernate"
+#~ msgstr "Siirry lepotilaan"
+
+#~ msgid "Restart"
+#~ msgstr "Käynnistä uudelleen"
+
+#~ msgid "Shut Down"
+#~ msgstr "Sammuta"
+
+#~ msgid "Session"
+#~ msgstr "Istunto"
+
+#~ msgid "System"
+#~ msgstr "Järjestelmä"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lukitse näyttö"
+
+#~ msgid "End session"
+#~ msgstr "Lopeta istunto"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Aloita rinnakkaisistunto toisena käyttäjänä"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Keskeytä muistiin"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Keskeytä levylle"
+
+#~ msgid "Restart computer"
+#~ msgstr "Käynnistä tietokone uudelleen"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Sammuta tietokone"
+
+#~ msgid "System actions"
+#~ msgstr "Järjestelmän toiminnot"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Hallitse sovellusta %1…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Suorita komento…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Etsi tai suorita"
+
+#~ msgid "Show:"
+#~ msgstr "Näytä:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Näytä viimeisimmät sovellukset"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Näytä usein käytetyt sovellukset"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Näytä viimeisimmät tiedostot"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Näytä usein käytetyt tiedostot"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Näytä viimeisimmät yhteystiedot"
+
+#~ msgid "Logout"
+#~ msgstr "Kirjaudu ulos"
+
+#~ msgid "Reboot"
+#~ msgstr "Käynnistä uudelleen"
+
+#~ msgid "Suspend"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Irrotettava tallennusväline"
+
+#~ msgid "Places"
+#~ msgstr "Sijainnit"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Käytä omaa kuvaa:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Valitse kuva"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Kuvatiedostot (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Lisää käynnistimenä"
+
+#~ msgid "New Session"
+#~ msgstr "Uusi istunto"
+
+#~ msgid "(Empty)"
+#~ msgstr "(tyhjä)"

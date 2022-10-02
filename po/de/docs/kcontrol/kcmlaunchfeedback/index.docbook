@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Programmstartanzeige</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+> <affiliation
+><address
+><email
+>F.Schuette@t-online.de</email
+></address
+></affiliation
+> <contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>Manchmal ist es nützlich zu wissen, dass der Computer einen Befehl nicht nur ignoriert sondern wirklich ausführt. In diesem Modul kann man visuelle Anzeigen einstellen, die melden, ob man das Symbol getroffen hat oder nicht.</para>
+	
+<para
+>Der übliche Weg um anzuzeigen, dass der Rechner beschäftigt ist, ist eine Veränderung des Mauszeigersymbols. Diese Methode können Sie unter <guilabel
+>Mauszeiger</guilabel
+> einschalten.</para>
+
+<para
+>Wenn diese Einstellung aktiviert ist, wird ein kleines Symbol zum Mauszeiger hinzugefügt, wenn ein neues Programm gestartet wird. Sie können unter <guilabel
+>Animation anhalten nach</guilabel
+> ein Zeitlimit für dieses Symbol einstellen. Die Voreinstellung beträgt 5 Sekunden.</para>
+
+<para
+>Sie können unter verschiedenen Aktivitätsanzeigen auswählen; darunter <guilabel
+>Keine Rückmeldung</guilabel
+>, <guilabel
+>Blinkend</guilabel
+>, <guilabel
+>Hüpfend</guilabel
+> oder ein <guilabel
+>Statisch</guilabel
+> ohne Animationen.</para>
+
+<para
+>Früher war die Programmstart-Anzeige in &plasma; etwas anders gelöst. Diese Methode kann hier ebenfalls aktiviert werden. Es handelt sich um ein beim Programmstart erscheinendes Symbol in der Fensterleiste, das zunächst durch ein rotierende Sanduhr ersetzt wurde, um anzuzeigen, dass etwas passiert. Sie können dieses Verhalten unter <guilabel
+>Animationen aktivieren</guilabel
+> ein- und ausschalten.</para>
+
+<para
+>Nicht alle Anwendungen, die Sie starten, öffnen ein Fenster auf der Arbeitsfläche. Einige werden zum Beispiel in der &plasma;-Miniprogrammleiste angedockt. Oder Sie haben ein Programm für eine andere als die aktuelle Arbeitsfläche gestartet und im Abschnitt <guilabel
+>Verhalten</guilabel
+> des Dialogs <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Einstellungen für „Fensterleiste“</guilabel
+></ulink
+> ist <guilabel
+>Nur Fenster der aktuellen Arbeitsfläche anzeigen</guilabel
+> für <guilabel
+>Nur Anwendungen anzeigen</guilabel
+> markiert. Das Zeitlimit ermöglicht auch in diesen Fällen eine visuelle Rückmeldung über den Programmstart, die wieder verschwindet, wenn der Start abgeschlossen ist.</para>
+
+</article>

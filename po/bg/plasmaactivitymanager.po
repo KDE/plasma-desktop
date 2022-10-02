@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2022-01-02 14:17+0100\n"
+"Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: sortedactivitiesmodel.cpp:316
+#, kde-format
+msgid "Used some time ago"
+msgstr "Използван преди време"
+
+#: sortedactivitiesmodel.cpp:332
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "Използван преди повече от година"
+
+#: sortedactivitiesmodel.cpp:333
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "Използван преди месец"
+msgstr[1] "Използван преди %1 месеца"
+
+#: sortedactivitiesmodel.cpp:334
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "Използван преди ден"
+msgstr[1] "Използван преди %1 дни"
+
+#: sortedactivitiesmodel.cpp:335
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "Използван преди час"
+msgstr[1] "Използван преди %1 часа"
+
+#: sortedactivitiesmodel.cpp:336
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "Използван преди минута"
+msgstr[1] "Използван преди %1 минути"
+
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used a moment ago"
+msgstr "Използван преди малко"
+
+#: switcherbackend.cpp:166
+#, kde-format
+msgid "Walk through activities"
+msgstr "Преминаване през дейности"
+
+#: switcherbackend.cpp:171
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "Преминаване през дейности (в обратен ред)"

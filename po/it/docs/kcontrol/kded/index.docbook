@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Servizi in background</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione in italiano</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>Servizio</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Il modulo <guilabel
+>Gestore dei servizi</guilabel
+> ti permette di avere una panoramica di tutte le estensioni del demone di &kde;, noto anche come Servizi di &kde;. In generale ci sono due tipi di servizio:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Servizi a richiesta</guilabel
+></term>
+<listitem
+><para
+>Questo è un elenco dei servizi di &kde; disponibili che verranno avviati a richiesta. Sono elencati solo per comodità, perché non li puoi manipolare. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Servizi all'avvio</guilabel
+></term>
+<listitem
+><para
+>Questo mostra tutti i servizi di &kde; che possono essere caricati al suo avvio. I servizi spuntati nella colonna <guilabel
+>Usa</guilabel
+> saranno avviati al prossimo avvio.</para>
+<para
+>Fai attenzione quando disattivi dei servizi sconosciuti: alcuni servizi sono fondamentali per &kde;. Non disattivare i servizi se non sai cosa stai facendo. </para>
+<para
+>Per cambiare lo <guilabel
+>Stato</guilabel
+> di un servizio, selezionalo nell'elenco. Puoi quindi usare <guibutton
+>Avvia</guibutton
+> e <guibutton
+>Interrompi</guibutton
+> per cambiare lo stato del servizio da <guilabel
+>Non in esecuzione</guilabel
+> a <guilabel
+>In esecuzione</guilabel
+> e viceversa. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

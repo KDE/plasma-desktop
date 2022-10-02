@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Tela de apresentação</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do Sistema</keyword>
+<keyword
+>tela de abertura</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo fornece uma interface para visualizar e selecionar os temas da tela de abertura.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do gerenciador da tela de abertura</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>O módulo de gerenciamento da tela de abertura</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Nesta página, você pode visualizar as telas de abertura já instaladas. A visualização da tela de abertura que está em uso aparece realçada.</para>
+
+<para
+>Passe com o ponteiro do mouse sobre uma imagem em miniatura para aparecer o botão <guilabel
+>Testar tela de abertura</guilabel
+> no canto superior direito da imagem. Clique nesse botão para ver a tela de abertura em ação.</para>
+
+<!-- not in 5.3
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Get New Themes...</guilabel
+></term>
+<listitem>
+<para>
+You need to be connected to the Internet to use this action. A dialog will display a list of themes from the <ulink url="http://www.kde-look.org"
+>http://www.kde-look.org</ulink
+> website. Clicking the <guibutton
+>Install</guibutton
+> button associated with a theme will install this theme locally.
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Installing a new theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Installing a new theme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+This new theme is immediately available after you close the System Settings Add-On Installer dialog and is highlighted. The preview displays the picture. You need to click the <guibutton
+>Apply</guibutton
+> biutton to make this theme your current splash-screen theme.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Install Theme File...</guilabel
+></term>
+<listitem>
+<para>
+Instead of installing a theme directly as above you might have a tarball of a theme locally that you want to install. Clicking on this button will open a file dialog and you choose the tarball of the theme you want to install. The installer then unpacks the theme locally and makes it immediately available in the themes list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Remove Theme</guilabel
+></term>
+<listitem>
+<para>
+Removing a theme means removing the theme files from your disk. A message box warns you before doing anything and indicates to you what it will remove. Clicking on <guibutton
+>Delete</guibutton
+> in this message box will remove the splash screen theme from your disk. Clicking <guibutton
+>Cancel</guibutton
+> will abort the remove action. If you choose <guibutton
+>Delete</guibutton
+>, the theme is then no longer available in the list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Test Theme</guilabel
+></term>
+<listitem>
+<para>
+This shows you the theme and the associated icons as they will be displayed as splash screen when &kde; starts. Clicking on the splash screen hides it.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+-->
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

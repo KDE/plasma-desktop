@@ -1,0 +1,830 @@
+# translation of kcmaccess.po to Malayalam
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdeedu package.
+#
+# Ashik S <aashiks@gmail.com>, 2008.
+# പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2019-12-12 23:03+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "ആള്‍ട്ട്ഗ്രാഫ്"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "ഹൈപ്പര്‍"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "സൂപ്പര്‍"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "NumLock, CapsLock ,ScrollLock എന്നിവ പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "CapsLock ,ScrollLock എന്നിവ പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "NumLock, ScrollLock എന്നിവ പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "ScrollLock പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "NumLock, CapsLock എന്നിവ പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "CapsLock പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "NumLock പ്രവര്‍ത്തനസജ്ജമായിരിക്കുമ്പോള്‍ %1 അമര്‍ത്തുക "
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "%1 അമര്‍ത്തുക"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr ""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Use System Bell"
+msgstr "&സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Customize system bell"
+msgstr "&സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Color of the Visible Bell"
+msgstr "&സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Use sticky Keys"
+msgstr "&സ്റ്റിക്കി കീകള്‍ "
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgid "Lock the sticky keys"
+msgstr "&സ്റ്റിക്കി കീകള്‍  പൂട്ടി വെക്കുക"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "രണ്ടു കീകള്‍ ഒരേ സമയം അമര്‍ത്തുമ്പോ സ്റ്റിക്കി കീകള്‍ ഓഫ് ആക്കുക"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Beep on a sticky key press"
+msgstr "&സ്റ്റിക്കി കീകള്‍ "
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Use slow keypresses"
+msgstr "സ്ലോ കീകള്‍ ഉപയോഗിക്കുക"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "ബൗണ്‍സ്  കീകള്‍"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:31
+#, fuzzy, kde-format
+#| msgid "Audible Bell"
+msgid "Audible bell:"
+msgstr "കേള്‍ക്കാന്‍ പറ്റുന്ന മണി"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:93
+#, fuzzy, kde-format
+msgid "Visual bell:"
+msgstr "ദൃശ്യമായ മണി"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:108
+#, fuzzy, kde-format
+#| msgid "I&nvert screen"
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "സ്ക്രീന്‍ വിപരീതനിറങ്ങളിലാക്കുക"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:147
+#, fuzzy, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "&സമയപരിധി:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Slow keys:"
+msgstr "സ്ലോ കീകള്‍ ഉപയോഗിക്കുക"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring system bell:"
+msgstr "&സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "&ഏതെങ്കിലും കീ അമര്‍ത്തിയാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "&ഏതെങ്കിലും കീ അംഗീകരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "&ഏതെങ്കിലും കീ തിരസ്കരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, fuzzy, kde-format
+#| msgid "Bounce Keys"
+msgid "Bounce keys:"
+msgstr "ബൗണ്‍സ്  കീകള്‍"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgid "Ring system bell when rejected"
+msgstr "&ഏതെങ്കിലും കീ തിരസ്കരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "&Bell"
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "&മണി"
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "&മോഡിഫയര്‍ കീകള്‍"
+
+#: package/contents/ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "&Keyboard Filters"
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "&കീബോര്‍ഡ് ഫില്‍ട്ടറുകള്‍"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, fuzzy, kde-format
+msgid "Sticky keys:"
+msgstr "&സ്റ്റിക്കി കി"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgid "Ring system bell when modifier keys are used"
+msgstr "&ഏതെങ്കിലും കീ അമര്‍ത്തിയാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgid "Ring system bell when locking keys are toggled"
+msgstr "&ഏതെങ്കിലും കീ അംഗീകരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, fuzzy, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"ഏതെങ്കിലും മോഡിഫയര്‍ അല്ലെങ്കില്‍ ലോക്കിങ്ങ് കീയുടെ അവസ്ഥ മാറുകയാണെങ്കില്‍ കെഡിഇയുടെ സിസ്റ്റം "
+"അറിയിപ്പ് സംവിധാനംഉപയോഗിക്കുക"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "&അറിയിപ്പുകള്‍ ക്രമീകരിക്കുക"
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "&സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "അറിയിപ്പ്"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration delay:"
+msgstr "&അംഗീകരിക്കാനുള്ള കാലതാമസം"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration time:"
+msgstr "&അംഗീകരിക്കാനുള്ള കാലതാമസം"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration profile:"
+msgstr "&അംഗീകരിക്കാനുള്ള കാലതാമസം"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ആഷിക് എസ്"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgid "Accessibility"
+#~ msgstr "കെഡിഇ സാമീപ്യതാ പണിയായുധം"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(c) 2000 മത്തിയാസ് ഹൊള്‍സ്നര്‍-ക്ളുപ്ഫെല്‍"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "മത്തിയാസ് ഹൊള്‍സ്നര്‍-ക്ളുപ്ഫെല്‍"
+
+#~ msgid "Author"
+#~ msgstr "രചയിതാവ്"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation:"
+#~ msgstr "സജീവമാക്കാന്‍ ഉപയോഗിക്കുന്ന ആംഗ്യങ്ങള്‍"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "ഈ ഐച്ഛികം തിരഞ്ഞെടുത്തിട്ടുണ്ടെങ്കില്‍ ഡിഫോള്‍ട്ട് ആയുള്ള സിസ്റ്റം മണി "
+#~ "ഉപയോഗിക്കപ്പെടുന്നതായിരിക്കും.\"സിസ്റ്റം മണി\" എന്നനിയന്ത്രണഘടകത്തില്‍ നോക്കിയാല്‍ സിസ്റ്റം "
+#~ "മണി യഥേഷ്ടം തെരഞ്ഞെടുക്കാവുന്നതാണ്.സാധാരണയായിഇത് ഒരു \"ബീപ്\" ശബ്ദമാണ്."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "<p>നിങ്ങള്‍ക്ക് ഇഷ്ടമുള്ള ഒരു ശബ്ദരേഖ തെരഞ്ഞടുത്ത് അത് മണിശബ്ദമായി ഉപയോഗിക്കണമെന്നുണ്ടെങ്കില്‍ ഈ "
+#~ "ഐച്ഛികം തെരഞ്ഞെടുക്കുക.ഇതു ചെയ്യുന്നുണ്ടെങ്കില്‍ സിസ്റ്റം മണി ഓഫാക്കി വെക്കുന്നത് നല്ലതായിരിക്കും."
+#~ "</p><p>പഴയ കമ്പ്യൂട്ടറുകളില്‍, മണി കേള്‍പ്പിക്കാനായുള്ള സംഭവംനടക്കുന്നതും ശബ്ദം കേള്‍"
+#~ "ക്കുന്നതിനുമിടയില്‍ ഒരു \"വിളംബം \" ഉണ്ടാകാന്‍ ഇതു കാരണമാകും</p>"
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "ഇഷ്ടപ്രകാരമുള്ള മണി ഉപയോഗിക്കുക"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "\"ഇഷ്ടപ്രകാരമുള്ള മണി ഉപയോഗിക്കുക\" എന്ന ഐച്ഛികം തെരഞ്ഞെടുത്തിട്ടുണ്ടെങ്കില്‍ ,അതിനുള്ള "
+#~ "ശബ്ദരേഖ ഇവിടെ നിന്നുംതെരഞ്ഞെടുക്കാവുന്നതാണ്.\"തെരയുക...\" എന്ന ബട്ടണ്‍ ഉപയോഗിച്ച് ഇഷ്ടമുള്ള "
+#~ "ഒരു ശബ്ദരേഖ ഫയല്‍ ഡയലോഗ് വഴി തെരഞ്ഞെടുക്കാവുന്നതാണ്."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "&കേള്‍പ്പിക്കേണ്ട ശബ്ദം"
+
+#~ msgid "Browse..."
+#~ msgstr "തെരയുക..."
+
+#, fuzzy
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "ഈ ഐച്ഛികം \"ദൃശ്യമായ മണി\" യെ പ്രവര്‍ത്തനസജ്ജമാക്കും . ഇത് സാധാരണയായി മണിശബ്ദം കേള്‍"
+#~ "ക്കുന്ന അവസരത്തിലെല്ലാം ദൃശ്യമായ ഒരു അറിയിപ്പ് കൂടെ തരും. ഇത് ബധിരതയുള്ളവര്‍ക്ക് വളരെ "
+#~ "ഉപകാരപ്പെടുന്ന ഒന്നാണ്."
+
+#, fuzzy
+#~ msgid "&Use visual bell"
+#~ msgstr "&ദൃശ്യമായ മണി ഉപയോഗിക്കുക"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "താഴെ പറഞ്ഞിരിക്കുന്ന സമയത്തേക്ക് സ്ക്രീനിനെ നിങ്ങള്‍ തെരഞ്ഞെടുക്കുന്ന ഒരു നിറത്തില്‍ "
+#~ "കാണിക്കുന്നതായിരിക്കും."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&സ്ക്രീന്‍ മിന്നിക്കുക"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "സ്ക്രീനിലെ എല്ലാ നിറങ്ങളും താഴെ പറഞ്ഞിരിക്കുന്ന സമയത്തേക്ക് നേര്‍ വിപരീതമാക്കപ്പെടും"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "\"&സ്ക്രീന്‍ മിന്നിക്കുക\" എന്ന ഐച്ഛികത്തിന് ആവശ്യമായ നിറം തെരഞ്ഞെടുക്കുവാന്‍ ഇവിടെ ക്ളിക്ക് "
+#~ "ചെയ്യുക"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "\"ദൃശ്യമായ മണി\" എന്ന പ്രഭാവത്തിന്റെ സമയപരിധി നിങ്ങള്‍ക്ക് ഇവിടെ നിശ്ചയിക്കാവുന്നതാണ്"
+
+#~ msgid " msec"
+#~ msgstr "മില്ലിസെക്കന്‍ഡ്"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "ഒരു മോഡിഫയര്‍ കൊളുത്തുകയോ, പൂട്ടുകോയോ തുറക്കുകയോ ചെയ്യുമ്പോള്‍ സിസ്റ്റത്തിലെ മണി ഉപയോഗിയ്ക്കുക"
+
+#~ msgid "Locking Keys"
+#~ msgstr "ലോക്കിങ്ങ് കീകള്‍"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "ലോക്കിങ്ങ് കീകളിലേതെങ്കിലുമൊരെണ്ണം സജീവമോ നിര്‍ജ്ജീവമോ ആകുകയാണെങ്കില്‍ സിസ്റ്റം മണി പ്രവര്‍"
+#~ "ത്തിപ്പിക്കുക"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&സ്ലോ കീകള്‍"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "&ബൗണ്‍സ്  കീകള്‍  ഉപയോഗിക്കുക"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "ഏതെങ്കിലും കീ തിരസ്കരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#, fuzzy
+#~ msgid "Activation &Gestures"
+#~ msgstr "സജീവമാക്കാന്‍ ഉപയോഗിക്കുന്ന ആംഗ്യങ്ങള്‍"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "സ്റ്റിക്കി കീകളും സ്ലോ കീകളും സജീവമാക്കാന്‍ ആംഗ്യങ്ങളുപയോഗിക്കുക"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "കുറച്ചു നേരം അങ്ങ്നാതെ ഇരിക്കുകയാണെങ്കില്‍ സ്റ്റിക്കി കീകളും സ്ലോ കീകളും നിര്‍ജീവമാക്കുക"
+
+#~ msgid " min"
+#~ msgstr "മിനുട്ടുകള്‍"
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "ഏതെങ്കിലും അക്സസബിളിറ്റി കഴിവുകള്‍ ഒരു ആംഗ്യം വഴി സജീവമാക്കുകയോ നിര്‍ജ്ജീവമാക്കുകയോ "
+#~ "ചെയ്യുകയാണെങ്കില്‍സിസ്റ്റം മണി ഉപയോഗിക്കുക"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "ഈ ഐച്ഛികം തെരഞ്ഞെടുത്തിട്ടുണ്ടെങ്കില്‍ ഏതെങ്കിലും കീബോര്‍ഡ്  അക്സസബിളിറ്റി കഴിവുകള്‍ "
+#~ "സജീവമാക്കുകയോ നിര്‍ജ്ജീവമാക്കുകയോ ചെയ്യുമ്പോള്‍അതിനെ  ഉറപ്പു വരുത്തുന്ന ഒരു ഡയലോഗ് കെഡിഇ "
+#~ "കാണിക്കും.\n"
+#~ " ഇതു തെരഞ്ഞെടുക്കുന്നില്ല എങ്കില്‍ നിങ്ങള്‍ ചെയ്യുന്നതെന്തെന്ന്നിങ്ങള്‍ക്ക് അറിയാമെന്ന് ഉറപ്പു വരുത്തുക, "
+#~ "ഇല്ലെങ്കില്‍ കീബോര്‍ഡ്  അക്സസബിളിറ്റി കഴിവുകള്‍ പ്രത്യേകിച്ചുള്ല ഉറപ്പു വരുത്തലുകള്ഒന്നുമില്ലാതെ "
+#~ "പ്രയോഗിക്കപ്പെടും"
+
+#, fuzzy
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "ഏതെങ്കിലും കീബോര്‍ഡ്  അക്സസബിളിറ്റി കഴിവുകള്‍ സജീവമാക്കുകയോ നിര്‍ജ്ജീവമാക്കുകയോ "
+#~ "ചെയ്യുകയാണെങ്കില്‍അതിനെ  ഉറപ്പു വരുത്തുന്ന ഒരു ഡയലോഗ് കാണിക്കുക"
+
+#, fuzzy
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "ഏതെങ്കിലും കീബോര്‍ഡ്  അക്സസബിളിറ്റി കഴിവുകള്‍ സജീവമാക്കുകയോ നിര്‍ജ്ജീവമാക്കുകയോ "
+#~ "ചെയ്യുകയാണെങ്കില്‍കെഡിഇയുടെ സിസ്റ്റം അറിയിപ്പുകള്‍ക്കായുള്ള സംവിധാനം ഉപയോഗിക്കുക"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "താഴെ പറയുന്ന ഗുണങ്ങള്‍ തുടങ്ങുവാനുള്ള കീബോര്‍ഡിലെ ആംഗ്യങ്ങളെ നിങ്ങള്‍ക്കു് സജീവമാക്കാം: \n"
+#~ "സ്റ്റിക്കി കീകള്‍: 5 തവണ തുടര്‍ച്ചയായി ഷിഷ്റ്റ് അമര്‍ത്തുക\n"
+#~ "വേഗം കുറഞ്ഞ കീകള്‍: 8 സെക്കന്റ് നേരം ഷിഫ്റ്റ് കീ അമര്‍ത്തിപിടിയ്ക്കുക"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "താഴെപ്പറയുന്നവയെ പ്രവര്‍ത്തനസജ്ജമാക്കാന്‍ ഉപയോഗിക്കുന്ന കീബോര്‍ഡ് ആംഗ്യങ്ങളെ ഇവിടെ നിന്നും "
+#~ "സജീവമാക്കാം:\n"
+#~ "മൗസ് കീകള്‍: %1 \n"
+#~ "സ്റ്റിക്കി കീകള്‍: ഷിഫ്റ്റ് കീ 5 തവണ അടുപ്പിച്ച് അമര്‍ത്തുക\n"
+#~ "സ്ലോ കീകള്‍: ഷിഫ്റ്റ് കീ 8 സെക്കന്‍ഡ് നേരം അടുപ്പിച്ച് അമര്‍ത്തി പിടിക്കുക"
+
+#, fuzzy
+#~ msgid "&Activation Gestures"
+#~ msgstr "സജീവമാക്കാന്‍ ഉപയോഗിക്കുന്ന ആംഗ്യങ്ങള്‍"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "ഡീബൗണ്‍സിനുള്ള  സമയം:"
+
+#~ msgid "Timeout:"
+#~ msgstr "സമയം"
+
+#~ msgid "kaccess"
+#~ msgstr "കെഅക്സസ്"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|വേവ് ഫയലുകള്‍"

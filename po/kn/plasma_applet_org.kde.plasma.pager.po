@@ -1,0 +1,208 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2010-01-03 21:59+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display text:"
+msgid "Text display:"
+msgstr "ಪಠ್ಯ ಪ್ರದರ್ಶನ"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "ಯಾವುದೆ ಪಠ್ಯವಿಲ್ಲ"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "ಗಣಕತೆರೆಯ ಸಂಖ್ಯೆ "
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "ಗಣಕತೆರೆಯ ಹೆಸರು"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "ಪ್ರಸ್ತುತ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸಲಾಗುತ್ತದೆ:"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "ಪ್ರಸ್ತುತ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸಲಾಗುತ್ತದೆ:"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "ಏನನ್ನೂ ಮಾಡದು"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "ಗಣಕತೆರೆಯನ್ನು ತೋರಿಸು"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and 1 other"
+#| msgid_plural "and %1 others"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "ಹಾಗು ೧ ಇತರೆ"
+msgstr[1] "ಹಾಗು ೧ ಇತರೆ"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "One window:"
+#| msgid_plural "%1 windows:"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "ಒಂದು ವಿಂಡೊ:"
+msgstr[1] "ಒಂದು ವಿಂಡೊ:"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "ಗಣಕತೆರೆಯ ಹೆಸರು"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, fuzzy, kde-format
+#| msgid "&Add Virtual Desktop"
+msgid "Add Virtual Desktop"
+msgstr "ವಾಸ್ತವಪ್ರಾಯ ಗಣಕತೆರೆಯನ್ನು ಸೇರಿಸು(&A)"
+
+#: package/contents/ui/main.qml:600
+#, fuzzy, kde-format
+#| msgid "&Remove Last Virtual Desktop"
+msgid "Remove Virtual Desktop"
+msgstr "ಕೊನೆಯ ವಾಸ್ತವಪ್ರಾಯ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸು(&R)"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Virtual Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "ವಾಸ್ತವಪ್ರಾಯ ಗಣಕತೆರೆಯನ್ನು ಸಂರಚಿಸು(&C)..."
+
+#, fuzzy
+#~| msgid "Configure Desktops..."
+#~ msgid "Configure Desktops..."
+#~ msgstr "ಗಣಕತೆರೆಗಳನ್ನು ಸಂರಚಿಸಿ..."
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "ಯಂತ್ರೋಪಕರಣ ಪಟ್ಟಿ  (ಡಾಶ್ ಬೋರ್ಡ್) ತೋರುತ್ತದೆ"
+
+#~ msgid "Display icons:"
+#~ msgstr "ಚಿಹ್ನೆಗಳನ್ನು ತೋರಿಸು:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "ವಾಸ್ತವಪ್ರಾಯ ಗಣಕತೆರೆಯನ್ನು ಸೇರಿಸು(&A)"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "ಕೊನೆಯ ವಾಸ್ತವಪ್ರಾಯ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸು(&R)"
+
+#~ msgid "Configure Pager"
+#~ msgstr "ಪೇಜರನ್ನು ಸಂರಚಿಸಿ"
+
+#~ msgid "Number of columns:"
+#~ msgstr "ಲಂಬಸಾಲುಗಳ ಸಂಖ್ಯೆ:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "ಅಡ್ಡಸಾಲುಗಳ ಸಂಖ್ಯೆ:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "ಅಡ್ಡಸಾಲಿನ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಿಸು"

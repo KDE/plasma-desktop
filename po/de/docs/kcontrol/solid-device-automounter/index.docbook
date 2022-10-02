@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Wechselmedien</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Automatisches Einhängen</keyword>
+<keyword
+>Gerät</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In diesem Dialog können Sie den automatischen Umgang mit Wechselmedien einrichten. </para>
+
+<para
+>Aktivieren Sie das automatische Einhängen von Wechselmedien in diesem Modul, müssen Sie das Miniprogramm „Geräteüberwachung“ oder die Seitenleiste in der Dateiverwaltung nicht verwenden, um Zugriff auf ein gerade eingestecktes Gerät zu erhalten. </para>
+
+<para
+>Oben im Dialog werden die globalen Einstellungen angezeigt, die für jedes einzelne Gerät in der Liste <guilabel
+>Vorrangige Geräte-Behandlung</guilabel
+> überschrieben werden können. Auf einem System mit nur einem Benutzer ist es sinnvoll, alle globalen Einstellungen zu aktivieren. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Automatisches Einhängen von Wechselmedien aktivieren</guilabel
+></term>
+<listitem
+><para
+>Wenn diese Einstellung nicht aktiviert ist, werden keinerlei Geräte automatisch eingehängt. Dabei ist es unerheblich, ob im Abschnitt <guilabel
+>Vorrangige Geräte-Behandlung</guilabel
+> besondere Einstellungen vorgenommen wurden. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nur Wechselmedien automatisch einhängen, die schon zuvor eingehängt waren</guilabel
+></term>
+<listitem
+><para
+>Wenn diese Einstellung aktiviert ist, wird &plasma; nur Geräte automatisch einhängen, die auch schon zuvor einmal eingehängt waren. Dies könnte &eg;  ein &USB;-Medienspieler sein, der zum Laden angeschlossen wurde. Wenn dabei auf keine Dateien zugegriffen wurde, wird &plasma; den Medienspieler beim nächsten Anschließen nicht automatisch einhängen. Wenn allerdings einmal auf Dateien zugegriffen wurde, wird sich &plasma; daran erinnern und den Inhalt des Medienspielers auch beim nächsten Mal verfügbar machen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Alle Wechselmedien beim Anmelden automatisch einhängen</guilabel
+></term>
+<listitem
+><para
+>Wenn bei Ihrer Anmeldung an  bereits Wechselmedien angeschlossen sind, wird &plasma; den Inhalt der Geräte automatisch für Sie verfügbar machen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Wechselmedien beim Anschluss automatisch einhängen</guilabel
+></term>
+<listitem
+><para
+>Wenn diese Einstellung aktiviert ist, wird &plasma; den Inhalt von Wechselmedien automatisch verfügbar machen, sobald sie angeschlossen werden. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Automatisch einhängen</guilabel
+></term>
+<listitem
+><para
+>Diese Liste zeigt alle Geräte, die &plasma; bekannt sind. Wenn die Einstellung <guilabel
+>Bei der Anmeldung</guilabel
+> aktiviert ist, wird das Gerät automatisch eingehängt, selbst wenn die Einstellung <guilabel
+>Alle Wechselmedien beim Anmelden einhängen</guilabel
+> nicht aktiviert ist. Das Gleiche gilt für die Einstellung <guilabel
+>Beim Anschluss</guilabel
+></para>
+<para
+>Wenn die Einstellung <guilabel
+>Automatisches Einhängen von Wechselmedien aktivieren</guilabel
+> ausgeschaltet ist, ist die vorrangige Geräte-Behandlung inaktiv und es werden keine Geräte automatisch eingehängt. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Gerät vergessen</guibutton
+></term>
+<listitem
+><para
+>Durch Drücken dieses Knopfes vergisst &plasma; die ausgewählten Geräte. Dies kann nützlich sein, wenn Sie die Funktion <guilabel
+>Nur Wechselmedien automatisch einhängen, die schon zuvor eingehängt waren</guilabel
+> verwenden. Wenn Sie &plasma; ein Gerät vergessen lassen, wird es zukünftig nicht mehr automatisch durch diese Funktion eingebunden. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

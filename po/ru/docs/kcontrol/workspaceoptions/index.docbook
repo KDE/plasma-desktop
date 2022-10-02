@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Основные параметры</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18 мая 2012 г.</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>параметры системы</keyword>
+<keyword
+>рабочий стол</keyword>
+<keyword
+>рабочая среда</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Данный модуль позволяет настроить основные параметры рабочей среды. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Всплывающие подсказки при наведении курсора мыши</guilabel
+></term>
+<listitem>
+<para
+>Выберите эту опцию, чтобы всплывающие подсказки показывались на панели или на рабочем столе.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Показывать уведомления при регулировке устройств</guilabel
+></term>
+<listitem>
+<para
+>При регулировании с помощью клавиатуры таких параметров, как, например, яркость экрана или громкость, изменения будут отображаться в экранном меню.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Скорость анимации</guilabel
+></term>
+<listitem>
+    <para
+>Позволяет указать скорость анимации эффектов рабочего стола (от <guilabel
+>Медленнее</guilabel
+> до <guilabel
+>Быстрее</guilabel
+>).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Одинарный щелчок для открытия файлов и каталогов</guilabel
+></term>
+<listitem>
+<para
+>По умолчанию используется это значение. Значки открываются одинарным щелчком кнопкой мыши. Выделить элементы можно, обведя их рамочкой, нажатием <keycombo action="simul"
+>&Ctrl;<mousebutton
+>правая кнопка мыши</mousebutton
+></keycombo
+> или просто нажатием и удержанием кнопки мыши для перетаскивания. Выделение также можно выполнить щелчком по маркеру выбора объекта.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Двойной щелчок для открытия файлов и каталогов</guilabel
+></term>
+<listitem>
+<para
+>Если флажок не установлен, то значки/файлы будут открываться с помощью одного щелчка <mousebutton
+>левой</mousebutton
+> кнопкой мыши. Такой режим установлен по умолчанию и похож на то, как в большинстве браузеров открываются ссылки. Если флажок установлен, то значки/файлы будут открываться двойным щелчком мыши, а одиночный щелчок только выделит значок или файл. Такой режим может быть знаком по другим операционным системам.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Щелчок по полосе прокрутки</guimenu
+><guimenuitem
+>Прокручивает на одну страницу страницу вверх или вниз</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Это параметр по умолчанию. Щелчок левой кнопкой мыши по полосе прокрутки приводит к перемещению на одну страницу.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Щелчок по полосе прокрутки</guimenu
+><guimenuitem
+>Прокручивает в указанное положение</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Включает поведение, при котором щелчок по полосе прокрутки приводит к перемещению на соответствующее место в документе. Такое поведение используется в других окружениях рабочего стола и операционных системах.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Сенсорный режим работы</guimenu
+><guimenuitem
+>Автоматически/Никогда не использовать</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Сенсорный режим работы будет автоматически включён при наличии сенсорного экрана если мышь или сенсорная панель отключены, например в случае переворачивания экрана или отключения клавиатуры от ноутбука-трансформера.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Использовать всегда (по умолчанию)/Никогда не использовать</guimenuitem
+></term>
+<listitem>
+<para
+>В сенсорном режиме многие элементы интерфейса пользователя становятся больше, что облегчает работу с ними.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

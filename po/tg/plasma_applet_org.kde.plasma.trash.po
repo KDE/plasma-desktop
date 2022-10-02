@@ -1,0 +1,108 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2009, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2019-09-16 13:44+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.04.3\n"
+
+#: contents/ui/main.qml:103
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "Кушодан"
+
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Холӣ кардан"
+
+#: contents/ui/main.qml:110
+#, fuzzy, kde-format
+#| msgid "Trash Settings..."
+msgid "Trash Settings…"
+msgstr "Танзимоти сабад..."
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"Сабад\n"
+"Холӣ"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"Сабад\n"
+"Як чиз"
+msgstr[1] ""
+"Сабад\n"
+"%1 чиз"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Сабад"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "Empty"
+msgstr "Холӣ"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "Як чиз"
+msgstr[1] "%1 чиз"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgid "Empty Trash"
+#~ msgstr "Холӣ кардани сабад"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Do you really want to empty the trash? All items will be deleted."
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr "Шумо мехоҳед сабадро холӣ кунед? Ҳамаи файлҳо нест карда мешаванд."
+
+#~ msgid "&Empty Trashcan"
+#~ msgstr "&Холи кардани сабад"
+
+#~ msgid "&Menu"
+#~ msgstr "&Меню"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgctxt "@title:window"
+#~ msgid "Empty Trash"
+#~ msgstr "Холӣ кардани сабад"
+
+#, fuzzy
+#~| msgid "&Empty Trashcan"
+#~ msgid "Emptying Trashcan..."
+#~ msgstr "&Холи кардани сабад"

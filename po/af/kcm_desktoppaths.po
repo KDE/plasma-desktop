@@ -1,0 +1,863 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001, 2005 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002,2005,2006.
+# Kobus Venter <kabousv@therugby.co.za>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2006-01-19 21:33+0200\n"
+"Last-Translator: Frikkie Thirion <frikkie.thirion@deneloptronics.co.za>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Werkskerm"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents"
+msgstr "Dokumente gids soeklys:"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads"
+msgstr "Dokumente gids soeklys:"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music"
+msgstr "Dokumente gids soeklys:"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures"
+msgstr "Dokumente gids soeklys:"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos"
+msgstr "Dokumente gids soeklys:"
+
+#: globalpaths.cpp:32
+#, fuzzy, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Gidse</h1>\n"
+"Hierdie module laat jou toe om te kies waar in die lêersisteem die lêers op "
+"jou werkskerm gestoor moet word.\n"
+"Gebruik die \"Wat is Hierdie?\" (Shift+F1) om hulp oor spesifieke opsies te "
+"kry"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Des&ktop path:"
+msgid "Desktop path:"
+msgstr "Werkskerm gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Hierdie houer bevat al die lêers wat jy op jou werkskerm sien. Jy kan die "
+"ligging van hierdie vouer verander as jy wil hê, en die inhoud sal "
+"automaties  beweeg na die nuwe ligging."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents path:"
+msgstr "Dokumente gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads path:"
+msgstr "Dokumente gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos path:"
+msgstr "Dokumente gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures path:"
+msgstr "Dokumente gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music path:"
+msgstr "Dokumente gids soeklys:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
+
+#, fuzzy
+#~| msgid "A&utostart path:"
+#~ msgid "Autostart path:"
+#~ msgstr "Outomatiese begin gids soeklys:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Hierdie houer bevat programme of skakel na programme (kortpaaie) wat jy "
+#~ "automaties wil laat begin wanneer Kde begin. Jy kan die ligging verander "
+#~ "van hierdie gids as jy wil hê, en die inhoud sal automaties na die nuwe "
+#~ "ligging  beweeg."
+
+#~ msgid "Autostart"
+#~ msgstr "Outomatiese begin"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Movies"
+#~ msgstr "Dokumente gids soeklys:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Die gids pad vir '%1' het verander;\n"
+#~ "wil hê die lêers moet van '%2' na '%3' geskuif word?"
+
+#, fuzzy
+#~| msgid ""
+#~| "The path for '%1' has been changed;\n"
+#~| "do you want the files to be moved from '%2' to '%3'?"
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Die gids pad vir '%1' het verander;\n"
+#~ "wil hê die lêers moet van '%2' na '%3' geskuif word?"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Bevestiging benodig"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror Gedrag</h1> Jy kan Konqueror se gedrag as 'n lêer "
+#~ "bestuurder hier opstel."
+
+#~ msgid "Misc Options"
+#~ msgstr "Allerlei Opsies"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Maak gidse in aparte vensters oop"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Indien hierdie opsie gekies is, sal Konqueror 'n nuwe venster oopmaak "
+#~ "wanneer jy 'n gids oopmaak, eerder as om die inhoud in die bestaande "
+#~ "venster te vertoon."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Wys 'Uitvee' konteks kieslys items wat verby die asblik gaan"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Kies die indien jy die 'Uitvee' kieslys opdrag vertoon wil hê op die "
+#~ "werksskerm en lêer bestuurder konteks kieslyste. Jy kan steeds lêers "
+#~ "regstreeks skrap deur die Verskuiwende sleutel in te druk wanneer jy die "
+#~ "opdrag 'Skuif na Asblik' gebruik."
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Vra Bevestiging Vir"
+
+#, fuzzy
+#~| msgid ""
+#~| "This option tells Konqueror whether to ask for a confirmation when you "
+#~| "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to "
+#~| "your trash folder, from where it can be recovered very easily.</li> "
+#~| "<li><em>Delete:</em> simply deletes the file.</li> </li></ul>"
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Hierdie opsie sê vir Konqueror of dit moet vra vir bevestiging wanneer jy "
+#~ "'n lêer \"Uitvee\".<ul><li><em>Beweeg na Asblik:</em> skuiwe die lêer na "
+#~ "jou Asblik gids, vanwaar dit baie maklik herwin kan word.</li> "
+#~ "<li><em>Uitvee:</em> Vernietig eenvoudig die lêer.</li> </li></ul>"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Beweeg na asblik"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Uitvee"
+
+#~ msgid "&Behavior"
+#~ msgstr "Gedrag"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "Voorskoue && Meta-Data"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Voorskoue toegelaat, \"Houer Ikone Reflekteer Inhoud\", en "
+#~ "terugvraging van meta-data op protokolle:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Voorskou Opsies</h1> Hier kan jy die gedrag van Konqueror bepaal "
+#~ "wanneer dit die lêers in 'n vouer vertoon.<h2>Die lys van protokolle:</"
+#~ "h2> skakel die protokolle aan waarvoor voorskoue gewys moet word, skakel "
+#~ "die af waarvoor voorskoue nie gedoen moet word nie. Jy wil byvoorbeeld "
+#~ "voorskoue toelaat vir SMB, indien die lokale netwerk vinnig genoeg is, "
+#~ "maar jy wil dit afskakel vir FTP, indien jy gereeld stadige tuistes "
+#~ "besoek wat groot beelde huisves.<h2>Maksimum Lêer Grootte:</h2> kies die "
+#~ "maksimum lêer grootte waarvoor voorskoue gedoen moet word. Die vertek is "
+#~ "1 Mb. Daar sal dus geen voorskou gedoen word vir lêers groter as 1 Mb "
+#~ "nie. "
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Kies Protokolle"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Plaaslike Protokolle"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Internet Protokolle"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Hierdie opsie maak dit moontlik om te kies of die lêer voorskoue en "
+#~ "luukse kabinet ikoone en meta-data in die Lêer Bestuurder geaktiveer moet "
+#~ "wees.\n"
+#~ "In die lys van protokolle wat verskyn, kies diegene wat vinnig genoeg is "
+#~ "wat jy wil toelaat dat voorskoue daarvan gegenereer moet word."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Maksimum lêer grootte:"
+
+#~ msgid " MB"
+#~ msgstr "  mb "
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "Vermeerder grootte van voorskoue relatief tot ikone"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Gebruik duimnaelskets ingebed in lêers"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Kies hierdie na gebruik duimnaelskets wat word gevind binne in sommige "
+#~ "lêer tipes (e.g. Jpeg). hierdie sal vermeerder spoed en verminder disket "
+#~ "gebruik. Ontkies dit as jy het lêers wat het al geprosesseer deur "
+#~ "programme wat skep onakuraat duimnaelskets, soos as Imagemagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Klank Lêers"
+
+#~ msgid "&Left button:"
+#~ msgstr "Links knoppie:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Jy kan kies wat gebeur wanneer Jy kliek die links knoppie van jou aanwys "
+#~ "toestel op die werkskerm:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Regterkant knoppie:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Jy kan kies wat gebeur wanneer Jy kliek die regterkant knoppie van jou "
+#~ "aanwys toestel op die werkskerm:"
+
+#, fuzzy
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Geen aksie:</em> soos jy dalk skat, niks gebeur!</li> "
+#~ "<li><em>Venster lys kieslys:</em> 'n kieslys te wys alle vensters op alle "
+#~ "virtuele werkskerms spring begin. jy kan kliek op die werkskerm naam na "
+#~ "wissel na wat werkskerm, van op 'n Venster naam na verskuiwende fokus na "
+#~ "wat Venster, omskakeling werkskerms as nodige, en herstel die Venster as "
+#~ "dit is weg gesteekte. weg gesteekte van geminimeer vensters word "
+#~ "verteenwoordig met hulle name in aanhalingstekens.</li> <li><em>werkskerm "
+#~ "kieslys:</em> 'n konteks kieslys vir die werkskerm spring begin. Onder "
+#~ "ander dinge, hierdie kieslys het opsies vir konfigurering van die "
+#~ "vertoon, sluit van die skerm, en afteken uit van Kde.</li> "
+#~ "<li><em>Aansoek kieslys:</em> die \"K\" kieslys spring begin. hierdie "
+#~ "dalk wees bruikbare vir vinnig toegang te kry tot programme as jy hou van "
+#~ "na hou die paneel (asook bekend as \"Kicker\") weg gesteekte van besigtig."
+#~ "</li></ul>"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Jy kan kies wat gebeur wanneer Jy kliek die middelste knoppie van jou "
+#~ "aanwys toestel op die werkskerm: <ul><li><em>Nee aksie:</em> as Jy dalk "
+#~ "skat, niks gebeur!</li> <li><em>Venster lys kieslys:</em> 'n kieslys te "
+#~ "wys alle vensters op alle virtuele werkskerms spring begin. Jy kan kliek "
+#~ "op die werkskerm naam na wissel na wat werkskerm, van op 'n Venster naam "
+#~ "na verskuiwende fokus na wat Venster, omskakeling werkskerms as nodige, "
+#~ "en herstel die Venster as dit is weg gesteekte. weg gesteekte van "
+#~ "geminimeer vensters word verteenwoordig met hulle name in "
+#~ "aanhalingstekens.</li> <li><em>werkskerm kieslys:</em> 'n konteks kieslys "
+#~ "vir die werkskerm spring begin. Onder ander dinge, hierdie kieslys het "
+#~ "opsies vir konfigurering van die vertoon, sluit van die skerm, en afteken "
+#~ "uit van Kde.</li> <li><em>Aansoek kieslys:</em> die \"K\" kieslys spring "
+#~ "begin. hierdie dalk wees bruikbare vir vinnig toegang te kry tot "
+#~ "programme as Jy hou van na hou die paneel (asook bekend as \"Kicker\") "
+#~ "weg gesteekte van besigtig.</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Geen aksie:</em> soos jy dalk skat, niks gebeur!</li> "
+#~ "<li><em>Venster lys kieslys:</em> 'n kieslys te wys alle vensters op alle "
+#~ "virtuele werkskerms spring begin. jy kan kliek op die werkskerm naam na "
+#~ "wissel na wat werkskerm, van op 'n Venster naam na verskuiwende fokus na "
+#~ "wat Venster, omskakeling werkskerms as nodige, en herstel die Venster as "
+#~ "dit is weg gesteekte. weg gesteekte van geminimeer vensters word "
+#~ "verteenwoordig met hulle name in aanhalingstekens.</li> <li><em>werkskerm "
+#~ "kieslys:</em> 'n konteks kieslys vir die werkskerm spring begin. Onder "
+#~ "ander dinge, hierdie kieslys het opsies vir konfigurering van die "
+#~ "vertoon, sluit van die skerm, en afteken uit van Kde.</li> "
+#~ "<li><em>Aansoek kieslys:</em> die \"K\" kieslys spring begin. hierdie "
+#~ "dalk wees bruikbare vir vinnig toegang te kry tot programme as jy hou van "
+#~ "na hou die paneel (asook bekend as \"Kicker\") weg gesteekte van besigtig."
+#~ "</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Nee Aksie"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Venster Lys Kieslys"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Werkskerm Kieslys"
+
+#~ msgid "Application Menu"
+#~ msgstr "Aansoek Kieslys"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Boekmerke Kieslys"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Pasmaak Kieslys 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Pasmaak Kieslys 2"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Gedrag</h1>\n"
+#~ "Hierdie module laat toe om verskeie opsies \n"
+#~ "vir jou werkskerm te kies. Insluitend: die uitleg waarin ikone gerangskik "
+#~ "word en\n"
+#~ "die opspring kieslyste wat met die middel en regter muis knoppies "
+#~ "geassosieer word\n"
+#~ "Gebruik die \"Wat is Hierdie?\" (Shift+F1) om hulp oor spesifieke opsies "
+#~ "te kry"
+
+#~ msgid "General"
+#~ msgstr "Algemeen"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Ontkies hierdie opsie as jy doen nie wil hê na het ikoone op die "
+#~ "werkskerm. Sonder om te ikoone die werkskerm sal wees ietwat vinniger "
+#~ "maar jy sal nee langer wees in staat na trek lêers na die werkskerm."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "Vertoon ikone op werkskerm"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Bevestig hierdie opsie as jy wil hê na hardloop X11 programme wat teken "
+#~ "binnein die werkskerm soos as xsneeu, xpikkewyn of xberg. as jy het "
+#~ "probleme met programme hou van netscape wat Bevestig die root venster vir "
+#~ "wat loop instansies, deaktiveer hierdie opsie."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Laat programme in werkskerm venster toe"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "Vertoon leidrade"
+
+#, fuzzy
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Kiesbalk Bo-Aan Skerm"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr ""
+#~ "Indien hierdie opsie gekies is, sal daar geen kiesbalk aan die bokant van "
+#~ "die skerm wees nie."
+
+#~ msgid "&None"
+#~ msgstr "Geen"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Indien gekies, sal daar een kiesbalk bo-aan die skerm wees, wat die "
+#~ "werksskerm kieslyste vertoon."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Werkskerm kieslys"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Indien gekies, sal die program nie meer sy eie kiesbalk aan sy eie "
+#~ "venster vas hê nie. Daar sal egter een kiesbalk bo-aan die bladsy wees, "
+#~ "wat die kieslyste vertoon van die huidige aktiewe program. Dit is "
+#~ "soortgelyk aan die Mac Os."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Huidige program kieslysbalk (Mac Os Styl)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Muis Knoppie Aksies"
+
+#~ msgid "Middle button:"
+#~ msgstr "Middelste knoppie:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "Links knoppie:"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "Regterkant knoppie:"
+
+#~ msgid "Edit..."
+#~ msgstr "Redigeer..."
+
+#~ msgid "File Icons"
+#~ msgstr "Lêer Ikone"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Kies hierdie opsie indien jy die ikone automaties wil belyn op die "
+#~ "grafiekuitleg wanneer jy dit skuif."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Belyn Ikone automaties"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>as jy hierdie opsie kies, sal enige lêers in jou werkskerm gids wat "
+#~ "begin met 'n punt (.) begin, vertoon word. Gewoonlik, bevat sulke lêers "
+#~ "konfigurasie inligting, en bly dit versteekt vir besigtig.</p>\n"
+#~ "<p> Byvoorbeeld, lêers genaamd \".gids\" word eenvoudige teks lêers wat "
+#~ "inligting bevat vir Konqueror, soos watter ikoon om te gebruik tydens die "
+#~ "vertoning van 'n gids, die volgorde waarin die lêers gesorteer moet word, "
+#~ "ens. Jy moet nie hierdie lêers verander of uitvee nie, tensy jy weet wat "
+#~ "jy doen!</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Vertoon versteekte lêers"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr "Kies die tipes lêers waarvoor jy voorskou beelde wil aktiveer."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Vertoon Ikoon Voorskoue Vir"
+
+#~ msgid "Device Icons"
+#~ msgstr "Toestel Ikone"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "Vertoon toestelle ikone:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr "Ontkies die toestel tipes wat jy nie op die werkskerm wil sien nie."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Toestel Tipes om te Vertoon"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Vertoon lêer leidrade"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Hier jy kan kontrole as, wanneer beweeg die muis bo 'n lêer, jy wil hê na "
+#~ "sien 'n klein opspring venster met aditionele informasie aangaande wat "
+#~ "lêer"
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "Vertoon voorskoue in lêer leidrade"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Hier jy kan kontrole as jy wil hê die opspring venster na bevat 'n "
+#~ "grootter voorskou vir die lêer, wanneer beweeg die muis bo dit."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>Veelvoudige Werksskerm</h1>In hierdie module, kan jy konfigureer "
+#~ "hoeveel virtuele werksskerms jy wil hê en hoe dit gemerk moet word."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "Nommer van werkskerms: "
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "Hier kan jy stel hoeveel virtuele werkskerms jy wil hê op jou Kde "
+#~ "werkskerm. Beweeg die skuiwer om die waarde te verander."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "Werkskerm Name"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Werkskerm %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Hier jy kan invoer die naam vir werkskerm %1"
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "Muis wiel oor werksskerm agtergrond verander werksskerm"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Werkskerm %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "Verander ikoon name inlyn"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "Deur hierdie opsie te kies kan jy toelaat dat lêers herbenoem word, deur "
+#~ "direk op die ikoon naam te kliek."
+
+#~ msgid "&Appearance"
+#~ msgstr "Voorkoms"
+
+#~ msgid "&Standard font:"
+#~ msgstr "Standaard skrif tipe:"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Hierdie is die skrif tipe gebruik word na vertoon teks in Konqueror "
+#~ "vensters."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "Skrif tipe grootte:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Hierdie is die skrif tipe grootte gebruik word na vertoon teks in "
+#~ "Konqueror vensters."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Normale teks kleur:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Hierdie is die kleur gebruik word na vertoon teks in Konqueror vensters."
+
+#~ msgid "&Text background color:"
+#~ msgstr "Teks agtergrond kleur:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr ""
+#~ "Hierdie is die kleur gebruik word agter die teks vir die ikoone op die "
+#~ "werkskerm."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "Hogte vir ikoon teks:"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "Hierdie is die maksimum aantal lyne wat gebruik kan word om ikoonteks te "
+#~ "trek. Lang lêer name word afgekap aan die einde van die laaste lyn."
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Wydte vir ikoon teks:"
+
+#~ msgid ""
+#~ "This is the maximum width for the icon text when konqueror is used in "
+#~ "multi column view mode."
+#~ msgstr ""
+#~ "Hierdie is die maksimum wydte vir die ikoonteks wanneer Konqueror gebruik "
+#~ "word in multi-kolommodus."
+
+#~ msgid "&Underline filenames"
+#~ msgstr "Onderstreep lêername"
+
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "Deur hierdie opsie te kies sal lêername onderstreep word, sodat hulle lyk "
+#~ "soos die skakels op 'n web bladsy. Nota: Om die analogie te voltooi, maak "
+#~ "seker dat die enkel kliek aktivering geaktiveer is in die muis kontrole "
+#~ "module."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Vertoon lêer grotes in grepe"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "Toetsing hierdie opsie sal resultaat in lêer grotes te wees vertoon in "
+#~ "grepe. Andersins lêer grotes word te wees vertoon in kilogrepe of "
+#~ "megagrepe as geskikte."
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>Voorkoms</h1> Jy kan hier konfigureer hoe Konqueror lyk as 'n lêer "
+#~ "bestuurder."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "Vertoon netwerk operasies in 'n enkele venster"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Toetsing hierdie opsie sal groep die vordering informasie vir alle "
+#~ "netwerk lêer oordragte binnein 'n enkel venster met 'n lys. Wanneer die "
+#~ "opsie is nie nagegaan, alle oordragte verskyn in 'n aparte venster."
+
+#~ msgid "Home &URL:"
+#~ msgstr "Tuis URL:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Kies Tuis Gids"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Hierdie is die URL (bv. 'n houer of web bladsy) waarnatoe Konqueror sal "
+#~ "spring wanneer die  \"Tuis\" knoppie gekliek word. Dit is jou tuis vouer, "
+#~ "voorgestel deur 'n tilde (~)."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Linkerkantse knoppie:"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Regterkantse knoppie:"
+
+#~ msgid "&Quick Copy && Move"
+#~ msgstr "Vinnige Kopie && Beweeg"

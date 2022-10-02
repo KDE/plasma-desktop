@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Sessionshantering</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-03-22</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>session</keyword>
+<keyword
+>Systeminställningar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Skrivbordssession</title>
+
+<sect2 id="sessions-use">
+<title
+>Användning</title>
+
+<para
+>I den här modulen i systeminställningarna kan du anpassa &plasma;s sessionshanterare och utloggningsinställningar.</para>
+
+<para
+>Sessionshantering betecknar &plasma;s förmåga att spara tillstånd för program och fönster när du loggar ut från &plasma;, och återställa dem när du loggar in igen.</para>
+
+<sect3 id="sessions-general">
+<title
+>Allmänt</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Bekräfta utloggning</guilabel
+></term>
+<listitem>
+<para
+>Om det här är markerat, så visar &plasma; en dialogruta när du loggar ut med en tidsgräns, normalt 30 sekunder, som ber dig bekräfta. I dialogrutan kan du också välja om du vill återställa din nuvarande session när du loggar in nästa gång.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Erbjud avstängningsalternativ</guilabel
+></term>
+<listitem>
+<para
+>Om alternativet är markerad, erbjuder &plasma; val av ett antal åtgärder vid utloggning. De omfattar att helt enkelt avsluta aktuell session (åtgärden som utförs om avstängningsalternativen inte är aktiverade), stänga av datorn eller starta om datorn.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Förvalt alternativ när datorn lämnas</title>
+<para
+>Du kan ställa in vad som normalt ska hända när du loggar ut från &plasma;. Alternativen är inte tillgängliga för alla operativsystem, och vissa av dem kanske inte visas om du inte använder &SDDM; som inloggningshanterare.</para>
+<para
+>De tillgängliga alternativen är självförklarande, men om du tvekar, lämna standardinställningen orörd. De är:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Avsluta aktuell session</guilabel
+> (detta är standardvärdet)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Stäng av datorn</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Starta om datorn</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Vid inloggning</title>
+<para
+>Du kan välja ett av tre alternativ angående vad som ska hända när du loggar in i &plasma;.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Återställ senaste session</guilabel
+></term>
+<listitem
+><para
+>Om det här är markerat, så sparar &plasma; din nuvarande sessions tillstånd när du loggar ut. &plasma; kommer att återställa din session när du loggar in nästa gång, så att du kan fortsätta arbeta med ett skrivbord precis likadant som du lämnade det.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Återställ senaste manuellt sparade session</guilabel
+></term>
+<listitem
+><para
+>Istället för att återställa &plasma; till tillståndet som gällde när du senast loggade ut, återställs ett särskilt tillstånd som du har sparat manuellt.</para>
+<para
+>Om alternativet är markerat, erbjuder startmenyn ytterligare ett alternativ <menuchoice
+><guimenu
+>Session</guimenu
+><guimenuitem
+>Spara session</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Starta med en tom session</guilabel
+></term>
+<listitem>
+<para
+>Om du väljer det här alternativet, återställer &plasma; aldrig sessioner som har sparats.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Till sist kan du skriva in en lista med program åtskilda av kolon (<literal
+>:</literal
+>) eller av kommatecken (<literal
+>,</literal
+>) som ska undantas från sessioner, och därför inte kommer att startas när sessionen återställs. Till exempel <userinput
+>xterm:konsole</userinput
+> eller <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

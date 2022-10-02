@@ -1,0 +1,364 @@
+# translation of kcmkonq.po to Arabic
+# translation of kcmkonq.po to
+# Konqueror Contol Module
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2001,2002.
+# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
+# Ammar Tabbaa <atabba@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-06-18 23:40+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "المستندات"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "التنزيلات"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "الموسيقى"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "الصور"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "الفيديوهات"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>المسارات</h1>\n"
+"هذه الوحدة تسمح لك باختيار المكان الذي سيتم فيه حفظ ملفات سطح المكتب على "
+"نظامك. \n"
+"استخدم خيار \"ما هذا؟\" (Shift+F1) للحصول على المساعدة حول الخيارات المحددة."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "مسار سطح المكتب:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"يحتوي هذا المجلد كل الملفات التي تراها على سطح مكتبك. تستطيع تغيير موقع هذا "
+"المجلد إن أردت، تسنقل عندها كل المحتويات تلقائياً للموقع الجديد."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "مسار المستندات:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "سيستخدم هذا المجلد افتراضيًا لتحميل المستندات منه أو حفظها فيه."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "مسار التنزيلات:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "سيستخدم هذا المجلد افتراضياً لحفظ العناصر التي تنزلها من الإنترنت."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "مسار الفيديوهات:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "مسار الصور:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "مسار الموسيقى:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الموسيقى منه أو حفظها فيه."
+
+#~ msgid "Autostart path:"
+#~ msgstr "مسار البدء التلقائي:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "يحتوي هذا المجلد على تطبيقات أو وصلات للتطبيقات التي تود تشغيلها تلقائياً "
+#~ "في كل مرة تشغل فيها كدي. تستطيع تغيير موقع هذا المجلد إذا أردت، ستنقل "
+#~ "عندها كل المحتويات تلقائياً للموقع الجديد."
+
+#~ msgid "Autostart"
+#~ msgstr "البدء التلقائي"
+
+#~ msgid "Movies"
+#~ msgstr "الأفلام"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "غير المسار إلى '%1'.\n"
+#~ "هل تريد نقل الملفات من '%2' إلى '%3'؟"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "انقل"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "لا تنقل"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "تم تغيير مسار '%1'.\n"
+#~ "هل تريد نقل المجلد '%2' إلى '%3' ؟"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "انقل "
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "لا تنقل "
+
+#~ msgid "Confirmation Required"
+#~ msgstr "التأكيد مطلوب"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr "<h1>سلوك كنكرر</h1> تستطيع هنا ضبط كيفية تصرّف كنكرر كمدير ملفات."
+
+#~ msgid "Misc Options"
+#~ msgstr "خيارات متنوعة"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "ا&فتح المجلدات في نوافذ منفصلة"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "إذا اخترت هذا الخيار ، سيقوم كنكرر بفتح نافذة جديدة عندما تفتح مجلداً ما، "
+#~ "بدلاً من عرض محتويات المجلد في نفس النافذة الحالية."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "أظهر مدخلات قائ&مة السياق 'احذف' التي تتجاوز المهملات"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "اختر هذا إذا أردت أن يظهر أمر 'احذف'  في قوائم سياق سطح المكتب و مدير "
+#~ "الملفات. باستطاعتك دائما أن تحذف الملفات بضغط على مفتاح Shift عند استدعاء "
+#~ "الأمر 'انقل إلى المهملات'."
+
+#~ msgid "Menu Editor"
+#~ msgstr "محرِّر القوائم"
+
+#~ msgid "Menu"
+#~ msgstr "القوائم"
+
+#~ msgid "New..."
+#~ msgstr "جديد..."
+
+#~ msgid "Remove"
+#~ msgstr "أزل"
+
+#~ msgid "Move Up"
+#~ msgstr "انقل للأعلى"
+
+#~ msgid "Move Down"
+#~ msgstr "انقل للأسفل"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "اطلب التأكيد لـِ"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "هذا الخيار يخبر الكونكيور إذا ما كان من اللازم سؤال عن التأكيد عند\"حذف\" "
+#~ "ملف. <ul><li><em>انقل إلى سلة المهملات:</em> تنقل الملف إلى مجلد سلة "
+#~ "المهملات ؛ حيث يمكن من هناك استعادته بسهولة.</li> <li><em>احذف:</em> "
+#~ "ببساطة تحذف الملف.</li> </ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "ان&قل إلى المهملات"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "اح&ذف"
+
+#~ msgid "&Behavior"
+#~ msgstr "&السلوك"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "ال&معاينات وبيانات التعريف"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>اسمح بالمعاينات و \"أيقونات المجلدات تعكس المحتوى\" واستعادة بيانات "
+#~ "تعريف البروتوكولات:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>خيارات المعاينة</h1> يمكنك هنا تعديد سلوك الكونكيور عندماالملفات في "
+#~ "مجلد.<h2>قائمة البروتوكلات:</h2> اختر البروتوكلات التي تريد استخدام "
+#~ "المعاينة معها والتي لا تريد استخدامها مع المعاينة. على سبيل المثال  قد "
+#~ "ترغب في عرض معاينة للملفات باستخدام SMB إذا كانت الشكبة سريعة بما فيها "
+#~ "الكفاية ، ولكن قد تريد تعطيل المعاينة إذا كانت FTP إذا كنت غالبا تزور "
+#~ "مواقع FTP بطيئة تحتوي على صور كبيرة الحجم.<h2>أقصى حجم للملف:</h2> انتق "
+#~ "أقصى حجم للملف الذي تريد إنشاء معاينة له ، على سبيل المثال إذا وضعت 1 "
+#~ "ميجابايت (المبدئي) فإنه لن تولد أي معاينة للملفات التي هي أكبر من واحد "
+#~ "ميجابايت بسبب السرعة."
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column Header of a colum where the user has to select in which "
+#~| "protocols he wants to see file previews"
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "انتق البروتوكولات"
+
+#~ msgid "Local Protocols"
+#~ msgstr "البروتوكولات المحلية"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "بروتوكولات الإنترنت"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "يسمح هذا الخيار باختيار متى يجب أن يتم تفعيل معاينة الملف وأيقونات "
+#~ "المجلدات الذكية وبيانات التعريف في مدير الملفات.\n"
+#~ "في قائمة البروتوكولات التي تظهر، انتقي أيها سريعاً بما فيه الكفاية للسماح "
+#~ "بتوليد المعاينة."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "ال&حجم الأقصى للملف:"
+
+#~ msgid " MB"
+#~ msgstr " م. بايت"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&زيادة حجم المعاينات نسبياً إلى الأيقونات"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "&استخدم المصغرات المضمّنة في الملفات"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "انتقي هذا الخيار لعرض المصغرات لبعض أنواع الملفات (مثل JPEG). هذا سيزيد "
+#~ "من السرعة و يقلل استعمال القرص الصلب. عدم انتقاء  هذا الخيار إذا كانت "
+#~ "لديك ملفات تم معالجتها بواسطة برامج تقوم بإنشاء مصغرات غير دقيقة, مثل "
+#~ "ImageMagick."

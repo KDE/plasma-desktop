@@ -1,0 +1,360 @@
+# translation of kcmcomponentchooser.po to Slovak
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004, 2005.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Miroslav David <mirodav@gmail.com>, 2009.
+# Roman Paholik <wizzardsk@gmail.com>, 2016, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-25 14:25+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Predvolený webový prehliadač"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Iný..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Vybrať predvolený webový prehliadač"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Vybrať predvolený poštového klienta"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Vybrať predvoleného správcu súborov"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Vybrať predvolenú mapu"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Vybrať predvolenú aplikáciu na vytáčanie:"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Vyberte predvolený emulátor terminálu"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Webový prehliadač:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Správca súborov:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Emailový klient:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Emulátor terminálu:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Mapa:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Vytáčanie:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stanislav Višňovský,Miroslav Dávid"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Predvolené aplikácie"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Neznámy"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Výber komponent"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Vyberte si zo zoznamu nižšie, ktorý komponent sa má štandardne používať "
+#~ "pre službu %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Zmenili ste štandardný komponent. Chcete tieto zmeny uložiť ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Popis nie je k dispozícii"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Tu môžete zmeniť programy komponent. Sú to programy, ktoré vykonávajú "
+#~ "základné činnosti, ako je emulátor terminálu, textový editor a poštový "
+#~ "klient. Rôzne KDE aplikácie niekedy potrebujú spustiť emulátor konzoly, "
+#~ "poslať e-mail alebo zobraziť nejaký text. Aby to bolo konzistentné, vždy "
+#~ "sa použijú tie isté komponenty. Tu si môžete vybrať, ktoré programy to "
+#~ "budú."
+
+#~ msgid "Default Component"
+#~ msgstr "Štandardný komponent"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Tento zoznam ukazuje typy nastaviteľných komponentov. Kliknite na "
+#~ "komponent, ktorý chcete upraviť.</p>\n"
+#~ "<p>V tomto dialógu môžete zmeniť štandardné komponenty KDE. Sú to "
+#~ "programy, ktoré vykonávajú základné činnosti, ako je emulátor terminálu, "
+#~ "textový editor a poštový klient. Rôzne KDE aplikácie niekedy potrebujú "
+#~ "spustiť príkazový riadok, poslať e-mail alebo zobraziť nejaký text. Aby "
+#~ "to bolo konzistentné, vždy sa použijú tie isté komponenty. Tu si môžete "
+#~ "vybrať, ktoré programy to budú.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Otvára URL pre <b>http</b> a <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "v aplikácii podľa obsahu URL"
+
+#~ msgid "in the following application:"
+#~ msgstr "v nasledovnej aplikácii:"
+
+#~ msgid "with the following command:"
+#~ msgstr "s nasledovným príkazom:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Vyberte preferovaný webový prehliadač:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "KMail je štandardný poštový klient pre prostredie Plasma."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Použiť KMail ako preferovaný poštový klient"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Vyberte túto voľbu, ak chcete používať iného poštového klienta."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Voliteľné zástupné znaky: <ul> <li>%t: Adresa príjemcu</li> <li>%s: "
+#~ "Predmet</li> <li>%c: Kópia (CC)</li> <li>%b: Neviditeľná kópia (BCC)</li> "
+#~ "<li>%B: Text šablóny tela</li> <li>%A: Príloha</li> <li>%u: Úplná mailto: "
+#~ "URL</li> </ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Stlačením tohto tlačidla môžete vybrať svojho obľúbeného poštového "
+#~ "klienta. Uvedomte si, že súbor, ktorý vyberiete, musí byť možné spustiť. "
+#~ "Iba tak bude považovaný za platnú voľbu.<br />V príkaze môžete použiť "
+#~ "niektoré zástupné znaky, ktoré sa nahradia skutočnými hodnotami pri "
+#~ "spustení poštového klienta: <ul><li>%t: Adresa príjemcu</li> <li>%s: "
+#~ "Predmet</li> <li>%c: Kópia (CC) </li><li>%b: Neviditeľná kópia (BCC)</li> "
+#~ "<li>%B: Text šablóny tela</li> <li>%A: Príloha</li></ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Sem kliknite, ak chcete vybrať súbor poštového programu."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Túto voľbu zapnite, ak chcete, aby sa vybraný poštový klient spúšťal v "
+#~ "termináli (napr. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Spustiť v &termináli"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Na prehliadanie adresárov používať nasledovného správcu súborov:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Iný: kliknite na Pridať... v tomto dialógu"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Použiť Konsole ako terminál"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Použiť iný &terminál:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Stlačením tohto tlačidla môžete vybrať svoj obľúbený terminál. Uvedomte "
+#~ "si, že súbor, ktorý vyberiete, musí byť možné spustiť. Iba tak bude "
+#~ "považovaný za platnú voľbu.<br/>Ďalej si uvedomte, že niektoré programy, "
+#~ "ktoré emulátor terminálu budú používať, nemusia fungovať v prípade, že "
+#~ "zadáte pre emulátor argumenty pre príkazový riadok (napr. konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Sem kliknite, ak chcete vybrať emulátor terminálu."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 sekunda zostáva:"
+#~ msgstr[1] "%1 sekundy zostávajú:"
+#~ msgstr[2] "%1 sekúnd zostáva:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "Nový správca okien bude použitý pri ďalšom štarte Plasma."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Zmena správcu okien"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Nový správca okien je spustený.\n"
+#~ "Napriek tomu je doporučené reštartovať toto KDE sedenie pre uistenie, že "
+#~ "sa všetky bežiace aplikácie prispôsobily zmene. "
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Správca okien nahradený"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "Váš bežiaci správca okien bude teraz nahradený s novonastaveným."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Nastavenie zmeny správcu okien"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Akceptovať zmenu"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Vrátiť sa do predchodzieho stavu"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Zvolený správca okien sa práve spúšťa.\n"
+#~ "Prosím skontrolujte, či sa správne spustil a potvrdťe zmenu.\n"
+#~ "Beh nového správcu okien sa automaticky ukončí za 20 sekúnd."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Bežiaci správca okien bol zmenený na štandardného KDE správcu okien KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Spustenie nového správcu okien zlyhalo.\n"
+#~ "Bežiaci správca okien bol zmenený na štandardného KDE správcu okien KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Spustenie konfiguračného nástroja zlyhalo"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Používať štandardného správcu okien KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Použiť iného &správcu okien:"
+
+#~ msgid "Configure"
+#~ msgstr "Nastaviť"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Poznámka: Väčšina správcov okien má svoju vlastnú konfiguráciu a "
+#~ "nenasleduje nastavenia KDE."

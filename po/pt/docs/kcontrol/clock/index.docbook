@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Data &amp; Hora</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2013-12-05</date>
+<releaseinfo
+>4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>relógio</keyword>
+<keyword
+>data</keyword>
+<keyword
+>hora</keyword>
+<keyword
+>mudar</keyword>
+<keyword
+>configurar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Data &amp; Hora</title>
+
+<para
+>Pode usar este módulo para alterar a data e hora do sistema através duma interface gráfica conveniente.</para>
+
+<note
+><para
+>Como esta configuração não o afecta apenas a si como utilizador, mas a todo o sistema, tem de ter acesso de administrador do sistema (<systemitem class="username"
+>root</systemitem
+>) para alterar a data e hora do sistema. Se não tiver esse nível de acesso, este módulo só lhe irá mostrar a configuração actual.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Data e Hora</title>
+
+<para
+>Se assinalar a opção <guilabel
+>Ajustar a data e hora automaticamente</guilabel
+>, poderá seleccionar um <guilabel
+>Servidor horário</guilabel
+> na lista, ficando todas as outras opções desta janela desactivadas.</para>
+
+<note>
+<para
+>As aplicações <command
+>rdate</command
+> ou <command
+>ntpdate</command
+> são usadas neste módulo para obter a data e hora de um servidor horário. Isto acontece quando inicia a sua sessão no &kde; enquanto estiver ligado ou quando se ligar posteriormente à Internet e poder aceder aos servidores horários.</para
+> 
+<para
+>Ambas as aplicações são clientes simples de <acronym
+>NTP</acronym
+> que configuram o relógio de um sistema para corresponder à hora obtida a partir da comunicação com um ou mais servidores de <acronym
+>NTP</acronym
+>. Isto não é suficiente, contudo, para manter um relógio acertado a longo prazo. Isto é útil para acertar ocasionalmente a hora nas máquinas que não têm acesso à rede a tempo inteiro, como os portáteis.</para>
+</note>
+
+<para
+>Se não usar um servidor horário, poderá definir manualmente a data usando a metade inferior do módulo. Basta escolher o mês e o ano, no topo do calendário, e o dia do mês, carregando no dia correspondente no calendário.</para>
+<para
+>Use os controlos no fundo do calendário para seleccionar a data actual, introduzir a data no campo de texto ou seleccionar a semana do ano a partir da lista.</para>
+
+<para
+>Pode acertar a hora utilizando os selectores por baixo do relógio analógico. Pode também indicar directamente o valor.</para>
+<!--Outdated
+<note
+><para
+>The time is represented in 24 hour format.  If you want
+the system time to be set to 8:00 PM, you need to set the hour spinbox
+to <guilabel
+>20</guilabel
+> (8 + 12).  If you want the system time set
+to 8:00 AM, you should set the hour spinbox to
+<guilabel
+>8</guilabel
+>.</para
+></note>
+-->
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Fuso-Horário</title>
+<para
+>Para definir um novo fuso-horário, basta seleccionar a sua área na lista abaixo. Use o campo do filtro para procurar a <guilabel
+>Área</guilabel
+> ou <guilabel
+>Região</guilabel
+> desejada.</para>
+</sect2>
+
+</sect1>
+
+</article>

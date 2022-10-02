@@ -1,0 +1,316 @@
+# translation of kcmcomponentchooser.po to
+# translation of kcmcomponentchooser.po to
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# root <root@localhost.localdomain>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-04-26 21:29+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.0\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "இயல்பிருப்பு இணைய உலாவி"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "வேறு…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "இயல்பிருப்பு இணைய உலாவியை தேர்ந்தெடு"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "வேறொரு மின்னஞ்சல் கருவியை பயன்படுத்து:"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "இயல்பிருப்பு கோப்பு மேலாளரைத் தேர்ந்தெடுங்கள்"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "இயல்பிருப்பு நிலப்படத்தை தேர்ந்தெடுங்கள்"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "இயல்பிருப்பு தொலைபேசி செயலியை தேர்ந்தெடுங்கள்"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "இயல்பிருப்பு முனையக் கருவியை தேர்ந்தெடுங்கள்"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "இணைய உலாவி:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "கோப்பு மேலாளர்"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "மின்னஞ்சல் மென்பொருள்:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "முனைய கருவி:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "நிலப்படம்:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "தொலைபேசி:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "பிரபு"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "prabu_anand2000@yahoo.com"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "இயல்பிருப்பு பயன்பாடுகள்"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "ஜோசப் வென்னிங்னர்"
+
+#~ msgid "Méven Car"
+#~ msgstr "மெவென் கார்"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "டோபியாஸ் ஃபெல்லா"
+
+#~ msgid "Unknown"
+#~ msgstr "தெரியாதது"
+
+#~ msgid "Component Chooser"
+#~ msgstr "நிரல் தேர்வாளர்"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "கீழே கொடுக்கப்பட்டுள்ள பட்டியலில் உள்ள பயன்பாட்டு நிரலில், %1 சேவைக்கு எது "
+#~ "பயன்படுத்தப்பட வேண்டும்"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>உங்களுடைய கொடாநிலை பயன்பாட்டு நிரல் ஒன்றை மாற்றியுள்ளீர்கள். இந்த மாற்றத்தை இப்போது "
+#~ "சேமிக்க வேண்டுமா?<BR><BR> <B>இல்லை</B> என்பதை தேர்ந்தெடுத்தால் மாற்றங்கள் மறக்கப்படும்</"
+#~ "qt>"
+
+#~ msgid "No description available"
+#~ msgstr "விளக்கம் ஏதும் அளிக்கப்படவில்லை"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "இங்குத் தாங்கள் சாதனத்தின் நிரல்களை மாற்ற இயலும்.பொதுப் பணிகளான முனையப் போன்மை, "
+#~ "எழுத்துத் திருத்தி மற்றும் மின்னஞ்சல் கிளையன்கள் முதலியவற்றை கையாளும் நிரல்களையே நாம் "
+#~ "சாதனங்கள் என்கிறோம். சிலச் சமயங்களில் பணியகப் போன்மைகளை எழுப்பவும், அஞ்சல் அனுப்பவும் "
+#~ "அல்லது சில எழுத்துக்களை வெளியிடவும் வித்தியாசமான KDE பயன்பாடுகள் தேவைப்படுகின்றன. "
+#~ "இவற்றையே நிலையாக செய்வதற்கு, இச்சாதனத்தையே பயன்பாடுகள் அழைக்கின்றன. இங்கு தாங்கள் "
+#~ "எச்சாதனத்தை பயன்படுத்துகிறீர்களோ அதன் நிரல்களை தேர்ந்தெடுக்கலாம்."
+
+#~ msgid "Default Component"
+#~ msgstr "கொடாநிலை நிரல்"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>இந்தப் பட்டியல் உள்ளமைப்பிற்க்கான சாதனவகைகளைக் கொண்டுள்ளது. தாங்கள் விரும்பும் "
+#~ "சாதனத்தில் சொடுக்கவும்.</p>\n"
+#~ "<p>இந்த உரையாலில் தாங்கள்KDE முன்னிருப்பு சாதனங்களையும் மாற்ற இயலும். பொதுப் பணிகளான "
+#~ "முனையப் போன்மை, எழுத்துத் திருத்தி மற்றும் மின்னஞ்சல் கிளையன்கள் முதலியவற்றை கையாளும் "
+#~ "நிரல்களையே நாம் சாதனங்கள் என்கிறோம். சிலச் சமயங்களில் பணியகப் போன்மைகளை எழுப்பவும், "
+#~ "அஞ்சல் அனுப்பவும் அல்லது சில எழுத்துக்களை வெளியிடவும் வித்தியாசமான KDE பயன்பாடுகள் "
+#~ "தேவைப்படுகின்றன. இவற்றையே நிலையாக செய்வதற்கு, இச்சாதனத்தையே பயன்பாடுகள் அழைக்கின்றன. "
+#~ "இங்கு தாங்கள் எச்சாதனத்தை பயன்படுத்துகிறீர்களோ அதன் நிரல்களை தேர்ந்தெடுக்கலாம்.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b> ÁüÚõ <b>https</b> URL¸¨Ç ¾¢È</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "ÀÂñÀ¡ð¨¼ º¡÷ó¾ ¯ûÇ¼ì¸ URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "¦¾¡¼Õõ ¯Ä¡Å¢Â¢ø:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "¦¾¡¼Õõ ¯Ä¡Å¢Â¢ø:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "உங்களுக்கு விருப்பமான வலை உலாவியைத் தேர்ந்தெடுங்கள்:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail லே KDE மேல்மேஜைக்காண த்ரமாண அஞ்சள் நிறல்."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "kமின்னஞ்சலை மின்னஞ்சல் கருவியாக பயன்படுத்து"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "இந்த விருப்பத்தை வேறு அஞ்சல் நிறலை தேர்ந்தெடுக்க தேர்வுசெய்யவும்."
+
+#, fuzzy
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: பெறுநர் முகவரி</li> <li>%s: பொருள்</li> <li>%c: கார்பன் நகல் "
+#~ "(காந)</li> <li>%b:பார்க்கமுடியாத கார்பன் நகல்(பாகாந)</li> <li>%B: உரையின் படிம "
+#~ "அச்சு</li> <li>%A: இணைப்பு</li> </ul>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite email client. Please note that "
+#~| "the file you select has to have the executable attribute set in order to "
+#~| "be accepted.<br> You can also use several placeholders which will be "
+#~| "replaced with the actual values when the email client is called:<ul> <li>"
+#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~| "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "இந்த பொத்தானைஅழுத்தி உங்களின் விருப்பமான மின்னஞ்சல் கருவியை தேர்ந்தெடுங்கள்.  நீங்கள் "
+#~ "தேர்ந்தெடுத்த கோப்பு இயக்க  கூடியதாக இருந்தால் மட்டுமே, இது ஒப்புக்கொள்ளப்படும்."
+#~ "<br>நீங்கள் அதனுடன் பல மாறிகளை பயன்படுத்தலாம். அவை அதற்கான மதிப்புகளால் மாற்றப்படும் "
+#~ "<ul> <li>%t: பெறுநர் முகவரி</li> <li>%s: பொருள்</li> <li>%c: கார்பன் நகல் "
+#~ "(காந)</li> <li>%b:பார்க்கமுடியாத கார்பன் நகல்(பாகாந)</li> <li>%B: உரையின் படிம "
+#~ "அச்சு</li> <li>%A: இணைப்பு</li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "அஞ்சல் நிறலை உலாவ இங்கே அழுத்தவும் ."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr "வேறொரு மின்னஞ்சல் கருவியை முனையத்தில் இயக்க இந்த தேர்வை பயன்படுத்து"
+
+#~ msgid "&Run in terminal"
+#~ msgstr "முனையத்தில் இயக்கு"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "கான்சோலை முனைய நிரலாக பயன்படுத்து"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "வேறொரு முனைய நிரலை பயன்படுத்து:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Press this button to select your favorite terminal client. Please note "
+#~| "that the file you select has to have the executable attribute set in "
+#~| "order to be accepted.<br> Also note that some programs that utilize "
+#~| "Terminal Emulator will not work if you add command line arguments "
+#~| "(Example: konsole -ls)."
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "உங்கள் விருப்ப முணைய கிளையணை தேர்ந்தெடுக்க இந்த பொத்தாணை அழுத்தவும். நீங்கள் தேர்வு "
+#~ "செய்த கோப்பு கண்டிப்பாக இயக்கக்கூடிய பாதுகாப்பு கோவை ஏற்றுக்கொள்வதாக இருக்க வேண்டும் "
+#~ "எண்பதை குறித்த்க்கொள்ளவும்.<br> நீங்கள் கட்டளை வரி அளபுருகளை சேர்த்தால் முணய "
+#~ "உருவாக்கியை உங்களால் பயன்படுத்தி பணி புரிய முடியாது (எடுத்துக்காட்டு\t: konsole -"
+#~ "ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "அஞ்சல் நிறலை உலாவ இங்கே அழுத்தவும் ."
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "வேறொரு முனைய நிரலை பயன்படுத்து:"
+
+#, fuzzy
+#~| msgid "Use a different &terminal program:"
+#~ msgid "Use a different &window manager:"
+#~ msgstr "வேறொரு முனைய நிரலை பயன்படுத்து:"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kநிரல் தேர்வாளர்"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "இங்குத் தாங்கள் தற்பொழுது தேர்ந்தெடுக்கப்பட்ட சாதனங்களின் சிறியக் குறிப்பைப் படிக்கலாம்."
+#~ "சாதனங்களை மாற்றுவதற்கு, தாங்கள் இடதுப் பக்கமாக பட்டியலைச் சொடுக்கவும். சாதனத்தின் "
+#~ "நிரல்களை மாற்ற விரும்பினால் தயைக் கூர்ந்து கீழேக் கொடுக்கப் பட்டதை தேர்ந்தெடுக்கவும்."
+
+#~ msgid "Component Description"
+#~ msgstr "பயன்பாட்டு நிரல் விளக்கம்"

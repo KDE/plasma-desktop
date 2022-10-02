@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Localizações</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>ambiente de trabalho</keyword>
+<keyword
+>caminhos</keyword>
+<keyword
+>localização</keyword>
+<keyword
+>configurações do sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este é um módulo configura os caminhos essenciais para o ambiente de trabalho &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configurar alguns caminhos do &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurar alguns caminhos do &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Caminho da área de trabalho:</guilabel
+></term>
+<listitem
+><para
+>A pasta da área de trabalho contém todos os arquivos que você vê na área de trabalho do seu computador. O caminho padrão normalmente é <filename class="directory"
+>~/Desktop</filename
+> mas você pode mudar aqui a localização desta pasta. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho de auto-início:</guilabel
+></term>
+<listitem
+><para
+>A pasta de auto-início contém aplicativos ou ligações para aplicativos ou programas que você deseja que sejam iniciados sempre que o &kde; inicia. Você pode mudar a localização desta pasta se desejar. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho dos documentos:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por padrão para carregar ou salvar documentos a partir dela ou para ela.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho das transferências:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por padrão como local para onde salvar os itens baixados da Internet.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho dos filmes:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por padrão para carregar ou salvar filmes a partir dela ou para ela.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho dos imagens:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por padrão para carregar ou salvar imagens a partir dela ou para ela.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Caminho das músicas:</guilabel
+></term>
+<listitem
+><para
+>Esta pasta será usada por padrão para carregar ou salvar músicas a partir dela ou para ela.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Se você alterar um local e clicar <guibutton
+>Aplicar</guibutton
+>, irá aparecer uma janela onde poderá optar por mover o conteúdo para a pasta nova ou usar a nova pasta sem mover os arquivos.</para>
+
+</article>

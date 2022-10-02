@@ -1,0 +1,367 @@
+# translation of kcmkonq.po to Karakh
+#
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2006, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-12-27 10:41+0600\n"
+"Last-Translator: \n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Үстел"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Құжаттар"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Жүктейтіндер"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Музыка"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Суреттер"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "&Фильмдер қапшығы:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Жолдар</h1>\n"
+"Бұл модуль үстелдің файлдары файл жүйенің қай қапшығында сақталатынын "
+"таңдауға мүмкіндік береді.\n"
+"Әрбір параметр туралы анықтама алу үшін \"Бұл не?\" (Shift+F1) мүмкіншілігін "
+"пайдаланыңыз."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Үс&тел қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Бұл қапшықта үстеліңізде көрінетін файлдар жатады. Сіз бұл үшін басқа "
+"қапшықты таңдай аласыз, сонда барлық үстелдегі файлдар автоматты түрде жаңа "
+"орынға ауысады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Құ&жаттар қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "Бұл қапшық әдетте құжаттарды жүктеу және сақтауға қолданылады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Жүктеп &алу қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "Бұл қапшық әдетте жүктеп алынғандарды сақтауға қолданылады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "&Фильмдер қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Бұл қапшық әдетте фильмдерді сақтауға және жүктеп алу/беруге қолданылады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "&Суреттер қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Бұл қапшық әдетте суреттерді сақтауға және жүктеп алу/беруге қолданылады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Музыка қапшығы:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Бұл қапшық әдетте музыканы сақтауға және жүктеп алу/беруге қолданылады."
+
+#~ msgid "Autostart path:"
+#~ msgstr "А&втобастау қапшығы:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Бұл қапшықта, KDE жұмысын бастағанда, автоматты түрде жегілетін "
+#~ "қолданбалар не қолданбалардың сілтемелері (жарлықтар) орналасады. Сіз бұл "
+#~ "үшін басқа қапшықты таңдай аласыз, сонда осындағы барлық файлдар "
+#~ "автоматты түрде жаңа орынға ауысады."
+
+#~ msgid "Autostart"
+#~ msgstr "Автобастау"
+
+#~ msgid "Movies"
+#~ msgstr "Фильмдер"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' дегеннің жолы өзгерді;\n"
+#~ "Файлдар '%2' дегеннен '%3' дегенге жылжытылсын ба?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Жылжыту"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Керегі жоқ"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1' дегеннің жолы өзгерді;\n"
+#~ "'%2' қапшығы '%3' қапшығына жылжытылсын ба?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Жылжыту"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Керегі жоқ"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Құптау керек"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror қасиеттері</h1> Мұнда Сіз Konqueror-ды файл менеджері "
+#~ "ретінде істегенін баптай аласыз."
+
+#~ msgid "Misc Options"
+#~ msgstr "Басқа параметрлері"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Қапшықтар бөлек &терезелерде ашылсын"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Бұл белгісі қойылса, Konqueror қапшықтың мазмұнын назардағы терезеде "
+#~ "көрсетудің орнына, оған бөлек терезе ашады."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Өшірілінгендер қапшыққа салмай жоятын, 'Жою' контекст мәзірі&нің жолы "
+#~ "болсын"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Үстел жане файл менеджерінің мәзірінде 'Жою' командасы болсын десеңіз, "
+#~ "бұл құсбелгісін қойыңыз. Сонымен қатар, әрқашанда, бұл әрекетті Shift "
+#~ "пернесін басып тұрып, 'Өшірілгендерге тастау' дегенмен істей аласыз."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Мәзір өңдегіші"
+
+#~ msgid "Menu"
+#~ msgstr "Мәзір"
+
+#~ msgid "New..."
+#~ msgstr "Жаңа..."
+
+#~ msgid "Remove"
+#~ msgstr "Өшіру"
+
+#~ msgid "Move Up"
+#~ msgstr "Жоғарлату"
+
+#~ msgid "Move Down"
+#~ msgstr "Төмендету"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Келесіге құптау сұрау"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Бұл параметр Konqueror файлды \"өшіргенде\", амалды құптау сұрақты қою-"
+#~ "қоймауды анықтайды. <ul> <li><em>Өшірілгендерге тастау:</em> өшірілгендер "
+#~ "қапшығына жылжытады. Файлды одан қайтару оп-оңай.</li> <li><em>Жою:</em> "
+#~ "файлды қайтарылмастай жою.</li></ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Өшірілінгендерге &тастау"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Ө&шіру"
+
+#~ msgid "&Behavior"
+#~ msgstr "Қ&асиет"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Нобайлар мен мета-деректер"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>Нобайлау, \"Қапшық таңбашасы мазмұнын көрсетеді\" дегені, және келесі "
+#~ "протоколдарға мета-деректерді алуға рұқсат етілсін: </p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Нобайлау параметрлері</h1> Мұнда Сіз Konqueror қапшықтардағы "
+#~ "файлдарды көрсету тәсілдерін баптай аласыз.<h2>Протоколдар тізімі:</h2> "
+#~ "қай протоколды қолданғанда файлдарды нобайлауы керек, қай протоколға "
+#~ "керегі жоғын бегілеп құсбелгісін қойыңыз не алып тастаңыз. Мысалы, "
+#~ "жергілікті желіңіз біршама жылдам болып, SMB арқылы істегенде файлдарды "
+#~ "нобайлауын рұқсат етуін, ал өте баяу FTP сайттарды жиі қарайтын болып, "
+#~ "FTP арқылы нобайлауды рұқсат етпеуін қалағаныңыз мүмкін. <h2>Файл "
+#~ "ұзындығының шегі:</h2> нобайлайтын файлдың шегін орнатады. Мысалы, "
+#~ "бұныңыз (әдеттегідей) 1 Мб болса, 1 Мбайттан асқан файлдардың нобайы, "
+#~ "уақытты үнемдеп, жасалмайды."
+
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Протоколдарды таңдау"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Жергілікті протоколдар"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Интернет протоколдарды"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Бұл параметр, файл менеджеріндегі файл нобайын көрсету, \"ақылды\" қапшық "
+#~ "таңбашалар, және мета-деректерді кашан қосуды таңдауға мүмкіншілік "
+#~ "береді.\n"
+#~ "Шыққан протоколдар тізімінде, қайсысының жылдамдығы нобайларды құрып "
+#~ "көрсетуге жеткілікті екенін таңдаңыз."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "Файл ұзы&ндығының шегі:"
+
+#~ msgid " MB"
+#~ msgstr " Мб"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "Нобайлардың өлшемін таңбашадан ү&лкен қылу"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Файлға ендірілген нобайлар қ&олданылсын"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Кейбір файл түрлеріне (мысалы, JPEG) ендірілген нобайларын қолдануын "
+#~ "таңдау. Бұл жылдамдығын арттырып, дискіде орынды үнемдейді. ImageMagick "
+#~ "секілді, жарамсыз нобайларды құратын бағдарламамен жасалған файлдар "
+#~ "болса, бұны таңдамаңыз."

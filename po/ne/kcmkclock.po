@@ -1,0 +1,261 @@
+# translation of kcmkclock.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2007-08-19 16:29+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nabin Gautam, श्यामकृष्ण बल"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nabin@mpp.org.np,shyamkrishna_bal@yahoo.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "मिति र समय स्वचालित रुपमा सेट गर्छ:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "यहाँ तपाईँले प्रणाली मितिको महिनाको दिन, महिना र वर्ष परिवर्तन गर्न सक्नुहुन्छ ।"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgid "Time Zone"
+msgstr "टाइमजोन त्रुटि"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, fuzzy, kde-format
+#| msgid "To change the timezone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr "टाइमजोन परिवर्तन गर्न, तलको सूचीबाट तपाईँको क्षेत्र चयन गर्नुहोस्"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"तपाईँले यहाँ प्रणाली समय परिवर्तन गर्न सक्नुहुन्छ । उचित मान परिवर्तन गर्न घण्टा, मिनेट वा "
+"सेकेन्ड फाँटमा या माथि र तल बटन प्रयोग गरेर वा नयाँ मान प्रविष्ट गरी क्लिक गर्नुहोस् ।"
+
+#: dtime.cpp:113
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
+
+#: dtime.cpp:116
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
+
+#: dtime.cpp:203
+#, fuzzy, kde-format
+#| msgid ""
+#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"सार्वजनिक समय सर्भर(pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
+"america.pool.ntp.org,oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "समय सर्भर सम्पर्क गर्न असक्षम: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "मिति सेट गर्न सकिँदैन ।"
+
+#: dtime.cpp:281
+#, fuzzy, kde-format
+#| msgid "Error setting new timezone."
+msgid "Error setting new time zone."
+msgstr "नयाँ टाइमजोन सेटिङ गर्दा त्रुटि ।"
+
+#: dtime.cpp:281
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgid "Time zone Error"
+msgstr "टाइमजोन त्रुटि"
+
+#: dtime.cpp:299
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Date & Time</h1> This control module can be used to set the system "
+#| "date and time. As these settings do not only affect you as a user, but "
+#| "rather the whole system, you can only change these settings when you "
+#| "start the Control Center as root. If you do not have the root password, "
+#| "but feel the system time should be corrected, please contact your system "
+#| "administrator."
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1> मिति र समय</h1> यो नियन्त्रण मोड्युल प्रणाली मिति र समय सेट गर्न प्रयोग गर्न "
+"सकिन्छ । यी सेटिङले तपाईँ प्रयोगकर्तालाई मात्र प्रभाव नपारी, पूरै प्रणालीमा प्रभाव पार्छ, "
+"तपाईँले यी सेटिङलाई नियन्त्रण केन्द्र रुटको रुपमा सुरु गरेको बेलामा मात्र परिवर्तन गर्न "
+"सक्नुहुन्छ । यदि तपाईँसँग मूल पासवर्ड नभएमा, तर प्रणाली समय सुधार गर्नुपर्ने लागेमा, कृपया "
+"तपाईँको प्रणाली प्रसाशकसँग सम्पर्क गर्नुहोस् ।"
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "केडीई घडी नियन्त्रण मोड्युल"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 लुका मन्टेकचियानी"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "लुका मन्टेकचियानी"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "मौलिक लेखक"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "पाउल क्याम्पबेल"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "हालको मर्मतकर्ता"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "बेन्जामिन मेयर"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "थपिएको एनटीपी समर्थन"
+
+#: main.cpp:60
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Date & Time</h1> This control module can be used to set the system "
+#| "date and time. As these settings do not only affect you as a user, but "
+#| "rather the whole system, you can only change these settings when you "
+#| "start the Control Center as root. If you do not have the root password, "
+#| "but feel the system time should be corrected, please contact your system "
+#| "administrator."
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1> मिति र समय</h1> यो नियन्त्रण मोड्युल प्रणाली मिति र समय सेट गर्न प्रयोग गर्न "
+"सकिन्छ । यी सेटिङले तपाईँ प्रयोगकर्तालाई मात्र प्रभाव नपारी, पूरै प्रणालीमा प्रभाव पार्छ, "
+"तपाईँले यी सेटिङलाई नियन्त्रण केन्द्र रुटको रुपमा सुरु गरेको बेलामा मात्र परिवर्तन गर्न "
+"सक्नुहुन्छ । यदि तपाईँसँग मूल पासवर्ड नभएमा, तर प्रणाली समय सुधार गर्नुपर्ने लागेमा, कृपया "
+"तपाईँको प्रणाली प्रसाशकसँग सम्पर्क गर्नुहोस् ।"
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: main.cpp:144
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set current time"
+msgstr "समय सर्भर सम्पर्क गर्न असक्षम: %1."
+
+#: main.cpp:154
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set timezone"
+msgstr "समय सर्भर सम्पर्क गर्न असक्षम: %1."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Date/Time Error"
+#~ msgstr "टाइमजोन त्रुटि"

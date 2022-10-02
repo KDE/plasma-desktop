@@ -1,0 +1,258 @@
+# Translation of kcm_device_automounter into esperanto.
+#
+# Axel Rousseau <axel@esperanto-jeunes.org>, 2009, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2015-02-28 22:21+0100\n"
+"Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Axel Rousseau"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "axel@esperanto-jeunes.org"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Aŭtomata surmeto"
+
+#: DeviceAutomounterKCM.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 Trever Fischer"
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Tiu listo enhavas ĉiujn konatajn memorilojn de la sistemo. Se \"Aŭtomate "
+"muntasje ensaluto \"estas enŝaltita, la memoriljo estos aŭtomate muntitaj "
+"kvankam\"Munti ĉiujn forpreneblajn komunikilojn je ensaluto\" estas "
+"nemarkita. La sama validas por\"Aŭtomate muntas je konektiĝo\". \n"
+"\n"
+"Se \"Ebligi aŭtomatan muntadon de forpreneblaj memoriloj\" estas malŝaltita, "
+"laanstataŭigo ne validu kaj neniu aparatoj estos aŭtomate muntitaj."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Klakante tiun butonon 'forgesos' la elektitan aparaton. Tio estasnur utila "
+"se la opcio \"Nur aŭtomate monto forprenebla memoriloj kiuj estispermane "
+"muntita antaŭe\" estas ŝaltita. Kiam la aparato estas forgesita kaj "
+"lasistemo estas agordita por munti aŭtomate nur 'konataj' aparatoj, la "
+"aparatone estos aŭtomate muntita."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Forgesu Aparaton"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Kiam tio estas ŝaltita, nur memoritaj aparatoj estos aŭtomate muntitaj."
+"Aparato estas 'memoritaj' se ĝi iam estis muntita antaŭe. Ekzemple,se vi "
+"konektas USB memoriloj  por ŝarĝi, tio ne sufiĉas por 'memori' ĝin- Se la "
+"dosieroj ne estis atingitaj, la aparato ne estos aŭtomate muntita "
+"venontfoje. Kiam dosiero estos atingita, tiam, la enhavo estos aŭtomate "
+"disponebla al la sistemo."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Muntas aŭtomate nur forpreneblaj memoriloj kiuj estis permane muntita antaŭe"
+
+#: DeviceModel.cpp:52
+#, fuzzy, kde-format
+#| msgid "Automount on Login"
+msgid "Automount Device"
+msgstr "Aŭtomate muntas je ensaluto"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr ""
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr ""
+
+#: DeviceModel.cpp:258
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "All Devices"
+msgstr "Aparato"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr ""
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Ligitaj aparatoj"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Malkonektita Aparatoj"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Tiu aparato estos aŭtomate muntita je ensaluto"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Tiu aparato NE estos aŭtomate muntita je ensaluto"
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Tiu aparato estos aŭtomate muntita je konektiĝo"
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Tiu aparato NE estos aŭtomate muntita je konektiĝo"
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Se forprenebla memorilo estas konektita al via sistemo kiam vi "
+#~ "ensalutassur via labortablon, iliaj enhavoj estos aŭtomate disponeblaj "
+#~ "legeble al viasistemo por aliaj programoj."
+
+#, fuzzy
+#~| msgid "Mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Munti ĉiujn forpreneblajn memorilojn je ensaluto"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Kiam tio estas ŝaltita, la enhavo de ajna stokado estos "
+#~ "aŭtomatedisponebla al la sistemo kiam ĝi estas konektita."
+
+#, fuzzy
+#~| msgid "Automatically mount removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr ""
+#~ "Aŭtomate montas forpreneblajn amaskomunikilojn kiam ili estas konektita"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Kiam tiu estas ŝaltita ne neniu aŭtomata enmeto okazos,sendepende de "
+#~ "agordo en la \"Aparato anstataŭigas\" sekcio."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Ebligi aŭtomatan muntadon de forprenebla memoriloj"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Aparatoj anstataŭigas"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Aŭtomate muntas je konektiĝo"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Aŭtomate muntas aparatojn je ensaluto aŭ kiam oni alfiksis ilin"
+
+#~ msgid "Yes"
+#~ msgstr "Jes"
+
+#~ msgid "No"
+#~ msgstr "Ne"

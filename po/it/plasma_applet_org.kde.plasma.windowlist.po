@@ -1,0 +1,74 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2014.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_windowlist\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-21 00:46+0000\n"
+"PO-Revision-Date: 2022-07-02 15:20+0200\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generale"
+
+#: contents/ui/ConfigGeneral.qml:27
+#, kde-format
+msgid "Show active application's name on Panel button"
+msgstr "Mostra il nome dell'applicazione sul pulsante del pannello"
+
+#: contents/ui/ConfigGeneral.qml:47
+#, kde-format
+msgid "Only icons can be shown when the Panel is vertical."
+msgstr "Solo le icone possono essere mostrate quando il pannello è verticale."
+
+#: contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgid "Not applicable when the widget is on the Desktop."
+msgstr "Non valido se l'oggetto è sul desktop."
+
+#: contents/ui/main.qml:80
+#, kde-format
+msgid "Plasma Desktop"
+msgstr "Desktop Plasma"
+
+#~ msgid "Show list of opened windows"
+#~ msgstr "Mostra elenco di finestre aperte"
+
+#~ msgid "On all desktops"
+#~ msgstr "Su tutti i desktop"
+
+#~ msgid "Window List"
+#~ msgstr "Elenco di finestre"
+
+#~ msgid "Actions"
+#~ msgstr "Azioni"
+
+#~ msgid "Unclutter Windows"
+#~ msgstr "Riordina le finestre"
+
+#~ msgid "Cascade Windows"
+#~ msgstr "Impila le finestre"
+
+#, fuzzy
+#~| msgid "Desktop"
+#~ msgctxt "%1 is the name of the desktop"
+#~ msgid "Desktop %1"
+#~ msgstr "Desktop"
+
+#~ msgid "Current desktop"
+#~ msgstr "Desktop attuale"
+
+#~ msgid "No windows"
+#~ msgstr "Nessuna finestra"

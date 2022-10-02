@@ -1,0 +1,275 @@
+# translation of kcmsmserver.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2007-02-01 10:26+0330\n"
+"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>مدیر نشست</h1> شما می‌توانید مدیر نشست خود را در اینجا پیکربندی کنید. "
+"شامل گزینه‌هایی نظیر، آیا خروج نشست )خروج( باید تأیید شود یا نه، آیا نشست "
+"باید هنگام ورود دوباره بازگردانده شود و آیا به طور پیش‌فرض، رایانه‌ها باید بعد "
+"از خروج نشست به صورت خودکار تعطیل شوند."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "&بازآغازی رایانه‌"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "عمومی"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "&تأیید‌ خروج‌"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "&ارائه گزینه‌های تعطیل‌"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "گزینه تعطیل پیش‌فرض"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "&پایان نشست جاری‌"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "&بازآغازی رایانه‌"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "&خاموش کردن رایانه‌"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "آغاز با یک &نشست خالی‌"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, fuzzy, kde-format
+#| msgid ""
+#| "Here you can enter a comma-separated list of applications that should not "
+#| "be saved in sessions, and therefore will not be started when restoring a "
+#| "session. For example 'xterm,xconsole'."
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"در اینجا می‌توانید فهرستی از کاربردهای جداشده با کاما را وارد کنید که نباید "
+"در نشستها ذخیره شوند، و بنابراین هنگام بازگرداندن یک نشست آغاز نمی‌شوند. برای "
+"مثال، »xterm،xconsole«."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "&تأیید‌ خروج‌"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "&ارائه گزینه‌های تعطیل‌"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "گزینه تعطیل پیش‌فرض"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "هنگام ورود"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "بازگرداندن نشست &قبلی‌"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "اگر می‌خواهید مدیر نشست، جعبه محاوره تأیید‌ را برای خروج نمایش دهد، این "
+#~ "گزینه را انتخاب کنید."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "&تأیید‌ خروج‌"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "&ارائه گزینه‌های تعطیل‌"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "در اینجا می‌توانید اتفاقی که باید هنگام خروج شما به طور پیش‌فرض رخ دهد را "
+#~ "انتخاب کنید. این فقط وقتی معنی دارد که شما از طریق KDM وارد شده باشید."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "گزینه تعطیل پیش‌فرض"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>بازگرداندن نشست قبلی:</b> همه کاربردهای در حال اجرا را، هنگام خروج "
+#~ "ذخیره کرده، و در زمان برپایی بعدی آنها را باز می‌گرداند</li>\n"
+#~ "<li><b>بازگرداندن دستی نشست ذخیره‌شده:</b> به نشست اجازه می‌دهد در هر زمانی "
+#~ "از طریق »ذخیره نشست«، در گزینگان K ذخیره شود. یعنی کاربرد اخیراً آغازشده، "
+#~ "هنگام برپایی بعدی دوباره ظاهر می‌شود.</li> \n"
+#~ "<li><b>آغاز با یک نشست خالی: </b> چیزی را ذخیره نمی‌کند. هنگام آغاز بعدی، "
+#~ "با یک رومیزی خالی همراه می‌شود.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "هنگام ورود"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+
+#~ msgid "Session Manager"
+#~ msgstr "مدیر نشست"
+
+#~ msgid "Advanced"
+#~ msgstr "پیشرفته"
+
+#, fuzzy
+#~ msgid "Window Manager"
+#~ msgstr "مدیر نشست"

@@ -1,0 +1,424 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Lorenz Adam Damara <lorenzrenz@gmail.com>, 2018.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2022-03-23 08:00+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Umum"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Hapus dari Favorit"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Tambahkan ke Favorit"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Pada Semua Activities"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Di Aktivitas Saat Ini"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Tampilkan di Favorit"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Pilih..."
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Bersihkan Ikon"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Tampilkan aplikasi sebagai:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Hanya nama"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Hanya deskripsi"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nama (deskripsi)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Deskripsi (nama)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Perilaku:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Urutkan aplikasi secara alfabet"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Ratakan sub-menu ke satu level"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Tampilkan ikon di level root-nya menu"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Tampilkan kategori:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Aplikasi Baru-baru ini"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Aplikasi yang sering digunakan"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "File baru-baru ini"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "File-file yang sering digunakan"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Kontak baru-baru ini"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Kontak yang sering digunakan"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Urutkan butir-butir dalam kategori berdasarkan:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Barusan digunakan"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Sering  digunakan"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Cari:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Perluas pencarian untuk markah, berkas, dan surel"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Sejajarkan hasil pencarian ke bagian bawah"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Mencari '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Ketik untuk mencari..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favorit"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Widget"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Aplikasi & Dokumen"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Edit Aplikasi..."
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgid "Search…"
+#~ msgstr "Cari:"
+
+#~ msgid "Search..."
+#~ msgstr "Cari..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Dokumen yang sering digunakan"
+
+#~ msgid "Open with:"
+#~ msgstr "Buka dengan:"
+
+#~ msgid "Properties"
+#~ msgstr "Properti"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Tambahkan ke Desktop"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Tambahkan ke Panel (Widget)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Pinkan ke Pengelola Tugas"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Dokumen Baru-baru ini"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Lupakan Dokumen Baru-baru ini"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Ubah Aplikasi..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Sembunyikan Aplikasi"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikasi"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Tampakkan Aplikasi di Submenu ini"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Tampakkan Aplikasi di '%1'"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Tampilkan KRunner"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Cari, hitung, atau jalankan perintah"
+
+#~ msgid "Computer"
+#~ msgstr "Komputer"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Tampilkan Informasi Kontak..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontak"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Lupakan Kontak"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Lupakan Semua Kontak"
+
+#~ msgid "Recently Used"
+#~ msgstr "Barusan Digunakan"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumen"
+
+#~ msgid "Forget Application"
+#~ msgstr "Lupakan Aplikasi"
+
+#~ msgid "Forget Document"
+#~ msgstr "Lupakan Dokumen"
+
+#~ msgid "Forget All"
+#~ msgstr "Lupakan Semua"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Lupakan Semua Aplikasi"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Lupakan Semua Dokumen"
+
+#~ msgid "Hide %1"
+#~ msgstr "Sembunyikan %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Semua Aplikasi"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Kontak Baru-baru ini"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Dokumen yang Sering Digunakan"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Aplikasi Baru-baru ini"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Aplikasi Sering Digunakan"
+
+#~ msgid "Power / Session"
+#~ msgstr "Daya / Sesi"
+
+#~ msgid "Search results"
+#~ msgstr "Hasil pencarian"
+
+#~ msgid "Lock"
+#~ msgstr "Kunci"
+
+#~ msgid "Log Out"
+#~ msgstr "Keluar Log"
+
+#~ msgid "Save Session"
+#~ msgstr "Simpan Sesi"
+
+#~ msgid "Switch User"
+#~ msgstr "Beralih Pengguna"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Tidur"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernasi"
+
+#~ msgid "Restart"
+#~ msgstr "Nyalakan-ulang"
+
+#~ msgid "Shut Down"
+#~ msgstr "Matikan"
+
+#~ msgid "Session"
+#~ msgstr "Sesi"
+
+#~ msgid "System"
+#~ msgstr "Sistem"
+
+#~ msgid "Lock screen"
+#~ msgstr "Layar kunci"
+
+#~ msgid "End session"
+#~ msgstr "Akhiri sesi"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Mulai sesi parallel sebagai pengguna yang berbeda"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspensikan ke RAM"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspensikan ke disk"
+
+#~ msgid "Restart computer"
+#~ msgstr "Menyalakan-ulang komputer"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Mematikan komputer"
+
+#~ msgid "System actions"
+#~ msgstr "Aksi sistem"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Atur '%1'..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Janlankan Perintah..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Jalankan perintah atau kata kunci pencarian"
+
+#~ msgid "Show:"
+#~ msgstr "Tampilkan:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Tampilkan aplikasi sebelumnya"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Tampilkan aplikasi yang sering digunakan"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Show recent documents"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Tampilkan dokumen yang sering digunakan"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Tampilkan kontak baru-baru ini"
+
+#~ msgid "Logout"
+#~ msgstr "Logout"
+
+#~ msgid "Reboot"
+#~ msgstr "Reboot"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspend"

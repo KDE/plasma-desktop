@@ -1,0 +1,500 @@
+# Translation of plasma_applet_org.kde.plasma.taskmanager.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-31 18:13+0200\n"
+"PO-Revision-Date: 2017-04-07 00:51+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: package/contents/config/config.qml:31
+#, kde-format
+msgid "Behavior"
+msgstr "Понашање"
+
+#: package/contents/ui/Badge.qml:48
+#, kde-format
+msgctxt "Invalid number of new messages, overlay, keep short"
+msgid "—"
+msgstr ""
+
+#: package/contents/ui/Badge.qml:50
+#, kde-format
+msgctxt "Over 9999 new messages, overlay, keep short"
+msgid "9,999+"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:48
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Опште"
+
+# >> @option:check (checkbox following)
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Show tooltips"
+msgstr "Облачићи"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, kde-format
+msgid "Highlight windows when hovering over tasks"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:59
+#, kde-format
+msgid "Mark applications that play audio"
+msgstr "Означи програме који пуштају звук"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgid "Icon size:"
+msgstr "Величина иконица:"
+
+# >> @item:inrange Icon size:
+#: package/contents/ui/ConfigAppearance.qml:85
+#, kde-format
+msgid "Small"
+msgstr "мале"
+
+# >> @item:inrange Icon size:
+#: package/contents/ui/ConfigAppearance.qml:94
+#, kde-format
+msgid "Large"
+msgstr "велике"
+
+#: package/contents/ui/ConfigAppearance.qml:105
+#, kde-format
+msgid "Maximum columns:"
+msgstr "Највише колона:"
+
+#: package/contents/ui/ConfigAppearance.qml:105
+#, kde-format
+msgid "Maximum rows:"
+msgstr "Највише врста:"
+
+#: package/contents/ui/ConfigAppearance.qml:111
+#, fuzzy, kde-format
+#| msgid "Always arrange tasks in rows of as many columns"
+msgid "Always arrange tasks in rows of as many columns"
+msgstr "Увек распореди задатке по врстама са оволико колона"
+
+#: package/contents/ui/ConfigAppearance.qml:111
+#, fuzzy, kde-format
+#| msgid "Always arrange tasks in rows of as many columns"
+msgid "Always arrange tasks in columns of as many rows"
+msgstr "Увек распореди задатке по врстама са оволико колона"
+
+#: package/contents/ui/ConfigBehavior.qml:51
+#, fuzzy, kde-format
+#| msgid "Grouping:"
+msgid "Group:"
+msgstr "Груписање:"
+
+# >> @item:inlistbox Grouping
+#: package/contents/ui/ConfigBehavior.qml:53
+#, fuzzy, kde-format
+#| msgid "Do Not Group"
+msgid "Do not group"
+msgstr "без груписања"
+
+# >> @item:inlistbox Grouping
+#: package/contents/ui/ConfigBehavior.qml:53
+#, fuzzy, kde-format
+#| msgid "By Program Name"
+msgid "By program name"
+msgstr "по имену програма"
+
+#: package/contents/ui/ConfigBehavior.qml:59
+#, kde-format
+msgid "Combine into single button"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:66
+#, fuzzy, kde-format
+#| msgid "Only group when the task manager is full"
+msgid "Group only when the Task Manager is full"
+msgstr "Групиши само када је менаџер задатака пун"
+
+#: package/contents/ui/ConfigBehavior.qml:79
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort:"
+msgstr "Ређање:"
+
+#: package/contents/ui/ConfigBehavior.qml:81
+#, kde-format
+msgid "Do not sort"
+msgstr ""
+
+# >> @item:inlistbox Grouping
+# >> @item:inlistbox Sorting
+#: package/contents/ui/ConfigBehavior.qml:81
+#, kde-format
+msgid "Manually"
+msgstr "ручно"
+
+# >> @item:inlistbox Sorting
+#: package/contents/ui/ConfigBehavior.qml:81
+#, kde-format
+msgid "Alphabetically"
+msgstr "азбучно"
+
+# >> @item:inlistbox Sorting
+#: package/contents/ui/ConfigBehavior.qml:81
+#, fuzzy, kde-format
+#| msgid "By Desktop"
+msgid "By desktop"
+msgstr "по површи"
+
+# >> @item:inlistbox Sorting
+#: package/contents/ui/ConfigBehavior.qml:81
+#, fuzzy, kde-format
+#| msgid "By Activity"
+msgid "By activity"
+msgstr "по активности"
+
+# >> @option:check
+#: package/contents/ui/ConfigBehavior.qml:87
+#, kde-format
+msgid "Keep launchers separate"
+msgstr "Држи покретаче раздвојено"
+
+#: package/contents/ui/ConfigBehavior.qml:99
+#, kde-format
+msgid "On middle-click:"
+msgstr "На средњи клик:"
+
+# >> @item:inlistbox On middle-click:
+#: package/contents/ui/ConfigBehavior.qml:102
+#, kde-format
+msgctxt "The click action"
+msgid "None"
+msgstr "ништа"
+
+# >> @item:inlistbox On middle-click:
+#: package/contents/ui/ConfigBehavior.qml:103
+#, fuzzy, kde-format
+#| msgid "Close Window or Group"
+msgid "Close window or group"
+msgstr "затвори прозор или групу"
+
+# >> @item:inlistbox On middle-click:
+#: package/contents/ui/ConfigBehavior.qml:104
+#, fuzzy, kde-format
+#| msgid "New Instance"
+msgid "New instance"
+msgstr "нови примерак"
+
+# >> @item:inlistbox On middle-click:
+#: package/contents/ui/ConfigBehavior.qml:105
+#, fuzzy, kde-format
+#| msgid "Minimize/Restore Window or Group"
+msgid "Minimize/Restore window or group"
+msgstr "минимизуј/обнови прозор или групу"
+
+# >> @item:inlistbox On middle-click:
+#: package/contents/ui/ConfigBehavior.qml:106
+#, kde-format
+msgctxt "When clicking it would toggle grouping windows of a specific app"
+msgid "Group/Ungroup"
+msgstr "групиши/разгрупиши"
+
+# >> @option:check
+#: package/contents/ui/ConfigBehavior.qml:107
+#, fuzzy, kde-format
+#| msgid "Show only tasks from the current desktop"
+msgid "Bring to the current virtual desktop"
+msgstr "Само задаци на тренутној површи"
+
+#: package/contents/ui/ConfigBehavior.qml:117
+#, kde-format
+msgid "Mouse wheel:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:118
+#, fuzzy, kde-format
+#| msgid "Cycle through tasks with mouse wheel"
+msgid "Cycle through tasks"
+msgstr "Кружи кроз задатке на точкић миша"
+
+# >> @option:check (checkbox following)
+#: package/contents/ui/ConfigBehavior.qml:127
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgid "Show only tasks:"
+msgstr "Облачићи"
+
+# >> @option:check
+#: package/contents/ui/ConfigBehavior.qml:128
+#, fuzzy, kde-format
+#| msgid "Show only tasks from the current screen"
+msgid "From current screen"
+msgstr "Само задаци на тренутном екрану"
+
+#: package/contents/ui/ConfigBehavior.qml:133
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgid "From current desktop"
+msgstr "Премести на &текућу површ"
+
+#: package/contents/ui/ConfigBehavior.qml:138
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgid "From current activity"
+msgstr "Додај у текућу активност"
+
+# >> @option:check
+#: package/contents/ui/ConfigBehavior.qml:143
+#, fuzzy, kde-format
+#| msgid "Show only tasks that are minimized"
+msgid "That are minimized"
+msgstr "Само задаци који су минимизовани"
+
+#: package/contents/ui/ContextMenu.qml:99
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:104
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Recent Documents"
+msgstr "Заборави недавне документе"
+
+#: package/contents/ui/ContextMenu.qml:109
+#, fuzzy, kde-format
+#| msgid "More Actions"
+msgid "Actions"
+msgstr "Више радњи"
+
+#: package/contents/ui/ContextMenu.qml:167
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Претходна нумера"
+
+#: package/contents/ui/ContextMenu.qml:181
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Паузирај"
+
+#: package/contents/ui/ContextMenu.qml:181
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Пусти"
+
+#: package/contents/ui/ContextMenu.qml:199
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Следећа нумера"
+
+#: package/contents/ui/ContextMenu.qml:210
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Заустави"
+
+#: package/contents/ui/ContextMenu.qml:230
+#, kde-format
+msgctxt "Quit media player app"
+msgid "Quit"
+msgstr "Напусти"
+
+#: package/contents/ui/ContextMenu.qml:245
+#, kde-format
+msgctxt "Open or bring to the front window of media player app"
+msgid "Restore"
+msgstr "Обнови"
+
+#: package/contents/ui/ContextMenu.qml:271
+#, kde-format
+msgid "Mute"
+msgstr "Утишај"
+
+#: package/contents/ui/ContextMenu.qml:285
+#, kde-format
+msgid "Start New Instance"
+msgstr "Покрени нови примерак"
+
+#: package/contents/ui/ContextMenu.qml:301
+#, fuzzy, kde-format
+#| msgid "Move To &Desktop"
+msgid "Move to &Desktop"
+msgstr "Премести на &површ"
+
+#: package/contents/ui/ContextMenu.qml:325
+#, kde-format
+msgid "Move &To Current Desktop"
+msgstr "Премести на &текућу површ"
+
+# >> @item:inmenu Move To Desktop
+#: package/contents/ui/ContextMenu.qml:334
+#, kde-format
+msgid "&All Desktops"
+msgstr "&све површи"
+
+# >> @item:inmenu Move To Desktop
+#: package/contents/ui/ContextMenu.qml:348
+#, kde-format
+msgctxt "1 = number of desktop, 2 = desktop name"
+msgid "&%1 %2"
+msgstr "&%1 — %2"
+
+# >> @item:inmenu Move To Desktop
+#: package/contents/ui/ContextMenu.qml:362
+#, kde-format
+msgid "&New Desktop"
+msgstr "&нова површ"
+
+#: package/contents/ui/ContextMenu.qml:381
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgid "Show in &Activities"
+msgstr "Све активности"
+
+#: package/contents/ui/ContextMenu.qml:403
+#, kde-format
+msgid "Add To Current Activity"
+msgstr "Додај у текућу активност"
+
+#: package/contents/ui/ContextMenu.qml:413
+#, kde-format
+msgid "All Activities"
+msgstr "Све активности"
+
+#: package/contents/ui/ContextMenu.qml:472
+#, kde-format
+msgid "More Actions"
+msgstr "Више радњи"
+
+#: package/contents/ui/ContextMenu.qml:481
+#, kde-format
+msgid "&Move"
+msgstr "&Премести"
+
+#: package/contents/ui/ContextMenu.qml:490
+#, kde-format
+msgid "Re&size"
+msgstr "Промени &величину"
+
+#: package/contents/ui/ContextMenu.qml:504
+#, kde-format
+msgid "Ma&ximize"
+msgstr "Ма&ксимизуј"
+
+#: package/contents/ui/ContextMenu.qml:518
+#, kde-format
+msgid "Mi&nimize"
+msgstr "Ми&нимизуј"
+
+#: package/contents/ui/ContextMenu.qml:528
+#, kde-format
+msgid "Keep &Above Others"
+msgstr "Држи из&над осталих"
+
+#: package/contents/ui/ContextMenu.qml:538
+#, kde-format
+msgid "Keep &Below Others"
+msgstr "Држи ис&под осталих"
+
+#: package/contents/ui/ContextMenu.qml:550
+#, kde-format
+msgid "&Fullscreen"
+msgstr "Преко &целог екрана"
+
+#: package/contents/ui/ContextMenu.qml:562
+#, kde-format
+msgid "&Shade"
+msgstr "&Намотај"
+
+#: package/contents/ui/ContextMenu.qml:578
+#, kde-format
+msgid "Allow this program to be grouped"
+msgstr "Дозволи груписање за овај програм"
+
+#: package/contents/ui/ContextMenu.qml:630
+#: package/contents/ui/ContextMenu.qml:645
+#, kde-format
+msgid "&Pin to Task Manager"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:698
+#, kde-format
+msgid "On All Activities"
+msgstr "У свим активностима"
+
+#: package/contents/ui/ContextMenu.qml:704
+#, kde-format
+msgid "On The Current Activity"
+msgstr "У текућој активности"
+
+#: package/contents/ui/ContextMenu.qml:728
+#, kde-format
+msgid "Unpin from Task Manager"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:742
+#, kde-format
+msgid "&Close"
+msgstr "&Затвори"
+
+# >> Which activity a window is currently on. Desktop name is either generic "Desktop %1" from kwin.po, or user supplied.
+#: package/contents/ui/ToolTipInstance.qml:374
+#, fuzzy, kde-format
+#| msgid "On %1"
+msgctxt "Comma-separated list of desktops"
+msgid "On %1"
+msgstr "У %1|/|У $[лок %1]"
+
+#: package/contents/ui/ToolTipInstance.qml:384
+#, kde-format
+msgctxt "Which virtual desktop a window is currently on"
+msgid "Available on all activities"
+msgstr "Доступан у свим активностима"
+
+#: package/contents/ui/ToolTipInstance.qml:406
+#, kde-format
+msgctxt "Activities a window is currently on (apart from the current one)"
+msgid "Also available on %1"
+msgstr "Такође доступан у %1|/|Такође доступан у $[лок %1]"
+
+#: package/contents/ui/ToolTipInstance.qml:410
+#, kde-format
+msgctxt "Which activities a window is currently on"
+msgid "Available on %1"
+msgstr "Доступан у %1|/|Доступан у $[лок %1]"
+
+#: plugin/backend.cpp:280
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "Још %1 место"
+msgstr[1] "Још %1 места"
+msgstr[2] "Још %1 места"
+msgstr[3] "Још %1 место"
+
+#: plugin/backend.cpp:353
+#, kde-format
+msgid "Forget Recent Documents"
+msgstr "Заборави недавне документе"

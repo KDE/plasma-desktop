@@ -1,0 +1,880 @@
+# translation of kxkb.po to Uzbek
+# Copyright (C) 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kxkb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2006-10-01 21:32+0000\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mashrab Quvatov"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kmashrab@uni-bremen.de"
+
+#: bindings.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "Tugmatag"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Keyingi tugmalar tartibiga oʻtish"
+
+#: bindings.cpp:49
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch keyboard layout to %1"
+msgstr "Keyingi tugmalar tartibiga oʻtish"
+
+#: flags.cpp:122
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
+#: kcm_add_layout_dialog.ui:14
+#, fuzzy, kde-format
+msgid "Add Layout"
+msgstr "Laoscha"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
+#: kcm_add_layout_dialog.ui:20
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
+#: kcm_add_layout_dialog.ui:45
+#, kde-format
+msgid "Shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLabel)
+#: kcm_add_layout_dialog.ui:55
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
+#. i18n: ectx: property (text), widget (QPushButton, previewButton)
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#, kde-format
+msgid "Preview"
+msgstr ""
+
+#: kcm_keyboard.cpp:32
+#, fuzzy, kde-format
+msgid "KDE Keyboard Control Module"
+msgstr "KDE uchun tugmatag vositasi"
+
+#: kcm_keyboard.cpp:36
+#, kde-format
+msgid "(c) 2010 Andriy Rysin"
+msgstr ""
+
+#: kcm_keyboard.cpp:40
+#, kde-format
+msgid ""
+"<h1>Keyboard</h1> This control module can be used to configure keyboard "
+"parameters and layouts."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
+#: kcm_keyboard.ui:18
+#, kde-format
+msgid "Hardware"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm_keyboard.ui:33
+#, fuzzy, kde-format
+msgid "Keyboard &model:"
+msgstr "KDE uchun tugmatag vositasi"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
+#: kcm_keyboard.ui:53
+#, kde-format
+msgid ""
+"Here you can choose a keyboard model. This setting is independent of your "
+"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+"keyboard is manufactured. Modern keyboards that come with your computer "
+"usually have two extra keys and are referred to as \"104-key\" models, which "
+"is probably what you want if you do not know what kind of keyboard you "
+"have.\n"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
+#: kcm_keyboard.ui:94
+#, fuzzy, kde-format
+msgid "Layouts"
+msgstr "Laoscha"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:102
+#, kde-format
+msgid ""
+"If you select \"Application\" or \"Window\" switching policy, changing the "
+"keyboard layout will only affect the current application or window."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
+#: kcm_keyboard.ui:105
+#, kde-format
+msgid "Switching Policy"
+msgstr "Tanlash qoidasi"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
+#: kcm_keyboard.ui:111
+#, kde-format
+msgid "&Global"
+msgstr "&Umumiy"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
+#: kcm_keyboard.ui:124
+#, kde-format
+msgid "&Desktop"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
+#: kcm_keyboard.ui:134
+#, fuzzy, kde-format
+#| msgid "Application"
+msgid "&Application"
+msgstr "Dastur"
+
+#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
+#: kcm_keyboard.ui:144
+#, kde-format
+msgid "&Window"
+msgstr "&Oyna"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
+#: kcm_keyboard.ui:157
+#, kde-format
+msgid "Shortcuts for Switching Layout"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm_keyboard.ui:163
+#, kde-format
+msgid "Main shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
+#: kcm_keyboard.ui:176
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts which is handled by X.org. It "
+"allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
+#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no shortcut defined"
+msgid "None"
+msgstr "Yoʻq"
+
+#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
+#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
+#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#, kde-format
+msgid "…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm_keyboard.ui:193
+#, kde-format
+msgid "3rd level shortcuts:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
+#: kcm_keyboard.ui:206
+#, kde-format
+msgid ""
+"This is a shortcut for switching to a third level of the active layout (if "
+"it has one) which is handled by X.org. It allows modifier-only shortcuts."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm_keyboard.ui:223
+#, kde-format
+msgid "Alternative shortcut:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
+#: kcm_keyboard.ui:236
+#, kde-format
+msgid ""
+"This is a shortcut for switching layouts. It does not support modifier-only "
+"shortcuts and also may not work in some situations (e.g. if popup is active "
+"or from screensaver)."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
+#: kcm_keyboard.ui:261
+#, fuzzy, kde-format
+#| msgid "Active layouts:"
+msgid "Configure layouts"
+msgstr "Aktiv tugmalar tartibi:"
+
+#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
+#: kcm_keyboard.ui:275
+#, fuzzy, kde-format
+#| msgid "Add >>"
+msgid "Add"
+msgstr "Qoʻshish >>"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
+#: kcm_keyboard.ui:285
+#, fuzzy, kde-format
+#| msgid "<< Remove"
+msgid "Remove"
+msgstr "<< Olib tashlash"
+
+#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
+#: kcm_keyboard.ui:295
+#, kde-format
+msgid "Move Up"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
+#: kcm_keyboard.ui:305
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
+#: kcm_keyboard.ui:350
+#, fuzzy, kde-format
+#| msgid "Available layouts:"
+msgid "Spare layouts"
+msgstr "Mavjud tugmalar tartibi:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm_keyboard.ui:382
+#, kde-format
+msgid "Main layout count:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: kcm_keyboard.ui:412
+#, kde-format
+msgid "Advanced"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
+#: kcm_keyboard.ui:418
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard layouts"
+msgid "&Configure keyboard options"
+msgstr "Tugmalar tart&ibini yoqish"
+
+#: kcm_keyboard_widget.cpp:211
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:213
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr ""
+
+#: kcm_keyboard_widget.cpp:643
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Yoʻq"
+
+#: kcm_keyboard_widget.cpp:657
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgctxt "layout map name"
+msgid "Map"
+msgstr ""
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+msgid "Layout"
+msgstr "Laoscha"
+
+#: kcm_view_models.cpp:200
+#, fuzzy, kde-format
+msgid "Variant"
+msgstr "Bolgarcha"
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Label"
+msgstr ""
+
+#: kcm_view_models.cpp:200
+#, kde-format
+msgid "Shortcut"
+msgstr ""
+
+#: kcm_view_models.cpp:273
+#, kde-format
+msgctxt "variant"
+msgid "Default"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmmiscwidget.ui:31
+#, kde-format
+msgid "When a key is held:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
+#: kcmmiscwidget.ui:38
+#, kde-format
+msgid "&Show accented and similar characters "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
+#: kcmmiscwidget.ui:45
+#, kde-format
+msgid "&Repeat the key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
+#: kcmmiscwidget.ui:52
+#, kde-format
+msgid "&Do nothing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmmiscwidget.ui:66
+#, kde-format
+msgid "Test area:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
+#: kcmmiscwidget.ui:73
+#, kde-format
+msgid ""
+"Allows to test keyboard repeat and click volume (just don't forget to apply "
+"the changes)."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:82
+#, kde-format
+msgid ""
+"If supported, this option allows you to setup the state of NumLock after "
+"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+"configure Plasma not to set NumLock state."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
+#: kcmmiscwidget.ui:85
+#, kde-format
+msgid "NumLock on Plasma Startup"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
+#: kcmmiscwidget.ui:97
+#, kde-format
+msgid "T&urn on"
+msgstr "Yoq&ish"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
+#: kcmmiscwidget.ui:104
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgid "&Turn off"
+msgstr "Oʻ&chirish"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
+#: kcmmiscwidget.ui:111
+#, kde-format
+msgid "Leave unchan&ged"
+msgstr "Oʻ&zgartirilmasin"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRate)
+#: kcmmiscwidget.ui:148
+#, kde-format
+msgid "&Rate:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the delay after which a pressed "
+"key will start generating keycodes. The 'Repeat rate' option controls the "
+"frequency of these keycodes."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
+#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
+#, kde-format
+msgid ""
+"If supported, this option allows you to set the rate at which keycodes are "
+"generated while a key is pressed."
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
+#: kcmmiscwidget.ui:195
+#, kde-format
+msgid " repeats/s"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
+#: kcmmiscwidget.ui:205
+#, kde-format
+msgid " ms"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: kcmmiscwidget.ui:246
+#, kde-format
+msgid "&Delay:"
+msgstr "K&echikish:"
+
+#: tastenbrett/main.cpp:57
+#, fuzzy, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Tugmatag"
+
+#: tastenbrett/main.cpp:59
+#, fuzzy, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Tugmatag"
+
+#: tastenbrett/main.cpp:144
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant."
+msgstr ""
+
+#, fuzzy
+#~ msgid "KDE Keyboard Layout Switcher"
+#~ msgstr "Tugmatag"
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Laoscha"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Bolgarcha"
+
+#, fuzzy
+#~ msgid "Layout Indicator"
+#~ msgstr "Laoscha"
+
+#, fuzzy
+#~| msgid "Show country flag"
+#~ msgid "Show flag"
+#~ msgstr "Davlatning bayrogʻini koʻrsatish"
+
+#, fuzzy
+#~| msgid "Show country flag"
+#~ msgid "Show label on flag"
+#~ msgstr "Davlatning bayrogʻini koʻrsatish"
+
+#, fuzzy
+#~ msgctxt "tooltip title"
+#~ msgid "Keyboard Layout"
+#~ msgstr "Tugmatag"
+
+#, fuzzy
+#~| msgid "Active layouts:"
+#~ msgid "Configure Layouts..."
+#~ msgstr "Aktiv tugmalar tartibi:"
+
+#, fuzzy
+#~ msgid "Keyboard Repeat"
+#~ msgstr "Tugmatag"
+
+#~ msgid "Turn o&ff"
+#~ msgstr "Oʻ&chirish"
+
+#, fuzzy
+#~| msgid "Leave unchan&ged"
+#~ msgid "&Leave unchanged"
+#~ msgstr "Oʻ&zgartirilmasin"
+
+#~ msgid "Configure..."
+#~ msgstr "Moslash..."
+
+#, fuzzy
+#~| msgid "Key click &volume:"
+#~ msgid "&Key click volume:"
+#~ msgstr "Tugmani &bosish tovushi:"
+
+#, fuzzy
+#~ msgid "Layout Name"
+#~ msgstr "Laoscha"
+
+#~ msgid "A utility to switch keyboard maps"
+#~ msgstr "Tugmalar tartibini almashtirish uchun vosita"
+
+#~ msgid "Error changing keyboard layout to '%1'"
+#~ msgstr "Tugmalar tartibini \"%1\"ga almashtirishda xato roʻy berdi."
+
+#, fuzzy
+#~| msgid "Switch to Next Keyboard Layout"
+#~ msgid "KDE will not configure or show keyboard layouts"
+#~ msgstr "Keyingi tugmalar tartibiga oʻtish"
+
+#, fuzzy
+#~| msgid "&Enable keyboard layouts"
+#~ msgid "Disable keyboard layouts"
+#~ msgstr "Tugmalar tart&ibini yoqish"
+
+#~ msgid "Command:"
+#~ msgstr "Buyruq:"
+
+#, fuzzy
+#~ msgid "Layout variant:"
+#~ msgstr "Latviacha"
+
+#~ msgid "Switching Options"
+#~ msgstr "Tanlash parametrlari"
+
+#~ msgid "&Reset old options"
+#~ msgstr "&Eski parametrlarni tiklash"
+
+#~ msgid "Xkb Options"
+#~ msgstr "Xkb parametrlari"
+
+#~ msgid "&Enable xkb options"
+#~ msgstr "Xkb parametrla&rini yoqish"
+
+#, fuzzy
+#~ msgid "Keyboard"
+#~ msgstr "Tugmatag"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Xkb parametrlari"
+
+#~ msgid "Keymap"
+#~ msgstr "Tugmalar tartibi"
+
+#~ msgid "Belgian"
+#~ msgstr "Belgiacha"
+
+#~ msgid "Brazilian"
+#~ msgstr "Brazilcha"
+
+#~ msgid "Canadian"
+#~ msgstr "Kanadcha"
+
+#~ msgid "Czech"
+#~ msgstr "Chexcha"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Chexcha (qwerty)"
+
+#~ msgid "Danish"
+#~ msgstr "Daniyaliklar tili"
+
+#~ msgid "Estonian"
+#~ msgstr "Estoncha"
+
+#~ msgid "Finnish"
+#~ msgstr "Fincha"
+
+#~ msgid "French"
+#~ msgstr "Fransuzcha"
+
+#~ msgid "German"
+#~ msgstr "Olmoncha"
+
+#~ msgid "Hungarian"
+#~ msgstr "Vengrcha"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "Vengrcha (qwerty)"
+
+#~ msgid "Italian"
+#~ msgstr "Italyancha"
+
+#~ msgid "Japanese"
+#~ msgstr "Yaponcha"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Litvacha"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norvegcha"
+
+#~ msgid "Polish"
+#~ msgstr "Polyakcha"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalcha"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumincha"
+
+#~ msgid "Russian"
+#~ msgstr "Ruscha"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovakcha"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "Slovakcha (qwerty)"
+
+#~ msgid "Spanish"
+#~ msgstr "Ispancha"
+
+#~ msgid "Swedish"
+#~ msgstr "Shvedcha"
+
+#~ msgid "Swiss German"
+#~ msgstr "Olmoncha (Shveysariya)"
+
+#~ msgid "Swiss French"
+#~ msgstr "Fransuzcha (Shveysariya)"
+
+#~ msgid "Thai"
+#~ msgstr "Taycha"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Buyuk Britaniya"
+
+#~ msgid "U.S. English"
+#~ msgstr "Inglizcha (AQSH)"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "Inglizcha (AQSH) oʻlik tugmalar b-n"
+
+#~ msgid "U.S. English w/ISO9995-3"
+#~ msgstr "Inglizcha (AQSH) ISO9995-3 b-n"
+
+#~ msgid "Armenian"
+#~ msgstr "Armancha"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Ozarbayjoncha"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandcha"
+
+#~ msgid "Israeli"
+#~ msgstr "Isroilcha"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "Litvacha (azerty)"
+
+#~ msgid "Lithuanian querty \"numeric\""
+#~ msgstr "Litvacha querty \"raqamli\""
+
+#~ msgid "Lithuanian querty \"programmer's\""
+#~ msgstr "Litvacha querty \"dasturchilarga\""
+
+#~ msgid "Macedonian"
+#~ msgstr "Makedoncha"
+
+#~ msgid "Serbian"
+#~ msgstr "Serbcha"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovencha"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vetnamcha"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabcha"
+
+#~ msgid "Belarusian"
+#~ msgstr "Beloruscha"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalcha"
+
+#~ msgid "Croatian"
+#~ msgstr "Xorvatcha"
+
+#~ msgid "Greek"
+#~ msgstr "Yunoncha"
+
+#~ msgid "Lithuanian qwerty \"numeric\""
+#~ msgstr "Litvacha qwerty \"raqamli\""
+
+#~ msgid "Lithuanian qwerty \"programmer's\""
+#~ msgstr "Litvacha qwerty \"dasturchilarga\""
+
+#~ msgid "Turkish"
+#~ msgstr "Turkcha"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukraincha"
+
+#~ msgid "Albanian"
+#~ msgstr "Albancha"
+
+#~ msgid "Burmese"
+#~ msgstr "Birmacha"
+
+#~ msgid "Dutch"
+#~ msgstr "Gollandcha"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Gruzincha (lotin)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Gruzincha (ruscha)"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmuxi"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindcha"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Iranian"
+#~ msgstr "Eroncha"
+
+#~ msgid "Latin America"
+#~ msgstr "Lotin Amerika"
+
+#~ msgid "Maltese"
+#~ msgstr "Malta"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Malta (AQSH)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Shimoliy Saamicha (Finlyandiya)"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Shimoliy Saamicha (Norvegiya)"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Shimoliy Saamicha (Shvetsiya)"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Polyakcha (qwertz)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Ruscha (fonetik kiril)"
+
+#~ msgid "Tajik"
+#~ msgstr "Tojikcha"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turkcha (F)"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "Inglizcha ISO9995-3 (AQSH)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Yugoslavcha"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bosniyacha"
+
+#~ msgid "Croatian (US)"
+#~ msgstr "Xorvatcha (AQSH)"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "French (alternative)"
+#~ msgstr "Fransuzcha (boshqa)"
+
+#~ msgid "French Canadian"
+#~ msgstr "Fransuzcha (Kanada)"
+
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malayalam"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mugʻulcha"
+
+#~ msgid "Ogham"
+#~ msgstr "Ogham"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Syriac"
+#~ msgstr "Suriyacha"
+
+#~ msgid "Telugu"
+#~ msgstr "Telegu"
+
+#~ msgid "Thai (Kedmanee)"
+#~ msgstr "Taycha (Kedmanee)"
+
+#~ msgid "Thai (Pattachote)"
+#~ msgstr "Taycha (Patachote)"
+
+#~ msgid "Thai (TIS-820.2538)"
+#~ msgstr "Taycha (TIS-820.2538)"
+
+#~ msgid "Uzbek"
+#~ msgstr "Oʻzbekcha"
+
+#~ msgid "Faroese"
+#~ msgstr "Farercha"
+
+#~ msgid "Hungarian (US)"
+#~ msgstr "Vengrcha (AQSH)"
+
+#~ msgid "Irish"
+#~ msgstr "Irlandcha"
+
+#~ msgid "Israeli (phonetic)"
+#~ msgstr "Isroilcha (fonetik)"
+
+#~ msgid "Serbian (Cyrillic)"
+#~ msgstr "Serbcha (kiril)"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Serbcha (lotin)"
+
+#, fuzzy
+#~ msgid "Swiss"
+#~ msgstr "Shvedcha"

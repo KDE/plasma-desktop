@@ -1,0 +1,511 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Accessibilitat</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>accessibilitat</keyword>
+<keyword
+>tecles</keyword>
+<keyword
+>timbre</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Accessibilitat</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Introducció</title>
+
+<para
+>Aquest mòdul està dissenyat per a ajudar als usuaris que tenen dificultats auditives o que tenen dificultats utilitzant un teclat. </para>
+
+<para
+>El mòdul està dividit en sis pestanyes: <link linkend="access-bell"
+><guilabel
+>Timbre</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Tecles modificadores</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtres de teclat</guilabel
+></link
+> i <link linkend="access-activation-gestures"
+><guilabel
+>Gestos d'activació</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Navegació amb el ratolí</guilabel
+></link
+> i <link linkend="access-screenreader"
+><guilabel
+>Lector de pantalla</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Timbre</guilabel
+></title>
+
+<para
+>Aquest plafó està dividit en dues seccions anomenades <guilabel
+>Timbre audible</guilabel
+> i <guilabel
+>Timbre visible</guilabel
+>. </para>
+
+<para
+>La casella de selecció de la part superior anomenada <guilabel
+>Usa el timbre del sistema</guilabel
+>, determina si ha de sonar el timbre normal del sistema. Si aquesta opció està inhabilitada, el timbre del sistema serà silenciat. </para>
+
+<para
+>La següent casella de selecció pot reproduir un so diferent cada vegada que s'hagi de disparar el timbre del sistema. Per a activar-ho, marqueu la casella de selecció anomenada <guilabel
+>Usa un timbre personalitzat</guilabel
+> i introduïu-hi el camí complet cap al fitxer de so en el quadre de text anomenat <guilabel
+>So a reproduir</guilabel
+>. Si ho desitgeu, podeu seleccionar el botó <guibutton
+>Navega...</guibutton
+> per a navegar pel sistema de fitxers i trobar el fitxer exacte. </para>
+
+<para
+>Per a aquells usuaris que tenen dificultats per a sentir el timbre del sistema o per als qui no tenen so al seu ordinador, el &kde; ofereix un <emphasis
+>timbre visual</emphasis
+>. El qual proporcionarà un senyal visual (invertint la pantalla o il·luminant-la amb un color) quan normalment hauria de sonar el timbre del sistema. </para>
+
+<para
+>Per a emprar el timbre visual, primer col·loqueu una marca a la casella de selecció anomenada <guilabel
+>Usa el timbre visual</guilabel
+>. </para>
+
+<para
+>Després podeu seleccionar entre <guilabel
+>Inverteix la pantalla</guilabel
+> o <guilabel
+>Flaix de la pantalla</guilabel
+>. Si seleccioneu <guilabel
+>Inverteix la pantalla</guilabel
+>, s'invertiran tots els colors de la pantalla. Si seleccioneu <guilabel
+>Flaix de la pantalla</guilabel
+>, podreu escollir el color fent clic en el botó a la dreta d'aquesta selecció. </para>
+
+<para
+>El botó de selecció de valors es pot emprar per a ajustar la durada del timbre visible. El valor predeterminat és de 500 ms, o mig segon. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Tecles modificadores</guilabel
+></title>
+
+<para
+>Aquest plafó està dividit en dues seccions anomenades <guilabel
+>Tecles apegaloses</guilabel
+> i <guilabel
+>Tecles de bloqueig</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usa tecles apegaloses</guilabel
+></term>
+<listitem>
+<para
+>Si aquesta opció està habilitada, l'usuari podrà prémer i deixar les tecles &Maj;, &Alt; o &Ctrl; i després prémer una altra tecla per a obtenir un accés ràpid (exemple: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> es podria fer amb &Ctrl; després &Alt; i després &Del;). </para>
+
+<para
+>En aquesta secció també hi ha una casella de selecció anomenada <guilabel
+>Bloqueja les tecles apegaloses</guilabel
+>. Si aquesta casella de selecció està habilitada les tecles &Alt;, &Ctrl; i &Maj; romandran <quote
+>seleccionades</quote
+> fins que siguin <quote
+>desseleccionades</quote
+> per l'usuari. </para>
+
+<para
+>Per exemple: </para>
+<variablelist>
+<varlistentry>
+<term
+>Amb <guilabel
+>Bloqueja les tecles apegaloses</guilabel
+> inhabilitada:</term>
+<listitem>
+<para
+>Si l'usuari prem la tecla &Maj;, després prem la tecla <keycap
+>F</keycap
+>. L'ordinador traduirà això com a <keycombo action="simul"
+>&Maj;<keycap
+>F</keycap
+></keycombo
+>. Ara si l'usuari introdueix <keycap
+>p</keycap
+>, l'ordinador ho interpretarà com la lletra p (no majúscula). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Amb <guilabel
+>Bloqueja les tecles apegaloses</guilabel
+> habilitada:</term>
+<listitem>
+<para
+>Si l'usuari prem <emphasis
+>dues vegades</emphasis
+> la tecla &Maj;, després prem la tecla <keycap
+>F</keycap
+>, l'ordinador ho traduirà com a <keycombo action="simul"
+>&Maj;<keycap
+>F</keycap
+></keycombo
+>. Ara, si l'usuari escriu una <keycap
+>P</keycap
+>, l'ordinador ho interpretarà com a la lletra P (<keycombo action="simul"
+>&Maj;<keycap
+>P</keycap
+></keycombo
+>). Per a desseleccionar la tecla &Maj;, premeu-les una altra vegada. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtres de teclat</guilabel
+></title>
+
+<para
+>En aquest plafó hi ha tres seccions.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usa tecles lentes</guilabel
+></term>
+<listitem>
+<para
+>Si aquesta opció està habilitada, abans que la pulsació de la tecla sigui acceptada l'usuari haurà de mantenir premuda la tecla durant el temps especificat (ajustable amb el botó de selecció de valors). Aquesta és una mesura preventiva contra les pulsacions de tecles accidentals. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Usa repetició de tecles</guilabel
+></term>
+<listitem>
+<para
+>Si s'habilita aquesta opció, l'usuari haurà d'esperar el temps especificat (configurable amb el botó de selecció de valors), abans que s'accepti la següent pulsació de tecla. Aquesta és una mesura preventiva contra les múltiples pulsacions accidentals de tecla. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gestos d'activació</guilabel
+></title>
+
+<para
+>En aquest plafó hi ha tres seccions.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos d'activació</guilabel
+> disposa de les següents opcions:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa gestos per a activar les tecles apegaloses i lentes</guilabel
+></member>
+<member
+>Aquí podeu activar els gestos del teclat disposant de les següents característiques:</member>
+<member
+>Tecles de ratolí: Preu &Maj;+Bloq Núm</member>
+<member
+>Tecles apegaloses: Premeu la tecla &Maj; cinc vegades consecutives</member>
+<member
+>Tecles lentes: Manteniu premut &Maj; durant vuit segons</member>
+<member
+><guilabel
+>Desactiva les tecles apegaloses i lentes després d'un cert període d'inactivitat</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificació</guilabel
+> disposa de les següents opcions:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa el timbre del sistema quan s'usi un gest per a commutar una característica d'accessibilitat</guilabel
+></member>
+
+<member
+><guilabel
+>Mostra un diàleg de confirmació sempre que es commuti una característica d'accessibilitat del teclat</guilabel
+></member>
+<member
+>Si aquesta opció està marcada, el &kde; mostrarà un diàleg de confirmació cada vegada que una característica d'accessibilitat del teclat sigui activada o desactivada.</member>
+<member
+>Assegureu-vos que sabeu el que esteu fent si la desmarqueu, ja que la configuració d'accessibilitat del teclat sempre s'aplicarà sense confirmació.</member>
+
+<member
+><guilabel
+>Usa el sistema de notificació del &kde; sempre que s'activi o desactivi una característica d'accessibilitat del teclat</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Feu clic al botó <guibutton
+>Configura les notificacions</guibutton
+> per a obrir un diàleg que permet editar les notificacions de canvis d'estat de totes les tecles.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Navegació amb el ratolí</title>
+
+<para
+>Aquesta pestanya us permet configurar les tecles del teclat numèric per a utilitzar-lo com a un dispositiu apuntador. Això pot ser d'utilitat quan esteu treballant sense un dispositiu apuntador, o quan no teniu cap altre ús per al teclat numèric. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mou l'apuntador amb el teclat (usant el teclat numèric)</guilabel
+></term>
+<listitem>
+<para
+>Per a activar el mode de ratolí amb el teclat us caldrà seleccionar la casella de selecció anomenada <guilabel
+>Mou el ratolí amb el teclat (utilitzant el teclat numèric)</guilabel
+>. Una vegada fet, s'activaran les altres opcions i podreu personalitzar l'apuntador del teclat perquè es comporti de forma més adequada segons les necessitats. </para>
+<para
+>Les diverses tecles sobre el teclat numèric mouen en la direcció que s'espera. Cal tenir present que podeu moure diagonalment amunt, avall, dreta i esquerra. La tecla número <keycap
+>5</keycap
+> emula un clic a un botó apuntador, típicament el &BER;. Els diferents botons són emulats per la tecla <keycap
+>/</keycap
+> (fa de &BER;), la tecla <keycap
+>*</keycap
+> (fa de &BMR;) i la tecla <keycap
+>-</keycap
+> (fa de &BDR;). Utilitzant la tecla <keycap
+>+</keycap
+> emulareu el doble clic. Podeu utilitzar la tecla <keycap
+>0</keycap
+> per a emular el fet de mantenir premut un botó de l'apuntador (per a arrossegar amb facilitat) i aleshores utilitzar la tecla <keycap
+>.</keycap
+> per a emular el fet de realitzar l'acció del botó apuntador. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Retard de l'acceleració</guilabel
+></term>
+<listitem>
+<para
+>Aquest és el temps (en mil·lisegons) entre que es prem inicialment la tecla i el primer esdeveniment de moviment repetit per a l'acceleració de la tecla del ratolí. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Interval de repetició</guilabel
+></term>
+<listitem>
+<para
+>Aquest és el temps en mil·lisegons entre els esdeveniments de moviment repetits per a l'acceleració de la tecla del ratolí. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Temps d'acceleració</guilabel
+></term>
+<listitem>
+<para
+>Aquest és el temps en mil·lisegons abans que l'apuntador abasti una velocitat màxima per a l'acceleració de la tecla del ratolí. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocitat màxima</guilabel
+></term>
+<listitem>
+<para
+>Aquesta és la velocitat màxima en píxels per segon que l'apuntador pot abastar per a l'acceleració de la tecla del ratolí. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil d'acceleració</guilabel
+></term>
+<listitem>
+<para
+>Aquesta és la declinació de la corba d'acceleració per a l'acceleració de la tecla del ratolí. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Lector de pantalla</guilabel
+></title>
+
+<para
+>Instal·la una aplicació de lector de pantalla com <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> juntament amb <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Proveu que el so de l'«speech-dispatcher» funciona utilitzant l'ordre <command
+>spd-say hello</command
+> en un terminal. </para>
+
+<para
+>A més, necessiteu un sintetitzador de text a veu com ara, &pex;, <application
+>espeak</application
+>. </para>
+
+<para
+>Activeu el lector de la pantalla a la casella de selecció, tanqueu i reinicieu la sessió de l'escriptori. </para>
+
+<para
+>Per al &plasma;, assegureu-vos d'utilitzar el <guilabel
+>Menú d'aplicacions</guilabel
+> tradicional i comproveu que aquest menú tingui una drecera de teclat associada (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). En prémer aquesta drecera, el menú s'hauria d'obrir i poder llegir navegant amb les tecles de fletxa. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

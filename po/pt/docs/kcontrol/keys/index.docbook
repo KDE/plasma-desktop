@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Atalhos</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-09-17</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>configuração de teclas</keyword>
+<keyword
+>configuração</keyword>
+<keyword
+>atalhos</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Atalhos</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Introdução</title
+> 
+
+<para
+>Apesar da maioria das funcionalidades oferecidas pelo &plasma; poder ser acedida através de um simples <quote
+>click</quote
+> de rato, muitas pessoas preferem usar o teclado para algumas tarefas. Carregando em algo do género <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> é frequente mais rápido do que desviar as mãos do teclado para o rato, abrir o menu <guimenu
+>Editar</guimenu
+> e seleccionar <guimenuitem
+>Procurar</guimenuitem
+>.</para>
+
+<para
+>Como as diferentes pessoas têm preferências diferentes acerca dos atalhos de teclado, o &plasma; possibilita a personalização completa dos <quote
+>atalhos de teclado</quote
+>. Um atalho é uma associação de uma acção com uma tecla ou combinação de teclas.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Atalhos-Padrão e Globais</title>
+
+<para
+>Os Atalhos-Padrão e os Atalhos Globais funcionam da mesma maneira. De facto, de certo modo os atalhos-padrão ou de aplicações são também <quote
+>globais</quote
+>. A única diferença é:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Os <quote
+>atalhos-padrão do teclado</quote
+> referem-se às acções que estão disponíveis nas aplicações, como Gravar, Imprimir, Copiar, &etc;</para
+></listitem
+> 
+<listitem
+><para
+>Os <quote
+>Atalhos globais</quote
+> são atalhos para as acções que fazem sentido, mesmo quando não está nenhuma aplicação aberta. Estes atalhos referem-se normalmente a acções como a mudança de ecrã, a manipulação de janelas, &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Lembre-se que os atalhos de aplicações aqui configurados são <emphasis
+>apenas</emphasis
+> as acções 'standard' normalmente encontradas nas aplicações. A maioria das aplicações irão definir as suas próprias acções, para as quais terá de personalizar as configurações de teclas na janela de configuração da própria aplicação.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Página de Atalhos-Padrão</title>
+<para
+>No topo desta janela, irá ver um campo de texto onde poderá procurar de forma interactiva pelos nomes dos atalhos (&eg; Copiar) ou pela combinação de teclas (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>), escrevendo-os aqui.</para>
+<para
+>Por baixo do campo de pesquisa, irá ver uma lista com as combinações de teclas, &ie; as associações entre as acções (&eg; Copiar) apresentadas na coluna <guilabel
+>Acção</guilabel
+> e as teclas ou combinações de teclas (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) que aparecem na coluna <guilabel
+>Atalho</guilabel
+> ou <guilabel
+>Alternativa</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Página de Atalhos Globais</title>
+<para
+>À esquerda desta página, existe uma lista que lhe permite seleccionar um <guilabel
+>Componente</guilabel
+>, como o KWin, a Área de Trabalho do Plasma, &etc;. Os atalhos definidos para o componente seleccionado são apresentados na coluna <guilabel
+>Acção</guilabel
+> e <guilabel
+>Global</guilabel
+> da lista.</para>
+<para
+>Esta página tem o mesmo campo de pesquisa que a página de <guilabel
+>Atalhos-Padrão</guilabel
+>.</para>
+<para
+>Use o <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> ou o <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> para adicionar ou remover um componente. </para>
+<para
+>Carregue na coluna <guilabel
+>Ficheiro</guilabel
+> à direita para importar/exportar um esquema ou limpar todos os atalhos.</para>
+<para
+>Os atalhos globais podem agora ser configurados para saltar para tarefas específicas dentro de uma aplicação.</para>
+
+<para
+>Por omissão, poderá abrir o menu de aplicações, bastando para tal carregar na tecla <keysym
+>Meta</keysym
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Definir a Configuração de Teclas</title>
+
+<para
+>A configuração das teclas é relativamente simples. No meio destes módulos de configuração de teclas do &systemsettings;, irá encontrar uma lista com as acções disponíveis. Se existir uma combinação de teclas para essa acção, estará representada logo à sua direita. Basta seleccionar a acção que deseja configurar.</para>
+
+<para
+>Depois de seleccionar uma acção na lista, irá reparar que a maioria dos controlos por baixo da lista de acções ficam activos e irão aparecer duas opções adicionais por baixo deste item na lista. Aí, poderá configurar uma combinação de teclas ou não associar de todo uma combinação de teclas para a acção seleccionada. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Predefinição</guilabel
+>: a acção seleccionada será associada com o valor predefinido pelo &kde;. Esta é uma boa opção para a maioria das acções, dado que o &kde; vem com configurações de teclas razoáveis, segundo a opinião dos criadores. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Personalizada</guilabel
+>: se esta opção estiver activa, o utilizador poderá criar uma combinação de teclas. Carregue no botão <guibutton
+>Nenhum</guibutton
+> ou que tem o atalho personalizado seleccionado anteriormente. Agora o botão muda para <guibutton
+>Entrada</guibutton
+>. Depois, poderá seleccionar qualquer modificador (&ie;,  &Shift;, &Ctrl; ou &Alt;) e então seleccionar uma tecla normal ou de funções (&eg; <keycap
+>F11</keycap
+>) que deseja associar a esta combinação.</para>
+<para
+>Se carregar na coluna <guilabel
+>Alternativa</guilabel
+> da linha seleccionada, poderá alterar o segundo atalho para a acção.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

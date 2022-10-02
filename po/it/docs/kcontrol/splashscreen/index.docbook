@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Schermata iniziale</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Alberto</firstname
+><surname
+>Campanile</surname
+><affiliation
+><address
+><email
+>acd_82@people.it</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>schermata iniziale</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo fornisce un'interfaccia per visualizzare e selezionare i temi per la schermata d'avvio.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Qui è presente una immagine del gestore della schermata d'avvio</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Il modulo per la gestione della schermata d'avvio</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>In questa pagina puoi vedere le anteprime delle schermate d'avvio già installate. L'anteprima della schermata di avvio attuale è evidenziata.</para>
+
+<para
+>Se fai passare il puntatore del mouse su un'immagine di anteprima, apparirà il pulsante <guilabel
+>Anteprima schermata d'avvio</guilabel
+> in basso a destra nell'immagine. Premilo per vedere la schermata in azione.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Scarica nuove schermate d'avvio...</guilabel
+></term>
+<listitem>
+<para
+>Devi essere collegato ad Internet per utilizzare quest'azione. Una finestra visualizzerà un elenco di temi dal sito <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Premendo il pulsante <guibutton
+>Installa</guibutton
+> associato al tema lo installerai in locale. </para>
+<para>
+<screenshot>
+<screeninfo
+>Installare un nuovo tema</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Installare un nuovo tema</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Il nuovo tema è immediatamente disponibile e viene evidenziato dopo la chiusura della finestra Scarica nuove schermate d'avvio delle &systemsettings;. L'anteprima visualizzerà l'immagine; devi premere il pulsante <guibutton
+>Applica</guibutton
+> per fare in modo che questo tema diventi la schermata d'avvio corrente. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

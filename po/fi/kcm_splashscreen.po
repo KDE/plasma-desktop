@@ -1,0 +1,104 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-06-07 16:50+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: kcm.cpp:160
+#, kde-format
+msgid "None"
+msgstr "Ei tervetuloruutua"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "Tervetuloruutua ei näytetä"
+
+#: kcm.cpp:180
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "Käytössä olevaa tervetuloruutua ei voi poistaa"
+
+#: package/contents/ui/main.qml:16
+#, kde-format
+msgid "This module lets you choose the splash screen theme."
+msgstr "Tässä osiossa voit valita tervetuloruudun teeman."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Tervetuloruudun esikatselu epäonnistui."
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Kokeile tervetuloruutua"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Uninstall"
+msgstr "Poista asennus"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "&Get New Splash Screens…"
+msgstr "&Hae uusia tervetuloikkunoita…"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Tulevaan käyttöön"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Nykyisen tervetuloruututeeman nimi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lasse Liehu, Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lasse.liehu@gmail.com,translator@legisign.org"
+
+#~ msgid "Splash Screen"
+#~ msgstr "Tervetuloruutu"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#, fuzzy
+#~| msgid "&Get New Splash Screens..."
+#~ msgid "Get New Icons..."
+#~ msgstr "&Hae uusia tervetuloruutuja…"
+
+#, fuzzy
+#~| msgid "Splash Screen"
+#~ msgid "Splash Screens"
+#~ msgstr "Tervetuloruutu"
+
+#~ msgid "Error"
+#~ msgstr "Virhe"
+
+#~ msgid "Choose the splash screen theme"
+#~ msgstr "Valitse tervetuloruudun teema"
+
+#~ msgid "Configure Splash screen details"
+#~ msgstr "Tervetuloruudun yksityiskohtien asetukset"

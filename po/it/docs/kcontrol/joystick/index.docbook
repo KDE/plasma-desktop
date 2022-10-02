@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Controller di gioco</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Pino</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>toscano.pino@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>joystick</keyword>
+<keyword
+>controller</keyword>
+<keyword
+>gamepad</keyword>
+<keyword
+>calibrare</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Calibra di controller di gioco</title>
+
+<para
+>Questo modulo fornisce un'interfaccia per calibrare i controller di gioco e per vedere quali funzioni del controller di gioco sono associate a quali pulsanti o assi logici.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ecco un'immagine del modulo dei controller di gioco</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Il modulo dei controller di gioco</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Qui puoi vedere il percorso del dispositivo. Se hai più di un controller di gioco puoi scegliere quale configurare. </para>
+<para
+>Se nessun controller di gioco è trovato nel tuo computer e sai che ce n'è uno inserito, puoi inserire qui il file corretto del dispositivo. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Posizione</guilabel
+></term>
+<listitem>
+<para
+>La posizione disegnata degli assi X e Y del joystick del controller di gioco. Abilita <guibutton
+>Mostra traccia</guibutton
+> per disegnare il percorso del joystick da un punto all'altro. </para>
+<tip
+><para
+>Se il joystick non riesce a raggiungere tutti i punti in questo grafico, oppure non è centrato correttamente, devi calibrare il dispositivo. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Pulsanti</guilabel
+></term>
+<listitem>
+<para
+>Qui puoi vedere lo stato dei pulsanti del controller di gioco (se sono premuti o no) e se sono associati correttamente. Quando un pulsante è premuto, apparirà <guilabel
+>PREMUTO</guilabel
+> accanto al numero logico (per come lo vede il computer) del pulsante che è stato premuto. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Assi</guilabel
+></term>
+<listitem>
+<para
+>Questo mostra i valori numerici delle posizioni degli assi. 0 significa che un asse è centrato, mentre i valori massimi e minimi dipendono dal controller di gioco e da ogni suo asse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Calibra</guilabel
+></term>
+<listitem>
+<para
+>Premendo <guibutton
+>Calibra</guibutton
+> sarà aperta una finestra di dialogo per calibrare tutti gli assi dei joystick. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Calibrazione del controller di gioco</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Calibrazione del controller di gioco</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Ciascun asse dovrà essere mosso prima alla posizione minima, quindi al centro ed infine alla posizione massima. Un misuratore nell'angolo in basso a sinistra nella finestra di dialogo aiuterà a determinare come i valori aumentano e diminuiscono. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/plasmaactivitymanager."
+"pot\n"
+"X-Crowdin-File-ID: 4683\n"
+
+#: sortedactivitiesmodel.cpp:316
+#, kde-format
+msgid "Used some time ago"
+msgstr "一段时间前使用"
+
+#: sortedactivitiesmodel.cpp:332
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "一年前使用"
+
+#: sortedactivitiesmodel.cpp:333
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "%1 个月前使用"
+
+#: sortedactivitiesmodel.cpp:334
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "%1 天前使用"
+
+#: sortedactivitiesmodel.cpp:335
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "%1 小时前使用"
+
+#: sortedactivitiesmodel.cpp:336
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "%1 分钟前使用"
+
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used a moment ago"
+msgstr "刚刚使用"
+
+#: switcherbackend.cpp:166
+#, kde-format
+msgid "Walk through activities"
+msgstr "遍历活动"
+
+#: switcherbackend.cpp:171
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "遍历活动 (反向)"

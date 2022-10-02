@@ -1,0 +1,286 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Teclat</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+> &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>5 de desembre de 2020</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>teclat</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul permet escollir el mode de funcionament del vostre teclat.</para>
+
+<para
+>Hi ha tres pestanyes en aquest mòdul.</para>
+
+<sect1 id="hardware">
+<title
+>La pestanya Maquinari</title>
+<para
+>L'efecte que produeix la selecció d'aquestes opcions depèn de les característiques del maquinari del vostre teclat i del servidor X en el qual s'està executant el &plasma;. Per exemple, podeu trobar-vos amb què la tecla per a modificar el volum no produeix cap efecte perquè aquesta propietat no està disponible al vostre sistema. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Model de teclat:</guilabel
+></term>
+<listitem>
+<para
+>Aquí podeu configurar el model de teclat. Aquesta opció és independent de la disposició de teclat i es refereix al model de «maquinari», &ead;, la forma en què es va fabricar el teclat. Els teclats moderns que venen amb l'ordinador en general tenen dues tecles extres i es coneixen com a models de «104 tecles», probablement és el que us cal si no sabeu quin tipus de teclat teniu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bloq Núm en iniciar el Plasma</guilabel
+></term>
+<listitem>
+<para
+>Sempre podeu escollir <guilabel
+>Engegat</guilabel
+> o <guilabel
+>Apagat</guilabel
+> quan s'inicia el &plasma; o podeu escollir que el &plasma; deixi la Bloq Núm com estava abans d'iniciar-se.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Quan es manté premuda una tecla:</guilabel
+></term>
+<listitem>
+<para
+>Aquí és possible seleccionar una de les opcions d'arbre, a saber:</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Mostra els caràcters accentuats i similars</guilabel
+></term>
+<listitem>
+<para
+>Si se selecciona aquesta opció, quan es manté premuda una tecla mentre s'introdueix text, es mostrarà una finestra emergent que permet triar entre diverses formes accentuades del caràcter.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>No facis res</guilabel
+></term>
+<listitem>
+<para
+>Aquesta opció permet desactivar qualsevol activitat quan premeu i manteniu premudes les tecles.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Repeteix la tecla</guilabel
+></term>
+<listitem>
+<para
+>Si se selecciona aquesta opció, si premeu una tecla i la manteniu premuda es produirà el mateix caràcter repetidament fins que la deixeu anar. Pel que prémer una tecla i mantenir-la premuda tindrà el mateix efecte que prémer-la successivament.</para>
+<tip
+><para
+>Gairebé tots els usuaris desitjaran tenir aquesta opció seleccionada, perquè facilita significativament la navegació per documents amb les tecles de les fletxes. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Retard</guilabel
+></term>
+<listitem>
+<para
+>Aquesta opció permet establir la demora després que es pressiona una tecla, s'iniciarà la generació dels codis de tecla.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Velocitat</guilabel
+></term>
+<listitem>
+<para
+>Aquesta opció permet establir la velocitat a la qual es generen els codis de tecla mentre es prem una tecla.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Escriviu alguns caràcters en el quadre de text <guilabel
+>Àrea de proves</guilabel
+> per a verificar les opcions.</para>
+<para
+>Molts ordinadors no acceptaran aquesta funció.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>La pestanya Disposicions</title>
+<para
+>Aquesta pestanya permet escollir quines disposicions de teclat voleu utilitzar, si voleu l'indicador a la safata del sistema, com voleu canviar i quines dreceres utilitzareu.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indicador de disposició</guilabel
+></term>
+<listitem>
+<para
+>Podeu optar per mostrar l'<guilabel
+>Indicador de disposició</guilabel
+> el qual mostrarà el nom iso de l'idioma a la safata del sistema. Podeu optar per mostrar l'indicador fins i tot si només teniu una disposició habilitada i es pot mostrar la bandera de l'idioma en comptes de només el codi ISO seleccionant <guilabel
+>Mostra la bandera</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Política de canvi</guilabel
+></term>
+<listitem>
+<para
+>Si seleccioneu <guilabel
+>Aplicació</guilabel
+> o <guilabel
+>Finestra</guilabel
+> com política de canvi, el canvi de la disposició de teclat només afectarà l'aplicació o a la finestra actuals. <guilabel
+>Global</guilabel
+> canviarà la disposició de teclat globalment i <guilabel
+>Escriptori</guilabel
+> únicament farà el canvi per a l'escriptori virtual actual. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Dreceres per a canviar la disposició</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Dreceres principals</guilabel
+> és una drecera per a les disposicions de canvi que són gestionades per X.org. <guilabel
+>Dreceres de 3r nivell</guilabel
+> és una drecera per a canviar a un tercer nivell de la disposició activa (si en teniu), que és manejada per X.org. Només permet modificadors de dreceres. <guilabel
+>Drecera alternativa</guilabel
+> és una drecera per a canviar les disposicions que són gestionades pel &plasma;. No és compatible amb només modificadors de dreceres i també pot no funcionar en algunes situacions (&pex;, si l'emergent està actiu o des de l'estalvi de pantalla). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Configura les disposicions</guilabel
+></term>
+<listitem>
+<para
+>Si marqueu <guilabel
+>Configura les disposicions</guilabel
+>, podreu afegir i eliminar les disposicions de teclat per a canviar entre elles quan sigui necessari. </para>
+<para
+>En fer clic a <guilabel
+>Afegeix</guilabel
+> s'obrirà un diàleg en el qual podreu escollir la nova disposició de teclat que voleu afegir, així com la seva variant, etiqueta i drecera. </para>
+<para
+>La llista de les disposicions correctes amb l'etiqueta <guilabel
+>Disposició</guilabel
+> al diàleg <guilabel
+>Afegeix una disposició</guilabel
+> es pot reduir utilitzant la llista desplegable <guilabel
+>Limita la selecció per idioma</guilabel
+>. Podeu fer clic sobre el botó <guibutton
+>Vista prèvia</guibutton
+> per a escollir la disposició en una finestra separada. </para>
+<para
+>Podeu ordenar els dissenys amb els botons amunt i avall, la que es trobi a dalt serà la predeterminada. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Disposicions de reserva</guilabel
+></term>
+<listitem>
+<para
+>Aquesta opció només es pot habilitar si teniu més de dues disposicions.</para>
+<para
+>Les disposicions de reserva permeten alternar entre un petit nombre de disposicions amb facilitat, mantenint a mà més disposicions. Per exemple, podeu utilitzar tres idiomes: anglès, ucraïnès i alemany, però dos s'utilitzen sovint i un tercer només de tant en tant. En aquest cas es poden configurar dues disposicions principals (arranjament <guilabel
+>Nombre de disposicions principals</guilabel
+>: 2) i una per a l'alemany com a recanvi -si les alterneu amb el teclat i el &BER; el canvi passarà entre les dues disposicions principals, però només sempre es podrà escollir la tercera amb el menú contextual-.</para>
+<para
+>Quan es tria la disposició de recanvi, aquesta substituirà a l'última disposició principal (això es fa per raons tècniques, en general, les dreceres globals treballen basant-se en la primera disposició activa, de manera que és més fiable mantenir la primera disposició quan es permet activar les disposicions de recanvi).</para>
+<!-- context menu ?-->
+<para
+>Com X.org només permet tenir quatre disposicions també permet canviar la característica <quote
+>disposicions de recanvi</quote
+> per a superar aquesta limitació: L'usuari pot tenir fins a quatre disposicions principals (gestionat per X.org), però es permeten quatre disposicions de recanvi més (gestionat pel commutador de disposicions). Així, l'usuari pot treballar convenientment amb fins a un total de vuit disposicions (encara que el límit de quatre disposicions de recanvi es podrà elevar en el futur). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>La pestanya Avançat</title>
+<para
+>En aquesta pestanya, si marqueu <guilabel
+>Configura les opcions del teclat</guilabel
+>, llavors podreu configurar algunes opcions especials pel que fa a algunes opcions de les tecles. Podeu expandir-les fent clic al símbol &gt; a l'esquerra de l'opció, seleccioneu la vostra configuració a la llista expandida.</para>
+<para
+>Aquesta és una &IGU; per a ajudar a la creació de disposicions de teclat personalitzades per a &X11; utilitzant XKB. </para>
+<para
+>Per a més informació, consulteu la secció <emphasis
+>Links</emphasis
+> de la <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>pàgina XKeyboardConfig a freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

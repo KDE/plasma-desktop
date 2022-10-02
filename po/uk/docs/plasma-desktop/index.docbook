@@ -1,0 +1,1061 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Довідник з Плазми</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>23 липня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<abstract>
+<para
+>Плазма — ключовий інтерфейс стільниці. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Плазма</keyword>
+<keyword
+>Плазмоїд</keyword>
+<keyword
+>Віджет</keyword>
+<keyword
+>Оболонка</keyword>
+<keyword
+>Стільниця</keyword>
+<keyword
+>Засіб для запуску</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<para
+>Плазма — сучасне і дуже гнучке середовище для запуску ваших улюблених програм та доступу до найрізноманітніших даних. Загальними характеристиками стільничного середовища Плазми є широкі можливості з керування вікнами та стільничні ефекти, підтримка віджетів Плазми KDE, інтегровані можливості пошуку, керування обладнанням та найширші можливості із налаштовування. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Користування Плазмою</title>
+
+<sect1 id="plasma-components">
+<title
+>Компоненти Плазми</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Віджети Плазми і оболонки</title>
+
+<para
+>Основою Плазми є два базових елементи: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Віджети Плазми</term>
+<listitem>
+<para
+>Аплети, або малі програми, які функціонують на стільниці. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Оболонки</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Аплети, що працюють як обгортки для віджетів Плазми </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>На типовій стільниці два головних елементи: Панель і сама стільниця. Обидва вони є оболонками з точки зору Плазми. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Типова стільниця Плазми</title>
+
+<para
+><note
+><para
+>Стільниця Плазми є доволі гнучкою у налаштуванні. На наведеному нижче знімку екрана показано стандартний вигляд стільниці. У деяких дистрибутивах вигляд типової стільниці є трохи відмінним від стандартного. Тому стільниця у вашій системі, може виглядати трохи інакше. </para>
+<para
+>Так само, можна змінити вигляд елементів інтерфейсу. Наведені тут знімки створено за використання типового стилю віджетів Плазми, Breeze.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Стандартна стільниця Плазми</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Кнопка запуску програм. Зазвичай, це кнопка <link linkend="panel-launcher"
+>засобу запуску програм</link
+>.</para
+></listitem>
+<listitem
+><para
+>Декілька піктограм, за допомогою яких простіше отримати доступ до програм, якими ви користуєтеся найчастіше.</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Панель задач</link
+>, на якій показано кнопки вікон, що належать запущеним зараз програмам. На нашому знімку ця панель є порожньою: жодної програми з графічним інтерфейсом не запущено.</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Системний лоток</link
+></para
+></listitem>
+<listitem
+><para
+>Віджет <link linkend="panel-digital-clock"
+>Цифрового годинника</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>Кнопка керування панеллю</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="desktop"
+>Кнопка налаштовування стільниці</link
+></para
+></listitem>
+<listitem
+><para
+>Віджет перегляду тек, у якому показано вміст теки «Стільниця» (або «Робочий стіл»)</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Панель</title>
+
+<para
+>На типовій панелі буде розміщено деякі віджети Плазми. На першій позиції, починаючи зліва, буде розташовано засіб запуску програм.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Засіб запуску програм</title>
+
+<screenshot>
+<screeninfo
+>Засіб запуску програм</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Засіб запуску програм</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Цим інструментом ви можете скористатися для запуску програм, повторного відкриття нещодавно відкритих файлів і звичайних дій з входу/виходу з облікового запису. Також передбачено можливість навігації деревом ваших програм. Компонування інструменту оптимізовано для виконання найпоширенішого завдання: запуску програм. Типовою є вкладка <guilabel
+>Улюблені</guilabel
+>, на якій розміщено список програм, які ви використовуєте найчастіше. На початку, доки цей список є порожнім, вам доведеться частіше користуватися вкладкою <guilabel
+>Програми</guilabel
+>. Ви можете знайти програми, які збираєтеся використовувати найчастіше, навести на відповідні пункти вказівник миші, а потім клацнути <mousebutton
+>правою</mousebutton
+> кнопкою і обрати у контекстному меню пункт <guimenuitem
+>Додати до улюблених</guimenuitem
+>, щоб додати відповідні програми до списку ваших <guilabel
+>Улюблених</guilabel
+> (або додати їх напряму на панель або стільницю. Зауважте, що для внесення будь-яких змін спершу треба «розблокувати» Плазму з точки зору реакції на клацання <mousebutton
+>правою</mousebutton
+> кнопкою на стільниці).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Меню програм</title>
+
+<para
+>Якщо ви надаєте перевагу традиційному засобу запуску у форматі меню, перемкніть засіб запуску у відповідний режим. Для цього наведіть на нього вказівник миші, клацніть правою кнопкою миші і виберіть у контекстному меню пункт <guimenuitem
+>Альтернативи</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Меню програм</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Меню програм</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Параметри засобу запуску програм</title>
+
+<para
+>Якщо ви хочете налаштувати засіб запуску програм,. наведіть на нього вказівник миші, клацніть правою кнопкою миші і виберіть у контекстному меню пункт <guimenuitem
+>Налаштувати «Інструмент запуску програм»</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Параметри засобу запуску програм</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Параметри засобу запуску програм</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Смужка задач</title>
+
+<para
+>Далі на панелі розташовано віджет смужки задач. На ній, типово, буде показано області всіх відкритих вікон всіх стільниць. Щоб показати на ній всі вікна лише з поточної стільниці, слід позначити пункт <guimenuitem
+>Показувати тільки завдання з поточної стільниці</guimenuitem
+> у контекстному меню, яке можна викликати клацанням <mousebutton
+>правою</mousebutton
+> кнопкою миші, коли вказівник миші знаходитиметься на смужці задач, між двома позначками вікон. Розмір тексту пунктів смужки задач можна встановити за допомогою інструмента «Системні параметри» на сторінці <menuchoice
+><guimenu
+>Вигляд</guimenu
+> <guisubmenu
+>Шрифти</guisubmenu
+></menuchoice
+>. Наведення вказівника на смужку задач з наступним клацанням правою кнопкою миші відкриває діалогове вікно «Параметри», у якому наведено декілька пунктів, які допоможуть вам налаштувати вашу смужку задач. <screenshot>
+<screeninfo
+>Ось знімок діалогового вікна параметрів смужки задач</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Діалогове вікно параметрів смужки задач</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Системний лоток</title>
+
+<para
+>Ще одним типовим елементом панелі буде <application
+>Системний лоток</application
+>, його використовують для швартування традиційні програми. За допомогою наведення вказівника миші на <application
+>Системний лоток</application
+> з наступним клацання правою кнопкою миші можна відкрити діалогове вікно параметрів, за допомогою якого можна визначити набір пунктів, які буде показано. </para>
+<screenshot>
+<screeninfo
+>Діалогове вікно параметрів системного лотка</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Діалогове вікно параметрів системного лотка</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Сповіщення про пристрої</title>
+
+<para
+>Одним з пунктів, який зазвичай показується у системному лотку, є <application
+>Сповіщення про пристрої</application
+>. Якщо, наприклад, ви з’єднаєте з комп’ютером <acronym
+>USB</acronym
+>-диск, тут відкриється діалогове вікно, яке надасть вам змогу відкрити пристрій у &dolphin; або іншій пов’язаній з його вмістом програмі. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Програму <application
+>Сповіщення про пристрої</application
+> призначено для обробки дій з портативними носіями даних, зокрема флеш-носіями <acronym
+>USB</acronym
+>, цифровими фотоапаратами, зовнішніми жорсткими дисками <acronym
+>USB</acronym
+> тощо. Ця програма також допоможе вам під час завантаження оптичного носія даних до пристрою читання компакт-дисків або DVD. </para>
+<para
+>Після з’єднання з комп’ютером зовнішнього носія даних або завантаження нового носія у пристрій читання буде відкрито контекстне вікно <guilabel
+>Сповіщувача</guilabel
+> (це вікно можна відкрити і безпосереднім натисканням піктограми на панелі). Вікно залишатиметься відкритим доки на нього буде наведено вказівник миші, якщо відвести вказівник миші з меж вікна, його буде закрито за декілька секунд. </para>
+<para
+>У вікні <guilabel
+>Сповіщення</guilabel
+> буде показано список всіх пристроїв, про які відомо системі. Наведення вказівника миші на пункт пристрою відкриє список можливих дій над пристроєм. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Клацання лівою кнопкою миші у будь-якій з точок затіненої області навколо пункту з назвою пристрою (але не на піктограмі виштовхування або демонтування, якщо таку показано) призведе до показу списку можливих дій над пристроєм. Набір дій залежить від типу пристрою. Налаштувати цей набір можна за допомогою модулів <ulink url="help:/kcontrol/solid-actions/index.html"
+>Дії з пристроями</ulink
+> та <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Портативні пристрої</ulink
+> програми «Системні параметри». Для виконання відповідної дії слід просто позначити її за допомогою вказівника миші або клавіатури і клацнути лівою кнопкою миші. </para>
+<para
+>Крім того, праворуч від кожного з пунктів буде показано невеличку піктограму, яка відповідатиме стану доступності (або <emphasis
+>«змонтованості»</emphasis
+>) пристрою. Пристрій можна від’єднувати від комп’ютера без жодного ризику втрати даних, лише якщо він перебуває у стані демонтування. Якщо натиснути цю піктограму, носій даних буде демонтовано і/або виштовхнуто з лотка, якщо цей носій було змонтовано, і змонтовано, якщо носій ще не змонтовано. Зауважте, що демонтування або виштовхування може зазнати невдачі, якщо файли з носія даних ще відкрито у якійсь програмі, наприклад, якщо копіювання якогось великого файла ще не завершено. Здебільшого, достатньо трошки зачекати, а потім повторити спробу. Якщо демонтування було успішно виконано, на місці піктограм <application
+>Сповіщення про пристрої</application
+> буде показано відповідну піктограму. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Приховані пункти</title>
+
+<para
+>У <application
+>системному лотку</application
+> зазвичай містяться декілька пунктів програм, зокрема &klipper;, &kmix; тощо.</para>
+
+<para
+>Деякі з типових пунктів <application
+>системного лотка</application
+> приховано з метою економії місця на панелі. Щоб наказати програмі показати ці пункти, натисніть невеличкий білий трикутничок <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, а потім скористайтеся клацанням лівою кнопкою миші для відкриття вікна віджета або правою кнопкою миші для відкриття діалогового вікна параметрів.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Цифровий годинник</title>
+
+<para
+>Найправішим віджетом Плазми на типовій панелі є <application
+>Цифровий годинник</application
+>. Годинник може показувати час у різних часових поясах, а також змінювати свій розмір. Розмір шрифту годинника підбирається за площею, яку буде відведено під нього зовнішньою оболонкою (у цьому випадку панеллю). Якщо ви вкажете, що крім годин слід показувати і дату, цю дату буде показано шрифтом, параметри якого визначає пункт <guimenuitem
+>Малий шрифт</guimenuitem
+> у діалоговому вікні <guilabel
+>Шрифт</guilabel
+> «Системних параметрів». Місце, що залишиться після вписування дати, буде зайняте часом. Отже, ви обираєте об’єм показаної інформації, а розміри програма підбере сама. Якщо вам потрібно показати більше інформації, зробіть панель більшою або перетягніть годинник на стільницю, де його розмір ніщо не обмежуватиме. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Пейджер</title>
+
+<para
+>Додатковим елементом на вашій панелі може бути <application
+>Пейджер</application
+>. За його допомогою ви можете перемикатися між вашими віртуальними стільницями. Компонування <application
+>Пейджера</application
+> можна змінити за допомогою параметра <guimenuitem
+>Кількість рядків</guimenuitem
+>, цей параметр також змінює компонування і анімації, які буде показано за допомогою ефекту <guimenuitem
+>Ґратка стільниці</guimenuitem
+> у &kwin;. На великих пейджерах доцільно увімкнути <guimenuitem
+>Показувати піктограми вікон</guimenuitem
+>. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Кнопка керування панеллю</title>
+
+<para
+>Якщо ви розблокували свою стільницю (це можна зробити наведенням вказівника на вільне місце стільниці з наступним клацанням <mousebutton
+>правою</mousebutton
+> кнопкою, або, якщо жодна з програм не у фокусі, за допомогою комбінації клавіш <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), у правому нижньому куті з’явиться маленький логотип Плазми. Наведіть вказівник миші на цю кнопку керування панеллю і клацніть лівою кнопкою — відкриється засіб керування панеллю.</para>
+
+<screenshot>
+<screeninfo
+>Параметри панелі</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Параметри панелі</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Засіб керування панеллю надасть вам змогу змінювати розташування, розмір і вирівнювання панелі. Віджети Плазми, що знаходяться на панелі змінюватимуть свій розмір автоматично. Базові відомості про розміри віджетам Плазми повідомить оболонка. Віджети Плазми запрограмовано для найбільш раціонального використання простору, вони інформують аплет про те, скільки саме місця буде їм потрібно. Зрештою, оболонка надає аплетам місце відповідно до своїх можливостей.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Як додати аплети</title>
+
+<para
+>Якщо розблокувати стільницю, ви матимете змогу додавати і вилучати плазмоїди з панелі або стільниці. Додати віджети Плазми можна простим перетягуванням їх у потрібне місце. Наведення вказівника миші на аплет з наступним клацанням <mousebutton
+>правою</mousebutton
+> кнопкою вилучить його. Крім того, діалогове вікно <guilabel
+>Додати аплети</guilabel
+> також надає вам змогу позначити певні аплети як <guilabel
+>Улюблені</guilabel
+>, щоб потім вам легше було їх знайти. <screenshot
+> <screeninfo
+>Улюблені віджети</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Улюблені віджети</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Кнопка <guibutton
+>Отримати нові віджети</guibutton
+> надає вам змогу додавати раніше отримані вами віджети та отримувати нові віджети Плазми. У цій версії підтримуються пакунки &plasmagik; і віджети панелі приладів &Mac; OS&nbsp;X. Доступ до віджетів, встановлених у такий спосіб, можна отримати так само, як і до звичайних попередньо встановлених віджетів. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Стільниця</title>
+
+<para
+>Стільниця є фактично ще однією оболонкою. Вона просто не накладає обмежень на розмір аплетів. Розмір і розташування аплетів на стільниці можна довільно змінювати. Якщо розблокувати стільницю, під час проведення вказівником миші над віджети Плазми буде показано його рамку. За допомогою цього аплету можна пересувати, змінювати розмір, розташування і вирівнювання панелі, а також перетягувати віджети Плазми на стільницю. Кнопки у кутку використовують для зміни розміру і кута повороту, а також вилучення аплету. Під час обертання віджети Плазми мають тенденцію розташовування у звичайній вертикальній позиції, отже повернути їх до типового розташування буде дуже просто. Типово, більшість аплетів під час зміни розмірів зберігають співвідношення сторін. Якщо вам потрібно змінити і співвідношення сторін, утримуйте натисненою клавішу &Ctrl; під час зміни розмірів. </para>
+
+<para
+>З контекстного меню стільниці, що викликається клацанням правою кнопкою миші, ви можете налаштувати інші параметри стільниці, наприклад зображення тла та компонування, а також дії у відповідь на клацання кнопками миші. Ви також можете отримати нові зображення тла зі сховища даних &kde;. </para>
+<para
+>За допомогою сторінки <guilabel
+>Коригування</guilabel
+> ви можете наказати системі приховати кнопку керування стільницею та скоригувати роботу з віджетами. </para>
+
+<screenshot>
+<screeninfo
+>Параметри стільниці</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Параметри стільниці</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Щоб змінити тему Плазми або отримати нову тему зі сховища даних &kde;, відкрийте сторінку <menuchoice
+><guimenu
+>Вигляд</guimenu
+> <guimenuitem
+>Тема стільниці</guimenuitem
+></menuchoice
+> у вікні програми «Системні параметри».</para>
+
+<para
+>Якщо відкрити багато вікон програм, віджети Плазми скоро буде закрито цими вікнами. Віджети Плазми з <emphasis role="bold"
+>Панелі приладів</emphasis
+> завжди залишатимуться видимими, це схоже на функцію <guilabel
+>Показати стільницю</guilabel
+> у традиційних стільницях. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Перегляд теки</title>
+<para
+>Віджет <guilabel
+>Перегляд теки</guilabel
+> призначено для показу тек або файлів у теці. Типово у ньому буде показано вміст теки <filename class="directory"
+>$<envar
+>HOME</envar
+>/Робочий стіл</filename
+>. </para>
+<para
+>Ви можете вибрати, має віджет показати усі файли, чи лише файли, назви яких відповідають певному формальному виразу (наприклад, усі файли із певним суфіксом назви) або належать до певного типу (наприклад лише зображення). </para>
+<para
+>У цьому віджеті також передбачено базові можливості керування файлами (пересування, копіювання, вирізання та вставляння, наприклад). Ви можете розташовувати на стільниці будь-яку кількість таких віджетів. </para>
+
+<screenshot>
+<screeninfo
+>Перегляд теки</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Перегляд теки</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Якщо вами буде вибрано компонування <guilabel
+>Перегляд теки</guilabel
+> у <guilabel
+>Параметрах стільниці</guilabel
+>, ви зможете використовувати як стільницю один віджет перегляду теки, що відповідає «старому стилю» парадигми стільниці. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; — невеличкий гнучкий засіб для виконання команд. Ним можна користуватися для запуску програм, відкриття сторінок мережі, доступу до закладок, пошуку даних на стільниці, невеличких обчислень тощо. Діалогове вікно &krunner; можна відкрити за допомогою комбінації клавіш <keycombo action="simul"
+>&Alt;<keycap
+>Пробіл</keycap
+></keycombo
+> або <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+>. Після того, як ви наберете перші два символи команди, &krunner; почне шукати можливі відповідники команди, яку ви бажаєте виконати. Обрати потрібний варіант з пропозицій &krunner; можна за допомогою клавіш зі стрілками і клавіші табуляції. Щоб дізнатися більше про функціональні можливості &krunner; та додатки до нього, ви можете відкрити діалогове вікно його параметрів. Навігацію поміж пунктами вікна можна здійснювати за допомогою клавіші табуляції та клавіш зі стрілками. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Діалогове вікно &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Діалогове вікно &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Скористайтеся кнопкою <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, щоб відкрити вікно <guilabel
+>KRunner</guilabel
+> і налаштувати місце і спосіб пошуку даних за допомогою &krunner;. </para>
+
+<para
+>У &krunner; передбачено «Дії зі стільницею». Такі дії є додатковими діями, які програма може пропонувати для здійснення типових операцій або переходу до певного завдання на смужці задач. Стандартними прикладами є <guilabel
+>Відкрити нове конфіденційне вікно</guilabel
+> для відкриття вікна програми для перегляду інтернету безпосередньо у конфіденційному режимі, <guilabel
+>Створити повідомлення</guilabel
+> без відкриття інших вікон клієнтської програми для роботи з електронною поштою або дії, які виконує &spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>Дії зі стільницею &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Дії зі стільницею &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Якщо ви натиснете клавішу <keysym
+>↓</keysym
+>, коли рядок введення &krunner; порожній, буде показано журнал нещодавно введених запитів. Після вибору якогось із результатів пошуку, його пункт буде пересунуто на початок списку, отже ви ніколи не шукатимете довго часто використовувані команди. </para>
+<para
+>Вилучити зі списку окремі записи можна за допомогою кнопки <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Спорожнити журнал можна за допомогою параметрів &krunner;. </para>
+
+<para
+>Якщо ви бажаєте знати, що саме зараз відбувається у системі, натисніть комбінацію клавіш <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+>. Вона надасть вам доступ до списку вікон і процесів, за допомогою якого ви можете стежити на інформацією, яку виводять процеси, і припиняти їх виконання. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Простори дій</title>
+
+<para
+>На смужці задач стільниці у верхньому лівому куті є кнопка для показу списку просторів дій, за допомогою якої можна додавати простори дій. Загалом кажучи, простір дій — це декілька контейнерів-панелей з різними наборами віджетів Плазми. Відкрийте панель просторів дій, виберіть один з типових просторів дій або натисніть кнопку <guilabel
+>Створити простір дій</guilabel
+>, щоб створити новий контейнер, відкрийте цей контейнер і налаштуйте її відповідно до ваших уподобань. У цьому сенсі зміна розміру у Плазма і ґратка стільниці у &kwin; є подібними, але між ними є одна основна відмінність. Віртуальні стільниці використовуються для групування і впорядкування вікон, а простори дій Плазми використовуються для групування віджетів Плазми, за їхньою допомогою ви можете перемикатися між діями, тобто отримувати набори віджетів Плазми, які відповідають завданню, яке ви ставите перед системою. Наприклад, ви можете створити дію «Вільний час», де можна розмістити рядки гумористичних цитат, головоломку та інші віджети Плазми, і робочий простір дій, з відповідними подачами <acronym
+>RSS</acronym
+>, калькулятором і календарем. </para>
+
+<para
+>Щоб вилучити простір дій, натисніть кнопку <guibutton
+>Зупинити простір дій</guibutton
+> на панелі «Простори дій» (натисніть комбінацію клавіш <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, потім <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+>, щоб відкрити цю панель), потім натисніть червону позначку «X» (або комбінацію клавіш <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, потім <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) і підтвердьте вилучення. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Клавіатурні скорочення</title>
+
+<para
+>Доступ до більшості функціональних можливостей Плазми також можна отримати за допомогою клавіатурних скорочень. Комбінації клавіш слід натискати послідовно, тобто, наприклад <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> означає: натисніть одночасно &Alt; і <keycap
+>D</keycap
+>, відпустіть ці клавіші і натисніть <keycap
+>A</keycap
+>. </para>
+<para
+>У поточній версії можна скористатися такими типовими скороченнями: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Додати віджети</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Вилучити віджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Заблокувати/Розблокувати віджети</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+><keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Зменшити</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+><keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Збільшити</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Наступний віджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Попередній віджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Параметри віджета</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Простори дій</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Вилучити цей простір дій</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Параметри стільниці</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Tab;</keycombo
+></term>
+<listitem
+><para
+>Наступний простір дій</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Попередній простір дій</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Показати стільницю</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Запустити пов’язану програму</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Tab;</keycombo
+></term>
+<listitem
+><para
+>Відкрити панель просторів дій</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Подяки і ліцензія</title>
+
+<para
+>&plasma; </para>
+<para
+>Авторські права на програму належать &Aaron.J.Seigo; &Aaron.J.Seigo.mail;, ©2008 </para>
+
+<para
+>Авторські права на документацію &copy;2008–2010 — Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

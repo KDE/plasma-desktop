@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Feedback Luncur</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+</articleinfo>
+
+<para
+>Terkadang meyakinkan untuk mengetahui bahwa komputermu tidak hanya mengabaikan perintahmu, dan sesuatu terjadi di balik layar. Dalam modul ini kamu bisa mengonfigurasi feedback yang terlihat untuk membantumu mengetahui jika kamu benar-benar menekan ikon itu atau tidak.</para>
+	
+<para
+>Cara tradisional untuk menunjukkan bahwa komputermu sibuk adalah dengan memodifikasi kursor, dan kamu bisa menyalakan ini dengan memilih <guilabel
+>Kursor</guilabel
+>.</para>
+
+<para
+>Dengan memfungsikan opsi ini, kursormu akan memiliki ikon yang melekat padanya dengan waktu yang singkat, ketika sebuah aplikasi baru diluncurkan. Kamu bisa mengkonfigurasi berapa lama ikon ini ditampilkan di sebelah kursormu dengan kotak-spin <guilabel
+>Hentikan animasi setelah:</guilabel
+>. Bakunya adalah 5 detik.</para>
+
+<para
+>Ada bermacam variasi pada kursor sibuk yang tersedia, termasuk ikon <guilabel
+>Kedip</guilabel
+>, ikon <guilabel
+>Pantul</guilabel
+> atau ikon <guilabel
+>Statik</guilabel
+> yang tanpa animasi.</para>
+
+<para
+>Peluncuran notifikasi tradisional &plasma; telah mengambil bentuk lain, yang mana kamu juga bisa memfungsikan dan menonfungsikannya di sini. Biasanya ketika kamu memulai aplikasi, itu mendapat entri langsung di bilah tugas, dengan ikon yang digantikan oleh sebuah jam pasir yang dijungkir-jungkir untuk memberi tahu kamu bahwa ada sesuatu yang terjadi. Kamu bisa menjungkit nyala dan mati perilaku ini dengan kotak-centang <guilabel
+>Fungsikan animasi</guilabel
+>.</para>
+
+<para
+>Tidak semua aplikasi yang kamu mulai pada akhirnya akan menampilkan window, atau entri di bilah tugas. Misalnya beberapa dari mereka akan ter-dock ke baki sistem &plasma;. Kemungkinan lain, kamu mengirimnya ke desktop virtual yang berbeda, dan di bagian <guilabel
+>Filter</guilabel
+> dari <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Pengaturan Task Manager</guilabel
+></ulink
+> pada opsi <guilabel
+>Hanya tampilkan tugas dari desktop saat ini</guilabel
+> tercentang. Mengeset sebuah batas waktu akan memastikannya, dalam kasus ini, kamu masih bisa mendapatkan feedback luncur, tetapi juga hal itu akan hilang ketika pekerjaan selesai.</para>
+
+</article>

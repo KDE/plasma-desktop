@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Pengendali Permainan</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>joystick</keyword>
+<keyword
+>pengendali</keyword>
+<keyword
+>gamepad</keyword>
+<keyword
+>kalibrasikan</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Kalibrasikan Pengendali Permainan</title>
+
+<para
+>Modul ini menyediakan sebuah antarmuka untuk mengkalibrasi pengendali permainanmu sebagaimana yang tampak dengan fungsi-fungsinya pada pengendali permainanmu yang dipetakan di mana tombol logis dan poros.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ini adalah cuplikan dari modul pengendali permainan</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modul pengendali permainan</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Perangkat</guilabel
+></term>
+<listitem>
+<para
+>Di sini kamu bisa melihat lokasi logisnya perangkat. Jika kamu mempunyai pengendali permainan lebih dari satu, kamu juga bisa memilih salahsatu untuk dikonfigurasikan. </para>
+<para
+>Jika tidak ada pengendali permainan yang secara otomatis ditemukan di komputermu dan kamu tau ada satu yang tertancap, kamu bisa memasukkan file perangkat yang benar di sini. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Posisi</guilabel
+></term>
+<listitem>
+<para
+>Lokasi yang diplot dari poros X dan Y si pengendali permainan. Fungsikan <guibutton
+>Tampilkan jejak</guibutton
+> untuk memplot alur joystick dari satu titik ke titik lainnya. </para>
+<tip
+><para
+>Jika joystick tidak dapat mencapai setiap titik pada grafik ini, atau jika itu tidak terpusat dengan benar, kamu perlu mengkalibrasi perangkatmu. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tombol</guilabel
+></term>
+<listitem>
+<para
+>Tempat untuk melihat status tombol yang ditekan pada pengendali permainanmu dan jika tombol dipetakan dengan benar. Saat tombol ditekan, teks <guilabel
+>PRESSED</guilabel
+> akan muncul di sebelah angka logis (seperti yang terlihat di komputer) dari tombol yang ditekan. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Poros</guilabel
+></term>
+<listitem>
+<para
+>Ini mendisplaikan nilai numeriknya posisi poros. Nilai 0 adalah ditengah dan nilai-nilai maksimum dan minimum tergantung pada pengendali permainan dan poros tertentu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kalibrasikan</guilabel
+></term>
+<listitem>
+<para
+>Mengeklik pada <guibutton
+>Kalibrasi</guibutton
+> akan membuka sebuah dialog untuk mengkalibrasi setiap poros pada joystick-joystick-mu. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Mengkalibrasi pengendali permainanmu</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Mengkalibrasi pengendali permainanmu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Setiap poros akan dipindah ke posisi minimum, kemudian tengah, dan yang terakhir posisi maksimum. Sebuah angka di pojok kiri bawah dari dialog akan membantu menentukan cara mana menambah dan cara mana mengurangi nilai-nilainya. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,112 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2009-08-08 18:23+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-05-06 01:04+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+
+#: contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "a verb"
+msgid "Open"
+msgstr "&Hape"
+
+#: contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Bosh"
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Trash Settings…"
+msgstr ""
+
+#: contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Trash"
+msgid ""
+"Trash\n"
+"Empty"
+msgstr "Koshi"
+
+#: contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] "Një temë"
+msgstr[1] "%1 tema"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Koshi"
+
+#: contents/ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgid "Empty"
+msgstr "Bosh"
+
+#: contents/ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "Një temë"
+msgstr[1] "%1 tema"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgid "Empty Trash"
+#~ msgstr "Zbraz Koshin"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Do you really want to empty the trash? All items will be deleted."
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr ""
+#~ "Dëshiron me të vërtetë ta zbrazësh koshin? Të gjitha temat do të fshihen."
+
+#~ msgid "&Empty Trashcan"
+#~ msgstr "&Zbraze Koshin"
+
+#~ msgid "&Menu"
+#~ msgstr "&Menu"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Empty Trash"
+#~ msgctxt "@title:window"
+#~ msgid "Empty Trash"
+#~ msgstr "Zbraz Koshin"
+
+#~ msgid "Emptying Trashcan..."
+#~ msgstr "Duke Zbrazur Koshin..."

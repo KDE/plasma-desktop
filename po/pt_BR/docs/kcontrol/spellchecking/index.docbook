@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Verificador ortográfico</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Ortografia</keyword>
+<keyword
+>dicionário</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Verificador ortográfico</title>
+<para
+>As opções de configuração aqui disponíveis são utilizadas como padrão por todos os aplicativos do &kde; que utilizam o &sonnet;, que é uma interface para os diversos sistemas de verificação ortográfica livres.</para>
+
+<para
+>Para usar o &sonnet;, você precisa instalar os corretores ortográficos, como, &eg;, o <ulink url="http://aspell.net/"
+>GNU Aspell</ulink
+>, o<ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> ou o <ulink url="http://hunspell.sourceforge.net/"
+>Hunspell</ulink
+> e, adicionalmente, os dicionários correspondentes ao seu idioma.</para>
+
+<para
+>As opções de configuração aqui selecionadas poderão ser substituídas em cada aplicativo.</para>
+
+<para
+>Escolha na lista <guilabel
+>Idioma padrão</guilabel
+>, entre os dicionários disponíveis, qual o que deverá ser utilizado pelo &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Opções de Ortografia</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Ativar a detecção automática do idioma</guilabel
+></term>
+<listitem>
+<para
+>Este recurso é baseado em várias heurísticas (script usado, correspondência de trigrama e classificação de idioma nos idiomas disponíveis na infraestrutura da verificação ortográfica). Isto permite alterar automaticamente o idioma em um documento multi-idiomas. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Verificação ortográfica automática habilitada por padrão</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, será verificada a ortografia das palavras no seu documento à medida que você vai digitando-as. O texto errado terá uma linha em vermelho abaixo dele. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ignorar palavras com todas as letras em maiúsculo</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, não será verificada a ortografia de qualquer palavra que contenha apenas letras maiúsculas.</para>
+<tip
+><para
+>Isto é útil para os documentos que usam uma grande quantidade de acrônimos. Se esta opção estiver desligada, a maioria desses acrônimos será marcada indevidamente. Se assinalar esta opção, os acrônimos não serão marcados como errados.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ignorar palavras coladas</guilabel
+></term>
+<listitem
+><para
+>Se esta opção estiver selecionada, então as palavras que aparecem no dicionário separadas, mas que estejam coladas, são consideradas como erros ortográficos. Por exemplo, considerando que o <quote
+>desperta</quote
+> e o <quote
+>dor</quote
+> existam no seu dicionário, se o <quote
+>despertador</quote
+> não constar, então isto não será considerado um erro ortográfico. </para>
+
+<tip
+><para
+>Assinalar esta opção irá evitar que os aplicativos considerem os endereços de e-mail e páginas Web como sendo erros ortográficos. Esses endereços normalmente contém palavras juntas.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Palavras ignoradas</title>
+<para
+>A metade inferior desta janela permite-lhe designar algumas palavras específicas (que podem ser terminologias especializadas, nomes próprios, &etc;) que deverão ser ignoradas pelo verificador ortográfico.</para>
+
+<sect3
+><title
+>Adicionando uma palavra à lista de palavras ignoradas</title>
+<para
+>Para adicionar uma palavra, digite-a no campo de texto e clique no botão <guibutton
+>Adicionar</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Removendo uma palavra da lista de palavras ignoradas</title>
+<para
+>Para remover uma palavra, selecione a palavra na lista que contém todas as palavras ignoradas clicando nela com o &LMB;. Agora, clique no botão <guibutton
+>Remover</guibutton
+>.</para>
+
+<para
+>Quando estiver satisfeito com as alterações, basta clicar em <guibutton
+>Aplicar</guibutton
+>.</para>
+
+<para
+>Clicar no botão <guibutton
+>Padrões</guibutton
+> restaura todos os valores padrão para as opções.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

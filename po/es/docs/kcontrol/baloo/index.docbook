@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Búsqueda de archivos</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+>Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Eloy</firstname
+><surname
+>Cuadra</surname
+><affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2017-07-28</date>
+<releaseinfo
+>Plasma 5.10</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>buscar</keyword>
+<keyword
+>archivo</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo de &systemsettings; le permite configurar qué archivos se deben indexar para realizar búsquedas rápidas. Usa internamente una tecnología denominada Baloo para buscar en los archivos de forma eficiente. </para>
+
+<para
+>Añada el elemento gráfico <guilabel
+>Búsqueda</guilabel
+> a su panel o active la búsqueda en &krunner; para usar los resultados indexados para un rápido acceso a sus documentos. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>No buscar en estas ubicaciones</guilabel
+></term>
+<listitem>
+    <para
+>Se le muestra una lista de carpetas donde no se debe buscar. Por omisión, se indexará la totalidad de su carpeta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> y ninguna otra carpeta ni dispositivo. </para>
+    <para
+>Los medios extraíbles nunca se indexan por omisión. Se pueden eliminar explícitamente de la lista de carpetas excluidas para que se indexen. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Por omisión, <guilabel
+>Activar la búsqueda de archivos</guilabel
+> estará activado. Quite la marca de esta opción si no desea usar la búsqueda de archivos. </para>
+
+<para
+>Use <guilabel
+>Indexar también el contenido de los archivos</guilabel
+> para indexar el contenido de los archivos además de su nombre. </para>
+
+<para
+>Para más información sobre las opciones de configuración (por ejemplo, cómo añadir una unidad montada fuera de su carpeta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>), consulte <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuración</ulink
+>.</para>
+
+</article>

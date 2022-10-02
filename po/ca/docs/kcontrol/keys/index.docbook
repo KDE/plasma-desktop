@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Dreceres</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>25 de març de 2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>lligams de tecla</keyword>
+<keyword
+>lligams</keyword>
+<keyword
+>dreceres</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Dreceres</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Introducció</title
+> 
+
+<para
+>Tot i que la major part de la funcionalitat oferta pel &plasma; es pot aconseguir emprant la interfície <quote
+>apunta i fes clic</quote
+>, moltes persones prefereixen utilitzar el teclat per a algunes tasques. Per exemple, prémer <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> és més ràpid que moure les mans a fora del teclat per a cercar el ratolí, obrir el menú <guimenu
+>Edita</guimenu
+> i seleccionar <guimenuitem
+>Cerca</guimenuitem
+>.</para>
+
+<para
+>Com gent diferent té preferències diferents quant a les dreceres del teclat, el &plasma; ofereix una completa personalització dels <quote
+>lligams de tecla</quote
+>. Un lligam de tecla o una drecera és l'associació d'una acció amb una tecla o una combinació d'aquestes.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Dreceres estàndard i dreceres globals</title>
+
+<para
+>Les dreceres estàndard i les dreceres globals funcionen de la mateixa manera. De fet, en certa manera les dreceres estàndard o d'aplicació també són <quote
+>globals</quote
+>. L'única diferència és:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Les <quote
+>Dreceres estàndard</quote
+> es refereixen a accions que sovint estan disponibles en les aplicacions, com ara; Desa, Imprimeix, Copia, &etc;</para
+></listitem
+> 
+<listitem
+><para
+>Les <quote
+>dreceres globals</quote
+> són les que tenen sentit fins i tot quan no hi ha cap aplicació oberta. Aquestes dreceres usualment es refereixen a accions com canviar d'escriptori, manipular les finestres, &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Si us plau, noteu que les dreceres d'aplicació aquí configurades <emphasis
+>sols</emphasis
+> són les accions estàndard trobades més freqüentment a les aplicacions. La majoria d'aplicacions també definiran les seves pròpies accions, pel qual haureu de personalitzar els lligams de tecla emprant el diàleg dels lligams de tecla de l'aplicació.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>La pàgina Dreceres estàndard</title>
+<para
+>A la part superior d'aquest diàleg es veu un quadre d'entrada, on podeu cercar de forma interactiva per als noms de les dreceres (&pex;, Copia) o la combinació de tecles (&pex;, <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>).</para>
+<para
+>A continuació al quadre de cerca és on podeu veure una llista dels lligams de tecla, &ead; associacions entre les accions (&pex;, Copia) es mostren a la columna <guilabel
+>Acció</guilabel
+> i les tecles o combinació de tecles (&pex;, <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+></keycombo
+>) són mostrades a la columna <guilabel
+>Drecera</guilabel
+> o <guilabel
+>Alternativa</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>La pàgina Dreceres globals</title>
+<para
+>A la part esquerra d'aquesta pàgina hi ha un quadre de llista que permet seleccionar un <guilabel
+>Component</guilabel
+> com KWin, Escriptori Plasma, &etc; Les dreceres definides per al component seleccionat es mostren a la columna <guilabel
+>Acció</guilabel
+> i <guilabel
+>Global</guilabel
+> en la vista de llista.</para>
+<para
+>Aquesta pàgina té el mateix quadre de cerca com la pestanya <guilabel
+>Dreceres estàndard</guilabel
+>.</para>
+<para
+>Utilitzeu <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> o <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> per a afegir o eliminar un component. </para>
+
+<para
+>Si afegiu un component, s'obrirà un diàleg per a seleccionar les aplicacions des de l'estructura del menú d'inici per a afegir llançadors que es podran utilitzar com a dreceres. Si una aplicació té opcions de «jumplist», estaran disponibles com a accions. </para>
+
+<para
+>Feu clic a la llista desplegable <guilabel
+>Fitxer</guilabel
+> que hi ha a la dreta per a importar/exportar un esquema, establir totes les dreceres a cap.</para>
+<para
+>Les dreceres globals ara es poden configurar per a saltar a tasques específiques dins d'una aplicació.</para>
+
+<para
+>De manera predeterminada, podeu obrir el menú de l'aplicació amb només prémer la tecla &Meta;. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Configurar els lligams de tecla</title>
+
+<para
+>La configuració dels lligams de tecla és força fàcil. Al mig del mòdul d'&systemsettings; veureu una llista de les accions disponibles. Si hi ha un lligam de tecla associat amb aquesta acció, el trobareu immediatament a la dreta. Simplement seleccioneu l'acció que voleu configurar.</para>
+
+<para
+>Després de seleccionar una acció en la llista advertireu que aquest element es ressalta i es veuen dues caselles de selecció addicionals per sota d'aquest element en la vista de llista. Allí podreu configurar una combinació de tecles o potser cap lligam de tecla per a l'acció seleccionada. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Omissió</guilabel
+>: l'acció seleccionada estarà associada amb el valor predeterminat del &kde;. Aquesta és una bona elecció per a la majoria dels casos, atès que el &kde; incorpora uns quants lligams de tecla raonablement planificats. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Personalitza</guilabel
+>: si seleccioneu aquesta opció, podreu crear una combinació de tecles per a l'acció seleccionada. Feu clic al botó <guibutton
+>Cap</guibutton
+> o marqueu la drecera a mida seleccionada prèviament. Ara, l'etiqueta del botó canvia a <guibutton
+>Entrada</guibutton
+>. Simplement seleccioneu qualsevol tecla modificadora (&ead;, &Maj;, &Ctrl; o &Alt;) i després seleccioneu una tecla normal o tecla de funció (&pex;, <keycap
+>F11</keycap
+>) a la que voleu assignar aquesta combinació.</para>
+<para
+>En fer clic a la columna <guilabel
+>Alternativa</guilabel
+> d'una fila a la llista es permet editar la segona drecera per a l'acció.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

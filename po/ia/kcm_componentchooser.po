@@ -1,0 +1,372 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-10 11:22+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Navigator de web predefinite"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Altere..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Selige navigator predefinite"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Selige cliente de e-posta predefinite:"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Selige le preferite gerente de file"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Selige le mappa predefinite"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Selige le preferite application de dialer (pro  telephonar)"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Selige le preferite emulator de terminal"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Navigator Web:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Gerente de File:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Cliente de E-Posta:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Emulator de Terminal:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Mappa:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Dialer (pro telephonar):"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Applicationes predefinite"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Incognite"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Selector de componente"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Elige ex le lista a basso qual componente deberea esser usate per "
+#~ "definition per servicio %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Tu modificava le componente predefinite de tu selection, tu vole "
+#~ "salveguardar ora ille modification ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Nulle description disponibile"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Ci tu pote cambiar le programma componente. Le componentes es programmas "
+#~ "que manea cargas basic, como le emulator de terminal, le redactor o "
+#~ "editor de texto e le cliente de e-posta. Differente applicationes de KDE "
+#~ "tal vice necessita de invocar un emulator de console, inviar un e-posta o "
+#~ "monstrar alcun texto. Pro facer lo consistentemente, iste applicationes "
+#~ "sempre clama le mesme componentes. Tu pote seliger qual programmas es de "
+#~ "iste componentes."
+
+#~ msgid "Default Component"
+#~ msgstr "Componente Predefinite"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Iste lista monstra le typos de componente configurable. Pulsa le "
+#~ "componente que tu vole configurar.</p>\n"
+#~ "<p>In iste dialogo tu pote cambiar componentes predefinite de KDE. "
+#~ "Componentes es programmas que manea cargas basic,como le emulator de "
+#~ "terminal, le editor de texto e le cliente de e-posta. Differente "
+#~ "applicationes de KDE tal vice necessita de invocar un emulator de "
+#~ "console, inviar un e-posta o monstrar alcun texto. Pro facer lo "
+#~ "consistentemente, iste applicationes sempre clama le mesme componentes. "
+#~ "Tu pote seliger qual programmas es de iste componentes.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Aperi <b>http</b> e <b>https</b> URLs</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "in un application basate sur le contentos del URL"
+
+#~ msgid "in the following application:"
+#~ msgstr "in le sequente appliction:"
+
+#~ msgid "with the following command:"
+#~ msgstr "con le sequente commando:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Selige le preferite application de navigator web:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr ""
+#~ "KMail es le programma standard de Posta pro le scriptorio de Plasma."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Usa KMail como cliente de e-posta preferite"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Selige iste option si tu vole usar ulle altere programma de posta."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Substitutos optional: <ul> <li>%t: Adresse del Recipiente</li> <li>%s: "
+#~ "Subjecto</li> <li>%c: Copia Carbon (CC)</li> <li>%b: Copia Carbon Cec "
+#~ "(BCC)</li> <li>%B: Texto de corpore patrono</li> <li>%A: Allegate </li> "
+#~ "<li>%u: Inviar posta plen a: URL </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Pressa iste button pro seliger tu favorite cliente de e-posta. Pro favor "
+#~ "tu nota que le file que tu selige debe haber fixate le attributo de "
+#~ "executabile pro haber acceptation.<br/> Tu pote anque usar multe "
+#~ "substitutos que essera reimplaciate con le valores actual quando le "
+#~ "cliente de e-posta es clamate<ul> <li>%t: Adresse del Recipiente</li> <li>"
+#~ "%s: Subjecto</li> <li>%c: Copia Carbon (CC)</li> <li>%b: Copia Carbon Cec "
+#~ "(BCC)</li> <li>%B: Texto de corpore patrono</li> <li>%A: Allegate </li></"
+#~ "ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Pressa ci pro navigar per le file de programma de posta."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Activa iste option si tu vole que le seligite cliente de e-posta es "
+#~ "executate in un terminal (p.ex. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "E&xecuta in terminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Naviga directorios usante le sequente gerente de file:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Altere: pulsa Adde... in le dialogo monstrate ci:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Usa Konsole como application de terminal"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Usa un differente programma de &terminal"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Pressa iste button pro seliger tu favorite cliente de terminal. Pro favor "
+#~ "tu nota que le file que tu selige debe haber fixate le attributo de "
+#~ "executabile pro haber acceptation.<br/>Etiam tu nota que alcun programmas "
+#~ "que utilisa le Emulator de Terminal non functionara si tu adde argumentos "
+#~ "de linea de commando (Exemplo: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Pulsa ci pro navigar pro programma de terminal."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 secunda remanente"
+#~ msgstr[1] "%1 secundas remanente:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Le nove gerente de fenestra essera usate quando KDE essera initiate le "
+#~ "proxime vice."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Modification de Gerente de Fenestra"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Un nove gerente de fenestra es executante.\n"
+#~ "Il es ancora recommendate de re-initiar iste session de KDE pro esser "
+#~ "secur que omne applicationes executante adjustara se pro iste "
+#~ "modification."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Gerente de Fenestra reimplaciate"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Tu gerente de fenestra executante essera reimplaciate con lo que es "
+#~ "configurate."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Configura Modification de Gerente de Fenestra"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Da &Acceptation a le Modification"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Reverte a Previe"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Le gerente de fenestra configurate es lanceate.\n"
+#~ "Pro favor tu verifica que il ha initiate propriemente e tu confirma le "
+#~ "cambio.\n"
+#~ "Le lanceamento essera automaticamente invertite in 20 secundas."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Le gerente de fenestra in execution ha essite invertite a le gerente de "
+#~ "fenestra predefinite de KDE KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Le nove gerente de fenestra ha fallite de startar.\n"
+#~ "Le gerente de fenestra in execution ha essite invertite a le gerente de "
+#~ "fenestra predefinite de KDE KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Il falleva le execution del instrumento de configuration"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Usa le gerente de fenestra predefinite de KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Usa un differente gerente de &fenestra:"
+
+#~ msgid "Configure"
+#~ msgstr "Configura"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Nota: plure gerentes de fenestras ha su proprie configuration e illos non "
+#~ "seque le preferentias de KDE."

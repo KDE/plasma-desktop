@@ -1,0 +1,348 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2011-07-08 13:33+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Viesturs Zariņš"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "viesturs.zarins@mii.lu.lv"
+
+#: ActionEditor.cpp:60
+#, fuzzy, kde-format
+#| msgid "Editing Action %1"
+msgid "Editing Action '%1'"
+msgstr "Rediģē darbību %1"
+
+#: ActionEditor.cpp:162
+#, kde-format
+msgid ""
+"It appears that the action name, command, icon or condition are not valid.\n"
+"Therefore, changes will not be applied."
+msgstr ""
+"Izskatās, ka vai nu darbības nosaukums, komanda, ikona vai nosacījumi nav "
+"derīgi.\n"
+"Tāpēc izmaiņas netiks saglabātas."
+
+#: ActionEditor.cpp:163
+#, kde-format
+msgid "Invalid action"
+msgstr "Nederīga darbība"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Rediģēt parametru"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Parametra veids:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Īpašība atbilst"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Satura konjunkcija"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Satura disjunkcija"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Ierīces saskarne atbilst"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Ierīces tips:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Vērtības nosaukums:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Vienāds ar"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Satur"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Atstatīt parametru"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Saglabāt parametra izmaiņas"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Darbības ikona, nospiediet lai izmainītu"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Darbības nosaukums"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Komanda: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Komanda, kas veiks darbību\n"
+"Tā var saturēt šādus reģistrnejūtīgus aizvietotājus:\n"
+"\n"
+"%f: Ierīces montēšanas punkts - tikai glabāšanas ierīcēm\n"
+"%d: Ierīces mezgla ceļš - tika bloka ierīcēm\n"
+"%i: Ierīces identifikators "
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Ierīcēm ir jāatbilst šiem parametriem, lai varētu veikt darbību:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Darbības nosaukums: "
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Ievadiet jaunās darbības nosaukumu"
+
+#: DesktopFileGenerator.cpp:25
+#, kde-format
+msgid "Solid Action Desktop File Generator"
+msgstr "Solid darbību Dekstop failu ģenerators"
+
+#: DesktopFileGenerator.cpp:27
+#, kde-format
+msgid ""
+"Tool to automatically generate Desktop Files from Solid DeviceInterface "
+"classes for translation"
+msgstr ""
+"Rīks automātiskai Desktop failu ģenerēšanai no Solid DeviceInterface klasēm "
+"tulkošanai"
+
+#: DesktopFileGenerator.cpp:29
+#, kde-format
+msgid "(c) 2009, Ben Cooksley"
+msgstr "(c) 2009, Ben Cooksley"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Ben Cooksley"
+msgstr "Ben Cooksley"
+
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Uzturētājs"
+
+#: PredicateItem.cpp:119
+#, kde-format
+msgid "The device must be of the type %1"
+msgstr "Ierīcei 1 jābūt ar tipu %1"
+
+#: PredicateItem.cpp:122
+#, kde-format
+msgid "Any of the contained properties must match"
+msgstr "Vismaz vienai apakšīpašībai jābūt apmierinātai"
+
+#: PredicateItem.cpp:125
+#, kde-format
+msgid "All of the contained properties must match"
+msgstr "Visām apakšīpašībām jābūt apmierinātām"
+
+#: PredicateItem.cpp:134
+#, fuzzy, kde-format
+#| msgid "The devices property %1 must equal %2"
+msgid "The device property %1 must equal %2"
+msgstr "Ierīces īpašībai %1 jābūt vienādai ar %2"
+
+#: PredicateItem.cpp:137
+#, kde-format
+msgid "The device property %1 must contain %2"
+msgstr "Ierīces īpašībai %1 jāsatur %2"
+
+#: SolidActions.cpp:33
+#, kde-format
+msgid "Solid Device Actions Editor"
+msgstr "Solid ierīču darbību redaktors"
+
+#: SolidActions.cpp:35
+#, kde-format
+msgid "Solid Device Actions Control Panel Module"
+msgstr "Solid ierīču darbību kontroles paneļa modulis"
+
+#: SolidActions.cpp:37
+#, fuzzy, kde-format
+#| msgid "(c) 2009 Solid Device Actions team"
+msgid "(c) 2009, 2014 Solid Device Actions team"
+msgstr "(c) 2009 Solid Device Actions komanda"
+
+#: SolidActions.cpp:39
+#, kde-format
+msgid "Port to Plasma 5"
+msgstr ""
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "It appears that the predicate for this action is not valid."
+msgstr "Izskatās ka šīs darbības nosacījums nav derīgs."
+
+#: SolidActions.cpp:152
+#, kde-format
+msgid "Error Parsing Device Conditions"
+msgstr "Kļūda, analizējot ierīces nosacījumus"
+
+#: SolidActions.cpp:200
+#, kde-format
+msgid "No Action Selected"
+msgstr "Nav izvēlēta darbība"
+
+#: SolidActions.cpp:221
+#, kde-format
+msgid "Cannot be deleted"
+msgstr "Nevar izdzēst"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Izņemt"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#~ msgid "Edit..."
+#~ msgstr "Rediģēt..."
+
+#~ msgid "Add..."
+#~ msgstr "Pievienot..."
+
+#~ msgid "Contains Other Requirements"
+#~ msgstr "Satur citas prasības"
+
+#~ msgid "Is A Requirement"
+#~ msgstr "Ir prasība"
+
+#~ msgid "Logic type:"
+#~ msgstr "Loģikas veids:"
+
+#~ msgid "All Contained Requirements Must Match"
+#~ msgstr "Visām iekšējām prasībām jāatbilst"
+
+#~ msgid "Any Contained Required Must Match"
+#~ msgstr "Kaut vienai iekšējai prasībai jāatbilst"
+
+#~ msgid "Restriction type:"
+#~ msgstr "Ierobežojuma tips:"
+
+#~ msgid "Is Value Type"
+#~ msgstr "Ir vērtības tips"
+
+#~ msgid "Compare Value To"
+#~ msgstr "Salīdzināt vērtību ar"
+
+#~ msgid "Does Not Equal"
+#~ msgstr "Nav vienāds ar"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Add a new requirement"
+#~ msgstr "Pievienot jaunu prasību"
+
+#~ msgid "Edit current requirement"
+#~ msgstr "Rediģēt aktīvo prasību"
+
+#~ msgid "Remove current requirement"
+#~ msgstr "Izņemt aktīvo prasību"
+
+#~ msgid ""
+#~ "It appears that the device conditions for this action are not valid. \n"
+#~ "If you previously used this utility to make changes, please revert them "
+#~ "and file a bug"
+#~ msgstr ""
+#~ "Izskatās, ka šīs darbības ierīces nosacījumi nav derīgi.\n"
+#~ "Ja ieprieš izmantojāt šo rīku izmaiņu veikšanai, lūdzu atstatiet tās un "
+#~ "ziņojiet par kļūdu."
+
+#~ msgid "Editing Requirement"
+#~ msgstr "Rediģē prasību"

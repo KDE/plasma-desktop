@@ -1,0 +1,646 @@
+# translation of kcmkwincompositing.po to Russian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2007, 2008.
+# Leonid Kanter <leon@asplinux.ru>, 2008.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Nick Shaforostoff <shafff@ukr.net>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2011, 2016, 2017.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkwincompositing\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-20 10:26+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Браузер по умолчанию"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Другое..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Выберите браузер, используемый по умолчанию"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Выберите приложение для работы с эл. почтой, используемую по умолчанию"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Выберите диспетчер файлов, используемый по умолчанию"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Выберите приложение для просмотра карт, используемое по умолчанию"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Выберите приложение для выполнения вызовов, используемое по умолчанию"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Выберите эмулятор терминала, используемый по умолчанию"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Веб-браузер:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Диспетчер файлов:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Почтовый клиент:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Эмулятор терминала:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Карта:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Номеронабиратель:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Николай Шафоростов,Леонид Кантер,Андрей Черепанов,Стёпа Семенуха"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shaforostoff@kde.ru,leon@asplinux.ru,skull@kde.ru,semenukha@gmail.com"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Приложения по умолчанию"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Выбор компонентов"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© Joseph Wenninger, 2002"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Выберите из списка ниже компонент, который должен использоваться по "
+#~ "умолчанию для службы %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Вы поменяли основную реализацию компонента. Сохранить изменения?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Описание недоступно"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Здесь можно изменить программы («компоненты»), выполняющие основные "
+#~ "задачи: эмулятор терминала, текстовый редактор и клиент электронной "
+#~ "почты. Различным программам KDE иногда необходимо запустить эмулятор "
+#~ "консоли, отправить почту или отобразить текст. Для согласованной работы "
+#~ "они вызывают одни и те же компоненты. Здесь вы можете выбрать эти "
+#~ "компоненты."
+
+#~ msgid "Default Component"
+#~ msgstr "Компонент по умолчанию"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt> <p>В этом диалоге можно изменить предпочитаемые в KDE программы-"
+#~ "компоненты, выполняющие такие задачи, как: эмулятор терминала, текстовый "
+#~ "редактор и клиент электронной почты. Различным программам KDE иногда "
+#~ "необходимо, соответственно, запустить эмулятор консоли, отправить почту "
+#~ "или отобразить текст. Для согласованной работы такие программы вызывают "
+#~ "одни и те же компоненты. Здесь вы можете выбрать эти компоненты.</p> </qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Открывать адреса <b>http</b> и <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "в приложении, соответствующем типу содержимого по адресу"
+
+#~ msgid "in the following application:"
+#~ msgstr "в следующем приложении:"
+
+#~ msgid "with the following command:"
+#~ msgstr "при помощи следующей команды:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Предпочтительный веб-браузер компьютера:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "KMail — стандартная для Plasma почтовая программа."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Использовать KMail как предпочитаемый клиент электронной почты"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Выберите этот пункт, чтобы использовать другую почтовую программу."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "В команду запуска можно подставлять следующие переменные: <ul> <li>%t — "
+#~ "адрес получателя,</li> <li>%s — тема,</li> <li>%c — адрес для копии (CC),"
+#~ "</li> <li>%b — адрес для скрытой копии (BCC),</li> <li>%B — текст шаблона,"
+#~ "</li> <li>%A — вложение,</li> <li>%u — полная ссылка «mailto:».</li> </ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Нажмите здесь, чтобы выбрать предпочитаемый почтовый клиент. Обратите "
+#~ "внимание, что выбранный файл должен иметь атрибут «исполняемый».<br/"
+#~ ">Кроме того, вы можете использовать специальные символы, которые будут "
+#~ "заменены фактическими значениями при вызове клиента почты: <ul><li>%t: "
+#~ "адрес получателя</li><li>%s: тема</li><li>%c: копия (CC)</li><li>%b: "
+#~ "слепая копия (BCC)</li><li>%B: текст шаблона</li><li>%A: вложение</li></"
+#~ "ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Нажмите здесь для выбора почтовой программы."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Отметьте этот флажок, если выбранный почтовый клиент должен выполняться в "
+#~ "окне терминала (напр. терминала <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Выполнять в терминале"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr ""
+#~ "Просмотр файлов и каталогов в компьютере с помощью диспетчера файлов:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Другой: нажмите Добавить... в диалоге:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Использовать Konsole &как терминальное приложение"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Использовать &другой эмулятор терминала:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Нажмите здесь для выбора предпочитаемого эмулятора терминала. Обратите "
+#~ "внимание, что выбранный файл должен иметь атрибут «исполняемый».<br/"
+#~ ">Также обратите внимание, что некоторые программы, использующие эмулятор "
+#~ "терминала, не смогут работать, если ему передавать параметр (напр.: "
+#~ "konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Нажмите для указания исполняемого файла терминальной программы."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Осталась %1 секунда:"
+#~ msgstr[1] "Осталось %1 секунды:"
+#~ msgstr[2] "Осталось %1 секунд:"
+#~ msgstr[3] "Осталась %1 секунда:"
+
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Новый диспетчер окон будет использоваться со следующего запуска сеанса "
+#~ "Plasma."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Смена диспетчера окон"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Запущен новый диспетчер окон. Тем не менее рекомендуется перезапустить "
+#~ "сеанс KDE, чтобы гарантировать правильную работу программ."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Диспетчер окон заменён"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "Сейчас диспетчер окон будет заменён на выбранный."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Произведена замена диспетчера окон."
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Принять конфигурацию"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Вернуться к предыдущей"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Запускается выбранный диспетчер окон. Убедитесь в том, что он работает "
+#~ "правильно, и подтвердите изменения. Изменение будет автоматически "
+#~ "отменено через 20 секунд."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr "Возвращён KWin — диспетчер окон KDE по умолчанию."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Не удалось запустить новый диспетчер окон. Восстановлен стандартный "
+#~ "диспетчер окон KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Не удалось запустить программу настройки"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Использовать диспетчер окон KDE по &умолчанию (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Использовать &другой диспетчер окон:"
+
+#~ msgid "Configure"
+#~ msgstr "Настроить"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Примечание: большинство диспетчеров окон имеют собственные средства "
+#~ "настройки, которые не связаны с параметрами KDE."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid "Confirm Desktop Effects Change"
+#~ msgstr "Подтверждение изменения эффектов"
+
+#~ msgid ""
+#~ "Desktop effects settings have changed.\n"
+#~ "Do you want to keep the new settings?\n"
+#~ "They will be automatically reverted in 10 seconds."
+#~ msgstr ""
+#~ "Эффекты рабочего стола были изменены.\n"
+#~ "Сохранить новые параметры эффектов?\n"
+#~ "Прежние будут автоматически восстановлены через 10 секунд."
+
+#~ msgid "Compositing is not supported on your system."
+#~ msgstr "Эффекты не поддерживается в вашей системе."
+
+#~ msgid "kcmkwincompositing"
+#~ msgstr "kcmkwincompositing"
+
+#~ msgid "KWin Desktop Effects Configuration Module"
+#~ msgstr "Модуль настройки эффектов KWin"
+
+#~ msgid "(c) 2007 Rivo Laks"
+#~ msgstr "© Rivo Laks, 2007"
+
+#~ msgid "Rivo Laks"
+#~ msgstr "Rivo Laks"
+
+#~ msgid "No Effect"
+#~ msgstr "Без эффекта"
+
+#~ msgid ""
+#~ "Failed to activate desktop effects using the given configuration options. "
+#~ "Settings will be reverted to their previous values.\n"
+#~ "\n"
+#~ "Check your X configuration. You may also consider changing advanced "
+#~ "options, especially changing the compositing type."
+#~ msgstr ""
+#~ "Невозможно включить эффект на текущей конфигурации. Будут возвращены "
+#~ "прежние параметры.\n"
+#~ "\n"
+#~ "Проверьте параметры графической подсистемы. Возможно, необходимо "
+#~ "настроить дополнительные параметры, например, движок."
+
+#~ msgid "Appearance"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Accessibility"
+#~ msgstr "Специальные возможности"
+
+#~ msgid "Focus"
+#~ msgstr "Управление фокусом"
+
+#~ msgid "Candy"
+#~ msgstr "Развлечения"
+
+#~ msgid "Demos"
+#~ msgstr "Демонстрации"
+
+#~ msgid "Tests"
+#~ msgstr "Тестирование"
+
+#~ msgid "Tools"
+#~ msgstr "Инструменты"
+
+#~ msgid "Compositing is active"
+#~ msgstr "Включены графические эффекты"
+
+#~ msgid "Suspend Compositing"
+#~ msgstr "Приостановить графические эффекты"
+
+#~ msgid "Compositing is temporarily disabled"
+#~ msgstr "Графические эффекты временно отключены"
+
+#~ msgid "Resume Compositing"
+#~ msgstr "Включить графические эффекты"
+
+#~ msgid "Compositing is disabled"
+#~ msgstr "Графические эффекты отключены"
+
+#~ msgid "The following effects could not be activated:"
+#~ msgstr "Следующие эффекты не могут быть использованы:"
+
+#~ msgid "<h1>Desktop Effects</h1>"
+#~ msgstr "<h1>Графические эффекты</h1>"
+
+#~ msgid "General"
+#~ msgstr "Главное"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable desktop effects"
+#~ msgstr "Включить графические эффекты"
+
+#~ msgid "Common Settings"
+#~ msgstr "Основные параметры"
+
+#~ msgid "Improved window management"
+#~ msgstr "Улучшенное управление окнами"
+
+#~ msgid "Shadows"
+#~ msgstr "Тени"
+
+#~ msgid "Various animations"
+#~ msgstr "Анимация"
+
+#~ msgid ""
+#~ "You can find more effects, as well as effect-specific settings, in the "
+#~ "\"All Effects\" tab above."
+#~ msgstr "Выбрать и настроить эффекты вы можете на вкладке «Эффекты»."
+
+#~ msgid "Effect for window switching:"
+#~ msgstr "Эффект смены окна:"
+
+#~ msgid "Effect for desktop switching:"
+#~ msgstr "Эффект смены рабочего стола:"
+
+#~ msgid "Instant"
+#~ msgstr "Без анимации"
+
+#~ msgid "Very Fast"
+#~ msgstr "Очень быстрая"
+
+#~ msgid "Fast"
+#~ msgstr "Быстрая"
+
+#~ msgid "Normal"
+#~ msgstr "Обычная"
+
+#~ msgid "Slow"
+#~ msgstr "Медленная"
+
+#~ msgid "Very Slow"
+#~ msgstr "Очень медленная"
+
+#~ msgid "Extremely Slow"
+#~ msgstr "Самая медленная"
+
+#~ msgid "Animation speed:"
+#~ msgstr "Скорость анимации:"
+
+#~ msgid "Compositing State"
+#~ msgstr "Показ графических эффектов"
+
+#~ msgid "All Effects"
+#~ msgstr "Эффекты"
+
+#~ msgid ""
+#~ "Hint: To find out or configure how to activate an effect, look at the "
+#~ "effect's settings."
+#~ msgstr ""
+#~ "Совет: способ запуска эффекта обычно находится в параметрах настройки "
+#~ "эффекта."
+
+#~ msgid "Advanced"
+#~ msgstr "Дополнительно"
+
+#~ msgid "Compositing type:"
+#~ msgstr "Движок:"
+
+#~ msgid "OpenGL"
+#~ msgstr "OpenGL"
+
+#~ msgid "XRender"
+#~ msgstr "XRender"
+
+#~ msgid "Keep window thumbnails:"
+#~ msgstr "Создавать миниатюры окон"
+
+#~ msgid "Always (Breaks minimization)"
+#~ msgstr "Всегда"
+
+#~ msgid "Only for Shown Windows"
+#~ msgstr "Только для видимых окон"
+
+#~ msgid "Never"
+#~ msgstr "Не создавать"
+
+#~ msgid ""
+#~ "Enabling this option allows compositing to be activated even if some of "
+#~ "the internal checks fail. Doing so may make the whole desktop unusable "
+#~ "and its use is not recommened. Use only if KWin refuses to activate "
+#~ "compositing on a system that should be capable of compositing.\n"
+#~ msgstr ""
+#~ "При включении этого параметра эффекты будут включены, даже если некоторые "
+#~ "тесты внутренней проверки завершились неудачно. Возможно, в этом случае "
+#~ "работа может быть невозможна, поэтому включайте этот параметр, если "
+#~ "уверены.\n"
+
+#~ msgid "Disable functionality checks"
+#~ msgstr "Отключить внутреннюю проверку"
+
+#~ msgid "OpenGL Options"
+#~ msgstr "Параметры OpenGL"
+
+#~ msgid "OpenGL mode:"
+#~ msgstr "Режим OpenGL:"
+
+#~ msgid "Texture From Pixmap"
+#~ msgstr "Растровые текстуры"
+
+#~ msgid "Shared Memory"
+#~ msgstr "Разделяемая память"
+
+#~ msgid "Fallback"
+#~ msgstr "Безопасный режим"
+
+#~ msgid "Texture filter:"
+#~ msgstr "Наложение текстур:"
+
+#~ msgid "Nearest (fastest)"
+#~ msgstr "Ближайшее (самое быстрое)"
+
+#~ msgid "Bilinear"
+#~ msgstr "Билинейное"
+
+#~ msgid "Trilinear (best quality)"
+#~ msgstr "Трилинейное (лучшее качество)"
+
+#~ msgid "Enable direct rendering"
+#~ msgstr "Аппаратная отрисовка"
+
+#~ msgid "Use VSync"
+#~ msgstr "Вертикальная синхронизация"
+
+#~ msgid "XRender Options"
+#~ msgstr "Параметры XRender"
+
+#~ msgid "Smooth scaling (slower)"
+#~ msgstr "Сглаживание (медленная работа эффектов)"
+
+#~ msgid "Always"
+#~ msgstr "Для всех окон"
+
+#~ msgid "All Desktops"
+#~ msgstr "Все рабочие столы"
+
+#~ msgid "Current Desktop"
+#~ msgstr "Текущий рабочий стол"
+
+#~ msgid "Screen Edges"
+#~ msgstr "Края экрана"
+
+#~ msgid ""
+#~ "Active screen edges allow you to activate effects by pushing your mouse "
+#~ "cursor against the edge of the screen. Here you can configure which "
+#~ "effect will get activated on each edge and corner of the screen."
+#~ msgstr ""
+#~ "Активные края экрана позволяют запускать назначенный эффект при "
+#~ "подведении курсора мыши к краю экрана или углу. Здесь вы можете настроить "
+#~ "какие эффекты будут запускаться при подведении курсора мыши к углам или "
+#~ "краям экрана. "
+
+#~ msgid ""
+#~ "If you are looking for the setting to enable switching of desktops by "
+#~ "pushing your mouse cursor against the edge of the screen you can find it "
+#~ "in the \"Window Behavior\" advanced tab under the name of \"Active "
+#~ "Desktop Borders\"."
+#~ msgstr ""
+#~ "Настроить эффект смены рабочего стола можно на вкладке «Эффекты» в группе "
+#~ "«Управление окнами»."
+
+#, fuzzy
+#~ msgid "Cylinder"
+#~ msgstr "Билинейное"
+
+#~ msgid "Advanced Compositing Options"
+#~ msgstr "Дополнительные параметры композиции"
+
+#~ msgid "Misc"
+#~ msgstr "Прочее"
+
+#~ msgid "Keep thumbnails of hidden windows up to date"
+#~ msgstr "Обновлять миниатюры скрытых окон"
+
+#, fuzzy
+#~ msgid "Advanced Options"
+#~ msgstr "Дополнительные параметры композиции"

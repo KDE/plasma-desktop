@@ -1,0 +1,188 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-06-23 20:22+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Bu modül, dosya indeksleyicisini ve arama işlevini yapılandırmanıza olanak "
+"tanır."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Bu, KRunner ve başlatıcı menülerinde dosya aramayı devre dışı bırakacaktır  "
+"ve genişletilmiş üst veri gösterimini tüm KDE uygulamalarından kaldıracaktır."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Kaydedilen indeks verisini silmek istiyor musunuz? %1 kadar alan "
+"boşaltılacak; ancak indeks oluşturma daha sonra yeniden etkinleştirilirse "
+"indeksin tümünün sıfırdan yeniden oluşturulması gerekecektir. Bu, sahip "
+"olduğunuz dosya sayısına bağlı olarak biraz zaman alabilir."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "İndeks Verisini Sil"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Dosya Arama, tüm dosyalarınızı içeriklerine göre hızlı bir şekilde bulmanıza "
+"yardımcı olur."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Dosya Arama'yı Etkinleştir"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Ayrıca dosya içeriğini indeksle"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Gizli dosya ve klasörleri indeksle"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Durum: %1, %​%2 tamamlandı"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "İndeks Oluşturucuyu Duraklat"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "İndeks Oluşturucuyu Sürdür"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "İndeksleniyor: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Klasöre özgü yapılandırma:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Bir klasörü indekslemeye başla…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Bir klasörü indekslemeyi durdur…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "İndekslenmemiş"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "İndekslenmiş"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Girdiyi sil"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "İçerilecek bir klasör seçin"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "İçerilmeyecek bir klasör seçin"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Necdet Yücel, Emir SARI"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "necdetyucel@gmail.com, emir_sari@icloud.com"
+
+#~ msgid "File Search"
+#~ msgstr "Dosya Arama"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Telif Hakkı 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Klasör yapılandırması ekleyin…"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 klasörü zaten hariç tutuluyor"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Bu konumlarda arama yapma"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Kök klasörü hariç tutma izniniz yok, lütfen Dosya Aramasını "
+#~ "istemiyorsanız devre dışı bırakın"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Üst %1 klasörü zaten hariç tutuluyor"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Dosya Aramasını Yapılandır"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Kök dizini her zaman gizlidir"

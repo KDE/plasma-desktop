@@ -1,0 +1,234 @@
+# Spanish translations for kcm_device_automounter.po package.
+# Copyright (C) 2015 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2015.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2015, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-10-17 12:05+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eloy Cuadra"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ecuadra@eloihr.net"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Montador automático de dispositivos"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "© 2009 Trever Fischer, © 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Autor original"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Adaptación a Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Esta lista contiene los dispositivos de almacenamiento conocidos por el "
+"sistema. Si está marcado «Montar automáticamente al iniciar sesión», el "
+"dispositivo se montará automáticamente incluso cuando no esté marcado "
+"«Montar todos los dispositivos extraíbles al iniciar sesión». Lo mismo se "
+"aplica para «Montar automáticamente al conectarlo»."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Si pulsa este botón, los dispositivos seleccionados se «olvidarán». Esto "
+"solo resulta útil si está marcado «Montar automáticamente solo los medios "
+"extraíbles que se hayan montado manualmente con anterioridad». En cuanto se "
+"haya olvidado un dispositivo, si el sistema está preparado para montar "
+"automáticamente solo los dispositivos conocidos, no se montará "
+"automáticamente dicho dispositivo."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Olvidar dispositivo"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Si no está marcado, solo se montarán automáticamente los dispositivos "
+"recordados. Un dispositivo «recordado» es el que se ha montado con "
+"anterioridad. Por ejemplo, conectar un reproductor multimedia USB para "
+"cargarlo no es suficiente para «recordarlo»: si no accede a sus archivos, no "
+"se montará automáticamente la próxima vez que se reconozca; no obstante, en "
+"cuanto haya accedido a sus archivos, el contenido del dispositivo se pondrá "
+"automáticamente a disposición del sistema la próxima vez que lo conecte."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Montar automáticamente los medios extraíbles que no se hayan montado con "
+"anterioridad"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Montar automáticamente el dispositivo"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Al iniciar sesión"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Al conectar"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Todos los dispositivos"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Todos los dispositivos conocidos"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Dispositivos conectados"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Dispositivos desconectados"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr ""
+"Este dispositivo se montará automáticamente durante el inicio de sesión."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr ""
+"Este dispositivo no se montará automáticamente durante el inicio de sesión."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Este dispositivo se montará automáticamente cuando lo conecte."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Este dispositivo no se montará automáticamente cuando lo conecte."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Si algún dispositivo de almacenamiento extraíble está conectado a su "
+#~ "equipo cuando inicie sesión en el escritorio, su contenido estará "
+#~ "automáticamente disponible para el sistema, de modo que otros programas "
+#~ "podrán usarlo."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Montar automáticamente los medios extraíbles al iniciar sesión"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Cuando está marcado, el contenido de cualquier dispositivo de "
+#~ "almacenamiento extraíble estará automáticamente disponible para el "
+#~ "sistema cuando lo encienda o lo conecte."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Montar automáticamente los medios extraíbles cuando los conecte"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Montar automáticamente"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Si no está marcado, no se realizará ningún tipo de montaje automático de "
+#~ "dispositivos, independientemente de lo que esté seleccionado en la "
+#~ "sección de «Sustituciones de dispositivos»."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Permitir el montaje automático de los medios extraíbles"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Sustituciones de dispositivos"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Montar automáticamente al conectarlo"

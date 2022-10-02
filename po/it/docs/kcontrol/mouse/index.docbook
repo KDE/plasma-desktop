@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Mouse</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Samuele</firstname
+> <surname
+>Kaplun</surname
+> <affiliation
+><address
+><email
+>samuele.kaplun@collegiodimilano.it</email
+></address
+></affiliation
+> <contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Questa è la documentazione per il modulo delle &systemsettings; per  la configurazione di mouse e di altri dispositivi di puntamento. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>mouse</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo ti permette di configurare il tuo dispositivo di puntamento. Questo può essere un mouse, un track ball, un touch-pad, o un altro dispositivo hardware che assolve a funzioni simili.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Generale</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Modalità mancino</guilabel
+></term>
+<listitem
+><para
+>Se sei mancino, potresti voler scambiare le funzioni dei pulsanti <mousebutton
+>sinistro</mousebutton
+> e <mousebutton
+>destro</mousebutton
+> sul tuo dispositivo di puntamento scegliendo questa opzione. Se il tuo dispositivo di puntamento ha più di due pulsanti solo quelli che si comportano da pulsanti <mousebutton
+>sinistro</mousebutton
+> e <mousebutton
+>destro</mousebutton
+> sono coinvolti. Ad esempio, se hai un mouse con tre pulsanti, il comportamento del pulsante <mousebutton
+>centrale</mousebutton
+> non viene alterato.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Premi i pulsanti sinistro e destro per il clic centrale</guilabel
+></term>
+<listitem
+><para
+>Seleziona questo elemento se non hai un &MMB;. Puoi fare clic sui pulsante sinistro e destro del mouse contemporaneamente per emulare il clic centrale. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Velocità del puntatore</guilabel
+></term>
+<listitem
+><para
+>Questa opzione ti permette di cambiare la relazione tra la distanza che il puntatore del mouse percorre sullo schermo e il relativo movimento del dispositivo fisico stesso (che potrebbe essere un mouse, un track-ball, o qualche altro dispositivo di puntamento.)</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Profilo di accelerazione</guilabel
+></term>
+<listitem
+><para
+>Il profile <guilabel
+>Adattivo</guilabel
+> è il profilo predefinito per tutti i dispositivi e prende in considerazione la velocità attuale del dispositivo nel decidere l'accelerazione. Il profilo <guilabel
+>Piatto</guilabel
+> è un semplice fattore costante applicato alle variazioni di tutti i dispositivi, indipendentemente dalla velocità del movimento. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Scorrimento: inverti la direzione di scorrimento</guilabel
+></term>
+<listitem
+><para
+>Quando viene selezionata questa casella, la rotellina del mouse (se è presente) funzionerà al contrario (così se in precedenza far scorrere la  rotellina verso di sé implicava lo scorrimento verso il basso, adesso implicherà uno scorrimento verso l'alto). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>In &plasma; 5.13 troverai le impostazioni per usare clic singoli o doppi del mouse per aprire file e cartelle nel modulo <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Spazio di lavoro</ulink
+>. </para
+></note>
+
+</article>

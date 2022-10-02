@@ -1,0 +1,540 @@
+# Translation of kcminput.po into Serbian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Marko Rosic <roske@kde.org.yu>, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2014, 2015, 2016, 2017.
+# Dalibor Djuric <dalibor.djuric@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-09 02:15+0200\n"
+"PO-Revision-Date: 2017-12-15 12:37+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:76
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:96
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:47
+#, kde-format
+msgid "Pointer device KCM"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:49
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:51
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:54 kcm/xlib/xlib_config.cpp:106
+#, kde-format
+msgid "Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:55
+#, kde-format
+msgid "Developer"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:131
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:142
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:162
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:184
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:208
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:210
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr ""
+
+#: kcm/libinput/main.qml:88
+#, kde-format
+msgid "Device:"
+msgstr ""
+
+#: kcm/libinput/main.qml:114 kcm/libinput/main_deviceless.qml:66
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General:"
+msgstr "&Opšte"
+
+#: kcm/libinput/main.qml:116
+#, kde-format
+msgid "Device enabled"
+msgstr ""
+
+#: kcm/libinput/main.qml:135
+#, kde-format
+msgid "Accept input through this device."
+msgstr ""
+
+#: kcm/libinput/main.qml:141 kcm/libinput/main_deviceless.qml:68
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
+msgid "Left handed mode"
+msgstr "&Ljevoruki"
+
+#: kcm/libinput/main.qml:160 kcm/libinput/main_deviceless.qml:87
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr ""
+
+#: kcm/libinput/main.qml:166 kcm/libinput/main_deviceless.qml:93
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: kcm/libinput/main.qml:185 kcm/libinput/main_deviceless.qml:112
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+
+#: kcm/libinput/main.qml:195 kcm/libinput/main_deviceless.qml:122
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Pointer speed:"
+msgstr "Prag pokazivača:"
+
+#: kcm/libinput/main.qml:227 kcm/libinput/main_deviceless.qml:154
+#, fuzzy, kde-format
+#| msgid "Acceleration &profile:"
+msgid "Acceleration profile:"
+msgstr "Pro&fil ubrzanja:"
+
+#: kcm/libinput/main.qml:258 kcm/libinput/main_deviceless.qml:185
+#, kde-format
+msgid "Flat"
+msgstr ""
+
+#: kcm/libinput/main.qml:261 kcm/libinput/main_deviceless.qml:188
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr ""
+
+#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:195
+#, kde-format
+msgid "Adaptive"
+msgstr ""
+
+#: kcm/libinput/main.qml:271 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+
+#: kcm/libinput/main.qml:283 kcm/libinput/main_deviceless.qml:210
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:212
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "Obrni &smijer klizanja"
+
+#: kcm/libinput/main.qml:300 kcm/libinput/main_deviceless.qml:227
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr ""
+
+#: kcm/libinput/main.qml:306
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Scrolling speed:"
+msgstr "Prag pokazivača:"
+
+#: kcm/libinput/main.qml:354
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<qt><h1>Miš</h1><p>U ovom modulu podešavate razne opcije vezane za ponašanje "
+"pokazivačkog uređaja. To može biti miš, trekbol, ili neki drugi hardver "
+"slične namene.</p></qt>"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "&Opšte"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"Ako ste ljevoruki, može vam odgovarati da zamijenite funkcije lijevih i "
+"desnih dugmadi miša biranjem opcije za ljevoruke. Ako miš ima više od dva "
+"dugmeta, biće promijenjene funkcije samo na lijevom i desnom dugmetu. Ako "
+"npr. imate miš sa tri dugmeta, srednje dugme će ostati nepromijenjeno."
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "Redoslijed dugmadi"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "&Desnoruki"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "&Ljevoruki"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr "Mijenja smijer klizanja točkićem ili četvrtim i petim dugmetom miša."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "Obrni &smijer klizanja"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "Napredno"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Ubrzanje pokazivača:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "Prag pokazivača:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "Period dvoklika:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "Početno vrijeme prevlačenja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "Početna udaljenost prevlačenja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "Točkić miša kliza:"
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<qt><p>Ovom opcijom podešavate odnos između rastojanja koji pokazivač "
+"prelazi na ekranu i relativnog pomjeraja samog fizičkog uređaja (miša, "
+"trekbola, ili nekog drugog pokazivačkog uređaja).</p><p>Visoka vrijednost "
+"ubrzanja će dovesti do velikih pomijeranja pokazivača na ekranu čak i kada "
+"pravite male pokrete uređajem, čineći ga teškim za kontrolu.</p></qt>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr " ×"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<qt><p>Prag je najmanja razdaljina koju pokazivač mora da prijeđe na ekranu "
+"da bi ubrzanje stupilo u dejstvo. Ako je pomak manji od praga, pokazivač se "
+"pomijera kao da je ubrzanje postavljeno na 1×.</p><p>Ako pravite male "
+"pokrete fizičkim uređajem, ubrzanja uopšte nema, što vam daje veći stepen "
+"kontrole nad pokazivačem. Većim pokretima uređaja možete brzo da pomijerate "
+"pokazivač prema udaljenim dijelovima ekrana.</p></qt>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"Period dvoklika je najveće vrijeme (u milisekundama) između dva klika mišem "
+"koje ih i dalje čini dvoklikom. Ako se drugi klik desi kasnije od zadatog "
+"perioda, klikovi se uzimaju kao dva nezavisna jednostruka."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " ms"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"Ako kliknete mišem (npr. u uređivaču teksta) i počnete da pomijerate miš u "
+"okviru početnog vremena prevlačenja, počeće postupak prevlačenja."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"Ako kliknete mišem i počnete da pomijerate miš u okviru početne udaljenosti "
+"prevlačenja, počeće postupak prevlačenja."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"Ako koristite točkić na mišu, ova vrijednost određuje broj redova koje treba "
+"otklizati na svaki pokret točkića. Ako ovaj broj prijeđe broj vidljivih "
+"redova, biće ignorisan, a pokret točkića će biti shvaćen kao pomijeranje na "
+"stranicu gore ili dolje."
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, kde-format
+msgid "Keyboard Navigation"
+msgstr "Navigacija tastaturom"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "Pomijeraj pokazivač &tastaturom (numeričkim dijelom)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "&Zastoj ubrzanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "&Period ponavljanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "&Vrijeme ubrzanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "&Najveća brzina:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " piksela/sek."
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "Pro&fil ubrzanja:"
+
+#: kcm/xlib/xlib_config.cpp:95
+#, kde-format
+msgid "Mouse"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:98
+#, kde-format
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:99
+#, kde-format
+msgid "Patrick Dowler"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:100
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:101
+#, kde-format
+msgid "David Faure"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:102
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:103
+#, kde-format
+msgid "Rik Hemsley"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:104
+#, kde-format
+msgid "Brad Hughes"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:105
+#, kde-format
+msgid "Brad Hards"
+msgstr ""
+
+#: kcm/xlib/xlib_config.cpp:302 kcm/xlib/xlib_config.cpp:307
+#, fuzzy, kde-format
+#| msgid " pixel/sec"
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] " piksela/sek."
+msgstr[1] " piksela/sek."
+msgstr[2] " piksela/sek."
+msgstr[3] " piksela/sek."
+
+#: kcm/xlib/xlib_config.cpp:312
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""

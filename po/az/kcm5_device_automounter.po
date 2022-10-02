@@ -1,0 +1,216 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-10-17 16:17+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Cihazın avtomatik qoşulması"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Əsl müəllifi"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 Port"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Bu siyahı sistemə tanış olan yaddaş cihazlarından ibarətdir. Əgər \"Girişdə "
+"avtomatik qoşulsun\" seçimi işarələnibsə, hətta \"Bütün çıxarılabilən "
+"qurğular girişdə qoşulsun\" seçimi işarələnməsə də cihaz avtomatik "
+"qoşulacaqdır. Bu həmçinin, \"Əlavə edildikdə avtomatik qoşulsun\" seçiminə "
+"də şamil edilir."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Bu düyməyə vurmaqda seçilmiş qurğu sistem tərəfindən 'unudulur'. Bu əgər "
+"\"Yalnız əvvəllər əllə qoşulan çıxarılabilən daşıyıcıları avtomatik qoş\" "
+"aktiv olunduqda faydalı ola bilər. Əgər bu aktiv olunubsa və daşıyıcı "
+"unudulan kimi göstərilibsə, həmin daşıyıcı növbəti dəfə avtomatik "
+"qoşulmayacaq."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Cihazı Unutmaq"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Əgər işarələnməyibsə yalnız yaddaşda saxlanılan qurğular avtomatik "
+"qoşulacaqdır. Daşıyıcı əgər əvvəl heç olmasa bir dəfə qoşulubsa o zaman o "
+"'yaddaşdadır'. Əgər daşıyıcı, fayl və məlumat mübadiləsi olmadan və yalnız "
+"enerji doldurmaq üçün qoşulubsa o zaman həmin qurğu yaddaşda qoşulan qurğu "
+"kimi qalmayacaq.və növbəti dəfə avtomatik qoşulma baş verməyəcək. "
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Əvvəllər heç vaxt qoşulmayan cihaz avtomatik qoşulsun"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Cihazın avtomatik qoşulması"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Girişdə"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Qoşulduqda"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Bütün cihazlar"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Bütün bilinən cihazlar"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Qoşulan məlumat daşıyıcıları"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Ayrılmış məlumat daşıyıcıları"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Bu cihaz sistemə girişdə avtomatik qoşulacaq."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Bu cihaz sistemə girişdə avtomatik qoşulmayacaq."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Bu cihaz qoşulsuqda avtomatik tanınancaq."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Bu cihaz qoşulsuqda avtomatik tanınmayacaq"
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Əgər hansısa bir çıxarılanbilən yaddaş qurğusu sizin sistemə girişiniz "
+#~ "zamnı qoşulubsa KDE fayl sistemi onları avtomatik tanıyacaqdır."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Bütün çıxarılabilən cihazları sistemə girişdə avtomatik qoşmaq"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Əgər bu işarələnibsə KDE sistemə qoşulan xarici yaddaş qurğularını "
+#~ "avtomatik qoşacaqdır."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Qoşulma zamanı bütün çıxarlabilən cihazları avtomatik qoşmaq"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Avtomatik qoşulma"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Bu işarələnməyibsə,\"Cihazın yenidən təyin edilməsi\"  bölməsində nə "
+#~ "seçilməsindən asılı olmayaraq heç bir cihazın avtomatik qoşulması baş "
+#~ "verməyəcək."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Çıxarılabilən daşıyıcının avtomatik qoşulmasını aktiv etmək"

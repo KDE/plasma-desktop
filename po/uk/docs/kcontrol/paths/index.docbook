@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Місця</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>5 вересня 2021 року</date>
+<releaseinfo
+>Плазма 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Плазма</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>стільниця</keyword>
+<keyword
+>шляхи</keyword>
+<keyword
+>місце</keyword>
+<keyword
+>системні параметри</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля можна налаштувати важливі для стільниці Плазми шляхи.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Налаштування деяких з шляхів &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Налаштування деяких з шляхів &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Диски, які автоматично монтуються під час входу користувача до системи, не можна використовувати як шляхи. Такі шляхи буде повернено до типових під час перезапуску Плазми. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Шлях до стільниці:</guilabel
+></term>
+<listitem
+><para
+>У теці стільниці містяться всі файли, які ви бачите у віджеті <guilabel
+>Перегляд тек</guilabel
+> на стільниці. Типовим шляхом, зазвичай, є <filename class="directory"
+>~/Desktop</filename
+>, але за допомогою цього модуля ви можете змінити адресу цієї теки. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шлях до теки документів:</guilabel
+></term>
+<listitem
+><para
+>Тека буде типовою для завантаження та збереження документів.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шлях до отримань:</guilabel
+></term>
+<listitem
+><para
+>Тека буде типовою для збереження отриманих даних.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шлях до відео:</guilabel
+></term>
+<listitem
+><para
+>Тека буде типовою для завантаження та збереження відео.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шлях до малюнків:</guilabel
+></term>
+<listitem
+><para
+>Тека буде типовою для завантаження та збереження зображень.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Шлях до музики:</guilabel
+></term>
+<listitem
+><para
+>Тека буде типовою для завантаження та збереження музики.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Якщо вами буде змінено шлях і натиснуто кнопку <guibutton
+>Застосувати</guibutton
+>, програма відкриє діалогове вікно, за допомогою якого ви зможете вказати, слід пересувати дані до нової теки чи просто використовувати нову теку без пересування файлів.</para>
+
+</article>

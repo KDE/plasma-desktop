@@ -1,0 +1,738 @@
+# KDE3 - kaccess.po Russian translation
+# Copyright (C) 2005, KDE Team.
+#
+# Hermann Zheboldov <Hermann.Zheboldov@shq.ru>, 2000.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Ivan Kashukov <dolphin210@yandex.ru>, 2005.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2015, 2017.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2021-02-06 16:43+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Герман Жеболдов"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Hermann.Zheboldov@shq.ru"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Shift активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "Клавиша Shift нажата."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "Клавиша Shift отпущена."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Control активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "Клавиша Control нажата."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "Клавиша Control отпущена."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Alt активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "Клавиша Alt нажата."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "Клавиша Alt отпущена."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Win активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "Клавиша Win нажата."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "Клавиша Win отпущена."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Meta активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "Клавиша Meta нажата."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "Клавиша Meta отпущена."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Super активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "Клавиша Super нажата."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "Клавиша Super отпущена."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Hyper активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "Клавиша Hyper нажата."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "Клавиша Hyper отпущена."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"Клавиша Alt Gr активирована. Она будет использоваться при всех дальнейших "
+"нажатиях."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "Клавиша Alt Gr нажата."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "Клавиша Alt Gr отпущена."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "Num Lock включён."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "Num Lock выключен."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "Caps Lock включён."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "Caps Lock выключен."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "Scroll Lock включён."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "Scroll Lock выключен."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr "Включить/выключить зачитывание с экрана"
+
+#: kaccess.cpp:333
+#, kde-format
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "Специальные возможности"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "Alt Gr"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&Когда использовался жест:"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "Изменять параметры без подтверждения"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "Выводить диалог подтверждения"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "Деактивировать все возможности и жесты AccessX"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "Медленные клавиши"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "Упругие клавиши"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "Залипающие клавиши"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "Кнопки мыши"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr "Вы действительно хотите деактивировать «%1»?"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr "Вы действительно хотите деактивировать «%1» и %2\"?"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Вы действительно хотите деактивировать «%1», «%2» и «%3»?"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Вы действительно хотите деактивировать «%1», «%2», «%3» и «%4»?"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr "Вы действительно хотите активировать «%1»?"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr "Вы действительно хотите активировать «%1» и деактивировать «%2»?"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr ""
+"Вы действительно хотите активировать «%1» и деактивировать «%2» и «%3»?"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr ""
+"Вы действительно хотите активировать «%1» и деактивировать «%2», «%3» и «%4»?"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "Вы действительно хотите активировать «%1» и «%2»?"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr ""
+"Вы действительно хотите активировать «%1» и «%2» и деактивировать «%3»?"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr ""
+"Вы действительно хотите активировать «%1» и «%2» и деактивировать «%3» и "
+"«%4»?"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "Вы действительно хотите активировать «%1», «%2» и «%3»?"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr ""
+"Вы действительно хотите активировать «%1», «%2» и «%3» и деактивировать «%4»?"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "Вы действительно хотите активировать «%1», «%2», «%3» и «%4»?"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "Приложение запросило изменение этого параметра."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"Вы удерживали клавишу Shift в течение 8 секунд или приложение запросило "
+"изменение этого параметра."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"Вы нажали клавишу Shift 5 раз подряд или приложение запросило изменение "
+"своих параметров."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr "Вы нажали %1 или приложение запросило изменение своих параметров."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"Приложение запросило изменение своих параметров, или вы использовали "
+"несколько жестов клавиатуры."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "Приложение запросило изменение своих параметров"
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"Параметры AccessX необходимы для некоторых пользователей с поражением "
+"двигательной функции и могут быть настроены в «Параметрах системы». Вы также "
+"можете включить и выключить стандартизованные жесты клавиатуры.\n"
+"\n"
+"Если вы в них не нуждаетесь, вы можете выбрать пункт «Деактивировать все "
+"возможности и жесты AccessX»."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"Включена поддержка «медленных» клавиш. Теперь нужно удерживать клавишу "
+"нажатой определённое время, чтобы она была принята."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "Медленные клавиши выключены."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"Включена поддержка «прыгающих» клавиш. Теперь после некоторого количества "
+"нажатий клавиши она будет заблокирована."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "Прыгающие клавиши выключены."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"Залипающие клавиши включены. Теперь клавиши-модификаторы будут "
+"использоваться даже после того, как вы их отпустили."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "Залипающие клавиши выключены."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"Кнопки мыши включены. Теперь для управления мышью можно использовать клавиши "
+"цифрового блока клавиатуры."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "Кнопки мыши выключены."
+
+#: main.cpp:49
+#, kde-format
+msgid "Accessibility"
+msgstr "Специальные возможности"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "© Matthias Hoelzer-Kluepfel, 2000"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "Автор"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "Специальные возможности KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#~ msgid "&Bell"
+#~ msgstr "&Звуковой сигнал"
+
+#~ msgid "Audible Bell"
+#~ msgstr "Звуковой сигнал"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Если этот параметр включён, то используется сигнал системного звукового "
+#~ "динамика. Обычно он звучит просто как «пик»."
+
+#~ msgid "Use &system bell"
+#~ msgstr "Использовать &системный динамик"
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Включите этот параметр, если хотите использовать собственный звуковой "
+#~ "сигнал (звуковой файл). При этом, возможно, вам придётся отключить "
+#~ "использование системного динамика."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "С&обственный звуковой сигнал"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "В параметре «Собственный звуковой сигнал» вы можете выбрать звуковой "
+#~ "файл. Нажмите «Обзор...» для выбора файла."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Проигрывать &звук:"
+
+#~ msgid "Browse..."
+#~ msgstr "Обзор..."
+
+#~ msgid "Visible Bell"
+#~ msgstr "Визуальный сигнал"
+
+#~ msgid ""
+#~ "This option will turn on the \"visible bell\", i.e. a visible "
+#~ "notification shown every time that normally just a bell would occur. This "
+#~ "is especially useful for deaf people."
+#~ msgstr ""
+#~ "Этот параметр включает показ «видимого сигнала», то есть изображение, "
+#~ "появляющееся всякий раз, когда в обычных условиях звучит только звуковой "
+#~ "сигнал. Это полезно для глухих людей."
+
+#~ msgid "&Use visible bell"
+#~ msgstr "&Видимый сигнал"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Экран будет закрашен выбранным цветом на указанный ниже промежуток "
+#~ "времени."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Мигание экрана"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr ""
+#~ "Все цвета экрана будут инвертированы в течение указанного ниже промежутка "
+#~ "времени."
+
+#~ msgid "I&nvert screen"
+#~ msgstr "&Инвертировать экран"
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Нажмите здесь для выбора цвета, использующегося в визуальном сигнале в "
+#~ "виде «Мигания экрана»."
+
+#~ msgid "&Duration:"
+#~ msgstr "Длительность:"
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "Здесь вы сможете настроить длительность эффекта «видимого сигнала»."
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Modifier Keys"
+#~ msgstr "Клавиши-модификаторы"
+
+#~ msgid "Sticky Keys"
+#~ msgstr "Залипающие клавиши"
+
+#~ msgid "Use &sticky keys"
+#~ msgstr "Использовать «&залипающие» клавиши"
+
+#~ msgid "&Lock sticky keys"
+#~ msgstr "За&блокировать залипающие клавиши"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "Выключать залипающие клавиши при одновременном нажатии двух клавиш"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Подавать звуковой сигнал при активации, нажатии или отпускании клавиш-"
+#~ "модификаторов"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Клавиши индикаторов"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Подавать звуковой сигнал при включении и выключении клавиш-переключателей"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a modifier or "
+#~| "locking key changes its state"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism for modifier or locking key state "
+#~ "changes"
+#~ msgstr ""
+#~ "Выводить уведомление Plasma при изменении состояния индикаторов "
+#~ "клавиатуры и клавиш-модификаторов"
+
+#~ msgid "Configure &Notifications..."
+#~ msgstr "Настроить &уведомления..."
+
+#~ msgid "&Keyboard Filters"
+#~ msgstr "&Фильтры клавиатуры"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "За&медленные клавиши"
+
+#~ msgid "&Use slow keys"
+#~ msgstr "&Использовать замедленные клавиши"
+
+#~ msgid "&Use system bell whenever a key is pressed"
+#~ msgstr "&Подавать системный сигнал при нажатии клавиши"
+
+#~ msgid "&Use system bell whenever a key is accepted"
+#~ msgstr "&Подавать системный сигнал при использовании клавиши"
+
+#~ msgid "&Use system bell whenever a key is rejected"
+#~ msgstr "&Подавать системный сигнал при отклонении клавиши"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "«Прыгающие» клавиши"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "И&спользовать «прыгающие» клавиши"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Подавать системный сигнал при отклонении ввода клавиши"
+
+#~ msgid "&Activation Gestures"
+#~ msgstr "Ж&есты активации"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Жесты активации"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Использовать жесты для активации залипающих и медленных клавиш"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Отключать залипающие и замедленные клавиши через некоторое время "
+#~ "бездействия."
+
+#~ msgid " min"
+#~ msgstr " мин"
+
+#~ msgid "Notification"
+#~ msgstr "Уведомление"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Подавать системный сигнал при использовании жеста, включающего или "
+#~ "отключающего специальные возможности клавиатуры"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Если флажок установлен, при включении или отключении специальных "
+#~ "возможностей клавиатуры KDE покажет диалог подтверждения.\n"
+#~ "Будьте осторожны — если вы отключите этот параметр, специальные "
+#~ "возможности клавиатуры всегда будут применяться без подтверждения."
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Запрашивать подтверждение при включении и выключении специальных "
+#~ "возможностей клавиатуры"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use Plasma's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Показывать уведомление Plasma при включении и отключении специальных "
+#~ "возможностей клавиатуры"
+
+#~ msgid "Screen Reader"
+#~ msgstr "Зачитывание с экрана"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Включить зачитывание текста с экрана"
+
+#~ msgid ""
+#~ "Please note that you may have to log out once to allow the screen reader "
+#~ "to work properly."
+#~ msgstr ""
+#~ "Для корректной работы зачитывания текста после включения его здесь может "
+#~ "понадобиться выйти из системы и войти заново."
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Герман Жеболдов"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "Hermann.Zheboldov@shq.ru"

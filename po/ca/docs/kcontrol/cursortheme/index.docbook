@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema de cursor</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>7 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Aquesta és la documentació per al mòdul d'&systemsettings;, per a personalitzar l'aparença del cursor del ratolí. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>ratolí</keyword>
+<keyword
+>cursor</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul permet seleccionar entre una sèrie de temes de cursor instal·lats des d'una vista prèvia del cursor. </para>
+
+<para
+>Les característiques proporcionades per aquesta pestanya no estan disponibles sobre alguns sistemes. Al vostre sistema potser li caldrà una actualització per a permetre els temes de cursor. </para>
+
+<para
+>Si teniu temes de cursor addicionals, els podeu eliminar utilitzant el botó de la paperera que apareix quan es passa el punter del ratolí per sobre de l'element de tema en el quadre de llista. Cal tenir present que no es poden eliminar els temes predeterminats. </para>
+
+<para
+>Alguns temes permeten triar la mida del cursor. Utilitzeu el camp <guilabel
+>Mida</guilabel
+> per a seleccionar la mida apropiada. Les mides disponibles es mostren quan es passa el punter del ratolí per sobre de l'element de tema en el quadre de llista. </para>
+
+<para
+>Si teniu disponibles temes de cursor addicionals, els podeu instal·lar utilitzant el botó <guibutton
+>Instal·la des d'un fitxer...</guibutton
+> que hi ha a sota del quadre de llista. Per als detalls sobre com crear un tema de cursor personalitzat, vegeu <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>aquestes instruccions</ulink
+>. </para>
+
+<para
+>Utilitzeu el botó <guibutton
+>Obtén cursors nous...</guibutton
+> per a llançar el diàleg <guilabel
+>Baixa cursors nous</guilabel
+> i baixar temes addicionals des d'Internet.</para>
+
+</article>

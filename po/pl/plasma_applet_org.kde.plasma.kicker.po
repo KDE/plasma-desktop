@@ -1,0 +1,446 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-06-06 07:08+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Ogólne"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Usuń z ulubionych"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj do ulubionych"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Na wszystkch aktywnościach"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Na bieżącej aktywności"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Pokaż w ulubionych"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Wybierz..."
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Wyczyść ikonę"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Pokazuj programy jako:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Tylko nazwy"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Tylko opisy"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nazwa (opis)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Opis (nazwa)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Zachowanie:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Uszereguj aplikacje alfabetycznie"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Spłaszcz podmenu do jednego poziomu"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Pokaż ikony na poziomie głównym menu"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Pokaż kategorie:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Ostatnie programy"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Najczęściej używane programy"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Ostatnio używane pliki"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Często używane pliki"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Ostatnie kontakty"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Najczęściej używane kontakty"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Uszereguj elementy w kategoriach wg:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Ostatnio używanych"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Najczęściej używanych"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Szukaj:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Rozszerz wyszukiwanie na zakładki, pliki i pocztę"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Wyrównaj wyniki wyszukiwania do dołu"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Szukanie '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Zacznij pisać, aby zacząć szukać..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Ulubione"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Elementy interfejsu"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Programy i dokumenty"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Edytuj programy..."
+
+#~ msgid "Search…"
+#~ msgstr "Szukaj..."
+
+#~ msgid "Search..."
+#~ msgstr "Szukaj..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Najczęściej używane dokumenty"
+
+#~ msgid "Open with:"
+#~ msgstr "Otwórz za pomocą:"
+
+#~ msgid "Properties"
+#~ msgstr "Właściwości"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Dodaj na pulpit"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Dodaj do panelu (element interfejsu)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Przypnij do paska zadań"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Ostatnie dokumenty"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Zapomnij o ostatnich dokumentach"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Edytuj programy..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Ukryj program"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Programy"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Pokaż ukryte programy w tym podmenu"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Pokaż programy w '%1'"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Pokaż KRunnera"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Wyszukaj, oblicz lub wykonaj polecenie"
+
+#~ msgid "Computer"
+#~ msgstr "Komputer"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Pokaż szczegóły kontaktu..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakty"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Zapomnij o kontakcie"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Zapomnij o wszystkich kontaktach"
+
+#~ msgid "Recently Used"
+#~ msgstr "Ostatnio używane"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
+
+#~ msgid "Forget Application"
+#~ msgstr "Zapomnij o programie"
+
+#~ msgid "Forget Document"
+#~ msgstr "Zapomnij o dokumencie"
+
+#~ msgid "Forget All"
+#~ msgstr "Zapomnij wszystko"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Zapomnij o wszystkich programach"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Zapomnij o wszystkich dokumentach"
+
+#~ msgid "Hide %1"
+#~ msgstr "Ukryj %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Wszystkie programy"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Ostatnie kontakty"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Najczęściej używane dokumenty"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Ostatnie programy"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Najczęściej używane programy"
+
+#~ msgid "Power / Session"
+#~ msgstr "Zasilanie / Sesja"
+
+#~ msgid "Search results"
+#~ msgstr "Wyniki wyszukiwania"
+
+#~ msgid "Lock"
+#~ msgstr "Zablokuj"
+
+#~ msgid "Log Out"
+#~ msgstr "Wyloguj"
+
+#~ msgid "Save Session"
+#~ msgstr "Zapisz sesję"
+
+#~ msgid "Switch User"
+#~ msgstr "Przełącz użytkownika"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Uśpij"
+
+#~ msgid "Hibernate"
+#~ msgstr "Zahibernuj"
+
+#~ msgid "Restart"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgid "Shut Down"
+#~ msgstr "Wyłącz"
+
+#~ msgid "Session"
+#~ msgstr "Sesja"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Lock screen"
+#~ msgstr "Zablokuj ekran"
+
+#~ msgid "End session"
+#~ msgstr "Zakończ sesję"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Rozpocznij sesję innego użytkownika"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Uśpienie do RAM-u"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Uśpienie na dysk"
+
+#~ msgid "Restart computer"
+#~ msgstr "Uruchom komputer ponownie"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Wyłącz komputer"
+
+#~ msgid "System actions"
+#~ msgstr "Działania systemowe"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Zarządzaj '%1'..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Wykonaj polecenie..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Wykonuje polecenie lub wyszukuje"
+
+#~ msgid "Show:"
+#~ msgstr "Pokaż:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Pokaż ostatnie programy"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Pokaż najczęściej używane programy"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Pokaż ostatnie dokumenty"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Pokaż najczęściej używane dokumenty"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Pokaż ostatnie kontakty"
+
+#~ msgid "Logout"
+#~ msgstr "Wyloguj"
+
+#~ msgid "Reboot"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgid "Suspend"
+#~ msgstr "Uśpij"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Nośniki wymienne"
+
+#~ msgid "Places"
+#~ msgstr "Miejsca"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Użyj własnego obrazu:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Wybierz obraz"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Pliki obrazów (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Dodaj jako program uruchamiający"
+
+#~ msgid "New Session"
+#~ msgstr "Nowa sesja"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Pusty)"

@@ -1,0 +1,182 @@
+# Translation of plasma_applet_org.kde.plasma.kimpanel.po to Catalan
+# Copyright (C) 2009-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2 or later.
+#
+# Manuel Tortosa <manutortosa@gmail.com>, 2009.
+# Joan Maspons <joanmaspons@gmail.com>, 2009.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2015, 2017, 2019, 2020, 2021.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2021-10-20 11:11+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aparença"
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr "(buit)"
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, kde-format
+msgid "Input method list:"
+msgstr "Llista de mètodes d'entrada:"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, kde-format
+msgid "Vertical"
+msgstr "Vertical"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, kde-format
+msgid "Horizontal"
+msgstr "Horitzontal"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr "Tipus de lletra:"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr "Ús personalitzat:"
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr " "
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Select Font…"
+msgstr "Selecció del tipus de lletra…"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Mida de les icones del plafó:"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr "Petita"
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Escala amb l'alçada del plafó"
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Escala amb l'amplada del plafó"
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Selecció del tipus de lletra"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr "Mostra"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr "Oculta %1"
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Configura el mètode d'entrada"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Recarrega la configuració"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Surt del mètode d'entrada"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Input Method Panel"
+msgstr "Plafó del mètode d'entrada"
+
+#~ msgid "Search"
+#~ msgstr "Cerca"
+
+#~ msgid "Clear History"
+#~ msgstr "Neteja l'historial"
+
+#~ msgid "No recent Emojis"
+#~ msgstr "No hi ha cap emoji recent"
+
+#~ msgid "%1 copied to the clipboard"
+#~ msgstr "S'ha copiat %1 al porta-retalls"
+
+#~ msgid "Recent"
+#~ msgstr "Recent"
+
+#~ msgid "All"
+#~ msgstr "Tot"
+
+#~ msgid "Categories"
+#~ msgstr "Categories"
+
+#~ msgid "Search…"
+#~ msgstr "Cerca…"
+
+#~ msgid "Search..."
+#~ msgstr "Cerca..."
+
+#~ msgid "Select Font..."
+#~ msgstr "Selecció del tipus de lletra..."
+
+#~ msgid "Emoji Picker"
+#~ msgstr "Selector d'emojis"
+
+#~ msgid "Use Default Font"
+#~ msgstr "Usa el tipus de lletra per omissió"
+
+#~ msgid "Custom Font:"
+#~ msgstr "Tipus de lletra personalitzada:"
+
+#~ msgid "Reverse display order when at screen border"
+#~ msgstr "Ordre de visualització invers en la vora de la pantalla"
+
+#~ msgid "Select Application"
+#~ msgstr "Selecció d'aplicació"
+
+#~ msgctxt "General configuration page"
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Start Input Method"
+#~ msgstr "Inicia el mètode d'entrada"
+
+#~ msgid "Icon Filter"
+#~ msgstr "Filtre d'icones"

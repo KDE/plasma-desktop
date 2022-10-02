@@ -1,0 +1,282 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2009.
+# Manfred Wiese <m.j.wiese@web.de>, 2009, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2011-08-12 14:23+0200\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sönke Dibbern, Manfred Wiese"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Auto-Inhangen vun Reedschappen"
+
+#: DeviceAutomounterKCM.cpp:42
+#, fuzzy, kde-format
+#| msgid "(c) 2009 Trever Fischer"
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "© 2009: Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Disse List wiest de Spiekerreedschappen, de dat Systeem „kennen“ deit. Is "
+"»Bi't Anmellen automaatsch tokoppeln« anmaakt, warrt de Reedschap ok denn "
+"automaatsch inhangt, wenn »All tuuschbor Medien bi't Anmellen inhangen« nich "
+"anmaakt is. Dat sülve gellt för »Bi't Tokoppeln automaatsch inhangen«.\n"
+"\n"
+"Is »Dat automaatsche Inhangen vun tuuschbor Medien anmaken« nich anmaakt, "
+"warrt de Inhangregeln nich bruukt un keen Reedschap automaatsch inhangt."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Dör't Klicken op dissen Knoop deit dat Systeem dat vergeten, dat hett de "
+"utsöchten Reedschappen jichtenseen Tiet sehn. Dat is bloots denn goot, wenn "
+"»Bloots tuuschbor Medien automaatsch inhangen, de vördem Een vun Hand "
+"inhangt harr« anmaakt is. Hett dat Systeem en Reedschap eerst maal "
+"„vergeten“ un is dat anmaakt, bloots kennt Reedschappen warrt automaatsch "
+"inhangt, denn warrt de Reedschap nich mehr automaatsch inhangt."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Reedschapdaten wegdoon"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Is dit anmaakt, warrt bloots Reedschappen automaatsch inhangt, de dat "
+"Systeem kennen deit. Dat Systeem „kennt“ en Reedschap, wenn dat to "
+"jichtenseen Tiet al maal inhangt weer. Bispill: Dat Tokoppeln vun en USB-"
+"Medienafspeler alleen (ahn Datentogriep) langt nich. Warrt nich op de "
+"Dateien togrepen, hangt KDE den Afspeler bi't tokamen Maal nich automaatsch "
+"in. Man, griept Een eenmaal op de Dateien to, stellt dat Systeem den Inholt "
+"vun denn af jümmers automaatsch för't Togriepen praat."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Bloots tuuschbor Medien automaatsch inhangen, de vördem Een vun Hand inhangt "
+"harr"
+
+#: DeviceModel.cpp:52
+#, fuzzy, kde-format
+#| msgid "Automount on Login"
+msgid "Automount Device"
+msgstr "Bi't Anmellen automaatsch inhangen"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr ""
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr ""
+
+#: DeviceModel.cpp:258
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "All Devices"
+msgstr "Reedschap"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr ""
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Tokoppelt Reedschappen"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Afkoppelt Reedschappen"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Disse Reedschap warrt bi't Anmellen automaatsch inhangt."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Disse Reedschap warrt bi't Anmellen nich automaatsch inhangt."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Disse Reedschap warrt bi't Tokoppeln automaatsch inhangt."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Disse Reedschap warrt bi't Tokoppeln nich automaatsch inhangt."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Is en tuuschbor Spiekerreedschap Dien Systeem tokoppelt, wenn Du Di "
+#~ "anmellen deist, warrt de Inholt automaatsch för't Togriepen vun anner "
+#~ "Programmen praatstellt."
+
+#, fuzzy
+#~| msgid "Mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "All tuuschbor Medien bi't Anmellen inhangen"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Is dit anmaakt, warrt in't Systeem automaatsch de Inholt vun all "
+#~ "Spiekermedien praatstellt, sodraad se tokoppelt oder insteken warrt."
+
+#, fuzzy
+#~| msgid "Automatically mount removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Tuuschbor Medien automaatsch bi't Insteken inhangen"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Is dit nich anmaakt, warrt keen Reedschap automaatsch inhangt, liek wat "
+#~ "binnen den Afsnitt »Besünner Reedschap-Instellen« utsöcht is."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Dat automaatsche Inhangen vun tuuschbor Medien anmaken"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Besünner Reedschap-Instellen"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Bi't Tokoppeln automaatsch inhangen"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Hangt Reedschappen bi't Insteken oder Anmellen automaatsch in"
+
+#~ msgid "Enter the device's system identifier"
+#~ msgstr "De Reedschap ehr Systeemkennen ingeven"
+
+#~ msgctxt ""
+#~ "@title:column The device's internal UDI if not attached, user-friendly "
+#~ "name reported by Solid otherwise."
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Always Automount"
+#~ msgstr "Jümmers automaatsch inhangen"
+
+#, fuzzy
+#~| msgid ""
+#~| "Enabling automounting for a device in this list overrides any other "
+#~| "setting."
+#~ msgid ""
+#~ "Enabling \"Always Automount\" for a device in this list overrides any "
+#~ "other setting."
+#~ msgstr ""
+#~ "Maakst Du dat automaatsche Inhangen binnen disse List för en Reedschap "
+#~ "an, geiht dat all anner Instellen vör"
+
+#~ msgid "Add Device..."
+#~ msgstr "Reedschap tofögen..."

@@ -1,0 +1,293 @@
+# translation of kcmkonq.po to
+# KDE3 - kdebase/kcmkonq.po Russian translation.
+# Copyright (C) 2005, KDE Russian translation Team.
+#
+# Evgeny Cherkashin <eugeneai@icc.ru>, 2000.
+# Gregory Mokhin <mok@kde.ru>, 2000.
+# Leon Kanter <leon@asplinux.ru>, 2002.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Andrey Cherepanov <sibskull@mail.ru>, 2005.
+# Nick Shaforostoff <shafff@ukr.net>, 2004-2005, 2006, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2018.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-04-17 21:44+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Документы"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Загрузки"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Музыка"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Рисунки"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Видеозаписи"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Пути</h1>\n"
+"Этот модуль позволяет указать, где должны располагаться файлы рабочего стола "
+"в файловой системе.\n"
+"Используйте подсказку «Что это?» (Shift+F1) для вызова справки по отдельным "
+"параметрам."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Папка рабочего стола:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Эта папка содержит все файлы, которые видны на рабочем столе. Вы можете "
+"изменить адрес этой папки по своему желанию, при этом содержимое "
+"автоматически переместится на новое место."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Папка документов:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Эта папка будет использоваться по умолчанию для открытия и сохранения "
+"документов."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Папка загрузок:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "Эта папка будет использоваться по умолчанию для загружаемых файлов."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Папка видеозаписей:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Эта папка будет использоваться по умолчанию для открытия и сохранения "
+"фильмов."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Папка изображений:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Эта папка будет использоваться по умолчанию для открытия и сохранения "
+"изображений."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Папка музыки:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Эта папка будет использоваться по умолчанию для открытия и сохранения музыки."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Папка автозапуска:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Эта папка содержит приложения или ссылки на приложения, которые должны "
+#~ "будут запускаться автоматически всякий раз при запуске сеанса работы. Вы "
+#~ "можете изменить адрес этой папки по своему желанию, при этом содержимое "
+#~ "может автоматически быть перемещено в новую папку, если вы этого "
+#~ "пожелаете."
+
+#~ msgid "Autostart"
+#~ msgstr "Автозапуск"
+
+#~ msgid "Movies"
+#~ msgstr "Фильмы"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Путь к папке «%1» изменился.\n"
+#~ "Переместить файлы из «%2» в «%3»?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Переместить"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Оставить"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Путь к папке «%1» изменился.\n"
+#~ "Переместить папку «%2» в «%3»?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Переместить"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Оставить"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Требуется подтверждение"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Поведение Konqueror</h1> Здесь можно настроить поведение Konqueror "
+#~ "как диспетчера файлов."
+
+#~ msgid "Misc Options"
+#~ msgstr "Основные параметры"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Открывать папки в отдельных окнах"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Если установлен этот параметр, при открытии новой папки Konqueror будет "
+#~ "открывать новое окно вместо того, чтобы показать содержимое папки в "
+#~ "текущем окне."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Добавить пункт «Удалить», &не перемещающий файлы в корзину"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Включите этот параметр, если вам нужна команда «Удалить» в контекстных "
+#~ "меню рабочего стола и диспетчера файлов. Можно также всегда удалять "
+#~ "файлы, нажав кнопку Shift при использовании пункта меню «Удалить в "
+#~ "корзину»."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Редактор меню"
+
+#~ msgid "Menu"
+#~ msgstr "Меню"
+
+#~ msgid "New..."
+#~ msgstr "Создать..."
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
+
+#~ msgid "Move Up"
+#~ msgstr "Выше"
+
+#~ msgid "Move Down"
+#~ msgstr "Ниже"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Подтверждения"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Этот параметр указывает программе Konqueror, запрашивать ли подтверждение "
+#~ "при «удалении» файла.<ul><li><em>Переместить в корзину:</em> переместить "
+#~ "удаляемый файл в папку вашей корзины, откуда файл может быть легко "
+#~ "восстановлен.</li> <li><em>Удалить:</em> просто удалить файл с диска без "
+#~ "возможности восстановления.</li> </ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Переместить в корзину"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "&Удалить"

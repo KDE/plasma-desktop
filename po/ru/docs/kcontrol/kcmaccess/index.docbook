@@ -1,0 +1,553 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Специальные возможности</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Обновление перевода</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>специальные возможности</keyword>
+<keyword
+>клавиши</keyword>
+<keyword
+>звуковой сигнал</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Специальные возможности</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Введение</title>
+
+<para
+>Этот модуль приложения &systemsettings; создан с целью помочь пользователям с ослабленным слухом и тем, у кого возникают трудности при работе с клавиатурой. </para>
+
+<para
+>Окно модуля содержит шесть вкладок: <link linkend="access-bell"
+><guilabel
+>Звуковой сигнал</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Клавиши-модификаторы</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Фильтры клавиатуры</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Жесты активации</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Навигация мыши</guilabel
+></link
+> и <guilabel
+>Зачитывание с экрана</guilabel
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Звуковой сигнал</guilabel
+></title>
+
+<para
+>Вкладка cодержит разделы <guilabel
+>Звуковой сигнал</guilabel
+> и <guilabel
+>Визуальный сигнал</guilabel
+>. </para>
+
+<para
+>Параметр <guilabel
+>Использовать системный динамик</guilabel
+> определяет, должен ли быть слышен системный динамик. Если флажок не установлен, системного динамика слышно не будет. </para>
+
+<para
+>Для дублирования или замены звука системного динамика можно назначить воспроизведение выбранного звукового файла. Для этого установите флажок <guilabel
+>Собственный звуковой сигнал</guilabel
+> и в поле ввода <guilabel
+>Проигрывать звук</guilabel
+> введите полный путь к звуковому файлу. Кнопка <guibutton
+>Обзор...</guibutton
+> служит для открытия системного диалога выбора файла. </para>
+
+<para
+>Пользователи, которые плохо слышат системные звуковые сигналы, и те, кто пользуется компьютером в беззвучном режиме, могут использовать <emphasis
+>визуальный сигнал</emphasis
+>. При его использовании вместо звукового сигнала будет воспроизводиться видимый сигнал (инвертирование экрана или мигание). </para>
+
+<para
+>Чтобы включить визуальный сигнал, установите флажок <guilabel
+>Видимый сигнал</guilabel
+>. </para>
+
+<para
+>Затем следует выбрать режим визуализации системного звукового сигнала: <guilabel
+>Инвертировать экран</guilabel
+>, или <guilabel
+>Мигание экрана</guilabel
+>. В первом случае для вывода оповещения будут инвертированы цвета экрана, во втором — ­экран будет мигать цветом, который возможно выбрать используя кнопку, расположенную справа. </para>
+
+<para
+>Длительность визуального сигнала регулируется с помощью соответствующего поля, по умолчанию установлена длительность 500 мс (пол-секунды). </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Клавиши-модификаторы</guilabel
+></title>
+
+<para
+>Вкладка содержит разделы <guilabel
+>Залипающие клавиши</guilabel
+> и <guilabel
+>Клавиши индикаторов</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>&quot;Залипающие&quot; клавиши</guilabel
+></term>
+<listitem>
+<para
+>При включении функции &quot;Залипающие клавиши&quot; для ввода комбинации клавиш достаточно нажать и отпустить &Shift;, &Alt; или &Ctrl; и затем нажать соответствующую клавишу. Например, комбинация <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> может быть выполнена нажатием &Ctrl;, потом &Alt; и затем &Del;. </para>
+
+<para
+>В этом разделе расположен флажок <guilabel
+>Заблокировать залипающие клавиши</guilabel
+>. Если он установлен, клавиши &Alt;, &Ctrl; и &Shift; остаются <quote
+>нажатыми</quote
+> до повторного нажатия на них. </para>
+
+<para
+>Например: </para>
+<variablelist>
+<varlistentry>
+<term
+>Когда флажок <guilabel
+>Заблокировать залипающие клавиши</guilabel
+> снят:</term>
+<listitem>
+<para
+>последовательное нажатие клавиш &Shift; и <keycap
+>F</keycap
+> компьютер будет воспринимать как нажатие комбинации <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Если затем нажать клавишу <keycap
+>P</keycap
+>, компьютер воспримет это как строчную букву «p» (без &Shift;). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Когда флажок <guilabel
+>Заблокировать залипающие клавиши</guilabel
+> установлен:</term>
+<listitem>
+<para
+><emphasis
+>двойное</emphasis
+> нажатие клавиши &Shift; и нажатие клавиши <keycap
+>F</keycap
+> компьютер будет воспринимать как комбинацию <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Если после этого нажать клавишу <keycap
+>P</keycap
+>, компьютер воспримет это как прописную букву «Р» (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Чтобы отменить залипание клавиши &Shift;, нужно нажать её ещё раз. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Фильтры клавиатуры</guilabel
+></title>
+
+<para
+>Вкладка содержит два раздела.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Замедленные клавиши</guilabel
+></term>
+<listitem>
+<para
+>Если этот флажок установлен, пользователь должен держать клавишу нажатой определённое время (настраивается с помощью соответствующего поля), чтобы она была воспринята. Это помогает избежать негативных последствий от случайного нажатия клавиш. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Прыгающие клавиши</guilabel
+></term>
+<listitem>
+<para
+>При включении этого параметра между нажатиями двух клавиш должно пройти определённое время (которое устанавливается при помощи счётчика), чтобы следующая клавиша была воспринята. Это помогает избежать негативных последствий от случайного нажатия сразу нескольких клавиш. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Жесты активации</guilabel
+></title>
+
+<para
+>Вкладка содержит два раздела.</para>
+
+<variablelist>
+<varlistentry>
+<term
+>В разделе <guilabel
+>Жесты активации</guilabel
+> представлены перечисленные ниже параметры.</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Использовать жесты для активации залипающих и медленных клавиш.</guilabel
+></member>
+<member
+>Включение жестов открывает доступ к следующим функциям:</member>
+<member
+>кнопки мыши: нажатие &Shift;+NumLock;</member>
+<member
+>залипающие клавиши: нажатие клавиши &Shift; 5 раз подряд;</member>
+<member
+>замедленные клавиши: удержание клавиши &Shift; нажатой в течение 8 секунд.</member>
+<member
+><guilabel
+>Отключать залипающие и замедленные клавиши через некоторое время бездействия.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>В разделе <guilabel
+>Уведомления</guilabel
+> представлены описанные ниже параметры.</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Подавать системный сигнал при использовании жеста, включающего или отключающего специальные возможности клавиатуры.</guilabel
+></member>
+
+<member
+><guilabel
+>Запрашивать подтверждение при включении и отключении специальных возможностей клавиатуры.</guilabel
+></member>
+<member
+>Если этот флажок установлен, при включении и отключении специальных возможностей клавиатуры на экран будет выводиться диалог подтверждения.</member>
+<member
+>Важно помнить, что при снятии флажка специальные возможности клавиатуры будут применяться без запроса подтверждения.</member>
+
+<member
+><guilabel
+>Показывать уведомление Plasma при включении и отключении специальных возможностей клавиатуры.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>При нажатии кнопки <guibutton
+>Настроить уведомления</guibutton
+> открывается диалог настройки уведомлений, получаемых при изменении статуса любой клавиши.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Навигация мыши</title>
+
+<para
+>Эта вкладка позволяет настроить цифровую клавиатуру для управления курсором мыши. Это может быть полезно при работе на компьютере, на котором нет другого устройства указания, или в тех случаях, когда цифровая клавиатура больше никак не используется. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Управлять курсором мыши с цифрового блока клавиатуры</guilabel
+></term>
+<listitem>
+<para
+>Чтобы включить режим управления курсором мыши с клавиатуры, необходимо установить флажок <guilabel
+>Управлять курсором мыши с цифрового блока клавиатуры</guilabel
+>. После этого станут доступны остальные параметры управления курсором с помощью клавиатуры, и при необходимости их можно будет настроить. </para>
+<para
+>Нажатие различных клавиш на цифровой клавиатуре приводит к перемещению в ожидаемом направлении. Обратите внимание, что указатель можно перемещать как по диагонали, так и по горизонтали и по вертикали. Клавиша <keycap
+>5</keycap
+> эмулирует щелчок устройства указания, обычно левой кнопки мыши. Эмулируемую клавишу можно выбрать с помощью клавиши <keycap
+>/</keycap
+> (что сделает её левой кнопкой мыши), клавиши <keycap
+>*</keycap
+> (что сделает её средней кнопкой мыши) и клавиши <keycap
+>-</keycap
+> (что сделает её правой кнопкой мыши). Клавиша <keycap
+>+</keycap
+> эмулирует двойной щелчок выбранной кнопки устройства указания. С помощью клавиши <keycap
+>0</keycap
+> можно эмулировать удержание в нажатом состоянии выбранной кнопки устройства указания (для облегчения перетаскивания), и затем использовать клавишу <keycap
+>.</keycap
+> для эмуляции отпускания кнопки устройства указания. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Задержка ускорения</guilabel
+></term>
+<listitem>
+<para
+>Это время (в миллисекундах), которое проходит между нажатием клавиши и первым повторением события движения при ускорении передвижения. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Интервал повтора</guilabel
+></term>
+<listitem>
+<para
+>Это время в миллисекундах между повторами события передвижения при ускорении передвижения. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Время ускорения</guilabel
+></term>
+<listitem>
+<para
+>Это время в миллисекундах, за которое указатель достигает максимальной скорости за счёт ускорения. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Максимальная скорость</guilabel
+></term>
+<listitem>
+<para
+>Это максимальная скорость в пикселах в секунду, которой указатель мыши может достичь за счёт ускорения. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Режим ускорения</guilabel
+></term>
+<listitem>
+<para
+>Это наклон кривой ускорения при ускорении передвижения курсора. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Зачитывание с экрана</guilabel
+></title>
+
+<para
+>Для добавления функции зачитывания текста с экрана на компьютер необходимо установить приложение для чтения, например, <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> вместе с приложением речевого вывода данных <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Проверить, выводится ли звук при помощи приложения, можно, введя в окне терминала команду <command
+>spd-say hello</command
+>. </para>
+
+<para
+>Кроме того, необходима программа преобразования текста в речь, например, <application
+>espeak</application
+>. </para>
+
+<para
+>Для корректной работы средств чтения с экрана установите флажок, выйдите из системы и перезапустите сеанс рабочего стола. </para>
+
+<para
+>Важно, чтобы <guilabel
+>Меню приложений</guilabel
+>, используемое в самой среде &plasma;, было традиционным и вызывалось комбинацией клавиш (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). При нажатии этой комбинации меню должно открываться, а при переходе от одного пункта к другому при помощи клавиш со стрелками пункты должны зачитываться. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

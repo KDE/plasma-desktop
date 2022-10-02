@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Sitzungsverwaltung</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<!-- Unbekannt --> 
+</authorgroup>
+
+<date
+>2018-11-28</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kontrollzentrum</keyword>
+<keyword
+>Sitzung</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Arbeitsflächen-Sitzung</title>
+
+<sect2 id="sessions-use">
+<title
+>Benutzung</title>
+
+<para
+>In diesem &systemsettings;-Modul können Sie die Sitzungsverwaltung von &plasma; und Optionen für das Abmelden einrichten.</para>
+
+<para
+>Sitzungsverwaltung bezieht sich auf die Fähigkeit von &plasma;, bei der Abmeldung von &plasma; den Status von Anwendungen und Fenstern zu speichern und diesen bei der erneuten Anmeldung wiederherzustellen.</para>
+
+<sect3 id="sessions-general">
+<title
+>Allgemein</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Abmeldung bestätigen</guilabel
+></term>
+<listitem>
+<para
+>Ist diese Einstellung markiert, bittet &plasma; beim Abmelden innerhalb von 30 Sekunden um Bestätigung. In diesem Dialog können Sie außerdem auswählen, ob Sie beim nächsten Anmelden Ihre jetzige Sitzung wiederhergestellt haben möchten.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Optionen für das Herunterfahren anbieten</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Einstellung aktiviert ist, wird &plasma; beim Abmelden verschiedene Möglichkeiten anbieten. Dazu gehört &eg; das einfache Beenden der aktuellen Sitzung (die Voreinstellung wenn keine Wahlmöglichkeit angeboten wird), den Rechner ausschalten und den Rechner neu starten.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Standardeinstellung für das Abmelden</title>
+<para
+>Hier können Sie einstellen, was standardmäßig geschieht, wenn Sie sich von &plasma; abmelden. Diese Einstellungen gibt es nicht auf allen Betriebssystemen und zum Teil setzen sie die Verwendung von &SDDM; als Anmeldungsverwaltung voraus.</para>
+<para
+>Die Einstellung erklären sich von selbst. Im Zweifelsfall belassen Sie es bei der Standardeinstellung. Es handelt sich um folgende Einstellungen:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Aktuelle Sitzung beenden</guilabel
+> (dies ist die Voreinstellung)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Rechner ausschalten</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Rechner neu starten</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Bei der Anmeldung</title>
+<para
+>Sie können eine von drei Einstellungen zur &plasma;-Anmeldung wählen:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Vorherige Sitzung wiederherstellen</guilabel
+></term>
+<listitem
+><para
+>Ist diese Einstellung markiert, speichert &plasma; den  Sitzungszustand beim Abmelden und stellt diesen Zustand beim nächsten Anmelden wieder her. Damit können Sie direkt dort weiterarbeiten, wo Sie aufgehört haben.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Manuell gespeicherte Sitzung wiederherstellen</guilabel
+></term>
+<listitem
+><para
+>Anstatt den Status wiederherzustellen, den &plasma; beim letzten Abmelden hatte, wird ein Zustand wiederhergestellt, den Sie vorher manuell gespeichert haben.</para>
+<para
+>Ist diese Einstellung aktiv, enthält das Startmenü den zusätzlichen Eintrag <menuchoice
+><guimenu
+>Energieverwaltung / Sitzung</guimenu
+><guimenuitem
+>Sitzung speichern</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mit leerer Sitzung starten</guilabel
+></term>
+<listitem>
+<para
+>Ist diese Einstellung ausgewählt, wird &plasma; keine gespeicherte Sitzung wiederherstellen.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Schließlich können Sie noch eine durch Doppelpunkt (<literal
+>:</literal
+>)  oder Komma (<literal
+>,</literal
+>) getrennte Liste von Anwendungen angeben, die nicht in Arbeitssitzungen gespeichert werden sollen und darum beim Wiederherstellen der Sitzung nicht gestartet werden. Ein Beispiel: <userinput
+>xterm:konsole</userinput
+> oder <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

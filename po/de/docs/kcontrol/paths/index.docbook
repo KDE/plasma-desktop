@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Orte</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>Desktop</keyword>
+<keyword
+>Pfade</keyword>
+<keyword
+>Standort</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Mit diesem Modul können Sie einige wichtige Pfade der &plasma;-Arbeitsfläche einrichten.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Einstellung einiger Pfade für &kde;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Einstellung einiger Pfade für &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pfad zur Arbeitsfläche:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner enthält alle Dateien, die auf der Arbeitsfläche in einer <guilabel
+>Ordneransicht</guilabel
+> angezeigt werden. Als Standardpfad ist normalerweise <filename class="directory"
+>~/Desktop</filename
+> eingestellt, aber Sie können hier einen anderen Pfad eingeben. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad zu Autostart:</guilabel
+></term>
+<listitem
+><para
+>Der Autostartordner enthält Anwendungen, Verknüpfungen zu Anwendungen oder Skripte, die bei jedem Start von &plasma; aufgerufen werden. Sie können hier einen anderen Pfad eingeben.  </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad für Dokumente:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Dokumenten benutzt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad für heruntergeladene Dateien:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner wird als Voreinstellung zum Speichern von heruntergeladenen Dateien benutzt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad für Videos:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen benutzt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad für Bilder:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern benutzt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pfad für Musik:</guilabel
+></term>
+<listitem
+><para
+>Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Musik benutzt.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Wenn Sie einen Pfad ändern und dann auf <guibutton
+>Anwenden</guibutton
+>, erscheint ein Dialog, in dem Sie auswählen können, ob der gesamte Inhalt des ursprünglichen Ordners in den neuen Ordner verschoben werden soll.</para>
+
+</article>

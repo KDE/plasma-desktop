@@ -1,0 +1,383 @@
+# translation of kcmcomponentchooser.po to Karakh
+#
+# Izbasarov M.I. <mambet@sci.kz>, 2005.
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2006, 2007, 2008, 2009, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2011-06-09 03:10+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+"\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Басқа &эл. поштаның клиенті қолданылсын:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Қолданатын эл. поштаның клиентін таңдаңыз:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Қолданатын эл. поштаның клиентін таңдаңыз:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Қолданатын терминал қолданбасын таңдаңыз:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Қолданатын терминал қолданбасын таңдаңыз:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Қолданатын терминал қолданбасын таңдаңыз:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Мәмбет Ізбасаров, Сайран Киккарин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "izbasar@sci.kz, sairan@computer.org"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Беймәлім"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Компоненттерді таңдау"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Төмендегі тізбеден %1 қызметіне әдетте қолданылатын компонентті таңдаңыз."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Әдеттегі болатын компонентті өзгерттіңіз. Өзгерісті сақтау керек пе?</"
+#~ "qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Сипаттамасы жоқ"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Бұл диалогта компонент бағдарламалады таңдап өзгертуіңізге болады. "
+#~ "Компононттер деп негізгі тапсырмаларды орындайтын бағдарламаларды атайды, "
+#~ "мысалы, терминал эмуляторы, мәтін редакторы және пошта клиенті. Түрлі KDE "
+#~ "қолданбаларына кейбірде консоль эмуляторын шақыру, поштаны жіберу не "
+#~ "мәтінді өңдеу қажет болады. Сонда бұл қолданба осы компоненттерді "
+#~ "жұмсайды. Осында сол компонент ретінде қолданылатын бағдарламаларын "
+#~ "таңдай аласыз."
+
+#~ msgid "Default Component"
+#~ msgstr "Әдеттегі компонент"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Бұл тізім бапталатын компоненттердің түрін көрсетеді. Баптайтын "
+#~ "компонентті таңдаңыз.</p>\n"
+#~ "<p>Бұл диалогта компонент бағдарламалады таңдап өзгертуіңізге болады. "
+#~ "Компононттер деп негізгі тапсырмаларды орындайтын бағдарламаларды атайды, "
+#~ "мысалы, терминал эмуляторы, мәтін редакторы және пошта клиенті. Түрлі KDE "
+#~ "қолданбаларына кейбірде консоль эмуляторын шақыру, поштаны жіберу не "
+#~ "мәтінді өңдеу қажет болады. Сонда бұл қолданба осы компоненттерді "
+#~ "жұмсайды. Осында сол компонент ретінде қолданылатын бағдарламаларын "
+#~ "таңдай аласыз.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt><b>http</b> және <b>https</b> URL адрестерін ашу үшін</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "URL мазмұнына лайық қолданбада пайдалансын"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "келесі шолғыш пайдалансын:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "келесі шолғыш пайдалансын:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Қолдантатың Веб шолғышының таңдаңыз:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail деген- KDE жүйесінің стандартты пошта бағдарламасы."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Эл. поштаның негізгі клиенті ретінде KMail қолданылсын"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Басқа пошталық бағдарламаны қолданғыңыз келсе осы көзді белгілеп қойыңыз."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Адресі</li> <li>%s: Тақырыбы</li> <li>%c: Көшірме кімге "
+#~ "(CC)</li>  <li>%b: Жасырып кімге (BCC)</li> <li>%B: Негізгі мәтін үлгісі</"
+#~ "li> <li>%A: Тіркемесі </li><li>%u: Жіберетін  URL адрес</li> </ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Қолданатын эл. пошта клиентін таңдау үшін осы батырманы басыңыз. "
+#~ "Таңдауңыз қабылдану үшін бағдарлама файлында орындалатын файл атрибуты "
+#~ "болуы тиіс.<br/> Сонымен қатар, пошта клиентті шақырғанда нақты "
+#~ "деректермен ауыстырылатын орынбасар жазуларды қолдана аласыз: <ul> <li>"
+#~ "%t: Қабылдаушының адресі</li> <li>%s: Тақырыбы</li> <li>%c: Көшірме кімге "
+#~ "(CC)</li>  <li>%b: Жасырып кімге (BCC)</li> <li>%B: Негізгі мәтін үлгісі</"
+#~ "li> <li>%A: Тіркемесі </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Пошта бағдарламасының файлын іздеу үшін осында басыңыз."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Пошта клиентіңіз (<em>Konsole</em> секілді) терминалда орындалатын болса, "
+#~ "осы құсбелгіні қойыңыз."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Терминалда о&рындалсын"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Каталогтарды ақтаратын файл менеджері:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Басқа: Келесі диалогтағы Қосу... дегенді түртіңіз:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Терминал ретінде Konsole қолданбасы &пайдалансын"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "&Басқа терминалдық бағдарлама қолданылсын:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Қолданатын терминал клиентін таңдау үшін осы батырманы басыңыз. "
+#~ "Таңдауыңыз қабылдану үшін бағдарлама файлында орындалатын файл атрибуты "
+#~ "болуы тиіс.<br/> Есіңізде болсын, егер командалық жолдың аргументін "
+#~ "қосатын болсаңыз (мысалы, былай: konsole -ls) кейбір терминал эмуляторын "
+#~ "қолданатын бағдарламалар істемейді."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Терминал бағдарламаны іздеу үшін осында басыңыз."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "%1 секунд қалды:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "Жаңа терезе менеджері келесі KDE сеансында жегіледі."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Терезе менеджерін ауыстыру"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Жаңа терезе менеджері жегілді.\n"
+#~ "Соңда да, барлық орындалып жатқан бағдарламалар бұл жаңалыққа "
+#~ "бейімдегеніне кепіл болсын деп, жаңа KDE сеансын бастаған жөн болар."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Терезе менеджері ауыстырылды"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Колданыстағы терезе менеджері, жаңа баптауына сәйкес, қазір ауыстырылады."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Терезе менеджерін ауыстыру"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Ауыстыру"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Бұрынғыға қайту"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Сұралған терезе менеджері жегілді.\n"
+#~ "Жұмысы дұрыс екеніне көз жеткізіңіз де өзгерісті құптаңыз.\n"
+#~ "Әйтпесе 20 секундтан кейін бұрынғысына қайтарылады."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Қолданыстағы терезе менеджері әдетті KDE-нің KWin менеджерініе қайтарылды."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Жаңа терезе менеджері жаңылды.\n"
+#~ "Қолданыстағы терезе менеджері әдетті KDE-нің KWin менеджерініе қайтарылды."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Баптау құралы жаңылды"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Ә&детті KDE терезе менеджері (KWin) қолданылсын"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Басқа &терезе менеджері қолданылсын:"
+
+#~ msgid "Configure"
+#~ msgstr "Баптау"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Ескерту: Көп терезе менеджерлері өзінің баптаулары болып, KDE "
+#~ "баптауларына бағынбайды."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Мұнда таңдалған компоненттің қысқа сипаттамасын оқуға болады. Басқа "
+#~ "компонентті сол жақтағы тізімнен таңдаңыз. Компонент бағдарламасын "
+#~ "төменде келтіріңіз."
+
+#~ msgid "Component Description"
+#~ msgstr "Компоненттің сипаттамасы"

@@ -1,0 +1,382 @@
+# translation of kcmcomponentchooser.po to Walloon
+# Ratournaedje e walon des messaedjes di KDE.
+#
+# Pablo Saratxaga <pablo@walon.org>, 2007.
+# Jean Cayron <jean.cayron@gmail.com>, 2008, 2009, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2011-12-18 18:18+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Walloon\n"
+"X-Poedit-Country: BELGIUM\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Eployî on cliyint &emile diferin:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Tchoezi cliyint emile ki vs inmez mia:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Tchoezi cliyint emile ki vs inmez mia:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Tchoezixhoz l' terminå ki vs inmez mia:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Tchoezixhoz l' terminå ki vs inmez mia:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Tchoezixhoz l' terminå ki vs inmez mia:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Djan Cayron"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jean.cayron@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Nén cnoxhou"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Tchoezixheu d' componint"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Tchoezixhoz el djivêye chal pa dzo ké componint duvreut esse eployî come "
+#~ "prémetou pol siervice %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Vos avoz candjî l' prémetou componint di vosse tchoes, voloz vs "
+#~ "schaper ç' candjmint asteure?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "I gn a pont d' discrijhaedje"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Vos ploz chal candjî li programe componint. Les componints sont des "
+#~ "programes ki fjhèt des bouyes di båze, come li terminå, l' aspougneu d' "
+#~ "tecse eyet l' cliyint emile. I gn a des côps k' sacwants programes di KDE "
+#~ "ont dandjî d' houkî ene conzôle, d' evoyî èn emile ou co bén håyner on "
+#~ "scrijhaedje. Pol fé comifåt, ces programes houkèt todi les minmes "
+#~ "componints. Vos ploz tchoezi chal ké programes sont ces componints."
+
+#~ msgid "Default Component"
+#~ msgstr "Prémetou componint"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Cisse djivêye mostere les sôres di componints apontiåves. Clitchîz sol "
+#~ "componint k' vos vloz apontyî.</p>\n"
+#~ "<p>Dins cisse divize vos ploz candjî les prémetous componints KDE. Les "
+#~ "componints sont des programes ki fjhèt des bouyes di båze, come li "
+#~ "terminå, l' aspougneu d' tecse eyet l' cliyint emile. I gn a des côps k' "
+#~ "sacwants programes di KDE ont dandjî d' houkî ene conzôle, d' evoyî èn "
+#~ "emile ou co bén håyner on scrijhaedje. Pol fé comifåt, ces programes "
+#~ "houkèt todi les minmes componints. Vos ploz tchoezi chal ké programes "
+#~ "sont ces componints.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Drovi adresses <b>http</b> eyet <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "dins on programe båzé so ç' k' i gn a dins l' adresse"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "e betcheu shuvant:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "e betcheu shuvant:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Tchoezi programe di betchteu waibe ki vs inmez mia:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail est l' sitandård programe d' emile pol sicribanne KDE"
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Eployî KMail come cliyint emile mia inmé"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Tchoezixhoz cisse tchuze si vs voloz eployî on ôte programe d' emile"
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon "
+#~ "Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> <li>%u: Full mailto: URL </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Tchôkîz so c' boton ci po tchoezi vosse cliyint emile favoris. Notez kel "
+#~ "fitchîz k' vos tchoeziroz dvrè awè les atributs enondåves defini pos esse "
+#~ "acceptés.<br/> Vos vs poloz ossu siervi di sacwants placeholders "
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Clithîz chal po foyter pol fitchî do programe d' emile."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Metoz cisse fonccion en alaedje si vs violoz kel cliyint emile di tchoezi "
+#~ "soeye enondé dvins on terminå (metans <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Enonder dvins on terminå"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Foyter les ridants e s' siervant do manaedjeu des fitchîs shuvant:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Ôte: clitchîz Radjouter... el divize mostrêye chal:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "E&ployî Konsole come programe di terminå"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Eployî on programe di &terminå diferin:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr "Tchôkîz so ç' boton ci po tchoezi l' vosse cliyint d' terminå colå."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Clitchîz chal po foyter po-z on programe di terminå."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Co 1 segonde:"
+#~ msgstr[1] "Co %1 secondes:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Li novea manaedjeu des fniesses serè eployî cwand KDE srè enondé pol côp "
+#~ "ki vént."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Candjmint do manaedjeu des fniesses"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "On novea manaedjeu des fniesses est enondé.\n"
+#~ "Il est cwand minme ricmandé d' renonder cisse session KDE pos esse seur "
+#~ "ki tos les programes en alaedje s' adjustexhe a c' candjmint."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Manaedjeu des fniesses metou al plaece"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Vosse manaedjeu des fniesses en alaedje pol moumint va esse replaecî do "
+#~ "côp avou l' ci d' apontyî."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Apontiaedje do candjmint d' manaedjeu des fniesses"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Accepter candjmint"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Rivni å ci did divant"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Li manaedjeu des fniesses d' apontyî est a l' enondaedje.\n"
+#~ "Verifyîz, s' i vs plait, k' il a-st enondé comifåt eyet racertiner l' "
+#~ "candjmint.\n"
+#~ "L' enondaedje serè rmetou come divant dins 20 segondes."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Li manaedjeu des fniesses en alaedje a stî rmetou come divant sol "
+#~ "prémetou manaedjeu des fniesses di KDE, KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Li novea manaedjeu des fniesses a fwait berwete a l' enondaedje.\n"
+#~ "Li manaedjeu des fniesses en alaedje a stî rmetou come divant sol "
+#~ "prémetou manaedjeu des fniesses di KDE, KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "L' enondaedje di l' usteye d' apontiaedje a fwait berwete"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Si siervi do prémetou manaedjeu des fniesses da KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Si siervi d' en ôte manaedjeu des &fniesses :"
+
+#~ msgid "Configure"
+#~ msgstr "Apontyî"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Note: Les troes cwårts des manaedjeu des fniesses ont leu prôpe "
+#~ "apontiaedje et n' shuvèt nén les tchuzes di KDE."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Vos ploz lére chal on ptit discrijhaedje do componint tchoezi pol "
+#~ "moumint. Po candjî l' componint tchoezi, clitchîz dins l' djivêye a "
+#~ "hintche. Po candjî l' progame componint, tchoezixhoz l' chal pa dzo."
+
+#~ msgid "Component Description"
+#~ msgstr "Discrijhaedje di componint"

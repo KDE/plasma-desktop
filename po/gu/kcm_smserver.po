@@ -1,0 +1,265 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Pragnesh Radadiya <pg.radadia@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2008-11-20 16:11+0530\n"
+"Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
+"Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>સત્ર વ્યવસ્થાપક</h1> તમે અહી સત્ર વ્યવસ્થાપકમાં ગોઠવણી કરી શકો છો. સત્રનો અંત કરતી "
+"વખતે તેની ખાતરી કરવી કે નહીં, સત્ર પ્રવેશ સમયે સત્ર પુન: સ્થાપિત કરવો કે નહીં, સત્ર અંત "
+"કરતી વખતે ગણકયંત્ર(કોમ્પયુટર) આપમેળે હમેંશા બંધ કરવૂ જેવા વિકલ્પોનો તેમાં સામાવેશ થાય છે."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "સામાન્ય"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "સત્ર અંતની ખાતરી કરો (&i)"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "બંધ કરવાના મૂળભૂત વિકલ્પ"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "ચાલતો સત્ર સમાપ્ત કરો (&E)"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "ગણકયંત્ર(કોમ્પ્યુટર) બંધ કરો (&T)"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ખાલી સત્ર સાશે શરુઆત કરો (&s)"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"અહીં તમે કોલન કે કોમા થી અલગ કરેલ કાર્યક્રમોની યાદી લખી શકો કે જેમને સત્રમાં બચાવવી "
+"જોઇએ નહીં અને જેથી ફરીથી સત્ર શરુ કરતી વખતે તેને શરુ કરવી નહીં. જેમ કે 'xterm:konsole' "
+"અથવા 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "સત્ર અંતની ખાતરી કરો (&i)"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "બંધ કરવાના મૂળભૂત વિકલ્પ"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "પ્રવેશ સમયે"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "સત્રમાથી કાઢી નાખવાના કાર્યક્રમો (&x)"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "પહેલાનો સત્ર પુન: સ્થાપિત કરો (&p)"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "જો તમે સત્ર વ્યવસ્થાપક દ્રારા સત્ર અંત સમયે ખાતરી સંવાદ પેટી બતાવવા માગતા હો તો આ "
+#~ "વિકલ્પ પર ટીક કરો."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "સત્ર અંતની ખાતરી કરો (&i)"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "અહીં તમે સત્ર બંધ કરતી વખતે શું થવુ જોઇએ તે પસંદ કરી શકો છો. તે ત્યારે જ અર્થપૂર્ણ છે જયારે "
+#~ "તમે કેડીએમ (KDM) વડે પ્રવેશ કર્યો હોય."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "બંધ કરવાના મૂળભૂત વિકલ્પ"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ " <li><b>પહેલાનો સત્ર પુન: સ્થાપિત કરો</b> બહાર નીકળતી વખતે બધા કાર્યક્રમોને બચાવો "
+#~ "અને પાછુ ચાલુ થાય ત્યારે તેને પુન: સ્થાપિત કરો</li>\n"
+#~ " <li><b>જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો</b>સત્રને કોઇપણ સમયે કેમેનુમાંથી \"સત્ર બચાવો"
+#~ "\" દ્રારા બચાવવા દો. જેનો અર્થ એ છે કે હાલમાં ચાલતા કાર્યક્રમ બીજી શરુઆત ના સમયે "
+#~ "ફરીથી દ્રશ્યમાન થશે.</li>\n"
+#~ " <li><b>ખાલી સત્ર સાથે શરુઆત કરો</b>કંઇપણ ના બચાવો. બીજી શરુઆત સમયે ખાલી ડેસ્કટોપ "
+#~ "સાથે આવશે</li>\n"
+#~ " </ul>"
+
+#~ msgid "On Login"
+#~ msgstr "પ્રવેશ સમયે"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "સત્રમાથી કાઢી નાખવાના કાર્યક્રમો (&x)"
+
+#~ msgid "Session Manager"
+#~ msgstr "સત્ર વ્યવસ્થાપક"
+
+#~ msgid "Advanced"
+#~ msgstr "અધ્યતન"

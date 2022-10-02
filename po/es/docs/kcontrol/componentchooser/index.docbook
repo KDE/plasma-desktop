@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Aplicaciones predefinidas</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+><affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>componente</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>En este módulo puede cambiar los componentes por defecto de &kde;.</para>
+
+<para
+>Los componentes son programas que manejan tareas básicas, como el navegador web, el emulador de terminal, el gestor de archivos y el cliente de correo electrónico. A veces, distintas aplicaciones de &kde; necesitan invocar un emulador de consola, enviar un correo electrónico o administrar archivos y carpetas.</para
+> 
+
+<para
+>Para hacerlo de manera consistente, dichas aplicaciones delegan siempre en los mismos componentes. Aquí puede seleccionar qué programas se utilizarán para ello.</para>
+
+<para
+>La lista de la izquierda muestra los tipos de componentes configurables:</para>
+<itemizedlist>
+<listitem>
+<para
+>Navegador web</para>
+</listitem>
+<listitem>
+<para
+>Gestor de archivos</para>
+</listitem>
+<listitem>
+<para
+>Cliente de correo electrónico</para>
+</listitem>
+<listitem>
+<para
+>Emulador de terminal</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Pulse en la lista desplegable del componente que desee configurar. En la lista, seleccione su navegador web favorito, gestor de archivos, cliente de correo electrónico y emulador de terminal. Elija <guimenuitem
+>Otro...</guimenuitem
+> para abrir el diálogo de <guilabel
+>Escoger aplicación</guilabel
+> y seleccionar una aplicación de forma manual.</para>
+
+</article>

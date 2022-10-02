@@ -1,0 +1,214 @@
+# translation of kcmkonq.po to Maithili
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2010-01-29 13:18+0530\n"
+"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
+"Language-Team: Maithili <maithili.sf.net>\n"
+"Language: mai\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "डेस्कटाप"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "दस्ताबेज"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "डाउनलोड"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "संगीत"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "छविसभ"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "मूवी क' पथः "
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "डेस्कटाप पथ: "
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "दस्ताबेज क' पथः "
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "ई फोल्डर मूलभूत द्वारा दस्ताबेज केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "दस्ताबेज क' पथः "
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "ई फोल्डर मूलभूत द्वारा दस्ताबेज केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "मूवी क' पथः "
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "ई फोल्डर मूलभूत द्वारा मूवी केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "चित्र क' पथः "
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "संगीत पथ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#~ msgid "Autostart path:"
+#~ msgstr "स्वतः प्रारंभ पथः "
+
+#~ msgid "Autostart"
+#~ msgstr "स्वतः चालू"
+
+#~ msgid "Movies"
+#~ msgstr "मूवी"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "घसकाबू"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "नहि घसकाउ"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "घसकाबू"
+
+#, fuzzy
+#~| msgctxt "Use the new directory but do not move files"
+#~| msgid "Do not Move"
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "नहि घसकाउ"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "पुष्टि आवश्यक"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>कान्कररक आचरण</h1> अहाँ कान्फिगर कए सकैत छी जे एतय कान्करर फाइल प्रबंधक कए "
+#~ "तरह कहिना आचरण करए."
+
+#~ msgid "Misc Options"
+#~ msgstr "विविध विकल्प"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "फोल्डर अलग विंडो मे खोलू (&w)"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "जँ ई विकल्प चेक कएल जाइछ तँ जखन अहाँ कोनो फोल्डर खोलम तँ बजाए ओ विंडो मे फोल्डरक "
+#~ "सामग्री केँ देखाबैक, कान्करर एकटा नवीन विंडो मे खुलताह."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "'मेटाबू' संदर्भित मेनू देखाबू जे रद्दीक टोकरी केँ बायपास करए (&n)"
+
+#~ msgid "Menu Editor"
+#~ msgstr "मेनू संपादक"
+
+#~ msgid "Menu"
+#~ msgstr "मेनू "
+
+#~ msgid "New..."
+#~ msgstr "नवीन..."
+
+#~ msgid "Remove"
+#~ msgstr "हटाबू"
+
+#~ msgid "Move Up"
+#~ msgstr "उप्पर जाउ"
+
+#~ msgid "Move Down"
+#~ msgstr "नीच्चाँ जाउ"

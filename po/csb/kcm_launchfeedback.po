@@ -1,0 +1,138 @@
+# translation of kcmlaunch.po to Kashubian
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2007-03-19 17:39+0100\n"
+"Last-Translator: Michôł Òstrowsczi <michol@linuxcsb.org>\n"
+"Language-Team: Kashubian\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "&Zmiana kùrsora"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "Mërgòtający kùrsor"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "Skaczący kùrsor"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "Włączë wëdowiédzã na &lëstwie dzajaniów"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "&Maksymalny czas zmianë kùrsora:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " sek."
+msgstr[1] " sek."
+msgstr[2] " sek."
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Òdkôzanié ò zrëszanim</h1> Mòduł nen pòzwôlô na wëbiérk metodë "
+#~ "òdkôzënkù ò naczãcu zrëszania programë."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Zmiana kùrsora</h1>\n"
+#~ "KDE może zaznaczac zrëszanié programë przez zmianã wëzdrzatkù kùrsora.\n"
+#~ "Żebë tak bëło, wëbierzë òptacëjã \"Zmieni kùrsor òbczas zrëszania\n"
+#~ "programë\".\n"
+#~ "Dodôwno mòżesz włączëc mërgòtanié kùrsora w òptacëji niżi.\n"
+#~ "Niechtërné programë mògą ignorowac tã fùnkcëjã, nie òdkôzewùjąc ò\n"
+#~ "zakùńczenim zrëszania. Tedë kùrsor przestanié mërgòtac pò czase\n"
+#~ "wpisónym w pòlu \"Maksymalny czas zmianë kùrsora\"."
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Bez zmianë kùrsora"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Pasywnô zmiana kùrsora"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "&Òdkôzywanié na lëstwie dzejaniów"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Lëstwa dzejaniów</h1>\n"
+#~ "Mòżesz włączëc jiną metodã òdkôzewaniô ò zrëszanim programë\n"
+#~ "- na lëstwie dzejaniów zjôwi sã ikòna programë z òbracającą sã "
+#~ "klepsydrą, \n"
+#~ "chtërna symbòlizëjë zrëszanié programë.\n"
+#~ "Niechtërné programë mògą ignorowac tã fùnkcëjã, nie òdkôzewając ò "
+#~ "zakùńczenim zrëszaniô. Tedë kùrsor przestanié mërgòtac pò czase òpisónym "
+#~ "w pòlu \"Maksymalny czas zmianë ikòny\"."
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Ma&ksymalny czas òdkôzëwaniô:"

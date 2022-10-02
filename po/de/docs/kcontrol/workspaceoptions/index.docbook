@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Allgemeines Verhalten</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-06-30</date>
+
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Arbeitsfläche</keyword>
+<keyword
+>Arbeitsbereich</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Mit diesem Modul können Sie das allgemeine Verhalten des Arbeitsbereichs einrichten. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Kurzinfos bei Überfahren mit dem Mauszeiger anzeigen</guilabel
+></term>
+<listitem>
+<para
+>Ist dies aktiviert, werden beim Überfahren von Elementen in der &plasma;-Kontrollleiste oder auf der Arbeitsfläche Kurzinfos angezeigt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Visuelle Rückmeldung bei Statusänderungen anzeigen</guilabel
+></term>
+<listitem>
+<para
+>Wenn Sie &eg; Bildschirmhelligkeit und Lautstärke über die Tastatur ändern, wird der Status in einem OSD (On Screen Display) angezeigt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Animationsgeschwindigkeit</guilabel
+></term>
+<listitem>
+    <para
+>Stellen Sie hier die Geschwindigkeit der Animation für Arbeitsflächeneffekte von <guilabel
+>Langsam</guilabel
+> bis <guilabel
+>Sofort</guilabel
+> ein.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Einfacher Klick zum Öffnen von Dateien und Ordnern</guilabel
+></term>
+<listitem>
+<para
+>Dies ist die Standardeinstellung. Ein einfacher Klick auf ein Symbol öffnet es. Zur Auswahl können Sie einen Rahmen um die Symbole ziehen oder <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Rechte Maustaste</mousebutton
+></keycombo
+> verwenden oder aber einfach klicken und die Taste zum Verschieben gedrückt halten. Außerdem können Sie durch Klicken auf die Auswahlmarkierung eines Eintrags auswählen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Doppelklick zum Öffnen von Dateien und Ordnern</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Option nicht markiert ist, werden Symbole/Dateien durch einen einfachen Klick der <mousebutton
+>linken Maustaste</mousebutton
+> geöffnet. Dieses Verhalten stimmt mit dem Verhalten der meisten Internet-Browser überein. Wenn diese Option markiert ist, werden Symbole/Dateien durch einen Doppelklick geöffnet. Ein einfacher Klick wählt das Symbol nur. Dieses Verhalten kennen Sie vielleicht von anderen Benutzeroberflächen und Betriebssystemen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klicken in Bildlaufleiste</guimenu
+><guimenuitem
+>Eine Seite hoch oder runter</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Dies ist die Voreinstellung. Durch Linksklick in die Bildlaufleiste verschiebt die Bildlaufleiste um eine Seite nach oben oder unten.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klicken in Bildlaufleiste</guimenu
+><guimenuitem
+>Geht zur angeklickten Position</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Durch Klicken in die Bildlaufleiste gehen Sie direkt zur entsprechenden Position im Dokument. Diese Verhalten kennen Sie wahrscheinlich von anderen Arbeitsflächen oder Betriebssystemen,</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

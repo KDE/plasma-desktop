@@ -1,0 +1,234 @@
+# Translation of kcmkded.po to Slovenian
+# Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
+# $Id: kcm5_kded.po 1623908 2022-05-04 01:32:56Z scripty $
+# $Source$
+#
+# Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004.
+# Jure Repinc <jlp@holodeck1.com>, 2007, 2008.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2015, 2017.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2020-07-07 09:55+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 19.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Gregor Rakar,Jure Repinc,Andrej Mernik,Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"gregor.rakar@kiss.si,jlp@holodeck1.com,andrejm@ubuntu.si,matjaz.jeran@amis."
+"net"
+
+#: kcmkded.cpp:48
+#, kde-format
+msgid "Background Services"
+msgstr "Storitve v ozadju"
+
+#: kcmkded.cpp:52
+#, kde-format
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmkded.cpp:125
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Ni bilo mogoče zaustaviti storitve %1"
+
+#: kcmkded.cpp:127
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Ni bilo mogoče zagnati storitve %1"
+
+#: kcmkded.cpp:134
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Ni bilo mogoče zaustaviti storitve."
+
+#: kcmkded.cpp:136
+#, kde-format
+msgid "Failed to start service."
+msgstr "Ni bilo mogoče zagnati storitve."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Ni bilo mogoče obvestiti KDE Service Managerja (kded5) o shranjeni "
+"spremembi: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Ta modul vam omogoča pregled nad vsemi vstavki programa KDE demona, "
+"imenovanih tudi kot storitve KDE. V splošnem sta dve vrsti storitev:</"
+"p><ul><li>Storitve, ki se zaženejo ob zagonu</li><li>Storitve, ki se "
+"zaženejo na zahtevo</li></ul><p>Slednje so navedene le zaradi lažjega "
+"ravnanja. Storitve ob zagonu so lahko zagnane ali zaustavljene. V skrbniškem "
+"načinu lahko tudi določite, ali naj se storitve naložijo ob zagonu.</"
+"p><p><b> To uporabljajte previdno. Nekatere storitve so ključnega pomena za "
+"Plasmo. Ne onemogočajte storitev, če ne veste, kaj počnete.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Upravitelj storitev v ozadju (kded5) trenutno ne deluje. Poskrbite, da je "
+"pravilno nameščen."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Nekatere storitve se ob ročnem zagonu ponovno onemogočijo, če niso nujno "
+"potrebne v trenutnem okolju."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Nekatere storitve v ozadju so se samodejno zagnale/ustavile, ko je bil "
+"upravitelj storitev (kded5) znova zagnan, da uveljavi vaše spremembe."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Vse storitve"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Teče"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Ne teče"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Zagon storitev"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Storitve na zahtevo"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Preklaplja samodejno nalaganje te storitve ob zagonu"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Ne teče"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Teče"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Ustavi storitev"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Zaženi storitev"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Upravljalnik storitev KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "To je seznam razpoložljivih storitev KDE, ki se zaženejo na zahtevo. "
+#~ "Navedene so samo zaradi lažjega ravnanja, ker ne morete vplivati nanje."
+
+#~ msgid "Status"
+#~ msgstr "Stanje"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "To prikazuje vse storitve KDE, ki se zaženejo ob zagonu Plasme. Označene "
+#~ "storitve bodo zagnane ob naslednjem zagonu. Bodite previdni pri "
+#~ "onemogočanju neznanih storitev."
+
+#~ msgid "Use"
+#~ msgstr "Uporaba"
+
+#~ msgid "Start"
+#~ msgstr "Zaženi"
+
+#~ msgid "Stop"
+#~ msgstr "Zaustavi"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Ni bilo mogoče navezati stika s KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Ni bilo mogoče zagnati storitve <em>%1</em>.<br /><br /><i>Napaka: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Ni bilo mogoče zaustaviti storitve <em>%1</em>.<br /><br /><i>Napaka: %2</"
+#~ "i>"

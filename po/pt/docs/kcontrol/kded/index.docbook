@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Serviços em Segundo-Plano</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>Serviço</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>O módulo do <guilabel
+>Gestor de Serviços</guilabel
+> permite-lhe ter uma ideia geral de todos os 'plugins' do Servidor do &kde;, também referidos como sendo os Serviços do &kde;. De um modo geral, existem dois tipos de serviços:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Serviços Carregados a Pedido</guilabel
+></term>
+<listitem
+><para
+>Esta é uma lista com todos os serviços do &kde; disponíveis que serão iniciados a pedido. Só estão presentes por razões de conveniência, dado que não poderá manipular esses serviços. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Serviços do Arranque</guilabel
+></term>
+<listitem
+><para
+>Isto mostra todos os serviços do &kde; que poderão ser arrancados no início do &kde;. Os serviços assinalados na coluna <guilabel
+>Usar</guilabel
+> serão invocados no próximo arranque.</para>
+<para
+>Tenha cuidado com a desactivação de serviços desconhecidos: alguns deles são vitais para o &kde;; não desactive os serviços se não souber o que faz. </para>
+<para
+>Para alterar o <guilabel
+>Estado</guilabel
+> de um serviço, seleccione-o na lista. Depois, poderá usar os botões <guibutton
+>Iniciar</guibutton
+> e <guibutton
+>Parar</guibutton
+>, de modo a alterar o estado de um serviço de <guilabel
+>Parado</guilabel
+> para <guilabel
+>Em execução</guilabel
+> e vice-versa. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

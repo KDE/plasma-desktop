@@ -1,0 +1,374 @@
+# Danish translation of kcmcomponentchooser
+# Copyright (C)
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2002, 2003, 2004, 2005.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2016, 2017, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-08-20 17:40+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Standard webbrowser"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Anden..."
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Vælg standardbrowser"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Vælg standard e-mail-klient"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Vælg standard filhåndtering"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Vælg standard kort"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Vælg standard opkaldstastatur-program"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Vælg standard terminalprogram"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Webbrowser:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Filhåndtering:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "E-mail-klient:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Terminalprogram:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Kort:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Opkaldstastatur:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Unknown"
+#~ msgstr "Ukendt"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentvælger"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Vælg fra listen nedenfor hvilke komponenter der skal bruges som standard "
+#~ "for %1-tjenesten."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Du ændrede din foretrukne standardkomponent. Ønsker du at gemme denne "
+#~ "ændring nu?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Ingen beskrivelse tilgængelig"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Her kan ændre komponentprogrammet. Komponenter er programmer der "
+#~ "håndterer basale opgaver, såsom terminalemulator, teksteditor og e-mail-"
+#~ "klient. Forskellige KDE-programmer har sommetider brug for at starte en "
+#~ "konsol-emulator, sende et brev eller vise noget tekst. For at gøre dette "
+#~ "på en konsistent måde, kalder disse programmer altid de samme "
+#~ "komponenter. Her kan du vælge hvilke programmer disse komponenter er."
+
+#~ msgid "Default Component"
+#~ msgstr "Standard-komponent"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Denne liste viser de indstillelige komponenttyper. Klik på den "
+#~ "komponent du ønsker at indstille.</p>\n"
+#~ "<p>I denne dialog kan du ændre KDE's standardkomponenter. Komponenter er "
+#~ "programmer der håndterer basale opgaver, såsom terminalemulator, "
+#~ "teksteditor og e-mail-klient. Forskellige KDE-programmer har sommetider "
+#~ "brug for at starte en konsol-emulator, sende et brev eller vise noget "
+#~ "tekst. For at gøre dette på en konsistent måde, kalder disse programmer "
+#~ "altid de samme komponenter. Her kan du vælge hvilke programmer disse "
+#~ "komponenter er.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Åbn <b>http</b> og <b>https</b> URL'er</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "i et program baseret på indholdet af URL'en"
+
+#~ msgid "in the following application:"
+#~ msgstr "i følgende program:"
+
+#~ msgid "with the following command:"
+#~ msgstr "med følgende kommando:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Vælg foretrukket browser-program:"
+
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "KMail er standard mailprogram til skrivebordsmiljøet Plasma."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Brug KMail som foretrukken e-mail-klient"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "Vælg dette hvis du ønsker at bruge et andet postprogram."
+
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "Valgfri pladsholdere:<ul> <li>%t: Modtagers adresse</li> <li>%s: Emne</"
+#~ "li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> "
+#~ "<li>%B: Skabelonens brødtekst</li> <li>%A: Bilag </li> <li>%u: Fuld "
+#~ "mailto: URL </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Tryk på denne knap for at vælge din favorit e-mail-klient. Bemærk "
+#~ "venligst at filen du vælger skal have den kørbare attribut sat for at "
+#~ "blive accepteret.<br/> Du kan bruge forskellige pladsholdere som vil "
+#~ "blive erstattet med de egentlige værdier når e-mail-klienten kaldes:<ul> "
+#~ "<li>%t: Modtagers adresse</li> <li>%s: Emne</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Skabelonens "
+#~ "brødtekst</li> <li>%A: Bilag </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Klik her for at lede efter postprogramfilen."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Aktivér dette hvis du ønsker at den valgte e-mail-klient skal køres i en "
+#~ "terminal (f.eks. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Kør i terminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Gennemse mapper med følgende filhåndtering:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Anden: Tryk på Tilføj... i dialogen som vises her:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Brug Konsole som terminalprogram"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Brug et andet &terminalprogram:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Tryk på denne knap for at vælge din foretrukne terminalklient. Bemærk "
+#~ "venligst at filen du vælger skal have den kørbare attribute sat for at "
+#~ "blive accepteret.<br/> Bemærk også at nogle programmer der udnytter "
+#~ "terminal-emulator ikke vil virke hvis du tilføjer kommandolinjeargumenter "
+#~ "(Eksempel: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Klik her for at lede efter terminalprogram."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 sekund tilbage:"
+#~ msgstr[1] "%1 sekunder tilbage:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "Den ny vindueshåndtering vil blive brugt næste gang KDE startes."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Ændring af vindueshåndtering"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Ny vindueshåndtering kører.\n"
+#~ "Det anbefales stadig at genstarte denne KDE-session, for at sikre at alle "
+#~ "kørende programmer tilpasses ændringen."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Vindueshåndtering erstattet"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Din aktuelle vindueshåndtering vil nu blive erstattet med med den "
+#~ "konfigurerede."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Konfiguration af vindueshåndterings-ændring"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Godkend ændring"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Vend tilbage til forrige"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Den valgte vindueshåndtering startes.\n"
+#~ "Tjek at den er startet korrekt og bekræft ændringen.\n"
+#~ "Starten vil automatisk blive omgjort om 20 sekunder."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Den kørende vindueshåndtering er sat tilbage til KDE's standard "
+#~ "vindueshåndtering - KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Den ny vindueshåndtering kunne ikke starte.\n"
+#~ "Den kørende vindueshåndtering er sat tilbage til KDE's standard "
+#~ "vindueshåndtering - KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Kørsel af konfigurationsværktøjet fejlede"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Br&ug KDE's standard vindueshåndtering (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Brug anden &vindueshåndtering:"
+
+#~ msgid "Configure"
+#~ msgstr "Indstil"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Bemærk: De fleste vindueshåndteringer har deres egen konfiguration og "
+#~ "følger ikke KDE's indstillinger."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Her kan du læse en lille beskrivelse af den komponent der er valgt nu. "
+#~ "For at ændre den valgte komponent, klikkes på listen til venstre. For at "
+#~ "ændre komponentprogrammet vælges det nedenfor."
+
+#~ msgid "Component Description"
+#~ msgstr "Komponentbeskrivelse"

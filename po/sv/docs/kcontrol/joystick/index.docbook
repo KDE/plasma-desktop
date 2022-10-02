@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Spelkontroll</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>styrspak</keyword>
+<keyword
+>kontroll</keyword>
+<keyword
+>handkontroll</keyword>
+<keyword
+>kalibrera</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Kalibrera spelkontroll</title>
+
+<para
+>Den här modulen tillhandahåller ett gränssnitt för att kalibrera en spelkontroll, samt för att se vilka funktioner på spelkontrollen som motsvarar vilken logisk knapp eller axel.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Här är en skärmbild av spelkontrollmodulen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Spelkontrollmodulen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Enhet</guilabel
+></term>
+<listitem>
+<para
+>Här kan du se enhetens logiska plats. Om du har mer än en spelkontroll kan du också välja vilken du vill ställa in. </para>
+<para
+>Om ingen spelkontroll hittas automatiskt på datorn och du vet att det finns en som är ansluten, kan du skriva in rätt enhetsfil här. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Position</guilabel
+></term>
+<listitem>
+<para
+>Den uppritade platsen för spelkontrollens X- och Y-axlar. Aktivera <guibutton
+>Visa spår</guibutton
+> för att rita upp spåret av styrspaken från en punkt till en annan. </para>
+<tip
+><para
+>Om styrspaken inte kan nå alla punkter i diagrammet, eller om den inte centreras korrekt, måste du kalibrera enheten. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Knappar</guilabel
+></term>
+<listitem>
+<para
+>Ett ställe där du kan se knapparnas nertryckta tillstånd på spelkontrollen, och om knapparna är riktigt avbildade. När en knapp trycks ner, visas <guilabel
+>TRYCKT</guilabel
+> intill det logiska numret (som datorn ser det) för knappen som trycktes ner. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Axlar</guilabel
+></term>
+<listitem>
+<para
+>Det här visar de numeriska värdena hos axlarnas positioner. Noll är i mitten, och de maximala och minimala värdena beror på spelkontrollen och den specifika axeln. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kalibrera</guilabel
+></term>
+<listitem>
+<para
+>Att klicka på <guibutton
+>Kalibrera</guibutton
+> visar en dialogruta för att kalibrera spelkontrollens alla axlar. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Kalibrering av spelkontrollen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Kalibrering av spelkontrollen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Varje axel måste flyttas till den minimala positionen, därefter till mitten, och slutligen till den maximala positionen. En mätare i dialogrutans nedre vänstra hörn hjälper till att avgöra åt vilket håll värdena ökar och åt vilket håll de minskar. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,85 @@
+# translation of plasma_applet_showdesktop.po to français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Stanislas Zeller <uncensored.assault@gmail.com>, 2008.
+# Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2015, 2016.
+# Simon Depiets <sdepiets@gmail.com>, 2018.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_showdesktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"PO-Revision-Date: 2022-09-17 10:31+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: package/contents/ui/MinimizeAllController.qml:17
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore All Minimized Windows"
+msgstr "Restaurer toutes les fenêtres minimisées"
+
+#: package/contents/ui/MinimizeAllController.qml:18
+#, kde-format
+msgctxt "@action:button"
+msgid "Minimize All Windows"
+msgstr "Réduire toutes les fenêtres"
+
+#: package/contents/ui/MinimizeAllController.qml:20
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Restores the previously minimized windows"
+msgstr "Restaure les fenêtres précédemment minimisées"
+
+#: package/contents/ui/MinimizeAllController.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Desktop by minimizing all windows"
+msgstr "Affiche le bureau en réduisant toutes les fenêtres"
+
+#: package/contents/ui/PeekController.qml:13
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "Arrêter de regarder le bureau"
+
+#: package/contents/ui/PeekController.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Peek at Desktop"
+msgstr "Coup d’œil sur le bureau"
+
+#: package/contents/ui/PeekController.qml:16
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Moves windows back to their original positions"
+msgstr "Déplace des fenêtres vers leurs positions initiales"
+
+#: package/contents/ui/PeekController.qml:17
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgstr ""
+"Affiche temporairement le bureau par un déplacement des fenêtres ouvertes "
+"vers les coins de l'écran"
+
+#~ msgid "Show Desktop"
+#~ msgstr "Afficher le bureau"
+
+#~ msgid "Show the Plasma desktop"
+#~ msgstr "Afficher le bureau Plasma"
+
+#~ msgid "Minimize all open windows and show the Desktop"
+#~ msgstr "Réduire toutes les fenêtres ouvertes et afficher le bureau"

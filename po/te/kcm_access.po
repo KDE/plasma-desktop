@@ -1,0 +1,803 @@
+# translation of kcmaccess.po to Telugu
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"PO-Revision-Date: 2009-01-16 22:16+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr "ఆల్ట్‌గ్రాఫ్"
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr "హైపర్"
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr "సూపర్"
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr "నమ్‌లాక్, కాప్స్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1ను వత్తుము"
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr "కాప్స్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr "నమ్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr "స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr "నమ్‌లాక్ మరియు కాప్స్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr "కాప్స్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr "నమ్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr "%1 వత్తుము"
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr ""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Use System Bell"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Customize system bell"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Color of the Visible Bell"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Use sticky Keys"
+msgstr "(&s) స్టికీ కీలను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgid "Lock the sticky keys"
+msgstr "(&L) స్టికీ కీలను లాక్‌చేయుము"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "రెండు కీలు వొకదానితర్వాత వొకటి నొక్కినప్పుడు స్టికీ కీలను ఆఫ్ చేయుము"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Beep on a sticky key press"
+msgstr "(&s) స్టికీ కీలను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Use slow keypresses"
+msgstr "(&U) స్లో కీలను వుపయోగించుము"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "బౌన్సు కీలు"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:28
+#, kde-format
+msgid "Maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:32
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:41
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:45
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:49
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:31
+#, fuzzy, kde-format
+#| msgid "Audible Bell"
+msgid "Audible bell:"
+msgstr "వినబడే బెల్"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visible Bell"
+msgid "Visual bell:"
+msgstr "కనిపించు బెల్‌"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:108
+#, fuzzy, kde-format
+#| msgid "I&nvert screen"
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "(&n) విలోమ తెర"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:147
+#, fuzzy, kde-format
+#| msgid "Duration:"
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "నిడివి:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Slow keys:"
+msgstr "(&U) స్లో కీలను వుపయోగించుము"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:33
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:50
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring system bell:"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/KeyboardFilters.qml:51
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "(&U) కీ వత్తబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/KeyboardFilters.qml:65
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "(&U) కీ ఆమోదింపబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/KeyboardFilters.qml:79
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "(&U) కీ తిరస్కరింపబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/KeyboardFilters.qml:96
+#, fuzzy, kde-format
+#| msgid "Bounce Keys"
+msgid "Bounce keys:"
+msgstr "బౌన్సు కీలు"
+
+#: package/contents/ui/KeyboardFilters.qml:97
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:111
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:126
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgid "Ring system bell when rejected"
+msgstr "(&U) కీ తిరస్కరింపబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "&Bell"
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "(&B) బెల్‌"
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "&Modifier Keys"
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "(&M) సవరణి కీలు"
+
+#: package/contents/ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "&Keyboard Filters"
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "(&K) కీబోర్డు ఫిల్టర్స్"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, fuzzy, kde-format
+#| msgid "S&ticky Keys"
+msgid "Sticky keys:"
+msgstr "(&t) స్టికీ కీలు"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgid "Ring system bell when modifier keys are used"
+msgstr "(&U) కీ వత్తబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgid "Ring system bell when locking keys are toggled"
+msgstr "(&U) కీ ఆమోదింపబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, fuzzy, kde-format
+#| msgid ""
+#| "Use KDE's system notification mechanism whenever a modifier or locking "
+#| "key changes its state"
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"సవరణి(మా‍డిఫైర్) లేదా లాకింగ్ కీ దాని స్థితిని మార్చినప్పుడు KDE యొక్క సిస్టమ్ నోటిఫికేషన్ మెకానిజంను వుపయోగించుము"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "(&N) నోటిఫికేషన్లను ఆకృతీకరించుము..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "నో‍టీసు"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration delay:"
+msgstr "(&y) అమోదముకు ఆలస్యము:"
+
+#: package/contents/ui/MouseNavigation.qml:79
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:90
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration time:"
+msgstr "(&y) అమోదముకు ఆలస్యము:"
+
+#: package/contents/ui/MouseNavigation.qml:101
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:112
+#, fuzzy, kde-format
+#| msgid "Acceptance dela&y:"
+msgid "Acceleration profile:"
+msgstr "(&y) అమోదముకు ఆలస్యము:"
+
+#: package/contents/ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "కృష్ణబాబు కె , విజయ్ కిరణ్ కముజు"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "k.meetme@gmail.com,infyquest@gmail.com"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgid "Accessibility"
+#~ msgstr "KDE అందుబాటు సాధనం"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "(c) 2000, మథియాస్ హోయెల్జర్-క్లుప్‌ఫెల్"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "మథయాస్ హొయెల్జర్-క్లూప్ఫెల్"
+
+#~ msgid "Author"
+#~ msgstr "మూలకర్త"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation:"
+#~ msgstr "క్రియాశీలపు జెస్టర్స్"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is checked, the default system bell will be used. See the "
+#~| "\"System Bell\" control module for how to customize the system bell. "
+#~| "Normally, this is just a \"beep\"."
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "ఈ ఐచ్చికం చెక్‌ చేయబడివుంటే అప్రమేయ సిస్టమ్ బెల్‌ వుపయోగించబడుతుంది. సిస్టమ్ బెల్‌ను యెలా మలచుకోవాలి "
+#~ "అనుదానికొరకు \"సిస్టమ్ బెల్‌\" నియంత్రణ మాడ్యూల్ చూడుము. సాదారణంగా, యిది \"బీప్\" మాత్రమే."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "(&e) మలచుకొనిని బెల్‌ను వుపయోగించుము"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "\"మలచుకొనిన బెల్‌\" ఐచ్చికం చేతనమైవుంటే, మీరు శబ్దపు ఫైలు యిక్కడ యెంచుకొనవచ్చు. ఫైలు డైలాగ్‌ను "
+#~ "వుపయోగించి శబ్దపు ఫైలును యెంచుకొనుటకు \"బ్రౌజ్‌చేయి...\" నొక్కుము."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "(&t) ప్లే చేయవలసిన శబ్దము:"
+
+#~ msgid "Browse..."
+#~ msgstr "బ్రౌజ్‌చేయి..."
+
+#, fuzzy
+#~| msgid "&Use visible bell"
+#~ msgid "&Use visual bell"
+#~ msgstr "(&U) కనిపించు బెల్‌ను వుపయోగించుము"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr "క్రింద తెలిపిన సమయం పాటు తెర రంగు మలచుకొనిన రంగునకు మారుతుంది."
+
+#~ msgid "F&lash screen"
+#~ msgstr "(&l) ఫ్లాష్ తెర"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "క్రింద తెలిపిన సమయం పాటు అన్ని తెర రంగులు విలోమం చేయబడతాయి."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr "\"ఫ్లాష్ తెర\" కనిపించు బెల్‌కు వుపయోగించిన రంగును యెంచుకొనుటకు యిక్కడ నొక్కుము."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr "\"కనిపించు బెల్‌\" ప్రభావం యెంతసేపు చూయించాలో ఆ నిడివిని మీరు యిక్కడ మలచుకొనవచ్చును."
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr "సవరణి(మాడిఫైర్) లాట్చ్ కాబడినా, లాక్ కాబడినా లేదా అన్‌లాక్ కాబడినా సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#~ msgid "Locking Keys"
+#~ msgstr "కీలను లాక్ చేయుట"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr "కీ లాకింగ్ చేయుట క్రియాశీలమైనా లేదా క్రియాహీనమైనా సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "(&w) స్లో కీలు"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "(&n) బౌన్సు కీలను వుపయోగించుము"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "కీ తిరస్కరించబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation &Gestures"
+#~ msgstr "క్రియాశీలపు జెస్టర్స్"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "స్టికీ కీలను మరియు స్లో కీలను క్రియాశీలము చేయుటకు జెస్టర్స్‌ను వుపయోగించుము"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr "కొంత కాలంపాటు క్రియాహీనముగావుంటే స్టికీ కీలను మరియు స్లో కీలను ఆఫ్ చేయుము."
+
+#~ msgid " min"
+#~ msgstr " ని"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the system bell whenever a gesture is used to turn an accessibility "
+#~| "feature on or off"
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "ఒక జెస్టర్ యాక్సెస్‌బిలిటి సౌలభ్యాన్ని ఆన్ లేదా ఆఫ్ చేయటానికి వుపయోగించినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#, fuzzy
+#~| msgid ""
+#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~| "turned on or off"
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr "కీబోర్డు యాక్సెస్‌బిలిటి సౌలభ్యము ఆన్ లేదా ఆఫ్ అయినప్పుడు నిర్ధారణ డైలాగును చూపుము"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use KDE's system notification mechanism whenever a keyboard "
+#~| "accessibility feature is turned on or off"
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "కీబోర్డు యాక్సెస్‌బిలిటి సౌలభ్యము ఆన్ లేదా ఆఫ్ అయినప్పుడు KDE యొక్క సిస్టమ్ నోటిఫికేషన్ మెకానిజంను "
+#~ "వుపయోగించుము."
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "ఈ క్రింది సౌలభ్యాలను ఆన్ చేసే కీబోర్డు జెస్టర్స్‌ను యిక్కడ మీరు క్రియాశీల పరచవచ్చు:\n"
+#~ "స్టికీ కీలు: షిఫ్టు కీను వరుసగా 5 సార్లు వత్తుము\n"
+#~ "స్లో కీలు: షిఫ్టు కీను 8 సెకనుల పాటు వత్తి వుంచుము"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "క్రింది సౌలభ్యాలను ఆన్ చేసే కీబోర్డు జెస్టర్స్‌ను మీరు యిక్కడ క్రియాశీల పరచవచ్చు: \n"
+#~ "మౌస్ కీలు: %1\n"
+#~ "స్టికీ కీలు: షిఫ్టు కీను వరుసగా 5 సార్లు నొక్కుము\n"
+#~ "స్లో కీలు: షిఫ్టు కీను 8 సెకనుల పాటు వత్తి వుంచుము"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "&Activation Gestures"
+#~ msgstr "క్రియాశీలపు జెస్టర్స్"
+
+#~ msgid "D&ebounce time:"
+#~ msgstr "(&e) డీబౌన్సు సమయం:"
+
+#~ msgid "Timeout:"
+#~ msgstr "కాలముగింపు:"
+
+#~ msgid "kaccess"
+#~ msgstr "కెయాక్సిస్"
+
+#~ msgid "*.wav|WAV Files"
+#~ msgstr "*.wav|WAV ఫైళ్ళు"

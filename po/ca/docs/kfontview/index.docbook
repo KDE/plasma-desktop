@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Visualitzador del tipus de lletra</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>31 de març de 2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>visualitzador del tipus de lletra</keyword>
+<keyword
+>tipus de lletra</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>El &kfontview; és una aplicació per a veure i instal·lar diferents tipus de lletra: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; type 1 (extensió de fitxer al &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; a &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, extensió de fitxer <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, extensió de fitxer <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Podeu utilitzar-lo com a programa independent per a pre-visualitzar i instal·lar un tipus de lletra baixat des d'Internet. A la vista prèvia, podeu comprovar que el tipus de lletra disposa de tots els caràcters que necessiteu. </para>
+<para
+>A més, el &kfontview; es pot iniciar des del mòdul de &systemsettings; anomenat <ulink url="help:/kcontrol/fontinst/index.html"
+><guilabel
+>Gestió dels tipus de lletra</guilabel
+></ulink
+> per a utilitzar les àmplies capacitats de la vista prèvia del &kfontview;.</para>
+
+<para
+>De manera alternativa, podeu utilitzar el mòdul <guilabel
+>Gestió dels tipus de lletra</guilabel
+> per a instal·lar, eliminar, previsualitzar i gestionar tots els tipus de lletra del vostre sistema.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>Aplicació &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Aplicació &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>El &kfontview; mostra una <guilabel
+>Vista prèvia estàndard</guilabel
+> del vostre tipus de lletra en diverses mides diferents utilitzant un pangrama (una oració utilitzant cada lletra de l'alfabet, almenys una vegada). De manera que obteniu una bona idea de com es veurà. Des de la llista desplegable a la barra d'eines podeu triar tipus de vista prèvia addicionals: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Tots els caràcters</guilabel
+>, mostra tots els caràcters proporcionats pel tipus de lletra en una sola mida. </para
+></listitem>
+<listitem
+><para
+>Bloc Unicode: L'estàndard Unicode organitza grups de caràcters en blocs</para
+></listitem>
+<listitem
+><para
+>Script Unicode: En Unicode, un script és una col·lecció de lletres i altres signes escrits utilitzats per a representar la informació textual en un o diversos sistemes d'escriptura</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Canvia el text</guibutton
+>: Utilitzant aquest botó s'obre el diàleg <guilabel
+>Cadena de vista prèvia</guilabel
+> en el qual podeu inserir un text definit per l'usuari. Aquesta característica permet comprovar que un tipus de lletra és compatible amb els caràcters que necessiteu. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Podeu utilitzar els botons de zoom o la roda del ratolí per a canviar la mida de la lletra en tots els tipus de vista prèvia.</para>
+<para
+>En els modes de vista prèvia <guilabel
+>Bloc Unicode</guilabel
+> i <guilabel
+>Script Unicode</guilabel
+> es mostren consells informatius addicionals sobre un caràcter apuntat amb el punter del ratolí: La <guilabel
+>Categoria</guilabel
+> Unicode del caràcter i el valor en <guilabel
+>UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> i com a <guilabel
+>Entitat decimal XML</guilabel
+>.</para>
+
+<para
+>Per a instal·lar un tipus de lletra baixat des d'Internet, feu clic al botó <guibutton
+>Instal·la</guibutton
+> a la cantonada inferior dreta. </para>
+
+<para
+>Podeu instal·lar el tipus de lletra personal perquè només resti disponible per a vosaltres o per a tots els usuaris del sistema, això últim requereix privilegis d'administrador.</para>
+
+<para
+>Els tipus de lletra sovint es proporcionen en un format d'arxiu com <literal role="extension"
+>zip</literal
+>. Obriu aquests arxius amb &ark;, el qual proporciona una vista prèvia senzilla per als tipus de lletra. Per a fer ús de les capacitats esteses del &kfontview;, extraieu els tipus de lletra i obriu-los al &kfontview;. </para
+><para
+>S'hauran de tornar a iniciar les aplicacions perquè utilitzin els tipus de lletra instal·lats recentment.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,226 @@
+# Irish translation of kimpanel
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kimpanel package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kimpanel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2009-03-09 08:39-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, fuzzy, kde-format
+#| msgid "Input method panel"
+msgid "Input method list:"
+msgstr "Painéal modh ionchurtha"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, fuzzy, kde-format
+#| msgid "Vertical List"
+msgid "Vertical"
+msgstr "Liosta Ingearach"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, fuzzy, kde-format
+#| msgid "Horizontally expand."
+msgid "Horizontal"
+msgstr "Leathnaigh go cothrománach."
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, fuzzy, kde-format
+#| msgid "Font"
+msgid "Font:"
+msgstr "Cló"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, fuzzy, kde-format
+#| msgid "Select Font"
+msgid "Select Font…"
+msgstr "Roghnaigh Cló"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, fuzzy, kde-format
+#| msgid "Select Font"
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Roghnaigh Cló"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Cumraigh an Modh Ionchurtha"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Athluchtaigh an Chumraíocht"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Scoir ó Mhodh Ionchurtha"
+
+#: package/contents/ui/main.qml:237
+#, fuzzy, kde-format
+#| msgid "Input Method"
+msgid "Input Method Panel"
+msgstr "Modh Ionchurtha"
+
+#, fuzzy
+#~| msgid "Select Font"
+#~ msgid "Select Font..."
+#~ msgstr "Roghnaigh Cló"
+
+#~ msgid "Reverse display order when at screen border"
+#~ msgstr "Iompaigh an t-ord taispeána ag ciumhais an scáileáin"
+
+#~ msgid "Select Application"
+#~ msgstr "Roghnaigh Feidhmchlár"
+
+#~ msgctxt "General configuration page"
+#~ msgid "General"
+#~ msgstr "Ginearálta"
+
+#~ msgid "Start Input Method"
+#~ msgstr "Tosaigh Modh Ionchurtha"
+
+#~ msgid "Icon Filter"
+#~ msgstr "Scagaire Deilbhíní"
+
+#~ msgid "Blur Behind"
+#~ msgstr "Doiléir Ar gCúl"
+
+#~ msgid "kimpanel"
+#~ msgstr "kimpanel"
+
+#~ msgid "Expand out"
+#~ msgstr "Leathnaigh amach"
+
+#~ msgid "Collapse to panel"
+#~ msgstr "Laghdaigh go dtí an painéal"
+
+#~ msgid "Embed into the panel"
+#~ msgstr "Leabaigh sa phainéal"
+
+#~ msgid "Generic input method panel"
+#~ msgstr "Painéal ginearálta modh ionchurtha"
+
+#~ msgid "Copyright (C) 2009, Wang Hoi"
+#~ msgstr "Cóipcheart © 2009, Wang Hoi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kevin Scannell"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kscanne@gmail.com"
+
+#~ msgid "Expand horizontally."
+#~ msgstr "Leathnaigh go cothrománach."
+
+#~ msgid "Expand vertically."
+#~ msgstr "Leathnaigh go hingearach."
+
+#~ msgid "(c) 2009 Wang Hoi"
+#~ msgstr "© 2009, Wang Hoi"
+
+#~ msgid "Wang Hoi"
+#~ msgstr "Wang Hoi"
+
+#~ msgid "Configure QuickLaunch"
+#~ msgstr "Cumraigh QuickLaunch"
+
+#~ msgid "Theme:"
+#~ msgstr "Téama:"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid ""
+#~ "When you resize the panel of the applet to larger size, several rows/"
+#~ "columns are used to layout icons"
+#~ msgstr ""
+#~ "Nuair a mhéadaíonn tú painéal an fheidhmchláir, leagann na deilbhíní "
+#~ "amach i roinnt rónna/colún"
+
+#~ msgid "Define how statusbar change its size when icons appear or disappear."
+#~ msgstr ""
+#~ "An tslí a athraíonn an barra stádais a mhéid féin nuair a thaispeántar "
+#~ "deilbhíní nua, nó nuair a théann siad as radharc."
+
+#~ msgid "Candidate words layout"
+#~ msgstr "Leagan amach focail iarrthóireachta"
+
+#~ msgid "Vertically expand."
+#~ msgstr "Leathnaigh go hingearach."
+
+#~ msgid "The theme for this input method panel."
+#~ msgstr "Téama le haghaidh an phainéil modh ionchurtha seo."
+
+#~ msgid "Unlimited"
+#~ msgstr "Gan Teorainn"

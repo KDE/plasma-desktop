@@ -1,0 +1,103 @@
+# Translation of plasma_applet_trash to Korean.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Shinjo Park <kde@peremen.name>, 2008, 2009, 2012, 2014, 2015, 2016, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2021-05-28 02:30+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: contents/ui/main.qml:103
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "열기"
+
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "비우기"
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Trash Settings…"
+msgstr "휴지통 설정…"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"휴지통\n"
+"비어 있음"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"휴지통\n"
+" 항목 %1개"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "휴지통"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "Empty"
+msgstr "비우기"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "항목 %1개"
+
+#~ msgid ""
+#~ "Trash \n"
+#~ " Empty"
+#~ msgstr ""
+#~ "휴지통\n"
+#~ " 비어 있음"
+
+#~ msgid "Empty Trash"
+#~ msgstr "휴지통 비우기"
+
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr "휴지통을 비우시겠습니까? 모든 항목이 삭제됩니다."
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
+
+#~ msgid "&Empty Trashcan"
+#~ msgstr "휴지통 비우기(&E)"
+
+#~ msgid "&Menu"
+#~ msgstr "메뉴(&M)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Empty Trash"
+#~ msgstr "휴지통 비우기"
+
+#~ msgid "Emptying Trashcan..."
+#~ msgstr "휴지통 비우는 중..."

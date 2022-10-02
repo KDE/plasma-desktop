@@ -1,0 +1,369 @@
+# Translation of kcmcomponentchooser.po into Bosnian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2015-02-06 15:32+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 05:58+0000\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Neki drugi klijent &e‑pošte:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Izaberite željeni terminalski program:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Izaberite željeni terminalski program:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Izaberite željeni terminalski program:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Samir Ribić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Samir.ribic@etf.unsa.ba"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Jozef Veninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Nepoznato"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Birač komponenata"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© 2002, Jozef Veninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Izaberite sa donjeg spiska komponentu koja će se koristiti kao "
+#~ "podrazumijevana za servis %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Promijenili ste neku podrazumijevanu komponentu svog izbora, želite "
+#~ "li sada da sačuvate izmjenu?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Opis nije dostupan"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Ovdje možete promijeniti komponente, odnosno programe koji služe osnovnim "
+#~ "radnjama, kao što su emulator terminala, uređivač teksta i klijent "
+#~ "e‑pošte. Pojedini KDE programi ponekad imaju potrebu da pozovu emulator "
+#~ "terminala, da pošalju e‑poruku ili prikažu neki tekst. Da bi to radili "
+#~ "usaglašeno, svi oni uvijek pozivaju iste komponente. Ovdje možete "
+#~ "izabrati koji su programi te komponente."
+
+#~ msgid "Default Component"
+#~ msgstr "Podrazumijevana komponenta"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Ovaj spisak prikazuje podesive tipove komponenti. Kliknite na "
+#~ "komponentu koju želite da podesite.</p>\n"
+#~ "<p>U ovom dijalogu možete promijeniti podrazumijevane komponente KDE‑a, "
+#~ "odnosno programe koji služe osnovnim radnjama, kao što su emulator "
+#~ "terminala, uređivač teksta i klijent e‑pošte. Pojedini KDE programi "
+#~ "ponekad imaju potrebu da pozovu emulator terminala, da pošalju e‑poruku "
+#~ "ili prikažu neki tekst. Da bi to radili usaglašeno, svi oni uvijek "
+#~ "pozivaju iste komponente.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Otvaraj <b>HTTP</b> i <b>HTTPS</b> URL‑ove</qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "u programu na osnovu sadržaja URL‑a"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "u sljedećem pregledniku:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "u sljedećem pregledniku:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Izaberite željeni veb pregledač:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "K‑pošta je standardni poštanski program za KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "K‑pošta &kao podrazumijevani klijent e‑pošte"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Izaberite ovo ako želite da koristite neki drugi program za e‑poštu."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul><li>%t: adresa primaoca</li><li>%s: tema</li><li>%c: kopija (CC)</"
+#~ "li><li>%b: nevidljiva kopija (BCC)</li><li>%B: šablonsko tijelo teksta</"
+#~ "li><li>%A: prilog</li><li>%u: pun URL <icode>mailto:</icode></li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Kliknite ovdje da izaberete željeni klijent e‑pošte. Da bi bio prihvaćen, "
+#~ "fajl koji izaberete mora imati postavljen izvršni atribut.<br/> Takođe "
+#~ "možete koristiti nekoliko mjestodržača koji će biti zamijenjeni stvarnim "
+#~ "vrijednostima kada se klijent pozove:<ul> <li>%t: adresa primaoca</li><li>"
+#~ "%s: tema</li><li>%c: kopija (CC)</li><li>%b: nevidljiva kopija (BCC)</"
+#~ "li><li>%B: šablonsko tijelo teksta</li><li>%A: prilog</li></ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Kliknite ovdje da potražite izvršni fajl programa."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Uključite ako želite da se izabrani klijent e‑pošte izvršava u terminalu "
+#~ "(npr. u <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "Pokreni u &terminalu"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Pregledaj fascikle sljedećim menadžerom fajlova:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Drugi: kliknite na Dodaj... u dijalogu datom ovdje:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Konsole kao &terminalski program"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Neki drugi &terminalski program:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "<p>Kliknite ovdje da izaberete podrazumijevani terminalski klijent. Da bi "
+#~ "bio prihvaćen, fajl koji izaberete mora imati postavljen izvršni atribut."
+#~ "</p><p>Takođe imajte na umu da neki programi koji koriste emulator "
+#~ "terminala neće raditi ako dodate argumente komandne linije (npr: "
+#~ "<icode>konsole -ls</icode>).</p>."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Kliknite ovdje da potražite terminalski program."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "Još %1 sekunda:"
+#~ msgstr[1] "Još %1 sekunde:"
+#~ msgstr[2] "Još %1 sekundi:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "Novi menadžer prozora biće korišćen od sljedećeg pokretanja KDE‑a."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Zamjena menadžera prozora"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Novi menadžer prozora je u pogonu.\n"
+#~ "Ipak je preporučljivo da pokrenete novu sesiju KDE‑a kako bi se svi "
+#~ "programi prilagodili ovoj izmjeni."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Menadžer prozora zamijenjen"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "Menadžer prozora trenutno u pogonu biće zamijenjen podešenim."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Izmjena podešenog menadžera prozora"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Prihvati izmjenu"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Vrati na prethodni"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Podešeni menadžer prozora se upravo pokreće.\n"
+#~ "Provjerite da li je to uspješno izvedeno i potvrdite izmjenu.\n"
+#~ "U roku od 20 sekundi biće automatski vraćen prethodni menadžer."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Menadžer programa sada u pogonu vraćen je na podrazumijevani KDE‑ov KWin."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Novi menadžer prozora ne može da se pokrene.\n"
+#~ "U pogon je vraćen podrazumijevani KDE‑ov menadžer, KWin."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Propalo izvršavanje postavne alatke"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "KDE‑ov podrazumijevani &menadžer prozora (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Neki drugi menadžer &prozora:"
+
+#~ msgid "Configure"
+#~ msgstr "Podesi"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Napomena: Većina menadžera ima sopstvenu postavu i ne prati postavke "
+#~ "KDE‑a."

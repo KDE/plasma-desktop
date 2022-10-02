@@ -1,0 +1,1069 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Handbok &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+><affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+><contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma;, är kärnan i skrivbordets gränssnitt. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Grafisk komponent</keyword>
+<keyword
+>Inneslutningar</keyword>
+<keyword
+>Skrivbord</keyword>
+<keyword
+>Körningsprogram</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<para
+>&plasma; tillhandahåller en modern och anpassningsbar miljö för att köra dina favoritprogram och komma åt information varän den finns. Andra typiska egenskaper hos &plasma;-skrivbordet omfattar avancerad fönsterhantering och skrivbordseffekter, stöd för &kde;:s grafiska &plasma;-komponenter, integrerad sökning, hårdvaruhantering och ett stort antal anpassningsmöjligheter. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Använda &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>&plasma;-komponenter</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Grafiska &plasma;-komponenter och inneslutningar</title>
+
+<para
+>&plasma;s innersta natur kretsar kring två grundläggande begrepp: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Grafiska &plasma;-komponenter</term>
+<listitem>
+<para
+>Miniprogram, eller små program som finns på skrivbordet. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Inneslutningar</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Miniprogram som fungerar som behållare för de grafiska &plasma;-komponenterna. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>På ett standardskrivbord finns det två huvuddelar: panelen och själva skrivbordet. Båda är inneslutningar i &plasma;s mening. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>&plasma; standardskrivbord</title>
+
+<para
+><note
+><para
+>&plasma;-skrivbordet kan anpassas på hur många sätt som helst. Skärmbilden som visas nedan representerar ett ganska normalt skrivbord. Vissa distributioner utför långtgående anpassningar, så ditt skrivbord kan se annorlunda ut. </para>
+<para
+>På liknande sätt kan stilen på det grafiska utseendet hos gränssnittselementen ändras. Dessa skärmbilder använder &plasma;s vanliga stil, Breeze.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Ett ganska vanligt &plasma;-skrivbord</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Startprogrammet. Oftast är det <link linkend="panel-launcher"
+>Starta program</link
+>.</para
+></listitem>
+<listitem
+><para
+>Ett antal ikoner som ger snabb åtkomst till ofta använda program</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Aktivitetshanteraren</link
+> som visar namn på fönster som hör till program som för närvarande kör. Inget program hade öppnat något fönster när skärmbilden togs.</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Systembrickan</link
+></para
+></listitem>
+<listitem
+><para
+>Den grafiska komponenten <link linkend="panel-digital-clock"
+>Digitalklocka</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>Panelverktyglådan</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="desktop"
+>Skrivbordsverktyglådan</link
+></para
+></listitem>
+<listitem
+><para
+>En grafisk katalogvisningskomponent, som visar innehållet i katalogen Skrivbord</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Panelen</title>
+
+<para
+>Standardpanelen innehåller några få grafiska &plasma;-komponenter: med början från vänster finns Starta program.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Starta program</title>
+
+<screenshot>
+<screeninfo
+>Starta program</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Starta program</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Du kan använda det för att starta program, öppna senast använda filer och utföra de vanliga utloggnings- och avstängningsåtgärderna. Det finns också en struktur som låter dig bläddra igenom dina program. Arrangemanget har optimerats för det vanligaste användarfallet: att starta ett program. Standardfliken är <guilabel
+>Favoriter</guilabel
+> som innehåller de oftast använda alternativen. I början märker du nog att du oftare använder fliken <guilabel
+>Program</guilabel
+>. När du väl har tagit reda på vilka program du oftast kör, <mousebutton
+>höger</mousebutton
+>klicka på alternativen och välj <guimenuitem
+>Lägg till i favoriter</guimenuitem
+> för att lägga till dem i <guilabel
+>Favoriter</guilabel
+> (eller direkt i panelen, eller på skrivbordet). Observera att du måste <quote
+>låsa upp</quote
+> &plasma; genom att <mousebutton
+>höger</mousebutton
+>klicka på skrivbordet för alla sorters ändringar).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Programmeny</title>
+
+<para
+> Om du föredrar den traditionella menystilen för att starta program, ändra det genom att <mousebutton
+>höger</mousebutton
+>klicka på menyknappen och välja <guimenuitem
+>Alternativ</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Programmeny</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Programmeny</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Inställningar av Starta program</title>
+
+<para
+> Om du vill anpassa Starta program, ändra det genom att <mousebutton
+>höger</mousebutton
+>klicka på menyknappen och välja <guimenuitem
+>Anpassa Starta program</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Inställningar av starta program</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Inställningar av starta program</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Aktivitetsfält</title>
+
+<para
+>Aktivitetsfältet är en annan grafisk komponent i panelen. Det visar normalt ett område för alla fönster på alla skrivbord. Du kan få det att bara visa alla öppna fönster på nuvarande skrivbord genom att markera <guimenuitem
+>Visa bara aktiviteter på nuvarande skrivbord</guimenuitem
+>, när du högerklickar på aktivitetsfältet mellan två fönster. Textstorleken hos aktivitetsfältets objekt kan ställas in med Systeminställningar, under <menuchoice
+><guimenu
+>Utseende</guimenu
+> <guisubmenu
+>Teckensnitt</guisubmenu
+></menuchoice
+>. Genom att högerklicka på aktivitetsfältet visas inställningsdialogrutan där du kan välja olika alternativ för att anpassa aktivitetsfältet. <screenshot>
+<screeninfo
+>Här är en skärmbild av aktivitetsfältets inställningsdialogruta</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Aktivitetsfältets inställningsdialogruta</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Systembricka</title>
+
+<para
+>Ett annat objekt i standardpanelen är <application
+>systembrickan</application
+>, som används för dockning av traditionella program och komponenter. Genom att högerklicka på <application
+>systembrickan</application
+> kan inställningsdialogrutan öppnas, där du kan välja poster att visa och deras synlighet. </para>
+<screenshot>
+<screeninfo
+>Systembrickans inställningsdialogruta</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Systembrickans inställningsdialogruta</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Underrättelse om enheter</title>
+
+<para
+>En ikon som oftast är placerad i systembrickan är <application
+>Underrättelse om ny enhet</application
+>. Koppla in en &USB;-hårddisk, så visas en dialogruta som låter dig öppna enheten i &dolphin;, eller ett annat tillhörande program. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+><application
+>Underrättelse om enheter</application
+> används för att hantera inkopplingsbara enheter som &USB;-minnen (också kallade flashminne eller minnespinne), digitalkameror, externa &USB;-hårddiskar, etc. Den är också med i spelet när medier som cd- eller dvd-skivor matas in i en optisk enhet. </para>
+<para
+>När en extern enhet kopplas in, eller ett nytt medium matas in i en enhet, dyker fönstret <guilabel
+>Tillgängliga enheter</guilabel
+> upp (det går också att öppna det explicit genom att klicka på panelikonen). Det förblir öppet medan pekaren hålls över det, annars döljs det efter några sekunder. </para>
+<para
+>Fönstret <guilabel
+>Tillgängliga enheter</guilabel
+> visar en lista med enheterna som det för närvarande känner till. Flyttas muspekaren över en enhet, markeras hur många möjliga åtgärder som är kopplade till enheten. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Att klicka var som helst i den skuggade rutan omkring enhetsnamnet (men inte på ikonen för utmatning eller avmontering om den finns) expanderar posten så att listan med möjliga åtgärder för enheten visas. Mängden åtgärder beror på enheten. De går att ställa in från den sammanhangsberoende menyn i <application
+>Underrättelse om enheter</application
+> eller från modulerna <ulink url="help:/kcontrol/solid-actions/index.html"
+>Enhetsåtgärder</ulink
+> och <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Flyttbara enheter</ulink
+> i systeminställningarna. Välj helt enkelt en med musen eller tangentbordet för att utföra den åtgärden. </para>
+<para
+>Det finns också en liten ikon till höger om varje post som visar om enheten för närvarande går att komma åt (eller är <emphasis
+>monterad</emphasis
+>) eller inte. Det är bara säkert att fysiskt koppla bort en enhet från datorn när den inte är monterad. Att klicka på ikonen gör att enheten avmonteras och/eller att mediet matas ut om den för närvarande är monterad, och monterar den om den inte är det. Observera att avmontering eller utmatning kan misslyckas om enheten fortfarande har öppna filer, t.ex. om en stor filkopiering inte har gjorts färdig. I de flesta fall kan man bara vänta ett tag och försöka igen. När en avmontering har lyckats visas en ikon som anger det över ikonen för <application
+>Underrättelse om enheter</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Dolda objekt</title>
+
+<para
+><application
+>Systembrickan</application
+> innehåller normalt ytterligare några poster, som &klipper;, &kmix;, etc.</para>
+
+<para
+>Vissa av standardposterna i <application
+>Systembrickan</application
+> är dolda för att spara utrymme i panelen. För att visa dessa poster, klicka på den lilla vita triangeln <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/></imageobject
+></inlinemediaobject
+> och använd sedan vänster musknapp för att starta en komponent eller höger musknapp för att öppna dess inställningsdialogruta.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Digitalklocka</title>
+
+<para
+>Den grafiska &plasma;-komponenten längst till höger i standardpanelen innehåller <application
+>digitalklockan</application
+>. Klockan kan visa tiden i olika tidzoner samt ändra storlek. Klockan justerar teckenstorleken till området den ges av omgivande inneslutning (dvs. panelen i detta fall). Om du väljer att visa datum, återges det med alternativet <guimenuitem
+>Litet teckensnitt</guimenuitem
+> från dialogrutan <guilabel
+>Teckensnitt</guilabel
+> i Systeminställningar. Tiden upptar resten av platsen. I slutändan väljer du själv hur mycket information som visas, och om den får plats. Om du vill visa mer information, gör panelen större eller placera klockan på skrivbordet, där den kan växa fritt. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Skrivbordsvisning</title>
+
+<para
+>Ett valfritt objekt i panelen är <application
+>Skrivbordsvisning</application
+>. Det låter dig byta mellan virtuella skrivbord. Om du ändrar arrangemanget hos <application
+>Skrivbordsvisning</application
+> med alternativet <guimenuitem
+>Antal rader</guimenuitem
+>, påverkar du också arrangemang och animeringar som visas av &kwin;s <guimenuitem
+>Skrivbordsrutnät</guimenuitem
+>. För större skrivbordsvisning, är det ofta vettigt att välja <guimenuitem
+>Visa fönsterikoner</guimenuitem
+>. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Panelens verktygslåda</title>
+
+<para
+>Om du har låst upp skrivbordet (du kan göra det genom att <mousebutton
+>höger</mousebutton
+>klicka på skrivbordet, eller med <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+><keycap
+>L</keycap
+>), visas en liten &plasma;-logotyp längst ner i högra hörnet av panelen. Klicka på verktygslådan, så visas panelstyrningen.</para>
+
+<screenshot>
+<screeninfo
+>Panelinställningar</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Panelinställningar</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Panelstyrningen låter dig ändra position, ändra storlek och justera om panelen. De grafiska &plasma;-komponenterna som ingår i panelen justerar sina storlekar automatiskt. &plasma;-komponenterna har grundkunskap om storleksändring, som tillhandahålls av inneslutningen. De är programmerade att utnyttja storleken, och att informera miniprogrammet om hur mycket utrymme de möjligen behöver. I slutändan ger inneslutningen en möjlig storlek till miniprogrammen, och de lyder.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Lägga till miniprogram</title>
+
+<para
+>Lås upp skrivbordet så kommer du att kunna lägga till och ta bort grafiska &plasma;-komponenter från panelen eller skrivbordet. &plasma;-komponenter läggs till genom att helt enkelt dra dem dit du vill ha dem. <mousebutton
+>Höger</mousebutton
+>klicka på en komponent för att ta bort den. <screenshot
+> <screeninfo
+>Lägg till grafiska komponenter</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Lägg till grafiska komponenter</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Knappen <guibutton
+>Hämta nya grafiska komponenter</guibutton
+> låter dig lägga till grafiska komponenter som du tidigare laddat ner, och ladda ner nya &plasma;-komponenter. För närvarande stöder den egna &plasmagik;-paket och vissa grafiska komponenter för &Mac; OS&nbsp;X instrumentpanel. Komponenter som du installerar på detta sätt kan kommas åt precis som vanliga, förinstallerade grafiska komponenter. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Skrivbordet</title>
+
+<para
+>Skrivbordet är i själva verket ytterligare en inneslutning, som inte ger miniprogrammen några storleksbegränsningar. Miniprogram kan flyttas och deras storlek kan ändras fritt. På ett upplåst skrivbord visar grafiska &plasma;-komponenter en ram när du flyttar musen över dem. Detta miniprogramgrepp låter dig flytta, ändra storlek, ändra plats och justera om panelen. Det låter dig också dra &plasma;-komponenter på skrivbordet. Knapparna i hörnet används för att ändra storlek, rotera, anpassa och ta bort miniprogrammet. När den roteras beter sig en &plasma;-komponent som en magnet åt klockan 12, så det är enkelt att få tillbaka den till en rimlig position. Normalt behåller de flesta miniprogram sin proportion när deras storlek ändras. Om du fritt vill ändra storlek på ett miniprogram, håll nere tangenten &Ctrl; medan storleken ändras. </para>
+
+<para
+>Att högerklicka på skrivbordet erbjuder dig också att anpassa aspekter som använt skrivbordsunderlägg, använd layout och musåtgärder. Du får möjlighet att ladda ner nya skrivbordsunderlägg via Heta nyheter. </para>
+<para
+>På sidan <guilabel
+>Justeringar</guilabel
+> kan du ställa in att dölja skrivbordets verktygslåda och justera hanteringen av grafiska komponenter. </para>
+
+<screenshot>
+<screeninfo
+>Skrivbordsinställningar</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Skrivbordsinställningar</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>För att ändra tema i &plasma; eller ladda ner ett nytt via Heta nyheter, öppna sidan <menuchoice
+><guimenu
+>Utseende</guimenu
+> <guimenuitem
+>Skrivbordstema</guimenuitem
+></menuchoice
+> i systeminställningarna.</para>
+
+<para
+>Det blir snabbt svårt att se de grafiska &plasma;-komponenterna på skrivbordet med öppna program. <emphasis role="bold"
+>Instrumentpanelen</emphasis
+> får fram &plasma;-komponenterna åt dig, på ett sätt som liknar funktionen <guilabel
+>Kika på skrivbord</guilabel
+> som du är van vid från traditionella skrivbord. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Katalogvy</title>
+<para
+>Den grafiska komponenten <guilabel
+>Katalogvy</guilabel
+> används för att visa saker som kataloger eller filer i en katalog, normalt från <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>Du kan välja att antingen visa alla filer, eller antingen filtrera enligt specifika reguljära uttryck (t.ex. alla filer med en viss filändelse) eller enligt filtyp (t.ex. bara bilder). </para>
+<para
+>Komponenten stöder också grundegenskaper för filhantering (exempelvis flytta, kopiera, klippa ut och klistra in), och du kan ha hur många som helst på skrivbordet. </para>
+
+<screenshot>
+<screeninfo
+>Katalogvy</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Katalogvy</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Om du väljer layouten <guilabel
+>Katalogvy</guilabel
+> i <guilabel
+>Skrivbordsinställningar</guilabel
+> kan du använda en katalogvy som hela skrivbordet, och därmed återskapa den "gamla stilens" skrivbordsparadigm. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>Kör program</title>
+<para
+>Kör program är en mångsidig minikommandorad. Du kan använda den för att starta program, visa webbsidor, komma åt bokmärken, söka i skrivbordsdata, beräkna enkla ekvationer, med mera. Tryck på <keycombo action="simul"
+>&Alt;<keysym
+>Mellanslag</keysym
+></keycombo
+> eller <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> för att visa dialogrutan. Börja bara skriva så börjar Kör program söka efter träffar så fort du har skrivit in mer än två tecken. Du kan öppna inställningsdialogrutan för att lära dig mer om funktionerna i Kör program, som tillhandahålls av insticksprogram. Du kan navigera bland träffarna med tabulator och piltangenter. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Dialogrutan Kör program</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Dialogrutan Kör program</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Använd knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> för att visa modulen <guilabel
+>Kör program</guilabel
+> i systeminställningarna och anpassa vad som ska sökas efter och var det ska göras i Kör program. </para>
+
+<para
+>Kör program stöder <quote
+>skrivbordsåtgärder</quote
+>, som är ytterligare åtgärder som ett program kan erbjuda för att utföra vanliga åtgärder eller direkt gå till en viss aktivitet från aktivitetshanteraren. Vanliga exempel är <guilabel
+>Visa nytt privat fönster</guilabel
+> för att direkt starta webbläsaren i privat läge, <guilabel
+>Skriv brev</guilabel
+> utan att först starta det fullfjädrade e-postprogrammet, eller åtgärder som tillhandahålls av Spectacle. </para>
+
+<screenshot>
+<screeninfo
+>Skrivbordsåtgärder i Kör program</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Skrivbordsåtgärder i Kör program</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Om du trycker på tangenten <keysym
+>Neråtpil</keysym
+> i ett tomt Kör program, visas en historik över de senaste posterna. Efter att ha använt ett sökresultat flyttas det alternativet längst upp, så att kommandon som används upprepade gånger aldrig försvinner från listan. </para>
+<para
+>Ta bort enstaka värden från listan genom att använda knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+> eller rensa hela historiken i inställningarna av Kör program. </para>
+
+<para
+>Om du vill veta vad som händer i datorn, får du snabbt tillgång till en lista med fönster och processer, med alternativ för att övervaka deras utdata och att döda processer genom att trycka på <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+>. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Aktiviteter</title>
+
+<para
+>Skrivbordets verktygslåda, som kan kommas åt via övre vänstra hörnet, har en knapp för att visa dina aktiviteter, där &plasma; låter dig ha mer än en. Det är i grund och botten flera skrivbordsinneslutningar som innehåller flera uppsättningar grafiska &plasma;-komponenter. Visa <quote
+>Aktiviteter</quote
+>, markera en av de fördefinierade aktiviteterna eller välj <guilabel
+>Skapa aktivitet</guilabel
+> för att skapa en ny inneslutning, välj den nya inneslutningen och anpassa den för att passa dina behov. &plasma;s aktiviteter och &kwin;s skrivbordsrutnät är liknande i det avseendet, men det finns en grundläggande skillnad. Medan virtuella skrivbord används för att gruppera och organisera fönster, används aktiviteter i &plasma; för att gruppera och organisera &plasma;-komponenter. På så sätt kan du byta mellan aktiviteter och ha relevanta &plasma;-komponenter som stöder uppgiften du för närvarande försöker lösa. Du kan till exempel skapa en fritidsaktivitet, med serier, ett pussel och andra &plasma;-komponenter, samt en arbetsaktivitet med relevanta <acronym
+>RSS</acronym
+>-kanaler, räknare och kalender. </para>
+
+<para
+>Klicka på knappen <guibutton
+>Stoppa aktivitet</guibutton
+> på raden <quote
+>Aktiviteter</quote
+> (tryck på <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> och därefter <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> för att visa raden) klicka därefter på det röda krysset (eller tryck på <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> och därefter <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) för att ta bort en aktivitet, och bekräfta borttagningen. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Genvägar</title>
+
+<para
+>De flesta av &plasma;s funktioner är också tillgängliga via snabbtangenter. De olika kombinationerna måste tryckas på i följd, dvs. exempelvis <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> betyder: Tryck ner &Alt; och <keycap
+>D</keycap
+>, släpp och tryck ner <keycap
+>A</keycap
+>. </para>
+<para
+>För närvarande kan följande standardgenvägar användas: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Lägg till grafiska komponenter</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Ta bort grafisk komponent</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Lås eller lås upp grafiska komponenter</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+><keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Zooma ut</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+><keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Zooma in</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Nästa grafiska komponent</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Föregående grafiska komponent</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Inställningar av grafiska komponenter</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Aktiviteter</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Ta bort aktiviteten</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Skrivbordsinställningar</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+> <keycap
+>Tabulator</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Nästa aktivitet</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keycap
+>Meta</keycap
+>&Shift; <keycap
+>Tabulator</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Föregående aktivitet</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Kika på skrivbord</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Kör tillhörande program</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+><keysym
+>Meta</keysym
+> <keycap
+>Tabulator</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Öppna aktivitetspanelen</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Tack till och licens</title>
+
+<para
+>&plasma; </para>
+<para
+>Program copyright 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Dokumentation Copyright &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

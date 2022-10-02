@@ -1,0 +1,287 @@
+# translation of kcmsmserver.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2005, 2007, 2008, 2009.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Sokun <sokun_poch@khmeros.info>, 2007.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-04-09 11:27+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>កម្មវិធី​គ្រប់គ្រង​សម័យ</h1> ​អ្នក​អាច​កំណត់រចនាសម្ព័ន្ធ​កម្មវិធី​គ្រប់​គ្រង​សម័យ​នៅ​ទីនេះ ។ ការ​នេះ​រួម​មាន​"
+"ទាំង​ជម្រើស​ដូច​ជា ថាតើគួរអះអាង ឬ​ក៏​អត់ នៅ​​ពេល​សម័យ​ចាក​ចេញ (ចេញ) ថា​តើ​គួរ​ស្ដារ​សម័យ ឬ​ក៏​អត់ នៅ​ពេល​"
+"ចូល តើ​កុំព្យូទ័រ​គួរ​បិទ​ដោយ​ស្វ័យ​ប្រវត្តិ ឬ​ក៏​អត់ ​បន្ទាប់​ពី​​សម័យ​ចេញ​ដោយ​លំនាំ​ដើម ។"
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#  i18n: file smserverconfigdlg.ui line 146
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "ចាប់​ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
+
+#  i18n: file smserverconfigdlg.ui line 40
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "ទូទៅ"
+
+#  i18n: file smserverconfigdlg.ui line 51
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "អះអាង​ការ​ចេញ"
+
+#  i18n: file smserverconfigdlg.ui line 62
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "ផ្ដល់​ជម្រើស​បិទ"
+
+#  i18n: file smserverconfigdlg.ui line 116
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
+
+#  i18n: file smserverconfigdlg.ui line 130
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "បញ្ចប់​សម័យ​បច្ចុប្បន្ន"
+
+#  i18n: file smserverconfigdlg.ui line 146
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "ចាប់​ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
+
+#  i18n: file smserverconfigdlg.ui line 138
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "បិទ​កុំព្យូទ័រ"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#  i18n: file smserverconfigdlg.ui line 98
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
+
+#  i18n: file smserverconfigdlg.ui line 98
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
+
+#  i18n: file smserverconfigdlg.ui line 106
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ចាប់ផ្តើម​ជាមួយ​សម័យ​ទទេ​"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#  i18n: file smserverconfigdlg.ui line 178
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"នៅ​ទីនេះ​អ្នក​អាច​បញ្ចូល​​បញ្ជី​ដែល​បំបែក​ដោយ​​សញ្ញា(:) ឬ​សញ្ញា (,) របស់​កម្មវិធី​ដែល​មិន​គួរ​ត្រូវ​បាន​រក្សាទុក​នៅ​"
+"ក្នុង​សម័យ ហើយ​ដូច្នេះ​នឹង​មិន​ត្រូវ​បាន​ចាប់ផ្ដើម​នៅពេល​ដែលស្ដារ​សម័យ​ទេ ។ ឧទាហរណ៍  'xterm:konsole' "
+"or 'xterm,konsole' ។"
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#  i18n: file smserverconfigdlg.ui line 51
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "អះអាង​ការ​ចេញ"
+
+#  i18n: file smserverconfigdlg.ui line 62
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "ផ្ដល់​ជម្រើស​បិទ"
+
+#  i18n: file smserverconfigdlg.ui line 116
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
+
+#  i18n: file smserverconfigdlg.ui line 72
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "ពេល​ចូល"
+
+#  i18n: file smserverconfigdlg.ui line 167
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "កម្មវិធី​ដែល​ត្រូវ​បាន​យក​ចេញ​ពី​សម័យ ៖"
+
+#  i18n: file smserverconfigdlg.ui line 90
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "ស្ដារ​សម័យ​មុន"
+
+#  i18n: file smserverconfigdlg.ui line 98
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
+
+#  i18n: file smserverconfigdlg.ui line 54
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr "ធីក​ជម្រើស​នេះ បើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​គ្រប់​គ្រង​សម័យ​បង្ហាញ​ប្រអប់​អះអាង ​ពេល​ចេញ​ ។"
+
+#  i18n: file smserverconfigdlg.ui line 51
+#~ msgid "Conf&irm logout"
+#~ msgstr "អះអាង​ការ​ចេញ"
+
+#  i18n: file smserverconfigdlg.ui line 62
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "ផ្ដល់​ជម្រើស​បិទ"
+
+#  i18n: file smserverconfigdlg.ui line 119
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "នៅ​ទីនេះ​អ្នក​អាច​ជ្រើស​អ្វី​ដែល​គួរ​កើត​ឡើង​តាម​​លំនាំ​ដើម នៅ​ពេល​អ្នក​ចេញ ។ នេះ​គ្រាន់​តែ​ជា​អត្ថន័យ​តែ​"
+#~ "ប៉ុណ្ណោះ បើ​អ្នក​បាន​ចូល​តាម KDM ។"
+
+#  i18n: file smserverconfigdlg.ui line 116
+#~ msgid "Default Leave Option"
+#~ msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
+
+#  i18n: file smserverconfigdlg.ui line 79
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>ស្ដារ​សម័យ​មុន ៖</b> នឹង​រក្សា​ទុក​កម្មវិធី​ទាំងអស់​ដែល​កំពុង​រត់ នៅ​ពេល​ចាក​ចេញ ហើយ​ស្ដារ​ពួក​វា "
+#~ "ពេល​ពួក​វា​ចាប់​ផ្ដើម​លើក​ក្រោយ</li>\n"
+#~ "<li><b>ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ ៖ </b> អនុញ្ញាត​ឲ្យ​សម័យ​ត្រូវ​បាន​រក្សា​ទុក​នៅ​ពេល​ណា​មួយ "
+#~ "តាមរយៈ \"រក្សា​ទុក​សម័យ\" ក្នុង​​ម៉ឺនុយ K ។ នេះ​មាន​ន័យ​ថា​កម្មវិធី​ដែល​បាន​ចាប់ផ្ដើម​ថ្មីៗ នឹង​បង្ហាញ​ឡើង​"
+#~ "វិញ ពេល​ពួក​វា​ចាប់​ផ្ដើម​លើក​ក្រោយ ។</li>\n"
+#~ "<li><b>ចាប់​ផ្ដើម​ជាមួយ​សម័យ​ទទេ ៖</b> មិន​រក្សា​ទុក​អ្វី​ទាំងអស់ ។ នឹង​បង្ហាញ​ផ្ទៃ​តុ​ទទេ ពេល​ចាប់​ផ្ដើម​"
+#~ "លើក​ក្រោយ ។</li>\n"
+#~ "</ul>"
+
+#  i18n: file smserverconfigdlg.ui line 72
+#~ msgid "On Login"
+#~ msgstr "ពេល​ចូល"
+
+#  i18n: file smserverconfigdlg.ui line 167
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "កម្មវិធី​ដែល​ត្រូវ​បាន​យក​ចេញ​ពី​សម័យ ៖"
+
+#  i18n: file smserverconfigdlg.ui line 16
+#~ msgid "Session Manager"
+#~ msgstr "កម្មវិធី​គ្រប់​គ្រង​សម័យ"

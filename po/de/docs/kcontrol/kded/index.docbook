@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Hintergrunddienste</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Dienst</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Das Modul <guilabel
+>Diensteverwaltung</guilabel
+> gibt Ihnen eine Übersicht über alle Module des &kde;-Daemon, auch &kde;-Systemdienst genannt. Es gibt zwei Arten von Diensten:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Dienste, die nur auf Anforderung gestartet werden</guilabel
+></term>
+<listitem
+><para
+>Dies ist eine Liste sämtlicher verfügbarer &kde;-Dienste, die nur auf ausdrückliche Anforderung gestartet werden. Sie werden nur zu Ihrer Information gelistet. Es lassen sich keine Änderungen vornehmen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>KDE-Dienste beim Start</guilabel
+></term>
+<listitem
+><para
+>Hier sind alle &kde;-Dienste aufgeführt, die sich beim Start von &kde; laden lassen. Dienste, die in der Spalte <guilabel
+>Benutzung</guilabel
+> markiert sind, werden beim nächsten Start aufgerufen. </para>
+<para
+>Seien Sie bitte vorsichtig bei der Deaktivierung Ihnen unbekannter Dienste, einige sind sehr wichtig für das &kde;-System. </para>
+<para
+>Um den <guilabel
+>Status</guilabel
+> eines Dienstes zu ändern, wählen sie ihn in der Liste aus. Mit <guibutton
+>Start</guibutton
+> und <guibutton
+>Stopp</guibutton
+> kann dann der Status dieses Dienstes von <guilabel
+>Nicht gestartet</guilabel
+> in <guilabel
+>Läuft</guilabel
+> und umgekehrt geändert werden. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

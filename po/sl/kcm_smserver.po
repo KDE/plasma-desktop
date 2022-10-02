@@ -1,0 +1,289 @@
+# translation of kcmsmserver.po to Slovenian
+# Translation of kcmsmserver.po to Slovenian
+# KDEBASE translation to Slovenian language.
+# $Id: kcm_smserver.po 1630923 2022-08-10 01:38:31Z scripty $
+# $Source$
+#
+# Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
+# Roman Maurer <roman.maurer@amis.net>, 2001.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004.
+# Jure Repinc <jlp@holodeck1.com>, 2008, 2009.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-24 09:18+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Upravljalnik sej</h1>Tu lahko nastavite upravljalnika sej. To vključuje "
+"tudi, ali želite odjavo potrditi, ali želite prejšnjo sejo ob prijavi "
+"obnoviti in ali naj bo po koncu seje računalnik samodejno izklopljen."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+"Ni bilo mogoče zahtevati ponovnega zagona za namestitev strojne programske "
+"opreme: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Ko se računalnik ponovno zažene, se bo aktivirala kontrolna plošča za "
+"nastavitev UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Ko se računalnik ponovno zažene, se bo aktivirala kontrolna plošča za "
+"nastavitev strojne programske opreme."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Ponovno zaženi računalnik"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "Splošno:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Potrdi odjavo"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Ponudi možnosti izklopa"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Privzeta možnost zapustitve:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Končaj trenutno sejo"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Ponovno zaženi računalnik"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Izklopi računalnik"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Ob prijavi:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Obnovi zadnjo sejo"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Obnovi ročno shranjeno sejo"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Začni s prazno sejo"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Ne obnavljaj naslednje aplikacije:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Sem lahko vnesete seznam programov, ločenih z vejico ali podpičjem, ki naj "
+"se ne shranjujejo v sejah, zato tudi ne bodo zagnani ob obnovah seje. Na "
+"primer »xterm:konsole« ali »xterm,konsole«."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Vstopi v nastavitev vdelane programske opreme ob naslednjem zagonu"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Potrditev odjave"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Ponudi možnosti izklopa"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Privzeta možnost zapustitve"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Ob prijavi"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Aplikacije, ki naj bi bile izključene iz seje"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matjaž Jeran"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matjaz.jeran@amis.net"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Namizna seja"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Prijava in odjava namizne seje"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Copyright © 2000–2020 Desktop Session team"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Obnovi prej shranjeno sejo"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "Nastavitev UEFI"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Ob naslednjem zagonu v nastavitev UEFI"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Izberite to možnost, če želite, da upravljalnik sej ob odjavi prikaže "
+#~ "potrditveno okno."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Potrd&itev odjave"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Prikaži možnosti izklopa"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Tu lahko izberete, kaj naj se privzeto zgodi ob odjavi. Nastavitev je "
+#~ "smiselna le, če ste se prijavili s KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Privzeta možnost zapustitve"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Obnovi prejšnjo sejo:</b> Ob izhodu bodo shranjeni vsi zagnani "
+#~ "programi, da bodo ob naslednji prijavi obnovljeni</li>\n"
+#~ "<li><b>Obnovi ročno shranjeno sejo:</b> Dovoljuje, da se seja lahko "
+#~ "kadarkoli shrani preko \"Shrani sejo\" v meniju K. To pomeni, da se bodo "
+#~ "trenutno zagnani programi znova pojavili ob naslednji prijavi.</li>\n"
+#~ "<li><b>Začni s prazno sejo:</b> Ne shrani nič. Ob naslednji prijavi bo "
+#~ "prazno namizje.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Ob prijavi"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Programi, ki niso vključeni v sejo:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Nastavitev strojne programske opreme"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Ko se računalnik naslednjič zažene, začnete v zaslonu za nastavitev "
+#~ "programske opreme (npr. Nastavitev UEFI ali BIOS)"

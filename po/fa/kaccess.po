@@ -1,0 +1,508 @@
+# translation of kaccess.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaccess\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-03 00:51+0000\n"
+"PO-Revision-Date: 2012-01-12 16:52+0330\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
+"Language-Team: Farsi (Persian) <>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "محمدرضا میردامادی , نازنین کاظمی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
+
+#: kaccess.cpp:68
+msgid ""
+"The Shift key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "کلید تبدیل قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:69
+msgid "The Shift key is now active."
+msgstr "در حال حاضر،کلید تبدیل فعال است."
+
+#: kaccess.cpp:70
+msgid "The Shift key is now inactive."
+msgstr "در حال حاضر،کلید تبدیل غیرفعال است."
+
+#: kaccess.cpp:74
+msgid ""
+"The Control key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "کلید مهار قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:75
+msgid "The Control key is now active."
+msgstr "در حال حاضر، کلید مهار فعال است."
+
+#: kaccess.cpp:76
+msgid "The Control key is now inactive."
+msgstr "در حال حاضر، کلید مهار غیرفعال می‌باشد."
+
+#: kaccess.cpp:80
+msgid ""
+"The Alt key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "کلید دگرساز قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:81
+msgid "The Alt key is now active."
+msgstr "در حال حاضر، کلید دگرساز فعال می‌باشد."
+
+#: kaccess.cpp:82
+msgid "The Alt key is now inactive."
+msgstr "در حال حاضر، کلید دگرساز غیرفعال می‌باشد."
+
+#: kaccess.cpp:86
+msgid ""
+"The Win key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "کلید پنجره قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:87
+msgid "The Win key is now active."
+msgstr "در حال حاضر، کلید پنجره فعال است."
+
+#: kaccess.cpp:88
+msgid "The Win key is now inactive."
+msgstr "در حال حاضر، کلید پنجره غیرفعال است."
+
+#: kaccess.cpp:92
+msgid ""
+"The Meta key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "فراکلید قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:93
+msgid "The Meta key is now active."
+msgstr "در حال حاضر، فراکلید فعال است."
+
+#: kaccess.cpp:94
+msgid "The Meta key is now inactive."
+msgstr "در حال حاضر، فراکلید غیرفعال است."
+
+#: kaccess.cpp:98
+msgid ""
+"The Super key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "ابرکلید قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:99
+msgid "The Super key is now active."
+msgstr "در حال حاضر، ابرکلید فعال است."
+
+#: kaccess.cpp:100
+msgid "The Super key is now inactive."
+msgstr "در حال حاضر، ابرکلید غیرفعال است."
+
+#: kaccess.cpp:104
+msgid ""
+"The Hyper key has been locked and is now active for all of the following "
+"keypresses."
+msgstr "ابرکلید قفل شده و اکنون برای فشار همه کلیدهای زیر فعال است."
+
+#: kaccess.cpp:105
+msgid "The Hyper key is now active."
+msgstr "در حال حاضر، ابرکلید فعال است."
+
+#: kaccess.cpp:106
+msgid "The Hyper key is now inactive."
+msgstr "در حال حاضر، ابرکلید غیرفعال است."
+
+#: kaccess.cpp:110
+msgid ""
+"The Alt Graph key has been locked and is now active for all of the following "
+"keypresses."
+msgstr ""
+"کلید نگاره‌ای دگرساز قفل شده و اکنون برای همه فشارهای کلید زیر فعال است."
+
+#: kaccess.cpp:111
+msgid "The Alt Graph key is now active."
+msgstr "در حال حاضر، کلید نگاره‌ای دگرساز فعال است."
+
+#: kaccess.cpp:112
+msgid "The Alt Graph key is now inactive."
+msgstr "در حال حاضر، کلید نگاره‌ای دگرساز غیرفعال است."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key has been activated."
+msgstr "کلید قفل اعداد فعال شده است."
+
+#: kaccess.cpp:113
+msgid "The Num Lock key is now inactive."
+msgstr "در حال حاضر، کلید قفل اعداد فعال است."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key has been activated."
+msgstr "کلید قفل تبدیل فعال شده است."
+
+#: kaccess.cpp:114
+msgid "The Caps Lock key is now inactive."
+msgstr "در حال حاضر، کلید قفل تبدیل فعال است."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key has been activated."
+msgstr "کلید لغزش فعال شده است."
+
+#: kaccess.cpp:115
+msgid "The Scroll Lock key is now inactive."
+msgstr "در حال حاضر، کلید لغزش فعال است."
+
+#: kaccess.cpp:331
+#, kde-format
+msgid "Toggle Screen Reader On and Off"
+msgstr ""
+
+#: kaccess.cpp:333
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgctxt "Name for kaccess shortcuts category"
+msgid "Accessibility"
+msgstr "ابزار دستیابی‌پذیری KDE"
+
+#: kaccess.cpp:619
+#, kde-format
+msgid "AltGraph"
+msgstr "نگاره‌ای دگرساز"
+
+#: kaccess.cpp:621
+#, kde-format
+msgid "Hyper"
+msgstr "فوق"
+
+#: kaccess.cpp:623
+#, kde-format
+msgid "Super"
+msgstr "ابر"
+
+#: kaccess.cpp:625
+#, kde-format
+msgid "Meta"
+msgstr "فرا"
+
+#: kaccess.cpp:642
+#, kde-format
+msgid "Warning"
+msgstr "اخطار"
+
+#: kaccess.cpp:670
+#, kde-format
+msgid "&When a gesture was used:"
+msgstr "&هنگام استفاده از یک وضعیت:‌"
+
+#: kaccess.cpp:676
+#, kde-format
+msgid "Change Settings Without Asking"
+msgstr "تغییر تنظیمات بدون سؤال"
+
+#: kaccess.cpp:677
+#, kde-format
+msgid "Show This Confirmation Dialog"
+msgstr "نمایش این محاوره پیکربندی"
+
+#: kaccess.cpp:678
+#, kde-format
+msgid "Deactivate All AccessX Features & Gestures"
+msgstr "غیرفعال کردن همه ویژگیها و وضعیتهای AccessX"
+
+#: kaccess.cpp:721 kaccess.cpp:723
+#, kde-format
+msgid "Slow keys"
+msgstr "کلیدهای کند"
+
+#: kaccess.cpp:726 kaccess.cpp:728
+#, kde-format
+msgid "Bounce keys"
+msgstr "کلیدهای واگشت"
+
+#: kaccess.cpp:731 kaccess.cpp:733
+#, kde-format
+msgid "Sticky keys"
+msgstr "کلیدهای چسبناک"
+
+#: kaccess.cpp:736 kaccess.cpp:738
+#, kde-format
+msgid "Mouse keys"
+msgstr "کلیدهای موشی"
+
+#: kaccess.cpp:745
+#, kde-format
+msgid "Do you really want to deactivate \"%1\"?"
+msgstr " واقعاً می‌خواهید »%1« را غیرفعال کنید؟"
+
+#: kaccess.cpp:748
+#, kde-format
+msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+msgstr " واقعاً می‌خواهید »%1« و »%2« را غیرفعال کنید؟"
+
+#: kaccess.cpp:752
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+msgstr " واقعاً می‌خواهید »%1«، »%2« و»%3« را غیرفعال کنید؟"
+
+#: kaccess.cpp:755
+#, kde-format
+msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr " واقعاً می‌خواهید »%1«، »%2«، »%3« و»%4« را غیرفعال کنید؟"
+
+#: kaccess.cpp:766
+#, kde-format
+msgid "Do you really want to activate \"%1\"?"
+msgstr " واقعاً می‌خواهید »%1« را فعال کنید؟"
+
+#: kaccess.cpp:769
+#, kde-format
+msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+msgstr " واقعاً می‌خواهید »%1« را فعال و »%2« را غیرفعال کنید؟"
+
+#: kaccess.cpp:772
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+msgstr "واقعاً می‌خواهید »%1« را فعال و »%2« و »%3« را غیرفعال کنید؟"
+
+#: kaccess.cpp:778
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
+"\"%4\"?"
+msgstr " واقعاً می‌خواهید »%1« را فعال و »%2«، »%3« و »%4« را غیرفعال کنید؟"
+
+#: kaccess.cpp:789
+#, kde-format
+msgid "Do you really want to activate \"%1\" and \"%2\"?"
+msgstr "واقعاً می‌خواهید »%1« و »%2« را فعال کنید؟"
+
+#: kaccess.cpp:792
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+msgstr "واقعاً می‌خواهید »%1« و »%2« را فعال و »%3« را غیرفعال کنید؟"
+
+#: kaccess.cpp:798
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
+"and \"%4\"?"
+msgstr "واقعاً می‌خواهید »%1« و »%2« را فعال و »%3« و »%4« را غیرفعال کنید؟"
+
+#: kaccess.cpp:809
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+msgstr "واقعاً می‌خواهید »%1«، »%2« و »%3« را فعال کنید؟"
+
+#: kaccess.cpp:812
+#, kde-format
+msgid ""
+"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
+"\"%4\"?"
+msgstr "واقعاً می‌خواهید »%1«، »%2« و »%3« را فعال و »%4« را غیرفعال کنید؟"
+
+#: kaccess.cpp:821
+#, kde-format
+msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+msgstr "واقعاً می‌خواهید »%1«، »%2«، »%3« و »%4« را فعال کنید؟"
+
+#: kaccess.cpp:830
+#, kde-format
+msgid "An application has requested to change this setting."
+msgstr "برای تغییر این تنظیم، کاربردی درخواست شده است."
+
+#: kaccess.cpp:834
+#, kde-format
+msgid ""
+"You held down the Shift key for 8 seconds or an application has requested to "
+"change this setting."
+msgstr ""
+"شما کلید تبدیل را به مدت ۸ ثانیه نگه داشتید، یا برای تغییر این تنظیم، کاربرد "
+"درخواست شده است."
+
+#: kaccess.cpp:836
+#, kde-format
+msgid ""
+"You pressed the Shift key 5 consecutive times or an application has "
+"requested to change this setting."
+msgstr ""
+"شما کلید تبدیل را به مدت ۵ ثانیه متوالی فشار دادید، یا برای تغییر این تنظیم، "
+"کاربرد درخواست شده است."
+
+#: kaccess.cpp:840
+#, kde-format
+msgid "You pressed %1 or an application has requested to change this setting."
+msgstr "شما %1 را فشار دادید، یا برای تغییر این تنظیم، کاربرد درخواست شده است."
+
+#: kaccess.cpp:845
+#, kde-format
+msgid ""
+"An application has requested to change these settings, or you used a "
+"combination of several keyboard gestures."
+msgstr ""
+"برای تغییر این تنظیمات، کاربردی درخواست شده است، یا شما از ترکیبی از چند "
+"وضعیت صفحه کلید استفاده کردید."
+
+#: kaccess.cpp:847
+#, kde-format
+msgid "An application has requested to change these settings."
+msgstr "برای تغییر این تنظیمات، کاربردی درخواست شده است."
+
+#: kaccess.cpp:852
+#, kde-format
+msgid ""
+"These AccessX settings are needed for some users with motion impairments and "
+"can be configured in the KDE System Settings. You can also turn them on and "
+"off with standardized keyboard gestures.\n"
+"\n"
+"If you do not need them, you can select \"Deactivate all AccessX features "
+"and gestures\"."
+msgstr ""
+"این تنظیمات AccessX برای برخی کاربران معلول لازم هستند، و در مرکز کنترل KDE "
+"قابل پیکربندی می‌باشند. همچنین می‌توانید آنها را با وضعیتهای صفحه کلید "
+"استاندارد، روشن و خاموش کنید.\n"
+"\n"
+"اگر به آنها نیاز ندارید، می‌توانید «غیرفعال کردن همه ویژگیها و وضعیتهای "
+"AccessX  » را انتخاب کنید."
+
+#: kaccess.cpp:873
+#, kde-format
+msgid ""
+"Slow keys has been enabled. From now on, you need to press each key for a "
+"certain length of time before it gets accepted."
+msgstr ""
+"کلیدهای آهسته فعال شده است. از این به بعد، لازم است پیش از این که پذیرفته "
+"شود، هر کلید را برای مدت مشخصی فشار دهید تا قابل پذیرش باشد."
+
+#: kaccess.cpp:875
+#, kde-format
+msgid "Slow keys has been disabled."
+msgstr "کلیدهای آهسته غیرفعال شده است."
+
+#: kaccess.cpp:879
+#, kde-format
+msgid ""
+"Bounce keys has been enabled. From now on, each key will be blocked for a "
+"certain length of time after it was used."
+msgstr ""
+"کلیدهای واگشت فعال شده است. از این پس، هر کلید بعد از استفاده شدن، برای زمان "
+"مشخصی بلوک می‌شود."
+
+#: kaccess.cpp:881
+#, kde-format
+msgid "Bounce keys has been disabled."
+msgstr "کلیدهای واگشت غیرفعال شده است."
+
+#: kaccess.cpp:885
+#, kde-format
+msgid ""
+"Sticky keys has been enabled. From now on, modifier keys will stay latched "
+"after you have released them."
+msgstr ""
+"کلیدهای چسبناک فعال شده‌اند، از این پس، کلیدهای تغییردهنده، بعد از اینکه آنها "
+"را انتشار دادید بست‌دار می‌مانند."
+
+#: kaccess.cpp:887
+#, kde-format
+msgid "Sticky keys has been disabled."
+msgstr "کلیدهای چسبناک غیرفعال شده است."
+
+#: kaccess.cpp:891
+#, kde-format
+msgid ""
+"Mouse keys has been enabled. From now on, you can use the number pad of your "
+"keyboard in order to control the mouse."
+msgstr ""
+"کلیدهای موشی فعال شده‌اند. از این پس، می‌توانید به منظور کنترل موشی، از لایه "
+"شماره صفحه کلید خود استفاده کنید."
+
+#: kaccess.cpp:893
+#, kde-format
+msgid "Mouse keys has been disabled."
+msgstr "کلیدهای موشی غیرفعال شده‌اند."
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "KDE Accessibility Tool"
+msgid "Accessibility"
+msgstr "ابزار دستیابی‌پذیری KDE"
+
+#: main.cpp:49
+#, kde-format
+msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(ح) ۲۰۰۰، Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "Matthias Hoelzer-Kluepfel"
+
+#: main.cpp:51
+#, kde-format
+msgid "Author"
+msgstr "نویسنده"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr "ابزار دستیابی‌پذیری KDE"
+
+#~ msgid "kaccess"
+#~ msgstr "kaccess"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Sticky Keys"
+#~ msgstr "کلیدهای چسبناک"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "Use &sticky keys"
+#~ msgstr "کلیدهای چسبناک"
+
+#, fuzzy
+#~| msgid "Sticky keys"
+#~ msgid "&Lock sticky keys"
+#~ msgstr "کلیدهای چسبناک"
+
+#, fuzzy
+#~| msgid "Slow keys"
+#~ msgid "&Use slow keys"
+#~ msgstr "کلیدهای کند"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Bounce Keys"
+#~ msgstr "کلیدهای واگشت"
+
+#, fuzzy
+#~| msgid "Bounce keys"
+#~ msgid "Use bou&nce keys"
+#~ msgstr "کلیدهای واگشت"
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key a "
+#~ "certain time before it gets accepted."
+#~ msgstr ""
+#~ "نمایش کلیدها فعال شده است. از این به بعد، لازم است پیش از این که پذیرفته "
+#~ "شود، هر کلید را برای مدت مشخصی فشار دهید."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked a "
+#~ "certain time after it was used."
+#~ msgstr ""
+#~ "کلیدهای واگشت فعال شده است. از این پس، هر کلید بعد از استفاده شدن، برای "
+#~ "زمان مشخصی بلوک می‌شود."

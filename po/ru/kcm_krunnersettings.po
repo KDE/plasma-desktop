@@ -1,0 +1,321 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2017, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022.
+# Дронова Ю <juliette.tux@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-06-27 08:58+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.3\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "Расположение:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "Сверху"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "В центре"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "Активация:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "Открывать при нажатии любой клавиши в рабочем столе"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "История:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "Запоминать последние запросы"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "Восстанавливать последний запрос при открытии"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "Отдельная для каждой комнаты"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "Очистить историю запросов"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "Очистить историю запросов для комнаты «%1»"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "Очистить историю запросов…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "Во всех комнатах"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "В комнате «%1»"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "Модули:"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Настроить используемые модули поиска…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "Доступные модули"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "Включить или отключить расширения (используются в KRunner, запуске "
+#~ "приложений и в эффекте обзора)"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "Настроить строку поиска и запуска…"
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "Загрузить новые модули…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr ""
+#~ "Не удалось запустить сценарий установки в терминале <message>%1</message>"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr "Установка успешно выполнена, это окно можно закрыть"
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr "Удаление успешно выполнено, это окно можно закрыть"
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "Сбой установки расширения KRunner"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "Команда для выполнения: install или uninstall."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Путь к архиву."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "Поддержка Packagekit отсутствует"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "Подтверждение установки"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "Выполняется установка пакета, содержащего исполняемые файлы. Следует "
+#~ "устанавливать пакеты только от доверенных авторов."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "Принять риск и продолжить"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "Показать файл"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "Тип MIME %1 не поддерживается механизмом packagekit"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Модуль не содержит сценарий удаления, поэтому его возможно будет удалить "
+#~ "только вручную, о чём желательно сообщить разработчику.<nl/>Если "
+#~ "действия, которые нужно будет предпринять для удаления, непонятны, "
+#~ "нажмите <interface>Отмена</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Модуль не содержит сценарий удаления, поэтому его возможно будет удалить "
+#~ "только вручную, о чём желательно сообщить разработчику.<nl/"
+#~ ">Дополнительные сведения могут быть приведены в сопроводительном файле. "
+#~ "Если действия, которые нужно будет предпринять для удаления, непонятны, "
+#~ "нажмите <interface>Отмена</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Модуль не содержит сценарий установки, поэтому его возможно установить "
+#~ "только вручную, о чём желательно сообщить разработчику.<nl/>Если "
+#~ "действия, которые нужно предпринять для установки, непонятны, нажмите "
+#~ "<interface>Отмена</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "Модуль не содержит сценарий установки, поэтому его возможно установить "
+#~ "только вручную, о чём желательно сообщить разработчику.<nl/"
+#~ ">Дополнительные сведения могут быть приведены в сопроводительном файле. "
+#~ "Если действия, которые нужно предпринять для установки, непонятны, "
+#~ "нажмите <interface>Отмена</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "Модуль содержит сценарий установки, выполнение которого может быть "
+#~ "небезопасно. Рекомендуется перед установкой изучить содержимое модуля, "
+#~ "или, как минимум, код сценария установки.<nl/>Если действия, которые "
+#~ "нужно предпринять, непонятны, нажмите <interface>Отмена</interface>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "Модуль содержит сценарий установки, выполнение которого может быть "
+#~ "небезопасно. Рекомендуется перед установкой изучить содержимое модуля, "
+#~ "или, как минимум, ознакомиться с сопроводительным файлом и исходным кодом "
+#~ "сценария установки.<nl/>Если действия, которые нужно предпринять, "
+#~ "непонятны, нажмите <interface>Отмена</interface>."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "Отметить объект как удалённый"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "Отметить объект как установленный"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "Просмотреть сценарий"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "Просмотреть исходный каталог"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "Просмотреть %1"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "Не удалось разрешить имя пакета %1"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr "Не удалось запустить команду установки: <message>%1</message>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Александр Поташев,Александр Яворский"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aspotashev@gmail.com,kekcuha@gmail.com"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Настройка параметров поиска"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "Положение строки поиска и запуска:"
+
+#~ msgid "Enable"
+#~ msgstr "Сохранять историю"
+
+#~ msgid "KRunner history:"
+#~ msgstr "Историю запросов KRunner:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Восстанавливать последний запрос"
+
+#~ msgid "Clear History..."
+#~ msgstr "Очистить историю запросов..."
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "Включить или выключить модули для строки поиска и запуска:"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Выберите модули для строки поиска и запуска:"

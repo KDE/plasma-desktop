@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Aviso de execução</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+</articleinfo>
+
+<para
+>Algumas vezes, é tranquilizante saber que o seu computador não ignora seu comando e algo está acontecendo por trás dos panos. Neste módulo você pode configurar um histórico visível, que o ajudará a saber se você realmente clicou naquele ícone, ou não.</para>
+	
+<para
+>A maneira tradicional de indicar se o seu computador está ocupado é modificando o cursor, podendo isso ser ativado através da opção <guilabel
+>Cursor de ocupado</guilabel
+>.</para>
+
+<para
+>Com esta opção ativada, o seu cursor ficará com um ícone anexado a ele por um período de tempo curto, no momento em que é lançado um novo aplicativo. O usuário pode configurar por quanto tempo é mostrado este ícone com a opção <guilabel
+>Tempo limite do indicador de inicialização:</guilabel
+>. O valor padrão é de 5 segundos.</para>
+
+<para
+>Existem diversas variações do cursor de ocupado disponíveis, incluindo um <guilabel
+>Cursor piscante</guilabel
+>, um <guilabel
+>Cursor saltitante</guilabel
+> ou um <guilabel
+>Cursor de ocupado passivo</guilabel
+> sem nenhuma animação.</para>
+
+<para
+>A notificação de lançamento tradicional do &kde; ganhou nova forma, a qual o usuário poderá ativar e desativar aqui. Normalmente quando você inicia um aplicativo, ele adiciona-se à barra de tarefas imediatamente com um ícone de uma ampulheta, que lhe informa que algo está acontecendo. Você pode ligar ou desligar este comportamento com a opção <guilabel
+>Habilitar a notificação na barra de tarefas</guilabel
+> e, quando ela está ativa, poderá definir o tempo na caixa <guilabel
+>Tempo limite do indicador de inicialização</guilabel
+>.</para>
+
+<para
+>Nem todos os aplicativos que você iniciar irão exibir uma janela ou um item na barra de tarefas. Alguns deles, por exemplo, ficam embutidos na área de notificação do &kde;. Alternativamente, o aplicativo pode ser enviado para um ambiente virtual diferente, e na seção <guilabel
+>Filtros</guilabel
+> das <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Configurações do Gerenciador de tarefas</guilabel
+></ulink
+> a opção <guilabel
+>Mostrar apenas as tarefas da área de trabalho atual</guilabel
+> estar selecionada. Se você definir um tempo limite irá garantir que, mesmo nestes casos, obterá um retorno do lançamento, mas que também será oculto quando a tarefa estiver concluída.</para>
+
+</article>

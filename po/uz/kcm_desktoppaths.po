@@ -1,0 +1,406 @@
+# translation of kcmkonq.po to Uzbek
+# Copyright (C) 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2006-10-01 21:18+0000\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Ish stoli"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Documents"
+msgstr "Ish stoli %1:"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Downloads"
+msgstr "Ish stoli %1:"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "Autostart"
+msgid "Music"
+msgstr "Avto-boshlash"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Pictures"
+msgstr "Ish stoli %1:"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Videos"
+msgstr "Ish stoli %1:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Desktop path:"
+msgstr "Ish stoli %1:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Documents path:"
+msgstr "Ish stoli %1:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Downloads path:"
+msgstr "Ish stoli %1:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Videos path:"
+msgstr "Ish stoli %1:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgid "Pictures path:"
+msgstr "Ish stoli %1:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "Autostart"
+msgid "Music path:"
+msgstr "Avto-boshlash"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+
+#, fuzzy
+#~| msgid "Autostart"
+#~ msgid "Autostart path:"
+#~ msgstr "Avto-boshlash"
+
+#~ msgid "Autostart"
+#~ msgstr "Avto-boshlash"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Tasdiqlash talab qilinadi"
+
+#~ msgid "Misc Options"
+#~ msgstr "Har xil parametrlar"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Jildlarni &alohida oynada ochish"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Agar belgilansa, jild ochilganda Konqueror uni yangi oynada koʻrsatadi."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "&Kontekst menyuda oʻchirish bandini koʻrsatish"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Agar belgilansa, ish stoli yoki fayl-brauzerning kontekst menyusida "
+#~ "oʻchirish bandi koʻrinadi."
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Tasdiqlash uchun soʻrash"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Chiqindilar quti&siga koʻchirish"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "Oʻ&chirish"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Xususiyatlar"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Koʻrib chiqishlar va meta-maʼlumot"
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Protokollarni tanlang"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Lokal protokollar"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Internet protokollari"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Fayllarning eng katta hajmi:"
+
+#~ msgid " MB"
+#~ msgstr " Mb"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Fayldagi &miniatyuradan foydalanish"
+
+#~ msgid "Sound Files"
+#~ msgstr "Tovush fayllari"
+
+#~ msgid "&Left button:"
+#~ msgstr "Ch&ap tugma:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Oʻn&g tugma:"
+
+#~ msgid "No Action"
+#~ msgstr "Amal yoʻq"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Oynalar roʻyxati menyusi"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Ish stoli menyusi"
+
+#~ msgid "Application Menu"
+#~ msgstr "Dastur menyusi"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Xatchoʻplar menyusi"
+
+#~ msgid "General"
+#~ msgstr "Umumiy"
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Ish stolida nishonchalarni koʻrsatish"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "Eslatmalarni &koʻrsatish"
+
+#, fuzzy
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Ish stolida menyular panelini koʻrsatish"
+
+#~ msgid "&None"
+#~ msgstr "&Yoʻq"
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Ish stoli &menyusi"
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "&Joriy dasturning menyusi (Mac OTga oʻxshash)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Sichqonchaning tugmalari uchun amallar"
+
+#~ msgid "Middle button:"
+#~ msgstr "Oʻrta tugma:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "Ch&ap tugma:"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "Oʻn&g tugma:"
+
+#~ msgid "Edit..."
+#~ msgstr "Tahrirlash"
+
+#~ msgid "File Icons"
+#~ msgstr "Fayl nishonchalari"
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Nishonchalarni avto-&tekislash"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Yashi&rilgan fayllarni koʻrsatish"
+
+#~ msgid "Device Icons"
+#~ msgstr "Uskuna nishonchalari"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "&Uskuna nishonchalarini koʻrsatish:"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Uskuna turlarini koʻrsatish"
+
+#~ msgid "Show file &tips"
+#~ msgstr "&Fayl haqida qoʻshimcha maʼlumotni koʻrsatish"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Agar belgilansa, sichqoncha faylning ustida boʻlganda u haqida qoʻshimcha "
+#~ "maʼlumot koʻrsatiladi."
+
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>Bir nechta ish stollari</h1>Bu moslama yordamida virtual ish "
+#~ "stollarning soni va ullarning nomini moslash mumkin."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "&Ish stollar soni: "
+
+#~ msgid "Desktop &Names"
+#~ msgstr "Ish stolining &nomlari"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Bu yerda %1chi ish stolining nomni koʻrsatish mumkin."
+
+#~ msgid "Desktop %1"
+#~ msgstr "Ish stoli %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "Nishonchalarning nomini &joyida oʻzgartirish"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "Agar belgilansa, nishonchaning nomini bir marta bosib faylning nomini "
+#~ "oʻzgartirsa boʻladi."
+
+#~ msgid "&Appearance"
+#~ msgstr "&Koʻrinishi"
+
+#~ msgid "&Standard font:"
+#~ msgstr "&Andoza shrift:"
+
+#~ msgid "Font si&ze:"
+#~ msgstr "Shri&ftning oʻlchami:"
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Oddiy &matning rangi:"
+
+#~ msgid "&Text background color:"
+#~ msgstr "&Matnning orqa fon rangi:"
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "Nishonchaning matn &eni:"
+
+#~ msgid "&Underline filenames"
+#~ msgstr "Fayl nom&ining tagini chizish"
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Faylning ha&jmini baytlarda koʻrsatish"
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Tarmoq amallar bitta oynada"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Agar belgilansa, hamma tarmoq amallari bitta oynada koʻrinadi. Aks holda, "
+#~ "ular alohida oynada koʻrinadi."
+
+#~ msgid "Home &URL:"
+#~ msgstr "&Uy URL:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Uy jildini tanlang"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Uy tugmasi bosilganida paydo boʻladigan manzil (m-n jild yoki veb-"
+#~ "sahifa). Odatda, buning qiymati uy jildiga (~) oʻrnatilgan boʻladi."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Chap tugma:"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Oʻng tugma:"

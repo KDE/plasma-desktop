@@ -1,0 +1,233 @@
+# Translation of kcm5_device_automounter.po to Euskara/Basque (eu).
+# Copyright (C) 2010-2018, Free Software Foundation.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2020, 2021.
+# marcos <marcos@euskalgnu.org>, 2010.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-11-13 22:54+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi,Hizkuntza Politikarako Sailburuordetza"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus,hizpol@ej-gv.es"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Gailuen muntaketa automatikoa"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Jatorrizko egilea"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5era egokitzea"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Zerrenda honetan, sistemari ezagunak zaizkion biltegiratze-gailuak daude. "
+"«Muntatu automatikoki saio-hastean» aukera markatuta badago, gailua "
+"automatikoki muntatuko da, «Muntatu euskarri aldagarri guztiak saio-hastean» "
+"markatu gabe egon arren. Gauza bera egiten da «Muntatu automatikoki "
+"eranstean» aukerarekin."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Botoi hori sakatuz gero, hautatutako gailuak 'ahaztu' egiten dira.\"Eskuz "
+"muntatu izan diren euskarri aldagarriak bakarrik muntatu automatikoki\" "
+"aukera hautatuta badago bakarrik da erabilgarria hau.Gailua ahazten denean, "
+"eta automatikoki gailu ezagunak soilik muntatzeko ezartzen denean sistema, "
+"gailua ez da automatikoki muntatuko."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Ahaztu gailua"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Hau markatu gabe dagoenean, gogoratutako gailuak baino ez dira automatikoki "
+"muntatuko. Gailu bat «gogoratzen» da, aurrez inoiz muntatu bada. Adibidez, "
+"USB euskarri jotzaile bat kargatzeko entxufatzea ez da hura «gogoratzeko» "
+"nahikoa - fitxategirik atzitzen ez bada, ez da automatikoki muntatuko ikusia "
+"den hurrengo aldian. Behin atzitu direnean, ordea, gailuaren edukia "
+"sistemari automatikoki erabilgarri ipiniko zaio."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Aurrez inoiz muntatu gabeko euskarriak automatikoki muntatzea"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Gailua automatikoki muntatu"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Saio-hastean"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Atxikitzean"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Gailua guztiak"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Gailu ezagun guztiak"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Erantsitako gailuak"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Deskonektatutako gailuak"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Gailu hau automatikoki muntatuko da saioa hastean."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Gailu hau ez da automatikoki muntatuko saioa hastean."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Gailu hau automatikoki muntatuko da eranstean."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Gailu hau ez da automatikoki muntatuko eranstean."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Mahaigainera konektatzen zarenean biltegiratze-gailu aldagarriren bat "
+#~ "baldin badago konektatuta zure sistemara, hango edukiak erabilgarri "
+#~ "egongo dira automatikoki beste programa batzuek irakurtzeko."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Euskarri aldagarriak saio-hastean automatikoki muntatzea"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Aukera hori hautatuta dagoenean, biltegiratze-gailu bat konektatzen edo "
+#~ "eransten bada, hango edukiak erabilgarri egongo dira sistemarako."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Euskarri aldagarriak atxikitzean automatikoki muntatzea"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Muntatze automatikoa"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Aukera hori hautatuta ez badago, gailurik ez da muntatzen automatikoki, "
+#~ "\"Gailuaren gainidazketa\" atalean aukeraren bat hautatua izan ala ez "
+#~ "izan."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Gaitu euskarri aldagarrien muntaketa automatikoa"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Gailuaren gainidazketa"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Muntatu automatikoki eranstean"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Gailuak automatikoki muntatzen ditu saioa hastean edo eranstean"

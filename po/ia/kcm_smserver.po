@@ -1,0 +1,272 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-29 23:05+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.80\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Gerente de Session</h1>Tu pote configurar le gerente de session ci. Isto "
+"include optiones tal como si le abandono de session (logout) il debe o non "
+"esser confirmate, si le session debe esser restabilite de nove quando on "
+"accede e si le computator debe esser automaticamente claudite (shutdown) "
+"postea abandono de session de modo predefinite."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Falleva a requirer restartar de configuration de firmware: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Proxime vice que le computator es restartate, illo insertara le schermo de "
+"configuration de UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Proxime vice que le computator es restartate, illo insertara le schermo de "
+"configuration de firmware."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Re-Initia nunc"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "General:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Confirma abandono de session"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Offere optiones de stoppar computator (shutdown)"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Option de Abandono predefinite:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Termina session currente"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Re-Initia computator"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Stoppa Computator "
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Quando Accedente :"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Restabili  ultime session"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Restabili manualmente ultime session salveguardate"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Initia con un session vacue"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "Non restabili iste applicationes:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Ci tu pote entrar un lista de applicationes, separate per duo punctos o un "
+"virgula, que on non debe salvar in sessiones, e ergo que on non essera "
+"initiate quando le session essera restabilite. Pro exemplo 'xterm:xconsole' "
+"o'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Inserta schermo de configuration de firmware al proxime reinitio"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Confirma abandono de session"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Offere optiones de stoppar computator (shutdown)"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Option de Abandono predefinite"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Sur Accesso de Identification (Login)"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Applicationes que on debe excluder ab session:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Session de scriptorio"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Aperi e Claude Session de scriptorio "
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr ""
+#~ "Copyright © 2000–2020 Desktop Session team (equipa de session de "
+#~ "scriptorio)"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Restabili previe session salveguardate"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "Configuration de UEFI"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Marca iste option si tu vole que le gerente de session monstra un "
+#~ "quadrato de dialogo de confirmation per un abandono de session (logout)."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Conf&irma abandono de session"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "O&ffere optiones de stoppar computator (shutdown)"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Ci tu pote seliger cosa il pote occurrer de modo predefinite quando tu "
+#~ "abandona le session (log out). Isto solmente ha significato si tu "
+#~ "accedeva per KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Option de Abandono predefinite"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Restabili previe session:</b> Il salvara omne applicationes "
+#~ "executante durante le abandono e il restabilira illos a le successive "
+#~ "initio</li>\n"
+#~ "<li><b>Restabili manualmente le session salvate: </b> Il permitte que le "
+#~ "session pote esser salvate sempre via \"Salva Session\" in le K-Menu. "
+#~ "Isto significa que le applicationes currentemente initiate reapparera a "
+#~ "le proxime initio.</li>\n"
+#~ "<li><b>Initia con un session vacue:</b> Il salva nihil. il initiara con "
+#~ "un scriptorio vacue a le proxime initio.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Sur Accesso de Identification (Login)"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Applicationes que on debe e&xcluder ab sessiones:"

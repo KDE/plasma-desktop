@@ -1,0 +1,317 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# JungHee Lee <daemul72@gmail.com>, 2021.
+# 김태경 <kim@taekyeong.me>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-04-16 02:11+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "화면상 위치:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "위"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "가운데"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "활성화:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "바탕 화면에서 아무 키나 눌렀을 때 활성화"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "과거 기록:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "검색 기록 기억"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "다시 열 때 마지막 검색 표시"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "활동 인식(이전 검색 및 기록)"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "과거 기록 비우기"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "\"%1\" 활동의 과거 기록 비우기"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "과거 기록 비우기…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "모든 활동"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "\"%1\" 활동"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "플러그인:"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "사용할 검색 플러그인 설정…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "사용 가능한 플러그인"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "플러그인 활성화 또는 비활성화(KRunner, 프로그램 실행기, 한눈에 보기에서 사"
+#~ "용)"
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "새 플러그인 가져오기…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr "<message>%1</message> 터미널에서 설치 스크립트를 실행할 수 없음"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr "설치에 성공했습니다. 이제 이 창을 닫을 수 있습니다."
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr "삭제에 성공했습니다. 이제 이 창을 닫을 수 있습니다."
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "Runner 플러그인 설치 실패"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "실행할 명령: install 또는 uninstall."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "압축 파일 경로입니다."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "PackageKit 지원 없음"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "설치 확인"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "바이너리 패키지를 설치하려고 합니다. 신뢰할 수 있는 작성자/패키징한 사람"
+#~ "의 패키지만 설치해야 합니다."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "위험을 감수하고 계속하기"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "파일 보기"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "%1 MIME 형식이 packagekit 백엔드에서 지원되지 않습니다."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "이 플러그인에서 삭제 스크립트를 제공하지 않습니다. 작성자에게 문의하십시"
+#~ "오. 직접 플러그인을 삭제할 수 있습니다.<nl/>이 작업을 할 수 없다고 생각하"
+#~ "면 <interface>취소</interface>를 클릭하십시오."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "이 플러그인에서 삭제 스크립트를 제공하지 않습니다. 작성자에게 문의하십시"
+#~ "오. 직접 플러그인을 삭제할 수 있습니다. 작성자의 지시 사항을 README 파일에"
+#~ "서 참조하십시오.<nl/>이 작업을 할 수 없다고 생각하면 <interface>취소</"
+#~ "interface>를 클릭하십시오."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "이 플러그인에서 설치 스크립트를 제공하지 않습니다. 작성자에게 문의하십시"
+#~ "오. 직접 플러그인을 설치할 수 있습니다.<nl/>이 작업을 할 수 없다고 생각하"
+#~ "면 <interface>취소</interface>를 클릭하십시오."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "이 플러그인에서 설치 스크립트를 제공하지 않습니다. 작성자에게 문의하십시"
+#~ "오. 직접 플러그인을 설치할 수 있습니다. 작성자의 지시 사항을 README 파일에"
+#~ "서 참조하십시오.<nl/>이 작업을 할 수 없다고 생각하면 <interface>취소</"
+#~ "interface>를 클릭하십시오."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "이 플러그인의 설치 스크립트에서 보안 위험을 초래할 수 있습니다. 설치하기 "
+#~ "전에 전체 플러그인의 내용을 검사하거나 스크립트의 소스 코드를 읽어 보십시"
+#~ "오.<nl/>이 작업을 할 수 없다고 생각하면 <interface>취소</interface>를 클릭"
+#~ "하십시오."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "이 플러그인의 설치 스크립트에서 보안 위험을 초래할 수 있습니다. 설치하기 "
+#~ "전에 전체 플러그인의 내용을 검사하거나 스크립트의 README 파일 및 소스 코드"
+#~ "를 읽어 보십시오.<nl/>이 작업을 할 수 없다고 생각하면 <interface>취소</"
+#~ "interface>를 클릭하십시오."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "항목을 삭제한 것으로 표시"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "항목을 설치한 것으로 표시"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "스크립트 보기"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "소스 디렉터리 보기"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "%1 보기"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "%1의 패키지 이름을 확인할 수 없음"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr "설치 명령을 실행할 수 없음: <message>%1</message>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조,김태경"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name,kim@taekyeong.me"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "검색 설정 변경"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "KRunner 위치:"
+
+#~ msgid "Enable"
+#~ msgstr "활성화"
+
+#~ msgid "KRunner history:"
+#~ msgstr "KRunner 기록:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "이전 검색 기록 저장"
+
+#~ msgid "Clear History..."
+#~ msgstr "기록 지우기..."
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "KRunner 플러그인 활성화 및 비활성화:"
+
+#~ msgid "Top of screen"
+#~ msgstr "화면 위쪽"
+
+#~ msgid "Free-floating window"
+#~ msgstr "떠다니는 창"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "검색 플러그인 선택:"

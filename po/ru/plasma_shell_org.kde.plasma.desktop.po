@@ -1,0 +1,798 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Nick Shaforostoff <shafff@ukr.net>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
+# Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
+# Julia Dronova <juliette.tux@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-09-29 10:38+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: contents/activitymanager/ActivityItem.qml:212
+msgid "Currently being used"
+msgstr "Сейчас используется"
+
+#: contents/activitymanager/ActivityItem.qml:252
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Переместить в\n"
+"эту комнату"
+
+#: contents/activitymanager/ActivityItem.qml:282
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Показывать также\n"
+"в этой комнате"
+
+# BUGME: please change to "configure activity" --aspotashev
+#: contents/activitymanager/ActivityItem.qml:342
+msgid "Configure"
+msgstr "Настроить комнату"
+
+#: contents/activitymanager/ActivityItem.qml:359
+msgid "Stop activity"
+msgstr "Остановить комнату"
+
+#: contents/activitymanager/ActivityList.qml:143
+msgid "Stopped activities:"
+msgstr "Остановленные комнаты:"
+
+#: contents/activitymanager/ActivityManager.qml:127
+msgid "Create activity…"
+msgstr "Создать комнату..."
+
+#: contents/activitymanager/Heading.qml:61
+msgid "Activities"
+msgstr "Комнаты"
+
+#: contents/activitymanager/StoppedActivityItem.qml:133
+msgid "Configure activity"
+msgstr "Настроить комнату"
+
+#: contents/activitymanager/StoppedActivityItem.qml:148
+msgid "Delete"
+msgstr "Удалить"
+
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr "Ошибка загрузки %1."
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr "Скопировать в буфер обмена"
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr "Подробные сведения об ошибке…"
+
+#: contents/applet/CompactApplet.qml:70
+msgid "Open %1"
+msgstr "Открыть %1"
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:240
+msgid "About"
+msgstr "О виджете"
+
+#: contents/configuration/AboutPlugin.qml:45
+msgid "Send an email to %1"
+msgstr "Отправить письмо %1"
+
+#: contents/configuration/AboutPlugin.qml:59
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr "Открыть сайт %1"
+
+#: contents/configuration/AboutPlugin.qml:107
+msgid "Copyright"
+msgstr "Авторские права"
+
+#: contents/configuration/AboutPlugin.qml:127 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Лицензия: "
+
+#: contents/configuration/AboutPlugin.qml:140
+msgid "Authors"
+msgstr "Авторы"
+
+#: contents/configuration/AboutPlugin.qml:150
+msgid "Credits"
+msgstr "Благодарности"
+
+#: contents/configuration/AboutPlugin.qml:161
+msgid "Translators"
+msgstr "Переводчики"
+
+#: contents/configuration/AboutPlugin.qml:175
+msgid "Report a Bug…"
+msgstr "Сообщить об ошибке…"
+
+#: contents/configuration/AppletConfiguration.qml:55
+msgid "Keyboard Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: contents/configuration/AppletConfiguration.qml:288
+msgid "Apply Settings"
+msgstr "Сохранение параметров"
+
+#: contents/configuration/AppletConfiguration.qml:289
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr "В текущем модуле имеются несохранённые изменения. Применить их?"
+
+#: contents/configuration/AppletConfiguration.qml:319
+msgid "OK"
+msgstr "ОК"
+
+#: contents/configuration/AppletConfiguration.qml:327
+msgid "Apply"
+msgstr "Применить"
+
+#: contents/configuration/AppletConfiguration.qml:333
+#: contents/explorer/AppletAlternatives.qml:179
+msgid "Cancel"
+msgstr "Отмена"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr "Открыть страницу конфигурации"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:19
+msgid "Left-Button"
+msgstr "Левая кнопка"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:20
+msgid "Right-Button"
+msgstr "Правая кнопка"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Middle-Button"
+msgstr "Средняя кнопка"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Back-Button"
+msgstr "Кнопка «назад»"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Forward-Button"
+msgstr "Кнопка «вперёд»"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Vertical-Scroll"
+msgstr "Вертикальная прокрутка"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:26
+msgid "Horizontal-Scroll"
+msgstr "Горизонтальная прокрутка"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:29
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:73
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Добавить действие"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+msgid "Layout changes have been restricted by the system administrator"
+msgstr ""
+"Возможность изменения типа комнаты была ограничена системным администратором"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+msgid "Layout:"
+msgstr "Тип комнаты:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+msgid "Wallpaper type:"
+msgstr "Тип обоев:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
+msgstr "Загрузить новые модули..."
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+msgid "Layout changes must be applied before other changes can be made"
+msgstr ""
+"Изменение типа комнаты необходимо применить перед редактированием других "
+"параметров."
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+msgid "Apply Now"
+msgstr "Применить сейчас"
+
+#: contents/configuration/ConfigurationShortcuts.qml:16
+msgid "Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr ""
+"Эта комбинация клавиш активирует виджет таким же образом, как если бы вы "
+"нажали на него."
+
+#: contents/configuration/ContainmentConfiguration.qml:29
+msgid "Wallpaper"
+msgstr "Обои"
+
+#: contents/configuration/ContainmentConfiguration.qml:34
+msgid "Mouse Actions"
+msgstr "Действия мыши"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Нажимайте здесь"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+msgid "Remove Panel"
+msgstr "Удалить панель"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
+msgid "Panel Alignment"
+msgstr "Выравнивание панели"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Top"
+msgstr "Сверху"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Left"
+msgstr "Слева"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+msgid "Center"
+msgstr "По центру"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Bottom"
+msgstr "Снизу"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Right"
+msgstr "Справа"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+msgid "Visibility"
+msgstr "Видимость"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+msgid "Always Visible"
+msgstr "Показывать всегда"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+msgid "Auto Hide"
+msgstr "Автоматически скрывать"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
+msgid "Windows Can Cover"
+msgstr "Допускать перекрытие окнами"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
+msgid "Windows Go Below"
+msgstr "Панель перекрывает окна"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr "Прозрачность"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr "Адаптивно"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr "Непрозрачно"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr "Полупрозрачно"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid "Maximize Panel"
+msgstr "Растянуть панель"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+msgid "Floating Panel"
+msgstr "Плавающая панель"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+msgid "Shortcut"
+msgstr "Комбинация клавиш"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr "Перетаскивайте для изменения максимальной высоты."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr "Перетаскивайте для изменения максимальной ширины."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr "Двойной щелчок для отмены."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr "Перетаскивайте для изменения минимальной высоты."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr "Перетаскивайте для изменения минимальной ширины."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+"Перетаскивайте для изменения расположения на краю экрана.\n"
+"Двойной щелчок для отмены."
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+msgid "Add Widgets…"
+msgstr "Добавить виджеты..."
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
+msgid "Add Spacer"
+msgstr "Добавить разделитель"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
+msgid "More Options…"
+msgstr "Дополнительные параметры..."
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr "Перетащите для перемещения"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr "Для перемещения панели используйте клавиши со стрелками"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel width:"
+msgstr "Ширина панели:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel height:"
+msgstr "Высота панели:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:397
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Закрыть"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Управление панелями и рабочими столами"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr "Панели с столы возможно перетаскивать на другие экраны."
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
+msgid "%1 (primary)"
+msgstr "%1 (основной)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
+msgid "%1 (disabled)"
+msgstr "%1 (отключён)"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+msgid "Swap with Desktop on Screen %1"
+msgstr "Обменять с рабочим столом на экране %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+msgid "Move to Screen %1"
+msgstr "Переместить на экран %1"
+
+#: contents/explorer/AppletAlternatives.qml:63
+msgid "Alternative Widgets"
+msgstr "Варианты виджета"
+
+#: contents/explorer/AppletAlternatives.qml:163
+msgid "Switch"
+msgstr "Заменить"
+
+#: contents/explorer/AppletDelegate.qml:175
+msgid "Undo uninstall"
+msgstr "Отменить удаление"
+
+#: contents/explorer/AppletDelegate.qml:176
+msgid "Uninstall widget"
+msgstr "Удалить виджет"
+
+#: contents/explorer/Tooltip.qml:102
+msgid "Author:"
+msgstr "Автор: "
+
+#: contents/explorer/Tooltip.qml:110
+msgid "Email:"
+msgstr "Эл. почта:"
+
+#: contents/explorer/Tooltip.qml:129
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: contents/explorer/WidgetExplorer.qml:134
+#: contents/explorer/WidgetExplorer.qml:245
+msgid "All Widgets"
+msgstr "Все виджеты"
+
+#: contents/explorer/WidgetExplorer.qml:199
+msgid "Widgets"
+msgstr "Виджеты"
+
+#: contents/explorer/WidgetExplorer.qml:207
+msgid "Get New Widgets…"
+msgstr "Пополнить список виджетов..."
+
+#: contents/explorer/WidgetExplorer.qml:256
+msgid "Categories"
+msgstr "Категории"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets matched the search terms"
+msgstr "Не найдено ни одного виджета, удовлетворяющего критериям поиска"
+
+#: contents/explorer/WidgetExplorer.qml:339
+msgid "No widgets available"
+msgstr "Виджеты не найдены"
+
+#~ msgid "Appearance"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Search…"
+#~ msgstr "Поиск"
+
+#~ msgid "Screen Edge"
+#~ msgstr "Край экрана"
+
+#~ msgid "Click and drag the button to a screen edge to move the panel there."
+#~ msgstr ""
+#~ "Нажмите и потяните за кнопку, чтобы перетащить панель к другому краю "
+#~ "экрана."
+
+#, fuzzy
+#~| msgid "Apply Settings"
+#~ msgid "Settings"
+#~ msgstr "Сохранение параметров"
+
+#~ msgid "Width"
+#~ msgstr "Ширина"
+
+#~ msgid "Height"
+#~ msgstr "Высота"
+
+#~ msgid "Click and drag the button to resize the panel."
+#~ msgstr "Нажмите и потяните за кнопку, чтобы изменить размер панели."
+
+#~ msgid "Layout cannot be changed while widgets are locked"
+#~ msgstr "Невозможно изменить тип комнаты, когда виджеты заблокированы."
+
+#~ msgid "Lock Widgets"
+#~ msgstr "Заблокировать виджеты"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet: it will give the keyboard focus "
+#~ "to it, and if the applet has a popup (such as the start menu), the popup "
+#~ "will be open."
+#~ msgstr ""
+#~ "Эта комбинация клавиш активирует виджет: фокус ввода с клавиатуры будет "
+#~ "переведён на него. Если у виджета есть всплывающее окно (например, как у "
+#~ "кнопки меню запуска приложений), то оно будет открыто."
+
+# BUGME: please say "Stop activity"; it's a tooltip, no need to save space --aspotashev
+#~ msgid "Stop"
+#~ msgstr "Остановить работу комнаты"
+
+#~ msgid "Activity name:"
+#~ msgstr "Название комнаты:"
+
+#~ msgid "Create"
+#~ msgstr "Создать"
+
+#, fuzzy
+#~| msgid "Are you sure you want to delete the activity?"
+#~ msgid "Are you sure you want to delete this activity?"
+#~ msgstr "Удалить выбранную комнату?"
+
+# BUGME: please change to "OK" --aspotashev
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Ok"
+#~ msgstr "ОК"
+
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Apply"
+#~ msgstr "Применить"
+
+#~ msgctxt "org.kde.plasma.desktop"
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Андрей Черепанов"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "skull@kde.ru"
+
+#~ msgid "Desktop Settings"
+#~ msgstr "Настройка рабочего стола"
+
+#~ msgid "View"
+#~ msgstr "Вид"
+
+#~ msgid ""
+#~ "This picture of a monitor contains a preview of what the current settings "
+#~ "will look like on your desktop."
+#~ msgstr ""
+#~ "Монитор на этой картинке показывает, как будет выглядеть ваш рабочий стол "
+#~ "после применения изменений параметров."
+
+#~ msgid "Widgets are currently locked, disabling some options."
+#~ msgstr ""
+#~ "В данный момент заблокировано изменение виджетов, поэтому не все "
+#~ "параметры можно изменить."
+
+#~ msgid "Monitor"
+#~ msgstr "Монитор"
+
+#~ msgid "Set Trigger..."
+#~ msgstr "Способ запуска..."
+
+#~ msgid "Click to change how an action is triggered"
+#~ msgstr "Нажмите, чтобы изменить способ запуска действия"
+
+#~ msgid ""
+#~ "Hold down the modifier keys you want, then click a mouse button or scroll "
+#~ "a mouse wheel here"
+#~ msgstr ""
+#~ "Зажмите нужные клавиши-модификаторы и нажмите здесь любую кнопку мыши или "
+#~ "прокрутите колёсико мыши"
+
+#~ msgid "Add another mouse action"
+#~ msgstr "Добавить ещё одно действие мыши"
+
+#~ msgid "This trigger is already assigned to another action."
+#~ msgstr "Эта комбинация уже используется для другого действия."
+
+#~ msgctxt "reassign to this action"
+#~ msgid "Reassign"
+#~ msgstr "Переназначить"
+
+#~ msgid "This trigger is assigned to another plugin."
+#~ msgstr "Эта комбинация уже связана с другим модулем."
+
+#~ msgctxt "reassign to this plugin"
+#~ msgid "Reassign"
+#~ msgstr "Переназначить"
+
+#~ msgid "Mouse Plugins"
+#~ msgstr "Действия мыши"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr "Действий не найдено, проверьте правильность установки."
+
+#~ msgid "Configure Plugin"
+#~ msgstr "Настроить модуль"
+
+#~ msgid "widgetById requires an id"
+#~ msgstr "widgetById требует идентификатор"
+
+#~ msgid "widgetById requires a name of a widget or a widget object"
+#~ msgstr "widgetById требует либо название виджета, либо объект виджета"
+
+#~ msgid "i18n() takes at least one argument"
+#~ msgstr "Функция i18n() требует хотя бы один аргумент."
+
+#~ msgid "i18nc() takes at least two arguments"
+#~ msgstr "Функция i18nc() требует хотя бы два аргумента."
+
+#~ msgid "i18np() takes at least two arguments"
+#~ msgstr "Функция i18np() требует хотя бы два аргумента."
+
+#~ msgid "i18ncp() takes at least three arguments"
+#~ msgstr "Функция i18ncp() требует хотя бы три аргумента."
+
+#~ msgid "Main Script File"
+#~ msgstr "Главный файл сценария"
+
+#~ msgid "activityById requires an id"
+#~ msgstr "activityById требует идентификатор"
+
+#~ msgid "activityForScreen requires a screen id"
+#~ msgstr "activityForScreen требует идентификатор экрана"
+
+#~ msgid "Could not find a plugin for %1 named %2."
+#~ msgstr "Не удалось найти расширение %2 для %1"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Не удалось загрузить файл сценария: %1"
+
+#~ msgid ""
+#~ "Error: %1 at line %2\n"
+#~ "\n"
+#~ "Backtrace:\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Ошибка: %1 в строке %2\n"
+#~ "\n"
+#~ "Стек вызовов:\n"
+#~ "%3"
+
+#~ msgid "Filters"
+#~ msgstr "Фильтры"
+
+#~ msgid "Select the type of widget to install from the list below."
+#~ msgstr "Выберите тип виджетов из списка для установки."
+
+#~ msgid "Plasmoid: Native plasma widget"
+#~ msgstr "Плазмоид — виджет Plasma"
+
+#~ msgid "Install New Widget From File"
+#~ msgstr "Установить виджет из файла"
+
+#~ msgid "Select File"
+#~ msgstr "Выбор файла"
+
+#~ msgid "Could not load the required installer %1. The error given was: %2"
+#~ msgstr "Невозможно загрузить модуль установки %1. Ошибка: %2"
+
+#~ msgid "Installation Failure"
+#~ msgstr "Ошибка установки"
+
+#~ msgid "Installing the package %1 failed."
+#~ msgstr "Ошибка установки пакета %1."
+
+#~ msgid "Enter search term..."
+#~ msgstr "Введите текст для поиска..."
+
+#~ msgid "Containments"
+#~ msgstr "Контейнеры"
+
+#~ msgid "Running"
+#~ msgstr "Используемые"
+
+#~ msgid "Categories:"
+#~ msgstr "Категории:"
+
+#~ msgid "Download New Plasma Widgets"
+#~ msgstr "Загрузить новые виджеты Plasma"
+
+#~ msgctxt ""
+#~ "%1 is a type of widgets, as defined by e.g. some plasma-packagestructure-"
+#~ "*.desktop files"
+#~ msgid "Download New %1"
+#~ msgstr "Загрузить новые %1"
+
+#~ msgid "Install Widget From Local File..."
+#~ msgstr "Установить виджет из файла..."
+
+#~ msgid "Version %1"
+#~ msgstr "Версия %1"
+
+#~ msgid "<font color=\"%1\">Author:</font>"
+#~ msgstr "<font color=\"%1\">Автор:</font>"
+
+#~ msgid "<font color=\"%1\">Website:</font>"
+#~ msgstr "<font color=\"%1\">Сайт:</font>"
+
+#~ msgid "<font color=\"%1\">License:</font>"
+#~ msgstr "<font color=\"%1\">Лицензия:</font>"
+
+#~ msgid "Unknown Applet"
+#~ msgstr "Неизвестный виджет"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid "(C) 2008, Aaron Seigo"
+#~ msgstr "© Aaron Seigo, 2008"
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgid "Name:"
+#~ msgstr "Название:"
+
+#~ msgid "&Type:"
+#~ msgstr "&Тип:"
+
+#, fuzzy
+#~| msgid "Add Widget"
+#~ msgid "Add Trigger"
+#~ msgstr "Добавить виджет"
+
+#~ msgid "Name"
+#~ msgstr "Название"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgctxt ""
+#~ "%1 is the entity (person, staff, organization...) which recommends the "
+#~ "widget"
+#~ msgid "Recommended by %1"
+#~ msgstr "Рекомендовано %1"
+
+#~ msgid "My Favorite Widgets"
+#~ msgstr "Избранные виджеты"
+
+#~ msgid "Widgets I Have Used Before"
+#~ msgstr "Ранее использованные виджеты"
+
+#~ msgid "Close the dialog"
+#~ msgstr "Закрыть диалог"
+
+#~ msgid ""
+#~ "<qt>When clicking <b>Close</b>, this dialog will be closed with no "
+#~ "further action taken.</qt>"
+#~ msgstr "<qt>При нажатии на кнопку <b>Закрыть</b> диалог будет закрыт.</qt>"
+
+#~ msgid "Add selected widgets"
+#~ msgstr "Добавить выбранные виджеты"
+
+#~ msgid ""
+#~ "<qt>When clicking <b>Add Widget</b>, the selected widgets will be added "
+#~ "to your desktop.</qt>"
+#~ msgstr ""
+#~ "<qt>При нажатии на кнопку <b>Добавить виджет</b> выбранные виджеты будут "
+#~ "добавлены на ваш рабочий стол.</qt>"
+
+#~ msgid ""
+#~ "<qt>Selecting <b>Get New Widgets</b> will show a window that allows you "
+#~ "to download new widgets directly from the Internet, while Install From "
+#~ "File allows you to add new widgets from files you have on disk.</qt>"
+#~ msgstr ""
+#~ "<qt>При нажатии на кнопку <b>Загрузить новые виджеты</b> откроется окно, "
+#~ "в котором можно выбрать и загрузить виджеты из Интернета. Также в нём вы "
+#~ "можете установить виджет из локального файла.</qt>"

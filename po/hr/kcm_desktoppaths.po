@@ -1,0 +1,691 @@
+# Translation of kcm_desktoppaths to Croatian
+#
+# Translators: Anđelko Iharoš <>,Danko Butorac <danko@ipsis.hr>,Dario Lah <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Mato Kutlić <mate@iskraemeco.hr>,Robert Pezer <rpezer@phy.hr>,Sasa Poznanovic <sasa.poznanovic@vuka.hr>,sime essert <sime2@nofrx.org>,Vedran Rodic <vedran@quark.fsb.hr>,Vlatko Kosturjak <kost@linux.hr>,
+# DoDo <DoDoEntertainment@gmail.com>, 2009.
+# Andrej Dundovic <adundovi@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq 0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2009-12-31 02:12+0100\n"
+"Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Radna površina"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokumenti"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Skinute datoteke"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Glazba"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Slike"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "Putanja filmova:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Putanje</h1>\n"
+"Ovaj modul vam omogućava da odaberete gdje na datotečnom sustavu su "
+"smještene datoteke s vaše radne površine.\n"
+"Koristite 'Što je ovo?' (tipkama Shift+F1) za dodatne informacije."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Putanja radne površine:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Ovaj direktorij sadrži sve datoteke koje vidite na radnoj površini. Možete "
+"promijeniti lokaciju ovog direktorija ako želite, i njegov sadržaj će se "
+"automatski premjestiti na  novu lokaciju."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Putanja dokumenata:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje dokumenata."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Putanja skinutih datoteka:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Ovaj direktorij će biti korišten kao uobičajeni za čuvanje skinutih datoteka."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "Putanja filmova:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje filmova."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Putanja slika:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Putanja glazbe:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje glazbe."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Putanja programa koji će se automatski pokretati:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Ovaj direktorij sadrži programe ili veze do njih (kratice) koje želite "
+#~ "automatski pokrenuti kad god je KDE pokrenut. Ako to želite, možete "
+#~ "promijeniti lokaciju ovog direktorija, i njegov sadržaj će se automatski "
+#~ "premjestiti na novu lokaciju."
+
+#~ msgid "Autostart"
+#~ msgstr "Automatsko pokretanje"
+
+#~ msgid "Movies"
+#~ msgstr "Filmovi"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Putanja za '%1' je izmjenjena.\n"
+#~ "Želite li da premjestim datoteke iz '%2' u '%3' ?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Pomakni"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Nemoj pomicati"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Putanja za '%1' je izmjenjena.\n"
+#~ "Želite li premjestiti direktorij '%2' u '%3' ?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Premjesti"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Nemoj pomicati"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Potrebna je potvrda"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Ponašanje Konquerora</h1>Ovdje možete podesiti ponašanje Konquerora "
+#~ "kao upravitelja datoteka. "
+
+#~ msgid "Misc Options"
+#~ msgstr "Ostale postavke"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Otvori mape u &odvojenim prozorima"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Ako je ovo odabrano, Konqueror će otvoriti direktorij koji otvorite i "
+#~ "pokazati ga u novom prozoru, umjesto da pokaže sadržaj direktorija u "
+#~ "trenutnom prozoru."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Prikaži u konteksnom izborniku opciju 'Briši' koja zaobilazi kantu za "
+#~ "smeće"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Uključite ovo ako želite da naredbe brisanja budu prikazane na radnoj "
+#~ "površini i u kontekstnim izbornicima upravitelja daotekama. Uvijek možete "
+#~ "izbrisati datoteke tako da držite tipku Shift dok pozivate naredbu 'Baci "
+#~ "u smeće'."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Uređivanje izbornika"
+
+#~ msgid "Menu"
+#~ msgstr "Izbornik"
+
+#~ msgid "New..."
+#~ msgstr "Novo …"
+
+#~ msgid "Remove"
+#~ msgstr "Ukloni"
+
+#~ msgid "Move Up"
+#~ msgstr "Pomakni gore"
+
+#~ msgid "Move Down"
+#~ msgstr "Pomakni dolje"
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Traži potvrdu za:"
+
+#, fuzzy
+#~| msgid "&Move to trash"
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Preseli u smeće"
+
+#, fuzzy
+#~| msgid "D&elete"
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "O&briši"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Ponašanje"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Pregledi i meta podaci"
+
+#, fuzzy
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "Odaberite protokole"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Lokalni protokoli"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Internet protokoli"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Ova opcija omogućava kada treba aktivirati pregled datoteka, pametne mape "
+#~ "imetapodatke u upravitelju datotekama.\n"
+#~ "U popisu protokola, oodaberite one koji su dovoljno brzi i za koje želite "
+#~ "dozvoliti pregledavanje datoteka."
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Najveća veličina datoteke:"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "&Povećaj veličinu pregleda u zavisnosti od ikona"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "&Koristi thumbnailse zapisane u datotekama"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Odaberite ovo da koristite thumbnailse koji se nalaze u nekim tipovima "
+#~ "datoteka (e.g. JPEG).Ovo će povećati brzinu i smanjiti korištenje diska. "
+#~ "Odznačite ako imate datoteke koje su obrađene programima koji zapisuju "
+#~ "netočne thumbnailse, kao što je ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Datoteke sa zvukovima"
+
+#~ msgid "&Left button:"
+#~ msgstr "Lijevi gumb:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Ovdje birate što se događa ako kliknete lijevom tipkom miša na radnu "
+#~ "podlogu."
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Desni g&umb:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Ovdje birate što se događa ako kliknete desom tipkom miša na radnu "
+#~ "podlogu."
+
+#~ msgid "No Action"
+#~ msgstr "Bez učinka"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Popis prozora"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Izbornik radne površine"
+
+#~ msgid "Application Menu"
+#~ msgstr "Izbornik aplikacija"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Podešeni izbornik 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Podešeni izbornik 1"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Ponašanje</h1>\n"
+#~ "Ovaj modul vam omogućava podešavanje raznih svojstava\n"
+#~ "vaše radne površine, kao i načine slaganja ikona, smještaj\n"
+#~ "vašeg 'desktop' direktorija (sa svim podešavanjima), kao i \n"
+#~ "izbornici koji se pojave kada kliknete lijevim/desnim mišem \n"
+#~ "na radnu plohu. Koristite 'Što je ovo?' (tipkama Shift+F1)za dodatne "
+#~ "informacije."
+
+#~ msgid "General"
+#~ msgstr "Općenito"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Ovdje možete isključiti iscrtavanje ikona na radnoj površini. To znači "
+#~ "nešto brže iscrtavanje slike na zaslon, ali i nemogućnost povlačenja "
+#~ "datoteki na radnu površinu."
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Prikaži sličice na radnoj površini"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Odaberite ovdje ako želite X11 programe koristit za crtanje radne "
+#~ "površine, kao što su npr. xsnow, xpenguin, xmountain ili slični. Ako vam "
+#~ "neki programi, kao npr. Netscape prave probleme jer provjeravaju dali se "
+#~ "nešto događa na osnovnom prozoru (root window runing instances), onda "
+#~ "nemojte korisiti ovu mogućnost."
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Pr&ogrami u prozoru radne površine"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "&Pokaži &natuknice za alate"
+
+#, fuzzy
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Prikazuj traku izbornika na vrhu zaslona:"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr ""
+#~ "Ako je ova opcija odabrana, neće se pojavljivati izbornik na vrhu zaslona."
+
+#~ msgid "&None"
+#~ msgstr "&Nijedan"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr ""
+#~ "Ako je ova opcija odabrana, biti će prikazan izbornik na vrhu zaslona "
+#~ "koji sadrži izbornike radne površine."
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Izbornik ra&dne površine"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "Ako je ova opcija odabrana, programi više neće imati svoj izbornik spojen "
+#~ "na svoj prozor. Umjesto toga, na vrhu zaslona biti će jedna traka "
+#~ "izbornika koja prikazuje izbornik trenutno aktivnog programa. Ovakvo "
+#~ "ponašanje vam je možda poznato sa MacOS-a."
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Trenutni aplika&cijski menu (Mac OS-stil)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Akcije gumba na mišu"
+
+#~ msgid "Middle button:"
+#~ msgstr "Srednji gumb:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "Lijevi gumb:"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "Desni g&umb:"
+
+#~ msgid "Edit..."
+#~ msgstr "Uredi..."
+
+#~ msgid "File Icons"
+#~ msgstr "Sličice datoteka"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "Uključite ovu opciju ako želite ikone automatski poravnate kada ih "
+#~ "pomjerite."
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Automatski &poravnaj sličice"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Prikaži s&krivene datoteke"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "Odaberite vrste datoteki za koje želite pokazivanje preglednih sličica."
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Pokaži preglede za"
+
+#~ msgid "Device Icons"
+#~ msgstr "Sličice uređaja"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "Prikazuj &sličice uređaja:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr ""
+#~ "Odznačite tipove uređaja koje ne želite vidjeti na radnoj površini.."
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Tipovi uređaja za prikaz"
+
+#~ msgid "Show file &tips"
+#~ msgstr "Pokaži &natuknice za datoteke"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Ovdje možete uključiti pokazivanje malog pojavljujućeg prozora sa "
+#~ "dodatnim podacima o datoteci, koji se pojavi ako je pokazivač iznad "
+#~ "datoteke."
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "Pokaži preglede u natuknicama za datoteke"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Ovdje možete uključiti pokazivanje većeg preglednog prozora za "
+#~ "datotekukada mišem pređete preko nje."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "Broj radnih površina:"
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "Ovdje možete podesiti koliko želite imati KDE prividnih ranih površina. "
+#~ "Pomaknite klizač na željenu vrijednost."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "Imena radnih površina"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Radna površina%1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Ovdje možete unijeti ime radne površine %1"
+
+#~ msgid "Mouse wheel over desktop background switches desktop"
+#~ msgstr "Kotačić miša preko radne površine izmjenjuje površine"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Radna površina%1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "P&romijeni imena sličica direktno"
+
+#~ msgid ""
+#~ "Checking this option will allow files to be renamed by clicking directly "
+#~ "on the icon name. "
+#~ msgstr ""
+#~ "Ovom opcijom omogućavate promjenu imena datoteka direktnim klikom na njih."
+
+#~ msgid "&Appearance"
+#~ msgstr "&Izgled"
+
+#~ msgid "&Standard font:"
+#~ msgstr "Obični pi&smo:"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Ovo je vrsta slova koje će Konqueror koristiti za prikazivanje teksta."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "&Veličina pisma:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Ovo je veličina slova koje će Konqueror koristiti za prikazivanje teksta."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Boja običnog teksta:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Ovo je boja koju će Konqueror koristiti za prikazivanje teksta u "
+#~ "Konqueror prozorima."
+
+#~ msgid "&Text background color:"
+#~ msgstr "Boja &pozadinskog teksta:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr "Ovo je boja teksta ispod ikona na radnoj površini."
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&Visina za tekst sličice:"
+
+#~ msgid ""
+#~ "This is the maximum number of lines that can be used to draw icon text. "
+#~ "Long file names are truncated at the end of the last line."
+#~ msgstr ""
+#~ "Ovo je maksimalni broj linija koje mogu biti korištene za iscrtavanje "
+#~ "teksta od sličica. Duga imena datoteka se odsjeku pri kraju zadnje linije."
+
+#, fuzzy
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Visina za tekst sličice:"
+
+#, fuzzy
+#~ msgid "&Underline filenames"
+#~ msgstr "Pod&vuci imena datoteka"
+
+#, fuzzy
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "Ako ovdje uključite mogućnost podvlačenja imena datoteki, onda će one "
+#~ "izgledati kao veze na web stranice. Ipak, da bi analogija bila potpuna, "
+#~ "uključite aktivaciju sa jednim kliom, umjesto sa dva (u modulu za "
+#~ "kontrolu miša/pokazivača)."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "Prikazivanje veličine datoteka u ba&jtovima"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "Ovdje odabirete prikazivanje veličine datoteka u bajtovima, u suprotnom "
+#~ "će njihova veličina biti pokazivana u kilobajtima ili megabajtima."
+
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>Izgled</h1> Ovdje možete podesiti izgled Konquerora kao upravitelja "
+#~ "datoteka. "
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Pokaži rad na mreži u posebnom prozoru"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Odabiranjem ove mogućnosti će svi podaci o mrežnom prebacivanju podataka "
+#~ "biti popisani u jednom prozoru. Ako ova mogućnost nije odabrana, svako "
+#~ "prebacivanje će biti prikazano u zasebnom prozoru."
+
+#~ msgid "Home &URL:"
+#~ msgstr "Početni &URL:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Odaberite početni direktorij"
+
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Ovo je URL (adresa direktorija ili web stranice) koju će Konqueror "
+#~ "otvoriti kada se pritisne gumb \"Početna lokacija\". Obično se unosi znak "
+#~ "\"tilda\" (~), koji označava lokalni korisnički direktorij."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "Lijevi gumb:"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Desni gumb:"
+
+#~ msgid "&Quick Copy && Move"
+#~ msgstr "&Brzi Copy && Move"

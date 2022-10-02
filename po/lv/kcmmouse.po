@@ -1,0 +1,894 @@
+# translation of kcminput.po to Latvian
+# Copyright (C) 2007, 2008, 2010 Free Software Foundation, Inc.
+#
+# Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2010.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"PO-Revision-Date: 2011-07-08 13:24+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Aleksejs Zosims"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "locale@aleksejs.id.lv"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:86
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:36
+#, kde-format
+msgid "Pointer device KCM"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:38
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:40
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
+#, kde-format
+msgid "Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:110
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:115
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:146
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:168
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:192
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:194
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr ""
+
+#: kcm/libinput/main.qml:79
+#, kde-format
+msgid "Device:"
+msgstr ""
+
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General:"
+msgstr "&Pamata"
+
+#: kcm/libinput/main.qml:105
+#, kde-format
+msgid "Device enabled"
+msgstr ""
+
+#: kcm/libinput/main.qml:124
+#, kde-format
+msgid "Accept input through this device."
+msgstr ""
+
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
+msgid "Left handed mode"
+msgstr "&Kreilis"
+
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr ""
+
+#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+
+#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Pointer speed:"
+msgstr "Kursora jutība:"
+
+#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#, fuzzy, kde-format
+#| msgid "Acceleration &profile:"
+msgid "Acceleration profile:"
+msgstr "Paātrināšanas &profils:"
+
+#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#, kde-format
+msgid "Flat"
+msgstr ""
+
+#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr ""
+
+#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#, kde-format
+msgid "Adaptive"
+msgstr ""
+
+#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+
+#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "Ritināt pretējā &virzienā"
+
+#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr ""
+
+#: kcm/libinput/main.qml:295
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Scrolling speed:"
+msgstr "Kursora jutība:"
+
+#: kcm/libinput/main.qml:343
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: kcm/libinput/main.qml:349
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr ""
+
+#: kcm/libinput/main.qml:395
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr ""
+
+#: kcm/libinput/main.qml:427
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+
+#: kcm/libinput/main.qml:428
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr ""
+
+#: kcm/libinput/main.qml:432
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: kcm/libinput/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Press Connect Button"
+msgctxt "@action:button"
+msgid "Press a mouse button "
+msgstr "Nospiediet \"Connect\" (savienošanās) pogu."
+
+#: kcm/libinput/main.qml:450
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr ""
+
+#: kcm/libinput/main.qml:479
+#, kde-format
+msgctxt "@action:button"
+msgid "Go back"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<h1>Pele</h1> Šis modulis ļauj jums izvēlēties dažādas opcijas veidam, kādā "
+"strādā jūsu manipulatora ierīce. Jūsu manipulatora ierīce var būt pele, "
+"kursorbumba, vai kāda cita aparatūra, kas izpilda šīs funkcijas."
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "&Pamata"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"Ja jūs esat kreilis, jūs, iespējams, vēlaties apmainīt vietām kreisās un "
+"labās pogas funkcijas jūsu manipulatora ierīcē, izvēloties \"Kreilis\" "
+"opciju. Ja jūsu manipulatora ierīcei ir vairāk par divām pogām, tikai labā "
+"un kreisā poga tiks ietekmēta. Piemēram, ja jums ir trīs pogu pele, vidējā "
+"poga netiks ietekmēta."
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "Pogu secība"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "&Labrocis"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "&Kreilis"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr ""
+"Izmainīt peles ritentiņa ritināšanas virzienu vai arī samainīt vietām 4. un "
+"5. peles pogu."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "Ritināt pretējā &virzienā"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "Paplašināti"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Kursora paātrinājums:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "Kursora jutība:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "Dubultklikšķa intervāls:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "Pārvilkšanas sākšanās laiks:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "Pārvilkšanas sākšanās attālums:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "Peles rullītis ritina par:"
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<p>Šī opcija atļauj jums mainīt attiecību starp attālumu, par kuru peles "
+"bultiņa pārvietojas pa ekrānu, un relatīvo fiziskās ierīces kustību (kura "
+"var būt pele, kursorbumba, vai kāda cita manipulatora ierīce).</p><p> Augsta "
+"paātrinājuma vērtība izsauks straujas peles bultiņas kustības uz ekrāna pat, "
+"ja jūs tikai nedaudz pakustināsiet fizisko ierīci. Ļoti augstas vērtības "
+"izvēlēšanās var būt par iemeslu tam, ka peles bultiņa \"lido\" pa ekrānu, "
+"padarot ļoti grūtu tās vadību.</p>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr " x"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<p>Jutība ir mazākais attālums, pa kādu jāpārvieto peles kurors pa ekrānu, "
+"lai būtu efekts no paātrinājuma. Ja pārvietošana ir mazāka, par jūtību, "
+"peles kursors pārvietosies tā, it kā paātrinājuma nebūtu.</p><p>Tādēļ, kad "
+"jūs veicat sīkas kustības ar fizisko ierīci, paātrinājuma nav vispār, "
+"sniedzot jums lielāku kontroles pakāpi pār kursoru. Ar plašākām ierīces "
+"kustībām, jūs varat ātri pārvietot peles kursoru uz citu ekrāna apgabalu.</p>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"Dubultklikšķa intervāls ir maksimālais laiks (milisekundēs) starp diviem "
+"peles klikšķiem, kurā tie pārtop dubultklikšķī. Ja otrs klikšķis ir izdarīts "
+"vēlāk par šo laika intervālu pēc pirmā klikšķa, tos atpazīs kā divus "
+"atsevišķus klikšķus."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " ms"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"Ja jūs noklikšķināt ar peli (piemēram, daudzrindu-redaktorā) un sākat to "
+"pārvietot pārvilkšanas sākšanās laika ietvaros, tiks uzsākta pārvilkšanas "
+"operācija."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"Ja jūs noklikšķināt ar peli un pārvietojat kursoru par vismaz pārvilkšanas "
+"sākšanās attālumu, tiks uzsākta pārvilkšanas operācija."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"Ja jūs izmantojat peles rullīti, šī vērtība nosaka līniju skaitu, kas tiks "
+"paritinātas pie katras rullīša kustības. Atcerieties, ka, ja šis skaitlis "
+"pārsniedz redzamo līniju skaitu, tas tiks ignorēts, un ritentiņa "
+"pārvietošana tiks apstrādāta kā lapas augšup/lejup pārvietošana."
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, fuzzy, kde-format
+#| msgid "Mouse Navigation"
+msgid "Keyboard Navigation"
+msgstr "Pārvietošanās ar peli"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "&Pārvietot kursoru ar tastatūru (izmantojot ciparu taustiņus)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "P&aātrināšanas aizture:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "Atkārtošanas int&ervāls:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "Paā&trināšanās laiks:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "M&aksimālais ātrums:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " punkti/sekundē"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "Paātrināšanas &profils:"
+
+#: kcm/xlib/xlib_config.cpp:79
+#, kde-format
+msgid "Mouse"
+msgstr "Pele"
+
+#: kcm/xlib/xlib_config.cpp:83
+#, fuzzy, kde-format
+#| msgid "(c) 1997 - 2005 Mouse developers"
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr "(c) 1997 - 2005 Peles izstrādātāji"
+
+#: kcm/xlib/xlib_config.cpp:84
+#, kde-format
+msgid "Patrick Dowler"
+msgstr "Patriks Doulers (Patrick Dowler)"
+
+#: kcm/xlib/xlib_config.cpp:85
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr "Dirks A. Mullers (Dirk A. Mueller)"
+
+#: kcm/xlib/xlib_config.cpp:86
+#, kde-format
+msgid "David Faure"
+msgstr "Deivids Fors (David Faure)"
+
+#: kcm/xlib/xlib_config.cpp:87
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr "Bernds Gērmans (Bernd Gehrmann)"
+
+#: kcm/xlib/xlib_config.cpp:88
+#, kde-format
+msgid "Rik Hemsley"
+msgstr "Riks Hemslijs (Rik Hemsley)"
+
+#: kcm/xlib/xlib_config.cpp:89
+#, kde-format
+msgid "Brad Hughes"
+msgstr "Breds Hūgs (Brad Hughes)"
+
+#: kcm/xlib/xlib_config.cpp:90
+#, kde-format
+msgid "Brad Hards"
+msgstr "Breds Hārds (Brad Hards)"
+
+#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#, kde-format
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] "punkts"
+msgstr[1] "punkti"
+msgstr[2] "punktu"
+
+#: kcm/xlib/xlib_config.cpp:293
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] "līnija"
+msgstr[1] "līnijas"
+msgstr[2] "līniju"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralfs Noldens (Ralf Nolden)"
+
+#, fuzzy
+#~| msgid "Acceleration &time:"
+#~ msgid "Acceleration:"
+#~ msgstr "Paā&trināšanās laiks:"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration Profile:"
+#~ msgstr "Paātrināšanas &profils:"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonas"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "KDE noklusētā izturēšanās ir iezīmēt un aktivēt ikonas ar vienu jūsu "
+#~ "manipulatora ierīces kreisās pogas klikšķi. Šī izturēšanās ir līdzvērtīga "
+#~ "tam, kad noklikšķiniet uz saites vairumā web pārlūku. Ja jūs vēlaties "
+#~ "iezīmēt ar vienu klikšķi, un aktivizēt ar dubultklikšķi, iezīmējiet šo "
+#~ "opciju."
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Du&bultklikšķis failu un mapju atvēršanai (ar pirmo klikšķi iezīmē ikonas)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktivizē un atver mapes un failus ar vienu klikšķi."
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Vien&s klikšķis failu un mapju atvēršanai"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Izvēlieties, kuru kursora tēmu vēlaties lietot:"
+
+#~ msgid "Name"
+#~ msgstr "Nosaukums"
+
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#~ msgid "You have to restart KDE for these changes to take effect."
+#~ msgstr "Jāpārstartē KDE, lai stātos spēkā kursora lieluma izmaiņas."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Kursora iestatījumi izmainīti"
+
+#~ msgid "Small black"
+#~ msgstr "Maza, melna"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Mazi, melni kursori"
+
+#~ msgid "Large black"
+#~ msgstr "Liela, melna"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Lieli, melni kursori"
+
+#~ msgid "Small white"
+#~ msgstr "Maza, balta"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Mazi, balti kursori"
+
+#~ msgid "Large white"
+#~ msgstr "Liela, balta"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Lieli, balti kursori"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Mai&nīt kursora bultiņas formu virs ikonām"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "A&utomātiski izvēlēties ikonas"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Aizture"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ja jūs iezīmēsiet šo opciju, peles kursora apturēšana ekrānā virs ikonas "
+#~ "automātiski iezīmēs ikonu. Tas var noderēt situācijā, kad aktivizēšana "
+#~ "notiek ar vienu klikšķi, bet jūs vēlaties tikai iezīmēt ikonas bez to "
+#~ "aktivizēšanas."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ja iezīmēta šī opcija automātiski iezīmēt ikonas, tad šis slīdnis ļauj "
+#~ "jums izvēlēties, cik ilgi jātur peles bultiņa virs ikonas, līdz tā tiks "
+#~ "iezīmēta."
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Peles veids: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Tika izvēlēts 1. radiokanāls. Lūdzu, nospiediet pogu \"Connect"
+#~ "\" (savienoties) uz peles, lai atjaunotu sakarus."
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Tika izvēlēts 2. radiokanāls. Lūdzu, nospiediet pogu \"Connect"
+#~ "\" (savienoties) uz peles, lai atjaunotu sakarus."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "nekāda"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Nezināma pele"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Bezvadu nosaukums"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Sensora izšķirtspēja"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 nolasījumu collā"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 nolasījumu collā"
+
+#~ msgid "Battery Level"
+#~ msgstr "Baterijas līmenis"
+
+#~ msgid "RF Channel"
+#~ msgstr "Radiofrekvences kanāls"
+
+#~ msgid "Channel 1"
+#~ msgstr "1. kanāls"
+
+#~ msgid "Channel 2"
+#~ msgstr "2. kanāls"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Jūsu Logitech pele ir pieslēgta un arī libusb bibliotēka tika atrasta "
+#~ "kompilēšanas laikā, taču nav iespējams piekļūt pelei. To, iespējams, "
+#~ "izraisa problēma ar piekļuves tiesībām - jums jānoskaidro instrukcijā, kā "
+#~ "to novērst."
+
+#~ msgid "Cursor Theme"
+#~ msgstr "Kursora tēma"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Ievelc vai ieraksti tēmas URL"
+
+#~ msgid "Unable to find the cursor theme archive %1."
+#~ msgstr "Nespēju atrast kursora tēmas arhīvu %1."
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Nespēju lejupielādēt kursora tēmas arhīvu, lūdzu, pārliecinieties, ka "
+#~ "adrese %1 ir pareiza."
+
+#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
+#~ msgstr "Neizskatās, ka fails %1 būtu derīgs kursora tēmu arhīvs."
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs nevarat izdzēst šobrīd lietojamo tēmu.<br />Vispirms jums "
+#~ "jāpārslēdzas uz citu tēmu.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Vai tiešām vēlaties izmest <i>%1</i> kursoru tēmu?<br />Šī darbība "
+#~ "izdzēsīs arī visus failus, kas pieinstalēti no tēmas.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Apstiprinājums"
+
+#~ msgid ""
+#~ "A theme named %1 already exists in your icon theme folder. Do you want "
+#~ "replace it with this one?"
+#~ msgstr ""
+#~ "Tēma ar nosaukumu \"%1\" jau atrodas jūsu tēmu mapē. Vai vēlaties to "
+#~ "aizvietot ar šo te?"
+
+#~ msgid "Overwrite Theme?"
+#~ msgstr "Pārrakstīt tēmu?"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Izvēlieties, kuru kursora tēmu vēlaties lietot (lai izmēģinātu kursoru, "
+#~ "uzkavējieties uz priekšapskates):"
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Iegūt jaunas krāsu saskaņas no interneta"
+
+#~ msgid "Get New Theme..."
+#~ msgstr "Iegūt jaunu tēmu..."
+
+#~ msgid "Install From File..."
+#~ msgstr "Instalēt no faila..."
+
+#~ msgid "Remove Theme"
+#~ msgstr "Izdzēst tēmu"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE klasiskā"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Noklusētā KDE 2 un 3 tēma"
+
+#~ msgid "No description available"
+#~ msgstr "Nav apraksta"
+
+#~ msgid "Short"
+#~ msgstr "Īsa"
+
+#~ msgid "Long"
+#~ msgstr "Gara"

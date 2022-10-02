@@ -1,0 +1,301 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Geräte-Aktionen</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Johannes</firstname
+><surname
+>Obermayr</surname
+><affiliation
+><address
+><email
+>johannesobermayr@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>Aktionen</keyword>
+<keyword
+>Geräte</keyword>
+<keyword
+>Hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Aktionen für neue Geräte</title>
+<sect2 id="icons-intro">
+<title
+>Einleitung</title>
+
+<para
+>In diesem Modul können Aktionen eingerichtet werden, die für den Anwender verfügbar sein sollen, wenn neue Geräte an den Rechner angeschlossen werden.</para>
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto des Dialogs „Geräte-Aktionen“</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Bildschirmfoto des Dialogs „Geräte-Aktionen“</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Es werden alle möglichen Aktionen aufgeführt, die verfügbar sind, sobald ein Gerät angeschlossen wird. Es ist zu beachten, dass die Aktionen nur unter bestimmten Voraussetzungen verfügbar sind.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Hinzufügen</guibutton
+>: Zunächst wird der Name für die neue Aktion abgefragt. Danach erscheint der Dialog zum Bearbeiten der Aktion. Werden in diesem Dialog nicht alle notwendigen Informationen eingegeben, wird die Aktion wieder gelöscht. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Bearbeiten ...</guibutton
+>: Hier können der Name, das Symbol, der auszuführende Befehl und die Bedingungen zur Anzeige der Aktion geändert werden. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Verwerfen</guibutton
+> / <guibutton
+>Kann nicht gelöscht werden</guibutton
+> / <guibutton
+>Entfernen</guibutton
+>: Hier werden unterschiedliche Aktionen ausgeführt - abhängig vom Dienst (systemweit oder benutzerdefiniert). Es können nur Änderungen an systemweiten Aktionen verworfen werden (aber nicht gelöscht werden). Benutzerdefinierte Aktionen können mit allen Änderungen vollständig entfernt werden. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Aktion hinzufügen</title>
+
+<para
+>Der Knopf <guibutton
+>Hinzufügen</guibutton
+> öffnet einen Dialog zur Eingabe des Namens für die neue Aktion. </para>
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto des Dialogs „Aktion hinzufügen“</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Bildschirmfoto des Dialogs „Aktion hinzufügen“</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Der Name für die Aktion sollte sie korrekt beschreiben. Nach Eingabe des Namens für die Aktion und anschließendem Klick auf <guibutton
+>OK</guibutton
+> erscheint der Dialog <guilabel
+>Aktion bearbeiten</guilabel
+> zum Einrichten der Eigenschaften der Aktion. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Aktion bearbeiten</title>
+
+<para
+>In diesem Dialog können die Einstellungen für die ausgewählte Aktion bearbeitet werden.</para>
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto des Dialogs „Aktion bearbeiten“</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Bildschirmfoto des Dialogs „Aktion bearbeiten“</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Das beinhaltet das Symbol, den Namen der Aktion, den auszuführenden Befehl und die verschiedenen Bedingungen. Das Symbol kann durch ein Klick darauf geändert werden.</para>
+<para
+>Die Elemente werden in einer Baumansicht angezeigt. Dabei muss die oberste Bedingung wahr sein, damit die Aktion angezeigt wird.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Parameter bearbeiten</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Parameter-Typ</guilabel
+></term>
+<listitem>
+<para
+>Diese Auswahl legt fest, was darin enthalten sein muss oder welche Übereinstimmung geprüft wird, um einen wahren Wert zu ergeben. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Eigenschaften-Übereinstimmung</guilabel
+></term>
+<listitem>
+<para
+>Vergleicht die angegebene Eigenschaft des Geräts (<guilabel
+>Gerätetyp</guilabel
+> und <guilabel
+>Name des Wertes</guilabel
+>) unter Verwendung der Bedingung mit dem eingegebenen Text.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Inhaltliche Übereinstimmung</guilabel
+></term>
+<listitem>
+<para
+>Alle untergeordneten Eigenschaften müssen wahr sein, damit diese Übereinstimmung wahr ist.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Inhaltliche Nicht-Übereinstimmung</guilabel
+></term>
+<listitem>
+<para
+>Irgendeine untergeordnete Eigenschaft muss wahr sein, damit diese Übereinstimmung wahr ist.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Geräteschnittstellen-Übereinstimmung</guilabel
+></term>
+<listitem>
+<para
+>Überprüft, ob das angegebene Gerät dem ausgewählten Gerätetyp entspricht.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Gerätetyp</guilabel
+></term>
+<listitem>
+<para
+>Hier werden alle möglichen Gerätetypen aufgeführt, die von &plasma; auf Ihrem System unterstützt werden. Diese Auswahl des Typs wird sowohl beim Vergleich der Eigenschaften wie auch der Geräteschnittstellen verwendet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Name des Wertes</guilabel
+></term>
+<listitem>
+<para
+>Dies ist eine Liste der möglichen Wertenamen des ausgewählten Gerätetyps. Dazu ist die Auswahl einer Bedingung für diesen Wert (entweder <guilabel
+>Ist gleich</guilabel
+> oder <guilabel
+>Enthält</guilabel
+>) und die Angabe des Textes zum Vergleich  möglich. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parameter zurücksetzen</guibutton
+></term>
+<listitem>
+<para
+>Macht alle noch nicht gespeicherten Änderungen dieses Parameters rückgängig.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Änderungen der Parameter speichern</guibutton
+></term>
+<listitem>
+<para
+>Speichert alle Änderungen diese Parameters.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

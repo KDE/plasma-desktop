@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Visor de tipos de letra</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>fontview</keyword>
+<keyword
+>tipos de letra</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; es una aplicación para visualizar e instalar diferentes tipos de letras: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; de tipo 1 (extensión de archivo en &Windows; y OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; en &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Formato de distribución de mapa de bits, extensión de archivo <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (formato portable compilado, extensión de archivo <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Puede utilizarlo como un programa independiente e instalar un tipo de letra descargada de Internet. En la vista previa puede comprobar si el tipo de letra tiene todos los caracteres que necesita. </para>
+<para
+>Además, &kfontview; se puede lanzar desde el módulo <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Gestión de tipos de letra</guilabel
+></ulink
+> de las &systemsettings; para utilizar las funcionalidades de vista previa de &kfontview;.</para>
+
+<para
+>De forma alternativa, puede usar el módulo <guilabel
+>Gestión de tipos de letra</guilabel
+> para instalar, eliminar, visualizar y gestionar todos los tipos de letra del sistema.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>La aplicación &kfontview;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>La aplicación &kfontview;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>La <guilabel
+>vista previa </guilabel
+> de &kfontview; muestra el tipo de letra en varios tamaños mediante un pangram (una frase que utiliza todas las letras del abecedario al menos una vez). De forma que pueda hacerse una idea del aspecto que tendrá. Desde la lista desplegable de la barra de herramientas, puede elegir tipos adicionales de vistas previas. <itemizedlist>
+<listitem
+><para
+><guilabel
+>Todos los caracteres</guilabel
+> muestran todos los caracteres proporcionados por el tipo de letra en un tamaño. </para
+></listitem>
+<listitem
+><para
+>Bloque Unicode: el estándar Unicode organiza grupos de caracteres en bloques</para
+></listitem>
+<listitem
+><para
+>Script Unicode: en Unicode, un script es un conjunto de letras y otros signos escritos que se utilizan para representar información textual en uno o más sistemas de escrituras</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Cambiar texto</guibutton
+>: mediante este botón, se abre el diálogo <guilabel
+>Vista previa de la cadena de texto</guilabel
+>, en el cual se puede introducir un texto definido por el usuario. Esta funcionalidad permite comprobar si un tipo de letra admite los caracteres que se necesitan. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Puede utilizar los botones de escala o la rueda del ratón para cambiar el tamaño del tipo de letra en todos los tipos de vista previa.</para>
+<para
+>En los modos de vista previa <guilabel
+>Bloque Unicode</guilabel
+> y <guilabel
+>Script Unicode</guilabel
+>, se muestra información adicional cuando el puntero del ratón pasa por encima de un carácter: la <guilabel
+>Categoría</guilabel
+> y los valores en <guilabel
+>UCS-4</guilabel
+>, en <guilabel
+>UTF-16</guilabel
+>, en <guilabel
+>UTF-8</guilabel
+> y como <guilabel
+>Entidad decimal XML </guilabel
+> del carácter Unicode.</para>
+
+<para
+>Para instalar un tipo de letra que haya descargado de Internet, haga clic en el botón <guibutton
+>Instalar</guibutton
+> en la esquina inferior derecha. </para>
+
+<para
+>Puede instalar el tipo de letra para su personal en exclusiva o para que esté disponible para todos los usuarios; esta última opción necesita privilegios de administrador.</para>
+
+<para
+>Los tipos de letras se suelen proporcionar en un formato de archivo comprimido <literal role="extension"
+>zip</literal
+>. Abra dicho archivo comprimido con &ark;, el cual proporciona un visor sencillo para tipos de letra. Para hacer uso de las funcionalidades ampliadas de &kfontview;, extraiga los tipos de letra y ábralos en &kfontview;. </para
+><para
+>Es necesario reinstalar las aplicaciones para que utilicen los nuevos tipos de letra instalados.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,760 @@
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to
+# translation of kcmkonq.po to Xhosa
+# K Desktop Environment - kdebase
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2002-10-26 12:43SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Desktop"
+
+#: desktoppathssettings.cpp:188
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents"
+msgstr "&Umendo wamaxwebhu:"
+
+#: desktoppathssettings.cpp:203
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads"
+msgstr "&Umendo wamaxwebhu:"
+
+#: desktoppathssettings.cpp:218
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music"
+msgstr "&Umendo wamaxwebhu:"
+
+#: desktoppathssettings.cpp:233
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures"
+msgstr "&Umendo wamaxwebhu:"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos"
+msgstr "&Umendo wamaxwebhu:"
+
+#: globalpaths.cpp:32
+#, fuzzy, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Umendo</h1>\n"
+"Lo mnqongo ukuvumela ukuba ukhethe indawo kwindlela yokusebenza yefayile kwi "
+"desktop yakho emele igcinwe.\n"
+"Sebenzisa i \"Yintoni le?\" (Shift+F1) ukufumana uncedo kwiinketho "
+"ezikhankanyiweyo."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, fuzzy, kde-format
+#| msgid "Des&ktop path:"
+msgid "Desktop path:"
+msgstr "&Umendo we desktop:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, fuzzy, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Olu khetho luqulathe zonke iifayile onokuzibona kwi desktop yakho. Unga "
+"tshintsha indawo yolu lawulo ukuba ufuna njalo, kwaye imixholo iza kuhamba "
+"ngokuzenzekela kwindawo entsha kwakhona."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Documents path:"
+msgstr "&Umendo wamaxwebhu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, fuzzy, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Lo mlawuli uzakusetyenziswa kokungagqibekanga ukulayisha okanye ukugcina "
+"amaxwebhu ukusuka okanye ukuya."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Downloads path:"
+msgstr "&Umendo wamaxwebhu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, fuzzy, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Lo mlawuli uzakusetyenziswa kokungagqibekanga ukulayisha okanye ukugcina "
+"amaxwebhu ukusuka okanye ukuya."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Videos path:"
+msgstr "&Umendo wamaxwebhu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, fuzzy, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Lo mlawuli uzakusetyenziswa kokungagqibekanga ukulayisha okanye ukugcina "
+"amaxwebhu ukusuka okanye ukuya."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Pictures path:"
+msgstr "&Umendo wamaxwebhu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, fuzzy, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Lo mlawuli uzakusetyenziswa kokungagqibekanga ukulayisha okanye ukugcina "
+"amaxwebhu ukusuka okanye ukuya."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Music path:"
+msgstr "&Umendo wamaxwebhu:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, fuzzy, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Lo mlawuli uzakusetyenziswa kokungagqibekanga ukulayisha okanye ukugcina "
+"amaxwebhu ukusuka okanye ukuya."
+
+#, fuzzy
+#~| msgid "A&utostart path:"
+#~ msgid "Autostart path:"
+#~ msgstr "&Umendo wesiqalo esizenzekelayo:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Olu lawulo luqulathe izicelo okanye amakhonkco kwizicelo (iindlela "
+#~ "ezimfutshane) ofuna ukuziqala ngokuzenzekela ngexesha i KDE iqala. "
+#~ "Ungatshintsha indawo yolulawulo ukuba ufuna njalo, kwaye imixholo iza "
+#~ "kuhamba ngokuzenzekela kwindawo entsha."
+
+#~ msgid "Autostart"
+#~ msgstr "Isiqalo esizenzekelayo"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Movies"
+#~ msgstr "&Umendo wamaxwebhu:"
+
+#, fuzzy
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Umendo we '%1' utshintshiwe.\n"
+#~ "Ufuna ukuya kwiifayile ukusuka ku '%2' ukuya ku '%3'?"
+
+#, fuzzy
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Umendo we '%1' utshintshiwe.\n"
+#~ "Ufuna ukuya kwiifayile ukusuka ku '%2' ukuya ku '%3'?"
+
+#, fuzzy
+#~ msgid "Confirmation Required"
+#~ msgstr "Uqinisekiso luyafuneka"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Ukuziphatha kwe Konqueror</h1> Ungaqwalasela indlela yokuziphatha kwe "
+#~ "Konqueror njengomphathi wefayile apha."
+
+#~ msgid "Misc Options"
+#~ msgstr "Iinketho ze Misc"
+
+#, fuzzy
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Vula abalawuli kwii window ezahlukeneyo"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Ukuba olu khetho lukhangelwe, i Konqueror izakuvula i window entsha xa "
+#~ "uvula ulawulo, kunokubonisa imixholo yolawulo kweyangoku i window."
+
+#, fuzzy
+#~| msgid "Ask Confirmation For"
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Cela Uqinisekiso Lwe:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Olu khetho luxelela i Konqueror ukuba ingacela uqwalaselo xa u \"cima\" "
+#~ "ifayile. <ul><li><em>Yiya kumonakalo:</em> ihambisa ifayile kulawulo "
+#~ "lwakho lwefayile ukuya kowakho umonakalo, ukusuka apho inokubuyiselwa "
+#~ "khona ngokulula kakhulu.</li> <li><em>Cima:</em> icima ngokulula ifayile."
+#~ "</li> <li><em>Krazula kancinane:</em> hayi ayicimi kuphela ifayile, kodwa "
+#~ "ibhala ngaphezulu i ariya ekwidiski apho ifayile igcinwa khona, isenza "
+#~ "ubuyiselo lungenzeki. Awunakususa uqinisekiso lwale ndlela ngaphandle "
+#~ "kokuba usebenze ngolwazi olufihlakeleyo.</li></ul>"
+
+#, fuzzy
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Yisa kumonakalo"
+
+#~ msgid "&Behavior"
+#~ msgstr "&Ukuziphatha"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "Bonisa iimbonisela \"Umxholo Wencwadi eneenkcukacha Ubonakalisa Uphawu "
+#~ "lomfanekiso\" nakwi protocols:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>Iinketho Zemboniso yakuqala</h1> Apha uyakwazi uguguqula kancincane "
+#~ "uphatho lwe Konqueror xa ibonisa iifayile kwisilawuli.</h2> khangela "
+#~ "imithetho elandelwayo ofuna iboniswe ngaphezulu kwe mboniso yakuqala, "
+#~ "suku khangela ezo ezingamelanga. Umzekelo, ungafuna ukubonisa imboniselo "
+#~ "zakuqala ngaphezulu kwe SMB ukuba umsebenzi womnatha wobulali "
+#~ "akakhawulezi ngokwaneleyo, kodwa ungathanda ukuyikhubazelela i FTP ukuba "
+#~ "undwendwela rhoqo amanxuwa e FTP achothayo anemifanekiso  emikhulu."
+#~ "<h2>Ubuninzi Befayile Yobungakanani:</h2> khetha ubuninzi bobungakanani "
+#~ "befayile ezenzelwa imboniselo  zakuqala. Umzekelo, ukuba icwangciselwe "
+#~ "kwi 1 MB (okwendalo), akhuko mboniselo yangaphambili ezakwenzelwaiifayile "
+#~ "ezinkulu kuno 1 MB, ngenxa yezizathu zesantya."
+
+#, fuzzy
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "Olukhetho lukwenza ukuba ukwazi ukuketha ukuba ukujonga kwe fayile "
+#~ "kumphati wo Mphanti kumele iqaliswe \n"
+#~ "Kwi protocols ezivelayo ezikawulezayo ukwenzela ukuba ukwazi ukujonga "
+#~ "imboniselo yangaphambili."
+
+#, fuzzy
+#~ msgid "&Maximum file size:"
+#~ msgstr "Ubungakanani obukhulu befayile:"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#, fuzzy
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "Yandisa ubungakanani bemboniselo zemphawu zemifanekiso"
+
+#, fuzzy
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Sebenzisa i thumbnails ebekwe kwifayile"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "Khetha oku ukusebenzisa i thumbnails ezifumanwe ngaphakathi kolunye udidi "
+#~ "lwefayile (e.g. JPEG). Oku kuzakwandisa isantya kwaye sehlise usebenziso "
+#~ "lwe disk. Sukukhetha ukuba unefayile ezenzwe yindlela yokusebenza eyenza "
+#~ "i thumbanails engeyizizo, njenge ImageMagick."
+
+#~ msgid "Sound Files"
+#~ msgstr "Iifayile Zesandi"
+
+#~ msgid "&Left button:"
+#~ msgstr "&Iqhosha lasekhohlo:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Ungakhetha okwenzekayo xa unqakraza kwiqhosha lasekhohlo lwecebo lencopho "
+#~ "kwi desktop:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Iqhosha l&asekunene:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr ""
+#~ "Ungakhetha okwenzekayo xa unqakraza kwiqhosha lasekunene kwicebo lakho "
+#~ "lencopho kwi desktop:"
+
+#, fuzzy
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Akukho ntshukumo:</em> njengoko unokuthekelela, akukho nto "
+#~ "yenzekayo!</li> <li><em>Uluhlu lwemenu lwe Window:</em> i menu ebonisa "
+#~ "zonke ii window kuzo zonke iziqhamo ze desktops pops up. Unganqakraza "
+#~ "kwigama le desktop ukuya kula desktop, okanye kwigama le window ukushifta "
+#~ "ngokujonga kula window, ifaka i desktops ukuba kulilungelo, kwaye igcina "
+#~ "kwakhona i window ukuba ifihlakele. Ezifihlakeleyo okanye ezincinane ii "
+#~ "window zimelwe ngamagama wazo kwindawo yegama.</li> <li><em>Desktop menu:"
+#~ "</em> imenu yentsingiselo ye desktop pops up. Ngaphandle kwezinye izinto, "
+#~ "le menu ineenketho zokuqwalasela umboniso, itshixa ikhusi, kwaye nokhupho "
+#~ "lwe KDE.</li> <li><em>Imenu yesicelo</em> i \"K\" menu pops up. Oku "
+#~ "kunokuba luncedo kunikezelo olukhawulezayo lwezicelo ukuba uthanda "
+#~ "ukugcina ipaneli (eyaziwa ngokuba yi \"Kicker\") efihliweyo kwimboniselo."
+#~ "</li></ul>"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "Ungakhetha okwenzekayoxa unqakraza iqhosha eliphakathi lwecebo lakho "
+#~ "lesalathisi kwi desktop: <ul><li><em>Akukho ntshukumo:</em> njengoko "
+#~ "unokuthelekelela, akukho nto yenzekayo!</li> <li><em>Imenu yoluhlu lwe "
+#~ "Window</em> imenu ebonisa zonke ii window kwezineziqhamo i desktops pops "
+#~ "up. Unganqakraza kwi desktop igama ukusebenza kula desktop, okanyekwigama "
+#~ "le window ukushifta ukujongana kula window, isenza i desktops ukuba "
+#~ "kuyimfuneko, kwaye igcina kwakhona i window ukuba ifihliwe. Ezifihliweyo "
+#~ "okanye ezincinane ii window zimelwe ngamagama wazo kwindawo yamagama azo."
+#~ "</li> <li><em>Desktop menu:</em> imenu yentsingiselo ye desktop pops up. "
+#~ "Ngaphandle kwezinye izinto, le menu ineenketho zokuqwalasela umboniso, "
+#~ "itshixaikhusi, nokhupho lwe KDE.</li><li><em>Imenu yesicelo:</em> i \"K\" "
+#~ "menu pops up. Oku kunokubaluncedo kwizicelo zonikezelo ezikhawulezayo "
+#~ "ukuba ufuna ukugcina ipaneli (eyaziwa ngokuba yi \"Kicker\") efihliweyo "
+#~ "kwimboniselo.</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>Akukho ntshukumo:</em> njengoko unokuthekelela, akukho nto "
+#~ "yenzekayo!</li> <li><em>Uluhlu lwemenu lwe Window:</em> i menu ebonisa "
+#~ "zonke ii window kuzo zonke iziqhamo ze desktops pops up. Unganqakraza "
+#~ "kwigama le desktop ukuya kula desktop, okanye kwigama le window ukushifta "
+#~ "ngokujonga kula window, ifaka i desktops ukuba kulilungelo, kwaye igcina "
+#~ "kwakhona i window ukuba ifihlakele. Ezifihlakeleyo okanye ezincinane ii "
+#~ "window zimelwe ngamagama wazo kwindawo yegama.</li> <li><em>Desktop menu:"
+#~ "</em> imenu yentsingiselo ye desktop pops up. Ngaphandle kwezinye izinto, "
+#~ "le menu ineenketho zokuqwalasela umboniso, itshixa ikhusi, kwaye nokhupho "
+#~ "lwe KDE.</li> <li><em>Imenu yesicelo</em> i \"K\" menu pops up. Oku "
+#~ "kunokuba luncedo kunikezelo olukhawulezayo lwezicelo ukuba uthanda "
+#~ "ukugcina ipaneli (eyaziwa ngokuba yi \"Kicker\") efihliweyo kwimboniselo."
+#~ "</li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "Akukho Ntshukumo"
+
+#~ msgid "Window List Menu"
+#~ msgstr "Menu Yoluhlu ye Window"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Menu ye Desktop"
+
+#~ msgid "Application Menu"
+#~ msgstr "Menu Yesicelo"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Isiko Menu 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Isiko Menu 2"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Desktop</h1>\n"
+#~ "Lo mnqongo ukuvumela ukuba ukhethe iinketho ezahlukene\n"
+#~ "ze desktop yakho, iquka indlela apho i icons zilungiswe ngayo, i\n"
+#~ "ngonqakrazo oluphakathi kunye namaqhosha asekunene e mouse kwi desktop.\n"
+#~ "Sebenzisa i \"Yintoni le?\" (Shift+F1) ukufumana uncedo kwiinketho "
+#~ "ezikhankanyiweyo."
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "Sukukhangela olum khetho ukuba awufuni ukuba nee icon kwidesktop. "
+#~ "Ngaphandle kwe icon i desktop izakukhawuleza kodwa awuzukukwazi ukutsala "
+#~ "iifayile kwi desktop."
+
+#, fuzzy
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Bonisa iifayile ezifihlakeleyo kwi desktop"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "Khangela olu khetho ukuba ufuna ukwenza udweliso lwenkqubo lwe X11 "
+#~ "oluzoba kwi desktop njenge xkhephu, xntaka yolwandle okanye xntaba. Ukuba "
+#~ "uneengxaki ngezicelo ezinjenge netscape ezikhangela ingcambu ye window "
+#~ "yemizekelo esebenzayo, khubaza olu khetho."
+
+#, fuzzy
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Ud&weliso lweenkqubo kwi window ye desktop"
+
+#, fuzzy
+#~ msgid "Show &tooltips"
+#~ msgstr "&Bonisa iincam zefayile"
+
+#, fuzzy
+#~ msgid "&Desktop menu bar"
+#~ msgstr "Menu ye Desktop"
+
+#, fuzzy
+#~ msgid "Middle button:"
+#~ msgstr "Iqhosha &eliphakathi:"
+
+#, fuzzy
+#~| msgid "&Left button:"
+#~ msgid "Left button:"
+#~ msgstr "&Iqhosha lasekhohlo:"
+
+#, fuzzy
+#~| msgid "Right b&utton:"
+#~ msgid "Right button:"
+#~ msgstr "Iqhosha l&asekunene:"
+
+#~ msgid "Edit..."
+#~ msgstr "Hlela..."
+
+#, fuzzy
+#~ msgid "File Icons"
+#~ msgstr "Amacebo"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "Ukuba ukhangela olu khetho, naziphi iifayile kulawulo lwe desktop yakho "
+#~ "eziqala ngesithuba (.) zizakuboniswa. Ngesiqhelo, ezo fayile ziqulathe "
+#~ "uqwalaselo lolwazi, kwaye zisala zifihlakele kumboniselo yakho.<p> "
+#~ "Umzekelo, iifayile ezi bizwa ngokuba \".lulawulo\" zifayile zokubhaliweyo "
+#~ "okungenanto eziqulathe ulwazi lwe Konqueror, ezinjenge icon ukusebenzisa "
+#~ "kumboniso wolawulo, indlela apho ifayile zinokulungiswa ngayo, njalo-"
+#~ "njalo. Awunakutshintsha okanye ucime ezi fayile ngaphandle kokuba "
+#~ "uyakwazi okwenzayo!"
+
+#, fuzzy
+#~ msgid "Show &hidden files"
+#~ msgstr "&Bonisa iifayile ezifihlakeleyo kwi desktop"
+
+#, fuzzy
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr ""
+#~ "Khetha udidi lweefayile ofuna ukwenza imifanekiso yemboniselo yasecaleni "
+#~ "kuzo"
+
+#, fuzzy
+#~ msgid "Show Icon Previews For"
+#~ msgstr "Bonisa Iimboniselo Ze"
+
+#, fuzzy
+#~ msgid "Device Icons"
+#~ msgstr "Amacebo"
+
+#, fuzzy
+#~ msgid "&Show device icons:"
+#~ msgstr "Bonis&a amacebo kwi desktop"
+
+#, fuzzy
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr "Sukukhetha udidi lwecebo ongafuniyo ukulibona kwi desktop"
+
+#, fuzzy
+#~ msgid "Device Types to Display"
+#~ msgstr "Udidi Oluzakuboniswa"
+
+#, fuzzy
+#~ msgid "Show file &tips"
+#~ msgstr "&Bonisa iincam zefayile"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "Apha uyakwazi ukulawula xa u hambisa imouse ngaphezulu kwe file ofuna "
+#~ "ukuyibona i window festile encinci izakuvela ne ncazela ngalo fayile"
+
+#, fuzzy
+#~ msgid "Show &previews in file tips"
+#~ msgstr "&Bonisa imboniselo kumancam kwifayile"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "Apha uyakwazi ukulawulo ukuba ufuna i window eqhekezayo ukugcina "
+#~ "imboniselo enkulu yefayile, za uhambisa i mouse ngapha kwayo."
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Multiple Desktops</h1>In this module, you can configure how many "
+#~ "virtual desktops you want and how these should be labeled."
+#~ msgstr ""
+#~ "<h1>Inani le Desktop & Amagama</h1>Kulo mnqongo wokulinganisela, "
+#~ "ungaqwalasela ukuba zingaphi i desktops ozifunayo kwaye zizakuboniswa "
+#~ "njani."
+
+#~ msgid "N&umber of desktops: "
+#~ msgstr "&Inani lee desktops: "
+
+#~ msgid ""
+#~ "Here you can set how many virtual desktops you want on your KDE desktop. "
+#~ "Move the slider to change the value."
+#~ msgstr ""
+#~ "Apha ungacwangcisa ubuninzi be desktops ozifunayo kwi desktop yakho ye "
+#~ "KDE. Shukumisa isityibilikisi ukutshintsha ixabiso."
+
+#~ msgid "Desktop &Names"
+#~ msgstr "Amagama e &Desktops"
+
+#~ msgid "Desktop %1:"
+#~ msgstr "Desktop %1:"
+
+#~ msgid "Here you can enter the name for desktop %1"
+#~ msgstr "Apha ungangenisa igama le desktop %1"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Desktop %1"
+
+#~ msgid "&Appearance"
+#~ msgstr "&Ukubonakala"
+
+#~ msgid "&Standard font:"
+#~ msgstr "&Uhlobo lwegama elisezantsi:"
+
+#~ msgid "This is the font used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Lo ngumgca osetyenziswa ukubonisa okubhaliweyo kwii windoe ze Konqueror."
+
+#~ msgid "Font si&ze:"
+#~ msgstr "&Ubungakanani Bohlobo lwamagama:"
+
+#~ msgid "This is the font size used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Oku bubungakanani bohlobo lwegama elisebenziswa ukubonisa okubhaliweyo "
+#~ "kwii window ze Konqueror."
+
+#~ msgid "Normal te&xt color:"
+#~ msgstr "Umbala wo&mbhalo oqhelekileyo:"
+
+#~ msgid "This is the color used to display text in Konqueror windows."
+#~ msgstr ""
+#~ "Lo ngumbala osetyenziswayo ukubonisa okubhaliweyo kwii window ze "
+#~ "Konqueror."
+
+#~ msgid "&Text background color:"
+#~ msgstr "&Umbala wesiqalo sokubhaliweyo:"
+
+#~ msgid "This is the color used behind the text for the icons on the desktop."
+#~ msgstr ""
+#~ "Lo ngumbala osetyenziswayo emva kombhalo wophawu lomfanekiso kwi desktop."
+
+#, fuzzy
+#~ msgid "H&eight for icon text:"
+#~ msgstr "&Usongelo-lwegama lophawu lomfaneksio lombhalo"
+
+#, fuzzy
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Usongelo-lwegama lophawu lomfaneksio lombhalo"
+
+#, fuzzy
+#~ msgid "&Underline filenames"
+#~ msgstr "&Yenza umgca ngaphantsi kwamagama efayile"
+
+#, fuzzy
+#~ msgid ""
+#~ "Checking this option will result in filenames being underlined, so that "
+#~ "they look like links on a web page. Note: to complete the analogy, make "
+#~ "sure that single click activation is enabled in the mouse control module."
+#~ msgstr ""
+#~ "Ukukhangela olu khetho kuzakubagela ukufakwa ngomgca ngaphantsi kwamagama "
+#~ "efayile, ukuze zibonakale njengamakhonkco ephepha leweb. Qaphela: "
+#~ "ukugqiba isivumelwano, qinisekisa ukuba usebenzo lonqakrazo olulodwa "
+#~ "luyenzeka kumnqongo wolawulo lwe mouse."
+
+#~ msgid "Display file sizes in b&ytes"
+#~ msgstr "&Bonisa ubungakanani beefayile kwii bytes"
+
+#~ msgid ""
+#~ "Checking this option will result in file sizes being displayed in bytes. "
+#~ "Otherwise file sizes are being displayed in kilobytes or megabytes if "
+#~ "appropriate."
+#~ msgstr ""
+#~ "Ukukhangela olukhetho luyakubangela ubungakanani beefayile ziboniswe kwi "
+#~ "bytes. Kungenjalo ubungakanani beefayile buguqulelwa kwi kilobytes okanye "
+#~ "i megabytes ukuba kuyakwazeka."
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Appearance</h1> You can configure how Konqueror looks as a file "
+#~ "manager here."
+#~ msgstr ""
+#~ "<h1>Ubonakalo lwe Konqueror</h1> Uyakwazi ukuqwalasela imbonakalo ye "
+#~ "Konqueror njengomphathi wefayile apha."
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Bonisa imisebenzi yomnatha kwi window eyodwa"
+
+#~ msgid ""
+#~ "Checking this option will group the progress information for all network "
+#~ "file transfers into a single window with a list. When the option is not "
+#~ "checked, all transfers appear in a separate window."
+#~ msgstr ""
+#~ "Ukukhangela olu khetho kuzakwenza amaqela ulwazi lwenkqubela kulo lonke "
+#~ "unikezelo lwefayile yomsebenzi womnatha kwi window eyodwa ngoluhlu. Xa "
+#~ "ukhetho lunga khangelwa, lonke unikezelo luvela kwi window eyahlukileyo."
+
+#~ msgid "Home &URL:"
+#~ msgstr "&Ikhaya URL:"
+
+#, fuzzy
+#~ msgid "Select Home Folder"
+#~ msgstr "Khetha Ulawulo Lwasekhaya"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is the URL (e.g. a folder or a web page) where Konqueror will jump "
+#~ "to when the \"Home\" button is pressed. This is usually your home folder, "
+#~ "symbolized by a 'tilde' (~)."
+#~ msgstr ""
+#~ "Le yi URL (umzekelo umlawuli okanye iphepha le web) apho i Konqueror "
+#~ "izakuxhumela khona xa iqhosha le \"Ekhaya\" licinezelwe. Ingakumbi i "
+#~ "'tilde' (~)."
+
+#, fuzzy
+#~ msgid "Qt::DockLeft button:"
+#~ msgstr "&Iqhosha lasekhohlo:"
+
+#, fuzzy
+#~ msgid "Qt::DockRight button:"
+#~ msgstr "Iqhosha l&asekunene:"
+
+#~ msgid "&Quick Copy && Move"
+#~ msgstr "&Uhambiso Lokhuphelo && Olukhawulezayo"

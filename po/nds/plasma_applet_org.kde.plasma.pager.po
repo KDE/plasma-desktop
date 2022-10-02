@@ -1,0 +1,222 @@
+# Translation of plasma_applet_pager.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2007, 2008, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2009, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_pager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-31 00:48+0000\n"
+"PO-Revision-Date: 2014-07-06 21:47+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmeen"
+
+#: package/contents/ui/configGeneral.qml:40
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Allmeen"
+
+#: package/contents/ui/configGeneral.qml:42
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:47
+#, kde-format
+msgid "Show only current screen"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:52
+#, kde-format
+msgid "Navigation wraps around"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:64
+#, kde-format
+msgid "Layout:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgctxt "The pager layout"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Horizontal"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:66
+#, kde-format
+msgid "Vertical"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:80
+#, fuzzy, kde-format
+#| msgid "Display Text:"
+msgid "Text display:"
+msgstr "Wiest Text:"
+
+#: package/contents/ui/configGeneral.qml:83
+#, kde-format
+msgid "No text"
+msgstr "Keen Text"
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Activity number"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:91
+#, kde-format
+msgid "Desktop number"
+msgstr "Schriefdischnummer"
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Activity name"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#, kde-format
+msgid "Desktop name"
+msgstr "Schriefdischnaam"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current Activity:"
+msgstr "Aktuell Schriefdisch warrt utsöcht"
+
+#: package/contents/ui/configGeneral.qml:113
+#, fuzzy, kde-format
+#| msgid "Selecting current desktop:"
+msgid "Selecting current virtual desktop:"
+msgstr "Aktuell Schriefdisch warrt utsöcht"
+
+#: package/contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Does nothing"
+msgstr "Deit nix"
+
+#: package/contents/ui/configGeneral.qml:124
+#, fuzzy, kde-format
+#| msgid "Shows desktop"
+msgid "Shows the desktop"
+msgstr "Wiest den Schriefdisch"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "and %1 other window"
+#| msgid_plural "and %1 other windows"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] "un %1 anner Finster"
+msgstr[1] "un %1 anner Finstern"
+
+#: package/contents/ui/main.qml:362
+#, fuzzy, kde-format
+#| msgid "%1 window"
+#| msgid_plural "%1 windows"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] "%1 Finster"
+msgstr[1] "%1 Finstern"
+
+#: package/contents/ui/main.qml:374
+#, kde-format
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgid "Desktop %1"
+msgstr "Schriefdischnaam"
+
+#: package/contents/ui/main.qml:450
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:596
+#, kde-format
+msgid "Show Activity Manager…"
+msgstr ""
+
+#: package/contents/ui/main.qml:599
+#, kde-format
+msgid "Add Virtual Desktop"
+msgstr "Virtuell Schriefdisch tofögen"
+
+#: package/contents/ui/main.qml:600
+#, kde-format
+msgid "Remove Virtual Desktop"
+msgstr "Virtuell Schriefdisch wegmaken"
+
+#: package/contents/ui/main.qml:603
+#, fuzzy, kde-format
+#| msgid "&Configure Virtual Desktops..."
+msgid "Configure Virtual Desktops…"
+msgstr "Virtuell Schriefdischen &instellen..."
+
+#, fuzzy
+#~| msgid "Configure Desktops"
+#~ msgid "Configure Desktops..."
+#~ msgstr "Schriefdischen instellen"
+
+#~ msgid "Shows the dashboard"
+#~ msgstr "Wiest dat Klockpaneel"
+
+#~ msgid "Display icons:"
+#~ msgstr "Wiest Lüttbiller:"
+
+#~ msgid "&Add Virtual Desktop"
+#~ msgstr "Virtuell Schriefdisch &tofögen"
+
+#~ msgid "&Remove Last Virtual Desktop"
+#~ msgstr "Verleden virtuell Schriefdisch &wegdoon"
+
+#~ msgid "Configure Pager"
+#~ msgstr "Pager instellen"
+
+#~ msgid "Number of columns:"
+#~ msgstr "Striepentall:"
+
+#~ msgid "Number of rows:"
+#~ msgstr "Regentall:"
+
+#~ msgid "Change the number of rows"
+#~ msgstr "De Tall vun Regen ännern"
+
+#~ msgid "buttonGroupText"
+#~ msgstr "KnööpKoppelText"
+
+#~ msgid "buttonGroupAction"
+#~ msgstr "KnööpKoppelAkschoon"
+
+#~ msgid "None"
+#~ msgstr "Keen"
+
+#~ msgid "What will appear when the mouse is over a desktop miniature"
+#~ msgstr ""
+#~ "Gifft an wat opduken deit, wenn Du mit de Muus op en Schriefdischlüttbild "
+#~ "wiest"

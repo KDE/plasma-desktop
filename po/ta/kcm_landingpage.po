@@ -1,0 +1,188 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"PO-Revision-Date: 2022-04-02 21:33+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.03.80\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "நிறத் திட்டமுறையின் பெயர்"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "ஒரு முறை க்ளிக் செய்தால் கோப்புகளைத் திற"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "பொதுவான தோற்றத் தொகுப்பு"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "மாற்று பொதுத் தோற்றத் தொகுப்பு"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "அசைவூட்டத்தின் வேகம்"
+
+#: package/contents/ui/FeedbackControls.qml:64
+#, kde-format
+msgid "Plasma"
+msgstr "பிளாஸ்மா"
+
+#: package/contents/ui/FeedbackControls.qml:72
+#, kde-format
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you."
+msgstr ""
+"நீங்கள் கே.டீ.யீ. பிளாஸ்மாவை பயன்படுத்தும் விதத்தைக் குறித்த சில விவரங்களை அனுப்பி, அதனை "
+"மேம்படுத்த உதவலாம்; இவ்வாறு செய்வதன் மூலம், பயனர்களுக்கு தேவையான அம்சங்கள் எவையென்று "
+"நாங்கள் தெரிந்துகொள்கிறோம்.<br/><br/>இவ்விவரங்களை அனுப்புதல் கட்டாயமில்லை, மேலும் உங்கள் "
+"அடையாளத்தை எங்களுக்கு தெரியப்படுத்தாது. உங்கள் தனிப்பட்ட தரவுகள், நீங்கள் பயன்படுத்தும் "
+"கோப்புகள், நீங்கள் பார்க்கும் இணையதளங்கள், அல்லது உங்களை அடையாளங்கான பயன்படும் விவரங்களை "
+"நாங்கள் ஒருபோதும் சேகரிக்க மாட்டோம்."
+
+#: package/contents/ui/FeedbackControls.qml:75
+#, kde-format
+msgid "No data will be sent."
+msgstr "எதுவும் அனுப்பப்படாது."
+
+#: package/contents/ui/FeedbackControls.qml:77
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "கீழ்வரும் விவரங்கள் அனுப்பப்படும்:"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid "Theme:"
+msgstr "தோற்றத்திட்டம்:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Animation speed:"
+msgstr "அசைவூட்டத்தின் வேகம்:"
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "மெதுவானது"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "உடனடியானது"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "பின்னணிப் படத்தை மாற்று…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "கூடுதல் தோற்ற அமைப்புகள்…"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "கோப்புகள் அல்லது அடைவுகளை க்ளிக் செய்தல்:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "அவற்றைத் திறக்கும்"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "ஒன்றன் தேர்வுக் குறிப்பை க்ளிக் செய்தால் அதைத் தேர்ந்தெடு"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "அவற்றைத் தேர்ந்தெடுக்கும்"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "இரண்டு முறை க்ளிக் செய்தால் அதைத் திற"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Send User Feedback:"
+msgstr "பயனர் பின்னூட்டத்தை அனுப்புதல்:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "நடத்தை சம்பந்தப்பட்ட கூடுதல் அமைப்புகள்…"
+
+#: package/contents/ui/main.qml:211
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "அடிக்கடி பயன்படுத்தப்படும் பக்கங்கள்:"
+
+#~ msgctxt "Adjective; as in, 'light theme'"
+#~ msgid "Light"
+#~ msgstr "வெளிர்ந்தது"
+
+#~ msgctxt "Adjective; as in, 'dark theme'"
+#~ msgid "Dark"
+#~ msgstr "கருமையானது"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "கோ. கிஷோர்"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Kde-l10n-ta@kde.org"
+
+#~ msgid "Quick Settings"
+#~ msgstr "எளிய விருப்பத்தேர்வுகள்"
+
+#~ msgid "Landing page with some basic settings."
+#~ msgstr "சில அடிப்படையான விருப்பத்தேர்வுகளைக் கொண்ட முகப்பு பக்கம்."
+
+#~ msgid "Marco Martin"
+#~ msgstr "மார்கோ மார்ட்டின்"
+
+#~ msgid "Most used module number %1"
+#~ msgstr "அடிக்கடி பயன்படுத்தப்படும் கூறு எண் %1"
+
+#~ msgid "Enabled"
+#~ msgstr "இயக்கப்பட்டுள்ளது"

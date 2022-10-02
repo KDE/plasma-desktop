@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"PO-Revision-Date: 2017-02-10 13:34+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: sortedactivitiesmodel.cpp:316
+#, kde-format
+msgid "Used some time ago"
+msgstr "استُخدم منذ أمد"
+
+#: sortedactivitiesmodel.cpp:332
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "استُخدم منذ أكثر من سنة"
+
+#: sortedactivitiesmodel.cpp:333
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "استُخدم منذ أقلّ من شهر"
+msgstr[1] "استُخدم منذ شهر واحد"
+msgstr[2] "استُخدم منذ شهرين"
+msgstr[3] "استُخدم منذ %1 أشهر"
+msgstr[4] "استُخدم منذ %1 شهرًا"
+msgstr[5] "استُخدم منذ %1 شهر"
+
+#: sortedactivitiesmodel.cpp:334
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "استُخدم منذ أقلّ من يوم"
+msgstr[1] "استُخدم منذ يوم واحد"
+msgstr[2] "استُخدم منذ يومين"
+msgstr[3] "استُخدم منذ %1 أيّام"
+msgstr[4] "استُخدم منذ %1 يومًا"
+msgstr[5] "استُخدم منذ %1 يوم"
+
+#: sortedactivitiesmodel.cpp:335
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "استُخدم منذ أقلّ من ساعة"
+msgstr[1] "استُخدم منذ ساعة واحدة"
+msgstr[2] "استُخدم منذ ساعتين"
+msgstr[3] "استُخدم منذ %1 ساعات"
+msgstr[4] "استُخدم منذ %1 ساعة"
+msgstr[5] "استُخدم منذ %1 ساعة"
+
+#: sortedactivitiesmodel.cpp:336
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "استُخدم منذ أقلّ من دقيقة"
+msgstr[1] "استُخدم منذ دقيقة واحدة"
+msgstr[2] "استُخدم منذ دقيقتين"
+msgstr[3] "استُخدم منذ %1 دقائق"
+msgstr[4] "استُخدم منذ %1 دقيقة"
+msgstr[5] "استُخدم منذ %1 دقيقة"
+
+#: sortedactivitiesmodel.cpp:337
+#, kde-format
+msgid "Used a moment ago"
+msgstr "استُخدم منذ قليل"
+
+#: switcherbackend.cpp:166
+#, kde-format
+msgid "Walk through activities"
+msgstr "تنقّل بين الأنشطة"
+
+#: switcherbackend.cpp:171
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "تنقّل بين الأنشطة (بالعكس)"

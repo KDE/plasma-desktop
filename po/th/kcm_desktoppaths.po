@@ -1,0 +1,633 @@
+# translation of kcmkonq.po to Thai
+# Copyright (C) 2003, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2005, 2006, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2010-02-11 21:34+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "พื้นที่หน้าจอ"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "เอกสารต่าง ๆ"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "แฟ้มดาวน์โหลดต่าง ๆ"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "ดนตรีต่าง ๆ"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "รูปภาพต่าง ๆ"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>พาธ</h1>\n"
+"มอดูลนี้ ให้คุณเลือกที่จะเก็บแฟ้มบนพื้นที่หน้าจอของคุณไว้ที่ไหนในระบบแฟ้ม\n"
+"เลือกใช้เมนู \"นี่คืออะไร ?\" (หรือกด Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือกที่ต้องการ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "พาธของพื้นที่ทำงาน:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"โฟลเดอร์นี้บรรจุแฟ้มทั้งหมดที่คุณเห็นบนพื้นที่ทำงาน คุณสามารถเปลี่ยน "
+"ตำแหน่งของตำแหน่งนี้ได้ตามต้องการ และแฟ้มต่าง ๆ ที่มีอยู่จะถูกย้ายไปยังตำแหน่งใหม่โดยอัตโนมัติ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "พาธตำแหน่งเก็บเอ&กสาร:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกเอกสาร"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "พาธตำแหน่งเก็บแฟ้มดาวน์โหลด:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อใช้ในการบันทึกแฟ้มต่าง ๆ ที่คุณทำการดาวน์โหลดมา"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกภาพยนตร์"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "พาธตำแหน่งเก็บรูปภาพ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกรูปภาพ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "พาธตำแหน่งเก็บแฟ้มดนตรี:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกแฟ้มดนตรี"
+
+#~ msgid "Autostart path:"
+#~ msgstr "พาธของโฟลเดอร์เริ่มอัตโนมัติ:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "โฟลเดอร์นี้ บรรจุโปรแกรมหรือที่อยู่เชื่อมโยงไปยังโปรแกรม (shortcuts) "
+#~ "ที่คุณต้องการให้ทำงานอัตโนมัติทุกครั้งเมื่อเริ่ม KDE คุณสามารถเปลี่ยนตำแหน่ง "
+#~ "ของตำแหน่งนี้ได้ตามต้องการ และแฟ้มต่าง ๆ ที่มีอยู่จะถูกย้ายไปยังตำแหน่งใหม่โดยอัตโนมัติ"
+
+#~ msgid "Autostart"
+#~ msgstr "เริ่มอัตโนมัติ"
+
+#~ msgid "Movies"
+#~ msgstr "ภาพยนตร์ต่าง ๆ"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "ตำแหน่งสำหรับ '%1' มีการเปลี่ยนแปลง\n"
+#~ "คุณต้องการย้ายแฟ้มจาก '%2' ไปยัง '%3' หรือไม่ ?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "ย้าย"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "ไม่ต้องย้าย"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "ตำแหน่งสำหรับ '%1' มีการเปลี่ยนแปลง\n"
+#~ "คุณต้องการย้ายไดเรกทอรีจาก '%2' ไปยัง '%3' หรือไม่ ?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "ย้าย"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "ไม่ต้องย้าย"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "ต้องการการยืนยัน"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>พฤติกรรมของ Konqueror</h1> คุณสามารถปรับแต่งพฤติกรรมเมื่อ Konqueror "
+#~ "ทำหน้าที่เป็นเครื่องมือจัดการแฟ้มได้ที่นี่"
+
+#~ msgid "Misc Options"
+#~ msgstr "ตัวเลือกเบ็ดเตล็ด"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "เปิดโฟลเดอร์ในอีกหน้าต่าง"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "หากกาเลือกตัวเลือกนี้ จะทำให้ Konqueror ทำการเปิดหน้าต่างใหม่เมื่อคุณเปิดโฟลเดอร์ "
+#~ "แทนการแสดงเนื้อหาของโฟลเดอร์ในหน้าต่างปัจจุบัน"
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "แสดงตัวเลือก 'ลบทิ้ง' ในเมนูคลิกขวา ซึ่งจะลบทิ้งโดยข้ามถังขยะไป"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "กาเลือกที่นี่ หากคุณต้องการให้คำสั่งเมนู 'ลบทิ้ง' ปรากฏบนพื้นที่หน้าจอ "
+#~ "และในเมนูคลิกขวาของตัวจัดการแฟ้ม นอกจากนี้ คุณยังสามารถลบแฟ้มทิ้งได้เสมอ โดยการกดปุ่ม "
+#~ "Shift ขณะเรียกใช้คำสั่ง 'ทิ้งลงถังขยะ'"
+
+#~ msgid "Menu Editor"
+#~ msgstr "ตัวแก้ไขเมนู"
+
+#~ msgid "Menu"
+#~ msgstr "เมนู"
+
+#~ msgid "New..."
+#~ msgstr "สร้างใหม่..."
+
+#~ msgid "Remove"
+#~ msgstr "เอาออก"
+
+#~ msgid "Move Up"
+#~ msgstr "ย้ายขึ้น"
+
+#~ msgid "Move Down"
+#~ msgstr "ย้ายลง"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "ถามยืนยันสำหรับ"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "ตัวเลือกนี้จะบอกให้ Konqueror ทำการถามยืนยัน เมื่อคุณทำการ \"ลบ\" แฟ้ม "
+#~ "<ul><li><em>ทิ้งลงถังขยะ:</em> ย้ายแฟ้มไปยังโฟลเดอร์ถังขยะของคุณ "
+#~ "ซึ่งจะทำให้คุณสามารถกู้แฟ้มคืนได้โดยง่าย </li> <li><em>ลบทิ้ง:</em> ลบแฟ้มตามปกติ</li></"
+#~ "ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&ทิ้งลงถังขยะ"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "ล&บทิ้ง"
+
+#~ msgid "&Behavior"
+#~ msgstr "&พฤติกรรม"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "แสดงหน้าตั&วอย่างและข้อมูลกำกับ"
+
+#~ msgid ""
+#~ "<p>Allow previews, \"Folder Icons Reflect Contents\", and retrieval of "
+#~ "meta-data on protocols:</p>"
+#~ msgstr ""
+#~ "<p>อนุญาตให้แสดงตัวอย่าง \"ไอคอนโฟลเดอร์แสดงเนื้อหาในโฟลเดอร์\" และดึงข้อมูลกำกับ "
+#~ "บนโพรโทคอล:</p>"
+
+#~ msgid ""
+#~ "<h1>Preview Options</h1> Here you can modify the behavior of Konqueror "
+#~ "when it shows the files in a folder.<h2>The list of protocols:</h2> check "
+#~ "the protocols over which previews should be shown; uncheck those over "
+#~ "which they should not. For instance, you might want to show previews over "
+#~ "SMB if the local network is fast enough, but you might disable it for FTP "
+#~ "if you often visit very slow FTP sites with large images.<h2>Maximum File "
+#~ "Size:</h2> select the maximum file size for which previews should be "
+#~ "generated. For instance, if set to 1 MB (the default), no preview will be "
+#~ "generated for files bigger than 1 MB, for speed reasons."
+#~ msgstr ""
+#~ "<h1>ตัวเลือกการแสดงตัวอย่าง</h1> คุณสามารถแก้ไขลักษณะที่ Konqueror "
+#~ "จะทำการแสดงแฟ้มในโฟลเดอร์ได้ที่นี่<h2>รายการของโพรโทคอล:</h2> "
+#~ "เลือกกาโพรโทคอลที่จะให้แสดงตัวอย่างของแฟ้ม และเลิกกาตัวที่ไม่ต้องการให้แสดง ตัวอย่างเช่น "
+#~ "คุณอาจจะเลือกให้แสดงตัวอย่างกับ โพรโทคอล SMB ก็ได้ หากระบบเครือข่ายของคุณเร็วเพียงพอ "
+#~ "และคุณอาจจะไม่ให้ แสดงตัวอย่างกับโพรโทคอล FTP หากคุณไปที่ไซต์ FTP มีความเร็วต่ำ "
+#~ "ที่มีแฟ้มภาพขนาดใหญ่บ่อย ๆ<h2>ขนาดใหญ่สุดของแฟ้ม:</h2> เลือกขนาดใหญ่สุดของแฟ้ม "
+#~ "ที่จะให้สร้างการแสดงตัวอย่าง ตัวอย่างเช่น ตั้งไว้ที่ 1 เมกะไบต์ (ค่าปริยาย) "
+#~ "จะทำให้ไม่มีการสร้างการแสดงตัวอย่างกับ แฟ้มที่ใหญ่กว่า 1 เมกะไบต์ เพื่อประสิทธิภาพที่เร็วขึ้น"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column Header of a colum where the user has to select in which "
+#~| "protocols he wants to see file previews"
+#~| msgid "Select Protocols"
+#~ msgctxt ""
+#~ "@title:column Header of a column where the user has to select in which "
+#~ "protocols he wants to see file previews"
+#~ msgid "Select Protocols"
+#~ msgstr "เลือกโพรโทคอล"
+
+#~ msgid "Local Protocols"
+#~ msgstr "โพรโทคอลท้องถิ่น"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "โพรโทคอลอินเทอร์เน็ต"
+
+#~ msgid ""
+#~ "This option makes it possible to choose when the file previews, smart "
+#~ "folder icons, and meta-data in the File Manager should be activated.\n"
+#~ "In the list of protocols that appear, select which ones are fast enough "
+#~ "for you to allow previews to be generated."
+#~ msgstr ""
+#~ "ตัวเลือกนี้ จะทำให้สามารถเลือกได้ว่า เมื่อไรที่ควรจะมีการใช้งาน การแสดงตัวอย่างแฟ้ม, "
+#~ "ไอคอนโฟลเดอร์ที่แสดงเนื้อหา และข้อมูลกำกับในตัวจัดการแฟ้ม\n"
+#~ "ในรายชื่อของโพรโทคอลที่ปรากฏอยู่นั้น "
+#~ "ให้ทำการเลือกว่าอันไหนที่มีความเร็วมากพอที่คุณจะให้มีการแสดงตัวอย่าง"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&ขนาดใหญ่สุดของแฟ้ม:"
+
+#~ msgid " MB"
+#~ msgstr " เมกะไบต์"
+
+#~ msgid "&Increase size of previews relative to icons"
+#~ msgstr "เพิ่มข&นาดการแสดงตัวอย่างสัมพันธ์กับไอคอน"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "ใ&ช้ภาพตัวอย่างขนาดเล็กที่ถูกฝังไว้ในแฟ้ม"
+
+#~ msgid ""
+#~ "Select this to use thumbnails that are found inside some file types (e.g. "
+#~ "JPEG). This will increase speed and reduce disk usage. Deselect it if you "
+#~ "have files that have been processed by programs which create inaccurate "
+#~ "thumbnails, such as ImageMagick."
+#~ msgstr ""
+#~ "เลือกตัวเลือกนี้ เพื่อให้ใช้ภาพตัวอย่างขนาดเล็กที่พบในแฟ้มบางประเภท (เช่นแฟ้มภาพ JPEG) "
+#~ "ซึ่งจะเพิ่ม ความเร็วและลดการใช้พื้นที่ดิสก์ได้ หรือปิดตัวเลือกนี้ "
+#~ "หากคุณมีแฟ้มที่ถูกประมวลผลด้วยโปรแกรมที่มีการสร้างภาพตัวอย่างไว้แล้วเช่น ImageMagick ก็ได้"
+
+#~ msgid "Sound Files"
+#~ msgstr "แฟ้มเสียง"
+
+#~ msgid "&Left button:"
+#~ msgstr "ปุ่มซ้าย:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the left button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr "คุณสามารถเลือกสิ่งที่จะกระทำ เมื่อคุณคลิกเมาส์ปุ่มซ้ายบนพื้นที่ทำงาน"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "ปุ่มขวา:"
+
+#~ msgid ""
+#~ "You can choose what happens when you click the right button of your "
+#~ "pointing device on the desktop:"
+#~ msgstr "คุณสามารถเลือกสิ่งที่จะกระทำ เมื่อคุณคลิกเมาส์ปุ่มขวาบนพื้นที่ทำงาน"
+
+#~ msgid ""
+#~ " <ul><li><em>No action</em></li> <li><em>Window list menu:</em> a menu "
+#~ "showing all windows on all virtual desktops pops up. You can click on the "
+#~ "desktop name to switch to that desktop, or on a window name to shift "
+#~ "focus to that window, switching desktops if necessary, and restoring the "
+#~ "window if it is hidden. Hidden or minimized windows are represented with "
+#~ "their names in parentheses.</li> <li><em>Desktop menu:</em> a context "
+#~ "menu for the desktop pops up. Among other things, this menu has options "
+#~ "for configuring the display, locking the screen, and logging out of KDE.</"
+#~ "li> <li><em>Application menu:</em> the \"K\" menu pops up. This might be "
+#~ "useful for quickly accessing applications if you like to keep the panel "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>ไม่มีการกระทำ:</em></li> <li><em>เมนูรายการหน้าต่าง:</em> "
+#~ "เมนูที่แสดงรายการหน้าต่างที่อยู่บนพื้นที่ทำงานเสมือนทั้งหมด คุณสามารถคลิกบนชื่อพื้นที่ทำงาน "
+#~ "เพื่อสลับการทำงานไปยังพื้นที่ทำงานนั้น หรือบนชื่อหน้าต่าง เพื่อย้ายการโฟกัสไปยังหน้าต่างนั้น "
+#~ "และสลับพื้นที่ทำงานหากจำเป็น รวมถึงเรียกคืนสถานะหน้าต่างนั้นหากมันถูกซ่อนอยู่ หน้าต่างที่ถูกซ่อน "
+#~ "หรือถูกย่อหายอยู่จะแสดงด้วยชื่อในวงเล็บ</li> <li><em>เมนูของพื้นที่ทำงาน:</em> "
+#~ "เมนูป๊อบอัปของพื้นที่ทำงานจะผุดขึ้นมา ซึ่งใช้เลือกปรับแต่งการแสดงผลได้, ล็อคหน้าจอได้, "
+#~ "และใช้ล็อกเอาท์ออกจาก KDE ได้</li> <li><em>เมนูโปรแกรม:</em> เมนู \"K\" "
+#~ "จะผุดขึ้นมา ซึ่งจะมีประโยชน์ในการเรียกโปรแกรมต่าง ๆ ให้ทำงานได้อย่างรวดเร็ว "
+#~ "หากว่าคุณชอบที่จะซ่อนแถบพาเนลออกไปจากสายตา</li></ul>"
+
+#~ msgid ""
+#~ "You can choose what happens when you click on the desktop using your "
+#~ "pointing device's middle button: <ul><li><em>No action</em></li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel hidden from view.</li></ul>"
+#~ msgstr ""
+#~ "คุณสามารถเลือกสิ่งที่จะกระทำได้ เมื่อคุณคลิกเมาส์ปุ่มกลางบนพื้นที่ทำงาน: "
+#~ "<ul><li><em>ไม่มีการกระทำ:</em></li> <li><em>เมนูรายการหน้าต่าง:</em> "
+#~ "เมนูที่แสดงรายการหน้าต่าง ที่อยู่บนพื้นที่ทำงานเสมือนทั้งหมดจะผุดขึ้นมา "
+#~ "คุณสามารถคลิกบนชื่อพื้นที่ทำงาน เพื่อสลับการทำงานไปยังพื้นที่ทำงานนั้น "
+#~ "หรือบนชื่อหน้าต่างเพื่อย้ายการโฟกัสไปยังหน้าต่างนั้น โดยสลับพื้นที่ทำงานด้วยหากจำเป็น "
+#~ "และเรียกคืนสถานะหน้าต่างหากมันถูกซ่อนอยู่ หน้าต่างที่ถูกซ่อน "
+#~ "หรือย่อเล็กสุดอยู่จะแสดงด้วยชื่อที่อยู่ในวงเล็บ</li> <li><em>เมนูของพื้นที่ทำงาน:</em> "
+#~ "เมนูป๊อบอัปของพื้นที่ทำงานจะผุดขึ้นมา ซึ่งใช้เลือกปรับแต่งการแสดงผลได้, ล็อคหน้าจอได้ "
+#~ "และใช้ล็อกเอาท์ออกจาก KDE ได้</li> <li><em>เมนูโปรแกรม:</em> เมนู \"K\" "
+#~ "จะผุดขึ้นมา นี่อาจจะมีประโยชน์ สำหรับการเข้าถึงโปรแกรมอย่างรวดเร็ว "
+#~ "ถ้าคุณชอบที่จะซ่อนแถบพาเนลเอาไว้ให้พ้นสายตา</li></ul>"
+
+#~ msgid ""
+#~ " <ul><li><em>No action:</em> as you might guess, nothing happens!</li> "
+#~ "<li><em>Window list menu:</em> a menu showing all windows on all virtual "
+#~ "desktops pops up. You can click on the desktop name to switch to that "
+#~ "desktop, or on a window name to shift focus to that window, switching "
+#~ "desktops if necessary, and restoring the window if it is hidden. Hidden "
+#~ "or minimized windows are represented with their names in parentheses.</"
+#~ "li> <li><em>Desktop menu:</em> a context menu for the desktop pops up. "
+#~ "Among other things, this menu has options for configuring the display, "
+#~ "locking the screen, and logging out of KDE.</li> <li><em>Application menu:"
+#~ "</em> the \"K\" menu pops up. This might be useful for quickly accessing "
+#~ "applications if you like to keep the panel (also known as \"Kicker\") "
+#~ "hidden from view.</li></ul>"
+#~ msgstr ""
+#~ " <ul><li><em>ไม่มีการกระทำ:</em> คุณเดาได้ว่า นี่จะไม่มีอะไรเกิดขึ้น !</li> "
+#~ "<li><em>เมนูรายการหน้าต่าง:</em> เมนูป๊อบอัป "
+#~ "ที่แสดงรายการหน้าต่างที่อยู่บนพื้นที่ทำงานเสมือนทั้งหมด คุณสามารถคลิกบนชื่อพื้นที่ทำงาน "
+#~ "เพื่อสลับการทำงานไปยังพื้นที่ทำงานนั้น หรือบนชื่อหน้าต่าง เพื่อเรียกการโฟกัสไปยังหน้าต่างนั้น "
+#~ "สลับพื้นที่ทำงาน, และเรียกคืนสถานะหน้าต่างหากมันถูกซ่อนอยู่ หน้าต่างที่ถูกซ่อน หรือย่อเล็กสุดอยู่ "
+#~ "จะแสดงด้วยชื่อในส่วนหน้าต่างแม่</li><li><em>เมนูของพื้นที่ทำงาน:</em> "
+#~ "เมนูป๊อบอัปของพื้นที่ทำงาน ซึ่งใช้เลือกปรับแต่งการแสดงผลได้, ล็อคหน้าจอได้, "
+#~ "และใช้ล็อกเอาท์ออกจาก KDE ได้</li> <li><em>เมนูโปรแกรม:</em> เมนูป๊อบอัป \"K\" "
+#~ "นี้เป็นเมนูหลักที่ใช้เรียกโปรแกรมต่างๆ ให้ทำงานได้อย่างรวดเร็ว </li></ul>"
+
+#~ msgid "No Action"
+#~ msgstr "ไม่มีการกระทำ"
+
+#~ msgid "Window List Menu"
+#~ msgstr "เมนูแสดงรายการหน้าต่าง"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "เมนูของพื้นที่ทำงาน"
+
+#~ msgid "Application Menu"
+#~ msgstr "เมนูของโปรแกรม"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "เมนูที่คั่นหน้า"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "เมนูกำหนดเอง 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "เมนูกำหนดเอง 2"
+
+#~ msgid ""
+#~ "<h1>Behavior</h1>\n"
+#~ "This module allows you to choose various options\n"
+#~ "for your desktop, including the way in which icons are arranged and\n"
+#~ "the pop-up menus associated when clicking on the desktop using the middle "
+#~ "and right mouse\n"
+#~ "buttons.\n"
+#~ "Use the \"What's This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>พฤติกรรม</h1>\n"
+#~ "มอดูลนี้ให้คุณได้ปรับแต่งค่าต่าง ๆ สำหรับพื้นที่ทำงานของคุณ\n"
+#~ "รวมถึงวิธีการจัดเรียงไอคอนบนพื้นที่ทำงาน และการกำหนดใช้งานป๊อบอัปเมนู \n"
+#~ "เมื่อมีการคลิกเมาส์ปุ่มซ้ายหรือขวาบนพื้นที่ทำงาน \n"
+#~ "ใช้ \"นี่คืออะไร ?\" (หรือกดปุ่มพิมพ์ Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือก"
+
+#~ msgid "General"
+#~ msgstr "ทั่วไป"
+
+#~ msgid ""
+#~ "Uncheck this option if you do not want to have icons on the desktop. "
+#~ "Without icons the desktop will be somewhat faster but you will no longer "
+#~ "be able to drag files to the desktop."
+#~ msgstr ""
+#~ "ยกเลิกตัวเลือกนี้ หากคุณไม่ต้องการ ให้มีไอคอนบนพื้นที่หน้าจอ ซึ่งจะทำให้พื้นที่หน้าจอ "
+#~ "ทำงานได้ค่อนข้างเร็วขึ้น แต่คุณก็จะไม่สามารถลาก แฟ้มมาไว้ยังพื้นที่หน้าจอได้"
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "แ&สดงไอคอนบนพื้นที่หน้าจอ"
+
+#~ msgid ""
+#~ "Check this option if you want to run X11 programs that draw into the "
+#~ "desktop such as xsnow, xpenguin or xmountain. If you have problems with "
+#~ "applications like netscape that check the root window for running "
+#~ "instances, disable this option."
+#~ msgstr ""
+#~ "เลือกตัวเลือกนี้ หากคุณต้องการสั่งทำงานโปรแกรมของ X11 ที่ต้องการวาดพื้นที่หน้าจอ เช่น "
+#~ "โปรแกรม xsnow หรือ xmountain เป็นต้น หากคุณมีปัญหา กับบางโปรแกรม เช่น Netscape "
+#~ "ที่มีการตรวจสอบหน้าต่างรากสำหรับทำงาน ให้ปิดการใช้งานตัวเลือกนี้"
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "อนุญาตโปรแ&กรมในหน้าต่างพื้นที่หน้าจอ"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "แสดงทู&ลทิป"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "แถบเมนูที่ด้านบนสุดของจอ"
+
+#~ msgid ""
+#~ "If this option is selected, there is no menu bar at the top of the screen."
+#~ msgstr "หากเลือกตัวเลือกนี้ จะไม่มีแถบเมนูที่ด้านบนสุดของจอ"
+
+#~ msgid "&None"
+#~ msgstr "ไม่มี"
+
+#~ msgid ""
+#~ "If this option is selected, there is one menu bar at the top of the "
+#~ "screen which shows the desktop menus."
+#~ msgstr "หากเลือกตัวเลือกนี้ จะมีแถบเมนูปรากฎที่ด้านบนสุดของจอ ซึ่งจะใช้แสดงเมนูของพื้นที่หน้าจอ"
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "แถบเมนูบนพื้&นที่ทำงาน"
+
+#~ msgid ""
+#~ "If this option is selected, applications will not have their menu bar "
+#~ "attached to their own window anymore. Instead, there is one menu bar at "
+#~ "the top of the screen which shows the menus of the currently active "
+#~ "application. You might recognize this behavior from Mac OS."
+#~ msgstr ""
+#~ "หากเลือกตัวเลือกนี้ ตัวโปรแกรมเองจะไม่มีแถบเมนูที่หน้าต่างอีกต่อไป "
+#~ "แต่จะมีแถบเมนูที่ด้านบนของจอ ซึ่งจะแสดงเมนูของโปรแกรมที่กำลังใช้งานอยู่ "
+#~ "คุณอาจจะจำลักษณะแบบนี้ได้จาก Mac OS"
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "เ&มนูของโปรแกรมที่ใช้อยู่ (แบบ Mac OS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "กำหนดการกระทำให้ปุ่มเมาส์"
+
+#~ msgid "Middle button:"
+#~ msgstr "ปุ่มกลาง:"
+
+#~ msgid "Left button:"
+#~ msgstr "ปุ่มซ้าย:"
+
+#~ msgid "Right button:"
+#~ msgstr "ปุ่มขวา:"
+
+#~ msgid "Edit..."
+#~ msgstr "แก้ไข..."
+
+#~ msgid "File Icons"
+#~ msgstr "ไอคอนของแฟ้ม"
+
+#~ msgid ""
+#~ "Check this option if you want to see your icons automatically aligned to "
+#~ "the grid when you move them."
+#~ msgstr ""
+#~ "กาที่ตัวเลือกนี้ หากคุณต้องการเห็นไอคอนของคุณเรียงเข้ากับช่องกริดโดยอัตโนมัติ เมื่อคุณเคลื่อนมัน"
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "เรียงไอคอนเป็นแนวโดยอัตโนมัติ"
+
+#~ msgid ""
+#~ "<p>If you check this option, any files in your desktop directory that "
+#~ "begin with a period (.) will be shown. Usually, such files contain "
+#~ "configuration information, and remain hidden from view.</p>\n"
+#~ "<p>For example, files which are named \".directory\" are plain text files "
+#~ "which contain information for Konqueror, such as the icon to use in "
+#~ "displaying a directory, the order in which files should be sorted, etc. "
+#~ "You should not change or delete these files unless you know what you are "
+#~ "doing.</p>"
+#~ msgstr ""
+#~ "<p>เปิดใช้ตัวเลือกนี้ เพื่อให้มีการแสดงทุกแฟ้มในไดเรกทอรีพื้นที่ทำงานของคุณ "
+#~ "รวมทั้งแฟ้มที่ขึ้นต้นด้วยจุด (.) ด้วย ซึ่งปกติจะไม่ถูกแสดงให้เห็น "
+#~ "เนื่องจากส่วนมากจะเป็นแฟ้มเก็บค่าปรับแต่งของโปรแกรม</p>\n"
+#~ "<p> ตัวอย่างเช่น แฟ้มที่ชื่อ \".directory\" ซึ่งเป็นแฟ้มข้อความธรรมดา ซึ่งใช้เก็บข้อมูลสำหรับ "
+#~ "Konqueror เช่น ไอคอนที่ใช้ในการแสดงไดเรกทอรี, การเรียงลำดับแฟ้ม เป็นต้น ดังนั้น "
+#~ "หากเปิดใช้งานตัวเลือกนี้ คุณไม่ควรจะลบแฟ้มการปรับแต่งเหล่านี้ จนกว่าคุณจะแน่ใจในสิ่งที่จะทำ</p>"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "แสดงแฟ้มที่ซ่&อนไว้"
+
+#~ msgid "Select for which types of files you want to enable preview images."
+#~ msgstr "เลือกประเภทของแฟ้ม ที่คุณต้องการเปิดใช้การแสดงตัวอย่าง"
+
+#~ msgid "Show Icon Previews For"
+#~ msgstr "แสดงตัวอย่างไอคอนสำหรับ"
+
+#~ msgid "Device Icons"
+#~ msgstr "ไอคอนของอุปกรณ์"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "แ&สดงไอคอนของอุปกรณ์:"
+
+#~ msgid ""
+#~ "Deselect the device types which you do not want to see on the desktop."
+#~ msgstr "ยกเลิกการเลือกชนิดของอุปกรณ์ที่คุณไม่ต้องการเห็นบนพื้นที่หน้าจอของคุณ"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "ชนิดของอุปกรณ์ที่จะแสดง"
+
+#~ msgid "Show file &tips"
+#~ msgstr "แสดงคำแนะนำของแฟ้ม"
+
+#~ msgid ""
+#~ "Here you can control if, when moving the mouse over a file, you want to "
+#~ "see a small popup window with additional information about that file"
+#~ msgstr ""
+#~ "คุณสามารถควบคุมการแสดงข้อมูลคร่าว ๆ แบบป๊อปอัปของแฟ้ม "
+#~ "เมื่อมีการเคลื่อนตัวชี้ของเมาส์มาอยู่เหนือแฟ้ม"
+
+#~ msgid "Show &previews in file tips"
+#~ msgstr "แสดงตัวอย่างในคำแนะนำของแฟ้ม"
+
+#~ msgid ""
+#~ "Here you can control if you want the popup window to contain a larger "
+#~ "preview for the file, when moving the mouse over it."
+#~ msgstr ""
+#~ "คุณสามารถควบคุมการแสดงข้อมูลคร่าว ๆ แบบป๊อปอัปของแฟ้ม "
+#~ "เมื่อมีการเคลื่อนตัวชี้ของเมาส์มาอยู่เหนือแฟ้ม"

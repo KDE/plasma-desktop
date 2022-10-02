@@ -1,0 +1,194 @@
+# Lithuanian translations for l package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the l package.
+#
+# Automatically generated, 2014.
+# Liudas Ališauskas <liudas@aksioma.lt>, 2014.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-08-23 00:41+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Šis modulis leidžia jums konfigūruoti failų indeksatorių ir paieškos "
+"funkcionalumą."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Tai išjungs failų paiešką KRunner programoje bei paleidyklių meniu ir "
+"pašalins išplėstinių metaduomenų atvaizdavimą iš visų KDE programų."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Ar norite ištrinti įrašytus indeksavimo duomenis? Bus atlaisvinta %1 vietos, "
+"bet jeigu vėliau indeksavimas bus įjungtas iš naujo, tuomet visą indeksą "
+"teks kurti iš naujo nuo nulio. Tai gali užtrukti tam tikrą laiką, "
+"priklausomai nuo to, kiek turite failų."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Ištrinti indeksavimo duomenis"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "Failų paieška leidžia jums greitai rasti failus pagal jų turinį."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Įjungti failų paiešką"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Taip pat indeksuoti failų turinį"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indeksuoti paslėptus failus ir aplankus"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Būsena: %1, %2% užbaigta"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Pristabdyti indeksatorių"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Pratęsti indeksatorių"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Šiuo metu indeksuojama: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Specifinė aplanko konfigūracija:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Pradėti aplanko indeksavimą…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Stabdyti aplanko indeksavimą…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Neindeksuotas"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indeksuotas"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Ištrinti įrašą"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Pasirinkite aplanką, kurį įtraukti"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Pasirinkite aplanką, kurį išbraukti"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Liudas Ališauskas, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "liudas@akmc.lt, <>"
+
+#~ msgid "File Search"
+#~ msgstr "Failų paieška"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Autorių teisės 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Pridėti aplanko konfigūraciją…"
+
+#~ msgid "%1 is included."
+#~ msgstr "%1 yra įtrauktas."
+
+#~ msgid "%1 is excluded."
+#~ msgstr "%1 yra išskirtas."
+
+#~ msgid "Disable indexing"
+#~ msgstr "Išjungti indeksavimą"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Neieškoti šiose vietose:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Pasirinkite aplanką, kurį reikia išskirti"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Neleidžiama išskirti šaknies aplanko. Jei to nenorite, išjunkite failų "
+#~ "paiešką"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Aplanko viršaplankis %1 jau yra išskirtas"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Konfigūruoti failų paiešką"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Šakninis katalogas visada paslėptas"

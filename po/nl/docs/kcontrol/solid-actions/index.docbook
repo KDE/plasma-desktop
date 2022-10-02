@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Apparaatacties</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>acties</keyword>
+<keyword
+>apparaten</keyword>
+<keyword
+>hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Acties voor nieuwe apparaten</title>
+<sect2 id="icons-intro">
+<title
+>Inleiding</title>
+
+<para
+>Deze module stelt u in staat acties in te stellen die wilt verbinden aan het inpluggen van nieuwe apparaten.</para>
+<para>
+<screenshot>
+<screeninfo
+>Schermafdruk van de beheerder van apparaatacties</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermafdruk van de beheerder van apparaatacties</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>U zult alle mogelijke acties zien die beschikbaar zijn wanneer apparaten worden ingeplugd. Let er wel op dat deze alleen onder bepaalde condities beschikbaar zijn.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Toevoegen</guibutton
+> Dit vraagt u om een naam voor uw nieuwe actie op te geven, waarna die actie wordt geopend voor bewerking. Als u niet alle vereiste details in die dialoog levert, dan zal uw actie worden verwijderd. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Bewerken</guibutton
+> Dit stelt u in staat om de Naam, Pictogram, uit te voeren commando en de condities te tonen waarmee de actie overeen moet komen, te wijzigen. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Verwerpen / Kan niet worden verwijderd / Verwijderen</guibutton
+> Dit doet verschillende acties, afhankelijk van of het was geleverd met uw systeem of door u aangemaakt. U kunt alleen wijzigingen verwerpen aan systeembrede acties, als er geen wijzigingen zijn dan kunnen deze acties niet worden verwijderd. Door de gebruiker aangemaakte acties worden volledig verwijderd, inclusief alle wijzigingen. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Actie toevoegen</title>
+
+<para
+>De knop <guibutton
+>Toevoegen</guibutton
+> brengt een dialoog om de nieuwe actienaam in te voeren. </para>
+<para>
+<screenshot>
+<screeninfo
+>Schermafdruk van de dialoog voor Actie toevoegen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermafdruk van de dialoog voor Actie toevoegen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>De actienaam zou de actie juist moeten omschrijven. Na het invoeren van een naam en klikken op <guibutton
+>OK</guibutton
+>, wordt de dialoog Actie bewerken getoond om u in staat te stellen om de actie-eigenschappen in te stellen. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Actie bewerken</title>
+
+<para
+>Deze dialoog stelt u in staat om de instellingen van de actie die u hebt geselecteerd te wijzigen.</para>
+<para>
+<screenshot>
+<screeninfo
+>Schermafdruk van de dialoog voor Actie bewerken</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Schermafdruk van de dialoog voor Actie bewerken</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Dit bevat het pictogram, de actienaam, het actiecommando en de verschillende parameters. U kunt het pictogram wijzigen door er op te klikken.</para>
+<para
+>De parameters worden in een boomstructuur getoond, het topitem moet waar zijn om de actie te laten tonen.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Parameter bewerken</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Parametertype</guilabel
+></term>
+<listitem>
+<para
+>Dit bestuurt wat er in kan zitten of welke vergelijking wordt uitgevoerd om te controleren of het waar is. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Overeenkomst in eigenschap</guilabel
+></term>
+<listitem>
+<para
+>Vergelijkt de gespecificeerde eigenschap van het apparaat (met gebruik van <guilabel
+>Apparaattype</guilabel
+> en <guilabel
+>Waardenaam</guilabel
+>) en gebruik van de evaluator, wordt het vergeleken met de ingevoerde tekst.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Inhoud samengevoegd</guilabel
+></term>
+<listitem>
+<para
+>Alle sub-eigenschappen hiervan moeten waar zijn om zelf waar te zijn.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Inhoud gesplitst</guilabel
+></term>
+<listitem>
+<para
+>Elke sub-eigenschappen hiervan mag waar zijn om zelf waar te zijn.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Apparaatinterface komt overeen</guilabel
+></term>
+<listitem>
+<para
+>Controleert of het Apparaat geclassificeerd kan worden als het geselecteerde Apparaattype.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Apparaattype</guilabel
+></term>
+<listitem>
+<para
+>Dit zijn de mogelijke apparaattypes die door &plasma; op uw systeem worden ondersteund. Zij worden gebruikt in zowel Eigenschappen als Apparaatinterface overeenkomsten. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Naam van waarde</guilabel
+></term>
+<listitem>
+<para
+>Dit is een lijst met alle mogelijke eigenschapnamen voor het geselecteerde apparaattype. Het levert ook de selectie van de waarde-evaluator (die ofwel <guilabel
+>Gelijk</guilabel
+> of <guilabel
+>Bevat</guilabel
+> is) en invoer van tekst toestaat om mee te vergelijken.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parameter resetten</guibutton
+></term>
+<listitem>
+<para
+>Keert de niet opgeslagen wijzigingen, die u in deze parameter hebt gemaakt, om.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parameter wijzigingen opslaan</guibutton
+></term>
+<listitem>
+<para
+>Slaat de wijzigingen, die u in de parameter hebt gemaakt, op.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

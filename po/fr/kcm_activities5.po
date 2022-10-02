@@ -1,0 +1,271 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2016.
+# Vincent Pinon <vpinon@kde.org>, 2016, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2021-05-27 14:32+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.04.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "Activités"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Supprimer l'activité"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Voulez-vous vraiment supprimer « %1 » ?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"Erreur lors du chargement des fichiers QML. Veuillez vérifier votre "
+"installation.\n"
+"Fichier %1 manquant"
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "Général"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Créer une nouvelle activité"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Paramètres des activités"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Créer"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr "Icône :"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "Nom :"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "Description :"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr "Confidentialité :"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Ne pas conserver d'historique pour cette activité"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Raccourci pour basculer :"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Combien de mois conserver l'historique d'activité"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Quelles données conserver dans l'historique d'activité"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Liste des applications dont l'historique d'activité est enregistré"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+"Liste des applications dont l'historique d'activité n'est pas enregistré"
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "Basculer"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Configurer l'activité %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Supprimer l'activité %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr "Créer une nouvelle activité..."
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "Basculer l'activité"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "Parcourir les activités"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "Parcourir les activités (inversé)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Se souvenir pour chaque activité (nécessite un redémarrage)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Bureau virtuel actuel :"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Raccourcis :"
+
+#~ msgid "Privacy"
+#~ msgstr "Vie privée"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Illimité"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Effacer la dernière heure"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Effacer les deux dernières heures"
+
+#~ msgid "Forget a day"
+#~ msgstr "Effacer la dernière journée"
+
+#~ msgid "Forget everything"
+#~ msgstr "Effacer tout"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " mois"
+#~ msgstr[1] " mois"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "Pour "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Historique d'activité effacé."
+
+#~ msgid "Keep history:"
+#~ msgstr "Conserver l'historique :"
+
+#~ msgid "Clear History"
+#~ msgstr "Effacer l'historique"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "Pour toutes les app&lications"
+
+#~ msgid "&Do not remember"
+#~ msgstr "Ne &pas se souvenir"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "U&niquement pour des applications spécifiques :"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Se souvenir des documents ouverts : "
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr ""
+#~ "Mettre les applications qui ne sont pas dans la liste sur liste noire"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Supprimer l'activité"
+
+#~ msgid "Other"
+#~ msgstr "Autre"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Appliquer"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
+
+#~ msgid "Activity information"
+#~ msgstr "Informations de l'activité"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Fond d'écran"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Modifier…"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "pour "

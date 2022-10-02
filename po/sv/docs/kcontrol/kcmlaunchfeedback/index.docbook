@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Gensvar vid programstart</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+</articleinfo>
+
+<para
+>Ibland är det lugnande att veta att din dator inte bara ignorerade ditt kommando, och någonting händer bakom ridån. I den här modulen kan du ställa in synligt gensvar för att hjälpa dig få reda på om du verkligen klickade på den där ikonen eller inte.</para>
+	
+<para
+>Det traditionella sättet att visa att din dator är upptagen är att ändra markören, och du kan aktivera det här sättet genom att välja en <guilabel
+>Pekare</guilabel
+>.</para>
+
+<para
+>Med det här alternativet aktiverat, kommer en ikon visas i anslutning till din markör en kort tid, när ett nytt program startas. Du kan ställa in hur länge ikonen visas vid din markör med nummerrutan <guilabel
+>Stoppa animering efter:</guilabel
+>. Det förvalda värdet är 5 sekunder.</para>
+
+<para
+>Det finns flera variationer av upptagen pekare, inklusive <guilabel
+>Inget gensvar</guilabel
+>, en <guilabel
+>Blinkande</guilabel
+>, en <guilabel
+>Studsande</guilabel
+> eller en <guilabel
+>Statisk</guilabel
+> pekarikon utan animering.</para>
+
+<para
+>Traditionellt, har &plasma;s programstartsinformation sett annorlunda ut, och den kan du också aktivera eller stänga av här. I normala fall, när du startar ett program, får det omedelbart en post i aktivitetsfältet med ikonen ersatt med ett snurrande timglas som visar att någonting händer. Du kan aktivera eller stänga av det här beteendet med kryssrutan <guilabel
+>Aktivera animering</guilabel
+>.</para>
+
+<para
+>Det är inte alla program du startar som till slut visar ett fönster eller en post i aktivitetsfältet. En del dockas till exempel i &plasma;s systembricka. Alternativt, skickar du dem kanske till ett annat virtuellt skrivbord, och inställningen <guilabel
+>Från nuvarande skrivbord</guilabel
+> är markerad under <guilabel
+>Beteende</guilabel
+> i <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Aktivitetshanterarens inställningar</guilabel
+></ulink
+>. Att ställa in en tidsgräns försäkrar dig om att du kan få gensvar vid programstart också för sådana fall, men också att gensvaret försvinner när jobbet är klart.</para>
+
+</article>

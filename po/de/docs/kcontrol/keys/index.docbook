@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Kurzbefehle</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Jürgen</firstname
+><surname
+>Nagel</surname
+><affiliation
+><address
+><email
+>JuergenNagel@web.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Tastenzuordnung</keyword>
+<keyword
+>Zuordnung</keyword>
+<keyword
+>Kurzbefehle</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Kurzbefehle</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Einführung</title
+> 
+
+<para
+>Obwohl die meisten von &plasma; bereitgestellten Funktionen, mit der Maus zugänglich sind, ziehen es viele Benutzer vor, für manche Aufgaben die Tastatur zu benutzen: eine Tastenkombination wie <keycombo action="simul"
+><keycap
+>&Ctrl;</keycap
+><keycap
+>F</keycap
+></keycombo
+> zu benutzen, ist oft schneller als die Hände von der Tastatur zur Maus zu bewegen, das Menü <guimenu
+>Bearbeiten</guimenu
+> zu öffnen und <guimenuitem
+>Suchen</guimenuitem
+> auszuwählen.</para>
+
+<para
+>Da verschiedene Menschen verschiedene Vorlieben bezüglich Kurzbefehlen haben, bietet &plasma; die vollständige Anpassung von so genannten <quote
+>Tastenzuordnungen</quote
+>. Eine Tastenzuordnung oder Kurzbefehle ist die Verbindung einer Aktion mit einer Taste oder einer Tastenkombination.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Standard-Kurzbefehle und Globale Kurzbefehle</title>
+
+<para
+>Standard-Kurzbefehle und globale Kurzbefehle arbeiten nach dem gleichen Prinzip. In einem gewissen Sinne sind Kurzbefehle für einzelne Programme auch <quote
+>global</quote
+>. Der einzige Unterschied ist:</para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Standard-Kurzbefehle</quote
+> beziehen sich auf Aktionen, die oft in Anwendungen verfügbar sind, wie Speichern, Drucken, Kopieren &etc;</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Globale Kurzbefehle</quote
+> sind Kürzel für Aktionen, die auch dann sinnvoll sind, wenn keine Anwendung geöffnet ist. Die Kurzbefehle beziehen sich üblicherweise auf Aktionen wie das Wechseln der Arbeitsfläche, das Verändern von Fenstern &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Bitte beachten Sie, dass Tastenkombinationen für einzelne Programme, die hier konfiguriert werden, <emphasis
+>nur</emphasis
+> die Standard-Aktionen sind, die man oft in Anwendungen vorfindet. Die meisten Anwendungen werden zusätzlich ihre eigenen Aktionen definieren, die Sie mit Hilfe des Dialogs für Kurzbefehle der jeweiligen Anwendung festlegen können.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Die Seite Standard-Kurzbefehle</title>
+<para
+>Oben im Dialogfenster wird ein Textfeld angezeigt, indem Sie interaktiv nach Namen von Aktionen (&eg; „Kopieren“) oder Tastenkombinationen (&eg; <quote
+><userinput
+>Strg+C</userinput
+></quote
+>) suchen können, indem Sie sie hier eintippen.</para>
+<para
+>Unter dem Suchfeld sehen Sie eine Liste der Tastenzuordnungen, &ie; Verknüpfungen zwischen Aktionen (&eg; „Kopieren“) in der linken Spalte <guilabel
+>Aktionen</guilabel
+> und Tasten oder Tastenkombinationen (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>), die in der Spalte <guilabel
+>Kurzbefehl</guilabel
+> oder <guilabel
+>Alternativ</guilabel
+> stehen. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Die Seite Globale Kurzbefehle</title>
+<para
+>Oben auf dieser Seite befindet sich ein Auswahlfeld, um eine <guilabel
+>Komponente</guilabel
+> wie KWin, Plasma-Desktop &etc; auszuwählen. Die festgelegten Kurzbefehle für die ausgewählte Komponente in den Spalten <guilabel
+>Aktion</guilabel
+> und <guilabel
+>Global</guilabel
+> in der Liste angezeigt.</para>
+<para
+>Diese Seite hat ein Suchfeld wie die Karteikarte <guilabel
+>Standard-Kurzbefehle</guilabel
+>. </para>
+<para
+>Verwenden Sie <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> oder <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+>, um eine Komponente hinzuzufügen oder zu entfernen. </para>
+
+<para
+>Fügen Sie eine Komponente hinzu, wird ein Dialog angezeigt. In diesem Dialog können Sie Einträge aus dem Startmenü und Starter als Kurzbefehle auswählen. Gibt es für eine Anwendung Sprunglisten-Elemente, dann können Sie als Aktionen gewählt werden. </para>
+
+<para
+>Klicken Sie auf das Auswahlfeld <guilabel
+>Datei</guilabel
+> an der rechten Seite, um ein Schema zu importieren oder zu exportieren oder alle Kurzbefehle zu entfernen.</para>
+<para
+>Globale Kurzbefehle können so eingerichtet werden, dass mit ihnen bestimmte Aufgaben in einer Anwendung gestartet werden können.</para>
+
+<para
+>In der Voreinstellung können Sie durch Drücken der &Meta;taste das Anwendungsmenü öffnen. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Tastenkürzel konfigurieren</title>
+
+<para
+>Tastenzuordnungen einzurichten ist ziemlich einfach. In der Mitte des Moduls für die Tastenzuordnungen, finden Sie eine Liste verfügbarer Aktionen. Wenn eine Tastenzuordnung für eine Aktion festgelegt ist, ist diese rechts daneben aufgeführt. Wählen Sie einfach die Aktion aus, die Sie bearbeiten wollen.</para>
+
+<para
+>Nachdem Sie eine Aktion ausgewählt haben, wird diese Zeile hervorgehoben und zwei zusätzliche Ankreuzfelder unter diesem Eintrag in der Liste angezeigt werden. Sie können mit diesen Ankreuzfeldern Tastenkombinationen für die gewählte Aktion bearbeiten oder vorhandene Tastenkombination löschen. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Standard</guilabel
+>: die ausgewählte Aktion wird mit dem &kde;-Standardwert verbunden. Dies ist eine gute Wahl für die meisten Aktionen, da &kde; mit vernünftigen, wohldurchdachten Tastenzuordnungen ausgeliefert wird. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Benutzerdefiniert</guilabel
+>: wenn diese Einstellung aktiviert ist, können Sie eine Tastenkombination für die ausgewählte Aktion erstellen. Klicken Sie auf den Knopf der entweder mit <guibutton
+>Keiner</guibutton
+> oder der vorher eingestellten Tastenkombination beschriftet ist. Dann wechselt der Text zu <guibutton
+>Eingabe</guibutton
+>. Drücken Sie nun eine Kombination aus Zusatztaste (&ie; &Shift;, &Ctrl; oder &Alt;) und einer normale Taste oder einer Funktionstaste (&eg; <keycap
+>F11</keycap
+>), die sie dieser Aktion zuordnen möchten.</para>
+<para
+>Klicken Sie auf die Spalte <guilabel
+>Alternativ</guilabel
+> in einer Zeile, dann können Sie den zweiten Kurzbefehl für diese Aktion bearbeiten.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

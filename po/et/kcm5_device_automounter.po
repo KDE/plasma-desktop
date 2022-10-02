@@ -1,0 +1,298 @@
+# translation of kcm_device_automounter.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2016, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2020-02-25 11:29+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "qiilaq69@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Seadmete automaatne ühendaja"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009: Trever Fischer, (c) 2015: Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Algne autor"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Plasma 5 portimine"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Siin on kirjas kõik süsteemile tuntud salvestid. Kui märgitud on "
+"\"Automaatne ühendamine sisselogimisel\", ühendatakse seade automaatselt ka "
+"siis, kui valik \"Kõigi eemaldatavate andmekandjate ühendamine sisselogimisel"
+"\" ei ole märgitud. Sama kehtib valiku \"Automaatne ühendamine seadme "
+"ühendamisel\" kohta.\n"
+"\n"
+"Kui valik \"Eemaldatavate andmekandjate automaatse ühendamise lubamine\" on "
+"märkimata, siis primaarsätted ei kehti ning ühtegi seadet ei ühendata "
+"automaatselt."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Klõps sellele nupule paneb täielikult \"unustama\" valitud seadmete "
+"olemasolu. See on mõttekas ainult siis, kui märgitud on valik \"Ainult nende "
+"eemaldatavate andmekandjate automaatne ühendamine, mis on varem ühendatud "
+"käsitsi\". Kui seade on unustatud ja süsteem on pandud automaatselt ühendama "
+"ainult tuntud seadmeid, siis seda seadet enam automaatselt ei ühendata."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Unusta seade"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Kui see on märgitud, ühendab KDE automaatselt ainult seadmed, mida ta "
+"mäletab. Seadet \"mäletatakse\", kui seda on varem ühendatud. Näiteks USB-"
+"meediamängija ühendamisest laadimiseks ei piisa selle \"mäletamiseks\" - kui "
+"faile ei ole kasutatud, ei ühenda KDE mängijat järgmisel masinaga "
+"ühendamisel automaatselt. Kui faile on aga kasutatud, jätab KDE seadme "
+"meelde ning järgmisel ühendamisel masinaga muudetakse selle failid "
+"automaatselt kättesaadavaks."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Ainult nende eemaldatavate andmekandjate automaatne ühendamine, mis on varem "
+"ühendatud käsitsi"
+
+#: DeviceModel.cpp:52
+#, fuzzy, kde-format
+#| msgid "Automount on Login"
+msgid "Automount Device"
+msgstr "Automaatne ühendamine sisselogimisel"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Siselogimisel"
+
+#: DeviceModel.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "As in automoount on attach"
+#| msgid "On Attach"
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Seondamisel"
+
+#: DeviceModel.cpp:258
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "All Devices"
+msgstr "Seade"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr ""
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Ühendatud seadmed"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Lahutatud seadmed"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "See seade ühendatakse automaatselt sisselogimisel."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Seda seadet ei ühendata automaatselt sisselogimisel."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "See seade ühendatakse automaatselt ühendamisel masinaga."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Seda seadet ei ühendata automaatselt ühendamisel masinaga."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Kui töölauale sisselogimisel ajal on süsteemiga ühendatud mõni eemaldatav "
+#~ "salvesti, muutub selle sisu automaatselt sinu süsteemi rakendustele "
+#~ "kättesaadavaks."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media at login"
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr ""
+#~ "Kõigi eemaldatavate andmekandjate automaatne ühendamine sisselogimisel"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Kui see on märgitud, muutub kõigi masinaga ühendatavate seadmete sisu "
+#~ "automaatselt kättesaadavaks."
+
+#, fuzzy
+#~| msgid "Automatically mount all removable media when attached"
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr ""
+#~ "Kõigi eemaldatavate andmekandjate automaatne ühendamine seadme "
+#~ "ühendamisel masinaga"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Automaatne ühendamine"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Kui see on märkimata, ei toimu üldse mingisugust automaatset ühendamist "
+#~ "sõltumata sellest, kas sektsioonis \"Seadmete primaarsätted\" on midagi "
+#~ "valitud või mitte."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Eemaldatavate andmekandjate automaatse ühendamise lubamine"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Seadmete primaarsätted"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Automaatne ühendamine seadme ühendamisel"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr ""
+#~ "Seadmete automaatne ühendamine sisselogimisel või seadmete ühendamisel "
+#~ "masinaga"
+
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Enter the device's system identifier"
+#~ msgstr "Sisesta seadme süsteemne identifikaator"
+
+#~ msgctxt ""
+#~ "@title:column The device's internal UDI if not attached, user-friendly "
+#~ "name reported by Solid otherwise."
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "Always Automount"
+#~ msgstr "Alati ühendatakse automaatselt"
+
+#~| msgid ""
+#~| "Enabling automounting for a device in this list overrides any other "
+#~| "setting."
+#~ msgid ""
+#~ "Enabling \"Always Automount\" for a device in this list overrides any "
+#~ "other setting."
+#~ msgstr ""
+#~ "Selles nimekirjas leiduva seadme automaatse ühendamise lubamine tühistab "
+#~ "kõik muud seadistused."
+
+#~ msgid "Add Device..."
+#~ msgstr "Lisa seade..."

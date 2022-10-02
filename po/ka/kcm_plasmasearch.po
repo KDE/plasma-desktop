@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-09-02 07:45+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "ხელმისაწვდომი დამატებები"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"დამატებების ჩართვა და გამორთვა (გამოიყენება KRunner-ის, Application Launcher-"
+"ის და Overview effect-ის მიერ)"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "KRunner-ის მორგება…"
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "ახალი დამატებების მიღება…"
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr "დაყენების ბრძანების ტერმინალში გაშვების შეცდომა: <message>%1</message>"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "დაყენება წარმატებით დასრულდა. შეგიძლიათ დახუროთ ეს ფანჯარა"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "წაშლა წარმატებით დასრულდა. შეგიძლიათ დახუროთ ეს ფანჯარა"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "KRunner-ის დამატების დაყენების შეცდომა"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "ბრძანება: დაყენება ან წაშლა."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "არქივის ბილიკი."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "PackageKit-ის მხარდაჭერის გარეშე"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "დაადასტურეთ დაყენება"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"აპირებთ დააყენოთ ბინარული პაკეტი. დააყენთ მხოლოდ და მხოლოდ სანდო ავტორის "
+"ბინარული პაკეტები."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "დაეთანხმეთ რისკს და გააგრძელეთ"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "ფაილის ნახვა"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "MIME ტიპი %1 მხარდაუჭერელია packagekit უკანაბოლოს მიერ"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"დამატებას წაშლის სკრიპტი არ გააჩნია. დაუკავშირდით ავტორს. შეგიძლიათ სცადოთ "
+"ხელით წაშალოთ ის<nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით "
+"ღილაკს<interface>გაუქმება</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"დამატებას წაშლის სკრიპტი არ გააჩნია. დაუკავშირდით ავტორს. შეგიძლიათ სცადოთ "
+"ხელით წაშალოთ ის. ასევე სცადეთ წაიკითხოთ ავტორის მიერ მოწოდებული "
+"ინსტრუქციები README ფაილიდან. <nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით "
+"ღილაკს<interface>გაუქმება</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"დამატებას დაყენების სკრიპტი არ გააჩნია. დაუკავშირდით ავტორს. შეგიძლიათ "
+"სცადოთ ხელით დააყენოთ ის<nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით "
+"ღილაკს<interface>გაუქმება</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"დამატებას დაყენების სკრიპტი არ გააჩნია. დაუკავშირდით ავტორს. შეგიძლიათ "
+"სცადოთ ხელით დააყენოთ ის. ასევე სცადეთ წაიკითხოთ ავტორის მიერ მოწოდებული "
+"ინსტრუქციები README ფაილიდან. <nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით "
+"ღილაკს<interface>გაუქმება</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"სკრიპტი, რომელიც ამ დამატების დასაყენებლად გამოიყენება, შეიძლება სერიოზულ "
+"საფრთხეს შეიცავდეს. გთხოვთ დაყენებამდე გადახედოთ დამატების სრულ შემცველობას "
+"ან კოდს მაინც <nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით "
+"ღილაკს<interface>გაუქმება</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"სკრიპტი, რომელიც ამ დამატების დასაყენებლად გამოიყენება, შეიძლება სერიოზულ "
+"საფრთხეს შეიცავდეს. გთხოვთ დაყენებამდე გადახედოთ README ფაილს და მის კოდს "
+"<nl/>თუ არ იცით, ეს როგორ ქნათ, დაწექით ღილაკს<interface>გაუქმება</"
+"interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "ელემენტის, როგორც წაშლილის მონიშვნა"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "ელემენტის, როგორც დაყენებულის მონიშვნა"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "სკრიპტის ნახვა"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "წყაროს საქაღალდის ნახვა"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "%1-ის ნახვა"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "პაკეტის სახელის ამოხსნა შეუძლებელია: %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "დაყენების ბრძანების გაშვების შეცდომა: <message>%1</message>"

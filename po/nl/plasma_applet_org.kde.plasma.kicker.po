@@ -1,0 +1,449 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-26 14:38+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Algemeen"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Uit Favorieten verwijderen"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Aan Favorieten toevoegen"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Op alle activiteiten"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Op de huidige activiteit"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "In Favorieten tonen"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Pictogram:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Kiezen…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Pictogram wissen"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Toepassing tonen als:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Alleen naam"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Alleen beschrijving"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Naam (beschrijving)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Beschrijving (Naam)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Gedrag:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Toepassingen alfabetisch sorteren"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Submenu's afvlakken tot een enkel niveau"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Pictogrammen tonen op het hoogste niveau van het menu"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Categorieën tonen:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Recente toepassingen"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Vaak gebruikte toepassingen"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Recente bestanden"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Vaak gebruikte bestanden"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Recente contactpersonen"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Vaak gebruikte contactpersonen"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Items in categorieën sorteren op:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Recent gebruikt"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Vaak gebruikt"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Zoeken:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Zoeken uitbreiden naar bladwijzers, bestanden en e-mailberichten"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Zoekresultaten uitlijnen naar onderen"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Zoeken naar '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Typen om te zoeken…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favorieten"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Widgets"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Apps & Docs"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Toepassingen bewerken…"
+
+#~ msgid "Search…"
+#~ msgstr "Zoeken…"
+
+#~ msgid "Search..."
+#~ msgstr "Zoeken..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Vaak gebruikte documenten"
+
+#~ msgid "Open with:"
+#~ msgstr "Openen met:"
+
+#~ msgid "Properties"
+#~ msgstr "Eigenschappen"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Aan bureaublad toevoegen"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Aan paneel toevoegen (widget)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Pin naar takenbeheerder"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Recente documenten"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Recente documenten vergeten"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Toepassing bewerken..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Uninstall or Manage Add-Ons..."
+#~ msgstr "Add-ons deïnstalleren of beheren..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Toepassing verbergen"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Toepassingen"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Het verbergen van toepassingen in dit submenu ongedaan maken"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Het verbergen van toepassingen in '%1' ongedaan maken"
+
+#~ msgid "Show KRunner"
+#~ msgstr "KRunner tonen"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Zoek, bereken of voer een commando uit"
+
+#~ msgid "Computer"
+#~ msgstr "Computer"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Contactpersooninformatie tonen..."
+
+#~ msgid "Contacts"
+#~ msgstr "Contactpersonen"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Contactpersoon vergeten"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Alle contactpersonen vergeten"
+
+#~ msgid "Recently Used"
+#~ msgstr "Recent gebruikt"
+
+#~ msgid "Documents"
+#~ msgstr "Documenten"
+
+#~ msgid "Forget Application"
+#~ msgstr "Toepassing vergeten"
+
+#~ msgid "Forget Document"
+#~ msgstr "Document vergeten"
+
+#~ msgid "Forget All"
+#~ msgstr "Alles vergeten"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Alle toepassingen vergeten"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Alle documenten vergeten"
+
+#~ msgid "Hide %1"
+#~ msgstr "%1 verbergen"
+
+#~ msgid "All Applications"
+#~ msgstr "Alle toepassingen"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Recente contactpersonen"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Vaak gebruikte documenten"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Recente programma's"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Vaak gebruikte toepassingen"
+
+#~ msgid "Power / Session"
+#~ msgstr "Energieverbruik / sessie"
+
+#~ msgid "Search results"
+#~ msgstr "Zoekresultaten"
+
+#~ msgid "Lock"
+#~ msgstr "Vergrendelen"
+
+#~ msgid "Log Out"
+#~ msgstr "Afmelden"
+
+#~ msgid "Save Session"
+#~ msgstr "Sessie opslaan"
+
+#~ msgid "Switch User"
+#~ msgstr "Gebruiker wisselen"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Slaapstand naar RAM"
+
+#~ msgid "Hibernate"
+#~ msgstr "Slaapstand naar schijf"
+
+#~ msgid "Restart"
+#~ msgstr "Herstarten"
+
+#~ msgid "Shut Down"
+#~ msgstr "Afsluiten"
+
+#~ msgid "Session"
+#~ msgstr "Sessie"
+
+#~ msgid "System"
+#~ msgstr "Systeem"
+
+#~ msgid "Lock screen"
+#~ msgstr "Scherm vergrendelen"
+
+#~ msgid "End session"
+#~ msgstr "Sessie beëindigen"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Start een parallelle sessie onder een andere gebruikersnaam"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Slaapstand naar RAM"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Schijf-slaapstand"
+
+#~ msgid "Restart computer"
+#~ msgstr "Computer herstarten"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Computer uitschakelen"
+
+#~ msgid "System actions"
+#~ msgstr "Systeemacties"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "'%1' beheren..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Commando uitvoeren..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Een commando uitvoeren of een zoekvraag"
+
+#~ msgid "Show:"
+#~ msgstr "Tonen:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Recente toepassingen tonen"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Vaak gebruikte toepassingen tonen"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Recente documenten tonen"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Vaak gebruikte documenten tonen"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Recente contactpersonen tonen"
+
+#~ msgid "Logout"
+#~ msgstr "Afmelden"
+
+#~ msgid "Reboot"
+#~ msgstr "Herstarten"
+
+#~ msgid "Suspend"
+#~ msgstr "Onderbreken"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Verwijderbare opslag"
+
+#~ msgid "Places"
+#~ msgstr "Plaatsen"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Eigen afbeelding gebruiken:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Een afbeelding kiezen"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Afbeeldingsbestanden (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Als programmastarter toevoegen"
+
+#~ msgid "New Session"
+#~ msgstr "Nieuwe sessie"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Leeg)"

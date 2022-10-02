@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Datum &amp; Zeit</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+><affiliation
+><address
+><email
+>f.Schuette@t-online.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>clock</keyword>
+<keyword
+>Datum</keyword>
+<keyword
+>Zeit</keyword>
+<keyword
+>set</keyword>
+<keyword
+>Ändern</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Datum &amp; Zeit</title>
+
+<para
+>Dieses Modul erlaubt die Einstellung von Datum und Zeit über eine grafische Benutzeroberfläche.</para>
+
+<note
+><para
+>Da diese Einstellung für alle Benutzer verwendet werden, benötigen Sie Rechte als Systemverwalter (<systemitem class="username"
+>root</systemitem
+>), um das Systemdatum und die Zeit zu verändern. Wenn Sie diese Rechte nicht haben, zeigt das Modul lediglich die aktuellen Einstellungen an, aber Ihre Änderungen werden nicht gespeichert.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Datum und Zeit</title>
+
+<para
+>Aktivieren Sie <guilabel
+>Datum und Uhrzeit automatisch setzen</guilabel
+>, dann wird das Dienstprogramm <acronym
+>systemd</acronym
+> zum Einstellen von Datum und Zeit benutzt.</para>
+
+<para
+>In einem System ohne <acronym
+>systemd</acronym
+> werden die <acronym
+>NTP</acronym
+>-Dienstprogramme <command
+>rdate</command
+> oder <command
+>ntpdate</command
+> verwendet. Fenlen diese Programme auf Ihren System, installieren Sie sie bitte. </para>
+
+<para
+>Wenn Sie bei der Anmeldung in der &plasma;-Sitzung eine Verbindung zum Internet haben oder sie später herstellen, erfolgt der Zugriff auf einen oder mehrere <acronym
+>NTP</acronym
+>-Server.</para>
+<para
+>Dieses Verfahren ist aber nicht ausreichend, um für einen längeren Zeitraum eine korrekte Zeit der Rechneruhr zu gewährleisten. Für Rechner, die wie zum Beispiel Laptops keine dauernde Verbindung zum Netzwerk haben, ist es nützlich, um gelegentlich die Zeit einzustellen. </para>
+
+<para
+>Verwenden Sie keinen Zeitserver, dann können Sie das Datum manuell im Kalender einstellen.</para>
+<para
+>Unter dem Kalender kann durch Klicken auf das Kalendersymbol das aktuelle Datum gewählt werden. Außerdem ist auch die direkte Eingabe des Datums im Textfeld oder die Einstellung der Kalenderwoche des Jahres im Auswahlfeld möglich.</para>
+
+<para
+>Die Zeit kann über das Drehfeld im unteren Bereich der Uhr gesetzt werden. Sie können aber auch direkt einen Wert eingeben.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Zeitzone</title>
+<para
+>Um eine neue Zeitzone einzustellen, wählen Sie einen Eintrag aus der Liste. Mit dem Filterfeld können Sie die Anzeige auf einen  bestimmte <guilabel
+>Bezirk</guilabel
+> oder <guilabel
+>Region</guilabel
+> einschränken.</para>
+</sect2>
+
+</sect1>
+
+</article>

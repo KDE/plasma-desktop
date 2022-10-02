@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Локације</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Мајкл</firstname
+> <surname
+>Андерсон</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Ан Мари</firstname
+> <surname
+>Мафу</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>21. 8. 2016.</date>
+<releaseinfo
+>Плазма 5.7</releaseinfo>
+
+<keywordset>
+<keyword
+>Плазма</keyword>
+<keyword
+>К‑контрола</keyword>
+<keyword
+>површ</keyword>
+<keyword
+>путање</keyword>
+<keyword
+>локација</keyword>
+<keyword
+>Системске поставке</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ово је модул за подешавање важних путања за радну површ Плазме.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Подешавање неких КДЕ‑ових путања.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Подешавање неких КДЕ‑ових путања.</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Путања површи:</guilabel
+></term>
+<listitem
+><para
+>Фасцикла површи садржи све фајлове које видите у виџету приказа фасцикле на површи. Подразумевана путања је обично <filename class="directory"
+>~/Desktop</filename
+>, али можете и променити локацију ове фасцикле. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања самопокретања:</guilabel
+></term>
+<listitem
+><para
+>Путања самопокретања садржи програме или везе ка програмима и скриптама које желите да покренете на сваком покретању Плазме. Ако желите, можете променити локацију ове фасцикле. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања докумената:</guilabel
+></term>
+<listitem
+><para
+>Ово је фасцикла из које се документи подразумевано учитавају и уписују.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања преузимања:</guilabel
+></term>
+<listitem
+><para
+>Ово је фасцикла у коју се подразумевано уписују преузете ставке.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања филмова:</guilabel
+></term>
+<listitem
+><para
+>Ово је фасцикла из које се филмови подразумевано учитавају и уписују.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања слика:</guilabel
+></term>
+<listitem
+><para
+>Ово је фасцикла из које се слике подразумевано учитавају и уписују.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Путања музике:</guilabel
+></term>
+<listitem
+><para
+>Ово је фасцикла из које се музика подразумевана учитава и уписује.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Ако промените путању и кликнете на <guibutton
+>Примени</guibutton
+>, искаче дијалог у којем можете изабрати да преместите садржај у нову фасциклу, или да пређете на нову фасциклу без премештања фајлова.</para>
+
+</article>

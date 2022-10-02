@@ -1,0 +1,1254 @@
+# translation of plasma_applet_folderview.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010.
+# sutha <sutha@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2012-06-11 14:32+0700\n"
+"Last-Translator: sutha <sutha@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WordForge 0.8 RC1\n"
+"X-Language: km-CM\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose which location should the "
+#| "folderview show"
+#| msgid "Location"
+msgid "Location"
+msgstr "ទីតាំង"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "រូបតំណាង"
+
+#: package/contents/config/config.qml:30
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose how to filter the folderview "
+#| "contents"
+#| msgid "Filter"
+msgid "Filter"
+msgstr "ត្រង"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "Files:"
+msgstr "ប្រភេទ​ឯកសារ ៖"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgid "Show all"
+msgstr "បង្ហាញ​ទីតាំង ៖"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show Files Matching"
+msgid "Show matching"
+msgstr "បង្ហាញ​ការ​ផ្គូផ្គង​ឯកសារ"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Hide Files Matching"
+msgid "Hide matching"
+msgstr "លាក់​ការ​ផ្គូផ្គង​ឯកសារ"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "លំនាំ​ឈ្មោះ​ឯកសារ ៖"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "ប្រភេទ​ឯកសារ ៖"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "File type"
+msgstr "ប្រភេទ​ឯកសារ ៖"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "ជ្រើស​ទាំង​អស់"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "មិនជ្រើស​ទាំងអស់"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Use a custom icon"
+msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@title:menu in Copy To or Move To submenu"
+#| msgid "Browse..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "រុករក..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Sort Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "តម្រៀប​រូបតំណាង"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgid "Arrangement:"
+msgstr "កា​ររៀបចំ​​ ៖"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "ពីកំពូល​ទៅ​បាត ពីឆ្វេង​ទៅ​ស្ដាំ"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "ពី​កំពូល​ទៅបាត ស្ដាំ​ទៅ​ឆ្វេង"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "ពីកំពូល​ទៅ​បាត ពីឆ្វេង​ទៅ​ស្ដាំ"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ ៖"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ ៖"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, fuzzy, kde-format
+#| msgid "Lock in place:"
+msgid "Lock in place"
+msgstr "ចាក់សោ​នៅ​ទីកន្លែង ៖"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sorting:"
+msgstr "តម្រៀប ៖"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "តាម​ឈ្មោះ"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "ទំហំ ៖"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "តាម​ប្រភេទ"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "តាម​កាលបរិច្ឆេទ"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Descending"
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "លំដាប់​ចុះ"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "ថត​មុន"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, fuzzy, kde-format
+#| msgid "Icon Text"
+msgid "Icon size:"
+msgstr "អត្ថបទ​រូបតំណាង"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "តូច"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "ធំ"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, fuzzy, kde-format
+#| msgid " lines"
+msgid "Text lines:"
+msgstr " បន្ទាត់"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Show selection markers"
+msgstr "ជ្រើស​ទាំង​អស់"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show folder preview popups"
+msgstr "រ​មើល​ជាមុន ៖"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "ប្ដូរឈ្មោះ"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Previews:"
+msgstr "រ​មើល​ជាមុន ៖"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show preview thumbnails"
+msgstr "រ​មើល​ជាមុន ៖"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "More Preview Options..."
+msgid "Configure Preview Plugins…"
+msgstr "ជម្រើស​មើលជាមុន​ច្រើនទៀត..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "Show the Desktop folder"
+msgid "Desktop folder"
+msgstr "បង្ហាញ​ថត​ផ្ទៃតុ"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, fuzzy, kde-format
+#| msgid "Show the files related to the current activity"
+msgid "Files linked to the current activity"
+msgstr "បង្ហាញ​ឯកសារ​ដែល​ទាក់ទង​នឹង​សកម្មភាព​បច្ចុប្បន្ន"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom location:"
+msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, fuzzy, kde-format
+#| msgid "Type a path or a URL here"
+msgid "Type path or URL…"
+msgstr "វាយ​ផ្លូវ ឬ​ URL នៅ​ទីនេះ"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, fuzzy, kde-format
+#| msgctxt "Music"
+#| msgid "Title:"
+msgid "Title:"
+msgstr "ចំណង​ជើង ៖"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "គ្មាន​"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "លំនាំដើម​"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "Full path"
+msgid "Full path"
+msgstr "ផ្លូវ​ពេញ​"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom title"
+msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Enter custom title…"
+msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Preview Plugins"
+msgstr "រ​មើល​ជាមុន ៖"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "&Refresh Desktop"
+msgid "Configure Desktop and Wallpaper…"
+msgstr "ធ្វើ​ឲ្យ​ផ្ទៃតុ​ស្រស់"
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Select Folder"
+msgstr "ជ្រើស​ទាំង​អស់"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "ធ្វើ​ឲ្យ​ផ្ទៃតុ​ស្រស់"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "ទិដ្ឋភាព​ធ្វើ​ឲ្យ​ស្រស់"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "សម្អាត​ធុង​សំរាម "
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "ស្តារ"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "បើក"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "បិទភ្ជាប់"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "លក្ខណៈ​សម្បត្តិ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort By"
+msgstr "តម្រៀប ៖"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "Sort Icons"
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "មិន​បាន​តម្រៀប"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "តាម​ឈ្មោះ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "ទំហំ ៖"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "តាម​ប្រភេទ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "តាម​កាលបរិច្ឆេទ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Descending"
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "លំដាប់​ចុះ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "ថត​មុន"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, fuzzy, kde-format
+#| msgid "Icon Text"
+msgid "Icon Size"
+msgstr "អត្ថបទ​រូបតំណាង"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "តូច"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "តូច"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "ធំ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "កា​ររៀបចំ​​ ៖"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "ពីកំពូល​ទៅ​បាត ពីឆ្វេង​ទៅ​ស្ដាំ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "ពី​កំពូល​ទៅបាត ស្ដាំ​ទៅ​ឆ្វេង"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "ពីកំពូល​ទៅ​បាត ពីឆ្វេង​ទៅ​ស្ដាំ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgid "Align"
+msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ ៖"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show Previews"
+msgstr "រ​មើល​ជាមុន ៖"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "On a camera"
+#~| msgid "Aperture:"
+#~ msgid "Features:"
+#~ msgstr "លំហ ៖"
+
+#, fuzzy
+#~| msgid "Search file type"
+#~ msgid "Search…"
+#~ msgstr "ស្វែងរក​សប្រភេទ​ឯកសារ"
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "បង្កើត​ថត..."
+
+#, fuzzy
+#~| msgid "Show the Desktop folder"
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "បង្ហាញ​ថត​ផ្ទៃតុ"
+
+#~ msgid "Show All Files"
+#~ msgstr "បង្ហាញ​ឯកសារ​ទាំង​អស់"
+
+#~ msgid "Size:"
+#~ msgstr "ទំហំ ៖"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#, fuzzy
+#~| msgid "Arrangement:"
+#~ msgid "Arrange in"
+#~ msgstr "កា​ររៀបចំ​​ ៖"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sort by"
+#~ msgstr "តម្រៀប ៖"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Title of the page that lets the user choose which location should the "
+#~| "folderview show"
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "ទីតាំង"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "បង្ហាញ​ថត​ផ្ទៃតុ"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "បញ្ជាក់​ថត ៖"
+
+#~ msgid "&Reload"
+#~ msgstr "ផ្ទុកឡើងវិញ"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "ផ្លាស់ទី​ទៅ​ធុងសំរាម"
+
+#~ msgid "&Delete"
+#~ msgstr "លុប"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgid "Align:"
+#~ msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ ៖"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sorting"
+#~ msgstr "តម្រៀប ៖"
+
+#~ msgid "Title"
+#~ msgstr "ចំណង​ជើង ៖​"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "បង្ហាញ​ថត​ដើម"
+
+#, fuzzy
+#~| msgid "Show All Files"
+#~ msgid "Show Original File"
+#~ msgstr "បង្ហាញ​ឯកសារ​ទាំង​អស់"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "សម្អាត​ធុង​សំរាម "
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "ចំណាំ​ទំព័រ​នេះ"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "ចំណាំ​ទីតាំង​នេះ"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "ចំណាំ​ថត​នេះ"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "ចំណាំ​តំណ​នេះ"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "ចំណាំ​ឯកសារ​នេះ"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "ចម្លង​ទៅ"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "ផ្លាស់​ទី​ទៅ"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "រុករក..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "ចម្លង​ទីនេះ"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "ផ្លាស់ទី​ទីនេះ"
+
+#~ msgid "Share"
+#~ msgstr "ចែក​រំលែក"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "រូបតំណាង"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "អ្នក​មិន​អាច​ទម្លាក់​ថត​មួយ​នៅ​លើ​ខ្លួន​វា​ទេ"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "លំនាំ​ឈ្មោះ​ឯកសារ ៖"
+
+#~ msgid "&Move Here"
+#~ msgstr "ផ្លាស់ទី​ទីនេះ"
+
+#~ msgid "&Copy Here"
+#~ msgstr "ចម្លង​ទីនេះ"
+
+#~ msgid "&Link Here"
+#~ msgstr "តភ្ជាប់​ទីនេះ"
+
+#~ msgid "C&ancel"
+#~ msgstr "បោះបង់"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "កំណត់​ជា​ផ្ទាំង​រូបភាព"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "បង្កើត​ថត"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "បញ្ចូលឈ្មោះ​ផ្សេង"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr "ឈ្មោះ \"%1\" ចាប់ផ្ដើម​ដោយ​សញ្ញា(.) ដូច្នេះ​ថត​នឹង​ត្រូវ​បានលាក់​តាម​លំនាំដើម ។"
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "បង្កើត​ថត​ដែលបានលាក់ ?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "បញ្ចូល​ឈ្មោះ​ថត ៖"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "ថត​ផ្ទៃតុ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "បិទភ្ជាប់​ឯកសារ​មួយ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Item"
+#~ msgid_plural "Paste %1 Items"
+#~ msgstr[0] "បិទភ្ជាប់ %1 ធាតុ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "បិទភ្ជាប់​មាតិកា​ក្ដារតម្បៀតខ្ទាស់..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "បិទភ្ជាប់"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr "ស្ដារ​ឯកសារ ឬ​ថត​នេះ​ឡើង​វិញ ត្រឡប់​ទៅ​ទីតាំង​ដែល​វា​ត្រូវបាន​លុប​ពី​ដំបូង"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr "បើក​បង្អួច​កម្មវិធី​គ្រប់គ្រង​ឯកសារ​​ថ្មី ដោយ​បង្ហាញ​គោលដៅ​របស់​តំណ​នេះ នៅ​ក្នុង​ថត​មេ​របស់​វា ។"
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "ចុច​ដើម្បី​មើល​ថត ៖"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "រូបតំណាង"
+
+#~ msgid "Align to Grid"
+#~ msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "ចាក់សោ​នៅ​នឹង​កន្លែង"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "ថត %1"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "ឯកសារ %1"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2 ។"
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "ឯកសារ %1"
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr "ប្រើ​វត្ថុ​បញ្ជា​នេះ ដើម្បីជ្រើស​លក្ខខណ្ឌ​តាម​រូបតំណាង​ដែល​នឹង​ត្រូវ​បាន​តម្រៀប​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#, fuzzy
+#~| msgctxt "Sort icons"
+#~| msgid "Descending"
+#~ msgid "Descending:"
+#~ msgstr "លំដាប់​ចុះ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want folder previews to appear only when "
+#~| "clicked. When this option is turned off, folder previews will appear "
+#~| "automatically when the mouse hovers over a folder."
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស​នេះ ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​ថត​មើល​ជាមុន​លេចឡើង​តែ​នៅ​ពេល​ចុច​ប៉ុណ្ណោះ ។ ពេល​ដោះ​ធីក​ជម្រើស​"
+#~ "នេះ ថត​មើល​ជាមុន​នឹង​លេចឡើង​​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​ដែល​អ្នក​ផ្លាស់ទី​កណ្ដុរ​នៅ​លើ​ថត ។"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr "ប្រើ​វត្ថុ​បញ្ជា​នេះ ដើម្បីជ្រើស​លក្ខខណ្ឌ​តាម​រូបតំណាង​ដែល​នឹង​ត្រូវ​បាន​តម្រៀប​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr "ប្រើ​វត្ថុ​បញ្ជា​នេះ ដើម្បីជ្រើស​លក្ខខណ្ឌ​តាម​រូបតំណាង​ដែល​នឹង​ត្រូវ​បាន​តម្រៀប​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស ប្រសិនបើ​អ្នក​មិនចង់​ឲ្យ​រូបតំណាង​អាច​​ផ្លាស់ទីបាន​នៅ​ក្នុង​ទិដ្ឋភាព ។\n"
+#~ "\n"
+#~ "ជម្រើស​នេះ​មានប្រយោជន៍​ ប្រសិនបើ​អ្នក​ចង់​ជៀសវាង​ការ​ផ្លាស់ទី​រូបតំណាង​​ដោយ​ចៃដន្យ ខណៈពេល​ធ្វើ​អន្តរកម្ម​"
+#~ "ជា​មួយ​ពួកវា ។"
+
+#~ msgid "Align to grid:"
+#~ msgstr "តម្រឹម​ទៅ​ក្រឡាចត្រង្គ ៖"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស​នេះ ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​រូបតំណាង​តម្រៀប​នៅ​ក្នុង​ក្រឡាចត្រង្គ ។\n"
+#~ "\n"
+#~ "នៅ​ពេល​ជម្រើស​នេះ​ត្រូវ​បាន​គូស​ធីក រូបតំណាង​នឹង​ខ្ទាស់​ដោយ​ស្វ័យ​ប្រវត្តិ​ទៅ​ក្រឡា​របស់​ក្រឡាចត្រង្គ​ដែល​នៅ​ជិត​"
+#~ "បំផុត នៅ​ពេល​អ្នក​ផ្លាស់ទី​ពួកវា​ជុំវិញ​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr "ប្រើ​ថត​នេះ​ដើម្បី​បង្កើន ឬ​បន្ថយ​ទំហម​របស់​រូបតំណាង​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr "គូស​ធីក​ជម្រើស​នេះ ប្រសិន​បើ​អ្នក​ចង់​មើល​មាតិកា​ឯកសារ​ជាមុន​នៅ​ក្នុង​រូបតំណាង ។"
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ ដើម្បីជ្រើស​ប្រភេទ​ការ​មើល​ឯកសារ​ជាមុនណាមួយ​នឹង​ត្រូវ​បាន​បង្ហាញ ។"
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស​នេះ ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​ថត​មើល​ជាមុន​លេចឡើង​តែ​នៅ​ពេល​ចុច​ប៉ុណ្ណោះ ។ ពេល​ដោះ​ធីក​ជម្រើស​"
+#~ "នេះ ថត​មើល​ជាមុន​នឹង​លេចឡើង​​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​ដែល​អ្នក​ផ្លាស់ទី​កណ្ដុរ​នៅ​លើ​ថត ។"
+
+#~ msgid "Lines:"
+#~ msgstr "បន្ទាត់ ៖"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "ប្រើ​​វត្ថុបញ្ជា​នេះ ដើម្បី​ជ្រើស​ចំនួនបន្ទាត់​របស់​អត្ថបទ​ដែល​នឹង​ត្រូវ​បាន​បង្ហាញ​ខាង​ក្រោម​រូបតំណាង ។"
+
+#~ msgid "1 line"
+#~ msgstr "១ បន្ទាត់"
+
+#~ msgid "Color:"
+#~ msgstr "ពណ៌ ៖"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ ដើម្បី​ជ្រើស​ពណ៌​ដែល​ត្រូ​វបានប្រើ​សម្រាប់​ស្លាក់​អត្ថបទ​នៅ​ក្នុង​ទិដ្ឋភាព ។"
+
+#~ msgid "Shadows:"
+#~ msgstr "ស្រមោល ៖"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>គូស​ធីក​ជម្រើស ប្រសិនបើ​អ្នក​ឲ្យស្លាក​អត្ថបទ​ចោល​ស្រមោល​លើ​ផ្ទៃ​ខាងក្រោយ ។</p>\n"
+#~ "<p></p>\n"
+#~ "<p>ស្រមោល​នឹង​ធ្វើ​ឲ្យ​កាន់​តែ​ងាយ​អាន ដោយ​សម្គាល់​វា​ចេញ​ពី​ផ្ទៃ​ខាងក្រោយ ។</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>ចំណាំ​ថា ពណ៌​អទ្ថបទ​ងងឹត ជម្រើស​នេះ​នឹង​ធ្វើ​ឲ្យអត្ថបទ​​មានពន្លឺ​ក្រហម​ខ្លាំង​​ដែល​មាន​ពន្លឺ​បាំង​ឆ័ត្រ "
+#~ "ជំនួយ​ឲ្យ​ការ​ចោល​ស្រមោល ។</i></p></body></html>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want to see previews of the file contents in "
+#~| "the icons."
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr "គូស​ធីក​ជម្រើស​នេះ ប្រសិន​បើ​អ្នក​ចង់​មើល​មាតិកា​ឯកសារ​ជាមុន​នៅ​ក្នុង​រូបតំណាង ។"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">ប្រសិនបើ​អ្នក​បានជ្រើស \"បង្ហាញ​"
+#~ "ការ​ផ្គូផ្គង​ឯកសារ\" ឬ\"លាក់​ការ​ផ្គូផ្គង​ឯកសារ\" មាន​តែ​​ឯកសារ​ដែល​ផ្គូផ្គង​នឹង​លក្ខខណ្ឌ​ទាំងពីរ​នឹង​ត្រូវ​"
+#~ "បានបង្ហាញ ឬ​លាក់​រៀងៗ​ខ្លួន ។</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">ឧទាហរណ៍ ប្រសិនបើ​អ្នកមាន \"*"
+#~ "\" ជា​លំនាំ​របស់​អ្នក ប៉ុន្តែ​មិន​បានជ្រើស​អ្វីសោះ​នៅ​ក្នុង​ប្រភេទ MIME គ្មាន​ឯកសារ​នឹង​ត្រូ​វបានបង្ហាញ​"
+#~ "ទេ ។</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "ចំណាំ​ថា ប្រសិនបើ​អ្នក​បានជ្រើស \"បង្ហាញ​កា​រផ្គូផ្គង​ឯកសារ\" ឬ \"លាក់​ការ​ផ្គូផ្គង​ឯកសារ\"\n"
+#~ "មានតែ​ឯកសារ​ដែល​ផ្គូផ្គង​នឹង​លក្ខខណ្ឌ​ទាំង​ពីរ​នឹង​ត្រូវ​បានបង្ហាញ ឬ​លាក់​រៀងខ្លួនៗ ។\n"
+#~ "ឧទាហរណ៍ ប្រសិនបើ​អ្នក​​មាន \"*\" ជា​លំនាំ​របស់​អ្នក ប៉ុន្តែ​គ្មាន​អ្វី​បាន​ជ្រើស​នៅ​ក្នុង​ប្រភេទ MIME ទេ "
+#~ "ដូច្នេះ​ឯកសារ​នឹង​ត្រូវ​បានបង្ហាញ ។"
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">មិនអាច​មើល​ឯកសារ​ណាមួយ​បានទេ ?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "បញ្ជី​ផ្នែកបន្ថែម​ដែល​បំបែក​ដោយ​ដកឃ្លា e.g. *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "បញ្ជី​ផ្នែក​បន្ថែម​ដែល​បំបែក​ដោយ​ដកឃ្លា e.g. *.txt *.od* ដើម្បី​បង្ហាញ​តែ​ឯកសារ​អត្ថបទ និង​"
+#~ "ការិយាល័យ"
+
+#~ msgid "Pattern filter"
+#~ msgstr "តម្រង​លំនាំ"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "ពិនិត្យ​មើល​ប្រភេទ​ឯកសារ​ ដែល​អ្នក​ចង់​ឃើញ​ការ​មើល​រូបតំណាង​ជា​មុន​សម្រាប់ ៖"
+
+#~ msgid "This folder is empty."
+#~ msgstr "ថត​នេះ​ទទេ ។"
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "សិល្បៈករ ៖"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "អាល់ប៊ុម ៖"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 មេហ្គាភីកសែល"
+
+#~ msgid "Camera:"
+#~ msgstr "ម៉ាស៊ីន​ថត ៖"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 មិល្លីម៉ែត្រ"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "៣៥ មិល្លីម៉ែត្រ​ស្មើ​នឹង %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "ប្រវែង​ចំណុច​​ស្រប​គ្នា ៖"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "ពេលវេលា​បង្ហាញ ៖"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 វិ."
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "ល្បឿន ISO ៖"
+
+#~ msgid "Time:"
+#~ msgstr "ពេលវេលា ៖"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "%1 ទំព័រ"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "%1 ពាក្យ"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "%1 ធាតុ"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "ឆ្វេង​ទៅ​ស្ដាំ ពី​កំពូល​ទៅ​បាត"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "ពី​ស្ដាំ​ទៅ​ឆ្វេង ពីកំពូល​ទៅ​បាត"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "បង្ហាញ"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "តាម​ទំហំ"
+
+#~ msgctxt "Sort icons"
+#~ msgid "Ascending"
+#~ msgstr "លំដាប់​ឡើង"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "ប្រើ​វត្ថុបញ្ជា​នេះ ដើម្បីជ្រើស​ ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​រូបតំណាង​តម្រៀប​​ពី​កំពូល​ទៅបាត ដោយ​ចាប់ផ្ដើម​នៅ​ផ្នែក​"
+#~ "ខាងឆ្វេង​របស់​ទិដ្ឋភាព ឬ​បាន​តម្រៀប​ពី​ឆ្វេង​ទៅ​ស្ដាំ​ដោយ​ចាប់ផ្ដើម​ពី​កំពូល​របស់​ទិដ្ឋភាព ។"
+
+#~ msgid "Header"
+#~ msgstr "បឋមកថា"

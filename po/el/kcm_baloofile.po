@@ -1,0 +1,386 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2017-06-12 16:44+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr ""
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate all your files based on their content"
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Η αναζήτηση αρχείων σας βοηθά να εντοπίσετε γρήγορα όλα τα αρχεία σας με "
+"βάση το περιεχόμενό τους"
+
+#: package/contents/ui/main.qml:80
+#, fuzzy, kde-format
+#| msgid "Enable File Search"
+msgid "Enable File Search"
+msgstr "Ενεργοποίηση της υπηρεσίας αναζήτησης αρχείων"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Δεικτοδότηση επίσης και του περιεχομένου των αρχείων"
+
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+#| msgid "Show hidden folders"
+msgid "Index hidden files and folders"
+msgstr "Εμφάνιση κρυφών φακέλων"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "Desktop File Indexer"
+msgid "Pause Indexer"
+msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid "Desktop File Indexer"
+msgid "Resume Indexer"
+msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
+
+#: package/contents/ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "File Indexing"
+msgid "Currently indexing: %1"
+msgstr "Δεικτοδότηση αρχείων"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr ""
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr ""
+
+#: package/contents/ui/main.qml:249
+#, fuzzy, kde-format
+#| msgid "Index Audio"
+msgid "Indexed"
+msgstr "Δεικτοδότηση ήχου"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr ""
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to include"
+msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to exclude"
+msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stelios, Αντώνης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sstavra@gmail.com, capoiosct@gmail.com"
+
+#, fuzzy
+#~| msgid "Enable File Search"
+#~ msgid "File Search"
+#~ msgstr "Ενεργοποίηση της υπηρεσίας αναζήτησης αρχείων"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Πνευματικά δικαιώματα 2007-2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Ο φάκελος %1 έχει ήδη εξαιρεθεί"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Δεικτοδότηση αρχείων"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Να μη γίνει αναζήτηση σε αυτές τις τοποθεσίες"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Ο γονέας %1 του φακέλου έχει ήδη εξαιρεθεί"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Διαμόρφωση της αναζήτησης αρχείων"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Ο ριζικός κατάλογος είναι πάντα κρυφός"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Ενεργοποίηση λειτουργίας για προγραμματιστές"
+
+#, fuzzy
+#~| msgid "Basic Settings"
+#~ msgid "Settings"
+#~ msgstr "Βασικές ρυθμίσεις"
+
+#~ msgid "Suspend"
+#~ msgstr "Αναστολή"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "Προσαρμογή αρχείων και φακέλων που θα δεικτοδοτηθούν"
+
+#~ msgid "Index Documents"
+#~ msgstr "Δεικτοδότηση εγγράφων"
+
+#~ msgid "Index Images"
+#~ msgstr "Δεικτοδότηση εικόνων"
+
+#~ msgid "Index Videos"
+#~ msgstr "Δεικτοδότηση βίντεο"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Δεικτοδότηση πηγαίου κώδικα"
+
+#~ msgid "Advanced"
+#~ msgstr "Για προχωρημένους"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Προσαρμογή φακέλων"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Προηγμένο φιλτράρισμα αρχείων"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "Εξαίρεση τύπου mime"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Φίλτρα εξαίρεσης ευρετηρίου"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Επιλέξτε εκφράσεις που ταιριάζουν με το όνομα των αρχείων που θα "
+#~ "αποκλειστούν από τη δεικτοδότηση"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (οι συμβολικοί σύνδεσμοι <emphasis>δεν</"
+#~ "emphasis> θα δεικτοδοτηθούν για αναζήτηση στην επιφάνειας εργασίας)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/>(θα προστεθεί στο ευρετήριο της αναζήτησης "
+#~ "επιφάνειας εργασίας)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (<emphasis>δεν</emphasis> θα προστεθεί στο "
+#~ "ευρετήριο της αναζήτησης επιφάνειας εργασίας)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Προσαρμογή φακέλων ευρετηρίου"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "Επιλέξτε τους τοπικούς φακέλους που περιέχουν τα αρχεία που θα προστεθούν "
+#~ "στο ευρετήριο για γρήγορες αναζητήσεις"
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτή την επιλογή για να μπορείτε να επιλέξετε κρυφούς "
+#~ "φακέλους"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "Η υπηρεσία δεικτοδότησης αρχείων δεν εκτελείται."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Αποτυχία επαφής με την υπηρεσία δεικτοδότησης αρχείων (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Συνέχεια"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Αναστολή"
+
+#~ msgid "File Metadata"
+#~ msgstr "Μεταδεδομένα αρχείων"
+
+#~ msgid ""
+#~ "File metadata enables tagging and rating of files integrated with the "
+#~ "Desktop Search."
+#~ msgstr ""
+#~ "Τα μεταδεδομένα αρχείων ενεργοποιούν την προσθήκη ετικετών και την "
+#~ "αξιολόγηση των αρχείων ενσωματωμένων στην αναζήτηση επιφάνειας εργασίας."
+
+#~ msgid "Enable File metadata"
+#~ msgstr "Ενεργοποίηση μεταδεδομένων αρχείων"
+
+#~ msgid "Details..."
+#~ msgstr "Λεπτομέρειες..."
+
+#~ msgid ""
+#~ "Desktop search allows searching for files by content instead of just by "
+#~ "name."
+#~ msgstr ""
+#~ "Η αναζήτηση επιφάνειας εργασίας επιτρέπει την αναζήτηση αρχείων κατά "
+#~ "περιεχόμενο αντί μόνο με το όνομά τους."
+
+#~ msgid "Indexing"
+#~ msgstr "Δεικτοδότηση"
+
+#~ msgid "Removable media handling:"
+#~ msgstr "Χειρισμός αφαιρούμενων μέσων:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Indexing of files on removable media"
+#~ msgstr "Προσθήκη στο ευρετήριο αρχείων από αφαιρούμενα μέσα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "<para>Nepomuk can index files on removable devices like USB keys or "
+#~ "external hard-disks for fast desktop searches.</para>\n"
+#~ "<para>By default no files are indexed. Here this behaviour can be changed "
+#~ "to one of two options:</para>\n"
+#~ "<para><list><item><interface>Index files on all removable devices</"
+#~ "interface> - Files on removable media are indexed as soon as the medium "
+#~ "is mounted. Caution: this does not include media which have been rejected "
+#~ "via the second option.</item>\n"
+#~ "<item><interface>Ask individually when newly mounted</interface> - The "
+#~ "user will be asked to decide if files on the newly mounted medium should "
+#~ "be indexed or not. Once decided Nepomuk will not ask again.</item></"
+#~ "list></para>"
+#~ msgstr ""
+#~ "<para>Το Nepomuk έχει την δυνατότητα να κατατάξει στο ευρετήριο αρχεία "
+#~ "από αφαιρούμενα μέσα όπως μνήμες USB ή εξωτερικούς σκληρούς δίσκους για "
+#~ "γρήγορες αναζητήσεις.</para>\n"
+#~ "<para>Από προεπιλογή κανένα αρχείο δεν προστίθεται στο ευρετήριο. Εδώ "
+#~ "αυτή η συμπεριφορά μπορεί να αλλάξει σε μία από τις δύο επιλογές:</para>\n"
+#~ "<para><list><item><interface>Προσθήκη στο ευρετήριο αρχείων από όλα τα "
+#~ "αφαιρούμενα μέσα</interface> - Τα αρχεία από αφαιρούμενα μέσα "
+#~ "προστίθενται στο ευρετήριο μόλις το μέσο προσαρτηθεί. Προσοχή: αυτό δεν "
+#~ "περιλαμβάνει τα μέσα που έχουν απορριφθεί μέσω της δεύτερης επιλογής.</"
+#~ "item>\n"
+#~ "<item><interface>Ερώτηση χωριστά όταν προσαρτηθούν πρόσφατα</interface> - "
+#~ "Ο χρήστης θα κληθεί να αποφασίσει αν τα αρχεία του πρόσφατα προσαρτημένου "
+#~ "μέσου θα πρέπει να προστίθενται στο ευρετήριο ή όχι. Αφού αποφασίσετε το "
+#~ "Nepomuk δεν θα ξαναρωτήσει.</item></list></para>"
+
+#~ msgid "Ignore all removable media"
+#~ msgstr "Παράβλεψη όλων των αφαιρούμενων μέσων"
+
+#~ msgid "Index files on all removable devices"
+#~ msgstr "Προσθήκη στο ευρετήριο αρχείων από όλα τα αφαιρούμενα μέσα"
+
+#~ msgid "Ask individually when newly mounted"
+#~ msgstr "Ερώτηση χωριστά για κάθε καινούρια προσάρτηση"
+
+#~ msgid "Refresh"
+#~ msgstr "Ανανέωση"
+
+#~ msgid "Files"
+#~ msgstr "Αρχεία"
+
+#~ msgid "Emails"
+#~ msgstr "Μηνύματα ηλ. ταχυδρομείου"
+
+#~ msgid "Calculating"
+#~ msgstr "Υπολογισμός"
+
+#~ msgid "Desktop Search Configuration Module"
+#~ msgstr "Άρθρωμα διαμόρφωσης αναζήτησης επιφάνειας εργασίας"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are active"
+#~ msgstr "Οι υπηρεσίες μεταδεδομένων αρχείων είναι ενεργές"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are disabled"
+#~ msgstr "Οι υπηρεσίες μεταδεδομένων αρχείων είναι απενεργοποιημένες"

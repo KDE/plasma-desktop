@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Allmänt beteende</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-05-18</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>skrivbord</keyword>
+<keyword
+>arbetsyta</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Det här är en modul för att anpassa arbetsytans allmänna beteende.. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Visa verktygstips när musen hålls över objekt</guilabel
+></term>
+<listitem>
+<para
+>Om alternativet är markerat, visas verktygstips när musen hålls över objekt i &plasma;s panel eller på skrivbordet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Visa visuell återmatning för statusändringar</guilabel
+></term>
+<listitem>
+<para
+>Om t.ex. ljusstyrka eller volym ändras genom att använda tangentbordet, visas statusändringarna med ett skärmmeddelande.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Animeringshastighet</guilabel
+></term>
+<listitem>
+    <para
+>Låter dig ställa in hastigheten på animering av skrivbordseffekter från <guilabel
+>Långsam</guilabel
+> till <guilabel
+>Omedelbar</guilabel
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Enkelklicka för att öppna filer och kataloger</guilabel
+></term>
+<listitem>
+<para
+>Det här är förvald inställning. Att klicka en gång på en ikon öppnar den. För att välja kan du dra runt en eller flera ikoner, <keycombo action="simul"
+>&Ctrl;<mousebutton
+>högerklicka</mousebutton
+></keycombo
+>, eller helt enkelt klicka och hålla nere för att dra. Det går också att välja genom att klicka på ett objekts markeringsmarkör.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Dubbelklicka för att öppna filer och kataloger</guilabel
+></term>
+<listitem>
+<para
+>Om det här alternativet inte är markerat, öppnas ikoner/filer med ett enkelt klick av <mousebutton
+>vänster</mousebutton
+> musknapp. Det här förvalda beteendet är det samma som du skulle förvänta dig när du klickar på länkar i de flesta webbläsare. Om det är markerat så öppnas ikoner/filer med ett dubbelklick, medan ett enkelklick bara väljer ikonen eller filen. Det här är ett beteende som du kan känna igen från andra skrivbord eller operativsystem.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Att klicka i rullningslistens spår</guimenu
+><guimenuitem
+>Rullar en sida uppåt eller neråt</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Det är förvald inställning. Ett vänsterklick i rullningslistens spår flyttar rullningslisten en sida.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Att klicka i rullningslistens spår</guimenu
+><guimenuitem
+>Rullar till klickad plats</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Sätter på beteendet att rullningsgreppets position går direkt till positionen i dokumentet där du har klickat. Det är beteendet som du kan känna till från andra skrivbord eller operativsystem.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Pekläge</guimenu
+><guimenuitem
+>Aktivera automatiskt efter behov/Aktivera aldrig</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Pekläge aktiveras automatiskt så fort systemet detekterar en pekskärm utan mus och tryckplatta. Exempelvis när en omvandlingsbar bärbar dators tangentbord vänds eller kopplas bort.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Alltid aktiverat (förval)/Aldrig aktiverat</guimenuitem
+></term>
+<listitem>
+<para
+>I pekläge blir många element i användargränssnittet större för att enklare hantera pekinteraktion.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

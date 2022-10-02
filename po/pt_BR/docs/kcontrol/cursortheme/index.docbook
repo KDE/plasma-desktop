@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Tema de cursores</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Marcus</firstname
+> <surname
+>Gama</surname
+><affiliation
+><address
+> <email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>Esta é a documentação do módulo &systemsettings;, que permite personalizar a aparência do cursor do mouse. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>mouse</keyword>
+<keyword
+>cursor</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo permite selecionar a partir de um determinado número de temas de cursores instalados. Uma previsão do cursor é mostrada abaixo da caixa de listagem. </para>
+
+<para
+>Os recursos fornecidos por este módulo podem não estar disponíveis em alguns sistemas. Seu sistema pode precisar ser atualizado para suportar temas de cursor. </para>
+
+<para
+>Se você tiver temas de cursor adicionais disponíveis, você pode instalá-los e removê-los usando os botões á direita da caixa de listagem. Observe que você não pode remover os temas predefinidos. </para>
+
+<para
+>Use o botão para <guibutton
+>Obter novos temas</guibutton
+> para invocar a janela para <guilabel
+>Obter coisas novas</guilabel
+> e transferir temas adicionais da Internet.</para>
+
+<para
+>Alguns temas permitem escolher o tamanho do cursor, usando a lista abaixo da legenda <guilabel
+>Tamanho:</guilabel
+>. </para>
+
+<para
+>O tamanho pode ser definido para ser <guilabel
+>dependente da resolução</guilabel
+> ou para um dos tamanhos disponíveis no seu sistema. </para>
+
+</article>

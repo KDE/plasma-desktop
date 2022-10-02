@@ -1,0 +1,341 @@
+# translation of kcm_search.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_search\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-06-26 14:49+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Dostupné pluginy"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Povoliť alebo zakázať doplnky (používané v KRunner-i, spúšťači aplikácií a v "
+"efekte Prehľad)"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Nastaviť KRunner…"
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Získať nové doplnky..."
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr ""
+"Nepodarilo sa spustiť inštalačný skript v termináli: <message>%1</message>"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "Inštalácia bola úspešne vykonaná, toto okno môžete teraz zavrieť"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "Odinštalovanie bolo úspešne vykonané, teraz môžete toto okno zavrieť"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "Inštalácia doplnku KRunner zlyhala"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Príkaz na vykonanie: inštalácia alebo odinštalovanie."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Cesta k archívu."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Žiadna podpora PackageKit"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Potvrdiť inštaláciu"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Chystáte sa nainštalovať binárny balík. Mali by ste ich nainštalovať iba od "
+"dôveryhodného autora/baliča."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Prijať riziko a pokračovať"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Zobraziť súbor"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "Typ mime %1 nie je podporovaný koncovým serverom packagekit"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok neposkytuje odinštalačný skript. Kontaktujte autora. Môžete sa "
+"pokúsiť odinštalovať doplnok manuálne. <nl/>Ak sa vám to nezdá alebo vám to "
+"nevyhovuje, kliknite na <interface>Zrušiť</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok neposkytuje odinštalačný skript. Kontaktujte autora. Môžete sa "
+"pokúsiť odinštalovať doplnok manuálne. Pokyny od autora nájdete v dokumente "
+"README. <nl/>Ak sa vám to nezdá alebo vám to nevyhovuje, kliknite na "
+"<interface> Zrušiť </interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok neposkytuje inštalačný skript. Kontaktujte autora. Môžete sa "
+"pokúsiť inštalovať doplnok manuálne. <nl/>Ak sa vám to nezdá alebo vám to "
+"nevyhovuje, kliknite na <interface>Zrušiť</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok neposkytuje inštalačný skript. Kontaktujte autora. Môžete sa "
+"pokúsiť inštalovať doplnok manuálne. Pokyny od autora nájdete v dokumente "
+"README. <nl/>Ak sa vám to nezdá alebo vám to nevyhovuje, kliknite na "
+"<interface> Zrušiť </interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok používa na inštaláciu skript, ktorý môže predstavovať "
+"bezpečnostné riziko. Pred inštaláciou prosím skontrolujte celý obsah "
+"doplnku, alebo si prečítajte aspoň zdrojový kód skriptu. <nl/>Ak sa vám to "
+"nezdá alebo vám to nevyhovuje, kliknite na <interface>Zrušiť</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Tento doplnok používa na inštaláciu skript, ktorý môže predstavovať "
+"bezpečnostné riziko. Pred inštaláciou skontrolujte celý obsah doplnku, alebo "
+"si prečítajte aspoň súbor README a zdrojový kód skriptu. <nl/>Ak sa vám to "
+"nezdá alebo vám to nevyhovuje, kliknite na <interface>Zrušiť</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Označiť položku ako odinštalovanú"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Označiť položku ako inštalovanú"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Zobraziť skript"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Zobraziť zdrojový priečinok"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "Zobraziť %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Nepodarilo sa vyriešiť názov balíka %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "Nepodarilo sa spustiť príkaz na inštaláciu: <message>%1</message>"
+
+#~ msgid "Position on screen:"
+#~ msgstr "Pozícia na obrazovke:"
+
+#~ msgid "Top"
+#~ msgstr "Hore"
+
+#~ msgid "Center"
+#~ msgstr "V strede"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktivácia:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activate when pressing any key on the desktop"
+#~ msgstr "Aktivácia pri stlačení ľubovoľného tlačidla na pracovnej ploche"
+
+#~ msgid "History:"
+#~ msgstr "História:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Remember past searches"
+#~ msgstr "Pamätať si minulé vyhľadávania"
+
+#~ msgctxt "@option:check"
+#~ msgid "Retain last search when re-opening"
+#~ msgstr "Zachovanie posledného vyhľadávania pri opätovnom otvorení"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "Brať ohľad na Aktivity (posledné vyhľadávanie a história)"
+
+#~ msgid "Clear History"
+#~ msgstr "Vyčistiť históriu"
+
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "Vymazanie histórie pre Aktivitu \"%1\""
+
+#~ msgid "Clear History…"
+#~ msgstr "Vyčistiť históriu..."
+
+#~ msgctxt "@item:inmenu delete krunner history for all activities"
+#~ msgid "For all activities"
+#~ msgstr "Pre všetky aktivity"
+
+#~ msgctxt "@item:inmenu delete krunner history for this activity"
+#~ msgid "For activity \"%1\""
+#~ msgstr "Pre aktivitu \"%1\""
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Moduly:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Nastaviť  povolené doplnky pre vyhľadávanie…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Zmeniť nastavenia vyhľadávania"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "KRunner position:"
+#~ msgstr "Umiestnenie KRunner:"
+
+#~ msgid "Enable"
+#~ msgstr "Povoliť"
+
+#~ msgid "KRunner history:"
+#~ msgstr "História KRunner:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "Ponechať predchádzajúce vyhľadávanie"
+
+#~ msgid "Clear History..."
+#~ msgstr "Vyčistiť históriu..."
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "Povoliť alebo zakázať KRunner doplnky:"
+
+#~ msgid "Top of screen"
+#~ msgstr "Horná časť obrazovky"
+
+#~ msgid "Free-floating window"
+#~ msgstr "Plávajúce okno"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Vyberte pluginy vyhľadávania:"

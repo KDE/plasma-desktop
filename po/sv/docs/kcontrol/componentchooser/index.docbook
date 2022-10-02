@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Standardprogram</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-01-12</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>komponent</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>I den här modulen kan du ändra &kde;:s standardkomponenter.</para>
+
+<para
+>Komponenter är program som hanterar grundläggande uppgifter, som webbläsaren, terminalemulatorn, filhanteraren, e-postprogrammet, den elektroniska kartan och uppringningsfunktionen. Olika &kde;-program behöver ibland starta en terminalemulator, skicka e-post, hantera filer och kataloger, visa kartan eller ringa ett nummer på telefonen.</para
+> 
+
+<para
+>För att göra det på ett likformigt sätt, anropar programmen alltid samma komponent. Här kan du välja vilka program dessa komponenter motsvarar.</para>
+
+<para
+>Listan till vänster visar de anpassningbara komponenttyperna:</para>
+<itemizedlist>
+<listitem>
+<para
+>Webbläsare</para>
+</listitem>
+<listitem>
+<para
+>Filhanterare</para>
+</listitem>
+<listitem>
+<para
+>E-postklient</para>
+</listitem>
+<listitem>
+<para
+>Terminalemulator</para>
+</listitem>
+<listitem>
+<para
+>Karta</para>
+</listitem>
+<listitem>
+<para
+>Uppringningsfunktion</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Klicka på kombinationsrutan för komponenten som du vill anpassa Välj ditt favoritprogram för webbläsare, filhanterare, e-postprogram, terminalemulator, karta och uppringningsfunktion. Använd <guimenuitem
+>Övrigt...</guimenuitem
+> för att visa dialogrutan <guilabel
+>Välj program</guilabel
+> och välj programmet manuellt.</para>
+
+</article>

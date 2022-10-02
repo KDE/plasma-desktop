@@ -1,0 +1,326 @@
+# Translation of kcm5_joystick to Norwegian Bokmål
+#
+# Axel Bojer <fri_programvare@bojer.no>, 2005.
+# Nils Kristian Tomren <slx@nilsk.net>, 2005, 2007.
+# Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2007.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2008, 2009, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: joystick\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2013-10-27 18:03+0100\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Bjørn Steensrud"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bjornst@skogkatt.homelinux.org"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "Oppstartsinnstilling"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "Neste"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "Vent litt mens presisjonen beregnes"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(vanligvis X)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(vanligvis Y)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Justeringsprosessen skal til å undersøke omfanget av signal fra enheten."
+"<br /><br />Flytt <b>akse %1 %2</b> på enheten til <b>minste</b> posisjon."
+"<br /><br /> Trykk en knapp på enheten eller velg «Neste» for å fortsette "
+"med neste steg.</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Justeringsprosessen skal til å undersøke omfanget av signaler fra "
+"enheten.<br /><br />Flytt <b>akse %1 %2</b> på enheten til <b>midtre</b> "
+"posisjon.<br /><br />Trykk en knapp på enheten eller velg «Neste» for å "
+"fortsette med neste steg.</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>Justeringsprosessen skal til å undersøke omfanget av signaler fra "
+"enheten.<br /><br />Flytt <b>akse %1 %2</b> på enheten til <b>høyeste</b> "
+"posisjon.<br /><br /> Trykk en knapp på enheten eller velg «Neste» for å "
+"fortsette med neste steg.</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "Kommunikasjonsfeil"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "Oppstartsinnstillinga er gjennomført med hell"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "Oppstartsinnstillinga ble vellykket"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "Verdi akse %1: %2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "Klarte ikke åpne den oppgitte enheten %1: %2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "Den oppgitte enheten %1 er ikke en styrespak."
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "Klarte ikke hente kjernedriverversjon for styrespakenheten %1: %2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"Den kjernedriveren som går nå (versjon %1.%2.%3) er ikke den som denne "
+"modulen ble kompilert for (%4.%5.%6)."
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "Klarte ikke finne antall knapper på styrespak-enheten %1: %2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "Klarte ikke finne antall akser på styrespak-enheten %1: %2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "Klarte ikke finne oppstartverdier for styrespak-enheten %1: %2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr ""
+"Klarte ikke tilbakestille oppstartverdiene for styrespak-enheten %1: %2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr ""
+"Klarte ikke finne oppstartverdiene for innstillinga av styrespak-"
+"enheten %1: %2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "Klarte ikke sette inn oppstartverdier for styrespak-enheten %1: %2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "intern feil – kode %1 ukjent"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "KDEs styremodul for styrespaker"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "KDE Systeminnstillingsmodul for å teste styrespaker"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "© 2004 Martin Koller"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>Styrespak</h1> Denne modulen hjelper til med å se etter at styrespaken "
+"virker riktig.<br />Hvis spaken gir feil verdier for aksene kan du forsøke å "
+"rette dette med oppstartsinnstillingene.<br />Modulen forsøker å finne alle "
+"tilgjengelige styrespakenheter ved å undersøke /dev/js[0-4] og /dev/input/"
+"js[0-4]<br />Hvis du har en annen enhetsfil kan du oppgi den i "
+"kombinasjonsboksen.<br />Lista «Knapper» viser tilstanden for alle knapper "
+"på styrespaken, og lista «akser» viser gjeldende verdi for alle akser. <br /"
+"> MERK: Enhetsdriveren for Linux (kjerne 2.4, 2.6) kan automatisk bare finne "
+"<ul><li> styrespak med 2 akser, 4 knapper</li><li> styrespak med 3 akser, 4 "
+"knapper</li><li> styrespak med 4 akser, 4 knapper</li><li>Saitek Cyborg "
+"digitale styrespaker</li></ul> (Mer detaljer finner du i kildekoden for "
+"Linux: Documentation/input/joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "Enhet:"
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "Posisjon:"
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "Vis spor"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "TRYKKET"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "Knapper:"
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "Tilstand"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "Akser:"
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "Verdi"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "Oppstartsinnstilling"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"Ingen styrespak-enhet ble oppdaget automatisk på denne maskina.<br />Det ble "
+"lett i /dev/js[0-4] og /dev/input/js[0-4].<br />Dersom du vet at en spak er "
+"tilkoblet, kan du prøve å oppgi rett enhetsfil."
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"Det oppgitte enhetsnavnet er ikke gyldig (inneholder ikke /dev).\n"
+"Velg enhet fra lista eller oppgi en enhetsfil\n"
+"slik som /dev/js0."
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "Ukjent enhet"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "Enhetsfeil"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>Oppstartsinnstillinga skal til å undersøke presisjonen.<br /><br /"
+"><b>Sett alle akser i senterstilling og rør deretter ikke på styrespaken.</"
+"b><br /><br />Trykk OK for å starte oppstartsinnstillinga </qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "Alle oppstartverdiene for styrespak-enhet %1 er tilbakestilt."

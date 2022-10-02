@@ -1,0 +1,288 @@
+# translation of kcmsmserver.po to Spanish
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Jaime Robles <jaime@kde.org>, 2003, 2008.
+# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
+# Pablo de Vicente <p.devicente@wanadoo.es>, 2004.
+# Jaime Robles <jaime@robles.nu>, 2005.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2012, 2019, 2020, 2021, 2022.
+# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-03-22 20:34+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"com>\n"
+"First-Translator: Pablo de Vicente <pvicentea@nexo.es>\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Gestor de sesiones</h1> Aquí puede configurar el gestor de sesiones, "
+"incluyendo opciones como si al cerrar sesión (terminar) se debe solicitar "
+"confirmación, si se debe restaurar la sesión previa al acceder a la cuenta y "
+"si, por omisión, el equipo debe apagarse automáticamente tras cerrar la "
+"sesión."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+"No se ha podido solicitar el reinicio para la configuración del firmware: %1"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"La próxima vez que reinicie el equipo, entrará en la pantalla de "
+"configuración de UEFI."
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"La próxima vez que reinicie el equipo, entrará en la pantalla de "
+"configuración del firmware."
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgid "Restart Now"
+msgstr "Reiniciar ahora"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "General:"
+msgstr "General:"
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Confirmar cierre de sesión"
+
+#: package/contents/ui/main.qml:48
+#, kde-format
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Ofrecer opciones de apagado"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Default leave option:"
+msgstr "Opción de salida por omisión:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Terminar la sesión actual"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "Reiniciar el equipo"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "Apagar el equipo"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr "Al iniciar sesión:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Restaurar la última sesión"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Restaurar la última sesión guardada manualmente"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Comenzar con una sesión vacía"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr "No restaurar estas aplicaciones:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Puede añadir una lista de aplicaciones separadas por comas que no se "
+"guardarán en las sesiones y que no serán iniciadas cuando se restaure la "
+"sesión. Por ejemplo «xterm,xconsole»."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr "Entrar en la configuración del firmware en el siguiente reinicio"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Confirmar terminar"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Offer shutdown options"
+msgstr "Ofrecer opciones de apagado"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, kde-format
+msgid "Default leave option"
+msgstr "Opción de salida por omisión"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "On login"
+msgstr "Al iniciar sesión"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Aplicaciones a excluir de la sesión"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eloy Cuadra"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ecuadra@eloihr.net"
+
+#~ msgid "Desktop Session"
+#~ msgstr "Sesión de escritorio"
+
+#~ msgid "Desktop Session Login and Logout"
+#~ msgstr "Inicio y fin de sesión de escritorio"
+
+#~ msgid "Copyright © 2000–2020 Desktop Session team"
+#~ msgstr "Copyright © 2000–2020 el equipo de Sesión de escritorio"
+
+#~ msgid "Oswald Buddenhagen"
+#~ msgstr "Oswald Buddenhagen"
+
+#~ msgid "Carl Schwan"
+#~ msgstr "Carl Schwan"
+
+#~ msgid "Restore previous saved session"
+#~ msgstr "Restaurar la última sesión guardada"
+
+#~ msgid "UEFI Setup"
+#~ msgstr "Configuración de UEFI"
+
+#~ msgid "Enter UEFI setup on next restart"
+#~ msgstr "Entrar en la configuración de UEFI durante el próximo reinicio"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Seleccione esta opción si desea que el gestor de sesiones muestre un "
+#~ "cuadro de diálogo solicitando confirmación para cerrar la sesión."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Conf&irmar terminar"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "O&frecer opciones de apagado"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Aquí puede elegir lo que debería ocurrir por omisión cuando termine. Esto "
+#~ "solo tiene sentido, si accede a través de KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Opción de salida por omisión"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Restaurar sesión anterior:</b> Guarda todas las aplicaciones al "
+#~ "salir y las restaura en el próximo inicio.</li>\n"
+#~ "<li><b>Restaurar sesión guardada manualmente: </b> Le permite que la "
+#~ "sesión sea guardada en cualquier momento vía «Guardar sesión» en el menú "
+#~ "K. Esto significa que las aplicaciones en ejecución en ese momento "
+#~ "reaparecerán en el próximo inicio.</li>\n"
+#~ "<li><b>Iniciar con una sesión vacía:</b> No guarda nada. Arrancará con un "
+#~ "escritorio vacío en el siguiente inicio.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Al iniciar sesión"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Aplicaciones a e&xcluir de las sesiones:"
+
+#~ msgid "Firmware Setup"
+#~ msgstr "Configuración del firmware"
+
+#~ msgid ""
+#~ "When the computer is restarted the next time, enter firmware setup screen "
+#~ "(e.g. UEFI or BIOS setup)"
+#~ msgstr ""
+#~ "Cuando reinicie el equipo la próxima vez, entrar en la pantalla de "
+#~ "configuración del firmware (configuración de UEFI o de BIOS)"

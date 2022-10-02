@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Керування сеансами</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22 березня 2022 року</date>
+<releaseinfo
+>Плазма 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>сеанс</keyword>
+<keyword
+>Системні параметри</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Сеанс стільниці</title>
+
+<sect2 id="sessions-use">
+<title
+>Користування</title>
+
+<para
+>За допомогою цього модуля Системних параметрів ви можете налаштувати менеджер сеансів Плазми та параметрів виходу з середовища.</para>
+
+<para
+>Поняття «керування сеансами» стосується здатності Плазми зберігати стан програм і вікно під час вашого виходу з Плазми і відновлювати ці параметри, коли ви знову входите до стільничного середовища.</para>
+
+<sect3 id="sessions-general">
+<title
+>Загальне</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Підтверджувати вихід</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, під час виходу з середовища Плазми показуватиме діалогове вікно з запитом на підтвердження виходу та типовим часом очікування у 30 секунд. У цьому діалоговому вікні ви також зможете обрати, чи бажаєте ви відновити поточний сеанс під час наступного входу до середовища.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Інші варіанти виходу з системи</guilabel
+></term>
+<listitem>
+<para
+>Якщо позначено цей пункт, Плазма пропонуватиме вам обрати один з варіантів дій під час виходу. Серед цих варіантів просте закриття поточного сеансу (дія, яку буде виконано, якщо цей пункт не позначено), вимикання комп’ютера і перезапуск системи на комп’ютері.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Типовий варіант виходу з системи</title>
+<para
+>Ви можете визначити типові дії, які буде виконано під час вашого виходу з Плазми. Не всі з варіантів можна обрати на будь-якій системі, ви не зможете побачити деякі з них до того часу, доки не визначите типовим інструментом для входження до системи <application
+>SDDM</application
+>.</para>
+<para
+>Призначення пунктів цього розділу самоочевидне, якщо ви не певні, краще не чіпайте типовий значень. Отже, серед пунктів розділу ви побачите:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Завершити поточний сеанс</guilabel
+> (типове значення)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Вимкнути комп'ютер</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Перезавантажити комп’ютер</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>При вході</title>
+<para
+>Ви можете обрати один з трьох варіантів дій, які буде виконано під час вашого входження до Плазми:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Відновлювати попередній сеанс</guilabel
+></term>
+<listitem
+><para
+>Якщо ви оберете цей варіант, Плазма зберігатиме ваш поточний сеанс, коли ви виходитимете з системи. Плазма відновить цей сеанс під час наступного входу до середовища, отже, ви зможете продовжити роботу зі стільницею, стан якої залишиться незмінним з часу вашого виходу.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Відновлювати попередній збережений вручну сеанс</guilabel
+></term>
+<listitem
+><para
+>Замість відновлення у Плазмі стану, у якому середовище знаходилося, коли ви востаннє з нього вийшли, буде відновлено стан, який було збережено вами вручну.</para>
+<para
+>Якщо буде позначено цей пункт, у меню програм з’явиться ще один пункт:<menuchoice
+><guimenu
+>Живлення / Сеанс</guimenu
+><guimenuitem
+>Зберегти сеанс</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Запускати з порожнім сеансом</guilabel
+></term>
+<listitem>
+<para
+>Якщо ви виберете цей варіант, Плазма ніколи не відновлюватиме сеансів, які було раніше збережено.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Нарешті, ви можете ввести список відокремлених двокрапками (<literal
+>:</literal
+>) або комами (<literal
+>,</literal
+>) програм, які не слід зберігати у сеансах, і тому не слід запускати під час відновлення сеансів. Наприклад, <userinput
+>xterm:konsole</userinput
+> або <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

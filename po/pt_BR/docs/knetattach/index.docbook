@@ -1,0 +1,400 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manual do &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>O &knetattach; é um assistente que facilita a integração dos seus recursos de rede com o seu ambiente de trabalho do &kde;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Pastas de Rede</keyword>
+<keyword
+>Assistente de Pastas de Rede</keyword>
+<keyword
+>Assistente de Pastas de Rede do KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+
+<para
+>O assistente &knetattach;, que se chamará a partir de agora como Assistente de Pastas de Rede, permite uma adição e integração simples das várias pastas de rede a sua área de trabalho do &kde;. Comunique por favor quaisquer problemas ou pedidos de recursos para ele no site de erros do &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Usando o &knetattach;</title>
+
+<para
+>Como irá ver na imagem abaixo, o Assistente de Pastas de Rede permite-lhe atualmente adicionar quatro tipos de pastas da rede: WebDav, &FTP;, unidades de rede do &Microsoft; &Windows; (Samba) e SSH. Adicionalmente, você pode selecionar uma conexão recente a partir da lista. <screenshot>
+<screeninfo
+>Aqui está uma imagem do &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+<caption>
+<para
+>A janela principal do Assistente de Pastas de Rede</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Adicionando pastas de rede</title>
+
+<para
+>As pastas de rede aparecem num local especial do &konqueror; e do &dolphin;, chamado de <emphasis
+>pasta virtual</emphasis
+>. Esta pasta é acessada digitando <userinput
+>remote:/</userinput
+> na barra de localização ou selecionando <guilabel
+>Rede</guilabel
+> a partir do painel <guilabel
+>Locais</guilabel
+>. Você poderá então ver as pastas que tiver adicionado previamente e será capaz também de usar o assistente para adicionar novas. <screenshot>
+<screeninfo
+>Aqui está uma imagem do &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+<caption>
+<para
+>A pasta virtual com o assistente da Pasta de Rede</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Falando em assistente, o Assistente de Pastas de Rede pretende ser bastante simples de usar. Depois de abrir o assistente, você deverá escolher o tipo de pasta de rede a que deseja acessar. Quando passar para a próxima tela, só terá que preencher as informações solicitadas. O passo final é inserir o seu nome de usuário e senha para o compartilhamento de rede que deseja acessar. </para>
+<para
+>Abaixo encontra-se uma lista, com as informações que o assistente precisa para criar as pastas de rede. Se uma opção não estiver disponível para uma determinada pasta, ela não precisa ser fornecida. As pastas de rede de Samba &eg; não necessitam de um item <guilabel
+>Porta</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nome:</guilabel
+></term>
+<listitem>
+<para
+>Aqui é onde você poderá fornecer um nome para a conexão de rede. Só está limitado pela sua imaginação (ou alfabeto). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Usuário:</guilabel
+></term>
+<listitem>
+<para
+>Este é o nome de usuário que será usado para estabelecer a conexão. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Servidor:</guilabel
+></term>
+<listitem>
+<para
+>Este é o endereço do servidor que está tentando adicionar. Isto poderá ser um endereço IP ou nome de domínio. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Porta:</guilabel
+></term>
+<listitem>
+<para
+>Aqui você indica o número de porta a qual deseja conectar-se. Os valores padrão são normalmente adequados. <note
+> <para
+>Não está disponível para as pastas do &Microsoft; &Windows; (Samba). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pasta:</guilabel
+></term>
+<listitem>
+<para
+>A localização da pasta de rede a qual deseja conectar-se deverá ser inserida aqui. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Codificação:</guilabel
+></term>
+<listitem>
+<para
+>Use os itens na lista para selecionar a codificação para as conexões &FTP; e ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Criar um ícone para esta pasta remota</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, será criado um ícone que permite o acesso através da pasta virtual remote:/. Se não estiver assinalada, será permitida uma conexão, mas não estará acessível a partir do remote:/. <note
+> <para
+>A opção <guilabel
+>Conexão recente:</guilabel
+> permite-lhe conectar-se novamente ao último ponto de montagem de rede a que se conectou através do assistente, quer tenha sido criado um ícone quer não. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Usar criptografia</guilabel
+></term>
+<listitem>
+<para
+>Se estiver assinalado, ficará ativa a possibilidade de usar uma conexão segura. <note
+> <para
+>Só está disponível para as pastas de WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Viagem pelo &knetattach;</title>
+
+
+<para
+>Esta será uma viagem rápida pelo Assistente de Pastas de Rede. Não se distraia, senão poderá perder o fio da meada. </para>
+
+<para
+>Abaixo, você poderá ver a janela principal do Assistente de Pastas de Rede. É aqui que nós escolhemos o tipo de pasta que desejamos adicionar ou conectar-nos. Para esta viagem, será usado o &FTP;. Ele contém a maioria das opções que irá encontrar ao usar o assistente. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aqui está uma imagem da janela principal do &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Correto, nós optamos então por adicionar uma pasta de &FTP;. Abaixo, você poderá ver um exemplo do tipo de informação que irá necessitar para adicionar para o seu servidor de &FTP; em particular. Depois de preencher os dados, pressione <guibutton
+>Salvar &amp; Conectar</guibutton
+> e espere pela magia. Ah sim, se o seu servidor necessitar de algum tipo de validação, é aqui que ela será pedida, antes da conexão ser permitida. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Imagem que mostra a adição da pasta de &FTP; usando o &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Bom, agora nós estamos todos conectados e aptos a navegar em nosso compartilhamento recém adicionado. Divirta-se! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Imagem da pasta de &FTP; conectada</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Para voltar às pastas de rede, tudo o que é necessário é digitar <action
+>remote:/</action
+> na barra de localização do &konqueror; ou &dolphin; ou selecionar <guilabel
+>Rede</guilabel
+> no painel <guilabel
+>Locais</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Imagem da pasta virtual 'remote:/' com a conexão adicionada</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Imagem</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Você poderá até adicionar novas pastas na mesma localização se usar a opção <guilabel
+>Adicionar uma Pasta de Rede</guilabel
+>. Bem, chegamos ao fim da nossa viagem (bem que se disse que seria rápido). Eu lhe desejo sorte nas suas aventuras com suas próprias pastas de rede ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e licença</title>
+
+<para
+>&knetattach; </para>
+<para
+>Direitos autorais do programa 2004 de &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Direitos autorais da documentação &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Tradução de Marcus Gama <email
+>marcus.gama@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

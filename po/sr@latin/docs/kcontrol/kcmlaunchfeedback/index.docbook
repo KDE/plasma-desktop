@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian-Latin "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Odziv pokretanja</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Lori</firstname
+> <surname
+>Vots</surname
+></personname
+> &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9. 4. 2015.</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+</articleinfo>
+
+<para
+>Nekada je ohrabrujuće znati da računar nije naprosto ignorisao vašu naredbu, već da se nešto dešava iz kulisa. U ovom modulu možete podesiti vizuelni odziv koji će vam pomoći da se uverite da ste zaista pogodili tu i tu ikonicu.</para>
+	
+<para
+>Tradicionalni način ukazivanja da je računar zauzet jeste izmenom pokazivača, što možete uključiti odabirom <guilabel
+>Zauzet pokazivač</guilabel
+>.</para>
+
+<para
+>Kada je ova opcija uključena, pokazivaču će se nakratko pridružiti ikonica pri pokretanju novog programa. Brojčanikom <guilabel
+>Prekovreme odziva na pokretanju:</guilabel
+> možete podesiti koliko se dugo ikonica prikazuje pokraj pokazivača. Podrazumevano je 5 sekundi.</para>
+
+<para
+>Raspoloživo je nekoliko varijanti zauzetog pokazivača: <guilabel
+>Trepćući pokazivač</guilabel
+>, <guilabel
+>Skakutajući pokazivač</guilabel
+>, ili <guilabel
+>Pasivni zauzeti pokazivač</guilabel
+> za ikonicu bez animacije.</para>
+
+<para
+>U KDE‑u, obaveštenje o pokretanju tradicionalno ima jedan drugi oblik, kojim takođe možete ovde upravljati. Normalno, tek pokrenuti program odmah na traci zadataka dobija stavku kojoj je ikonica zamenjena vrtećim peščanikom, čime vam se stavlja na znanje da se nešto događa. Kućicom <guilabel
+>Uključi obaveštenje u traci zadataka</guilabel
+> možete uključiti ili isključiti ovo ponašanje. Ako ga uključite, možete zadati trajanje brojčanikom <guilabel
+>Prekovreme odziva na pokretanju:</guilabel
+>.</para>
+
+<para
+>Neće svi programi koje pokrenete najzad prikazati prozor ili stavku na traci zadataka. Neki od njih, na primer, usidre se u sistemsku kasetu KDE‑a. Dalje, može biti da je program poslat na drugu virtuelnu površ, a da je pritom u <ulink url="help:/plasma-desktop/panel.html"
+>postavkama menadžera zadataka</ulink
+> u sekciji <guilabel
+>Filteri</guilabel
+> popunjena kućica <guilabel
+>Samo zadaci na trenutnoj površi</guilabel
+>. Zadavanje prekovremena obezbeđuje da čak i u ovim slučajevima dobijate odziv pri pokretanju, a takođe i da nestane pošto se pokretanje dovrši.</para>
+
+</article>

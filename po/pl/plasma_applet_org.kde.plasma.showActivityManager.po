@@ -1,0 +1,76 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2014, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-20 00:47+0000\n"
+"PO-Revision-Date: 2022-07-31 09:17+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: package/contents/ui/ConfigAppearance.qml:24
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigAppearance.qml:26
+#, kde-format
+msgid "Show the current activity icon"
+msgstr "Pokaż ikonę bieżącej aktywności"
+
+#: package/contents/ui/ConfigAppearance.qml:32
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr "Pokaż ikonę ogólnej aktywności"
+
+#: package/contents/ui/ConfigAppearance.qml:42
+#, kde-format
+msgid "Title:"
+msgstr "Nazwa:"
+
+#: package/contents/ui/ConfigAppearance.qml:44
+#, kde-format
+msgid "Show the current activity name"
+msgstr "Pokaż nazwę bieżącej aktywności"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr "Bieżąca aktywność to %1"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "Pokaż zarządzanie aktywnościami"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "Naciśnij, aby pokazać program do zarządzania aktywnościami"
+
+#~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
+#~ msgstr ""
+#~ "Kliknij lub naciśnij metaprzycisk i 'Q', aby pokazać menadżera działań"
+
+#~ msgid ""
+#~ "Click or press the associated keyboard shortcut (%1) to show the activity "
+#~ "manager"
+#~ msgstr ""
+#~ "Kliknij lub naciśnij skojarzony skrót klawiaturowy (%1), aby pokazać "
+#~ "menadżera działań"

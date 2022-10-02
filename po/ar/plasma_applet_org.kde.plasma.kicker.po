@@ -1,0 +1,441 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٥, ٢٠١٦, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-06-26 21:21+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "عامّ"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "أزل من المفضّلة"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "أضف إلى المفضّلة"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "في كلّ الأنشطة"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "في النّشاط الحاليّ"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "أظهر في المفضّلة"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "الأيقونة:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "اختر..."
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "امسح الأيقونة"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "أظهر التّطبيقات ك‍:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "الاسم فقط"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "الوصف فقط"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "الاسم (الوصف)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "الوصف (الاسم)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "السّلوك:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "افرز أبجديًّا"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "سطّح القوائم الفرعية إلى مستوًى واحد"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "أظهر الأيقونات في المستوى الجذري للقائمة"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "اعرض الفئات:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "آخر التّطبيقات"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "التّطبيقات المستخدمة كثيرا"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "الملفات الحديثة"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "الملفات المستخدمة كثيرا"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "آخر المتراسلون"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "المتراسلين المستخدمين كثيرا"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "افرز العناصر في فئات بواسطة:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "المستخدمة حديثًا"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "كثيرا ما تستخدم"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "ابحث:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "وسّع البحث إلى العلامات، والملفّات والبُرد الإلكترونيّة"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "حاذِ نتائج البحث إلى الأسفل"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "نتائج البحث عن '%1'"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "اكتب لتبحث…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "المفضّلة"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "الودجات"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "التّطبيقات والمستندات"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "حرّر التّطبيقات..."
+
+#~ msgid "Search…"
+#~ msgstr "ابحث..."
+
+#~ msgid "Search..."
+#~ msgstr "ابحث عن..."
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "آخر المستندات"
+
+#~ msgid "Open with:"
+#~ msgstr "افتح ب‍:"
+
+#~ msgid "Properties"
+#~ msgstr "خصائص"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "أضف إلى سطح المكتب"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "أضف إلى اللوحة (ودجة)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "ثبّت في مدير المهامّ"
+
+#~ msgid "Recent Documents"
+#~ msgstr "آخر المستندات"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "انسَ آخر المستندات"
+
+#~ msgid "Edit Application..."
+#~ msgstr "حرّر التّطبيق..."
+
+#~ msgid "Hide Application"
+#~ msgstr "أخفِ التّطبيق"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "التّطبيقات"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "أظهر التّطبيقات في هذه القائمة الفرعيّة"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "أظهر التّطبيقات في '%1'"
+
+#~ msgid "Computer"
+#~ msgstr "الحاسوب"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "أظهر معلومات المتراسل..."
+
+#~ msgid "Contacts"
+#~ msgstr "المتراسلون"
+
+#~ msgid "Forget Contact"
+#~ msgstr "انسَ المتراسل"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "انسَ كلّ المتراسلين"
+
+#~ msgid "Recently Used"
+#~ msgstr "المستخدمة حديثًا"
+
+#~ msgid "Documents"
+#~ msgstr "المستندات"
+
+#~ msgid "Forget Application"
+#~ msgstr "انسَ التّطبيق"
+
+#~ msgid "Forget Document"
+#~ msgstr "انسَ المستند"
+
+#~ msgid "Forget All"
+#~ msgstr "انسَ الكلّ"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "انسَ كلّ التّطبيقات"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "انسَ كلّ المستندات"
+
+#~ msgid "Hide %1"
+#~ msgstr "أخفِ %1"
+
+#~ msgid "All Applications"
+#~ msgstr "كلّ التّطبيقات"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "آخر المتراسلون"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "آخر المستندات"
+
+#~ msgid "Recent Applications"
+#~ msgstr "آخر التّطبيقات"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "آخر التّطبيقات"
+
+#~ msgid "Power / Session"
+#~ msgstr "الطّاقة/الجلسة"
+
+#~ msgid "Search results"
+#~ msgstr "نتائج البحث"
+
+#~ msgid "Lock"
+#~ msgstr "اقفل"
+
+#~ msgid "Save Session"
+#~ msgstr "احفظ الجلسة"
+
+#~ msgid "Switch User"
+#~ msgstr "بدّل المستخدم"
+
+#~ msgid "Hibernate"
+#~ msgstr "أسبت"
+
+#~ msgid "Restart"
+#~ msgstr "أعد التّشغيل"
+
+#~ msgid "Shut Down"
+#~ msgstr "أطفئ"
+
+#~ msgid "Session"
+#~ msgstr "الجلسة"
+
+#~ msgid "System"
+#~ msgstr "النّظام"
+
+#~ msgid "Lock screen"
+#~ msgstr "اقفل الشّاشة"
+
+#~ msgid "End session"
+#~ msgstr "أنهِ الجلسة"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "ابدأ جلسة موازية كمستخدم مختلف"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "علّق إلى الذّاكرة العشوائيّة"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "علّق إلى القرص"
+
+#~ msgid "Restart computer"
+#~ msgstr "أعد تشغيل الحاسوب"
+
+#~ msgid "Turn off computer"
+#~ msgstr "أطفئ الحاسوب"
+
+#~ msgid "System actions"
+#~ msgstr "إجراءات النّظام"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "أدر ’%1‘..."
+
+#~ msgid "Run Command..."
+#~ msgstr "شغّل أمرًا..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "شغّل أمرًا أو استعلام بحث"
+
+#~ msgid "Show recent applications"
+#~ msgstr "أظهر آخر التّطبيقات"
+
+#, fuzzy
+#~| msgid "Show recent applications"
+#~ msgid "Show often used applications"
+#~ msgstr "أظهر آخر التّطبيقات"
+
+#~ msgid "Show recent documents"
+#~ msgstr "أظهر آخر المستندات"
+
+#, fuzzy
+#~| msgid "Show recent documents"
+#~ msgid "Show often used documents"
+#~ msgstr "أظهر آخر المستندات"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "أظهر آخر المتراسلين"
+
+#~ msgid "Logout"
+#~ msgstr "اخرج"
+
+#~ msgid "Reboot"
+#~ msgstr "أعد الإقلاع"
+
+#~ msgid "Suspend"
+#~ msgstr "علّق"
+
+#~ msgid "Removable Storage"
+#~ msgstr "التّخزين المنفصل"
+
+#~ msgid "Places"
+#~ msgstr "الأماكن"
+
+#~ msgid "Use custom image:"
+#~ msgstr "استخدم صورة مخصّصة:"
+
+#~ msgid "Choose an image"
+#~ msgstr "اختر صورة"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "ملفات الصّور (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "أضف كمُطلق"
+
+#~ msgid "New Session"
+#~ msgstr "جلسة جديدة"
+
+#~ msgid "(Empty)"
+#~ msgstr "(فارغ)"

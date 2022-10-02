@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Мышь</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Ivan</firstname
+><surname
+>Petrov</surname
+><affiliation
+><address
+><email
+>pis00593@udmglzs.udmene.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>06 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Это документация к модулю настройки мыши и других манипуляторов в «Параметрах системы» от &kde;. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>мышь</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Этот модуль позволяет настроить устройство указания. Это может быть мышь, трэкбол или другое устройство выполняющее такие же функции.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Общие</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Мышь для левшей</guilabel
+></term>
+<listitem
+><para
+>Пользователи-левши могут поменять функции <mousebutton
+>левой</mousebutton
+> и <mousebutton
+>правой</mousebutton
+> кнопок устройства указания с помощью опции <guilabel
+>Для левшей</guilabel
+>. Если на устройстве указания больше двух кнопок, то эта опция влияет только на те, которые работают как <mousebutton
+>правая</mousebutton
+> и <mousebutton
+>левая</mousebutton
+> кнопки мыши. Например, если используется мышь с тремя кнопками, то эта опция не влияет на <mousebutton
+>среднюю</mousebutton
+> кнопку.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Воспринимать одновременное нажатие левой и правой кнопки на нажатие средней кнопки</guilabel
+></term>
+<listitem
+><para
+>Установите этот флажок в случае отсутствия средней кнопки мыши. Для эмуляции щелчка средней кнопкой мыши будет можно одновременно нажимать левую и правую кнопки мыши. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Скорость курсора</guilabel
+></term>
+<listitem
+><para
+>Этот параметр позволяет задать соотношение между расстоянием, которое проходит курсор на экране, и непосредственным перемещением самого устройства указания (это может быть мышь, трэкбол или другое устройство указания).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Режим ускорения</guilabel
+></term>
+<listitem
+><para
+><guilabel
+>Адаптивный</guilabel
+> режим используется по умолчанию для всех устройств и учитывает текущую скорость устройства при расчёте ускорения. <guilabel
+>Плоский</guilabel
+> режим подразумевает применение постоянного коэффициента ко всем устройствам независимо от скорости движения. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Прокрутка: Изменить направление прокрутки</guilabel
+></term>
+<listitem
+><para
+>Если этот параметр включён, колесо прокрутки (если оно есть) будет работать в противоположном направлении (если раньше вращение колеса вперёд приводило к перемещению вверх, то теперь это будет приводить к перемещению вниз). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>В &plasma; 5.13 параметры использования одинарного или двойного щелчка мышью для открытия файлов и папок расположены в модуле <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Основные параметры</ulink
+>. </para
+></note>
+
+</article>

@@ -1,0 +1,158 @@
+# translation of kcmlaunch.po to Français
+# translation of kcmlaunch.po to
+# Traduction de kcmlaunch en Français
+# Gérard Delafond <gerard@delafond.org>, 2002.
+# Gilles CAULIER <caulier.gilles@free.fr>, 2003.
+# Matthieu Robin <kde@macolu.org>, 2003.
+# aminesay <aminesay@yahoo.fr>, 2007.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Yoann Laissus <yoann.laissus@gmail.com>, 2018.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-05-28 08:42+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.04.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Délai maximal en secondes"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Témoin de démarrage"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Curseur :"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Aucun témoin de démarrage"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Statique"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Curseur clignotant"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Curseur rebondissant"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Gestionnaire de tâches :"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Activer l'animation"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Durée de l'animation :"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 seconde"
+msgstr[1] "%1 secondes"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Geoffray Levasseur, Matthieu Robin, Xavier Besnard"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "geoffray.levasseurbrandin@numericable.fr, kde@macolu.org, xavier."
+#~ "besnard@neuf.fr"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "Configurer le témoin de démarrage des applications"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Notification de lancement</h1> Vous pouvez configurer ici la "
+#~ "notification de lancement des applications."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Témoin du curseur</h1>\n"
+#~ "KDE propose un témoin lié au curseur pour notifier le démarrage des "
+#~ "applications.\n"
+#~ "Pour activer ce témoin, sélectionnez un des modes de retour "
+#~ "d'informations visuel \n"
+#~ "de la liste déroulante.\n"
+#~ "Il est possible que certaines applications ne sachent pas gérer cette "
+#~ "notification de\n"
+#~ "démarrage. Dans ce cas, le curseur cesse de clignoter après le temps\n"
+#~ "spécifié dans la section « Délai du témoin de démarrage »"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Aucun témoin du curseur"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Témoin du curseur passif"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "&Notification de la barre de tâches"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Notification de la barre de tâches</H1>\n"
+#~ "Vous pouvez activer une seconde méthode de notification de \n"
+#~ "démarrage utilisée par la barre des tâches. Celle-ci fait apparaître un "
+#~ "bouton avec un sablier\n"
+#~ "tournant, montrant que l'application que vous \n"
+#~ "avez lancée est en cours de démarrage.\n"
+#~ "Il est possible que certaines applications ne sachent pas gérer\n"
+#~ "cette notification de démarrage. Dans ce cas, le bouton disparaît\n"
+#~ "après le délai spécifié dans la section « Délai du témoin de démarrage » "
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Délai d&u témoin de démarrage :"

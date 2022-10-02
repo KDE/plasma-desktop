@@ -1,0 +1,390 @@
+# Irish translation of kcmcomponentchooser
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmcomponentchooser package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/kcmcomponentchooser.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "Úsáid cliant ríomhphoist &eile:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "Roghnaigh an cliant ríomhphoist is ansa leat:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "Roghnaigh an cliant ríomhphoist is ansa leat:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "Roghnaigh an feidhmchlár teirminéil is ansa leat:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "Roghnaigh an feidhmchlár teirminéil is ansa leat:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Roghnaigh an feidhmchlár teirminéil is ansa leat:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "Anaithnid"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Roghnóir Comhpháirte"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "© 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Roghnaigh ón liosta thíos cé acu comhpháirt ba chóir a úsáid le haghaidh "
+#~ "seirbhís %1 de réir réamhshocraithe."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>D'athraigh tú an chomhpháirt réamhshocraithe do rogha; an bhfuil fonn "
+#~ "ort an t-athrú sin a shábháil anois ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Níl cur síos ar fáil"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Anseo is féidir leat an chomhpháirt a athrú.  Is éard atá i gcomhpháirt "
+#~ "ná ríomhchlár a láimhseálann tasc bunúsach, mar shampla an t-aithriseoir "
+#~ "teirminéil, an t-eagarthóir téacs agus an cliant ríomhphoist. Uaireanta "
+#~ "is gá d'fheidhmchláir éagsúla KDE aithriseoir teirminéil a úsáid, "
+#~ "ríomhphost a sheoladh, nó roinnt téacs a thaispeáint. Chun na tascanna "
+#~ "seo a dhéanamh ar bhealach comhsheasmhach, úsáideann na feidhmchláir seo "
+#~ "na comhpháirteanna céanna i gcónaí.  Anseo is féidir leat na "
+#~ "comhpháirteanna seo a roghnú."
+
+#~ msgid "Default Component"
+#~ msgstr "Comhpháirt Réamhshocraithe"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Taispeánann an liosta seo na comhpháirteanna is féidir a chumrú. "
+#~ "Cliceáil an chomhpháirt is mian leat a chumrú.</p>\n"
+#~ "<p>Sa dialóg seo is féidir leat na comhpháirteanna réamhshocraithe a "
+#~ "athrú.  Is éard atá i gcomhpháirt ná ríomhchlár a láimhseálann tasc "
+#~ "bunúsach, mar shampla an t-aithriseoir teirminéil, an t-eagarthóir téacs "
+#~ "agus an cliant ríomhphoist. Uaireanta is gá d'fheidhmchláir éagsúla KDE "
+#~ "aithriseoir teirminéil a úsáid, ríomhphost a sheoladh, nó roinnt téacs a "
+#~ "thaispeáint. Chun na tascanna seo a dhéanamh ar bhealach comhsheasmhach, "
+#~ "úsáideann na feidhmchláir seo na comhpháirteanna céanna i gcónaí.  Anseo "
+#~ "is féidir leat na comhpháirteanna seo a roghnú.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Oscail URLanna <b>http</b> agus <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "i bhfeidhmchlár de réir an URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "sa bhrabhsálaí seo a leanas:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "sa bhrabhsálaí seo a leanas:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Roghnaigh an brabhsálaí Gréasáin is ansa leat:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Is é KMail an cliant caighdeánach ríomhphoist le haghaidh KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "Ú&sáid KMail mar an cliant ríomhphoist de rogha"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Roghnaigh an rogha seo más mian leat aon chlár eile a úsáid le haghaidh "
+#~ "ríomhphoist."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Seoladh an fhaighteora</li> <li>%s: Ábhar</li> <li>%c: Cóip "
+#~ "Charbóin (CC)</li> <li>%b: Cóip Cheilte (BCC)</li> <li>%B: Téacs an "
+#~ "teimpléid</li> <li>%A: Iatán </li> <li>%u: URL mailto: iomlán </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Brúigh an cnaipe seo chun an cliant ríomhphoist is ansa leat a roghnú. Ní "
+#~ "mór duit clár inrite a roghnú, nó ní ghlacfar leis.<br/> Is féidir roinnt "
+#~ "ionadchoinneálaithe a úsáid, agus cuirfear na luachanna ina n-ionad nuair "
+#~ "a ghlaofar an cliant ríomhphoist:<ul> <li>%t: Seoladh an fhaighteora</li> "
+#~ "<li>%s: Ábhar</li> <li>%c: Cóip Chuig (CC)</li> <li>%b: (BCC)</li> <li>"
+#~ "%B: Corp teimpléid</li> <li>%A: Iatán </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Cliceáil anseo chun brabhsáil agus clár ríomhphoist a aimsiú."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Leis an rogha seo, rithfear an cliant roghnaithe ríomhphoist i "
+#~ "dteirminéal (m.sh. <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Rith i dteirminéal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Brabhsáil comhadlanna leis an mbainisteoir comhad seo a leanas:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Eile: cliceáil Cuir Leis... sa dialóg anseo:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "Ú&sáid Konsole mar fheidhmchlár teirminéil"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Úsáid clár &teirminéil eile:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Brúigh an cnaipe seo chun an cliant teirminéil is ansa leat a roghnú. Ní "
+#~ "mór duit clár inrite a roghnú, nó ní ghlacfar leis.<br/> Tabhair faoi "
+#~ "deara freisin go bhfuil seans nach n-oibreoidh ríomhchláir áirithe a "
+#~ "úsáideann aithriseoir teirminéil má chuireann tú argóintí ar líne na n-"
+#~ "orduithe (mar shampla: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Cliceáil anseo chun brabhsáil agus clár teirminéil a aimsiú."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 soicind fágtha:"
+#~ msgstr[1] "%1 shoicind fágtha:"
+#~ msgstr[2] "%1 shoicind fágtha:"
+#~ msgstr[3] "%1 soicind fágtha:"
+#~ msgstr[4] "%1 soicind fágtha:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Úsáidfear an bainisteoir nua fuinneog nuair a thosóidh tú KDE an chéad "
+#~ "uair eile."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Athraíodh an Bainisteoir Fuinneog"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Tá bainisteoir fuinneog nua ag rith.\n"
+#~ "Moltar duit fós an seisiún KDE seo a atosú sa chaoi go mbeidh tú cinnte "
+#~ "go n-aithníonn gach uile fheidhmchlár an t-athrú seo."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Ionadaíodh an Bainisteoir Fuinneog"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Cuireadh an bainisteoir fuinneog cumraithe in ionad an chinn atá ag rith "
+#~ "faoi láthair."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Athrú Bainisteora Fuinneog"
+
+#~ msgid "&Accept Change"
+#~ msgstr "Gl&ac leis an Athrú"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Fill ar na socruithe roimhe seo"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Tá an bainisteoir fuinneog cumraithe á thosú.\n"
+#~ "Bí cinnte go bhfuil sé tosaithe mar is ceart agus deimhnigh an t-athrú.\n"
+#~ "Cealaigh an tosú go huathoibríoch i gceann 20 soicind."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Cuireadh an bainisteoir fuinneog réamhshocraithe KDE (KWin) ar siúl arís."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Níor tosaíodh an bainisteoir fuinneog nua mar is ceart.\n"
+#~ "Cuireadh an bainisteoir fuinneog réamhshocraithe KDE (KWin) ar siúl arís."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Theip ar an uirlis chumraíochta"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "Ú&sáid an bainisteoir fuinneog réamhshocraithe de chuid KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Úsáid &bainisteoir fuinneog eile:"
+
+#~ msgid "Configure"
+#~ msgstr "Cumraigh"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Nóta: Tá a socruithe féin ag formhór na mbainisteoirí fuinneog agus ní "
+#~ "úsáideann siad na socruithe KDE."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Anseo is féidir leat cur síos beag ar an gcomhpháirt reatha a léamh. Chun "
+#~ "an chomhpháirt roghnaithe a athrú, cliceáil ar an liosta ar chlé. Chun an "
+#~ "chomhpháirt a athrú, roghnaigh é thíos."
+
+#~ msgid "Component Description"
+#~ msgstr "Cur Síos na Comhpháirte"

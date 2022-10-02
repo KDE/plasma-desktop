@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Data &amp; Hora</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+><surname
+>Sztoltz</surname
+><affiliation
+><address
+><email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>05/12/2013</date>
+<releaseinfo
+>4.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>relógio</keyword>
+<keyword
+>Data</keyword>
+<keyword
+>Hora</keyword>
+<keyword
+>configurar</keyword>
+<keyword
+>configurar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Data &amp; Hora</title>
+
+<para
+>Você pode usar este módulo para alterar a data e hora do sistema, usando uma interface gráfica conveniente.</para>
+
+<note
+><para
+>Como estas configurações não afetam somente você como usuário, mas todo o sistema, você deve ter acesso de administrador do sistema (<systemitem class="username"
+>root</systemitem
+>) para modificar a data e hora do sistema. Se você não possuir este nível de acesso, este módulo mostrará somente as configurações atuais, mas suas alterações não poderão ser salvas.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Data e hora</title>
+
+<para
+>Se você assinalar a opção <guilabel
+>Ajustar a data e hora automaticamente</guilabel
+>, você poderá selecionar um <guilabel
+>Servidor de hora</guilabel
+> na lista e todas as outras configurações nesta janela serão desativadas.</para>
+
+<note>
+<para
+>Os aplicativos <command
+>rdate</command
+> ou <command
+>ntpdate</command
+> são usados neste módulo para obter a data e a hora a partir de um servidor de tempo. Isto acontece quando você se autentica no &kde; estando online ou quando você se conecta mais tarde à Internet e o acesso aos servidores de tempo se torna possível.</para
+> 
+<para
+>Ambos os aplicativos são simplesmente clientes <acronym
+>NTP</acronym
+> que fazem com que o horário do sistema corresponda ao horário obtido ao se comunicar com um ou mais servidores de <acronym
+>NTP</acronym
+>. No entanto, isto não é suficiente para manter a hora precisa durante uma longa execução. Isto é útil para configurar ocasionalmente a hora em máquinas que não possuem acesso permanente à redes, como laptops.</para>
+</note>
+
+<para
+>Se você não usar um servidor de hora, você poderá ajustar a data manualmente usando a metade inferior da página. Basta escolher um mês e ano usando os controles acima do calendário e o dia do mês clicando no respectivo dia no calendário.</para>
+<para
+>Use os controles no fundo do calendário para selecionar a data atual, inserir a data no campo de texto ou selecionar a semana do ano a partir da lista.</para>
+
+<para
+>Você ajusta a hora usando as caixas de contagem na base do relógio analógico. Você pode também digitar diretamente o valor.</para>
+<!--Outdated
+<note
+><para
+>The time is represented in 24 hour format.  If you want
+the system time to be set to 8:00 PM, you need to set the hour spinbox
+to <guilabel
+>20</guilabel
+> (8 + 12).  If you want the system time set
+to 8:00 AM, you should set the hour spinbox to
+<guilabel
+>8</guilabel
+>.</para
+></note>
+-->
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Fuso horário</title>
+<para
+>Para definir um novo fuso horário, basta selecionar a sua área na lista abaixo. Use o campo do filtro para procurar a <guilabel
+>Área</guilabel
+> ou <guilabel
+>Região</guilabel
+> desejada.</para>
+</sect2>
+
+</sect1>
+
+</article>

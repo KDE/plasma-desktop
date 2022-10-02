@@ -1,0 +1,334 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"PO-Revision-Date: 2022-09-27 18:12+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: plasmasearch/kcm.cpp:87
+#, kde-format
+msgid "Available Plugins"
+msgstr "Plugin Tersedia"
+
+#: plasmasearch/package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect)"
+msgstr ""
+"Fungsikan atau nonfungsikan plugin (yang digunakan di KRunner, Application "
+"Launcher, dan efek Overview)"
+
+#: plasmasearch/package/contents/ui/main.qml:49
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Konfigurasi KRunner..."
+
+#: plasmasearch/package/contents/ui/main.qml:53
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Dapatkan Plugin Baru..."
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr "Gagal menjalankan skrip di terminal <message>%1</message>"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "Eksekusi pemasangan berhasil, sekarang kamu boleh menutup jendela ini"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "Eksekusi pencopotan berhasil, sekarang kamu boleh menutup jendela ini"
+
+#: plugininstaller/main.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "Pemasangan plugin KRunner gagal"
+
+#: plugininstaller/main.cpp:43
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Perintah untuk mengeksekusi: pasang atau copot."
+
+#: plugininstaller/main.cpp:44
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Alur untuk arsip."
+
+#: plugininstaller/main.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Tidak ada dukungan PackageKit"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Konfirmasi Pemasangan"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Kamu akan memasang paket biner. Kamu seharusnya hanya memasang ini dari "
+"penulis/paket tepercaya."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Terima Resiko Dan Lanjutkan"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Tampilan File"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "Tipe mime %1 tidak didukung oleh backend pakcagekit"
+
+#: plugininstaller/ScriptConfirmationDialog.h:32
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini tidak menyediakan skrip pencopotan instalasi. Silahkan hubungi "
+"penulis. Kamu bisa mencoba copot instalasi plugin secara manual.<nl/>Jika "
+"kamu merasa tidak mampu atau tidak nyaman dengan ini, klik <interface>Batal</"
+"interface> sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini tidak menyediakan skrip pencopotan instalasi. Silahkan hubungi "
+"penulis. Kamu bisa mencoba copot instalasi plugin secara manual. Silakan "
+"lihat README untuk petunjuk dari penulis.<nl/>Jika kamu merasa tidak mampu "
+"atau tidak nyaman dengan ini, klik <interface>Batal</interface> sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:43
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini tidak menyediakan skrip pemasangan. Silahkan hubungi penulis. "
+"Kamu bisa mencoba pasang plugin secara manual.<nl/>Jika kamu merasa tidak "
+"mampu atau tidak nyaman dengan ini, klik <interface>Batal</interface> "
+"sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini tidak menyediakan skrip pemasangan. Silahkan hubungi penulis. "
+"Kamu bisa mencoba pasang plugin secara manual. Silakan lihat README untuk "
+"petunjuk dari penulis.<nl/>Jika kamu merasa tidak mampu atau tidak nyaman "
+"dengan ini, klik <interface>Batal</interface> sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:54
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini menggunakan skrip untuk pemasangan yang bisa mengakibatkan resiko "
+"keamanan. Silahkan teliti seluruh konten plugin sebelum pemasangan, atau "
+"setidaknya baca skrip kode sumbernya.<nl/>Jika kamu merasa tidak mampu atau "
+"tidak nyaman dengan ini, klik <interface>Batal</interface> sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:60
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Plugin ini menggunakan skrip untuk  pemasangan yang bisa mengakibatkan "
+"resiko keamanan. Silahkan teliti seluruh konten plugin sebelum pemasangan, "
+"atau setidaknya baca file README dan skrip kode sumbernya.<nl/>Jika kamu "
+"merasa tidak mampu atau tidak nyaman dengan ini, klik <interface>Batal</"
+"interface> sekarang."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Tandai entri sebagai dicopot"
+
+#: plugininstaller/ScriptConfirmationDialog.h:77
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Tandai entri sebagai dipasang"
+
+#: plugininstaller/ScriptConfirmationDialog.h:85
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Tampilan Skrip"
+
+#: plugininstaller/ScriptConfirmationDialog.h:91
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Tampilan Direktori Sumber"
+
+#: plugininstaller/ScriptConfirmationDialog.h:102
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "Tampilan %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Tidak bisa menyelesaikan nama paket %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:37
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "Gagal menjalankan perintah pasang: <message>%1</message>"
+
+#~ msgid "Position on screen:"
+#~ msgstr "Posisi di layar:"
+
+#~ msgid "Top"
+#~ msgstr "Atas"
+
+#~ msgid "Center"
+#~ msgstr "Tengah"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktivasi:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activate when pressing any key on the desktop"
+#~ msgstr "Aktifkan ketika menekan tuts apapun di desktop"
+
+#~ msgid "History:"
+#~ msgstr "Histori:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Remember past searches"
+#~ msgstr "Ingat pencarian yang lampau"
+
+#~ msgctxt "@option:check"
+#~ msgid "Retain last search when re-opening"
+#~ msgstr "Pertahankan pencarian terakhir ketika pembukaan ulang"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "Sadar aktivitas (pencarian terakhir dan histori)"
+
+#~ msgid "Clear History"
+#~ msgstr "Bersihkan Histori"
+
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "Bersihkan Histori untuk Aktivitas \"%1\""
+
+#~ msgid "Clear History…"
+#~ msgstr "Bersihkan Histori..."
+
+#~ msgctxt "@item:inmenu delete krunner history for all activities"
+#~ msgid "For all activities"
+#~ msgstr "Untuk semua aktivitas"
+
+#~ msgctxt "@item:inmenu delete krunner history for this activity"
+#~ msgid "For activity \"%1\""
+#~ msgstr "Untuk aktivitas \"%1\""
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Plugin:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Konfigurasikan Plugin Pencarian Yang Difungsikan..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyèk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "Konfigurasikan pengaturan pencarian"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#, fuzzy
+#~| msgid "Clear History"
+#~ msgid "KRunner history:"
+#~ msgstr "Bersihkan Histori"
+
+#, fuzzy
+#~| msgid "Clear History"
+#~ msgid "Clear History..."
+#~ msgstr "Bersihkan Histori"
+
+#~ msgid "Enable or disable KRunner plugins:"
+#~ msgstr "Fungsikan atau nonfungsikan plugin-plugin KRunner:"
+
+#~ msgid "Select the search plugins:"
+#~ msgstr "Pilih plugin pencarian:"

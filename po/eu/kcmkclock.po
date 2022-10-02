@@ -1,0 +1,244 @@
+# Translation for kcmkclock.po to Euskara/Basque (eu).
+# Copyright (C) 2003-2018, Free Software Foundation.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos <marcos@euskalgnu.org>, 2003, 2005, 2006, 2007, 2008, 2010.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2021.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2021-07-02 21:35+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Marcos Goyeneche,Asier Urio Larrea,Iñigo Salvador Azurmendi,Hizkuntza "
+"Politikarako Sailburuordetza"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"marcos@euskalgnu.org,asieriko@gmail.com,xalba@euskalnet.net,hizpol@ej-gv.es"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Data eta ordua"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Ezarri data eta ordua &automatikoki"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Ordu-zerbitzaria"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Hemen sistemako dataren hileko eguna, hila eta urtea alda ditzakezu."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Ordu-gunea"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "Tokiko ordu-gunea aldatzeko, hautatu zure eskualdea azpiko zerrendan."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Uneko tokiko ordu-gunea:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Bilatu..."
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"Ez da NTP utilitaterik aurkitu. Instalatu 'ntpdate' edo 'rdate' komandoa, "
+"dataren eta orduaren eguneraketa automatikoa gaitzeko."
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Hemen, sistemaren ordua alda dezakezu. Egin klik ordu, minutu edo segundoen "
+"eremuetan balioa aldatzeko, eskuineko gora eta behera botoiak erabiliz edo "
+"balio berri bat sartuz."
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Uneko tokiko ordu-gunea: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Uneko tokiko ordu-gunea: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Ordu-zerbitzari publikoa (pool.ntp.org),        asia.pool.ntp.org,        "
+"europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
+"ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Ezin da jarri harremanetan ordu-zerbitzariarekin: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Ezin da ezarri data."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "Errorea ordu-gune berria ezartzean."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "Errorea ordu-gunean"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Data eta ordua</h1> Sistema-ezarpenen modulu hau sistemaren data eta "
+"ordua ezartzeko erabil daiteke. Ezarpen horiek, zuri erabiltzaile gisa ez "
+"ezik, sistema osoari eragiten diote, eta, beraz, sistema-ezarpenak root gisa "
+"abiarazten dituzunean soilik aldatu ditzakezu. Ez badaukazu root-aren "
+"pasahitza, baina uste baduzu sistemaren ordua zuzendu beharra dagoela, jarri "
+"harremanetan zure sistema-administratzailearekin."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "KDE ordulariaren aginte-modulua"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Jatorrizko egilea"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Uneko arduraduna"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "NTPren laguntza gehitu da"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>Data eta ordua</h1> Aginte-modulu hau sistemaren data eta ordua "
+"ezartzeko erabil daiteke. Ezarpen horiek, zuri erabiltzaile gisa ez ezik, "
+"sistema osoari eragiten diote, eta, beraz, sistema-ezarpenak root gisa "
+"abiarazten dituzunean soilik aldatu ditzakezu. Ez badaukazu root-aren "
+"pasahitza, baina uste baduzu sistemaren ordua zuzendu beharra dagoela, jarri "
+"harremanetan zure sistema-administratzailearekin."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Ez da ekintza autentifikatu/exekutatzeko gai: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Ez da NTP ezarpenak aldatzeko gai"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Ez da uneko ordua ezartzeko gai"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Ez da ordu-eremua ezartzeko gai"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

@@ -1,0 +1,288 @@
+# translation of kcmsmserver.po to
+# translation of kcmsmserver.po to Greek
+# Copyright (C) 2003, 2005, 2007 Free Software Foundation, Inc.
+#
+# Dimitris Kamenopoulos <el97146@mail.ntua.gr>, 2001.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2003.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2007.
+# Toussis Manolis <koppermind@yahoo.com>, 2005.
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2009-02-13 11:53+0200\n"
+"Last-Translator: Toussis Manolis <manolis@koppermind.homelinux.org>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>Διαχειριστής συνεδρίας</h1> Εδώ μπορείτε να ρυθμίσετε το διαχειριστή "
+"συνεδρίας. Αυτό περιλαμβάνει επιλογές όπως αν θα πρέπει να ζητείται "
+"επιβεβαίωση πριν την έξοδο από τη συνεδρία (έξοδος), αν θα πρέπει να "
+"επαναφέρεται η προηγούμενη συνεδρία κατά την είσοδο και αν ο υπολογιστής θα "
+"κλείνει αυτόματα κατά την έξοδο από τη συνεδρία."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "&Επανεκκίνηση υπολογιστή"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Γενικά"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "Επι&βεβαίωση εξόδου"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "Ε&μφάνιση επιλογών τερματισμού"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option:"
+msgstr "Προκαθορισμένη επιλογή τερματισμού"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "Τ&ερματισμός τρέχουσας συνεδρίας"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "&Επανεκκίνηση υπολογιστή"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "&Κλείσιμο υπολογιστή"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Εκκίνηση με μια &κενή συνεδρία"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"Εδώ μπορείτε να δώσετε μια στήλη εφαρμογών, χωρισμένη με κόμματα, που δε θα "
+"πρέπει να αποθηκεύονται στις συνεδρίες και έτσι δε θα ξεκινούν κατά την "
+"επαναφορά μιας συνεδρίας. Για παράδειγμα 'xterm:konsole' ή 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Επι&βεβαίωση εξόδου"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "Ε&μφάνιση επιλογών τερματισμού"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "Προκαθορισμένη επιλογή τερματισμού"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Κατά την είσοδο"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συνεδρίες:"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "Επαναφορά &προηγούμενης συνεδρίας"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτή την επιλογή αν θέλετε ο διαχειριστής συνεδρίας να "
+#~ "εμφανίζει ένα πλαίσιο επιβεβαίωσης εξόδου."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "Επι&βεβαίωση εξόδου"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Ε&μφάνιση επιλογών τερματισμού"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να επιλέξετε τι θα συμβαίνει εξ ορισμού, κατά την έξοδό σας. "
+#~ "Αυτό έχει νόημα μόνο αν χρησιμοποιείτε το KDM."
+
+#~ msgid "Default Leave Option"
+#~ msgstr "Προκαθορισμένη επιλογή τερματισμού"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>Επαναφορά προηγούμενης συνεδρίας:</b> Θα αποθηκεύσει όλες τις "
+#~ "εφαρμογές που εκτελούνται, κατά την έξοδο, και θα τις επαναφέρει στο "
+#~ "επόμενο ξεκίνημα</li>\n"
+#~ "<li><b>Επαναφορά χειροκίνητα αποθηκευμένης συνεδρίας: </b> Επιτρέπει την "
+#~ "αποθήκευση της συνεδρίας οποιαδήποτε στιγμή μέσω του \"Αποθήκευση "
+#~ "συνεδρίας\" στο K-Μενού. Αυτό σημαίνει ότι οι τότε εκτελούμενες εφαρμογές "
+#~ "θα επανεμφανιστούν στο επόμενο ξεκίνημα.</li>\n"
+#~ "<li><b>Εκκίνηση με μια άδεια συνεδρία:</b> Να μην αποθηκεύεται τίποτα. Θα "
+#~ "εμφανιστεί μια κενή επιφάνεια εργασίας στο επόμενο ξεκίνημα.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "Κατά την είσοδο"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συνεδρίες:"
+
+#~ msgid "Session Manager"
+#~ msgstr "Διαχειριστής συνεδρίας"
+
+#~ msgid "Advanced"
+#~ msgstr "Για προχωρημένους"
+
+#~ msgid ""
+#~ "The new window manager will be used when KDE is started the next time."
+#~ msgstr ""
+#~ "Ο νέος διαχειριστής παραθύρων θα χρησιμοποιηθεί στην επόμενη έναρξη του "
+#~ "KDE."
+
+#~ msgid "Window manager change"
+#~ msgstr "Τροποποίηση διαχειριστή παραθύρων"
+
+#~ msgid "KWin (KDE default)"
+#~ msgstr "KWin (προκαθορισμένου του KDE)"
+
+#~ msgid "Window Manager"
+#~ msgstr "Διαχειριστής παραθύρων"

@@ -1,0 +1,399 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Sergiu Bivol <sergiu@cip.md>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-02-04 16:21+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Navigatorul web implicit"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "Altul…"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "Alege navigatorul implicit"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "Alegeți clientul de poștă electronică implicit"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "Alegeți gestionarul de fișiere implicit"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "Alegeți harta implicită"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "Alegeți aplicația de apelare implicită"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "Alegeți emulatorul de terminal implicit"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "Navigator de Internet:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "Gestionar de fișiere:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "Client de poștă:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Emulator de terminal:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "Hartă:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "Apelator:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "Aplicații implicite"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "Necunoscut"
+
+#~ msgctxt "The label for the combobox: browser, terminal emulator...)"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Alegere componente"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr ""
+#~ "Alegeți din lista de mai jos componenta care să fie utilizată implicit cu "
+#~ "serviciul %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>Ați modificat componenta implicită de utilizat. Doriți să salvați "
+#~ "acum această modificare?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "Nu există o descriere"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "Aici puteți schimba programul componentă. Componentele sunt programe care "
+#~ "execută activități de bază, precum emulator de terminal, editor de text "
+#~ "sau client de e-mail. Unele aplicații KDE au uneori nevoie să pornească "
+#~ "un emulator de consolă, să trimită un e-mail sau să afișeze text. Pentru "
+#~ "a face acest lucru consistent, aceste aplicații apelează întotdeauna la "
+#~ "aceleași componente. Aici puteți alege care programe să fie folosite ca "
+#~ "și componente de bază."
+
+#~ msgid "Default Component"
+#~ msgstr "Componenta implicită"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>Această listă afișează tipurile de componente ce pot fi configurate. "
+#~ "Dați clic pe cea pe care doriți să o configurați.</p>\n"
+#~ "<p>În acest dialog puteți schimba componentele implicite KDE. "
+#~ "Componentele sunt programe care execută activități de bază, precum "
+#~ "emulator de terminal, editor de text sau client de e-mail. Unele "
+#~ "aplicații KDE au uneori nevoie să pornească un emulator de consolă, să "
+#~ "trimită un e-mail sau să afișeze text. Pentru a face acest lucru "
+#~ "consistent, aceste aplicații apelează întotdeauna la aceleași componente. "
+#~ "Aici puteți alege care programe să fie folosite ca și componente de bază."
+#~ "</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>Deschide URL-urile <b>http</b> și <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "într-o aplicație bazată pe conținutul URL-urilor"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "în următorul navigator de web:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "în următorul navigator de web:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "Alegeți aplicația preferată de navigare pe Internet:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail este programul de e-mail standard pentru mediul grafic KDE."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&Utilizează KMail ca client de e-mail preferat"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr ""
+#~ "Selectați această opțiune dacă doriți să utilizați alt program de trimis "
+#~ "e-mail-uri."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: Adresa destinatarului</li> <li>%s: Subiect</li> <li>%c: "
+#~ "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Text "
+#~ "conținut model</li> <li>%A: Atașament </li> <li>%u: Full mailto: URL</"
+#~ "li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "Apăsați acest buton pentru a selecta clientul de e-mail favorit. Ca să "
+#~ "fie acceptat, fișierul selectat trebuie să aibă atributul executabil. <br/"
+#~ "> Puteți utiliza variabilele de mai jos care vor fi înlocuite cu valorile "
+#~ "necesare atunci când clientul de email este executat:<ul> <li>%t: Adresa "
+#~ "destinatarului</li> <li>%s: Subiect</li> <li>%c: Carbon Copy (CC)</li> "
+#~ "<li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Text conținut model</li> <li>"
+#~ "%A: Atașament </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "Dați clic aici pentru a căuta un program de e-mail."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "Activați această opțiune dacă doriți ca clientul de e-mail să fie "
+#~ "executat într-o fereastră terminal (de exemplu <em>Konsole</em>)."
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&Execută în terminal"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "Răsfoiește directoarele utilizând următorul gestionar de fișiere:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "Altul: faceți clic pe Adăugare... în dialogul afișat aici:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "&Utilizează Konsole ca aplicație terminal"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "Utilizează un program diferit de &terminal:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "Apăsați acest buton pentru a selecta clientul de terminal preferat. "
+#~ "Pentru a fi acceptat, fișierul pe care îl selectați trebuie să aibă setat "
+#~ "atributul executabil.<br/> Rețineți că unele programe care utilizează  "
+#~ "„Emulatorul de terminal” nu vor funcționa dacă adăgați argumente în linia "
+#~ "de comandă (de exemplu: konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "Dați clic aici pentru a răsfoi pentru program de terminal."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "1 secundă rămasă:"
+#~ msgstr[1] "%1 secunde rămase:"
+#~ msgstr[2] "%1 de secunde rămase:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "Noul gestionar de ferestre va fi utilizat la următoarea pornire a KDE."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "Schimbare gestionar de ferestre"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "Un nou gestionar de ferestre rulează.\n"
+#~ " Este recomandat să reporniți această sesiune KDE pentru a vă asigura că "
+#~ "toate aplicațiile ce rulează se ajustează la această schimbare."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "Gestionarul de ferestre a fost înlocuit"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "Gestionarul de ferestre care rulează va fi înlocuit acum de cel "
+#~ "configurat."
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "Configurează modificarea gestionarului de ferestre"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&Acceptă modificarea"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&Revenire la cel precedent"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "Gestionarul de ferestre configurat este lansat.\n"
+#~ " Verificați dacă a pornit corespunzător și confirmați modificarea.\n"
+#~ " Lansarea va fi revocată automat în 20 de secunde."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Gestionarul de ferestre în execuție a fost restabilit la KWin - "
+#~ "gestionarul de ferestre implicit în KDE."
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "Noul gestionar de ferestre a eșuat la pornire.\n"
+#~ " Gestionarul de ferestre în execuție a fost restabilit la KWin - "
+#~ "gestionarul de ferestre implicit în KDE."
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "Rularea uneltei de configurare a eșuat "
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "&Utilizează gestionarul de ferestre implicit (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "Utilizează un &gestionar de ferestre diferit:"
+
+#~ msgid "Configure"
+#~ msgstr "Configurează"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "Notă: Majoritatea gestionarilor de ferestre au propria configurare și nu "
+#~ "urmează setările KDE."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "Aici puteți citi o mică descriere a componentei selectate. Pentru a "
+#~ "schimba componenta selectată, dați clic în lista din stânga. Pentru a "
+#~ "modifica programul componentă, alegeți-l mai jos."
+
+#~ msgid "Component Description"
+#~ msgstr "Descriere componentă"

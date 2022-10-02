@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Spellingcontrole</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Spelling</keyword>
+<keyword
+>woordenboek</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Spellingcontrole</title>
+<para
+>De hier beschikbare configuratie-opties worden door alle &kde;-toepassingen gebruikt die van &sonnet; gebruik maken. &sonnet; is een frontend van  verschillende vrije programma's voor spellingcontrole.</para>
+
+<para
+>Om &sonnet; te gebruiken is het nodig om spellingcontroleprogramma's zoals &eg; <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> of <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> en daarbij de overeenkomstige woordenboeken voor uw taal.</para>
+
+<para
+>De hier geselecteerde configuratieopties kunnen overschreven worden door elke applicatie.</para>
+
+<para
+>Kies in het afrolmenu <guilabel
+>Standaard taal</guilabel
+> uit de beschikbare woordenboeken diegene die u voor &sonnet; wilt gebruiken. </para>
+
+<sect2 id="spell-options">
+<title
+>Opties</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Automatische detectie van taal inschakelen</guilabel
+></term>
+<listitem>
+<para
+>Deze functie is gebaseerd op een aantal heuristics (gebruikt script, trigram-matching en taalvolgorde op beschikbare talen in de spellingcontrole-backend). Hiermee kan het automatisch de taal omschakelen in een document met meerdere talen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Automatische spellingcontrole standaard ingeschakeld</guilabel
+></term>
+<listitem>
+<para
+>Als dit keuzevakje is geactiveerd zal de spelling van woorden worden gecontroleerd tijdens het typen. Onjuist gespelde woorden krijgen er een rode lijn onder. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Woorden in hoofdletters negeren</guilabel
+></term>
+<listitem>
+<para
+>Als dit keuzevakje is geactiveerd zal de spelling van elke woord dat uit hoofdletters bestaat niet worden gecontroleerd.</para>
+<tip
+><para
+>Dit is bruikbaar voor documenten met een groot aantal acroniemen. Als dit vakje niet is geactiveerd, zullen de meeste van die acroniemen als onjuist gemarkeerd worden. Door dit keuzevakje te activeren zullen de acroniemen niet als fout gespeld worden gemarkeerd.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Aaneengeschreven woorden overslaan</guilabel
+></term>
+<listitem
+><para
+>Als dit keuzevakje niet is geactiveerd dan worden woorden die alleenstaand in het woordenboek voorkomen, maar samengevoegd zijn, als fout aangezien. Voorbeelden van zulke woorden zijn zwartelijst, systeeminstellingen en afrolmenu. </para>
+
+<tip
+><para
+>Activeren van dit vakje helpt voorkomen dat applicaties een website en een e-mailadres als spelfout aangeven. Deze adressen bevatten vaak samengestelde woorden.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Genegeerde woorden</title>
+<para
+>De onderste helft van het dialoogvak stelt u in staat specifieke woorden (het kan gespecialiseerde terminologie zijn, gewone namen, &etc;) die genegeerd zouden moeten worden het spellingcontroleprogramma.</para>
+
+<sect3
+><title
+>Een woord toevoegen aan de lijst met te negeren woorden</title>
+<para
+>Om een woord toe te voegen, voer het woord in in het tekstvak en klik op de knop <guibutton
+>Toevoegen</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Een woord verwijderen uit de lijst met te negeren woorden</title>
+<para
+>Om een woord te verwijderen uit het lijstvak met alle nu te negeren woorden, selecteert u het woord door er met de &LMB; op te klikken. Klik daarna op de knop <guibutton
+>Verwijderen</guibutton
+>.</para>
+
+<para
+>Wanneer u tevreden bent met de wijzigingen, klik dan op de knop <guibutton
+>Toepassen</guibutton
+>.</para>
+
+<para
+>Klikken op de knop <guibutton
+>Standaard</guibutton
+> herstelt alle waarden naar hun standaard waarden.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

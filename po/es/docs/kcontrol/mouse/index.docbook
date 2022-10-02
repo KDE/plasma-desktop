@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Ratón</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2020-10-01</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Esta es la documentación del módulo &systemsettings; que le permite configurar los ratones y otros dispositivos de puntero. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>ratón</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_mouse">
+<title
+>Ratón</title>
+
+<para
+>Este módulo le permite configurar su puntero. Su puntero puede ser un ratón, una bola, un panel o cualquier otra pieza de hardware que realice una función similar.</para>
+
+<para
+>Este módulo está dividido en dos pestañas: <link linkend="mouse-general"
+>General</link
+> y <link linkend="mouse-advanced"
+>Avanzado</link
+>. </para>
+
+<sect2 id="mouse-general">
+<title
+>General</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Orden de los botones</guilabel
+></term>
+<listitem
+><para
+>Si usted es zurdo, puede preferir intercambiar las funciones de los botones <mousebutton
+>izquierdo</mousebutton
+> y <mousebutton
+>derecho</mousebutton
+> de su puntero eligiendo la opción <guilabel
+>
+>urdo</guilabel
+>. Si su puntero tiene más de dos botones, solo se verán afectados los botones <mousebutton
+>izquierdo</mousebutton
+> y <mousebutton
+>derecho</mousebutton
+>. Por ejemplo, si dispone de un ratón de tres botones, el botón <mousebutton
+>central</mousebutton
+> no se verá afectado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Dirección de desplazamiento inversa</guilabel
+></term>
+<listitem
+><para
+>Si está marcada esta casilla, la rueda de desplazamiento (si existe) funcionará en la dirección contraria (de forma que si antes al girar hacia arriba la rueda de desplazamiento se provocaba un desplazamiento hacia abajo, ahora el desplazamiento será hacia arriba). Esto puede ser práctico para manejar configuraciones poco usuales del servidor X. </para>
+</listitem>
+</varlistentry>
+<!--FIXME http://kdeblog.mageprojects.com/2016/06/24/plasma-5-6-clean-installation-impression/
+Just tick the “reverse scroll direction” in your mouse settings (in the system settings under “Input Devices”). That did the trick, but not completely. It only seems to be applied for the Qt applications! Yay, we have a good old setting per UI Toolkit again… But that’s wrong., we have libinput now and we can set “natural sorting” there. Why isn’t the settings page doing that under the hood if libinput is being used? Anyway, the fix here (comes from this link) was to do:
+
+xinput set-prop 11 282 1
+-->
+</variablelist>
+
+<note
+><para
+>En &plasma; 5.13 encontrará la preferencia para usar un solo clic o doble clic del ratón para abrir archivos y carpetas en el módulo <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Espacio de trabajo</ulink
+>. </para
+></note>
+</sect2>
+
+<sect2 id="mouse-advanced">
+<title
+>Avanzado</title>
+
+<variablelist>
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Aceleración del puntero</guilabel
+></term>
+<listitem>
+<para
+>Esta opción le permite cambiar la relación entre la distancia que se mueve el puntero del ratón por la pantalla y el movimiento relativo del propio dispositivo físico (que puede ser un ratón, una bola o cualquier otro dispositivo puntero).</para>
+
+<para
+>Un valor alto para el multiplicador de aceleración le permitirá movimientos grandes del cursor sobre la pantalla, incluso si realiza un movimiento pequeño con el dispositivo físico.</para>
+
+<tip
+><para
+>Un multiplicador entre <guilabel
+>1x</guilabel
+> y <guilabel
+>3x</guilabel
+> funcionará bien en muchos sistemas. Con un multiplicador por encima de <guilabel
+>3x</guilabel
+> el cursor puede ser difícil de controlar.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Umbral del puntero</guilabel
+></term>
+<listitem>
+<para
+>El umbral es la distancia mínima que el cursor se debe mover en la pantalla antes de que la aceleración surta efecto. Si el movimiento está dentro del umbral, el cursor se mueve como si la aceleración estuviera configurada a <guilabel
+>1x</guilabel
+>.</para>
+
+<para
+>De este modo, cuando se hacen pequeños movimientos con el dispositivo físico (&eg; un ratón), todavía tiene un control fino del cursor en la pantalla, mientras que movimientos mayores del dispositivo físico moverán el ratón rápidamente a diferentes áreas de la pantalla.</para>
+
+<para
+>Puede configurar el umbral introduciendo un valor en la casilla de edición o pulsando las flechas arriba/abajo a la derecha de la casilla.</para>
+
+<tip
+><para
+>En general, cuanto más alta es la <guilabel
+>Aceleración del puntero</guilabel
+>, más alto debería configurar el valor del <guilabel
+>Umbral de arrastre</guilabel
+>. Por ejemplo, un valor de <guilabel
+>Umbral de arrastre</guilabel
+> de 4 píxeles podría ser apropiado para una <guilabel
+>Aceleración del puntero</guilabel
+> de 2x, pero 10 píxeles puede ser un valor mejor para 3x.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de doble pulsación</guilabel
+></term>
+<listitem>
+<para
+>Este es el máximo intervalo de tiempo entre pulsaciones para registrar una doble pulsación. Si usted pulsa dos veces, y el intervalo de tiempo entre las pulsaciones es menor que ese número, se considera esa acción como una doble pulsación. Si el intervalo de tiempo entre dos pulsaciones es mayor que este número, se consideran como dos pulsaciones <emphasis
+>separadas</emphasis
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tiempo de inicio de arrastre</guilabel
+> y <guilabel
+>Distancia inicio de arrastre</guilabel
+></term>
+
+<listitem>
+<para
+>Si <itemizedlist
+> <listitem
+><para
+>pulsa y arrastra con el ratón</para
+></listitem
+> <listitem
+><para
+>dentro del tiempo especificado en <guilabel
+>Tiempo de inicio de arrastre</guilabel
+>, y </para
+></listitem
+> <listitem
+><para
+>mueve una distancia igual o mayor que el número (de pixels) especificado en <guilabel
+>Distancia inicio de arrastre</guilabel
+></para
+> </listitem
+> </itemizedlist
+>se arrastrará el elemento seleccionado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>La rueda del ratón mueve</guilabel
+></term>
+<listitem>
+<para
+>Si usted dispone de un ratón de rueda, utilice el selector numérico para determinar cuantas líneas de texto se desplazarán con un solo «paso» de la rueda del ratón.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

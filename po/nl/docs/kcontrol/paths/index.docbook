@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Locaties</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-09-05</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>bureaublad</keyword>
+<keyword
+>paden</keyword>
+<keyword
+>locatie</keyword>
+<keyword
+>systeeminstellingen</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dit is een module om essentiële paden voor het &plasma;-bureaublad te wijzigen.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Enkele &kde;-paden wijzigen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Enkele &kde;-paden wijzigen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Stations die automatisch bij aanmelden zijn aangekoppeld kunnen niet als paden gebruikt worden. Zulke stations zullen teruggedraaid worden naar standaarden tijdens herstarten van &plasma;. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pad naar Bureaublad:</guilabel
+></term>
+<listitem
+><para
+>De bureaubladmap bevat alle bestanden die u in een widget <guilabel
+>Mapweergave</guilabel
+> op uw bureaublad ziet. Het standaard pad is gewoonlijk <filename class="directory"
+>~/Bureaublad</filename
+> maar u kunt hier de locatie van deze map wijzigen. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pad naar Documenten:</guilabel
+></term>
+<listitem
+><para
+>Deze map wordt standaard gebruikt om documenten uit te laden of in op te slaan.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Downloadpad:</guilabel
+></term>
+<listitem
+><para
+>Deze map wordt standaard gebruikt om uw gedownloade items in op te slaan.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pad naar video's:</guilabel
+></term>
+<listitem
+><para
+>Deze map wordt standaard gebruikt om films uit te laden of in op te slaan.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pad naar Afbeeldingen:</guilabel
+></term>
+<listitem
+><para
+>Deze map wordt standaard gebruikt om afbeeldingen uit te laden of in op te slaan.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pad naar Muziek:</guilabel
+></term>
+<listitem
+><para
+>Deze map wordt standaard gebruikt om muziek uit te laden of in op te slaan.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Als u een pad wijzigt en op <guibutton
+>Toepassen</guibutton
+> klikt verschijnt er een dialoog waarin u kunt kiezen om de inhoud naar de nieuwe map te verplaatsen of de nieuwe map te gebruiken zonder de bestanden te verplaatsen.</para>
+
+</article>

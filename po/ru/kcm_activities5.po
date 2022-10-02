@@ -1,0 +1,335 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Julia Dronova <juliette.tux@gmail.com>, 2013.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016.
+# Victor Ryzhykh <victorr2007@yandex.ru>, 2016.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2021-05-29 13:29+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
+#, kde-format
+msgid "Activities"
+msgstr "Комнаты"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Удаление комнаты"
+
+#: imports/activitysettings.cpp:52
+#, kde-format
+msgid "Are you sure you want to delete '%1'?"
+msgstr "Удалить комнату «%1»?"
+
+#: imports/dialog.cpp:82
+#, kde-format
+msgid ""
+"Error loading the QML files. Check your installation.\n"
+"Missing %1"
+msgstr ""
+"Ошибка загрузки файла QML. Проверьте правильность установки.\n"
+"Отсутствует файл «%1»."
+
+#: imports/dialog.cpp:146
+#, kde-format
+msgid "General"
+msgstr "Основное"
+
+#: imports/dialog.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Создание новой комнаты"
+
+#: imports/dialog.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Activity Settings"
+msgstr "Настройка комнаты"
+
+#: imports/dialog.cpp:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Создать"
+
+#: imports/qml/activityDialog/GeneralTab.qml:41
+#, kde-format
+msgid "Icon:"
+msgstr "Значок:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:55
+#, kde-format
+msgid "Name:"
+msgstr "Название:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:60
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:69
+#, kde-format
+msgid "Privacy:"
+msgstr "Конфиденциальность:"
+
+#: imports/qml/activityDialog/GeneralTab.qml:70
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Не запоминать статистику использования"
+
+#: imports/qml/activityDialog/GeneralTab.qml:75
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Комбинация клавиш для переключения:"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Срок хранения статистики использования в месяцах"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Типы событий для сохранения в статистике использования"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Список приложений, статистика использования которых будет сохраняться"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+"Список приложений, статистика использования которых не будет сохраняться"
+
+#: MainConfigurationWidget.cpp:33
+#, kde-format
+msgid "Switching"
+msgstr "Переключение"
+
+#: qml/activitiesTab/ActivitiesView.qml:55
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Настроить комнату %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:62
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Удалить комнату %1"
+
+#: qml/activitiesTab/ActivitiesView.qml:73
+#, kde-format
+msgid "Create New…"
+msgstr "Создать..."
+
+#: SwitchingTab.cpp:52
+#, kde-format
+msgid "Activity switching"
+msgstr "Переключение комнат"
+
+#: SwitchingTab.cpp:55
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities"
+msgstr "На одну комнату вперёд"
+
+#: SwitchingTab.cpp:56
+#, kde-format
+msgctxt "@action"
+msgid "Walk through activities (Reverse)"
+msgstr "На одну комнату назад"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Запоминать для каждой комнаты (потребуется перезапуск)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Текущий рабочий стол:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Комбинации клавиш:"
+
+#~ msgid "Privacy"
+#~ msgstr "Конфиденциальность"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Бессрочно"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Стереть последний час"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Стереть последние два часа"
+
+#~ msgid "Forget a day"
+#~ msgstr "Стереть день"
+
+#~ msgid "Forget everything"
+#~ msgstr "Стереть всё"
+
+# "Хранить историю в течение ... месяц(а/ев)" --aspotashev
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " месяца"
+#~ msgstr[1] " месяцев"
+#~ msgstr[2] " месяцев"
+#~ msgstr[3] " месяца"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr " "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "История использования очищена."
+
+#~ msgid "Keep history:"
+#~ msgstr "Хранить историю:"
+
+#~ msgid "Clear History"
+#~ msgstr "Очистить историю"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "Для &всех приложений"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&Не запоминать"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "Толь&ко для определённых приложений:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Запоминать открытые документы:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Заблокировать все приложения, кроме перечисленных"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Удалить"
+
+#~ msgid "Other"
+#~ msgstr "Дополнительно"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Применить"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Activity information"
+#~ msgstr "Сведения о комнате"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Обои"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Изменить..."
+
+# "Хранить историю в течение ... месяц(а/ев)" --aspotashev
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "в течение "
+
+#~ msgid "Form"
+#~ msgstr "Форма"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Александр Лахин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "exclusion@gmail.com"
+
+#~ msgid "Default"
+#~ msgstr "Начальная комната"
+
+#~ msgctxt "@action"
+#~ msgid "Switch to activity \"%1\""
+#~ msgstr "Переключиться на комнату «%1»"
+
+#~ msgctxt "Header title for activity data model"
+#~ msgid "Activity"
+#~ msgstr "Комната"
+
+#~ msgid "Loading..."
+#~ msgstr "Загрузка..."
+
+#~ msgid "The Activity Manager is not running"
+#~ msgstr "Диспетчер комнат не запущен."
+
+#~ msgid "Link to the current activity"
+#~ msgstr "Привязать к текущей комнате"
+
+#~ msgid "Unlink from the current activity"
+#~ msgstr "Снять привязку к текущей комнате"
+
+#~ msgid "Link to:"
+#~ msgstr "Привязать к:"
+
+#~ msgid "Unlink from:"
+#~ msgstr "Снять привязку с:"
+
+#~ msgid "Activity"
+#~ msgstr "Комната"
+
+#~ msgid "Activity name"
+#~ msgstr "Название комнаты"
+
+#~ msgid "Available Features"
+#~ msgstr "Доступные возможности"
+
+#~ msgid "Plugins"
+#~ msgstr "Модули"
+
+#~ msgid "Enable activities management"
+#~ msgstr "Включить управление комнатами"
+
+#~ msgid "Activity manager is not running properly."
+#~ msgstr "Диспетчер комнат не запущен правильно."
+
+#~ msgid "Activities..."
+#~ msgstr "Комнаты..."
+
+#~ msgid "(c) 2012 Ivan Cukic"
+#~ msgstr "© Ivan Cukic, 2012"

@@ -1,0 +1,254 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-07-08 18:26+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Comportamento visual:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:25 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Monstra consilio informative quando le mus passa"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Monstra responsas visual per cambiamentos de stato"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgid "Animation speed:"
+msgstr "Velocitate de animation:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Lente"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Instante"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Pulsante files e dossieres:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Aperi illos"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Selige per cliccar sur le marcator de selection del elemento"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Selige illos"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Aperi in vice per duple cliccar"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Cliccar in tracia de barra de rolar:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Rola un pagina in alto o a basso"
+
+#: package/contents/ui/main.qml:164
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Clicca in le medio per rolar al location cliccate"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Rola al location cliccate"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Middle Click:"
+msgstr "Click in medio:"
+
+#: package/contents/ui/main.qml:196
+#, kde-format
+msgid "Paste selected text"
+msgstr "Colla texto selectionate"
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Modo de Touch (Tocco)"
+
+#: package/contents/ui/main.qml:215
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Habilitate automaticamente como necessitate"
+
+#: package/contents/ui/main.qml:215 package/contents/ui/main.qml:244
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Jammais habilitate"
+
+#: package/contents/ui/main.qml:227
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Moto de Tocco (Touch mode) essera activate automaticamente quandocunque le "
+"systema detege un schermo tactil ma necun mus o pannello tactile. Pro "
+"exemplo quando un claviero de un laptop trasformabile es girate o  "
+"distaccate."
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Sempre habilitate"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"In modo de tocco (Touch Mode), multe elementos del interfacie de usator "
+"devenira plus grande pro adataptar meliormente al interation de tocco."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Singule click per aperir files"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Velocitate de animation"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Clicca a sinistra in tracia de barra de rolar per mover le barra de rolar de "
+"un pagina"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Commuta automaticamente a modo de tocco optimisate"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Habilita selection de click de medio de collar"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Monstra un on-screen display per indicar modificationes de stato tal como "
+"brillantia o voumine"
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "OSD sur modification de disposition"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Monstra un popup sur modificationes de disposition"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "General Behavior"
+#~ msgstr "Comportamento general"
+
+#~ msgid "System Settings module for configuring general workspace behavior."
+#~ msgstr ""
+#~ "Modulo de Preferentias de Systema pro configurar le comportamento general "
+#~ "del spatio de labor."
+
+#~ msgid "Furkan Tokac"
+#~ msgstr "Furkan Tokac"
+
+#~ msgid "Click behavior:"
+#~ msgstr "Pulsa comportamento:"
+
+#~ msgid "Double-click to open files and folders"
+#~ msgstr "Duple clic per aperir files e dossieres"
+
+#~ msgid "(c) 2009 Marco Martin"
+#~ msgstr "(c) 2009 Marco Martin"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "Maintainer"
+#~ msgstr "Mantenitor"
+
+#, fuzzy
+#~| msgid "Show Informational Tips:"
+#~ msgid "Show Informational Tips"
+#~ msgstr "Monstra consilios de information:"

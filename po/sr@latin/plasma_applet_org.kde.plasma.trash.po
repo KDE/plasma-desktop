@@ -1,0 +1,87 @@
+# Translation of plasma_applet_org.kde.plasma.trash.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-06-03 03:28+0200\n"
+"PO-Revision-Date: 2016-04-15 23:42+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: contents/ui/main.qml:100
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "Otvori"
+
+#: contents/ui/main.qml:101
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Isprazni"
+
+#: contents/ui/main.qml:107
+#, kde-format
+msgid "Trash Settings..."
+msgstr "Postavke smeća..."
+
+#: contents/ui/main.qml:155
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"Smeće\n"
+"prazno"
+
+#: contents/ui/main.qml:155
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"Smeće\n"
+"%1 stavka"
+msgstr[1] ""
+"Smeće\n"
+"%1 stavke"
+msgstr[2] ""
+"Smeće\n"
+"%1 stavki"
+msgstr[3] ""
+"Smeće\n"
+"jedna stavka"
+
+# >> @title:menu
+#: contents/ui/main.qml:164
+#, kde-format
+msgid "Trash"
+msgstr "Smeće"
+
+# >> The trash is empty. This is not an action, but a state
+#: contents/ui/main.qml:165
+#, kde-format
+msgid "Empty"
+msgstr "Prazno"
+
+#: contents/ui/main.qml:165
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "%1 stavka"
+msgstr[1] "%1 stavke"
+msgstr[2] "%1 stavki"
+msgstr[3] "Jedna stavka"

@@ -1,0 +1,362 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Rato</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-06-01</date>
+<releaseinfo
+>Plasma 5.6</releaseinfo>
+
+<abstract>
+<para
+>Esta é a documentação do módulo do &systemsettings; que configura os ratos e outros dispositivos para apontar. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>rato</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_mouse">
+<title
+>Rato</title>
+
+<para
+>Este módulo permite-lhe configurar o seu dispositivo de posicionamento. Este pode ser um rato, uma 'trackball', um 'touchpad' ou qualquer outro 'hardware' que desempenhe uma função semelhante.</para>
+
+<para
+>Este módulo está dividido em várias páginas: a <link linkend="mouse-general"
+>Geral</link
+>, o <link linkend="mouse-advanced"
+>Avançado</link
+> e a <link linkend="mouse-navigation"
+>Navegação do Rato</link
+>. </para>
+
+<sect2 id="mouse-general">
+<title
+>Geral</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ordem dos Botões</guilabel
+></term>
+<listitem
+><para
+>Se você for esquerdino, poderá preferir trocar as funções dos botões <mousebutton
+>esquerdo</mousebutton
+> e <mousebutton
+>direito</mousebutton
+> do seu dispositivo de posicionamento, seleccionando a opção <quote
+>esquerdino</quote
+>. Se o dispositivo tiver mais do que dois botões, só os que funcionarem como <mousebutton
+>esquerdo</mousebutton
+> e <mousebutton
+>direito</mousebutton
+> são afectados. Por exemplo, se tiver um rato com três botões, o botão <mousebutton
+>do meio</mousebutton
+> não é afectado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Inverter a direcção do deslizamento</guilabel
+></term>
+<listitem
+><para
+>Com esta opção seleccionada, a roda do rato (se existir) irá funcionar na direcção contrária (ou seja, se rodar para a frente irá descer a posição da barra, enquanto que se rodar para trás irá subir a barra). Isto poderá ser útil para lidar com alguma configuração anormal do servidor X. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Duplo-'click' para abrir os ficheiros e pastas (escolher os ícones no primeiro 'click')</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção não estiver seleccionada, os ícones/ficheiros serão abertos com um 'click' simples do botão <mousebutton
+>esquerdo</mousebutton
+> do rato. Este comportamento por omissão é consistente com o que esperaria, ao carregar nas ligações na maioria dos navegadores Web. Se estiver seleccionado, os ícones/ficheiros serão abertos com um duplo-click, enquanto que um click simples só seleccionará o ícone ou o ficheiro. Este é o comportamento que poderá conhecer de outros ambientes de trabalho ou sistemas operativos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Carregar uma vez para abrir os ficheiros e pastas</guilabel
+></term>
+<listitem>
+<para
+>Esta é a opção por omissão. Se você carregar num ícone, irá abri-lo. Para o seleccionar, poderá arrastar o(s) ícone(s) pelo ecrã ou carregar em <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Direito</mousebutton
+></keycombo
+> ou então carregar e manter carregado para o arrastar.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="mouse-advanced">
+<title
+>Avançado</title>
+
+<variablelist>
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Aceleração do ponteiro</guilabel
+></term>
+<listitem>
+<para
+>Esta opção permite-lhe alterar a relação entre a distância que o cursor do rato percorre no ecrã e o movimento relativo do dispositivo físico em si (que pode ser um rato, uma 'trackball' ou outro dispositivo do género).</para>
+
+<para
+>Um valor alto do multiplicador da aceleração conduzirá a grandes movimentos do cursor do rato no ecrã, mesmo quando só deseja efectuar um pequeno movimento com o dispositivo físico.</para>
+
+<tip
+><para
+>Um multiplicador entre <guilabel
+>1x</guilabel
+> e <guilabel
+>3x</guilabel
+> será aceitável para muitos dos sistemas. Com um multiplicador superior a <guilabel
+>3x</guilabel
+>, o cursor do rato será difícil de controlar.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sensibilidade à aceleração</guilabel
+></term>
+<listitem>
+<para
+>A sensibilidade corresponde à menor distância que o cursor do rato terá de se mover no ecrã antes da aceleração fazer efeito. Se o movimento estiver dentro desse limite, o cursor do rato movimentar-se-á como se a aceleração fosse <guilabel
+>1x</guilabel
+>.</para>
+
+<para
+>Deste modo, quando você fizer movimentos pequenos com o dispositivo físico (&eg;, o rato), continuará a ter um controlo fino do cursor do rato no ecrã, enquanto os movimentos amplos do dispositivo físico farão o cursor do rato movimentar-se rapidamente para as diferentes áreas do ecrã.</para>
+
+<para
+>Poderá definir o valor-limite se introduzir um valor no campo de texto ou carregar nos botões cima/baixo do campo à esquerda do campo.</para>
+
+<tip
+><para
+>De um modo geral, quanto maior for o valor da <guilabel
+>Aceleração do cursor</guilabel
+>, maior deverá ser o valor da <guilabel
+>Distância até arrastar</guilabel
+>. Por exemplo, uma <guilabel
+>Distância até arrastar</guilabel
+> de 4 pixels será apropriada para uma <guilabel
+>Aceleração do Cursor</guilabel
+> de 2x, mas 10 pixels poderá ser melhor para o 3x.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de duplo-'click'</guilabel
+></term>
+<listitem>
+<para
+>Esta é a maior quantidade de tempo entre 'clicks' num botão até que se considere que fez um duplo-click. Se carregar duas vezes e o tempo entre esses dois eventos for menor que este valor, será reconhecida a acção como um duplo-click. Se o tempo for maior, reconhece-se a acção como se você tivesse carregado duas vezes <emphasis
+>separadas</emphasis
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo de início de arrasto</guilabel
+> e <guilabel
+>Distância até arrastar</guilabel
+></term>
+
+<listitem>
+<para
+>Se <itemizedlist
+> <listitem
+><para
+>carregar com o rato</para
+></listitem
+> <listitem
+><para
+>arrastar dentro do tempo indicado em <guilabel
+>Tempo de Início de Arrasto</guilabel
+> e </para
+></listitem
+> <listitem
+><para
+>o mover ao longo de uma distância igual ou superior ao número (de pontos) indicado em <guilabel
+>Distância até Arrastar</guilabel
+></para
+> </listitem
+> </itemizedlist
+>, irá arrastar o item seleccionado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>A roda do rato desloca</guilabel
+></term>
+<listitem>
+<para
+>Se você tiver um rato com roda, use a barra para determinar quantas linhas de texto um <quote
+>movimento</quote
+> da roda do rato fará deslocar.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="mouse-navigation">
+<title
+>Navegação do Rato</title>
+
+<para
+>Esta página permite-lhe configurar as teclas de cursores do teclado numérico como um dispositivo de emulação do rato. Isto poderá ser útil quando estiver a trabalhar com um dispositivo sem outro dispositivo de posicionamento ou quando não tiver outro uso para o teclado numérico. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mover o cursor com o teclado (numérico)</guilabel
+></term>
+<listitem>
+<para
+>Para activar o modo do rato através do teclado, terá de seleccionar a opção <guilabel
+>Mover o cursor com o teclado (teclas numéricas)</guilabel
+>. Quando o fizer, as outras opções ficarão activas, pelo que poderá personalizar o comportamento do cursor com o teclado, se necessário. </para>
+<para
+>As várias teclas do teclado numérico movem o cursor na direcção por elas indicadas. Repare que poder-se-á mover na diagonal, assim como para cima, baixo, esquerda e direita. A tecla <keycap
+>5</keycap
+> emula um 'click' de um botão do rato, sendo tipicamente o &LMB;. Poderá mudar o botão que é emulado se usar a tecla <keycap
+>/</keycap
+> (que o torna o &LMB;), a tecla <keycap
+>*</keycap
+> (que o torna o &MMB;) e a <keycap
+>-</keycap
+> (que o torna o &RMB;). Se usar a tecla <keycap
+>+</keycap
+> irá emular um duplo-click do botão seleccionado. Poderá usar a tecla <keycap
+>0</keycap
+> para emular o carregar contínuo do botão seleccionado (para um arrastamento simples) e depois o <keycap
+>.</keycap
+> para emular a largada do botão seleccionado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Atraso da aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo (em milisegundos) entre o pressionar inicial da tecla e o primeiro evento de movimento repetido até à aceleração do rato. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de repetição</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo em milisegundos entre os eventos repetidos de movimento para a aceleração do rato. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o período em milisegundos antes de o cursor atingir uma velocidade máxima para a aceleração do rato. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidade máxima</guilabel
+></term>
+<listitem>
+<para
+>Esta é a velocidade máxima em pixels por segundo que o cursor poderá atingir, na aceleração do rato pelo teclado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Esta é a inclinação da curva de aceleração do rato pelo teclado. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

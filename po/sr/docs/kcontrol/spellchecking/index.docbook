@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY kappname-n '<application>Сонет</application>'>
+  <!ENTITY kappname-g '<application>Сонета</application>'>
+  <!ENTITY kappname-d '<application>Сонету</application>'>
+  <!ENTITY kappname-a '<application>Сонет</application>'>
+  <!ENTITY kappname-i '<application>Сонетом</application>'>
+  <!ENTITY kappname-l '<application>Сонету</application>'>
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Правописар</title>
+
+<authorgroup>
+<author
+><personname
+><firstname
+>Лори</firstname
+> <surname
+>Вотс</surname
+></personname
+> &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9. 4. 2015.</date>
+<releaseinfo
+>Плазма 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>правопис</keyword>
+<keyword
+>речник</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Правописар</title>
+<para
+>Овде дате поставне опције подразумеване су за све КДЕ програме који користе <application
+>Сонет</application
+>, прочеље за разне слободне правописаре.</para>
+
+<para
+>Да би <application
+>Сонет</application
+> радио, морате инсталирати неки од правописара, као што су <ulink url="http://aspell.net/"
+>Аспел</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Хспел</ulink
+> или <ulink url="http://hunspell.sourceforge.net/"
+>Ханспел</ulink
+>, као и одговарајуће речнике за жељени језик.</para>
+
+<para
+>Овде изабране поставне опције може потиснути сваки програм понаособ.</para>
+
+<para
+>Из падајућег списка <guilabel
+>Подразумевани језик:</guilabel
+>, између расположивих језика, бирате онај који желите да <application
+>Сонет</application
+> користи. </para>
+
+<sect2 id="spell-options">
+<title
+>Опције правописа</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Аутоматско откривање језика</guilabel
+></term>
+<listitem>
+<para
+>Ова могућност је заснована на неколико хеуристика (коришћено писмо, поклапање триграфа и рангирање језика по доступним језицима у правописарској позадини). Пружа аутоматску промену језика у вишејезичком документу. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Аутоматска провера правописа подразумевано укључена</guilabel
+></term>
+<listitem>
+<para
+>Ако се ова кућица попуни, речи ће бити провераване док их куцате у документу. Погрешно написане ће бити подвучене црвеном линијом. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Прескочи све писано великим словима</guilabel
+></term>
+<listitem>
+<para
+>Ако се ова кућица попуни, неће бити проверавана ниједна реч која се потпуно састоји од великих слова.</para>
+<tip
+><para
+>Ово је корисно у документима са великим бројем акронима. Ако се кућица остави празна, већина тих акронима биће означена као неправилне речи. Ако се попуни, акроними неће бити означавани као неправилни.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Прескочи спојено написане речи</guilabel
+></term>
+<listitem
+><para
+>Ако је ова кућица празна, речи које се у тексту нађу спојено док их речник наводи одвојено биће сматране правописним грешкама. На пример, ако речник садржи „море“ и „пловка“, али не и „морепловка“, онда ће „морепловка“ бити означена као неправилна. </para>
+
+<tip
+><para
+>Попуњавање ове кућице помоћи ће у избегавању адреса е‑поште и веб сајтова, које би биле пријављене као неправилне будући да често садрже спојене и непостојеће речи.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Игнорисање речи</title>
+<para
+>У доњој половини дијалога можете навести одређене речи (попут стручних израза, личних имена, итд.) које правописар треба да игнорише.</para>
+
+<sect3
+><title
+>Додавање речи на списак игнорисаних</title>
+<para
+>Да додате реч, откуцајте је у пољу за унос и кликните на дугме <guibutton
+>Додај</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Брисање речи са списка игнорисаних</title>
+<para
+>Да уклоните реч, изаберите је из падајућег списка који садржи тренутно игнорисане речи, кликом на њу <mousebutton
+>левим</mousebutton
+> дугметом миша. Затим кликните на дугме <guibutton
+>Уклони</guibutton
+>.</para>
+
+<para
+>Када сте задовољни изменама, једноставно кликните на <guibutton
+>Примени</guibutton
+></para>
+
+<para
+>Клик на дугме <guibutton
+>Подразумевано</guibutton
+> враћа све поставке на подразумеване вредности.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

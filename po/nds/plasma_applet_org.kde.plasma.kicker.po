@@ -1,0 +1,447 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2014-08-21 16:22+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmeen"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Ut de Leestekens wegmaken"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Na de Leestekens tofögen"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:134
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Show in Favorites"
+msgstr "Na de Leestekens tofögen"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, fuzzy, kde-format
+#| msgid "Icon"
+msgid "Icon:"
+msgstr "Lüttbild"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Programmen so wiesen:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Bloots Naam"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Bloots Beschrieven"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Naam (Beschrieven)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Beschrieven (Naam)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgid "Behavior:"
+msgstr "Bedregen"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgid "Sort applications alphabetically"
+msgstr "Programmen so wiesen:"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, fuzzy, kde-format
+#| msgid "Flatten menu to a single level"
+msgid "Flatten sub-menus to a single level"
+msgstr "Menüs to een Stoop tosamenleggen"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Show categories:"
+msgstr "Na de Leestekens tofögen"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, fuzzy, kde-format
+#| msgid "Recent Applications"
+msgid "Recent applications"
+msgstr "Tolest bruukt Programmen"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, fuzzy, kde-format
+#| msgid "Recent Applications"
+msgid "Often used applications"
+msgstr "Tolest bruukt Programmen"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent files"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used files"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent contacts"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Often used contacts"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Tolest bruukt Dokmenten"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search:"
+msgstr "Söken"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Ok binnen Leestekens, Dateien un Nettpost söken"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Söökresultaten nerrn utrichten"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Type to search…"
+msgstr "Söken..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, fuzzy, kde-format
+#| msgid "Add to Favorites"
+msgid "Favorites"
+msgstr "Na de Leestekens tofögen"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr ""
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr ""
+
+#: package/contents/ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "Programmen bewerken..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "Söken"
+
+#~ msgid "Search..."
+#~ msgstr "Söken..."
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#~ msgid "Open with:"
+#~ msgstr "Opmaken mit:"
+
+#~ msgid "Properties"
+#~ msgstr "Egenschappen"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Na den Schriefdisch tofögen"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Na't Paneel tofögen"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Edit Application..."
+#~ msgstr "Programmen bewerken..."
+
+#, fuzzy
+#~| msgid "Forget Application"
+#~ msgid "Hide Application"
+#~ msgstr "Programm vergeten"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#, fuzzy
+#~| msgid "Forget Application"
+#~ msgid "Applications"
+#~ msgstr "Programm vergeten"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Tolest bruukt Programmen"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Contacts"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#, fuzzy
+#~| msgid "Forget Document"
+#~ msgid "Forget Contact"
+#~ msgstr "Dokment vergeten"
+
+#, fuzzy
+#~| msgid "Forget All Documents"
+#~ msgid "Forget All Contacts"
+#~ msgstr "All Dokmenten vergeten"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#~ msgid "Forget Application"
+#~ msgstr "Programm vergeten"
+
+#~ msgid "Forget Document"
+#~ msgstr "Dokment vergeten"
+
+#, fuzzy
+#~| msgid "Forget All Documents"
+#~ msgid "Forget All"
+#~ msgstr "All Dokmenten vergeten"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "All Programm vergeten"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "All Dokmenten vergeten"
+
+#, fuzzy
+#~| msgid "Forget All Applications"
+#~ msgid "All Applications"
+#~ msgstr "All Programm vergeten"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent Contacts"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Tolest bruukt Programmen"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "Tolest bruukt Programmen"
+
+#~ msgid "Power / Session"
+#~ msgstr "Stroom un Törn"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search results"
+#~ msgstr "Söken"
+
+#~ msgid "Lock"
+#~ msgstr "Afsluten"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "Save Session"
+#~ msgstr "Nieg Törn"
+
+#~ msgid "Hibernate"
+#~ msgstr "Infreren"
+
+#~ msgid "Restart"
+#~ msgstr "Nieg starten"
+
+#, fuzzy
+#~| msgid "Shutdown"
+#~ msgid "Shut Down"
+#~ msgstr "Utmaken"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "Session"
+#~ msgstr "Nieg Törn"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "End session"
+#~ msgstr "Nieg Törn"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to RAM"
+#~ msgstr "Utsetten"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to disk"
+#~ msgstr "Utsetten"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart computer"
+#~ msgstr "Nieg starten"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show recent applications"
+#~ msgstr "Tolest bruukt Programmen"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show often used applications"
+#~ msgstr "Tolest bruukt Programmen"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show often used documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#~ msgid "Logout"
+#~ msgstr "Afmellen"
+
+#~ msgid "Suspend"
+#~ msgstr "Utsetten"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Egen Lüttbild bruken:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Bitte en Bild utsöken"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Bilddateien (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "As Oproper tofögen"
+
+#~ msgid "New Session"
+#~ msgstr "Nieg Törn"
+
+#~ msgid "(Empty)"
+#~ msgstr "(leddig)"

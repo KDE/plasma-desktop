@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Мишка</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>6 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.21</releaseinfo>
+
+<abstract>
+<para
+>Це документація до модуля «Системних параметрів» &kde;, за допомогою якого можна налаштовувати миші та інші координатно-покажчикові пристрої. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>миша</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля ви можете налаштувати координатно-покажчиковий пристрій вашого комп’ютера. Цим координатно-покажчиковим пристроєм може бути миша, кульовий маніпулятор, тачпад або будь-який інший пристрій з подібним призначенням.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Загальне</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Режим шульги</guilabel
+></term>
+<listitem
+><para
+>Якщо ви шульга, ви можете змінити функції <mousebutton
+>лівої</mousebutton
+> і <mousebutton
+>правої</mousebutton
+> кнопок вашого координатно-покажчикового пристрою за допомогою цього пункту. Якщо на вашому координатно-покажчиковому пристрої більше за дві кнопки, цей пункт вплине лише на функції <mousebutton
+>лівої</mousebutton
+> і <mousebutton
+>правої</mousebutton
+> кнопок. Наприклад, якщо у вас миша з трьома кнопками, функції <mousebutton
+>середньої</mousebutton
+> кнопки змінено не буде.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Натискати ліву і праву кнопки для клацання середньою</guilabel
+></term>
+<listitem
+><para
+>Позначте цей пункт, якщо у вас немає середньої кнопки миші (коліщатка). Ви зможете одночасно натиснути ліву і праву кнопки миші для імітації клацання середньою кнопкою миші. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Швидкість руху вказівника</guilabel
+></term>
+<listitem
+><para
+>За допомогою цього параметра ви можете змінити співвідношення між відстанню, на яку буде пересунуто вказівник миші на екрані і відносним рухом самого координатного пристрою (миші, кульового маніпулятора або іншого координатно-покажчикового пристрою).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Профіль прискорення</guilabel
+></term>
+<listitem
+><para
+>Профіль <guilabel
+>Адаптивний</guilabel
+> є типовим профілем для усіх пристроїв. У ньому визначено врахування поточної швидкості руху пристрою при визначенні прискорення. <guilabel
+>Нейтральний</guilabel
+> профіль визначає простий сталий коефіцієнт для усіх приростів координат приросту, незалежно від швидкості руху. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Гортання: Інвертувати напрямок гортання</guilabel
+></term>
+<listitem
+><para
+>Якщо позначено цей пункт, коліщатко прокручування (якщо воно є на мишці) працюватиме у зворотному напрямку (так, що, якщо раніше прокручування коліщатка у напрямку до себе призводило до гортання сторінки вниз, тепер таке прокручування гортатиме сторінку угору). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>У Плазмі 5.13 ви можете скористатися параметром, який визначає, одинарні чи подвійні клацання використовуватимуться для відкриття файлів і тек, у модулі <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Робочий простір</ulink
+>. </para
+></note>
+
+</article>

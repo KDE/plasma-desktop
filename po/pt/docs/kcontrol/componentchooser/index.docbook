@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Aplicações Predefinidas</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2017-01-10</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>componente</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Neste módulo, poderá alterar os componentes predefinidos do &kde;.</para>
+
+<para
+>Os componentes são programas que conseguem lidar com algumas tarefas básicas, como um emulador de terminal, um editor de texto ou o cliente de e-mail. As diferentes aplicações do &kde; precisam às vezes de invocar um dado emulador de consola, enviar um e-mail ou mostrar algum texto.</para
+> 
+
+<para
+>Para o fazer de forma consistente, estas aplicações chamam sempre os mesmos componentes. Aqui poderá seleccionar os programas que representam esses componentes.</para>
+
+<para
+>A lista à esquerda mostra os tipos de componentes configuráveis:</para>
+<itemizedlist>
+<listitem>
+<para
+>Cliente de E-Mail</para>
+</listitem>
+<listitem>
+<para
+>Gestor de Ficheiros</para>
+</listitem>
+<listitem>
+<para
+>Emulador do Terminal</para>
+</listitem>
+<listitem>
+<para
+>Navegador Web</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Carregue no componente que deseja configurar. Na parte direita da janela, estarão todas as aplicações disponíveis para esse serviço, de modo a que possa seleccionar o seu emulador de terminal, editor de texto, cliente de e-mail, &etc; favorito</para>
+
+</article>

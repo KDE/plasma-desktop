@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Ricerca dei file</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Luigi</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>luigi.toscano@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>ricerca</keyword>
+<keyword
+>file</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo delle &systemsettings; ti permette di configurare quali file debbano essere indicizzati per una ricerca veloce. Usa internamente una tecnologia chiamata Baloo per cercare in modo efficiente tra i file. </para>
+
+<para
+>Aggiungi l'oggetto <guilabel
+>Ricerca</guilabel
+> al pannello o abilita la ricerca in &krunner; per usare i risultati dell'indicizzazione per accedere più rapidamente ai tuoi documenti. </para>
+
+<para
+>Attiva l'elemento <guilabel
+>Abilita la ricerca nei file</guilabel
+> se vuoi usare le funzioni di ricerca desktop in &dolphin; ed altre applicazioni &kde;. Deseleziona l'elemento se non vuoi usare la ricerca dei file tramite Baloo (è possibile usare altre tecnologie di ricerca, &eg; &kfind;). </para>
+
+<para
+>Usa <guilabel
+>Indicizza anche il contenuto dei file</guilabel
+> per indicizzare anche i contenuti dei file in aggiunta ai nomi dei file. </para>
+
+<para
+>Seleziona l'elemento <guilabel
+>Indicizza file e cartelle nascosti</guilabel
+> per fare sì che Baloo indicizzi i file e le cartelle nascosti. </para>
+
+<note>
+    <para
+>Ogni nome di file o cartella che inizia con un punto (<literal
+>.</literal
+>) è nascosto in modo predefinito. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Configurazione specifica per la cartella</guilabel
+></term>
+<listitem>
+    <para
+>Ti viene mostrato un elenco di cartelle che possono essere indicizzate. Come impostazione predefinita, l'intera cartella <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> viene indicizzata e nessun'altra cartella o dispositivo lo è. </para>
+    <para
+>I dispositivi rimovibili non sono mai indicizzati come impostazione predefinita. Possono essere rimossi esplicitamente dalla lista delle cartelle escluse, e in questo caso saranno indicizzati. </para>
+    <para
+>È possibile usare la casella combinata accanto a ciascun elemento nell'elenco per configurare se debba essere <guimenuitem
+>Indicizzato</guimenuitem
+> o <guimenuitem
+>Non indicizzato</guimenuitem
+>. </para>
+    <para
+>Usa il pulsante del cestino per rimuovere un elemento dall'elenco. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Aggiungi configurazione cartella...</guibutton
+></term>
+<listitem>
+    <para
+>Premi questo pulsante per aprire il selettore con due opzioni, in particolare <guimenuitem
+>Inizia a indicizzare una cartella</guimenuitem
+> e <guimenuitem
+>Interrompi l'indicizzazione di una cartella</guimenuitem
+>. </para>
+    <para
+>Un clic su ciascuna delle opzioni citate in precedenza mostra la finestra standard <guilabel
+>Seleziona una cartella da filtrare</guilabel
+> di &plasma; e ti permette di scegliere la cartella che deve essere oggetto dell'azione. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Per maggiori informazioni di configurazione, &eg; come aggiungere un dispositivo esterno montato fuori dalla cartella <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, consultare la pagina <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

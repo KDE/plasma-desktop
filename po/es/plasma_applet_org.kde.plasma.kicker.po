@@ -1,0 +1,451 @@
+# Spanish translations for plasma_applet_org.kde.plasma.kicker.po package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2014.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2021-05-27 00:58+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Eliminar de favoritos"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Añadir a favoritos"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "En todas las actividades"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "En la actividad actual"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Mostrar en favoritos"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Icono:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Escoger..."
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Borrar icono"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Mostrar aplicaciones como:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Solo el nombre"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Solo la descripción"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Nombre (Descripción)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Descripción (Nombre)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Comportamiento:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Ordenar aplicaciones alfabéticamente"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Aplanar submenús hasta un único nivel"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Mostrar iconos en el nivel raíz del menú"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Mostrar categorías:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Aplicaciones recientes"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Aplicaciones usadas con frecuencia"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Archivos recientes"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Archivos usados con frecuencia"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Contactos recientes"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Contactos usados con frecuencia"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Ordenar elementos en categorías por:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Usados recientemente"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Usados con frecuencia"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Buscar:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Expandir la búsqueda a marcadores, archivos y correo electrónico"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Alinear el resultado de la búsqueda al fondo"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Buscando «%1»"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Escriba para buscar..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Elementos gráficos"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Aplicaciones y documentos"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Editar aplicaciones..."
+
+#~ msgid "Search…"
+#~ msgstr "Buscar..."
+
+#~ msgid "Search..."
+#~ msgstr "Buscar..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Documentos usados con frecuencia"
+
+#~ msgid "Open with:"
+#~ msgstr "Abrir con:"
+
+#~ msgid "Properties"
+#~ msgstr "Propiedades"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Añadir al escritorio"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Añadir al panel (elemento gráfico)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Fijar en el gestor de tareas"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Documentos recientes"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Olvidar documentos recientes"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Editar aplicación..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Uninstall or Manage Add-Ons..."
+#~ msgstr "Desinstalar o gestionar complementos..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Ocultar aplicación"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicaciones"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Mostrar aplicaciones ocultas en este submenú"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Mostrar aplicaciones ocultas en «%1»"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Mostrar KRunner"
+
+#~ msgid "Search, calculate, or run a command"
+#~ msgstr "Buscar, calcular o ejecutar una orden"
+
+#~ msgid "Computer"
+#~ msgstr "Equipo"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Mostrar información del contacto..."
+
+#~ msgid "Contacts"
+#~ msgstr "Contactos"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Olvidar contacto"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Olvidar todos los contactos"
+
+#~ msgid "Recently Used"
+#~ msgstr "Usado recientemente"
+
+#~ msgid "Documents"
+#~ msgstr "Documentos"
+
+#~ msgid "Forget Application"
+#~ msgstr "Olvidar aplicación"
+
+#~ msgid "Forget Document"
+#~ msgstr "Olvidar documento"
+
+#~ msgid "Forget All"
+#~ msgstr "Olvidar todo"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Olvidar todas las aplicaciones"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Olvidar todos los documentos"
+
+#~ msgid "Hide %1"
+#~ msgstr "Ocultar %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Todas las aplicaciones"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Contactos recientes"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Documentos usados con frecuencia"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Aplicaciones recientes"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Aplicaciones usadas con frecuencia"
+
+#~ msgid "Power / Session"
+#~ msgstr "Inicio y apagado"
+
+#~ msgid "Search results"
+#~ msgstr "Resultado de la búsqueda"
+
+#~ msgid "Lock"
+#~ msgstr "Bloquear la sesión"
+
+#~ msgid "Log Out"
+#~ msgstr "Cerrar sesión"
+
+#~ msgid "Save Session"
+#~ msgstr "Guardar la sesión"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar de usuario"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Sleep"
+#~ msgstr "Dormir"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
+
+#~ msgid "Restart"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Shut Down"
+#~ msgstr "Apagar"
+
+#~ msgid "Session"
+#~ msgstr "Sesión"
+
+#~ msgid "System"
+#~ msgstr "Sistema"
+
+#~ msgid "Lock screen"
+#~ msgstr "Bloquear la pantalla"
+
+#~ msgid "End session"
+#~ msgstr "Terminar la sesión"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Iniciar una sesión paralela como otro usuario"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspender en memoria"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspender en disco"
+
+#~ msgid "Restart computer"
+#~ msgstr "Reiniciar el equipo"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Apagar el equipo"
+
+#~ msgid "System actions"
+#~ msgstr "Acciones del sistema"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Gestionar «%1»..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Ejecutar orden..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Ejecutar una orden o realizar una búsqueda"
+
+#~ msgid "Show:"
+#~ msgstr "Mostrar:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Mostrar aplicaciones recientes"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Mostrar aplicaciones usadas con frecuencia"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Mostrar documentos recientes"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Mostrar documentos usados con frecuencia"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Mostrar contactos recientes"
+
+#~ msgid "Logout"
+#~ msgstr "Cerrar la sesión"
+
+#~ msgid "Reboot"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspender"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Almacenamiento extraíble"
+
+#~ msgid "Places"
+#~ msgstr "Lugares"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Usar imagen personalizada:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Escoja una imagen"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Archivos de imagen (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Añadir como lanzador"
+
+#~ msgid "New Session"
+#~ msgstr "Nueva sesión"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Vacío)"

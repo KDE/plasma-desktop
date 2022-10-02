@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2021-10-29 09:54+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: Emojis emojis\n"
+"X-POFile-IgnoreConsistency: Show\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aparência"
+
+#: package/contents/ui/ActionMenu.qml:93
+#, kde-format
+msgid "(Empty)"
+msgstr "(Vazio)"
+
+#: package/contents/ui/ConfigAppearance.qml:29
+#, kde-format
+msgid "Input method list:"
+msgstr "Lista de métodos de introdução de dados:"
+
+#: package/contents/ui/ConfigAppearance.qml:30
+#, kde-format
+msgid "Vertical"
+msgstr "Vertical"
+
+#: package/contents/ui/ConfigAppearance.qml:36
+#, kde-format
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr "Tipo de letra:"
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr "Usar um personalizado:"
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr " "
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgid "Select Font…"
+msgstr "Seleccionar o Tipo de Letra…"
+
+#: package/contents/ui/ConfigAppearance.qml:73
+#, kde-format
+msgctxt "The arrangement of icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Tamanho dos ícones no painel:"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgid "Small"
+msgstr "Pequeno"
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Adaptar à Altura do Painel"
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Adaptar à Largura do Painel"
+
+#: package/contents/ui/ConfigAppearance.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Seleccionar o Tipo de Letra"
+
+#: package/contents/ui/ContextMenu.qml:83
+#, kde-format
+msgid "Show"
+msgstr "Mostrar"
+
+#: package/contents/ui/ContextMenu.qml:98
+#, kde-format
+msgid "Hide %1"
+msgstr "Esconder o %1"
+
+#: package/contents/ui/ContextMenu.qml:107
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Configurar o Método de Introdução de Dados"
+
+#: package/contents/ui/ContextMenu.qml:115
+#, kde-format
+msgid "Reload Config"
+msgstr "Actualizar a Configuração"
+
+#: package/contents/ui/ContextMenu.qml:123
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Sair do Método de Introdução de Dados"
+
+#: package/contents/ui/main.qml:237
+#, kde-format
+msgid "Input Method Panel"
+msgstr "Painel de Métodos de Introdução de Dados"
+
+#~ msgid "Search"
+#~ msgstr "Procurar"
+
+#~ msgid "Clear History"
+#~ msgstr "Limpar o Histórico"
+
+#~ msgid "No recent Emojis"
+#~ msgstr "Sem emojis recentes"
+
+#~ msgid "%1 copied to the clipboard"
+#~ msgstr "O %1 foi copiado para a área de transferência"
+
+#~ msgid "Recent"
+#~ msgstr "Recente"
+
+#~ msgid "All"
+#~ msgstr "Tudo"
+
+#~ msgid "Categories"
+#~ msgstr "Categorias"
+
+#~ msgid "Search…"
+#~ msgstr "Procurar…"

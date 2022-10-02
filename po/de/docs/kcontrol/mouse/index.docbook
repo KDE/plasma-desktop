@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Maus</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<!-- Unbekannt --> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Dies ist die Dokumentation für das &systemsettings;-Modul, mit dem die Maus und andere Zeigegeräte eingerichtet werden. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>mouse</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dieses Modul erlaubt Ihnen die Einrichtung Ihres Zeigegerätes. Das kann eine Maus, ein Trackball, ein Touchpad oder alles andere sein, das die gleiche Funktion erfüllt.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Allgemein</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Linkshändige Bedienung</guilabel
+></term>
+<listitem
+><para
+>Falls Sie Linkshänder sind, wollen Sie vielleicht die Funktionen der <mousebutton
+>linken</mousebutton
+> und <mousebutton
+>rechten</mousebutton
+> Taste Ihres Zeigegerätes tauschen, indem Sie diese Einstellung wählen. Wenn Ihr Zeigegerät mehr als zwei Tasten hat, werden nur die <mousebutton
+>linke</mousebutton
+> und die <mousebutton
+>rechte</mousebutton
+> Taste angepasst. Haben Sie zum Beispiel eine Maus mit drei Tasten, so wird die <mousebutton
+>mittlere</mousebutton
+> Maustaste nicht verändert.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Linke und rechte Taste für Mittelklick drücken</guilabel
+></term>
+<listitem
+><para
+>Haben Sie nur eine Maus mit zwei Tasten, aktivieren Sie diese Einstellung. Dann können Sie die linke und rechte Maustaste gleichzeitig drücken, um den Mittelklick zu emulieren. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Zeigergeschwindigkeit</guilabel
+></term>
+<listitem
+><para
+>Diese Option ermöglicht Ihnen die Einstellung der Beziehung zwischen der auf dem Monitor dargestellten Bewegung des Zeigers und der tatsächlichen Bewegung Ihres Zeigegerätes. Dabei ist es gleichgültig, um was für ein Gerät es sich dabei handelt (also Maus, Joystick, Trackball &etc;).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Beschleunigungsprofil</guilabel
+></term>
+<listitem
+><para
+>Das Profil <guilabel
+>Adaptiv</guilabel
+> ist das Standardprofil für alle Geräte und berücksichtigt die aktuelle Geschwindigkeit des Geräts bei der Entscheidung über die Beschleunigung. Das Profil <guilabel
+>Flach</guilabel
+> ist einfach ein konstanter Faktor, der auf alle Geräte angewendet wird, unabhängig von der Bewegungsgeschwindigkeit. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bildlauf: Laufrichtung umkehren</guilabel
+></term>
+<listitem
+><para
+>Ist dieses Ankreuzfeld markiert, arbeitet das Mausrad (falls vorhanden) in entgegengesetzter Richtung. Wenn das Bewegen des Mausrades in ihre Richtung zuvor eine Bewegung nach unten auf dem Bildschirm ausgelöst hat, wird es nun eine Bewegung nach oben sein. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>In &plasma; 5.13 finden Sie die Einstellung, ob Einzel- oder Doppelklicks mit der Maustaste Dateien und Ordner öffnen, im Modul <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Arbeitsbereich</ulink
+>. </para
+></note>
+
+</article>

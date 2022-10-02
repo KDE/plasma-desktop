@@ -1,0 +1,138 @@
+# translation of kcmlaunch.po to Esperanto
+# Copyright (C) 2001, 2007 Free Software Foundation, Inc.
+# Wolfram Diestel <wolfram@steloj.de>, 2001.
+# Cindy McKee <cfmckee@gmail.com>, 2007.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2007-12-26 10:47-0600\n"
+"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Bus&y Cursor"
+msgid "Cursor:"
+msgstr "Okup&iteco-kursoro"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Blinking Cursor"
+msgid "Blinking"
+msgstr "Pulsanta kursoro"
+
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "Bouncing Cursor"
+msgid "Bouncing"
+msgstr "Resaltanta kursoro"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Enable &taskbar notification"
+msgid "Enable animation"
+msgstr "Enŝalti avizon en la &taskostrio"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "&Startup indication timeout:"
+msgid "Stop animation after:"
+msgstr "Tempolimo por &lanĉmontrado (sekundoj):"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, fuzzy, kde-format
+#| msgid " sec"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] " sek"
+msgstr[1] " sek"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>Lanĉoretrokuplado</h1> Vi povas agordi la retrokupladon de "
+#~ "prepariĝanta aplikaĵo tie ĉi."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>Okupiteco-kursoro</h1>\n"
+#~ "KDE ofertas apartan muskursoron kiu indikas la lanĉo de aplikaĵo.\n"
+#~ "Por uzi tion, elektu 'Enŝalti okupiteco-kursoron'.\n"
+#~ "Povas esti, ke iuj aplikaĵoj ne scias pri tiu avizo.\n"
+#~ "Tiam la butono malaperos post la tempo\n"
+#~ "donita de vi ĉe 'Tempolimo por lanĉmontrado'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "Neniu okupiteco-kursoro"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "Pasiva okupiteco-kursoro"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "Taskostria a&vizo"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>Avizo en la taskostrio</H1>\n"
+#~ "Vi povas enŝalti duan metodon de atentigo pri lanĉado de\n"
+#~ "aplikaĵo. Tiuokaze en la taskostrio aperos butono kun\n"
+#~ "turniĝanta sablohorloĝo, kiu simbolas, ke via lanĉita aplikaĵo\n"
+#~ "prepariĝas. Povas okazi, ke iuj programoj ne scias pri la lanĉa avizo. "
+#~ "Tiam la butono malaperos post la tempo\n"
+#~ "donita de vi ĉe \"Tempolimo por lanĉmontrado\""
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "Tempolimo por &lanĉmontrado:"

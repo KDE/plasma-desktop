@@ -1,0 +1,661 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Mouse</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Marcus</firstname
+> <surname
+>Gama</surname
+><affiliation
+><address
+> <email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>Esta é a documentação para o módulo das &systemsettings; do &kde; que configura o mouse e outros dispositivos de apontamento. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>mouse</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_mouse">
+<title
+>Mouse</title>
+
+<para
+>Este módulo permite configurar o "dispositivo de apontamento", sendo que este dispositivo pode ser um mouse, um mouse de toque (touch-pad), ou qualquer outro hardware que executa uma função similar.</para>
+
+<para
+>Este módulo é dividido em diversas abas: <link linkend="mouse-general"
+>Geral</link
+>, <link linkend="mouse-advanced"
+>Avançado</link
+> e <link linkend="mouse-navigation"
+>Navegação do mouse</link
+>. Podem existir também uma ou mais abas adicionais se você possuir um mouse ou trackball da Logitech, fornecendo acesso a recursos especiais. </para>
+
+<sect2 id="mouse-general">
+<title
+>Geral</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ordem dos botões</guilabel
+></term>
+<listitem
+><para
+>Se você é canhoto, é possível trocar as funções dos botões <mousebutton
+>esquerdo</mousebutton
+> e <mousebutton
+>direito</mousebutton
+> do seu dispositivo, escolhendo a opção <quote
+>Canhoto</quote
+>. Se o seu dispositivo tem mais de dois botões, somente as funções dos botões <mousebutton
+>esquerdo</mousebutton
+> e <mousebutton
+>direito</mousebutton
+> serão afetadas. Em um mouse com três botões, por exemplo, o botão do <mousebutton
+>meio</mousebutton
+> não será afetado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Direção inversa de rolagem</guilabel
+></term>
+<listitem
+><para
+>Com esta opção selecionada, a roda de rolagem (se existir) funcionará na direção oposta, ou seja, se rolar para cima irá descer a barra de rolagem e se rolar para baixo irá subir a barra). Isto pode ser útil para lidar com alguma configuração incomum do servidor X. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clique duplo para abrir arquivos e pastas (o primeiro clique seleciona os ícones)</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção não estiver marcada, os ícones/arquivos serão abertos com um único clique do botão <mousebutton
+>esquerdo</mousebutton
+> do mouse. Este comportamento padrão é compatível com o que você obtém ao clicar em links na maioria dos navegadores Web. No entanto, se esta opção estiver selecionada, os ícones/arquivos serão abertos com um clique duplo, enquanto um clique simples irá apenas selecioná-los. Este é o comportamento que você pode conhecer pela experiência com outros ambientes ou sistemas operacionais.</para>
+<note>
+<para
+>Esta opção pode ser alterada nas caixas de diálogo de configuração do &dolphin; e do &konqueror;, na aba <guilabel
+>Navegação</guilabel
+>.</para>
+</note>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clique único para abrir arquivos e pastas</guilabel
+></term>
+<listitem>
+<para
+>Esta é a configuração padrão do &kde;: clicar uma vez sobre um ícone irá abri-lo. Para selecionar, você pode arrastar o(s) ícone(s) ou clicar <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Botão esquerdo</mousebutton
+></keycombo
+> do mouse simultaneamente, ou simplesmente clicar e manter pressionado para arrastá-lo. Você também pode ativar a seleção automática de ícones marcando a opção <guilabel
+>Selecionar ícones automaticamente</guilabel
+>, conforme explicado mais adiante.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mudar o formato do ponteiro sobre os ícones</guilabel
+></term>
+<listitem>
+<para
+>Quando esta opção estiver marcada, o formato do ponteiro do mouse muda sempre que ele estiver sobre um ícone.</para>
+
+<tip
+><para
+>Esta opção deve estar selecionada na maioria das situações. Ela fornece um retorno visual, indicando-lhe que alguma coisa irá acontecer se você clicar neste local.</para
+></tip>
+
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Selecionar ícones automaticamente</guilabel
+></term>
+<listitem>
+<para
+>Como observado acima, se a opção <guilabel
+>Clique único para abrir arquivos e pastas</guilabel
+> estiver marcada, você pode selecionar ícones arrastando-os ou usando <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Botão esquerdo</mousebutton
+></keycombo
+> do mouse. Se você frequentemente precisa selecionar ícones, você pode querer habilitar esta opção, que permite-lhe selecionar os ícones automaticamente parando o cursor sobre eles. O controle deslizante <guilabel
+>Atraso:</guilabel
+> determina quanto tempo é necessário antes que ocorra a seleção automática. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="mouse-advanced">
+<title
+>Avançado</title>
+
+<variablelist>
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Aceleração do ponteiro</guilabel
+></term>
+<listitem>
+<para
+>Esta opção permite-lhe alterar o relacionamento entre a distância que o ponteiro do mouse percorre sobre a tela e o movimento relativo do dispositivo físico em si (que pode ser um mouse, track-ball ou qualquer outro dispositivo de apontamento.)</para>
+
+<para
+>Um valor alto para o multiplicador de aceleração conduzirá o ponteiro do mouse na tela a movimentos largos, mesmo quando você fizer somente um pequeno movimento com o dispositivo físico.</para>
+
+<tip
+><para
+>Um multiplicador entre <guilabel
+>1x</guilabel
+> e <guilabel
+>3x</guilabel
+> funcionará bem para a maioria dos sistemas. Com um multiplicador acima de <guilabel
+>3x</guilabel
+>, pode se tornar difícil controlar o ponteiro do mouse.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Limite do ponteiro</guilabel
+></term>
+<listitem>
+<para
+>O limite é a menor distância que o ponteiro do mouse deve mover na tela antes da aceleração ter efeito. Se o movimento estiver dentro do limite, o ponteiro do mouse move-se como se a aceleração estivesse configurada para <guilabel
+>1x</guilabel
+>.</para>
+
+<para
+>Assim, quando você fizer pequenos movimentos com o dispositivo físico (&eg;, o mouse), ainda terá controle preciso do ponteiro do mouse na tela, considerando que movimentos maiores do dispositivo físico moverão o ponteiro do mouse rapidamente para as diferentes áreas da tela.</para>
+
+<para
+>Você pode ajustar o limite inserindo o valor no campo de edição ou clicando nas setas indicadoras à direita do campo.</para>
+
+<tip
+><para
+>Em geral, quanto maior o valor definido na <guilabel
+>Aceleração do ponteiro</guilabel
+>, maior deve ser o valor do <guilabel
+>Limite do ponteiro</guilabel
+>. Por exemplo, um valor de 4 pixels para o <guilabel
+>Limite do ponteiro</guilabel
+> pode ser apropriado para um valor de 2x para a <guilabel
+>Aceleração do ponteiro</guilabel
+>, mas 10 pixels pode ser melhor para uma aceleração de 3x.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo do clique duplo</guilabel
+></term>
+<listitem>
+<para
+>Esta é a quantidade máxima de tempo entre os cliques até o &kde; considerar como sendo um clique duplo. Se você clicou duas vezes e o tempo entre estes dois cliques é menor que este número, então o &kde; reconhecerá a ação como um clique duplo. Se o tempo entre dois cliques é maior que este número, o &kde; reconhece eles como sendo dois cliques simples <emphasis
+>separados</emphasis
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo inicial de arrasto</guilabel
+> e <guilabel
+>Distância inicial de arrasto</guilabel
+></term>
+
+<listitem>
+<para
+>Se você <itemizedlist
+> <listitem
+><para
+>clicar com o mouse</para
+></listitem
+> <listitem
+><para
+>arrastar dentro do tempo indicado em <guilabel
+>Tempo inicial de arrasto</guilabel
+>, e </para
+></listitem
+> <listitem
+><para
+>mover a uma distância igual ou maior do que o número (de pixels) especificado em <guilabel
+>Distância inicial de arrasto</guilabel
+></para
+> </listitem
+> </itemizedlist
+> o &kde; arrastará o item selecionado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Roda do mouse rola</guilabel
+></term>
+<listitem>
+<para
+>Se você tiver um mouse com roda, use as setas para determinar quantas linhas de texto um <quote
+>movimento</quote
+> da roda do mouse irá deslocar.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="mouse-navigation">
+<title
+>Navegação do mouse</title>
+
+<para
+>Esta aba permite-lhe configurar as teclas do teclado numérico como se fosse um mouse. Isto pode ser útil quando você estiver trabalhando em um dispositivo sem outro dispositivo de apontamento, ou quando você não tem outra utilidade para o teclado numérico. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mover o ponteiro do mouse com o teclado (usando o teclado numérico)</guilabel
+></term>
+<listitem>
+<para
+>Para habilitar o modo de mouse pelo teclado, você precisa selecionar a opção <guilabel
+>Mover o ponteiro do mouse com o teclado (usando o teclado numérico)</guilabel
+>. Quando fizer isto, as outras configurações ficarão ativas, e você poderá personalizar o comportamento do ponteiro com o teclado, se for necessário. </para>
+<para
+>As diversas teclas do teclado numérico movem o ponteiro na direção por elas indicadas. Observe que você pode mover o ponteiro na diagonal, bem como para cima, para abaixo, para a esquerda e para a direita. A tecla <keycap
+>5</keycap
+> emula o clique de um botão do mouse, normalmente o esquerdo. Você pode alterar qual botão é emulado usando as teclas <keycap
+>/</keycap
+> (que faz o &LMB;), <keycap
+>*</keycap
+> (que faz o &MMB;) e <keycap
+>-</keycap
+> (que faz o &RMB;). Usar o <keycap
+>+</keycap
+> emula o clique duplo do botão selecionado pelo ponteiro. Você pode usar a tecla <keycap
+>0</keycap
+> para emular o pressionamento contínuo do botão selecionado pelo ponteiro (para arrastar facilmente), e então usar o <keycap
+>.</keycap
+> para emular a liberação do botão selecionado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Atraso da aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo, em milissegundos, entre o pressionamento inicial da tecla e a primeira repetição do evento de movimento até a aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de repetição</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo, em milissegundos, entre a repetição dos eventos de movimento para a aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo, em milissegundos, antes de o ponteiro atingir uma velocidade máxima para a aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidade máxima</guilabel
+></term>
+<listitem>
+<para
+>Esta é a velocidade máxima, em pixels por segundo, que o ponteiro pode atingir para a aceleração de tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Esta é a inclinação da curva de aceleração para a aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="logitech-mouse">
+<title
+>Suporte ao Logitech</title>
+
+<para
+>Alguns mouses USB da Logitech possuem recursos especiais, como aumentar a resolução ou fornecer o estado da conexão sem fio. Se o &kde; foi compilado com suporte à 'libusb', então você terá uma aba adicional para cada mouse suportado que estiver conectado. </para>
+
+<para
+>Os dispositivos suportados são: </para>
+<orderedlist>
+<listitem
+><para
+>Mouse óptico com roda</para
+></listitem>
+<listitem
+><para
+>MouseMan para viagem</para
+></listitem>
+<listitem
+><para
+>MouseMan óptico duplo</para
+></listitem>
+<listitem
+><para
+>Mouse óptico MX310</para
+></listitem>
+<listitem
+><para
+>Mouse óptico MX510</para
+></listitem>
+<listitem
+><para
+>Mouse óptico MX300</para
+></listitem>
+<listitem
+><para
+>Mouse óptico MX500</para
+></listitem>
+<listitem
+><para
+>Mouse iFeel</para
+></listitem>
+<listitem
+><para
+>Receptor de mouse</para
+></listitem>
+<listitem
+><para
+>Receptor duplo</para
+></listitem>
+<listitem
+><para
+>Óptico sem fio</para
+></listitem>
+<listitem
+><para
+>Elite Duo sem fio</para
+></listitem>
+<listitem
+><para
+>Mouse óptico MX700</para
+></listitem>
+<listitem
+><para
+>Trackman óptico sem fio</para
+></listitem>
+<listitem
+><para
+>Receptor MX Duo sem fio</para
+></listitem>
+<listitem
+><para
+>Mouse laser MX100</para
+></listitem>
+<listitem
+><para
+>Receptor para apresentador sem fio</para
+></listitem>
+</orderedlist>
+
+<para
+>Nem todos os dispositivos suportam todos os recursos (normalmente os dispositivos sem fio não fornecem alteração de resolução e, obviamente, apenas os dispositivos sem fio suportam relatório do estado sem fio). Desta forma, algumas partes da aba não estarão habilitadas para alguns tipos de mouse. </para>
+
+<para
+>Se o mouse suportar alteração de resolução, o grupo de opções <guilabel
+>Resolução do sensor</guilabel
+> estará habilitado, e você pode alterar de <guilabel
+>400 pontos por polegada</guilabel
+> para <guilabel
+>800 pontos por polegada</guilabel
+> ou o contrário. Se você usar <guilabel
+>800 pontos por polegada</guilabel
+>, o mesmo movimento físico do mouse causará uma maior (aproximadamente o dobro) quantidade de movimentos do cursor. Isto tende a ser popular, principalmente entre jogadores. </para>
+
+<para
+>Se o mouse suportar relatório de estado sem fio, os widgets de <guilabel
+>Nível da bateria</guilabel
+> e <guilabel
+>Canal RF</guilabel
+> serão habilitados. Você somente pode alterar o <guilabel
+>Canal RF</guilabel
+> se o seu mouse tiver suporte para dois canais. </para>
+<!--FIXME outdated
+<sect3 id="logitech-perms">
+<title
+>Fixing permission problems on Logitech mice</title>
+
+<para>
+Because of the way USB devices work, the code that accesses the current
+status on Logitech mice needs to be able to write to the mouse. This
+should be handled by your distribution, but if not, you may need to do some
+configuration yourself.
+</para>
+
+<para>
+On a &Linux; system, you should use the hotplug system to change the ownership
+and permissions on the mouse entry in <filename
+>/proc/bus/usb</filename
+>. One
+way to do this is to create a short script
+(<filename
+>/etc/hotplug/usb/consoleUserPerms</filename
+>) that changes the ownership
+and permissions, as shown below:
+</para>
+
+<informalexample>
+<programlisting
+>
+<![CDATA[
+#!/bin/bash
+#
+# /etc/hotplug/usb/consoleUserPerms
+#
+# Sets up newly plugged in USB device so that the user who owns
+# the console according to pam_console can access it from user space
+#
+# Note that for this script to work, you'll need all of the following:
+# a) a line in the file /etc/hotplug/usb.usermap or another usermap file
+#    in /etc/hotplug/usb/ that corresponds to the device you are using.
+# b) a setup using pam_console creates the respective lock files
+#    containing the name of the respective user. You can check for that
+#    by executing "echo `cat /var/{run,lock}/console.lock`" and
+#    verifying the appropriate user is mentioned somewhere there.
+# c) a Linux kernel supporting hotplug and usbdevfs
+# d) the hotplug package (http://linux-hotplug.sourceforge.net/)
+#
+# In the usermap file, the first field "usb module" should be named
+# "consoleUserPerms" to invoke this script.
+#
+
+if [ "${ACTION}" = "add" ] && [ -f "${DEVICE}" ]
+then
+# New code, using lock files instead of copying /dev/console permissions
+# This also works with non-kdm logins (e.g. on a virtual terminal)
+# Idea and code from Nalin Dahyabhai <nalin@redhat.com>
+    if [ -f /var/run/console.lock ]
+    then
+        CONSOLEOWNER=`cat /var/run/console.lock`
+    elif [ -f /var/lock/console.lock ]
+    then
+        CONSOLEOWNER=`cat /var/lock/console.lock`
+    else
+        CONSOLEOWNER=
+    fi
+    if [ -n "$CONSOLEOWNER" ]
+    then
+        chmod 0000 "${DEVICE}"
+        chown "$CONSOLEOWNER" "${DEVICE}"
+        chmod 0600 "${DEVICE}"
+    fi
+fi
+]]>
+</programlisting>
+</informalexample>
+
+<para>
+The usermap file that goes with this is
+<filename
+>/etc/hotplug/usb/logitechmouse.usermap</filename
+>, as
+shown below:
+</para>
+
+<informalexample>
+<programlisting
+>
+<![CDATA[
+# script           match_flags idVendor idProduct bcdDevice_lo bcdDevice_hi bDeviceClass bDeviceSubClass bDeviceProtocol bInterfaceClass bInterfaceSubClass bInterfaceProtocol driver_info
+# Wheel Mouse Optical
+consoleUserPerms     0x0003      0x046d   0xc00e    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MouseMan Traveler
+consoleUserPerms     0x0003      0x046d   0xc00f    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MouseMan Dual Optical
+consoleUserPerms     0x0003      0x046d   0xc012    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX310 Optical Mouse
+consoleUserPerms     0x0003      0x046d   0xc01b    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX510 Optical Mouse
+consoleUserPerms     0x0003      0x046d   0xc01d    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX300 Optical Mouse
+consoleUserPerms     0x0003      0x046d   0xc024    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX500 Optical Mouse
+consoleUserPerms     0x0003      0x046d   0xc025    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# iFeel Mouse
+consoleUserPerms     0x0003      0x046d   0xc031    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Mouse Receiver
+consoleUserPerms     0x0003      0x046d   0xc501    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Dual Receiver
+consoleUserPerms     0x0003      0x046d   0xc502    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Cordless Freedom Optical
+consoleUserPerms     0x0003      0x046d   0xc504    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Cordless Elite Duo
+consoleUserPerms     0x0003      0x046d   0xc505    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX700 Optical Mouse
+consoleUserPerms     0x0003      0x046d   0xc506    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Cordless Optical Trackman
+consoleUserPerms     0x0003      0x046d   0xc508    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Cordless MX Duo Receiver
+consoleUserPerms     0x0003      0x046d   0xc50b    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# MX100 Laser Mouse
+consoleUserPerms     0x0003      0x046d   0xc50e    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+# Receiver for Cordless Presenter
+consoleUserPerms     0x0003      0x046d   0xc702    0x0000       0xffff      0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+]]>
+</programlisting>
+</informalexample>
+
+<para>
+That should be all that is needed on &Linux; - just copy the files into
+<filename
+>/etc/hotplug/usb/</filename
+>, and when the mouse is
+plugged in, the ownership and permissions should be changed
+so that the user at the console can access the mouse.
+</para>
+</sect3>
+-->
+</sect2>
+
+</sect1>
+
+</article>

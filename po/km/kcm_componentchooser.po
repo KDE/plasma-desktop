@@ -1,0 +1,385 @@
+# translation of kcmcomponentchooser.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2007, 2008, 2009.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2009-05-06 09:51+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#  i18n: file emailclientconfig_ui.ui line 152
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "ប្រើ​កម្មវិធី​អ៊ីមែល​ផ្សេង​ ៖"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "ជ្រើស​កម្មវិធី​អ៊ីមែល​ដែល​ចូលចិត្ត ៖"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "ជ្រើស​កម្មវិធី​អ៊ីមែល​ដែល​ចូលចិត្ត ៖"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "ជ្រើស​កម្មវិធី​ស្ថានីយ​ដែល​ចូលចិត្ត ៖"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "ជ្រើស​កម្មវិធី​ស្ថានីយ​ដែល​ចូលចិត្ត ៖"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "ជ្រើស​កម្មវិធី​ស្ថានីយ​ដែល​ចូលចិត្ត ៖"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ​​"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "មិន​ស្គាល់"
+
+#~ msgid "Component Chooser"
+#~ msgstr "ឧបករណ៍​ជ្រើស​សមាសភាគ"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០២ ដោយ Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "ជ្រើស​ពី​បញ្ជី​ខាងក្រោម​នូវ​សមាសភាគ​ដែល​គួរ​ត្រូវ​ប្រើ​ជា​លំនាំ​ដើម​សម្រាប់​សេវា %1 ។"
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​បាន​ផ្លាស់​ប្តូរ​សមាសភាគ​លំនាំ​ដើម​នៃ​ជម្រើស​របស់​អ្នក តើ​អ្នក​ចង់​រក្សាទុក​ការ​ផ្លាស់ប្តូរ​នោះ "
+#~ "ឥឡូវ​ ឬ​ទេ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "មិន​មាន​សេចក្ដី​ពិពណ៌នា"
+
+#  i18n: file componentchooser_ui.ui line 46
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "នៅ​ទីនេះ អ្នក​អាចផ្លាស់​ប្តូរ​កម្មវិធី​របស់​សមាសភាគ ។ សមាសភាគជា​កម្មវិធី​ដែល​គ្រប់គ្រង​ភារកិច្ច​មូលដ្ឋាន "
+#~ "ដូចជា​កម្មវិធី​ស្ថានីយ កម្មវិធី​និពន្ធ​អត្ថបទ និង​កម្មវិធី​អ៊ីមែល​ជាដើម ។ ពេល​ខ្លះ​កម្មវិធី KDE ផ្សេងៗ​គ្នា "
+#~ "ត្រូវការ​ហៅ​កម្មវិធី​កុងសូល ដើម្បី​ផ្ញើ​សំបុត្រ ឬ​បង្ហាញ​អត្ថបទ​មួយ​ចំនួន​ ។ ដើម្បី​ធ្វើ​ដូច្នេះ ​បាន​យ៉ាង​ប្រាកដ "
+#~ "កម្មវិធី​ទាំងនេះ​តែងតែ​ហៅ​សមាសភាគ​ដូច​គ្នា ។ នៅ​ទីនេះ អ្នក​អាច​ជ្រើស​កម្មវិធី ដែល​ប្រើ​សមាសភាគ​ទាំង​"
+#~ "នេះ ។"
+
+#  i18n: file componentchooser_ui.ui line 43
+#~ msgid "Default Component"
+#~ msgstr "សមាភាគ​លំនាំ​ដើម"
+
+#  i18n: file componentchooser_ui.ui line 119
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>បញ្ជី​នេះ​បង្ហាញ​ប្រភេទ​សមាសភាគ​ដែល​អាច​កំណត់​រចនាសម្ព័ន្ធ ។ ចុច​លើ​សមាសភាគ​ដែល​អ្នក​ចង់​កំណត់​"
+#~ "រចនាសម្ព័ន្ធ ។</p>\n"
+#~ "<p>ក្នុង​ប្រអប់​នេះ អ្នក​អាច​ផ្លាស់ប្តូរ​សមាសភាគ​លំនាំ​ដើម KDE ។ សមាសភាគ ​ជា​កម្មវិធី​ដែល​គ្រប់គ្រង​"
+#~ "ភារកិច្ច​មូលដ្ឋាន ដូចជា​កម្មវិធី​ស្ថានីយ កម្មវិធី​និពន្ធ​អត្ថបទ និង​កម្មវិធី​អ៊ីមែល ។ ជួនកាល​កម្មវិធី KDE "
+#~ "ផ្សេងៗ ត្រូវការ​ហៅ​កម្មវិធី​កុងសូល ដើម្បី​ផ្ញើ​សំបុត្រ ឬ​បង្ហាញ​អត្ថបទ​មួយ​ចំនួន​ ។ ដើម្បី​ធ្វើ​ដូច្នេះ​បាន​យ៉ាង​"
+#~ "ប្រាកដ កម្មវិធី​ទាំងនេះ​តែងតែ​ហៅ​សមាសភាគ​ដូចគ្នា ។ នៅ​ទីនេះ អ្នក​ជ្រើស​កម្មវិធី​ដែល​ប្រើ​សមាសភាគ​"
+#~ "ទាំងនេះ ។</p>\n"
+#~ "</qt>"
+
+#  i18n: file browserconfig_ui.ui line 49
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>បើក URL <b>http</b> និង <b>https</b></qt>"
+
+#  i18n: file browserconfig_ui.ui line 57
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "ក្នុង​កម្មវិធី​ដែល​ផ្អែក​លើ​មាតិកា​របស់ URL"
+
+#  i18n: file browserconfig_ui.ui line 68
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "ក្នុង​កម្មវិធី​រុករក​ខាង​ក្រោម ៖"
+
+#  i18n: file browserconfig_ui.ui line 68
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "ក្នុង​កម្មវិធី​រុករក​ខាង​ក្រោម ៖"
+
+#  i18n: file browserconfig_ui.ui line 120
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "ជ្រើស​កម្មវិធី​រុករក​អ៊ិនធឺណិត​ដែល​ចូលចិត្ត ៖"
+
+#  i18n: file emailclientconfig_ui.ui line 144
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail ជា​កម្មវិធី​អ៊ីមែល​ស្តង់ដារ​សម្រាប់​ផ្ទៃតុ KDE ។"
+
+#  i18n: file emailclientconfig_ui.ui line 141
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "ប្រើ KMail ជា​កម្មវិធី​អ៊ីមែល​ដែល​ចូលចិត្ត"
+
+#  i18n: file emailclientconfig_ui.ui line 155
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "ជ្រើស​ជម្រើស​នេះ បើ​អ្នក​ចង់​ប្រើ​កម្មវិធី​អ៊ីមែល​ផ្សេង ។"
+
+#  i18n: file emailclientconfig_ui.ui line 83
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t ៖ អាសយដ្ឋាន​អ្នក​ទទួល</li> <li>%s ៖ ប្រធាន​បទ</li> <li>%c ៖ ចម្លង​ជូន​ "
+#~ "(CC)</li> <li>%b ៖ ចម្លង​ជាសម្ងាត់ជូន (BCC)</li> <li>%B ៖ អត្ថបទ​តួរបស់​ពុម្ព​</li> "
+#~ "<li>%A ៖ ឯកសារ​ភ្ជាប់</li> <li>%u ៖ ផ្ញើ​សំបុត្រ​ទៅ ៖ URL </li></ul>"
+
+#  i18n: file emailclientconfig_ui.ui line 86
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "ចុច​ប៊ូតុង​នេះ ដើម្បី​ជ្រើស​កម្មវិធី​អ៊ីមែល​ដែល​អ្នក​ពេញ​ចិត្ត ។ សូម​ចំណាំ​ថា ដើម្បី​អាច​ទទួល​យក​បាន ឯកសារ​ដែល​"
+#~ "អ្នក​បាន​ជ្រើស​ត្រូវ​មាន​ការ​កំណត់​គុណលក្ខណៈ​អាច​ប្រតិបត្តិ ។<br/> អ្នក​អាច​ប្រើ​កន្លែង​ដាក់​ជាច្រើន​"
+#~ "ផងដែរ ដែល​វា​នឹង​ជំនួស​ដោយ​តម្លៃ​ពិតប្រាកដ ពេល​កម្មវិធី​អ៊ីមែល​ត្រូវ​បាន​ហៅ ៖ <ul> <li>%t​ ៖ "
+#~ "អាសយដ្ឋាន​របស់​អ្នក​ទទួល</li> <li>%s ៖ ប្រធានបទ</li> <li>%c ៖ ចម្លង​ជូន (CC)</li> "
+#~ "<li>%b ៖ ចម្លង​ជូន​ជា​សម្ងាត់ (BCC)</li> <li>%B ៖ អត្ថបទ​តួ​របស់​ពុម្ព</li> <li>%A ៖ "
+#~ "ឯកសារ​ភ្ជាប់ </li> </ul>"
+
+#  i18n: file emailclientconfig_ui.ui line 100
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "ចុច​ទីនេះ ដើម្បី​រក​មើល​ឯកសារ​របស់​កម្មវិធី​អ៊ីមែល ។"
+
+#  i18n: file emailclientconfig_ui.ui line 116
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "ធ្វើ​ឲ្យ​ជម្រើស​នេះ​សកម្ម បើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​អ៊ីមែល​ដែល​បាន​ជ្រើស ប្រតិបត្តិ​ក្នុង​ស្ថានីយ​មួយ (ឧទាហរណ៍ "
+#~ "<em>Konsole</em>) ។"
+
+#  i18n: file emailclientconfig_ui.ui line 113
+#~ msgid "&Run in terminal"
+#~ msgstr "រត់​ក្នុង​ស្ថានីយ"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "រក​មើល​ថត ដោយ​ប្រើ​កម្មវិធី​គ្រប់គ្រង​ឯកសារ​ដូច​ខាងក្រោម ៖"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "ផ្សេងៗ ៖ ចុច បន្ថែម... នៅ​ក្នុង​ប្រអប់​បង្ហាញ​នៅ​ទីនេះ ៖"
+
+#  i18n: file terminalemulatorconfig_ui.ui line 97
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "ប្រើ​កុងសូល (Konsole) ជា​កម្មវិធី​ស្ថានីយ"
+
+#  i18n: file terminalemulatorconfig_ui.ui line 72
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "ប្រើ​កម្មវិធី​ស្ថានីយ៍​ផ្សេង ៖ "
+
+#  i18n: file terminalemulatorconfig_ui.ui line 130
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "ចុច​ប៊ូតុង​នេះ ដើម្បី​ជ្រើស​កម្មវិធី​ស្ថានីយ​ចំណូល​ចិត្ត​របស់​អ្នក ។ សូម​ចំណាំ​ថា ដើម្បី​អាច​ទទួល​យក​បាន ឯកសារ​ដែល​"
+#~ "អ្នក​បាន​ជ្រើស ត្រូវ​មាន​ការ​កំណត់​គុណ​លក្ខណៈ​ដែល​អាច​ប្រតិបត្តិ ។ <br/> សូម​ចំណាំ​ផង​ដែរ​ថា កម្មវិធី​ខ្លះ​"
+#~ "ដែល​ប្រើ​កម្មវិធី​ស្ថានីយ វា​នឹង​មិន​ធ្វើការ​ឡើយ បើ​អ្នក​បន្ថែម​អាគុយម៉ង់ របស់​បន្ទាត់​បញ្ជា (ឧទាហរណ៍ ៖ "
+#~ "konsole -ls) ។"
+
+#  i18n: file terminalemulatorconfig_ui.ui line 152
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "ចុច​ទីនេះ ដើម្បី​រក​មើល​កម្មវិធី​ស្ថានីយ ។"
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "នៅ​សល់ %1 "
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ថ្មី​នឹង​ត្រូវ​បានប្រើ​នៅពេល KDE ត្រូវ​បាន​ចាប់ផ្ដើម​នៅ​ពេល​ក្រោយ ។"
+
+#~ msgid "Window Manager Change"
+#~ msgstr "ការ​ផ្លាស់ប្ដូរ​កម្មវិធី​គ្រប់គ្រង​បង្អួច"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ថ្មី​កំពុង​តែ​រត់ ។\n"
+#~ "វា​នៅ​តែ​ត្រូ​វបាន​ផ្ដល់​អនុសាសន៍​ឲ្យ​ចាប់ផ្ដើម​សម័យ​របស់ KDE នេះ​ឡើ​ងវិញ ដើម្បី​ប្រាកដ​ថា​កម្មវិធី​ដែល​កំពុង​តែ​"
+#~ "រត់​ទាំងអស់​បាន​ផ្លាស់ប្ដូរ ។"
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "បាន​ជំនួស​កម្មវិធី​គ្រប់គ្រង​បង្អួច"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr ""
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ដែល​កំពុង​រត់​របស់​អ្នក នឹង​ត្រូវ​បាន​ជំនយស​ឥឡូវ​ដោយ​កម្មវិធី​គ្រប់គ្រង​បង្អួច​ដែល​បានកំណត់​"
+#~ "រចនាសម្ព័ន្ធ​មួយ ។"
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ​ការ​ផ្លាស់ប្ដូរ​កម្មវិធី​គ្រប់គ្រង​បង្អួច"
+
+#~ msgid "&Accept Change"
+#~ msgstr "ទទួល​យក​ការ​ផ្លាស់ប្ដូរ"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "បម្លែង​ទៅ​អ្វី​ពីមុន"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ដែល​បានកំណត់​រចនាសម្ព័ន្ធ​ត្រូវ​បាន​ចាប់ផ្ដើម ។\n"
+#~ " សូម​ពិនិត្យ​មើល​ថាតើ​វា​បាន​ចាប់ផ្ដើម​ត្រឹមត្រូវ​​ឬទេ និង​បញ្ជាក់​ការ​ផ្លាស់ប្ដូរ ។\n"
+#~ " ការ​ចាប់ផ្ដើម​នឹង​ត្រូវ​បាន​បម្លែង​ដោយ​ស្វ័យ​ប្រវត្តិ​ក្នុង​រយៈពេល ២០ វិនាទី ។"
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ដែល​កំពុង​រត់​ត្រូវ​បាន​បម្លែង​ទៅ​ជា​កម្មវិធី​គ្រប់គ្រង​បង្អួច KDE លំនាំ​ដើម​របស់ KWin ។"
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​​ថ្មី​បាន​បរាជ័យ​ក្នុងការ​ចាប់ផ្ដើម ។\n"
+#~ "កម្មវិធី​គ្រប់គ្រង​បង្អួច​ដែល​កំពុង​រត់​ត្រូវ​បាន​បម្លែង​ទៅ​កម្មវិធី​គ្រប់គ្រង​របស់ KDE លំនាំដើម​របស់ KWin ។"
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "បាន​បរាជ័យ​ក្នុងការ​រត់​កម្មវិធី​កំណត់​រចនាសម្ព័ន្ធ​"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "ប្រើ​កម្មវិធី​គ្រប់គ្រង​បង្អួច​របស់ KDE លំនាំដើម (KWin)"
+
+#  i18n: file terminalemulatorconfig_ui.ui line 72
+#~ msgid "Use a different &window manager:"
+#~ msgstr "ប្រើ​កម្មវិធី​គ្រប់គ្រង​បង្អួច​ផ្សេងៗ​គ្នា ៖"
+
+#~ msgid "Configure"
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "ចំណាំ ៖ កម្មវិធី​គ្រប់គ្រង​បង្អួច​ភាគ​ច្រើន​មាន​ការ​កំណត់​រចនាសម្ព័ន្ធ​របស់​ពួកគេ និង​មិន​តាម​​ការ​កំណត់​របស់ "
+#~ "KDE ។"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"

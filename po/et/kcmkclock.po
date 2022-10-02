@@ -1,0 +1,248 @@
+# translation of kcmkclock.po to Estonian
+# Copyright (C) 2000, 2003 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@linux.ee>, 2000.
+# Marek Laane <bald@starman.ee>, 2003-2005,2007-2008.
+# Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2014, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2019-10-30 15:39+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Hasso Tepper"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "hasso@linux.ee"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Kuupäev ja kellaaeg"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Kuupäev&a ja kellaaja määramine automaatselt"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "A&jaserver:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Siin saab muuta süsteemi kuupäeva, kuud ja aastat."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Ajavöönd"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Kohaliku ajavööndi muutmiseks vali allolevast nimekirjast oma piirkond."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Aktiivne kohalik ajavöönd:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
+msgstr "Otsing ..."
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"Ühtegi NTP tööriista ei leitud. Kuupäeva ja kellaaja automaatseks "
+"uuendamiseks tuleb paigaldada käsk 'ntpdate' või 'rdate'."
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Siin saab muuta süsteemi kellaaega. Kellaaja muutmiseks klõpsa tundide, "
+"minutite ja sekundite väljadel ning kasuta kas paremal asuvaid nooltega "
+"nuppe või sisesta uued väärtused otse väljale."
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "Aktiivne kohalik ajavöönd: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "Aktiivne kohalik ajavöönd: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"Avalik ajaserver (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "Ajaserveriga ühenduse loomine nurjus: %1."
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "Kuupäeva pole võimalik seada."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "Viga uue ajavööndi määramisel."
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "Ajavööndi viga"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Kuupäev ja kellaaeg</h1> Seda Süsteemi seadistuste moodulit võib "
+"kasutada süsteemi kuupäeva ja kellaaja seadmiseks. Kuna need seadistused ei "
+"mõjuta ainult sind kui kasutajat, vaid tervet süsteemi, saab neid seadistusi "
+"muuta ainult siis, kui käivitad Süsteemi seadistused administraatorina "
+"(<em>root</em>). Kui sul pole kasutaja <em>root</em> parooli, kuid näed, et "
+"süsteemi kellaaega oleks vaja korrigeerida, võta ühendust oma süsteemi "
+"administraatoriga."
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "KDE kella seadistamise moodul"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001: Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "Algne autor"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "Praegune hooldaja"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "Lisas NTP toe"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>Kuupäev ja kellaaeg</h1> Seda Süsteemi seadistuste moodulit võib "
+"kasutada süsteemi kuupäeva ja kellaaja seadmiseks. Kuna need seadistused ei "
+"mõjuta ainult sind kui kasutajat, vaid tervet süsteemi, saab neid seadistusi "
+"muuta ainult siis, kui käivitad Süsteemi seadistused administraatorina "
+"(<em>root</em>). Kui sul pole kasutaja <em>root</em> parooli, kuid näed, et "
+"süsteemi kellaaega oleks vaja korrigeerida, võta ühendust oma süsteemi "
+"administraatoriga."
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Toimingu autentimine/täitmine nurjus: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "NTP seadistuste muutmine nurjus"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Parajasti kehtiva kellaaja määramine nurjus"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Ajavööndi määramine nurjus"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "NTP"
+#~ msgstr "NTP"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "Süsteemi kuupäeva/kellaaja/ajavööndi määramine nurjus."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Kuupäeva/kellaaja viga"

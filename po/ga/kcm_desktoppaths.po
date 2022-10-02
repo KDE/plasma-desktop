@@ -1,0 +1,432 @@
+# translation of kcmkonq.po to Irish
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
+# Kevin Scannell <kscanne@gmail.com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta1\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Deasc"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Cáipéisí"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Íosluchtuithe"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Ceol"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Pictiúir"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "Conair na scannán:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Conairí</h1>\n"
+"Leis an modúl seo is féidir leat na comhadlanna sa chóras comhad ina "
+"stóráiltear na comhaid ar do dheasc.\n"
+"Úsáid \"Cad É Seo?\" (Shift+F1) chun tuilleadh eolais a fháil maidir le "
+"roghanna áirithe."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Conair na deisce:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Is san fhillteán seo a stóráiltear na comhaid go léir atá ar do dheasc. Is "
+"féidir suíomh an fhillteáin seo a athrú más mian leat, agus bogfar an t-"
+"inneachar go dtí an suíomh nua go huathoibríoch."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Conair na gcáipéisí:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Luchtófar cáipéisí ón fhillteán seo agus sábhálfar iad ann de réir "
+"réamhshocraithe."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Conair na n-íosluchtuithe:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Sábhálfar do chuid íosluchtuithe san fhillteán seo de réir réamhshocraithe."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "Conair na scannán:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Luchtófar scannáin ón fhillteán seo agus sábhálfar iad ann de réir "
+"réamhshocraithe."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Conair na bpictiúr:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
+"réamhshocraithe."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Conair cheoil:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Luchtófar ceol ón fhillteán seo agus sábhálfar é ann de réir réamhshocraithe."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Conair uath-thosaithe:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Is san fhillteán seo a stóráiltear feidhmchláir nó naisc le feidhmchláir "
+#~ "(aicearraí) is mian leat a thosú go huathoibríoch ag am tosaithe KDE. Is "
+#~ "féidir leat suíomh an fhillteáin seo a athrú más mian leat, agus bogfar "
+#~ "an t-inneachar go dtí an suíomh nua go huathoibríoch."
+
+#~ msgid "Autostart"
+#~ msgstr "Tosú uathoibríoch"
+
+#~ msgid "Movies"
+#~ msgstr "Scannáin"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Athraíodh an chonair le haghaidh '%1'.\n"
+#~ "An bhfuil fonn ort na comhaid a bhogadh ó '%2' go '%3'?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Bog"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Ná Bog"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Athraíodh conair le haghaidh '%1'.\n"
+#~ "An bhfuil fonn ort comhadlann '%2' a bhogadh go '%3'?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Bog"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Ná Bog"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Ní mór cinntiú"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Oibriú Konqueror</h1> Leis seo is féidir oibriú Konqueror a chumrú "
+#~ "mar bhainisteoir comhad."
+
+#~ msgid "Misc Options"
+#~ msgstr "Roghanna Éagsúla"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Oscail fillteáin i bh&fuinneoga ar leith"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Má chuireann tú tic sa bhosca seo, osclóidh Konqueror fuinneog nua nuair "
+#~ "a osclóidh tú fillteán, in ionad inneachar an fhillteáin sin a "
+#~ "thaispeáint san fhuinneog reatha."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Taispeái&n iontrálacha 'Scrios' sa roghchlár comhthéacs a sheachnaíonn an "
+#~ "bruscar"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Cuir tic anseo más mian leat orduithe 'Scrios' a thaispeáint ar an deasc "
+#~ "agus i roghchláir chomhthéacs sa bhainisteoir comhad. Is féidir leat "
+#~ "comhaid a scriosadh i gcónaí tríd an eochair Shift a choinneáil síos agus "
+#~ "'Bog go dtí an bruscar' a úsáid."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Eagarthóir Roghchláir"
+
+#~ msgid "Menu"
+#~ msgstr "Roghchlár"
+
+#~ msgid "New..."
+#~ msgstr "Nua..."
+
+#~ msgid "Remove"
+#~ msgstr "Bain"
+
+#~ msgid "Move Up"
+#~ msgstr "Bog Suas"
+
+#~ msgid "Move Down"
+#~ msgstr "Bog Síos"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "&Bog go dtí an bruscar"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "S&crios"
+
+#~ msgid "&Behavior"
+#~ msgstr "Oi&briú"
+
+#~ msgid "&Previews && Meta-Data"
+#~ msgstr "&Réamhamhairc agus Meiteashonraí"
+
+#~ msgid "Local Protocols"
+#~ msgstr "Prótacail Logánta"
+
+#~ msgid "Internet Protocols"
+#~ msgstr "Prótacail Idirlín"
+
+#~ msgid "&Maximum file size:"
+#~ msgstr "&Uasmhéid comhaid:"
+
+#~ msgid " MB"
+#~ msgstr " MB"
+
+#~ msgid "&Use thumbnails embedded in files"
+#~ msgstr "Ú&sáid mionsamhlacha atá leabaithe i gcomhaid"
+
+#~ msgid "Sound Files"
+#~ msgstr "Comhaid Fhuaime"
+
+#~ msgid "&Left button:"
+#~ msgstr "&Cnaipe clé:"
+
+#~ msgid "Right b&utton:"
+#~ msgstr "Cnaipe &deas:"
+
+#~ msgid "No Action"
+#~ msgstr "Gan Ghníomh"
+
+#~ msgid "Desktop Menu"
+#~ msgstr "Roghchlár na Deisce"
+
+#~ msgid "Application Menu"
+#~ msgstr "Roghchlár na bhFeidhmchlár"
+
+#~ msgid "Bookmarks Menu"
+#~ msgstr "Roghchlár na Leabharmharcanna"
+
+#~ msgid "Custom Menu 1"
+#~ msgstr "Roghchlár Saincheaptha 1"
+
+#~ msgid "Custom Menu 2"
+#~ msgstr "Roghchlár Saincheaptha 2"
+
+#~ msgid "General"
+#~ msgstr "Ginearálta"
+
+#~ msgid "&Show icons on desktop"
+#~ msgstr "&Taispeáin deilbhíní ar an deasc"
+
+#~ msgid "Allow pro&grams in desktop window"
+#~ msgstr "Ceadai&gh do chláir a bheith ar an deasc"
+
+#~ msgid "Show &tooltips"
+#~ msgstr "&Taispeáin leideanna uirlisí"
+
+#~ msgid "Menu Bar at top of Screen"
+#~ msgstr "Barra Roghchlár ag barr an Scáileáin"
+
+#~ msgid "&None"
+#~ msgstr "&Neamhní"
+
+#~ msgid "&Desktop menu bar"
+#~ msgstr "&Barra roghchláir na Deisce"
+
+#~ msgid "&Current application's menu bar (Mac OS-style)"
+#~ msgstr "Barra rogh&chláir an fheidhmchláir reatha (stíl Mac OS)"
+
+#~ msgid "Mouse Button Actions"
+#~ msgstr "Gníomhartha na gCnaipí Luiche"
+
+#~ msgid "Middle button:"
+#~ msgstr "Cnaipe sa lár:"
+
+#~ msgid "Left button:"
+#~ msgstr "Cnaipe clé:"
+
+#~ msgid "Right button:"
+#~ msgstr "Cnaipe deas:"
+
+#~ msgid "Edit..."
+#~ msgstr "Eagar..."
+
+#~ msgid "File Icons"
+#~ msgstr "Deilbhíní Comhaid"
+
+#~ msgid "Automatically &line up icons"
+#~ msgstr "Cuir deilbhíní i &línte go huathoibríoch"
+
+#~ msgid "Show &hidden files"
+#~ msgstr "Taispeáin com&haid fholaithe"
+
+#~ msgid "Device Icons"
+#~ msgstr "Deilbhíní Gléis"
+
+#~ msgid "&Show device icons:"
+#~ msgstr "Tai&speáin deilbhíní gléis:"
+
+#~ msgid "Device Types to Display"
+#~ msgstr "Cineálacha Gléis le Taispeáint"
+
+#~ msgid "Show file &tips"
+#~ msgstr "&Taispeáin leideanna comhaid"
+
+#~ msgid "Desktop %1"
+#~ msgstr "Deasc %1"
+
+#~ msgid "Rename icons in&line"
+#~ msgstr "Athainmnigh dei&lbhíní inlíne"
+
+#~ msgid "&Appearance"
+#~ msgstr "&Cuma"
+
+#~ msgid "&Standard font:"
+#~ msgstr "&Cló caighdeánach:"
+
+#~ msgid "Font si&ze:"
+#~ msgstr "C&lómhéid:"
+
+#~ msgid "H&eight for icon text:"
+#~ msgstr "Aird&e an téacs deilbhín:"
+
+#~ msgid "&Width for icon text:"
+#~ msgstr "&Leithead an téacs deilbhín:"
+
+#~ msgid "&Underline filenames"
+#~ msgstr "C&uir líne faoi ainmneacha comhaid"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " líne"
+#~ msgstr[1] " líne"
+#~ msgstr[2] " líne"
+#~ msgstr[3] " líne"
+#~ msgstr[4] " líne"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " phicteilín"
+#~ msgstr[1] " phicteilín"
+#~ msgstr[2] " phicteilín"
+#~ msgstr[3] " bpicteilín"
+#~ msgstr[4] " picteilín"
+
+#~ msgid "&Show network operations in a single window"
+#~ msgstr "&Taispeáin oibríochtaí líonra i bhfuinneog aonair"
+
+#~ msgid "Home &URL:"
+#~ msgstr "&URL Baile:"
+
+#~ msgid "Select Home Folder"
+#~ msgstr "Roghnaigh Fillteán Baile"

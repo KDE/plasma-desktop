@@ -1,0 +1,310 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-06-04 21:06+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Position on screen:"
+msgstr "திரையில் இருப்பிடம்:"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Top"
+msgstr "மேலே"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Center"
+msgstr "நடுவில்"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Activation:"
+msgstr "தூண்டுவது:"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "பணிமேடையில் எந்த விசையை அழுத்தினாலும் தூண்டு"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "History:"
+msgstr "வரலாறு:"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@option:check"
+msgid "Remember past searches"
+msgstr "முந்தைய தேடல்களை நினைவில் கொள்"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt "@option:check"
+msgid "Retain last search when re-opening"
+msgstr "திறக்கும்போது முந்தைய தேடலை நிரப்பு"
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Activity-aware (last search and history)"
+msgstr "செயல்பாட்டை பொறுத்தது (முந்தைய தேடல் மற்றும் வரலாறு)"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Clear History"
+msgstr "வரலாற்றை நீக்கு"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button %1 activity name"
+msgid "Clear History for Activity \"%1\""
+msgstr "\"%1\" என்ற செயல்பாட்டிற்கான வரலாற்றை நீக்கு"
+
+#: package/contents/ui/main.qml:111
+#, kde-format
+msgid "Clear History…"
+msgstr "வரலாற்றை மற…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "அனைத்து செயல்பாடுகளுக்கும்"
+
+#: package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "\"%1\" என்ற செயல்பாட்டிற்கு மட்டும்"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "செருகுநிரல்கள்:"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "இயக்கியுள்ள தேடல் செருகுநிரல்களை அமை…"
+
+#~ msgid "Available Plugins"
+#~ msgstr "பயன்படுத்தக்கூடிய செருகுநிரல்கள்"
+
+#~ msgid ""
+#~ "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#~ "Overview effect)"
+#~ msgstr ""
+#~ "செருகுநிரல்களை இயக்கு அல்லது முடக்கு (கேரன்னரில், செயலி ஏவியில், மற்றும் மேலோட்ட "
+#~ "அசைவூட்டத்தில் பயன்படுத்துபவை)"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "கேரன்னரை அமை…"
+
+#~ msgid "Get New Plugins…"
+#~ msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Failed to run install script in terminal <message>%1</message>"
+#~ msgstr ""
+#~ "நிறுவல் சிறுநிரலை முனையத்தில் இயக்குதல் தோல்வியடைந்தது <message>%1</message>"
+
+#~ msgctxt "@info"
+#~ msgid "Installation executed successfully, you may now close this window"
+#~ msgstr "வெற்றிகரமாக நிறுவப்பட்டது, நீங்கள் இந்த சாளரத்தை இப்போது மூடலாம்"
+
+#~ msgctxt "@info"
+#~ msgid "Uninstallation executed successfully, you may now close this window"
+#~ msgstr "வெற்றிகரமாக நிறுவல் நீக்கப்பட்டது, நீங்கள் இந்த சாளரத்தை இப்போது மூடலாம்"
+
+#~ msgctxt "@info"
+#~ msgid "KRunner plugin installation failed"
+#~ msgstr "கேரன்னர் செருகுநிரல் நிறுவல் தோல்வியடைந்தது"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Command to execute: install or uninstall."
+#~ msgstr "இயக்க வேண்டிய கட்டளை: install அல்லது uninstall."
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "பெட்டகத்துக்கான (archive-க்கான) பாதை."
+
+#~ msgctxt "@info"
+#~ msgid "No PackageKit support"
+#~ msgstr "PackageKit ஆதரவு இல்லை"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Installation"
+#~ msgstr "நிறுவலை உறுதி செய்யுங்கள்"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You are about to install a binary package. You should only install these "
+#~ "from a trusted author/packager."
+#~ msgstr ""
+#~ "நீங்கள் ஒரு இரும (binary) தொகுப்பை நிறுவ உள்ளீர்கள். நம்பகமானவர்களிடமே இவற்றை பெற்று "
+#~ "நிறுவ வேண்டும்."
+
+#~ msgctxt "@action:button"
+#~ msgid "Accept Risk And Continue"
+#~ msgstr "ஆபத்தை ஏற்று தொடர்"
+
+#~ msgctxt "@action:button"
+#~ msgid "View File"
+#~ msgstr "கோப்பைக் காட்டு"
+
+#~ msgctxt "@info"
+#~ msgid "The mime type %1 is not supported by the packagekit backend"
+#~ msgstr "%1 என்ற மைம்வகை, packagekit பின்நிலையால் ஆதரிக்கப்படாதது"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவல்நீக்க சிறுநிரலை வழங்கவில்லை. தயவுசெய்து இயற்றியவரை தொடர்பு "
+#~ "கொள்ளுங்கள். நீங்கள் செருகுநிரலை கைமுறையாக நீக்க முயற்சிக்கலாம்.<nl/>இதை நீங்கள் செய்ய "
+#~ "விரும்பாத பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை இப்போதே "
+#~ "அழுத்துங்கள்."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an uninstallation script. Please contact the "
+#~ "author. You can try to uninstall the plugin manually. Please have a look "
+#~ "at the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவல்நீக்க சிறுநிரலை வழங்கவில்லை. தயவுசெய்து இயற்றியவரை தொடர்பு "
+#~ "கொள்ளுங்கள். நீங்கள் செருகுநிரலை கைமுறையாக நீக்க முயற்சிக்கலாம். இயற்றியவர் "
+#~ "பரிந்துரைக்கும் வழிமுறைகளை README கோப்பில் பாருங்கள்.<nl/>இதை நீங்கள் செய்ய விரும்பாத "
+#~ "பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை இப்போதே அழுத்துங்கள்."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually.<nl/>If you do not "
+#~ "feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவல் சிறுநிரலை வழங்கவில்லை. தயவுசெய்து இயற்றியவரை தொடர்பு "
+#~ "கொள்ளுங்கள். நீங்கள் செருகுநிரலை கைமுறையாக நிறுவ முயற்சிக்கலாம்.<nl/>இதை நீங்கள் செய்ய "
+#~ "விரும்பாத பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை இப்போதே "
+#~ "அழுத்துங்கள்."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin does not provide an installation script. Please contact the "
+#~ "author. You can try to install the plugin manually. Please have a look at "
+#~ "the README for instructions from the author.<nl/>If you do not feel "
+#~ "capable or comfortable with this, click <interface>Cancel</interface>  "
+#~ "now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவல் சிறுநிரலை வழங்கவில்லை. தயவுசெய்து இயற்றியவரை தொடர்பு "
+#~ "கொள்ளுங்கள். நீங்கள் செருகுநிரலை கைமுறையாக நிறுவ முயற்சிக்கலாம். இயற்றியவர் "
+#~ "பரிந்துரைக்கும் வழிமுறைகளை README கோப்பில் பாருங்கள்.<nl/>இதை நீங்கள் செய்ய விரும்பாத "
+#~ "பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை இப்போதே அழுத்துங்கள்."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the script's source code.<nl/>If you do not feel capable or "
+#~ "comfortable with this, click <interface>Cancel</interface>  now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவலுக்கு ஒரு சிறுநிரலைப் பயன்படுத்துகிறது; இது, ஆபத்து "
+#~ "விளைவிக்கக் கூடும். தயவுசெய்து முழு செருகுநிரலை ஒரு முறை ஆராய்ந்து பாருங்கள், "
+#~ "அல்லது குறைந்தபட்சம் சிறுநிரலின் மூலத்தைப் பாருங்கள்.<nl/>இதை நீங்கள் செய்ய விரும்பாத "
+#~ "பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை இப்போதே அழுத்துங்கள்."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "This plugin uses a script for installation which can pose a security "
+#~ "risk. Please examine the entire plugin's contents before installing, or "
+#~ "at least read the README file and the script's source code.<nl/>If you do "
+#~ "not feel capable or comfortable with this, click <interface>Cancel</"
+#~ "interface>  now."
+#~ msgstr ""
+#~ "இந்த செருகுநிரல், நிறுவலுக்கு ஒரு சிறுநிரலைப் பயன்படுத்துகிறது; இது, ஆபத்து "
+#~ "விளைவிக்கக் கூடும். தயவுசெய்து முழு செருகுநிரலை ஒரு முறை ஆராய்ந்து பாருங்கள், "
+#~ "அல்லது குறைந்தபட்சம் சிறுநிரலின் மூலத்தையும் README கோப்பையும் பாருங்கள்.<nl/>இதை "
+#~ "நீங்கள் செய்ய விரும்பாத பட்சத்தில், <interface>ரத்து செய்</interface> என்ற பட்டனை "
+#~ "இப்போதே அழுத்துங்கள்."
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as uninstalled"
+#~ msgstr "நிறுவல் நீக்கியதாக பதிவை குறி"
+
+#~ msgctxt "@action:button"
+#~ msgid "Mark entry as installed"
+#~ msgstr "நிறுவியதாக பதிவை குறி"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Script"
+#~ msgstr "சிறுநிரலை காட்டு"
+
+#~ msgctxt "@action:button"
+#~ msgid "View Source Directory"
+#~ msgstr "மூல அடைவை காட்டு"
+
+#~ msgctxt "@action:button"
+#~ msgid "View %1"
+#~ msgstr "%1 என்பதை காட்டு"
+
+#~ msgctxt "@info"
+#~ msgid "Could not resolve package name of %1"
+#~ msgstr "%1 என்பதன் தொகுப்புப் பெயரைக் கண்டறிய முடியவில்லை"
+
+#~ msgctxt "@info"
+#~ msgid "Failed to run install command: <message>%1</message>"
+#~ msgstr "நிறுவல் கட்டளை தோல்வியடைந்தது: <message>%1</message>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "கோ. கிஷோர்"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Kde-l10n-ta@kde.org"
+
+#~ msgctxt "kcm name for About dialog"
+#~ msgid "Configure search settings"
+#~ msgstr "தேடல் அமைப்புகளை மாற்றுங்கள்"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "விஷேஷ் ஹண்டா"
+
+#~ msgid "KRunner position:"
+#~ msgstr "கேரன்னரின் இருப்பிடம்:"
+
+#~ msgid "Enable"
+#~ msgstr "இயக்கு"
+
+#~ msgid "KRunner history:"
+#~ msgstr "கேரன்னர் வரலாறு:"
+
+#~ msgid "Retain previous search"
+#~ msgstr "முந்தைய தேடலை வைத்திரு"
+
+#~ msgid "Clear History..."
+#~ msgstr "வரலாற்றை மற..."

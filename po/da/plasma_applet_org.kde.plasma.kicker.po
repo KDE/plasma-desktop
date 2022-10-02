@@ -1,0 +1,762 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2022-08-20 17:19+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generelt"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Fjern fra favoritter"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Føj til favoritter"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "På alle aktiviteter"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "På den aktuelle aktivitet"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Vis i favoritter"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Vælg..."
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Ryd ikon"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Vis programmer som:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Kun navn"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Kun beskrivelse"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Navn (beskrivelse)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Beskrivelse (navn)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Opførsel:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Sortér programmer alfabetisk"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Gør undermenuer flade til et enkelt niveau"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Vis ikoner i bunden af menuen"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Vis kategorier"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Nylige programmer"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Ofte anvendte programmer"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Nylige filer"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Ofte anvendte filer"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Nylige kontakter"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Ofte anvendte kontakter"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Sortér elementer i kategorier efter:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Nyligt anvendt"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Ofte anvendt"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Søg:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Udvid søgning til bogmærker, filer og e-mails"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Justér søgeresultater nederst"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Søger efter \"%1\""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Skriv for at søge..."
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritter"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Widgets"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Programmer og dokumenter"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Redigér programmer…"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgid "Search…"
+#~ msgstr "Søg:"
+
+#~ msgid "Search..."
+#~ msgstr "Søg..."
+
+#~ msgid "Often used documents"
+#~ msgstr "Ofte anvendte dokumenter"
+
+#~ msgid "Open with:"
+#~ msgstr "Åbn med:"
+
+#~ msgid "Properties"
+#~ msgstr "Egenskaber"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Føj til skrivebordet"
+
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Føj til panel (widget)"
+
+#~ msgid "Pin to Task Manager"
+#~ msgstr "Fastgør til opgavelinje"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Nylige dokumenter"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Glem nylige dokumenter"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Redigér program..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Skjul program"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Programmer"
+
+#~ msgid "Unhide Applications in this Submenu"
+#~ msgstr "Stop med at skjule programmer i denne undermenu"
+
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Stop med at skjule programmer i \"%1\""
+
+#, fuzzy
+#~| msgid "KRunner"
+#~ msgid "Show KRunner"
+#~ msgstr "KRunner"
+
+#~ msgid "Computer"
+#~ msgstr "Computer"
+
+#~ msgid "Show Contact Information..."
+#~ msgstr "Vis kontaktinformation..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakter"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Glem kontakt"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Glem alle kontakter"
+
+#~ msgid "Recently Used"
+#~ msgstr "Nyligt anvendt"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenter"
+
+#~ msgid "Forget Application"
+#~ msgstr "Glem program"
+
+#~ msgid "Forget Document"
+#~ msgstr "Glem dokument"
+
+#~ msgid "Forget All"
+#~ msgstr "Glem alt"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Glem alle programmer"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Glem alle dokumenter"
+
+#~ msgid "Hide %1"
+#~ msgstr "Skjul %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Alle programmer"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Nylige kontakter"
+
+#~ msgid "Often Used Documents"
+#~ msgstr "Ofte anvendte dokumenter"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Nylige programmer"
+
+#~ msgid "Often Used Applications"
+#~ msgstr "Ofte anvendte programmer"
+
+#~ msgid "Power / Session"
+#~ msgstr "Strøm / session"
+
+#~ msgid "Search results"
+#~ msgstr "Søgeresultater"
+
+#~ msgid "Lock"
+#~ msgstr "Lås"
+
+#~ msgid "Save Session"
+#~ msgstr "Gem session"
+
+#~ msgid "Switch User"
+#~ msgstr "Skift bruger"
+
+#~ msgid "Hibernate"
+#~ msgstr "Dvale"
+
+#~ msgid "Restart"
+#~ msgstr "Genstart"
+
+#~ msgid "Shut Down"
+#~ msgstr "Luk ned"
+
+#~ msgid "Session"
+#~ msgstr "Session"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Lock screen"
+#~ msgstr "Lås skærmen"
+
+#~ msgid "End session"
+#~ msgstr "Afslut session"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Start en parallel session som en anden bruger"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspendér til ram"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspendér til disk"
+
+#~ msgid "Restart computer"
+#~ msgstr "Genstart computeren"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Sluk computeren"
+
+#~ msgid "System actions"
+#~ msgstr "Systemhandlinger"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Håndtér \"%1\"..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Kør kommando..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Kør en kommando eller søgeforespørgsel"
+
+#~ msgid "Show:"
+#~ msgstr "Vis:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Vis nylige programmer"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Vis ofte anvendte programmer"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Vis nylige dokumenter"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Vis ofte anvendte dokumenter"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Vis nylige kontakter"
+
+#~ msgid "Logout"
+#~ msgstr "Log ud"
+
+#~ msgid "Reboot"
+#~ msgstr "Genstart"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspendér"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Flytbare lagringsmedier"
+
+#~ msgid "Places"
+#~ msgstr "Steder"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Anvend brugervalgt billede:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Vælg billede"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Billedfiler (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Tilføj som programstarter"
+
+#~ msgid "New Session"
+#~ msgstr "Ny session"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Tom)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Runner: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Gennemse installerede programmer efter kategori"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Alle installerede programmer"
+
+#~ msgid ""
+#~ "List all installed applications in a flat list, grouped by categories"
+#~ msgstr ""
+#~ "Oplist alle installerede programmer i en flad liste grupperet efter "
+#~ "kategori"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Alle installerede programmer med filtre"
+
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr "Oplist alle installerede programmer og filtrér via sidepanelet"
+
+#~ msgid "List the most recently launched applications"
+#~ msgstr "Oplist de programmer der er kørt for nyligt"
+
+#~ msgid "Folder"
+#~ msgstr "Mappe"
+
+#~ msgid "List the content of a folder and let you browse into sub-folders"
+#~ msgstr "Oplister indholdet af en mappe og lader dig gå ind i undermapper"
+
+#~ msgid "Browse the content of your favorite places"
+#~ msgstr "Gennemse indholdet af dine favoritsteder"
+
+#~ msgid "List applications marked as favorite"
+#~ msgstr "Oplist programmer der er markeret som favoritter"
+
+#~ msgid "Power Management"
+#~ msgstr "Strømstyring"
+
+#~ msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgstr ""
+#~ "Vis knapper til at suspendere, dvale, genstarte eller slukke computeren"
+
+#~ msgid ""
+#~ "Provide buttons to lock the screen, log out, or switch to another user"
+#~ msgstr ""
+#~ "Vis knapper til at låse skærmen, logge ud eller skifte til en anden bruger"
+
+#~ msgid "Provide buttons to switch to opened sessions"
+#~ msgstr "Giver knapper til at skifte mellem åbne sessioner"
+
+#~ msgid ""
+#~ "Provide buttons to manage your workspace session and the power state of "
+#~ "your computer"
+#~ msgstr ""
+#~ "Vis knapper til at håndtere din arbejdsområde-session og din computers "
+#~ "strømstatus"
+
+#~ msgid "Perform searchs using a selection of runners"
+#~ msgstr "Udfør søgning med et udvalg af runners"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Mappe der skal vises:"
+
+#~ msgid "Title:"
+#~ msgstr "Titel:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Mappenavnet bruges, hvis titel står tom"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Hjem"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Netværk"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Rod"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Affald"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "&Frigiv \"%1\""
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "&Afmontér \"%1\""
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "&Skub \"%1\" ud"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "Enheden \"%1\" er ikke en disk og kan ikke skubbes ud."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr ""
+#~ "Der opstod en fejl under tilgang til \"%1\", systemet svarede med: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "En fejl opstod under tilgang til \"%1\""
+
+#~ msgid "Pick the application folder to display:"
+#~ msgstr "Vælg den programmappe der skal vises:"
+
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Fjern fra sidepanel"
+
+#~ msgid "Add to Sidebar"
+#~ msgstr "Føj til sidepanel"
+
+#~ msgid "Power"
+#~ msgstr "Tænd/sluk"
+
+#~ msgid "Pick the runners you would like to use in this source:"
+#~ msgstr "Vælg de runners der skal bruges i denne kilde:"
+
+#~ msgid "Hello"
+#~ msgstr "Hej"
+
+#~ msgid "World"
+#~ msgstr "Verden"
+
+#~ msgid "Hello World"
+#~ msgstr "Hej verden"
+
+#~ msgid "Text Color:"
+#~ msgstr "Tekstfarve:"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Tekstskygge:"
+
+#~ msgid "None"
+#~ msgstr "Ingen"
+
+#~ msgid "Automatic"
+#~ msgstr "Automatisk"
+
+#~ msgid "Custom:"
+#~ msgstr "Brugertilpasset:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Gå til forrige faneblad"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Gå til næste faneblad"
+
+#~ msgid "Focus search field"
+#~ msgstr "Bring søgefelt i fokus"
+
+#~ msgid "Go back"
+#~ msgstr "Gå tilbage"
+
+#~ msgid "Go forward"
+#~ msgstr "Gå frem"
+
+#~ msgid "Go up"
+#~ msgstr "Gå op"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Unavngiven>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Færdig"
+
+#~ msgid "Search in current tab..."
+#~ msgstr "Søg i det aktuelle faneblad..."
+
+#~ msgid "End Configure Tabs"
+#~ msgstr "Afslut indstilling af faneblade"
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Indstil faneblade"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Indstil genveje..."
+
+#~ msgid "Show Action List Buttons"
+#~ msgstr "Vis handlingsliste-knapper"
+
+#~ msgid "Show Desktop Tool Box"
+#~ msgstr "Vis skrivebord-værktøjskasse"
+
+#~ msgid "Restore Tabs to Default"
+#~ msgstr "Nulstil faneblade til standard"
+
+#~ msgid ""
+#~ "Are you sure you want to restore tabs?\n"
+#~ "Restoring tabs will reset your configuration to the default Homerun "
+#~ "tabs.\n"
+#~ "Your lists of favorite applications and places will remain untouched."
+#~ msgstr ""
+#~ "Vil du virkelig nulstille faneblade?\n"
+#~ "Nulstilling af faneblade vil bringe din konfiguration tilbage til "
+#~ "Homeruns standardfaneblade.\n"
+#~ "Dine lister over favoritprogrammer og steder vil ikke blive berørt."
+
+#~ msgid "Restore Tabs"
+#~ msgstr "Nulstil faneblade"
+
+#~ msgid "About %1"
+#~ msgstr "Om %1"
+
+#~ msgid "Drag to reorder; release to show menu"
+#~ msgstr "Træk for at omorganisere. Slip for at vise menuen"
+
+#~ msgid "Release to show menu"
+#~ msgstr "Slip for at vise menuen"
+
+#~ msgid "Drag to reorder"
+#~ msgstr "Træk for at omorganisere"
+
+#~ msgid "This item has no menu and cannot be dragged"
+#~ msgstr "Dette element har ingen menu og kan ikke trækkes"
+
+#~ msgid "%1 has been added to your favorites"
+#~ msgstr "%1 er blevet føjet til dine favoritter"
+
+#~ msgid "Broken source '%1'"
+#~ msgstr "Defekt kilde \"%1\""
+
+#~ msgid "Tab Label:"
+#~ msgstr "Fanebladsetiket:"
+
+#~ msgid ""
+#~ "<p><b>Sorry, Homerun failed to load</b></p><p>Do you want to report this "
+#~ "error?</p><p>If you decide to report it, please copy and paste the "
+#~ "following output in your report:</p><pre>%1</pre>"
+#~ msgstr ""
+#~ "<p><b>Beklager, Homerun kunne ikke indlæses</b></p><p>Vil du rapportere "
+#~ "denne fejl?</p><p>Hvis du vælger at rapportere den, så kopiér og indsæt "
+#~ "venligst følgende output i din fejlrapport:</p><pre>%1</pre>"
+
+#~ msgid "Report Error"
+#~ msgstr "Rapportér fejl"
+
+#~ msgid "Log focused item (for debug purposes)"
+#~ msgstr "Log elementet i fokus (til fejlsøgningsformål)"
+
+#~ msgid "Use a plain window (for debug purposes)"
+#~ msgstr "Brug et almindeligt vindue (til fejlsøgningsformål)"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "(C) 2012-2014 Blue Systems"
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Udvikler"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgid "Eike Hein"
+#~ msgstr "Eike Hein"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Hjem"
+
+#~ msgctxt "Tab title"
+#~ msgid "Files"
+#~ msgstr "Filer"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Tænd/sluk"
+
+#~ msgid ""
+#~ "If this option is enabled, search may display additional columns with "
+#~ "search results powered by certain Plasma runner plugins, such as "
+#~ "\"Bookmarks\" and \"Desktop Search\"."
+#~ msgstr ""
+#~ "Hvis denne indstilling er aktiveret, kan søgning vise yderligere kolonner "
+#~ "med søgeresultater leveret af forskellige Plasma runner-plugins, såsom "
+#~ "\"Bogmærker\" og \"Skrivebordssøgning\"."
+
+#~ msgid "Appearance"
+#~ msgstr "Udseende"
+
+#~ msgid "*.jpg *.png *.xpm *.gif *.webp"
+#~ msgstr "*.jpg *.png *.xpm *.gif *.webp"
+
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun-kicker"
+
+#~ msgid "Launch applications and manage your desktop."
+#~ msgstr "Kør programmer og håndtér din desktop."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Tøm affald"
+
+#~ msgid "Use Plasma runners for additional search results"
+#~ msgstr "Brug Plasma-runners for yderligere søgeresultater"
+
+#~ msgid "Show on screen <screen>"
+#~ msgstr "Vis på skærmen <screen>"
+
+#~ msgid "Nightly build using source from: %1"
+#~ msgstr "Nye byg hver nat med kildekode fra: %1"
+
+#~ msgid "Form"
+#~ msgstr "Formular"

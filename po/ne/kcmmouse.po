@@ -1,0 +1,866 @@
+# translation of kcminput.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"PO-Revision-Date: 2007-11-04 18:50+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nabin Gautam, श्यामकृष्ण बल"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nabin@mpp.org.np,shyamkrishna_bal@yahoo.com"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:86
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:36
+#, kde-format
+msgid "Pointer device KCM"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:38
+#, kde-format
+msgid "System Settings module for managing mice and trackballs."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:40
+#, kde-format
+msgid "Copyright 2018 Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
+#, kde-format
+msgid "Roman Gilg"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:110
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:115
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:126
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:146
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:168
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:192
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr ""
+
+#: kcm/libinput/libinput_config.cpp:194
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr ""
+
+#: kcm/libinput/main.qml:79
+#, kde-format
+msgid "Device:"
+msgstr ""
+
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General:"
+msgstr "सामान्य"
+
+#: kcm/libinput/main.qml:105
+#, kde-format
+msgid "Device enabled"
+msgstr ""
+
+#: kcm/libinput/main.qml:124
+#, kde-format
+msgid "Accept input through this device."
+msgstr ""
+
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
+msgid "Left handed mode"
+msgstr "बायाँ हाते"
+
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr ""
+
+#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+
+#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Pointer speed:"
+msgstr "सङ्केतक थ्रेसहोल्ड:"
+
+#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#, fuzzy, kde-format
+#| msgid "Acceleration &profile:"
+msgid "Acceleration profile:"
+msgstr "गतिबर्धन प्रोफाइल:"
+
+#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#, kde-format
+msgid "Flat"
+msgstr ""
+
+#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr ""
+
+#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#, kde-format
+msgid "Adaptive"
+msgstr ""
+
+#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+
+#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
+
+#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr ""
+
+#: kcm/libinput/main.qml:295
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Scrolling speed:"
+msgstr "सङ्केतक थ्रेसहोल्ड:"
+
+#: kcm/libinput/main.qml:343
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: kcm/libinput/main.qml:349
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#: kcm/libinput/main.qml:360
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr ""
+
+#: kcm/libinput/main.qml:395
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr ""
+
+#: kcm/libinput/main.qml:427
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+
+#: kcm/libinput/main.qml:428
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr ""
+
+#: kcm/libinput/main.qml:432
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: kcm/libinput/main.qml:449
+#, fuzzy, kde-format
+#| msgid "Press Connect Button"
+msgctxt "@action:button"
+msgid "Press a mouse button "
+msgstr "जडान बटन थिच्नुहोस्"
+
+#: kcm/libinput/main.qml:450
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr ""
+
+#: kcm/libinput/main.qml:479
+#, kde-format
+msgctxt "@action:button"
+msgid "Go back"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
+#: kcm/xlib/kcmmouse.ui:14
+#, kde-format
+msgid ""
+"<h1>Mouse</h1> This module allows you to choose various options for the way "
+"in which your pointing device works. Your pointing device may be a mouse, "
+"trackball, or some other hardware that performs a similar function."
+msgstr ""
+"<h1>माउस</h1>तपाईँको सङ्केतक यन्त्रले कार्य गर्ने ठाउँमा तपाईँलाई मार्गका लागि धेरै विकल्प "
+"रोज्न यो मोड्युलले अनुमति दिन्छ । तपाईँको सङ्केतक यन्त्र माउस, ट्र्याकबल, वा अन्य केही "
+"हार्डवेयर हुन सक्छ जसले समान कार्य सम्पादन गर्छ ।"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: kcm/xlib/kcmmouse.ui:36
+#, kde-format
+msgid "&General"
+msgstr "सामान्य"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:52
+#, kde-format
+msgid ""
+"If you are left-handed, you may prefer to swap the functions of the left and "
+"right buttons on your pointing device by choosing the 'left-handed' option. "
+"If your pointing device has more than two buttons, only those that function "
+"as the left and right buttons are affected. For example, if you have a three-"
+"button mouse, the middle button is unaffected."
+msgstr ""
+"यदि तपाईँ बायाँ हाते हुनुहुन्छ भने, तपाईँ बायाँको कार्य र दायाँ बटन तपाईँको सूचक यन्त्रमा "
+"'बायाँ' विकल्प रोजाइद्वारा साट्न रुचाउनुहुन्छ । यदि तपईँको सूचक यन्त्रमा दुई भन्दा बढी बटन "
+"भएमा, तिनीहरूका ति कार्य मात्र बायाँ र दायाँ बटन जस्तै प्रभावित हुन्छन् । उदाहरणका लागि "
+"यदि तपाईँसँग तीन बटन भएको माउस छ भने, बीचको बटन प्रभावित हुदैन ।"
+
+#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
+#: kcm/xlib/kcmmouse.ui:55
+#, kde-format
+msgid "Button Order"
+msgstr "बटन क्रम"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
+#: kcm/xlib/kcmmouse.ui:64
+#, kde-format
+msgid "Righ&t handed"
+msgstr "दायाँ हाते"
+
+#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
+#: kcm/xlib/kcmmouse.ui:77
+#, kde-format
+msgid "Le&ft handed"
+msgstr "बायाँ हाते"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:106
+#, kde-format
+msgid ""
+"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+"mouse buttons."
+msgstr ""
+"माउस चक्र वा चौथो र पाँचौ माउस बटनका लागि स्क्रोलिङको दिशा परिवर्तन गर्नुहोस् ।"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
+#: kcm/xlib/kcmmouse.ui:109
+#, kde-format
+msgid "Re&verse scroll direction"
+msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kcm/xlib/kcmmouse.ui:156
+#, kde-format
+msgid "Advanced"
+msgstr "उन्नत"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "सङ्केतक गतिबर्धन:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/kcmmouse.ui:174
+#, kde-format
+msgid "Pointer threshold:"
+msgstr "सङ्केतक थ्रेसहोल्ड:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/kcmmouse.ui:184
+#, kde-format
+msgid "Double click interval:"
+msgstr "डबल क्लिक अन्तराल:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/kcmmouse.ui:194
+#, kde-format
+msgid "Drag start time:"
+msgstr "सुरुआत समय तान्नुहोस्:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/kcmmouse.ui:204
+#, kde-format
+msgid "Drag start distance:"
+msgstr "सुरुआत दूरी तान्नुहोस्:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/kcmmouse.ui:214
+#, kde-format
+msgid "Mouse wheel scrolls by:"
+msgstr "यसद्वारा माउस चक्र स्क्रोल गर्छ:"
+
+#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:230
+#, kde-format
+msgid ""
+"<p>This option allows you to change the relationship between the distance "
+"that the mouse pointer moves on the screen and the relative movement of the "
+"physical device itself (which may be a mouse, trackball, or some other "
+"pointing device.)</p><p> A high value for the acceleration will lead to "
+"large movements of the mouse pointer on the screen even when you only make a "
+"small movement with the physical device. Selecting very high values may "
+"result in the mouse pointer flying across the screen, making it hard to "
+"control.</p>"
+msgstr ""
+"<p>यो विकल्पले तपाईँलाई माउस सूचक पर्दामा सरेको र भौतिक यन्त्र आफैँको सापेक्षीक चाल "
+"बीचको दुरीको सम्बन्ध परिवर्तन गर्न अनुमति दिन्छ (जुन माउस, ट्र्याकबल, वा अन्य कुनै देखाउने "
+"यन्त्र हुन सक्छ ।)</p><p> तपाईँले भौतिक यन्त्रमा सानो चाल मात्र ल्याउदा पनि गतिबर्धनका "
+"लागि एउटा उच्च मानले पर्दामा माउस सूचकको ठूलो चाल नेतृत्व गर्नेछ । धेरै उच्च मान चयन गर्दा "
+"यसको परिणाम स्वरुप नियन्त्रण गर्न कठीन हुने गरि, पर्दामा माउस सूचक उडी राख्छ ।</p>"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
+#: kcm/xlib/kcmmouse.ui:233
+#, kde-format
+msgid " x"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
+#: kcm/xlib/kcmmouse.ui:261
+#, kde-format
+msgid ""
+"<p>The threshold is the smallest distance that the mouse pointer must move "
+"on the screen before acceleration has any effect. If the movement is smaller "
+"than the threshold, the mouse pointer moves as if the acceleration was set "
+"to 1X;</p><p> thus, when you make small movements with the physical device, "
+"there is no acceleration at all, giving you a greater degree of control over "
+"the mouse pointer. With larger movements of the physical device, you can "
+"move the mouse pointer rapidly to different areas on the screen.</p>"
+msgstr ""
+"<p>थ्रेसहोल्ड गतिबर्धनको कुनै पनि प्रभाव भन्दा पहिले माउस देखाउने पर्दामा सर्ने सबैभन्दा "
+"सानो दुरी हो । यदि चाल थ्रेसहोल्ड भन्दा सानो छ भने, माउस देखाउने 1X मा सेट भएको "
+"गतिवर्धन अनुरुप सर्दछ;</p><p>त्यसैले, तपाईँलाई माउस देखाउमा नियन्त्रणको बृहत अंश दिइ, "
+"भौतिक यन्त्रलाई थोरै सार्दा, त्यहाँ सबैमा गतिबर्धन हुदैँन । भौतिक यन्त्रको ठूलो चालमा, "
+"तपाईँले पर्दाको विभिन्न क्षेत्रमा माउस देखाउने तत्काल सर्न सक्नुहुन्छ ।</p>"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
+#: kcm/xlib/kcmmouse.ui:280
+#, kde-format
+msgid ""
+"The double click interval is the maximal time (in milliseconds) between two "
+"mouse clicks which turns them into a double click. If the second click "
+"happens later than this time interval after the first click, they are "
+"recognized as two separate clicks."
+msgstr ""
+"डबल क्लिक अन्तराल तीनिहरूलाई डबल क्लिक विषयवस्तुमा फर्काउने दुई माउस क्लिक बीचको "
+"अधिकतम समय (मिलिसेकेन्डमा) हो । यदि दोस्रो क्लिक यो समय अन्तराल पछि आउछ भने त्यसपछि "
+"पहिलो क्लिकलाई दुई फरक क्लिकहरू अनुरुप चिनिन्छ ।"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
+#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
+#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
+#, kde-format
+msgid " msec"
+msgstr " मिलि सेकेन्ड"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
+#: kcm/xlib/kcmmouse.ui:308
+#, kde-format
+msgid ""
+"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
+"the mouse within the drag start time, a drag operation will be initiated."
+msgstr ""
+"यदि तपाईँले माउसमा क्लिक गरेमा (जस्तै: बहु-लाइन सम्पादकमा) र तान्ने सुरु समयमा माउस सार्न "
+"सुरु गरेमा, तान्ने कार्य सुरुआत हुनेछ ।"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
+#: kcm/xlib/kcmmouse.ui:333
+#, kde-format
+msgid ""
+"If you click with the mouse and begin to move the mouse at least the drag "
+"start distance, a drag operation will be initiated."
+msgstr ""
+"यदि तपाईँले माउसमा क्लिक गरेमा र कम्तिमा तान्ने सुरुआत दूरीमा माउस सार्न सुरु गरेमा, तान्ने "
+"कार्य सुरुआत हुनेछ ।"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
+#: kcm/xlib/kcmmouse.ui:355
+#, kde-format
+msgid ""
+"If you use the wheel of a mouse, this value determines the number of lines "
+"to scroll for each wheel movement. Note that if this number exceeds the "
+"number of visible lines, it will be ignored and the wheel movement will be "
+"handled as a page up/down movement."
+msgstr ""
+"यदि तपाईँले माउसको चक्र प्रयोग गरेमा, यो मानले प्रत्येक चक्र चालका लागि स्क्रोल गर्नुपर्ने "
+"लाइनको सङ्ख्या निर्धारण गर्छ । याद गर्नुहोस् यदि यो सङ्ख्या देखिने लाइनको सङ्ख्या भन्दा "
+"बढी भएमा, यसलाई उपेक्षा गरिनेछ र चक्र चाललाई पृष्ठ तल/माथि चाल अनुरुप ह्यान्डल गरिनेछ ।"
+
+#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
+#: kcm/xlib/kcmmouse.ui:387
+#, fuzzy, kde-format
+#| msgid "Mouse Navigation"
+msgid "Keyboard Navigation"
+msgstr "माउस नेभिगेसन"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
+#: kcm/xlib/kcmmouse.ui:395
+#, kde-format
+msgid "&Move pointer with keyboard (using the num pad)"
+msgstr "(नम प्याड प्रयोग गरेर) कुञ्जीपाटीबाट सङ्केतक सार्नुहोस्"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/kcmmouse.ui:424
+#, kde-format
+msgid "&Acceleration delay:"
+msgstr "गतिबर्धन बिलम्व:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/kcmmouse.ui:434
+#, kde-format
+msgid "R&epeat interval:"
+msgstr "अन्तराल दोहोर्याउनुहोस्:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/kcmmouse.ui:466
+#, kde-format
+msgid "Acceleration &time:"
+msgstr "गतिबर्धन समय:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/kcmmouse.ui:498
+#, kde-format
+msgid "Ma&ximum speed:"
+msgstr "अधिकतम गति:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
+#: kcm/xlib/kcmmouse.ui:514
+#, kde-format
+msgid " pixel/sec"
+msgstr " पिक्सेल/सेकेन्ड"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/kcmmouse.ui:530
+#, kde-format
+msgid "Acceleration &profile:"
+msgstr "गतिबर्धन प्रोफाइल:"
+
+#: kcm/xlib/xlib_config.cpp:79
+#, kde-format
+msgid "Mouse"
+msgstr "माउस"
+
+#: kcm/xlib/xlib_config.cpp:83
+#, fuzzy, kde-format
+#| msgid "(c) 1997 - 2005 Mouse developers"
+msgid "(c) 1997 - 2018 Mouse developers"
+msgstr "(c) 1997 - 2005 माउस विकासकर्ता"
+
+#: kcm/xlib/xlib_config.cpp:84
+#, kde-format
+msgid "Patrick Dowler"
+msgstr "प्याट्रिक डाउलर"
+
+#: kcm/xlib/xlib_config.cpp:85
+#, kde-format
+msgid "Dirk A. Mueller"
+msgstr "डिर्क ए. मुइलर"
+
+#: kcm/xlib/xlib_config.cpp:86
+#, kde-format
+msgid "David Faure"
+msgstr "डेभिड फाउरे"
+
+#: kcm/xlib/xlib_config.cpp:87
+#, kde-format
+msgid "Bernd Gehrmann"
+msgstr "बर्न्ड गेयरम्यान"
+
+#: kcm/xlib/xlib_config.cpp:88
+#, kde-format
+msgid "Rik Hemsley"
+msgstr "रिक हेम्सले"
+
+#: kcm/xlib/xlib_config.cpp:89
+#, kde-format
+msgid "Brad Hughes"
+msgstr "ब्राड हगेस"
+
+#: kcm/xlib/xlib_config.cpp:90
+#, kde-format
+msgid "Brad Hards"
+msgstr "ब्राड हार्ड्स"
+
+#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#, kde-format
+msgid " pixel"
+msgid_plural " pixels"
+msgstr[0] " पिक्सेल"
+msgstr[1] " पिक्सेल"
+
+#: kcm/xlib/xlib_config.cpp:293
+#, kde-format
+msgid " line"
+msgid_plural " lines"
+msgstr[0] "रेखा"
+msgstr[1] "रेखा"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "राल्फ नोल्डेन"
+
+#, fuzzy
+#~| msgid "Acceleration &time:"
+#~ msgid "Acceleration:"
+#~ msgstr "गतिबर्धन समय:"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration Profile:"
+#~ msgstr "गतिबर्धन प्रोफाइल:"
+
+#~ msgid "Icons"
+#~ msgstr "प्रतिमा"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "केडीईको पूर्वनिर्धारित व्यवहार तपाईँको देखाइरहेको यन्त्रमा बायाँ बटनमा एकल क्लिकले "
+#~ "प्रतिमा चयन गर्नु र सक्रिय पार्नु हो । तपाईँले धेरै वेब ब्राउजरमा लिङ्क क्लिक गरेको "
+#~ "बेलामा तपाईँले अपेक्षा गरेकोसँग यो व्यवहार सुसङ्गत छ । यदि तापईँले एकल क्लिकमा चयन गर्न "
+#~ "रुचाउनुहुन्छ, र डबल क्लिकमा सक्रिय पार्न चाहनुहुन्छ भने, यो विकल्प जाँच गर्नुहोस् ।"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "फाइल र फोल्डर खोल्नका लागि डबल क्लिक गर्नुहोस् (पहिलो क्लिकमा प्रतिमा चयन गर्नुहोस्)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "एकल क्लिकमा फाइल वा फोल्डरलाई सक्रिय पार्छ र खोल्दछ ।"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "फाइल र फोल्डर खोल्नका लागि एकल क्लिक गर्नुहोस्"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "तपाईँले प्रयोग गर्न चाहेको कर्सर विषयवस्तु चयन गर्नुहोस्:"
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "Description"
+#~ msgstr "वर्णन"
+
+#~ msgid "You have to restart KDE for these changes to take effect."
+#~ msgstr "ती परिवर्तनको प्रभाव लिनका लागि तपाईँले केडीई फेरि सुरु गर्नुपर्छ ।"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "कर्सर सेटिङ परिवर्तन गरियो"
+
+#~ msgid "Small black"
+#~ msgstr "सानो कालो"
+
+#~ msgid "Small black cursors"
+#~ msgstr "सानो कालो कर्सर"
+
+#~ msgid "Large black"
+#~ msgstr "ठूलो कालो"
+
+#~ msgid "Large black cursors"
+#~ msgstr "ठूलो कालो कर्सर"
+
+#~ msgid "Small white"
+#~ msgstr "सानो सेतो"
+
+#~ msgid "Small white cursors"
+#~ msgstr "सानो सेतो कर्सर"
+
+#~ msgid "Large white"
+#~ msgstr "ठूलो सेतो"
+
+#~ msgid "Large white cursors"
+#~ msgstr "ठूलो सेतो कर्सर"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "प्रतिमा माथि सङ्केतकको आकार परिवर्तन गर्नुहोस्"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "स्वचालित रूपमा प्रतिमा चयन गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "बिलम्ब:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " मिलि सेकेन्ड"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "यदि तपाईँले यो विकल्प जाँच गरेमा, पर्दामा एउटा प्रतिमा माथि माउसको सङ्केतक पज गर्दा "
+#~ "स्वचालित तरीकाले त्यो प्रतिमा चयन गर्छ । एकल क्लिकले प्रतिमा सक्रिय पार्दा, र तपाईँले "
+#~ "यसलाई सक्रिय नपारी प्रतिमा मात्र चयन गर्न चाहेमा यो उपयोगि हुन सक्छ ।"
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "यदि तपाईँले स्वचालित तरिकाले प्रतिमा चयन गर्न विकल्प जाँच गर्नु भएको छ भने, यो "
+#~ "स्लाइडरले यसलाई चयन गर्नु भन्दा पहिला कति समयसम्म प्रतिमा माथि माउस सङ्केतक पज गर्नु "
+#~ "पर्छ चयन गर्न अनुमति दिन्छ ।"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "माउस प्रकार: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF च्यानल १ सेट भएको छ । लिङ्क पुन: कृपया स्थापना गर्न माउसको जडान बटन थिच्नुहोस् ।"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF च्यानल २ सेट भएको छ । कृपया लिङ्क पुन: स्थापना गर्न माउसको जडान बटन थिच्नुहोस् ।"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "कुनै पनि होइन"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "तार नभएको माउस"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "तार नभएको चक्र माउस"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "तार नभएको माउस म्यान चक्र"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "तार नभएको ट्र्याक म्यान चक्र"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ट्र्याक म्यान लाइभ"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "तार नभएको ट्र्याक म्यान FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "तार नभएको माउस म्यान अप्टिकल"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "तार नभएको अप्टिकल माउस"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "तार नभएको माउस म्यान अप्टिकल (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "तार नभएको अप्टिकल माउस (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "तार नभएको माउस (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "तार नभएको अप्टिकल ट्र्याक म्यान"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "तार नभएको अप्टिकल माउस MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "तार नभएको अप्टिकल माउस MX700 (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "अज्ञात माउस"
+
+#~ msgid "Cordless Name"
+#~ msgstr "कर्डलेस नाम"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "सचेतक रिजोल्युसन"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "प्रति इन्च ४०० गणना हुन्छ"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "प्रति इन्च ८०० गणना हुन्छ"
+
+#~ msgid "Battery Level"
+#~ msgstr "ब्याट्री तह"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF च्यानल"
+
+#~ msgid "Channel 1"
+#~ msgstr "च्यानल १"
+
+#~ msgid "Channel 2"
+#~ msgstr "च्यानल २"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "तपाईँसँग लोगिटेक माउस जडान गरिएको छ र कम्पाइलको समयमा लिबुस्ब फेला पारेको थियो, "
+#~ "तर यो माउसमा पहुँच प्राप्त गर्न सम्भव थिएन । यो सम्भवत अनुमतिको समस्याका कारणले हुन "
+#~ "सक्छ - तपाईँले यसलाई कसरी स्थिर गर्ने म्यानुअलको ध्यान राख्नु पर्छ ।"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursor Theme"
+#~ msgstr "कर्सर विषयवस्तु"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "विषयवस्तु यूआरएल तान्नुहोस् वा टाइप गर्नुहोस्"
+
+#~ msgid "Unable to find the cursor theme archive %1."
+#~ msgstr "कर्सर विषयवस्तु सङ्ग्रह %1 फेला पार्न अक्षम ।"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "कर्सर विषयवस्तु सङ्ग्रह डाउनलोड गर्न अक्षम; कृपया %1 ठेगाना ठीक भएको जाँच गर्नुहोस् ।"
+
+#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
+#~ msgstr "%1 फाइल वैध कर्सर विषयवस्तु सङ्ग्रह हो जस्तो देखिदैन ।"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>तपाईँ हाल प्रयोग गरिरहेको विषयवस्तु मेट्न सक्नुहुन्न ।<br />तपाईँले पहिले अर्को "
+#~ "विषयवस्तु स्विच गर्नुपर्नेछ ।</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>के तपाईँ <strong>%1</strong> कर्सर विषयवस्तु हटाउन निश्चिन्त हुनुहुन्छ?<br /> "
+#~ "यसले यस विषयवस्तुद्वारा स्थापना गरिएका सबै फाइल मेट्नेछ ।</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "स्वीकृति"
+
+#~ msgid ""
+#~ "A theme named %1 already exists in your icon theme folder. Do you want "
+#~ "replace it with this one?"
+#~ msgstr ""
+#~ "%1 नाम गरिएको विषयवस्तु तपाईँको प्रतिमा विषयवस्तु फोल्डरमा पहिले नै अवस्थित छ । के "
+#~ "तपाईँ यसलाई योसँग प्रतिस्थापन गर्न चाहनुहुन्छ?"
+
+#~ msgid "Overwrite Theme?"
+#~ msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
+
+#, fuzzy
+#~| msgid "Select the cursor theme you want to use:"
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "तपाईँले प्रयोग गर्न चाहेको कर्सर विषयवस्तु चयन गर्नुहोस्:"
+
+#~ msgid "KDE Classic"
+#~ msgstr "केडीई शास्त्रिय"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "केडीई २ र ३ मा पूर्वानिर्धारित कर्सर विषयवस्तु"
+
+#~ msgid "No description available"
+#~ msgstr "विवरण उपलव्ध छैन"
+
+#~ msgid "Short"
+#~ msgstr "छोटो"
+
+#~ msgid "Long"
+#~ msgstr "लामो"

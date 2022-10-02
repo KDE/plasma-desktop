@@ -1,0 +1,1306 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_folderview\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2010-07-07 15:16+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/config/config.qml:16
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose which location should the "
+#| "folderview show"
+#| msgid "Location"
+msgid "Location"
+msgstr "ตำแหน่ง"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "ไอคอน"
+
+#: package/contents/config/config.qml:30
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Title of the page that lets the user choose how to filter the folderview "
+#| "contents"
+#| msgid "Filter"
+msgid "Filter"
+msgstr "กรอง"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "Files:"
+msgstr "ชนิดของแฟ้ม:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgid "Show all"
+msgstr "แสดงสถานที่:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Show Files Matching"
+msgid "Show matching"
+msgstr "แสดงแฟ้มที่เข้าเงื่อนไข"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, fuzzy, kde-format
+#| msgid "Hide Files Matching"
+msgid "Hide matching"
+msgstr "ซ่อนแฟ้มที่เข้าเงื่อนไข"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "รูปแบบชื่อแฟ้ม:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "ชนิดของแฟ้ม:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgid "File type"
+msgstr "ชนิดของแฟ้ม:"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "เลือกทั้งหมด"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "ยกเลิกเลือกทั้งหมด"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Use a custom icon"
+msgstr "หัวเรื่องกำหนดเอง:"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@title:menu in Copy To or Move To submenu"
+#| msgid "Browse..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "เลือก..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, fuzzy, kde-format
+#| msgid "Sort Icons"
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "เรียงไอคอน"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgid "Arrangement:"
+msgstr "การจัดเรียง:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "จากบนลงล่าง, จากขวาไปซ้าย"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "เรียงเข้ากับแนวตาราง:"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "เรียงเข้ากับแนวตาราง:"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, fuzzy, kde-format
+#| msgid "Lock in place:"
+msgid "Lock in place"
+msgstr "ล็อคให้อยู่กับที่:"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sorting:"
+msgstr "การเรียงลำดับ:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "ตามชื่อ"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "ขนาด:"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "ตามชนิด"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "ตามวันที่"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "เรียงโฟลเดอร์ก่อน"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgid "Icon size:"
+msgstr "ขนาดไอคอน:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "เล็ก"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "ใหญ่"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, fuzzy, kde-format
+#| msgid "Label:"
+msgid "Label width:"
+msgstr "ป้ายข้อความ:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, fuzzy, kde-format
+#| msgid " lines"
+msgid "Text lines:"
+msgstr " บรรทัด"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Show selection markers"
+msgstr "เลือกทั้งหมด"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show folder preview popups"
+msgstr "แสดงตัวอย่าง:"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Rename:"
+msgstr "เ&ปลี่ยนชื่อ"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Previews:"
+msgstr "แสดงตัวอย่าง:"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show preview thumbnails"
+msgstr "แสดงตัวอย่าง:"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, fuzzy, kde-format
+#| msgid "More Preview Options..."
+msgid "Configure Preview Plugins…"
+msgstr "ตัวเลือกเพิ่มเติมของการแสดงตัวอย่าง..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "Show the Desktop folder"
+msgid "Desktop folder"
+msgstr "แสดงโฟลเดอร์พื้นที่ทำงาน"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom location:"
+msgstr "หัวเรื่องกำหนดเอง:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, fuzzy, kde-format
+#| msgid "Type a path or a URL here"
+msgid "Type path or URL…"
+msgstr "ป้อนพาธหรือที่อยู่ URL ที่นี่"
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, fuzzy, kde-format
+#| msgctxt "Music"
+#| msgid "Title:"
+msgid "Title:"
+msgstr "ชื่อเพลง:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, fuzzy, kde-format
+#| msgid "Custom title:"
+msgid "Custom title"
+msgstr "หัวเรื่องกำหนดเอง:"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Enter a customized title"
+msgid "Enter custom title…"
+msgstr "ป้อนชื่อที่จะกำหนดเอง"
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr ""
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Preview Plugins"
+msgstr "แสดงตัวอย่าง:"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/main.qml:356
+#, fuzzy, kde-format
+#| msgid "&Refresh Desktop"
+msgid "Configure Desktop and Wallpaper…"
+msgstr "&ปรับปรุงพื้นที่ทำงานอีกครั้ง"
+
+#: plugins/folder/directorypicker.cpp:32
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Select Folder"
+msgstr "เลือกทั้งหมด"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "&ปรับปรุงพื้นที่ทำงานอีกครั้ง"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "&ปรับปรุงมุมมองอีกครั้ง"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, fuzzy, kde-format
+#| msgid "&Empty Trash Bin"
+msgid "&Empty Trash"
+msgstr "&เทถังขยะทิ้ง"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, fuzzy, kde-format
+#| msgid "&Restore"
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "เ&รียกคืน"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "เ&ปิด"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&วาง"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "คุณ&สมบัติ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort By"
+msgstr "การเรียงลำดับ:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "Sort Icons"
+#| msgid "Unsorted"
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "ไม่มีการเรียงลำดับ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Name"
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "ตามชื่อ"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "ขนาด:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Type"
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "ตามชนิด"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "By Date"
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "ตามวันที่"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "Sort icons"
+#| msgid "Folders First"
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "เรียงโฟลเดอร์ก่อน"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgid "Icon Size"
+msgstr "ขนาดไอคอน:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "เล็ก"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "เล็ก"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, fuzzy, kde-format
+#| msgid "Large"
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "ใหญ่"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, fuzzy, kde-format
+#| msgid "Arrange icons:"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "จัดเรียงไอคอน:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "จากบนลงล่าง, จากขวาไปซ้าย"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, fuzzy, kde-format
+#| msgid "Align to grid:"
+msgid "Align"
+msgstr "เรียงเข้ากับแนวตาราง:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgid "Show Previews"
+msgstr "แสดงตัวอย่าง:"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "On a camera"
+#~| msgid "Aperture:"
+#~ msgid "Features:"
+#~ msgstr "ขนาดรูรับแสง:"
+
+#, fuzzy
+#~| msgid "Search file type"
+#~ msgid "Search…"
+#~ msgstr "ค้นหาชนิดของแฟ้ม"
+
+#, fuzzy
+#~| msgid "Create &Folder..."
+#~ msgid "&Create Folder"
+#~ msgstr "สร้างโ&ฟลเดอร์ใหม่..."
+
+#, fuzzy
+#~| msgid "Show the Desktop folder"
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "แสดงโฟลเดอร์พื้นที่ทำงาน"
+
+#~ msgid "Show All Files"
+#~ msgstr "แสดงแฟ้มทั้งหมด"
+
+#~ msgid "Size:"
+#~ msgstr "ขนาด:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgid "Desktop Layout"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#, fuzzy
+#~| msgid "Arrange icons:"
+#~ msgid "Arrange in"
+#~ msgstr "จัดเรียงไอคอน:"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sort by"
+#~ msgstr "การเรียงลำดับ:"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Title of the page that lets the user choose which location should the "
+#~| "folderview show"
+#~| msgid "Location"
+#~ msgid "Location:"
+#~ msgstr "ตำแหน่ง"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "แสดงโฟลเดอร์พื้นที่ทำงาน"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "ระบุโฟลเดอร์:"
+
+#~ msgid "&Reload"
+#~ msgstr "เ&รียกใหม่"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&ทิ้งลงถังขยะ"
+
+#~ msgid "&Delete"
+#~ msgstr "&ลบ"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgid "Align:"
+#~ msgstr "เรียงเข้ากับแนวตาราง:"
+
+#, fuzzy
+#~| msgid "Sorting:"
+#~ msgid "Sorting"
+#~ msgstr "การเรียงลำดับ:"
+
+#, fuzzy
+#~| msgctxt "Music"
+#~| msgid "Title:"
+#~ msgid "Title"
+#~ msgstr "ชื่อเพลง:"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "แสดงไดเรกทอรีดั้งเดิม"
+
+#, fuzzy
+#~| msgid "Show All Files"
+#~ msgid "Show Original File"
+#~ msgstr "แสดงแฟ้มทั้งหมด"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&เทถังขยะทิ้ง"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&คั่นหน้านี้"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&คั่นหน้าตำแหน่งนี้"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&คั่นหน้าโฟลเดอร์นี้"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&คั่นหน้าส่วนเชื่อมโยงนี้"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&คั่นหน้าแฟ้มนี้"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "คัดลอกไปยัง"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "ย้ายไปยัง"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "เลือก..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "คัดลอกไว้ที่นี่"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "ย้ายมาที่นี่"
+
+#~ msgid "Share"
+#~ msgstr "ใช้งานร่วมกัน"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "ไอคอน"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "คุณไม่สามารถลากและวางโฟลเดอร์ไปบนตัวมันเองได้"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "รูปแบบชื่อแฟ้ม:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&ย้ายมาที่นี่"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&คัดลอกไว้ที่นี่"
+
+#~ msgid "&Link Here"
+#~ msgstr "เ&ชื่อมโยงไว้ที่นี่"
+
+#~ msgid "C&ancel"
+#~ msgstr "&ยกเลิก"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "ตั้งเป็น&ภาพพื้นหลัง"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "สร้างไดเรกทอรี"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "ป้อนชื่ออื่น"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr "ชื่อของ \"%1\" นั้นขึ้นต้นด้วยจุด ซึ่งจะทำให้ไดเรกทอรีถูกซ่อนไปโดยปริยาย"
+
+#, fuzzy
+#~| msgid "Create hidden directory?"
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "จะทำการสร้างไดเรกทอรีแบบซ่อนหรือไม่ ?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "ป้อนชื่อโฟลเดอร์:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "โฟลเดอร์พื้นที่ทำงาน"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "วางหนึ่งแฟ้ม"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Item"
+#~ msgid_plural "Paste %1 Items"
+#~ msgstr[0] "วาง %1 รายการ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "วางเนื้อหาจากคลิปบอร์ด..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "&วาง"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr "เรียกคืนแฟ้มหรือไดเรกทอรีนี้ เพื่อให้มันกลับไปอยู่ยังตำแหน่งเดิมก่อนที่มันจะถูกลบ"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "เปิดเครื่องมือจัดการแฟ้มหน้าต่างใหม่ขึ้นมา "
+#~ "เพื่อทำการแสดงปลายทางของส่วนเชื่อมโยงนี้ในไดเรกทอรีแม่ของมัน"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "ไอคอน"
+
+#~ msgid "Align to Grid"
+#~ msgstr "เรียงเข้ากับแนวตาราง"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "ล็อคให้อยู่กับที่"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "%1 โฟลเดอร์"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "%1 แฟ้ม"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2"
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "%1 แฟ้ม"
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr "ใช้ตัวควบคุมนี้ เพื่อเลือกวิธีการจัดเรียงลำดับไอคอนเพื่อใช้ในการแสดงในมุมมองอย่างไร"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want the icons to be arranged in a grid.\n"
+#~| "\n"
+#~| "When this option is checked, icons will automatically snap to the "
+#~| "nearest grid cell when you move them around in the view."
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "กาเลือกตัวเลือกนี้ หากคุณต้องการจัดเรียงไอคอนให้เข้ากับแนวตาราง\n"
+#~ "\n"
+#~ "หากกาเลือกตัวเลือกนี้ เวลาที่คุณย้ายไอคอนไปทั่ว ๆ มุมมอง "
+#~ "ไอคอนจะถูกจัดแนบเข้ากับแนวช่องตารางที่อยู่ใกล้ที่สุดให้โดยอัตโนมัติ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr "ใช้ตัวควบคุมนี้ เพื่อเลือกวิธีการจัดเรียงลำดับไอคอนเพื่อใช้ในการแสดงในมุมมองอย่างไร"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr "ใช้ตัวควบคุมนี้ เพื่อเลือกวิธีการจัดเรียงลำดับไอคอนเพื่อใช้ในการแสดงในมุมมองอย่างไร"
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "กาเลือกตัวเลือกนี้ หากคุณไม่ต้องการให้มีการย้ายตำแหน่งของไอคอนในมุมมองได้\n"
+#~ "\n"
+#~ "ตัวเลือกนี้จะมีประโยชน์มาก หากคุณต้องการจะป้องกันการย้ายไอคอนโดยไม่ได้ตั้งใจ "
+#~ "ในระหว่างที่ทำการบางอย่างกับพวกมันอยู่"
+
+#~ msgid "Align to grid:"
+#~ msgstr "เรียงเข้ากับแนวตาราง:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "กาเลือกตัวเลือกนี้ หากคุณต้องการจัดเรียงไอคอนให้เข้ากับแนวตาราง\n"
+#~ "\n"
+#~ "หากกาเลือกตัวเลือกนี้ เวลาที่คุณย้ายไอคอนไปทั่ว ๆ มุมมอง "
+#~ "ไอคอนจะถูกจัดแนบเข้ากับแนวช่องตารางที่อยู่ใกล้ที่สุดให้โดยอัตโนมัติ"
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr "ใช้แถบเลื่อนนี้ เพื่อปรับขยายหรือลดขนาดของไอคอนในมุมมอง"
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr "กาเลือกตัวเลือกนี้ หากคุณต้องการจะเห็นตัวอย่างของเนื้อหาแฟ้มถูกแสดงในไอคอน"
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr "คลิกที่ปุ่มนี้ เพื่อทำการเลือกชนิดของแฟ้มที่จะให้มีการแสดงตัวอย่าง"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want the icons to be arranged in a grid.\n"
+#~| "\n"
+#~| "When this option is checked, icons will automatically snap to the "
+#~| "nearest grid cell when you move them around in the view."
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "กาเลือกตัวเลือกนี้ หากคุณต้องการจัดเรียงไอคอนให้เข้ากับแนวตาราง\n"
+#~ "\n"
+#~ "หากกาเลือกตัวเลือกนี้ เวลาที่คุณย้ายไอคอนไปทั่ว ๆ มุมมอง "
+#~ "ไอคอนจะถูกจัดแนบเข้ากับแนวช่องตารางที่อยู่ใกล้ที่สุดให้โดยอัตโนมัติ"
+
+#~ msgid "Icon Text"
+#~ msgstr "ข้อความกำกับไอคอน"
+
+#~ msgid "Lines:"
+#~ msgstr "จำนวนบรรทัด:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr "ใช้ตัวควบคุมนี้ เพื่อทำการเลือกจำนวนบรรทัดของข้อความ ที่จะให้แสดงทางด้านล่างไอคอน"
+
+#~ msgid "1 line"
+#~ msgstr "%1 บรรทัด"
+
+#~ msgid "Color:"
+#~ msgstr "สี:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr "คลิกที่ปุ่มนี้ เพื่อทำการเลือกสีที่จะให้ใช้กับป้ายข้อความในมุมมอง"
+
+#~ msgid "Shadows:"
+#~ msgstr "เงา:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>กาเลือกตัวเลือกนี้ หากคุณต้องการให้ป้ายข้อความมีเงาเบื้องหลังด้วย</p>\n"
+#~ "<p></p>\n"
+#~ "<p>เงานั้นจะช่วยให้อ่านข้อความได้ง่ายขึ้น โดยเฉพาะกรณีที่ข้อความถูกกลืนไปกับพื้นหลัง </p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>โปรดทราบว่า หากใช้สีข้อความที่ค่อนข้างมืด ตัวเลือกนี้จะทำให้ข้อความ "
+#~ "ดูเหมือนมีรัศมีเปล่งออกมา แทนที่จะเป็นเงาของข้อความ</i></p></body></html>"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want to see previews of the file contents in "
+#~| "the icons."
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr "กาเลือกตัวเลือกนี้ หากคุณต้องการจะเห็นตัวอย่างของเนื้อหาแฟ้มถูกแสดงในไอคอน"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">หากคุณเลือกตัวเลือก "
+#~ "\"แสดงแฟ้มที่เข้าเงื่อนไข\" หรือ \"ซ่อนแฟ้มที่เข้าเงื่อนไข\" "
+#~ "จะมีการแสดงหรือซ่อนแฟ้มที่เข้าเงื่อนไขเท่านั้น</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">ตัวอย่างเช่น "
+#~ "หากคุณมีรูปแบบเป็น \"*\" แต่คุณไม่ได้เลือกประเภท MIME ใด ๆ ของแฟ้มเลย "
+#~ "ก็จะไม่มีการแสดงแฟ้มใด ๆ ขึ้นมาเลย</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "หากคุณเลือกตัวเลือก \"แสดงแฟ้มที่เข้าเงื่อนไข\" หรือ \"ซ่อนแฟ้มที่เข้าเงื่อนไข\"\n"
+#~ "จะมีการแสดงหรือซ่อนแฟ้มที่เข้าเงื่อนไขตามที่คุณกำหนดเท่านั้น\n"
+#~ "ตัวอย่างเช่น หากคุณใช้รูปแบบเป็น \"*\" แต่คุณไม่ได้เลือกประเภท MIME ใด ๆ\n"
+#~ "ของแฟ้มเลย ก็จะไม่มีการแสดงแฟ้มใด ๆ ขึ้นมาเลย"
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">ไม่สามารถเห็นแฟ้มใด ๆ เลยใช่หรือไม่ ?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "รายการของส่วนขยาย (นามสกุลแฟ้ม) โดยแบ่งด้วยช่องว่าง เช่น *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "รายการของส่วนขยาย (นามสกุลแฟ้ม) โดยแบ่งด้วยช่องว่าง เช่น *.txt *.od* "
+#~ "เพื่อให้แสดงเฉพาะแฟ้มของโปรแกรมชุดสำนักงาน และแฟ้มข้อความเท่านั้น"
+
+#~ msgid "Pattern filter"
+#~ msgstr "กรองรูปแบบ"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "กาเลือกชนิดแฟ้มที่คุณต้องการให้มีการแสดงตัวอย่างในไอคอน:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "โฟลเดอร์นี้เป็นโฟลเดอร์ว่าง"
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "ศิลปิน:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "อัลบั้ม:"
+
+#, fuzzy
+#~| msgid "1 MPixel"
+#~| msgid_plural "%1 MPixels"
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 ล้านพิกเซล"
+
+#~ msgid "Camera:"
+#~ msgstr "กล้อง:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 ม.ม."
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "เทียบเท่ากับเลนส์ 35 ม.ม.: %1 ม.ม."
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "ทางยาวโฟกัส:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "ความเร็วชัตเตอร์:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 วินาที"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "ความไว ISO:"
+
+#~ msgid "Time:"
+#~ msgstr "เวลา:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "%1 หน้า"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "%1 คำ"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "%1 รายการ"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "จากซ้ายไปขวา, จากบนลงล่าง"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "จากขวาไปซ้าย, จากบนลงล่าง"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "แสดง"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "ตามขนาด"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "ใช้ตัวควบคุมนี้ เพื่อเลือกว่าจะให้ทำการจัดเรียงไอคอนในรูปแบบใด ไม่ว่าจะเป็น "
+#~ "การเรียงจากด้านบนลงล่าง โดยเริ่มจากทางด้านซ้ายของมุมมอง หรือจะเป็น "
+#~ "การเรียงจากด้านซ้ายมาด้านขวา โดยเริ่มจากด้านบนของมุมมอง"
+
+#~ msgid "Header"
+#~ msgstr "ส่วนหัว"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "ช่องข้อมูลนี้จะบรรจุป้ายข้อความที่จะใช้แสดงอยู่ทางด้านบนของแอพเพล็ต\n"
+#~ "\n"
+#~ "โดยปริยายแล้ว มันจุบรรจุชื่อของสถานที่ที่จะถูกแสดงในแอพเพล็ต "
+#~ "แต่หากคุณต้องการกำหนดป้ายข้อความเอง ก็สามารถป้อนมันได้ที่นี่"
+
+#~ msgid "Advanced Options"
+#~ msgstr "ตัวเลือกขั้นสูง"
+
+#~ msgid "Text Settings"
+#~ msgstr "ตั้งค่าข้อความ"
+
+#~ msgid "Text color:"
+#~ msgstr "สีของข้อความ:"
+
+#~ msgid "Number of lines:"
+#~ msgstr "จำนวนบรรทัด:"
+
+#~ msgid "Show text shadows"
+#~ msgstr "แสดงเงาของข้อความ"
+
+#~ msgid "Align icons in a grid"
+#~ msgstr "จัดตำแหน่งไอคอนเข้ากับแนวตาราง"
+
+#~ msgid "Lock icons in place"
+#~ msgstr "ล็อคไอคอนให้อยู่กับที่"
+
+#~ msgid ""
+#~ "<html><body><b>Note: The Desktop folder currently does not exist.<br />If "
+#~ "you select this option and click OK it will be created for you.</b></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><body><b>โปรดทราบ: ตอนนี้ โฟลเดอร์พื้นที่ทำงานยังไม่มีอยู่<br /"
+#~ ">หากคุณเลือกตัวเลือกนี้ แล้วคลิกที่ ตกลง มันจะทำการสร้างโฟลเดอร์นี้ให้</b></body></html>"
+
+#~ msgid "Show a custom folder"
+#~ msgstr "แสดงโฟลเดอร์ที่กำหนดเอง"
+
+#~ msgid "Select:"
+#~ msgstr "เลือก:"
+
+#~ msgid "Home"
+#~ msgstr "พื้นที่ส่วนตัว"

@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian-Latin "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Lokacije</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Majkl</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>An Mari</firstname
+> <surname
+>Mafu</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>21. 8. 2016.</date>
+<releaseinfo
+>Plasma 5.7</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>K‑kontrola</keyword>
+<keyword
+>površ</keyword>
+<keyword
+>putanje</keyword>
+<keyword
+>lokacija</keyword>
+<keyword
+>Sistemske postavke</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ovo je modul za podešavanje važnih putanja za radnu površ Plasme.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Podešavanje nekih KDE‑ovih putanja.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Podešavanje nekih KDE‑ovih putanja.</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Putanja površi:</guilabel
+></term>
+<listitem
+><para
+>Fascikla površi sadrži sve fajlove koje vidite u vidžetu prikaza fascikle na površi. Podrazumevana putanja je obično <filename class="directory"
+>~/Desktop</filename
+>, ali možete i promeniti lokaciju ove fascikle. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja samopokretanja:</guilabel
+></term>
+<listitem
+><para
+>Putanja samopokretanja sadrži programe ili veze ka programima i skriptama koje želite da pokrenete na svakom pokretanju Plasme. Ako želite, možete promeniti lokaciju ove fascikle. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja dokumenata:</guilabel
+></term>
+<listitem
+><para
+>Ovo je fascikla iz koje se dokumenti podrazumevano učitavaju i upisuju.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja preuzimanja:</guilabel
+></term>
+<listitem
+><para
+>Ovo je fascikla u koju se podrazumevano upisuju preuzete stavke.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja filmova:</guilabel
+></term>
+<listitem
+><para
+>Ovo je fascikla iz koje se filmovi podrazumevano učitavaju i upisuju.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja slika:</guilabel
+></term>
+<listitem
+><para
+>Ovo je fascikla iz koje se slike podrazumevano učitavaju i upisuju.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Putanja muzike:</guilabel
+></term>
+<listitem
+><para
+>Ovo je fascikla iz koje se muzika podrazumevana učitava i upisuje.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Ako promenite putanju i kliknete na <guibutton
+>Primeni</guibutton
+>, iskače dijalog u kojem možete izabrati da premestite sadržaj u novu fasciklu, ili da pređete na novu fasciklu bez premeštanja fajlova.</para>
+
+</article>

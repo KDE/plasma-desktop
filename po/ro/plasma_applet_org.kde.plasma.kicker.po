@@ -1,0 +1,702 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2012, 2013, 2020, 2021, 2022.
+#
+# Tatiana Țurcanu <turcanu DOT tatiana91 AT gmail DOT com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2022-02-06 14:10+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generale"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Elimină din favorite"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Adaugă la favorite"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Pe toate activitățile"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "Pe activitatea curentă"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Arată în favorite"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Pictogramă:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Alege…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Șterge pictograma"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Arată aplicațiile ca:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Doar denumirea"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Doar descrierea"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Denumire (descriere)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Descriere (denumire)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Comportament:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Sortează aplicațiile alfabetic"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Aplatizează submeniurile la un singur nivel"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Arată pictogramele la nivelul rădăcină al meniului"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Arată categorii:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Aplicații recente"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Aplicații folosite des"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Fișiere recente"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Fișiere folosite des"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Contacte recente"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Contacte folosite des"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Sortează elementele în categorii după:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Folosite recent"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Folosite des"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Caută:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Extinde căutarea asupra semnelor de carte, fișierelor și scrisorilor"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Aliniază rezultatele căutării în partea de jos"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Se caută „%1”"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Tastați pentru a căuta…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Favorite"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Controale grafice"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Aplicații și documente"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Modifică aplicații…"
+
+#~ msgid "Search…"
+#~ msgstr "Caută…"
+
+#~ msgid "Search..."
+#~ msgstr "Caută..."
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Documente recente"
+
+#~ msgid "Open with:"
+#~ msgstr "Deschide cu:"
+
+#~ msgid "Properties"
+#~ msgstr "Proprietăți"
+
+#~ msgid "Add to Desktop"
+#~ msgstr "Adaugă la birou"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Panel (Widget)"
+#~ msgstr "Adaugă la panou"
+
+#~ msgid "Recent Documents"
+#~ msgstr "Documente recente"
+
+#~ msgid "Forget Recent Documents"
+#~ msgstr "Uită documentele recente"
+
+#~ msgid "Edit Application..."
+#~ msgstr "Editează aplicația..."
+
+#~ msgid "Hide Application"
+#~ msgstr "Ascunde aplicația"
+
+#~ msgctxt "App name (Generic name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Generic name (App name)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicații"
+
+#, fuzzy
+#~| msgid "Favorite Applications"
+#~ msgid "Unhide Applications in '%1'"
+#~ msgstr "Aplicații favorite"
+
+#, fuzzy
+#~| msgid "KRunner"
+#~ msgid "Show KRunner"
+#~ msgstr "KRunner"
+
+#~ msgid "Contacts"
+#~ msgstr "Contacte"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Uită contactul"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Uită toate contactele"
+
+#~ msgid "Documents"
+#~ msgstr "Documente"
+
+#~ msgid "Forget Application"
+#~ msgstr "Uită aplicația"
+
+#~ msgid "Forget Document"
+#~ msgstr "Uită documentul"
+
+#, fuzzy
+#~| msgid "Forget All Contacts"
+#~ msgid "Forget All"
+#~ msgstr "Uită toate contactele"
+
+#~ msgid "Forget All Applications"
+#~ msgstr "Uită toate aplicațiile"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Uită toate documentele"
+
+#~ msgid "Hide %1"
+#~ msgstr "Ascunde %1"
+
+#~ msgid "All Applications"
+#~ msgstr "Toate aplicațiile"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Contacte recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often Used Documents"
+#~ msgstr "Documente recente"
+
+#~ msgid "Recent Applications"
+#~ msgstr "Aplicații recente"
+
+#, fuzzy
+#~| msgid "Installed Applications"
+#~ msgid "Often Used Applications"
+#~ msgstr "Aplicații instalate"
+
+#~ msgid "Power / Session"
+#~ msgstr "Oprire / Sesiune"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search results"
+#~ msgstr "Caută"
+
+#~ msgid "Lock"
+#~ msgstr "Blocare"
+
+#~ msgid "Save Session"
+#~ msgstr "Salvează sesiunea"
+
+#, fuzzy
+#~| msgctxt "an action"
+#~| msgid "Switch User"
+#~ msgid "Switch User"
+#~ msgstr "Comută utilizatorul"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernare"
+
+#~ msgid "Restart"
+#~ msgstr "Repornire"
+
+#, fuzzy
+#~| msgid "Shutdown"
+#~ msgid "Shut Down"
+#~ msgstr "Oprire"
+
+#~ msgid "Session"
+#~ msgstr "Sesiune"
+
+#, fuzzy
+#~| msgid "System actions"
+#~ msgid "System"
+#~ msgstr "Acțiuni de sistem"
+
+#, fuzzy
+#~| msgid "Opened Sessions"
+#~ msgid "End session"
+#~ msgstr "Sesiuni deschise"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to RAM"
+#~ msgstr "Suspendare"
+
+#, fuzzy
+#~| msgid "Suspend"
+#~ msgid "Suspend to disk"
+#~ msgstr "Suspendare"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart computer"
+#~ msgstr "Repornire"
+
+#~ msgid "System actions"
+#~ msgstr "Acțiuni de sistem"
+
+#, fuzzy
+#~| msgid "&Safely Remove '%1'"
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Scoate în &siguranță „%1”"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Arată aplicațiile recente"
+
+#, fuzzy
+#~| msgid "Show recent applications"
+#~ msgid "Show often used applications"
+#~ msgstr "Arată aplicațiile recente"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Arată documentele recente"
+
+#, fuzzy
+#~| msgid "Show recent documents"
+#~ msgid "Show often used documents"
+#~ msgstr "Arată documentele recente"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Arată contactele recente"
+
+#~ msgid "Logout"
+#~ msgstr "Ieșire"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspendare"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Folosește o imagine personalizată:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Alege o imagine"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Fișiere imagine (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Adaugă ca lansator"
+
+#~ msgid "New Session"
+#~ msgstr "Sesiune nouă"
+
+#~ msgid "(Empty)"
+#~ msgstr "(gol)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@ase.md"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Lansator: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Răsfoiește aplicațiile instalate după categorii"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Toate aplicațiile instalate"
+
+#~ msgid ""
+#~ "List all installed applications in a flat list, grouped by categories"
+#~ msgstr ""
+#~ "Enumeră într-o listă plată toate aplicațiile instalate, grupate după "
+#~ "categorie"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Toate aplicațiile instalate cu filtre"
+
+#, fuzzy
+#~| msgid ""
+#~| "List all installed applications in a flat list, grouped by categories"
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr ""
+#~ "Enumeră într-o listă plată toate aplicațiile instalate, grupate după "
+#~ "categorie"
+
+#~ msgid "Folder"
+#~ msgstr "Dosar"
+
+#~ msgid "List the content of a folder and let you browse into sub-folders"
+#~ msgstr ""
+#~ "Enumeră conținutul unui dosar și vă permite să răsfoiți prin subdosare"
+
+#~ msgid "Browse the content of your favorite places"
+#~ msgstr "Răsfoiți conținutul locurilor favorite"
+
+#~ msgid "List applications marked as favorite"
+#~ msgstr "Enumeră aplicațiile marcate ca fiind favorite"
+
+#~ msgid "Power Management"
+#~ msgstr "Gestiunea alimentării"
+
+#~ msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgstr ""
+#~ "Furnizează butoane pentru suspendare, hibernare, repornire și oprirea "
+#~ "calculatorului"
+
+#~ msgid ""
+#~ "Provide buttons to lock the screen, log out, or switch to another user"
+#~ msgstr ""
+#~ "Furnizează butoanele pentru blocarea ecranului, ieșidea din sistem sau "
+#~ "comutarea la alt utilizator"
+
+#~ msgid "Provide buttons to switch to opened sessions"
+#~ msgstr "Furnizează butoane pentru comutarea la sesiunile deschise"
+
+#, fuzzy
+#~| msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgid ""
+#~ "Provide buttons to manage your workspace session and the power state of "
+#~ "your computer"
+#~ msgstr ""
+#~ "Furnizează butoane pentru suspendare, hibernare, repornire și oprirea "
+#~ "calculatorului"
+
+#~ msgid "Perform searchs using a selection of runners"
+#~ msgstr "Efectuează căutări folosind o selecție de lansatori"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Dosar de arătat:"
+
+#~ msgid "Title:"
+#~ msgstr "Titlu:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Dacă lăsați titlul gol, va fi folosită denumirea dosarului"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Acasă"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Rețea"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Rădăcină"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Gunoi"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "Elibe&rează „%1”"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "De&montează „%1”"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "Scoat&e „%1”"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "Dispozitivul „%1” nu este un disc și nu poate fi scos."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr "A apărut o eroare la accesarea „%1”, sistemul a răspuns: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "A apărut o eroare la accesarea „%1”"
+
+#~ msgid "Pick the application folder to display:"
+#~ msgstr "Alegeți dosarul cu aplicații de afișat:"
+
+#, fuzzy
+#~| msgid "Remove from Favorites"
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Elimină din favorite"
+
+#, fuzzy
+#~| msgid "Add to Panel"
+#~ msgid "Add to Sidebar"
+#~ msgstr "Adaugă la panou"
+
+#~ msgid "Power"
+#~ msgstr "Alimentare"
+
+#~ msgid "Pick the runners you would like to use in this source:"
+#~ msgstr "Alegeți lansatorii pe care doriți să-i folosiți în această sursă:"
+
+#~ msgid "Hello"
+#~ msgstr "Salut"
+
+#~ msgid "World"
+#~ msgstr "Lume"
+
+#~ msgid "Hello World"
+#~ msgstr "Salut, lume"
+
+#~ msgid "Text Color:"
+#~ msgstr "Culoare text:"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Umbră text:"
+
+#~ msgid "None"
+#~ msgstr "Niciuna"
+
+#~ msgid "Automatic"
+#~ msgstr "Automată"
+
+#~ msgid "Custom:"
+#~ msgstr "Personalizat:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Mergi la fila precedentă"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Mergi la fila următoare"
+
+#~ msgid "Focus search field"
+#~ msgstr "Focalizează câmpul de căutare"
+
+#~ msgid "Go back"
+#~ msgstr "Mergi înapoi"
+
+#~ msgid "Go forward"
+#~ msgstr "Mergi înainte"
+
+#~ msgid "Go up"
+#~ msgstr "Mergi în sus"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Fără titlu>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Gata"
+
+#~ msgid "Search in current tab..."
+#~ msgstr "Caută în fila curentă..."
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Configurează filele"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Configurează acceleratorii..."
+
+#~ msgid "Restore Tabs to Default"
+#~ msgstr "Restabilește filele la valori implicite"
+
+#~ msgid "Restore Tabs"
+#~ msgstr "Restabilește filele"
+
+#~ msgid "About %1"
+#~ msgstr "Despre %1"
+
+#~ msgid "Release to show menu"
+#~ msgstr "Eliberați pentru a arăta meniul"
+
+#~ msgid "Drag to reorder"
+#~ msgstr "Trageți pentru a reordona"
+
+#~ msgid "This item has no menu and cannot be dragged"
+#~ msgstr "Acest element nu are meniu și nu poate fi tras"
+
+#~ msgid "%1 has been added to your favorites"
+#~ msgstr "%1 a fost adăugat la favorite"
+
+#~ msgid "Broken source '%1'"
+#~ msgstr "Sursă defectă „%1”"
+
+#~ msgid "Tab Label:"
+#~ msgstr "Eticheta filei:"
+
+#~ msgid "Report Error"
+#~ msgstr "Raportează eroare"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#, fuzzy
+#~| msgid "(C) 2012-2013 Blue Systems"
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "(C) 2012-2013 Blue Systems"
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Dezvoltator"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Acasă"
+
+#~ msgctxt "Tab title"
+#~ msgid "Files"
+#~ msgstr "Fișiere"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Alimentare"
+
+#, fuzzy
+#~| msgctxt "Program name"
+#~| msgid "Homerun"
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Golește gunoiul"
+
+#~ msgid "Show on screen <screen>"
+#~ msgstr "Arată pe ecranul <ecran>"

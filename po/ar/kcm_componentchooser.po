@@ -1,0 +1,387 @@
+# translation of kcmcomponentchooser.po to Arabic
+# translation of kcmcomponentchooser.po to
+# Copyright (C) 2002, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ossama Khayat <okhayat@yahoo.com>, 2004.
+# Ossama M. Khayat <okhayat@yahoo.com>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2009, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2022-01-09 22:38+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "متصفح الوب المبدئي"
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr "أخرى"
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr "اختر المتصفح المبدئي"
+
+#: componentchooseremail.cpp:19
+#, kde-format
+msgid "Select default e-mail client"
+msgstr "اختر عميل البريد الإلكتروني المبدئي"
+
+#: componentchooserfilemanager.cpp:14
+#, kde-format
+msgid "Select default file manager"
+msgstr "اختر مدير الملفات المبدئي"
+
+#: componentchoosergeo.cpp:11
+#, kde-format
+msgid "Select default map"
+msgstr "اختر خريطة مبدئية"
+
+#: componentchoosertel.cpp:15
+#, kde-format
+msgid "Select default dialer application"
+msgstr "حدد تطبيق الاتصال الافتراضي"
+
+#: componentchooserterminal.cpp:24
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr "اختر محاكي الطرفية المبدئي"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr "متصفح الويب:"
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr "مدير الملفات:"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr "عميل البريد الإلكتروني:"
+
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "محاكي الطرفية:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr "الخريطة:"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr "تطبيق الاتصال:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgctxt "@title"
+#~ msgid "Default Applications"
+#~ msgstr "التطبيقات المبدئية"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Méven Car"
+#~ msgstr "Méven Car"
+
+#~ msgid "Tobias Fella"
+#~ msgstr "Tobias Fella"
+
+#~ msgid "Unknown"
+#~ msgstr "مجهول"
+
+#~ msgid "Component Chooser"
+#~ msgstr "مخيِّر المكونات"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "(c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "اختر من اللائحة أدناه أي مكوّن يجب استخدامه مبدئيا للخدمة %1."
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>لقد قمت بتغيير خيارك للمكوّن الافتراضي ، هل تريد حفظ هذا التغيير الآن ؟"
+#~ "</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "لا وصف متوفر"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "هنا يمكنك تغيير المكوِّنات. المكوِّنات هي برامج تتولّى أمر مهامّ أساسية، مثل "
+#~ "محاكي الطرفية، محرّر النصوص وعميل البريد. تحتاج تطبيقات كيدي المختلفة "
+#~ "أحياناً أن تشغّل محاكي الطرفية، أو ترسل بريداً أو تظهر نصا ما. لتفعل ذلك "
+#~ "بشكل مُتّسق، تنادي هذه التطبيقات نفس المكوّنات. يمكنك أن تختار هنا هذه "
+#~ "المكوّنات."
+
+#~ msgid "Default Component"
+#~ msgstr "المكوّن الافتراضي"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>تظهر هذه اللائحة أنواع المكوّنات القابلة للتّهيئة. انقر على المكوّن الذي "
+#~ "تريد تهيئته.</p>\n"
+#~ "<p>في مربع الحوار هذا يمكنك تغيير مكوّنات كدي الافتراضية. المكوّنات هي "
+#~ "برامج تتولى أمر مهامّ أساسية، مثل محاكي الشاشة الطرفية، محرّر النصوص وعميل "
+#~ "البريد الإلكتروني. تطبيقات كيدي المختلفة تحتاج أحياناً أن تشغّل محاكي شاشة "
+#~ "طرفية، ترسل بريداً أو تظهر بعض النص. لتفعل ذلك بشكل مُتّسق، تنادي هذه "
+#~ "التطبيقات دائماً نفس المكوّنات. يمكنك أن تختار هنا ما هي البرامج التي هي "
+#~ "هذه المكوّنات.</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>افتح الوصلات <b>http</b> و <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "في تطبيق مبني على محتويات الوصلة "
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "في المتصفح التالي:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "في المتصفح التالي:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "اختر تطبيق تصفح الويب المفضل:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "إنّ البرنامج Kmail هو برنامج البريد المعياري لسطح مكتب كدي."
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "&استخدم KMail كعميل البريد المفضل"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "اختري هذا الخيار إذا كنت تريد استخدام أي برنامج بريد آخر."
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t: عنوان المُستلم</li> <li>%s: الموضوع</li> <li>%c: نسخة كربونيّة "
+#~ "(CC)</li> <li>%b: نسخة كربونيّة خفيّة (BCC)</li> <li>%B: نص المتن النموذجي</"
+#~ "li> <li>%A: المرفق </li> <li>%u: مسار العنوان الكامل (mailto:) </li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "اضغط هذا الزر لانتقاء عميل البريد المفضل. لاحظ أن الملف المنتقى يجب أن "
+#~ "يكون ملفاً تنفيذياً لكي يتم قبوله.<br/> يمكن أيضاً تمرير بعض القيم التي سيتم "
+#~ "تبديلها بالقيم الحقيقية عند استدعاء عميل البريد:<ul> <li>%t: عنوان "
+#~ "المُستلم </li> <li>%s: الموضوع</li> <li>%c: نسخة كربونيّة (CC)</li> <li>%b: "
+#~ "نسخة كربونيّة خفيّة (BCC)</li> <li>%B: نص متن القالب</li> <li>%A: المُرفق </"
+#~ "li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "انقر هنا لتستعرض بحثاً عن ملف برنامج البريد."
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "قم بتنشيط هذا الخيار اذا كنت تريد تنفيذ عميل البريد المنتقى في سطر "
+#~ "الأوامر (مثال. <em>Konsole</em>)"
+
+#~ msgid "&Run in terminal"
+#~ msgstr "&نفّذ في طرفيّة"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "تصفح الملفات باستخدام مدير الملفات التالي:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "أخرى: انقر اضف... في الحورا المعروض هنا:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "ا&ستخدم Konsole كتطبيق للطرفيّة"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "استخدم برنامج &طرفيّة مختلف:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "اضغط على هذا الزرّ كي تنتقي عميل الطرفيّة المفضّل. لاحظ أن الملف الذي سيتم "
+#~ "انتقائه يجب أن يكون ملفاً تنفيذياً لكي يتم قبوله .<br/> لاحظ أيضاً أنّ بعض "
+#~ "البرامج التي تستخدم محاكي الطرفيّة قد لا تعمل إذا أضفت إليها معطيات سطر "
+#~ "الأمر  ( مثلاً : konsole -ls)."
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "انقر هنا لتستعرض بحثاً عن برنامج الطرفيّة."
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "لم يبق شيء"
+#~ msgstr[1] "بقي ثانية واحدة:"
+#~ msgstr[2] "بقي ثانيان:"
+#~ msgstr[3] "بقي %1 ثوان:"
+#~ msgstr[4] "بقي %1 ثانية:"
+#~ msgstr[5] "بقي %1 ثانية:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr ""
+#~ "سيتم استخدام المدير الجديد للنوافذ في المرة القادمة التي ستبدأ فيها كدي."
+
+#~ msgid "Window Manager Change"
+#~ msgstr "تغيير مدير النوافذ"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "مدير جديد للنوافذ يعمل.\n"
+#~ "ولكنه ما يزال من المفضل إعادة تشغيل جلسة كدي هذه لتأكد من أن جميع "
+#~ "التطبيقات العاملة استجابة لهذا التعديل."
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "اسُتبدلَ مدير النوافذ"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "مدير نوافذ العامل لك سيستبدل بالمدير الذي تم ضبطه"
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "ضبط تغيير مدير النوافذ"
+
+#~ msgid "&Accept Change"
+#~ msgstr "ا&قبل التغيير"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "ا&سترجع السابق"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "تم تشغيل المدير الجديد المضبوط.\n"
+#~ "المرجو تأكد من أنه يعمل بالشكل المطلوب و تأكيد التغيير.\n"
+#~ "سيتم استرجاع المدير السابق في 20 ثانية."
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr "تم استراجاع مدير النوافذ إلى مدير النوافذ المبدئي لكدي كوِن"
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "فشل مدير النوافذ الجديد في الإقلاع.\n"
+#~ "واسترجع مدير النوافذ إلى مدير النوافذ المبدئي لكدي كوِن"
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "فشل تشغيل أداة الضبط"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "اس&تعمل مدير نوافذ كدي الافتراضي (كوِن)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "استخدم برنامج &طرفيّة مختلف:"
+
+#~ msgid "Configure"
+#~ msgstr "اضبط"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "لاحظ: أغلب مدراء النوافذ لديها ملفات ضبط خاصة بها ولا تتبع إعدادات كدي."
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "يمكنك هنا قراءة وصف بسيط للمكوّن المنتقى حالياً. لتغيير المكوّن المنتقى، "
+#~ "انقر على اللائحة إلى اليسار.لتغيير البرنامج المكوّن، من فضلك اختره في "
+#~ "الأسفل."
+
+#~ msgid "Component Description"
+#~ msgstr "وصف المكوّن"

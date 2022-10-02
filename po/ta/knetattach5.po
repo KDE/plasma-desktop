@@ -1,0 +1,220 @@
+#
+# Kishore G <kishore96@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: knetattach\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"PO-Revision-Date: 2022-04-02 21:54+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.03.80\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "jayalakshmi balaji"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jayalakshmibalaji@hotmail.com"
+
+#: knetattach.cpp:79
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"இந்த<i>வலை அடைவு</i> மற்றும் சேவகன் முகவரி, முனையம் மற்றும் அடைவு பாதைக்கு ஒரு பெயரை "
+"உள்ளிட்டு<b>சேமி & இணை பட்டனை</b> அழுத்தவும்."
+
+#: knetattach.cpp:82
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"இந்த<i>பாதுகாப்பான ஷெல் இணைப்பு</i> மற்றும் சேவகன் முகவரி, முனையம் மற்றும் அடைவு "
+"பாதைக்கு ஒரு பெயரை உள்ளிட்டு<b>சேமி & இணை பட்டனை</b> அழுத்தவும்."
+
+#: knetattach.cpp:86
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"இந்த<i>கோப்பு மாற்று நெறிமுறை இணைப்பு</i> மற்றும் சேவகன் முகவரி, முனையம் மற்றும் அடைவு "
+"பாதைக்கு ஒரு பெயரை உள்ளிட்டு<b>சேமி & இணை பட்டனை</b> அழுத்தவும்."
+
+#: knetattach.cpp:90
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"இந்த<i>மைக்ரோசாஃப்ட் விண்டோள் வலைப்பின்னல் இயக்கி</i> மற்றும் சேவகன் முகவரி, முனையம் மற்றும் "
+"அடைவு பாதைக்கு ஒரு பெயரை உள்ளிட்டு<b>சேமி & இணை பட்டனை</b> அழுத்தவும்."
+
+#: knetattach.cpp:208
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr ""
+"சேவகனுக்கு இணைக்க முடியவில்லை. உங்கள் அமைப்புகளை சரிப்பார்த்து மீண்டும் முயற்சிக்கவும்."
+
+#: knetattach.cpp:336
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "சேமித்து &இணை"
+
+#: knetattach.cpp:338
+#, kde-format
+msgid "C&onnect"
+msgstr "&இணை"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "பிணைய அடைவு உதவிநிரல்"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "பிணைய அடைவைச் சேர்"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"நீங்கள் சேர்க்க விரும்பும் பிணைய அடைவின் வகையை தேர்ந்தெடுத்து 'அடுத்த‍து' என்ற பட்டனை "
+"அழுத்துங்கள்."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&சமீப இணைப்பு:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&இணைய அடைவு (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&பாதுகாப்பான முனையம் (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "&எஃப.டீ.பீ. (FTP)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&மைக்ரோசாப்ட் விண்டோஸ் பிணைய அடைவு"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "பிணைய அடைவிற்கான விவரங்கள்"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&பெயர்:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "ப&யனர்:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "&சேவையகம்:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&புறை:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&நெறிமுறை:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&அடைவு:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "குறியாக்கம்:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "இந்த தொலை &அடைவிற்கான சின்னத்தை உருவாக்கு"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&மறையாக்கத்தைப் பயன்படுத்து"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "கே.டி.யீ. பிணைய உதவிநிரல்"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "(c) 2004 ஜார்ஜ் ஸ்டைகோஸ்"
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "ஜார்ஜ் ஸ்டைகோஸ்"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "முதன்மை நிரலாளர் மற்றும் பராமரிப்பாளர்"
+
+#~ msgid ""
+#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
+#~ "folder path to use and press the Next button."
+#~ msgstr ""
+#~ "இந்த <i>%1க்கான</i> பெயரையும், சேவகனின் முகவரி, முனையம், பயன்படுத்த அடைவு "
+#~ "பாதையையும் உள்ளிட்டு அடுத்த என்ற பட்டனை அழுத்தவும்."

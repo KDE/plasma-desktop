@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Serveis en segon pla</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail; </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>Servei</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>El mòdul <guilabel
+>Gestor del servei</guilabel
+> us permet tenir una visió general de tots els connectors del dimoni del &kde;, també referit com a serveis del &kde;. En general, hi ha dos tipus de serveis:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Serveis de càrrega sota demanda</guilabel
+></term>
+<listitem
+><para
+>Aquesta és una llista dels serveis disponibles al &kde; que s'engegaran sota demanda. Només es llisten per comoditat, atès que no podeu gestionar-los. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Serveis d'inicialització</guilabel
+></term>
+<listitem
+><para
+>Aquí es mostren tots els serveis del &kde; que es poden carregar a l'inici del &kde;. Els serveis seleccionats a la columna <guilabel
+>Utilitza</guilabel
+> seran invocats al següent inici.</para>
+<para
+>Aneu amb compte amb la desactivació de serveis desconeguts: Alguns són vitals per al &kde;; no en desactiveu cap si desconeixeu el que esteu fent. </para>
+<para
+>Per a canviar l'<guilabel
+>Estat</guilabel
+> d'un servei, seleccioneu-lo a la llista. A continuació, podeu utilitzar <guibutton
+>Engega</guibutton
+> i <guibutton
+>Atura</guibutton
+> per a canviar l'estat d'un servei des d'<guilabel
+>Aturat</guilabel
+> a <guilabel
+>En execució</guilabel
+> i viceversa. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

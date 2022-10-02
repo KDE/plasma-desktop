@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Заставка</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>заставка</keyword>
+<keyword
+>тема</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Этот модуль используется для просмотра и выбора экрана-заставки.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимок экрана модуля управления экранами-заставками.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Модуль управления экранами-заставками</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>В окне показаны миниатюры установленных в системе заставок. Миниатюра текущей заставки выделена.</para>
+
+<para
+>Для предварительного просмотра заставки наведите курсор мыши на её миниатюру и нажмите кнопку <guilabel
+>Продемонстрировать заставку</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Загрузить заставки…</guilabel
+></term>
+<listitem>
+<para
+>Для загрузки новых заставок необходимо подключение к интернету. В открывшемся окне будет представлен список заставок, опубликованных на сайте <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Для установки выбранной заставки служит кнопка <guibutton
+>Установить</guibutton
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+>Установка новой заставки</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Установка новой заставки</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Новая заставка будет доступна для выбора сразу после закрытия диалога установки новых заставок. Чтобы задать использование заставки, выделите её миниатюру и нажмите кнопку <guibutton
+>Применить</guibutton
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

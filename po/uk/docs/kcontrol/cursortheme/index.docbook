@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Тема вказівника</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>7 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<abstract>
+<para
+>Це документація з модуля «Системних параметрів», призначеного для налаштування вигляду вказівника миші. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>миша</keyword>
+<keyword
+>вказівник</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля ви можете обрати одну зі встановлених тем вказівника, які показано на панелі попереднього перегляду вказівників. </para>
+
+<para
+>Можливості, які ви отримуєте за допомогою цього модуля, можуть бути недоступними у деяких системах. Можливо, вашу систему доведеться оновити, щоб вона могла підтримувати теми вказівників. </para>
+
+<para
+>Якщо у вас є додаткові теми вказівників, ви можете вилучати ці теми за допомогою кнопки із зображенням смітника, яку буде показано у відповідь на наведення вказівника миші на пункт теми на панелі списку. Зауважте, що ви не можете вилучати типові теми. </para>
+
+<para
+>У деяких темах передбачено можливість вибору розміру вказівника. Скористайтеся полем <guilabel
+>Розмір</guilabel
+> для вибору належного розміру. Доступні розміри можна переглянути на контекстній панелі, яку буде показано у відповідь на наведення вказівника миші на пункту теми на панелі списку. </para>
+
+<para
+>Якщо у вас є додаткові теми вказівника, ви можете встановити їх за допомогою кнопки <guibutton
+>Встановити з файла...</guibutton
+> під панеллю списку. Ознайомтеся із <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>цими настановами</ulink
+>, щоб дізнатися більше про створення нетипової теми вказівника. </para>
+
+<para
+>Натисніть кнопку <guibutton
+>Отримати нові вказівники</guibutton
+>, щоб відкрити діалогове вікно <guilabel
+>Отримання нових даних Вказівники</guilabel
+>, за допомогою якого ви зможете отримати додаткові теми з інтернету.</para>
+
+</article>

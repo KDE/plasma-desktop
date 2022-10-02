@@ -1,0 +1,115 @@
+# translation of plasma_applet_trash.po to greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Antonis Geralis <capoiosct@gmail.com>, 2012, 2013, 2014.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <sstavra@gmail.com>, 2012.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_trash\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-16 00:49+0000\n"
+"PO-Revision-Date: 2016-09-16 14:27+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: contents/ui/main.qml:103
+#, kde-format
+msgctxt "a verb"
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: contents/ui/main.qml:104
+#, kde-format
+msgctxt "a verb"
+msgid "Empty"
+msgstr "Άδειασμα"
+
+#: contents/ui/main.qml:110
+#, fuzzy, kde-format
+#| msgid "Trash Settings..."
+msgid "Trash Settings…"
+msgstr "Ρυθμίσεις απορριμάτων..."
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"Empty"
+msgstr ""
+"Απορρίμματα\n"
+"Άδεια"
+
+#: contents/ui/main.qml:161
+#, kde-format
+msgid ""
+"Trash\n"
+"One item"
+msgid_plural ""
+"Trash\n"
+" %1 items"
+msgstr[0] ""
+"Απορρίμματα\n"
+"Ένα αντικείμενο"
+msgstr[1] ""
+"Απορρίμματα\n"
+" %1 αντικείμενα"
+
+#: contents/ui/main.qml:170
+#, kde-format
+msgid "Trash"
+msgstr "Απορρίμματα"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "Empty"
+msgstr "Άδειο"
+
+#: contents/ui/main.qml:171
+#, kde-format
+msgid "One item"
+msgid_plural "%1 items"
+msgstr[0] "Ένα αντικείμενο"
+msgstr[1] "%1 αντικείμενα"
+
+#~ msgid ""
+#~ "Trash \n"
+#~ " Empty"
+#~ msgstr ""
+#~ "Απορρίμματα \n"
+#~ " Άδεια"
+
+#~ msgid "Empty Trash"
+#~ msgstr "Άδειασμα απορριμμάτων"
+
+#~ msgid ""
+#~ "Do you really want to empty the trash ? All the items will be deleted."
+#~ msgstr ""
+#~ "Επιθυμείτε πραγματικά να αδειάσετε τα απορρίμματα; Όλα τα αντικείμενα θα "
+#~ "διαγραφούν."
+
+#~ msgid "Cancel"
+#~ msgstr "Ακύρωση"
+
+#~ msgid "&Empty Trashcan"
+#~ msgstr "Άδ&ειασμα του κάδου απορριμμάτων"
+
+#~ msgid "&Menu"
+#~ msgstr "&Μενού"
+
+#~ msgctxt "@title:window"
+#~ msgid "Empty Trash"
+#~ msgstr "Άδειασμα απορριμμάτων"
+
+#~ msgid "Emptying Trashcan..."
+#~ msgstr "Άδειασμα του κάδου απορριμμάτων..."

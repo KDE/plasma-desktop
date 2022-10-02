@@ -1,0 +1,391 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2020, 2021.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-07-22 16:00+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "Tällä moduulilla voit asettaa tiedosto-indeksointi- ja -hakutoiminnot."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Tämä poistaa KRunnerissa ja käynnistysvalikoissa tiedostohaun käytöstä sekä "
+"poistaa laajennetun metatietonäkymän kaikista KDE-sovelluksista."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Haluatko poistaa tallennetun indeksitiedon? %1 levytilaa vapautuu, mutta jos "
+"indeksointi palautetaan käyttöön tuonnempana, koko indeksi on luotava alusta "
+"uudelleen, mikä tiedostojen määrän mukaan voi kestää kauan."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Poista indeksitiedot"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "Tiedostohaulla löydät tiedostosi nopeasti niiden sisällön perusteella."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Käytä tiedostohakua"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Indeksoi myös tiedoston sisältö"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Indeksoi piilotiedostot ja -kansiot"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Tila: %1, %2 % valmiina"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Keskeytä indeksointi"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Jatka indeksointia"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Nyt indeksoidaan: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Kansiokohtainen määritys:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Valitse indeksoitava kansio…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Valitse kansio, jota ei indeksoida…"
+
+# Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Älä indeksoi"
+
+# Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indeksoi"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Poista tietue"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Valitse mukaan otettava kansio"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Valitse pois jätettävä kansio"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lasse Liehu, Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lasse.liehu@gmail.com, translator@legisign.org"
+
+#~ msgid "File Search"
+#~ msgstr "Tiedostohaku"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "Tekijänoikeudet 2007–2010 Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Lisää kansiomääritys…"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "Kansio %1 on jo jätetty pois indeksoinnista"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Tiedostojen indeksointi"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Älä hae seuraavista sijainneista:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Valitse kansio, jota ei indeksoida"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Juurikansiota ei voi jättää pois indeksoinnista: poista tiedostojen "
+#~ "etsintä käytöstä, jos haluat sitä"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "Kansion yläkansio %1 on jo jätetty pois indeksoinnista"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Tiedostohaun asetukset"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "Juurikansio on aina piilossa"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Käytä kehittäjän tilaa"
+
+#, fuzzy
+#~| msgid "Basic Settings"
+#~ msgid "Settings"
+#~ msgstr "Perusasetukset"
+
+#~ msgid "Suspend"
+#~ msgstr "Keskeytä"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "Valitse indeksoitavat tiedostot ja kansiot"
+
+#~ msgid "Index Documents"
+#~ msgstr "Indeksoi asiakirjat"
+
+#~ msgid "Index Audio"
+#~ msgstr "Indeksoi äänitiedostot"
+
+#~ msgid "Index Images"
+#~ msgstr "Indeksoi kuvat"
+
+#~ msgid "Index Videos"
+#~ msgstr "Indeksoi videot"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Indeksoi lähdekoodi"
+
+#~ msgid "Advanced"
+#~ msgstr "Lisäasetukset"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Valitse kansiot"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Tiedostosuodatuksen lisäasetukset"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "Ohitettavat MIME-tyypit"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Indeksin ohitussuodattimet"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Määritä lausekkeet, jotka sulkevat tiedostoja indeksoinnin ulkopuolelle"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (symbolisia linkkejä <emphasis>ei</emphasis> "
+#~ "indeksoida työpöytähakua varten)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr "<filename>%1</filename><nl/>(indeksoidaan työpöytähakua varten)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (<emphasis>ei</emphasis> indeksoida "
+#~ "työpöytähakua varten)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Indeksikansioiden mukauttaminen"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "Valitse paikalliset kansiot, jotka haluat indeksoitavan työpöytähakujen "
+#~ "nopeuttamiseksi"
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr "Valitse tämä valitaksesi myös piilokansioita"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "Tiedostojen indeksointipalvelu ei ole käynnissä."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Tiedostojen indeksointipalveluun ei saatu yhteyttä (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Jatka"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Keskeytä"
+
+#~ msgid "File Metadata"
+#~ msgstr "Tiedostojen metatiedot"
+
+#~ msgid ""
+#~ "File metadata enables tagging and rating of files integrated with the "
+#~ "Desktop Search."
+#~ msgstr ""
+#~ "Tiedostojen metatiedot ottavat käyttöön tunnisteiden lisäämisen sekä "
+#~ "arvostelun tiedostoille, jotka on integroitu työpöytähakuun."
+
+#~ msgid "Enable File metadata"
+#~ msgstr "Käytä tiedostojen metatietoja"
+
+#~ msgid "Details..."
+#~ msgstr "Yksityiskohdat…"
+
+#~ msgid ""
+#~ "Desktop search allows searching for files by content instead of just by "
+#~ "name."
+#~ msgstr ""
+#~ "Työpöytähaku mahdollistaa tiedostojen etsimisen sisällön eikä vain nimen "
+#~ "perusteella."
+
+#~ msgid "Indexing"
+#~ msgstr "Indeksointi"
+
+#~ msgid "Removable media handling:"
+#~ msgstr "Irrotettavien medioiden käsittely:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Indexing of files on removable media"
+#~ msgstr "Irrotettavien medioiden tiedostojen indeksointi"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "<para>Nepomuk can index files on removable devices like USB keys or "
+#~ "external hard-disks for fast desktop searches.</para>\n"
+#~ "<para>By default no files are indexed. Here this behaviour can be changed "
+#~ "to one of two options:</para>\n"
+#~ "<para><list><item><interface>Index files on all removable devices</"
+#~ "interface> - Files on removable media are indexed as soon as the medium "
+#~ "is mounted. Caution: this does not include media which have been rejected "
+#~ "via the second option.</item>\n"
+#~ "<item><interface>Ask individually when newly mounted</interface> - The "
+#~ "user will be asked to decide if files on the newly mounted medium should "
+#~ "be indexed or not. Once decided Nepomuk will not ask again.</item></"
+#~ "list></para>"
+#~ msgstr ""
+#~ "<para>Nepomuk voi indeksoida irrotettavien laitteiden tiedostot "
+#~ "työpöytähakujen nopeuttamiseksi. Laitteita ovat esimerkiksi USB-muistit "
+#~ "ja ulkoiset kiintolevyt.</para>\n"
+#~ "<para>Oletusarvoisesti tiedostoja ei indeksoida. Tässä toimintaa voi "
+#~ "muuttaa kahteen muuhun vaihtoehtoon:</para>\n"
+#~ "<para><list><item><interface>Indeksoi kaikkien irrotettavien medioiden "
+#~ "tiedostot</interface> – Irrotettavan median tiedostot indeksoidaan, kun "
+#~ "media liitetään. Varoitus: toisen vaihtoehdon kautta hylättyjä medioita "
+#~ "ei indeksoida.</item>\n"
+#~ "<item><interface>Kysy erikseen liitettäessä ensimmäisen kerran</"
+#~ "interface> – Käyttäjältä kysytään, pitäisikö uuden median tiedostot "
+#~ "indeksoida vai ei. Vastaamisen jälkeen Nepomuk ei kysy uudelleen.</item></"
+#~ "list></para>"
+
+#~ msgid "Ignore all removable media"
+#~ msgstr "Jätä kaikki irrotettavat mediat huomiotta"
+
+#~ msgid "Index files on all removable devices"
+#~ msgstr "Indeksoi kaikkien irrotettavien medioiden tiedostot"
+
+#~ msgid "Ask individually when newly mounted"
+#~ msgstr "Kysy erikseen liitettäessä ensimmäisen kerran"
+
+#~ msgid "Refresh"
+#~ msgstr "Päivitä"
+
+#~ msgid "Files"
+#~ msgstr "Tiedostoja"
+
+#~ msgid "Emails"
+#~ msgstr "Sähköposteja"
+
+#~ msgid "Calculating"
+#~ msgstr "Lasketaan"
+
+#~ msgid "Desktop Search Configuration Module"
+#~ msgstr "Työpöytähaun hallinta"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are active"
+#~ msgstr "Tiedostojen metatietopalvelut ovat käynnissä"
+
+#~ msgctxt "@info:status"
+#~ msgid "File Metadata services are disabled"
+#~ msgstr "Tiedostojen metatietopalvelut eivät ole käynnissä"

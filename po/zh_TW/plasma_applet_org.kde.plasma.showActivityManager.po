@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
+# Yi-Jyun Pan <pan93412@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-20 00:47+0000\n"
+"PO-Revision-Date: 2020-03-24 19:57+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "外觀"
+
+#: package/contents/ui/ConfigAppearance.qml:24
+#, kde-format
+msgid "Icon:"
+msgstr "圖示："
+
+#: package/contents/ui/ConfigAppearance.qml:26
+#, kde-format
+msgid "Show the current activity icon"
+msgstr "顯示目前的活動圖示"
+
+#: package/contents/ui/ConfigAppearance.qml:32
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr "顯示通用的活動圖示"
+
+#: package/contents/ui/ConfigAppearance.qml:42
+#, kde-format
+msgid "Title:"
+msgstr "標題："
+
+#: package/contents/ui/ConfigAppearance.qml:44
+#, kde-format
+msgid "Show the current activity name"
+msgstr "顯示目前的活動名稱"
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr "顯示目前的活動圖示"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "顯示活動管理員"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "點擊以顯示活動管理員"

@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Управление службами</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8 апреля 2015 г.</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>Служба</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>В модуле <guilabel
+>Управление службами</guilabel
+> можно посмотреть все расширения фонового процесса &kde; Daemon (kded), их также называют «Службы &kde;». Как правило, службы подразделяются на два вида:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Службы, загружаемые при необходимости</guilabel
+></term>
+<listitem
+><para
+>Это список доступных служб &kde;, которые будут запущены в случае необходимости. Список приведён только для ознакомления, поскольку этими службами нельзя управлять. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Службы, загружаемые при запуске</guilabel
+></term>
+<listitem
+><para
+>Показывает, какие службы &kde; могут быть загружены при запуске &kde;. Службы, выбранные в столбце <guilabel
+>Использовать</guilabel
+>, будут вызваны при следующем запуске.</para>
+<para
+>Будьте осторожны при отключении незнакомых служб: некоторые службы важны для работы &kde;. Не отключайте службы, если вы точно не уверены, к чему это приведёт. </para>
+<para
+>Чтобы изменить <guilabel
+>Состояние</guilabel
+> службы, следует выбрать её в списке. С помощью кнопок <guibutton
+>Запустить</guibutton
+> и <guibutton
+>Остановить</guibutton
+> можно изменять состояние службы с <guilabel
+>Не запущена</guilabel
+> на <guilabel
+>Выполняется</guilabel
+> и наоборот. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

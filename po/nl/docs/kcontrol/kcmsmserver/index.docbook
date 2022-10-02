@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Sessiebeheer</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2022-03-22</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>sessie</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Bureaubladsessie</title>
+
+<sect2 id="sessions-use">
+<title
+>Gebruik</title>
+
+<para
+>In deze &systemsettings;-module kunt &plasma;'s sessiebeheerder en afmeldinstellingen instellen.</para>
+
+<para
+>Sessiebeheer is de mogelijkheid binnen &plasma; om de huidige staat van toepassingen en vensters op te slaan als u zich afmeldt uit &plasma; en deze weer te herstellen als u zich weer aanmeldt.</para>
+
+<sect3 id="sessions-general">
+<title
+>Algemeen</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Afmelden bevestigen</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie geactiveerd is, toont &plasma; bij het afmelden een dialoogvenster met een standaard timeout van 30 seconden, waarin gevraagd wordt om bevestiging. In dit venster kunt u ook kiezen of u de huidige sessie bij de volgende keer dat u zich aanmeldt wilt herstellen.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Afsluitopties aanbieden</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie ingeschakeld is, biedt &plasma; een keuze uit acties tijdens het afmelden. Deze zijn het beëindigen van de huidige sessie (de actie die wordt uitgevoerd als de opties niet aangeboden worden), het uitschakelen van de computer, en het herstarten van de computer.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Standaard afmeldoptie</title>
+<para
+>U kunt instellen wat er standaard dient te gebeuren als u zich afmeldt bij &plasma;. Deze opties zijn niet op alle besturingssystemen mogelijk, en vereisen het gebruik van &SDDM; als aanmeldbeheerder.</para>
+<para
+>De beschikbare opties zijn zelfverklarend. Als u twijfelt kunt u het beste de standaardinstelling aanhouden. De opties zijn:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Huidige sessie beëindigen</guilabel
+> (standaard)</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Computer uitschakelen</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Computer herstarten</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>Bij het aanmelden</title>
+<para
+>U kunt uit drie opties kiezen voor wat er gebeurt als u zich bij &plasma; aanmeldt:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Laatste sessie herstellen</guilabel
+></term>
+<listitem
+><para
+>Als deze optie is aangevinkt, slaat &plasma; uw huidige sessie op wanneer u zich afmeldt. &plasma; herstelt de sessie bij de volgende keer dat u zich aanmeldt zodat u kunt doorgaan met het bureaublad zoals u het hebt verlaten.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Laatste handmatig opgeslagen sessie herstellen</guilabel
+></term>
+<listitem
+><para
+>In plaats van &plasma; te herstellen naar de staat zoals die was was toen u zich afmeldde, wordt het hersteld naar een specifieke staat die u handmatig hebt opgeslagen.</para>
+<para
+>Als deze optie is geactiveerd biedt het toepassingenmenu een extra item <menuchoice
+><guimenu
+>Power / Sessie</guimenu
+><guimenuitem
+>Sessie opslaan</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Met een lege sessie opstarten</guilabel
+></term>
+<listitem>
+<para
+>Als u deze optie kiest, herstelt &plasma; nooit opgeslagen sessies.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Tenslotte kunt u een lijst van toepassingen opgeven, gescheiden door dubbelepunten (<literal
+>:</literal
+>) of komma's (<literal
+>,</literal
+>), die uitgesloten dienen te worden in sessies en deze zullen dus ook niet worden opgestart bij het herstellen van een sessie. Bijvoorbeeld <userinput
+>xterm:konsole</userinput
+> of <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

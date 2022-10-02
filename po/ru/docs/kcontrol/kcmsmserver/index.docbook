@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Управление сеансами</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+> <affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22 марта 2022 г.</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>сеанс</keyword>
+<keyword
+>Параметры системы</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Сеанс рабочего стола</title>
+
+<sect2 id="sessions-use">
+<title
+>Использование</title>
+
+<para
+>Этот модуль приложения «Параметры системы» служит для настройки параметров диспетчера сеансов и завершения работы &plasma;.</para>
+
+<para
+>Управление сеансами касается способности &plasma; сохранять состояние приложений и окон на момент выхода из &plasma; и восстанавливать их при следующем входе.</para>
+
+<sect3 id="sessions-general">
+<title
+>Общие</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Запрашивать подтверждение при выходе</guilabel
+></term>
+<listitem>
+<para
+>Если этот флажок установлен, при выходе из &plasma; в течение 30 секунд будет показываться окно для подтверждения. В этом окне возможно указать, требуется ли восстановить текущий сеанс при следующем входе.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Предлагать параметры выключения</guilabel
+></term>
+<listitem>
+<para
+>Если этот флажок установлен, при выходе из &plasma; будет предложен ряд вариантов: обычное завершение текущего сеанса (выполняется, если отключены параметры выключения, то есть данный флажок снят), выключение или перезагрузка компьютера.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title
+>Параметр выхода по умолчанию</title>
+<para
+>Возможно настроить действие, которое будет выполняться по умолчанию при выходе из &plasma;. Эта функция поддерживается не во всех системах, кроме того, она работает только с диспетчером входа в систему &SDDM;.</para>
+<para
+>В названиях доступных вариантов уже содержится их описание. Если при выборе возникли сомнения, рекомендуется оставить параметры по умолчанию. Варианты:</para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Завершить текущий сеанс</guilabel
+> (вариант по умолчанию);</para
+></listitem>
+<listitem
+><para
+><guilabel
+>Выключить компьютер;</guilabel
+></para
+></listitem>
+<listitem
+><para
+><guilabel
+>Перегрузить компьютер.</guilabel
+></para
+></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title
+>При входе в систему</title>
+<para
+>Этот раздел позволяет настроить поведение диспетчера сеансов &plasma; при входе пользователя в систему:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Восстанавливать предыдущий сеанс</guilabel
+></term>
+<listitem
+><para
+>При выборе этого варианта &plasma; при выходе сохраняет состояние сеанса. При следующем входе сохранённое состояние будет восстановлено, позволяя продолжить работу с момента её завершения.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Восстанавливать сеанс, сохранённый вручную</guilabel
+></term>
+<listitem
+><para
+>При выборе этого варианта при начале сессии &plasma; будет восстановлено сохранённое вручную состояние, а не состояние при выходе из последнего сеанса.</para>
+<para
+>Если этот флажок установлен, в меню приложений появится дополнительный пункт <menuchoice
+><guimenu
+>Завершение работы</guimenu
+><guimenuitem
+>Сохранить сеанс</guimenuitem
+></menuchoice
+>. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Начинать с пустого сеанса</guilabel
+></term>
+<listitem>
+<para
+>При выборе этого варианта &plasma; никогда не будет восстанавливать сохранённые сеансы.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Также возможно определить список приложений, состояние которых не следует сохранять для их последующего запуска при восстановлении сеанса. Для этого в соответствующее поле следует ввести имена приложений, разделённые двоеточиями (<literal
+>:</literal
+>) или запятыми (<literal
+>,</literal
+>). Например, <userinput
+>xterm:konsole</userinput
+> или <userinput
+>xterm,konsole</userinput
+>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

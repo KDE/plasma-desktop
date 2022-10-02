@@ -1,0 +1,78 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdeplasma-addons package.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeplasma-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"PO-Revision-Date: 2021-02-12 22:11+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/ui/MinimizeAllController.qml:17
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button"
+msgid "Restore All Minimized Windows"
+msgstr "Minimalkan Semua Window"
+
+#: package/contents/ui/MinimizeAllController.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button"
+msgid "Minimize All Windows"
+msgstr "Minimalkan Semua Window"
+
+#: package/contents/ui/MinimizeAllController.qml:20
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Restores the previously minimized windows"
+msgstr ""
+
+#: package/contents/ui/MinimizeAllController.qml:21
+#, fuzzy, kde-format
+#| msgid "Show the desktop by moving windows aside"
+msgctxt "@info:tooltip"
+msgid "Shows the Desktop by minimizing all windows"
+msgstr "Tampilkan desktop dengan memindahkan window ke samping"
+
+#: package/contents/ui/PeekController.qml:13
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Peek at Desktop"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:16
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Moves windows back to their original positions"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:17
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgstr ""
+
+#~ msgid "Show Desktop"
+#~ msgstr "Tampilkan Desktop"
+
+#~ msgid "Show the Plasma desktop"
+#~ msgstr "Menampilkan desktop Plasma"

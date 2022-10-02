@@ -1,0 +1,308 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Tastatur</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Carsten</firstname
+><surname
+>Niehaus</surname
+><affiliation
+><address
+><email
+>CNiehaus@gmx.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Tastatur</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dieses Modul erlaubt es Ihnen, Einstellungen in Bezug auf Ihre Tastatur zu treffen.</para>
+
+<para
+>Es gibt drei Karteikarten in diesem Modul.</para>
+
+<sect1 id="hardware">
+<title
+>Die Karteikarte Hardware</title>
+<para
+>Der tatsächliche Effekt der Einstellung dieser Optionen hängt von den Funktionen ihrer Tastatur und des X-Servers ab, auf dem &plasma; läuft. Zum Beispiel könnte das Verändern der Klicklautstärke bei Ihrem System keine Wirkung zeigen, da Ihr System diese Funktion nicht unterstützt. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tastatur-Modell:</guilabel
+></term>
+<listitem>
+<para
+>Hier können Sie das Modell Ihrer Tastatur auswählen. Diese Auswahl ist unabhängig von Ihrem Tastaturlayout und bezieht sich auf das tatsächliche physikalische Modell. Neuere Tastaturen haben zwei zusätzliche Tasten, diese nennt man <quote
+>104-Tasten</quote
+>-Tastaturen. Falls Sie das genaue Modell Ihrer Tastatur nicht kennen, ist dies vermutlich die richtige Auswahl. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zahlenblock beim Plasma-Start</guilabel
+></term>
+<listitem>
+<para
+>Hier kann man auswählen, ob &plasma; den Zahlenblock beim Start immer <guilabel
+>Einschalten</guilabel
+>, <guilabel
+>Ausschalten</guilabel
+> oder den Zustand dieser Taste <guilabel
+>Unverändert lassen</guilabel
+> soll.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Wenn eine Taste gedrückt wird:</guilabel
+></term>
+<listitem>
+<para
+>Sie können eine von diesen drei Einstellungen wohlen</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Akzent-Zeichen und ähnliche Zeichen anzeigen</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Einstellung aktiviert ist, wird bei gedrückter Taste während der Texteingabe ein Aufklapp-Fenster angezeigt, in dem zwischen verschiedenen akzentuierten Formen des Zeichens gewählt werden kann.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Keine Aktion</guilabel
+></term>
+<listitem>
+<para
+>Diese Einstellung schaltet alle Aktionen ab, wenn Sie eine Taste gedrückt halten.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tastendruck wiederholen</guilabel
+></term>
+<listitem>
+<para
+>Wenn diese Option angewählt ist, bewirkt andauerndes Gedrückthalten einer Taste, dass das entsprechende Zeichen solange ausgegeben wird, wie die Taste gedrückt wird. Das andauernde Gedrückthalten einer Taste hat somit denselben Effekt wie ein ständig wiederholtes Drücken einer Taste.</para>
+<tip
+><para
+>Fast alle Benutzer werden diese Option anwählen, weil es das Navigieren durch Dokumente mit den Pfeiltasten erheblich vereinfacht. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Verzögerung</guilabel
+></term>
+<listitem>
+<para
+>Diese Einstellung legt die Verzögerung fest, nach der Zeichen ausgegeben werden, wenn Sie eine Taste gedrückt halten.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Geschwindigkeit</guilabel
+></term>
+<listitem>
+<para
+>Diese Einstellung legt die Wiederholrate fest, mit der Zeichen ausgegeben werden, solange Sie eine Taste gedrückt halten.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Tippen Sie einige Zeichen im <guilabel
+>Testbereich</guilabel
+>, um die Einstellungen zu überprüfen.</para>
+<para
+>Viele Computer unterstützen diese Funktion nicht.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Die Karteikarte Belegungen</title>
+<para
+>Auf dieser Karteikarte können Sie eine Tastaturbelegung, das Anzeigesymbol im Systemabschnitt der Kontrollleiste, Umschaltregelungen und Kurzbefehle zum Belegungswechsel einstellen.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Belegungsanzeige</guilabel
+></term>
+<listitem>
+<para
+>Mit der Einstellung <guilabel
+>Belegungsanzeige aktivieren</guilabel
+> wird der ISO-Name der Belegung im Systemabschnitt der Kontrollleiste angezeigt. Auch bei nur einer Belegung kann die Anzeige dieses Symbols eingeschaltet werden. Mit der Auswahl von <guilabel
+>Fahne anzeigen</guilabel
+> wird eine Fahne mit dem Sprachsymbol anstelle des ISO-Namens angezeigt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Umschaltregelung</guilabel
+></term>
+<listitem>
+<para
+>Falls Sie die Umschaltregelung <guilabel
+>Anwendung</guilabel
+> oder <guilabel
+>Fenster</guilabel
+> wählen, gilt die Änderung der Tastaturbelegung nur für das aktuelle Programm oder Fenster. <guilabel
+>Global</guilabel
+> ändert die Tastaturbelegung global und <guilabel
+>Arbeitsfläche</guilabel
+> nur für die gerade benutzte virtuelle Arbeitsfläche. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Kurzbefehle zum Belegungswechsel</guilabel
+></term>
+<listitem>
+<para
+>Die <guilabel
+>Haupt-Kurzbefehle</guilabel
+> zum Belegungswechsel werden von X.org behandelt. <guilabel
+>Kurzbefehle für die 3. Ebene</guilabel
+> dienen zum Wechseln in eine dritte Ebene der aktiven Belegung - sofern diese Ebene dafür definiert ist, auch das wird von X.org behandelt. Hier können nur Sondertasten ausgewählt werden. Der <guilabel
+>Alternative Kurzbefehl</guilabel
+> wird von &plasma; behandelt. Hier können nicht Sondertasten allein gewählt werden. Diese alternativen Kurzbefehle funktionieren unter bestimmten Bedingungen nicht richtig, zum Beispiel wenn ein Benachrichtigungsfenster angezeigt wird oder der Bildschirmschoner eingeschaltet ist. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Belegungen einrichten</guilabel
+></term>
+<listitem>
+<para
+>Aktivieren Sie <guilabel
+>Belegungen einrichten</guilabel
+>, dann können Sie Tastaturbelegungen hinzufügen oder löschen, um dann zwischen Ihnen zu wechseln. </para>
+<para
+>Klicken Sie auf <guibutton
+>Hinzufügen</guibutton
+>, damit öffnen Sie einen Dialog, aus dem Sie eine neue Tastaturbelegung mit seinen Varianten, Beschriftung und Kurzbefehl auswählen können. </para>
+<para
+>Die Liste der Tastaturbelegungen rechts neben dem Feld <guilabel
+>Belegung</guilabel
+> im Dialog <guilabel
+>Belegung hinzufügen</guilabel
+> kann mit dem Auswahlfeld <guilabel
+>Auswahl nach Sprache beschränken</guilabel
+> eingegrenzt werden. Durch Klicken auf <guibutton
+>Vorschau</guibutton
+> wird ein eigenes Fenster mit einer Vorschau der gewählten Tastaturbelegung angezeigt. </para>
+<para
+>Die Reihenfolge der Einträge können Sie mit <guibutton
+>Nach oben</guibutton
+> und <guibutton
+>Nach unten</guibutton
+> ändern, die erste Tastaturbelegung in der Liste wird als Standard verwendet. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Zusätzliche Belegungen</guilabel
+></term>
+<listitem>
+<para
+>Diese Einstellung kann nur dann aktiviert werden, wenn Sie mehr als zwei Belegungen hinzugefügt haben.</para>
+<para
+>Mit zusätzlichen Belegungen können Sie zwischen einer kleinen Anzahl von Belegungen wechseln und die häufig benutzen Belegungen sind schnell zu erreichen. Sie möchten zum Beispiel drei Belegungen verwenden: Englisch, Ukrainisch und Deutsch. Von diesen werden die ersten beiden Belegungen häufig benutzt, die dritte nur selten. In diesem Fall richten Sie die ersten beiden als Haupt-Belegungen ein, indem Sie die <guilabel
+>Anzahl Haupt-Belegungen</guilabel
+> auf 2 setzen. Deutsch wird dann die zusätzliche Belegung. Mit der Tastatur oder durch Klicken mit der linken Maustaste wechseln Sie zwischen den Haupt-Belegungen. Die dritte zusätzliche Belegung ist dann über das Kontextmenü zu erreichen.</para>
+<para
+>Eine ausgewählte zusätzliche Belegung ersetzt die letzte Hauptbelegung. Dies erfolgt aus technischen Gründen. Normalerweise funktionieren globale Kurzbefehle auf der Grundlage der ersten Belegung. Daher ist es sicherer die erste Belegung zu erhalten, wenn zusätzliche Belegungen benutzt werden sollen.</para>
+<!-- context menu ?-->
+<para
+>Der X.Org-Server erlaubt nur zwischen vier Belegungen zu wechseln. Mit <quote
+>Zusätzlichen Belegungen</quote
+> kann diese Einschränkung überwunden werden: Benutzer können vier Haupt-Belegungen (vom X.Org-Server verwaltet) benutzen. Zusätzlich noch vier weitere Belegungen, die vom Belegungs-Umschalter verwaltet werden. Daher können bis zu 8 Belegungen leicht gehandhabt werden. Die Anzahl der zusätzlichen Belegungen kann zukünftig einfach erhöht werden. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Die Karteikarte Erweitert</title>
+<para
+>Aktivieren Sie auf dieser Karteikarte <guilabel
+>Tastatureinstellungen ändern</guilabel
+>, dann können Sie weitere Einstellungen für einige spezielle Tasten einrichten. Klicken Sie auf das Symbol &gt; links vor einer Einstellung, um weitere Untereinträge aufzuklappen und daraus auszuwählen. </para>
+<para
+>Dies ist eine grafische Benutzeroberfläche, um benutzerdefinierte Tastaturbelegungen für &X11; mithilfe vom XKB zu erstellen. </para>
+<para
+> Weitere Informationen hierzu finden Sie im Abschnitt <emphasis
+>Verknüpfungen</emphasis
+> auf der Seite <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>XKeyboardConfig auf freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

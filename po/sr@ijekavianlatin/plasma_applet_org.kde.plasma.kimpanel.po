@@ -1,0 +1,132 @@
+# Translation of plasma_applet_org.kde.kimpanel.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2012, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.kimpanel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-31 18:13+0200\n"
+"PO-Revision-Date: 2017-03-19 22:40+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: backend/ibus/emojier/ui/CategoryPage.qml:55
+#, kde-format
+msgid "Search..."
+msgstr ""
+
+#: backend/ibus/emojier/ui/emojier.qml:50
+#, kde-format
+msgid "%1 copied to the clipboard"
+msgstr ""
+
+#: backend/ibus/emojier/ui/emojier.qml:54
+#: backend/ibus/emojier/ui/emojier.qml:76
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: backend/ibus/emojier/ui/emojier.qml:65
+#, kde-format
+msgid "Recent"
+msgstr ""
+
+#: backend/ibus/emojier/ui/emojier.qml:87
+#, kde-format
+msgid "All"
+msgstr ""
+
+#: backend/ibus/emojier/ui/emojier.qml:94
+#, kde-format
+msgid "Categories"
+msgstr ""
+
+#: package/contents/config/config.qml:26
+#, kde-format
+msgid "Appearance"
+msgstr "Izgled"
+
+#: package/contents/ui/ActionMenu.qml:106
+#, kde-format
+msgid "(Empty)"
+msgstr "(prazno)"
+
+#: package/contents/ui/ConfigAppearance.qml:38
+#, fuzzy, kde-format
+#| msgid "Exit Input Method"
+msgid "Input method list:"
+msgstr "Napusti metod unosa"
+
+# >> @option:check
+#: package/contents/ui/ConfigAppearance.qml:39
+#, fuzzy, kde-format
+#| msgid "Vertical List"
+msgid "Vertical"
+msgstr "Uspravni spisak:"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Font:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:49
+#, kde-format
+msgid "Use custom:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "The selected font family and font size"
+msgid " "
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, fuzzy, kde-format
+#| msgid "Select Font"
+msgid "Select Font..."
+msgstr "Izaberi font"
+
+#: package/contents/ui/ConfigAppearance.qml:74
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Font"
+msgstr "Izbor fonta"
+
+#: package/contents/ui/ContextMenu.qml:96
+#, kde-format
+msgid "Show"
+msgstr "Prikaži"
+
+#: package/contents/ui/ContextMenu.qml:111
+#, kde-format
+msgid "Hide %1"
+msgstr "Sakrij %1|/|Sakrij $[aku %1]"
+
+#: package/contents/ui/ContextMenu.qml:120
+#, kde-format
+msgid "Configure Input Method"
+msgstr "Podesi metod unosa"
+
+#: package/contents/ui/ContextMenu.qml:128
+#, kde-format
+msgid "Reload Config"
+msgstr "Ponovo učitaj postavu"
+
+#: package/contents/ui/ContextMenu.qml:136
+#, kde-format
+msgid "Exit Input Method"
+msgstr "Napusti metod unosa"
+
+#: package/contents/ui/main.qml:209
+#, fuzzy, kde-format
+#| msgid "Exit Input Method"
+msgid "Input Method Panel"
+msgstr "Napusti metod unosa"

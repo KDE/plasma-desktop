@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Lettertypeweergave</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>fontview</keyword>
+<keyword
+>lettertypen</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; is een programma om verschillende lettertypen te bekijken en te installeren: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; type 1 (bestandsextensie in &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; in &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, bestandsextensie <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, bestandsextensie <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>U kunt als alleenstaand programma gebruiken om een van het internet gedownload lettertype te bekijken en te installeren. Bij het bekijken kunt u controleren of het lettertype alle benodigde tekens die u nodig hebt bevat. </para>
+<para
+>Ook kan &kfontview; vanuit de module &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
+>worden opgestart <guilabel
+>Lettertypebeheer</guilabel
+></ulink
+> om de uitgebreide mogelijkheden tot bekijken van &kfontview; te gebruiken.</para>
+
+<para
+>Als alternatief kunt u de module <guilabel
+>Lettertypenbeheer</guilabel
+> gebruiken om alle lettertypen op uw systeem te installeren, te verwijderen, te bekijken en te beheren.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>&kfontview;-programma</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&kfontview;-programma</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+><guilabel
+>Standaard voorbeeld</guilabel
+> van &kfontview; toont uw lettertype in verschillende groottes met een pangram ( een zin die alle letters van het alfabet minstens een keer bevat), zodat u een goed idee krijgt van hoe het eruit ziet. Vanuit het afrolvak in de werkbalk kunt u extra voorbeeldtypen kiezen: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Alle tekens</guilabel
+> toont alle door het lettertype geboden tekens in één grootte. </para
+></listitem>
+<listitem
+><para
+>Unicode-blok: De Unicode-standaard arrangeert groepen tekens in blokken</para
+></listitem>
+<listitem
+><para
+>Unicode-script: In Unicode is een script een verzameling letters en andere geschreven tekens die worden gebruikt om tekstuele informatie in een of meer schrijfsystemen weer te geven</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Tekst wijzigen</guibutton
+>: Met deze knop opent u de dialoog <guilabel
+>Voorbeeldtekst</guilabel
+> waar u een gebruikergedefinieerde tekst in kunt voegen. Hiermee kunt u controleren dat een lettertype de benodigde tekens ondersteunt. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>U kunt de knoppen voor zoomen of het muiswiel gebruiken om de grootte van het lettertype in alle typen voorbeelden te wijzigen.</para>
+<para
+>In de voorbeeldmodus <guilabel
+>Unicode-blok</guilabel
+> en <guilabel
+>Unicode-script</guilabel
+> worden extra informatietekstballonnen getoond bij het over een teken bewegen met de muisaanwijzerer: De <guilabel
+>Category</guilabel
+> van het Unicode-teken en de waarde in <guilabel
+> UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> en als <guilabel
+>XML Decimal Entity</guilabel
+> worden getoond.</para>
+
+<para
+>Om een lettertype te installeren die u van het internet hebt gedownload, klik op de knop <guibutton
+>Installeren</guibutton
+> in de rechtsonderhoek. </para>
+
+<para
+>U kunt het lettertype voor persoonlijk gebruik installeren, alleen voor u beschikbaar, of systeembreed beschikbaar voor alle gebruikers, de laatste vereist beheerderrechten.</para>
+
+<para
+>Lettertype worden vaak in een archiefformaat zoals <literal role="extension"
+>zip</literal
+>, geleverd. Open deze archieven met &ark; die op een eenvoudige manier lettertypen laat zien. Om gebruik te maken van de uitgebreide mogelijkheden van &kfontview; extraheert u de lettertypen en opent ze in &kfontview;. </para
+><para
+>Toepassingen moeten opnieuw gestart worden om de nieuw geïnstalleerde lettertypen te kunnen gebruiken.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

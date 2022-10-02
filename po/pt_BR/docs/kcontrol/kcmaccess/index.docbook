@@ -1,0 +1,419 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Acessibilidade</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Marcus</firstname
+> <surname
+>Gama</surname
+><affiliation
+><address
+> <email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Revisão</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>acessibilidade</keyword>
+<keyword
+>teclas</keyword>
+<keyword
+>campainha</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Acessibilidade</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Introdução</title>
+
+<para
+>Este módulo foi projetado para auxiliar usuários que possuem deficiências auditivas, ou que possuem dificuldade em utilizar um teclado. </para>
+
+<para
+>O módulo está dividido em cinco abas: <link linkend="access-bell"
+><guilabel
+>Campainha</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Teclas modificadoras</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtros do Teclado</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Gestos de ativação</guilabel
+></link
+> e <guilabel
+>Leitor de tela</guilabel
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Campainha</guilabel
+></title>
+
+<para
+>Este painel é dividido em uma seção <guilabel
+>Campainha audível</guilabel
+> e em um seção <guilabel
+>Campainha visível</guilabel
+>. </para>
+
+<para
+>A opção <guilabel
+>Usar campainha do sistema</guilabel
+> determina se o sistema normal de campainha irá tocar. Se esta opção estiver desabilitada, o sistema de campainha será silenciado. </para>
+
+<para
+>A próxima opção pode ser usada para tocar um som diferente se a campainha do sistema for disparada. Para ativar, selecione a opção <guilabel
+>Usar campainha personalizada</guilabel
+> e digite o nome completo do caminho para o arquivo de som na caixa <guilabel
+>Som a ser reproduzido</guilabel
+>. Se quiser, você pode selecionar o botão <guibutton
+>Navegar</guibutton
+> para navegar pelo seu sistema de arquivos para encontrar o arquivo exato. </para>
+
+<para
+>Para aqueles usuários que possuem dificuldade em ouvir a campainha do sistema, ou para aqueles que possuem um computador silencioso, o &kde; oferece a <emphasis
+>campainha visível</emphasis
+>. Ela fornece um sinal visual (invertendo a tela ou piscando uma cor nela), quando a campainha do sistema normalmente tocaria um som. </para>
+
+<para
+>Para usar a campainha visual, primeiro selecione a caixa de verificação chamada <guilabel
+>Usar campainha visível</guilabel
+>. </para>
+
+<para
+>Você pode, então, selecionar entre <guilabel
+>Inverter tela</guilabel
+>, ou<guilabel
+>Piscar tela</guilabel
+>. Se você selecionou <guilabel
+>Inverter tela</guilabel
+>, todas as cores na tela serão invertidas. Se você escolheu <guilabel
+>Piscar tela</guilabel
+>, você pode escolher a cor clicando no botão à direita da opção <guilabel
+>Piscar tela</guilabel
+>. </para>
+
+<para
+>O campo incremental pode ser usado para ajustar a duração da campainha visível. O valor padrão é de 500 ms ou metade de um segundo. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Teclas modificadoras</guilabel
+></title>
+
+<para
+>Existem duas seções neste painel: <guilabel
+>Teclas de aderência</guilabel
+> e <guilabel
+>Teclas de bloqueio</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar teclas de aderência</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estive selecionada, o usuário pode pressionar e soltar as teclas &Shift;, &Alt; ou &Ctrl;, e depois clicar noutra tecla para obter uma combinação de teclas (exemplo: <keycombo action="simul"
+>&Ctrl; &Alt; <keycap
+>Del</keycap
+></keycombo
+> poderia ser feito com &Ctrl; seguido de &Alt; seguido de <keycap
+>Del</keycap
+>). </para>
+
+<para
+>Nesta seção também existe uma opção <guilabel
+>Bloquear as teclas de aderência</guilabel
+>. Se ela estiver selecionada, as teclas &Alt;, &Ctrl;, e &Shift; ficam <quote
+>selecionadas</quote
+> até que sejam <quote
+>desativadas</quote
+> pelo usuário. </para>
+
+<para
+>Como exemplo: </para>
+<variablelist>
+<varlistentry>
+<term
+>Com a opção <guilabel
+>Bloquear as teclas de aderência</guilabel
+> desativada:</term>
+<listitem>
+<para
+>O usuário pressiona a tecla &Shift;, e pressiona em seguida a tecla <keycap
+>F</keycap
+>. O computador traduz esta ação em <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Se o usuário em seguida pressionar a tecla <keycap
+>P</keycap
+>, o computador recebe a letra p (sem o Shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Com a opção <guilabel
+>Bloquear as teclas de aderência</guilabel
+> ativada:</term>
+<listitem>
+<para
+>Se o usuário pressionar a tecla &Shift; <emphasis
+>duas vezes</emphasis
+> e pressionar em seguida na tecla <keycap
+>F</keycap
+>, o computador traduz esta ação em <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Se o usuário em seguida pressionar a tecla <keycap
+>P</keycap
+>, o computador interpreta isto também como <keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>. Para desligar a tecla &Shift;, pressione-a de novo. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtros do teclado</guilabel
+></title>
+
+<para
+>Existem duas seções neste painel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar teclas lentas</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver ativa, o usuário tem que manter a tecla pressionada durante um período de tempo específico (ajustável com o campo incremental), antes que a tecla seja aceita. Isto previne o pressionamento acidental de teclas. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Usar teclas de repercussão</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver selecionada, o usuário tem que esperar um intervalo de tempo específico (configurado com o campo incremental) antes que a próxima tecla seja aceita. Isto evita que pessoas com pouca precisão pressionem na mesma tecla mais de uma vez. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gestos de ativação</guilabel
+></title>
+
+<para
+>Existem duas seções neste painel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos para ativação</guilabel
+> com estas opções:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar gestos para ativar as teclas de aderência e as teclas lentas</guilabel
+></member>
+<member
+>Aqui você poderá ativar os gestos do teclado que ativam as seguintes funcionalidades:</member>
+<member
+>Mouse por teclado: Pressione &Shift;+NumLock</member>
+<member
+>Teclas de aderência: Pressione &Shift; 5 vezes consecutivas</member>
+<member
+>Teclas lentas: Mantenha pressionado o &Shift; durante 8 segundos</member>
+<member
+><guilabel
+>Desabilitar as teclas de aderência e as teclas lentas após um certo tempo de inatividade</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificação</guilabel
+> com estas opções:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar a campainha do sistema sempre que for usado um gesto para ativar ou desativar um recurso de acessibilidade</guilabel
+></member>
+
+<member
+><guilabel
+>Exibir um diálogo de confirmação se um recurso de acessibilidade do teclado for ativado ou desativado</guilabel
+></member>
+<member
+>Se esta opção estiver assinalada, o &kde; irá mostrar uma janela de confirmação, sempre que uma determinada funcionalidade de acessibilidade seja ativada ou desativada.</member>
+<member
+>Certifique-se de que sabe o que está fazendo quando a desligar, uma vez que a configuração da acessibilidade do teclado será sempre aplicada sem qualquer confirmação.</member>
+
+<member
+><guilabel
+>Use o mecanismo de notificação de sistema do &kde; se um recurso de acessibilidade do teclado for ativado ou desativado</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Clique no botão para <guibutton
+>Configurar notificações</guibutton
+>, de modo a abrir uma janela que lhe permite editar as notificações das mudanças de estado de todas as teclas.</para>
+
+</sect3>
+</sect2>
+
+</sect1>
+
+</article>

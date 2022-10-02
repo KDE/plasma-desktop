@@ -1,0 +1,270 @@
+# translation of kcmkonq.po to Macedonian
+# Copyright (C) 2000,2002,2003, 2004, 2005, 2006, 2008, 2009, 2010 Free Software Foundation, Inc.
+#
+# Danko Ilik <danko@mindless.com>, 2000,2002,2003.
+# Novica Nakov <novica@bagra.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2005, 2006, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2010-01-29 22:27+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Површина"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Документи"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Симнувања"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Музика"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Слики"
+
+#: desktoppathssettings.cpp:248
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos"
+msgstr "Патека до филмови:"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Патеки</h1>\n"
+"Овој модул Ви овозможува да изберете каде во датотечниот систем треба да се "
+"складираат датотеките од вашата работна површина.\n"
+"Користете ја опцијата „Што е ова?“ (Shift+F1) за да добиете помош за "
+"специфичните опции."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Патека до површината:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Оваа папка ги содржи сите датотеки што ги гледате на вашата површина. Ако "
+"сакате, може да ја промените локацијата на папката и тогаш нејзината "
+"содржина автоматски ќе се премести на новата локација."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Патека до документите:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Оваа папка ќе се користи како стандардна папка во која ќе се снимаат и од "
+"која ќе се вчитуваат документи."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Патека до симнувањата:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Оваа папка ќе се користи како стандардна папка за зачувување на вашите "
+"симнувања."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, fuzzy, kde-format
+#| msgid "Movies path:"
+msgid "Videos path:"
+msgstr "Патека до филмови:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Оваа папка ќе се користи како стандардна папка во која ќе се зачувуваат "
+"филмови."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Патека до слики:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Оваа папка ќе се користи како стандардна папка во која ќе се зачувуваат "
+"слики."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Патека до музика:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Оваа папка ќе се користи како стандардна папка во која ќе се зачувува музика."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Патека за автом. старт:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains applications or links to applications (shortcuts) "
+#~| "that you want to have started automatically whenever KDE starts. You can "
+#~| "change the location of this folder if you want to, and the contents will "
+#~| "move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Оваа папка ги содржи апликациите или врските до апликации (кратенки) кои "
+#~ "што сакате автоматски да се стартуваат секој пат кога ќе се стартува KDE. "
+#~ "Ако сакате, може да ја промените локацијата на папката и тогаш нејзината "
+#~ "содржина автоматски ќе се премести на новата локација."
+
+#~ msgid "Autostart"
+#~ msgstr "Автостарт"
+
+#~ msgid "Movies"
+#~ msgstr "Филмови"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Патеката за „%1“ е променета.\n"
+#~ "Дали сакате датотеките да бидат преместени од „%2“ во „%3“?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Премести"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Не преместувај"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Патеката за „%1“ е променета.\n"
+#~ "Дали сакате да ја преместите папката „%2“ во „%3“?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Премести"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Не преместувај"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Потребна е потврда"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Однесување на Konqueror</h1> Тука може да конфигурирате како ќе се "
+#~ "однесува Konqueror како менаџер на датотеки."
+
+#~ msgid "Misc Options"
+#~ msgstr "Разни опции"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "&Отворај ги папките во посебни прозорци"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Ако е избрана оваа опција, Konqueror ќе отвори нов прозорец кога ќе "
+#~ "отворите папка, наместо да ја прикажува содржината на таа папка во "
+#~ "тековниот прозорец."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Покажи ги во контексното ме&ни ставките „Избриши“ што ја заобиколуваат "
+#~ "корпата"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Изберете го ова ако сакате командите „Избриши“ да бидат прикажани на "
+#~ "површината и во менијата и контекстните менија на менаџерот на датотеки. "
+#~ "Датотеките секогаш може да ги избришете со држење на копчето Shift додека "
+#~ "избирате „Премести во корпата“."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Уредувач на мени"
+
+#~ msgid "Menu"
+#~ msgstr "Мени"
+
+#~ msgid "New..."
+#~ msgstr "Ново..."
+
+#~ msgid "Remove"
+#~ msgstr "Отстрани"
+
+#~ msgid "Move Up"
+#~ msgstr "Помести нагоре"
+
+#~ msgid "Move Down"
+#~ msgstr "Помести надолу"

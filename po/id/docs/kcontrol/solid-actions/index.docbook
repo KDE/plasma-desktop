@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Aksi Perangkat</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-12-2018</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>aksi</keyword>
+<keyword
+>perangkat</keyword>
+<keyword
+>hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Aksi untuk perangkat baru</title>
+<sect2 id="icons-intro">
+<title
+>Pengenalan</title>
+
+<para
+>Modul ini memungkinkanmu untuk mempersiapkan aksi yang kamu inginkan untuk mengasosiasi ketika kamu mencolokkan perangkat baru.</para>
+<para>
+<screenshot>
+<screeninfo
+>Screenshot-nya Pengelola Aksi Perangkat</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Screenshot-nya Pengelola Aksi Perangkat</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Kamu akan melihat semua daftar aksi yang memungkinkan yang tersedia ketika perangkat dicolokkan. Mohon perhatikan bahwa mereka hanya akan tersedia dalam kondisi tertentu.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Tambah</guibutton
+> Ini akan menanyakan kamu untuk memberikan sebuah nama untuk aksi barumu, kemudian akan membukakan aksi untuk pengeditan. Jika kamu tidak mau memberikan semua perincian yang diperlukan dalam dialog tersebut, maka aksimu akan dihapus. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Edit</guibutton
+> Ini akan memungkinkanmu untuk mengubah Nama, Ikon, perintah untuk mengeksekusi dan kondisi aksi yang mestinya cocok dengan yang ditampilkan. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Buang / Tidak dapat dihapus / Hapus</guibutton
+> Ini akan melakukan aksi yang berbeda, tergantung pada apakah itu disertakan dengan sistemmu atau diciptakan oleh kamu. Kamu hanya bisa membuang perubahan pada aksi sistem, jika tidak ada perubahan maka aksi tersebut tidak dapat dihapus. Aksi yang diciptakan pengguna sepenuhnya dihapus, termasuk semua perubahan. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Tambahkan Aksi</title>
+
+<para
+>Tombol <guibutton
+>Tambah</guibutton
+> membawamu sebuah dialog untuk memasukkan nama aksi baru. </para>
+<para>
+<screenshot>
+<screeninfo
+>Screenshot-nya dialog Tambahkan Aksi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Screenshot-nya dialog Tambahkan Aksi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Nama aksi seharusnya mendeskripsikan aksi secara benar. Setelah memasukkan sebuah nama dan mengeklik <guibutton
+>Oke</guibutton
+>, dialog Edit Aksi akan tampil untuk memungkinkanmu mempersiapkan propeti aksi. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Edit Aksi</title>
+
+<para
+>Dialog ini memungkinkanmu untuk mengubah pengaturannya aksi yang kamu pilih.</para>
+<para>
+<screenshot>
+<screeninfo
+>Screenshot-nya dialog Edit Aksi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Screenshot-nya dialog Edit Aksi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ini menyertakan ikon, nama aksi, perintah aksi dan berbagai parameter. Kamu bisa mengubah si ikon dengan mengekliknya.</para>
+<para
+>Parameter didisplaikan dalam hierarki, butir teratas harus menjadi true agar aksi ditampilkan.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Edit parameter</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tipe parameter</guilabel
+></term>
+<listitem>
+<para
+>Ini mengendalikan apa yang bisa terisi di dalamnya, atau mencocokan apa yang dilakukan untuk memeriksa apakah itu true. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Kecocokan Properti</guilabel
+></term>
+<listitem>
+<para
+>Membandingkan properti yang ditentukan Perangkat (menggunakan <guilabel
+>Tipe Perangkat</guilabel
+> dan <guilabel
+>Nama Nilai</guilabel
+>) dan menggunakan pengevaluasi, membandingkannya kembali teks yang disediakan.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Konjungsi Konten</guilabel
+></term>
+<listitem>
+<para
+>Semua sub properti ini mestinya true agar menjadi true sendiri.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Disjungsi Konten</guilabel
+></term>
+<listitem>
+<para
+>Sub properti apa pun ini mungkin true agar menjadi true sendiri.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kecocokan antarmuka perangkat</guilabel
+></term>
+<listitem>
+<para
+>Periksa untuk melihat apakah Perangkat bisa dikelaskan sebagai tipe Perangkat yang dipilih.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tipe perangkat</guilabel
+></term>
+<listitem>
+<para
+>Ada tipe-tipe perangkat yang mungkin didukung oleh &plasma; di sistemmu. Mereka digunakan dalam kecocokan antarmuka Perangkat dan Properti. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nama nilai</guilabel
+></term>
+<listitem>
+<para
+>Ini adalah sebuah daftar dari semua nama-nama properti yang mungkin untuk tipe perangkat yang dipilih. Ini juga menyediakan pemilihan pada pengevaluasi nilai (yang mana adalah antara <guilabel
+>Equals</guilabel
+> atau <guilabel
+>Contains</guilabel
+>), dan memungkinkan entri-entri teks untuk dibandingkan.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parameter Set ulang</guibutton
+></term>
+<listitem>
+<para
+>Mengembalikan perubahan-perubahan yang tak tersimpan yang telah kamu buat ke parameter ini.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Simpan perubahan Parameter</guibutton
+></term>
+<listitem>
+<para
+>Menyimpan perubahan-perubahan yang telah kamu buat ke parameter.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

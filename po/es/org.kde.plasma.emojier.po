@@ -1,0 +1,148 @@
+# Spanish translations for org.kde.plasma.emojier.po package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Automatically generated, 2019.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: org\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"PO-Revision-Date: 2022-09-24 11:58+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: app/emojier.cpp:84 app/emojier.cpp:86
+#, kde-format
+msgid "Emoji Selector"
+msgstr "Selector de emojis"
+
+#: app/emojier.cpp:88
+#, kde-format
+msgid "(C) 2019 Aleix Pol i Gonzalez"
+msgstr "© 2019 Aleix Pol i Gonzalez"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eloy Cuadra"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ecuadra@eloihr.net"
+
+#: app/emojier.cpp:105
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Sustituir una instancia existente"
+
+#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:57
+#, kde-format
+msgid "Search"
+msgstr "Buscar"
+
+#: app/ui/CategoryPage.qml:74
+#, kde-format
+msgid "Clear History"
+msgstr "Borrar el historial"
+
+#: app/ui/CategoryPage.qml:153
+#, kde-format
+msgid "No recent Emojis"
+msgstr "No hay emojis recientes"
+
+#: app/ui/emojier.qml:36
+#, kde-format
+msgid "%1 copied to the clipboard"
+msgstr "%1 copiado en el portapapeles"
+
+#: app/ui/emojier.qml:47
+#, kde-format
+msgid "Recent"
+msgstr "Recientes"
+
+#: app/ui/emojier.qml:68
+#, kde-format
+msgid "All"
+msgstr "Todas"
+
+#: app/ui/emojier.qml:76
+#, kde-format
+msgid "Categories"
+msgstr "Categorías"
+
+#: emojicategory.cpp:11
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Smileys and Emotion"
+msgstr "Emojis y emoticonos"
+
+#: emojicategory.cpp:12
+#, kde-format
+msgctxt "Emoji Category"
+msgid "People and Body"
+msgstr "Personas y cuerpo"
+
+#: emojicategory.cpp:13
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Component"
+msgstr "Componentes"
+
+#: emojicategory.cpp:14
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Animals and Nature"
+msgstr "Animales y naturaleza"
+
+#: emojicategory.cpp:15
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Food and Drink"
+msgstr "Comida y bebida"
+
+#: emojicategory.cpp:16
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Travel and Places"
+msgstr "Viajes y lugares"
+
+#: emojicategory.cpp:17
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Activities"
+msgstr "Actividades"
+
+#: emojicategory.cpp:18
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Objects"
+msgstr "Objetos"
+
+#: emojicategory.cpp:19
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Symbols"
+msgstr "Símbolos"
+
+#: emojicategory.cpp:20
+#, kde-format
+msgctxt "Emoji Category"
+msgid "Flags"
+msgstr "Banderas"
+
+#~ msgid "Search…"
+#~ msgstr "Buscar..."
+
+#~ msgid "Search..."
+#~ msgstr "Buscar..."

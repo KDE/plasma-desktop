@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Scorciatoie</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Samuele</firstname
+><surname
+>Kaplun</surname
+><affiliation
+><address
+><email
+>samuele.kaplun@collegiodimilano.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Luigi</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>luigi.toscano@tiscali.it</email
+></address
+></affiliation
+><contrib
+> Traduzione e revisione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>combinazione di tasti</keyword>
+<keyword
+>combinazioni</keyword>
+<keyword
+>scorciatoie</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Scorciatoie</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Introduzione</title
+> 
+
+<para
+>Mentre si può accedere alla maggior parte delle caratteristiche offerte da &plasma; con una semplice interfaccia <quote
+>punta e fai clic</quote
+>, molte persone preferiscono utilizzare la tastiera per alcuni compiti. Premere, ad esempio, <keycombo action="simul"
+>&Ctrl;<keycap
+>F</keycap
+></keycombo
+> è spesso semplicemente più rapido che spostare le tue mani dalla tastiera al mouse, aprire il menu <guimenu
+>Modifica</guimenu
+> e selezionare <guimenuitem
+>Trova</guimenuitem
+>.</para>
+
+<para
+>Dato che persone diverse, hanno diverse preferenze riguardo alle scorciatoie di tastiera, &plasma; permette una completa personalizzazione delle <quote
+>combinazioni di tasti</quote
+>. Una combinazione di tasti, o scorciatoia, è una combinazione di un azione con un tasto o una combinazione di tasti.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Scorciatoie standard e scorciatoie globali</title>
+
+<para
+>Le scorciatoie standard e le scorciatoie globali funzionano allo stesso modo. Al momento, le scorciatoie standard e quelle delle applicazioni sono anche loro, in un certo senso, <quote
+>globali</quote
+>. L'unica differenza è:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Le <quote
+>scorciatoie standard</quote
+> si riferiscono ad azioni che sono disponibili spesso nelle applicazioni, come Salva, Stampa, Copia, &etc;</para
+></listitem
+> 
+<listitem
+><para
+>Le <quote
+>scorciatoie globali</quote
+> sono scorciatoie per azioni che hanno un senso anche se non è aperta alcuna applicazione. Queste scorciatoie si riferiscono, di solito, ad azioni come il cambiamento di desktop, la manipolazione delle finestre, &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Osserva che le scorciatoie delle applicazioni qui elencate sono <emphasis
+>solo</emphasis
+> le azioni standard che puoi trovare spesso nelle applicazioni. La maggior parte delle applicazioni definirà inoltre delle proprie azioni, che potrai configurare utilizzando la finestra di dialogo delle scorciatoie di tasti della specifica applicazione.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Scheda Scorciatoie standard</title>
+<para
+>In alto in questa finestra di dialogo puoi vedere una casella di testo; digitando del testo in essa, puoi cercare interattivamente scorciatoie (&eg; Copia) o combinazione di tasti (&eg; <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>.</para>
+<para
+>Sotto la casella di ricerca puoi vedere una lista di combinazioni di tasti, &ie; associazioni tra azioni (&eg; Copia) mostrate nella colonna <guilabel
+>Azione</guilabel
+>, e tasti o combinazioni di tasti (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) mostrati nelle colonne <guilabel
+>Scorciatoia</guilabel
+> o <guilabel
+>Alternativa</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Scheda Scorciatoie globali</title>
+<para
+>A sinistra in questa pagina c'è un elenco che consente di selezionare un <guilabel
+>componente</guilabel
+> come KWin, il desktop Plasma &etc;. Le scorciatoie definite per il componente selezionato sono mostrate nelle colonne <guilabel
+>Azioni</guilabel
+> e <guilabel
+>Globale</guilabel
+> nella lista.</para>
+<para
+>Questa pagina ha la stessa casella di ricerca della scheda <guilabel
+>Scorciatoie standard</guilabel
+>.</para>
+<para
+>Usa <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> o <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> per aggiungere o rimuovere un componente. </para>
+
+<para
+>L'aggiunta di un componente apre una finestra di dialogo per scegliere applicazioni dalla struttura del menu di avvio per aggiungere lanciatori da usare come scorciatoie. Se un'applicazione ha opzioni di tipo elenchi di azioni, queste saranno disponibili come azioni. </para>
+
+<para
+>Fai clic sul menu a comparsa <guilabel
+>File</guilabel
+> a destra per importare/esportare uno schema, azzerare tutte le scorciatoie.</para>
+<para
+>Le scorciatoie globali possono ora essere configurate per passare ad un'attività particolare dentro un'applicazione.</para>
+
+<para
+>Come comportamento predefinito puoi aprire il menu dell'applicazione premendo il tasto &Meta;. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Configurare le combinazioni di tasti</title>
+
+<para
+>Configurare le scorciatoie della tastiera è molto semplice. Al centro di questi moduli di &systemsettings; troverai una lista di azioni disponibili. Se è stata configurata una combinazione di tasti per una particolare azione, troverai tale combinazione nella colonna alla sua destra. Seleziona quindi l'azione che vuoi configurare.</para>
+
+<para
+>Dopo aver selezionato un'azione potrai notare che l'elemento sarà evidenziato e, nella lista, sotto di esso saranno disponibili due ulteriori caselle. Qui, per l'azione selezionata, puoi configurare una combinazione di tasti oppure non impostarla affatto. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Predefinito</guilabel
+>: l'azione selezionata verrà associata al valore predefinito di &kde;. Questa è una buona scelta per la maggior parte delle azioni, dato che &kde; è dotato di combinazioni di tasti  ragionevoli, su cui abbiamo riflettuto a lungo. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Personalizzata</guilabel
+>: se viene abilitata questa opzione, puoi creare una combinazione di tasti per l'azione selezionata. Fai clic sul pulsante etichettato come <guibutton
+>Nessuna</guibutton
+> o avente per etichetta la scorciatoia precedentemente scelta. L'etichetta del pulsante diventerà <guibutton
+>Immissione</guibutton
+>. Premi un qualsiasi tasto modificatore (&ie; &Shift;, &Ctrl; o &Alt;) e quindi il tasto normale o il tasto funzione (&eg; <keycap
+>F11</keycap
+>) che desideri assegnare alla combinazione di tasti.</para>
+<para
+>Facendo clic sulla colonna <guilabel
+>Alternativa</guilabel
+> di una riga nell'elenco, puoi modificare la seconda scorciatoia per l'azione.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

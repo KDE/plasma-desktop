@@ -1,0 +1,235 @@
+# Traducerea kcmkded.po în Română
+# translation of kcmkded.po to Romanian
+# translation of @PACKAGE.po to @LANGUAGE
+# Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004.
+# Sergiu Bivol <sergiu@cip.md>, 2008.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2020-09-20 11:46+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Claudiu Costin,Laurențiu Buzdugan,Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ",lbuz@rolix.org,sergiu@cip.md"
+
+#: kcmkded.cpp:48
+#, kde-format
+msgid "Background Services"
+msgstr "Servicii de fundal"
+
+#: kcmkded.cpp:52
+#, kde-format
+msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#: kcmkded.cpp:53
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
+
+#: kcmkded.cpp:54
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: kcmkded.cpp:125
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Oprirea serviciului a eșuat: %1"
+
+#: kcmkded.cpp:127
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Pornirea serviciului a eșuat: %1"
+
+#: kcmkded.cpp:134
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Oprirea serviciului a eșuat."
+
+#: kcmkded.cpp:136
+#, kde-format
+msgid "Failed to start service."
+msgstr "Pornirea serviciului a eșuat."
+
+#: kcmkded.cpp:234
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Notificarea gestionarului de servicii KDE (kded5) despre modificări salvate "
+"a eșuat: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Acest modul vă permite să aveți o vedere de ansamblu asupra modulelor "
+"demonului KDE, numite și Servicii KDE. În general, există două tipuri de "
+"servicii:</p> <ul><li>Servicii invocate la pornire</li><li>Servicii apelate "
+"la cerere</li></ul> <p>Cele din urmă sunt enumerate pentru conveniență. "
+"Serviciile de pornire pot fi pornite și oprite. Puteți defini și dacă "
+"serviciile trebuiesc încărcate la pornire.</p> <p><b>Folosiți cu grijă: "
+"unele servicii sunt vitale pentru Plasma. Nu dezactivați servicii dacă nu "
+"sunteți sigur de ceea ce faceți.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Gestionarul de servicii de fundal (kded5) nu rulează momentan. Asigurați-vă "
+"că e instalat corect."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Unele servicii se dezactivează iar când sunt pornite manual dacă nu sunt "
+"utile în mediul actual."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Unele servicii au fost pornite/oprite automat când gestionarul de servicii "
+"de fundal (kded5) a fost repornit pentru a vă aplica modificările."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Toate serviciile"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Rulează"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Nu rulează"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Servicii la pornire"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Servicii încărcate la cerere"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Comută încărcarea automată a acestui serviciu la pornire"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Nu rulează"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Rulează"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Oprește serviciul"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Pornește serviciul"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Administratorul de servicii KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Aceasta este o listă de servicii KDE disponibile care vor fi pornite "
+#~ "numai la cerere. Ele sunt listate numai pentru conveniență și nu pot fi "
+#~ "configurate de aici într-un anumit fel."
+
+#~ msgid "Status"
+#~ msgstr "Stare"
+
+#~ msgid "Description"
+#~ msgstr "Descriere"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Aici sunt afișate toate serviciile KDE care vor fi încărcate la pornirea "
+#~ "KDE. Selectați serviciile care să fie executate la următoarea pornire. "
+#~ "Aveți grijă să nu dezactivați servicii pe care nu le cunoașteți."
+
+#~ msgid "Use"
+#~ msgstr "Utilizează"
+
+#~ msgid "Start"
+#~ msgstr "Pornește"
+
+#~ msgid "Stop"
+#~ msgstr "Oprește"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Nu am putut contacta KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nu am putut porni serviciul <em>%1</em>.<br /><br /><i>Eroare: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nu am putut opri serviciul <em>%1</em>.<br /><br /><i>Eroare: %2</i>"

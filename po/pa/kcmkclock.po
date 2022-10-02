@@ -1,0 +1,235 @@
+# translation of kcmkclock.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2010, 2020, 2021.
+# ASB <aalam@users.sf.net>, 2007, 2012, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"PO-Revision-Date: 2021-10-07 18:06-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alam.yellow@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਆਟੋਮੈਟਿਕ ਸੈੱਟ ਕਰੋ(&a)"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "ਸਮਾਂ ਸਰਵਰ(&T):"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "ਇੱਥੇ ਤੁਸੀਂ ਸਿਸਟਮ ਦਾ ਮਹੀਨੇ ਦਾ ਦਿਨ, ਮਹੀਨਾ ਤੇ ਸਾਲ ਬਦਲ ਸਕਦੇ ਹੋ।"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "ਟਾਈਮ-ਜ਼ੋਨ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "ਲੋਕਲ ਟਾਈਮ ਖੇਤਰ ਬਦਲਣ ਲਈ, ਤੁਸੀਂ ਲਿਸਟ ਵਿੱਚੋਂ ਆਪਣਾ ਖੇਤਰ ਚੁਣੋ।"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "…ਖੋਜੋ"
+
+#: dtime.cpp:61
+#, kde-format
+msgid ""
+"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+"enable automatic updating of date and time."
+msgstr ""
+"ਕੋਈ NTP ਸਹੂਲਤ ਨਹੀਂ ਲੱਭੀ ਹੈ। ਸਮੇਂ ਅਤੇ ਮਿਤੀ ਨੂੰ ਆਟੋਮੈਟਿਕ ਅੱਪਡੇਟ ਕਰਨ ਨੂੰ ਚਾਲੂ ਕਰਨ ਲਈ 'ntpdate' "
+"ਜਾਂ 'rdate' ਕਮਾਂਡ ਇੰਸਟਾਲ ਕਰੋ।"
+
+#: dtime.cpp:91
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"ਤੁਸੀਂ ਇੱਥੇ ਸਮਾਂ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ। ਘੰਟੇ, ਮਿੰਟ ਜਾਂ ਸਕਿੰਟ ਤਬਦੀਲ ਕਰਨ ਲਈ ਅਨੁਸਾਰੀ ਖੇਤਰ ਉੱਤੇ ਕਲਿੱਕ "
+"ਕਰੋ, ਭਾਵੇਂ ਉੱਤੇ ਹੇਠਾਂ ਸਵਿੱਚਾਂ ਵਰਤੋਂ ਜਾਂ ਸਿੱਧਾ ਮੁੱਲ ਭਰੋ।"
+
+#: dtime.cpp:113
+#, kde-format
+msgctxt "%1 is name of time zone"
+msgid "Current local time zone: %1"
+msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ: %1"
+
+#: dtime.cpp:116
+#, kde-format
+msgctxt "%1 is name of time zone, %2 is its abbreviation"
+msgid "Current local time zone: %1 (%2)"
+msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਟਾਈਮ ਜ਼ੋਨ: %1 (%2)"
+
+#: dtime.cpp:203
+#, kde-format
+msgid ""
+"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
+"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr ""
+"ਪਬਲਿਕ ਟਾਈਮ ਸਰਵਰ (pool.ntp.org),        asia.pool.ntp.org,        europe.pool."
+"ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+
+#: dtime.cpp:274
+#, kde-format
+msgid "Unable to contact time server: %1."
+msgstr "ਟਾਈਮ ਸਰਵਰ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %1"
+
+#: dtime.cpp:278
+#, kde-format
+msgid "Can not set date."
+msgstr "ਤਾਰੀਖ ਸੈੱਟ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Error setting new time zone."
+msgstr "ਨਵਾਂ ਟਾਈਮ-ਜ਼ੋਨ ਸੈਟਿੰਗ ਗਲਤੀ ਹੈ।"
+
+#: dtime.cpp:281
+#, kde-format
+msgid "Time zone Error"
+msgstr "ਟਾਈਮ-ਜ਼ੋਨ ਗਲਤੀ"
+
+#: dtime.cpp:299
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ</h1> ਇਹ ਸਿਸਟਮ ਸੈਟਿੰਗ ਸਿਸਟਮ ਦਾ ਸਮਾਂ ਅਤੇ ਤਾਰੀਖ ਸੈੱਟ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ "
+"ਸਕਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਨਾ ਸਿਰਫ ਤੁਹਾਡੇ ਲਈ ਸਹਾਈ ਹਨ, ਬਲਕਿ ਪੂਰੇ ਸਿਸਟਮ ਉੱਤੇ ਲਾਗੂ ਹੋਣਗੀਆਂ, ਪਰ ਜਦੋਂ "
+"ਤੁਸੀਂ ਸਿਰਫ ਪਰਸ਼ਾਸ਼ਕ ਦੇ ਤੌਰ ਤੇ ਹੀ ਸਿਸਟਮ ਸੈਟਿੰਗ ਨੂੰ ਚਲਾ ਰਹੇ ਹੋਵੋ। ਪਰ ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰਬੰਧਕੀ "
+"(root) ਪਾਸਵਰਡ ਨਹੀਂ ਹੈ ਤਾਂ ਸਮਾਂ ਠੀਕ ਕਰਨ ਲਈ ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
+
+#: main.cpp:49
+#, kde-format
+msgid "KDE Clock Control Module"
+msgstr "KDE ਘੜੀ ਕੰਟਰੋਲ ਮੋਡੀਊਲ"
+
+#: main.cpp:53
+#, kde-format
+msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Luca Montecchiani"
+msgstr "Luca Montecchiani"
+
+#: main.cpp:55
+#, kde-format
+msgid "Original author"
+msgstr "ਅਸਲੀ ਲੇਖਕ"
+
+#: main.cpp:56
+#, kde-format
+msgid "Paul Campbell"
+msgstr "Paul Campbell"
+
+#: main.cpp:56
+#, kde-format
+msgid "Current Maintainer"
+msgstr "ਮੌਜੂਦਾ ਪ੍ਰਬੰਧਕ"
+
+#: main.cpp:57
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "Benjamin Meyer"
+
+#: main.cpp:57
+#, kde-format
+msgid "Added NTP support"
+msgstr "NTP ਸਹਿਯੋਗ ਸ਼ਾਮਿਲ"
+
+#: main.cpp:60
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This control module can be used to set the system date "
+"and time. As these settings do not only affect you as a user, but rather the "
+"whole system, you can only change these settings when you start the System "
+"Settings as root. If you do not have the root password, but feel the system "
+"time should be corrected, please contact your system administrator."
+msgstr ""
+"<h1>ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ</h1> ਇਹ ਕੰਟਰੋਲ ਮੋਡੀਊਲ ਸਿਸਟਮ ਦਾ ਸਮਾਂ ਅਤੇ ਤਾਰੀਖ ਸੈੱਟ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ "
+"ਸਕਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਨਾ ਸਿਰਫ ਤੁਹਾਡੇ ਲਈ ਸਹਾਈ ਹਨ, ਬਲਕਿ ਪੂਰੇ ਸਿਸਟਮ ਉੱਤੇ ਲਾਗੂ ਹੋਣਗੀਆਂ, ਪਰ ਜਦੋਂ "
+"ਤੁਸੀਂ ਸਿਰਫ ਪਰਸ਼ਾਸ਼ਕ ਦੇ ਤੌਰ ਤੇ ਸਿਸਟਮ ਸੈਟਿੰਗ ਨੂੰ ਚਲਾ ਰਹੇ ਹੋਵੋ। ਪਰ ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰਬੰਧਕੀ (root) "
+"ਪਾਸਵਰਡ ਨਹੀਂ ਹੈ ਤਾਂ ਸਮਾਂ ਠੀਕ ਕਰਨ ਲਈ ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
+
+#: main.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "ਕਾਰਵਾਈ ਨੂੰ ਪਰਮਾਣਿਤ ਕਰਨ/ਚਲਾਉਣ ਲਈ ਅਸਮਰੱਥ: %1, %2"
+
+#: main.cpp:133
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "NTP ਸੈਟਿੰਗਾਂ ਬਦਲਣ ਲਈ ਅਸਮਰੱਥ"
+
+#: main.cpp:144
+#, kde-format
+msgid "Unable to set current time"
+msgstr "ਮੌਜੂਦਾ ਸਮਾਂ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
+
+#: main.cpp:154
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "ਸਮਾਂ-ਖੇਤਰ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "ਸਿਸਟਮ ਮਿਤੀ/ਟਾਈਮ/ਟਾਈਮ ਜ਼ੋਨ ਸੈੱਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
+
+#~ msgid "Date/Time Error"
+#~ msgstr "ਮਿਤੀ/ਟਾਈਮ ਗਲਤੀ"

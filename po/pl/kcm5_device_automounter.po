@@ -1,0 +1,235 @@
+# translation of kcm_device_automounter.po to Polish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marta Rybczynska <kde-i18n@rybczynska.net>, 2010.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2015, 2016, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_device_automounter\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-11-28 08:06+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marta Rybczyńska, Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-i18n@rybczynska.net, lukasz.wojnilowicz@gmail.com"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Podpinanie urządzeń"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Autor pierwszej wersji"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Przeniesienie do Plazmy 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Ta lista zawiera znane systemowi urządzenia do przechowywania danych Jeśli "
+"zaznaczono \"Podpinaj przy logowaniu\", to urządzenie zostanie samoczynnie "
+"podpięte nawet jeśli nie zaznaczono \"Podepnij wszystkie urządzenia wymienne "
+"po zalogowaniu\". To samo odnosi się do \"Podepnij urządzenia wymienne po "
+"ich podłączeniu\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Naciśnięcie tego przycisku spowoduje, że KDE \"zapomni\", że wybrane "
+"urządzenie kiedykolwiek istniało. Jest to użyteczne jeśli zaznaczono "
+"\"Samoczynnie podpinaj tylko urządzenia, które zostały wcześniej ręcznie "
+"podpięte\". Kiedy KDE zapomni o urządzeniu i jest ustawione, żeby "
+"samoczynnie podpinać znane urządzenia, to \"zapomniane\" urządzenie nie "
+"zostanie podpięte."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Zapomnij o urządzeniu"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Po odznaczeniu tego pola, tylko zapamiętane urządzenia będą podpinane. "
+"Urządzenie jest zapamiętywane jeśli kiedykolwiek wcześniej zostało podpięte, "
+"np. odtwarzacz muzyczny, który został podłączony do naładowania przez USB, "
+"nie wystarczy do jego zapamiętania, jeśli nie uzyskano dostępu do jego "
+"plików i nie zostanie podpięte po jego następnym wykryciu. Jeśli jednak "
+"nastąpił dostęp do plików, to zawartość urządzenia będzie dostępna w "
+"systemie."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Sam podepnij tylko te urządzenia, które nigdy nie zostały wcześniej podpięte"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Sam podepnij urządzenie"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Po zalogowaniu"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Po podłączeniu"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Wszystkie urządzenia"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Wszystkie znane urządzenia"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Podłączone urządzenia"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Odłączone urządzenia"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "To urządzenie zostanie samoczynnie podpięte przy logowaniu."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "To urządzenie nie zostanie samoczynnie podpięte przy logowaniu."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "To urządzenie będzie samoczynnie podpięte po podłączeniu."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "To urządzenie nie będzie samoczynnie podpięte po podłączeniu."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Jeżeli dowolne urządzenie wymienne będzie podłączone do twojego "
+#~ "komputera, przy logowaniu do niego, to jego zawartość stanie się dla "
+#~ "ciebie dostępna."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Sam podepnij urządzenia wymienne po zalogowaniu"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Po zaznaczeniu tego pola, zawartość dowolnego urządzenia będzie dostępna "
+#~ "dla ciebie po jego podłączeniu do komputera."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Sam podepnij urządzenia wymienne po ich podłączeniu"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Podpinanie samoczynne"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Gdy pole to nie będzie zaznaczone, to nie będą podpinane żadne "
+#~ "urządzenia, niezależnie od tego co zaznaczono w sekcji \"Ustawieniaach "
+#~ "wyjątków\"."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Sam podepnij urządzenia wymienne"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Ustawienia wyjątków"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Podepnij po podłączeniu"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr ""
+#~ "Automatycznie montuje urządzenia po zalogowaniu lub po podłączeniu "
+#~ "urządzeń"

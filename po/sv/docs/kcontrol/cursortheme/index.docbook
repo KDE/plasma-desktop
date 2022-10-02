@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>Muspekartema</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>Det här är dokumentationen för systeminställningarnas modul som anpassar muspekarens utseende. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>mus</keyword>
+<keyword
+>muspekare</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modulen låter dig välja bland flera installerade muspekarteman från en förhandsgranskning av pekarvisningen. </para>
+
+<para
+>Funktionerna som tillhandahålls av modulen kanske inte är tillgängliga på vissa system. Ditt system kan behöva uppdateras för att stödja muspekarteman. </para>
+
+<para
+>Om du har ytterligare muspekarteman tillgängliga, kan du ta bort dem med papperskorgsknappen som visas när muspekaren hålls över temat i listan. Observera att du inte kan ta bort standardteman. </para>
+
+<para
+>Vissa teman tillåter att pekarstorleken väljes. Använd fältet <guilabel
+>Storlek</guilabel
+> för att välja lämplig storlek. Tillgängliga storlekar visas när du håller muspekaren över temat i listrutan. </para>
+
+<para
+>Om du har ytterligare pekarteman tillgängliga, kan du installera dem genom att använda knappen <guibutton
+>Installera från fil...</guibutton
+> under listrutan. Se <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>följande instruktioner</ulink
+> för detaljerad information om hur ett eget pekartemat kan skapas. </para>
+
+<para
+>Använd knappen <guibutton
+>Hämta nya pekare...</guibutton
+> för att starta dialogrutan <guilabel
+>Ladda ner nya pekare</guilabel
+> och ladda ner ytterligare teman från Internet.</para>
+
+</article>

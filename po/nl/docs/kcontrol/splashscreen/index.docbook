@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Opstartscherm</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>opstartscherm</keyword>
+<keyword
+>thema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module biedt een interface om opstartschermthema's te bekijken en te selecteren.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Dit is een schermafdruk van de themabeheerder</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Module voor opstartscherm-beheer</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Op deze pagina ziet u voorbeelden van reeds geïnstalleerde opstartschermen. Het voorbeeld van het huidige opstartscherm is geaccentueerd.</para>
+
+<para
+>Beweeg met de muiscursor over een voorbeeldafbeelding, daarna zal de knop <guilabel
+>Voorbeeld opstartscherm</guilabel
+> rechtsonder op de afbeelding verschijnen. Druk op deze knop om het opstartscherm in actie te bekijken.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Nieuwe opstartschermen ophalen...</guilabel
+></term>
+<listitem>
+<para
+>Hiervoor hebt u een verbinding met internet nodig Een dialoog zal een lijst met thema's van de website <ulink url="http://store.kde-look.org"
+>https://store.kde.org</ulink
+> weergeven. Klik op de knop <guibutton
+>Installeren</guibutton
+> om het bijhorende thema op uw computer te zetten. </para>
+<para>
+<screenshot>
+<screeninfo
+>Een nieuw thema installeren</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Een nieuw thema installeren</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Dit nieuwe thema is onmiddellijk beschikbaar nadat u de dialoog &systemsettings; Nieuwe opstartschermen downloaden hebt gesloten en is geaccentueerd. Het voorbeeld toont de afbeelding. U dient op de knop <guibutton
+>Toepassen</guibutton
+> te klikken om dit thema uw huidige opstartschermthema te maken. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

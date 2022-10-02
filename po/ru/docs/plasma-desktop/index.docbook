@@ -1,0 +1,1093 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>Руководство пользователя &plasma;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+>   <firstname
+></firstname
+>   <surname
+></surname
+>   <affiliation
+>     <address
+>     <email
+>juliette.tux@gmail.com</email
+>     </address
+>   </affiliation
+>   <contrib
+>Перевод на русский язык</contrib
+> </othercredit
+><othercredit role="translator"
+>   <firstname
+>Ольга</firstname
+>   <surname
+>Миронова</surname
+>   <affiliation
+>     <address
+>       <email
+>omiro@basealt.ru</email
+>     </address
+>   </affiliation
+>   <contrib
+>Перевод на русский язык</contrib
+> </othercredit
+> <othercredit role="translator"
+>   <firstname
+>Олеся</firstname
+>   <surname
+>Герасименко</surname
+>   <affiliation
+>     <address
+>       <email
+>gammaray@basealt.ru</email
+>     </address
+>   </affiliation
+>   <contrib
+>Перевод на русский язык</contrib
+> </othercredit
+> <othercredit role="reviewer"
+>   <firstname
+>Александр</firstname
+>   <surname
+>Яворский</surname
+> <contrib
+>Рецензирование</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma; — основной интерфейс взаимодействия пользователя с окружением рабочего стола. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Виджет Plasma</keyword>
+<keyword
+>Виджет</keyword>
+<keyword
+>Контейнеры</keyword>
+<keyword
+>Рабочий стол</keyword>
+<keyword
+>Инструмент запуска</keyword>
+<keyword
+>Меню приложений</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<para
+>&plasma; предоставляет пользователю современное настраиваемое окружение рабочего стола для работы с любимыми приложениями и доступа к необходимой информации из любого места. Помимо прочего к основным отличительным свойствам рабочего стола &plasma; относятся улучшенное управление окнами и эффектами рабочего стола, поддержка виджетов &kde; &plasma;, интегрированный поиск, управление аппаратными средствами и высокая степень настраиваемости. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Использование &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>Компоненты &plasma;</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>Виджеты и контейнеры &plasma;</title>
+
+<para
+>Суть &plasma; заключается в двух понятиях: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>Виджеты &plasma;:</term>
+<listitem>
+<para
+>аплеты или небольшие приложения, располагающиеся на рабочем столе; </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Контейнеры:</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>аплеты, которые выполняют роль контейнеров виджетов &plasma;. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Стандартный рабочий стол содержит два основных элемента: панель и сам рабочий стол. В отношении &plasma; они оба являются контейнерами. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Стандартный рабочий стол &plasma;</title>
+
+<para
+><note
+><para
+>У рабочего стола &plasma; существует бесчисленное множество вариантов настройки. Снимок экрана ниже показывает относительно стандартный рабочий стол. В некоторых дистрибутивах используются расширенные параметры настройки, поэтому рабочие столы на разных компьютерах могут отличаться друг от друга. </para>
+<para
+>Также к элементам графического интерфейса можно применить тот или иной стиль оформления. На снимках экрана ниже показан рабочий стол &plasma; со стандартным стилем оформления Breeze.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Относительно стандартный рабочий стол &plasma;.</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Запуск программ. Обычно для этого используется <link linkend="panel-launcher"
+>Меню приложений</link
+>.</para
+></listitem>
+<listitem
+><para
+>Значки, предоставляющие быстрый доступ к часто используемым приложениям.</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+>Виджет <link linkend="panel-taskbar"
+>Панель задач</link
+>, показывающий заголовки окон, принадлежащих работающему в данный момент приложению. Во время создания снимка экрана окна приложений на рабочем столе отсутствовали.</para
+></listitem>
+<listitem
+><para
+>Виджет <link linkend="panel-system-tray"
+>Системный лоток</link
+>.</para
+></listitem>
+<listitem
+><para
+>Виджет <link linkend="panel-digital-clock"
+>Цифровые часы</link
+>.</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>Инструменты настройки панели</link
+>.</para
+></listitem>
+<listitem
+><para
+><link linkend="desktop"
+>Инструменты рабочего стола</link
+>.</para
+></listitem>
+<listitem
+><para
+>Виджет «Просмотр папки», показывающий содержание папки рабочего стола.</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Панель</title>
+
+<para
+>На стандартной панели содержится несколько виджетов &plasma;: первый слева — меню приложений.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Меню приложений</title>
+
+<screenshot>
+<screeninfo
+>Меню приложений</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Меню приложений</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Меню приложений может быть использовано для запуска приложений, открытия недавно открывавшихся файлов и выполнения стандартных операций завершения работы. Также имеется возможность перемещения по списку установленных приложений. По умолчанию меню приложений настроено для наиболее типичного варианта использования: запуска приложений. Вкладка по умолчанию — <guilabel
+>Избранное</guilabel
+> — содержит значки наиболее часто используемых приложений. В начале работы, скорее всего будет чаще использоваться вкладка <guilabel
+>Приложения</guilabel
+>, но как только набор часто используемых приложений определится, достаточно щёлкнуть по элементу <mousebutton
+>правой</mousebutton
+> кнопкой мыши и выбрать в контекстном меню пункт <guimenuitem
+>Добавить в избранное</guimenuitem
+>, чтобы он был добавлен во вкладку <guilabel
+>Избранное</guilabel
+> (или напрямую на панель или рабочий стол. Важно: для внесения любого рода изменений необходимо <quote
+>разблокировать</quote
+> виджеты &plasma;, щёлкнув <mousebutton
+>правой</mousebutton
+> кнопкой мыши по рабочему столу).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Вид меню приложений</title>
+
+<para
+>Для переключения на традиционный вид меню приложений щёлкните <mousebutton
+>правой</mousebutton
+> кнопкой мыши по кнопке меню и выберите пункт <guimenuitem
+>Редактировать меню...</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Меню приложений</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Меню приложений</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Параметры настройки меню приложений</title>
+
+<para
+>Для изменения параметров настройки меню приложений щёлкните <mousebutton
+>правой</mousebutton
+> кнопкой мыши по кнопке меню и выберите пункт <guimenuitem
+>Настроить виджет «Меню запуска приложений»</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Параметры настройки меню приложений</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Параметры настройки меню приложений</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Панель задач</title>
+
+<para
+>Панель задач — ещё один виджет, расположенный на основной панели. Эта панель по умолчанию показывает все окна, открытые на всех рабочих столах. Чтобы видеть окна только с текущего рабочего стола, щёлкните правой кнопкой мыши по панели задач в промежутке между двумя значками окон и установите флажок <guimenuitem
+>Показывать задачи только с текущего рабочего стола</guimenuitem
+>. Размер шрифта элементов панели задач можно настроить в модуле <menuchoice
+><guimenu
+>Внешний вид</guimenu
+><guisubmenu
+>Шрифты</guisubmenu
+> </menuchoice
+> приложения «Параметры системы». Щелчок правой кнопкой мыши по панели задач выводит на экран диалог настройки параметров панели задач. <screenshot>
+<screeninfo
+>Диалог настройки панели задач</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Диалог настройки панели задач</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Системный лоток</title>
+
+<para
+>Ещё один стандартный элемент панели — <application
+>Системный лоток</application
+>, используемый традиционными приложениями и виджетами в качестве панели быстрого доступа. Щелчок правой кнопкой мыши по <application
+>Системному лотку</application
+> запускает диалог настройки, где можно выбрать, какие элементы должны быть показаны в лотке, а также установить их видимость. </para>
+<screenshot>
+<screeninfo
+>Диалог настройки системного лотка</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Диалог настройки системного лотка</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Подключаемые устройства</title>
+
+<para
+>Одним из значков, обычно располагающихся в системном лотке, является виджет <application
+>Подключаемые устройства</application
+>. Подсоедините &USB;-накопитель к компьютеру и откроется диалоговое окно, предлагающее открыть устройство в диспетчере файлов &dolphin; или в другом связанном приложении. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Виджет <application
+>Подключаемые устройства</application
+> используется для управления подключаемыми устройствами, такими как &USB;-накопители (так называемые «флешки»), цифровые камеры, внешние жёсткие диски &USB; и так далее. Также он реагирует на установку &CD; или DVD-носителей в оптический дисковод. </para>
+<para
+>При подсоединении внешнего устройства или загрузке нового носителя информации в лоток привода появляется всплывающее окно <guilabel
+>Подключаемые устройства</guilabel
+> (его также можно вызвать намеренно, щёлкнув по его значку на панели). Окно остаётся открытым всё время, пока над ним располагается курсор мыши, и исчезает через несколько секунд после смещения курсора. </para>
+<para
+>Окно виджета <guilabel
+>Подключаемые устройства</guilabel
+> показывает список всех устройств, подключённых к системе на текущий момент. Перемещая курсор на то или иное устройство в списке, можно увидеть все доступные действия, связанные с этим устройством. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Щелчок по затенённой области вокруг имени устройства (кроме значка извлечения/размонтирования, если таковой имеется), открывает список возможных действий, зависящих от типа устройства. Этот список можно настроить из контекстного меню виджета <application
+>Подключаемые устройства</application
+> или с помощью модулей <ulink url="help:/kcontrol/solid-actions/index.html"
+>Действия для устройств</ulink
+> и <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Внешние носители</ulink
+> приложения «Параметры системы». Для запуска желаемого действия достаточно просто выделить его мышью или с клавиатуры. </para>
+<para
+>Справа от каждого устройства есть значок, показывающий, доступно ли устройство на текущий момент (<emphasis
+>смонтировано</emphasis
+> ли оно). Физическое извлечение безопасно только для размонтированных устройств. Щелчок по значку размонтирует смонтированное устройство и/или извлечёт его, и смонтирует устройство, которое не было смонтировано. Заметьте, что размонтирование/извлечение устройства не будет произведено, если файлы, содержащиеся на устройстве, остаются открытыми в какой-нибудь программе, например, если копирование  большого файла ещё не закончено. В большинстве случаев достаточно немного подождать и попробовать снова. При успешном размонтировании значок виджета <application
+>Подключаемых устройств</application
+> меняется. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Скрытые элементы</title>
+
+<para
+>Виджет <application
+>Системный лоток</application
+> обычно содержит ещё некоторое количество элементов, таких, как &klipper;, &kmix; и другие.</para>
+
+<para
+>Некоторые элементы, по умолчанию присутствующие в <application
+>Системном лотке</application
+>, скрыты для экономии места на панели. Чтобы их увидеть, щёлкните на маленьком белом треугольничке <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, затем щёлкните левой кнопкой мыши, чтобы запустить виджет, или правой для открытия диалога настройки этого виджета.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Цифровые часы</title>
+
+<para
+>Крайний правый виджет &plasma; на стандартной панели — это <application
+>Цифровые часы</application
+>. Размер шрифта часов и часовой пояс отображаемого времени могут быть настроены. Размер шрифта часов подстраивается под размер пространства, отведённого часам в контейнере (в данном случае — в панели). Если часы, согласно выбранным параметрам, показывают дату, то дата будет показана шрифтом, заданным в строке <guimenuitem
+>Маленький шрифт</guimenuitem
+> в модуле <guilabel
+>Шрифт</guilabel
+> приложения «Параметры системы». Оставшееся пространство виджета занимает указание времени. Приведённые выше параметры позволяют гибко настроить вывод информация её размещение в отведённом пространстве. Чтобы иметь возможность видеть больше информации, увеличьте панель или разместите часы на рабочем столе, где их размер можно беспрепятственно увеличить. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Переключатель рабочих столов</title>
+
+<para
+><application
+>Переключатель рабочих столов</application
+> — необязательный элемент панели. Он даёт возможность перемещаться с одного рабочего стола на другой. Изменение схемы <application
+>Переключателя рабочих столов</application
+> через параметр <guimenuitem
+>Количество строк</guimenuitem
+> также повлияет на схему и анимацию эффекта рабочего стола <guimenuitem
+>Сетка</guimenuitem
+>, который используется менеджером окон &kwin;. Для виджета переключателя большого размера обычно имеет смысл включить параметр <guimenuitem
+>Показывать выбранное окно</guimenuitem
+>. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Инструменты настройки панели</title>
+
+<para
+>После разблокировки виджетов (это можно сделать, щёлкнув <mousebutton
+>правой</mousebutton
+> кнопкой мыши по рабочему столу или нажав комбинацию клавиш <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>) в правом нижнем углу панели появляется небольшой логотип &plasma;. Нажмите на этот значок, и откроется модуль настройки панели.</para>
+
+<screenshot>
+<screeninfo
+>Параметры панели</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Параметры панели</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Модуль настройки панели позволяет менять положение, размер и сторону выравнивания панели. Размер виджетов &plasma;, расположенных на этой панели, будет настроен автоматически. Виджеты &plasma; получают информацию о размере предоставляемого контейнером пространства. Они максимально используют этот размер и информируют апплет о том, сколько примерно места им понадобится. В итоге контейнер предоставляет апплетам пространство допустимого размера, а апплеты подчиняются команде.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Добавление аплетов</title>
+
+<para
+>Разблокировка рабочего стола даёт возможность добавлять и удалять виджеты &plasma; на панель или на рабочий стол. Чтобы добавить виджет, просто перетащите его в желаемое место. Для удаления виджета щёлкните по нему <mousebutton
+>правой</mousebutton
+> кнопкой мыши. <screenshot
+> <screeninfo
+>Добавление виджета</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Добавление виджета</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Нажатие кнопки <guibutton
+>Пополнить список виджетов</guibutton
+> предоставляет возможность добавить ранее загруженные виджеты &plasma; и загрузить новые. Поддерживаются стандартные пакеты &plasmagik; и некоторые виджеты панели &Mac; OS&nbsp;X. Получить доступ к виджетам, установленным таким образом, можно точно так же, как и к обычным, предустановленным виджетам. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Рабочий стол</title>
+
+<para
+>Рабочий стол, по сути, является ещё одним контейнером. Этот контейнер не налагает ограничения на размер апплетов. Апплеты можно свободно перемещать и изменять их размер. При задержке курсора мыши над виджетом &plasma; на разблокированном рабочем столе справа от виджета появляется панелька. Она даёт возможность перемещать, изменять размер, местоположение и сторону выравнивания панели, а также перетаскивать виджеты &plasma; на рабочий стол. Расположенные в углу кнопки позволяют изменять размер, поворачивать, настраивать и удалять апплеты. При повороте апплет &plasma; стремится к наиболее стабильному положению на одной из устойчивых сторон, поэтому вернуть его в правильное положение будет не сложно. По умолчанию большинство апплетов при изменении размера сохраняют соотношение сторон. Для придания апплету произвольного размера удерживайте нажатой клавишу &Ctrl; во время изменения размера. </para>
+
+<para
+>Щелчок правой кнопкой мыши по рабочему столу открывает модуль настройки таких параметров как фон рабочего стола и стиль его расположения, а также действия мыши. Новые обои можно загрузить в этом же модуле с помощью утилиты &knewstuff;. </para>
+<para
+>На вкладке <guilabel
+>Поправки</guilabel
+> можно настроить показ кнопки инструментов Plasma и выбрать способ управления виджетами. </para>
+
+<screenshot>
+<screeninfo
+>Настройка рабочего стола</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Настройка рабочего стола</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Чтобы изменить тему оформления &plasma; или поучить новую с помощью &knewstuff;, откройте модуль <menuchoice
+><guimenu
+>Оформление рабочей среды</guimenu
+> <guimenuitem
+>Тема рабочего стола</guimenuitem
+></menuchoice
+> приложения «Параметры системы».</para>
+
+<para
+>По мере открытия окон, приложения перекрывают доступ к виджетам &plasma; на рабочем столе. <emphasis role="bold"
+>Приборная доска</emphasis
+> выносит эти виджеты на передний план аналогично тому, как кнопка <guilabel
+>Показать рабочий стол</guilabel
+> освобождает классический рабочий стол. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Просмотр папки</title>
+<para
+>Виджет <guilabel
+>Просмотр папки</guilabel
+> по умолчанию используется для показа папок и файлов, расположенных в <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>Можно настроить показ всех файлов или отфильтровать их по регулярным выражениям (например, показывать все файлы с определённым расширением) или типу файлов (например, только изображения). </para>
+<para
+>Виджет также поддерживает базовые функции управления файлами (перемещение, копирование, вырезка и вставка, например) и позволяет размещать на рабочем столе столько объектов, сколько необходимо пользователю. </para>
+
+<screenshot>
+<screeninfo
+>Просмотр папки</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Просмотр папки</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>В разделе <guilabel
+>Путь</guilabel
+> модуля <guilabel
+>Настройка рабочего стола</guilabel
+> можно выбрать отображение одного виджета «Просмотр папки» на весь рабочий стол, который будет воспроизводить концепцию рабочего стола старого стиля. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>Строка поиска и запуска &krunner; — это универсальный инструмент, представляющий собой мини-командную строку. С его помощью можно запускать приложения, открывать сайты, переходить по закладкам, искать файлы и данные, решать короткие уравнения и многое другое. Чтобы открыть диалог &krunner;, нажмите <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> или <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+>. Начинайте вводить необходимые сочетания букв, и после второй буквы &krunner; начнёт искать совпадения. Чтобы узнать, какие функции расширения предоставляют инструменту &krunner;, нужно открыть диалог настройки. Перемещаться между найденными совпадениями можно с помощью клавиши табуляции и клавиш со стрелками. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>Диалог &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Диалог &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Чтобы настроить, какие объекты можно найти через строку поиска и запуска &krunner; и где может вестись поиск, нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> и выберите нужные варианты в открывшемся модуле <guilabel
+>Строка поиска</guilabel
+> приложения «Параметры системы». </para>
+
+<para
+>Инструмент &krunner; также поддерживает выполнение <quote
+>Действий рабочего стола</quote
+>, то есть дополнительных действий, которые приложение предлагает для выполнения обычных действий, или прямого перехода к конкретной задаче на панели задач. Например, команда <guilabel
+>Open New Incognito Window</guilabel
+> (открыть новое окно в режиме инкогнито) откроет браузер в режиме инкогнито, <guilabel
+>Compose Email</guilabel
+> (написать сообщение) откроет окно создания электронного письма без запуска полнофункционального почтового клиента, так же могут выполняться действия, предлагаемые программой для создания снимков экрана &spectacle;. </para>
+
+<screenshot>
+<screeninfo
+>Действия рабочего стола в &krunner;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Действия рабочего стола в &krunner;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Если при пустой строке поиска и запуска &krunner; нажать клавишу &Down;, откроется список последних поисковых запросов. После выбора одного из результатов поиска соответствующий запрос займёт верхнюю строчку в истории поиска. Поэтому повторно используемые команды всегда остаются в списке. </para>
+<para
+>Отдельные строки в истории поиска можно удалить. Для этого нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> или очистите историю поиска в модуле настройки &krunner;. </para>
+
+<para
+>Чтобы узнать, что происходит в системе в текущий момент, нажмите комбинацию клавиш <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+>, которая откроет список окон и процессов с возможностью контроля их вывода и уничтожения. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Комнаты</title>
+
+<para
+>Среди инструментов рабочего стола, доступ к которым можно получить из правого верхнего угла рабочего стола, имеется кнопка показа всех многочисленных комнат &plasma;. По сути, это множество контейнеров рабочего стола, содержащих наборы виджетов &plasma;. Запустите панель <quote
+>Комнаты</quote
+>, выберите одну из предварительно настроенных комнат или выберите пункт <guilabel
+>Добавить комнату</guilabel
+> для создания нового контейнера, выберите его и настройте по своему вкусу. Комнаты &plasma; и сетка &kwin; схожи в этом отношении, но существует одно значительное различие. Виртуальные рабочие столы служат для группировки и упорядочения окон, а комнаты &plasma; группируют и упорядочивают виджеты &plasma;. Соответственно, пользователь может переключаться между комнатами и иметь доступ к соответствующим виджетам &plasma;, предназначенным для выполнения задачи, которую пользователь хочет выполнить. Можно создать комнату <quote
+>Свободное время</quote
+> с набором комиксов, головоломок и других  развлекательных виджетов &plasma; или комнату <quote
+>Работа</quote
+>, где будут размещаться ссылки на <acronym
+>RSS</acronym
+>-каналы, калькулятор и календарь. </para>
+
+<para
+>Чтобы удалить комнату, нажмите кнопку <guibutton
+>Удалить комнату</guibutton
+> на панели <quote
+>Комнаты</quote
+> (чтобы открыть эту панель, нажмите <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> и затем <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+>). Далее нажмите на красный крестик «X» (или нажмите <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> и затем <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) и подтвердите удаление. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Комбинации клавиш</title>
+
+<para
+>Большинство функций &plasma; также выполнимы с помощью комбинаций клавиш, которые нужно нажимать последовательно, например: <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> означает, что нужно одновременно нажать клавиши &Alt; и <keycap
+>D</keycap
+>, отпустить и нажать <keycap
+>A</keycap
+>. </para>
+<para
+>На текущий момент по умолчанию используются следующие комбинации клавиш: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Добавить виджеты</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Удалить виджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Заблокировать/разблокировать виджеты</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Приблизить</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Отодвинуть</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Следующий виджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Предыдущий виджет</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Параметры виджета</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Комнаты</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Удалить эту комнату</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Настроить рабочий стол</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Следующая комната</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Предыдущая комната</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Показать рабочий стол</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Запустить связанное приложение</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Открыть панель управления комнатами</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&plasma; </para>
+<para
+>Программа: &copy; &Aaron.J.Seigo; &Aaron.J.Seigo.mail;, 2008 </para>
+
+<para
+>Документация: &copy; Sebastian Kügler <email
+>sebas@kde.org</email
+>, 2008-2010 </para>
+
+<para
+>Ольга Миронова<email
+>omiro@basealt.ru</email
+></para
+><para
+>Юлия Дронова<email
+>juliette.tux@gmail.com</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

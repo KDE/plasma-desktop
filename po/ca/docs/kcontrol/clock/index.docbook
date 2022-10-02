@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Data i hora</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>25 de març de 2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>rellotge</keyword>
+<keyword
+>data</keyword>
+<keyword
+>hora</keyword>
+<keyword
+>estableix</keyword>
+<keyword
+>configuració</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Data i hora</title>
+
+<para
+>Podeu utilitzar aquest mòdul per a modificar la data i hora del sistema, utilitzant una interfície gràfica còmoda.</para>
+
+<note
+><para
+>Atès que aquests valors no sols us afectaran com a usuari, sinó a tot el sistema, haureu de tenir accessos d'administrador del sistema (<systemitem class="username"
+>root</systemitem
+>) per a canviar la data i l'hora del sistema. Si no teniu aquest nivell d'accés, aquest mòdul tan sols us mostrarà els valors actuals i no podreu desar els canvis.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Data i hora</title>
+
+<para
+>Si marqueu <guilabel
+>Estableix la data i hora automàticament</guilabel
+>, aquest mòdul emprarà el <acronym
+>systemd</acronym
+> per a obtenir la data i l'hora.</para>
+
+<para
+>En un ordinador sense <acronym
+>systemd</acronym
+>, s'utilitzaran les utilitats <acronym
+>NTP</acronym
+> com <command
+>rdate</command
+> o <command
+>ntpdate</command
+>. Si aquestes utilitats falten, instal·leu-les. </para>
+
+<para
+>Quan accediu a la sessió del &plasma; mentre esteu en línia o quan connecteu més endavant a Internet, es produirà l'accés a un o més servidors <acronym
+>NTP</acronym
+>.</para>
+<para
+>Això no és suficient, si cal mantenir un rellotge de precisió durant un llarg termini de temps. Sí que ens serà d'utilitat per a establir l'hora ocasionalment en màquines que no tenen accés a la xarxa a tota hora, com ara ordinadors portàtils. </para>
+
+<para
+>Si no utilitzeu un servidor de temps, podeu establir manualment la data al calendari.</para>
+<para
+>Utilitzeu els controls a la part inferior del calendari per a seleccionar la data actual, introduïu la data en el quadre d'edició o trieu la setmana de l'any a partir de la llista desplegable.</para>
+
+<para
+>Podeu establir l'hora utilitzant els botons de selecció de valors que hi ha a baix del rellotge analògic. També podeu introduir directament el valor.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Zona horària</title>
+<para
+>Per a establir una nova zona horària, simplement seleccioneu-la a la llista. Utilitzeu el quadre de filtre per a cercar l'<guilabel
+>Àrea</guilabel
+> o <guilabel
+>Regió</guilabel
+> desitjada.</para>
+</sect2>
+
+</sect1>
+
+</article>

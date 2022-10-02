@@ -1,0 +1,417 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manual de &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Santiago</firstname
+> <surname
+>Fernández Sancho</surname
+> <affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2015-04-10</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; es un asistente que le ayuda a integrar los recursos de red en su escritorio &kde;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Directorios en red</keyword>
+<keyword
+>Asistente para carpetas en red</keyword>
+<keyword
+>Asistente para carpetas en red de KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+
+<para
+>El asistente &knetattach;, conocido cariñosamente desde ahora como el Asistente de Carpetas de Red, permite añadir e integrar con facilidad varias carpetas de red con su escritorio &kde;. Por favor, informe de cualquier problema o petición de características en el sitio web de errores de &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Uso de &knetattach;</title>
+
+<para
+>Como puede ver en la captura de pantalla inferior, el asistente de carpetas de red le permite añadir cuatro tipos de carpetas de red: WebDav, &FTP;, &Microsoft; &Windows; (&Samba;) unidades de red y SSH. También puede seleccionar una conexión reciente de la lista. <screenshot>
+<screeninfo
+>Aquí puede ver una captura de pantalla de &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+<caption>
+<para
+>Ventana principal del asistente de carpetas de red</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Añadir carpetas de red</title>
+
+<para
+>Las carpetas de red se muestran en una ubicación especial de &konqueror; y &dolphin; llamada <emphasis
+>carpeta virtual</emphasis
+>. Esta carpeta virtual estará accesible tecleando <userinput
+>remote:/</userinput
+> en la barra de direcciones o seleccionando <guilabel
+>Red</guilabel
+> en el panel <guilabel
+>Lugares</guilabel
+>. Entonces podrá ver cualquier carpeta que haya sido añadida o utilizar el asistente para añadir otras nuevas. <screenshot>
+<screeninfo
+>Aquí puede ver una captura de pantalla de &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+<caption>
+<para
+>La carpeta virtual con el Asistente de la carpeta de red</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Hablando de asistentes, el asistente de carpetas de red pretende ser muy sencillo de utilizar. Después de abrir el asistente deberá seleccionar el tipo de red a la que desea acceder. Cuando se mueva a la siguiente pantalla necesitará rellenar la información que se le pida y lo peor ya habrá pasado. El paso final es introducir su nombre de usuario y la contraseña de acceso para la red compartida a la que ha decidido acceder. </para>
+<para
+>A continuación puede ver una lista de la información que necesita el asistente para crear las carpetas de red. Si una opción no está disponible para una red particular no necesitará introducirla. Por ejemplo, las carpetas &Samba; no necesitan un <guilabel
+>Puerto</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nombre:</guilabel
+></term>
+<listitem>
+<para
+>Aquí introducirá un nombre para la conexión de red. Solo está limitado por su imaginacion (o alfabeto). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Usuario:</guilabel
+></term>
+<listitem>
+<para
+>El nombre de usuario que se utilizará para establecer la conexión. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Servidor:</guilabel
+></term>
+<listitem>
+<para
+>Esta es la dirección del servidor que intenta añadir. Puede ser una dirección IP o un nombre de dominio. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Puerto:</guilabel
+></term>
+<listitem>
+<para
+>Aquí introducirá el número de puerto al que desea conectarse. Suele ser suficiente con los valores predeterminados. <note
+> <para
+>No disponible para las carpetas &Microsoft; &Windows; (&Samba;). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Carpeta:</guilabel
+></term>
+<listitem>
+<para
+>La ruta de la carpeta a la que desea conectarse debería introducirla aquí. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Codificación:</guilabel
+></term>
+<listitem>
+<para
+>Utilice los elementos de la lista para seleccionar una codificación para las conexiones &FTP; y ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Crear un icono para esta carpeta remota</guilabel
+></term>
+<listitem>
+<para
+>Si esta casilla está marcada se creará un icono permitiendo el acceso a través de la carpeta virtual remote:/. Sino está marcada, la conexión será posible, pero no estará accesible a través de remote:/. <note
+> <para
+>La opción <guilabel
+>Conexión reciente:</guilabel
+> le permitirá conectarse al último punto de montaje de la red al que estuviera conectado utilizando el asistente haya creado o no un icono. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Utilizar cifrado</guilabel
+></term>
+<listitem>
+<para
+>Si está marcado se activará la posibilidad de hacer conexiones seguras. <note
+> <para
+>Disponible solo para carpetas WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Vistazo rápido a &knetattach;</title>
+
+
+<para
+>Esto será un vistazo rápido al asistente de carpetas de red. No parpadee o se lo perderá. </para>
+
+<para
+>Debajo puede ver la ventana principal del asistente de carpetas de red. Aquí seleccionaremos el tipo de carpeta que deseamos añadir o conectarnos. El propósito de esta vista rápida será utilizar el &FTP;. Contiene la mayor parte de las opciones que podrá encontrar utilizando el asistente. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aquí puede ver una captura de pantalla del a ventana principal de &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>De acuerdo, hemos (al menos yo) decidido añadir una carpeta &FTP;. Debajo puede ver un ejemplo del tipo de información que necesitará añadir a su servidor &FTP; particular. Después de rellenarlo se pulsará <guibutton
+>Guardar y copiar</guibutton
+> y se esperará la magia. Oh sí, si su servidor precisa validación de algún tipo se le preguntará sobre ella antes de permitirle la conexión. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla que muestra cómo añadir carpetas &FTP; con &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Ahora ya estamos todos conectados y podremos navegar por nuestro nuevo elemento compartido. ¡Perfecto! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla de la carpeta &FTP; conectada</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Para volver a ver las carpetas de red basta con teclear <action
+>remote:/</action
+> en la barra de ubicaciones de &konqueror; o &dolphin;, o seeleccionar <guilabel
+>Red</guilabel
+> en el panel <guilabel
+>Lugares</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla de la carpeta virtual remote:/ con la conexión añadida</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Captura de pantalla</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Puede incluso añadir nuevas carpetas de la misma dirección utilizando el enlace <guilabel
+>Añadir una carpeta de red</guilabel
+>. Bueno, esto nos permite finalizar nuestro vistazo rápido. Le deseo la mejor de las suertes en sus aventuras con sus carpetas de red ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos y licencias</title>
+
+<para
+>&knetattach; </para>
+<para
+>Derechos de autor del programa. 2004. &George.Staikos; &George.Staikos.mail;. </para>
+
+<para
+>Derechos de autor de la documentation. &copy; 2005. &Orville.Bennett; &Orville.Bennett.mail;. </para>
+
+<para
+>Marcos Fouces Lago<email
+>mfouces@yahoo.es</email
+>.</para
+><para
+>Santiago Fernández Sancho<email
+>santi@kde-es.org</email
+>.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

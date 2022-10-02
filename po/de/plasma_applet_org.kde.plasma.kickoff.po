@@ -1,0 +1,431 @@
+# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2022.
+# Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2017, 2018, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2022-07-24 15:15+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allgemein"
+
+#: package/contents/ui/code/tools.js:39
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Aus Favoriten entfernen"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Zu Favoriten hinzufügen"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr "In allen Aktivitäten"
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr "In der aktuellen Aktivität"
+
+#: package/contents/ui/code/tools.js:131
+#, kde-format
+msgid "Show in Favorites"
+msgstr "In Favoriten anzeigen"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr "Symbol:"
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Auswählen ..."
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "General options"
+msgid "General:"
+msgstr "Allgemein:"
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, kde-format
+msgid "Always sort applications alphabetically"
+msgstr "Anwendungen immer alphabetisch sortieren"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Aktivierte Suchmodule einrichten ..."
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Show favorites:"
+msgstr "Favoriten anzeigen:"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr "In einem Gitter"
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr "In einer Liste"
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, kde-format
+msgid "Show other applications:"
+msgstr "Weitere Anwendungen anzeigen:"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr "In einem Gitter"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr "In einer Liste"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr "Knöpfe anzeigen für:"
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr "Energie"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgid "Session"
+msgstr "Sitzung"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, kde-format
+msgid "Power and session"
+msgstr "Energieverwaltung und Sitzung"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr ""
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Anwendungen"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Orte"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr "Benutzereinstellungen öffnen"
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr "Offen halten"
+
+#: package/contents/ui/Kickoff.qml:283
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Menüeinträge bearbeiten ..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Gitter mit %1 Zeilen, %2 Spalten"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Verlassen"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr "Mehr"
+
+#: package/contents/ui/PlacesPage.qml:49
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Rechner"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Verlauf"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Häufig verwendet"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Symbol zurücksetzen"
+
+#~ msgid "Search…"
+#~ msgstr "Suchen ..."
+
+#~ msgid "Primary actions:"
+#~ msgstr "Primäre Aktionen:"
+
+#~ msgid "Power actions"
+#~ msgstr "Energie-Aktionen"
+
+#~ msgid "Session actions"
+#~ msgstr "Sitzungs-Aktionen"
+
+#~ msgid "Leave…"
+#~ msgstr "Verlassen …"
+
+#~ msgid "Power…"
+#~ msgstr "Energie …"
+
+#~ msgid "More…"
+#~ msgstr "Mehr …"
+
+#~ msgid "Updating applications…"
+#~ msgstr "Anwendungen werden aktualisiert ..."
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Beschriftungen in zwei Zeilen zulassen"
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Liste mit 1 Eintrag"
+#~ msgstr[1] "Liste mit %1 Einträgen"
+
+#~ msgid "%1 submenu"
+#~ msgstr "Untermenü %1"
+
+#~ msgid "Leave..."
+#~ msgstr "Verlassen ..."
+
+#~ msgid "Power..."
+#~ msgstr "Energie ..."
+
+#~ msgid "More..."
+#~ msgstr "Mehr ..."
+
+#~ msgid "Applications updated."
+#~ msgstr "Anwendungen wurden aktualisiert."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Karteikarten bei Mausberührung wechseln"
+
+#~ msgid "All Applications"
+#~ msgstr "Alle Anwendungen"
+
+#~ msgid "Favorites"
+#~ msgstr "Favoriten"
+
+#~ msgid "Often Used"
+#~ msgstr "Häufig verwendete"
+
+#~ msgid "Active Tabs"
+#~ msgstr "Aktive Unterfenster"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "Inaktive Unterfenster"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Verschieben Sie die Karteikarten zwischen den Feldern, um sie anzuzeigen "
+#~ "oder auszublenden. Die Reihenfolge der Karteikarten können Sie durch "
+#~ "Ziehen ändern"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Suche auf Lesezeichen, Dateien und E-Mails erweitern"
+
+#~ msgid "Appearance"
+#~ msgstr "Erscheinungsbild"
+
+#~ msgid "Menu Buttons"
+#~ msgstr "Menüknöpfe"
+
+#~ msgid "Visible Tabs"
+#~ msgstr "Sichtbare Karteikarten"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Favoriten"
+
+#~ msgid "Log out"
+#~ msgstr "Abmelden"
+
+#~ msgid "Lock"
+#~ msgstr "Sperren"
+
+#~ msgid "Lock screen"
+#~ msgstr "Bildschirm sperren"
+
+#~ msgid "Switch user"
+#~ msgstr "Benutzer wechseln"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "Weitere Sitzung starten"
+
+#~ msgid "Shut down"
+#~ msgstr "Herunterfahren"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Rechner ausschalten"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Neu starten"
+
+#~ msgid "Restart computer"
+#~ msgstr "Rechner neu starten"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Aktuelle Sitzung für die nächste Anmeldung speichern"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Bereitschaft"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Arbeitsunterbrechung ohne Abmelden"
+
+#~ msgid "Hibernate"
+#~ msgstr "Tiefschlaf"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Tiefschlaf (Disk)"
+
+#~ msgid "Suspend"
+#~ msgstr "Ruhezustand"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Tiefschlaf (RAM)"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Home Folder"
+#~ msgstr "Persönlicher Ordner"
+
+#~ msgid "Network Folders"
+#~ msgstr "Netzwerkordner"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumente"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Verlauf (Dokumente)"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Verlauf (Anwendungen)"
+
+#~ msgid "Run Command..."
+#~ msgstr "Befehl ausführen ..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Befehl ausführen oder Suche starten"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Wechselmedien"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "\"Kürzlich Installierte\" anzeigen"
+
+#~ msgid "Uninstall"
+#~ msgstr "Deinstallieren"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Alphabetisch sortieren (Z bis A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Verlauf (Programme) leeren"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Verlauf (Dokumente) leeren"
+
+#~ msgid "Sleep"
+#~ msgstr "Ruhezustand"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plasma von KDE"

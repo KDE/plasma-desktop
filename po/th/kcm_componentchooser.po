@@ -1,0 +1,372 @@
+# translation of kcmcomponentchooser.po to Thai
+# Copyright (C) 2003, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003, 2005.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2005, 2008, 2010.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcomponentchooser\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"PO-Revision-Date: 2010-02-27 23:08+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: componentchooser.cpp:74 componentchooserterminal.cpp:74
+#, kde-format
+msgid "Other…"
+msgstr ""
+
+#: componentchooserbrowser.cpp:18
+#, kde-format
+msgid "Select default browser"
+msgstr ""
+
+#: componentchooseremail.cpp:19
+#, fuzzy, kde-format
+#| msgid "Use a different &email client:"
+msgid "Select default e-mail client"
+msgstr "ใช้โปรแกรมรับ/ส่งอีเมลตัวอื่น:"
+
+#: componentchooserfilemanager.cpp:14
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default file manager"
+msgstr "เลือกโปรแกรมรับส่งอีเมลที่ควรใช้:"
+
+#: componentchoosergeo.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default map"
+msgstr "เลือกโปรแกรมรับส่งอีเมลที่ควรใช้:"
+
+#: componentchoosertel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default dialer application"
+msgstr "เลือกโปรแกรมเทอร์มินัลที่ควรใช้:"
+
+#: componentchooserterminal.cpp:24
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default terminal emulator"
+msgstr "เลือกโปรแกรมเทอร์มินัลที่ควรใช้:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Web browser:"
+msgstr ""
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "เลือกโปรแกรมเทอร์มินัลที่ควรใช้:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgid "Map:"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Default phone app"
+msgid "Dialer:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#~ msgid "Joseph Wenninger"
+#~ msgstr "Joseph Wenninger"
+
+#~ msgid "Unknown"
+#~ msgstr "ไม่รู้จัก"
+
+#~ msgid "Component Chooser"
+#~ msgstr "เครื่องมือเลือกส่วนประกอบ"
+
+#~ msgid "(c), 2002 Joseph Wenninger"
+#~ msgstr "สงวนลิขสิทธิ์ (c), 2002 Joseph Wenninger"
+
+#~ msgid ""
+#~ "Choose from the list below which component should be used by default for "
+#~ "the %1 service."
+#~ msgstr "เลือกส่วนประกอบปริยายที่ควรใช้กับบริการ %1 จากรายการด้านล่างนี้"
+
+#~ msgid ""
+#~ "<qt>You changed the default component of your choice, do want to save "
+#~ "that change now ?</qt>"
+#~ msgstr ""
+#~ "<qt>คุณได้แก้ไขค่าส่วนประกอบปริยายเป็นตามการเลือกของคุณเอง "
+#~ "ต้องการจะบันทึกการเปลี่ยนแปลงเดี๋ยวนี้หรือไม่ ?</qt>"
+
+#~ msgid "No description available"
+#~ msgstr "ไม่มีคำอธิบายอยู่"
+
+#~ msgid ""
+#~ "Here you can change the component program. Components are programs that "
+#~ "handle basic tasks, like the terminal emulator, the text editor and the "
+#~ "email client. Different KDE applications sometimes need to invoke a "
+#~ "console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. You can "
+#~ "choose here which programs these components are."
+#~ msgstr ""
+#~ "คุณสามารถเปลี่ยนโปรแกรมของส่วนประกอบได้ที่นี่ ส่วนประกอบก็คือ โปรแกรมที่มีการทำงานทั่ว ๆ "
+#~ "ไป เช่น เทอร์มินัล, เครื่องมือแก้ไขข้อความ และโปรแกรมรับ/ส่งเมล โปรแกรมต่าง ๆ ของ KDE "
+#~ "อาจจำเป็นต้องจะเรียกใช้ตัวจำลองคอนโซล, ส่งเมล "
+#~ "หรือแสดงแฟ้มข้อความในการที่จะทำแบบนั้นได้แบบแนบเนียน "
+#~ "โปรแกรมเหล่านี้จะต้องเรียกใช้ส่วนประกอบเดียวกัน "
+#~ "คุณสามารถเลือกได้ว่าจะให้โปรแกรมไหนเป็นส่วนประกอบใด ได้ที่นี่"
+
+#~ msgid "Default Component"
+#~ msgstr "ส่วนประกอบปริยาย"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "<p>This list shows the configurable component types. Click the component "
+#~ "you want to configure.</p>\n"
+#~ "<p>In this dialog you can change KDE default components. Components are "
+#~ "programs that handle basic tasks, like the terminal emulator, the text "
+#~ "editor and the email client. Different KDE applications sometimes need to "
+#~ "invoke a console emulator, send a mail or display some text. To do so "
+#~ "consistently, these applications always call the same components. Here "
+#~ "you can select which programs these components are.</p>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "<p>ชุดรายการนี้แสดงถึงประเภทส่วนประกอบที่ปรับแต่งได้ "
+#~ "ให้คลิกที่ส่วนประกอบที่คุณต้องการปรับแต่ง</p>\n"
+#~ "<p>ในกล่องนี้ คุณสามารถจะเปลี่ยนส่วนประกอบปริยายของ KDE ได้ "
+#~ "ส่วนประกอบก็คือโปรแกรมที่มีการทำงานทั่ว ๆ ไป เช่น เทอร์มินัล, เครื่องมือแก้ไขข้อความ "
+#~ "และโปรแกรมรับ/ส่งเมล โปรแกรมต่าง ๆ ของ KDE อาจจำเป็นต้องจะเรียกใช้ตัวจำลองคอนโซล, "
+#~ "ส่งเมล หรือแสดงแฟ้มข้อความ ในการที่จะทำแบบนั้นได้แบบแนบเนียน "
+#~ "โปรแกรมเหล่านี้จะต้องเรียกใช้ส่วนประกอบเดียวกันเสมอ คุณสามารถเลือกได้ว่าจะให้ "
+#~ "โปรแกรมไหนเป็นส่วนประกอบใด ได้ที่นี่</p>\n"
+#~ "</qt>"
+
+#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+#~ msgstr "<qt>เปิดที่อยู่ URL <b>http</b> และ <b>https</b></qt>"
+
+#~ msgid "in an application based on the contents of the URL"
+#~ msgstr "ในโปรแกรมที่กำหนดให้ใช้กับที่อยู่ URL"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "in the following application:"
+#~ msgstr "ในเบราว์เซอร์ต่อไปนี้:"
+
+#, fuzzy
+#~| msgid "in the following browser:"
+#~ msgid "with the following command:"
+#~ msgstr "ในเบราว์เซอร์ต่อไปนี้:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Select preferred Web browser application:"
+#~ msgstr "เลือกเว็บเบราว์เซอร์ที่ควรใช้:"
+
+#, fuzzy
+#~| msgid "Kmail is the standard Mail program for the KDE desktop."
+#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
+#~ msgstr "Kmail เป็นโปรแกรมรับ/ส่งอีเมลมาตรฐานของ KDE"
+
+#~ msgid "&Use KMail as preferred email client"
+#~ msgstr "ใ&ช้โปรแกรม KMail เป็นโปรแกรมรับ/ส่งอีเมลหลัก"
+
+#~ msgid "Select this option if you want to use any other mail program."
+#~ msgstr "เลือกตัวเลือกนี้หากต้องการใช้โปรแกรมรับ/ส่งอีเมลตัวอื่น"
+
+#, fuzzy
+#~| msgid ""
+#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
+#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
+#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
+#~| "URL </li></ul>"
+#~ msgid ""
+#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
+#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
+#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
+#~ "%u: Full mailto: URL </li></ul>"
+#~ msgstr ""
+#~ "<ul> <li>%t คือ: ที่อยู่ผู้รับ</li> <li>%s: เรื่อง</li> <li>%c: ทำสำเนา (CC)</li> "
+#~ "<li>%b: ซ่อนการทำสำเนา (BCC)</li> <li>%B: แม่แบบเนื้อความ</li> <li>%A: "
+#~ "สิ่งที่แนบมาด้วย </li> <li>%u: URL สำหรับส่งเมล mailto: แบบเต็ม</li></ul>"
+
+#~ msgid ""
+#~ "Press this button to select your favorite email client. Please note that "
+#~ "the file you select has to have the executable attribute set in order to "
+#~ "be accepted.<br/> You can also use several placeholders which will be "
+#~ "replaced with the actual values when the email client is called:<ul> <li>"
+#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
+#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+#~ "text</li> <li>%A: Attachment </li> </ul>"
+#~ msgstr ""
+#~ "กดที่ปุ่มนี้ เพื่อเลือกโปรแกรมรับ/ส่งอีเมลที่ต้องการ โปรดจำไว้ว่า แฟ้มที่คุณเลือกนั้น "
+#~ "จะต้องสามารถประมวลผลได้<br/> คุณสามารถค่าอื่น ๆ "
+#~ "เพื่อแทนที่ค่าปกติเมื่อเรียกประมวลผลโปรแกรมรับ/ส่งอีเมล: <ul> <li>%t: ที่อยู่ผู้รับ</li> <li>"
+#~ "%s: เรื่อง</li> <li>%c: ทำสำเนา (CC)</li> <li>%b: ซ่อนการทำสำเนา (BCC)</li> "
+#~ "<li>%B: แม่แบบเนื้อความ</li> <li>%A: สิ่งที่แนบมาด้วย </li> </ul>"
+
+#~ msgid "Click here to browse for the mail program file."
+#~ msgstr "คลิกที่นี่เพื่อเรียกดูแฟ้มโปรแกรมรับ/ส่งเมล"
+
+#~ msgid ""
+#~ "Activate this option if you want the selected email client to be executed "
+#~ "in a terminal (e.g. <em>Konsole</em>)."
+#~ msgstr ""
+#~ "เปิดใช้งานตัวเลือกนี้ หากคุณต้องการให้โปรแกรมรับ/ส่งอีเมลที่เลือกไว้ ทำงานในเทอร์มินัล (เช่น "
+#~ "<em>คอนโซล K</em>)"
+
+#~ msgid "&Run in terminal"
+#~ msgstr "สั่งทำ&งานในเทอร์มินัล"
+
+#~ msgid "Browse directories using the following file manager:"
+#~ msgstr "ดูไดเรกทอรีต่าง ๆ โดยใช้ตัวจัดการแฟ้มต่อไปนี้:"
+
+#~ msgid "Other: click Add... in the dialog shown here:"
+#~ msgstr "อื่น ๆ: คลิกที่ เพิ่ม... ในกล่องที่แสดงที่นี่:"
+
+#~ msgid "&Use Konsole as terminal application"
+#~ msgstr "ใ&ช้คอนโซล-K เป็นโปรแกรมเทอร์มินัลหลัก"
+
+#~ msgid "Use a different &terminal program:"
+#~ msgstr "ใช้โปรแกรมเ&ทอร์มินัลตัวอื่น:"
+
+#~ msgid ""
+#~ "Press this button to select your favorite terminal client. Please note "
+#~ "that the file you select has to have the executable attribute set in "
+#~ "order to be accepted.<br/> Also note that some programs that utilize "
+#~ "Terminal Emulator will not work if you add command line arguments "
+#~ "(Example: konsole -ls)."
+#~ msgstr ""
+#~ "คลิกที่ปุ่มนี้ เพื่อเลือกโปรแกรมเทอร์มินัลที่ต้องการ จำไว้ว่าแฟ้มที่คุณเลือก\n"
+#~ "จะต้องสามารถประมวลผลได้<br/>โปรดสังเกตด้วยว่า "
+#~ "บางโปรแกรมที่ใช้ประโยชน์จากโปรแกรมจำลองเป็นเทอร์มินัลจะทำงานไม่ได้ "
+#~ "หากคุณเพิ่มค่าอาร์กิวเมนต์ในบรรทัดคำสั่งด้วย (เช่น: konsole -ls)"
+
+#~ msgid "Click here to browse for terminal program."
+#~ msgstr "คลิกที่นี่เพื่อเลือกโปรแกรมเทอร์มินัล"
+
+#~ msgid "1 second remaining:"
+#~ msgid_plural "%1 seconds remaining:"
+#~ msgstr[0] "เหลืออีก %1 วินาที:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The new window manager will be used when KDE is started the next time."
+#~ msgid ""
+#~ "The new window manager will be used when Plasma is started the next time."
+#~ msgstr "ตัวจัดการหน้าต่างตัวใหม่ จะถูกใช้งานหลังการเริ่มวาระงานของ KDE ในครั้งต่อไป"
+
+#~ msgid "Window Manager Change"
+#~ msgstr "เปลี่ยนตัวจัดการหน้าต่าง"
+
+#~ msgid ""
+#~ "A new window manager is running.\n"
+#~ "It is still recommended to restart this KDE session to make sure all "
+#~ "running applications adjust for this change."
+#~ msgstr ""
+#~ "ตัวจัดการหน้าต่างตัวใหม่กำลังทำงานอยู่\n"
+#~ "แต่ยังคงแนะนำให้คุณเริ่มวาระงานของ KDE ใหม่อีกครั้ง เพื่อให้มั่นใจได้ว่า "
+#~ "จะมีการปรับใช้กับโปรแกรมที่กำลังทำงานอยู่ทั้งหมดในตอนนี้ด้วย"
+
+#~ msgid "Window Manager Replaced"
+#~ msgstr "ตัวจัดการหน้าต่างถูกแทนที่"
+
+#~ msgid ""
+#~ "Your running window manager will be now replaced with the configured one."
+#~ msgstr "ตัวจัดการหน้าต่างของคุณที่กำลังทำงานอยู่ จะถูกแทนที่ด้วยตัวที่ปรับแต่งให้"
+
+#~ msgid "Config Window Manager Change"
+#~ msgstr "การปรับแต่งตัวจัดการหน้าต่างมีการเปลี่ยนแปลง"
+
+#~ msgid "&Accept Change"
+#~ msgstr "&ยอมรับการเปลี่ยนแปลง"
+
+#~ msgid "&Revert to Previous"
+#~ msgstr "&กลับไปใช้ค่าก่อนหน้า"
+
+#~ msgid ""
+#~ "The configured window manager is being launched.\n"
+#~ "Please check it has started properly and confirm the change.\n"
+#~ "The launch will be automatically reverted in 20 seconds."
+#~ msgstr ""
+#~ "ตัวจัดการหน้าต่างที่ถูกปรับค่าไป กำลังจะเริ่มการทำงาน\n"
+#~ "โปรดตรวจสอบว่ามันทำงานได้อย่างถูกต้องหรือไม่ แล้วยืนยันการเปลี่ยนแปลง\n"
+#~ "หากไม่ยืนยันภายใน 20 วินาที จะถูกปรับค่ากลับไปใช้ค่าเดิม"
+
+#~ msgid ""
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr "ตัวจัดการหน้าต่าง ถูกปรับกลับไปใช้ตัวจัดการหน้าต่างปริยายของ KDE (KWin)"
+
+#~ msgid ""
+#~ "The new window manager has failed to start.\n"
+#~ "The running window manager has been reverted to the default KDE window "
+#~ "manager KWin."
+#~ msgstr ""
+#~ "การเริ่มทำงานของตัวจัดการหน้าต่างตัวใหม่เกิดความล้มเหลว\n"
+#~ "จะกลับไปใช้ตัวจัดการหน้าต่างปริยายของ KDE (KWin) แทน"
+
+#~ msgid "Running the configuration tool failed"
+#~ msgstr "การทำงานของเครื่องมือปรับแต่งค่าล้มเหลว"
+
+#~ msgid "&Use the default KDE window manager (KWin)"
+#~ msgstr "ใ&ช้ตัวจัดการหน้าต่างปริยายของ KDE (KWin)"
+
+#~ msgid "Use a different &window manager:"
+#~ msgstr "ใช้ตัวจัดการ&หน้าต่างตัวอื่น:"
+
+#~ msgid "Configure"
+#~ msgstr "ปรับแต่ง"
+
+#~ msgid ""
+#~ "Note: Most window managers have their own configuration and do not follow "
+#~ "KDE settings."
+#~ msgstr ""
+#~ "ข้อควรทราบ: ตัวจัดการหน้าต่างส่วนมากจะมีการปรับแต่งค่าเป็นของตัวเอง และไม่ได้ใช้ค่าตาม KDE"
+
+#~ msgid "kcmcomponentchooser"
+#~ msgstr "kcmcomponentchooser"
+
+#~ msgid ""
+#~ "Here you can read a small description of the currently selected "
+#~ "component. To change the selected component, click on the list to the "
+#~ "left. To change the component program,  please choose it below."
+#~ msgstr ""
+#~ "คุณสามารถอ่านรายละเอียดย่อ ๆ ของส่วนประกอบที่เลือกได้ที่นี่ "
+#~ "หากต้องการเปลี่ยนการเลือกส่วนประกอบ ให้คลิกที่รายการทางด้านซ้าย "
+#~ "หากต้องการเปลี่ยนโปรแกรมของส่วนประกอบ ให้เลือกจากด้านล่างนี้"
+
+#~ msgid "Component Description"
+#~ msgstr "คำอธิบายของส่วนประกอบ"

@@ -1,0 +1,262 @@
+# Translation for kcm_desktoppaths.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2018, The Free Software Foundation, Inc.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Juan Irigoien <juanirigoien@irakasle.net>
+# Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007, 2010.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2018, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-03-31 09:24+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Mahaigaina"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokumentuak"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Jaitsitakoak"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Musika"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Irudiak"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Bideoak"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Bide-izenak</h1> Modulu honek mahaigaineko fitxategiak fitxategi "
+"sisteman non gordeko diren hautatzen uzten dizu\n"
+"Erabili \"Zer da hau?\" (Maius+F1) laguntza lortzeko."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Mahaigainaren bide-izena:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Karpeta honek zure mahaigainean ikusten dituzun fitxategi guztiak dauzka. "
+"Nahi izanez gero, karpeta honen helbidea aldatu dezakezu, eta barnean "
+"dituenak ere automatikoki mugituko dira helbide berrira."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Dokumentuen bide-izena:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Hau izango da dokumentuak bertatik kargatzeko edo bertara kopiatzeko "
+"erabiliko den karpeta lehenetsia."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Jaitsitakoak-en bidea:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Hau izango da zuk jaitsitako elementuak gordetzeko erabiliko den karpeta "
+"lehenetsia."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Bideoen bide-izena:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Hau izango da filmak kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Irudien bide-izena:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
+"lehenetsia."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Musikaren bide-izena:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Hau izango da musika kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Autoabioaren bide-izena:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Karpeta honek saioa abiatzen den bakoitzean automatikoki abiarazita "
+#~ "nahidituzun aplikazioak edo aplikazioetarako estekak (lasterbideak) ditu. "
+#~ "Karpeta honen kokapena alda dezakezu hala nahi baduzu, eta edukia ere "
+#~ "automatikoki mugituko da kokapen berrira."
+
+#~ msgid "Autostart"
+#~ msgstr "Autoabiarazi"
+
+#~ msgid "Movies"
+#~ msgstr "Filmak"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1'(e)rako bide-izena aldatu egin da.\n"
+#~ "Fitxategiak '%2'(e)tik '%3'(e)ra mugitu daitezen nahi duzu?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Mugitu"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Ez mugitu"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "'%1'(e)rako bide-izena aldatu egin da.\n"
+#~ "'%2' karpeta '%3'(e)ra mugitu nahi duzu?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Mugitu"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Ez mugitu"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Berrespena beharrezkoa"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konquerorren portaera</h1>Hemen, fitxategi kudeatzaile ari denean, "
+#~ "Konquerorren portaera konfigura dezakezu."
+
+#~ msgid "Misc Options"
+#~ msgstr "Hainbat aukera"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Karpetak l&eiho banatan ireki"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Aukera hau hautatuz gero, Konquerorrek leiho berria zabalduko du karpeta "
+#~ "bat irekitzean, karpetaren edukiak uneko leihoan erakutsi ordez."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr ""
+#~ "Erakutsi 'Ezabatu' men&u sarrea gauzak zuzenki ezabatzeko zakarontzitik "
+#~ "pasatu gabe"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Desautatu hau 'Ezabatu' komandoak mahaigain eta fitxategi kudeatzaileko "
+#~ "testuinguruko menuan agertzea nahi baduzu. Dena den, beti ezaba ditzakezu "
+#~ "fitxategiak Shift tekla zapatuta kontuz 'Mugitu zakarontzira' aukeran "
+#~ "klik egiten duzun bitartean."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menu editorea"
+
+#~ msgid "Menu"
+#~ msgstr "Menua"
+
+#~ msgid "New..."
+#~ msgstr "Berria..."
+
+#~ msgid "Remove"
+#~ msgstr "Kendu"
+
+#~ msgid "Move Up"
+#~ msgstr "Mugitu gora"
+
+#~ msgid "Move Down"
+#~ msgstr "Mugitu behera"

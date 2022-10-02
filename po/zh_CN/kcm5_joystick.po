@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm5_joystick.pot\n"
+"X-Crowdin-File-ID: 7024\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国, Guo Yunhe, shaodan1997, Tyson Tan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kde-china@kde.org, i@guoyunhe.me, shaodan1997@kde.org, tysontan@tysontan.com"
+
+#: caldialog.cpp:26 joywidget.cpp:335
+#, kde-format
+msgid "Calibration"
+msgstr "校准"
+
+#: caldialog.cpp:40
+#, kde-format
+msgid "Next"
+msgstr "下一步"
+
+#: caldialog.cpp:50
+#, kde-format
+msgid "Please wait a moment to calculate the precision"
+msgstr "正在计算精度，请稍候"
+
+#: caldialog.cpp:79
+#, kde-format
+msgid "(usually X)"
+msgstr "(通常是 X 轴)"
+
+#: caldialog.cpp:81
+#, kde-format
+msgid "(usually Y)"
+msgstr "(通常是 Y 轴)"
+
+#: caldialog.cpp:87
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>minimum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>校准工具即将检查您设备输出的数值范围。<br /><br />请将您设备上的 <b>轴 "
+"%1 %2 </b>推到<b>最小</b>位置。<br /><br />按下设备的任意按钮，或者单击“下一"
+"步”按钮，继续下一步校准操作。</qt>"
+
+#: caldialog.cpp:110
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>center</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>校准工具即将检查您设备输出的数值范围。<br /><br />请将您设备上的 <b>轴 "
+"%1 %2 </b>推到<b>中间</b>位置。<br /><br />按下设备的任意按钮，或者单击“下一"
+"步”按钮，继续下一步校准操作。</qt>"
+
+#: caldialog.cpp:133
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the value range your device delivers.<br /"
+"><br />Please move <b>axis %1 %2</b> on your device to the <b>maximum</b> "
+"position.<br /><br />Press any button on the device or click on the 'Next' "
+"button to continue with the next step.</qt>"
+msgstr ""
+"<qt>校准工具即将检查您设备输出的数值范围。<br /><br />请将您设备上的 <b>轴 "
+"%1 %2 </b>推到<b>最大</b>位置。<br /><br />按下设备的任意按钮，或者单击“下一"
+"步”按钮，继续下一步校准操作。</qt>"
+
+#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#, kde-format
+msgid "Communication Error"
+msgstr "通讯错误"
+
+#: caldialog.cpp:164
+#, kde-format
+msgid "You have successfully calibrated your device"
+msgstr "您已经成功校准了此设备"
+
+#: caldialog.cpp:164 joywidget.cpp:363
+#, kde-format
+msgid "Calibration Success"
+msgstr "校准成功"
+
+#: caldialog.cpp:184
+#, kde-format
+msgid "Value Axis %1: %2"
+msgstr "轴 %1 数值：%2"
+
+#: joydevice.cpp:41
+#, kde-format
+msgid "The given device %1 could not be opened: %2"
+msgstr "无法打开指定的设备 %1：%2"
+
+#: joydevice.cpp:45
+#, kde-format
+msgid "The given device %1 is not a joystick."
+msgstr "指定的设备 %1 不是游戏控制器。"
+
+#: joydevice.cpp:49
+#, kde-format
+msgid "Could not get kernel driver version for joystick device %1: %2"
+msgstr "无法获取游戏控制器设备 %1 的内核驱动程序版本：%2"
+
+#: joydevice.cpp:60
+#, kde-format
+msgid ""
+"The current running kernel driver version (%1.%2.%3) is not the one this "
+"module was compiled for (%4.%5.%6)."
+msgstr ""
+"当前正在运行的内核驱动程序版本 (%1.%2.%3) 不是此模块编译时使用的版本 (%4.%5."
+"%6)。"
+
+#: joydevice.cpp:71
+#, kde-format
+msgid "Could not get number of buttons for joystick device %1: %2"
+msgstr "无法获取游戏控制器设备 %1 的按钮数：%2"
+
+#: joydevice.cpp:75
+#, kde-format
+msgid "Could not get number of axes for joystick device %1: %2"
+msgstr "无法获取游戏控制器设备 %1 的轴数：%2"
+
+#: joydevice.cpp:79
+#, kde-format
+msgid "Could not get calibration values for joystick device %1: %2"
+msgstr "无法获取游戏控制器设备 %1 的校准数值：%2"
+
+#: joydevice.cpp:83
+#, kde-format
+msgid "Could not restore calibration values for joystick device %1: %2"
+msgstr "无法恢复游戏控制器设备 %1 的校准数值：%2"
+
+#: joydevice.cpp:87
+#, kde-format
+msgid "Could not initialize calibration values for joystick device %1: %2"
+msgstr "无法初始化游戏控制器设备 %1 的校准数值：%2"
+
+#: joydevice.cpp:91
+#, kde-format
+msgid "Could not apply calibration values for joystick device %1: %2"
+msgstr "无法将校准数值应用到游戏控制器设备 %1：%2"
+
+#: joydevice.cpp:95
+#, kde-format
+msgid "internal error - code %1 unknown"
+msgstr "内部错误 - 代码 %1 未知"
+
+#: joystick.cpp:29
+#, kde-format
+msgid "KDE Joystick Control Module"
+msgstr "KDE 游戏控制器控制模块"
+
+#: joystick.cpp:31
+#, kde-format
+msgid "KDE System Settings Module to test Joysticks"
+msgstr "用于测试游戏控制器的 KDE 系统设置模块"
+
+#: joystick.cpp:33
+#, kde-format
+msgid "(c) 2004, Martin Koller"
+msgstr "(c) 2004, Martin Koller"
+
+#: joystick.cpp:38
+#, kde-format
+msgid ""
+"<h1>Joystick</h1>This module helps to check if your joystick is working "
+"correctly.<br />If it delivers wrong values for the axes, you can try to "
+"solve this with the calibration.<br />This module tries to find all "
+"available joystick devices by checking /dev/js[0-4] and /dev/input/"
+"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
+">The Buttons list shows the state of the buttons on your joystick, the Axes "
+"list shows the current value for all axes.<br />NOTE: the current Linux "
+"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
+"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
+"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
+"can check your Linux source/Documentation/input/joystick.txt)"
+msgstr ""
+"<h1>游戏控制器</h1>此模块可帮助您检查游戏控制器是否正常工作。<br />如果游戏控"
+"制器的轴输出的数值不正确，您可以尝试通过校准来解决。<br />此模块将会检查 /"
+"dev/js[0-4] 和 /dev/input/js[0-4] 上连接的全部游戏控制器设备。<br />如果您有"
+"其他设备文件，请在组合框中输入。<br />按钮列表将会显示您游戏控制器上按钮的状"
+"态，而轴列表将会显示全部轴的当前数值。<br />注意：目前的 Linux 设备驱动程序 "
+"(2.4、2.6 版内核) 只能自动检测以下类型的游戏控制器：<ul><li>2 轴 4 按钮</"
+"li><li>3 轴 4 按钮</li><li>4 轴 4 按钮</li><li>Saitek Cyborg Digital 系列游戏"
+"控制器</li></ul>(详情请查看 Linux 的相关文档 source/Documentation/input/"
+"joystick.txt)"
+
+#: joywidget.cpp:67
+#, kde-format
+msgid "Device:"
+msgstr "设备："
+
+#: joywidget.cpp:84
+#, kde-format
+msgctxt "Cue for deflection of the stick"
+msgid "Position:"
+msgstr "位置："
+
+#: joywidget.cpp:87
+#, kde-format
+msgid "Show trace"
+msgstr "显示轨迹"
+
+#: joywidget.cpp:96 joywidget.cpp:300
+#, kde-format
+msgid "PRESSED"
+msgstr "已按下"
+
+#: joywidget.cpp:98
+#, kde-format
+msgid "Buttons:"
+msgstr "按钮："
+
+#: joywidget.cpp:102
+#, kde-format
+msgid "State"
+msgstr "状态"
+
+#: joywidget.cpp:110
+#, kde-format
+msgid "Axes:"
+msgstr "轴："
+
+#: joywidget.cpp:114
+#, kde-format
+msgid "Value"
+msgstr "数值"
+
+#: joywidget.cpp:127
+#, kde-format
+msgid "Calibrate"
+msgstr "校准"
+
+#: joywidget.cpp:190
+#, kde-format
+msgid ""
+"No joystick device automatically found on this computer.<br />Checks were "
+"done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
+"one attached, please enter the correct device file."
+msgstr ""
+"系统并未在此电脑中自动检测到游戏控制器。<br />系统已检测了 /dev/js[0-4] 和 /"
+"dev/input/js[0-4] 等位置。<br />如果您确定已经连接了游戏控制器，请输入正确的"
+"设备文件。"
+
+#: joywidget.cpp:226
+#, kde-format
+msgid ""
+"The given device name is invalid (does not contain /dev).\n"
+"Please select a device from the list or\n"
+"enter a device file, like /dev/js0."
+msgstr ""
+"指定的设备名称无效 (不包含 /dev)。\n"
+"请从列表中选择设备，或者输入设备文件，如 /dev/js0。"
+
+#: joywidget.cpp:229
+#, kde-format
+msgid "Unknown Device"
+msgstr "未知设备"
+
+#: joywidget.cpp:247
+#, kde-format
+msgid "Device Error"
+msgstr "设备错误"
+
+#: joywidget.cpp:265
+#, kde-format
+msgid "1(x)"
+msgstr "1(x)"
+
+#: joywidget.cpp:266
+#, kde-format
+msgid "2(y)"
+msgstr "2(y)"
+
+#: joywidget.cpp:331
+#, kde-format
+msgid ""
+"<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
+"all axes to their center position and then do not touch the joystick anymore."
+"</b><br /><br />Click OK to start the calibration.</qt>"
+msgstr ""
+"<qt>校准工具即将检查设备的输出精度。<br /><br /><b>请将控制器的全部轴归位到中"
+"间位置，此后不要再触碰控制器。</b><br /><br />单击确定按钮，开始校准。</qt>"
+
+#: joywidget.cpp:363
+#, kde-format
+msgid "Restored all calibration values for joystick device %1."
+msgstr "已经恢复了游戏控制器设备 %1 的全部校准数值。"

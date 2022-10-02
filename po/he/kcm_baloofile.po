@@ -1,0 +1,172 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm5_baloofile\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 11:32-0400\n"
+"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr ""
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate all your files based on their content"
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr "חיפוש קבצים עוזר לך למצוא במהירות את הקבצים שלך על בסיס תוכנם"
+
+#: package/contents/ui/main.qml:80
+#, fuzzy, kde-format
+#| msgid "Enable File Search"
+msgid "Enable File Search"
+msgstr "אפשר חיפוש קבצים"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "אנדקס גם את תוכן הקבצים"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr ""
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr ""
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr ""
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr ""
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr ""
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr ""
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to include"
+msgstr "בחר את התיקיות שימנעו מחיפוש"
+
+#: package/contents/ui/main.qml:294
+#, fuzzy, kde-format
+#| msgid "Select the folder which should be excluded"
+msgid "Select a folder to exclude"
+msgstr "בחר את התיקיות שימנעו מחיפוש"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "אלקנה ברדוגו"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ttv200@gmail.com"
+
+#, fuzzy
+#~| msgid "Enable File Search"
+#~ msgid "File Search"
+#~ msgstr "אפשר חיפוש קבצים"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "כל הזכויות שמורות ל־Sebastian Trüg"
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "התיקיה %1 כבר יוצאת דופן"
+
+#, fuzzy
+#~| msgid "Do not search in these locations"
+#~ msgid "Do not search in these locations:"
+#~ msgstr "אל תחפש במיקומים אלו"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "תיקית האב של %1 כבר יוצאת דופן"
+
+#~ msgid "Configure File Search"
+#~ msgstr "הגדרות חיפוש קבצים"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "תיקית השורש תמיש נסתרת"

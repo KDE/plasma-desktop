@@ -1,0 +1,64 @@
+# translation of plasma_applet_org.kde.plasma.showActivityManager.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2011.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.showActivityManager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-20 00:47+0000\n"
+"PO-Revision-Date: 2020-03-24 16:39+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.03.80\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: package/contents/ui/ConfigAppearance.qml:24
+#, kde-format
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: package/contents/ui/ConfigAppearance.qml:26
+#, kde-format
+msgid "Show the current activity icon"
+msgstr "Zobraziť ikonu aktuálnej aktivity"
+
+#: package/contents/ui/ConfigAppearance.qml:32
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr "Zobraziť všeobecnú ikonu aktivity"
+
+#: package/contents/ui/ConfigAppearance.qml:42
+#, kde-format
+msgid "Title:"
+msgstr "Názov:"
+
+#: package/contents/ui/ConfigAppearance.qml:44
+#, kde-format
+msgid "Show the current activity name"
+msgstr "Zobraziť názov aktuálnej aktivity"
+
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr "Zobraziť ikonu aktuálnej aktivity"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "Ukázať správcu aktivít"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "Kliknite na zobrazenie správcu aktivít"

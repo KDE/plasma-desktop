@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Mando de juegos</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-09</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>joystick</keyword>
+<keyword
+>mando</keyword>
+<keyword
+>gamepad</keyword>
+<keyword
+>calibrar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Calibrar el mando de juegos</title>
+
+<para
+>Este módulo proporciona una interfaz para calibrar su mando de juegos y para ver cuáles de sus funciones están mapeadas con un botón lógico o con un eje.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del módulo del mando de juegos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El módulo del mando de juegos</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Aquí puede configurar la dirección lógica del dispositivo. Si tiene más de un mando de juegos, también puede seleccionar cuál de ellos configurar. </para>
+<para
+>Si no se detecta ningún mando de juegos en su equipo y sabe que hay uno conectado, puede introducir aquí el archivo de dispositivo correcto. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Posición</guilabel
+></term>
+<listitem>
+<para
+>La dirección punteada de los ejes X e Y la palanca del mando de juegos. Active <guibutton
+>Mostrar rastro</guibutton
+> para dibujar la ruta del joystick de un punto a otro. </para>
+<tip
+><para
+>Si el joystick no puede alcanzar cada punto del gráfico, o si no se centra correctamente, necesitará calibrar su dispositivo. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Botones</guilabel
+></term>
+<listitem>
+<para
+>Un lugar para ver el estado de los botones pulsados en su mando de juegos y si los botones se han mapeado correctamente. Al pulsar un botón, se mostrará <guilabel
+>PULSADO</guilabel
+> al lado del número lógico (tal y como lo ve la máquina) del botón que se ha pulsado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ejes</guilabel
+></term>
+<listitem>
+<para
+>Muestra los valores numéricos de las posiciones de los ejes. 0 es centrado y los valores máximo y mínimo dependen del mando de juegos y del eje en particular. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Calibrar</guilabel
+></term>
+<listitem>
+<para
+>Pulsar sobre <guibutton
+>Calibrar</guibutton
+> abrirá un diálogo para calibrar cada eje en su mando de juegos. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Calibración del mando de juegos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Calibración del mando de juegos</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Cada eje deberá moverse a la posición mínima, a continuación centrarse y finalmente la posición máxima. Un contador en la esquina inferior izquierda del diálogo le ayudará a determinar como se incrementará y cómo se reducirá el valor. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

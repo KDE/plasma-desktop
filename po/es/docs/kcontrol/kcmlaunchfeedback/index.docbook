@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title
+>Notificación de inicio</title>
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego </surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+</articleinfo>
+
+<para
+>Algunas veces, es tranquilizador saber que su equipo no ignoró la orden que introdujo y que algo está ocurriendo entre bambalinas. En este módulo, puede configurar una notificación visible para ayudarle a saber si realmente pulsó o no el icono.</para>
+	
+<para
+>El modo tradicional de indicar que su equipo está ocupado es modificar el cursor y esto lo puede activar escogiendo un <guilabel
+>Cursor</guilabel
+>.</para>
+
+<para
+>Con esta opción activada, su cursor tendrá un icono adjunto durante un intervalo corto de tiempo, cuando se inicie una aplicación. Puede configurar cuanto tiempo se mostrará este icono junto al cursor con la casilla de edición numérica <guilabel
+>Detener animación tras:</guilabel
+>. El valor predeterminado es de 5 segundos.</para>
+
+<para
+>Están disponibles diversas variantes del icono del cursor ocupado, incluidos un <guilabel
+>Parpadeo</guilabel
+>, un <guilabel
+>Rebote</guilabel
+> o un icono de cursor <guilabel
+>Estático</guilabel
+> sin animación.</para>
+
+<para
+>La notificación de inicio tradicional de &plasma; ha tomado otra forma que puede activar y desactivar aquí. Normalmente, cuando inicie una aplicación, esta se muestra inmediatamente en la barra de tareas, con su icono sustituido por un reloj de arena girando para indicarle que se está haciendo algo. Puede cambiar este comportamiento en la casilla <guilabel
+>Activar animación</guilabel
+>.</para>
+
+<para
+>No todas las aplicaciones que inicie mostrarán una ventana o una entrada en la barra de tareas. Algunas, por ejemplo, se empotran en la bandeja del sistema de &plasma;. También puede ser que las haya enviado a un escritorio virtual diferente y que esté marcada la opción <guilabel
+>Mostrar solo las tareas del escritorio actual</guilabel
+> en la sección <guilabel
+>Filtros</guilabel
+> de las <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Preferencias del gestor de tareas</guilabel
+></ulink
+>. En estos casos, configurando un tiempo de espera, puede obtener notificación de inicio, pero desaparecerá en cuanto el trabajo haya acabado.</para>
+
+</article>

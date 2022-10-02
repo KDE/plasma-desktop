@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Verwijderbare apparaten</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>automatisch aankoppelen</keyword>
+<keyword
+>apparaat</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze dialoog biedt u de mogelijkheid automatische behandeling van verwijderbare opslagmedia configureren. </para>
+
+<para
+>Als u de automatische aankoppelfunctie in deze module inschakelt, dan is het niet nodig om om het applet voor apparaatnotificatie of het navigatiepaneel in de bestandsbeheerder te gebruiken om toegang te krijgen tot recent ingeplugde apparaten. </para>
+
+<para
+>Bovenaan de dialoog vindt u de globale instellingen, die overschreven kunnen worden voor elk enkel apparaat in de lijst <guilabel
+>Apparaten met voorrang</guilabel
+>. Voor een bureaublad met een enkele gebruiker is de aanbeveling om alle keuzevakjes hierboven te activeren in de voorranglijst. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Automatisch aankoppelen van verwijderbare media inschakelen</guilabel
+></term>
+<listitem
+><para
+>Indien dit is aangevinkt zal geen enkel apparaat automatisch worden aangekoppeld, wat er ook onder <guilabel
+>Apparaten met voorrang</guilabel
+> staat. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Alleen verwijderbare media automatisch aankoppelen als ze al een keer eerder handmatig zijn aangekoppeld</guilabel
+></term>
+<listitem
+><para
+>Indien dit is aangevinkt zal &plasma; alleen apparaten die het onthoudt automatisch aankoppelen Een apparaat wordt <quote
+>onthouden</quote
+> als het al eens eerder werd aangekoppeld &eg; het inpluggen van een &USB;-mediaspeler om op te laden is niet genoeg om deze te <quote
+>herinneren</quote
+>. Als de bestanden erop niet worden benaderd zal &plasma; hem de volgende keer niet meer automatisch aankoppelen. Vanaf het moment echter dat de bestanden wel worden gebruikt zal &plasma; de inhoud in het vervolg wel beschikbaar maken. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Alle verwijderbare media bij aanmelden automatisch aankoppelen</guilabel
+></term>
+<listitem
+><para
+>Als er verwijderbare opslagapparaten met uw systeem zijn verbonden wanneer u zich aanmeldt op uw bureaublad, dan zal &plasma; automatisch de inhoud beschikbaar stellen aan uw systeem om door andere programma's gelezen te worden. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Verwijderbare media automatisch aankoppelen als ze ingeplugd worden</guilabel
+></term>
+<listitem
+><para
+>Als dit is geactiveerd, zal &plasma; automatisch de inhoud van elk opslagapparaat beschikbaar stellen aan het systeem wanneer het wordt ingeplugd of aangesloten. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Automatisch aankoppelen</guilabel
+></term>
+<listitem
+><para
+>Deze lijst bevat de opslagapparaten die bekend zijn aan &plasma;. Als <guilabel
+>Bij aanmelden</guilabel
+>is geactiveerd zal het apparaat automatisch worden aangekoppeld zelfs als <guilabel
+>Alle verwijderbare media bij aanmelden automatisch aankoppelen</guilabel
+> niet is geactiveerd. Datzelfde is van toepassing op <guilabel
+>Aankoppelen bij insteken</guilabel
+>.</para>
+<para
+>Als <guilabel
+>Automatisch aankoppelen van verwijderbare media inschakelen</guilabel
+> niet is geactiveerd, dan is er geen voorrang en zullen geen apparaten automatisch aangekoppeld worden. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Apparaat vergeten</guibutton
+></term>
+<listitem
+><para
+>Op deze knop klikken heeft tot gevolg dat &plasma; <quote
+>vergeet</quote
+> dat het geselecteerde apparaat ooit bestond. Dit is alleen bruikbaar als <guilabel
+>Alleen automatisch verwijderbare media aankoppelen die eerder handmatig zijn aangekoppeld</guilabel
+> is geactiveerd. Wanneer een apparaat vergeten is en &plasma; is ingesteld om alleen automatisch bekende apparaten aan te koppelen, dan zal het apparaat niet automatisch worden aangekoppeld. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

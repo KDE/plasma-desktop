@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Вікно вітання</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>вікно вітання</keyword>
+<keyword
+>тема</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля ви зможете переглянути теми вітальних вікон і вибрати серед них бажану.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ось знімок екрана засобу для керування вітальними вікнами</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Модуль керування вітальними вікнами</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>За допомогою цієї сторінки ви можете переглядати вже встановлені у системі вікна вітання. Панель перегляду поточного вітального вікна виокремлено підсвічуванням.</para>
+
+<para
+>Наведіть на зображення попереднього перегляду вказівник миші, у відповідь програма покаже у нижньому правому куті зображення кнопку <guilabel
+>Ескіз вікна вітання</guilabel
+>. Натисніть цю кнопку, щоб ознайомитися із вікном вітання у дії.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Отримати нові вікна вітання…</guilabel
+></term>
+<listitem>
+<para
+>Щоб скористатися цією можливістю вам потрібне з’єднання з мережею Інтернет. У діалоговому вікні буде показано список тем з вебсайта <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Натискання кнопки <guibutton
+>Встановити</guibutton
+> поряд з пунктом, що відповідає певній темі, встановить тему на вашому комп’ютері. </para>
+<para>
+<screenshot>
+<screeninfo
+>Встановлення нової теми</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Встановлення нової теми</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ця нова тема негайно з’явиться підсвіченою у списку, тільки-но ви закриєте діалогове вікно отримання нових вікон вітання. У області попереднього перегляду буде показано відповідну картинку. Для того, щоб зробити цю тему вашою поточною темою вітального вікна, вам слід натиснути кнопку <guibutton
+>Застосувати</guibutton
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

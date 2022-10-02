@@ -1,0 +1,401 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"PO-Revision-Date: 2014-08-11 12:29+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:39
+#, fuzzy, kde-format
+#| msgid "Remove From Favorites"
+msgid "Remove from Favorites"
+msgstr "Ut de Leestekens wegmaken"
+
+#: package/contents/ui/code/tools.js:43
+#, fuzzy, kde-format
+#| msgid "Add To Favorites"
+msgid "Add to Favorites"
+msgstr "Na de Leestekens tofögen"
+
+#: package/contents/ui/code/tools.js:67
+#, kde-format
+msgid "On All Activities"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:117
+#, kde-format
+msgid "On the Current Activity"
+msgstr ""
+
+#: package/contents/ui/code/tools.js:131
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgid "Show in Favorites"
+msgstr "Leestekens"
+
+#: package/contents/ui/ConfigGeneral.qml:34
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:69
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:74
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:91
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:132
+#, kde-format
+msgctxt "General options"
+msgid "General:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:133
+#, fuzzy, kde-format
+#| msgid "Sort Alphabetically (A to Z)"
+msgid "Always sort applications alphabetically"
+msgstr "Alfabeetsch sorteren (A to Z)"
+
+#: package/contents/ui/ConfigGeneral.qml:138
+#, kde-format
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:144
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgid "Show favorites:"
+msgstr "Leestekens"
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:172
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:180
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgid "Show other applications:"
+msgstr "Programmen na Naam wiesen"
+
+#: package/contents/ui/ConfigGeneral.qml:181
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Show buttons for:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, fuzzy, kde-format
+#| msgid "Save Session"
+msgid "Session"
+msgstr "Törn sekern"
+
+#: package/contents/ui/ConfigGeneral.qml:220
+#, fuzzy, kde-format
+#| msgid "End session"
+msgid "Power and session"
+msgstr "Törn beennen"
+
+#: package/contents/ui/ConfigGeneral.qml:229
+#, kde-format
+msgid "Show action button captions"
+msgstr ""
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programmen"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr "Steden"
+
+#: package/contents/ui/Header.qml:63
+#, kde-format
+msgid "Open user settings"
+msgstr ""
+
+#: package/contents/ui/Header.qml:237
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/Kickoff.qml:283
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
+msgstr "Programmen bewerken..."
+
+#: package/contents/ui/KickoffGridView.qml:88
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr ""
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "Leave"
+msgstr "Verlaten"
+
+#: package/contents/ui/LeaveButtons.qml:71
+#, kde-format
+msgid "More"
+msgstr ""
+
+#: package/contents/ui/PlacesPage.qml:49
+#, fuzzy, kde-format
+#| msgid "Computer"
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Reekner"
+
+#: package/contents/ui/PlacesPage.qml:50
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr ""
+
+#: package/contents/ui/PlacesPage.qml:51
+#, fuzzy, kde-format
+#| msgid "Recently Installed"
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr "Annerlest installeert"
+
+#, fuzzy
+#~| msgid "Type to search..."
+#~ msgid "Search…"
+#~ msgstr "Typ, den Du söken wullt"
+
+#, fuzzy
+#~| msgid "Session"
+#~ msgid "Session actions"
+#~ msgstr "Törn"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave…"
+#~ msgstr "Verlaten"
+
+#, fuzzy
+#~| msgid "Edit Applications..."
+#~ msgid "Updating applications…"
+#~ msgstr "Programmen bewerken..."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#, fuzzy
+#~| msgid "Leave"
+#~ msgid "Leave..."
+#~ msgstr "Verlaten"
+
+#~ msgid "Applications updated."
+#~ msgstr "Programmen opfrischt."
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Paneels bi't Anrögen wesseln"
+
+#~ msgid "All Applications"
+#~ msgstr "All Programmen"
+
+#~ msgid "Favorites"
+#~ msgstr "Leestekens"
+
+#, fuzzy
+#~| msgid "Recently Used"
+#~ msgid "Often Used"
+#~ msgstr "Tolest bruukt"
+
+#~ msgid "Appearance"
+#~ msgstr "Utsehn"
+
+#~ msgctxt "@title:column"
+#~ msgid "Favorites"
+#~ msgstr "Leestekens"
+
+#~ msgid "Log out"
+#~ msgstr "Afmellen"
+
+#~ msgid "Lock"
+#~ msgstr "Afsluten"
+
+#~ msgid "Lock screen"
+#~ msgstr "Schirm afsluten"
+
+#~ msgid "Switch user"
+#~ msgstr "Bruker wesseln"
+
+#~ msgid "Start a parallel session as a different user"
+#~ msgstr "En nieg Törn as en anner Bruker anfangen"
+
+#~ msgid "Shut down"
+#~ msgstr "Utmaken"
+
+#~ msgid "Turn off computer"
+#~ msgstr "Reekner utmaken"
+
+#~ msgctxt "Restart computer"
+#~ msgid "Restart"
+#~ msgstr "Nieg starten"
+
+#~ msgid "Restart computer"
+#~ msgstr "Reekner nieg starten"
+
+#~ msgid "Save current session for next login"
+#~ msgstr "Aktuell Törn för't nakamen Anmellen sekern"
+
+#~ msgctxt "Puts the system on standby"
+#~ msgid "Standby"
+#~ msgstr "Praatschap"
+
+#~ msgid "Pause without logging out"
+#~ msgstr "Anhollen, man nich afmellen"
+
+#~ msgid "Hibernate"
+#~ msgstr "Infreren"
+
+#~ msgid "Suspend to disk"
+#~ msgstr "Op Fastplaat infreren"
+
+#, fuzzy
+#~| msgid "Suspend to RAM"
+#~ msgid "Suspend"
+#~ msgstr "Slapen (in't RAM)"
+
+#~ msgid "Suspend to RAM"
+#~ msgstr "Slapen (in't RAM)"
+
+#~ msgid "System"
+#~ msgstr "Systeem"
+
+#~ msgid "Home Folder"
+#~ msgstr "Tohuusorner"
+
+#~ msgid "Network Folders"
+#~ msgstr "Nettwarkornern"
+
+#~ msgid "Documents"
+#~ msgstr "Dokmenten"
+
+#~ msgid "Recently Used Documents"
+#~ msgstr "Tolest bruukt Dokmenten"
+
+#~ msgid "Recently Used Applications"
+#~ msgstr "Tolest bruukt Programmen"
+
+#~ msgid "Run Command..."
+#~ msgstr "Befehl utföhren..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "En Befehl oder en Söökanfraag utföhren"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Wessel-Spiekerreedschap"
+
+#~ msgid "Show 'Recently Installed'"
+#~ msgstr "„Annerlest installeerte“ wiesen"
+
+#~ msgid "Uninstall"
+#~ msgstr "Deinstalleren"
+
+#~ msgid "Sort Alphabetically (Z to A)"
+#~ msgstr "Alfabeetsch sorteren (Z to A)"
+
+#~ msgid "Clear Recent Applications"
+#~ msgstr "Tolest bruukt Programmen opkloren"
+
+#~ msgid "Clear Recent Documents"
+#~ msgstr "Tolest bruukt Dokmenten opkloren"
+
+#~ msgid "Sleep"
+#~ msgstr "Utsetten"
+
+#~ msgid "Plasma by KDE"
+#~ msgstr "Plasma vun KDE"

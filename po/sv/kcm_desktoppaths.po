@@ -1,0 +1,285 @@
+# translation of kcmkonq.po to Swedish
+# Översättning kcmkonq.po till Svenska
+# Copyright (C) 1999,2002,2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+#
+# Anders Widell <awl@hem.passagen.se>, 1999-2000.
+# Per Lindström <pelinsr@algonet.se>, 2000.
+# Mattias Newzella <newzella@linux.nu>, 2000, 2001, 2002,2003, 2004.
+# Stefan Asserhäll <stefan.asserhall@telia.com>, 2002.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkonq\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-03-19 09:22+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "Dokument"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "Nerladdat"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "Musik"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "Bilder"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "Videor"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>Sökvägar</h1>\n"
+"Denna modul låter dig välja var filer på skrivbordet lagras i filsystemet.\n"
+"Använd \"Vad är det här?\" (Skift+F1) för att få hjälp om specifika "
+"alternativ."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "Sökväg till skrivbord:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"Denna katalog innehåller alla filer som du ser på skrivbordet. Du kan ändra "
+"plats på denna katalog om du vill, och innehållet kommer automatiskt att "
+"flyttas till den nya platsen."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "Sökväg till dokument:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+"Denna katalog kommer att användas som förval när du laddar eller sparar "
+"dokument."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "Sökväg till nerladdat:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"Denna katalog kommer att användas som förval för att spara nerladdade objekt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "Sökväg till videor:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+"Denna katalog kommer att användas som förval när du laddar eller sparar "
+"filmer."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "Sökväg till bilder:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+"Denna katalog kommer att användas som förval när du laddar eller sparar "
+"bilder."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "Sökväg till musik:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"Denna katalog kommer att användas som förval när du laddar eller sparar "
+"musik."
+
+#~ msgid "Autostart path:"
+#~ msgstr "Sökväg till autostart:"
+
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "Denna katalog innehåller program eller länkar till program (genvägar) som "
+#~ "du vill starta automatiskt när sessionen startar. Du kan ändra plats på "
+#~ "denna katalog om du vill, och innehållet kommer att flyttas med "
+#~ "automatiskt till den nya platsen."
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Movies"
+#~ msgstr "Filmer"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ "Sökvägen för '%1' har ändrats.\n"
+#~ "Vill du att filerna ska flyttas från '%2' till '%3'?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "Flytta"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "Flytta inte"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ "Sökvägen för '%1' har ändrats.\n"
+#~ "Vill du flytta katalogen '%2' till '%3'?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "Flytta"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "Flytta inte"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "Bekräftelse krävs"
+
+#~ msgid ""
+#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
+#~ "file manager here."
+#~ msgstr ""
+#~ "<h1>Konqueror-uppträdande</h1> Här kan du anpassa hur Konqueror uppträder "
+#~ "som filhanterare."
+
+#~ msgid "Misc Options"
+#~ msgstr "Diverse inställningar"
+
+#~ msgid "Open folders in separate &windows"
+#~ msgstr "Öppna &kataloger i egna fönster"
+
+#~ msgid ""
+#~ "If this option is checked, Konqueror will open a new window when you open "
+#~ "a folder, rather than showing that folder's contents in the current "
+#~ "window."
+#~ msgstr ""
+#~ "Om det här alternativet är markerat kommer Konqueror att öppna ett nytt "
+#~ "fönster när du öppnar en katalog, i stället för att visa den katalogens "
+#~ "innehåll i det nuvarande fönstret."
+
+#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
+#~ msgstr "Visa me&nyalternativ för 'Ta bort' som förbigår papperskorgen"
+
+#~ msgid ""
+#~ "Check this if you want 'Delete' menu commands to be displayed on the "
+#~ "desktop and in the file manager's context menus. You can always delete "
+#~ "files by holding the Shift key while calling 'Move to Trash'."
+#~ msgstr ""
+#~ "Markera det här om du vill att menyalternativ för 'Ta bort' ska visas på "
+#~ "skrivbordet och i filhanterarens menyer och sammanhangsberoende menyer. "
+#~ "Du kan alltid ta bort filer genom att hålla nere skifttangenten när "
+#~ "'Flytta till papperskorg' används."
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menyeditor"
+
+#~ msgid "Menu"
+#~ msgstr "Meny"
+
+#~ msgid "New..."
+#~ msgstr "Ny..."
+
+#~ msgid "Remove"
+#~ msgstr "Ta bort"
+
+#~ msgid "Move Up"
+#~ msgstr "Flytta upp"
+
+#~ msgid "Move Down"
+#~ msgstr "Flytta ner"
+
+#~ msgctxt "@title:group what to do when a file is deleted"
+#~ msgid "Ask Confirmation For"
+#~ msgstr "Begär bekräftelse för att"
+
+#~ msgid ""
+#~ "This option tells Konqueror whether to ask for a confirmation when you "
+#~ "\"delete\" a file. <ul><li><em>Move To Trash:</em> moves the file to your "
+#~ "trash folder, from where it can be recovered very easily.</li> "
+#~ "<li><em>Delete:</em> simply deletes the file.</li> </ul>"
+#~ msgstr ""
+#~ "Detta alternativ talar om för Konqueror om du ska bli tillfrågad att "
+#~ "bekräfta när du \"tar bort\" en fil. <ul><li><em>Flytta till "
+#~ "papperskorgen:</em> flyttar filen till papperskorgen, varifrån den kan "
+#~ "återställas mycket enkelt.</li> <li><em>Ta bort:</em> tar helt enkelt "
+#~ "bort filen.</li> </ul>"
+
+#~ msgctxt "@option:check Ask for confirmation when moving to trash"
+#~ msgid "&Move to trash"
+#~ msgstr "Fl&ytta till papperskorgen"
+
+#~ msgctxt "@option:check Ask for confirmation when deleting"
+#~ msgid "D&elete"
+#~ msgstr "&Ta bort"

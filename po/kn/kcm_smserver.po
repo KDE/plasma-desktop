@@ -1,0 +1,266 @@
+# translation of kcmsmserver.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmsmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2008-12-29 15:40+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmsmserver.cpp:49
+#, kde-format
+msgid ""
+"<h1>Session Manager</h1> You can configure the session manager here. This "
+"includes options such as whether or not the session exit (logout) should be "
+"confirmed, whether the session should be restored again when logging in and "
+"whether the computer should be automatically shut down after session exit by "
+"default."
+msgstr ""
+"<h1>ಅಧಿವೇಶನ ನಿರ್ವಾಹಕ</h1> ಇಲ್ಲಿ ನೀವು ಅಧಿವೇಶನದ ನಿರ್ವಾಹಕನನ್ನು ಸಂರಚಿಸಬಹುದಾಗಿದೆ. "
+"ಇದರಲ್ಲಿ ಅಧಿವೇಶನದ ನಿರ್ಗಮನವನ್ನು ಖಚಿತಪಡಿಸಬೇಕೆ (ನಿರ್ಗಮನ), ಮರಳಿ ಪ್ರವೇಶಿಸಿದಾಗ "
+"ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸಬೇಕೆ ಹಾಗು ಅಧಿವೇಶನದಿಂದ ನಿರ್ಗಮಿಸಿದಾಗ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ "
+"ಗಣಕವು ಸ್ಥಗಿತಗೊಳ್ಳಬೇಕೆ ಎನ್ನುಂತಹ ಹಲವಾರು ಆಯ್ಕೆಗಳು ಒಳಗೊಂಡಿವೆ."
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+
+#: package/contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
+msgstr "ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸು(&R)"
+
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: package/contents/ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgctxt "@option:check"
+msgid "Confirm logout"
+msgstr "ಖಚಿತಪಡಿಸು ಹಾಗು ನಿರ್ಗಮಿಸು(&i)"
+
+#: package/contents/ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgctxt "@option:check"
+msgid "Offer shutdown options"
+msgstr "ಸ್ಥಗಿತಗೊಳಿಸುವ ಆಯ್ಕೆಗಳನ್ನು ಒದಗಿಸು(&f)"
+
+#: package/contents/ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option:"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಗಿತ ಆಯ್ಕೆ"
+
+#: package/contents/ui/main.qml:66
+#, fuzzy, kde-format
+#| msgid "&End current session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "End current session"
+msgstr "ಪ್ರಸಕ್ತ ಅಧಿವೇಶನವನ್ನು ಮುಗಿಸು(&E)"
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgctxt "@option:radio"
+msgid "Restart computer"
+msgstr "ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸು(&R)"
+
+#: package/contents/ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "&Turn off computer"
+msgctxt "@option:radio"
+msgid "Turn off computer"
+msgstr "ಗಣಕವನ್ನು ಮುಚ್ಚು(&T)"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "When logging in:"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last session"
+msgstr "ಉಳಿಸಲಾದ ಅಧಿವೇಶನವನ್ನು ಕೈಯಾರೆ ಮರಳಿ ಸ್ಥಾಪಿಸು(&m)"
+
+#: package/contents/ui/main.qml:113
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Restore last manually saved session"
+msgstr "ಉಳಿಸಲಾದ ಅಧಿವೇಶನವನ್ನು ಕೈಯಾರೆ ಮರಳಿ ಸ್ಥಾಪಿಸು(&m)"
+
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ಖಾಲಿ ಅಧೀವೇಶನದೊಂದಿಗೆ ಆರಂಭಿಸು(&s)"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Don't restore these applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgid ""
+"Here you can enter a colon or comma separated list of applications that "
+"should not be saved in sessions, and therefore will not be started when "
+"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+msgstr ""
+"ಇಲ್ಲಿ ನೀವು ಅಧಿವೇಶನಗಳಲ್ಲಿ ಉಳಿಸಲು ವಿವರಣ ಚಿಹ್ನೆ ಅಥವ ಅರ್ಧವಿರಾಮ ಚಿಹ್ನೆಯನ್ನು ಒಳಗೊಂಡಿರುವ "
+"ಅನ್ವಯಗಳ ಪಟ್ಟಿಯನ್ನು ನೀಡಬಹುದು, ಹಾಗು ಒಂದು ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸಿದಾಗ ಅವುಗಳು "
+"ಆರಂಭಗೊಳ್ಳುವುದಿಲ್ಲ. ಉದಾಹರಣೆಗೆ 'xterm:konsole' ಅಥವ 'xterm,konsole'."
+
+#: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen on next restart"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "ಖಚಿತಪಡಿಸು ಹಾಗು ನಿರ್ಗಮಿಸು(&i)"
+
+#. i18n: ectx: label, entry (offerShutdown), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "O&ffer shutdown options"
+msgid "Offer shutdown options"
+msgstr "ಸ್ಥಗಿತಗೊಳಿಸುವ ಆಯ್ಕೆಗಳನ್ನು ಒದಗಿಸು(&f)"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಗಿತ ಆಯ್ಕೆ"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "ಪ್ರವೇಶಿಸಿದಾಗ"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:30
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "ಅಧಿವೇಶನಗಳಿಂದ ಹೊರಗಿಡಬೇಕಿರುವ ಅನ್ವಯಗಳು(&x):"
+
+#, fuzzy
+#~| msgid "Restore &previous session"
+#~ msgid "Desktop Session"
+#~ msgstr "ಹಿಂದಿನ ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸು(&p)"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgid "Restore previous saved session"
+#~ msgstr "ಉಳಿಸಲಾದ ಅಧಿವೇಶನವನ್ನು ಕೈಯಾರೆ ಮರಳಿ ಸ್ಥಾಪಿಸು(&m)"
+
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "ಅಧಿವೇಶನ ನಿರ್ವಾಹಕವು ಒಂದು ನಿರ್ಗಮನ ಖಚಿತಪಡಿಸುವಿಕೆಯ ಸಂವಾದ ಪೆಟ್ಟಿಗೆಯನ್ನು ತೋರಿಸಲು "
+#~ "ನೀವು ಬಯಸಿದಲ್ಲಿ ಇದನ್ನು ಗುರುತು ಹಾಕಿ."
+
+#~ msgid "Conf&irm logout"
+#~ msgstr "ಖಚಿತಪಡಿಸು ಹಾಗು ನಿರ್ಗಮಿಸು(&i)"
+
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "ಸ್ಥಗಿತಗೊಳಿಸುವ ಆಯ್ಕೆಗಳನ್ನು ಒದಗಿಸು(&f)"
+
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "ನೀವು ನಿರ್ಗಮಿಸಿದಾಗ ಏನು ಆಗಬೇಕು ಎಂದು ಇಲ್ಲಿ ನೀವು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಆಯ್ಕೆ ಮಾಡಬಹುದು. "
+#~ "ಕೇವಲ ನೀವು KDM ಮೂಲಕ ನಿರ್ಗಮಿಸಿದಲ್ಲಿ ಮಾತ್ರ ಇದಕ್ಕೆ ಅರ್ಥವಿರುತ್ತದೆ."
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default Leave Option"
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಗಿತ ಆಯ್ಕೆ"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li><b>ಹಿಂದಿನ ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸು:</b> ನಿರ್ಗಮಿಸುವ ಸಂದರ್ಭದಲ್ಲಿ "
+#~ "ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿದ್ದಂತಹ ಎಲ್ಲಾ ಅನ್ವಯಗಳು ಉಳಿಸಲ್ಪಡುತ್ತವೆ ಹಾಗು ಮುಂದಿನ ಭಾರಿ ಆರಂಭಿಸಿದಾಗ "
+#~ "ಮರಳಿ ಸ್ಥಾಪಿಸಲ್ಪಡುತ್ತವೆ</li>\n"
+#~ "<li><b>ಉಳಿಸಲಾದ ಅಧೀವೇಶನವನ್ನು ಕೈಯಾರೆ ಮರು ಸ್ಥಾಪಿಸು: </b> K-ಮೆನುವಿನಲ್ಲಿನ "
+#~ "\"ಅಧಿವೇಶನವನ್ನು ಉಳಿಸು\" ಅನ್ನು ಬಳಸಿಕೊಂಡು ಅಧಿವೇಶನವನ್ನು ಉಳಿಸಲು ಅನುವು "
+#~ "ಮಾಡಿಕೊಡುತ್ತದೆ. ಅಂದರೆ ಈಗ ಆರಂಭಗೊಂಡಿರುವ ಅನ್ವಯಗಳು ಮುಂದಿನ ಬಾರಿ ಆರಂಭಿಸಿದಾಗ ಮರಳಿ "
+#~ "ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.</li>\n"
+#~ "<li><b>ಖಾಲಿ ಅಧಿವೇಶನದೊಂದಿಗೆ ಆರಂಭಿಸು:</b> ಏನನ್ನೂ ಉಳಿಸಲಾಗುವುದಿಲ್ಲ. ಮುಂದಿನ ಬಾರಿ "
+#~ "ಆರಂಭಿಸಿದಾಗ ಒಂದು ಖಾಲಿ ಗಣಕತೆರೆಯೊಂದಿಗೆ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ.</li>\n"
+#~ "</ul>"
+
+#~ msgid "On Login"
+#~ msgstr "ಪ್ರವೇಶಿಸಿದಾಗ"
+
+#~ msgid "Applications to be e&xcluded from sessions:"
+#~ msgstr "ಅಧಿವೇಶನಗಳಿಂದ ಹೊರಗಿಡಬೇಕಿರುವ ಅನ್ವಯಗಳು(&x):"
+
+#~ msgid "Session Manager"
+#~ msgstr "ಅಧಿವೇಶನ ನಿರ್ವಾಹಕ"

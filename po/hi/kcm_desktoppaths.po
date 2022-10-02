@@ -1,0 +1,201 @@
+# translation of kcm_desktoppaths.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoppaths\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"PO-Revision-Date: 2021-10-11 12:02+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.08.2\n"
+
+#: desktoppathssettings.cpp:173
+#, kde-format
+msgid "Desktop"
+msgstr "डेस्कटॉप"
+
+#: desktoppathssettings.cpp:188
+#, kde-format
+msgid "Documents"
+msgstr "दस्तावेज़"
+
+#: desktoppathssettings.cpp:203
+#, kde-format
+msgid "Downloads"
+msgstr "डॉउनलोड"
+
+#: desktoppathssettings.cpp:218
+#, kde-format
+msgid "Music"
+msgstr "संगीत"
+
+#: desktoppathssettings.cpp:233
+#, kde-format
+msgid "Pictures"
+msgstr "छवियाँ"
+
+#: desktoppathssettings.cpp:248
+#, kde-format
+msgid "Videos"
+msgstr "वीडियो"
+
+#: globalpaths.cpp:32
+#, kde-format
+msgid ""
+"<h1>Paths</h1>\n"
+"This module allows you to choose where in the filesystem the files on your "
+"desktop should be stored.\n"
+"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+msgstr ""
+"<h1>पथ</h1>\n"
+"यह मॉड्यूल आपको डेस्कटॉप में स्थित फाइलों को फ़ाइल-तंत्र में कहाँ संग्रहीत किया जाना चाहिए "
+"यह चुनने की अनुमति देता है।\"यह क्या है?\" का प्रयोग करें (Shift+F1) विशिष्ट विकल्पों पर "
+"सहायता प्राप्त करने के लिए।"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: globalpaths.ui:17
+#, kde-format
+msgid "Desktop path:"
+msgstr "डेस्कटॉप पथ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
+#: globalpaths.ui:24
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: globalpaths.ui:34
+#, kde-format
+msgid "Documents path:"
+msgstr "दस्तावेज़ का पथः"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
+#: globalpaths.ui:41
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा दस्तावेज़ को लोड करने या सहेजने में उपयोग में लिया जाएगा."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: globalpaths.ui:51
+#, kde-format
+msgid "Downloads path:"
+msgstr "डॉउनलोड का पथः"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
+#: globalpaths.ui:58
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+"यह फ़ोल्डर डिफ़ॉल्ट द्वारा डॉउलोड किए हुए को लोड करने या सहेजने में उपयोग में लिया जाएगा."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: globalpaths.ui:68
+#, kde-format
+msgid "Videos path:"
+msgstr "वीडियो का पथ :"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
+#: globalpaths.ui:75
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा चलचित्रों को लोड करने या सहेजने में उपयोग में लिया जाएगा."
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: globalpaths.ui:85
+#, kde-format
+msgid "Pictures path:"
+msgstr "छवियों का पथः"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
+#: globalpaths.ui:92
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा छवियों को लोड करने या सहेजने में उपयोग में लिया जाएगा."
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: globalpaths.ui:102
+#, kde-format
+msgid "Music path:"
+msgstr "संगीत का पथः"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
+#: globalpaths.ui:109
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा संगीत को लोड करने या सहेजने में उपयोग में लिया जाएगा."
+
+#~ msgid "Autostart path:"
+#~ msgstr "स्वतः प्रारंभ पथः"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder contains all the files which you see on your desktop. You "
+#~| "can change the location of this folder if you want to, and the contents "
+#~| "will move automatically to the new location as well."
+#~ msgid ""
+#~ "This folder contains applications or links to applications (shortcuts) "
+#~ "that you want to have started automatically whenever the session starts. "
+#~ "You can change the location of this folder if you want to, and the "
+#~ "contents will move automatically to the new location as well."
+#~ msgstr ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+
+#~ msgid "Autostart"
+#~ msgstr "स्वतः चालू"
+
+#~ msgid "Movies"
+#~ msgstr "चलचित्र"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want the files to be moved from '%2' to '%3'?"
+#~ msgstr ""
+#~ " '%1' के लिए पथ बदल दिया गया है;\n"
+#~ "क्या आप चाहते हैं कि फ़ाइलों को '%2' से '%3' पर ले जाया जाए?"
+
+#~ msgctxt "Move files from old to new place"
+#~ msgid "Move"
+#~ msgstr "खिसकाएँ"
+
+#~ msgctxt "Use the new directory but do not move files"
+#~ msgid "Do not Move"
+#~ msgstr "नहीं खिसकाएँ"
+
+#~ msgid ""
+#~ "The path for '%1' has been changed.\n"
+#~ "Do you want to move the directory '%2' to '%3'?"
+#~ msgstr ""
+#~ " '%1' के लिए पथ बदल दिया गया है;\n"
+#~ "क्या आप चाहते हैं कि फ़ाइलों को '%2' से '%3' पर ले जाया जाए?"
+
+#~ msgctxt "Move the directory"
+#~ msgid "Move"
+#~ msgstr "खिसकाएँ"
+
+#~ msgctxt "Use the new directory but do not move anything"
+#~ msgid "Do not Move"
+#~ msgstr "खिसकाएँ नहीं"
+
+#~ msgid "Confirmation Required"
+#~ msgstr "पुष्टि आवश्यक"

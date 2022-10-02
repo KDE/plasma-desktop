@@ -1,0 +1,1246 @@
+# Translation for plasma_applet_org.kde.desktopcontainment.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2018, Free Software Foundation.
+# Copyright (C) 2019-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022.
+# marcos <marcos@euskalgnu.org>, 2010.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:47+0000\n"
+"PO-Revision-Date: 2022-07-07 21:19+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: package/contents/config/config.qml:16
+#, kde-format
+msgid "Location"
+msgstr "Kokalekua"
+
+#: package/contents/config/config.qml:23
+#: package/contents/ui/FolderViewLayer.qml:428
+#, kde-format
+msgid "Icons"
+msgstr "Ikonoak"
+
+#: package/contents/config/config.qml:30
+#, kde-format
+msgid "Filter"
+msgstr "Iragazkia"
+
+#: package/contents/ui/BackButtonItem.qml:103
+#, kde-format
+msgid "Back"
+msgstr "Atzera"
+
+#: package/contents/ui/ConfigFilter.qml:63
+#, kde-format
+msgid "Files:"
+msgstr "Fitxategiak:"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show all"
+msgstr "Erakutsi denak"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Show matching"
+msgstr "Erakutsi bat datozenak"
+
+#: package/contents/ui/ConfigFilter.qml:64
+#, kde-format
+msgid "Hide matching"
+msgstr "Ezkutatu bat datozenak"
+
+#: package/contents/ui/ConfigFilter.qml:69
+#, kde-format
+msgid "File name pattern:"
+msgstr "Fitxategi-izenaren eredua:"
+
+#: package/contents/ui/ConfigFilter.qml:76
+#, kde-format
+msgid "File types:"
+msgstr "Fitxategi motak:"
+
+#: package/contents/ui/ConfigFilter.qml:175
+#, kde-format
+msgid "File type"
+msgstr "Fitxategi mota"
+
+#: package/contents/ui/ConfigFilter.qml:184
+#, kde-format
+msgid "Description"
+msgstr "Azalpena"
+
+#: package/contents/ui/ConfigFilter.qml:197
+#, kde-format
+msgid "Select All"
+msgstr "Hautatu guztia"
+
+#: package/contents/ui/ConfigFilter.qml:207
+#, kde-format
+msgid "Deselect All"
+msgstr "Desautatu guztia"
+
+#: package/contents/ui/ConfigIcons.qml:63
+#, kde-format
+msgid "Panel button:"
+msgstr "Paneleko botoia:"
+
+#: package/contents/ui/ConfigIcons.qml:69
+#, kde-format
+msgid "Use a custom icon"
+msgstr "Erabili ikono pertsonalizatua"
+
+#: package/contents/ui/ConfigIcons.qml:103
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Hautatu..."
+
+#: package/contents/ui/ConfigIcons.qml:109
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Kendu ikonoa"
+
+#: package/contents/ui/ConfigIcons.qml:129
+#, kde-format
+msgid "Arrangement:"
+msgstr "Antolaketa:"
+
+#: package/contents/ui/ConfigIcons.qml:133
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Left to Right"
+msgstr "Ezkerretik eskuinera"
+
+#: package/contents/ui/ConfigIcons.qml:134
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Right to Left"
+msgstr "Eskuinetik ezkerrera"
+
+#: package/contents/ui/ConfigIcons.qml:135
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Goitik behera"
+
+#: package/contents/ui/ConfigIcons.qml:144
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align left"
+msgstr "Lerrokatu ezkerrean"
+
+#: package/contents/ui/ConfigIcons.qml:145
+#, kde-format
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Align right"
+msgstr "Lerrokatu eskuinean"
+
+#: package/contents/ui/ConfigIcons.qml:160
+#, kde-format
+msgid "Lock in place"
+msgstr "Giltzatu lekuan"
+
+#: package/contents/ui/ConfigIcons.qml:174
+#, kde-format
+msgid "Sorting:"
+msgstr "Sailkatzea:"
+
+#: package/contents/ui/ConfigIcons.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort icons manually"
+msgid "Manual"
+msgstr "Eskuz"
+
+#: package/contents/ui/ConfigIcons.qml:183
+#, kde-format
+msgctxt "@item:inlistbox sort icons by name"
+msgid "Name"
+msgstr "Izena"
+
+#: package/contents/ui/ConfigIcons.qml:184
+#, kde-format
+msgctxt "@item:inlistbox sort icons by size"
+msgid "Size"
+msgstr "Neurria"
+
+#: package/contents/ui/ConfigIcons.qml:185
+#, kde-format
+msgctxt "@item:inlistbox sort icons by file type"
+msgid "Type"
+msgstr "Mota"
+
+#: package/contents/ui/ConfigIcons.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort icons by date"
+msgid "Date"
+msgstr "Data"
+
+#: package/contents/ui/ConfigIcons.qml:197
+#, kde-format
+msgctxt "@option:check sort icons in descending order"
+msgid "Descending"
+msgstr "Beherakorra"
+
+#: package/contents/ui/ConfigIcons.qml:205
+#, kde-format
+msgctxt "@option:check sort icons with folders first"
+msgid "Folders first"
+msgstr "Karpetak aurrena"
+
+#: package/contents/ui/ConfigIcons.qml:219
+#, kde-format
+msgctxt "whether to use icon or list view"
+msgid "View mode:"
+msgstr "Ikuspegi-modua:"
+
+#: package/contents/ui/ConfigIcons.qml:221
+#, kde-format
+msgctxt "@item:inlistbox show icons in a list"
+msgid "List"
+msgstr "Zerrenda"
+
+#: package/contents/ui/ConfigIcons.qml:222
+#, kde-format
+msgctxt "@item:inlistbox show icons in a grid"
+msgid "Grid"
+msgstr "Sareta"
+
+#: package/contents/ui/ConfigIcons.qml:233
+#, kde-format
+msgid "Icon size:"
+msgstr "Ikonoen neurria:"
+
+#: package/contents/ui/ConfigIcons.qml:248
+#, kde-format
+msgctxt "@label:slider smallest icon size"
+msgid "Small"
+msgstr "Txikia"
+
+#: package/contents/ui/ConfigIcons.qml:257
+#, kde-format
+msgctxt "@label:slider largest icon size"
+msgid "Large"
+msgstr "Handia"
+
+#: package/contents/ui/ConfigIcons.qml:266
+#, kde-format
+msgid "Label width:"
+msgstr "Etiketen zabalera:"
+
+#: package/contents/ui/ConfigIcons.qml:269
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Narrow"
+msgstr "Estua"
+
+#: package/contents/ui/ConfigIcons.qml:270
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Medium"
+msgstr "Ertaina"
+
+#: package/contents/ui/ConfigIcons.qml:271
+#, kde-format
+msgctxt "@item:inlistbox how long a text label should be"
+msgid "Wide"
+msgstr "Zabala"
+
+#: package/contents/ui/ConfigIcons.qml:279
+#, kde-format
+msgid "Text lines:"
+msgstr "Testu lerroak:"
+
+#: package/contents/ui/ConfigIcons.qml:295
+#, kde-format
+msgid "When hovering over icons:"
+msgstr "Ikonoen gainetik igarotzean:"
+
+#: package/contents/ui/ConfigIcons.qml:297
+#, kde-format
+msgid "Show tooltips"
+msgstr "Erakutsi argibideak"
+
+#: package/contents/ui/ConfigIcons.qml:304
+#, kde-format
+msgid "Show selection markers"
+msgstr "Eraktusi hautapen markatzaileak"
+
+#: package/contents/ui/ConfigIcons.qml:311
+#, kde-format
+msgid "Show folder preview popups"
+msgstr "Erakutsi Karpeta-aurreikuspegi gainerakorrak"
+
+#: package/contents/ui/ConfigIcons.qml:321
+#, kde-format
+msgid "Rename:"
+msgstr "Berrizendatu:"
+
+#: package/contents/ui/ConfigIcons.qml:325
+#, kde-format
+msgid "Rename inline by clicking selected item's text"
+msgstr ""
+"Berrizendatu, lerro barruan, hautatutako elementuaren testuan klik eginez"
+
+#: package/contents/ui/ConfigIcons.qml:336
+#, kde-format
+msgid "Previews:"
+msgstr "Aurreikuspegiak:"
+
+#: package/contents/ui/ConfigIcons.qml:338
+#, kde-format
+msgid "Show preview thumbnails"
+msgstr "Erakutsi aurreikuspegi koadro txikiak"
+
+#: package/contents/ui/ConfigIcons.qml:346
+#, kde-format
+msgid "Configure Preview Plugins…"
+msgstr "Konfiguratu aurreikuspegi pluginak..."
+
+#: package/contents/ui/ConfigLocation.qml:81
+#, kde-format
+msgid "Show:"
+msgstr "Erakutsi:"
+
+#: package/contents/ui/ConfigLocation.qml:83
+#, kde-format
+msgid "Desktop folder"
+msgstr "Mahaigaineko karpeta"
+
+#: package/contents/ui/ConfigLocation.qml:90
+#, kde-format
+msgid "Files linked to the current activity"
+msgstr "Uneko jarduerarekin lotutako fitxategiak"
+
+#: package/contents/ui/ConfigLocation.qml:97
+#, kde-format
+msgid "Places panel item:"
+msgstr "Lekuak panelaren elementuak:"
+
+#: package/contents/ui/ConfigLocation.qml:130
+#, kde-format
+msgid "Custom location:"
+msgstr "Norberak finkatutako kokalekua:"
+
+#: package/contents/ui/ConfigLocation.qml:138
+#, kde-format
+msgid "Type path or URL…"
+msgstr "Tekleatu bide-izena edo URLa..."
+
+#: package/contents/ui/ConfigLocation.qml:181
+#, kde-format
+msgid "Title:"
+msgstr "Titulua:"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "None"
+msgstr "Bat ere ez"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Default"
+msgstr "Lehenetsia"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Full path"
+msgstr "Bide-izen osoa"
+
+#: package/contents/ui/ConfigLocation.qml:183
+#, kde-format
+msgid "Custom title"
+msgstr "Titulu pertsonalizatua"
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgid "Enter custom title…"
+msgstr "Sartu norberak finkatutako titulua..."
+
+#: package/contents/ui/ConfigOverlay.qml:87
+#, kde-format
+msgid "Rotate"
+msgstr "Biratu"
+
+#: package/contents/ui/ConfigOverlay.qml:178
+#, kde-format
+msgid "Open Externally"
+msgstr "Kanpotik irekitzea"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Hide Background"
+msgstr "Ezkutatu atzealdea"
+
+#: package/contents/ui/ConfigOverlay.qml:190
+#, kde-format
+msgid "Show Background"
+msgstr "Erakutsi atzealdea"
+
+#: package/contents/ui/ConfigOverlay.qml:238
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#, kde-format
+msgid "Preview Plugins"
+msgstr "Aurreikusteko pluginak"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
+#, kde-format
+msgid "OK"
+msgstr "Ados"
+
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
+#, kde-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#: package/contents/ui/main.qml:356
+#, kde-format
+msgid "Configure Desktop and Wallpaper…"
+msgstr "Konfiguratu mahaigaina eta horma-papera..."
+
+#: plugins/folder/directorypicker.cpp:32
+#, kde-format
+msgid "Select Folder"
+msgstr "Hautatu karpeta"
+
+#: plugins/folder/foldermodel.cpp:464
+#, kde-format
+msgid "&Refresh Desktop"
+msgstr "F&reskatu mahaigaina"
+
+#: plugins/folder/foldermodel.cpp:464 plugins/folder/foldermodel.cpp:1622
+#, kde-format
+msgid "&Refresh View"
+msgstr "F&reskatu ikuspegia"
+
+#: plugins/folder/foldermodel.cpp:1631
+#, kde-format
+msgid "&Empty Trash"
+msgstr "&Hustu zakarrontzia"
+
+#: plugins/folder/foldermodel.cpp:1634
+#, kde-format
+msgctxt "Restore from trash"
+msgid "Restore"
+msgstr "Lehengoratu"
+
+#: plugins/folder/foldermodel.cpp:1637
+#, kde-format
+msgid "&Open"
+msgstr "&Ireki"
+
+#: plugins/folder/foldermodel.cpp:1752
+#, kde-format
+msgid "&Paste"
+msgstr "&Itsatsi"
+
+#: plugins/folder/foldermodel.cpp:1869
+#, kde-format
+msgid "&Properties"
+msgstr "&Propietateak"
+
+#: plugins/folder/viewpropertiesmenu.cpp:21
+#, kde-format
+msgid "Sort By"
+msgstr "Sailkatu honen arabera"
+
+#: plugins/folder/viewpropertiesmenu.cpp:24
+#, kde-format
+msgctxt "@item:inmenu Sort icons manually"
+msgid "Unsorted"
+msgstr "Sailkatu gabe"
+
+#: plugins/folder/viewpropertiesmenu.cpp:28
+#, kde-format
+msgctxt "@item:inmenu Sort icons by name"
+msgid "Name"
+msgstr "Izena"
+
+#: plugins/folder/viewpropertiesmenu.cpp:32
+#, kde-format
+msgctxt "@item:inmenu Sort icons by size"
+msgid "Size"
+msgstr "Neurria"
+
+#: plugins/folder/viewpropertiesmenu.cpp:36
+#, kde-format
+msgctxt "@item:inmenu Sort icons by file type"
+msgid "Type"
+msgstr "Mota"
+
+#: plugins/folder/viewpropertiesmenu.cpp:40
+#, kde-format
+msgctxt "@item:inmenu Sort icons by date"
+msgid "Date"
+msgstr "Data"
+
+#: plugins/folder/viewpropertiesmenu.cpp:45
+#, kde-format
+msgctxt "@item:inmenu Sort icons in descending order"
+msgid "Descending"
+msgstr "Beherakorra"
+
+#: plugins/folder/viewpropertiesmenu.cpp:47
+#, kde-format
+msgctxt "@item:inmenu Sort icons with folders first"
+msgid "Folders First"
+msgstr "Karpetak aurrena"
+
+#: plugins/folder/viewpropertiesmenu.cpp:50
+#, kde-format
+msgid "Icon Size"
+msgstr "Ikonoen neurria"
+
+#: plugins/folder/viewpropertiesmenu.cpp:53
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Tiny"
+msgstr "Ñimiñoa"
+
+#: plugins/folder/viewpropertiesmenu.cpp:54
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Very Small"
+msgstr "Oso txikia"
+
+#: plugins/folder/viewpropertiesmenu.cpp:55
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small"
+msgstr "Txikia"
+
+#: plugins/folder/viewpropertiesmenu.cpp:56
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Small-Medium"
+msgstr "txiki-ertaina"
+
+#: plugins/folder/viewpropertiesmenu.cpp:57
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Medium"
+msgstr "Ertaina"
+
+#: plugins/folder/viewpropertiesmenu.cpp:58
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Large"
+msgstr "Handia"
+
+#: plugins/folder/viewpropertiesmenu.cpp:59
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "Huge"
+msgstr "Itzela"
+
+#: plugins/folder/viewpropertiesmenu.cpp:67
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr "Antolatu"
+
+#: plugins/folder/viewpropertiesmenu.cpp:71
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Left to Right"
+msgstr "Ezkerretik eskuinera"
+
+#: plugins/folder/viewpropertiesmenu.cpp:72
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Right to Left"
+msgstr "Eskuinetik ezkerrera"
+
+#: plugins/folder/viewpropertiesmenu.cpp:76
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "Top to Bottom"
+msgstr "Goitik behera"
+
+#: plugins/folder/viewpropertiesmenu.cpp:81
+#, kde-format
+msgid "Align"
+msgstr "Lerrokatu"
+
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left"
+msgstr "Ezkerrean"
+
+#: plugins/folder/viewpropertiesmenu.cpp:88
+#, kde-format
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right"
+msgstr "Eskuinean"
+
+#: plugins/folder/viewpropertiesmenu.cpp:93
+#, kde-format
+msgid "Show Previews"
+msgstr "Erakutsi aurreikuspegiak"
+
+#: plugins/folder/viewpropertiesmenu.cpp:97
+#, kde-format
+msgctxt "@item:inmenu lock icon positions in place"
+msgid "Locked"
+msgstr "Giltzatuta"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Errenkadatan"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Zutabetan"
+
+#, fuzzy
+#~| msgid "Rows"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Rows"
+#~ msgstr "Errenkadatan"
+
+#, fuzzy
+#~| msgid "Columns"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Columns"
+#~ msgstr "Zutabetan"
+
+#~ msgid "Features:"
+#~ msgstr "Eginbideak:"
+
+#~ msgid "Search…"
+#~ msgstr "Bilatu..."
+
+#~ msgid "&Create Folder"
+#~ msgstr "S&ortu karpeta..."
+
+#~ msgid "Tweaks"
+#~ msgstr "Egokitzapenak"
+
+#~ msgid ""
+#~ "With the Desktop Toolbox hidden, right-click on the desktop and choose "
+#~ "'Configure Desktop...' to access this configuration window in the future"
+#~ msgstr ""
+#~ "Mahaigaineko tresna-kutxa ezkutuan dagoenean, eskuin-klik egin "
+#~ "mahaigainean eta aukeratu 'Konfiguratu mahaigaina...' konfiguratzeko "
+#~ "leiho hau etorkizunean atzitzeko"
+
+#~ msgid "Show the desktop toolbox"
+#~ msgstr "Erakutsi Mahaigaineko tresna-kutxa"
+
+#~ msgid "Press and hold widgets to move them and reveal their handles"
+#~ msgstr ""
+#~ "Zanpatu trepetak eta eutsi, haiek mugitu eta euren heldulekuak erakusteko"
+
+#~ msgid "Widgets unlocked"
+#~ msgstr "Trepetak giltzatu gabe"
+
+#~ msgid ""
+#~ "You can press and hold widgets to move them and reveal their handles."
+#~ msgstr ""
+#~ "Trepetak zanpatu eta eutsi ditzakezu, haiek mugitu eta euren heldulekuak "
+#~ "erakusteko."
+
+#~ msgid "Got it"
+#~ msgstr "Ulertuta"
+
+#~ msgid "Resize"
+#~ msgstr "Neurria aldatu"
+
+#~ msgid "Show All Files"
+#~ msgstr "Erakutsi fitxategi guztiak"
+
+#~ msgid "Size:"
+#~ msgstr "Neurria:"
+
+#~ msgid "Desktop Layout"
+#~ msgstr "Mahaigainaren diseinua"
+
+#~ msgid "Widget Handling"
+#~ msgstr "Trepeten kudeaketa"
+
+#~ msgid "Arrange in"
+#~ msgstr "Antolatu"
+
+#~ msgid "Sort by"
+#~ msgstr "Sailkatu ... arabera"
+
+#~ msgid "Appearance:"
+#~ msgstr "Itxura:"
+
+#~ msgid "Location:"
+#~ msgstr "Kokalekua:"
+
+#~ msgid "Show the Desktop folder"
+#~ msgstr "Erakutsi Mahaigain karpeta"
+
+#~ msgid "Specify a folder:"
+#~ msgstr "Zehaztu karpeta bat:"
+
+#~ msgid "&Reload"
+#~ msgstr "&Birzamatu"
+
+#~ msgid "&Move to Trash"
+#~ msgstr "&Bota zakarrontzira"
+
+#~ msgid "&Delete"
+#~ msgstr "&Ezabatu"
+
+#~ msgid "Align:"
+#~ msgstr "Lerrokatu:"
+
+#~ msgid "Sorting"
+#~ msgstr "Sailkatzea"
+
+#~ msgid "Title"
+#~ msgstr "Titulua"
+
+#~ msgid "Show Original Directory"
+#~ msgstr "Erakutsi jatorrizko karpeta"
+
+#, fuzzy
+#~| msgid "Show All Files"
+#~ msgid "Show Original File"
+#~ msgstr "Erakutsi fitxategi guztiak"
+
+#, fuzzy
+#~| msgid "&Empty Trash Bin"
+#~ msgid "&Configure Trash Bin"
+#~ msgstr "&Hustu zakarrontzia"
+
+#~ msgid "&Bookmark This Page"
+#~ msgstr "&Sortu orri honen laster-marka"
+
+#~ msgid "&Bookmark This Location"
+#~ msgstr "&Sortu helbide honen laster-marka"
+
+#~ msgid "&Bookmark This Folder"
+#~ msgstr "&Sortu karpeta honen laster-marka"
+
+#~ msgid "&Bookmark This Link"
+#~ msgstr "&Sortu esteka honen laster-marka"
+
+#~ msgid "&Bookmark This File"
+#~ msgstr "&Sortu fitxategi honen laster-marka"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy To"
+#~ msgstr "Kopiatu hemen"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move To"
+#~ msgstr "Eraman hona"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Home Folder"
+#~ msgstr "Mahaigaina karpeta"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:menu"
+#~ msgid "Root Folder"
+#~ msgstr "Mahaigaina karpeta"
+
+#~ msgctxt "@title:menu in Copy To or Move To submenu"
+#~ msgid "Browse..."
+#~ msgstr "Arakatu..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "Copy Here"
+#~ msgstr "Kopiatu hemen"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Move Here"
+#~ msgstr "Eraman hona"
+
+#~ msgid "Share"
+#~ msgstr "Partekatu"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgid "Icon:"
+#~ msgstr "Ikonoak"
+
+#~ msgid "You cannot drop a folder on to itself"
+#~ msgstr "Ezin duzu karpeta bat bere buruaren baitan jaregin"
+
+#, fuzzy
+#~| msgid "File name pattern:"
+#~ msgid "File name for dropped contents:"
+#~ msgstr "Fitxategi-izenaren eredua:"
+
+#~ msgid "&Move Here"
+#~ msgstr "&Eraman hona"
+
+#~ msgid "&Copy Here"
+#~ msgstr "&Kopiatu hemen"
+
+#~ msgid "&Link Here"
+#~ msgstr "E&stekatu hemen"
+
+#~ msgid "C&ancel"
+#~ msgstr "&Utzi"
+
+#~ msgid "Set as &Wallpaper"
+#~ msgstr "Ezarri &horma-paper gisa"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create directory"
+#~ msgstr "Sortu direktorioa"
+
+#~ msgctxt "@action:button"
+#~ msgid "Enter a different name"
+#~ msgstr "Sartu beste izen bat"
+
+#~ msgid ""
+#~ "The name \"%1\" starts with a dot, so the directory will be hidden by "
+#~ "default."
+#~ msgstr ""
+#~ "\"%1\" izena puntu batekin hasten denez ezkutuko direktorioa izango da."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create hidden directory?"
+#~ msgstr "Sortu ezkutuko direktorioa?"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@label Default name when creating a folder"
+#~ msgid "New Folder"
+#~ msgstr "Mahaigaina karpeta"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@title:window"
+#~ msgid "New Folder"
+#~ msgstr "Mahaigaina karpeta"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter folder name:"
+#~ msgstr "Sartu karpetaren izena:"
+
+#, fuzzy
+#~| msgid "Desktop Folder"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One Folder"
+#~ msgstr "Mahaigaina karpeta"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste One File"
+#~ msgstr "Itsatsi fitxategi bat"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste Clipboard Contents..."
+#~ msgstr "Itsatsi arbelaren edukia..."
+
+#, fuzzy
+#~| msgid "&Paste"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Paste"
+#~ msgstr "&Itsatsi"
+
+#~ msgid ""
+#~ "Restores this file or directory, back to the location where it was "
+#~ "deleted from initially"
+#~ msgstr ""
+#~ "Fitxategi edo karpeta hau leheneratzen du, hasieran ezabatua izan zeneko "
+#~ "lekura"
+
+#~ msgid ""
+#~ "Opens a new file manager window showing the target of this link, in its "
+#~ "parent directory."
+#~ msgstr ""
+#~ "Fitxategi-kudeatzailearen leiho berri bat irekitzen du esteka honen "
+#~ "helmuga erakutsiz, bere guraso karpetan."
+
+#, fuzzy
+#~| msgid "Click to view folder:"
+#~ msgid "Click to view folder"
+#~ msgstr "Egin klik karpeta ikusteko:"
+
+#, fuzzy
+#~| msgid "Icons"
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Icons"
+#~ msgstr "Ikonoak"
+
+#~ msgid "Align to Grid"
+#~ msgstr "Atxiki saretari"
+
+#~ msgctxt "Icons on the desktop"
+#~ msgid "Lock in Place"
+#~ msgstr "Blokeatu lekuan"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 folder"
+#~ msgid_plural "%1 folders"
+#~ msgstr[0] "karpeta 1"
+#~ msgstr[1] "%1 karpeta"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "fitxategi 1"
+#~ msgstr[1] "%1 fitxategi"
+
+#~ msgctxt "%1 and %2 are the messages translated above."
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "1 file."
+#~ msgid_plural "%1 files."
+#~ msgstr[0] "fitxategi 1."
+#~ msgstr[1] "%1 fitxategi."
+
+#~ msgid ""
+#~ "Use this control to choose the criteria by which the icons will be sorted "
+#~ "in the view."
+#~ msgstr ""
+#~ "Erabili kontrol hau ikonoak ikuspegian nola ordenatuko diren irizpidea "
+#~ "aukeratzeko."
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this option if you want folder previews to appear only when "
+#~| "clicked. When this option is turned off, folder previews will appear "
+#~| "automatically when the mouse hovers over a folder."
+#~ msgid ""
+#~ "Check this option if you want folders to have sorting precedence. When "
+#~ "this option is turned off, folders will be treated like regular files "
+#~ "with respect to sorting."
+#~ msgstr ""
+#~ "Markatu aukera hau, karpeten aurrebista klik egitean soilik agertzea nahi "
+#~ "baduzu. Aukera hau desaktibatzen bada, karpeten aurrebistak automatikoki "
+#~ "agertuko dira sagua karpeten gainetik pasatzean."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be arranged "
+#~ "horizontally (in rows) or vertically (in columns)."
+#~ msgstr ""
+#~ "Erabili kontrol hau ikonoak ikuspegian nola ordenatuko diren irizpidea "
+#~ "aukeratzeko."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use this control to choose the criteria by which the icons will be "
+#~| "sorted in the view."
+#~ msgid ""
+#~ "Use this control to choose whether the icons will be aligned to the left "
+#~ "or to the right side of the screen."
+#~ msgstr ""
+#~ "Erabili kontrol hau ikonoak ikuspegian nola ordenatuko diren irizpidea "
+#~ "aukeratzeko."
+
+#~ msgid ""
+#~ "Check this option if you do not want the icons to be moveable in the "
+#~ "view.\n"
+#~ "\n"
+#~ "This option is useful if you want to avoid accidentally moving the icons "
+#~ "while interacting with them."
+#~ msgstr ""
+#~ "Markatu aukera hau ikonoak ikuspegian mugikorrak izatea nahi ez "
+#~ "duzunean.\n"
+#~ "\n"
+#~ "Aukera hau erabilgarria da beraiekin zabiltzanean ikonoak konturatu gabe "
+#~ "mugitzea saihestea nahi baduzu."
+
+#~ msgid "Align to grid:"
+#~ msgstr "Atxiki saretari:"
+
+#~ msgid ""
+#~ "Check this option if you want the icons to be arranged in a grid.\n"
+#~ "\n"
+#~ "When this option is checked, icons will automatically snap to the nearest "
+#~ "grid cell when you move them around in the view."
+#~ msgstr ""
+#~ "Markatu aukera hau ikonoak sareta batean antolatu nahi badituzu.\n"
+#~ "\n"
+#~ "Aukera hau markatzen bada, ikonoak automatikoki atxikiko dira saretaren "
+#~ "gertueneko gelaxkara ikuspegitik mugitzen dituzunean."
+
+#~ msgid ""
+#~ "Use this slider to increase or decrease the size of the icons in the view."
+#~ msgstr ""
+#~ "Erabili graduatzailea ikuspegian ikonoen tamaina handitu edo txikitzeko."
+
+#~ msgid ""
+#~ "Check this option if you want to see previews of the file contents in the "
+#~ "icons."
+#~ msgstr ""
+#~ "Markatu aukera hau fitxategien edukiaren aurrebista ikonoetan ikustea "
+#~ "nahi baduzu."
+
+#~ msgid ""
+#~ "Click this button to choose for which types of files previews will be "
+#~ "shown."
+#~ msgstr ""
+#~ "Egin klik botoi honetan zein fitxategi moten aurrebista ikusi nahi duzun "
+#~ "aukeratzeko."
+
+#~ msgid ""
+#~ "Check this option if you want folder previews to appear only when "
+#~ "clicked. When this option is turned off, folder previews will appear "
+#~ "automatically when the mouse hovers over a folder."
+#~ msgstr ""
+#~ "Markatu aukera hau, karpeten aurrebista klik egitean soilik agertzea nahi "
+#~ "baduzu. Aukera hau desaktibatzen bada, karpeten aurrebistak automatikoki "
+#~ "agertuko dira sagua karpeten gainetik pasatzean."
+
+#~ msgid "Lines:"
+#~ msgstr "Lerroak:"
+
+#~ msgid ""
+#~ "Use this control to choose how many lines of text will be shown below the "
+#~ "icons."
+#~ msgstr ""
+#~ "Erabili kontrol hau ikonoen azpian zenbat testu lerro erakutsiko diren "
+#~ "aukeratzeko."
+
+#~ msgid "1 line"
+#~ msgstr "lerro 1"
+
+#~ msgid "Color:"
+#~ msgstr "Kolorea:"
+
+#~ msgid ""
+#~ "Click this button to choose the color which is used for the text labels "
+#~ "in the view."
+#~ msgstr ""
+#~ "Egin klik botoi honetan ikuspegiaren etiketetan testuarentzako erabiliko "
+#~ "den kolorea aukeratzeko."
+
+#~ msgid "Shadows:"
+#~ msgstr "Itzalak:"
+
+#~ msgid ""
+#~ "<html><body><p>Check this option if you want the text labels to cast a "
+#~ "shadow on the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Shadows help make the text easier to read by making it stand out more "
+#~ "from the background.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Note that with dark text colors, this option will cause the text to "
+#~ "glow with a bright halo, instead of casting a shadow.</i></p></body></"
+#~ "html>"
+#~ msgstr ""
+#~ "<html><body><p>Markatu aukera hau testu-etiketek atzeko planoan itzal bat "
+#~ "edukitzea nahi baduzu.</p>\n"
+#~ "<p></p>\n"
+#~ "<p>Itzalek testua irakurtzeko errazagoa egiten dute atzeko planoa "
+#~ "nabarmenago eginez.</p>\n"
+#~ "<p></p>\n"
+#~ "<p><i>Oharra: testu-kolore ilunekin, aukera honek testuak halo argi "
+#~ "batekin distiratu dezan eragingo du, itzala bota ordez.</i></p></body></"
+#~ "html>"
+
+#, fuzzy
+#~| msgid "Check this option if you want click to view the folder previews."
+#~ msgid ""
+#~ "Check this option if you want the icons to be sorted in a descending "
+#~ "order."
+#~ msgstr ""
+#~ "Markatu aukera hau klikarekin karpetaren aurreikuspena ikusi nahi baduzu."
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">If you have selected "
+#~ "\"Show Files Matching\" or \"Hide Files Matching\", only the files "
+#~ "matching BOTH the conditions will be shown or hidden respectively.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">For example, if you "
+#~ "have \"*\" as your pattern, but have nothing selected in the MIME types, "
+#~ "no files will be shown.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Jakizu \"Erakutsi bat "
+#~ "datozen fitxategiak\" edo \"Ezkutatu bat datozen fitxategiak\" hautatu "
+#~ "baduzu, soilik baldintza biak betetzen dituzten fitxategiak erakutsi edo "
+#~ "ezkutatutako direla hurrenez hurren.</p>\n"
+#~ "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Adibidez, \"*\" eredu "
+#~ "gisa badaukazu, baino ez duzu MIME motatan ezer aukeratu, ez da "
+#~ "fitxategirik erakutsiko.</p></body></html>"
+
+#~ msgid ""
+#~ "Note that if you have selected \"Show Files Matching\" or \"Hide Files "
+#~ "Matching\",\n"
+#~ "only the files matching BOTH the conditions will be shown or hidden "
+#~ "respectively.\n"
+#~ "For example, if you have \"*\" as your pattern, but have nothing selected "
+#~ "in the MIME types, no files will be shown."
+#~ msgstr ""
+#~ "Oharra: \"Erakutsi bat datozen fitxategiak\" edo \"Ezkutatu bat datozen "
+#~ "fitxategiak\" hautatu baduzu,\n"
+#~ "soilik baldintza biak betetzen dituzten fitxategiak erakutsi edo "
+#~ "ezkutatuko dira.\n"
+#~ "Adibidez, \"*\" eredu gisa badaukazu, baino ez duzu MIME motatan ezer "
+#~ "aukeratu, ez da fitxategirik erakutsiko."
+
+#~ msgid "<a href=\"null\">Cannot See Any Files?</a>"
+#~ msgstr "<a href=\"null\">Ezin da fitxategi bat ere ikusi?</a>"
+
+#~ msgid "Space-separated list of extensions, e.g. *.txt *.od*"
+#~ msgstr "Zuriunez banatutako luzapenen zerrenda, adib *.txt *.od*"
+
+#~ msgid ""
+#~ "Space-separated list of extensions, e.g. *.txt *.od* to display only "
+#~ "office- and text-files"
+#~ msgstr ""
+#~ "Zuriunez banatutako luzapenen zerrenda, adib *.txt *.od* office eta testu "
+#~ "fitxategiak soilik bistaratzeko"
+
+#~ msgid "Pattern filter"
+#~ msgstr "Ereduen iragazkia"
+
+#~ msgid "Check the file types you want icon previews for:"
+#~ msgstr "Markatu ikonoaren aurrebistak erakustea nahi duzun fitxategi motak:"
+
+#~ msgid "This folder is empty."
+#~ msgstr "Karpeta hau hutsik dago."
+
+#~ msgctxt "Music"
+#~ msgid "Artist:"
+#~ msgstr "Artista:"
+
+#~ msgctxt "Music"
+#~ msgid "Album:"
+#~ msgstr "Albuma:"
+
+#~ msgid "%1 MPixels"
+#~ msgstr "%1 MPixel"
+
+#~ msgid "Camera:"
+#~ msgstr "Kamera:"
+
+#~ msgctxt "Length in millimeters"
+#~ msgid "%1 mm"
+#~ msgstr "%1 mm"
+
+#~ msgctxt "In photography"
+#~ msgid "35 mm equivalent: %1 mm"
+#~ msgstr "35 mm baliokide: %1 mm"
+
+#~ msgctxt "On a camera"
+#~ msgid "Focal Length:"
+#~ msgstr "Foku-luzera:"
+
+#~ msgctxt "On a camera"
+#~ msgid "Exposure Time:"
+#~ msgstr "Esposizio-denbora:"
+
+#~ msgctxt "Fraction of a second, or number of seconds"
+#~ msgid "%1 s"
+#~ msgstr "%1 s"
+
+#~ msgctxt "On a camera"
+#~ msgid "Aperture:"
+#~ msgstr "Irekiera:"
+
+#~ msgctxt "On a camera"
+#~ msgid "ISO Speed:"
+#~ msgstr "ISO abiadura:"
+
+#~ msgid "Time:"
+#~ msgstr "Denbora:"
+
+#~ msgctxt "Inserted as %1 in the message below."
+#~ msgid "1 page"
+#~ msgid_plural "%1 pages"
+#~ msgstr[0] "orrialde 1"
+#~ msgstr[1] "%1 orrialde"
+
+#~ msgctxt "Inserted as %2 in the message below."
+#~ msgid "1 word"
+#~ msgid_plural "%1 words"
+#~ msgstr[0] "hitz 1"
+#~ msgstr[1] "%1 hitz"
+
+#~ msgctxt "Items in a folder"
+#~ msgid "1 item"
+#~ msgid_plural "%1 items"
+#~ msgstr[0] "elementu 1"
+#~ msgstr[1] "%1 elementu"
+
+#~ msgid "Left to Right, Top to Bottom"
+#~ msgstr "Ezkerretik eskuinera, goitik behera"
+
+#~ msgid "Right to Left, Top to Bottom"
+#~ msgstr "Eskuinetik ezkerrera, goitik behera"
+
+#~ msgctxt ""
+#~ "Title of the page that lets the user choose how the folderview should be "
+#~ "shown"
+#~ msgid "Display"
+#~ msgstr "Bistaratzea"
+
+#~ msgctxt "Sort icons"
+#~ msgid "By Size"
+#~ msgstr "Tamainaren arabera"
+
+#~ msgid ""
+#~ "Use this control to choose if you want the icons to be arranged top to "
+#~ "bottom starting on the left side of the view, or arranged left to right "
+#~ "starting at the top of the view."
+#~ msgstr ""
+#~ "Erabili kontrol hau ikonoak ikuspegiaren ezker aldetik goitik behera "
+#~ "antolatu nahi dituzun, edo ikuspegiaren gaineko aldetik hasita ezkerretik "
+#~ "eskuinera antolatuta nahi dituzun aukeratzeko."
+
+#~ msgid "Header"
+#~ msgstr "Goiburua"
+
+#~ msgid ""
+#~ "This edit field contains the label which is shown at the top of the "
+#~ "applet.\n"
+#~ "\n"
+#~ "By default it contains the name of the place being shown in the applet, "
+#~ "but if you prefer to have a custom label you can enter it here."
+#~ msgstr ""
+#~ "Testu lauki honek appletaren gaineko aldean erakusten den etiketa dauka.\n"
+#~ "\n"
+#~ "Modu lehenetsian appletan erakusten den tokiaren izena dauka, baino "
+#~ "etiketa pertsonalizatua nahiago baduzu hemen sartu dezakezu."

@@ -1,0 +1,232 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jure Repinc <jlp@holodeck1.com>, 2009, 2010, 2011.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2015.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"PO-Revision-Date: 2021-10-18 08:37+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Jure Repinc,Andrej Mernik"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jlp@holodeck1.com,andrejm@ubuntu.si"
+
+#: DeviceAutomounterKCM.cpp:38
+#, kde-format
+msgid "Device Automounter"
+msgstr "Samodejno priklapljanje naprav"
+
+#: DeviceAutomounterKCM.cpp:42
+#, kde-format
+msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: DeviceAutomounterKCM.cpp:43
+#, kde-format
+msgid "Original Author"
+msgstr "Prvotni avtor"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr "Kai Uwe Broulik"
+
+#: DeviceAutomounterKCM.cpp:44
+#, kde-format
+msgid "Plasma 5 Port"
+msgstr "Predelava za Plasmo 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Ta seznam vsebuje znane naprave za shranjevanje. Če je omogočeno »Samodejno "
+"priklopi ob prijavi«, bo naprava priklopljena samodejno, četudi možnost »Ob "
+"prijavi priklopi vse odstranljive nosilce« ni omogočena. Isto velja za "
+"»Samodejno priklopi ob priključitvi«."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Klik na ta gumb prisili sistem, da pozabi na obstoj izbranih naprav. To je "
+"uporabno, samo če je omogočena možnost »Samodejno priklopi samo odstranljive "
+"nosilce, ki so že bili ročno priklopljeni«. Ko je naprava pozabljena in je "
+"sistem nastavljen, da samodejno priklopi samo znane naprave, naprava ne bo "
+"priklopljena samodejno."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Pozabi napravo"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Ko je to ni omogočeno, bodo samodejno priklopljene samo naprave, ki si jih "
+"je sistem zapomnil. Sistem si je napravo zapomnil, če je bila priklopljena "
+"že kdaj prej. Na primer, če ste samo priključili USB predstavnostni "
+"predvajalnik zaradi polnjenja z energijo ni dovolj, da si ga sistem zapomni. "
+"Če niste dostopali do datotek, naslednjič ne bo samodejno priklopljen, ko bo "
+"zaznan. Ko ste dostopali do datotek, pa si bo sistem to zapomnil in s "
+"samodejnim priklopom omogočil dostop do vsebine."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Samodejno priklopi odstranljive nosilce, ki še nikoli prej niso bili "
+"priklopljeni"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Samodejno priklopi napravo"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Pri prijavi"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Pri priklopu"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Vse naprave"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Vse znane naprave"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Priključene naprave"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Odklopljene naprave"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Ta naprava bo ob prijavi priklopljena samodejno."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Ta naprava ob prijavi ne bo priklopljena samodejno."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Ta naprava bo ob priključitvi priklopljena samodejno."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Ta naprava ob priključitvi ne bo priklopljena samodejno."
+
+#~ msgid ""
+#~ "If any removable storage devices are connected to your system when you "
+#~ "login to your desktop, their contents will automatically be made "
+#~ "available to your system for other programs to read."
+#~ msgstr ""
+#~ "Če so ob prijavi na računalnik priključene kake odstranljive shranjevalne "
+#~ "naprave, bo sistem samodejno priklopil naprave in omogočil dostop do "
+#~ "vsebine na njih."
+
+#~ msgid "Automatically mount removable medias at login"
+#~ msgstr "Samodejno priklopi vse odstranljive nosilce ob prijavi"
+
+#~ msgid ""
+#~ "When this is checked, the contents of any storage device will "
+#~ "automatically be made available to the system when it is plugged in or "
+#~ "attached."
+#~ msgstr ""
+#~ "Ko je to omogočeno, bo sistem ob priključitvi katerekoli naprave za "
+#~ "shranjevanje priklopil to napravo in omogočil dostop do vsebine na njej."
+
+#~ msgid "Automatically mount removable medias when attached"
+#~ msgstr "Samodejno priklopi vse odstranljive nosilce ob priključitvi"
+
+#~ msgid "Automatic mount"
+#~ msgstr "Samodejni priklop"
+
+#~ msgid ""
+#~ "When this is unchecked, no device automounting of any kind will happen, "
+#~ "regardless of anything selected in the \"Device Overrides\" section."
+#~ msgstr ""
+#~ "Ko to ni omogočeno, do samodejnega priklopa ne bo prišlo, ne glede na "
+#~ "možnosti v odseku \"Vsiljeno za naprave\"."
+
+#~ msgid "Enable automatic mounting of removable media"
+#~ msgstr "Omogoči samodejno priklapljanje odstranljivih nosilcev"
+
+#~ msgid "Device Overrides"
+#~ msgstr "Vsiljeno za naprave"
+
+#~ msgid "Automount on Attach"
+#~ msgstr "Samodejno priklopi ob priključitvi"
+
+#~ msgid "Automatically mounts devices at login or when attached"
+#~ msgstr "Samodejno priklopi naprave ob priklopu ali ob prijavi"

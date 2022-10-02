@@ -1,0 +1,295 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
+# Kristof Kiszel <kiszel.kristof@gmail.com>, 2018, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2021-09-04 09:01+0200\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr "Ebben a modulban állíthatja be a fájlindexelőt és keresőt."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Ezzel kikapcsolja a fájlkeresést a KRunnerben és az indítómenükben, valamint "
+"eltávolítja a kiterjesztett metaadatok megjelenítését minden KDE "
+"alkalmazásból."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Szeretné törölni a mentett indexadatokat? %1 hely szabadul fel, de ha később "
+"újra bekapcsolja az indexelést, a teljes indexet a semmiből kell létrehozni. "
+"Ez időbe telhet, attól függően, mennyi fájlja van."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Indexadatok törlése"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"A Fájlkeresés segít önnek megtalálni minden fájlját a tartalmuk alapján."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Fájlkeresés bekapcsolása"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Fájltartalom indexelése"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Rejtett fájlok és mappák indexelése"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Állapot: %1, %2% kész"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Indexelés szüneteltetése"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Indexelés folytatása"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Indexelés alatt: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Mappaspecifikus beállítások:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Mappaindexelés indítás…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Mappaindexelés leállítása…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Nincs indexelve"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Indexelve"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Bejegyzés törlése"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Válassza ki a belefoglalni kívánt mappát"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Válassza ki a kizárni kívánt mappát"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Úr Balázs"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,urbalazs@gmail.com"
+
+#~ msgid "File Search"
+#~ msgstr "Fájlkeresés"
+
+#~ msgid "Copyright 2007-2010 Sebastian Trüg"
+#~ msgstr "© Sebastian Trüg, 2007-2010."
+
+#~ msgid "Sebastian Trüg"
+#~ msgstr "Sebastian Trüg"
+
+#~ msgid "Vishesh Handa"
+#~ msgstr "Vishesh Handa"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Add folder configuration…"
+#~ msgstr "Mappabeállítás hozzáadása…"
+
+#, fuzzy
+#~| msgid "Folder %1 is already excluded"
+#~ msgid "%1 is excluded."
+#~ msgstr "A(z) %1 mappa már ki van zárva"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgid "Disable indexing"
+#~ msgstr "Fájlindexelés"
+
+#~ msgid "Do not search in these locations:"
+#~ msgstr "Ne keressen ezeken a helyeken:"
+
+#~ msgid "Select the folder which should be excluded"
+#~ msgstr "Válassza ki azokat a mappákat, amelyeket ki kell zárni"
+
+#~ msgid ""
+#~ "Not allowed to exclude root folder, please disable File Search if you do "
+#~ "not want it"
+#~ msgstr ""
+#~ "Nem lehet kizárni a root mappát. Kapcsolja ki a fájlkeresést, ha nem "
+#~ "szeretné"
+
+#~ msgid "Folder's parent %1 is already excluded"
+#~ msgstr "%1, a mappa szülője már ki van zárva"
+
+#~ msgid "Configure File Search"
+#~ msgstr "Fájlkeresés beállítása"
+
+#~ msgid "The root directory is always hidden"
+#~ msgstr "A root könyvtár mindig rejtett"
+
+#~ msgid "Enable Developer Mode"
+#~ msgstr "Fejlesztői mód engedélyezése"
+
+#~ msgid "Settings"
+#~ msgstr "Beállítások"
+
+#~ msgid "Enable Tags and Ratings"
+#~ msgstr "Címkék és értékelések engedélyezése"
+
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Customize the files and folders to be indexed"
+#~ msgstr "Az indexelni kívánt fájlok és mappák testreszabása"
+
+#~ msgid "Index Documents"
+#~ msgstr "Dokumentumok indexelése"
+
+#~ msgid "Index Images"
+#~ msgstr "Képek indexelése"
+
+#~ msgid "Index Videos"
+#~ msgstr "Videók indexelése"
+
+#~ msgid "Index Source Code"
+#~ msgstr "Forráskód indexelése"
+
+#~ msgid "Advanced"
+#~ msgstr "Speciális"
+
+#~ msgid "Customize Folders"
+#~ msgstr "Mappák testreszabása"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Advanced File Filtering"
+#~ msgstr "Speciális fájlszűrés"
+
+#~ msgid "Exclude Mime Type"
+#~ msgstr "MIME-típus kizárása"
+
+#~ msgid "Index Exclude Filters"
+#~ msgstr "Az indexelő kizárt könyvtárai"
+
+#~ msgid ""
+#~ "Select expressions to exclude files from indexing by matching their "
+#~ "filenames"
+#~ msgstr ""
+#~ "Válasszon fájlnévre illeszkedő kifejezéseket a fájlok indexelésből való "
+#~ "kizárásához"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (symbolic links are <emphasis>not</emphasis> "
+#~ "indexed for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (a szimbolikus linkek <emphasis>nincsenek</"
+#~ "emphasis> indexelve az asztali kereséshez)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid "<filename>%1</filename><nl/>(will be indexed for desktop search)"
+#~ msgstr "<filename>%1</filename><nl/>(indexelés kereséshez)"
+
+#~ msgctxt "@info:tooltip %1 is the path of the folder in a listview"
+#~ msgid ""
+#~ "<filename>%1</filename><nl/> (will <emphasis>not</emphasis> be indexed "
+#~ "for desktop search)"
+#~ msgstr ""
+#~ "<filename>%1</filename><nl/> (<emphasis>nem lesz</emphasis> indexelve "
+#~ "kereséshez)"
+
+#~ msgctxt ""
+#~ "@title:window Referring to the folders which will be searched for files "
+#~ "to index for desktop search"
+#~ msgid "Customizing Index Folders"
+#~ msgstr "Indexmappák testreszabása"
+
+#~ msgid ""
+#~ "Select the local folders that contain files to be indexed for fast "
+#~ "desktop searches"
+#~ msgstr ""
+#~ "Válassza ki, mely mappák tartalmát szeretné gyors kereséshez indexelni"
+
+#~ msgid "Check to be able to select hidden folders"
+#~ msgstr "Jelölje be, hogy képes legyen rejtett mappák kijelölésére is"
+
+#~ msgctxt "@info:status"
+#~ msgid "File indexing service not running."
+#~ msgstr "A fájlindexelő szolgáltatás nem fut."
+
+#~ msgctxt "@info:status %1 is an error message returned by a dbus interface."
+#~ msgid "Failed to contact File Indexer service (%1)"
+#~ msgstr "Nem sikerült kommunikálni a fájlindexelő szolgáltatással (%1)"
+
+#~ msgctxt "Resumes the File indexing service."
+#~ msgid "Resume"
+#~ msgstr "Folytatás"
+
+#~ msgctxt "Suspends the File indexing service."
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"

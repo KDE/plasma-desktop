@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Dispositivos extraíbles</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+><affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2016-08-24</date>
+<releaseinfo
+>&plasma; 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>preferencias del sistema</keyword>
+<keyword
+>montaje automático</keyword>
+<keyword
+>dispositivo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este diálogo le permite configurar la gestión automática de los medios de almacenamiento extraíbles. </para>
+
+<para
+>Activando las características de montaje automático en este módulo no necesitará utilizar la miniaplicación del notificador de dispositivos o el panel de navegación del gestor de archivos para tener acceso a un dispositivo recientemente conectado. </para>
+
+<para
+>En la parte superior del diálogo encontrará la configuración global, que puede ser sobre escrita para cada dispositivo individual en la lista <guilabel
+>Sobre escritura de dispositivo</guilabel
+>. Para un escritorio con un usuario único se recomienda activar todas las casillas de verificación de la lista de sobre escrituras. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Activar montaje automático de medios extraíbles</guilabel
+></term>
+<listitem
+><para
+>Cuando está desmarcado, no se realizará el montaje automático de ningún tipo de dispositivo, independientemente de si alguno de ellos está seleccionado en la sección <guilabel
+>Sobre escritura de dispositivo</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automáticamente solo los medios extraíbles que anteriormente hayan sido montados de forma manual</guilabel
+></term>
+<listitem
+><para
+>Cuando está marcada, &plasma; montará automáticamente solo los dispositivos que recuerde. Un dispositivo es <quote
+>recordado</quote
+> si ha sido montado antes; por ejemplo, conectar un reproductor multimedia &USB; no es suficiente para «recordarlo». Si los archivos no son accedidos, &plasma; no montará automáticamente el reproductor la próxima vez que lo veo. No obstante una vez hayan sido accedidos, &plasma; lo recordará para automáticamente hacer los contenidos accesibles a tu sistema. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montas todos los medios extraíbles durante al inicio</guilabel
+></term>
+<listitem
+><para
+>Si cualquier dispositivo de almacenamiento extraíble es conectado a su sistema cuando inicia sesión en su escritorio, &plasma; pondrá automáticamente los contenidos a disposición de su sistema para otros programas puedan leerlos. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montar automáticamente todos los medios extraíbles cuando sean insertados</guilabel
+></term>
+<listitem
+><para
+>Cuando está activada, &plasma; hará disponibles para el sistema de forma automática los contenidos de cualquier dispositivo cuando este sea conectado o insertado. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Sobre escritura de dispositivos</guilabel
+></term>
+<listitem
+><para
+>Esta lista contiene los dispositivos de almacenamiento conocidos por &plasma;. Si <guilabel
+>Montar automáticamente al insertar</guilabel
+> está marcado, el dispositivo será montado automáticamente incluso aunque <guilabel
+>Montar todos los medios extraíbles al inicio</guilabel
+> esté desmarcada. Lo mismo se aplica para <guilabel
+>Montar automáticamente al insertar</guilabel
+>.</para>
+<para
+>Si <guilabel
+>Activar montaje automático de medios extraíbles</guilabel
+> está desmarcado, la sobre escritura no se aplicará y los dispositivos no se montarán automáticamente. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Dispositivo olvidado</guibutton
+></term>
+<listitem
+><para
+>Pulsar este botón causa que &plasma; <quote
+>olvide</quote
+> que los dispositivos seleccionados existen. Esto solo es útil si <guilabel
+>Montar automáticamente solo los medios extraíbles que anteriormente hayan sido montados de forma manual</guilabel
+> está marcada. Una vez que un dispositivo es olvidado y que &plasma; es configurado para montar automáticamente solo los dispositivos que le sean familiares, el dispositivo no será montado automáticamente. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

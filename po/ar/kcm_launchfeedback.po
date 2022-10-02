@@ -1,0 +1,152 @@
+# translation of kcmlaunch.po to Arabic
+# translation of kcmlaunch.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# Ammar Tabbaa <munzir@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmlaunch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-06-18 23:56+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "المهلة بالثواني:"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "مؤشر البدء"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "المؤشر:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "بدون مؤشر"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "ساكن"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "وميض"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "مرتد"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "مدير المهام:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "مكّن التحريك"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "أوقف التحريك بعد:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 ثانية"
+msgstr[1] " ثانية واحدة"
+msgstr[2] "ثانيتين"
+msgstr[3] "%1 ثواني"
+msgstr[4] "%1 ثانية"
+msgstr[5] "%1 ثانية"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com"
+
+#~ msgid "Configure application launch feedback"
+#~ msgstr "ضبط مؤشر بدء التطبيقات"
+
+#~ msgid ""
+#~ "<h1>Launch Feedback</h1> You can configure the application-launch "
+#~ "feedback here."
+#~ msgstr ""
+#~ "<h1>اشعار الإطلاق</h1> هناك يمكنك ضبط كيفية إشعارك عند إطلاق التطبيق."
+
+#~ msgid ""
+#~ "<h1>Busy Cursor</h1>\n"
+#~ "KDE offers a busy cursor for application startup notification.\n"
+#~ "To enable the busy cursor, select one kind of visual feedback\n"
+#~ "from the combobox.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the cursor stops blinking after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<h1>المؤشر المشغول</h1>\n"
+#~ "كيدي يعرض ميزة المؤشر المشغول للاشعار إلى بدء تشغيل التطبيق.\n"
+#~ "لتمكين المؤشر المشغول, انتقي نوع واحد من الارتداد المرئي من المربع "
+#~ "المركب.\n"
+#~ "من الممكن أن يحدث أن بعض التطبيقات قد لا تعي اشعار بدء\n"
+#~ "التشغيل هذا. في هذه الحالة يتوقف المؤشر عن النبض بعد الوقت\n"
+#~ "المعطى في قسم 'المهلة لإظهار بدء التشغيل'"
+
+#~ msgid "No Busy Cursor"
+#~ msgstr "لا مؤشر مشغول"
+
+#~ msgid "Passive Busy Cursor"
+#~ msgstr "المؤشر المشغول السلبي"
+
+#~ msgid "Taskbar &Notification"
+#~ msgstr "اشعارات &شريط المهام"
+
+#~ msgid ""
+#~ "<H1>Taskbar Notification</H1>\n"
+#~ "You can enable a second method of startup notification which is\n"
+#~ "used by the taskbar where a button with a rotating hourglass appears,\n"
+#~ "symbolizing that your started application is loading.\n"
+#~ "It may occur, that some applications are not aware of this startup\n"
+#~ "notification. In this case, the button disappears after the time\n"
+#~ "given in the section 'Startup indication timeout'"
+#~ msgstr ""
+#~ "<H1>اشعارات شريط المهام</H1>\n"
+#~ "يمكنك تمكين طريقة ثانية للإشعار إلى بدء تشغيل التطبيق و هي\n"
+#~ "المستخدمة في شريط المهام حيث يظهر زر مع صورة ساعة رملية ، ترمز إلى\n"
+#~ "أن التطبيق جاري تشغيله.\n"
+#~ "قد يحصل أن بعض التطبيقات قد لا تعي إلى اشعار بدء التشغيل هذا.\n"
+#~ "في هذه الحالة يختفي الزر بعد الوقت المعطى في قسم\n"
+#~ "'المهلة لإظهار بدء التشغيل'"
+
+#~ msgid "Start&up indication timeout:"
+#~ msgstr "الم&هلة لاظهار بدء التشغيل:"
