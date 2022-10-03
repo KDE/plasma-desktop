@@ -135,8 +135,8 @@ Item {
                 onClicked: ActivitySettings.configureActivity(root.activityId)
 
                 anchors {
-                    left       : parent.left
-                    leftMargin : 2 * PlasmaCore.Units.smallSpacing + 2
+                    right       : deleteButton.left
+                    rightMargin : 2 * PlasmaCore.Units.smallSpacing
                     verticalCenter: parent.verticalCenter
                 }
             }
