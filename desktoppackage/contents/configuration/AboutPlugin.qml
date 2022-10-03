@@ -14,7 +14,7 @@ import org.kde.kirigami 2.6 as Kirigami
 /**
  * A copy of Kirigami.AboutPage adapted to KPluginMetadata instead of KAboutData
  */
-Kirigami.ScrollablePage {
+QQC2.Page {
     id: page
     title: i18n("About")
 
@@ -69,6 +69,7 @@ Kirigami.ScrollablePage {
     }
 
     ColumnLayout {
+        width: parent.width
         spacing: Kirigami.Units.largeSpacing * 3
 
         Kirigami.FormLayout {
