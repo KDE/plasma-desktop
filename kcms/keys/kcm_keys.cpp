@@ -157,9 +157,14 @@ QVariantList KCMKeys::defaultSchemes() const
     return schemes;
 }
 
-void KCMKeys::addApplication(QQuickItem *ctx)
+void KCMKeys::addApplication(bool command, QQuickItem *ctx)
 {
-    auto dialog = new KOpenWithDialog;
+    KOpenWithDialog *dialog;
+    if (command) {
+        dialog = new KOpenWithDialog({}, i18n("Type in a command:"), QString());
+    } else {
+        dialog = new KOpenWithDialog();
+    }
     if (ctx && ctx->window()) {
         dialog->winId(); // so it creates windowHandle
         dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(ctx->window()));

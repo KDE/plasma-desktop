@@ -40,7 +40,7 @@ public:
     Q_INVOKABLE void loadScheme(const QUrl &url);
     Q_INVOKABLE QVariantList defaultSchemes() const;
 
-    Q_INVOKABLE void addApplication(QQuickItem *ctx);
+    Q_INVOKABLE void addApplication(bool command, QQuickItem *ctx);
 
     Q_INVOKABLE QString keySequenceToString(const QKeySequence &keySequence) const;
     Q_INVOKABLE QString urlFilename(const QUrl &url);
