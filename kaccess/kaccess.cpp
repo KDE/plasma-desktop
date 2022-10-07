@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QPainter>
 #include <QProcess>
+#include <QScreen>
 #include <QTimer>
 
 #include <QAction>
@@ -507,7 +508,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         overlay->setGeometry(window.pos.x, window.pos.y, window.size.width, window.size.height);
 
         if (_visibleBellInvert) {
-            QPixmap screen = QPixmap::grabWindow(id, 0, 0, window.size.width, window.size.height);
+            QPixmap screen = QGuiApplication::primaryScreen()->grabWindow(id, 0, 0, window.size.width, window.size.height);
 #ifdef __GNUC__
 #warning is this the best way to invert a pixmap?
 #endif
