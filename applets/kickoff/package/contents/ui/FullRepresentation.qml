@@ -15,6 +15,7 @@ import QtQuick.Layouts 1.15
 import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 EmptyPage {
@@ -98,6 +99,39 @@ EmptyPage {
                 T.StackView.onActivated: {
                     plasmoid.rootItem.sideBar = null
                     plasmoid.rootItem.contentArea = searchView
+                }
+
+                Loader {
+                    anchors.centerIn: searchView.view
+                    width: searchView.view.width - (PlasmaCore.Units.largeSpacing * 4)
+
+                    active: searchView.view.count === 0
+                    visible: active
+                    asynchronous: true
+
+                    sourceComponent: PlasmaExtras.PlaceholderMessage {
+                        id: emptyHint
+
+                        iconName: "edit-none"
+                        opacity: 0
+                        text: i18nc("@info:status", "No matches")
+
+                        Connections {
+                            target: Plasmoid.rootItem.runnerModel
+                            function onQueryFinished() {
+                                showAnimation.restart()
+                            }
+                        }
+
+                        NumberAnimation {
+                            id: showAnimation
+                            duration: PlasmaCore.Units.longDuration
+                            easing.type: Easing.OutCubic
+                            property: "opacity"
+                            target: emptyHint
+                            to: 1
+                        }
+                    }
                 }
             }
         }
