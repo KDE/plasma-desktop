@@ -13,13 +13,12 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <KComponentData>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KProcess>
-#include <KStandardDirs>
 #include <QDebug>
 #include <QFile>
+#include <QRegularExpression>
 
 #if defined(USE_SOLARIS)
 #include <KTemporaryFile>
@@ -56,9 +55,9 @@ int ClockHelper::ntp(const QStringList &ntpServers, bool ntpEnabled)
     if (ntpEnabled && !ntpUtility.isEmpty()) {
         // NTP Time setting
         QString timeServer = ntpServers.first();
-        if (timeServer.indexOf(QRegExp(QStringLiteral(".*\\(.*\\)$"))) != -1) {
-            timeServer.remove(QRegExp(QStringLiteral(".*\\(")));
-            timeServer.remove(QRegExp(QStringLiteral("\\).*")));
+        if (timeServer.indexOf(QRegularExpression(QStringLiteral(".*\\(.*\\)$"))) != -1) {
+            timeServer.remove(QRegularExpression(QStringLiteral(".*\\(")));
+            timeServer.remove(QRegularExpression(QStringLiteral("\\).*")));
             // Would this be better?: s/^.*\(([^)]*)\).*$/\1/
         }
 
@@ -97,7 +96,8 @@ int ClockHelper::tz(const QString &selectedzone)
 
     // only allow letters, numbers hyphen underscore plus and forward slash
     // allowed pattern taken from time-util.c in systemd
-    if (!QRegExp(QStringLiteral("[a-zA-Z0-9-_+/]*")).exactMatch(selectedzone)) {
+    const auto rx = QRegularExpression(QRegularExpression::anchoredPattern(QStringLiteral("[a-zA-Z0-9-_+/]*")));
+    if (!rx.match(selectedzone).hasMatch()) {
         return ret;
     }
 

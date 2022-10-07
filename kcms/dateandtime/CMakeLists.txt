@@ -29,7 +29,7 @@ install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/syst
 #This is only needed when not using timedated and can be removed in future
 
 add_executable(kcmdatetimehelper helper.cpp ${helper_mocs})
-target_link_libraries(kcmdatetimehelper KF5::AuthCore KF5::ConfigCore KF5::KDELibs4Support)
+target_link_libraries(kcmdatetimehelper KF5::AuthCore KF5::ConfigCore)
 
 install(TARGETS kcmdatetimehelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)
