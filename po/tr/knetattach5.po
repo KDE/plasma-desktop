@@ -92,13 +92,13 @@ msgstr "&Bağlan"
 #: knetattach.ui:14
 #, kde-format
 msgid "Network Folder Wizard"
-msgstr "Ağ Kaynağı Sihirbazı"
+msgstr "Ağ Klasörü Sihirbazı"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "Ağ Kaynağı Ekle"
+msgstr "Ağ Klasörü Ekle"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -106,7 +106,7 @@ msgstr "Ağ Kaynağı Ekle"
 msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
-msgstr "Bağlantı kurulacak ağ servisini seçin ve İleri düğmesine tıklayın."
+msgstr "Bağlantı kurulacak ağ klasörünü seçin ve İleri düğmesine tıklayın."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -142,7 +142,7 @@ msgstr "&Microsoft® Windows® ağ sürücüsü"
 #: knetattach.ui:145
 #, kde-format
 msgid "Network Folder Information"
-msgstr "Ağ Kaynağı Bilgisi"
+msgstr "Ağ Klasörü Bilgisi"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: knetattach.ui:177
@@ -216,11 +216,4 @@ msgstr "George Staikos"
 #: main.cpp:28
 #, kde-format
 msgid "Primary author and maintainer"
-msgstr "Yazan ve geliştiren"
-
-#~ msgid ""
-#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
-#~ "folder path to use and press the Next button."
-#~ msgstr ""
-#~ "Bu <i>%1</i> için bir sunucu adı, port numarası ve yolu girerek İleri "
-#~ "düğmesine tıklayın."
+msgstr "Yazar ve bakımcı"

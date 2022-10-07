@@ -44,7 +44,7 @@ msgstr "Tarih ve Saat"
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr "Günü ve s&aati otomatik olarak ayarla"
+msgstr "Tarihi ve s&aati otomatik olarak ayarla"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
@@ -99,7 +99,7 @@ msgid ""
 "buttons to the right or by entering a new value."
 msgstr ""
 "Buradan sistem saatini değiştirebilirsiniz. Değiştirmek istediğiniz ögeye "
-"bağlı olarak saat, dakika ya da saniye alanlarına tıklayınız. Bu ögelerin "
+"bağlı olarak saat, dakika ya da saniye alanlarına tıklayın. Bu ögelerin "
 "değerlerini değiştirmek için sağ taraftaki aşağı ve yukarı düğmelerini "
 "kullanabilir ya da yeni bir değer girebilirsiniz."
 
@@ -179,7 +179,7 @@ msgstr "Luca Montecchiani"
 #: main.cpp:55
 #, kde-format
 msgid "Original author"
-msgstr "Asıl yazar"
+msgstr "Özgün Yazar"
 
 #: main.cpp:56
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "Paul Campbell"
 #: main.cpp:56
 #, kde-format
 msgid "Current Maintainer"
-msgstr "Şimdiki Yazar"
+msgstr "Şimdiki Bakımcı"
 
 #: main.cpp:57
 #, kde-format
@@ -236,18 +236,3 @@ msgstr "Geçerli zaman ayarlanamadı"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Saat dilimi ayarlanamadı"
-
-#~ msgid "kcmclock"
-#~ msgstr "kcmclock"
-
-#~ msgid "NTP"
-#~ msgstr "NTP"
-
-#~ msgid "Form"
-#~ msgstr "Biçim"
-
-#~ msgid "Failed to set system date/time/time zone."
-#~ msgstr "Sistem tarihi/saati/zaman dilimi ayarlanamadı."
-
-#~ msgid "Date/Time Error"
-#~ msgstr "Tarih/Saat Hatası"

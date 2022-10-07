@@ -113,8 +113,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
-"Bazı hizmetler, mevcut ortamda kullanışlı değillerse elle başlatıldıklarında "
-"kendilerini tekrar devre dışı bırakırlar."
+"Bazı hizmetler, geçerli ortamda kullanışlı değillerse elle "
+"başlatıldıklarında kendilerini yeniden devre dışı bırakırlar."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -176,52 +176,4 @@ msgstr "Hizmeti Durdur"
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Start Service"
-msgstr "Hizmeti Çalıştır"
-
-#~ msgid "kcmkded"
-#~ msgstr "kcmkded"
-
-#~ msgid "KDE Service Manager"
-#~ msgstr "KDE Servis Yöneticisi"
-
-#~ msgid ""
-#~ "This is a list of available KDE services which will be started on demand. "
-#~ "They are only listed for convenience, as you cannot manipulate these "
-#~ "services."
-#~ msgstr ""
-#~ "İstek halinde başlatılacak olan KDE servislerinin listesini burada "
-#~ "görebilirsiniz."
-
-#~ msgid "Status"
-#~ msgstr "Durum"
-
-#~ msgid "Description"
-#~ msgstr "Açıklama"
-
-#~ msgid ""
-#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
-#~ "services will be invoked on next startup. Be careful with deactivation of "
-#~ "unknown services."
-#~ msgstr ""
-#~ "Bu ekranda KDE başlangıcında yüklenebilecek tüm servislerin bir listesi "
-#~ "vardır. İşaretli simgeler, Plasma tekrar başladığı zaman "
-#~ "çalıştırılacaktır. Bilinmeyen servislerin kapatılması konusunda iki kez "
-#~ "dikkatli olmanızı öneririz."
-
-#~ msgid "Use"
-#~ msgstr "Kullan"
-
-#~ msgid "Start"
-#~ msgstr "Başlat"
-
-#~ msgid "Stop"
-#~ msgstr "Durdur"
-
-#~ msgid "Unable to contact KDED."
-#~ msgstr "KDED ile bağlantı kurulamadı."
-
-#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr "Servis başlatılamadı <em>%1</em>.<br /><br /><i>Hata: %2</i>"
-
-#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr "Servis durdurulamadı <em>%1</em>.<br /><br /><i>Hata: %2</i>"
+msgstr "Hizmeti Başlat"

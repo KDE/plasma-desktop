@@ -418,7 +418,7 @@ msgid ""
 "this configuration module and try again."
 msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
-"Lütfen bu yapılandırma modülünü yeniden başlatın ve tekrar deneyin."
+"Lütfen bu yapılandırma modülünü yeniden başlatın ve yeniden deneyin."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:123
 #, kde-format
@@ -543,7 +543,7 @@ msgstr "Vadim Zaytsev"
 #, kde-format
 msgctxt "Credits"
 msgid "Testing"
-msgstr "Tesler"
+msgstr "Sınama"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:97
 #, kde-format
@@ -719,13 +719,13 @@ msgstr "En fazla işaretçi hızı"
 #, kde-format
 msgctxt "Pointer acceleration"
 msgid "Acceleration:"
-msgstr "Hızlanma:"
+msgstr "İvmelenme:"
 
 #. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
 #: kcm/xlib/ui/pointermotion.ui:85
 #, kde-format
 msgid "Acceleration factor for normal pointer movements"
-msgstr "Normal işaretçi hareketleri için hızlanma oranı"
+msgstr "Normal işaretçi hareketleri için ivmelenme oranı"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/pointermotion.ui:101
@@ -1312,8 +1312,8 @@ msgid ""
 "finger on the touchpad"
 msgstr ""
 "Bu hareket sürüklemenin alternatif bir yoludur. Bir vuruş (dokunmak ve "
-"parmağı bırakmak), ardından tekrar dokunup dokunmatik yüzey üzerinde fareyi "
-"hareket ettirmekle uygulanır."
+"parmağı bırakmak), ardından yeniden dokunup dokunmatik yüzey üzerinde fareyi "
+"hareket ettirmekle uygulanır"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:254
@@ -1354,7 +1354,7 @@ msgid ""
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
 "Parmak dokunmatik yüzeyden kaldırıldığında \"Kilitli Sürüklemeler\" kipinin "
-"otomatik olarak ne zaman kapatılacağını (milisaniye cinsinden) belirler"
+"otomatik olarak ne zaman kapatılacağını (milisaniye türünden) belirler"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325
@@ -1390,7 +1390,7 @@ msgstr "Tek vuruş zaman aşımı:"
 #: kcm/xlib/ui/tap.ui:389
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Bir vuruş tespiti için en fazla süre (milisaniye cinsinden)"
+msgstr "Bir vuruş tespiti için en fazla süre (milisaniye türünden)"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
 #: kcm/xlib/ui/tap.ui:408
@@ -1402,7 +1402,7 @@ msgstr "Bir vuruş tespiti için en fazla parmak hareketi"
 #: kcm/xlib/ui/tap.ui:427
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "Bir çift vuruş tespiti için en fazla süre (milisaniye cinsinden)"
+msgstr "Bir çift vuruş tespiti için en fazla süre (milisaniye türünden)"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
 #: kcm/xlib/ui/tap.ui:446

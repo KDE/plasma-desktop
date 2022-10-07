@@ -60,7 +60,7 @@ msgstr "Kai Uwe Broulik"
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
 msgid "Plasma 5 Port"
-msgstr "Plasma 5 Portu"
+msgstr "Plasma 5 Aktarımı"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -184,51 +184,3 @@ msgstr "Bu aygıt takıldığında otomatik olarak bağlanacak."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Bu aygıt takıldığında otomatik olarak bağlanmayacak."
-
-#~ msgid ""
-#~ "If any removable storage devices are connected to your system when you "
-#~ "login to your desktop, their contents will automatically be made "
-#~ "available to your system for other programs to read."
-#~ msgstr ""
-#~ "Eğer sisteme giriş yaptığınızda herhangi bir depolama aygıtı bağlıysa, "
-#~ "uygulamaların aygıttaki içeriğe erişebilmesi için otomatik olarak aygıtı "
-#~ "bağlanır."
-
-#, fuzzy
-#~| msgid "Mount all removable media at login"
-#~ msgid "Automatically mount removable medias at login"
-#~ msgstr "Tüm çıkarılabilir ortamları girişte otomatik olarak bağla"
-
-#~ msgid ""
-#~ "When this is checked, the contents of any storage device will "
-#~ "automatically be made available to the system when it is plugged in or "
-#~ "attached."
-#~ msgstr ""
-#~ "Bu seçenek işaretliyse, tüm depolama aygıtlarının içerikleri, "
-#~ "takıldıkları ya da eklendikleri anda sistem tarafından erişilebilir hale "
-#~ "getirilir."
-
-#, fuzzy
-#~| msgid "Automatically mount removable media when attached"
-#~ msgid "Automatically mount removable medias when attached"
-#~ msgstr "Çıkarılabilir ortamları takıldıklarında otomatik olarak bağla"
-
-#~ msgid ""
-#~ "When this is unchecked, no device automounting of any kind will happen, "
-#~ "regardless of anything selected in the \"Device Overrides\" section."
-#~ msgstr ""
-#~ "Bu seçenek işaretli değilse, \"Aygıta Özel Ayarlar\" bölümünde yapılan "
-#~ "ayarlardan bağımsız olarak, hiçbir şekilde otomatik aygıt bağlama "
-#~ "yapılmayacaktır."
-
-#~ msgid "Enable automatic mounting of removable media"
-#~ msgstr "Çıkarılabilir aygıtı otomatik olarak bağlanmayı etkinleştir"
-
-#~ msgid "Device Overrides"
-#~ msgstr "Aygıta Özel Ayarlar"
-
-#~ msgid "Automount on Attach"
-#~ msgstr "Takıldığında Otomatik Bağla"
-
-#~ msgid "Automatically mounts devices at login or when attached"
-#~ msgstr "Aygıtları girişte ya da takıldıklarında otomatik olarak bağlar"

@@ -66,10 +66,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları kontrol "
-"edilecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> <b>minimum</"
-"b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için herhangi bir "
-"düğmeye veya 'İleri' düğmesine basın.</qt>"
+"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları "
+"denetlenecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> "
+"<b>minimum</b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için "
+"herhangi bir düğmeye veya 'İleri' düğmesine basın.</qt>"
 
 #: caldialog.cpp:110
 #, kde-format
@@ -79,10 +79,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları kontrol "
-"edilecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> <b>merkez</"
-"b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için herhangi bir "
-"düğmeye veya 'İleri' düğmesine basın.</qt>"
+"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları "
+"denetlenecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> "
+"<b>merkez</b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için "
+"herhangi bir düğmeye veya 'İleri' düğmesine basın.</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -92,10 +92,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları kontrol "
-"edilecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> <b>maksimum</"
-"b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için herhangi bir "
-"düğmeye veya 'İleri' düğmesine basın.</qt>"
+"<qt>Bu ayarlama ile sizin aygıtınızın gönderdiği değer aralıkları "
+"denetlenecektir. <br /><br />Oyun kumandanızı<b>%1 %2 ekseninde</b> "
+"<b>maksimum</b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için "
+"herhangi bir düğmeye veya 'İleri' düğmesine basın.</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
 #, kde-format
@@ -138,38 +138,38 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
-"Şu anki çekirdek sürümünüz (%1.%2.%3) , bu modülün derlendiği çekirdek "
-"sürümü (%4.%5.%6) ile uyumlu değil."
+"Şu anki çekirdek sürümünüz (%1.%2.%3), bu modülün derlendiği çekirdek sürümü "
+"(%4.%5.%6) ile uyumlu değil."
 
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr "Oyun kumandası %1 deki düğme sayısı alınamadı:%2"
+msgstr "Oyun kumandası %1 üzerindeki düğme sayısı alınamadı:%2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr "Oyun kumandası %1 deki eksen sayısı alınamadı:%2"
+msgstr "Oyun kumandası %1 üzerindeki eksen sayısı alınamadı:%2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
-msgstr "Oyun kumandası %1 deki kalibrasyon değerleri alınamadı:%2"
+msgstr "Oyun kumandası %1 üzerindeki kalibrasyon değerleri alınamadı:%2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
-msgstr "Oyun kumandası %1 'in kalibrasyon değerleri geri yüklenemiyor:%2"
+msgstr "Oyun kumandası %1 için kalibrasyon değerleri geri yüklenemiyor:%2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
-msgstr "Oyun kumandası %1 'in kalibrasyon değerleri yüklenemiyor:%2"
+msgstr "Oyun kumandası %1 için kalibrasyon değerleri yüklenemiyor:%2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
-msgstr "Oyun kumandası %1 'in kalibrasyon değerlerini uygulayamıyor:%2"
+msgstr "Oyun kumandası %1 için kalibrasyon değerlerini uygulanamıyor:%2"
 
 #: joydevice.cpp:95
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "İç hata - kod %1 bilinmiyor"
 #: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
-msgstr "KDE Oyun Çubuğu Kontrol Modülü"
+msgstr "KDE Oyun Çubuğu Denetim Modülü"
 
 #: joystick.cpp:31
 #, kde-format
@@ -207,17 +207,17 @@ msgid ""
 "can check your Linux source/Documentation/input/joystick.txt)"
 msgstr ""
 "<h1>Oyun kumandası</h1> Bu modül oyun kumandanızın düzgün çalışıp "
-"çalışmadığının kontrolü içindir.<br /> Eğer aygıt eksenler için yanlış "
-"değerler gönderiyorsa , bu sorunu ayarlama ile aşabilirsiniz.<br />Bu modül /"
-"dev/js[0-4] ve dev/input/js[0-4] kontrolü yaparak uygun tüm oyun "
+"çalışmadığının denetimi içindir.<br /> Eğer aygıt eksenler için yanlış "
+"değerler gönderiyorsa bu sorunu ayarlama ile aşabilirsiniz.<br />Bu modül /"
+"dev/js[0-4] ve dev/input/js[0-4] denetimi yaparak uygun tüm oyun "
 "kumandalarını bulmaya çalışır.<br />Eğer başka bir aygıt dosyanız varsa bunu "
 "açılır kutuya girin.<br />Düğme listesi oyun kumandası üzerindeki tüm "
-"düğmeleri belirtir , Eksen listesi ise tüm eksenler için değerleri verir."
-"<br />Not: Şu anki Linux Aygıt Sürücüsü (Çekirdek 2.4, 2.6) yalnızca "
-"otomatik tanıma yapabilir.<ul><li>2-eksen , 4-düğmeli oyun kumandası</"
-"li><li>3-eksen , 4-düğmeli oyun kumandası</li><li>4-eksen , 4-düğmeli oyun "
-"kumandası</li> <li>Saitek Cyborg Sayısal Oyun kumandaları</li></ul>(Detaylar "
-"için Linux source/Documentation/input/joystick.txt dosyasını kontrol edin)"
+"düğmeleri belirtir; Eksen listesi ise tüm eksenler için değerleri verir.<br /"
+">Not: Şu anki Linux Aygıt Sürücüsü (Çekirdek 2.4, 2.6) yalnızca otomatik "
+"tanıma yapabilir.<ul><li>2-eksen, 4-düğmeli oyun kumandası</li><li>3-eksen, "
+"4-düğmeli oyun kumandası</li><li>4-eksen, 4-düğmeli oyun kumandası</li> "
+"<li>Saitek Cyborg Sayısal Oyun kumandaları</li></ul>(Detaylar için Linux "
+"source/Documentation/input/joystick.txt dosyasını denetleyin)"
 
 #: joywidget.cpp:67
 #, kde-format
@@ -274,7 +274,7 @@ msgid ""
 msgstr ""
 "Bu bilgisayarda hiçbir oyun çubuğu algılanamadı.<br />Arama /dev/js[0-4] ve /"
 "dev/input/js[0-4] aygıt düğümlerinde yapıldı.<br />Eğer bağlı bir oyun "
-"çubuğu olduğundan eminseniz, lütfen doğru aygıt düğümünü giriniz."
+"çubuğu olduğundan eminseniz lütfen doğru aygıt düğümünü giriniz."
 
 #: joywidget.cpp:226
 #, kde-format
@@ -285,7 +285,7 @@ msgid ""
 msgstr ""
 "Verilen aygıt adı geçersiz(/dev şeklinde başlamıyor).\n"
 "Lütfen listeden bir aygıt seçin veya\n"
-"/dev/js0 'a benzer bir aygıt dosyası girin."
+"/dev/js0'a benzer bir aygıt dosyası girin."
 
 #: joywidget.cpp:229
 #, kde-format
@@ -314,12 +314,11 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
-"<qt>Ayarlama doğruluğu kontrol ediliyor.<br /><br /><b>Lütfen tüm yönleri "
-"merkez konumuna getirin ve oyun kumandasına daha fazla dokunmayın. </b><br /"
-"><br />Ayarlamayı başlatmak için Tamam düğmesine basın.</qt>"
+"<qt>Ayarlama doğruluğu denetleniyor.<br /><br /><b>Lütfen tüm yönleri merkez "
+"konumuna getirin ve oyun kumandasına daha fazla dokunmayın. </b><br /><br /"
+">Ayarlamayı başlatmak için Tamam düğmesine basın.</qt>"
 
 #: joywidget.cpp:363
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
-msgstr ""
-"Oyun kumandası %1 için tüm kalibrasyon değerleri eski yeniden yüklendi."
+msgstr "Oyun kumandası %1 için tüm kalibrasyon değerleri geri yüklendi."
