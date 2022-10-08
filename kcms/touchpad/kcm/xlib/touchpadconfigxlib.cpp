@@ -347,7 +347,7 @@ void TouchpadConfigXlib::updateTestAreaEnabled()
 
 void TouchpadConfigXlib::showConfigureNotificationsDialog()
 {
-    KNotifyConfigWidget *widget = KNotifyConfigWidget::configure(nullptr, m_parent->componentData().componentName());
+    KNotifyConfigWidget *widget = KNotifyConfigWidget::configure(nullptr, QStringLiteral("kcm_touchpad"));
     QDialog *dialog = qobject_cast<QDialog *>(widget->topLevelWidget());
     connect(dialog, SIGNAL(finished()), dialog, SLOT(deleteLater()));
 }
