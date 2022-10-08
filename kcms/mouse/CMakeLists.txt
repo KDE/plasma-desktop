@@ -82,7 +82,6 @@ target_link_libraries(kcm_mouse
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
-    KF5::Declarative
     PW::KWorkspace
 
     Qt::DBus

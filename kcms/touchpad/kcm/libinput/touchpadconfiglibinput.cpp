@@ -9,10 +9,10 @@
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <kdeclarative/kdeclarative.h>
 
 #include <QMetaObject>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQmlProperty>
 #include <QQuickItem>
 #include <QQuickWidget>
@@ -56,7 +56,6 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
 
     qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "TouchpadConfig", this);
 
-    KDeclarative::KDeclarative::setupEngine(m_view->engine());
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
     m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
 

@@ -34,7 +34,6 @@ target_link_libraries(kcm_touchpad
     KF5::I18n
     KF5::Completion
     KF5::ConfigWidgets
-    KF5::Declarative
     KF5::Plasma
     KF5::WindowSystem
     KF5::NotifyConfig

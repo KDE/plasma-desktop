@@ -11,10 +11,10 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KMessageWidget>
-#include <kdeclarative/kdeclarative.h>
 
 #include <QMetaObject>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQmlProperty>
 #include <QQuickItem>
 #include <QQuickWidget>
@@ -66,7 +66,6 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->rootContext()->setContextProperty("backend", m_backend);
     m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
-    KDeclarative::KDeclarative::setupEngine(m_view->engine()); // This is a new engine
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
 
     if (m_backend->mode() == InputBackendMode::XLibinput) {
