@@ -12,8 +12,6 @@
 #undef QT_NO_STL
 #define QT_STL
 
-#define QT_NO_KEYWORDS
-
 #include <config-scim.h>
 #include <errno.h>
 #include <list>
@@ -53,6 +51,15 @@
 #pragma GCC visibility push(default)
 #include <scim.h>
 #pragma GCC visibility pop
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+constexpr inline QLatin1String operator"" _L1(const char *str, size_t size) noexcept
+{
+    return QLatin1String(str, size);
+}
+#else
+using namespace Qt::StringLiterals;
+#endif
 
 Q_DECLARE_METATYPE(scim::Property)
 Q_DECLARE_METATYPE(scim::PanelFactoryInfo)
@@ -141,7 +148,7 @@ static QString AttrList2String(const AttributeList &attr_list)
         unsigned int start = attr.get_start();
         unsigned int length = attr.get_length();
         unsigned int value = attr.get_value();
-        result += QString("%1:%2:%3:%4;").arg(type).arg(start).arg(length).arg(value);
+        result += QString::fromLatin1("%1:%2:%3:%4;").arg(type).arg(start).arg(length).arg(value);
     }
     return result;
 }
@@ -177,7 +184,7 @@ static QString Property2String(const Property &prop)
         state |= SCIM_PROPERTY_ACTIVE;
     if (prop.visible())
         state |= SCIM_PROPERTY_VISIBLE;
-    result = QString("%1:%2:%3:%4:%5")
+    result = QString::fromLatin1("%1:%2:%3:%4:%5")
                  .arg(QString::fromUtf8(prop.get_key().c_str()))
                  .arg(QString::fromUtf8(prop.get_label().c_str()))
                  .arg(QString::fromUtf8(prop.get_icon().c_str()))
@@ -274,15 +281,15 @@ public:
     explicit DBusHandler(QObject *parent = nullptr)
         : QObject(parent)
     {
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "MovePreeditCaret", this, SLOT(MovePreeditCaret(int)));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "SelectCandidate", this, SLOT(SelectCandidate(int)));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "LookupTablePageUp", this, SLOT(LookupTablePageUp()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "LookupTablePageDown", this, SLOT(LookupTablePageDown()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "TriggerProperty", this, SLOT(TriggerProperty(QString)));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "PanelCreated", this, SLOT(PanelCreated()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "Exit", this, SLOT(Exit()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "ReloadConfig", this, SLOT(ReloadConfig()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "Configure", this, SLOT(Configure()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "MovePreeditCaret"_L1, this, SLOT(MovePreeditCaret(int)));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "SelectCandidate"_L1, this, SLOT(SelectCandidate(int)));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "LookupTablePageUp"_L1, this, SLOT(LookupTablePageUp()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "LookupTablePageDown"_L1, this, SLOT(LookupTablePageDown()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "TriggerProperty"_L1, this, SLOT(TriggerProperty(QString)));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "PanelCreated"_L1, this, SLOT(PanelCreated()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "Exit"_L1, this, SLOT(Exit()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "ReloadConfig"_L1, this, SLOT(ReloadConfig()));
+        QDBusConnection("scim_panel"_L1).connect(""_L1, ""_L1, "org.kde.impanel"_L1, "Configure"_L1, this, SLOT(Configure()));
 
         logo_prop = Property("/Logo", "SCIM", String(SCIM_ICON_DIR) + "/trademark.png", "SCIM Input Method");
         show_help_prop = Property("/StartHelp", "Help", "help-about", "About SCIM…");
@@ -329,13 +336,13 @@ public Q_SLOTS:
     void TriggerProperty(const QString &key)
     {
         SCIM_DEBUG_MAIN(1) << qPrintable(key) << "\n";
-        if (key == show_help_prop.get_key().c_str()) {
+        if (key == QString::fromUtf8(show_help_prop.get_key().c_str())) {
             SCIM_DEBUG_MAIN(1) << "about_to_show_help"
                                << "\n";
             _panel_agent->request_help();
             return;
         }
-        if (key == logo_prop.get_key().c_str()) {
+        if (key == QString::fromUtf8(logo_prop.get_key().c_str())) {
             SCIM_DEBUG_MAIN(1) << "about_to_show_factory_menu"
                                << "\n";
             _panel_agent->request_factory_menu();
@@ -374,9 +381,9 @@ public Q_SLOTS:
                 _panel_agent->trigger_property(key.toUtf8().constData());
             } else {
                 SCIM_DEBUG_MAIN(1) << "ExecMenu" << qPrintable(key) << "\n";
-                QDBusMessage message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu");
+                QDBusMessage message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ExecMenu"_L1);
                 message << list_result;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
             }
         }
     }
@@ -395,10 +402,10 @@ public Q_SLOTS:
 
         list_result << Property2String(show_help_prop);
 
-        message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties");
+        message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "RegisterProperties"_L1);
 
         message << list_result;
-        QDBusConnection("scim_panel").send(message);
+        QDBusConnection("scim_panel"_L1).send(message);
     }
     void Exit()
     {
@@ -417,7 +424,7 @@ public Q_SLOTS:
     void Configure()
     {
         SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO << "\n";
-        QProcess::startDetached("scim-setup", QStringList());
+        QProcess::startDetached("scim-setup"_L1, QStringList());
     }
 
 protected:
@@ -442,23 +449,23 @@ protected:
                 }
                 list_result << Property2String(show_help_prop);
 
-                message = QDBusMessage::createSignal("/kimpanel",
+                message = QDBusMessage::createSignal("/kimpanel"_L1,
                     "org.kde.kimpanel.inputmethod",
                     "RegisterProperties");
 
                 message << list_result;
                 QDBusConnection("scim_panel").send(message);
                 */
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "Enable");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "Enable"_L1);
                 message << true;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::TURN_OFF:
                 logo_prop.set_icon(String(SCIM_ICON_DIR) + "/trademark.png");
 
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateProperty"_L1);
                 message << Property2String(logo_prop);
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 /*
                 list_result.clear();
                 list_result << Property2String(logo_prop);
@@ -475,17 +482,17 @@ protected:
 
                 QDBusConnection("scim_panel").send(message);
                 */
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "Enable");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "Enable"_L1);
                 message << false;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::SHOW_HELP:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ExecDialog");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ExecDialog"_L1);
                 message << Property2String(Property("/Help", "Help", "", ev->data().at(0).toString().toUtf8().constData()));
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::SHOW_FACTORY_MENU:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ExecMenu"_L1);
                 // X                 _factory_list.clear();
                 list_result.clear();
                 data = ev->data();
@@ -498,93 +505,93 @@ protected:
                                                             factory_info.lang));
                 }
                 message << list_result;
-                SCIM_DEBUG_MAIN(1) << qPrintable(list_result.join(";")) << "\n";
-                QDBusConnection("scim_panel").send(message);
+                SCIM_DEBUG_MAIN(1) << qPrintable(list_result.join(QLatin1Char(';'))) << "\n";
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::SHOW_PREEDIT:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowPreedit"_L1);
                 message << true;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::SHOW_AUX:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowAux"_L1);
                 message << true;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::SHOW_LOOKUPTABLE:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowLookupTable"_L1);
                 message << true;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::HIDE_PREEDIT:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowPreedit"_L1);
                 message << false;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::HIDE_AUX:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowAux"_L1);
                 message << false;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::HIDE_LOOKUPTABLE:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ShowLookupTable"_L1);
                 message << false;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_PROPERTY:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateProperty"_L1);
                 message << Property2String(ev->data().at(0).value<Property>());
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_LOOKUPTABLE:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTable");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateLookupTable"_L1);
                 message << ev->data().at(0).toStringList();
                 message << ev->data().at(1).toStringList();
                 message << ev->data().at(2).toStringList();
                 message << ev->data().at(3).toBool();
                 message << ev->data().at(4).toBool();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_LOOKUPTABLE_CURSOR:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTableCursor");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateLookupTableCursor"_L1);
                 message << ev->data().at(0).toInt();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_PREEDIT_CARET:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditCaret");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdatePreeditCaret"_L1);
                 message << ev->data().at(0).toInt();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_PREEDIT_STR:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditText");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdatePreeditText"_L1);
                 message << ev->data().at(0).toString();
                 message << ev->data().at(1).toString();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_AUX:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateAux");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateAux"_L1);
                 message << ev->data().at(0).toString();
                 message << ev->data().at(1).toString();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_SPOT_LOC:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateSpotLocation");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateSpotLocation"_L1);
                 message << ev->data().at(0).toInt();
                 message << ev->data().at(1).toInt();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_SCREEN:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateScreen");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateScreen"_L1);
                 message << ev->data().at(0).toInt();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::UP_FACTORY_INFO:
                 SCIM_DEBUG_MAIN(1) << "update factory info\n";
 
                 logo_prop.set_icon(ev->data().at(0).value<PanelFactoryInfo>().icon);
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "UpdateProperty"_L1);
                 message << Property2String(logo_prop);
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             case DBusEvent::REG_HELPER:
                 break;
@@ -606,10 +613,10 @@ protected:
                 }
                 list_result << Property2String(show_help_prop);
 
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "RegisterProperties"_L1);
 
                 message << list_result;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
 
                 break;
             case DBusEvent::REG_PROPERTIES:
@@ -630,10 +637,10 @@ protected:
                 }
                 list_result << Property2String(show_help_prop);
 
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "RegisterProperties"_L1);
 
                 message << list_result;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
 
                 break;
             case DBusEvent::RM_HELPER:
@@ -646,22 +653,22 @@ protected:
                 }
                 list_result << Property2String(show_help_prop);
 
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "RegisterProperties"_L1);
 
                 message << list_result;
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
 
                 break;
             case DBusEvent::RM_PROPERTY:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "RemoveProperty");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "RemoveProperty"_L1);
                 // message << ev->data().at(0).V();
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             default:
-                message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ImplementMe");
+                message = QDBusMessage::createSignal("/kimpanel"_L1, "org.kde.kimpanel.inputmethod"_L1, "ImplementMe"_L1);
                 // message << ev->data().at(0).toInt();
                 SCIM_DEBUG_MAIN(1) << "Implement me:" << ev->scim_event_type() << "\n";
-                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel"_L1).send(message);
                 break;
             }
 
@@ -1161,7 +1168,7 @@ int main(int argc, char *argv[])
     qRegisterMetaType<PanelFactoryInfo>("PanelFactoryInfo");
     qRegisterMetaType<HelperInfo>("HelperInfo");
 
-    QDBusConnection::connectToBus(QDBusConnection::SessionBus, "scim_panel");
+    QDBusConnection::connectToBus(QDBusConnection::SessionBus, "scim_panel"_L1);
     _dbus_handler = new DBusHandler();
     _dbus_handler->setInitialHelpers(_helper_list);
 

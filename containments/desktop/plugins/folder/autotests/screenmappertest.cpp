@@ -16,6 +16,15 @@
 
 #include <KActivities/Consumer>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+constexpr inline QLatin1String operator"" _L1(const char *str, size_t size) noexcept
+{
+    return QLatin1String(str, size);
+}
+#else
+using namespace Qt::StringLiterals;
+#endif
+
 QTEST_MAIN(ScreenMapperTest)
 
 void ScreenMapperTest::initTestCase()
@@ -187,9 +196,9 @@ void ScreenMapperTest::tst_readScreenActivityMapping()
     };
     // clang-format off
     const QStringList mapping{
-        paths[0], "0", m_currentActivity,
-        paths[1], "1", m_currentActivity,
-        paths[0], "1", m_alternativeActivity,
+        paths[0], "0"_L1, m_currentActivity,
+        paths[1], "1"_L1, m_currentActivity,
+        paths[0], "1"_L1, m_alternativeActivity,
     };
     // clang-format on
     QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
@@ -216,8 +225,8 @@ void ScreenMapperTest::tst_readScreenActivityMappingFromOldConfig()
     };
     // clang-format off
     const QStringList mapping{
-        paths[0], "0",
-        paths[1], "1",
+        paths[0], "0"_L1,
+        paths[1], "1"_L1,
     };
     // clang-format on
     QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
@@ -238,9 +247,9 @@ void ScreenMapperTest::tst_saveScreenActivityMapping()
 
     QString file(QStringLiteral("desktop:/foo%1.txt"));
     const std::array<QStringList, 3> expectedMapping{
-        QStringList{file.arg(0), "0", m_currentActivity},
-        QStringList{file.arg(1), "1", m_currentActivity},
-        QStringList{file.arg(0), "1", m_alternativeActivity},
+        QStringList{file.arg(0), "0"_L1, m_currentActivity},
+        QStringList{file.arg(1), "1"_L1, m_currentActivity},
+        QStringList{file.arg(0), "1"_L1, m_alternativeActivity},
     };
 
     for (const auto &l : expectedMapping) {
@@ -268,9 +277,9 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreens()
     };
     // clang-format off
     const std::array<QStringList, 3> expectedMapping{
-        QStringList{"0", m_currentActivity, "2", paths[0], paths[1]},
-        QStringList{"1", m_currentActivity, "2", paths[2], paths[3]},
-        QStringList{"0", m_alternativeActivity, "2", paths[0], paths[1]},
+        QStringList{"0"_L1, m_currentActivity, "2"_L1, paths[0], paths[1]},
+        QStringList{"1"_L1, m_currentActivity, "2"_L1, paths[2], paths[3]},
+        QStringList{"0"_L1, m_alternativeActivity, "2"_L1, paths[0], paths[1]},
     };
     // clang-format on
     QStringList seralizedMap;
@@ -306,8 +315,8 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreensFromOldC
     };
     // clang-format off
     const std::array<QStringList, 2> expectedMapping{
-        QStringList{"0", m_currentActivity, "2", paths[0], paths[1]},
-        QStringList{"1", m_currentActivity, "2", paths[2], paths[3]},
+        QStringList{"0"_L1, m_currentActivity, "2"_L1, paths[0], paths[1]},
+        QStringList{"1"_L1, m_currentActivity, "2"_L1, paths[2], paths[3]},
     };
     // clang-format on
     QStringList seralizedMap;

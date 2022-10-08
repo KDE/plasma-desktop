@@ -38,7 +38,7 @@ QHash<int, QByteArray> PlacesModel::roleNames() const
 
 bool PlacesModel::activityLinkingEnabled() const
 {
-    KPluginMetaData plugin = KPluginMetaData::findPluginById("kf5/kfileitemaction", QStringLiteral("kactivitymanagerd_fileitem_linking_plugin"));
+    KPluginMetaData plugin = KPluginMetaData::findPluginById(QLatin1String("kf5/kfileitemaction"), QStringLiteral("kactivitymanagerd_fileitem_linking_plugin"));
     return plugin.isValid();
 }
 
