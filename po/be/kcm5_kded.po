@@ -1,15 +1,13 @@
-# translation of kcmkded.po to Belarusian
-#
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkded\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2007-08-22 14:09+0000\n"
+"PO-Revision-Date: 2022-09-26 14:52\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,80 +16,70 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm5_kded.po\n"
+"X-Crowdin-File-ID: 8501\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ігра Грачышка"
+msgstr "Ігар Грачышка, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ihar.hrachyshka@gmail.com"
+msgstr "ihar.hrachyshka@gmail.com, nashtlumach@gmail.com"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "Сервісы аўтаматычнага запуску"
+msgstr "Фонавыя службы"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "(c) 2002 Daniel Molkentin"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
 msgid "Daniel Molkentin"
-msgstr "Даніель Молькенцін"
+msgstr "Daniel Molkentin"
 
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>service</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Немагчыма спыніць <em>службу</em> сервера."
+msgstr "Не ўдалося спыніць службу: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>service</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Немагчыма запусціць <em>службу</em> сервера."
+msgstr "Не ўдалося запусціць службу: %1"
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>service</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Немагчыма спыніць <em>службу</em> сервера."
+msgstr "Не ўдалося спыніць службу."
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>service</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Немагчыма запусціць <em>службу</em> сервера."
+msgstr "Не ўдалося запусціць службу."
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"Не ўдалося апавясціць кіраўніка службаў KDE (kded5) пра захаваныя змены: %1"
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -102,14 +90,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>Кіраўнік сервісаў</h1><p>Гэты модуль дазваляе вам наставіць усе ўтулкі "
-"сервісаў KDE. Увогуле, існуе два тыпы сервісаў:</p><ul><li>Сервісы, якія "
-"запускаюцца аўтаматычна</li><li>Сервісы, якія выклікаюцца па патрабаванні</"
-"li></ul><p>Апошнія пералічаны для ўтульнасці. Першыя могуць быць запушчаны і "
-"спынены. У рэжыму адміністратара, вы таксама можаце вызначыць, якмя сервісы "
-"трэба загружаць пры запуску.</p><p><b> Карыстайцеся гэтым з аглядкай: "
-"некаторыя сервіся неабходныя для KDE; не адключайце сервісы, калі не "
-"ведаеце, што робіце.</b></p>"
+"<p>Гэты модуль дае магчымасць аглядаць усе ўбудовы \"Дэмана KDE\", які "
+"таксама называецца \"Службамі KDE\". Звычайна бывае два тыпы службаў:</p> "
+"<ul><li>Службы, якія запускаюцца падчас запуску сістэмы</li><li>Службы, якія "
+"запускаюцца па запыце</li></ul> <p>Апошнія толькі пералічваюцца.  Службы "
+"можна запускаць і спыняць. Вы таксама можаце вызначыць, ці трэба загружаць "
+"службы падчас запуску сістэмы.</p> <p><b>Карыстайцеся гэтым уважліва: "
+"некаторыя службы неабходныя для працы Plasma. Не адключайце службы, калі вы "
+"не ведаеце, што робіце.</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -117,6 +105,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Кіраўнік фонавых службаў (kded5) не запушчаны. Пераканайцеся, што ён "
+"усталяваны правільна."
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -124,6 +114,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Некаторыя службы зноў адключаюцца, калі вы запусцілі іх уласнаручна, але яны "
+"бескарысныя ў бягучым працоўным асяроддзі."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -131,42 +123,40 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"Некаторыя службы былі аўтаматычна запушчаныя/спыненыя, калі кіраўнік фонавых "
+"службаў (kded5) быў перазапушчаны, каб ужыць вашыя змены."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Сервіс"
+msgstr "Усе службы"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Выконваецца"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr "Не выконваецца"
+msgstr "Не запушчаныя"
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Startup Services"
-msgstr "Сервісы аўтаматычнага запуску"
+msgstr "Запушчаныя службы"
 
 #: package/contents/ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
-msgstr "Сервісы, якія загружаюцца пры патрэбе"
+msgstr "Службы, якія загружаюцца пры неабходнасці"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Уключыць аўтаматычную загрузку гэтай службы падчас запуску сістэмы"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -179,16 +169,14 @@ msgid "Running"
 msgstr "Выконваецца"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Сервіс"
+msgstr "Спыніць службу"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Сервіс"
+msgstr "Запусціць службу"
 
 #~ msgid "kcmkded"
 #~ msgstr "kcmkded"

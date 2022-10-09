@@ -1,0 +1,272 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"PO-Revision-Date: 2022-09-29 11:16\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_keys.po\n"
+"X-Crowdin-File-ID: 8633\n"
+
+#: globalaccelmodel.cpp:113
+#, kde-format
+msgid "Applications"
+msgstr "Праграмы"
+
+#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
+#, kde-format
+msgid "System Services"
+msgstr "Сістэмныя службы"
+
+#: globalaccelmodel.cpp:187
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Не ўдалося захаваць спалучэнне клавіш %1: %2"
+
+#: globalaccelmodel.cpp:295
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "Не ўдалося дадаць %1. Выглядае, што няма дзеянняў."
+
+#: globalaccelmodel.cpp:338
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Не ўдалося звязацца з глабальнай службай спалучэнняў клавіш"
+
+#: kcm_keys.cpp:50
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Не ўдалося звязацца з дэманам спалучэнняў клавіш"
+
+#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
+#: standardshortcutsmodel.cpp:29
+#, kde-format
+msgid "Common Actions"
+msgstr "Глабальныя дзеянні"
+
+#: kcm_keys.cpp:230
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Спалучэнне клавіш %1 ужо прызначана для глабальнага %2 дзеяння \"%3\".\n"
+"Хочаце перапрызначыць?"
+
+#: kcm_keys.cpp:234
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"Спалучэнне клавіш %1 ужо прызначана для дзеяння \"%2\" у %3.\n"
+"Хочаце перапрызначыць?"
+
+#: kcm_keys.cpp:235
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "Знойдзены канфлікт"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Немагчыма экспартаваць схему, пакуль ёсць незахаваныя змены"
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Абярыце ніжэй кампаненты, якія патрэбна ўключыць у схему для экспартавання"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "Save scheme"
+msgstr "Захаваць схему"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Выдаліць усе спалучэнні клавіш для %1"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Undo deletion"
+msgstr "Адрабіць выдаленне"
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Няма элементаў, якія адпавядаюць умовам пошуку"
+
+#: package/contents/ui/main.qml:224
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Абярыце элемент са спіса, каб убачыць тут яго спалучэнні клавіш"
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgid "Add Application…"
+msgstr "Дадаць праграму…"
+
+#: package/contents/ui/main.qml:242
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Імпартаванне схемы…"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Cancel Export"
+msgstr "Скасаваць экспартаванне"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Экспартаванне схемы…"
+
+#: package/contents/ui/main.qml:268
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Экспартаванне схемы спалучэнняў клавіш"
+
+#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Імпартаванне схемы спалучэнняў клавіш"
+
+#: package/contents/ui/main.qml:270
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Схема спалучэнняў клавіш (*.kksrc)"
+
+#: package/contents/ui/main.qml:296
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Абярыце схему для імпартавання:"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Адвольная схема"
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Select File…"
+msgstr "Абраць файл…"
+
+#: package/contents/ui/main.qml:313
+#, kde-format
+msgid "Import"
+msgstr "Імпартаванне"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:26
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Рэдагаванне спалучэння клавіш: %1"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:38
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:51
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Няма актыўных спалучэнняў клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:90
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Прадвызначанае спалучэнне клавіш"
+msgstr[1] "Прадвызначаныя спалучэнні клавіш"
+msgstr[2] "Прадвызначаныя спалучэнні клавіш"
+msgstr[3] "Прадвызначаныя спалучэнні клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:92
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Няма прадвызначаных спалучэнняў клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "Прадвызначанае спалучэнне клавіш %1 уключана."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:100
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "Прадвызначанае спалучэнне клавіш %1 адключана."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:121
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Адвольныя спалучэнні клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:145
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Выдаліць гэтае спалучэнне клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:151
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Дадаць адвольнае спалучэнне клавіш"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:185
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Скасаваць захопліванне новага спалучэння клавіш"
+
+#: standardshortcutsmodel.cpp:33
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "Edit"
+msgstr "Рэдагаванне"
+
+#: standardshortcutsmodel.cpp:36
+#, kde-format
+msgid "Navigation"
+msgstr "Навігацыя"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "View"
+msgstr "Прагляд"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "Settings"
+msgstr "Налады"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Help"
+msgstr "Даведка"

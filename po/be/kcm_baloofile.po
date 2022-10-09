@@ -1,0 +1,137 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-09-28 23:16\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_baloofile.po\n"
+"X-Crowdin-File-ID: 8631\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+"Гэты модуль дазваляе вам наладжваць індэксаванне файлаў і функцыю пошуку."
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Гэты параметр адключыць пошук файлаў у KRunner і меню запуску, а таксама і "
+"паказ метаданых з усіх праграм KDE."
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Хочаце выдаліць захаваныя даныя індэкса? %1 прасторы будзе вызвалена, але "
+"калі індэксаванне будзе паўторна ўключана пазней, увесь індэкс трэба будзе "
+"стварыць нанова. Гэта можа заняць некаторы час. Залежыць ад таго, колькі ў "
+"вас файлаў."
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Выдаліць даныя індэкса"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+"Пошук файлаў дапамагае хутка знаходзіць усе вашыя файлы па іх змесціву."
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Enable File Search"
+msgstr "Уключыць пошук файлаў"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Also index file content"
+msgstr "Таксама індэксаваць змесціва файлаў"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr "Індэксаваць схаваныя файлы і каталогі"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr "Стан: %1, %2% завершана"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Прыпыніць індэксаванне"
+
+#: package/contents/ui/main.qml:138
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Узнавіць індэксаванне"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr "Бягучае індэксаванне: %1"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr "Канфігурацыя вызначанага каталога:"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr "Пачаць індэксаванне каталога…"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr "Спыніць індэксаванне каталога…"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Not indexed"
+msgstr "Не індэксуецца"
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Indexed"
+msgstr "Індэксаваны"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Delete entry"
+msgstr "Выдаліць запіс"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Абярыце каталог для ўключэння"
+
+#: package/contents/ui/main.qml:294
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Абярыце каталог для выключэння"

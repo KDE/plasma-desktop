@@ -1,16 +1,14 @@
-# translation of kcmlaunch.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Pavel Piatruk <berserker@neolocation.com>, 2007.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmlaunch\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2007-10-28 14:23+0200\n"
+"PO-Revision-Date: 2022-09-29 11:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,72 +17,72 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_launchfeedback.po\n"
+"X-Crowdin-File-ID: 8509\n"
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
 #: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Тэрмін чакання ў секундах"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Водгук пры запуску"
 
 #: package/contents/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Bus&y Cursor"
+#, kde-format
 msgid "Cursor:"
-msgstr "Заняты &курсор"
+msgstr "Курсор:"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
 msgid "No Feedback"
-msgstr ""
+msgstr "Няма водгуку"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Static"
-msgstr ""
+msgstr "Статычны"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Blinking Cursor"
+#, kde-format
 msgid "Blinking"
-msgstr "Курсор мільгаціць"
+msgstr "Мільгаючы"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Bouncing Cursor"
+#, kde-format
 msgid "Bouncing"
-msgstr "Курсор скача"
+msgstr "Скокаючы"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Task Manager:"
-msgstr ""
+msgstr "Кіраўнік задач:"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Enable &taskbar notification"
+#, kde-format
 msgid "Enable animation"
-msgstr "Задзейнічаць &абвяшчэнне ў панелі заданняў"
+msgstr "Уключыць анімацыю"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "&Startup indication timeout:"
+#, kde-format
 msgid "Stop animation after:"
-msgstr "Час індыкацыі &запуску:"
+msgstr "Спыніць анімацыю пасля:"
 
 #: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid " sec"
+#, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] " сек"
-msgstr[1] " сек"
-msgstr[2] " сек"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунды"
+msgstr[2] "%1 секунд"
+msgstr[3] "%1 секунды"
 
 #~ msgid ""
 #~ "<h1>Launch Feedback</h1> You can configure the application-launch "

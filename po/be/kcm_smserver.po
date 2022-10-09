@@ -1,15 +1,13 @@
-# translation of kcmsmserver.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmsmserver\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-10 00:47+0000\n"
-"PO-Revision-Date: 2007-08-26 22:03+0300\n"
+"PO-Revision-Date: 2022-09-30 11:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,6 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_smserver.po\n"
+"X-Crowdin-File-ID: 8511\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -28,112 +31,101 @@ msgid ""
 "whether the computer should be automatically shut down after session exit by "
 "default."
 msgstr ""
-"<h1>Кіраўнік сеансаў</h1> Тут вы можаце наставіць кіраўніка сеансаў. Гэта "
-"ўключае ў сябе выбар, ці павінна запытвацца пацверджанне перад выхадам з "
-"сістэмы, ці павінны сеанс быць адноўлены пасля ўваходу і ці павінен "
-"камп'ютэр быць аўтаматычна выключаны пасля выхаду з сістэмы."
+"<h1>Кіраўнік сеансаў</h1> Тут вы можаце наладзіць кіраўнік сеансаў, "
+"уключаючы пацвярджэнне перад завяршэннем сеанса, аднаўлення сеанса пасля "
+"ўваходу і аўтаматычнае адключэнне камп'ютара пасля завяршэння сеанса."
 
 #: package/contents/ui/main.qml:25
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
+"Не ўдалося адправіць запыт на перазапуск у праграму кіравання прашыўкай: %1"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
+msgstr "Пасля перазапуску камп'ютара адкрыецца экран кіравання UEFI."
 
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
+msgstr "Пасля перазапуску камп'ютара адкрыецца праграма кіравання прашыўкай."
 
 #: package/contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart Now"
-msgstr "&Перазагрузіць камп'ютэр"
+msgstr "Перазапусціць"
 
 #: package/contents/ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Агульныя"
+msgstr "Асноўныя:"
 
 #: package/contents/ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Confirm logout"
-msgstr "Пацвердзіць выхад"
+msgstr "Пацвярджэнне выхаду"
 
 #: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
+#, kde-format
 msgctxt "@option:check"
 msgid "Offer shutdown options"
-msgstr "Прапанаваць настаўленні выключэння"
+msgstr "Прапаноўваць параметры выключэння"
 
 #: package/contents/ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid "Default Shutdown Option"
+#, kde-format
 msgid "Default leave option:"
-msgstr "Настаўленні выключэння па змаўчанні"
+msgstr "Прадвызначаны параметр:"
 
 #: package/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "&End current session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "End current session"
-msgstr "Скончыць бягучы сеанс"
+msgstr "Завяршыць бягучы сеанс"
 
 #: package/contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart computer"
-msgstr "&Перазагрузіць камп'ютэр"
+msgstr "Перазапусціць камп'ютар"
 
 #: package/contents/ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "&Turn off computer"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn off computer"
-msgstr "&Выключыць камп'ютэр"
+msgstr "Выключыць камп'ютар"
 
 #: package/contents/ui/main.qml:102
 #, kde-format
 msgid "When logging in:"
-msgstr ""
+msgstr "Уваход:"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Restore last session"
-msgstr "Узнавіць самастойна запісаны сеанс"
+msgstr "Аднавіць апошні сеанс"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Restore last manually saved session"
-msgstr "Узнавіць самастойна запісаны сеанс"
+msgstr "Аднавіць апошні ўласнаручна захаваны сеанс"
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
@@ -144,7 +136,7 @@ msgstr "Пачаць новы сеанс"
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Don't restore these applications:"
-msgstr ""
+msgstr "Не аднаўляць наступныя праграмы:"
 
 #: package/contents/ui/main.qml:152
 #, kde-format
@@ -153,47 +145,45 @@ msgid ""
 "should not be saved in sessions, and therefore will not be started when "
 "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
 msgstr ""
+"Тут вы можаце ўвесці праз двукроп'е або коску спіс праграм, якія не павінны "
+"захоўвацца ў сеансах і не будуць запускацца пры аднаўленні сеанса. "
+"Напрыклад, \"xterm:konsole\" або \"xterm,konsole\"."
 
 #: package/contents/ui/main.qml:161
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
-msgstr ""
+msgstr "Увайдзіце ў праграму кіравання прашыўкай пры наступным перазапуску"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "Пацвердзіць выхад"
+msgstr "Пацвярджэнне выхаду"
 
 #. i18n: ectx: label, entry (offerShutdown), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
+#, kde-format
 msgid "Offer shutdown options"
-msgstr "Прапанаваць настаўленні выключэння"
+msgstr "Прапаноўваць параметры выключэння"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Default Shutdown Option"
+#, kde-format
 msgid "Default leave option"
-msgstr "Настаўленні выключэння па змаўчанні"
+msgstr "Прадвызначаны параметр выхаду"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
-msgstr "Пры ўваходзе"
+msgstr "Падчас уваходу"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:30
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Праграмы, якія трэба выключыць з сеансаў:"
+msgstr "Праграмы будуць выключаныя з сеанса"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

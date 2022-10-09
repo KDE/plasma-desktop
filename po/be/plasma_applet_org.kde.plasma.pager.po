@@ -1,16 +1,12 @@
-# translation of plasma_applet_pager.po to Belarusian
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_pager\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-31 00:48+0000\n"
-"PO-Revision-Date: 2007-12-09 18:31+0200\n"
+"PO-Revision-Date: 2022-10-07 06:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,161 +15,166 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/plasma_applet_org.kde.plasma.pager."
+"po\n"
+"X-Crowdin-File-ID: 8527\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Асноўныя налады"
 
 #: package/contents/ui/configGeneral.qml:40
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Асноўныя:"
 
 #: package/contents/ui/configGeneral.qml:42
 #, kde-format
 msgid "Show application icons on window outlines"
-msgstr ""
+msgstr "Паказваць значкі праграм на абрысах вокнаў"
 
 #: package/contents/ui/configGeneral.qml:47
 #, kde-format
 msgid "Show only current screen"
-msgstr ""
+msgstr "Паказваць толькі бягучы экран"
 
 #: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "Цыклічная навігацыя"
 
 #: package/contents/ui/configGeneral.qml:64
 #, kde-format
 msgid "Layout:"
-msgstr ""
+msgstr "Макет:"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
-msgstr ""
+msgstr "Прадвызначаны"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgid "Horizontal"
-msgstr ""
+msgstr "Гарызантальны"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgid "Vertical"
-msgstr ""
+msgstr "Вертыкальны"
 
 #: package/contents/ui/configGeneral.qml:80
 #, kde-format
 msgid "Text display:"
-msgstr ""
+msgstr "Тэкст:"
 
 #: package/contents/ui/configGeneral.qml:83
 #, kde-format
 msgid "No text"
-msgstr ""
+msgstr "Няма тэксту"
 
 #: package/contents/ui/configGeneral.qml:91
 #, kde-format
 msgid "Activity number"
-msgstr ""
+msgstr "Нумар пакоя"
 
 #: package/contents/ui/configGeneral.qml:91
 #, kde-format
 msgid "Desktop number"
-msgstr ""
+msgstr "Нумар працоўнага пакоя"
 
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
 msgid "Activity name"
-msgstr ""
+msgstr "Назва пакоя"
 
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
 msgid "Desktop name"
-msgstr ""
+msgstr "Назва працоўнага стала"
 
 #: package/contents/ui/configGeneral.qml:113
 #, kde-format
 msgid "Selecting current Activity:"
-msgstr ""
+msgstr "Выбар бягучага пакоя:"
 
 #: package/contents/ui/configGeneral.qml:113
-#, fuzzy, kde-format
-#| msgid "&Configure Desktops..."
+#, kde-format
 msgid "Selecting current virtual desktop:"
-msgstr "&Наставіць працоўныя сталы..."
+msgstr "Выбар бягучага віртуальнага працоўнага стала:"
 
 #: package/contents/ui/configGeneral.qml:116
 #, kde-format
 msgid "Does nothing"
-msgstr ""
+msgstr "Нічога не рабіць"
 
 #: package/contents/ui/configGeneral.qml:124
 #, kde-format
 msgid "Shows the desktop"
-msgstr ""
+msgstr "Паказвае працоўны стол"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "…і %1 іншае акно"
+msgstr[1] "…і %1 іншыя вокны"
+msgstr[2] "…і %1 іншых акон"
+msgstr[3] "і %1 іншыя вокны"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 акно"
+msgstr[1] "%1 вокны:"
+msgstr[2] "%1 акон:"
+msgstr[3] "%1 вокны:"
 
 #: package/contents/ui/main.qml:374
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 згорнутае акно:"
+msgstr[1] "%1 згорнутыя вокны:"
+msgstr[2] "%1 згорнутых акон:"
+msgstr[3] "%1 згорнутыя вокны:"
 
 #: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Desktop %1"
-msgstr ""
+msgstr "Працоўны стол %1"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Пераключыцца на %1"
 
 #: package/contents/ui/main.qml:596
 #, kde-format
 msgid "Show Activity Manager…"
-msgstr ""
+msgstr "Паказаць кіраўнік пакояў…"
 
 #: package/contents/ui/main.qml:599
-#, fuzzy, kde-format
-#| msgid "&Configure Desktops..."
+#, kde-format
 msgid "Add Virtual Desktop"
-msgstr "&Наставіць працоўныя сталы..."
+msgstr "Дадаць віртуальны працоўны стол"
 
 #: package/contents/ui/main.qml:600
-#, fuzzy, kde-format
-#| msgid "&Configure Desktops..."
+#, kde-format
 msgid "Remove Virtual Desktop"
-msgstr "&Наставіць працоўныя сталы..."
+msgstr "Выдаліць віртуальны працоўны стол"
 
 #: package/contents/ui/main.qml:603
-#, fuzzy, kde-format
-#| msgid "&Configure Desktops..."
+#, kde-format
 msgid "Configure Virtual Desktops…"
-msgstr "&Наставіць працоўныя сталы..."
+msgstr "Наладжванне віртуальных працоўных сталоў…"
 
 #, fuzzy
 #~| msgid "&Configure Desktops..."

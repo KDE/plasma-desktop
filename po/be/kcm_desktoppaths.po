@@ -1,15 +1,13 @@
-# translation of kcmkonq.po to Belarusian
-#
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkonq\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2007-08-26 22:23+0300\n"
+"PO-Revision-Date: 2022-09-28 23:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,6 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_desktoppaths.po\n"
+"X-Crowdin-File-ID: 8507\n"
 
 #: desktoppathssettings.cpp:173
 #, kde-format
@@ -25,34 +28,29 @@ msgid "Desktop"
 msgstr "Працоўны стол"
 
 #: desktoppathssettings.cpp:188
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Documents"
-msgstr "Тэчка &дакументаў:"
+msgstr "Дакументы"
 
 #: desktoppathssettings.cpp:203
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Downloads"
-msgstr "Тэчка &дакументаў:"
+msgstr "Спампаваныя файлы"
 
 #: desktoppathssettings.cpp:218
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Music"
-msgstr "Тэчка &дакументаў:"
+msgstr "Музыка"
 
 #: desktoppathssettings.cpp:233
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Pictures"
-msgstr "Тэчка &дакументаў:"
+msgstr "Выявы"
 
 #: desktoppathssettings.cpp:248
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Videos"
-msgstr "Тэчка &дакументаў:"
+msgstr "Відэа"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -62,13 +60,17 @@ msgid ""
 "desktop should be stored.\n"
 "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
 msgstr ""
+"<h1>Шляхі</h1>\n"
+"Гэты модуль дазваляе вам абраць, дзе ў файлавай сістэме павінны захоўвацца "
+"файлы на працоўным стале.\n"
+"Скарыстайцеся \"Што гэта?\" (Shift+F1), каб паглядзець даведку па пэўных "
+"параметрах."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: globalpaths.ui:17
-#, fuzzy, kde-format
-#| msgid "Des&ktop path:"
+#, kde-format
 msgid "Desktop path:"
-msgstr "Тэчка &працоўнага стала:"
+msgstr "Шлях да каталога \"Працоўны стол\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
 #: globalpaths.ui:24
@@ -78,81 +80,74 @@ msgid ""
 "change the location of this folder if you want to, and the contents will "
 "move automatically to the new location as well."
 msgstr ""
+"Гэты каталог змяшчае ўсе файлы, якія вы бачыце на працоўным стале. Вы можаце "
+"змяніць размяшчэнне гэтага каталога, калі захочаце, і змесціва таксама "
+"аўтаматычна перамесціцца ў новае месца."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: globalpaths.ui:34
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Documents path:"
-msgstr "Тэчка &дакументаў:"
+msgstr "Шлях да каталога \"Дакументы\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
 #: globalpaths.ui:41
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
-msgstr "Гэтая тэчка будзе выкарыстоўвацца для запісу і загрузкі дакументаў."
+msgstr ""
+"Гэты каталог будзе выкарыстоўвацца для захавання і загрузкі дакументаў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: globalpaths.ui:51
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Downloads path:"
-msgstr "Тэчка &дакументаў:"
+msgstr "Шлях да каталога \"Спампаваныя файлы\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
 #: globalpaths.ui:58
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "Гэтая тэчка будзе выкарыстоўвацца для запісу і загрузкі дакументаў."
+msgstr ""
+"Гэты каталог будзе выкарыстоўвацца для захавання спампаваных элементаў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "Тэчка &дакументаў:"
+msgstr "Шлях да каталога \"Відэа\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
 #: globalpaths.ui:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr "Гэтая тэчка будзе выкарыстоўвацца для запісу і загрузкі дакументаў."
+msgstr ""
+"Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання відэафайлаў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: globalpaths.ui:85
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Pictures path:"
-msgstr "Тэчка &дакументаў:"
+msgstr "Шлях да каталога \"Выявы\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
 #: globalpaths.ui:92
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
-msgstr "Гэтая тэчка будзе выкарыстоўвацца для запісу і загрузкі дакументаў."
+msgstr "Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання выяў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
+#, kde-format
 msgid "Music path:"
-msgstr "Тэчка &дакументаў:"
+msgstr "Шлях да каталога \"Музыка\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
 #: globalpaths.ui:109
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgid "This folder will be used by default to load or save music from or to."
-msgstr "Гэтая тэчка будзе выкарыстоўвацца для запісу і загрузкі дакументаў."
+msgstr "Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання музыкі."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

@@ -1,0 +1,215 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"PO-Revision-Date: 2022-10-06 18:01\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/plasma_applet_org.kde.plasma.kicker."
+"po\n"
+"X-Crowdin-File-ID: 8661\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Асноўныя"
+
+#: package/contents/ui/code/tools.js:42
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Выдаліць з улюбёнага"
+
+#: package/contents/ui/code/tools.js:46
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Дадаць ва ўлюбёнае"
+
+#: package/contents/ui/code/tools.js:70
+#, kde-format
+msgid "On All Activities"
+msgstr "Ва ўсіх пакоях"
+
+#: package/contents/ui/code/tools.js:120
+#, kde-format
+msgid "On the Current Activity"
+msgstr "У бягучым пакоі"
+
+#: package/contents/ui/code/tools.js:134
+#, kde-format
+msgid "Show in Favorites"
+msgstr "Паказваць ва ўлюбёных"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "Значок:"
+
+#: package/contents/ui/ConfigGeneral.qml:126
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Абраць…"
+
+#: package/contents/ui/ConfigGeneral.qml:131
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Прыбраць значок"
+
+#: package/contents/ui/ConfigGeneral.qml:149
+#, kde-format
+msgid "Show applications as:"
+msgstr "Спосаб паказу праграм:"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name only"
+msgstr "Толькі назва"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description only"
+msgstr "Толькі апісанне"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Name (Description)"
+msgstr "Назва (Апісанне)"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+#, kde-format
+msgid "Description (Name)"
+msgstr "Апісанне (Назва)"
+
+#: package/contents/ui/ConfigGeneral.qml:161
+#, kde-format
+msgid "Behavior:"
+msgstr "Паводзіны:"
+
+#: package/contents/ui/ConfigGeneral.qml:163
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "Сартаваць праграмы па алфавіце"
+
+#: package/contents/ui/ConfigGeneral.qml:171
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "Прывесці падменю да аднаго ўзроўню"
+
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "Паказваць значкі на каранёвым узроўні меню"
+
+#: package/contents/ui/ConfigGeneral.qml:189
+#, kde-format
+msgid "Show categories:"
+msgstr "Паказваць катэгорыі:"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Recent applications"
+msgstr "Нядаўнія праграмы"
+
+#: package/contents/ui/ConfigGeneral.qml:193
+#, kde-format
+msgid "Often used applications"
+msgstr "Праграмы, якія часта выкарыстоўваюцца"
+
+#: package/contents/ui/ConfigGeneral.qml:200
+#, kde-format
+msgid "Recent files"
+msgstr "Нядаўнія файлы"
+
+#: package/contents/ui/ConfigGeneral.qml:201
+#, kde-format
+msgid "Often used files"
+msgstr "Файлы, якія часта выкарыстоўваюцца"
+
+#: package/contents/ui/ConfigGeneral.qml:208
+#, kde-format
+msgid "Recent contacts"
+msgstr "Нядаўнія кантакты"
+
+#: package/contents/ui/ConfigGeneral.qml:209
+#, kde-format
+msgid "Often used contacts"
+msgstr "Кантакты, якія часта выкарыстоўваюцца"
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "Сартаванне элементаў па катэгорыях:"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr "Нядаўна выкарыстаныя"
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr "Часта выкарыстоўваюцца"
+
+#: package/contents/ui/ConfigGeneral.qml:226
+#, kde-format
+msgid "Search:"
+msgstr "Пошук:"
+
+#: package/contents/ui/ConfigGeneral.qml:228
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "Пашырыць пошук да закладак, файлаў і лістоў"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "Выраўноўваць вынікі пошуку па нізе"
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "Пошук \"%1\""
+
+#: package/contents/ui/DashboardRepresentation.qml:292
+#, kde-format
+msgid "Type to search…"
+msgstr "Увядзіце для пошуку…"
+
+#: package/contents/ui/DashboardRepresentation.qml:392
+#, kde-format
+msgid "Favorites"
+msgstr "Улюбёнае"
+
+#: package/contents/ui/DashboardRepresentation.qml:610
+#: package/contents/ui/DashboardTabBar.qml:42
+#, kde-format
+msgid "Widgets"
+msgstr "Віджэты"
+
+#: package/contents/ui/DashboardTabBar.qml:31
+#, kde-format
+msgid "Apps & Docs"
+msgstr "Праграмы і дакументы"
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Рэдагаваць праграмы…"

@@ -1,0 +1,220 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"PO-Revision-Date: 2022-10-08 19:29\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_workspace.po\n"
+"X-Crowdin-File-ID: 8651\n"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Візуальныя паводзіны:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:25 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Паказваць падказкі пры навядзенні курсора"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Паказваць візуальнае апавяшчэнне пры змене стану"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgid "Animation speed:"
+msgstr "Хуткасць анімацыі:"
+
+#: package/contents/ui/main.qml:78
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Павольна"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Імгненна"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Пстрыканне па файлах або каталогах:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Адкрывае іх"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Абярыце пстрыкнуўшы па адзнаке выбару элементаў"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Абірае іх"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Замест гэтага адкрываць падвойным пстрыканнем"
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Пстрыканне па паласе пракручвання:"
+
+#: package/contents/ui/main.qml:152
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Пракручвае адну старонку ўверх ці ўніз"
+
+#: package/contents/ui/main.qml:164
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr ""
+"Пстрыкніце сярэдняй кнопкай мышы, каб пракруціць да абранага размяшчэння"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Пракручвае да абранага размяшчэння"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Middle Click:"
+msgstr "Пстрыканне сярэдняй кнопкай мышы:"
+
+#: package/contents/ui/main.qml:196
+#, kde-format
+msgid "Paste selected text"
+msgstr "Уставіць абраны тэкст"
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Сэнсарны рэжым:"
+
+#: package/contents/ui/main.qml:215
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Аўтаматычнае ўключэнне пры неабходнасці"
+
+#: package/contents/ui/main.qml:215 package/contents/ui/main.qml:244
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Ніколі не ўключаць"
+
+#: package/contents/ui/main.qml:227
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Сэнсарны рэжым будзе аўтаматычна актывавацца кожны раз, калі сістэма будзе "
+"выяўляць сэнсарны экран, і не будзе выяўляць мыш або сэнсарную панэль. "
+"Напрыклад, калі клавіятура ноўтбука-трансформера пераварочваецца або "
+"адлучаецца."
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Заўсёды ўключана"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"У сэнсарным рэжыме многія элементы інтэрфейсу карыстальніка павялічваюцца, "
+"каб было зручней узаемадзейнічаць з імі."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Адкрываць файлы адным пстрыканнем"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Хуткасць анімацыі"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Пстрыканне левай кнопкай мышы па паласе пракручвання перамяшчае на адну "
+"старонку"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr ""
+"Аўтаматычнае пераключэнне у рэжым, аптымізаваны для сэнсарнага кіравання"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr ""
+"Уключыць устаўлянне абраных элементаў пстрыканнем сярэдняй кнопкай мышы"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "Паказваць выплыўныя апавяшчэнні пра змену яркасці, гучнасці і інш."
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Апавяшчэнне пры змене раскладкі"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Паказваць выплыўныя апавяшчэнні пры змене раскладкі"

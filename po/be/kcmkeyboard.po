@@ -1,16 +1,12 @@
-# translation of kcmkeyboard.po to Belarusian
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkeyboard\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2007-11-13 21:08+0200\n"
+"PO-Revision-Date: 2022-10-04 16:31\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,22 +15,26 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcmkeyboard.po\n"
+"X-Crowdin-File-ID: 8515\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Eugene Zelenko,Дарафей Праляскоўскі"
+msgstr "Eugene Zelenko, Дарафей Праляскоўскі, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "greendeath@mail.ru,symbol@akeeri.tk"
+msgstr "greendeath@mail.ru, symbol@akeeri.tk, nashtlumach@gmail.com"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Паўтор клавішаў"
+msgstr "Сродак пераключэння раскладак клавіятуры"
 
 #: bindings.cpp:26
 #, kde-format
@@ -42,60 +42,56 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Пераключыцца на наступную раскладку клавіятуры"
 
 #: bindings.cpp:49
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Пераключыцца на наступную раскладку клавіятуры"
+msgstr "Пераключыць раскладку клавіятуры на \"%1\""
 
 #: flags.cpp:122
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
 #: kcm_add_layout_dialog.ui:14
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgid "Add Layout"
-msgstr "Паўтор клавішаў"
+msgstr "Дадаць раскладку"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Пошук…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
 #, kde-format
 msgid "Shortcut:"
-msgstr ""
+msgstr "Спалучэнне клавіш:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
 #, kde-format
 msgid "Label:"
-msgstr "Подпіс:"
+msgstr "Адмеціна:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Папярэдні прагляд"
 
 #: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "KDE Keyboard Control Module"
-msgstr "Пераключэнне раскладак KDE"
+msgstr "Модуль KDE для кіравання клавіятурай"
 
 #: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2006-2007 Andriy Rysin"
+#, kde-format
 msgid "(c) 2010 Andriy Rysin"
-msgstr "Copyright (C) 2006-2007 Andriy Rysin"
+msgstr "(c) 2010 Andriy Rysin"
 
 #: kcm_keyboard.cpp:40
 #, kde-format
@@ -103,19 +99,20 @@ msgid ""
 "<h1>Keyboard</h1> This control module can be used to configure keyboard "
 "parameters and layouts."
 msgstr ""
+"<h1>Клавіятура</h1> Гэты модуль можна выкарыстоўваць для наладжвання "
+"параметраў клавіятуры і раскладак."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
 #, kde-format
 msgid "Hardware"
-msgstr ""
+msgstr "Абсталяванне"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm_keyboard.ui:33
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgid "Keyboard &model:"
-msgstr "Паўтор клавішаў"
+msgstr "Мадэль &клавіятуры:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:53
@@ -128,18 +125,18 @@ msgid ""
 "is probably what you want if you do not know what kind of keyboard you "
 "have.\n"
 msgstr ""
-"Тут вы можаце выбраць мадэль клавіятуры. Гэтае настаўленне не залежыць ад "
-"раскладак клавіятуры і вызначае апаратную мадэль, г.зн. спосаб працы вашай "
-"клавіятуры. Сучасныя клавіятуры, якія звычайна маюць 2 дадатковыя клавішы, "
-"называюцца мадэллю \"104 клавішы\". Хутчэй за ўсё, вы маеце такую "
-"клавіятуру.\n"
+"Тут вы можаце абраць мадэль клавіятуры. Гэты параметр не залежыць ад вашай "
+"раскладкі клавіятуры і тычыцца \"апаратнай\" мадэлі, г.зн. спосабу "
+"вытворчасці вашай клавіятуры. Сучасныя клавіятуры, якія пастаўляюцца з "
+"камп'ютарам, звычайна маюць дзве дадатковыя клавішы і называюцца \"104-"
+"клавішнымі\" мадэлямі. Калі вы не ведаеце, якая ў вас клавіятура, хутчэй за "
+"ўсё, вам патрэбны гэты параметр.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:94
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Layouts"
-msgstr "&Уключыць паўтор клавішаў"
+msgstr "Раскладкі"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
@@ -148,14 +145,14 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"Калі вы выберыце абшар \"Праграма\" ці \"Акно\", пераключэнне раскладкі "
-"будзе ўздзейнічаць толькі на актыўную праграму ці акно адпаведна."
+"Калі вы абераце правіла пераключэння \"Праграма\" або \"Акно\" раскладка "
+"клавіятуры будзе змяняцца толькі для бягучай праграмы або акна."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
 #, kde-format
 msgid "Switching Policy"
-msgstr "Абшар пераключэння"
+msgstr "Правіла пераключэння"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
 #: kcm_keyboard.ui:111
@@ -165,15 +162,13 @@ msgstr "&Глабальна"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
 #: kcm_keyboard.ui:124
-#, fuzzy, kde-format
-#| msgid "Desktop"
+#, kde-format
 msgid "&Desktop"
-msgstr "Працоўны стол"
+msgstr "&Працоўны стол"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
 #: kcm_keyboard.ui:134
-#, fuzzy, kde-format
-#| msgid "Application"
+#, kde-format
 msgid "&Application"
 msgstr "&Праграма"
 
@@ -185,16 +180,15 @@ msgstr "&Акно"
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
 #: kcm_keyboard.ui:157
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "&Уключыць паўтор клавішаў"
+msgstr "Спалучэнні клавіш для пераключэння раскладак"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
 #, kde-format
 msgid "Main shortcuts:"
-msgstr ""
+msgstr "Асноўныя спалучэнні клавіш:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
@@ -203,6 +197,8 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
+"Гэта спалучэнне клавіш для пераключэння раскладак, якое апрацоўваецца X.org. "
+"Можна выкарыстоўваць толькі спалучэнні клавіш-мадыфікатараў."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -210,21 +206,20 @@ msgstr ""
 #, kde-format
 msgctxt "no shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
 #. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
-#, fuzzy, kde-format
-#| msgid "3d level shortcuts:"
+#, kde-format
 msgid "3rd level shortcuts:"
-msgstr "Скароты трэцяга ўзроўню:"
+msgstr "Спалучэнні клавіш трэцяга ўзроўню:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -233,12 +228,15 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
+"Гэта спалучэнне клавіш для пераключэння на трэці ўзровень актыўнай раскладкі "
+"(калі ён ёсць), якое апрацоўваецца X.org. Можна выкарыстоўваць толькі "
+"спалучэнні клавіш-мадыфікатараў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "Альтэрнатыўны скарот:"
+msgstr "Альтэрнатыўнае спалучэнне клавіш:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
@@ -248,79 +246,78 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
+"Гэта спалучэнне клавіш для пераключэння раскаладак. Яно падтрымлівае не "
+"толькі спалучэнні мадыфікатараў, але можа не працаваць у некаторых сітуацыях "
+"(напрыклад, для выплыўных акон або з застаўкі)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Configure layouts"
-msgstr "&Уключыць паўтор клавішаў"
+msgstr "Наладжванне раскладак клавіятуры"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Дадаць"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
 #: kcm_keyboard.ui:285
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Выдаліць"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:295
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Перамясціць вышэй"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
 #: kcm_keyboard.ui:305
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Перамясціць ніжэй"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
 #: kcm_keyboard.ui:350
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Spare layouts"
-msgstr "&Уключыць паўтор клавішаў"
+msgstr "Запасныя раскладкі"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
 #, kde-format
 msgid "Main layout count:"
-msgstr ""
+msgstr "Колькасць асноўных раскладак:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
 #, kde-format
 msgid "Advanced"
-msgstr "Адмысловае"
+msgstr "Дадатковыя налады"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
 #: kcm_keyboard.ui:418
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "&Configure keyboard options"
-msgstr "&Уключыць паўтор клавішаў"
+msgstr "&Наладжванне параметраў клавіятуры"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "Невядома"
 
 #: kcm_keyboard_widget.cpp:213
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
-msgstr ""
+msgstr "%1 | %2"
 
 #: kcm_keyboard_widget.cpp:643
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Няма"
@@ -329,20 +326,21 @@ msgstr "Няма"
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 спалучэнне клавіш"
+msgstr[1] "%1 спалучэнні клавіш"
+msgstr[2] "%1 спалучэнняў клавіш"
+msgstr[3] "%1 спалучэнні клавіш"
 
 #: kcm_view_models.cpp:200
 #, kde-format
 msgctxt "layout map name"
 msgid "Map"
-msgstr ""
+msgstr "Мапа"
 
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Layout"
-msgstr "Расклад"
+msgstr "Раскладка"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -352,49 +350,48 @@ msgstr "Варыянт"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Label"
-msgstr "Подпіс"
+msgstr "Адмеціна"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Shortcut"
-msgstr "Галоўныя скароты:"
+msgstr "Спалучэнне клавіш"
 
 #: kcm_view_models.cpp:273
 #, kde-format
 msgctxt "variant"
 msgid "Default"
-msgstr ""
+msgstr "Прадвызначана"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "Калі клавіша ўтрымліваецца:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "&Паказваць дыякрытычныя і падобныя знакі "
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "&Паўторнае націсканне клавішы"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "&Нічога не рабіць"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
 #, kde-format
 msgid "Test area:"
-msgstr ""
+msgstr "Тэставая вобласць:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
 #: kcmmiscwidget.ui:73
@@ -403,29 +400,26 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
+"Дазваляе праверыць паўтарэнне клавіш клавіятуры і гучнасць націскання "
+"(толькі не забудзьцеся ўжыць змены)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"Калі падтрымліваецца, гэты параметр дазваляе змяніць стан індыкатара NumLock "
-"падчас запуску KDE.<p>Вы можаце уключыць ці выключыць NumLock, ці забараніць "
-"KDE змяняць стан індыкатара NumLock."
+"Калі падтрымліваецца, гэты параметр дазваляе наладзіць пераключэнне стану "
+"NumLock пасля запуску Plasma.<p>Вы можаце наладзіць уключэнне або адключэнне "
+"NumLock."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "NumLock пры запуску KDE"
+msgstr "Актывацыя NumLock падчас запуску Plasma"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -435,10 +429,9 @@ msgstr "&Уключыць"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgid "&Turn off"
-msgstr "&Выключыць"
+msgstr "&Адключыць"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
 #: kcmmiscwidget.ui:111
@@ -461,9 +454,9 @@ msgid ""
 "key will start generating keycodes. The 'Repeat rate' option controls the "
 "frequency of these keycodes."
 msgstr ""
-"Калі падтрымліваецца, гэты параметр дазваляе вам вызначыць затрымку, пасля "
-"якой заціснутая клавіша пачне генераваць коды клавішы. Параметр 'Хуткасць' "
-"кантралюе частату генерацыі гэтых кодаў."
+"Калі падтрымліваецца, гэты параметр дазваляе вам вызначыць затрымліванне, "
+"пасля якога націснутая клавіша пачне генераваць коды клавішы. Параметр "
+"\"Частата паўтарэння\" кантралюе частату генеравання гэтых кодаў."
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
 #. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
@@ -473,40 +466,38 @@ msgid ""
 "If supported, this option allows you to set the rate at which keycodes are "
 "generated while a key is pressed."
 msgstr ""
-"Калі падтрымліваецца, гэты параметр дазваляе вызначыць хуткасць генерацыі "
-"кодаў клавішы, калі яна заціснута."
+"Калі падтрымліваецца, гэты параметр дазваляе вызначыць частату генеравання "
+"кодаў клавішы, калі яна націснутая."
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
 #: kcmmiscwidget.ui:195
 #, kde-format
 msgid " repeats/s"
-msgstr ""
+msgstr " паўтарэнняў/сек"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:205
 #, kde-format
 msgid " ms"
-msgstr ""
+msgstr " мс"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
 #: kcmmiscwidget.ui:246
 #, kde-format
 msgid "&Delay:"
-msgstr "&Затрымка:"
+msgstr "&Затрымліванне:"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Паўтор клавішаў"
+msgstr "Папярэдні прагляд клавіятуры"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Паўтор клавішаў"
+msgstr "Візуалізацыя раскладкі клавіятуры"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -517,6 +508,10 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+"Не ўдалося загрузіць геаметрыю клавіятуры. Гэта часта сведчыць пра тое, што "
+"абраная мадэль не падтрымлівае пэўную раскладку або варыянт раскладкі. "
+"Верагодна, гэтая праблема таксама ўзнікне, калі вы паспрабуеце выкарыстаць "
+"гэтую мадэль з гэтай раскладкай або варыянтам раскладкі."
 
 #, fuzzy
 #~| msgid "Keyboard Repeat"

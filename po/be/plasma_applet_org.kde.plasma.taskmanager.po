@@ -1,16 +1,12 @@
-# translation of plasma_applet_tasks.po to Belarusian (Official spelling)
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Darafei Praliaskouski <komzpa@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_tasks\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-23 00:48+0000\n"
-"PO-Revision-Date: 2008-01-06 21:38+0200\n"
+"PO-Revision-Date: 2022-10-07 18:01\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
-"Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,154 +15,159 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/plasma_applet_org.kde.plasma."
+"taskmanager.po\n"
+"X-Crowdin-File-ID: 8531\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Выгляд"
 
 #: package/contents/config/config.qml:18
 #, kde-format
 msgid "Behavior"
-msgstr ""
+msgstr "Паводзіны"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Уключыць гук"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr ""
+msgstr "Сцішыць"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Уключыць гук для %1"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "Сцішыць %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "—"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Асноўныя:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show tooltips"
 msgstr "Паказваць падказкі"
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Highlight windows when hovering over task tooltips"
-msgstr ""
+msgstr "Падсвятляць вокны пры навядзенні курсора на падказкі"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr ""
+msgstr "Пазначаць праграмы, якія прайграюць аўдыё"
 
 #: package/contents/ui/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Запоўніць вольнае месца на панэлі"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Maximum columns:"
-msgstr ""
+msgstr "Максімум слупкоў:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Maximum rows:"
-msgstr ""
+msgstr "Максімум радкоў:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr ""
+msgstr "Заўсёды парадкаваць задачы па радках з такой колькасцю слупкоў"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr ""
+msgstr "Заўсёды парадкаваць задачы па слупках з такой колькасцю радкоў"
 
 #: package/contents/ui/ConfigAppearance.qml:83
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Прамежак паміж значкамі:"
 
 #: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Маленькі"
 
 #: package/contents/ui/ConfigAppearance.qml:91
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Звычайны"
 
 #: package/contents/ui/ConfigAppearance.qml:95
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Вялікі"
 
 #: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Аўтаматычнае павелічэнне ў сэнсарным рэжыме"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
 msgid "Group:"
-msgstr ""
+msgstr "Групаванне:"
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
 msgid "Do not group"
-msgstr ""
+msgstr "Не групаваць"
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
 msgid "By program name"
-msgstr ""
+msgstr "Па назве праграмы"
 
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Пстрыканне па групе задач:"
 
 #: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Пераход па задачах"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -174,26 +175,28 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows tooltip window thumbnails"
-msgstr ""
+msgstr "Паказваюцца мініяцюры акон падказак"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows windows side by side"
-msgstr ""
+msgstr "Паказваюцца вокны побач адно з адным"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Паказваецца спіс"
 
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
 msgid ""
 "Tooltips are disabled, so the windows will be displayed side by side instead."
 msgstr ""
+"Падказкі адключаныя, таму замест гэтага будуць паказвацца вокны побач адно з "
+"адным."
 
 #: package/contents/ui/ConfigBehavior.qml:80
 #, kde-format
@@ -201,6 +204,8 @@ msgid ""
 "Tooltips are disabled, and the compositor does not support displaying "
 "windows side by side, so a textual list will be displayed instead"
 msgstr ""
+"Падказкі адключаныя, а сродак кампазітынгу не падтрымлівае адлюстраванне "
+"вокнаў побач адно з адным, таму замест іх будзе паказвацца тэкставы спіс"
 
 #: package/contents/ui/ConfigBehavior.qml:87
 #, kde-format
@@ -208,86 +213,88 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"Сродак кампазітынгу не падтрымлівае адлюстраванне вокнаў побач адно з адным, "
+"таму замест іх будзе паказвацца тэкставы спіс."
 
 #: package/contents/ui/ConfigBehavior.qml:97
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "Спалучыць у адну кнопку"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Group only when the Task Manager is full"
-msgstr ""
+msgstr "Групаваць толькі тады, калі акно кіраўніка задач запоўненае"
 
 #: package/contents/ui/ConfigBehavior.qml:115
 #, kde-format
 msgid "Sort:"
-msgstr ""
+msgstr "Сартаванне:"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgid "Do not sort"
-msgstr ""
+msgstr "Не сартаваць"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgid "Manually"
-msgstr ""
+msgstr "Уласнаручна"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgid "Alphabetically"
-msgstr ""
+msgstr "Па алфавіце"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgid "By desktop"
-msgstr ""
+msgstr "Па працоўных сталах"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgid "By activity"
-msgstr ""
+msgstr "Па пакоях"
 
 #: package/contents/ui/ConfigBehavior.qml:124
 #, kde-format
 msgid "Keep launchers separate"
-msgstr ""
+msgstr "Размяшчаць праграмы запуску асобна"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Пстрыканне па актыўнай задачы:"
 
 #: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Згортванне задачы"
 
 #: package/contents/ui/ConfigBehavior.qml:141
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "Пстрыканне сярэдняй кнопкай па любой задачы:"
 
 #: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Нічога"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "Закрыццё акна або групы"
 
 #: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "Адкрыццё новага акна"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
@@ -295,13 +302,13 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr ""
+msgstr "Згортванне/Аднаўленне акна або групы"
 
 #: package/contents/ui/ConfigBehavior.qml:149
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "Пераключэнне групавання"
 
 #: package/contents/ui/ConfigBehavior.qml:150
 #, kde-format
@@ -309,340 +316,337 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr ""
+msgstr "Перанос на бягучы віртуальны працоўны стол"
 
 #: package/contents/ui/ConfigBehavior.qml:160
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "Кола мышы:"
 
 #: package/contents/ui/ConfigBehavior.qml:161
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Пераход па задачах"
 
 #: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Прапускаць згорнутыя задачы"
 
 #: package/contents/ui/ConfigBehavior.qml:181
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show only tasks:"
-msgstr "Паказваць падказкі"
+msgstr "Фільтр задач:"
 
 #: package/contents/ui/ConfigBehavior.qml:182
 #, kde-format
 msgid "From current screen"
-msgstr ""
+msgstr "З бягучага экрана"
 
 #: package/contents/ui/ConfigBehavior.qml:187
 #, kde-format
 msgid "From current desktop"
-msgstr ""
+msgstr "З бягучага працоўнага стала"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "From current activity"
-msgstr ""
+msgstr "З бягучага пакоя"
 
 #: package/contents/ui/ConfigBehavior.qml:197
 #, kde-format
 msgid "That are minimized"
-msgstr ""
+msgstr "Тыя, што згорнутыя"
 
 #: package/contents/ui/ConfigBehavior.qml:206
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Калі хаваць панэль:"
 
 #: package/contents/ui/ConfigBehavior.qml:207
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "Паказваць, калі акно патрабуе ўвагі"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "З'яўленне новых задач:"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Справа"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Злева"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Размяшчэнні"
 
 #: package/contents/ui/ContextMenu.qml:98
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "Нядаўнія файлы"
 
 #: package/contents/ui/ContextMenu.qml:103
 #, kde-format
 msgid "Actions"
-msgstr ""
+msgstr "Дзеянні"
 
 #: package/contents/ui/ContextMenu.qml:168
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "Папярэдняя кампазіцыя"
 
 #: package/contents/ui/ContextMenu.qml:182
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "Прыпыніць"
 
 #: package/contents/ui/ContextMenu.qml:182
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "Прайграць"
 
 #: package/contents/ui/ContextMenu.qml:200
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "Наступная кампазіцыя"
 
 #: package/contents/ui/ContextMenu.qml:211
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "Спыніць"
 
 #: package/contents/ui/ContextMenu.qml:231
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "Выйсці"
 
 #: package/contents/ui/ContextMenu.qml:246
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "Аднавіць"
 
 #: package/contents/ui/ContextMenu.qml:272
 #, kde-format
 msgid "Mute"
-msgstr ""
+msgstr "Сцішыць"
 
 #: package/contents/ui/ContextMenu.qml:283
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Адкрыць новае акно"
 
 #: package/contents/ui/ContextMenu.qml:299
 #, kde-format
 msgid "Move to &Desktop"
-msgstr ""
+msgstr "Перамясціць на &працоўны стол"
 
 #: package/contents/ui/ContextMenu.qml:323
 #, kde-format
 msgid "Move &To Current Desktop"
-msgstr ""
+msgstr "Перамясціць на &бягучы працоўны стол"
 
 #: package/contents/ui/ContextMenu.qml:332
 #, kde-format
 msgid "&All Desktops"
-msgstr ""
+msgstr "&Усе працоўныя сталы"
 
 #: package/contents/ui/ContextMenu.qml:346
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
-msgstr ""
+msgstr "&%1 %2"
 
 #: package/contents/ui/ContextMenu.qml:360
 #, kde-format
 msgid "&New Desktop"
-msgstr ""
+msgstr "&Новы працоўны стол"
 
 #: package/contents/ui/ContextMenu.qml:380
 #, kde-format
 msgid "Show in &Activities"
-msgstr ""
+msgstr "Паказваць у пак&оях"
 
 #: package/contents/ui/ContextMenu.qml:404
 #, kde-format
 msgid "Add To Current Activity"
-msgstr ""
+msgstr "Дадаць у бягучы пакой"
 
 #: package/contents/ui/ContextMenu.qml:414
 #, kde-format
 msgid "All Activities"
-msgstr ""
+msgstr "Усе пакоі"
 
 #: package/contents/ui/ContextMenu.qml:471
 #, kde-format
 msgid "Move to %1"
-msgstr ""
+msgstr "Перамясціць у %1"
 
 #: package/contents/ui/ContextMenu.qml:498
 #: package/contents/ui/ContextMenu.qml:515
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr ""
+msgstr "&Замацаваць у кіраўніку задач"
 
 #: package/contents/ui/ContextMenu.qml:567
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "Ва ўсіх пакоях"
 
 #: package/contents/ui/ContextMenu.qml:573
 #, kde-format
 msgid "On The Current Activity"
-msgstr ""
+msgstr "У бягучым пакоі"
 
 #: package/contents/ui/ContextMenu.qml:597
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr ""
+msgstr "Адмацаваць з кіраўніка задач"
 
 #: package/contents/ui/ContextMenu.qml:612
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Яшчэ"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "&Move"
-msgstr ""
+msgstr "&Перамясціць"
 
 #: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "Re&size"
-msgstr ""
+msgstr "&Змяніць памер"
 
 #: package/contents/ui/ContextMenu.qml:644
 #, kde-format
 msgid "Ma&ximize"
-msgstr ""
+msgstr "&Разгарнуць"
 
 #: package/contents/ui/ContextMenu.qml:658
 #, kde-format
 msgid "Mi&nimize"
-msgstr ""
+msgstr "З&гарнуць"
 
 #: package/contents/ui/ContextMenu.qml:668
 #, kde-format
 msgid "Keep &Above Others"
-msgstr ""
+msgstr "Размяшчаць &вышэй астатніх"
 
 #: package/contents/ui/ContextMenu.qml:678
 #, kde-format
 msgid "Keep &Below Others"
-msgstr ""
+msgstr "Размяшчаць &ніжэй астатніх"
 
 #: package/contents/ui/ContextMenu.qml:690
 #, kde-format
 msgid "&Fullscreen"
-msgstr ""
+msgstr "&На ўвесь экран"
 
 #: package/contents/ui/ContextMenu.qml:702
 #, kde-format
 msgid "&Shade"
-msgstr ""
+msgstr "&Цень"
 
 #: package/contents/ui/ContextMenu.qml:718
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr ""
+msgstr "Дазволіць групаванне гэтай праграмы"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "За&крыць"
 
 #: package/contents/ui/Task.qml:74
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Запусціць %1"
 
 #: package/contents/ui/Task.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Ёсць %1 новае паведамленне."
+msgstr[1] "Ёсць %1 новыя паведамленні."
+msgstr[2] "Ёсць %1 новых паведамленняў."
+msgstr[3] "Ёсць %1 новыя паведамленні."
 
 #: package/contents/ui/Task.qml:88
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Паказваць падказкі"
+msgstr "Паказаць падказку па задачы для %1"
 
 #: package/contents/ui/Task.qml:94
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Паказаць вокны побач адно з адным для %1"
 
 #: package/contents/ui/Task.qml:99
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Адкрыць спіс акон для %1"
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "Актываваць %1"
 
 #: package/contents/ui/ToolTipInstance.qml:326
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Уключыць гук для %1"
 
 #: package/contents/ui/ToolTipInstance.qml:327
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr ""
+msgstr "Сцішыць %1"
 
 #: package/contents/ui/ToolTipInstance.qml:350
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Наладзіць узровень гучнасці для %1"
 
 #: package/contents/ui/ToolTipInstance.qml:366
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:369
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:393
-#, fuzzy, kde-format
-#| msgctxt "Which virtual desktop a window is currently on"
-#| msgid "On %1"
+#, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "На %1"
@@ -651,73 +655,74 @@ msgstr "На %1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Замацавана на ўсіх працоўных сталах"
 
 #: package/contents/ui/ToolTipInstance.qml:407
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr ""
+msgstr "Даступна ва ўсіх пакоях"
 
 #: package/contents/ui/ToolTipInstance.qml:429
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
-msgstr ""
+msgstr "Таксама даступна ў %1"
 
 #: package/contents/ui/ToolTipInstance.qml:433
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr ""
+msgstr "Даступна ў %1"
 
 #: plugin/backend.cpp:326
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Яшчэ %1 размяшчэнне"
+msgstr[1] "Яшчэ %1 размяшчэнні"
+msgstr[2] "Яшчэ %1 размяшчэнняў"
+msgstr[3] "Яшчэ %1 размяшчэнні"
 
 #: plugin/backend.cpp:422
 #, kde-format
 msgid "Recent Downloads"
-msgstr ""
+msgstr "Нядаўнія спампоўванні"
 
 #: plugin/backend.cpp:424
 #, kde-format
 msgid "Recent Connections"
-msgstr ""
+msgstr "Нядаўнія злучэнні"
 
 #: plugin/backend.cpp:426
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "Нядаўнія размяшчэнні"
 
 #: plugin/backend.cpp:435
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Забыцца нядаўнія спампоўванні"
 
 #: plugin/backend.cpp:437
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Забыцца нядаўнія злучэнні"
 
 #: plugin/backend.cpp:439
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "Забыцца нядаўнія размяшчэнні"
 
 #: plugin/backend.cpp:441
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Забыцца нядаўнія файлы"
 
 #~ msgid "Configure Taskbar"
 #~ msgstr "Наставіць панель заданняў"

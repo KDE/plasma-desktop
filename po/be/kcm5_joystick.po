@@ -1,16 +1,14 @@
-# translation of joystick.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Siarhei Liantsevich <serzh.by@gmail.com>, 2007.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: joystick\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-25 00:48+0000\n"
-"PO-Revision-Date: 2007-10-28 14:19+0200\n"
+"PO-Revision-Date: 2022-09-23 12:58\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,31 +17,36 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm5_joystick.po\n"
+"X-Crowdin-File-ID: 8499\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Дарафей Праляскоўскі"
+msgstr "Дарафей Праляскоўскі, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "komzpa@licei2.com"
+msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
 
 #: caldialog.cpp:26 joywidget.cpp:335
 #, kde-format
 msgid "Calibration"
-msgstr "Каліброўка"
+msgstr "Калібраванне"
 
 #: caldialog.cpp:40
 #, kde-format
 msgid "Next"
-msgstr "Наступная"
+msgstr "Далей"
 
 #: caldialog.cpp:50
 #, kde-format
 msgid "Please wait a moment to calculate the precision"
-msgstr "Пачакайце, пакуль ідзе каліброўка адчувальнасці"
+msgstr "Пачакайце, пакуль выконваецца вылічэнне адчувальнасці"
 
 #: caldialog.cpp:79
 #, kde-format
@@ -63,10 +66,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Працэдура каліброўкі гатовая вызначыць дыяпазон адчувальнасці прылады."
-"<br /><br />Перасуньце паказальнік па  <b>восі %1 %2</b> у <b>мінімальнае</"
-"b> становішча.<br /><br />Для пераходу да наступнага этапу націсніце любую "
-"кнопку на прыладзе.</qt>"
+"<qt>Працэдура калібравання збіраецца праверыць дыяпазон значэнняў вашай "
+"прылады.<br /><br />Перамясціце паказальнік па <b>восі %1 %2</b> на "
+"<b>мінімум</b>.<br /><br />Каб перайсці на наступны крок, націсніце любую "
+"кнопку на прыладзе або кнопку \"Далей\".</qt>"
 
 #: caldialog.cpp:110
 #, kde-format
@@ -76,10 +79,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Працэдура каліброўкі гатовая вызначыць дыяпазон адчувальнасці прылады."
-"<br /><br />Перасуньце паказальнік па <b>восі %1 %2</b> у <b>цэнтральнае</b> "
-"становішча.<br /><br />Для пераходу да наступнага этапу націсніце любую "
-"кнопку на прыладзе.</qt>"
+"<qt>Працэдура калібравання збіраецца праверыць дыяпазон значэнняў вашай "
+"прылады.<br /><br />Перамясціце паказальнік па <b>восі %1 %2</b> у <b>цэнтр</"
+"b>.<br /><br />Каб перайсці на наступны крок, націсніце любую кнопку на "
+"прыладзе або кнопку \"Далей\".</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -89,10 +92,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Працэдура каліброўкі гатовая вызначыць дыяпазон адчувальнасці прылады."
-"<br /><br />Перасуньце паказальнік па <b>восі %1 %2</b> у <b>максімальнае</"
-"b> становішча.<br /><br />Для пераходу да наступнага этапу націсніце любую "
-"кнопку на прыладзе.</qt>"
+"<qt>Працэдура калібравання збіраецца праверыць дыяпазон значэнняў вашай "
+"прылады.<br /><br />Перамясціце паказальнік па <b>восі %1 %2</b> на "
+"<b>максімум</b>.<br /><br />Каб перайсці на наступны крок, націсніце любую "
+"кнопку на прыладзе або кнопку \"Далей\".</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
 #, kde-format
@@ -102,12 +105,12 @@ msgstr "Памылка злучэння"
 #: caldialog.cpp:164
 #, kde-format
 msgid "You have successfully calibrated your device"
-msgstr "Каліброўка прылады выканана паспяхова"
+msgstr "Калібраванне прылады паспяхова выканана"
 
 #: caldialog.cpp:164 joywidget.cpp:363
 #, kde-format
 msgid "Calibration Success"
-msgstr "Каліброўка выканана"
+msgstr "Калібраванне паспяхова выканана"
 
 #: caldialog.cpp:184
 #, kde-format
@@ -117,17 +120,17 @@ msgstr "Значэнне па восі %1: %2"
 #: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
-msgstr "Не атрымліваецца адкрыць прыладу %1: %2"
+msgstr "Не ўдалося адкрыць прыладу %1: %2"
 
 #: joydevice.cpp:45
 #, kde-format
 msgid "The given device %1 is not a joystick."
-msgstr "Прылада %1 - гэта не джойстык."
+msgstr "Прылада %1 - не джойсцік."
 
 #: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
-msgstr "Не атрымліваецца загрузіць модуль ядра для прылады джойстыка %1: %2"
+msgstr "Не ўдалося атрымаць драйвер ядра для джойсціка %1: %2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -141,39 +144,32 @@ msgstr ""
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца вызначыць колькасць кнопак для прылады джойстыка %1: %2"
+msgstr "Не ўдалося атрымаць колькасць кнопак для джойсціка %1: %2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца вызначыць колькасць восяў для прылады джойстыка %1: %2"
+msgstr "Не ўдалося атрымаць колькасць восяў для джойсціка %1: %2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца вызначыць значэнні каліброўкі для прылады джойстыка %1: %2"
+msgstr "Не ўдалося атрымаць значэнні калібравання для джойсціка %1: %2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца аднавіць значэнні каліброўкі для прылады джойстыка %1: %2"
+msgstr "Не ўдалося аднавіць значэнні калібравання для джойсціка %1: %2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца ініцыялізаваць значэнні каліброўкі для прылады джойстыка "
-"%1: %2"
+msgstr "Не ўдалося ініцыялізаваць значэнні калібравання для джойсціка %1: %2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
-msgstr ""
-"Не атрымліваецца ўжыць значэнні каліброўкі для прылады джойстыка %1: %2"
+msgstr "Не ўдалося ўжыць значэнні калібравання для джойсціка %1: %2"
 
 #: joydevice.cpp:95
 #, kde-format
@@ -183,18 +179,17 @@ msgstr "Унутраная памылка з невядомым кодам %1"
 #: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
-msgstr "Модуль настаўлення джойстыка KDE"
+msgstr "Модуль KDE для наладжвання джойсціка"
 
 #: joystick.cpp:31
-#, fuzzy, kde-format
-#| msgid "KDE Control Center Module to test Joysticks"
+#, kde-format
 msgid "KDE System Settings Module to test Joysticks"
-msgstr "Модуль Цэнтра кіравання KDE для праверкі джойстыка"
+msgstr "Модуль сістэмных налад KDE для тэставання джойсцікаў"
 
 #: joystick.cpp:33
 #, kde-format
 msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Марцін Коллер"
+msgstr "(c) 2004, Martin Koller"
 
 #: joystick.cpp:38
 #, kde-format
@@ -211,18 +206,18 @@ msgid ""
 "joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
 "can check your Linux source/Documentation/input/joystick.txt)"
 msgstr ""
-"<h1>Джойстык</h1>Гэты модуль дазваляе праверыць правільнасць працы джойстыка."
-"<br />Калі значэнні для восяў паказаныя няслушна, гэта можна выправіць з "
-"дапамогай працэдуры каліброўкі.<br />Прылады джойстыка апытваюцца для /dev/"
-"js[0-4] і /dev/input/js[0-4]<br />Калі ваш джойстык працуе на іншай "
-"прыладзе, пакажыце яго ў поле ўводу.<br />У спісе Кнопкі паказана стан "
-"кнопак джойстыка, а спісе Восі - стан восяў.<br />Нататка: у бягучай "
-"рэалізацыі драйвер джойстыка ядра Linux (для 2.4 і 2.6) можа правільна "
-"вызначыць наступныя прылады:<ul><li>джойстык з двума восямі і чатырма "
-"кнопкамі</li><li>джойстык з трыма восямі і чатырма кнопкамі</li><li>джойстык "
-"з чатырма восямі і чатырма кнопкамі</li><li>лічбавыя джойстыкі Saitek "
-"Cyborg</li></ul>(Падрабязней пра гэта гл. дакументацыю ядра Linux, файл "
-"Documentation/input/joystick.txt)"
+"<h1>Джойсцік</h1>Гэты модуль дазваляе праверыць правільнасць працы джойстыка."
+"<br />Калі значэнні для восяў паказаныя няправільна, гэта можна выправіць з "
+"дапамогай працэдуры калібравання.<br />Модуль спрабуе знайсці джоцсцікі ў /"
+"dev/js[0-4] і /dev/input/js[0-4]<br />Калі ваш джойсцік мантуецца па іншым "
+"адрасе, увядзіце яго ў поле ўводу.<br />У спісе \"Кнопкі\" паказваецца стан "
+"кнопак джойсціка, а ў спісе \"Восі\" - стан восяў.<br />Нататка: у бягучай "
+"рэалізацыі драйвер джойсціка ядра Linux (для 2.4 і 2.6) можа правільна "
+"вызначыць наступныя прылады:<ul><li>джойсцік з двума восямі і чатырма "
+"кнопкамі</li><li>джойсцік з трыма восямі і чатырма кнопкамі</li><li>джойсцік "
+"з чатырма восямі і чатырма кнопкамі</li><li>лічбавыя джойсцікі Saitek "
+"Cyborg</li></ul>(Падрабязней пра гэта глядзіце ў дакументацыі да ядра Linux, "
+"файл Documentation/input/joystick.txt)"
 
 #: joywidget.cpp:67
 #, kde-format
@@ -230,8 +225,7 @@ msgid "Device:"
 msgstr "Прылада:"
 
 #: joywidget.cpp:84
-#, fuzzy, kde-format
-#| msgid "Position:"
+#, kde-format
 msgctxt "Cue for deflection of the stick"
 msgid "Position:"
 msgstr "Пазіцыя:"
@@ -269,7 +263,7 @@ msgstr "Значэнне"
 #: joywidget.cpp:127
 #, kde-format
 msgid "Calibrate"
-msgstr "Каліброўка"
+msgstr "Калібраваць"
 
 #: joywidget.cpp:190
 #, kde-format
@@ -278,8 +272,8 @@ msgid ""
 "done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
 "one attached, please enter the correct device file."
 msgstr ""
-"Джойстыкі не выяўленыя.<br />Правяраліся прылады /dev/js[0-4] і /dev/input/"
-"js[0-4]<br />Калі вы ведаеце, на якой прыладзе працуе джойстык, пакажыце "
+"Джойсцікі не выяўленыя.<br />Правяраліся /dev/js[0-4] і /dev/input/"
+"js[0-4]<br />Калі вы ведаеце, па якім адрасе мантуецца джойсцік, увядзіце "
 "гэтае значэнне."
 
 #: joywidget.cpp:226
@@ -289,9 +283,9 @@ msgid ""
 "Please select a device from the list or\n"
 "enter a device file, like /dev/js0."
 msgstr ""
-"Паказана недапушчальнае імя прылады (адсутнічае /dev).\n"
-"Вылучыце прыладу з спісу або\n"
-"увядзіце яе імя, напрыклад, /dev/js0."
+"Уведзена хібная назва прылады (адсутнічае /dev).\n"
+"Абярыце прыладу са спіса або\n"
+"увядзіце яе назву, напрыклад, /dev/js0."
 
 #: joywidget.cpp:229
 #, kde-format
@@ -320,14 +314,14 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
-"<qt>Пачынаецца каліброўка адчувальнасці.<br /><br /><b>Перасуньце джойстык у "
-"цэнтральнае становішча па абедзвюх восях і больш не чапайце яго.</b><br /"
-"><br />Для пачатку каліброўкі націсніце OK.</qt>"
+"<qt>Пачынаецца калібраванне адчувальнасці.<br /><br /><b>Перамясціце кнопкі "
+"джойсціка у цэнтральную пазіцыю па абедзвюх восях і больш не чапайце яго.</"
+"b><br /><br />Каб пачаць калібраванне, націсніце \"Добра\".</qt>"
 
 #: joywidget.cpp:363
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
-msgstr "Усё значэнні каліброўкі для джойстыка %1 былі адноўленыя."
+msgstr "Усё значэнні калібравання для джойсціка %1 былі адноўленыя."
 
 #~ msgid ""
 #~ "_: NAME OF TRANSLATORS\n"

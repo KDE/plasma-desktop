@@ -1,0 +1,69 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-20 00:47+0000\n"
+"PO-Revision-Date: 2022-10-07 06:00\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/plasma_applet_org.kde.plasma."
+"showActivityManager.po\n"
+"X-Crowdin-File-ID: 8667\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Выгляд"
+
+#: package/contents/ui/ConfigAppearance.qml:24
+#, kde-format
+msgid "Icon:"
+msgstr "Значок:"
+
+#: package/contents/ui/ConfigAppearance.qml:26
+#, kde-format
+msgid "Show the current activity icon"
+msgstr "Паказваць значок бягучага пакоя"
+
+#: package/contents/ui/ConfigAppearance.qml:32
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr "Паказваць агульны значок пакояў"
+
+#: package/contents/ui/ConfigAppearance.qml:42
+#, kde-format
+msgid "Title:"
+msgstr "Подпіс:"
+
+#: package/contents/ui/ConfigAppearance.qml:44
+#, kde-format
+msgid "Show the current activity name"
+msgstr "Паказваць назву бягучага пакоя"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr "Бягучы пакой - %1"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "Паказаць кіраўнік пакояў"
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "Пстрыкніце, каб паказаць кіраўнік пакояў"

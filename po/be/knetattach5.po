@@ -1,15 +1,13 @@
-# translation of knetattach.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: knetattach\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2007-10-28 14:27+0200\n"
+"PO-Revision-Date: 2022-10-05 18:01\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,16 +16,21 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/knetattach5.po\n"
+"X-Crowdin-File-ID: 8519\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Дарафей Праляскоўскі"
+msgstr "Дарафей Праляскоўскі, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "symbol@akeeri.tk"
+msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -35,6 +38,8 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
+"Увядзіце назву для гэтага <i>Вэб-каталога</i>, а таксама адрас сервера, порт "
+"і шлях да каталога, і націсніце кнопку <b>Захаваць і падлучыцца</b>."
 
 #: knetattach.cpp:82
 #, kde-format
@@ -43,6 +48,8 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
+"Увядзіце назву для гэтага <i>Злучэння праз ssh</i>, а таксама адрас сервера, "
+"порт і шлях да каталога, і націсніце кнопку <b>Захаваць і падлучыцца</b>."
 
 #: knetattach.cpp:86
 #, kde-format
@@ -51,6 +58,9 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
+"Увядзіце назву для гэтага <i>Злучэння па пратаколе перадачы файлаў</i>, а "
+"таксама адрас сервера, порт і шлях да каталога, і націсніце кнопку "
+"<b>Захаваць і падлучыцца</b>."
 
 #: knetattach.cpp:90
 #, kde-format
@@ -59,35 +69,38 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
+"Увядзіце назву для гэтага <i>Сеткавага дыска Microsoft Windows</i>, а "
+"таксама адрас сервера, порт і шлях да каталога, і націсніце кнопку "
+"<b>Захаваць і падлучыцца</b>."
 
 #: knetattach.cpp:208
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
 msgstr ""
-"Немагчыма злучыцца з серверам. Калі ласка, праверуе вагыя настаўленні і "
+"Не ўдалося злучыцца з серверам. Калі ласка, праверце вашыя налады і "
 "паспрабуйце зноў."
 
 #: knetattach.cpp:336
 #, kde-format
 msgid "Save && C&onnect"
-msgstr "Запісаць і &злучыцца"
+msgstr "Захаваць і &падлучыцца"
 
 #: knetattach.cpp:338
 #, kde-format
 msgid "C&onnect"
-msgstr "З&лучыцца"
+msgstr "Пад&лучыцца"
 
 #. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
 #: knetattach.ui:14
 #, kde-format
 msgid "Network Folder Wizard"
-msgstr "Майстар сеткавай тэчкі"
+msgstr "Памагаты па сеткавых каталогах"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "Дадаць сеткавую тэчку"
+msgstr "Дадаць сеткавы каталог"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -96,26 +109,26 @@ msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
 msgstr ""
-"Выберыце тып сеткавай тэчкі, да якой хочаце далцчыцца і пераходзьце да "
-"наступнага кроку."
+"Абярыце тып сеткавага каталога, да якога хочаце падлучыцца, і націсніце "
+"кнопку \"Далей\"."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
 #, kde-format
 msgid "&Recent connection:"
-msgstr "Нядаўняе злучэнне:"
+msgstr "&Нядаўняе падлучэнне:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
 #: knetattach.ui:72
 #, kde-format
 msgid "&WebFolder (webdav)"
-msgstr "&WebFolder (webdav)"
+msgstr "&Вэб-каталог (webdav)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _fish)
 #: knetattach.ui:82
 #, kde-format
 msgid "&Secure shell (ssh)"
-msgstr "&Secure shell (ssh)"
+msgstr "&Бяспечная абалонка (ssh)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _ftp)
 #: knetattach.ui:111
@@ -133,7 +146,7 @@ msgstr "Сеткавы дыск &Microsoft® Windows®"
 #: knetattach.ui:145
 #, kde-format
 msgid "Network Folder Information"
-msgstr "Звесткі пра сеткавую тэчку"
+msgstr "Звесткі пра сеткавы каталог"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: knetattach.ui:177
@@ -163,51 +176,51 @@ msgstr "&Порт:"
 #: knetattach.ui:283
 #, kde-format
 msgid "&Protocol:"
-msgstr ""
+msgstr "&Пратакол:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: knetattach.ui:313
 #, kde-format
 msgid "&Folder:"
-msgstr "&Тэчка:"
+msgstr "&Каталог:"
 
 #. i18n: ectx: property (text), widget (QLabel, _encodingText)
 #: knetattach.ui:335
 #, kde-format
 msgid "Encoding:"
-msgstr ""
+msgstr "Кадаванне:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
 #: knetattach.ui:351
 #, kde-format
 msgid "Cr&eate an icon for this remote folder"
-msgstr "Стварыць значку для гэтай аддаленай тэчкі"
+msgstr "Ст&варыць значок для гэтага адлеглага каталога"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
 #: knetattach.ui:361
 #, kde-format
 msgid "&Use encryption"
-msgstr "Карыстацца шыфраваннем"
+msgstr "&Выкарыстоўваць шыфраванне"
 
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
-msgstr "Настаўленне сеткі KDE"
+msgstr "Памагаты па сетцы для KDE"
 
 #: main.cpp:25
 #, kde-format
 msgid "(c) 2004 George Staikos"
-msgstr "(c) 2004 Джоржд Стайкас"
+msgstr "(c) 2004 George Staikos"
 
 #: main.cpp:28
 #, kde-format
 msgid "George Staikos"
-msgstr "Джоржд Стайкас"
+msgstr "George Staikos"
 
 #: main.cpp:28
 #, kde-format
 msgid "Primary author and maintainer"
-msgstr "Аўтар і адказны"
+msgstr "Асноўны стваральнік і суправаджальнік"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "
