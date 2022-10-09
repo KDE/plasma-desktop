@@ -106,6 +106,9 @@ class EmojiParser(object):
 */
 // Generated from emoji-test.txt
 #include "emojicategory.h"
+
+#include <KLazyLocalizedString>
+
 const QStringList &getCategoryNames()
 {
     static const QStringList names = {'''
@@ -113,7 +116,7 @@ const QStringList &getCategoryNames()
     return names;
 }
 '''
-        content = "\n".join([template_header] + [f"        I18N_NOOP2(\"Emoji Category\", \"{categoryName.decode('utf-8')}\")," for categoryName in self.categoryNames] + [template_foot])
+        content = "\n".join([template_header] + [f"        QString::fromUtf8(kli18nc(\"Emoji Category\", \"{categoryName.decode('utf-8')}\").untranslatedText())," for categoryName in self.categoryNames] + [template_foot])
         with open("../emojicategory.cpp", "w") as f:
             f.write(content)
 

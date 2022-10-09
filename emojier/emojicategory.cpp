@@ -5,19 +5,22 @@
 */
 // Generated from emoji-test.txt
 #include "emojicategory.h"
+
+#include <KLazyLocalizedString>
+
 const QStringList &getCategoryNames()
 {
     static const QStringList names = {
-        I18N_NOOP2("Emoji Category", "Smileys and Emotion"),
-        I18N_NOOP2("Emoji Category", "People and Body"),
-        I18N_NOOP2("Emoji Category", "Component"),
-        I18N_NOOP2("Emoji Category", "Animals and Nature"),
-        I18N_NOOP2("Emoji Category", "Food and Drink"),
-        I18N_NOOP2("Emoji Category", "Travel and Places"),
-        I18N_NOOP2("Emoji Category", "Activities"),
-        I18N_NOOP2("Emoji Category", "Objects"),
-        I18N_NOOP2("Emoji Category", "Symbols"),
-        I18N_NOOP2("Emoji Category", "Flags"),
+        QString::fromUtf8(kli18nc("Emoji Category", "Smileys and Emotion").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "People and Body").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Component").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Animals and Nature").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Food and Drink").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Travel and Places").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Activities").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Objects").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Symbols").untranslatedText()),
+        QString::fromUtf8(kli18nc("Emoji Category", "Flags").untranslatedText()),
     };
     return names;
 }
