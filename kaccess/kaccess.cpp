@@ -533,7 +533,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         // flash the overlay widget
         overlay->raise();
         overlay->show();
-        qApp->flush();
+        QCoreApplication::sendPostedEvents();
     }
 
     // ask Phonon to ring a nice bell
