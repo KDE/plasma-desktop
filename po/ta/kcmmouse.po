@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2022-08-25 21:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "ரோமன் கில்கு"
 msgid "Developer"
 msgstr "நிரலாளர்"
 
-#: kcm/libinput/libinput_config.cpp:110
+#: kcm/libinput/libinput_config.cpp:109
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -72,12 +72,12 @@ msgstr ""
 "மதிப்புகளை ஏற்றுவதில் சிக்கல். மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:115
+#: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "எந்த சுட்டி சாதனமும் கண்டுபிடிக்கப்படவில்லை. சாதனத்தை இப்போது செருகுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:125
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -86,7 +86,7 @@ msgstr ""
 "சில மாற்றங்களை சேமிக்க முடியவில்லை. மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:146
+#: kcm/libinput/libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -95,7 +95,7 @@ msgstr ""
 "இயல்பிருப்பு மதிப்புகளை ஏற்றுவதில் சிக்கல். சில விருப்பங்கள் அவற்றின் இயல்பிருப்பு "
 "மதிப்புகளுக்கு மாற்றப்படவில்லை."
 
-#: kcm/libinput/libinput_config.cpp:168
+#: kcm/libinput/libinput_config.cpp:167
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -104,12 +104,12 @@ msgstr ""
 "புதிதாக செருகிய சாதனத்தை சேர்ப்பதில் சிக்கல். அதை கழற்றி, மீண்டும் செருகிய பின் இக்கூறை "
 "மீள்துவக்குங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:192
+#: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "சுட்டி கழற்றப்பட்டதால் அதன் அமைப்புச்சாளரம் மூடப்பட்டது."
 
-#: kcm/libinput/libinput_config.cpp:194
+#: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-03 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2021-09-04 09:16+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -400,7 +400,7 @@ msgstr "Fejlesztő"
 msgid "Roman Gilg"
 msgstr "Roman Gilg"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:92
+#: kcm/libinput/touchpadconfiglibinput.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -409,12 +409,12 @@ msgstr ""
 "Hiba az értékek betöltésekor. Lásd a naplót további információkért. Indítsa "
 "újra a modult."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:95
+#: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nem található érintőtábla. Csatlakoztassa az érintőtáblát."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -423,7 +423,7 @@ msgstr ""
 "Nem lehet minden módosítást menteni. Lásd a naplót további információkért. "
 "Indítsa újra a modult, és próbálja meg újból."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:123
+#: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -432,7 +432,7 @@ msgstr ""
 "Hiba az alapértelmezett értékek betöltésekor. Nem mindegyik vagy egyik "
 "beállítás sem állítható az alapértelmezett értékre."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:143
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -441,12 +441,12 @@ msgstr ""
 "Hiba az újonnan csatlakoztatott eszköz hozzáadásakor. Csatlakoztassa újra és "
 "indítsa újra ezt a modult."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:166
+#: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Az értintőpárna nincs csatlakoztatva. A beállítóablak bezárva."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:168
+#: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Az értintőtábla nincs csatlakoztatva. Nem található másik érintőtábla."

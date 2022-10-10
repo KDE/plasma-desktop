@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2022-08-25 12:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "Roman Gilg"
 msgid "Developer"
 msgstr "Geliştirici"
 
-#: kcm/libinput/libinput_config.cpp:110
+#: kcm/libinput/libinput_config.cpp:109
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -87,12 +87,12 @@ msgstr ""
 "Değerler yüklenirken hata oluştu. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/libinput_config.cpp:115
+#: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "İşaretçi aygıtı bulunamadı. Şimdi bağlayın."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:125
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -101,7 +101,7 @@ msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın ve tekrar deneyin."
 
-#: kcm/libinput/libinput_config.cpp:146
+#: kcm/libinput/libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -110,7 +110,7 @@ msgstr ""
 "Öntanımlı değerler yüklenirken hata oluştu. Bazı seçenekleri öntanımlı "
 "değerlerine ayarlama başarısız."
 
-#: kcm/libinput/libinput_config.cpp:168
+#: kcm/libinput/libinput_config.cpp:167
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -119,12 +119,12 @@ msgstr ""
 "Yeni bir aygıt eklenirken hata oluştu. Lütfen yeniden bağlayın ve bu "
 "yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/libinput_config.cpp:192
+#: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "İşaretçi aygıtı bağlantısı kesildi. Ayar iletişim penceresi kapatıldı."
 
-#: kcm/libinput/libinput_config.cpp:194
+#: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "İşaretçi aygıtı bağlantısı kesildi. Başka aygıt bulunamadı."

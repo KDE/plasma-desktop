@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-03 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2021-09-06 01:01+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -390,19 +390,19 @@ msgstr "開發者"
 msgid "Roman Gilg"
 msgstr "Roman Gilg"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:92
+#: kcm/libinput/touchpadconfiglibinput.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "載入值時發生錯誤。請見紀錄檔以取得更多資訊。請重新啟動本設定模組。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:95
+#: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "找不到觸控板。現在連線觸控板。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -410,26 +410,26 @@ msgid ""
 msgstr ""
 "無法儲存所有變動。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:123
+#: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "載入預設值時發生錯誤。將部份選項設定為它們的預設值時失敗。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:143
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "加入新連線的裝置時發生錯誤。請重新連接它並重新啟動本設定模組。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:166
+#: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "觸控板已斷線。關閉此設定對話框。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:168
+#: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "觸控板已斷線。找不到其他的觸控板。"

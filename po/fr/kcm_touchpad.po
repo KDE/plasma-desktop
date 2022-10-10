@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015.
+# Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015, 2022.
 # Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2017.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
@@ -10,16 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-03 00:47+0000\n"
-"PO-Revision-Date: 2021-05-27 14:31+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"PO-Revision-Date: 2022-10-09 17:42+0200\n"
+"Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -33,7 +33,8 @@ msgstr "Thomas Vergnaud, Johan Claude-Breuninger, Simon Depiets"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"thomas.vergnaud@gmx.fr, johan.claudebreuninger@gmail.com, sdepiets@gmail.com"
+"thomas.vergnaud@mailo.eu, johan.claudebreuninger@gmail.com, sdepiets@gmail."
+"com"
 
 #: actions.cpp:19
 #, kde-format
@@ -413,7 +414,7 @@ msgstr "Développeur"
 msgid "Roman Gilg"
 msgstr "Roman Gilg"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:92
+#: kcm/libinput/touchpadconfiglibinput.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -423,12 +424,12 @@ msgstr ""
 "évènements pour plus d'informations. Veuillez redémarrer ce module de "
 "configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:95
+#: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Aucun pavé tactile trouvé. Connectez un pavé tactile maintenant."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -438,7 +439,7 @@ msgstr ""
 "l'historique des évènements pour plus d'informations. Veuillez redémarrer ce "
 "module de configuration et essayer à nouveau."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:123
+#: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -447,7 +448,7 @@ msgstr ""
 "Erreur lors du chargement des valeurs par défaut. Impossible de définir "
 "certaines options à leurs valeurs d'origines."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:143
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -456,13 +457,13 @@ msgstr ""
 "Erreur lors de l'ajout du périphérique nouvellement connecté. Veuillez le "
 "reconnecter et redémarrer ce module de configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:166
+#: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "Pavé tactile déconnecté. Sa boîte de dialogue de configuration a été fermée."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:168
+#: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Pavé tactile déconnecté. Aucun autre pavé tactile trouvé."

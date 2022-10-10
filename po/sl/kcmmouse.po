@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1633305 2022-09-08 02:10:35Z scripty $
+# $Id: kcmmouse.po 1635680 2022-10-10 01:35:35Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2022-09-07 07:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -77,7 +77,7 @@ msgstr "Roman Gilg"
 msgid "Developer"
 msgstr "Razvijalec"
 
-#: kcm/libinput/libinput_config.cpp:110
+#: kcm/libinput/libinput_config.cpp:109
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -86,12 +86,12 @@ msgstr ""
 "Napaka pri nalaganju vrednosti. Za več informacij si oglejte dnevnike. "
 "Ponovno zaženite ta nastavitveni modul."
 
-#: kcm/libinput/libinput_config.cpp:115
+#: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ni bilo mogoče najti nobene kazalne naprave . Povežite jih."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:125
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -100,7 +100,7 @@ msgstr ""
 "Vseh sprememb ni mogoče shraniti. Za več informacij oglejte dnevnike. "
 "Ponovno zaženite ta nastavitveni modul in spet poskusite."
 
-#: kcm/libinput/libinput_config.cpp:146
+#: kcm/libinput/libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -109,7 +109,7 @@ msgstr ""
 "Napaka med nalaganjem privzetih vrednosti. Nekaterih nastavitev ni bilo "
 "mogoče nastaviti na privzete vrednosti."
 
-#: kcm/libinput/libinput_config.cpp:168
+#: kcm/libinput/libinput_config.cpp:167
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -118,13 +118,13 @@ msgstr ""
 "Napaka pri dodajanju na novo povezane naprave. Ponovno jo povežite in "
 "zaženite ta nastavitveni modul."
 
-#: kcm/libinput/libinput_config.cpp:192
+#: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Kazalna naprava je izključena. Pogovorno okno z nastavitvami je zaprto."
 
-#: kcm/libinput/libinput_config.cpp:194
+#: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2022-08-28 17:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -83,7 +83,7 @@ msgstr "Roman Gilg"
 msgid "Developer"
 msgstr "Desarrollador"
 
-#: kcm/libinput/libinput_config.cpp:110
+#: kcm/libinput/libinput_config.cpp:109
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -92,12 +92,12 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores. Consulte los registros para más "
 "información. Por favor, reinicie este módulo de configuración."
 
-#: kcm/libinput/libinput_config.cpp:115
+#: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "No se ha encontrado ningún dispositivo apuntador. Conecte uno ahora."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:125
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -107,7 +107,7 @@ msgstr ""
 "más información. Por favor, reinicie este módulo de configuración y vuelva a "
 "probar."
 
-#: kcm/libinput/libinput_config.cpp:146
+#: kcm/libinput/libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -116,7 +116,7 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores predeterminados. Ha fallado la "
 "inicialización de algunas opciones a sus valores predeterminados."
 
-#: kcm/libinput/libinput_config.cpp:168
+#: kcm/libinput/libinput_config.cpp:167
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -125,13 +125,13 @@ msgstr ""
 "Ha ocurrido un error al añadir el dispositivo recién conectado. Por favor, "
 "vuelva a conectarlo y reinicie este módulo de configuración."
 
-#: kcm/libinput/libinput_config.cpp:192
+#: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Dispositivo apuntador desconectado. Se ha cerrado su diálogo de preferencias."
 
-#: kcm/libinput/libinput_config.cpp:194
+#: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""

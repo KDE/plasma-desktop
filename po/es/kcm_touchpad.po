@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-03 00:47+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2021-05-27 00:52+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -407,7 +407,7 @@ msgstr "Desarrollador"
 msgid "Roman Gilg"
 msgstr "Roman Gilg"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:92
+#: kcm/libinput/touchpadconfiglibinput.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -416,12 +416,12 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores. Consulte los registros para más "
 "información. Por favor, reinicie este módulo de configuración."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:95
+#: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "No se ha encontrado ningún panel táctil. Conecte uno ahora."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -431,7 +431,7 @@ msgstr ""
 "más información. Por favor, reinicie este módulo de configuración y vuelva a "
 "probar."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:123
+#: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -440,7 +440,7 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores predeterminados. Ha fallado la "
 "inicialización de algunas opciones a sus valores predeterminados."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:143
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -449,12 +449,12 @@ msgstr ""
 "Ha ocurrido un error al añadir el dispositivo recién conectado. Por favor, "
 "vuelva a conectarlo y reinicie este módulo de configuración."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:166
+#: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Panel táctil desconectado. Se ha cerrado su diálogo de preferencias."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:168
+#: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Panel táctil desconectado. No se han encontrado más paneles táctiles."
