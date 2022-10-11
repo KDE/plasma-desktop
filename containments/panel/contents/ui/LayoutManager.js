@@ -96,7 +96,7 @@ function save() {
     updateMargins()
 }
 
-function indexAtCoordinates(x, y) {
+function childAtCoordinates(x, y) {
     if (root.isHorizontal) {
         y = layout.height / 2;
     } else {
@@ -120,6 +120,11 @@ function indexAtCoordinates(x, y) {
         }
         child = layout.childAt(x, y);
     }
+    return child
+}
+
+function indexAtCoordinates(x, y) {
+    let child = childAtCoordinates(x, y)
     if ((plasmoid.formFactor === 3 && y < child.y + child.height/2) ||
         (plasmoid.formFactor !== 3 && x < child.x + child.width/2)) {
         return child.index;
@@ -144,8 +149,11 @@ function move(applet, end) {
     var start = applet.index
     var target = end - (start < end)
     if (start == target) return;
-    applet.oldX = applet.x
-    applet.oldY = applet.y
+    // Setting oldX,oldY allows for position animations
+    for (let i = Math.min(start, end); i <= Math.max(start, end-1); i++) {
+        let el = layout.children[i]
+        el.oldX = el.x, el.oldY = el.y
+    }
     appletsModel.move(start, target, 1)
     save()
 }
