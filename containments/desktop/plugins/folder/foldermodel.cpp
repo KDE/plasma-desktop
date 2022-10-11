@@ -56,7 +56,9 @@
 #include <KDesktopFile>
 #include <KDirModel>
 #include <KIO/CopyJob>
+#include <KIO/DeleteOrTrashJob>
 #include <KIO/Job>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
 #include <KIO/PreviewJob>
 #include <KProtocolInfo>
@@ -764,7 +766,7 @@ void FolderModel::run(int row)
     }
 
     auto job = new KIO::OpenUrlJob(url);
-    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     // On desktop:/ we want to be able to run .desktop files right away,
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
@@ -2047,14 +2049,9 @@ void FolderModel::moveSelectedToTrash()
         }
     }
 
-    const QList<QUrl> urls = selectedUrls();
-    KIO::JobUiDelegate uiDelegate;
-
-    if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job *job = KIO::trash(urls);
-        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-        KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
-    }
+    using Iface = KIO::AskUserActionInterface;
+    auto *job = new KIO::DeleteOrTrashJob(selectedUrls(), Iface::Trash, Iface::DefaultConfirmation, this);
+    job->start();
 }
 
 void FolderModel::deleteSelected()
@@ -2069,13 +2066,9 @@ void FolderModel::deleteSelected()
         }
     }
 
-    const QList<QUrl> urls = selectedUrls();
-    KIO::JobUiDelegate uiDelegate;
-
-    if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job *job = KIO::del(urls);
-        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
+    using Iface = KIO::AskUserActionInterface;
+    auto *job = new KIO::DeleteOrTrashJob(selectedUrls(), Iface::Delete, Iface::DefaultConfirmation, this);
+    job->start();
 }
 
 void FolderModel::undo()
@@ -2090,12 +2083,9 @@ void FolderModel::undo()
 
 void FolderModel::emptyTrashBin()
 {
-    KIO::JobUiDelegate uiDelegate;
-
-    if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job *job = KIO::emptyTrash();
-        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
+    using Iface = KIO::AskUserActionInterface;
+    auto *job = new KIO::DeleteOrTrashJob({}, Iface::EmptyTrash, Iface::DefaultConfirmation, this);
+    job->start();
 }
 
 void FolderModel::restoreSelectedFromTrash()

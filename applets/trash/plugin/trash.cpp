@@ -9,10 +9,7 @@
 #include <QApplication>
 #include <QFileInfo>
 
-#include <KIO/CopyJob>
-#include <KIO/EmptyTrashJob>
-#include <KIO/Job>
-#include <KIO/JobUiDelegate>
+#include <KIO/DeleteOrTrashJob>
 
 Trash::Trash(QObject *parent)
     : QObject(parent)
@@ -21,20 +18,16 @@ Trash::Trash(QObject *parent)
 
 void Trash::trashUrls(const QList<QUrl> &urls)
 {
-    KIO::JobUiDelegate uiDelegate;
-    if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job *job = KIO::trash(urls);
-        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
+    using Iface = KIO::AskUserActionInterface;
+    auto *job = new KIO::DeleteOrTrashJob(urls, Iface::Trash, Iface::DefaultConfirmation, this);
+    job->start();
 }
 
 void Trash::emptyTrash()
 {
-    KIO::JobUiDelegate uiDelegate;
-    if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job *job = KIO::emptyTrash();
-        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
+    using Iface = KIO::AskUserActionInterface;
+    auto *job = new KIO::DeleteOrTrashJob({}, Iface::EmptyTrash, Iface::DefaultConfirmation, this);
+    job->start();
 }
 
 bool Trash::canBeTrashed(const QUrl &url) const
