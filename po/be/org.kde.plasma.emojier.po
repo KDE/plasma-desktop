@@ -6,16 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"POT-Creation-Date: 2022-10-11 00:48+0000\n"
 "PO-Revision-Date: 2022-10-09 08:21+0300\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian <kde-i18n-doc@kde.org>\n"
-"Language: be_BY\n"
+"Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.1\n"
 
 #: app/emojier.cpp:84 app/emojier.cpp:86
@@ -80,62 +81,52 @@ msgstr "Усе"
 msgid "Categories"
 msgstr "Катэгорыі"
 
-#: emojicategory.cpp:11
-#, kde-format
+#: emojicategory.cpp:14
 msgctxt "Emoji Category"
 msgid "Smileys and Emotion"
 msgstr "Усмешкі і эмоцыі"
 
-#: emojicategory.cpp:12
-#, kde-format
+#: emojicategory.cpp:15
 msgctxt "Emoji Category"
 msgid "People and Body"
 msgstr "Людзі і цела"
 
-#: emojicategory.cpp:13
-#, kde-format
+#: emojicategory.cpp:16
 msgctxt "Emoji Category"
 msgid "Component"
 msgstr "Кампанент"
 
-#: emojicategory.cpp:14
-#, kde-format
+#: emojicategory.cpp:17
 msgctxt "Emoji Category"
 msgid "Animals and Nature"
 msgstr "Жывёлы і прырода"
 
-#: emojicategory.cpp:15
-#, kde-format
+#: emojicategory.cpp:18
 msgctxt "Emoji Category"
 msgid "Food and Drink"
 msgstr "Ежа і напоі"
 
-#: emojicategory.cpp:16
-#, kde-format
+#: emojicategory.cpp:19
 msgctxt "Emoji Category"
 msgid "Travel and Places"
 msgstr "Падарожжы і мясціны"
 
-#: emojicategory.cpp:17
-#, kde-format
+#: emojicategory.cpp:20
 msgctxt "Emoji Category"
 msgid "Activities"
 msgstr "Дзейнасць"
 
-#: emojicategory.cpp:18
-#, kde-format
+#: emojicategory.cpp:21
 msgctxt "Emoji Category"
 msgid "Objects"
 msgstr "Аб'екты"
 
-#: emojicategory.cpp:19
-#, kde-format
+#: emojicategory.cpp:22
 msgctxt "Emoji Category"
 msgid "Symbols"
 msgstr "Сімвалы"
 
-#: emojicategory.cpp:20
-#, kde-format
+#: emojicategory.cpp:23
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Сцягі"
