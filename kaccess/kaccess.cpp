@@ -10,7 +10,6 @@
 
 #include "kaccess.h"
 
-#include <QDesktopWidget>
 #include <QMessageBox>
 #include <QPainter>
 #include <QProcess>
@@ -501,7 +500,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         WId id = _activeWindow;
 
         NETRect frame, window;
-        NETWinInfo net(QX11Info::connection(), id, qApp->desktop()->winId(), NET::Properties(), NET::Properties2());
+        NETWinInfo net(QX11Info::connection(), id, QX11Info::appRootWindow(), NET::Properties(), NET::Properties2());
 
         net.kdeGeometry(frame, window);
 
