@@ -149,14 +149,3 @@ function move(applet, end) {
     appletsModel.move(start, target, 1)
     save()
 }
-
-function moveIndex(oldIndex, newIndex) {
-    if (oldIndex === newIndex || newIndex < 0 || newIndex >= appletsModel.count) {
-        return;
-    }
-
-    const applet = layout.children[oldIndex]
-    applet.oldX = applet.x
-    applet.oldY = applet.y
-    appletsModel.move(oldIndex, newIndex, 1)
-}
