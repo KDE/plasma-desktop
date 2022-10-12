@@ -151,6 +151,7 @@ Item {
 
         MouseEventInputButton {
             defaultText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Action");
+            icon.name: checked ? "input-mouse-symbolic" : "list-add"
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
             }
