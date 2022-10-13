@@ -13,7 +13,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDirNotify>
-#include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
 #include <KIO/StatJob>
 #include <KJobWidgets>
@@ -211,7 +211,7 @@ bool KNetAttach::validateCurrentPage()
         }
 
         auto job = new KIO::OpenUrlJob(url, QStringLiteral("inode/directory"));
-        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
+        job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
         job->setRunExecutables(true);
         job->start();
 
