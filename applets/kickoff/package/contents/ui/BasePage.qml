@@ -14,6 +14,7 @@ import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
+import org.kde.plasma.workspace.trianglemousefilter 1.0
 
 FocusScope {
     id: root
@@ -31,7 +32,7 @@ FocusScope {
     implicitWidth: root.preferredSideBarWidth + separator.implicitWidth + contentAreaLoader.implicitWidth
     implicitHeight: Math.max(root.preferredSideBarHeight, contentAreaLoader.implicitHeight)
 
-    Kicker.TriangleMouseFilter {
+    TriangleMouseFilter {
         id: sideBarFilter
         anchors {
             left: parent.left
@@ -41,6 +42,7 @@ FocusScope {
         implicitWidth: root.preferredSideBarWidth
         implicitHeight: root.preferredSideBarHeight
         edge: LayoutMirroring.enabled ? Qt.LeftEdge : Qt.RightEdge
+        blockFirstEnter: true
         Loader {
             id: sideBarLoader
             anchors.fill: parent
