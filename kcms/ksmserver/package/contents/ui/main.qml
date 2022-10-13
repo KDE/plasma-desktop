@@ -158,7 +158,8 @@ KCM.SimpleKCM {
         }
         CheckBox {
             id: uefi
-            text: i18nc("@option:check", "Enter firmware setup screen on next restart")
+            text: kcm.isUefi ? i18nc("@option:check", "Enter UEFI setup screen on next restart")
+                             : i18nc("@option:check", "Enter firmware setup screen on next restart")
             visible: kcm.canFirmwareSetup
             checked: kcm.restartInSetupScreen
             onToggled: kcm.restartInSetupScreen = checked
