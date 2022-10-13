@@ -11,7 +11,7 @@ import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -628,7 +628,7 @@ FocusScope {
             }
         }
 
-        PlasmaExtras.ScrollArea {
+        Item {
             id: scrollArea
 
             anchors.fill: parent
@@ -638,6 +638,7 @@ FocusScope {
             property bool ready: false
             readonly property int viewportWidth: scrollArea.ready && viewport ? Math.ceil(viewport.width) : 0
             readonly property int viewportHeight: scrollArea.ready && viewport ? Math.ceil(viewport.height) : 0
+            readonly property Flickable viewport: gridView
 
             Component.onCompleted: {
                 scrollArea.ready = true;
@@ -645,6 +646,8 @@ FocusScope {
 
             GridView {
                 id: gridView
+                clip: true
+                anchors.fill: parent
 
                 property bool isRootView: false
 
@@ -676,6 +679,10 @@ FocusScope {
 
                 keyNavigationWraps: false
                 boundsBehavior: Flickable.StopAtBounds
+                focus: true
+
+                PC3.ScrollBar.vertical: PC3.ScrollBar {}
+                PC3.ScrollBar.horizontal: PC3.ScrollBar {}
 
                 function calcExtraSpacing(cellSize, containerSize) {
                     var availableColumns = Math.floor(containerSize / cellSize);
