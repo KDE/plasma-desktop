@@ -8,6 +8,7 @@
 */
 
 import QtQuick 2.15
+import QtQml 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import QtGraphicalEffects 1.15
@@ -173,6 +174,8 @@ PlasmaExtras.PlasmoidHeading {
                 target: plasmoid.rootItem
                 property: "searchField"
                 value: searchField
+                // there's only one header ever, so don't waste resources
+                restoreMode: Binding.RestoreNone
             }
             Connections {
                 target: plasmoid
@@ -243,6 +246,8 @@ PlasmaExtras.PlasmoidHeading {
                 target: plasmoid
                 property: "hideOnWindowDeactivate"
                 value: !plasmoid.configuration.pin
+                // there should be no other bindings, so don't waste resources
+                restoreMode: Binding.RestoreNone
             }
             KeyNavigation.backtab: configureButton
             KeyNavigation.tab: if (plasmoid.rootItem.sideBar) {
