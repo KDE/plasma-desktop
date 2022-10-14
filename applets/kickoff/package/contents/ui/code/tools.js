@@ -2,13 +2,21 @@
     SPDX-FileCopyrightText: 2013 Aurélien Gâteau <agateau@kde.org>
     SPDX-FileCopyrightText: 2013-2015 Eike Hein <hein@kde.org>
     SPDX-FileCopyrightText: 2017 Ivan Cukic <ivan.cukic@kde.org>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 .pragma library
+.import org.kde.plasma.core 2.1 as PlasmaCore
 
 const defaultIconName = "start-here-kde";
+
+function iconOrDefault(formFactor, preferredIconName) {
+    // Vertical panels must have an icon, at least a default one.
+    return (formFactor === PlasmaCore.Types.Vertical && preferredIconName === "")
+        ? defaultIconName : preferredIconName;
+}
 
 function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId) {
     // Accessing actionList can be a costly operation, so we don't

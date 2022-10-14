@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2013 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
     SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -57,7 +58,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     width: PlasmaCore.Units.iconSizes.large
                     height: width
-                    source: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? cfg_icon : cfg_icon ? cfg_icon : Tools.defaultIconName
+                    source: Tools.iconOrDefault(plasmoid.formFactor, cfg_icon)
                 }
             }
 
