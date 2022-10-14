@@ -10,7 +10,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 DropArea {
     id: root
     required property Flickable targetView
-    property bool enableAutoScroll: targetView.height < targetView.contentHeight
+    readonly property bool enableAutoScroll: targetView.height < targetView.contentHeight
     property real scrollUpMargin: 0
     property real scrollDownMargin: 0
     enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable

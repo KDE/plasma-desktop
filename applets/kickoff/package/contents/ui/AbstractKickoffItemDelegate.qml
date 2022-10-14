@@ -34,7 +34,7 @@ T.ItemDelegate {
     property var actionList: null
     property bool isSearchResult: false
 
-    property bool dragEnabled: enabled && !isCategory
+    readonly property bool dragEnabled: enabled && !isCategory
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     property bool labelTruncated: false

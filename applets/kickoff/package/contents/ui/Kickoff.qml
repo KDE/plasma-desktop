@@ -26,20 +26,22 @@ Item {
     // instance of Kickoff requires different instances of these properties
 
     // Used to display the menu label on the only text mode
-    property string menuLabel: plasmoid.configuration.menuLabel
+    readonly property string menuLabel: plasmoid.configuration.menuLabel
 
-    property bool inPanel: plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool inPanel: [
+        PlasmaCore.Types.TopEdge,
+        PlasmaCore.Types.RightEdge,
+        PlasmaCore.Types.BottomEdge,
+        PlasmaCore.Types.LeftEdge,
+    ].includes(plasmoid.location)
+    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
-    property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
+    readonly property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
         || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > 16)
 
     //BEGIN Models
-    property Kicker.RootModel rootModel: Kicker.RootModel {
+    readonly property Kicker.RootModel rootModel: Kicker.RootModel {
         autoPopulate: false
 
         appletInterface: plasmoid
@@ -69,7 +71,7 @@ Item {
         }
     }
 
-    property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
+    readonly property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
         query: kickoff.searchField ? kickoff.searchField.text : ""
         onRequestUpdateQuery: function (query) {
             kickoff.searchField && (kickoff.searchField.text = query);
@@ -79,7 +81,7 @@ Item {
         favoritesModel: rootModel.favoritesModel
     }
 
-    property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
+    readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
         appletInterface: plasmoid
         favoritesModel: rootModel.favoritesModel
         systemApplications: plasmoid.configuration.systemApplications
@@ -88,11 +90,11 @@ Item {
         }
     }
 
-    property Kicker.RecentUsageModel recentUsageModel: Kicker.RecentUsageModel {
+    readonly property Kicker.RecentUsageModel recentUsageModel: Kicker.RecentUsageModel {
         favoritesModel: rootModel.favoritesModel
     }
 
-    property Kicker.RecentUsageModel frequentUsageModel: Kicker.RecentUsageModel {
+    readonly property Kicker.RecentUsageModel frequentUsageModel: Kicker.RecentUsageModel {
         favoritesModel: rootModel.favoritesModel
         ordering: 1 // Popular / Frequently Used
     }
