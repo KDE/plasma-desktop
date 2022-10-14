@@ -628,7 +628,7 @@ FocusScope {
             }
         }
 
-        Item {
+        FocusScope {
             id: scrollArea
 
             anchors.fill: parent
