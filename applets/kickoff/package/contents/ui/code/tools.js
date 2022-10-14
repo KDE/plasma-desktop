@@ -185,16 +185,16 @@ function handleFavoriteAction(actionId, actionArgument) {
     }
 }
 
-function returnValueIfExists(checker, value, optional = 0) {
-    var condition = Array.isArray(checker) ? checker.some(el => el) : checker;
-
-    return condition ? value : optional;
-}
-
-function dynamicSetWidgetWidth(icon, buttonIconWidth, kickoffMenuLabel, menuLabelWidth, spacing) {
-    return [
-        returnValueIfExists(icon, buttonIconWidth),
-        returnValueIfExists(kickoffMenuLabel, menuLabelWidth),
-        returnValueIfExists(kickoffMenuLabel && icon, spacing)
-    ].reduce((sum, n) => sum + n, 0);
+function dynamicSetWidgetWidth(icon, buttonIconWidth, kickoffMenuLabelText, menuLabelWidth, spacing) {
+    let w = 0;
+    if (icon !== "") {
+        w += buttonIconWidth;
+    }
+    if (icon !== "" && kickoffMenuLabelText !== "") {
+        w += spacing;
+    }
+    if (kickoffMenuLabelText !== "") {
+        w += menuLabelWidth;
+    }
+    return w;
 }

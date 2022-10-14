@@ -244,7 +244,7 @@ Item {
 
                 readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
                     : implicitWidth / implicitHeight)
-                readonly property int iconSize: Tools.returnValueIfExists(plasmoid.icon, compactRoot.height)
+                readonly property int iconSize: plasmoid.icon ? compactRoot.height : 0
 
                 Layout.preferredWidth: iconSize
                 Layout.preferredHeight: iconSize
