@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-01-20 22:44+0100\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -145,6 +145,13 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Entrar na configuración de la UEFI nel próximu reaniciu"
+
+#: package/contents/ui/main.qml:162
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"

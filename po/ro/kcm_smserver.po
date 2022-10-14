@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-04-04 09:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -151,6 +151,13 @@ msgstr ""
 "restabilirea sesiunii. De exemplu: „xterm:konsole” sau „xterm,konsole”."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Intră în configurarea UEFI la următoarea repornire"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -214,9 +221,6 @@ msgstr "Aplicații de exclus din sesiune"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Configurare UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Intră în configurarea UEFI la următoarea repornire"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

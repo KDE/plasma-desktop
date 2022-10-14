@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-03-24 18:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -152,6 +152,13 @@ msgstr ""
 "ketika memulihkan sesi. Misalnya 'xterm:konsole' atau 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Memasuki pengesetan UEFI saat menyalakan-ulang nanti"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -217,9 +224,6 @@ msgstr "Aplikasi yang dekecualikan dari sesi:"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Pengesetan UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Memasuki pengesetan UEFI saat menyalakan-ulang nanti"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

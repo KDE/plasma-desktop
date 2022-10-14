@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-01-13 20:22+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -159,6 +159,13 @@ msgstr ""
 
 #: package/contents/ui/main.qml:161
 #, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "UEFI beállítóképernyő indítása a következő újrainduláskor"
+
+#: package/contents/ui/main.qml:162
+#, fuzzy, kde-format
 #| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -222,9 +229,6 @@ msgstr "Az állapotkezelésből kizárandó alkalmazások:"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "UEFI beállítás"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "UEFI beállítóképernyő indítása a következő újrainduláskor"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

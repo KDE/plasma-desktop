@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-08-14 21:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -189,6 +189,12 @@ msgstr "Aplikazioak"
 #, kde-format
 msgid "Places"
 msgstr "Lekuak"
+
+#: package/contents/ui/FullRepresentation.qml:117
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #: package/contents/ui/Header.qml:63
 #, kde-format

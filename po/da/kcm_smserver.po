@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-08-20 17:45+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -148,6 +148,13 @@ msgstr ""
 "genskabes. For eksempel \"xterm:xconsole\" eller \"xterm,konsole\"."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Gå ind i UEFI-opsætningen ved næste genstart"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -195,9 +202,6 @@ msgstr "Programmer der skal udelukkes fra session"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "UEFI-opsætning"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Gå ind i UEFI-opsætningen ved næste genstart"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

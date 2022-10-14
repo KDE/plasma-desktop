@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-08-08 17:19+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -186,6 +186,12 @@ msgstr "Programmer"
 #, kde-format
 msgid "Places"
 msgstr "Steder"
+
+#: package/contents/ui/FullRepresentation.qml:117
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #: package/contents/ui/Header.qml:63
 #, kde-format

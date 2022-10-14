@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-09-06 02:03+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -156,6 +156,13 @@ msgstr ""
 
 #: package/contents/ui/main.qml:161
 #, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "下次重開機進入 UEFI 設定介面"
+
+#: package/contents/ui/main.qml:162
+#, fuzzy, kde-format
 #| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -223,9 +230,6 @@ msgstr "要自工作階段排除的應用程式"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "UEFI 設定"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "下次重開機進入 UEFI 設定介面"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

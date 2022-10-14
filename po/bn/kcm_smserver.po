@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2004-05-22 22:42-0500\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -149,6 +149,12 @@ msgstr ""
 "এবং আরম্ভকৃত যখন একটি সেশন জন্য উদাহরণ"
 
 #: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"

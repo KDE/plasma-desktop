@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-03-23 18:37+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -152,6 +152,13 @@ msgstr ""
 "xconsole'."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Gå till inställning av UEFI vid nästa omstart"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -215,9 +222,6 @@ msgstr "Program som ska undantas från session"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Inställning av UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Gå till inställning av UEFI vid nästa omstart"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

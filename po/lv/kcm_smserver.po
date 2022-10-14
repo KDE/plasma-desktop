@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2009-05-20 20:24+0300\n"
 "Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -158,6 +158,12 @@ msgstr ""
 "palaistas. Piemēram 'xterm:konsole' vai 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"

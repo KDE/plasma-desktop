@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2020-01-11 11:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -195,6 +195,12 @@ msgstr "Aplicacións"
 #, kde-format
 msgid "Places"
 msgstr "Lugares"
+
+#: package/contents/ui/FullRepresentation.qml:117
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #: package/contents/ui/Header.qml:63
 #, kde-format

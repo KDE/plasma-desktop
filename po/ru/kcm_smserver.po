@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-06-27 10:50+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -160,6 +160,13 @@ msgstr ""
 "konsole»."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Показать экран настройки UEFI при следующей перезагрузке"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -223,9 +230,6 @@ msgstr "Приложения, которые не следует восстан�
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Настройка UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Показать экран настройки UEFI при следующей перезагрузке"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

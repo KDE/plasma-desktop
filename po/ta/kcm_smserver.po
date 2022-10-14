@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-04-02 21:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -144,6 +144,14 @@ msgstr ""
 "எடுத்துக்காட்டாக, 'xterm:konsole' அல்லது 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "அடுத்த மீள்துவக்கத்தின் போது சாதனநிரல் (firmware) அமைப்புகளில் நுழை"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"

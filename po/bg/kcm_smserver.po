@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-05-22 08:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -146,6 +146,14 @@ msgstr ""
 "(примерно: xterm, xconcole)."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Стартиране на инсталация на фърмуер при следващо рестартиране"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-08-14 21:29+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -194,6 +194,12 @@ msgstr "Applications"
 #, kde-format
 msgid "Places"
 msgstr "Emplacements"
+
+#: package/contents/ui/FullRepresentation.qml:117
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #: package/contents/ui/Header.qml:63
 #, kde-format

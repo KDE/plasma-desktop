@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-07 00:05+0200\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -194,6 +194,12 @@ msgstr "Aplicaciones"
 #, kde-format
 msgid "Places"
 msgstr "Llugares"
+
+#: package/contents/ui/FullRepresentation.qml:117
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #: package/contents/ui/Header.qml:63
 #, kde-format

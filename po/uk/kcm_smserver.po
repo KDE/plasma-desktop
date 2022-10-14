@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-03-22 09:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -156,6 +156,13 @@ msgstr ""
 "відновленні сеансу. Наприклад, «xterm:xconsole» або «xterm,konsole»."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Налаштувати UEFI під час наступного перезапуску"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -219,9 +226,6 @@ msgstr "Програми, що мають бути вилучені з сеан�
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Налаштування UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Налаштувати UEFI під час наступного перезапуску"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

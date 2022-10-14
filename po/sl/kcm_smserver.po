@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1630923 2022-08-10 01:38:31Z scripty $
+# $Id: kcm_smserver.po 1636040 2022-10-14 01:35:48Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-03-24 09:18+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -160,6 +160,13 @@ msgstr ""
 "primer »xterm:konsole« ali »xterm,konsole«."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Ob naslednjem zagonu v nastavitev UEFI"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -223,9 +230,6 @@ msgstr "Aplikacije, ki naj bi bile izključene iz seje"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "Nastavitev UEFI"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Ob naslednjem zagonu v nastavitev UEFI"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

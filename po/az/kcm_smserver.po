@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2022-07-03 13:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -150,6 +150,13 @@ msgstr ""
 "or 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen on next restart"
+msgstr "Növbəti başlamada UEFİ ayarlarını daxil etmək"
+
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -213,9 +220,6 @@ msgstr "Sesiyalardan istisna ediləcək tətbiqlər"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "UEFI ayarlanması"
-
-#~ msgid "Enter UEFI setup on next restart"
-#~ msgstr "Növbəti başlamada UEFİ ayarlarını daxil etmək"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

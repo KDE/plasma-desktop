@@ -2,6 +2,7 @@
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Alois Spitzbart <spitz234@hotmail.com>, 2022.
 #
 # Automatically generated, 2022.
 msgid ""
@@ -9,15 +10,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-06 00:47+0000\n"
-"PO-Revision-Date: 2022-03-06 15:11+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2022-09-08 14:00+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.0\n"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -50,27 +51,25 @@ msgid "Follow the active screen"
 msgstr "Dem aktiven Bildschirm folgen"
 
 #: kcmtablet.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "model - (x,y widthxheight)"
-#| msgid "%1 - (%2,%3 %4x%5)"
+#, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4x%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:116
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "An Ausgabe anpassen"
 
 #: kcmtablet.cpp:117
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "Ausgabe an Tablett anpassen"
 
 #: kcmtablet.cpp:118
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Benutzerdefinierte Größe"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -78,8 +77,7 @@ msgid "No drawing tablets found."
 msgstr "Kein Grafiktablett gefunden."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Gerät:"
@@ -102,24 +100,24 @@ msgstr "Linkshändiger Modus:"
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "Bereich:"
 
 #: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Größe des Tablettbereichs ändern"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Seitenverhältnis sperren"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
