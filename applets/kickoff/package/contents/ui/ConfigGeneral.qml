@@ -93,7 +93,7 @@ ColumnLayout {
             placeholderText: i18nc("@info:placeholder", "Type here to add a text label")
             onTextEdited: {
                 cfg_menuLabel = menuLabel.text
-                
+
                 // This is to make sure that we always have a icon if there is no text.
                 // If the user remove the icon and remove the text, without this, we'll have no icon and no text.
                 // This is to force the icon to be there.
