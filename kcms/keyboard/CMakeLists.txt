@@ -36,7 +36,7 @@ kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE "kf5/kded")
+kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE kf${QT_MAJOR_VERSION}/kded)
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 
 target_link_libraries(kded_keyboard
