@@ -89,7 +89,7 @@ T.ItemDelegate {
 
     text: model.name ?? model.display
     Accessible.role: Accessible.ListItem
-    Accessible.description: root.description != root.text ? root.description : ""
+    Accessible.description: root.description !== root.text ? root.description : ""
     Accessible.onPressAction: {
         root.forceActiveFocus() // trigger is focus guarded
         action.trigger()
@@ -172,7 +172,7 @@ T.ItemDelegate {
             if (mouse.button === Qt.RightButton) {
                 root.openActionMenu(mouseX, mouseY)
             } else if (mouseArea.dragEnabled && mouse.button === Qt.LeftButton
-                && root.dragEnabled && root.dragIconItem && root.Drag.imageSource == ""
+                && root.dragEnabled && root.dragIconItem && root.Drag.imageSource.toString() === ""
             ) {
                 root.dragIconItem.grabToImage(result => {
                     root.Drag.imageSource = result.url

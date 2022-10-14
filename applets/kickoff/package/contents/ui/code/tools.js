@@ -49,7 +49,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
             action.text = i18n("Remove from Favorites");
             action.icon = "bookmark-remove";
             action.actionId = "_kicker_favorite_remove";
-        } else if (favoriteModel.maxFavorites == -1 || favoriteModel.count < favoriteModel.maxFavorites) {
+        } else if (favoriteModel.maxFavorites === -1 || favoriteModel.count < favoriteModel.maxFavorites) {
             action.text = i18n("Add to Favorites");
             action.icon = "bookmark-new";
             action.actionId = "_kicker_favorite_add";
@@ -168,19 +168,19 @@ function handleFavoriteAction(actionId, actionArgument) {
     var favoriteId = actionArgument.favoriteId;
     var favoriteModel = actionArgument.favoriteModel;
 
-    if (favoriteModel === null || favoriteId == null) {
+    if (favoriteModel === null || favoriteId === null) {
         return null;
     }
 
-    if (actionId == "_kicker_favorite_remove") {
+    if (actionId === "_kicker_favorite_remove") {
         favoriteModel.removeFavorite(favoriteId);
-    } else if (actionId == "_kicker_favorite_add") {
+    } else if (actionId === "_kicker_favorite_add") {
         favoriteModel.addFavorite(favoriteId);
-    } else if (actionId == "_kicker_favorite_remove_from_activity") {
+    } else if (actionId === "_kicker_favorite_remove_from_activity") {
         favoriteModel.removeFavoriteFrom(favoriteId, actionArgument.favoriteActivity);
-    } else if (actionId == "_kicker_favorite_add_to_activity") {
+    } else if (actionId === "_kicker_favorite_add_to_activity") {
         favoriteModel.addFavoriteTo(favoriteId, actionArgument.favoriteActivity);
-    } else if (actionId == "_kicker_favorite_set_to_activity") {
+    } else if (actionId === "_kicker_favorite_set_to_activity") {
         favoriteModel.setFavoriteOn(favoriteId, actionArgument.favoriteActivity);
     }
 }

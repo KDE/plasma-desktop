@@ -76,13 +76,13 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
                     icon.name: "edit-clear"
-                    enabled: cfg_icon != Tools.defaultIconName
+                    enabled: cfg_icon !== Tools.defaultIconName
                     onClicked: cfg_icon = Tools.defaultIconName
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove icon")
                     icon.name: "delete"
-                    enabled: !!cfg_icon && menuLabel.text && plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                    enabled: cfg_icon !== "" && menuLabel.text && plasmoid.formFactor !== PlasmaCore.Types.Vertical
                     onClicked: cfg_icon = ""
                 }
             }
@@ -167,7 +167,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a grid'", "In a grid")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.favoritesDisplay == index
+            checked: plasmoid.configuration.favoritesDisplay === index
         }
 
         RadioButton {
@@ -175,7 +175,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a list'", "In a list")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.favoritesDisplay == index
+            checked: plasmoid.configuration.favoritesDisplay === index
         }
 
         RadioButton {
@@ -184,7 +184,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a grid'", "In a grid")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.applicationsDisplay == index
+            checked: plasmoid.configuration.applicationsDisplay === index
         }
 
         RadioButton {
@@ -192,7 +192,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a list'", "In a list")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.applicationsDisplay == index
+            checked: plasmoid.configuration.applicationsDisplay === index
         }
 
         Item {
@@ -206,7 +206,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "suspend,hibernate,reboot,shutdown"
             property int index: 0
-            checked: plasmoid.configuration.primaryActions == index
+            checked: plasmoid.configuration.primaryActions === index
         }
 
         RadioButton {
@@ -215,7 +215,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user"
             property int index: 1
-            checked: plasmoid.configuration.primaryActions == index
+            checked: plasmoid.configuration.primaryActions === index
         }
 
         RadioButton {
@@ -224,7 +224,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user,suspend,hibernate,reboot,shutdown"
             property int index: 3
-            checked: plasmoid.configuration.primaryActions == index
+            checked: plasmoid.configuration.primaryActions === index
         }
 
         CheckBox {

@@ -95,7 +95,7 @@ EmptyPage {
             // use grid cells to determine size
             let h = KickoffSingleton.gridCellSize * 4
             // If no grids are used, use the number of items that would fit in the grid height
-            if (plasmoid.configuration.favoritesDisplay != 0 && plasmoid.configuration.applicationsDisplay != 0) {
+            if (plasmoid.configuration.favoritesDisplay !== 0 && plasmoid.configuration.applicationsDisplay !== 0) {
                 h = Math.floor(h / plasmoid.rootItem.listDelegateHeight) * plasmoid.rootItem.listDelegateHeight
             }
             return h + topMargin + bottomMargin

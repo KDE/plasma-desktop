@@ -59,10 +59,10 @@ BasePage {
         }
 
         id: stackView
-        readonly property string preferredFavoritesViewObjectName: plasmoid.configuration.favoritesDisplay == 0 ? "favoritesGridView" : "favoritesListView"
-        readonly property Component preferredFavoritesViewComponent: plasmoid.configuration.favoritesDisplay == 0 ? favoritesGridViewComponent : favoritesListViewComponent
-        readonly property string preferredAppsViewObjectName: plasmoid.configuration.applicationsDisplay == 0 ? "applicationsGridView" : "applicationsListView"
-        readonly property Component preferredAppsViewComponent: plasmoid.configuration.applicationsDisplay == 0 ? applicationsGridViewComponent : applicationsListViewComponent
+        readonly property string preferredFavoritesViewObjectName: plasmoid.configuration.favoritesDisplay === 0 ? "favoritesGridView" : "favoritesListView"
+        readonly property Component preferredFavoritesViewComponent: plasmoid.configuration.favoritesDisplay === 0 ? favoritesGridViewComponent : favoritesListViewComponent
+        readonly property string preferredAppsViewObjectName: plasmoid.configuration.applicationsDisplay === 0 ? "applicationsGridView" : "applicationsListView"
+        readonly property Component preferredAppsViewComponent: plasmoid.configuration.applicationsDisplay === 0 ? applicationsGridViewComponent : applicationsListViewComponent
         // NOTE: The 0 index modelForRow isn't supposed to be used. That's just how it works.
         // But to trigger model data update, set initial value to 0
         property int appsModelRow: 0
@@ -99,7 +99,7 @@ BasePage {
                 objectName: "applicationsListView"
                 mainContentView: true
                 model: stackView.appsModel
-                section.property: model && model.description == "KICKER_ALL_MODEL" ? "group" : ""
+                section.property: model && model.description === "KICKER_ALL_MODEL" ? "group" : ""
                 section.criteria: ViewSection.FirstCharacter
                 hasSectionView: stackView.appsModelRow === 1
 
@@ -137,12 +137,12 @@ BasePage {
         }
 
         onPreferredFavoritesViewComponentChanged: {
-            if (root.sideBarItem != null && root.sideBarItem.currentIndex === 0) {
+            if (root.sideBarItem !== null && root.sideBarItem.currentIndex === 0) {
                 stackView.replace(stackView.preferredFavoritesViewComponent)
             }
         }
         onPreferredAppsViewComponentChanged: {
-            if (root.sideBarItem != null && root.sideBarItem.currentIndex > 1) {
+            if (root.sideBarItem !== null && root.sideBarItem.currentIndex > 1) {
                 stackView.replace(stackView.preferredAppsViewComponent)
             }
         }
