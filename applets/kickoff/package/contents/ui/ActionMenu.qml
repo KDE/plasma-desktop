@@ -35,8 +35,8 @@ Item {
     visible: false
 
     Instantiator {
-        active: actionList !== null
-        model: actionList
+        active: root.actionList !== null
+        model: root.actionList
         delegate: menuItemComponent
         onObjectAdded: menu.addMenuItem(object)
         onObjectRemoved: menu.removeMenuItem(object)
