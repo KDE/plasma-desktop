@@ -34,8 +34,6 @@ Item {
         || plasmoid.location === PlasmaCore.Types.LeftEdge
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-    property string defaultIcon: "start-here-kde"
-
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
     property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
         || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > 16)
@@ -247,7 +245,7 @@ Item {
                 Layout.preferredWidth: iconSize
                 Layout.preferredHeight: iconSize
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                source: !kickoff.vertical ? plasmoid.icon : plasmoid.icon ? plasmoid.icon : kickoff.defaultIcon
+                source: !kickoff.vertical ? plasmoid.icon : plasmoid.icon ? plasmoid.icon : Tools.defaultIconName
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
                 smooth: true
                 roundToIconSize: aspectRatio === 1

@@ -8,6 +8,8 @@
 
 .pragma library
 
+const defaultIconName = "start-here-kde";
+
 function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId) {
     // Accessing actionList can be a costly operation, so we don't
     // access it until we need the menu.

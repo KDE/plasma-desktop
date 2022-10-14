@@ -15,6 +15,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import "code/tools.js" as Tools
+
 ColumnLayout {
 
     property string cfg_menuLabel: menuLabel.text
@@ -38,7 +40,7 @@ ColumnLayout {
 
             KQuickAddons.IconDialog {
                 id: iconDialog
-                onIconNameChanged: cfg_icon = iconName || "start-here-kde"
+                onIconNameChanged: cfg_icon = iconName || Tools.defaultIconName
             }
 
             onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
@@ -55,7 +57,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     width: PlasmaCore.Units.iconSizes.large
                     height: width
-                    source: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? cfg_icon : cfg_icon ? cfg_icon : "start-here-kde"
+                    source: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? cfg_icon : cfg_icon ? cfg_icon : Tools.defaultIconName
                 }
             }
 
@@ -73,8 +75,8 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
                     icon.name: "edit-clear"
-                    enabled: cfg_icon != "start-here-kde"
-                    onClicked: cfg_icon = "start-here-kde"
+                    enabled: cfg_icon != Tools.defaultIconName
+                    onClicked: cfg_icon = Tools.defaultIconName
                 }
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove icon")
@@ -98,7 +100,7 @@ ColumnLayout {
                 // If the user remove the icon and remove the text, without this, we'll have no icon and no text.
                 // This is to force the icon to be there.
                 if (!menuLabel.text) {
-                    cfg_icon = cfg_icon || "start-here-kde"
+                    cfg_icon = cfg_icon || Tools.defaultIconName
                 }
             }
             rightActions: [
@@ -108,7 +110,7 @@ ColumnLayout {
                     onTriggered: {
                         menuLabel.clear()
                         cfg_menuLabel = ''
-                        cfg_icon = cfg_icon || "start-here-kde"
+                        cfg_icon = cfg_icon || Tools.defaultIconName
                     }
                 }
             ]
