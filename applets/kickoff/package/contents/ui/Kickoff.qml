@@ -253,6 +253,7 @@ Item {
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
                 smooth: true
                 roundToIconSize: aspectRatio === 1
+                visible: iconSize !== 0
             }
 
             PC3.Label {
