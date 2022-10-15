@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-04-08 01:02+0200\n"
+"PO-Revision-Date: 2022-10-14 18:30+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -150,12 +150,10 @@ msgstr ""
 "konsole'."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Đi vào màn hình cài đặt phần sụn ở lần khởi động lại tiếp theo"
+msgstr "Đi vào màn hình cài đặt UEFI ở lần khởi động lại tiếp theo"
 
 #: package/contents/ui/main.qml:162
 #, kde-format

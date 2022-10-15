@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-08-14 21:49+0200\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"PO-Revision-Date: 2022-10-14 07:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "Lekuak"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Ez dago bat datorrenik"
 
 #: package/contents/ui/Header.qml:63
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "Ireki erabiltzailearen ezarpenak"
 msgid "Keep Open"
 msgstr "Eduki irekita"
 
-#: package/contents/ui/Kickoff.qml:283
+#: package/contents/ui/Kickoff.qml:286
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editatu aplikazioak..."

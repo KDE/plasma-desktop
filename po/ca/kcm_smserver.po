@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-22 11:20+0100\n"
+"PO-Revision-Date: 2022-10-14 12:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -158,11 +158,10 @@ msgstr ""
 "«xterm,konsole»."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Entra a la configuració de la UEFI en el proper reinici"
+msgstr "Entra a la pantalla de configuració de la UEFI en el proper reinici"
 
 #: package/contents/ui/main.qml:162
 #, kde-format
@@ -200,96 +199,3 @@ msgstr "En connectar-se"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicacions que s'exclouran de la sessió"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Sebastià Pla i Sanz"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "sps@sastia.com"
-
-#~ msgid "Desktop Session"
-#~ msgstr "Sessió d'escriptori"
-
-#~ msgid "Desktop Session Login and Logout"
-#~ msgstr "Connexió i desconnexió de la sessió d'escriptori"
-
-#~ msgid "Copyright © 2000–2020 Desktop Session team"
-#~ msgstr "Copyright © 2000–2020 Desktop Session team"
-
-#~ msgid "Oswald Buddenhagen"
-#~ msgstr "Oswald Buddenhagen"
-
-#~ msgid "Carl Schwan"
-#~ msgstr "Carl Schwan"
-
-#~ msgid "Restore previous saved session"
-#~ msgstr "Restaura la sessió desada anterior"
-
-#~ msgid "UEFI Setup"
-#~ msgstr "Configuració de la UEFI"
-
-#~ msgid ""
-#~ "Check this option if you want the session manager to display a logout "
-#~ "confirmation dialog box."
-#~ msgstr ""
-#~ "Marqueu aquesta opció si voleu que el gestor de sessió mostri un diàleg "
-#~ "de confirmació de sortida."
-
-#~ msgid "Conf&irm logout"
-#~ msgstr "Con&firma la sortida"
-
-#~ msgid "O&ffer shutdown options"
-#~ msgstr "O&fereix les opcions d'aturada"
-
-#~ msgid ""
-#~ "Here you can choose what should happen by default when you log out. This "
-#~ "only has meaning, if you logged in through KDM."
-#~ msgstr ""
-#~ "Aquí podeu triar que hauria de passar de manera predeterminada quan us "
-#~ "desconnecteu. Això només té significat si us heu connectat mitjançant KDM."
-
-#~ msgid "Default Leave Option"
-#~ msgstr "Opció predeterminada de sortida"
-
-#~ msgid ""
-#~ "<ul>\n"
-#~ "<li><b>Restore previous session:</b> Will save all applications running "
-#~ "on exit and restore them when they next start up</li>\n"
-#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
-#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
-#~ "currently started applications will reappear when they next start up.</"
-#~ "li>\n"
-#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
-#~ "up with an empty desktop on next start.</li>\n"
-#~ "</ul>"
-#~ msgstr ""
-#~ "<ul>\n"
-#~ "<li><b>Restaura la sessió anterior:</b> Quan surti desarà l'estat de "
-#~ "totes les aplicacions en execució i les restaurarà en el següent inici.</"
-#~ "li>\n"
-#~ "<li><b>Restaura la sessió desada manualment: </b> Permet desar la sessió "
-#~ "en qualsevol moment mitjançant l'element del menú K «Desa la sessió». "
-#~ "Això vol dir que les aplicacions en execució apareixeran en el següent "
-#~ "inici.</li>\n"
-#~ "<li><b>Inicia amb una sessió buida:</b> No desa res. En el següent inici "
-#~ "es començarà amb un escriptori buit.</li>\n"
-#~ "</ul>"
-
-#~ msgid "On Login"
-#~ msgstr "En connectar-se"
-
-#~ msgid "Applications to be e&xcluded from sessions:"
-#~ msgstr "Aplicacions que s'e&xclouran de les sessions:"
-
-#~ msgid "Firmware Setup"
-#~ msgstr "Configuració del microprogramari"
-
-#~ msgid ""
-#~ "When the computer is restarted the next time, enter firmware setup screen "
-#~ "(e.g. UEFI or BIOS setup)"
-#~ msgstr ""
-#~ "Quan l'ordinador es reiniciï la propera vegada, presentarà la pantalla de "
-#~ "configuració del microprogramari (p. ex. la configuració de la UEFI o la "
-#~ "BIOS)"

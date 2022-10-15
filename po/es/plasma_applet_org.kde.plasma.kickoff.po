@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-08-14 04:28+0200\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"PO-Revision-Date: 2022-10-14 21:38+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "Lugares"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Sin coincidencias"
 
 #: package/contents/ui/Header.qml:63
 #, kde-format
@@ -204,7 +204,7 @@ msgstr "Abrir las preferencias del usuario"
 msgid "Keep Open"
 msgstr "Mantener abierta"
 
-#: package/contents/ui/Kickoff.qml:283
+#: package/contents/ui/Kickoff.qml:286
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editar aplicaciones..."
