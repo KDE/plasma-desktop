@@ -26,13 +26,14 @@ T.StackView {
     Transition {
         id: enterTransition
         NumberAnimation {
-            properties: "x"
+            property: "x"
             from: (root.reverseTransitions ? -0.5 : 0.5) * (root.mirrored ? -1 : 1) * -root.width
             to: 0
             duration: root.movementTransitionsEnabled ? PlasmaCore.Units.longDuration : 0
             easing.type: Easing.OutCubic
         }
-        NumberAnimation { property: "opacity"
+        NumberAnimation {
+            property: "opacity"
             from: 0.0
             to: 1.0
             duration: PlasmaCore.Units.longDuration

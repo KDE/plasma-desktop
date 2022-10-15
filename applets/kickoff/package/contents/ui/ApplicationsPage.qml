@@ -25,16 +25,18 @@ BasePage {
         }
     }
     contentAreaComponent: VerticalStackView {
+        id: stackView
 
         popEnter: Transition {
             NumberAnimation {
-                properties: "x"
+                property: "x"
                 from: 0.5 * root.width
                 to: 0
                 duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.OutCubic
             }
-            NumberAnimation { property: "opacity"
+            NumberAnimation {
+                property: "opacity"
                 from: 0.0
                 to: 1.0
                 duration: PlasmaCore.Units.longDuration
@@ -44,13 +46,14 @@ BasePage {
 
         pushEnter: Transition {
             NumberAnimation {
-                properties: "x"
+                property: "x"
                 from: 0.5 * -root.width
                 to: 0
                 duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.OutCubic
             }
-            NumberAnimation { property: "opacity"
+            NumberAnimation {
+                property: "opacity"
                 from: 0.0
                 to: 1.0
                 duration: PlasmaCore.Units.longDuration
@@ -58,7 +61,6 @@ BasePage {
             }
         }
 
-        id: stackView
         readonly property string preferredFavoritesViewObjectName: plasmoid.configuration.favoritesDisplay === 0 ? "favoritesGridView" : "favoritesListView"
         readonly property Component preferredFavoritesViewComponent: plasmoid.configuration.favoritesDisplay === 0 ? favoritesGridViewComponent : favoritesListViewComponent
         readonly property string preferredAppsViewObjectName: plasmoid.configuration.applicationsDisplay === 0 ? "applicationsGridView" : "applicationsListView"
