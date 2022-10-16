@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1636040 2022-10-14 01:35:48Z scripty $
+# $Id: kcm_smserver.po 1636173 2022-10-16 01:42:20Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-24 09:18+0100\n"
+"PO-Revision-Date: 2022-10-15 09:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
@@ -160,11 +160,10 @@ msgstr ""
 "primer »xterm:konsole« ali »xterm,konsole«."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Ob naslednjem zagonu v nastavitev UEFI"
+msgstr "Vstop v nastavitve UEFI ob naslednjem zagonu"
 
 #: package/contents/ui/main.qml:162
 #, kde-format

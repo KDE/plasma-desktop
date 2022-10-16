@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-04-04 13:46+0300\n"
+"PO-Revision-Date: 2022-08-19 12:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -89,11 +89,10 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:132
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr "Yleistä:"
+msgstr "Perusasetukset:"
 
 #: package/contents/ui/ConfigGeneral.qml:133
 #, kde-format
@@ -103,13 +102,13 @@ msgstr "Aakkosta sovellukset aina"
 #: package/contents/ui/ConfigGeneral.qml:138
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Käytä tiivistelmä luetelmatyyliä"
 
 #: package/contents/ui/ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Poistetaan kosketustilassa automaattisesti käytöstä"
 
 #: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:38+0200\n"
+"PO-Revision-Date: 2022-10-15 06:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -151,12 +151,10 @@ msgstr ""
 "მაგალითად 'xterm:konsole' ან 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "გადატვირთვისას მიკროკოდის ეკრანზე გადასვლა"
+msgstr "გადატვირთვისას UEFI-ის მორგების ეკრანზე გადასვლა"
 
 #: package/contents/ui/main.qml:162
 #, kde-format
