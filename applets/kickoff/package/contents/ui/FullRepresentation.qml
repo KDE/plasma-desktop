@@ -28,9 +28,11 @@ EmptyPage {
     bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
     readonly property var appletInterface: plasmoid.self
 
-    Layout.minimumWidth: implicitWidth
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
+    Layout.preferredWidth: implicitWidth
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
-    Layout.minimumHeight: implicitHeight
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
+    Layout.preferredHeight: implicitHeight
     Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     /* NOTE: Important things to know about keyboard input handling:
