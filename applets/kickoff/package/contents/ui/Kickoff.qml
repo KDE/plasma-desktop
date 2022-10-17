@@ -251,9 +251,19 @@ Item {
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 source: Tools.iconOrDefault(plasmoid.formFactor, plasmoid.icon)
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
-                smooth: true
                 roundToIconSize: aspectRatio === 1
-                visible: iconSize !== 0
+                visible: iconSize !== 0 && valid
+            }
+
+            PlasmaCore.IconItem {
+                id: buttonIconFallback
+                Layout.preferredWidth: buttonIcon.iconSize
+                Layout.preferredHeight: buttonIcon.iconSize
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+
+                source: Tools.defaultIconName
+                visible: Plasmoid.icon !== "" && !buttonIcon.valid
+                active: compactRoot.containsMouse || compactDragArea.containsDrag
             }
 
             PC3.Label {
