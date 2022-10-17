@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-22 11:20+0100\n"
+"PO-Revision-Date: 2022-10-14 12:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -159,13 +159,10 @@ msgstr ""
 "«xterm,konsole»."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr ""
-"Entra a la pantalla de configuració del microprogramari en el proper reinici"
+msgstr "Entra a la pantalla de configuració de la UEFI en el proper reinici"
 
 #: package/contents/ui/main.qml:162
 #, kde-format

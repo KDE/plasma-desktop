@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-26 23:19+0000\n"
+"PO-Revision-Date: 2022-10-16 11:37+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -148,12 +148,10 @@ msgstr ""
 "konsole'."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Entrar no ecrã de configuração do 'firmware' no próximo reinício"
+msgstr "Entrar no ecrã de configuração do UEFI no próximo reinício"
 
 #: package/contents/ui/main.qml:162
 #, kde-format
@@ -190,26 +188,3 @@ msgstr "No arranque"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicações a excluir da sessão"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "José Nuno Pires"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "zepires@gmail.com"
-
-#~ msgid "Desktop Session"
-#~ msgstr "Sessão do Ambiente de Trabalho"
-
-#~ msgid "Desktop Session Login and Logout"
-#~ msgstr "Início e Encerramento da Sessão do Ambiente de Trabalho"
-
-#~ msgid "Copyright © 2000–2020 Desktop Session team"
-#~ msgstr "Copyright © 2000–2020 da equipa de Sessões do Ambiente de Trabalho"
-
-#~ msgid "Oswald Buddenhagen"
-#~ msgstr "Oswald Buddenhagen"
-
-#~ msgid "Carl Schwan"
-#~ msgstr "Carl Schwan"
