@@ -99,7 +99,7 @@ bool KWinWaylandBackend::applyConfig()
         if (auto keys = it.value().value<QKeySequence>(); !keys.isEmpty()) {
             buttonGroup.writeEntry(it.key(), QStringList{"Key", keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
         } else {
-            buttonGroup.deleteEntry(it.key());
+            buttonGroup.deleteEntry(it.key(), KConfig::Notify);
         }
     }
 
