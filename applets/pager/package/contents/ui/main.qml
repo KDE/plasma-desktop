@@ -512,8 +512,6 @@ MouseArea {
                             border.color: (model.IsActive === true) ? windowActiveBorderColor
                                                     : windowInactiveBorderColor
 
-                            Behavior on x      { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on y      { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on width  { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on height { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on color        { ColorAnimation  { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
@@ -524,11 +522,12 @@ MouseArea {
                                 anchors.fill: parent
 
                                 drag.target: windowRect
+                                drag.threshold: 1
                                 drag.axis: Drag.XAndYAxis
-                                drag.minimumX: -windowRect.width/2
-                                drag.maximumX: root.width - windowRect.width/2
-                                drag.minimumY: -windowRect.height/2
-                                drag.maximumY: root.height - windowRect.height/2
+                                drag.minimumX: 0
+                                drag.maximumX: root.width - windowRect.width
+                                drag.minimumY: 0
+                                drag.maximumY: root.height - windowRect.height
 
                                 drag.onActiveChanged: {
                                     root.dragging = drag.active;
@@ -540,7 +539,7 @@ MouseArea {
                                         const value = root.mapFromItem(clipRect, windowRect.x, windowRect.y);
                                         windowRect.parent = root;
                                         windowRect.x = value.x;
-                                        windowRect.y = value.y
+                                        windowRect.y = value.y;
                                     }
                                 }
 
