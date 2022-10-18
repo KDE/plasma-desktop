@@ -40,6 +40,13 @@ for (var i in containments) {
                 if (widget.readConfig("boldText", false)) {
                     widget.writeConfig("fontWeight", 75)
                 }
+                // Set the font size to the largest value (72) in the font dialog,
+                // so the font autofits the panel when the panel height is less
+                // than 72pt. This should keep 5.25's autosize behavior for custom
+                // font.
+                // For panels taller than 72pt, with custom font set in 5.25, the
+                // digital clock's look may still change, though. 
+                widget.writeConfig("fontSize", 72)
             }
         }
     }
