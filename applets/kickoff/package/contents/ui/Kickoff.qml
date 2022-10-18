@@ -25,9 +25,6 @@ Item {
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
 
-    // Used to display the menu label on the only text mode
-    readonly property string menuLabel: plasmoid.configuration.menuLabel
-
     readonly property bool inPanel: [
         PlasmaCore.Types.TopEdge,
         PlasmaCore.Types.RightEdge,
@@ -164,56 +161,55 @@ Item {
         // Taken from DigitalClock to ensure uniform sizing when next to each other
         readonly property bool tooSmall: plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= PlasmaCore.Theme.smallestFont.pixelSize
 
+        readonly property bool shouldHaveIcon: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.icon !== ""
+        readonly property bool shouldHaveLabel: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.configuration.menuLabel !== ""
+
+        readonly property var sizing: {
+            const displayedIcon = buttonIcon.valid ? buttonIcon : buttonIconFallback;
+
+            let impWidth = 0;
+            if (shouldHaveIcon) {
+                impWidth += displayedIcon.width;
+            }
+            if (shouldHaveLabel) {
+                impWidth += labelTextField.contentWidth + labelTextField.Layout.leftMargin + labelTextField.Layout.rightMargin;
+            }
+            const impHeight = Math.max(PlasmaCore.Units.iconSizeHints.panel, displayedIcon.height);
+
+            // at least square, but can be wider/taller
+            if (kickoff.inPanel) {
+                if (kickoff.vertical) {
+                    return {
+                        minimumWidth: -1,
+                        maximumWidth: PlasmaCore.Units.iconSizeHints.panel,
+                        minimumHeight: impHeight,
+                        maximumHeight: impHeight,
+                    };
+                } else { // horizontal
+                    return {
+                        minimumWidth: impWidth,
+                        maximumWidth: impWidth,
+                        minimumHeight: -1,
+                        maximumHeight: PlasmaCore.Units.iconSizeHints.panel,
+                    };
+                }
+            } else {
+                return {
+                    minimumWidth: impWidth,
+                    maximumWidth: -1,
+                    minimumHeight: PlasmaCore.Units.iconSizes.small,
+                    maximumHeight: -1,
+                };
+            }
+        }
+
         implicitWidth: PlasmaCore.Units.iconSizeHints.panel
         implicitHeight: PlasmaCore.Units.iconSizeHints.panel
 
-        Layout.minimumWidth: {
-            if (!kickoff.inPanel) {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
-            }
-
-            if (kickoff.vertical) {
-                return -1;
-            } else {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
-            }
-        }
-
-        Layout.minimumHeight: {
-            if (!kickoff.inPanel) {
-                return PlasmaCore.Units.iconSizes.small
-            }
-
-            if (kickoff.vertical) {
-                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
-            } else {
-                return -1;
-            }
-        }
-
-        Layout.maximumWidth: {
-            if (!kickoff.inPanel) {
-                return -1;
-            }
-
-            if (kickoff.vertical) {
-                return PlasmaCore.Units.iconSizeHints.panel;
-            } else {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
-            }
-        }
-
-        Layout.maximumHeight: {
-            if (!kickoff.inPanel) {
-                return -1;
-            }
-
-            if (kickoff.vertical) {
-                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
-            } else {
-                return PlasmaCore.Units.iconSizeHints.panel;
-            }
-        }
+        Layout.minimumWidth: sizing.minimumWidth
+        Layout.maximumWidth: sizing.maximumWidth
+        Layout.minimumHeight: sizing.minimumHeight
+        Layout.maximumHeight: sizing.maximumHeight
 
         hoverEnabled: true
         // For some reason, onClicked can cause the plasmoid to expand after
@@ -237,48 +233,51 @@ Item {
         RowLayout {
             id: iconLabelRow
             anchors.fill: parent
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: 0
 
             PlasmaCore.IconItem {
                 id: buttonIcon
 
-                readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
-                    : implicitWidth / implicitHeight)
-                readonly property int iconSize: plasmoid.icon ? compactRoot.height : 0
-
-                Layout.preferredWidth: iconSize
-                Layout.preferredHeight: iconSize
+                Layout.fillWidth: kickoff.vertical
+                Layout.fillHeight: !kickoff.vertical
+                Layout.preferredWidth: kickoff.vertical ? -1 : height / (implicitHeight / implicitWidth)
+                Layout.preferredHeight: !kickoff.vertical ? -1 : width * (implicitHeight / implicitWidth)
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 source: Tools.iconOrDefault(plasmoid.formFactor, plasmoid.icon)
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
-                roundToIconSize: aspectRatio === 1
-                visible: iconSize !== 0 && valid
+                roundToIconSize: implicitHeight === implicitWidth
+                visible: valid
             }
 
             PlasmaCore.IconItem {
                 id: buttonIconFallback
-                Layout.preferredWidth: buttonIcon.iconSize
-                Layout.preferredHeight: buttonIcon.iconSize
+                // fallback is assumed to be square
+                Layout.fillWidth: kickoff.vertical
+                Layout.fillHeight: !kickoff.vertical
+                Layout.preferredWidth: kickoff.vertical ? -1 : height
+                Layout.preferredHeight: !kickoff.vertical ? -1 : width
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
-                source: Tools.defaultIconName
-                visible: Plasmoid.icon !== "" && !buttonIcon.valid
+                source: buttonIcon.valid ? null : Tools.defaultIconName
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
+                visible: !buttonIcon.valid && Plasmoid.icon !== ""
             }
 
             PC3.Label {
                 id: labelTextField
 
                 Layout.fillHeight: true
+                Layout.leftMargin: PlasmaCore.Units.smallSpacing
+                Layout.rightMargin: PlasmaCore.Units.smallSpacing
 
-                text: !kickoff.vertical ? kickoff.menuLabel : ''
+                text: Plasmoid.configuration.menuLabel
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
                 wrapMode: Text.NoWrap
                 fontSizeMode: Text.VerticalFit
                 font.pixelSize: compactRoot.tooSmall ? PlasmaCore.Theme.defaultFont.pixelSize : PlasmaCore.Units.roundToIconSize(PlasmaCore.Units.gridUnit * 2)
                 minimumPointSize: PlasmaCore.Theme.smallestFont.pointSize
-                visible: text && !kickoff.vertical
+                visible: compactRoot.shouldHaveLabel
             }
         }
     }

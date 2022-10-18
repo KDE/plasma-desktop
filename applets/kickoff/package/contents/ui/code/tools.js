@@ -184,17 +184,3 @@ function handleFavoriteAction(actionId, actionArgument) {
         favoriteModel.setFavoriteOn(favoriteId, actionArgument.favoriteActivity);
     }
 }
-
-function dynamicSetWidgetWidth(icon, buttonIconWidth, kickoffMenuLabelText, menuLabelWidth, spacing) {
-    let w = 0;
-    if (icon !== "") {
-        w += buttonIconWidth;
-    }
-    if (icon !== "" && kickoffMenuLabelText !== "") {
-        w += spacing;
-    }
-    if (kickoffMenuLabelText !== "") {
-        w += menuLabelWidth;
-    }
-    return w;
-}
