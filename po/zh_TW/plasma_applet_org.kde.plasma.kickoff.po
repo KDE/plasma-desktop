@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2021-09-06 01:57+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -25,158 +25,158 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: package/contents/ui/code/tools.js:39
+#: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "從我的最愛中移除"
 
-#: package/contents/ui/code/tools.js:43
+#: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
 msgstr "新增到我的最愛"
 
-#: package/contents/ui/code/tools.js:67
+#: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
 msgstr "所有活動"
 
-#: package/contents/ui/code/tools.js:117
+#: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
 msgstr "在目前的活動"
 
-#: package/contents/ui/code/tools.js:131
+#: package/contents/ui/code/tools.js:141
 #, kde-format
 msgid "Show in Favorites"
 msgstr "在最愛中顯示"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Icon:"
 msgstr "圖示："
 
-#: package/contents/ui/ConfigGeneral.qml:69
+#: package/contents/ui/ConfigGeneral.qml:72
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "選擇…"
 
-#: package/contents/ui/ConfigGeneral.qml:74
+#: package/contents/ui/ConfigGeneral.qml:77
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:80
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:135
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "General options"
 msgid "General:"
 msgstr "一般："
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: package/contents/ui/ConfigGeneral.qml:136
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "總是依字母排序"
 
-#: package/contents/ui/ConfigGeneral.qml:138
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Use compact list item style"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:144
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:156
 #, fuzzy, kde-format
 #| msgid "Configure enabled search plugins"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "設定啟用的搜尋外掛"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Show favorites:"
 msgstr "以…顯示「我的最愛」項目："
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "圖示網格"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "清單列表"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgid "Show other applications:"
 msgstr "以…顯示其他應用程式："
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:184
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "圖示網格"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "清單列表"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Show buttons for:"
 msgstr "顯示…按鈕："
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:205
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "電源選項"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:214
 #, kde-format
 msgid "Session"
 msgstr "工作階段"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Power and session"
 msgstr "電源與工作階段"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show action button captions"
 msgstr "顯示動作按鈕的替代文字"
@@ -197,18 +197,18 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: package/contents/ui/Header.qml:63
+#: package/contents/ui/Header.qml:64
 #, fuzzy, kde-format
 #| msgid "Go to user settings"
 msgid "Open user settings"
 msgstr "前往「使用者設定」"
 
-#: package/contents/ui/Header.qml:237
+#: package/contents/ui/Header.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "保持開啟"
 
-#: package/contents/ui/Kickoff.qml:286
+#: package/contents/ui/Kickoff.qml:289
 #, kde-format
 msgid "Edit Applications…"
 msgstr "編輯應用程式…"

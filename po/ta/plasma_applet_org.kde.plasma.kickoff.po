@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-08-16 21:50+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -22,156 +22,156 @@ msgstr ""
 msgid "General"
 msgstr "பொது"
 
-#: package/contents/ui/code/tools.js:39
+#: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "பிடித்தவற்றிலிருந்து நீக்கு"
 
-#: package/contents/ui/code/tools.js:43
+#: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
 msgstr "பிடித்தவற்றில் சேர்"
 
-#: package/contents/ui/code/tools.js:67
+#: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
 msgstr "அனைத்து செயல்பாடுகளிலும்"
 
-#: package/contents/ui/code/tools.js:117
+#: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
 msgstr "தற்போதைய செயல்பாட்டில்"
 
-#: package/contents/ui/code/tools.js:131
+#: package/contents/ui/code/tools.js:141
 #, kde-format
 msgid "Show in Favorites"
 msgstr "பிடித்தவற்றில் காட்டு"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: package/contents/ui/ConfigGeneral.qml:69
+#: package/contents/ui/ConfigGeneral.qml:72
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "தேர்வு செய்…"
 
-#: package/contents/ui/ConfigGeneral.qml:74
+#: package/contents/ui/ConfigGeneral.qml:77
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "இயல்பிருப்பு சின்னத்தை மீட்டமை"
 
-#: package/contents/ui/ConfigGeneral.qml:80
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "சின்னத்தை நீக்கு"
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "காட்சிப்பெயர்:"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "காட்சிப்பெயரை சேர்க்க இங்கு கிளிக் செய்யுங்கள்"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "பலகை செங்குத்தாக இருக்கும்போது காட்சிப்பெயரை அமைக்கு முடியாது."
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: package/contents/ui/ConfigGeneral.qml:136
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "செயலிகளை எப்போதும் அகரவரிசையாக வகைப்படுத்து"
 
-#: package/contents/ui/ConfigGeneral.qml:138
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Use compact list item style"
 msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
 
-#: package/contents/ui/ConfigGeneral.qml:144
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "இயக்கியுள்ள தேடல் செருகுநிரல்களை அமை…"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Show favorites:"
 msgstr "பிடித்தவற்றை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgid "Show other applications:"
 msgstr "மற்ற செயலிகளை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:184
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Show buttons for:"
 msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:205
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "ஆற்றல்"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:214
 #, kde-format
 msgid "Session"
 msgstr "அமர்வு"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Power and session"
 msgstr "ஆற்றல் மற்றும் அமர்வு"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show action button captions"
 msgstr "பட்டன்களுக்கு கருவித்துப்புகளை காட்டு"
@@ -192,17 +192,17 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: package/contents/ui/Header.qml:63
+#: package/contents/ui/Header.qml:64
 #, kde-format
 msgid "Open user settings"
 msgstr "பயனர் அமைப்புகளை திற"
 
-#: package/contents/ui/Header.qml:237
+#: package/contents/ui/Header.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: package/contents/ui/Kickoff.qml:286
+#: package/contents/ui/Kickoff.qml:289
 #, kde-format
 msgid "Edit Applications…"
 msgstr "செயலிகளை திருத்து…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-10-15 09:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,156 +25,156 @@ msgstr ""
 msgid "General"
 msgstr "Splošno"
 
-#: package/contents/ui/code/tools.js:39
+#: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Odstrani iz priljubljenih"
 
-#: package/contents/ui/code/tools.js:43
+#: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj med priljubljene"
 
-#: package/contents/ui/code/tools.js:67
+#: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
 msgstr "Na vseh dejavnostih"
 
-#: package/contents/ui/code/tools.js:117
+#: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Na trenutni dejavnosti"
 
-#: package/contents/ui/code/tools.js:131
+#: package/contents/ui/code/tools.js:141
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Pokaži v priljubljenih"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:69
+#: package/contents/ui/ConfigGeneral.qml:72
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Izberi…"
 
-#: package/contents/ui/ConfigGeneral.qml:74
+#: package/contents/ui/ConfigGeneral.qml:77
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Ponovno nastavi na privzeto ikono"
 
-#: package/contents/ui/ConfigGeneral.qml:80
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Odstrani ikono"
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Besedilna oznaka:"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Tu vtipkajte za dodajanje besedilne oznake"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Besedilne oznake ni mogoče nastaviti, kadar je plošča navpična."
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Splošno:"
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: package/contents/ui/ConfigGeneral.qml:136
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Vedno razvrsti aplikacije po abecedi"
 
-#: package/contents/ui/ConfigGeneral.qml:138
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Uporabi slog kompaktnega seznama"
 
-#: package/contents/ui/ConfigGeneral.qml:144
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Samodejno onemogočeno v načinu dotikanja"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Nastavi omogočene vtičnike za iskanje…"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Show favorites:"
 msgstr "Pokaži priljubljene:"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "V mreži"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgid "Show other applications:"
 msgstr "Prikaži ostale aplikacije:"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:184
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "V mreži"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Prikaži gumbe za:"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:205
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "Moč"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:214
 #, kde-format
 msgid "Session"
 msgstr "Sejo"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Power and session"
 msgstr "Izklop in sejo"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show action button captions"
 msgstr "Prikaži napise gumbov aktivnosti"
@@ -195,17 +195,17 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Ni zadetkov"
 
-#: package/contents/ui/Header.qml:63
+#: package/contents/ui/Header.qml:64
 #, kde-format
 msgid "Open user settings"
 msgstr "Odpri nastavitve uporabnika"
 
-#: package/contents/ui/Header.qml:237
+#: package/contents/ui/Header.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Ohranjaj odprte"
 
-#: package/contents/ui/Kickoff.qml:286
+#: package/contents/ui/Kickoff.qml:289
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Uredi aplikacije…"
