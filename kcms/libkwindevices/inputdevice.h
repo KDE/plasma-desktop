@@ -1,4 +1,4 @@
-/*
+﻿/*
     SPDX-FileCopyrightText: 2018 Roman Gilg <subdiff@gmail.com>
     SPDX-FileCopyrightText: 2021 Aleix Pol Gonzalez <aleixpol@kde.org>
 
@@ -29,6 +29,7 @@ class InputDevice : public QObject
     Q_PROPERTY(int orientation READ orientation WRITE setOrientation NOTIFY orientationChanged)
     Q_PROPERTY(QString outputName READ outputName WRITE setOutputName NOTIFY outputNameChanged)
     Q_PROPERTY(QRectF outputArea READ outputArea WRITE setOutputArea NOTIFY outputAreaChanged)
+    Q_PROPERTY(bool mapToWorkspace READ isMapToWorkspace WRITE setMapToWorkspace NOTIFY mapToWorkspaceChanged)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -91,6 +92,12 @@ public:
 
     void setEnabled(bool enabled);
 
+    bool isMapToWorkspace() const
+    {
+        return m_mapToWorkspace.value();
+    }
+    void setMapToWorkspace(bool mapToWorkspace);
+
 Q_SIGNALS:
     void needsSaveChanged();
 
@@ -99,6 +106,7 @@ Q_SIGNALS:
     void outputNameChanged();
     void outputAreaChanged();
     void enabledChanged();
+    void mapToWorkspaceChanged();
 
 private:
     template<typename T>
@@ -214,6 +222,9 @@ private:
                                              &OrgKdeKWinInputDeviceInterface::defaultOutputArea,
                                              &OrgKdeKWinInputDeviceInterface::supportsOutputArea,
                                              &InputDevice::outputAreaChanged);
+
+    Prop<bool> m_mapToWorkspace =
+        Prop<bool>(this, "mapToWorkspace", &OrgKdeKWinInputDeviceInterface::defaultMapToWorkspace, nullptr, &InputDevice::mapToWorkspaceChanged);
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };

@@ -88,11 +88,17 @@ public:
         it->setData(screens[0]->size(), Qt::UserRole + 2);
         appendRow(it);
 
+        it = new QStandardItem(i18n("All Displays"));
+        it->setData(screens[0]->virtualSize(), Qt::UserRole + 1);
+        it->setData(screens[0]->virtualSize(), Qt::UserRole + 2);
+        appendRow(it);
+
         for (auto screen : screens) {
             auto geo = screen->geometry();
+            auto name = screen->model().isEmpty() ? screen->name() : screen->model();
             auto it = new QStandardItem(i18nc("model - (x,y widthxheight)",
                                               "%1 - (%2,%3 %4×%5)",
-                                              screen->model(),
+                                              name,
                                               QString::number(geo.x()),
                                               QString::number(geo.y()),
                                               QString::number(geo.width()),
@@ -115,6 +121,18 @@ public:
     {
         return item(row)->data(Qt::UserRole).toString();
     }
+
+    Q_SCRIPTABLE int rowForDevice(InputDevice *device)
+    {
+        if (!device) {
+            return 0;
+        } else if (device->isMapToWorkspace()) {
+            return 1;
+        } else {
+            return rowForOutputName(device->outputName());
+        }
+    }
+
     Q_SCRIPTABLE int rowForOutputName(const QString &outputName)
     {
         for (int i = 0, c = rowCount(); i < c; ++i) {
@@ -125,6 +143,11 @@ public:
 
         // If not found, let's just return the PrimaryOrientation
         return 0;
+    }
+
+    Q_SCRIPTABLE bool isMapToWorkspaceAt(int row)
+    {
+        return row == 1;
     }
 };
 

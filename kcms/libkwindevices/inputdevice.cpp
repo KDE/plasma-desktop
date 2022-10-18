@@ -62,6 +62,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::outputNameChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::outputAreaChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::enabledChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::mapToWorkspaceChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -71,11 +72,13 @@ void InputDevice::save()
     m_leftHanded.save();
     m_outputArea.save();
     m_enabled.save();
+    m_mapToWorkspace.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
-    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed();
+    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
+        || m_mapToWorkspace.changed();
 }
 
 void InputDevice::defaults()
@@ -85,11 +88,13 @@ void InputDevice::defaults()
     m_outputName.resetFromDefaults();
     m_outputArea.resetFromDefaults();
     m_enabled.resetFromDefaults();
+    m_mapToWorkspace.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
-    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults();
+    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults()
+        && m_mapToWorkspace.isDefaults();
 }
 
 void InputDevice::load()
@@ -99,6 +104,7 @@ void InputDevice::load()
     m_outputName.resetFromSaved();
     m_outputArea.resetFromSaved();
     m_enabled.resetFromSaved();
+    m_mapToWorkspace.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -124,4 +130,9 @@ void InputDevice::setOutputArea(const QRectF &outputArea)
 void InputDevice::setEnabled(bool enabled)
 {
     m_enabled.set(enabled);
+}
+
+void InputDevice::setMapToWorkspace(bool mapToWorkspace)
+{
+    m_mapToWorkspace.set(mapToWorkspace);
 }

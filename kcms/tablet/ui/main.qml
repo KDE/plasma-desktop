@@ -97,18 +97,19 @@ SimpleKCM {
             model: OutputsModel {
                 id: outputsModel
             }
-            enabled: count > 2 //It's only interesting when there's more than 1 screen
+            enabled: count > 3 //It's only interesting when there's more than 1 screen
             currentIndex: {
 
                 if (count === 0) {
                     return -1
                 }
 
-                outputsModel.rowForOutputName(parent.device.outputName)
+                outputsModel.rowForDevice(parent.device)
             }
             textRole: "display"
             onActivated: {
                 parent.device.outputName = outputsModel.outputNameAt(currentIndex)
+                parent.device.mapToWorkspace = outputsModel.isMapToWorkspaceAt(currentIndex)
             }
         }
         QQC2.ComboBox {
