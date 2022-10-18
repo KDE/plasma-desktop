@@ -373,6 +373,7 @@ Kirigami.ApplicationItem {
 
             anchors.fill: parent
             enabled: newBinding.checked
+            preventStealing: true
             acceptedButtons: Qt.AllButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton)
             onClicked: {
                 lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] == mouse.button)
