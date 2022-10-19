@@ -408,13 +408,11 @@ Kirigami.ApplicationItem {
                         multiKeyShortcutsAllowed: false
                         checkForConflictsAgainst: ShortcutType.None
 
-                        onKeySequenceChanged: {
-                            if (!root.loading) {
-                                let copy = backend.buttonMapping;
-                                copy[modelData.buttonName] = keySequence
-                                backend.buttonMapping = copy
-                                root.changeSignal()
-                            }
+                        onCaptureFinished: {
+                            let copy = backend.buttonMapping;
+                            copy[modelData.buttonName] = keySequence
+                            backend.buttonMapping = copy
+                            root.changeSignal()
                         }
                     }
                 }

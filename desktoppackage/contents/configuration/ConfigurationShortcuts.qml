@@ -32,7 +32,7 @@ Kirigami.ScrollablePage {
         KeySequenceItem {
             id: button
             keySequence: plasmoid.globalShortcut
-            onKeySequenceChanged: {
+            onCaptureFinished: {
                 if (keySequence !== plasmoid.globalShortcut) {
                     root.configurationChanged();
                 }
