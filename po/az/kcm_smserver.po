@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-07-03 13:56+0400\n"
+"PO-Revision-Date: 2022-10-18 12:41+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -150,11 +150,10 @@ msgstr ""
 "or 'xterm,konsole'."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Növbəti başlamada UEFİ ayarlarını daxil etmək"
+msgstr "Növbəti başlamada UEFİ ayarlarına daxil ol"
 
 #: package/contents/ui/main.qml:162
 #, kde-format

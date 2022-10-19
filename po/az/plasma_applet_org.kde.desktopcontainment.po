@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-12 00:48+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-07-03 13:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -68,22 +68,22 @@ msgstr "Fayl adı nümunəsi"
 msgid "File types:"
 msgstr "Fayl növləri"
 
-#: package/contents/ui/ConfigFilter.qml:175
+#: package/contents/ui/ConfigFilter.qml:173
 #, kde-format
 msgid "File type"
 msgstr "Fayl Növü"
 
-#: package/contents/ui/ConfigFilter.qml:184
+#: package/contents/ui/ConfigFilter.qml:182
 #, kde-format
 msgid "Description"
 msgstr "Təsviri"
 
-#: package/contents/ui/ConfigFilter.qml:197
+#: package/contents/ui/ConfigFilter.qml:195
 #, kde-format
 msgid "Select All"
 msgstr "Hamısını seçmək"
 
-#: package/contents/ui/ConfigFilter.qml:207
+#: package/contents/ui/ConfigFilter.qml:205
 #, kde-format
 msgid "Deselect All"
 msgstr "Seçimləri ləğv etmək"
@@ -98,209 +98,209 @@ msgstr "Panel düyməsi"
 msgid "Use a custom icon"
 msgstr "Fərsi ikonu istifadə etmək"
 
-#: package/contents/ui/ConfigIcons.qml:103
+#: package/contents/ui/ConfigIcons.qml:102
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seçim…"
 
-#: package/contents/ui/ConfigIcons.qml:109
+#: package/contents/ui/ConfigIcons.qml:108
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "İkonu silmək"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgid "Arrangement:"
 msgstr "Düzülüş:"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:132
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "Soldan sağa"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "Sağdan sola"
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "Yuxarıdan aşağıya"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Sol kənar"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:144
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Sağ kənar"
 
-#: package/contents/ui/ConfigIcons.qml:160
+#: package/contents/ui/ConfigIcons.qml:159
 #, kde-format
 msgid "Lock in place"
 msgstr "Yerində kilidləmək"
 
-#: package/contents/ui/ConfigIcons.qml:174
+#: package/contents/ui/ConfigIcons.qml:173
 #, kde-format
 msgid "Sorting:"
 msgstr "Çeşidləmə:"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:181
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Nizamlamaq"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Adı"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Ölçüsü"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Növü"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Tarix"
 
-#: package/contents/ui/ConfigIcons.qml:197
+#: package/contents/ui/ConfigIcons.qml:196
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Azalan"
 
-#: package/contents/ui/ConfigIcons.qml:205
+#: package/contents/ui/ConfigIcons.qml:204
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Öncə Qovluqlar"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:218
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Baxış rejimi:"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Siyahı"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:221
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Tor"
 
-#: package/contents/ui/ConfigIcons.qml:233
+#: package/contents/ui/ConfigIcons.qml:232
 #, kde-format
 msgid "Icon size:"
 msgstr "İkon Ölçüsü:"
 
-#: package/contents/ui/ConfigIcons.qml:248
+#: package/contents/ui/ConfigIcons.qml:247
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Kiçik"
 
-#: package/contents/ui/ConfigIcons.qml:257
+#: package/contents/ui/ConfigIcons.qml:256
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Böyük"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:265
 #, kde-format
 msgid "Label width:"
 msgstr "Yarlıq eni:"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:268
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Məhdud"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Orta"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Geniş"
 
-#: package/contents/ui/ConfigIcons.qml:279
+#: package/contents/ui/ConfigIcons.qml:278
 #, kde-format
 msgid "Text lines:"
 msgstr "Mətn sətirləri:"
 
-#: package/contents/ui/ConfigIcons.qml:295
+#: package/contents/ui/ConfigIcons.qml:294
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Nişanın üzərində dayandıqda:"
 
-#: package/contents/ui/ConfigIcons.qml:297
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "Show tooltips"
 msgstr "İpuclarını göstərmək"
 
-#: package/contents/ui/ConfigIcons.qml:304
+#: package/contents/ui/ConfigIcons.qml:303
 #, kde-format
 msgid "Show selection markers"
 msgstr "Seçilmiş nişanlar göstərmək"
 
-#: package/contents/ui/ConfigIcons.qml:311
+#: package/contents/ui/ConfigIcons.qml:310
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Qovluğa öncədən baxşış pəncərələrinii göstərmək"
 
-#: package/contents/ui/ConfigIcons.qml:321
+#: package/contents/ui/ConfigIcons.qml:320
 #, kde-format
 msgid "Rename:"
 msgstr "Adını dəyişin:"
 
-#: package/contents/ui/ConfigIcons.qml:325
+#: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Seçilmiş elementin mətninə vuraraq sətirin adını dəyişdirin"
 
-#: package/contents/ui/ConfigIcons.qml:336
+#: package/contents/ui/ConfigIcons.qml:335
 #, kde-format
 msgid "Previews:"
 msgstr "Miniatürlər:"
 
-#: package/contents/ui/ConfigIcons.qml:338
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Miniatürlərə öncədən baxışı göstərmək"
 
-#: package/contents/ui/ConfigIcons.qml:346
+#: package/contents/ui/ConfigIcons.qml:345
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Öncədən baxşı qoşmalarını tənzimləmək..."
@@ -365,27 +365,27 @@ msgstr "Fərdi başlıq"
 msgid "Enter custom title…"
 msgstr "Fərdi başlıq daxil etmək..."
 
-#: package/contents/ui/ConfigOverlay.qml:87
+#: package/contents/ui/ConfigOverlay.qml:91
 #, kde-format
 msgid "Rotate"
 msgstr "Döndərmək"
 
-#: package/contents/ui/ConfigOverlay.qml:178
+#: package/contents/ui/ConfigOverlay.qml:181
 #, kde-format
 msgid "Open Externally"
 msgstr "Xarici olaraq açın"
 
-#: package/contents/ui/ConfigOverlay.qml:190
+#: package/contents/ui/ConfigOverlay.qml:193
 #, kde-format
 msgid "Hide Background"
 msgstr "Arxa fonu izlətmək"
 
-#: package/contents/ui/ConfigOverlay.qml:190
+#: package/contents/ui/ConfigOverlay.qml:193
 #, kde-format
 msgid "Show Background"
 msgstr "Arxa fonu göstərmək"
 
-#: package/contents/ui/ConfigOverlay.qml:238
+#: package/contents/ui/ConfigOverlay.qml:241
 #, kde-format
 msgid "Remove"
 msgstr "Silmək"

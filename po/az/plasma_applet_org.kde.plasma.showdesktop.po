@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-16 00:46+0000\n"
-"PO-Revision-Date: 2022-08-16 17:00+0400\n"
+"PO-Revision-Date: 2022-10-18 12:53+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -24,12 +24,10 @@ msgid "Restore All Minimized Windows"
 msgstr "Bütün yığılmış pəncərələri açın"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr "Bütün pəncərələri kiçiltmək"
+msgstr "Bütün pəncərələri yığın"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
@@ -38,11 +36,10 @@ msgid "Restores the previously minimized windows"
 msgstr "Sonuncu yığılmış pəncərələri bərpa edin"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Bütün pəncərələri kiçiltməklə İş Masasını göstərir"
+msgstr "Bütün pəncərələri yığmaqla iş masasını göstərir"
 
 #: package/contents/ui/PeekController.qml:13
 #, kde-format
@@ -63,15 +60,13 @@ msgid "Moves windows back to their original positions"
 msgstr "Pəncərələri öz əsas mövqeylərinə köçürür"
 
 #: package/contents/ui/PeekController.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgstr ""
-"Açıq pəncərələrin ekran künclərinəd yeri dəyişdirilərkən İş masası müvəqqəti "
-"göstərilsin."
+"Açıq pəncərələr ekranın künclərinə çəkilməklə İş masası müvəqqəti "
+"olaraqgöstərilir"
 
 #~ msgid "Show Desktop"
 #~ msgstr "İş masasını Göstərmək"
