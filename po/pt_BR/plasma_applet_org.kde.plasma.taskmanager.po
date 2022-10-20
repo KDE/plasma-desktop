@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-23 00:48+0000\n"
-"PO-Revision-Date: 2022-07-14 10:16-0300\n"
+"PO-Revision-Date: 2022-10-19 15:17-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -32,32 +32,25 @@ msgid "Behavior"
 msgstr "Comportamento"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "Ativar o som %1"
+msgstr "Ativar o som"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Silenciar"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Ativar o som %1"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "Sem áudio %1"
@@ -585,15 +578,15 @@ msgstr "Fe&char"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Iniciar %1"
 
 #: package/contents/ui/Task.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Existe %1 nova mensagem."
+msgstr[1] "Existem %1 novas mensagens."
 
 #: package/contents/ui/Task.qml:88
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2013.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showActivityManager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-20 00:47+0000\n"
-"PO-Revision-Date: 2020-03-23 15:38-0300\n"
+"PO-Revision-Date: 2022-10-19 15:18-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -50,11 +50,10 @@ msgid "Show the current activity name"
 msgstr "Mostrar o nome da atividade atual"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
-msgstr "Mostrar o ícone da atividade atual"
+msgstr "A atividade atual é %1"
 
 #: package/contents/ui/main.qml:83
 #, kde-format

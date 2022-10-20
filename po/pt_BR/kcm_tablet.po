@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-06 00:47+0000\n"
-"PO-Revision-Date: 2021-12-21 09:30-0300\n"
+"PO-Revision-Date: 2022-10-19 15:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -48,12 +48,10 @@ msgid "Follow the active screen"
 msgstr "Seguir a tela ativa"
 
 #: kcmtablet.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "model - (x,y widthxheight)"
-#| msgid "%1 - (%2,%3 %4x%5)"
+#, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4x%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:116
 #, kde-format
@@ -68,7 +66,7 @@ msgstr ""
 #: kcmtablet.cpp:118
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Tamanho personalizado"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -76,8 +74,7 @@ msgid "No drawing tablets found."
 msgstr "Nenhum tablet de desenho encontrado."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
@@ -100,24 +97,24 @@ msgstr "Modo canhoto:"
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "Área:"
 
 #: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Redimensionar a área do tablet"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Bloquear taxa de proporção"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
@@ -128,7 +125,7 @@ msgstr ""
 #: package/contents/ui/RebindButtons.qml:43
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "Botão %1:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
