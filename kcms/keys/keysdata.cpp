@@ -6,6 +6,8 @@
 
 #include "keysdata.h"
 
+#include "modifieronlyshortcuts.h"
+
 #include <KGlobalAccel>
 #include <KGlobalShortcutInfo>
 #include <KPluginFactory>
@@ -16,6 +18,11 @@
 KeysData::KeysData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
 {
+    if (!ModifierOnlyShortcutsSettings().isDefaults()) {
+        m_isDefault = false;
+        return;
+    }
+
     for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
         const auto id = static_cast<KStandardShortcut::StandardShortcut>(i);
         const QList<QKeySequence> activeShortcuts = KStandardShortcut::shortcut(id);

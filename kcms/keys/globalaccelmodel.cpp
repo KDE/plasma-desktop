@@ -30,18 +30,65 @@ static QStringList buildActionId(const QString &componentUnique, const QString &
     return actionId;
 }
 
-GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent)
-    : BaseModel(parent)
-    , m_globalAccelInterface{interface}
+static void writeModifiers(ModifierOnlyShortcutsSettings *settings, Qt::KeyboardModifiers modifiers, const QStringList &value)
 {
+    if (modifiers & Qt::ShiftModifier) {
+        settings->setShift(value);
+    }
+    if (modifiers & Qt::AltModifier) {
+        settings->setAlt(value);
+    }
+    if (modifiers & Qt::ControlModifier) {
+        settings->setControl(value);
+    }
+    if (modifiers & Qt::MetaModifier) {
+        settings->setMeta(value);
+    }
 }
+
+static std::pair<QString, QString> getIdsforModifier(ModifierOnlyShortcutsSettings *settings, Qt::KeyboardModifier modifier)
+{
+    QStringList value;
+    switch (modifier) {
+    case Qt::ShiftModifier:
+        value = settings->shift();
+        break;
+        case Qt::Shift
+    }
+}
+
+GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent)
+    :
+            BaseModel(parent), m_globalAccelInterface{interface}
+            {
+            }
 
 QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
 {
     if (role == SupportsMultipleKeysRole) {
         return false;
     }
+    if (role == SupportsModifierOnlyShortcutsRole) {
+        return true;
+    }
+    if (role == ModifierOnlyShortcutsRole) {
+        if (index.parent().isValid()) {
+            const Component &component = m_components[index.parent().row()];
+            const Action &action = component.actions[index.row()];
+            return QVariant::fromValue(m_modiferOnlyShortcutsMap.value(index));
+        }
+    }
     return BaseModel::data(index, role);
+}
+
+bool GlobalAccelModel::isDefault() const
+{
+    return m_modifieronlyShortcuts.isDefaults() && BaseModel::isDefault();
+}
+
+bool GlobalAccelModel::needsSave() const
+{
+    return m_modifieronlyShortcuts.isSaveNeeded() && BaseModel::needsSave();
 }
 
 void GlobalAccelModel::load()
@@ -50,6 +97,7 @@ void GlobalAccelModel::load()
         return;
     }
     beginResetModel();
+    m_modifieronlyShortcuts.load();
     m_components.clear();
     auto componentsWatcher = new QDBusPendingCallWatcher(m_globalAccelInterface->allComponents());
     connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *componentsWatcher) {
@@ -82,6 +130,7 @@ void GlobalAccelModel::load()
                     std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2) {
                         return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.displayName, c2.displayName) < 0;
                     });
+                    matchModifierOnlyShortcuts();
                     endResetModel();
                     delete pendingCalls;
                 }
@@ -158,8 +207,55 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     return c;
 }
 
+void GlobalAccelModel::matchModifierOnlyShortcuts()
+{
+    const auto modifiers = std::array{std::pair{Qt::ShiftModifier, m_modifieronlyShortcuts.shift()},
+                                      std::pair{Qt::ControlModifier, m_modifieronlyShortcuts.control()},
+                                      std::pair{Qt::AltModifier, m_modifieronlyShortcuts.alt()},
+                                      std::pair{Qt::MetaModifier, m_modifieronlyShortcuts.meta()}};
+    for (const auto &modifier : modifiers) {
+        if (modifier.second.size() != 5) {
+            continue;
+        }
+        const auto &service = modifier.second.at(0);
+        const auto &path = modifier.second.at(1);
+        const auto &interface = modifier.second.at(2);
+        const auto &method = modifier.second.at(3);
+        const auto &argument = modifier.second.at(4);
+
+        if (service != m_globalAccelInterface->service() || interface != KGlobalAccelComponentInterface::staticInterfaceName()
+            || method != QLatin1String("invokeShortcut")) {
+            continue;
+        }
+
+        if (!path.startsWith(QLatin1String("/component"))) {
+            continue;
+        }
+
+        const auto componentName = path.mid(strlen("/component"));
+
+        auto component = std::find_if(m_components.cbegin(), m_components.cend(), [componentName](const Component &component) {
+            return component.id == componentName;
+        });
+        if (component == m_components.cend()) {
+            continue;
+        }
+
+        auto action = std::find_if(component->actions.cbegin(), component->actions.cend(), [argument](const Action &action) {
+            return action.id == argument;
+        });
+        if (action == component->actions.cend()) {
+            continue;
+        }
+
+        QModelIndex i = index(action - component->actions.begin(), 0, index(component - m_components.cbegin(), 0));
+        m_modiferOnlyShortcutsMap[QPersistentModelIndex(i)].setFlag(modifier.first);
+    }
+}
+
 void GlobalAccelModel::save()
 {
+    m_modifieronlyShortcuts.save();
     for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
         if (it->pendingDeletion) {
             removeComponent(*it);
@@ -193,6 +289,13 @@ void GlobalAccelModel::save()
             }
         }
     }
+}
+
+void GlobalAccelModel::defaults()
+{
+    m_modifieronlyShortcuts.setDefaults();
+    matchModifierOnlyShortcuts();
+    BaseModel::defaults();
 }
 
 void GlobalAccelModel::exportToConfig(const KConfigBase &config)
@@ -324,9 +427,30 @@ void GlobalAccelModel::removeComponent(const Component &component)
         return c.id == uniqueName;
     });
     const int row = it - m_components.begin();
+
+    if (auto it = std::remove_if(m_modiferOnlyShortcutsMap.begin()
     beginRemoveRows(QModelIndex(), row, row);
     m_components.remove(row);
     endRemoveRows();
+}
+
+void GlobalAccelModel::toggleModifier(const QModelIndex &index, Qt::KeyboardModifier modifier)
+{
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid) || !index.parent().isValid()) {
+        return;
+    }
+
+    const bool used = m_modifieronlyShortcuts->
+
+                      if (used != m_modiferOnlyShortcutsMap.keyValueEnd())
+    {
+        used->second.setFlag(modifier, false);
+        Q_EMIT dataChanged(us);
+    }
+
+    const Component &component = m_components[index.parent().row()];
+    const Action &action = component.actions[index.row()];
+    m_modiferOnlyShortcutsMap[{component.id, action.id}] = value.value<Qt::KeyboardModifiers>();
 }
 
 void GlobalAccelModel::genericErrorOccured(const QString &description, const QDBusError &error)

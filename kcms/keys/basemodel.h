@@ -48,6 +48,8 @@ public:
         PendingDeletionRole,
         IsDefaultRole,
         SupportsMultipleKeysRole,
+        SupportsModifierOnlyShortcutsRole,
+        ModifierOnlyShortcutsRole,
     };
     Q_ENUM(Roles)
 
@@ -62,9 +64,9 @@ public:
 
     virtual void load() = 0;
     virtual void save() = 0;
-    void defaults();
-    bool needsSave() const;
-    bool isDefault() const;
+    virtual void defaults();
+    virtual bool needsSave() const;
+    virtual bool isDefault() const;
 
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &child) const override;

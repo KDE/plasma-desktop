@@ -137,6 +137,7 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
         X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::MODEL_ONLY);
         if (xkbConfig.keyboardModel != config.keyboardModel()) {
             setxkbmapCommandArguments.append(QStringLiteral("-model"));
+            qCritical() << config.keyboardModel();
             setxkbmapCommandArguments.append(config.keyboardModel());
         }
     }

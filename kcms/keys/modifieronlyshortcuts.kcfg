@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="kwinrc"/>
+  <group name="ModifierOnlyShortcuts">
+    <entry name="Shift" type="StringList"/>
+    <entry name="Control" type="StringList"/>
+    <entry name="Alt" type="StringList"/>
+    <entry name="Meta" type="StringList">
+      <default>org.kde.kglobalaccel,/component/plasmashell,org.kde.kglobalaccel.Component,invokeShortcut,activate-launcher</default>
+    </entry>
+  </group>
+</kcfg>
+

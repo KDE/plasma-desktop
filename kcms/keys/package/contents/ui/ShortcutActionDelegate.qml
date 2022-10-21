@@ -83,7 +83,7 @@ Kirigami.AbstractListItem {
                 spacing: 0
                 ColumnLayout {
                     Layout.alignment: Qt.AlignTop
-                    Layout.preferredWidth: parent.width * 0.5
+                    Layout.fillWidth: true
                     Kirigami.Heading {
                         level: 4
                         text: model.defaultShortcuts &&  model.defaultShortcuts.length != 0 ? 
@@ -114,7 +114,7 @@ Kirigami.AbstractListItem {
                     }
                 }
                 ColumnLayout {
-                    Layout.preferredWidth: parent.width * 0.5
+                    Layout.fillWidth: true
                     Layout.alignment: Qt.AlignTop
                     Kirigami.Heading {
                         level: 4
@@ -185,6 +185,29 @@ Kirigami.AbstractListItem {
                                     text: i18n("Cancel capturing of new shortcut")
                                 }
                             }
+                        }
+                    }
+                }
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignTop
+                    visible: model.supportsModifierOnlyShortcuts
+                    Kirigami.Heading {
+                        level: 4
+                        text: i18nc("@title:group", "Modifier-only shortcuts")
+                    }
+                    Kirigami.Separator {
+                        Layout.fillWidth: true
+                    }
+                    Repeater {
+                        model: [{modifier: Qt.ControlModifier, text: qsTranslate("QShortcut", "Ctrl")},
+                                {modifier: Qt.ShiftModifier, text: qsTranslate("QShortcut", "Shift")},
+                                {modifier: Qt.AltModifier, text: qsTranslate("QShortcut", "Alt")},
+                                {modifier: Qt.MetaModifier, text: qsTranslate("QShortcut", "Meta")}]
+                        QQC2.CheckBox {
+                           text: modelData.text
+                           checked: model.modifierOnlyShortcuts & modelData
+                           onToggled: model.modifierOnlyShortcuts = model.modifierOnlyShortcuts & modifier
                         }
                     }
                 }

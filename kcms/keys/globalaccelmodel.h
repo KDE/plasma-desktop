@@ -10,6 +10,7 @@
 #include <QList>
 
 #include "basemodel.h"
+#include "modifieronlyshortcuts.h"
 
 class QDBusError;
 
@@ -35,16 +36,24 @@ public:
 
     void load() override;
     void save() override;
+    void defaults() override;
+    bool needsSave() const override;
+    bool isDefault() const override;
+
+    Q_INVOKABLE void toggleModifier(const QModelIndex &index, Qt::KeyboardModifier modifier);
 
 Q_SIGNALS:
     void errorOccured(const QString &);
 
 private:
     Component loadComponent(const QList<KGlobalShortcutInfo> &info);
+    void matchModifierOnlyShortcuts();
     void removeComponent(const Component &component);
     void genericErrorOccured(const QString &description, const QDBusError &error);
 
     KGlobalAccelInterface *m_globalAccelInterface;
+    ModifierOnlyShortcutsSettings m_modifieronlyShortcuts;
+    QMap<QModelIndex, Qt::KeyboardModifiers> m_modiferOnlyShortcutsMap;
 };
 
 #endif // SHORTCUTSMODEL_H
