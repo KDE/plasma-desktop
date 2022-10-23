@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:47+0000\n"
-"PO-Revision-Date: 2022-06-30 17:53+0400\n"
+"PO-Revision-Date: 2022-10-22 18:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -509,13 +509,13 @@ msgstr "حجم الأيقونات"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr "صغيرة"
+msgstr "بالغة الصِّغَر"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "صغيرة جدا"
+msgstr "صغيرة جداً"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
@@ -527,13 +527,13 @@ msgstr "صغيرة"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr "متوسّطة الصّغر"
+msgstr "صغيرة-متوسطة"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr "متوسّط"
+msgstr "متوسّطة"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
@@ -545,7 +545,7 @@ msgstr "كبيرة"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
-msgstr "كبيرة"
+msgstr "ضخمة"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
 #, kde-format
