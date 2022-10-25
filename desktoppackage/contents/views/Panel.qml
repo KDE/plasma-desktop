@@ -42,10 +42,10 @@ Item {
     readonly property int leftPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.left, spacingAtMinSize));
     readonly property int rightPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.right, spacingAtMinSize));
 
-    readonly property int bottomFloatingPadding: floating  ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
-    readonly property int leftFloatingPadding: floating    ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
-    readonly property int rightFloatingPadding: floating   ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
-    readonly property int topFloatingPadding: floating     ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
+    readonly property int bottomFloatingPadding: floating && containment.location !== PlasmaCore.Types.TopEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
+    readonly property int leftFloatingPadding: floating && containment.location !== PlasmaCore.Types.RightEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
+    readonly property int rightFloatingPadding: floating && containment.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
+    readonly property int topFloatingPadding: floating && containment.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
 
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
@@ -55,14 +55,37 @@ Item {
         id: activityInfo
     }
 
+    property bool touchingWindow: false
+
+    function rectOverlap(a, b) {
+        return (Math.max(a.left, b.left) - 1 <= Math.min(a.right, b.right) &&
+                Math.max(a.top, b.top) - 1 <= Math.min(a.bottom, b.bottom))
+    }
+
+    function updateWindows() {
+        if (visibleWindowsModel.count === 0) {
+            root.touchingWindow = false
+            return
+        }
+        let panelGeo = panel.geometryByDistance(0)
+        for( var i = 0; i < visibleWindowsModel.rowCount(); i++ ) {
+            if (rectOverlap(panelGeo, visibleWindowsModel.get(i).Geometry)) {
+                root.touchingWindow = true
+                return
+            }
+        }
+        root.touchingWindow = false
+    }
+
     PlasmaCore.SortFilterModel {
         id: visibleWindowsModel
         filterRole: 'IsMinimized'
         filterRegExp: 'false'
+        onDataChanged: root.updateWindows()
+        onCountChanged: root.updateWindows()
         sourceModel: TaskManager.TasksModel {
             filterByVirtualDesktop: true
             filterByActivity: true
-            filterNotMaximized: true
             filterByScreen: true
             filterHidden: true
 
@@ -153,7 +176,7 @@ Item {
     property bool isTransparent: panel.opacityMode === Panel.Global.Translucent
     property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
-    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop && panel.visibilityMode == Panel.Global.NormalPanel
+    readonly property bool screenCovered: touchingWindow && !kwindowsystem.showingDesktop && panel.visibilityMode == Panel.Global.NormalPanel
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
     onStateTriggersChanged: {
         let opaqueApplets = false
