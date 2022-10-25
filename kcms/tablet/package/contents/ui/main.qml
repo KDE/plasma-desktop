@@ -19,6 +19,9 @@ SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
 
+    // So it doesn't scroll while dragging
+    flickable.interactive: Kirigami.Settings.hasTransientTouchInput
+
     header: Kirigami.InlineMessage {
         Layout.fillWidth: true
 
@@ -163,6 +166,10 @@ SimpleKCM {
                     yAxis.minimum: 0
                     yAxis.maximum: outputItem.height - tabletItem.height
 
+                }
+
+                TapHandler {
+                    gesturePolicy: TapHandler.WithinBounds
                 }
 
                 QQC2.Button {
