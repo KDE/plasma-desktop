@@ -118,6 +118,8 @@ ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kc
 
 add_library(kcm_keyboard_static STATIC ${kcm_keyboard_PART_SRCS})
 
+set_property(TARGET kcm_keyboard_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets

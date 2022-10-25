@@ -24,6 +24,8 @@ kconfig_add_kcfg_files(TOUCHPAD_SRCS touchpadparameters.kcfgc)
 
 add_library(touchpad STATIC ${TOUCHPAD_SRCS} ${backend_SRCS})
 
+set_property(TARGET touchpad PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 target_link_libraries(touchpad
     PUBLIC
     Qt::Core
