@@ -4,20 +4,21 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-04 00:46+0000\n"
-"PO-Revision-Date: 2020-05-14 23:57+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2022-10-19 06:48+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -52,10 +53,8 @@ msgid "Stopped activities:"
 msgstr "已停止的活動："
 
 #: contents/activitymanager/ActivityManager.qml:127
-#, fuzzy
-#| msgid "Create activity..."
 msgid "Create activity…"
-msgstr "建立活動..."
+msgstr "建立活動…"
 
 #: contents/activitymanager/Heading.qml:61
 msgid "Activities"
@@ -71,59 +70,57 @@ msgstr "刪除"
 
 #: contents/applet/AppletError.qml:123
 msgid "Sorry! There was an error loading %1."
-msgstr ""
+msgstr "很抱歉！載入 %1 時發生錯誤。"
 
 #: contents/applet/AppletError.qml:161
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "複製到剪貼簿"
 
 #: contents/applet/AppletError.qml:184
 msgid "View Error Details…"
-msgstr ""
+msgstr "檢視錯誤詳細資訊…"
 
 #: contents/applet/CompactApplet.qml:70
 msgid "Open %1"
-msgstr ""
+msgstr "開啟 %1"
 
 #: contents/configuration/AboutPlugin.qml:19
 #: contents/configuration/AppletConfiguration.qml:240
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: contents/configuration/AboutPlugin.qml:45
 msgid "Send an email to %1"
-msgstr ""
+msgstr "傳送電子郵件給 %1"
 
 #: contents/configuration/AboutPlugin.qml:59
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr ""
+msgstr "開啟網站 %1"
 
 #: contents/configuration/AboutPlugin.qml:108
 msgid "Copyright"
-msgstr ""
+msgstr "版權"
 
 #: contents/configuration/AboutPlugin.qml:128 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "授權條款："
 
 #: contents/configuration/AboutPlugin.qml:141
-#, fuzzy
-#| msgid "Author:"
 msgid "Authors"
-msgstr "作者："
+msgstr "作者群"
 
 #: contents/configuration/AboutPlugin.qml:151
 msgid "Credits"
-msgstr ""
+msgstr "致謝"
 
 #: contents/configuration/AboutPlugin.qml:162
 msgid "Translators"
-msgstr ""
+msgstr "翻譯者"
 
 #: contents/configuration/AboutPlugin.qml:176
 msgid "Report a Bug…"
-msgstr ""
+msgstr "回報問題…"
 
 #: contents/configuration/AppletConfiguration.qml:55
 msgid "Keyboard Shortcuts"
@@ -154,7 +151,7 @@ msgstr "取消"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:28
 msgid "Open configuration page"
-msgstr ""
+msgstr "開啟設定頁面"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
 msgid "Left-Button"
@@ -219,14 +216,10 @@ msgid "Layout:"
 msgstr "佈局："
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:107
-#, fuzzy
-#| msgid "Wallpaper Type:"
 msgid "Wallpaper type:"
-msgstr "桌布型態："
+msgstr "桌布類型："
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:127
-#, fuzzy
-#| msgid "Get New Plugins..."
 msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
@@ -235,14 +228,10 @@ msgid "Layout changes must be applied before other changes can be made"
 msgstr "佈局的變動必須在其他變動做出前套用"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:199
-#, fuzzy
-#| msgid "Apply now"
 msgid "Apply Now"
 msgstr "立刻套用"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcuts"
 msgstr "鍵盤快捷鍵"
 
@@ -314,19 +303,19 @@ msgstr "視窗在下面"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
 msgid "Opacity"
-msgstr ""
+msgstr "透明度"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
 msgid "Adaptive"
-msgstr ""
+msgstr "自動調整"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
 msgid "Opaque"
-msgstr ""
+msgstr "不透明"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
 msgid "Translucent"
-msgstr ""
+msgstr "半透明"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid "Maximize Panel"
@@ -334,44 +323,42 @@ msgstr "將面板最大化"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
 msgid "Floating Panel"
-msgstr ""
+msgstr "浮動面板"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Shortcut"
 msgstr "鍵盤快捷鍵"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "拖曳來變更最大高度。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "拖曳來變更最大寬度。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "雙擊來重設。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "拖曳來變更最小高度。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "拖曳來變更最小寬度。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"拖曳來變更在這個螢幕邊緣上的位置。\n"
+"雙擊來重設。"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
-#, fuzzy
-#| msgid "Add Widgets..."
 msgid "Add Widgets…"
 msgstr "新增元件..."
 
@@ -380,30 +367,26 @@ msgid "Add Spacer"
 msgstr "新增空白"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:26
-#, fuzzy
-#| msgid "More Options..."
 msgid "More Options…"
 msgstr "更多選項…"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:222
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
-msgstr ""
+msgstr "拖曳來移動"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "用方向鍵來移動面板"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
-msgstr ""
+msgstr "面板寬度："
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Panel height:"
-msgstr "面板對齊"
+msgstr "面板高度："
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:397
 #: contents/configuration/ShellContainmentConfiguration.qml:43
@@ -412,28 +395,28 @@ msgstr "關閉"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr ""
+msgstr "面板與桌面管理"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr ""
+msgstr "您可以拖曳面板與桌面來將它們移動到不同的螢幕。"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
 msgid "%1 (primary)"
-msgstr ""
+msgstr "%1（主要）"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
 msgid "%1 (disabled)"
-msgstr ""
+msgstr "%1（已停用）"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Swap with Desktop on Screen %1"
-msgstr ""
+msgstr "與螢幕 %1 上的桌面交換"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
 msgid "Move to Screen %1"
-msgstr ""
+msgstr "移動到螢幕 %1"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -465,18 +448,14 @@ msgstr "解除安裝"
 
 #: contents/explorer/WidgetExplorer.qml:134
 #: contents/explorer/WidgetExplorer.qml:245
-#, fuzzy
-#| msgid "Widgets"
 msgid "All Widgets"
-msgstr "元件"
+msgstr "所有元件"
 
 #: contents/explorer/WidgetExplorer.qml:199
 msgid "Widgets"
 msgstr "元件"
 
 #: contents/explorer/WidgetExplorer.qml:207
-#, fuzzy
-#| msgid "Get New Widgets..."
 msgid "Get New Widgets…"
 msgstr "取得新元件…"
 
