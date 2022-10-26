@@ -131,7 +131,12 @@ SimpleKCM {
                     tabletItem.width   = Qt.binding(() => tabletSizeHandle.x);
                     tabletItem.height  = Qt.binding(() => tabletSizeHandle.y);
                     tabletSizeHandle.x = Qt.binding(() => outputArea.width * outputItem.width)
-                    tabletSizeHandle.y = Qt.binding(() => outputArea.height * outputItem.height)
+                    if (keepAspectRatio.checked) {
+                        tabletSizeHandle.y = Qt.binding(() => tabletSizeHandle.x / tabletItem.aspectRatio);
+                    } else {
+                        tabletSizeHandle.y = Qt.binding(() => outputArea.height * outputItem.height)
+                    }
+
                 }
             }
 
@@ -217,6 +222,9 @@ SimpleKCM {
             text: i18ndc("kcm_tablet", "@option:check", "Lock aspect ratio")
             visible: outputAreaCombo.currentIndex >= 2
             checked: true
+            onToggled: {
+                outputAreaView.resetOutputArea(outputAreaCombo.currentIndex, form.device.outputArea)
+            }
         }
         QQC2.Label {
             text: i18ndc("kcm_tablet", "tablet area position - size", "%1,%2 - %3×%4", Math.floor(outputAreaView.outputAreaSetting.x * outputItem.outputSize.width)
