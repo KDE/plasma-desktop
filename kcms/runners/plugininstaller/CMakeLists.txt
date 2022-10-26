@@ -19,7 +19,7 @@ target_link_libraries(krunner-plugininstaller
   KF5::KIOWidgets
 )
 if(HAVE_PACKAGEKIT)
-    target_link_libraries(krunner-plugininstaller PK::packagekitqt5)
+    target_link_libraries(krunner-plugininstaller PK::packagekitqt${QT_MAJOR_VERSION})
 endif()
 
 install(TARGETS krunner-plugininstaller DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

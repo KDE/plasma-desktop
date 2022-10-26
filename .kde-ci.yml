@@ -20,7 +20,6 @@ Dependencies:
     'frameworks/kcrash': '@latest'
     'frameworks/kdbusaddons': '@latest'
     'frameworks/kdeclarative': '@latest'
-    'frameworks/kdelibs4support': '@latest'
     'frameworks/kfilemetadata': '@latest'
     'frameworks/kglobalaccel': '@latest'
     'frameworks/kguiaddons': '@latest'
@@ -50,3 +49,6 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
+- 'on': ['Linux/Qt5', 'FreeBSD/Qt5']
+  'require':
+    'frameworks/kdelibs4support': '@latest'

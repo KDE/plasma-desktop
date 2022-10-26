@@ -77,8 +77,10 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     Codecs
     Sonnet
-    KDELibs4Support # kcms/dateandtime
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
+endif()
 
 find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 
