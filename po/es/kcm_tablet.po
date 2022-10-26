@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2022-09-07 22:29+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -70,55 +70,55 @@ msgstr "Ajustar la salida en la tableta"
 msgid "Custom size"
 msgstr "Tamaño personalizado"
 
-#: package/contents/ui/main.qml:27
+#: package/contents/ui/main.qml:30
 #, kde-format
 msgid "No drawing tablets found."
 msgstr "No se han encontrado tabletas de dibujo."
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Target display:"
 msgstr "Pantalla de destino:"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientación:"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo para zurdos:"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Area:"
 msgstr "Área:"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Cambiar el tamaño del área de la tableta"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloquear las proporciones"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:211
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:216
+#: package/contents/ui/main.qml:223
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"

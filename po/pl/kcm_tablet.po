@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2022-09-23 10:33+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -69,55 +69,55 @@ msgstr "Zmieść wynik na tablecie"
 msgid "Custom size"
 msgstr "Własny rozmiar"
 
-#: package/contents/ui/main.qml:27
+#: package/contents/ui/main.qml:30
 #, kde-format
 msgid "No drawing tablets found."
 msgstr "Nie znaleziono żadnego tabletu rysunkowego."
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Target display:"
 msgstr "Docelowy wyświetlacz"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Orientation:"
 msgstr "Kierunek:"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Tryb leworęczny:"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Area:"
 msgstr "Obszar:"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Zmień rozmiar obszaru tabletu"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Zablokuj współczynnik kształtu"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:211
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:216
+#: package/contents/ui/main.qml:223
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
