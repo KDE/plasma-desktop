@@ -9,11 +9,16 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.6 as KCM
+import org.kde.kwindowsystem 1.0
 
 KCM.SimpleKCM {
     id: root
 
     implicitWidth: Kirigami.Units.gridUnit * 40
+
+    KWindowSystem {
+        id: kwindowsystem
+    }
 
     Kirigami.FormLayout {
         id: formLayout
@@ -192,7 +197,7 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: primarySelectionRadio
             Kirigami.FormData.label: i18n("Middle Click:")
-            visible: kcm.isWayland
+            visible: kwindowsystem.isPlatformWayland
             text: i18n("Paste selected text")
             checked: kcm.kwinSettings.primarySelection
             onToggled: kcm.kwinSettings.primarySelection = checked
@@ -212,7 +217,7 @@ KCM.SimpleKCM {
         RowLayout {
             Kirigami.FormData.label: i18n("Touch Mode:")
             QQC2.RadioButton {
-                text: kcm.isWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                text: kwindowsystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
                 checked: kcm.kwinSettings.tabletMode === "auto"
                 onToggled: if (checked) kcm.kwinSettings.tabletMode = "auto"
                 QQC2.ButtonGroup.group: tabletModeBehaviorGroup
@@ -223,7 +228,7 @@ KCM.SimpleKCM {
                 }
             }
             KCM.ContextualHelpButton {
-                visible: kcm.isWayland
+                visible: kwindowsystem.isPlatformWayland
                 toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
             }
         }
@@ -240,7 +245,7 @@ KCM.SimpleKCM {
             }
         }
         QQC2.RadioButton {
-            visible: kcm.isWayland
+            visible: kwindowsystem.isPlatformWayland
             text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
             checked: kcm.kwinSettings.tabletMode === "off"
             onToggled: if (checked) kcm.kwinSettings.tabletMode = "off"

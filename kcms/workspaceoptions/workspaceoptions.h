@@ -21,7 +21,6 @@ class KCMWorkspaceOptions : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(WorkspaceOptionsGlobalsSettings *globalsSettings READ globalsSettings CONSTANT)
     Q_PROPERTY(WorkspaceOptionsPlasmaSettings *plasmaSettings READ plasmaSettings CONSTANT)
     Q_PROPERTY(WorkspaceOptionsKwinSettings *kwinSettings READ kwinSettings CONSTANT)
-    Q_PROPERTY(bool isWayland READ isWayland CONSTANT)
 
 public:
     KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
@@ -32,8 +31,6 @@ public:
     WorkspaceOptionsGlobalsSettings *globalsSettings() const;
     WorkspaceOptionsPlasmaSettings *plasmaSettings() const;
     WorkspaceOptionsKwinSettings *kwinSettings() const;
-
-    bool isWayland() const;
 
 public Q_SLOTS:
     void save() override;
