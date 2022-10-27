@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-27 00:48+0000\n"
 "PO-Revision-Date: 2022-06-21 17:08+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,75 +17,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Vizual davranış:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:25 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:30 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Siçan üzərində dayandıqda köməkçi məlumatları göstərmək"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:42 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Vəziyyət dəyişiklikləri ilə bağlı vizual rəyləri göstərmək"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animasiya sürəti:"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Yavaş"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Ani"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Faylları və qovluqları açmaq üçün klikləmə:"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Onları açmaq"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Elementin seçim işarəsini klikləyərək seçmək"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:128
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Onları seçmək"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:141
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Əvəzinə cüt kliklə açmaq"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Sürüşdürmə çubuğuna klikləyərək"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -93,12 +93,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Bir səhifə yuxarı və ya aşağı sürüşdürür"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Seçilmiş yerə sürüşdürmək üçün orta düymə kliki"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -106,34 +106,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Seçilmiş yerə sürüşdürür"
 
-#: package/contents/ui/main.qml:194
+#: package/contents/ui/main.qml:199
 #, kde-format
 msgid "Middle Click:"
 msgstr "Orta düymə kliki:"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "Paste selected text"
 msgstr "Seçilmiş mətni yerləşdirin"
 
-#: package/contents/ui/main.qml:213
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Toxunma sensoru rejimi"
 
-#: package/contents/ui/main.qml:215
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Lazım gəldikdə avtomatik aktiv edilsin"
 
-#: package/contents/ui/main.qml:215 package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:220 package/contents/ui/main.qml:249
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Heç vaxt aktiv edilməsin"
 
-#: package/contents/ui/main.qml:227
+#: package/contents/ui/main.qml:232
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -144,13 +144,13 @@ msgstr ""
 "aşkarlandıqda avtomatik aktiv olunacaq. Məsələn transformer noutbuklarda "
 "klaviatura modulu arxaya qatlandıqda və ya çıxarıldığında."
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Həmişə aktivdir"
 
-#: package/contents/ui/main.qml:257
+#: package/contents/ui/main.qml:262
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
