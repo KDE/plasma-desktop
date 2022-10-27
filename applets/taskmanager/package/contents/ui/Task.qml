@@ -235,8 +235,6 @@ MouseArea {
                 model.LauncherUrlWithoutIcon, model.decoration);
             pressX = -1;
             pressY = -1;
-
-            return;
         }
     }
 
