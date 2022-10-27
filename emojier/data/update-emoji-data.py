@@ -91,7 +91,9 @@ class EmojiParser(object):
                         continue
                     if len(annotationNode.childNodes) != 1 or annotationNode.childNodes[0].nodeType != xml.dom.minidom.Node.TEXT_NODE:
                         continue
-                    annotation = annotations[emoji] = EmojiAnnotation()
+                    if emoji not in annotations:
+                        annotations[emoji] = EmojiAnnotation()
+                    annotation = annotations[emoji]
                     if "type" in annotationNode.attributes and annotationNode.attributes["type"].nodeValue == "tts":
                         annotation.description = annotationNode.childNodes[0].nodeValue
                     else:
