@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Tommi Nieminen <translator@legisign.org>, 2010, 2018, 2021, 2022.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2022.
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-16 00:46+0000\n"
-"PO-Revision-Date: 2022-08-05 10:26+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2022-10-28 22:19+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:25:25+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -27,9 +27,7 @@ msgid "Restore All Minimized Windows"
 msgstr "Palauta kaikki pienennetyt ikkunat"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Pienennä kaikki ikkunat"
@@ -41,8 +39,7 @@ msgid "Restores the previously minimized windows"
 msgstr "Palauttaa aiemmin pienennetyt ikkunat"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Näytä työpöytä pienentämällä kaikki ikkunat"
@@ -66,9 +63,7 @@ msgid "Moves windows back to their original positions"
 msgstr "Palauttaa ikkunat alkuperäisille paikoilleen"
 
 #: package/contents/ui/PeekController.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Temporarily reveals the Desktop by moving open windows into screen corners"

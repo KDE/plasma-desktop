@@ -6,7 +6,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2022.
 # Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2022.
 #
 # KDE Finnish translation sprint participants:
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2022-04-04 13:44+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2022-10-28 22:12+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:24+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -158,11 +158,10 @@ msgstr ""
 "Esimerkiksi ”xterm:konsole” tai ”xterm,konsole”."
 
 #: package/contents/ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Siirry uudelleenkäynnistyksen jälkeen UEFI-asetusohjelmaan"
+msgstr "Siirry uudelleenkäynnistyksen jälkeen UEFI-asetusnäyttöön"
 
 #: package/contents/ui/main.qml:162
 #, kde-format
