@@ -1,4 +1,5 @@
 /*
+ * SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
  * SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
