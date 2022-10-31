@@ -40,7 +40,7 @@ Kirigami.FormLayout
             Layout.fillWidth: true
             QQC2.Label {
                 id: buttonLabel
-                text: i18nd("kcmtablet", "Button %1:", modelData + 1)
+                text: i18nd("kcm_tablet", "Button %1:", modelData + 1)
             }
 
             Connections {
