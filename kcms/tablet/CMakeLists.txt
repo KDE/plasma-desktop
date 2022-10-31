@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmtablet\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_tablet\")
 
 include(ECMQtDeclareLoggingCategory)
 ecm_qt_declare_logging_category(common_SRCS

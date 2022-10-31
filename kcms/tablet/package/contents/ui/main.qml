@@ -27,7 +27,7 @@ SimpleKCM {
 
         type: Kirigami.MessageType.Information
         visible: combo.count === 0
-        text: i18nd("kcmtablet", "No drawing tablets found.")
+        text: i18nd("kcm_tablet", "No drawing tablets found.")
     }
 
     Kirigami.FormLayout {
@@ -35,7 +35,7 @@ SimpleKCM {
         enabled: combo.count > 0
         QQC2.ComboBox {
             id: combo
-            Kirigami.FormData.label: i18ndc("kcmtablet", "@label:listbox The device we are configuring", "Device:")
+            Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The device we are configuring", "Device:")
             model: kcm.toolsModel
 
             onCountChanged: if (count > 0 && currentIndex < 0) {
@@ -62,7 +62,7 @@ SimpleKCM {
 
         QQC2.ComboBox {
             id: outputsCombo
-            Kirigami.FormData.label: i18nd("kcmtablet", "Target display:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Target display:")
             model: OutputsModel {
                 id: outputsModel
             }
@@ -74,7 +74,7 @@ SimpleKCM {
             }
         }
         QQC2.ComboBox {
-            Kirigami.FormData.label: i18nd("kcmtablet", "Orientation:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Orientation:")
             model: OrientationsModel {
                 id: orientationsModel
             }
@@ -86,7 +86,7 @@ SimpleKCM {
             }
         }
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcmtablet", "Left-handed mode:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Left-handed mode:")
             enabled: parent.device && parent.device.supportsLeftHanded
             checked: parent.device && parent.device.leftHanded
             onCheckedChanged: {
@@ -96,7 +96,7 @@ SimpleKCM {
         QQC2.ComboBox {
             id: outputAreaCombo
             Layout.fillWidth: true
-            Kirigami.FormData.label: i18nd("kcmtablet", "Area:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Area:")
             model: OutputsFittingModel {}
             onActivated: {
                 outputAreaView.changed = true
@@ -179,7 +179,7 @@ SimpleKCM {
                     visible: outputAreaCombo.currentIndex >= 2
                     icon.name: "transform-move"
                     display: QQC2.AbstractButton.IconOnly
-                    text: i18nd("kcmtablet", "Resize the tablet area")
+                    text: i18nd("kcm_tablet", "Resize the tablet area")
                     QQC2.ToolTip {
                         text: tabletSizeHandle.text
                         visible: parent.hovered
@@ -203,12 +203,12 @@ SimpleKCM {
 
         QQC2.CheckBox {
             id: keepAspectRatio
-            text: i18ndc("kcmtablet", "@option:check", "Lock aspect ratio")
+            text: i18ndc("kcm_tablet", "@option:check", "Lock aspect ratio")
             visible: outputAreaCombo.currentIndex >= 2
             checked: true
         }
         QQC2.Label {
-            text: i18ndc("kcmtablet", "tablet area position - size", "%1,%2 - %3×%4", Math.floor(outputAreaView.outputAreaSetting.x * outputItem.outputSize.width)
+            text: i18ndc("kcm_tablet", "tablet area position - size", "%1,%2 - %3×%4", Math.floor(outputAreaView.outputAreaSetting.x * outputItem.outputSize.width)
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.y * outputItem.outputSize.height)
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.width * outputItem.outputSize.width)
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height))
@@ -220,7 +220,7 @@ SimpleKCM {
 
         property QtObject padDevice: null
         QQC2.ComboBox {
-            Kirigami.FormData.label: i18ndc("kcmtablet", "@label:listbox The pad we are configuring", "Pad:")
+            Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The pad we are configuring", "Pad:")
             model: kcm.padsModel
 
             onCurrentIndexChanged: {
