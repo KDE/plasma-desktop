@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_touchscreen",
+        "FormFactors": [
+            "tablet",
+            "handset",
+            "desktop"
+        ],
+        "Icon": "preferences-desktop-touchscreen",
+        "License": "GPL",
+        "Name": "Touchscreen"
+    },
+    "X-KDE-Keywords": "touchscreen,touch,laptop,screen,display",
+    "X-KDE-OnlyShowOnQtPlatforms": "wayland",
+    "X-KDE-System-Settings-Parent-Category": "input-devices",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
