@@ -7,6 +7,9 @@
 #pragma once
 
 #include <QAbstractListModel>
+
+#include <memory>
+
 class QDBusInterface;
 class InputDevice;
 
@@ -38,7 +41,7 @@ private:
     void addDevice(const QString &sysname, bool tellModel);
     void resetModel();
 
-    QVector<InputDevice *> m_devices;
+    std::vector<std::unique_ptr<InputDevice>> m_devices;
     QDBusInterface *m_deviceManager;
     QByteArray m_kind;
 };
