@@ -10,6 +10,7 @@ import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.tablet.kcm 1.1
 import org.kde.kcm 1.3
+import org.kde.kquickcontrols 2.0
 
 SimpleKCM {
     id: root
@@ -240,6 +241,47 @@ SimpleKCM {
                                                                                     , String(Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height)))
         }
 
+        Repeater {
+            model: [
+                { value: 0x14b, text: i18nd("kcm_tablet", "Tool Button 1") },
+                { value: 0x14c, text: i18nd("kcm_tablet", "Tool Button 2") },
+                { value: 0x149, text: i18nd("kcm_tablet", "Tool Button 3") }
+            ] // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
+
+            delegate: KeySequenceItem {
+                id: seq
+                Kirigami.FormData.label: (pressed ? "<b>" : "") + modelData.text + (pressed ? "</b>" : "")
+                property bool pressed: false
+
+                Connections {
+                    target: tabletEvents
+                    function onToolButtonReceived(hardware_serial_hi, hardware_serial_lo, button, pressed) {
+                        if (button !== modelData.value) {
+                            return;
+                        }
+                        seq.pressed = pressed
+                    }
+                }
+
+                keySequence: kcm.toolButtonMapping(form.device.name, modelData.value)
+                Connections {
+                    target: kcm
+                    function onSettingsRestored() {
+                        seq.keySequence = kcm.toolButtonMapping(form.device.name, modelData.value)
+                    }
+                }
+
+                showCancelButton: true
+                modifierlessAllowed: true
+                multiKeyShortcutsAllowed: false
+                checkForConflictsAgainst: ShortcutType.None
+
+                onCaptureFinished: {
+                    kcm.assignToolButtonMapping(form.device.name, modelData.value, keySequence)
+                }
+            }
+        }
+
         Kirigami.Separator {
             Layout.fillWidth: true
         }
@@ -258,10 +300,55 @@ SimpleKCM {
             }
         }
 
-        RebindButtons {
-            Layout.fillWidth: true
-            path: form.padDevice.sysName
-            name: form.padDevice.name
+        TabletEvents {
+            id: tabletEvents
+
+            anchors.fill: parent
+
+            onPadButtonsChanged: {
+                if (!path.endsWith(form.padDevice.sysName)) {
+                    return;
+                }
+                buttonsRepeater.model = buttonCount
+            }
+        }
+
+        Repeater {
+            id: buttonsRepeater
+            model: tabletEvents.padButtons
+
+            delegate: KeySequenceItem {
+                id: seq
+                Kirigami.FormData.label: (pressed ? "<b>" : "") + i18nd("kcm_tablet", "Button %1:", modelData + 1) + (pressed ? "</b>" : "")
+                property bool pressed: false
+
+                Connections {
+                    target: tabletEvents
+                    function onPadButtonReceived(path, button, pressed) {
+                        if (button !== modelData || !path.endsWith(form.padDevice.sysName)) {
+                            return;
+                        }
+                        seq.pressed = pressed
+                    }
+                }
+
+                keySequence: kcm.padButtonMapping(form.padDevice.name, modelData)
+                Connections {
+                    target: kcm
+                    function onSettingsRestored() {
+                        seq.keySequence = kcm.padButtonMapping(form.padDevice.name, modelData)
+                    }
+                }
+
+                showCancelButton: true
+                modifierlessAllowed: true
+                multiKeyShortcutsAllowed: false
+                checkForConflictsAgainst: ShortcutType.None
+
+                onCaptureFinished: {
+                    kcm.assignPadButtonMapping(form.padDevice.name, modelData, keySequence)
+                }
+            }
         }
     }
 }
