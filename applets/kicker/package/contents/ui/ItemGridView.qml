@@ -6,7 +6,6 @@
 
 import QtQuick 2.15
 
-import org.kde.draganddrop 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -103,7 +102,7 @@ FocusScope {
 
         anchors.fill: parent
 
-        onDragMove: {
+        onPositionChanged: event => {
             if (!itemGrid.dropEnabled || gridView.animating || !kicker.dragSource) {
                 return;
             }
@@ -143,14 +142,14 @@ FocusScope {
             }
         }
 
-        onDragLeave: {
+        onExited: {
             if ("dropPlaceholderIndex" in itemGrid.model) {
                 itemGrid.model.dropPlaceholderIndex = -1;
                 gridView.currentIndex = -1;
             }
         }
 
-        onDrop: {
+        onDropped: {
             if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.GridView.view.model.favoritesModel === itemGrid.model) {
                 itemGrid.model.addFavorite(kicker.dragSource.favoriteId, itemGrid.model.dropPlaceholderIndex);
                 gridView.currentIndex = -1;
