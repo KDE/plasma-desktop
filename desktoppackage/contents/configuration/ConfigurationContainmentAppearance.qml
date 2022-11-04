@@ -19,7 +19,7 @@ Item {
     id: appearanceRoot
     signal configurationChanged
 
-    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + (Kirigami.Units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
     property string currentWallpaper: ""
     property string containmentPlugin: ""
 
