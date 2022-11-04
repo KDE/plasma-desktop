@@ -1656,10 +1656,12 @@ void FolderModel::createActions()
     // The RemoveAction needs to be updated after adding all actions to the actionCollection
     remove->update();
 
-    m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), this);
+    m_newMenu = new KNewFileMenu(this);
     m_newMenu->setModal(false);
     connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
     connect(m_newMenu, &KNewFileMenu::fileCreated, this, &FolderModel::newFileMenuItemCreated);
+
+    m_actionCollection.addAction(QStringLiteral("newMenu"), m_newMenu);
 
     m_copyToMenu = new KFileCopyToMenu(nullptr);
 }
