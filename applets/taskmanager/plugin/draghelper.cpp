@@ -28,7 +28,7 @@ QVariantMap DragHelper::generateMimeData(const QString &mimeType, const QVariant
     const QString &taskUrlData = Backend::tryDecodeApplicationsUrl(url).toString();
     mimedata.insert(QStringLiteral("text/x-orgkdeplasmataskmanager_taskurl"), taskUrlData);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 4, 1)
+#if QT_VERSION < QT_VERSION_CHECK(6, 4, 2)
     // Workaround for https://bugreports.qt.io/browse/QTBUG-71922
     QString idString;
     if (KWindowSystem::isPlatformX11()) {
