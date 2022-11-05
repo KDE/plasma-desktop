@@ -552,8 +552,7 @@ MouseArea {
              * containsMouse changed signal, so we need to update the tooltip
              * properties here.
              */
-            if (plasmoid.configuration.showToolTips
-                && plasmoid.configuration.groupedTaskVisualization === 1) {
+            if (plasmoid.configuration.groupedTaskVisualization === 1) {
                 task.updateMainItemBindings();
             }
 

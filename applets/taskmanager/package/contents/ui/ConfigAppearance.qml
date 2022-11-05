@@ -34,15 +34,9 @@ Kirigami.FormLayout {
         text: i18n("Show small window previews when hovering over Tasks")
     }
 
-    RowLayout {
-        // HACK: Workaround for Kirigami bug 434625
-        // due to which a simple Layout.leftMargin on CheckBox doesn't work
-        Item { implicitWidth: Kirigami.Units.gridUnit }
-        CheckBox {
-            id: highlightWindows
-            text: i18n("Hide other windows when hovering over previews")
-            enabled: showToolTips.checked
-        }
+    CheckBox {
+        id: highlightWindows
+        text: i18n("Hide other windows when hovering over previews")
     }
 
     CheckBox {

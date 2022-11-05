@@ -63,7 +63,7 @@ PlasmaCore.ToolTipArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
-    active: plasmoid.configuration.showToolTips && !inPopup && !tasks.groupDialog && (tasks.toolTipOpenedByClick === task || tasks.toolTipOpenedByClick === null)
+    active: (plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog
     interactive: model.IsWindow === true || mainItem.hasPlayer
     location: plasmoid.location
     mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
@@ -121,6 +121,8 @@ PlasmaCore.ToolTipArea {
     onContainsMouseChanged: if (containsMouse) {
         task.forceActiveFocus(Qt.MouseFocusReason);
         task.updateMainItemBindings();
+    } else {
+        tasks.toolTipOpenedByClick = null;
     }
 
     onHighlightedChanged: {

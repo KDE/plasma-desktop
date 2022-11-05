@@ -155,11 +155,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
 
         // Option 2: show tooltips for all child tasks
         // ===========================================
-        // Make sure tooltips are actually enabled though; if not, fall through
-        // to the next option.
-        else if (plasmoid.configuration.showToolTips
-            && plasmoid.configuration.groupedTaskVisualization === 1
-        ) {
+        else if (plasmoid.configuration.groupedTaskVisualization === 1) {
             if (tasks.toolTipOpenedByClick) {
                 task.hideImmediately();
             } else {
@@ -173,18 +169,15 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
         // ==================================================
         // Make sure the Window View effect is  are actually enabled though;
         // if not, fall through to the next option.
-        else if (windowViewAvailable
-            && (plasmoid.configuration.groupedTaskVisualization === 2
-            || plasmoid.configuration.groupedTaskVisualization === 1)
-        ) {
+        else if (plasmoid.configuration.groupedTaskVisualization === 2 && windowViewAvailable) {
             task.hideToolTip();
             tasks.activateWindowView(model.WinIdList);
         }
 
         // Option 4: show group dialog/textual list
         // ========================================
-        // This is also the final fallback option if Tooltips or Present windows
-        // are chosen but not actually available
+        // This is also the final fallback option if Window View
+        // is chosen but not actually available
         else {
             if (!!tasks.groupDialog) {
                 task.hideToolTip();
