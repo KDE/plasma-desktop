@@ -531,6 +531,8 @@ PlasmaCore.ToolTipArea {
         verticalAlignment: Text.AlignVCenter
         maximumLineCount: plasmoid.configuration.maxTextLines || undefined
 
+        color: theme.disabledTextColor
+
         // use State to avoid unnecessary re-evaluation when the label is invisible
         states: State {
             name: "labelVisible"
@@ -578,6 +580,11 @@ PlasmaCore.ToolTipArea {
             PropertyChanges {
                 target: frame
                 basePrefix: "focus"
+            }
+
+            PropertyChanges {
+                target: label
+                color: theme.textColor
             }
         }
     ]
