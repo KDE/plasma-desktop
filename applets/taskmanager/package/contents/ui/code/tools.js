@@ -74,6 +74,9 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
     }
 
     var target = taskIndexList[0];
+    if (!next) {
+        var target = taskIndexList[taskIndexList.length-1];
+    }
 
     for (var i = 0; i < taskIndexList.length; ++i) {
         if (taskIndexList[i] === activeTaskIndex)

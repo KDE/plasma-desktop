@@ -590,18 +590,25 @@ MouseArea {
             return;
         }
 
-        var task = taskRepeater.itemAt(index);
-        if (task) {
-            /**
-             * BUG 452187: when activating a task from keyboard, there is no
-             * containsMouse changed signal, so we need to update the tooltip
-             * properties here.
-             */
-            if (plasmoid.configuration.groupedTaskVisualization === 1) {
-                task.updateMainItemBindings();
-            }
+        if (index == 0) {
+            TaskTools.activateNextPrevTask(null, true);
+        } else if (index == 9) {
+            TaskTools.activateNextPrevTask(null, false);
+        } else{
+            var task = taskRepeater.itemAt(index);
+            if (task) {
+                /**
+                * BUG 452187: when activating a task from keyboard, there is no
+                * containsMouse changed signal, so we need to update the tooltip
+                * properties here.
+                */
+                if (plasmoid.configuration.showToolTips
+                    && plasmoid.configuration.groupedTaskVisualization === 1) {
+                    task.toolTipAreaItem.updateMainItemBindings();
+                }
 
-            TaskTools.activateTask(task.modelIndex(), task.m, null, task, plasmoid, tasks);
+                TaskTools.activateTask(task.modelIndex(), task.m, null, task);
+            }
         }
     }
 
@@ -625,5 +632,11 @@ MouseArea {
 
     Component.onDestruction: {
         TaskTools.taskManagerInstanceCount -= 1;
+    }
+
+    Keys.onPressed: {
+        if ((event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.AltModifier) && (event.key === Qt.Key_Tab)) {
+            TaskTools.activateNextPrevTask(null, ~ Qt.ShiftModifier);
+        }
     }
 }
