@@ -31,7 +31,7 @@ Kirigami.FormLayout {
     CheckBox {
         id: showToolTips
         Kirigami.FormData.label: i18n("General:")
-        text: i18n("Show tooltips")
+        text: i18n("Show window previews when hovering over Tasks")
     }
 
     RowLayout {
@@ -40,7 +40,7 @@ Kirigami.FormLayout {
         Item { implicitWidth: Kirigami.Units.gridUnit }
         CheckBox {
             id: highlightWindows
-            text: i18n("Highlight windows when hovering over task tooltips")
+            text: i18n("Hide other windows when hovering over previews")
             enabled: showToolTips.checked
         }
     }

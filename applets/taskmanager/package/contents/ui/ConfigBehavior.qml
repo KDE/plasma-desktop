@@ -60,7 +60,7 @@ Item {
 
             model: [
                 i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
-                i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows tooltip window thumbnails"),
+                i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows window previews"),
                 i18nc("Completes the sentence 'Clicking grouped task shows windows side by side' ", "Shows windows side by side"),
                 i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
             ]
