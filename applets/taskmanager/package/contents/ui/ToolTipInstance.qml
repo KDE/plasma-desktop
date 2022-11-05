@@ -145,7 +145,7 @@ ColumnLayout {
         Layout.preferredHeight: header.width / 2
 
         clip: true
-        visible: toolTipDelegate.isWin
+        visible: false
 
         readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
         // TODO: this causes XCB error message when being visible the first time
