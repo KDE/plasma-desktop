@@ -87,16 +87,16 @@ void SearchConfigModule::reloadPlugins()
     m_model->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
 }
 
-void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args) const
+void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args, const KPluginMetaData &krunnerPluginData) const
 {
     auto dlg = new KCMultiDialog();
     dlg->addModule(data, args);
     dlg->show();
-    connect(dlg, qOverload<>(&KCMultiDialog::configCommitted), dlg, [data]() {
+    connect(dlg, qOverload<>(&KCMultiDialog::configCommitted), dlg, [krunnerPluginData]() {
         QDBusMessage message =
             QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
         const QHash<QString, QByteArrayList> changes = {
-            {QStringLiteral("Runners"), {data.pluginId().toLocal8Bit()}},
+            {QStringLiteral("Runners"), {krunnerPluginData.pluginId().toLocal8Bit()}},
         };
         message.setArguments({QVariant::fromValue(changes)});
         QDBusConnection::sessionBus().send(message);

@@ -35,7 +35,7 @@ KCM.ScrollViewKCM {
         sourceModel: kcm.model
         query: searchField.text
         delegate: KCMUtils.KPluginDelegate {
-            onConfigTriggered: kcm.showKCM(model.config)
+            onConfigTriggered: kcm.showKCM(model.config, [], model.metaData)
             highlighted: false
             hoverEnabled: false
         }

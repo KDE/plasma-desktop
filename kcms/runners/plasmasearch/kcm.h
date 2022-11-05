@@ -35,7 +35,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
     void reloadPlugins();
-    void showKCM(const KPluginMetaData &data, const QStringList args = {}) const;
+    void showKCM(const KPluginMetaData &data, const QStringList args = {}, const KPluginMetaData &krunnerPluginData = {}) const;
     void showKRunnerKCM() const
     {
         showKCM(KPluginMetaData(QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")), {QStringLiteral("openedFromPluginSettings")});
