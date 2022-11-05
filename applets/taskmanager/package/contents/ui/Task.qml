@@ -520,7 +520,7 @@ PlasmaCore.ToolTipArea {
             fill: parent
             leftMargin: taskFrame.margins.left + iconBox.width + LayoutManager.labelMargin
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIcon !== null && audioStreamIcon.visible ? (audioStreamIcon.width + LayoutManager.labelMargin) : 0)
+            rightMargin: taskFrame.margins.right + closeButton.width + LayoutManager.labelMargin
             bottomMargin: taskFrame.margins.bottom
         }
 
@@ -575,6 +575,45 @@ PlasmaCore.ToolTipArea {
             }
 
             return text.toString();
+        }
+    }
+
+    PlasmaComponents3.ToolButton {
+        id: closeButton
+        visible: model.IsWindow === true && model.isLauncher !== true
+        opacity: model.isActive ? 1 : 0.25
+        icon.name: "window-close"
+
+        anchors {
+            right: parent.right
+            rightMargin: adjustMargin(true, parent.width, taskFrame.margins.right)
+            top: parent.top
+            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top) + 4
+            bottom: parent.bottom
+            bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.bottom) + 4
+        }
+
+        width: height
+        height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
+            - adjustMargin(false, parent.height, taskFrame.margins.bottom))
+
+        onClicked: {
+            backend.cancelHighlightWindows();
+            tasksModel.requestClose(modelIndex());
+        }
+
+        function adjustMargin(vert, size, margin) {
+            if (!size) {
+                return margin;
+            }
+
+            var margins = vert ? LayoutManager.horizontalMargins() : LayoutManager.verticalMargins();
+
+            if ((size - margins) < PlasmaCore.Units.iconSizes.small) {
+                return Math.ceil((margin * (PlasmaCore.Units.iconSizes.small / size)) / 2);
+            }
+
+            return margin;
         }
     }
 
