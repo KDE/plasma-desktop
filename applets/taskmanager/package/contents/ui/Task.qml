@@ -540,8 +540,41 @@ PlasmaCore.ToolTipArea {
 
             PropertyChanges {
                 target: label
-                text: model.display || ""
+                text: generateTitle() || ""
             }
+        }
+
+        function generateTitle() {
+            var text = model.display;
+
+            var no_strip_appname = ["RStudio"].some(appname => text.includes(appname));
+            var no_truncate_filename = ["Mozilla"].some(appname => text.includes(appname));
+            var media = ["Spotify"].some(appname => text.includes(appname));
+
+            // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
+            // In this case save <#number> as counter and delete it at the end of text.
+            var counter = text.match(/<\d+>\W*$/);
+            text = text.replace(/\s*<\d+>\W*$/, "");
+
+            // Remove appName from the end of text.
+            var appNameRegex = new RegExp(appName + "$", "i");
+            if (!no_strip_appname) {
+                text = text.replace(appNameRegex, "");
+                text = text.replace(/\s*(?:-|—|–|—|⸺|\|)*\s*$/, ""); // application name
+            }
+            text = text.replace(/(\s-\s|\s—\s|)Mozilla/, ""); // appname in mozilla
+            text = text.replace(/\s:\s\w+sh/, ""); // shells in konsole
+            text = text.replace(/\s-\s(Privat|Uni|Local)/, ""); // mail folders in thunderbird
+            text = text.replace(/\s-\s\d+x\d+\s-\s\d+%/, ""); // media info in gwenview
+            text = text.replace(/\s⸺\s/, "");
+            if (!no_strip_appname && !no_truncate_filename) {
+                text = text.replace(/((~|\/).*\/)([\w\-]+\.\w+)/, "$3"); // path in kate
+                text = text.replace(/^(.*\/)([^\/]+)$/, "$2"); // path in dolphin
+                text = text.replace(/^(.*) - (.*)$/, "$2"); // file name with root name in vscode
+                text = text.replace(/(\.[A-Za-z]{1,4})+$/, ""); // file extension
+            }
+
+            return text.toString();
         }
     }
 
