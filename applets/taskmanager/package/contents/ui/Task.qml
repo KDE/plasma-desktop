@@ -122,17 +122,16 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    onContainsMouseChanged: if (containsMouse) {
-        task.forceActiveFocus(Qt.MouseFocusReason);
-        task.updateMainItemBindings();
-        tasks.toolTipAreaItem = task;
-    } else {
-        tasks.toolTipOpenedByClick = null;
-    }
-
-    onHighlightedChanged: {
-        // ensure it doesn't get stuck with a window highlighted
-        backend.cancelHighlightWindows();
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            task.forceActiveFocus(Qt.MouseFocusReason);
+            task.updateMainItemBindings();
+        } else {
+            tasks.toolTipOpenedByClick = null;
+        }
+        console.log("taskmanager:", "contains mouse changed", containsMouse, winIdList);
+        tasks.windowsHovered(winIdList, containsMouse);
+        console.log("taskmanager:", "contains mouse changed", containsMouse, winIdList, "done");
     }
 
     onPidChanged: updateAudioStreams({delay: false})

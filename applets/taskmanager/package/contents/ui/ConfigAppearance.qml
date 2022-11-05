@@ -36,7 +36,7 @@ Kirigami.FormLayout {
 
     CheckBox {
         id: highlightWindows
-        text: i18n("Hide other windows when hovering over previews")
+        text: i18n("Hide other windows when hovering over task buttons")
     }
 
     CheckBox {
