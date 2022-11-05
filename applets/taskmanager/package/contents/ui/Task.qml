@@ -388,8 +388,8 @@ PlasmaCore.ToolTipArea {
         anchors {
             fill: parent
 
-            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
-            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
+            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 4
+            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 4
             leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
             rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
         }
@@ -439,7 +439,9 @@ PlasmaCore.ToolTipArea {
             left: parent.left
             leftMargin: adjustMargin(true, parent.width, taskFrame.margins.left)
             top: parent.top
-            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
+            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top) + 4
+            bottom: parent.bottom
+            bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.bottom) + 4
         }
 
         width: height
