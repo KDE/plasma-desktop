@@ -12,8 +12,6 @@ import org.kde.kcm 1.6 as KCM
 import org.kde.kwindowsystem 1.0
 
 KCM.SimpleKCM {
-    id: root
-
     implicitWidth: Kirigami.Units.gridUnit * 40
 
     KWindowSystem {
@@ -21,11 +19,9 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
-        id: formLayout
 
         // Visual behavior settings
         QQC2.CheckBox {
-            id: showToolTips
             Kirigami.FormData.label: i18n("Visual behavior:")
             text: i18n("Display informational tooltips on mouse hover")
             checked: kcm.plasmaSettings.delay > 0
@@ -38,7 +34,6 @@ KCM.SimpleKCM {
         }
 
         QQC2.CheckBox {
-            id: showVisualFeedback
             text: i18n("Display visual feedback for status changes")
             checked: kcm.plasmaSettings.osdEnabled
             onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
@@ -124,7 +119,6 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            id: doubleClick
             text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
@@ -176,7 +170,6 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            id: scrollBarLeftClickWarpsScrollHandle
             text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
             checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
             onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
