@@ -63,8 +63,7 @@ ColumnLayout {
         spacing: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
 
         // This number controls the overall size of the window tooltips
-        Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
-        Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
+        width: winTitle.text.length * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
         Layout.margins: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
@@ -82,7 +81,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 text: appName
                 opacity: flatIndex == 0
-                visible: text.length !== 0
+                visible: false
                 textFormat: Text.PlainText
             }
             // window title
@@ -90,10 +89,10 @@ ColumnLayout {
                 id: winTitle
                 maximumLineCount: 1
                 Layout.fillWidth: true
-                elide: Text.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                elide: Text.ElideMiddle
                 text: titleIncludesTrack ? "" : title
-                opacity: 0.75
-                visible: title.length !== 0 && title !== appNameHeading.text
+                visible: title.length !== 0
                 textFormat: Text.PlainText
             }
             // subtext
@@ -101,10 +100,10 @@ ColumnLayout {
                 id: subtext
                 maximumLineCount: 1
                 Layout.fillWidth: true
-                elide: Text.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                elide: Text.ElideMiddle
                 text: isWin ? generateSubText() : ""
-                opacity: 0.6
-                visible: text.length !== 0 && text !== appNameHeading.text
+                visible: text.length !== 0
                 textFormat: Text.PlainText
             }
         }
@@ -123,18 +122,18 @@ ColumnLayout {
                 number: smartLauncherCount
             }
         }
+    }
 
-        // close button
-        PlasmaComponents3.ToolButton {
-            id: closeButton
-            Layout.alignment: Qt.AlignRight | Qt.AlignTop
-            visible: isWin
-            icon.name: "window-close"
-            onClicked: {
-                backend.cancelHighlightWindows();
-                tasksModel.requestClose(submodelIndex);
-            }
-        }
+    PlasmaComponents3.ToolButton {
+       id: closeButton
+       Layout.alignment: Qt.AlignRight | Qt.AlignTop
+       visible: false
+       icon.name: "window-close"
+
+       onClicked: {
+           backend.cancelHighlightWindows();
+           tasksModel.requestClose(modelIndex());
+         }
     }
 
     // thumbnail container
