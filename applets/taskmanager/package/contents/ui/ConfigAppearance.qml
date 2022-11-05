@@ -31,7 +31,7 @@ Kirigami.FormLayout {
     CheckBox {
         id: showToolTips
         Kirigami.FormData.label: i18n("General:")
-        text: i18n("Show window previews when hovering over Tasks")
+        text: i18n("Show small window previews when hovering over Tasks")
     }
 
     RowLayout {
