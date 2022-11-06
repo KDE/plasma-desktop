@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-10-15 09:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -72,13 +72,15 @@ msgid "General:"
 msgstr "Splošno:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Prikaži orodne namige"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Osvetljuj okna, kadar je miška nad namigi opravil"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Osvetljuj okna, kadar je miška nad namigi opravil"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -168,18 +170,24 @@ msgid "Cycles through tasks"
 msgstr "Kroži skozi opravila"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Prikaže namig s predogledno sličico okna"
+msgid "Shows small window previews"
+msgstr "Prikaže okna enega zraven drugega"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Prikaže okna enega zraven drugega"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -721,6 +729,15 @@ msgstr "Pozabi nedavne lokacije"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Pozabi nedavne datoteke"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Prikaži orodne namige"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Prikaže namig s predogledno sličico okna"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Progress for the current Task is %1 percent."

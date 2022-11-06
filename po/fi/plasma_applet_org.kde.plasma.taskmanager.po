@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-21 18:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -71,13 +71,15 @@ msgid "General:"
 msgstr "Yleistä:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Näytä työkaluvihjeet"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Korosta ikkunat tehtävien työkaluvihjeiden yllä leijuttaessa"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Korosta ikkunat tehtävien työkaluvihjeiden yllä leijuttaessa"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -167,18 +169,24 @@ msgid "Cycles through tasks"
 msgstr "vaihtaa tehtävää"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "näyttää työkaluvihjeenä ikkunoiden pienoiskuvat"
+msgid "Shows small window previews"
+msgstr "näyttää ikkunat rinnakkain"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "näyttää ikkunat rinnakkain"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -719,6 +727,15 @@ msgstr "Unohda viimeisimmät sijainnit"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unohda viimeisimmät tiedostot"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Näytä työkaluvihjeet"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "näyttää työkaluvihjeenä ikkunoiden pienoiskuvat"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

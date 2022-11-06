@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2008-12-26 01:50+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -73,14 +73,13 @@ msgid "General:"
 msgstr "Giştî"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Show tooltips:"
-msgid "Show tooltips"
-msgstr "Qutî ya amûran nîşan bide:"
+#, kde-format
+msgid "Show small window previews when hovering over Tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -178,14 +177,14 @@ msgstr ""
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
+msgid "Shows small window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -736,6 +735,11 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Show tooltips:"
+#~ msgid "Show tooltips"
+#~ msgstr "Qutî ya amûran nîşan bide:"
 
 #, fuzzy
 #~| msgid "Grouping:"

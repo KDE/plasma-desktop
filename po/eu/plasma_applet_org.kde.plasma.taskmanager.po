@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-08-10 13:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -74,13 +74,15 @@ msgid "General:"
 msgstr "Orokorra:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Erakutsi argibideak"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Nabarmendu leihoa atazen argibideen gainetik igarotzean"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Nabarmendu leihoa atazen argibideen gainetik igarotzean"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -170,18 +172,24 @@ msgid "Cycles through tasks"
 msgstr "Atazen arteko ibilaldia egiten du"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Tresna-argibide leihoen koadro-txikiak erakusten ditu"
+msgid "Shows small window previews"
+msgstr "Leihoak aurrez-aurre erakusten ditu"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Leihoak aurrez-aurre erakusten ditu"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -718,6 +726,15 @@ msgstr "Ahaztu azken aldiko lekuak"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Ahaztu azken aldiko fitxategiak"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Erakutsi argibideak"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Tresna-argibide leihoen koadro-txikiak erakusten ditu"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

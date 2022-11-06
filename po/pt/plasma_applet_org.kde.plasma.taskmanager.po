@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-16 10:46+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -71,13 +71,15 @@ msgid "General:"
 msgstr "Geral:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Mostrar as dicas"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Realçar as janelas ao passar o cursor sobre as dicas das tarefas"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Realçar as janelas ao passar o cursor sobre as dicas das tarefas"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -167,18 +169,24 @@ msgid "Cycles through tasks"
 msgstr "Circula pelas tarefas"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Mostra miniaturas das janelas na dica"
+msgid "Shows small window previews"
+msgstr "Mostra as janelas lado a lado"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Mostra as janelas lado a lado"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -716,6 +724,15 @@ msgstr "Esquecer os Locais Recentes"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Esquecer os Ficheiros Recentes"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Mostrar as dicas"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Mostra miniaturas das janelas na dica"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Progress for the current Task is %1 percent."

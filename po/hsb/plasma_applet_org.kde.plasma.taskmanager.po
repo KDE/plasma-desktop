@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2021-11-04 09:14+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -69,13 +69,15 @@ msgid "General:"
 msgstr "Powšitkownje:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Tooltips pokazać"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Wokno wuzběhnyć, hdyž je myška nad tooltipsami"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Wokno wuzběhnyć, hdyž je myška nad tooltipsami"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -171,14 +173,14 @@ msgstr "Cyklisce po nadawkach chodźi"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Pokazuje tooltipowe woknješko jako mini-wobrazk"
+msgid "Shows small window previews"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -729,6 +731,15 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#~ msgid "Show tooltips"
+#~ msgstr "Tooltips pokazać"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Pokazuje tooltipowe woknješko jako mini-wobrazk"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

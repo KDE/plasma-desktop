@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2014-10-21 17:48+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -74,12 +74,12 @@ msgstr "Opšte"
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
-msgid "Show tooltips"
-msgstr "Prikaži savjete"
+msgid "Show small window previews when hovering over Tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -177,14 +177,14 @@ msgstr ""
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
+msgid "Shows small window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -740,6 +740,9 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#~ msgid "Show tooltips"
+#~ msgstr "Prikaži savjete"
 
 #, fuzzy
 #~| msgid "Grouping:"

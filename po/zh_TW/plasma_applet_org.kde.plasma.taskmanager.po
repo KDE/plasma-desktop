@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2020-02-20 19:09+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -78,14 +78,15 @@ msgid "General:"
 msgstr "一般："
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "顯示工具提示"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over tasks"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "當游標停留在工作上時突顯視窗"
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, fuzzy, kde-format
 #| msgid "Highlight windows when hovering over tasks"
-msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "當游標停留在工作上時突顯視窗"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -182,14 +183,14 @@ msgstr "循環切換工作"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
+msgid "Shows small window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -738,6 +739,9 @@ msgstr "忘掉最近的文件"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "忘掉最近的文件"
+
+#~ msgid "Show tooltips"
+#~ msgstr "顯示工具提示"
 
 #~ msgid "Icon size:"
 #~ msgstr "圖示大小："

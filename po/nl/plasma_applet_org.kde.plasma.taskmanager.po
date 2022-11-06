@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-16 13:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -69,13 +69,15 @@ msgid "General:"
 msgstr "Algemeen:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Tekstballonnen tonen"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Vensters accentueren bij zweven boven tekstballonnen van taken"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Vensters accentueren bij zweven boven tekstballonnen van taken"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -165,18 +167,24 @@ msgid "Cycles through tasks"
 msgstr "Loopt door taken"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Tekstballonvensterminiaturen wordt getoond"
+msgid "Shows small window previews"
+msgstr "Vensters naast elkaar tonen"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Vensters naast elkaar tonen"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -715,6 +723,15 @@ msgstr "Recente plaatsen vergeten"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Recente bestanden vergeten"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Tekstballonnen tonen"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Tekstballonvensterminiaturen wordt getoond"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Progress for the current Task is %1 percent."

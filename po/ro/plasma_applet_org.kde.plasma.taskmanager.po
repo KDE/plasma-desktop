@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-06-01 18:36+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -82,13 +82,15 @@ msgid "General:"
 msgstr "Generale:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Arată indicii"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -178,18 +180,24 @@ msgid "Cycles through tasks"
 msgstr "Ciclează printre sarcini"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Arată miniatura ferestrei"
+msgid "Shows small window previews"
+msgstr "Arată ferestrele una lângă alta"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Arată ferestrele una lângă alta"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -732,6 +740,15 @@ msgstr "Uită locurile recente"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Arată indicii"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Arată miniatura ferestrei"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

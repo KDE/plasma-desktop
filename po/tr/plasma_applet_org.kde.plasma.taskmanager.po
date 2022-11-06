@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-16 13:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -73,13 +73,15 @@ msgid "General:"
 msgstr "Genel:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Araç ipuçlarını göster"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Görev araç ipuçlarının üzerine gelindiğinde pencereleri vurgula"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Görev araç ipuçlarının üzerine gelindiğinde pencereleri vurgula"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -169,18 +171,24 @@ msgid "Cycles through tasks"
 msgstr "Görevler arasında geçiş yapar"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Araç ipucu penceresi küçük resimlerini gösterir"
+msgid "Shows small window previews"
+msgstr "Pencereleri yan yana gösterir"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Pencereleri yan yana gösterir"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -718,3 +726,12 @@ msgstr "Son Yerleri Unut"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Son Dosyaları Unut"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Araç ipuçlarını göster"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Araç ipucu penceresi küçük resimlerini gösterir"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-02-07 11:00+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -79,13 +79,15 @@ msgid "General:"
 msgstr "Általános:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Tippek megjelenítése"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Ablakok kiemelése a feladat buboréksúgójára mutatáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Ablakok kiemelése a feladat buboréksúgójára mutatáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -181,14 +183,14 @@ msgstr "Váltás az alkalmazások között"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Előnézeti képek megjelenítése"
+msgid "Shows small window previews"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -745,6 +747,15 @@ msgstr "Legutóbbi fájlok elfelejtése"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Legutóbbi fájlok elfelejtése"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Tippek megjelenítése"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Előnézeti képek megjelenítése"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

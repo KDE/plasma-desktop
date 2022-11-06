@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-06-21 06:35+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,75 +20,75 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: package/contents/ui/main.qml:29
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Vizualno obnašanje:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:30 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:26 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Prikaži informativne orodne namige ob prehodu miške"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:42 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Prikaži vidni odziv na spremembe stanja"
 
-#: package/contents/ui/main.qml:60
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Animation speed:"
 msgstr "Hitrost animacije:"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:78
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Počasi"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Trenutno"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Klikanje na datoteke ali mape:"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Jih odpira"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Izbira s klikom na marker označevanje predmeta"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Jih izbira"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Odpira jih z dvojnim klikom"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klik v drsnik:"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -96,12 +96,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Drsi en zaslon gor ali dol"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Srednji klik za zdrs na s klikom označeno mesto"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -109,34 +109,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Drsne na s klikom označeno mesto"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Middle Click:"
 msgstr "Srednji klik:"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Paste selected text"
 msgstr "Prilepi izbrano besedilo"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:211
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Dotikalni način:"
 
-#: package/contents/ui/main.qml:220
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Samodejno omogoči kadar je potrebno"
 
-#: package/contents/ui/main.qml:220 package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:213 package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikoli omogočeno"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -147,13 +147,13 @@ msgstr ""
 "in niti miške niti ploščice. Na primer kadar se prilagodljiva tipkovnica "
 "preklopi na drugo stran notesnika ali se jo odklopi."
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vedno omogočeno"
 
-#: package/contents/ui/main.qml:262
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

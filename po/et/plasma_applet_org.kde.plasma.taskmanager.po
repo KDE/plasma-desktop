@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2020-10-08 12:14+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -74,14 +74,15 @@ msgid "General:"
 msgstr "Üldine:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Kohtspikrite näitamine"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over tasks"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohale"
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, fuzzy, kde-format
 #| msgid "Highlight windows when hovering over tasks"
-msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohale"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -177,14 +178,14 @@ msgstr "Kerib läbi tegumite"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Näitab kohtspikris akende pisipilte"
+msgid "Shows small window previews"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -748,6 +749,15 @@ msgstr "Unusta viimati kasutatud failid"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Kohtspikrite näitamine"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Näitab kohtspikris akende pisipilte"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

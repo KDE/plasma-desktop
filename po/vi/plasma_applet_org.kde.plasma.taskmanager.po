@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-08-02 11:28+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -70,13 +70,15 @@ msgid "General:"
 msgstr "Chung:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "Hiện chú giải"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "Tô sáng các cửa sổ khi đảo chuột trên chú giải của tác vụ"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "Tô sáng các cửa sổ khi đảo chuột trên chú giải của tác vụ"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -166,18 +168,24 @@ msgid "Cycles through tasks"
 msgstr "Xoay vòng qua các tác vụ"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "Hiện hình nhỏ của cửa sổ ở dạng chú giải"
+msgid "Shows small window previews"
+msgstr "Hiện các cửa sổ ở cạnh nhau"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "Hiện các cửa sổ ở cạnh nhau"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -712,6 +720,15 @@ msgstr "Quên các địa điểm gần đây đi"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Quên các tệp gần đây đi"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Hiện chú giải"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "Hiện hình nhỏ của cửa sổ ở dạng chú giải"
 
 #~ msgctxt ""
 #~ "Completes the sentence 'Clicking grouped task shows 'Present Windows' "

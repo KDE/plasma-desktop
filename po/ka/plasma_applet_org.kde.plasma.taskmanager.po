@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-09-12 09:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -70,13 +70,15 @@ msgid "General:"
 msgstr "საერთო:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "მინიშნებების ჩვენება"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr "ამოცანის მინიატურაზე თაგუნას გადატარებისას ფანჯრის გამოკვეთა"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr "ამოცანის მინიატურაზე თაგუნას გადატარებისას ფანჯრის გამოკვეთა"
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -168,18 +170,24 @@ msgid "Cycles through tasks"
 msgstr "გადართავს ამოცანებს შორის"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "ფანჯრის მინიატურების ჩვენება"
+msgid "Shows small window previews"
+msgstr "ფანჯრების გვერდიგვერდ ჩვენება"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "ფანჯრების გვერდიგვერდ ჩვენება"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -716,3 +724,12 @@ msgstr "ბოლოს ნანახი ადგილების დავ
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "ბოლო ფაილების დავიწყება"
+
+#~ msgid "Show tooltips"
+#~ msgstr "მინიშნებების ჩვენება"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "ფანჯრის მინიატურების ჩვენება"

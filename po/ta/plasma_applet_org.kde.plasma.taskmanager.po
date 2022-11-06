@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-19 21:49+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -69,13 +69,16 @@ msgid "General:"
 msgstr "பொது:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, kde-format
-msgid "Show tooltips"
-msgstr "கருவித் துப்புகளை காட்டு"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr ""
+"செயலிகளுக்கான கருவித்துப்புகளின் மீது சுட்டியை வைக்கும்போது சாளரங்களை முன்னிலைப்படுத்து"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+#, fuzzy, kde-format
+#| msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr ""
 "செயலிகளுக்கான கருவித்துப்புகளின் மீது சுட்டியை வைக்கும்போது சாளரங்களை முன்னிலைப்படுத்து"
 
@@ -166,18 +169,24 @@ msgid "Cycles through tasks"
 msgstr "பணிகளுக்கிடையே தாவும்"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
-msgstr "கருவித் துப்பில் சாளர சிறுபடங்களை காட்டும்"
+msgid "Shows small window previews"
+msgstr "சாளரங்களை பக்கத்துப்பக்கத்தில் காட்டும்"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows windows side by side"
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr "சாளரங்களை பக்கத்துப்பக்கத்தில் காட்டும்"
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -715,6 +724,15 @@ msgstr "சமீப இடங்களை மறந்துவிடு"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "சமீப கோப்புகளை மறந்துவிடு"
+
+#~ msgid "Show tooltips"
+#~ msgstr "கருவித் துப்புகளை காட்டு"
+
+#~ msgctxt ""
+#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
+#~ "thumbnails' "
+#~ msgid "Shows tooltip window thumbnails"
+#~ msgstr "கருவித் துப்பில் சாளர சிறுபடங்களை காட்டும்"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Progress for the current Task is %1 percent."
