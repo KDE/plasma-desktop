@@ -227,10 +227,10 @@ SimpleKCM {
             }
         }
         QQC2.Label {
-            text: i18ndc("kcm_tablet", "tablet area position - size", "%1,%2 - %3×%4", Math.floor(outputAreaView.outputAreaSetting.x * outputItem.outputSize.width)
-                                                                                    , Math.floor(outputAreaView.outputAreaSetting.y * outputItem.outputSize.height)
-                                                                                    , Math.floor(outputAreaView.outputAreaSetting.width * outputItem.outputSize.width)
-                                                                                    , Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height))
+            text: i18ndc("kcm_tablet", "tablet area position - size", "%1,%2 - %3×%4", String(Math.floor(outputAreaView.outputAreaSetting.x * outputItem.outputSize.width))
+                                                                                    , String(Math.floor(outputAreaView.outputAreaSetting.y * outputItem.outputSize.height))
+                                                                                    , String(Math.floor(outputAreaView.outputAreaSetting.width * outputItem.outputSize.width))
+                                                                                    , String(Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height)))
         }
 
         Kirigami.Separator {

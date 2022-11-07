@@ -74,8 +74,13 @@ public:
 
         for (auto screen : screens) {
             auto geo = screen->geometry();
-            auto it =
-                new QStandardItem(i18nc("model - (x,y widthxheight)", "%1 - (%2,%3 %4×%5)", screen->model(), geo.x(), geo.y(), geo.width(), geo.height()));
+            auto it = new QStandardItem(i18nc("model - (x,y widthxheight)",
+                                              "%1 - (%2,%3 %4×%5)",
+                                              screen->model(),
+                                              QString::number(geo.x()),
+                                              QString::number(geo.y()),
+                                              QString::number(geo.width()),
+                                              QString::number(geo.height())));
             it->setData(screen->name(), Qt::UserRole);
             it->setData(screen->physicalSize(), Qt::UserRole + 1);
             it->setData(screen->size(), Qt::UserRole + 2);
