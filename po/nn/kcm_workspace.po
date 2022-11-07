@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-07-02 13:29+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,75 +19,75 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/ui/main.qml:29
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Visuell åtferd:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:30 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:26 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Vis hjelpebobler når peikaren er over"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:42 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Visuell tilbakemelding ved statusendringar"
 
-#: package/contents/ui/main.qml:60
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animasjonsfart:"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:78
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Sakte"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Med ein gong"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Trykk på filer og mapper:"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Opnar dei"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykkja på markerings­ikonet"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Merkjer dei"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Opna berre med dobbeltklikking"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klikking i rullefelt:"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -95,12 +95,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Rullar ei side opp/ned"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Midtklikk for å rulla til vald plass"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -108,35 +108,35 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Rullar til vald plass"
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Middle Click:"
 msgstr "Midtklikk:"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Paste selected text"
 msgstr "Lim inn merkt tekst"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:211
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Trykkskjerm-modus:"
 
-#: package/contents/ui/main.qml:220
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ta automatisk i bruk ved behov"
 
 # Vert lettare å lesa/forstå om denne og teksten nedanfor begge brukar ordet «alltid».
-#: package/contents/ui/main.qml:220 package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:213 package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Alltid av"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -147,13 +147,13 @@ msgstr ""
 "trykkskjerm, men inga mus eller styreplate. Eit eksempel er når eit "
 "fleksibelt tastatur på ei berbar maskin vert snudd eller kopla frå."
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltid på"
 
-#: package/contents/ui/main.qml:262
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

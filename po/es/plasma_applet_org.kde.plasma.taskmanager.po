@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2022-07-16 12:03+0200\n"
+"PO-Revision-Date: 2022-11-06 14:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -71,20 +71,16 @@ msgid "General:"
 msgstr "General:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr ""
-"Realzar las ventanas al situar el ratón sobre las ayudas emergentes de las "
+"Mostrar vistas previas pequeñas de las ventanas al situar el ratón sobre las "
 "tareas"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr ""
-"Realzar las ventanas al situar el ratón sobre las ayudas emergentes de las "
-"tareas"
+msgstr "Ocultar otras ventanas al situar el ratón sobre las vistas previas"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -173,25 +169,19 @@ msgid "Cycles through tasks"
 msgstr "Se recorren las tareas"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Muestra las ventanas una al lado de otra"
+msgstr "Mostrar vistas previas pequeñas de las ventanas"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Muestra las ventanas una al lado de otra"
+msgstr "Mostrar vistas previas grandes de las ventanas"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

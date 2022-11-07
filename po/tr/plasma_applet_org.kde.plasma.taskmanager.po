@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2022-07-16 13:17+0300\n"
+"PO-Revision-Date: 2022-11-06 10:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "—"
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr "+9,999"
+msgstr "+9.999"
 
 #: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
@@ -73,16 +73,14 @@ msgid "General:"
 msgstr "Genel:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Görev araç ipuçlarının üzerine gelindiğinde pencereleri vurgula"
+msgstr "Görevler üzerine gelindiğinde küçük pencere önizlemeleri göster"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Görev araç ipuçlarının üzerine gelindiğinde pencereleri vurgula"
+msgstr "Önizlemeler üzerine gelindiğinde diğer pencereleri gizle"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -98,12 +96,12 @@ msgstr "Paneldeki boş alanı doldur"
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Maximum columns:"
-msgstr "En fazla sütun sayısı:"
+msgstr "En çok sütun sayısı:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Maximum rows:"
-msgstr "En fazla satır sayısı:"
+msgstr "En çok satır sayısı:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
@@ -171,25 +169,19 @@ msgid "Cycles through tasks"
 msgstr "Görevler arasında geçiş yapar"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Pencereleri yan yana gösterir"
+msgstr "Küçük pencere önizlemeleri göster"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Pencereleri yan yana gösterir"
+msgstr "Büyük pencere önizlemeleri göster"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

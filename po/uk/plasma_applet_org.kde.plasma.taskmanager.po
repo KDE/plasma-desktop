@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2022-07-16 09:12+0300\n"
+"PO-Revision-Date: 2022-11-06 10:06+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -72,16 +72,14 @@ msgid "General:"
 msgstr "Загальне:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Підсвічування вікон у відповідь на наведення на підказки щодо завдання"
+msgstr "Показувати мініатюри вікон при наведенні на пункт на панелі завдань"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Підсвічування вікон у відповідь на наведення на підказки щодо завдання"
+msgstr "Сховати інші вікна при наведення на мініатюру"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -170,25 +168,19 @@ msgid "Cycles through tasks"
 msgstr "Циклічно переходити між завданнями"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Показує вікна поряд одне з одним"
+msgstr "Показує малі ескізи вікон"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Показує вікна поряд одне з одним"
+msgstr "Показує великі ескізи вікон"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2013-11-04 23:00+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -72,12 +72,12 @@ msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
-msgid "Show tooltips"
-msgstr "Vis verktøytips"
+msgid "Show small window previews when hovering over Tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
-msgid "Highlight windows when hovering over task tooltips"
+msgid "Hide other windows when hovering over previews"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:50
@@ -171,14 +171,14 @@ msgstr ""
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
-msgid "Shows tooltip window thumbnails"
+msgid "Shows small window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
-msgid "Shows windows side by side"
+msgid "Shows large window previews"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
@@ -567,13 +567,13 @@ msgstr "Tillat dette programmet å bli gruppert"
 msgid "&Close"
 msgstr ""
 
-#: package/contents/ui/Task.qml:74
+#: package/contents/ui/Task.qml:71
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:79
+#: package/contents/ui/Task.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -581,25 +581,25 @@ msgid_plural "There are %1 new messages."
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/Task.qml:88
+#: package/contents/ui/Task.qml:85
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:94
+#: package/contents/ui/Task.qml:91
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:99
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:100
 #, kde-format
 msgid "Activate %1"
 msgstr ""
