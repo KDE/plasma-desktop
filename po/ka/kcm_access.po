@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-12 00:47+0000\n"
-"PO-Revision-Date: 2022-09-02 07:53+0200\n"
+"PO-Revision-Date: 2022-11-07 07:11+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -130,13 +130,13 @@ msgstr "ხილული ზარის ხანგრძლივობა"
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr ""
+msgstr "წებოვანი ღილაკების გამოყენება"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr ""
+msgstr "წებოვანი ღილაკების დაბლოკვა"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
@@ -314,7 +314,7 @@ msgstr "ჩართვა"
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "ხმის მითითება:"
 
 #: package/contents/ui/Bell.qml:76
 #, kde-format
@@ -329,7 +329,7 @@ msgstr ""
 #: package/contents/ui/Bell.qml:93
 #, kde-format
 msgid "Visual bell:"
-msgstr ""
+msgstr "ვიზუალური ზარი:"
 
 #: package/contents/ui/Bell.qml:94
 #, kde-format
@@ -341,7 +341,7 @@ msgstr "ჩართვა"
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr ""
+msgstr "ეკრანის ინვერსია"
 
 #: package/contents/ui/Bell.qml:125
 #, kde-format
@@ -364,7 +364,7 @@ msgstr "ხანგრძლივობა:"
 #: package/contents/ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
-msgstr ""
+msgstr "ნელი ღილაკები:"
 
 #: package/contents/ui/KeyboardFilters.qml:19
 #, kde-format
@@ -381,7 +381,7 @@ msgstr "დაყოვნება:"
 #: package/contents/ui/KeyboardFilters.qml:50
 #, kde-format
 msgid "Ring system bell:"
-msgstr ""
+msgstr "სისტემური ზარის დარეკვა:"
 
 #: package/contents/ui/KeyboardFilters.qml:51
 #, kde-format
@@ -434,25 +434,25 @@ msgstr ""
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr ""
+msgstr "ზარი"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr ""
+msgstr "მოდიფიკატორი ღილაკები"
 
 #: package/contents/ui/main.qml:36
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr ""
+msgstr "კლავიატურის ფილტრები"
 
 #: package/contents/ui/main.qml:41
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "თაგუნით ნავიგაცა"
 
 #: package/contents/ui/main.qml:46
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "ეკრანის მკითხველი"
 #: package/contents/ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
-msgstr ""
+msgstr "წებოვანი ღილაკები:"
 
 #: package/contents/ui/ModifierKeys.qml:17
 #, kde-format
@@ -505,7 +505,7 @@ msgstr ""
 #: package/contents/ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
-msgstr ""
+msgstr "შეტყობინებების მორგება…"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
@@ -525,37 +525,37 @@ msgstr ""
 #: package/contents/ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "დადასტურების ფანჯრის ჩვენება"
 
 #: package/contents/ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
-msgstr ""
+msgstr "სისტემური ზარის დარეკვა"
 
 #: package/contents/ui/MouseNavigation.qml:52
 #, kde-format
 msgid "Show a notification"
-msgstr ""
+msgstr "გაფრთხილების ჩვენება"
 
 #: package/contents/ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
-msgstr ""
+msgstr "აჩქარების დაყოვნება:"
 
 #: package/contents/ui/MouseNavigation.qml:79
 #, kde-format
 msgid "Repeat interval:"
-msgstr ""
+msgstr "გამეორების ინტერვალი:"
 
 #: package/contents/ui/MouseNavigation.qml:90
 #, kde-format
 msgid "Acceleration time:"
-msgstr ""
+msgstr "აჩქარების დრო:"
 
 #: package/contents/ui/MouseNavigation.qml:101
 #, kde-format
 msgid "Maximum speed:"
-msgstr ""
+msgstr "მაქსიმალური სიჩქარე:"
 
 #: package/contents/ui/MouseNavigation.qml:112
 #, kde-format

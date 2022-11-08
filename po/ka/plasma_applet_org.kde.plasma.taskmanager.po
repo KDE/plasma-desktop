@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2022-09-12 09:52+0200\n"
+"PO-Revision-Date: 2022-11-07 07:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -70,16 +70,14 @@ msgid "General:"
 msgstr "საერთო:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "ამოცანის მინიატურაზე თაგუნას გადატარებისას ფანჯრის გამოკვეთა"
+msgstr "ამოცანაზე თაგუნას გადატარებისას ფანჯრების მინიატურის ჩვენება"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "ამოცანის მინიატურაზე თაგუნას გადატარებისას ფანჯრის გამოკვეთა"
+msgstr "სხვა ფანჯრების დამალვა მინიატურებზე თაგუნას გადატარებისას"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -170,25 +168,19 @@ msgid "Cycles through tasks"
 msgstr "გადართავს ამოცანებს შორის"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "ფანჯრების გვერდიგვერდ ჩვენება"
+msgstr "ფანჯრების პატარა გადახედვების ჩვენება"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "ფანჯრების გვერდიგვერდ ჩვენება"
+msgstr "ფანჯრების დიდი გადახედვების ჩვენება"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
