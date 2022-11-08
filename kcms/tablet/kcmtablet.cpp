@@ -66,6 +66,23 @@ class OutputsModel : public QStandardItemModel
 public:
     OutputsModel()
     {
+        setItemRoleNames({
+            {Qt::DisplayRole, "display"},
+            {Qt::UserRole, "name"},
+            {Qt::UserRole + 1, "physicalSize"},
+            {Qt::UserRole + 2, "size"},
+        });
+
+        reset();
+
+        connect(qGuiApp, &QGuiApplication::screenAdded, this, &OutputsModel::reset);
+        connect(qGuiApp, &QGuiApplication::screenRemoved, this, &OutputsModel::reset);
+    }
+
+    void reset()
+    {
+        clear();
+
         auto screens = qGuiApp->screens();
         auto it = new QStandardItem(i18n("Follow the active screen"));
         it->setData(screens[0]->physicalSize(), Qt::UserRole + 1); // we use the first display to give an idea
