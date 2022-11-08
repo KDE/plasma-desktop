@@ -212,10 +212,11 @@ Item {
         Layout.maximumHeight: sizing.maximumHeight
 
         hoverEnabled: true
-        // For some reason, onClicked can cause the plasmoid to expand after
-        // releasing sometimes in plasmoidviewer.
-        // plasmashell doesn't seem to have this issue.
-        onClicked: plasmoid.expanded = !plasmoid.expanded
+
+        property bool wasExpanded
+
+        onPressed: wasExpanded = Plasmoid.expanded
+        onClicked: Plasmoid.expanded = !wasExpanded
 
         DropArea {
             id: compactDragArea
