@@ -78,7 +78,14 @@ SimpleKCM {
                 id: outputsModel
             }
             enabled: count > 2 //It's only interesting when there's more than 1 screen
-            currentIndex: outputsModel.rowForOutputName(parent.device.outputName)
+            currentIndex: {
+
+                if (count === 0) {
+                    return -1
+                }
+
+                outputsModel.rowForOutputName(parent.device.outputName)
+            }
             textRole: "display"
             onActivated: {
                 parent.device.outputName = outputsModel.outputNameAt(currentIndex)
