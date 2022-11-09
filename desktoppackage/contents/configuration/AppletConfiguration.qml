@@ -136,10 +136,56 @@ Rectangle {
         rightPadding: 0
         topPadding: 0
         bottomPadding: 0
+        activeFocusOnTab: true
         focus: true
         Accessible.role: Accessible.MenuBar
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
+        }
+
+        Keys.onUpPressed: {
+            const buttons = categories.children
+
+            let foundPrevious = false
+            for (let i = buttons.length - 1; i >= 0; --i) {
+                const button = buttons[i];
+                if (!button.hasOwnProperty("highlighted")) {
+                    // not a ConfigCategoryDelegate
+                    continue;
+                }
+
+                if (foundPrevious) {
+                    categories.openCategory(button.item)
+                    categoriesScroll.forceActiveFocus(Qt.TabFocusReason)
+                    return
+                } else if (button.highlighted) {
+                    foundPrevious = true
+                }
+            }
+
+            event.accepted = false
+        }
+
+        Keys.onDownPressed: {
+            const buttons = categories.children
+
+            let foundNext = false
+            for (let i = 0, length = buttons.length; i < length; ++i) {
+                const button = buttons[i];
+                if (!button.hasOwnProperty("highlighted")) {
+                    continue;
+                }
+
+                if (foundNext) {
+                    categories.openCategory(button.item)
+                    categoriesScroll.forceActiveFocus(Qt.TabFocusReason)
+                    return
+                } else if (button.highlighted) {
+                    foundNext = true
+                }
+            }
+
+            event.accepted = false
         }
 
         ColumnLayout {
@@ -148,45 +194,6 @@ Rectangle {
             spacing: 0
             width: categoriesScroll.width
             focus: true
-
-            Keys.onUpPressed: {
-                const buttons = categories.children
-
-                let foundPrevious = false
-                for (let i = buttons.length - 1; i >= 0; --i) {
-                    const button = buttons[i];
-                    if (!button.hasOwnProperty("highlighted")) {
-                        // not a ConfigCategoryDelegate
-                        continue;
-                    }
-
-                    if (foundPrevious) {
-                        categories.openCategory(button.item)
-                        return
-                    } else if (button.highlighted) {
-                        foundPrevious = true
-                    }
-                }
-            }
-
-            Keys.onDownPressed: {
-                const buttons = categories.children
-
-                let foundNext = false
-                for (let i = 0, length = buttons.length; i < length; ++i) {
-                    const button = buttons[i];
-                    if (!button.hasOwnProperty("highlighted")) {
-                        continue;
-                    }
-
-                    if (foundNext) {
-                        categories.openCategory(button.item)
-                        return
-                    } else if (button.highlighted) {
-                        foundNext = true
-                    }
-                }
-            }
 
             function openCategory(item) {
                 if (applyButton.enabled) {
