@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2022-09-07 12:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -50,17 +50,17 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2, %3 %4 × %5)"
 
-#: kcmtablet.cpp:116
+#: kcmtablet.cpp:121
 #, kde-format
 msgid "Fit to Output"
 msgstr "Faire correspondre à la sortie"
 
-#: kcmtablet.cpp:117
+#: kcmtablet.cpp:122
 #, kde-format
 msgid "Fit Output in tablet"
 msgstr "Faire correspondre à la sortie pour une tablette"
 
-#: kcmtablet.cpp:118
+#: kcmtablet.cpp:123
 #, kde-format
 msgid "Custom size"
 msgstr "Taille personnalisée"
@@ -76,44 +76,44 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Périphérique :"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Target display:"
 msgstr "Affichage cible :"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientation :"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode gaucher :"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Area:"
 msgstr "Zone :"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensionner la zone de tablette"
 
-#: package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Verrouiller le ration d'affichage"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1, %2 - %3 × %4"
 
-#: package/contents/ui/main.qml:223
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"

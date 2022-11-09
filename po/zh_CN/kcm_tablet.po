@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2022-11-06 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -53,17 +53,17 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:116
+#: kcmtablet.cpp:121
 #, kde-format
 msgid "Fit to Output"
 msgstr "适合输出"
 
-#: kcmtablet.cpp:117
+#: kcmtablet.cpp:122
 #, kde-format
 msgid "Fit Output in tablet"
 msgstr "适合数位板输出"
 
-#: kcmtablet.cpp:118
+#: kcmtablet.cpp:123
 #, kde-format
 msgid "Custom size"
 msgstr "自定义大小"
@@ -79,44 +79,44 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "设备："
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Target display:"
 msgstr "目标显示器："
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Area:"
 msgstr "有效区域："
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "调整数位板有效区域大小"
 
-#: package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "锁定宽高比"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:223
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"

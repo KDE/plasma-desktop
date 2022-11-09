@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2022-09-06 13:05+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -55,17 +55,17 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:116
+#: kcmtablet.cpp:121
 #, kde-format
 msgid "Fit to Output"
 msgstr "Ajusta a l'eixida"
 
-#: kcmtablet.cpp:117
+#: kcmtablet.cpp:122
 #, kde-format
 msgid "Fit Output in tablet"
 msgstr "Ajusta a l'eixida en una tauleta"
 
-#: kcmtablet.cpp:118
+#: kcmtablet.cpp:123
 #, kde-format
 msgid "Custom size"
 msgstr "Mida personalitzada"
@@ -81,44 +81,44 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositiu:"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Target display:"
 msgstr "Pantalla de destinació:"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientació:"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode esquerrà:"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Area:"
 msgstr "Àrea:"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensiona l'àrea de la tauleta"
 
-#: package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloqueja la relació d'aspecte"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:223
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
