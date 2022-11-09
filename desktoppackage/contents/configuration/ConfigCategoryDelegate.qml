@@ -62,6 +62,7 @@ QQC2.ItemDelegate {
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
             color: Window.active && (delegate.highlighted || delegate.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            font.bold: delegate.highlighted && delegate.parent.activeFocus
         }
     }
 //END UI components
