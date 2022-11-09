@@ -1,0 +1,67 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "hein@kde.org",
+                "Name": "Eike Hein",
+                "Name[ar]": "Eike Hein",
+                "Name[az]": "Eike Hein",
+                "Name[bg]": "Eike Hein",
+                "Name[ca@valencia]": "Eike Hein",
+                "Name[ca]": "Eike Hein",
+                "Name[cs]": "Eike Hein",
+                "Name[da]": "Eike Hein",
+                "Name[de]": "Eike Hein",
+                "Name[en_GB]": "Eike Hein",
+                "Name[es]": "Eike Hein",
+                "Name[eu]": "Eike Hein",
+                "Name[fi]": "Eike Hein",
+                "Name[fr]": "Eike Hein",
+                "Name[hu]": "Eike Hein",
+                "Name[ia]": "Eike Hein",
+                "Name[id]": "Eike Hein",
+                "Name[is]": "Eike Hein",
+                "Name[it]": "Eike Hein",
+                "Name[ja]": "Eike Hein",
+                "Name[ka]": "აიკე ჰაინი",
+                "Name[ko]": "Eike Hein",
+                "Name[lt]": "Eike Hein",
+                "Name[nl]": "Eike Hein",
+                "Name[nn]": "Eike Hein",
+                "Name[pa]": "ਇਕੀ ਹੀਇਨ",
+                "Name[pl]": "Eike Hein",
+                "Name[pt]": "Eike Hein",
+                "Name[pt_BR]": "Eike Hein",
+                "Name[ro]": "Eike Hein",
+                "Name[ru]": "Eike Hein",
+                "Name[sk]": "Eike Hein",
+                "Name[sl]": "Eike Hein",
+                "Name[sv]": "Eike Hein",
+                "Name[ta]": "எய்கே ஹைன்",
+                "Name[tr]": "Eike Hein",
+                "Name[uk]": "Eike Hein",
+                "Name[vi]": "Eike Hein",
+                "Name[x-test]": "xxEike Heinxx",
+                "Name[zh_CN]": "Eike Hein"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Window switcher displaying only text",
+        "EnabledByDefault": true,
+        "Icon": "preferences-system-windows",
+        "Id": "org.kde.plasma.texttasks",
+        "License": "GPL-2.0+",
+        "Name": "Text-only Task Manager",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "3.0",
+        "Website": "https://www.opendesktop.org/p/1688468"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.multitasking"
+    ],
+    "X-Plasma-RootPath": "org.kde.plasma.taskmanager"
+}

@@ -442,7 +442,7 @@ PlasmaCore.ToolTipArea {
             topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
         }
 
-        width: height
+        width: textOnly ? 0 : height
         height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
             - adjustMargin(false, parent.height, taskFrame.margins.bottom))
 
