@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-09-30 11:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -46,28 +46,28 @@ msgstr "Адваротная кніжная"
 msgid "Inverted Landscape"
 msgstr "Адваротная альбомная"
 
-#: kcmtablet.cpp:70
+#: kcmtablet.cpp:87
 #, kde-format
 msgid "Follow the active screen"
 msgstr "Пільнавацца актыўнага экрана"
 
-#: kcmtablet.cpp:78
+#: kcmtablet.cpp:95
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:121
+#: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit to Output"
 msgstr "Падладзіць да вываду"
 
-#: kcmtablet.cpp:122
+#: kcmtablet.cpp:139
 #, kde-format
 msgid "Fit Output in tablet"
 msgstr "Падладзіць да вываду планшэта"
 
-#: kcmtablet.cpp:123
+#: kcmtablet.cpp:140
 #, kde-format
 msgid "Custom size"
 msgstr "Адвольны памер"
@@ -88,39 +88,39 @@ msgstr "Прылада:"
 msgid "Target display:"
 msgstr "Мэтавы дысплэй:"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Orientation:"
 msgstr "Арыентацыя:"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Рэжым для ляўшэй:"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Area:"
 msgstr "Вобласць:"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Змяніць памер вобласці планшэта"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Заблакаваць суадносіны бакоў"
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
