@@ -39,6 +39,10 @@ ColumnLayout {
             implicitWidth: previewFrame.width + PlasmaCore.Units.smallSpacing * 2
             implicitHeight: previewFrame.height + PlasmaCore.Units.smallSpacing * 2
 
+            Accessible.name: i18nc("@action:button", "Change Application Launcher's icon")
+            Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", cfg_icon)
+            Accessible.role: Accessible.ButtonMenu
+
             KQuickAddons.IconDialog {
                 id: iconDialog
                 onIconNameChanged: cfg_icon = iconName || Tools.defaultIconName
@@ -71,6 +75,7 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon.name: "document-open-folder"
+                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
                     onClicked: iconDialog.open()
                 }
                 MenuItem {
