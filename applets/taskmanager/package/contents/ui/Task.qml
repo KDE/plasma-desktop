@@ -31,6 +31,7 @@ MouseArea {
 
     readonly property int pid: model.AppPid !== undefined ? model.AppPid : 0
     readonly property string appName: model.AppName || ""
+    readonly property string appId: model.AppId.replace(/\.desktop/, '')
     readonly property variant winIdList: model.WinIdList
     property int itemIndex: index
     property bool inPopup: false
@@ -277,16 +278,21 @@ MouseArea {
             return;
         }
 
-        var streams = pa.streamsForPid(task.pid);
-        if (streams.length) {
-            pa.registerPidMatch(task.appName);
-        } else {
-            // We only want to fall back to appName matching if we never managed to map
-            // a PID to an audio stream window. Otherwise if you have two instances of
-            // an application, one playing and the other not, it will look up appName
-            // for the non-playing instance and erroneously show an indicator on both.
-            if (!pa.hasPidMatch(task.appName)) {
-                streams = pa.streamsForAppName(task.appName);
+        // Check appid first for app using portal
+        // https://docs.pipewire.org/page_portal.html
+        var streams = pa.streamsForAppId(task.appId);
+        if (!streams.length) {
+            streams = pa.streamsForPid(task.pid);
+            if (streams.length) {
+                pa.registerPidMatch(task.appName);
+            } else {
+                // We only want to fall back to appName matching if we never managed to map
+                // a PID to an audio stream window. Otherwise if you have two instances of
+                // an application, one playing and the other not, it will look up appName
+                // for the non-playing instance and erroneously show an indicator on both.
+                if (!pa.hasPidMatch(task.appName)) {
+                    streams = pa.streamsForAppName(task.appName);
+                }
             }
         }
 

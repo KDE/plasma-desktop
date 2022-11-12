@@ -34,14 +34,22 @@ QtObject {
     }
 
     function findStreams(key, value) {
+        return findStreamsFn(stream => stream[key] === value);
+    }
+
+    function findStreamsFn(fn) {
         var streams = []
         for (var i = 0, length = instantiator.count; i < length; ++i) {
             var stream = instantiator.objectAt(i);
-            if (stream[key] === value) {
+            if (fn(stream)) {
                 streams.push(stream);
             }
         }
-        return streams
+        return streams;
+    }
+
+    function streamsForAppId(appId) {
+        return findStreams("portalAppId", appId);
     }
 
     function streamsForAppName(appName) {
@@ -49,7 +57,9 @@ QtObject {
     }
 
     function streamsForPid(pid) {
-        var streams = findStreams("pid", pid);
+        // skip stream that has portalAppId
+        // app using portal may have a sandbox pid
+        var streams = findStreamsFn(stream => stream.pid === pid && !stream.portalAppId);
 
         if (streams.length === 0) {
             for (var i = 0, length = instantiator.count; i < length; ++i) {
@@ -82,6 +92,7 @@ QtObject {
             // Determined on demand.
             property int parentPid: -1
             readonly property string appName: model.Client ? model.Client.properties["application.name"] : ""
+            readonly property string portalAppId: model.Client ? model.Client.properties["pipewire.access.portal.app_id"] : ""
             readonly property bool muted: model.Muted
             // whether there is nothing actually going on on that stream
             readonly property bool corked: model.Corked
