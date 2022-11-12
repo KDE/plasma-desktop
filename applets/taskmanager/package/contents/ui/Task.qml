@@ -571,7 +571,7 @@ MouseArea {
             fill: parent
             leftMargin: taskFrame.margins.left + iconBox.width + LayoutManager.labelMargin
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIcon !== null ? (audioStreamIcon.width + LayoutManager.labelMargin) : 0)
+            rightMargin: taskFrame.margins.right + (audioStreamIcon !== null && audioStreamIcon.visible ? (audioStreamIcon.width + LayoutManager.labelMargin) : 0)
             bottomMargin: taskFrame.margins.bottom
         }
 
