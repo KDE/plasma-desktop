@@ -29,8 +29,8 @@ AbstractKickoffItemDelegate {
     topPadding: compact ? PlasmaCore.Units.mediumSpacing : PlasmaCore.Units.smallSpacing
     bottomPadding: compact ? PlasmaCore.Units.mediumSpacing : PlasmaCore.Units.smallSpacing
 
-    icon.width: compact || root.isCategory ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
-    icon.height: compact || root.isCategory ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
+    icon.width: compact || root.isCategoryListItem ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
+    icon.height: compact || root.isCategoryListItem ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
 
     labelTruncated: label.truncated
     descriptionTruncated: descriptionLabel.truncated
@@ -68,7 +68,7 @@ AbstractKickoffItemDelegate {
                 Layout.fillWidth: !descriptionLabel.visible
                 Layout.maximumWidth: root.width - root.leftPadding - root.rightPadding - icon.width - row.spacing
                 Layout.preferredHeight: {
-                    if (root.isCategory) {
+                    if (root.isCategoryListItem) {
                         return root.compact ? implicitHeight : Math.round(implicitHeight * 1.5);
                     }
                     if (!root.compact && !descriptionLabel.visible) {
@@ -86,7 +86,9 @@ AbstractKickoffItemDelegate {
             PC3.Label {
                 id: descriptionLabel
                 Layout.fillWidth: true
-                visible: text.length > 0 && text !== root.text
+                // Don't want to show descriptions for apps in the category list, because
+                // there's not enough room for them with the category list item height
+                visible: text.length > 0 && text !== root.text && !root.isCategoryListItem
                 enabled: false
                 text: root.description
                 textFormat: Text.PlainText

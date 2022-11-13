@@ -21,7 +21,7 @@ BasePage {
             url: ""
             description: ""
             width: view.availableWidth
-            isCategory: true
+            isCategoryListItem: true
         }
     }
     contentAreaComponent: KickoffListView {

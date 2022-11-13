@@ -29,12 +29,12 @@ T.ItemDelegate {
     required property string description
 
     readonly property Flickable view: ListView.view ?? GridView.view
-    property bool isCategory: false
+    property bool isCategoryListItem: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
     property bool isSearchResult: false
 
-    readonly property bool dragEnabled: enabled && !isCategory
+    readonly property bool dragEnabled: enabled && !isCategoryListItem
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     property bool labelTruncated: false
