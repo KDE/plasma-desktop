@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-13 00:47+0000\n"
 "PO-Revision-Date: 2022-11-11 09:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
-"%100<=4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.1.1\n"
 
@@ -574,13 +574,13 @@ msgstr "Temu programu dovoli združevanje"
 msgid "&Close"
 msgstr "Zapri"
 
-#: package/contents/ui/Task.qml:71
+#: package/contents/ui/Task.qml:72
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Zaženi %1"
 
-#: package/contents/ui/Task.qml:76
+#: package/contents/ui/Task.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -590,25 +590,25 @@ msgstr[1] "Obstajata %1 novi sporočili."
 msgstr[2] "Obstajajo %1 nova sporočila."
 msgstr[3] "Obstaja %1 novih sporočil."
 
-#: package/contents/ui/Task.qml:85
+#: package/contents/ui/Task.qml:86
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Prikaži orodni namig za %1"
 
-#: package/contents/ui/Task.qml:91
+#: package/contents/ui/Task.qml:92
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Prikaže okna enega zraven drugega za %1"
 
-#: package/contents/ui/Task.qml:96
+#: package/contents/ui/Task.qml:97
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Odpri besedilni seznam oken za %1"
 
-#: package/contents/ui/Task.qml:100
+#: package/contents/ui/Task.qml:101
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktiviraj %1"
