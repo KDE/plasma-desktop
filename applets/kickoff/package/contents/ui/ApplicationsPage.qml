@@ -21,7 +21,7 @@ BasePage {
         section.property: ""
         delegate: KickoffListDelegate {
             width: view.availableWidth
-            isCategory: model.hasChildren
+            isCategoryListItem: true
         }
     }
     contentAreaComponent: VerticalStackView {
