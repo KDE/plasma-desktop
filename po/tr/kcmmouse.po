@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-08-25 12:17+0300\n"
+"PO-Revision-Date: 2022-11-14 13:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -203,28 +203,28 @@ msgstr "İmleç hareket mesafesi, fare hareket hızına bağlıdır."
 #: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
 #, kde-format
 msgid "Scrolling:"
-msgstr "Kaydırma:"
+msgstr "Sarma:"
 
 #: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "Kaydırma yönünü tersine çevir"
+msgstr "Sarma yönünü tersine çevir"
 
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Dokunmatik ekran gibi kaydırma."
+msgstr "Dokunmatik ekran gibi sarma."
 
 #: kcm/libinput/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Kaydırma hızı:"
+msgstr "Sarma hızı:"
 
 #: kcm/libinput/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr "Daha Yavaş"
+msgstr "Daha yavaş"
 
 #: kcm/libinput/main.qml:349
 #, kde-format
@@ -339,14 +339,13 @@ msgid ""
 "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
 "mouse buttons."
 msgstr ""
-"Fare ile kaydırma yaparken veya 4.üncü ve 5.inci düğmeleri kullanırken yönü "
-"değiştir."
+"Fare ile sararken veya 4.üncü ve 5.inci düğmeleri kullanırken yönü değiştir."
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:109
 #, kde-format
 msgid "Re&verse scroll direction"
-msgstr "Ters ka&ydırma yönü"
+msgstr "Sarma yönünü t&ersine çevir"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: kcm/xlib/kcmmouse.ui:156
@@ -388,7 +387,7 @@ msgstr "Sürüklemeye başlangıç uzaklığı:"
 #: kcm/xlib/kcmmouse.ui:214
 #, kde-format
 msgid "Mouse wheel scrolls by:"
-msgstr "Fare tekerleği kaydırması:"
+msgstr "Fare tekerleği sarması:"
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
 #: kcm/xlib/kcmmouse.ui:230
@@ -491,8 +490,8 @@ msgid ""
 "number of visible lines, it will be ignored and the wheel movement will be "
 "handled as a page up/down movement."
 msgstr ""
-"Farenin tekerleğini kullanıyorsanız bu değer her tekerlek hareketinde ne "
-"kadar satır kayacağını belirler."
+"Fare tekerleğini kullanıyorsanız bu değer her tekerlek hareketinde ne kadar "
+"satır sarılacağını belirler."
 
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387

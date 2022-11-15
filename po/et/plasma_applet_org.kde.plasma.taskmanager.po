@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Marek Laane <bald@smail.ee>, 2008, 2010, 2011, 2016, 2019, 2020.
-# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-13 00:47+0000\n"
-"PO-Revision-Date: 2020-10-08 12:14+0200\n"
+"PO-Revision-Date: 2022-10-19 22:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -80,10 +80,9 @@ msgid "Show small window previews when hovering over Tasks"
 msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohale"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over tasks"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohale"
+msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohtspikri kohale"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -94,7 +93,7 @@ msgstr "Heli esitavate rakenduste tähistamine"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Paneeli vaba ruumi täitmine"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -119,11 +118,10 @@ msgstr "Ülesanded paigutatakse alati nii mitme reaga veergudesse"
 #: package/contents/ui/ConfigAppearance.qml:83
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Vahe ikoonide vahel:"
 
 #: package/contents/ui/ConfigAppearance.qml:87
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Väike"
@@ -132,20 +130,19 @@ msgstr "Väike"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Tavaline"
 
 #: package/contents/ui/ConfigAppearance.qml:95
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Suur"
 
 #: package/contents/ui/ConfigAppearance.qml:119
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Puuterežiimis automaatselt suur"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
@@ -304,13 +301,10 @@ msgid "Closes window or group"
 msgstr "Sulgeb akna või rühma"
 
 #: package/contents/ui/ConfigBehavior.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task opens a new instance'"
-#| msgid "Opens a new instance"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr "Avab uue isendi"
+msgstr "Avab uue akna"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
@@ -347,11 +341,9 @@ msgid "Cycles through tasks"
 msgstr "Kerib läbi tegumite"
 
 #: package/contents/ui/ConfigBehavior.qml:170
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgid "Skip minimized tasks"
-msgstr "Minimeerib tegumi"
+msgstr "Minimeeritud tegumid jäetakse vahele"
 
 #: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
@@ -381,29 +373,29 @@ msgstr "Minimeeritud tegumeid"
 #: package/contents/ui/ConfigBehavior.qml:206
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Kui paneel on peidetud:"
 
 #: package/contents/ui/ConfigBehavior.qml:207
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "Tähelepanu nõudva akna korral tuuakse peidust välja"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Uued tegumid ilmuvad:"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Paremale"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Vasakule"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -470,7 +462,7 @@ msgstr "Tumm"
 #: package/contents/ui/ContextMenu.qml:283
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Ava uus aken"
 
 #: package/contents/ui/ContextMenu.qml:299
 #, kde-format
@@ -514,10 +506,9 @@ msgid "All Activities"
 msgstr "Kõik tegevused"
 
 #: package/contents/ui/ContextMenu.qml:471
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "Liiguta &töölauale"
+msgstr "Liiguta tegevusele %1"
 
 #: package/contents/ui/ContextMenu.qml:498
 #: package/contents/ui/ContextMenu.qml:515
@@ -543,7 +534,7 @@ msgstr "Eemalda tegumihaldurilt"
 #: package/contents/ui/ContextMenu.qml:612
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Rohkem"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
@@ -640,11 +631,10 @@ msgid "Unmute %1"
 msgstr ""
 
 #: package/contents/ui/ToolTipInstance.qml:327
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "Tumm"
+msgstr "Vaigista %1"
 
 #: package/contents/ui/ToolTipInstance.qml:350
 #, kde-format
@@ -653,18 +643,16 @@ msgid "Adjust volume for %1"
 msgstr ""
 
 #: package/contents/ui/ToolTipInstance.qml:366
-#, fuzzy, kde-format
-#| msgctxt "@title:group Name of a group of windows"
-#| msgid "%1"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:369
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:393
 #, kde-format
@@ -676,7 +664,7 @@ msgstr "Töölaudadel %1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Kinnistatud kõigile töölaudadele"
 
 #: package/contents/ui/ToolTipInstance.qml:407
 #, kde-format
@@ -705,47 +693,40 @@ msgstr[0] "Veel %1 asukoht"
 msgstr[1] "Veel %1 asukohta"
 
 #: plugin/backend.cpp:422
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "Viimati kasutatud failid"
+msgstr "Viimati allalaaditud failid"
 
 #: plugin/backend.cpp:424
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Connections"
-msgstr "Viimati kasutatud failid"
+msgstr "Viimatised ühendused"
 
 #: plugin/backend.cpp:426
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Viimati kasutatud failid"
+msgstr "Viimati avatud kohad"
 
 #: plugin/backend.cpp:435
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "Unusta viimati kasutatud failid"
+msgstr "Unusta viimati allalaaditud failid"
 
 #: plugin/backend.cpp:437
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "Unusta viimati kasutatud failid"
+msgstr "Unusta viimatised ühendused"
 
 #: plugin/backend.cpp:439
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "Unusta viimati kasutatud failid"
+msgstr "Unusta viimati avatud kohad"
 
 #: plugin/backend.cpp:441
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"

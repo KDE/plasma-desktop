@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2022-10-12 15:09+0300\n"
+"PO-Revision-Date: 2022-11-14 13:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -254,7 +254,7 @@ msgstr "Orta tıklama için iki parmağınızla vurun."
 #: kcm/libinput/touchpad.qml:582
 #, kde-format
 msgid "Scrolling:"
-msgstr "Kaydırma:"
+msgstr "Sarma:"
 
 #: kcm/libinput/touchpad.qml:612
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "İki parmak"
 #: kcm/libinput/touchpad.qml:616
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "İki parmakla kaydırın."
+msgstr "İki parmakla kaydırmak sarar."
 
 #: kcm/libinput/touchpad.qml:624
 #, kde-format
@@ -274,27 +274,27 @@ msgstr "Dokunmatik yüzey kenarları"
 #: kcm/libinput/touchpad.qml:628
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "Dokunmatik yüzeyin kenarları kaydırır."
+msgstr "Dokunmatik yüzey kenarlarında kaydırmak sarar."
 
 #: kcm/libinput/touchpad.qml:638
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Kaydırma yönünü ters çevir (Doğal kaydırma)"
+msgstr "Sarma yönünü ters çevir (Doğal sarma)"
 
 #: kcm/libinput/touchpad.qml:654
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Dokunmatik ekran gibi kaydırma."
+msgstr "Dokunmatik ekran gibi sarma."
 
 #: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "Yatay kaydırmayı devre dışı bırak"
+msgstr "Yatay sarmayı devre dışı bırak"
 
 #: kcm/libinput/touchpad.qml:687
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Kaydırma hızı:"
+msgstr "Sarma hızı:"
 
 #: kcm/libinput/touchpad.qml:736
 #, kde-format
@@ -635,15 +635,15 @@ msgid ""
 "You will be still able to move pointer using touchpad and perform clicks "
 "with hardware buttons."
 msgstr ""
-"Tıklama öykünmesi ve kaydırmayı devre dışı bırak.\n"
-"Hala donanım düğmelerine basarak dokunmatik yüzey kullanarak imleci hareket "
-"ettirip tıklama yapabileceksiniz."
+"Tıklama öykünmesi ve sarmayı devre dışı bırak.\n"
+"Yine de donanım düğmelerine basarak ve dokunmatik yüzey kullanarak imleci "
+"hareket ettirip tıklama yapabileceksiniz."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:109
 #, kde-format
 msgid "Disable taps and scrolling only"
-msgstr "Yalnızca vuruş ve kaydırmayı devre dışı bırak"
+msgstr "Yalnızca vuruş ve sarmayı devre dışı bırak"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
 #: kcm/xlib/ui/kded.ui:119
@@ -832,19 +832,19 @@ msgstr "Hareket olayları oluşturmak için gerekli en az yatay donanım uzaklı
 #: kcm/xlib/ui/scroll.ui:14
 #, kde-format
 msgid "Scrolling"
-msgstr "Kaydırma"
+msgstr "Sarma"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/scroll.ui:28
 #, kde-format
 msgid "Edge scrolling:"
-msgstr "Kenar kaydırma:"
+msgstr "Kenar sarması:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
 #: kcm/xlib/ui/scroll.ui:38
 #, kde-format
 msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Sağ kenarlıkta sürüklemede dikey kaydırmayı etkinleştir"
+msgstr "Sağ kenarlıkta sürüklemede dikey sarmayı etkinleştir"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
@@ -859,7 +859,7 @@ msgstr "Dikey"
 #: kcm/xlib/ui/scroll.ui:48
 #, kde-format
 msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Alt kenarlıkta sürüklemede yatay kaydırmayı etkinleştir"
+msgstr "Alt kenarlıkta sürüklemede yatay sarmayı etkinleştir"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
@@ -877,8 +877,8 @@ msgid ""
 "Enable vertical scrolling when dragging with two fingers anywhere on the "
 "touchpad"
 msgstr ""
-"Dokunmatik yüzeyde herhangi bir yerde iki parmakla sürüklemede dikey "
-"kaydırmayı etkinleştir"
+"Dokunmatik yüzeyde herhangi bir yerde iki parmakla sürüklemede dikey sarmayı "
+"etkinleştir"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
 #: kcm/xlib/ui/scroll.ui:68
@@ -887,39 +887,39 @@ msgid ""
 "Enable horizontal scrolling when dragging with two fingers anywhere on the "
 "touchpad"
 msgstr ""
-"Dokunmatik yüzeyde herhangi bir yerde iki parmakla sürüklemede yatay "
-"kaydırmayı etkinleştir"
+"Dokunmatik yüzeyde herhangi bir yerde iki parmakla sürüklemede yatay sarmayı "
+"etkinleştir"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
 #: kcm/xlib/ui/scroll.ui:78
 #, kde-format
 msgid "Reverse vertical scrolling"
-msgstr "Ters dikey kaydırma"
+msgstr "Ters dikey sarma"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
 #: kcm/xlib/ui/scroll.ui:88
 #, kde-format
 msgid "Reverse horizontal scrolling"
-msgstr "Ters yatay kaydırma"
+msgstr "Ters yatay sarma"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/ui/scroll.ui:98
 #, kde-format
 msgid "Two-finger scrolling:"
-msgstr "İki parmak kaydırma:"
+msgstr "İki parmak sarma:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/scroll.ui:108
 #, kde-format
 msgid "Reverse scrolling:"
-msgstr "Ters kaydırma:"
+msgstr "Ters sarma:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/scroll.ui:126
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Scrolling Distance"
-msgstr "Kaydırma Uzaklığı"
+msgstr "Sarma Uzaklığı"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/scroll.ui:138
@@ -933,7 +933,7 @@ msgstr "Dikey:"
 #: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
 #, kde-format
 msgid "Move distance of the finger for a scroll event"
-msgstr "Bir kaydırma olayı için parmak hareket uzaklığı"
+msgstr "Bir sarma olayı için parmak hareket uzaklığı"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
@@ -955,15 +955,14 @@ msgstr "Yatay:"
 #, kde-format
 msgid ""
 "Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr ""
-"Parmaklar dokunmatik yüzeyin kenarından bırakıldığında kaydırmaya devam et"
+msgstr "Parmaklar dokunmatik yüzeyin kenarından bırakıldığında sarmayı sürdür"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
 #: kcm/xlib/ui/scroll.ui:202
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Coasting"
-msgstr "Otomatik Kaydırma"
+msgstr "Otomatik Sarma"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/scroll.ui:217
@@ -979,14 +978,14 @@ msgid ""
 "Your finger needs to produce this many scrolls per second in order to start "
 "coasting"
 msgstr ""
-"Otomatik kaydırmanın başlayabilmesi için parmaklarınızın saniyede şu kadar "
-"kaydırma yapması gereklidir"
+"Otomatik sarmanın başlatılabilmesi için parmaklarınızın saniyede şu kadar "
+"sarma yapması gereklidir"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:233
 #, kde-format
 msgid " scrolls/sec"
-msgstr " kaydırma/sn"
+msgstr " sarma/sn"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/scroll.ui:240
@@ -999,19 +998,19 @@ msgstr "Yavaşlama:"
 #: kcm/xlib/ui/scroll.ui:250
 #, kde-format
 msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Otomatik kaydırma hızını azaltmak için kaydırma/saniye² sayısı"
+msgstr "Otomatik sarma hızını azaltmak için sarma/saniye² sayısı"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
 #: kcm/xlib/ui/scroll.ui:256
 #, kde-format
 msgid " scrolls/sec²"
-msgstr " kaydırma/sn²"
+msgstr " sarma/sn²"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/ui/scroll.ui:263
 #, kde-format
 msgid "Corner coasting:"
-msgstr "Köşe otomatik kaydırma:"
+msgstr "Köşeden otomatik sarma:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:273
@@ -1019,8 +1018,8 @@ msgstr "Köşe otomatik kaydırma:"
 msgid ""
 "Enable edge scrolling to continue while the finger stays in an edge corner"
 msgstr ""
-"Parmak kenarlık köşesinde kaldığı sürece kenar kaydırmanın devam "
-"ettirilmesini etkinleştir"
+"Parmak kenarlık köşesinde kaldığı sürece kenardan sarmanın sürdürülmesini "
+"etkinleştir"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:276
@@ -1037,18 +1036,17 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
-"Kaydırma, belirtilen tetikleme bölgesinde sürükleme başlatıldığında "
-"uygulanır.\n"
+"Sarma, belirtilen tetikleme bölgesinde sürükleme başlatıldığında uygulanır.\n"
 "Parmağınızı dokunmatik yüzeyin ortalarında saat yönünde dairesel hareket "
 "ettirmek\n"
-"aşağı, saatin aksi yönünde hareket ettirmek ise yukarı kaydırma yapacaktır"
+"aşağı, saatin aksi yönünde hareket ettirmek ise yukarı sarma yapacaktır"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:291
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Circular Scrolling"
-msgstr "Dairesel Kaydırma"
+msgstr "Dairesel Sarma"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/scroll.ui:306
@@ -1062,7 +1060,7 @@ msgstr "Tetikleme bölgesi:"
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
 msgstr ""
-"Dairesel kaydırmaya başlanılması için dokunmatik yüzey üzerindeki tetikleme "
+"Dairesel sarmanın başlatılması için dokunmatik yüzey üzerindeki tetikleme "
 "bölgesi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
@@ -1076,7 +1074,7 @@ msgstr "Açı:"
 #: kcm/xlib/ui/scroll.ui:345
 #, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "Kaydırma olayı oluşturmak için parmağınızı (derece) hareket ettirin"
+msgstr "Sarma olayı oluşturmak için parmağınızı (derece) hareket ettirin"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348
@@ -1092,9 +1090,8 @@ msgid ""
 "When used together with vertical scrolling, hitting the upper or lower right "
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
-"Dikey kaydırma ile birlikte kullanıldığında, üst veya sağ alt köşeye "
-"dokunmak, sorunsuz bir biçimde dikey kaydırmadan dairesel kaydırmaya geçiş "
-"yapacaktır"
+"Dikey sarma ile birlikte kullanıldığında, üst veya sağ alt köşeye dokunmak, "
+"sorunsuz bir biçimde dikey sarmadan dairesel sarmaya geçiş yapacaktır"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
 #: kcm/xlib/ui/sensitivity.ui:14

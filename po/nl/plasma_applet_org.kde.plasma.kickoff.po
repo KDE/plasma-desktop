@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:47+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2022-10-14 10:13+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -52,127 +52,147 @@ msgstr "In Favorieten tonen"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: package/contents/ui/ConfigGeneral.qml:72
+#: package/contents/ui/ConfigGeneral.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Application Launcher's icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Current icon is %1. Click to open menu to change the current icon or reset "
+"to the default icon."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kies…"
 
-#: package/contents/ui/ConfigGeneral.qml:77
+#: package/contents/ui/ConfigGeneral.qml:78
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose an icon for Application Launcher"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Terugzetten naar standaard pictogram"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Pictogram verwijderen"
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Tekstlabel:"
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Hier typen om een tekstlabel toe te voegen"
 
-#: package/contents/ui/ConfigGeneral.qml:124
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 "Er kan geen tekstlabel ingesteld worden wanneer het paneel verticaal is."
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: package/contents/ui/ConfigGeneral.qml:140
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Algemeen:"
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Toepassingen altijd alfabetisch sorteren"
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Compacte stijl voor lijst gebruiken"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatisch uitschakelen wanneer in aanraakmodus"
 
-#: package/contents/ui/ConfigGeneral.qml:156
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Ingeschakelde plug-ins voor zoeken configureren…"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgid "Show favorites:"
 msgstr "Favorieten tonen:"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "In een raster"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "In een lijst"
 
-#: package/contents/ui/ConfigGeneral.qml:183
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show other applications:"
 msgstr "Andere toepassingen tonen:"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "In een raster"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "In een lijst"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Knoppen tonen voor:"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:210
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "Energie"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Session"
 msgstr "Sessie"
 
-#: package/contents/ui/ConfigGeneral.qml:223
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Power and session"
 msgstr "Energieverbruik en sessie"
 
-#: package/contents/ui/ConfigGeneral.qml:232
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Show action button captions"
 msgstr "Opschriften van actieknoppen tonen"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-13 00:47+0000\n"
-"PO-Revision-Date: 2022-08-02 11:28+0200\n"
+"PO-Revision-Date: 2022-11-14 14:44+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -70,16 +70,14 @@ msgid "General:"
 msgstr "Chung:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Tô sáng các cửa sổ khi đảo chuột trên chú giải của tác vụ"
+msgstr "Hiện ô xem thử nhỏ cho cửa sổ khi đảo chuột trên các tác vụ"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Tô sáng các cửa sổ khi đảo chuột trên chú giải của tác vụ"
+msgstr "Ẩn các cửa sổ khác khi đảo chuột trên ô xem thử"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -168,25 +166,19 @@ msgid "Cycles through tasks"
 msgstr "Xoay vòng qua các tác vụ"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Hiện các cửa sổ ở cạnh nhau"
+msgstr "Hiện ô xem thử nhỏ cho cửa sổ"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Hiện các cửa sổ ở cạnh nhau"
+msgstr "Hiện ô xem thử lớn cho cửa sổ"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

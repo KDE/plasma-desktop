@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:47+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2021-10-26 10:26+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -54,128 +54,150 @@ msgstr "Megjelenítés a Kedvenceknél"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: package/contents/ui/ConfigGeneral.qml:72
+#: package/contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Application Launcher"
+msgctxt "@action:button"
+msgid "Change Application Launcher's icon"
+msgstr "Alkalmazásindító"
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Current icon is %1. Click to open menu to change the current icon or reset "
+"to the default icon."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kiválasztás…"
 
-#: package/contents/ui/ConfigGeneral.qml:77
+#: package/contents/ui/ConfigGeneral.qml:78
+#, fuzzy, kde-format
+#| msgid "Application Launcher"
+msgctxt "@info:whatsthis"
+msgid "Choose an icon for Application Launcher"
+msgstr "Alkalmazásindító"
+
+#: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:124
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: package/contents/ui/ConfigGeneral.qml:140
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "General options"
 msgid "General:"
 msgstr "Általános:"
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Mindig rendezze ABC sorrendbe az alkalmazásokat"
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgid "Use compact list item style"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:156
+#: package/contents/ui/ConfigGeneral.qml:161
 #, fuzzy, kde-format
 #| msgid "Configure enabled search plugins"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Bekapcsolt keresőbővítmények beállítása"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgid "Show favorites:"
 msgstr "Kedvencek megjelenítése:"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: package/contents/ui/ConfigGeneral.qml:183
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show other applications:"
 msgstr "Egyéb alkalmazások megjelenítése:"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Gombok megjelenítése ehhez:"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:210
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "Főkapcsoló"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Session"
 msgstr "Munkamenet"
 
-#: package/contents/ui/ConfigGeneral.qml:223
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Power and session"
 msgstr "Főkapcsoló és munkamenet"
 
-#: package/contents/ui/ConfigGeneral.qml:232
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Show action button captions"
 msgstr "Gombfeliratok megjelenítése"
@@ -469,6 +491,3 @@ msgstr "Gyakran használt"
 
 #~ msgid "Kickoff"
 #~ msgstr "Kickoff"
-
-#~ msgid "Application Launcher"
-#~ msgstr "Alkalmazásindító"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:47+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2022-10-14 12:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -53,126 +53,146 @@ msgstr "Sık Kullanılanlarda Göster"
 msgid "Icon:"
 msgstr "Simge:"
 
-#: package/contents/ui/ConfigGeneral.qml:72
+#: package/contents/ui/ConfigGeneral.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Application Launcher's icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Current icon is %1. Click to open menu to change the current icon or reset "
+"to the default icon."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: package/contents/ui/ConfigGeneral.qml:77
+#: package/contents/ui/ConfigGeneral.qml:78
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose an icon for Application Launcher"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Öntanımlı simgeye sıfırla"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Simgeyi kaldır"
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Metin etiketi:"
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Bir metin etiketi eklemek için buraya yazın"
 
-#: package/contents/ui/ConfigGeneral.qml:124
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Panel dikeyken bir metin etiketi ayarlanamaz."
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: package/contents/ui/ConfigGeneral.qml:140
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Genel:"
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Uygulamaları her zaman alfabetik olarak sırala"
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Sıkışık list ögesi biçemini kullan"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Dokunma Kipi'ndeyken kendiliğinden devre dışı"
 
-#: package/contents/ui/ConfigGeneral.qml:156
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Etkin Arama Eklentilerini Yapılandır…"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgid "Show favorites:"
 msgstr "Sık kullanılanları göster:"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "bir ızgara olarak"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "bir liste olarak"
 
-#: package/contents/ui/ConfigGeneral.qml:183
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show other applications:"
 msgstr "Diğer uygulamaları göster:"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "bir ızgara olarak"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "bir liste olarak"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Şunlar için düğmeleri göster:"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:210
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "Güç"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Session"
 msgstr "Oturum"
 
-#: package/contents/ui/ConfigGeneral.qml:223
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Power and session"
 msgstr "Güç ve oturum"
 
-#: package/contents/ui/ConfigGeneral.qml:232
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Show action button captions"
 msgstr "Eylem düğmesi başlıklarını göster"

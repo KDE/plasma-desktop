@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Marek Laane <qiilaq69@gmail.com>, 2016, 2019.
-# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2020-10-25 18:53+0100\n"
+"PO-Revision-Date: 2022-11-14 01:35+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/main.qml:25
 #, kde-format
@@ -110,29 +110,29 @@ msgstr "Kerib klõpsatud asukohta"
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Middle Click:"
-msgstr ""
+msgstr "Keskklõps:"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Paste selected text"
-msgstr ""
+msgstr "Asetab valitud teksti"
 
 #: package/contents/ui/main.qml:211
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Puuterežiim:"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Lülitatakse automaatselt"
 
 #: package/contents/ui/main.qml:213 package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Püsivalt välja lülitatud"
 
 #: package/contents/ui/main.qml:225
 #, kde-format
@@ -141,12 +141,15 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Puuterežiim lülitatakse automaatselt sisse, kui puuteekraaniga süsteemis "
+"tuvastatakse hiire ja puutepadja puudumine, näiteks hübriidarvuti "
+"klaviatuuri ümberpööramisel või eemaldamisel."
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Püsivalt sisse lülitatud"
 
 #: package/contents/ui/main.qml:255
 #, kde-format
@@ -154,6 +157,8 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"Puuterežiimis kuvatakse paljusid kasutajaliidese elemente suurematena, et "
+"neile oleks hõlpsam sõrmega pihta saada."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
