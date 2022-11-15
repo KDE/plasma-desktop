@@ -10,9 +10,6 @@ set(KF5_MIN_VERSION "5.98.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.85")
 set(ACCOUNTSQT_DEP_VERSION "1.13")
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
@@ -241,8 +238,6 @@ configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-works
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
-
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_NO_FOREACH)
 
 add_subdirectory(layout-templates)
 
