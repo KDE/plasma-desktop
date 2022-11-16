@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-14 21:38+0200\n"
+"PO-Revision-Date: 2022-11-16 01:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "Icono:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Cambiar el icono del lanzador aplicaciones"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -67,6 +67,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"El icono actual es %1. Pulse para abrir el menú para cambiar el icono actual "
+"o restaurar el icono predeterminado."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -78,7 +80,7 @@ msgstr "Escoger..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Escoger un icono para el lanzador de aplicaciones"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-14 17:08+0300\n"
+"PO-Revision-Date: 2022-11-15 16:32+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -59,7 +59,7 @@ msgstr "Піктограма:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Змінити піктограму засобу запуску програм"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -68,6 +68,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Поточною піктограмою є %1. Натисніть, щоб відкрити меню для зміни поточної "
+"піктограми або відновлення типової піктограми."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -79,7 +81,7 @@ msgstr "Вибрати…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Виберіть піктограму засобу запуску програм"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format

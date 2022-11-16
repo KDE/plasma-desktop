@@ -1,6 +1,5 @@
 # Translation for plasma_applet_org.kde.plasma.kickoff.po to Euskara/Basque (eu)
-# Copyright (C) 2016, Free Software Foundation.
-# Copyright (C) 2017-2022, This file is copyright:
+# Copyright (C) 2016-2022, This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -11,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-14 07:02+0200\n"
+"PO-Revision-Date: 2022-11-15 05:25+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -60,7 +59,7 @@ msgstr "Ikonoa:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Aldatu aplikazio-abiarazlearen ikonoa"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -69,6 +68,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Uneko ikonoa %1 da. Egin klik uneko ikonoa aldatzeko menua irekitzeko edo "
+"berrezarri lehenetsitako ikonora."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -80,7 +81,7 @@ msgstr "Hautatu..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Hautatu Aplikazio-abiarazlearentzako ikono bat"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
