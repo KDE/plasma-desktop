@@ -153,7 +153,7 @@ Item {
     property bool isAdaptive: panel.opacityMode === 0
     property bool floating: panel.floating
     readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop
-    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
+    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, kwindowsystem.compositingActive]
     onStateTriggersChanged: {
         let opaqueApplets = false
         if ((!floating || screenCovered) && (isOpaque || (screenCovered && isAdaptive))) {
@@ -170,6 +170,10 @@ Item {
             panelOpacity = 1
             opaqueApplets = true
             floatingness = 1
+        }
+        if (!kwindowsystem.compositingActive) {
+            opaqueApplets = false
+            panelOpacity = 0
         }
         // Not using panelOpacity to check as it has a NumberAnimation, and it will thus
         // be still read as the initial value here, before the animation starts.
