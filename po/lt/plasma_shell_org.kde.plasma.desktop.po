@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 00:48+0000\n"
-"PO-Revision-Date: 2022-09-19 12:46+0300\n"
+"PO-Revision-Date: 2022-11-17 01:05+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -97,7 +97,7 @@ msgstr "Siųsti el. laišką, adresu %1"
 #: contents/configuration/AboutPlugin.qml:59
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr ""
+msgstr "Atverti internetinę svetainę %1"
 
 #: contents/configuration/AboutPlugin.qml:108
 msgid "Copyright"
@@ -121,7 +121,7 @@ msgstr "Vertėjai"
 
 #: contents/configuration/AboutPlugin.qml:176
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Pranešti apie klaidą…"
 
 #: contents/configuration/AppletConfiguration.qml:55
 msgid "Keyboard Shortcuts"
@@ -328,7 +328,7 @@ msgstr "Išskleisti skydelį"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
 msgid "Floating Panel"
-msgstr ""
+msgstr "Slankus skydelis"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Shortcut"
@@ -336,30 +336,32 @@ msgstr "Spartusis klavišas"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Tempkite, norėdami keisti didžiausią aukštį."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Tempkite, norėdami keisti didžiausią plotį."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Spustelėkite du kartus, norėdami atstatyti."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Tempkite, norėdami keisti mažiausią aukštį."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Tempkite, norėdami keisti mažiausią plotį."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Tempkite, norėdami keisti poziciją šiame ekrano krašte.\n"
+"Spustelėkite du kartus, norėdami atstatyti."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
@@ -376,7 +378,7 @@ msgstr "Daugiau parinkčių…"
 #: contents/configuration/panelconfiguration/ToolBar.qml:222
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
-msgstr ""
+msgstr "Tempkite, norėdami perkelti"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
@@ -398,12 +400,14 @@ msgstr "Užverti"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr ""
+msgstr "Skydelių ir darbalaukių tvarkymas"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
+"Galite tempti pirmyn atgal skydelius ir darbalaukius, kad perkeltumėte juos "
+"į skirtingus ekranus."
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
 msgid "%1 (primary)"
@@ -415,7 +419,7 @@ msgstr "%1 (išjungtas)"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Swap with Desktop on Screen %1"
-msgstr ""
+msgstr "Sukeisti su darbalaukiu, esančiu ekrane %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
 msgid "Move to Screen %1"

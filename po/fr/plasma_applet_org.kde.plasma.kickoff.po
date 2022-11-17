@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-15 17:50+0200\n"
+"PO-Revision-Date: 2022-11-15 20:04+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -63,7 +63,7 @@ msgstr "Icône :"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Modifier l'icône du lanceur d'applications"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -72,6 +72,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"L'icône courante est %1. Veuillez cliquer sur le menu pour modifier l'icône "
+"courante ou faire une ré-initialisation vers l'icône par défaut."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -83,7 +85,7 @@ msgstr "Sélectionner…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Sélectionnez une icône pour le lanceur d'applications"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format

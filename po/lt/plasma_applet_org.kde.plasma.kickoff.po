@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2021-12-12 13:22+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-17 02:05+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "Piktograma:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Keisti programų paleidyklės piktogramą"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -69,6 +69,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Dabartinė piktograma yra %1. Spustelėkite, norėdami atverti meniu ir "
+"pakeisti dabartinę piktogramą ar atstatyti numatytąją piktogramą."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -80,41 +82,42 @@ msgstr "Pasirinkti…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Pasirinkti programų paleidyklės piktogramą"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Atstatyti į numatytąją piktogramą"
 
 #: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Šalinti piktogramą"
 
 #: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Tekstinė etiketė:"
 
 #: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Rašykite, norėdami pridėti tekstinį užrašą"
 
 #: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
+"Tekstinė etiketė negali būti nustatyta, kai skydelis yra vertikalioje "
+"padėtyje."
 
 #: package/contents/ui/ConfigGeneral.qml:140
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Bendra:"
@@ -127,20 +130,19 @@ msgstr "Visada rikiuoti programas pagal abėcėlę"
 #: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Naudoti glaustą sąrašo elementų stilių"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Lietimo veiksenoje yra automatiškai išjungiama"
 
 #: package/contents/ui/ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Configure enabled search plugins"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Konfigūruoti įjungtus paieškos papildinius"
+msgstr "Konfigūruoti įjungtus paieškos papildinius…"
 
 #: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
@@ -216,7 +218,7 @@ msgstr "Vietos"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nėra atitikmenų"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format

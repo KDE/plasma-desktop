@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-14 00:47+0000\n"
-"PO-Revision-Date: 2021-12-12 13:45+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-17 00:54+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -126,30 +126,28 @@ msgstr "Išdėstymas:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Iš kairės į dešinę"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Iš dešinės į kairę"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Iš viršaus į apačią"
 
 #: package/contents/ui/ConfigIcons.qml:143
-#, fuzzy, kde-format
-#| msgid "Align left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Lygiuoti kairėje"
 
 #: package/contents/ui/ConfigIcons.qml:144
-#, fuzzy, kde-format
-#| msgid "Align right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Lygiuoti dešinėje"
@@ -165,50 +163,43 @@ msgid "Sorting:"
 msgstr "Rikiavimas:"
 
 #: package/contents/ui/ConfigIcons.qml:181
-#, fuzzy, kde-format
-#| msgid "Manual"
+#, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr "Rankinis"
+msgstr "Rankiniu būdu"
 
 #: package/contents/ui/ConfigIcons.qml:182
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Pavadinimas"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Dydis"
 
 #: package/contents/ui/ConfigIcons.qml:184
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tipas"
 
 #: package/contents/ui/ConfigIcons.qml:185
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Data"
 
 #: package/contents/ui/ConfigIcons.qml:196
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Mažėjančiai"
 
 #: package/contents/ui/ConfigIcons.qml:204
-#, fuzzy, kde-format
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Pirma aplankai"
@@ -220,8 +211,7 @@ msgid "View mode:"
 msgstr "Rodinio veiksena:"
 
 #: package/contents/ui/ConfigIcons.qml:220
-#, fuzzy, kde-format
-#| msgid "List"
+#, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Sąrašas"
@@ -230,7 +220,7 @@ msgstr "Sąrašas"
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "Tinklelis"
 
 #: package/contents/ui/ConfigIcons.qml:232
 #, kde-format
@@ -238,15 +228,13 @@ msgid "Icon size:"
 msgstr "Piktogramų dydis:"
 
 #: package/contents/ui/ConfigIcons.qml:247
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Mažas"
 
 #: package/contents/ui/ConfigIcons.qml:256
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Didelis"
@@ -257,22 +245,19 @@ msgid "Label width:"
 msgstr "Etikečių plotis:"
 
 #: package/contents/ui/ConfigIcons.qml:268
-#, fuzzy, kde-format
-#| msgid "Narrow"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Siauras"
 
 #: package/contents/ui/ConfigIcons.qml:269
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Vidutinis"
 
 #: package/contents/ui/ConfigIcons.qml:270
-#, fuzzy, kde-format
-#| msgid "Wide"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Platus"
@@ -285,31 +270,27 @@ msgstr "Teksto eilutės:"
 #: package/contents/ui/ConfigIcons.qml:294
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Užvedant pele virš piktogramų:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, fuzzy, kde-format
-#| msgid "Tooltips"
+#, kde-format
 msgid "Show tooltips"
-msgstr "Paaiškinimai"
+msgstr "Rodyti paaiškinimus"
 
 #: package/contents/ui/ConfigIcons.qml:303
-#, fuzzy, kde-format
-#| msgid "Selection markers"
+#, kde-format
 msgid "Show selection markers"
-msgstr "Žymėjimo žymekliai"
+msgstr "Rodyti žymėjimo žymeklius"
 
 #: package/contents/ui/ConfigIcons.qml:310
-#, fuzzy, kde-format
-#| msgid "Folder preview popups"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "Aplanko peržiūros iškylantieji langai"
+msgstr "Rodyti aplankų peržiūros iškylančiuosius langus"
 
 #: package/contents/ui/ConfigIcons.qml:320
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Rename:"
-msgstr "&Pervadinti"
+msgstr "Pervadinti:"
 
 #: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
@@ -317,16 +298,14 @@ msgid "Rename inline by clicking selected item's text"
 msgstr "Pervadinti tiesiogiai, spustelėjant ant pažymėto elemento teksto"
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgid "Previews:"
-msgstr "Rodyti peržiūras"
+msgstr "Peržiūros:"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Preview thumbnails"
+#, kde-format
 msgid "Show preview thumbnails"
-msgstr "Peržiūros miniatiūros"
+msgstr "Rodyti peržiūros miniatiūras"
 
 #: package/contents/ui/ConfigIcons.qml:345
 #, kde-format
@@ -485,50 +464,43 @@ msgid "Sort By"
 msgstr "Rikiuoti pagal"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
-msgstr "Nerikiuota"
+msgstr "Nerikiuoti"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
 msgstr "Pavadinimas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
 msgstr "Dydis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
 msgstr "Tipas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
 msgstr "Data"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
 msgstr "Mažėjančiai"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
 msgstr "Pirma aplankai"
@@ -539,57 +511,49 @@ msgid "Icon Size"
 msgstr "Piktogramų dydis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
 msgstr "Mažytis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Very Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
 msgstr "Labai mažas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "Mažas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "Small-Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
 msgstr "Mažesnis nei vidutinis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
 msgstr "Vidutinis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "Didelis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "Huge"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
 msgstr "Didžiulis"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Išdėstyti"
@@ -598,19 +562,19 @@ msgstr "Išdėstyti"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Iš kairės į dešinę"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Iš dešinės į kairę"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Iš viršaus į apačią"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -618,15 +582,13 @@ msgid "Align"
 msgstr "Lygiuotė"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
 msgstr "Kairėje"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
 msgstr "Dešinėje"
@@ -637,8 +599,7 @@ msgid "Show Previews"
 msgstr "Rodyti peržiūras"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
-#, fuzzy, kde-format
-#| msgid "Locked"
+#, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Užrakinta"
