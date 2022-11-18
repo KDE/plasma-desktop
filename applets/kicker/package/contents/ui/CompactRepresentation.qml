@@ -114,7 +114,6 @@ Item {
         onClicked: {
             if (kicker.isDash) {
                 root.dashWindow.toggle();
-                justOpenedTimer.start();
             } else {
                 plasmoid.expanded = !wasExpanded;
             }
@@ -127,7 +126,6 @@ Item {
 
         function onActivated() {
             root.dashWindow.toggle();
-            justOpenedTimer.start();
         }
     }
 }

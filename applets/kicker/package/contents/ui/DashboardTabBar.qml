@@ -26,6 +26,8 @@ Row {
     DashboardTabButton {
         id: appsdocs
 
+        visible: false
+
         index: 0
 
         text: i18n("Apps & Docs")
@@ -36,6 +38,8 @@ Row {
 
     DashboardTabButton {
         id: widgets
+
+        visible: false
 
         index: 1
 
