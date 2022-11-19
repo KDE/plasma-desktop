@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-16 00:46+0000\n"
-"PO-Revision-Date: 2021-01-31 22:10+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 23:16+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,20 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restore All Minimized Windows"
-msgstr "Suskleisti visus langus"
+msgstr "Atkurti visus suskleistus langus"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Suskleisti visus langus"
@@ -40,32 +36,31 @@ msgstr "Suskleisti visus langus"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Atkuria anksčiau suskleistus langus"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Rodyti darbalaukį perkeliant langus į šalį"
+msgstr "Rodo darbalaukį, suskleisdamas visus langus"
 
 #: package/contents/ui/PeekController.qml:13
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Nustoti žvelgti į darbalaukį"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Žvilgsnis į darbalaukį"
 
 #: package/contents/ui/PeekController.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Perkelia langus atgal į jų pradinę poziciją"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
@@ -73,6 +68,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgstr ""
+"Laikinai atskleidžia darbalaukį, perkeldamas atvertus langus į ekrano kampus"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Rodyti darbalaukį"

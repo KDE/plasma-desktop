@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-13 00:47+0000\n"
-"PO-Revision-Date: 2021-12-12 13:20+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-19 00:22+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -38,28 +38,25 @@ msgstr "Elgsena"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Įjungti garsą"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Nutildyti"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "Nutildyti"
+msgstr "Įjungti %1 garsą"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr "Nutildyti"
+msgstr "Nutildyti %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
@@ -79,16 +76,14 @@ msgid "General:"
 msgstr "Bendra:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Užvedant pelę virš užduočių paaiškinimų, paryškinti langus"
+msgstr "Užvedant pelę virš užduočių, rodyti mažas langų peržiūras"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Užvedant pelę virš užduočių paaiškinimų, paryškinti langus"
+msgstr "Užvedant pelę virš peržiūrų, slėpti kitus langus"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -99,7 +94,7 @@ msgstr "Pažymėti programas, kuriose atkuriamas garsas"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Užpildyti laisvą vietą skydelyje"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -124,33 +119,31 @@ msgstr "Visada rikiuoti užduotis į tiek stulpelių kiek yra eilučių"
 #: package/contents/ui/ConfigAppearance.qml:83
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Tarpai tarp piktogramų:"
 
 #: package/contents/ui/ConfigAppearance.qml:87
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr "Mažas"
+msgstr "Maži"
 
 #: package/contents/ui/ConfigAppearance.qml:91
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Įprasti"
 
 #: package/contents/ui/ConfigAppearance.qml:95
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr "Didelis"
+msgstr "Dideli"
 
 #: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
@@ -184,14 +177,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Rodo mažas langų peržiūras"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Rodyti dideles langų peržiūras"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -200,39 +193,30 @@ msgid "Shows textual list"
 msgstr "Rodo tekstinį sąrašą"
 
 #: package/contents/ui/ConfigBehavior.qml:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tooltips are disabled, so the 'Present Windows' effect will be displayed "
-#| "instead."
+#, kde-format
 msgid ""
 "Tooltips are disabled, so the windows will be displayed side by side instead."
 msgstr ""
-"Paaiškinimai yra išjungti, todėl, vietoj jų, bus rodomas „Langų pateikimo“ "
-"efektas."
+"Paaiškinimai yra išjungti, todėl, vietoj jų, bus vienas šalia kito rodomi "
+"langai."
 
 #: package/contents/ui/ConfigBehavior.qml:80
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tooltips are disabled, and the 'Present Windows' effect is not enabled or "
-#| "otherwise available right now, so a textual list will be displayed instead"
+#, kde-format
 msgid ""
 "Tooltips are disabled, and the compositor does not support displaying "
 "windows side by side, so a textual list will be displayed instead"
 msgstr ""
-"Paaiškinimai yra išjungti, o „Langų pateikimo“ efektas nėra įjungtas ar kitu "
-"būdu prieinamas, todėl, vietoj to, bus rodomas tekstinis sąrašas"
+"Paaiškinimai yra išjungti, o kompozitorius nepalaiko langų atvaizdavimo "
+"vienas šalia kito, todėl, vietoj to, bus rodomas tekstinis sąrašas"
 
 #: package/contents/ui/ConfigBehavior.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "The 'Present Windows' effect is not enabled or otherwise available right "
-#| "now, so a textual list will be displayed instead."
+#, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
-"„Langų pateikimo“ efektas nėra įjungtas ar kitu būdu prieinamas, todėl, "
-"vietoj jo, bus rodomas tekstinis sąrašas."
+"Kompozitorius nepalaiko langų atvaizdavimo vienas šalia kito, todėl, vietoj "
+"to, bus rodomas tekstinis sąrašas."
 
 #: package/contents/ui/ConfigBehavior.qml:97
 #, kde-format
@@ -309,13 +293,10 @@ msgid "Closes window or group"
 msgstr "Užveria langą ar grupę"
 
 #: package/contents/ui/ConfigBehavior.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task opens a new instance'"
-#| msgid "Opens a new instance"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr "Atveria naują egzempliorių"
+msgstr "Atveria naują langą"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
@@ -352,11 +333,9 @@ msgid "Cycles through tasks"
 msgstr "Perjunginėja per užduotis"
 
 #: package/contents/ui/ConfigBehavior.qml:170
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgid "Skip minimized tasks"
-msgstr "Suskleidžia užduotį"
+msgstr "Praleisti suskleistas užduotis"
 
 #: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
@@ -396,19 +375,19 @@ msgstr "Nustoti slėpti, kai langas reikalauja dėmesio"
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Naujos užduotys atsiranda:"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Dešinėje"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Kairėje"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -475,7 +454,7 @@ msgstr "Nutildyti"
 #: package/contents/ui/ContextMenu.qml:283
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Atverti naują langą"
 
 #: package/contents/ui/ContextMenu.qml:299
 #, kde-format
@@ -547,7 +526,7 @@ msgstr "Atsegti nuo užduočių tvarkytuvės"
 #: package/contents/ui/ContextMenu.qml:612
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Daugiau"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
@@ -603,74 +582,70 @@ msgstr "&Užverti"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Paleisti %1"
 
 #: package/contents/ui/Task.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Yra %1 nauja žinutė."
+msgstr[1] "Yra %1 naujos žinutės."
+msgstr[2] "Yra %1 naujų žinučių."
+msgstr[3] "Yra %1 nauja žinutė."
 
 #: package/contents/ui/Task.qml:86
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Rodyti paaiškinimus"
+msgstr "Rodyti %1 užduoties paaiškinimą"
 
 #: package/contents/ui/Task.qml:92
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Rodyti %1 langus vieną šalia kito"
 
 #: package/contents/ui/Task.qml:97
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Atverti tekstinį %1 langų sąrašą"
 
 #: package/contents/ui/Task.qml:101
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "Aktyvuoti %1"
 
 #: package/contents/ui/ToolTipInstance.qml:326
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Įjungti %1 garsą"
 
 #: package/contents/ui/ToolTipInstance.qml:327
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "Nutildyti"
+msgstr "Nutildyti %1"
 
 #: package/contents/ui/ToolTipInstance.qml:350
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Reguliuoti %1 garsumą"
 
 #: package/contents/ui/ToolTipInstance.qml:366
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "&%1 %2"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:369
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:393
 #, kde-format
@@ -713,50 +688,43 @@ msgstr[2] "ir dar %1 vietų"
 msgstr[3] "ir dar %1 vieta"
 
 #: plugin/backend.cpp:422
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "Paskiausiai naudoti failai"
+msgstr "Paskiausi atsiuntimai"
 
 #: plugin/backend.cpp:424
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Connections"
-msgstr "Paskiausiai naudoti failai"
+msgstr "Paskiausi ryšiai"
 
 #: plugin/backend.cpp:426
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Paskiausiai naudoti failai"
+msgstr "Paskiausios vietos"
 
 #: plugin/backend.cpp:435
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
+msgstr "Išvalyti paskiausius atsiuntimus"
 
 #: plugin/backend.cpp:437
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
+msgstr "Išvalyti paskiausius ryšius"
 
 #: plugin/backend.cpp:439
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
+msgstr "Išvalyti paskiausias vietas"
 
 #: plugin/backend.cpp:441
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
+msgstr "Išvalyti paskiausiai naudotus failus"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Rodyti paaiškinimus"

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-06 00:48+0000\n"
-"PO-Revision-Date: 2021-02-04 18:41+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 20:34+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/ui/main.qml:25
 #, kde-format
@@ -112,29 +112,29 @@ msgstr "Slenka į spustelėtą vietą"
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Middle Click:"
-msgstr ""
+msgstr "Viduriniojo mygtuko spustelėjimas:"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Paste selected text"
-msgstr ""
+msgstr "Įdėti žymėtą tekstą"
 
 #: package/contents/ui/main.qml:211
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Lietimo veiksena:"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Automatiškai įjungti, kai reikia"
 
 #: package/contents/ui/main.qml:213 package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Niekada neįjungta"
 
 #: package/contents/ui/main.qml:225
 #, kde-format
@@ -143,12 +143,16 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Lietimo veiksena bus automatiškai aktyvuojama kas kartą, kai sistema aptiks "
+"jutiklinį ekraną, bet neaptiks pelės ar jutiklinio kilimėlio. Pavyzdžiui, "
+"kai transformuojamojo nešiojamojo kompiuterio klaviatūra yra apverčiama ar "
+"atjungiama."
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Visada įjungta"
 
 #: package/contents/ui/main.qml:255
 #, kde-format
@@ -156,6 +160,8 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"Lietimo veiksenoje daugelis naudotojo sąsajos elementų taps didesni, kad "
+"būtų lengviau pritaikyti lietimo integraciją."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -181,13 +187,13 @@ msgstr ""
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Automatiškai perjungti į lietimui optimizuotą veikseną"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Įjungti žymėto teksto įdėjimą viduriniuoju pelės mygtuku"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16

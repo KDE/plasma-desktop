@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:50+0000\n"
-"PO-Revision-Date: 2021-12-12 13:49+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 21:38+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/ui/main.qml:29
 #, kde-format
@@ -39,13 +39,13 @@ msgstr "Centre"
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgid "Activation:"
-msgstr ""
+msgstr "Aktyvavimas:"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr ""
+msgstr "Aktyvuoti, kai darbalaukyje paspaudžiamas bet kuris klavišas"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -56,17 +56,16 @@ msgstr "Istorija:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
-msgstr ""
+msgstr "Prisiminti ankstesnias paieškas"
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
-msgstr ""
+msgstr "Kai atveriama iš naujo, išlaikyti atmintyje paskutinę paiešką"
 
 #: package/contents/ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Activity aware (previous search and history)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
 msgstr "Atskirti pagal veiklas (ankstesnė paieška ir istorija)"
@@ -77,12 +76,10 @@ msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
 #: package/contents/ui/main.qml:110
-#, fuzzy, kde-format
-#| msgctxt "delete history for this activity"
-#| msgid "For activity \"%1\""
+#, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
-msgstr "Veikloje „%1“"
+msgstr "Išvalyti istoriją veikloje „%1“"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
@@ -90,17 +87,13 @@ msgid "Clear History…"
 msgstr "Išvalyti istoriją…"
 
 #: package/contents/ui/main.qml:140
-#, fuzzy, kde-format
-#| msgctxt "delete history for all activities"
-#| msgid "For all activities"
+#, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Visose veiklose"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt "delete history for this activity"
-#| msgid "For activity \"%1\""
+#, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Veikloje „%1“"
@@ -109,15 +102,13 @@ msgstr "Veikloje „%1“"
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "Papildiniai:"
 
 #: package/contents/ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "kcm name for About dialog"
-#| msgid "Configure search settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Konfigūruoti paieškos nuostatas"
+msgstr "Konfigūruoti įjungtus paieškos papildinius…"
 
 #~ msgid "Available Plugins"
 #~ msgstr "Prieinami priedai"
