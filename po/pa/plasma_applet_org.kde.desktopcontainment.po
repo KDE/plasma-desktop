@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2020, 2021.
+# A S Alam <aalam@users.sf.net>, 2014, 2020, 2021, 2022.
 # Aman Alam <alam.yellow@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-14 00:47+0000\n"
-"PO-Revision-Date: 2021-10-09 09:16-0700\n"
+"PO-Revision-Date: 2022-11-19 06:25-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -120,30 +120,28 @@ msgstr "ਇਕਸਾਰ:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "ਖੱਬੇ ਤੋਂ ਸੱਜੇ"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "ਸੱਜੇ ਤੋਂ ਖੱਬੇ"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "ਉੱਤੇ ਤੋਂ ਹੇਠਾਂ"
 
 #: package/contents/ui/ConfigIcons.qml:143
-#, fuzzy, kde-format
-#| msgid "Align left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "ਖੱਬੇ ਪਾਸੇ ਇਕਸਾਰ"
 
 #: package/contents/ui/ConfigIcons.qml:144
-#, fuzzy, kde-format
-#| msgid "Align right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "ਸੱਜੇ ਪਾਸੇ ਇਕਸਾਰ"
@@ -159,50 +157,43 @@ msgid "Sorting:"
 msgstr "ਲੜੀਬੱਧ:"
 
 #: package/contents/ui/ConfigIcons.qml:181
-#, fuzzy, kde-format
-#| msgid "Manual"
+#, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr "ਦਸਤੀ"
+msgstr "ਖੁਦ"
 
 #: package/contents/ui/ConfigIcons.qml:182
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "ਨਾਂ"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
 #: package/contents/ui/ConfigIcons.qml:184
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
 #: package/contents/ui/ConfigIcons.qml:185
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
-msgstr "ਮਿਤੀ"
+msgstr "ਤਾਰੀਖ"
 
 #: package/contents/ui/ConfigIcons.qml:196
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "ਘੱਟਦਾ ਕਰਮ"
 
 #: package/contents/ui/ConfigIcons.qml:204
-#, fuzzy, kde-format
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "ਫੋਲਡਰ ਪਹਿਲਾਂ"
@@ -214,8 +205,7 @@ msgid "View mode:"
 msgstr "ਝਲਕ ਢੰਗ:"
 
 #: package/contents/ui/ConfigIcons.qml:220
-#, fuzzy, kde-format
-#| msgid "List"
+#, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "ਸੂਚੀ"
@@ -224,7 +214,7 @@ msgstr "ਸੂਚੀ"
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "ਗਰਿੱਡ"
 
 #: package/contents/ui/ConfigIcons.qml:232
 #, kde-format
@@ -232,15 +222,13 @@ msgid "Icon size:"
 msgstr "ਆਈਕਾਨ ਆਕਾਰ:"
 
 #: package/contents/ui/ConfigIcons.qml:247
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "ਛੋਟਾ"
 
 #: package/contents/ui/ConfigIcons.qml:256
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "ਵੱਡਾ"
@@ -251,25 +239,22 @@ msgid "Label width:"
 msgstr "ਲੇਬਲ ਚੌੜਾਈ:"
 
 #: package/contents/ui/ConfigIcons.qml:268
-#, fuzzy, kde-format
-#| msgid "Narrow"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "ਸੌੜਾ"
 
 #: package/contents/ui/ConfigIcons.qml:269
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "ਮੱਧਮ"
 
 #: package/contents/ui/ConfigIcons.qml:270
-#, fuzzy, kde-format
-#| msgid "Wide"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
-msgstr "ਫੈਲਾਓ"
+msgstr "ਚੌੜਾ"
 
 #: package/contents/ui/ConfigIcons.qml:278
 #, kde-format
@@ -282,10 +267,9 @@ msgid "When hovering over icons:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, fuzzy, kde-format
-#| msgid "Tooltips"
+#, kde-format
 msgid "Show tooltips"
-msgstr "ਟੂਲ-ਟਿਪ"
+msgstr "ਟੂਲ-ਟਿਪ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:303
 #, fuzzy, kde-format
@@ -294,15 +278,14 @@ msgid "Show selection markers"
 msgstr "ਚੋਣ ਨਿਸ਼ਾਨ"
 
 #: package/contents/ui/ConfigIcons.qml:310
-#, fuzzy, kde-format
-#| msgid "Folder preview popups"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "ਫੋਲਡਰ ਝਲਕ ਪੋਪਅਪ"
+msgstr "ਫੋਲਡਰ ਝਲਕ ਪੋਪਅਪ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:320
 #, kde-format
 msgid "Rename:"
-msgstr ""
+msgstr "ਨਾਂ-ਬਦਲੋ:"
 
 #: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
@@ -310,10 +293,9 @@ msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgid "Previews:"
-msgstr "ਝਲਕਾਂ ਵੇਖਾਓ"
+msgstr "ਝਲਕਾਂ:"
 
 #: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
@@ -478,50 +460,43 @@ msgid "Sort By"
 msgstr "ਲੜੀਬੱਧ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
 msgstr "ਅਣ-ਲੜੀਬੱਧ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
 msgstr "ਨਾਂ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
-msgstr "ਮਿਤੀ"
+msgstr "ਤਾਰੀਖ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
 msgstr "ਘੱਟਦਾ ਕਰਮ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
 msgstr "ਫੋਲਡਰ ਪਹਿਲਾਂ"
@@ -532,78 +507,70 @@ msgid "Icon Size"
 msgstr "ਆਈਕਾਨ ਆਕਾਰ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
 msgstr "ਨਿੰਮਾ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "ਛੋਟਾ"
+msgstr "ਬਹੁਤ ਛੋਟਾ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "ਛੋਟਾ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "Small Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr "ਛੋਟੇ ਮੱਧਮ"
+msgstr "ਛੋਟਾ-ਮੱਧਮ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
 msgstr "ਮੱਧਮ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "ਵੱਡਾ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "Huge"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
 msgstr "ਬਹੁਤ ਵੱਡਾ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "ਇੰਝ ਇਕਸਾਰ"
+msgstr "ਇੰਤਜ਼ਾਮ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "ਖੱਬੇ ਤੋਂ ਸੱਜੇ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "ਸੱਜੇ ਤੋਂ ਖੱਬੇ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "ਉੱਤੇ ਤੋਂ ਹੇਠਾਂ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -611,15 +578,13 @@ msgid "Align"
 msgstr "ਇਕਸਾਰ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
 msgstr "ਖੱਬੇ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
 msgstr "ਸੱਜੇ"
@@ -630,8 +595,7 @@ msgid "Show Previews"
 msgstr "ਝਲਕਾਂ ਵੇਖਾਓ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
-#, fuzzy, kde-format
-#| msgid "Locked"
+#, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "ਲਾਕ ਕੀਤੇ"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-13 00:47+0000\n"
-"PO-Revision-Date: 2022-06-11 09:45-0700\n"
+"PO-Revision-Date: 2022-11-19 06:18-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -31,27 +31,22 @@ msgstr "ਰਵੱਈਆ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "ਨਾ-ਚੁੱਪ"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "ਚੁੱਪ"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "ਚੁੱਪ %1"
+msgstr "%1 ਨਾ-ਚੁੱਪ"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "ਚੁੱਪ %1"
@@ -327,7 +322,7 @@ msgstr "ਟਾਸਕਾਂ ਵਿੱਚ ਚੱਕਰ ਲਾਓ"
 #: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "ਘੱਟੋ-ਘੱਟ ਕੀਤੇ ਟਾਸਕ ਛੱਡੋ"
 
 #: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
@@ -574,28 +569,27 @@ msgstr "ਬੰਦ ਕਰੋ(&C)"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "%1 ਚਲਾਓ"
 
 #: package/contents/ui/Task.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ਨਵਾਂ ਸੁਨੇਹਾ ਹੈ।"
+msgstr[1] "%1 ਨਵੇਂ ਸੁਨੇਹੇ ਹਨ।"
 
 #: package/contents/ui/Task.qml:86
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "ਟੂਲ-ਟਿੱਪ ਵੇਖੋ"
+msgstr "%1 ਲਈ ਟੂਲ-ਟਿੱਪ ਵੇਖੋ"
 
 #: package/contents/ui/Task.qml:92
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "%1 ਲਈ ਵਿੰਡੋਆਂ ਨਾਲ ਨਾਲ ਵੇਖੋ"
 
 #: package/contents/ui/Task.qml:97
 #, kde-format
@@ -612,7 +606,7 @@ msgstr "%1 ਸਰਗਰਮ ਕਰੋ"
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "%1 ਨਾ-ਚੁੱਪ"
 
 #: package/contents/ui/ToolTipInstance.qml:327
 #, kde-format
@@ -624,7 +618,7 @@ msgstr "ਚੁੱਪ %1"
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "%1 ਲਈ ਵਾਲੀਅਮ ਅਡਜੱਸਟ ਕਰੋ"
 
 #: package/contents/ui/ToolTipInstance.qml:366
 #, kde-format

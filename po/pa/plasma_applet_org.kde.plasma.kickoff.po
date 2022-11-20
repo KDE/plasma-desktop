@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2015, 2016, 2018, 2021.
+# A S Alam <aalam@users.sf.net>, 2014, 2015, 2016, 2018, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2021-10-09 09:21-0700\n"
+"PO-Revision-Date: 2022-11-19 06:19-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "ਆਈਕਾਨ:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸਨ ਲਾਂਚਰ ਦਾ ਆਈਕਾਨ ਬਦਲੋ"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -76,19 +76,19 @@ msgstr "…ਚੁਣੋ"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ ਲਈ ਆਈਕਾਨ ਚੁਣੋ"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "ਮੂਲ ਆਈਕਾਨ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
 #: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "ਆਈਕਾਨ ਹਟਾਓ"
 
 #: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
@@ -109,8 +109,7 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:140
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "ਆਮ:"
@@ -212,13 +211,12 @@ msgstr "ਥਾਵਾਂ"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "ਕੋਈ ਮੇਲ ਨਹੀਂ"
 
 #: package/contents/ui/Header.qml:64
-#, fuzzy, kde-format
-#| msgid "Go to user settings"
+#, kde-format
 msgid "Open user settings"
-msgstr "ਵਰਤੋਂਕਾਰ ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਜਾਓ"
+msgstr "ਵਰਤੋਂਕਾਰ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ"
 
 #: package/contents/ui/Header.qml:240
 #, kde-format
