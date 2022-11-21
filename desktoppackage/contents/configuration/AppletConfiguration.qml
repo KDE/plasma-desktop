@@ -364,7 +364,6 @@ Rectangle {
                 applyAction.trigger();
                 configDialog.close();
             }
-            shortcut: "Return"
         }
 
         QQC2.Action {
@@ -383,7 +382,9 @@ Rectangle {
                     configDialog.close();
                 }
             }
-            shortcut: "Escape"
         }
+
+        Keys.onReturnPressed: acceptAction.trigger();
+        Keys.onEscapePressed: cancelAction.trigger();
     }
 }
