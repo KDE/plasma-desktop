@@ -113,6 +113,7 @@ ColumnLayout {
                 Action {
                     icon.name: "edit-clear"
                     enabled: menuLabel.text !== ""
+                    text: i18nc("@action:button", "Reset menu label")
                     onTriggered: {
                         menuLabel.clear()
                         cfg_menuLabel = ''
