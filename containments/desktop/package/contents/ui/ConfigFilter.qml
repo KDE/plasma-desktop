@@ -20,6 +20,7 @@ ColumnLayout {
     property alias cfg_filterMode: filterMode.currentIndex
     property alias cfg_filterPattern: filterPattern.text
     property alias cfg_filterMimeTypes: mimeTypesModel.checkedTypes
+    property alias cfg_showHiddenFiles: showHiddenFiles.checked
 
     PlasmaCore.SortFilterModel {
         id: filteredMimeTypesModel
@@ -75,6 +76,11 @@ ColumnLayout {
             id: mimeFilter
             Kirigami.FormData.label: i18n("File types:")
             enabled: (filterMode.currentIndex > 0)
+        }
+
+        CheckBox {
+            id: showHiddenFiles
+            Kirigami.FormData.label: i18n("Show hidden files:")
         }
     }
 

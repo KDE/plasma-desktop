@@ -168,6 +168,7 @@ FolderModel::FolderModel(QObject *parent)
     , m_screenMapper(ScreenMapper::instance())
     , m_complete(false)
     , m_currentActivity(KActivities::Consumer().currentActivity())
+    , m_showHiddenFiles(false)
 {
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::draggingChanged);
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::dragInProgressAnywhereChanged);
@@ -2028,6 +2029,22 @@ void FolderModel::setAppletInterface(QObject *appletInterface)
         }
 
         Q_EMIT appletInterfaceChanged();
+    }
+}
+
+bool FolderModel::showHiddenFiles() const
+{
+    return m_showHiddenFiles;
+}
+
+void FolderModel::setShowHiddenFiles(bool enable)
+{
+    if (m_showHiddenFiles != enable) {
+        m_showHiddenFiles = enable;
+        m_dirModel->dirLister()->setShowHiddenFiles(enable);
+        m_dirModel->dirLister()->emitChanges();
+
+        Q_EMIT showHiddenFilesChanged();
     }
 }
 

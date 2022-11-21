@@ -135,5 +135,9 @@
       <label>List of MIME types to filter by.</label>
       <default>all/all</default>
     </entry>
+    <entry name="showHiddenFiles" type="Bool">
+      <label>Show hidden files.</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

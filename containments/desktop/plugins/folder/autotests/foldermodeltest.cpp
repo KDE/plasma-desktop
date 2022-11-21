@@ -29,8 +29,13 @@ void FolderModelTest::createTestFolder(const QString &path)
     dir.cd(path);
     dir.mkdir(QStringLiteral("firstDir"));
     QFile f;
-    for (int i = 1; i < 10; i++) {
-        f.setFileName(QStringLiteral("%1/file%2.txt").arg(dir.path(), QString::number(i)));
+    for (int i = 1; i < 15; i++) {
+        if (i < 10) {
+            f.setFileName(QStringLiteral("%1/file%2.txt").arg(dir.path(), QString::number(i)));
+        } else {
+            f.setFileName(QStringLiteral("%1/.file%2.txt").arg(dir.path(), QString::number(i - 9)));
+        }
+
         f.open(QFile::WriteOnly);
         f.close();
     }
@@ -90,6 +95,24 @@ void FolderModelTest::tst_listingFolderNotFirst()
     for (int i = 0; i < count - 1; i++) {
         const auto index = m_folderModel->index(i, 0);
         QCOMPARE(index.data(FolderModel::FileNameRole).toString(), QStringLiteral("file%1.txt").arg(i + 1));
+    }
+}
+
+void FolderModelTest::tst_listingHidden()
+{
+    m_folderModel->setShowHiddenFiles(true);
+    const auto count = m_folderModel->rowCount();
+    QCOMPARE(count, 15);
+    QCOMPARE(m_folderModel->index(0, 0).data(FolderModel::FileNameRole).toString(), QLatin1String("firstDir"));
+    for (int i = 1; i < count; i++) {
+        const auto index = m_folderModel->index(i, 0);
+        QString fileName = index.data(FolderModel::FileNameRole).toString();
+        // hidden files are listed first
+        if (i <= 5) {
+            QCOMPARE(fileName, QStringLiteral(".file%1.txt").arg(i));
+        } else {
+            QCOMPARE(fileName, QStringLiteral("file%1.txt").arg(i - 5));
+        }
     }
 }
 

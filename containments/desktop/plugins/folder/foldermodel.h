@@ -89,6 +89,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
     Q_PROPERTY(QObject *newMenu READ newMenu CONSTANT)
     Q_PROPERTY(QObject *appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
+    Q_PROPERTY(bool showHiddenFiles READ showHiddenFiles WRITE setShowHiddenFiles NOTIFY showHiddenFilesChanged)
 
 public:
     enum DataRole {
@@ -182,6 +183,9 @@ public:
     QObject *appletInterface() const;
     void setAppletInterface(QObject *appletInterface);
 
+    bool showHiddenFiles() const;
+    void setShowHiddenFiles(bool enable);
+
     KFileItem rootItem() const;
 
     Q_INVOKABLE void up();
@@ -268,6 +272,7 @@ Q_SIGNALS:
     void move(int x, int y, QList<QUrl> urls);
     void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
     void selectionChanged() const;
+    void showHiddenFilesChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -356,6 +361,7 @@ private:
      * This property is used to save the current activity when FolderModel is initialized.
      */
     QString m_currentActivity;
+    bool m_showHiddenFiles;
 };
 
 class DragTracker : public QObject

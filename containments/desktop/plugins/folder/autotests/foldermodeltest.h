@@ -23,6 +23,7 @@ private Q_SLOTS:
     void tst_listing();
     void tst_listingDescending();
     void tst_listingFolderNotFirst();
+    void tst_listingHidden();
     void tst_filterListing();
     void tst_cd();
     void tst_rename_data();
