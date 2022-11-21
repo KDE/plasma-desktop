@@ -43,13 +43,15 @@ DragDrop.DropArea {
     PlasmaCore.FrameSvgItem {
         id: panelSvg
         visible: false
-        prefix: 'normal'
+        prefix: [{[PlasmaCore.Types.LeftEdge]: 'west', [PlasmaCore.Types.TopEdge]: 'north',
+                 [PlasmaCore.Types.RightEdge]: 'east', [PlasmaCore.Types.BottomEdge]: 'south'
+        }[plasmoid.location], ""]
         imagePath: "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: thickPanelSvg
         visible: false
-        prefix: 'thick'
+        prefix: ['thick'].concat(panelSvg.prefix)
         imagePath: "widgets/panel-background"
     }
     property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins
