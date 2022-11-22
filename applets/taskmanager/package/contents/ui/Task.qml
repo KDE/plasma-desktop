@@ -41,7 +41,6 @@ MouseArea {
     property alias labelText: label.text
     property bool pressed: false
     property QtObject contextMenu: null
-    property int wheelDelta: 0
     readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
     property alias toolTipAreaItem: toolTipArea
@@ -200,14 +199,6 @@ MouseArea {
         pressed = false;
     }
 
-    onWheel: {
-        if (plasmoid.configuration.wheelEnabled && (!inPopup || !groupDialog.overflowing)) {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.angleDelta.y);
-        } else {
-            wheel.accepted = false;
-        }
-    }
-
     onSmartLauncherEnabledChanged: {
         if (smartLauncherEnabled && !smartLauncherItem) {
             const smartLauncher = Qt.createQmlObject(`
@@ -361,6 +352,14 @@ MouseArea {
             } else {
                 showContextMenu();
             }
+        }
+    }
+
+    WheelHandler {
+        property int wheelDelta: 0
+        enabled: plasmoid.configuration.wheelEnabled && (!task.inPopup || !groupDialog.overflowing)
+        onWheel: {
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y);
         }
     }
 

@@ -45,6 +45,19 @@ Item {
         }
     }
 
+    WheelHandler {
+        id: wheelHandler
+
+        property bool active: true
+        property int wheelDelta: 0;
+
+        enabled: active && plasmoid.configuration.wheelEnabled
+
+        onWheel: {
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y);
+        }
+    }
+
     DropArea {
         id: dropHandler
 
@@ -160,27 +173,6 @@ Item {
                     tasksModel.requestActivate(parent.hoveredItem.modelIndex());
                 }
             }
-        }
-    }
-
-    MouseArea {
-        id: wheelHandler
-
-        anchors.fill: parent
-
-        enabled: active && plasmoid.configuration.wheelEnabled
-
-        property bool active: true
-        property int wheelDelta: 0;
-
-
-        onWheel: {
-            if (!active) {
-                wheel.accepted = false;
-                return;
-            }
-
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, wheel.angleDelta.y);
         }
     }
 }
