@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-04-04 09:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -26,7 +26,7 @@ msgid "Location"
 msgstr "Amplasare"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "Pictograme"
@@ -41,52 +41,58 @@ msgstr "Filtru"
 msgid "Back"
 msgstr "Înapoi"
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Files:"
 msgstr "Fișiere:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show all"
 msgstr "Arată tot"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr "Arată cele potrivite"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr "Ascunde cele potrivite"
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "Șablon denumiri:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "Tipuri de fișier:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Show All Files"
+msgid "Show hidden files:"
+msgstr "Arată toate fișierele"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
 msgid "File type"
 msgstr "Tip fișier"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr "Descriere"
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "Selectează tot"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "Deselectează tot"
@@ -421,38 +427,38 @@ msgstr "Configurează birou și tapet…"
 msgid "Select Folder"
 msgstr "Alege dosarul"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Reîmprospătează biroul"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Reîmprospătează vizualizarea"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Gol&ește gunoiul"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Restabilește"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "&Deschide"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "Li&pește"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "&Proprietăți"
@@ -636,9 +642,6 @@ msgstr "Blocat"
 #~| msgid "Show the Desktop folder"
 #~ msgid "Show the desktop toolbox"
 #~ msgstr "Afișează dosarul biroului"
-
-#~ msgid "Show All Files"
-#~ msgstr "Arată toate fișierele"
 
 #~ msgid "Size:"
 #~ msgstr "Dimensiune:"

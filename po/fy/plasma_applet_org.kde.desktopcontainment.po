@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2009-06-26 00:57+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "Lokaasje"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, fuzzy, kde-format
 msgid "Icons"
 msgstr "Byldkaikes"
@@ -39,52 +39,58 @@ msgstr "Filter"
 msgid "Back"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 msgid "Files:"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 msgid "Show all"
 msgstr "Posysje beskoattelje"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, fuzzy, kde-format
 msgid "File types:"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Show Original File"
+msgid "Show hidden files:"
+msgstr "Oarspronlike triem sjen litte"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, fuzzy, kde-format
 msgid "File type"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, fuzzy, kde-format
 msgid "Select All"
 msgstr "Alles selektearje"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, fuzzy, kde-format
 msgid "Deselect All"
 msgstr "Alles &ûntselektearje"
@@ -421,40 +427,40 @@ msgstr ""
 msgid "Select Folder"
 msgstr "Alles selektearje"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "&leegje jiskefet"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, fuzzy, kde-format
 #| msgid "&Restore"
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "He&rstelle"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "&Iepenje"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, fuzzy, kde-format
 msgid "&Paste"
 msgstr "P&lakken"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "Eigenski&ppen"
@@ -633,9 +639,6 @@ msgstr ""
 
 #~ msgid "Show Original Directory"
 #~ msgstr "Oarspronklike triemtafel sjen litte"
-
-#~ msgid "Show Original File"
-#~ msgstr "Oarspronlike triem sjen litte"
 
 #~ msgid "&Configure Trash Bin"
 #~ msgstr "&Jiskefet ynstelle"

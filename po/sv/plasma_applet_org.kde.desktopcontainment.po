@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-08-03 10:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgid "Location"
 msgstr "Plats"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "Ikoner"
@@ -38,52 +38,58 @@ msgstr "Filter"
 msgid "Back"
 msgstr "Bakåt"
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Files:"
 msgstr "Filer:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show all"
 msgstr "Visa alla"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr "Visa matchande"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr "Dölj matchande"
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "Filnamnsmönster:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "Filtyper:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Show All Files"
+msgid "Show hidden files:"
+msgstr "Visa alla filer"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
 msgid "File type"
 msgstr "Filtyp"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr "Beskrivning"
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "Markera alla"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "Avmarkera alla"
@@ -415,38 +421,38 @@ msgstr "Anpassa skrivbord och skrivbordsunderlägg…"
 msgid "Select Folder"
 msgstr "Markera katalog"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Uppdate&ra skrivbord"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "Uppdate&ra vy"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Töm papp&erskorg"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Återställ"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "Ö&ppna"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "K&listra in"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "E&genskaper"
@@ -655,9 +661,6 @@ msgstr "Låst"
 
 #~ msgid "Resize"
 #~ msgstr "Ändra storlek"
-
-#~ msgid "Show All Files"
-#~ msgstr "Visa alla filer"
 
 #~ msgid "Size:"
 #~ msgstr "Storlek:"

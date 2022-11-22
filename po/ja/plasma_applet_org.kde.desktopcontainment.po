@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-07-04 12:08-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -25,7 +25,7 @@ msgid "Location"
 msgstr "場所"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "アイコン"
@@ -40,52 +40,57 @@ msgstr "フィルタ"
 msgid "Back"
 msgstr "戻る"
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Files:"
 msgstr "ファイル:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show all"
 msgstr "すべて表示"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr "マッチするファイルを表示"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr "マッチするファイルを隠す"
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "ファイル名パターン:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "ファイルタイプ:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, kde-format
+msgid "Show hidden files:"
+msgstr ""
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
 msgid "File type"
 msgstr "ファイルタイプ"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr "説明"
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "すべて選択"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "すべて選択解除"
@@ -417,38 +422,38 @@ msgstr "デスクトップと壁紙を設定..."
 msgid "Select Folder"
 msgstr "フォルダを選択"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "デスクトップを更新(&R)"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "ビューを更新(&R)"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, kde-format
 msgid "&Empty Trash"
 msgstr "ごみ箱を空にする(&E)"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "復元(&R)"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "開く(&O)"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "貼り付け(&P)"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "プロパティ(&P)"

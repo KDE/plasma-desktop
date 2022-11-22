@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2010-01-12 21:50+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Location"
 msgstr "ಸ್ಥಳ"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "ಚಿಹ್ನೆಗಳು"
@@ -47,57 +47,63 @@ msgstr "ಸೋಸುಗ(ಫಿಲ್ಟರ್)"
 msgid "Back"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "Files:"
 msgstr "ಕಡತದ ಬಗೆಗಳು:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 #| msgid "Show a place:"
 msgid "Show all"
 msgstr "ಸ್ಥಳವನ್ನು ತೋರಿಸು:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 #| msgid "Show Files Matching"
 msgid "Show matching"
 msgstr "ತಾಳೆಯಾಗುವ ಕಡತಗಳನ್ನು ತೋರಿಸು"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 #| msgid "Hide Files Matching"
 msgid "Hide matching"
 msgstr "ತಾಳೆಯಾಗುವ ಕಡತಗಳನ್ನು ಮರೆ ಮಾಡಿ"
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "ಕಡತ ಹೆಸರಿನ ರೂಪ:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "ಕಡತದ ಬಗೆಗಳು:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Show All Files"
+msgid "Show hidden files:"
+msgstr "ಎಲ್ಲಾ ಕಡತಗಳನ್ನು ತೋರಿಸು"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "File type"
 msgstr "ಕಡತದ ಬಗೆಗಳು:"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "ಎಲ್ಲವನ್ನೂ ಆರಿಸು"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "ಎಲ್ಲಾ ಆಯ್ಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸು"
@@ -467,40 +473,40 @@ msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊ�
 msgid "Select Folder"
 msgstr "ಎಲ್ಲವನ್ನೂ ಆರಿಸು"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "ನೋಟವನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "ಕಸಬುಟ್ಟಿಯನ್ನು ಖಾಲಿಮಾಡು (&E)"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, fuzzy, kde-format
 #| msgid "&Restore"
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "&ಮರುಸ್ಥಾಪಿಸು (ರಿಸ್ಟೋರ್)"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "(&ತ)ತೆರೆ"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "ಅಂಟಿಸು(&P)"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "(&ಗ)ಗುಣಗಳು"
@@ -693,9 +699,6 @@ msgstr ""
 #~| msgid "Show the Desktop folder"
 #~ msgid "Show the desktop toolbox"
 #~ msgstr "ಗಣಕತೆರೆ ಕಡತಕೋಶವನ್ನು ತೋರಿಸು"
-
-#~ msgid "Show All Files"
-#~ msgstr "ಎಲ್ಲಾ ಕಡತಗಳನ್ನು ತೋರಿಸು"
 
 #~ msgid "Size:"
 #~ msgstr "ಗಾತ್ರ:"

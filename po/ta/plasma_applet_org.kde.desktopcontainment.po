@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-06-30 21:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Location"
 msgstr "இடம்"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "நுண்படங்கள்"
@@ -45,52 +45,58 @@ msgstr "வடிகட்டி"
 msgid "Back"
 msgstr "பின்னே செல்"
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Files:"
 msgstr "கோப்புகள்:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show all"
 msgstr "அனைத்தையும் காட்டு"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr "பொருந்தியவற்றை காட்டு"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr "பொருந்தியவற்றை மறை"
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "கோப்புப் பெயர் பாங்கு:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "கோப்பு வகைகள்:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Shred Files"
+msgid "Show hidden files:"
+msgstr "கோப்புகளை உதிர்"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
 msgid "File type"
 msgstr "கோப்பு வகை:"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "அனைத்தையும் தேர்வு செய்"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "அனைத்து தேர்வுகளை நிராகரி"
@@ -422,38 +428,38 @@ msgstr "பின்னணியையும் பணிமேடையைய�
 msgid "Select Folder"
 msgstr "அடைவை தேர்வு செய்"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "பணிமேடையை &புதுப்பி"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "காட்சிப்பகுதியை &புதுப்பி"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&அகற்றிடத்தை காலியாக்கு"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "மீட்டெடு"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "&திற"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "ஒட்டு"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "&பண்புகள்"
@@ -643,11 +649,6 @@ msgstr "பூட்டு"
 #~| msgid "Delete Files"
 #~ msgid "&Delete"
 #~ msgstr "கோப்புகளை நீக்கு"
-
-#, fuzzy
-#~| msgid "Shred Files"
-#~ msgid "Show Original File"
-#~ msgstr "கோப்புகளை உதிர்"
 
 #, fuzzy
 #~| msgid "&Empty Trash Bin"

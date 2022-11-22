@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "സ്ഥാനം"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr "ചിഹ്നങ്ങള്‍"
@@ -39,52 +39,58 @@ msgstr "അരിപ്പ"
 msgid "Back"
 msgstr "പുറകോട്ട്"
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 msgid "Files:"
 msgstr "ഫയലുകള്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show all"
 msgstr "എല്ലാം കാണിക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 msgid "Show matching"
 msgstr "പൊരുത്തമുള്ളത് മാത്രം കാണിക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 msgid "Hide matching"
 msgstr "പൊരുത്തമുള്ളവ മറയ്ക്കുക "
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, kde-format
 msgid "File name pattern:"
 msgstr "ഫയലിന്റെ പേരിലെ പാറ്റേണ്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, kde-format
 msgid "File types:"
 msgstr "ഫയലിന്റെ തരങ്ങള്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Show All Files"
+msgid "Show hidden files:"
+msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
 msgid "File type"
 msgstr "ഫയലിന്റെ തരം"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr "വിവരണം"
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കാത്തതാക്കുക"
@@ -432,38 +438,38 @@ msgstr "പണിയിടം ക്രമീകരിക്കുക"
 msgid "Select Folder"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "പണിയിടം പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr "കാഴ്ച പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, fuzzy, kde-format
 msgid "&Empty Trash"
 msgstr "ചവറ്റുകുട്ട കാലിയാക്കുക (&E)"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, fuzzy, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "വീണ്ടെടുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "തുറക്കുക (&O)"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr "ഒട്ടിക്കുക (&P)"
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "ഗുണഗണങ്ങള്‍ (&P)"
@@ -645,9 +651,6 @@ msgstr "പൂട്ടി"
 #, fuzzy
 #~ msgid "Show the desktop toolbox"
 #~ msgstr "പണിയിട അറ കാണിയ്ക്കുക"
-
-#~ msgid "Show All Files"
-#~ msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
 
 #, fuzzy
 #~ msgid "Size:"

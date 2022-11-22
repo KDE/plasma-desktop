@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2002-10-26 12:50SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -29,7 +29,7 @@ msgid "Location"
 msgstr ""
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:428
+#: package/contents/ui/FolderViewLayer.qml:429
 #, kde-format
 msgid "Icons"
 msgstr ""
@@ -44,57 +44,63 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:63
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "File name:"
 msgid "Files:"
 msgstr "Igama lefayile:"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, fuzzy, kde-format
 #| msgid "Shred Files"
 msgid "Show all"
 msgstr "Iifayile Ezikrazukileyo"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Show matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:65
 #, kde-format
 msgid "Hide matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:69
+#: package/contents/ui/ConfigFilter.qml:70
 #, fuzzy, kde-format
 #| msgid "File name:"
 msgid "File name pattern:"
 msgstr "Igama lefayile:"
 
-#: package/contents/ui/ConfigFilter.qml:76
+#: package/contents/ui/ConfigFilter.qml:77
 #, fuzzy, kde-format
 #| msgid "File name:"
 msgid "File types:"
 msgstr "Igama lefayile:"
 
-#: package/contents/ui/ConfigFilter.qml:173
+#: package/contents/ui/ConfigFilter.qml:83
+#, fuzzy, kde-format
+#| msgid "Shred Files"
+msgid "Show hidden files:"
+msgstr "Iifayile Ezikrazukileyo"
+
+#: package/contents/ui/ConfigFilter.qml:179
 #, fuzzy, kde-format
 #| msgid "File name:"
 msgid "File type"
 msgstr "Igama lefayile:"
 
-#: package/contents/ui/ConfigFilter.qml:182
+#: package/contents/ui/ConfigFilter.qml:188
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:195
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Select All"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:205
+#: package/contents/ui/ConfigFilter.qml:211
 #, kde-format
 msgid "Deselect All"
 msgstr ""
@@ -433,39 +439,39 @@ msgstr "Isiqalo"
 msgid "Select Folder"
 msgstr "Incwadi enenkcukacha Entsha:"
 
-#: plugins/folder/foldermodel.cpp:466
+#: plugins/folder/foldermodel.cpp:467
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1624
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
 #, kde-format
 msgid "&Refresh View"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1633
+#: plugins/folder/foldermodel.cpp:1634
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "&Umgqomo Wokungabalulekanga Ongenanto"
 
-#: plugins/folder/foldermodel.cpp:1636
+#: plugins/folder/foldermodel.cpp:1637
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1639
+#: plugins/folder/foldermodel.cpp:1640
 #, kde-format
 msgid "&Open"
 msgstr "&Vula"
 
-#: plugins/folder/foldermodel.cpp:1756
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Paste"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1873
+#: plugins/folder/foldermodel.cpp:1874
 #, kde-format
 msgid "&Properties"
 msgstr "&Izinto zobunini..."
@@ -639,11 +645,6 @@ msgstr ""
 #~| msgid "Delete Files"
 #~ msgid "&Delete"
 #~ msgstr "Cima Iifayile"
-
-#, fuzzy
-#~| msgid "Shred Files"
-#~ msgid "Show Original File"
-#~ msgstr "Iifayile Ezikrazukileyo"
 
 #, fuzzy
 #~| msgid "&Empty Trash Bin"

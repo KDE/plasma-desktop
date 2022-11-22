@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-22 18:16+0400\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"PO-Revision-Date: 2022-11-21 19:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -58,7 +58,7 @@ msgstr "الأيقونة:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "غيّر أيقونة تطبيق المُطلق"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -67,6 +67,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"الأيقونة الحالية %1. انقر لتفتح قائمة لتغير الأيقونة الحالية أو تصفرها إلى "
+"المبدئية."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -78,7 +80,7 @@ msgstr "اختر..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "اختر أيقونة لتطبيق مطلق التطبيقات"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -104,96 +106,102 @@ msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "اكتب هنا لتضيف لصيقة نصية"
 
-#: package/contents/ui/ConfigGeneral.qml:129
+#: package/contents/ui/ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "لا يمكن وضع لصيقة نصية عندما تكون اللوحة عمودية"
 
-#: package/contents/ui/ConfigGeneral.qml:140
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "عام:"
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:142
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "افرز أبجديًّا دائما"
 
-#: package/contents/ui/ConfigGeneral.qml:146
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Use compact list item style"
 msgstr "استخدم قائمة العناصر المتراصة"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "يعطل آليا في وضع اللوحي"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "اضبط ملحقات البحث المفعلة"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Show favorites:"
 msgstr "أظهر المفضّلات"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:173
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgid "Show other applications:"
 msgstr "أظهر التّطبيقات الأخرى:"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Show buttons for:"
 msgstr "أظهر أزرار لـ:"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:211
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "الطاقة"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgid "Session"
 msgstr "الجلسة"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:229
 #, kde-format
 msgid "Power and session"
 msgstr "الطاقة والجلسة"
 
-#: package/contents/ui/ConfigGeneral.qml:237
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgid "Show action button captions"
 msgstr "أظهر عناوين أزرار الإجراءات"

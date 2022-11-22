@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-11-15 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -109,96 +109,102 @@ msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Teclegeu aquí per afegir una etiqueta de text"
 
-#: package/contents/ui/ConfigGeneral.qml:129
+#: package/contents/ui/ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "No és pot definir una etiqueta de text quan el plafó és vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:140
+#: package/contents/ui/ConfigGeneral.qml:141
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "General:"
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:142
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Ordena alfabèticament les aplicacions sempre"
 
-#: package/contents/ui/ConfigGeneral.qml:146
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Usa un estil compacte d'elements de llista"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Desactivat automàticament en el mode tàctil"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configura els connectors de cerca habilitats…"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Show favorites:"
 msgstr "Mostra els preferits:"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:173
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgid "Show other applications:"
 msgstr "Mostra altres aplicacions:"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Mostra els botons per a:"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:211
 #: package/contents/ui/LeaveButtons.qml:71
 #, kde-format
 msgid "Power"
 msgstr "Aturada"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgid "Session"
 msgstr "Sessió"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:229
 #, kde-format
 msgid "Power and session"
 msgstr "Aturada i sessió"
 
-#: package/contents/ui/ConfigGeneral.qml:237
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgid "Show action button captions"
 msgstr "Mostra les llegendes dels botons d'acció"
