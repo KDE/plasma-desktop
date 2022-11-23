@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-09-02 07:33+0200\n"
+"PO-Revision-Date: 2022-11-22 07:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "ხატულა:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "აპლიკაციების გამშვების ხატულის შეცვლა"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -66,6 +66,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"მიმდინარე ხატულაა %1. მიმდინარე ხატულის შესაცვლელად ან ნაგულისხმევზე "
+"დასაბრუნებლად მენიუ გახსენით."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -77,7 +79,7 @@ msgstr "არჩევა…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "აირჩიეთ აპლიკაციების გამშვების ხატულა"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -107,7 +109,7 @@ msgstr "ტექსტური ჭდის დასამატებლა�
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "მენიუს ჭდის საწყის მნიშვნელობაზე დაბრუნება"
 
 #: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
@@ -217,7 +219,7 @@ msgstr "ადგილები"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "დათხვევა არ არსებობს"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format

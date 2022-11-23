@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-13 00:47+0000\n"
-"PO-Revision-Date: 2022-06-26 14:55+0200\n"
+"POT-Creation-Date: 2022-11-23 00:49+0000\n"
+"PO-Revision-Date: 2022-11-22 17:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.11.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:13
@@ -29,32 +29,25 @@ msgid "Behavior"
 msgstr "Správanie"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "Zrušiť stlmenie %1"
+msgstr "Zrušiť stlmenie"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Stlmiť"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Zrušiť stlmenie %1"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "Stlmiť %1"
@@ -97,7 +90,7 @@ msgstr "Označiť aplikácie, ktoré prehrávajú zvuk"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Vyplniť voľné miesto na paneli"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -585,44 +578,40 @@ msgstr "Povoliť programu zoskupovanie"
 msgid "&Close"
 msgstr "&Zavrieť"
 
-#: package/contents/ui/Task.qml:72
+#: package/contents/ui/Task.qml:71
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Spustiť %1"
 
-#: package/contents/ui/Task.qml:77
+#: package/contents/ui/Task.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pribudla %1 nová správa."
+msgstr[1] "Pribudli %1 nové správy."
+msgstr[2] "Pribudli %1 nové správy."
 
-#: package/contents/ui/Task.qml:86
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#: package/contents/ui/Task.qml:85
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Zobrazovať popisky"
+msgstr "Zobraziť popis k úlohe pre %1"
 
-#: package/contents/ui/Task.qml:92
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#: package/contents/ui/Task.qml:91
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "Zobrazí okná vedľa seba"
+msgstr "Zobrazenie okien vedľa seba pre %1"
 
-#: package/contents/ui/Task.qml:97
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Otvorenie textového zoznamu okien pre %1"
 
-#: package/contents/ui/Task.qml:101
+#: package/contents/ui/Task.qml:100
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivovať %1"

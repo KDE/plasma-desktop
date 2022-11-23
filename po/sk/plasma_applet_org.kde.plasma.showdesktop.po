@@ -3,34 +3,30 @@
 # Michal Sulek <misurel@gmail.com>, 2009.
 # Roman Paholik <wizzardsk@gmail.com>, 2016.
 # Mthw <jari_45@hotmail.com>, 2018.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-16 00:46+0000\n"
-"PO-Revision-Date: 2021-02-11 10:35+0100\n"
+"PO-Revision-Date: 2022-11-22 17:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.11.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restore All Minimized Windows"
-msgstr "Minimalizovať všetky okná"
+msgstr "Obnoviť všetky okná"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Minimalizovať všetky okná"
@@ -39,32 +35,31 @@ msgstr "Minimalizovať všetky okná"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Obnoví predtým minimalizované okná"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Zobraziť pracovnú plochu posunutím okien nabok"
+msgstr "Zobrazí plochu minimalizovaním všetkých okien"
 
 #: package/contents/ui/PeekController.qml:13
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Zrušiť náhľad pracovnej plochy"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Nazrieť na pracovnú plochu"
 
 #: package/contents/ui/PeekController.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Presunie okná na pôvodné miesto"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
@@ -72,6 +67,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgstr ""
+"Dočasne odhalí pracovnú plochu presunutím otvorených okien do rohov obrazovky"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Zobraziť plochu"

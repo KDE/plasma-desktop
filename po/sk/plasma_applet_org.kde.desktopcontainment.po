@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-04-28 08:43+0200\n"
+"PO-Revision-Date: 2022-11-22 17:52+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.11.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:16
@@ -69,10 +69,9 @@ msgid "File types:"
 msgstr "Typy súborov:"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Zobraziť všetky súbory"
+msgstr "Zobraziť skryté súbory:"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
@@ -125,19 +124,19 @@ msgstr "Usporiadanie do:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Zľava doprava"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Sprava doľava"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Zhora nadol"
 
 #: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
@@ -552,8 +551,7 @@ msgid "Huge"
 msgstr "Obrovská"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Usporiadať do"
@@ -562,19 +560,19 @@ msgstr "Usporiadať do"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Zľava doprava"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Sprava doľava"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Zhora nadol"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format

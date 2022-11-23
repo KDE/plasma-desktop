@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-06-26 14:55+0200\n"
+"PO-Revision-Date: 2022-11-22 17:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.11.80\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -83,25 +83,25 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Obnovenie predvolenej ikony"
 
 #: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Odstrániť ikonu"
 
 #: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Textové pole:"
 
 #: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Tu zadajte textový štítok"
 
 #: package/contents/ui/ConfigGeneral.qml:116
 #, kde-format
@@ -113,11 +113,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Textový štítok nie je možné nastaviť, keď je panel vertikálny."
 
 #: package/contents/ui/ConfigGeneral.qml:141
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Všeobecné:"
@@ -130,13 +129,13 @@ msgstr "Vždy zoradiť aplikácie podľa abecedy"
 #: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Použiť štýl kompaktných položiek zoznamu"
 
 #: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automaticky vypnuté v dotykovom režime"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
@@ -218,7 +217,7 @@ msgstr "Miesta"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Žiadne zhody"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format

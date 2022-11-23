@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 00:48+0000\n"
-"PO-Revision-Date: 2022-06-26 14:55+0200\n"
+"PO-Revision-Date: 2022-11-22 17:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.11.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
@@ -92,11 +92,9 @@ msgid "Send an email to %1"
 msgstr "Odoslať email pre %1"
 
 #: contents/configuration/AboutPlugin.qml:59
-#, fuzzy
-#| msgid "Open %1"
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Otvoriť %1"
+msgstr "Otvoriť webovú stránku %1"
 
 #: contents/configuration/AboutPlugin.qml:108
 msgid "Copyright"
@@ -120,7 +118,7 @@ msgstr "Prekladatelia"
 
 #: contents/configuration/AboutPlugin.qml:176
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Nahlásiť chybu…"
 
 #: contents/configuration/AppletConfiguration.qml:55
 msgid "Keyboard Shortcuts"
@@ -333,30 +331,32 @@ msgstr "Skratka"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Potiahnutím zmeníte maximálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Potiahnutím zmeníte maximálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Dvojitým kliknutím obnovíte."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Potiahnutím zmeníte minimálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Potiahnutím zmeníte minimálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Potiahnutím zmeníte polohu na tomto okraji obrazovky.\n"
+"Dvojitým kliknutím obnovíte nastavenie."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
@@ -378,7 +378,7 @@ msgstr "Ťahať na presunutie"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "Panel môžete presúvať pomocou klávesov so šípkami"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
