@@ -766,6 +766,12 @@ PlasmaComponents.ContextMenu {
         text: i18n("&Close")
         icon: "window-close"
 
-        onClicked: tasksModel.requestClose(modelIndex)
+        onClicked: {
+            if (tasks.groupDialog !== null && tasks.groupDialog.visualParent === visualParent) {
+                tasks.groupDialog.visible = false;
+            }
+
+            tasksModel.requestClose(modelIndex);
+        }
     }
 }
