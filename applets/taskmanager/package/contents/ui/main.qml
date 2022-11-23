@@ -40,8 +40,8 @@ MouseArea {
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
 
     Plasmoid.onUserConfiguringChanged: {
-        if (plasmoid.userConfiguring) {
-            groupDialog.visible = false;
+        if (plasmoid.userConfiguring && !!tasks.groupDialog) {
+            tasks.groupDialog.visible = false;
         }
     }
 
