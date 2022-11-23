@@ -230,7 +230,7 @@ MouseArea {
     }
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
-    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
+    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, plasmoid, tasks)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
     Keys.onSpacePressed: Keys.onReturnPressed(event);
     Keys.onUpPressed: Keys.onLeftPressed(event)
@@ -338,7 +338,7 @@ MouseArea {
             if (plasmoid.configuration.showToolTips && toolTipArea.active) {
                 hideToolTipTemporarily();
             }
-            TaskTools.activateTask(modelIndex(), model, eventPoint.event.modifiers, task);
+            TaskTools.activateTask(modelIndex(), model, eventPoint.event.modifiers, task, plasmoid, tasks);
         }
         onLongPressed: {
             /* TODO: make press and hold to open menu exclusive to touch.
@@ -361,7 +361,7 @@ MouseArea {
         property int wheelDelta: 0
         enabled: plasmoid.configuration.wheelEnabled && (!task.inPopup || !groupDialog.overflowing)
         onWheel: {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y);
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y, plasmoid.configuration.wheelSkipMinimized, tasks);
         }
     }
 
@@ -401,7 +401,7 @@ MouseArea {
         imagePath: "widgets/tasks"
         property bool isHovered: task.highlighted && plasmoid.configuration.taskHoverEffect
         property string basePrefix: "normal"
-        prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix) : TaskTools.taskPrefix(basePrefix)
+        prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix, plasmoid.location) : TaskTools.taskPrefix(basePrefix, plasmoid.location)
 
         PlasmaCore.ToolTipArea {
             id: toolTipArea

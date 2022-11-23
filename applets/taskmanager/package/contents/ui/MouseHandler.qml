@@ -54,7 +54,7 @@ Item {
         enabled: active && plasmoid.configuration.wheelEnabled
 
         onWheel: {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y);
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y, plasmoid.configuration.wheelSkipMinimized, tasks);
         }
     }
 
@@ -117,7 +117,7 @@ Item {
                     return;
                 }
 
-                var insertAt = TaskTools.insertIndexAt(above, event.x, event.y);
+                var insertAt = TaskTools.insertIndexAt(above, event.x, event.y, tasks, LayoutManager);
 
                 if (tasks.dragSource !== above && tasks.dragSource.itemIndex !== insertAt) {
                     if (!!tasks.groupDialog) {
@@ -168,7 +168,7 @@ Item {
 
             onTriggered: {
                 if (parent.hoveredItem.m.IsGroupParent === true) {
-                    TaskTools.createGroupDialog(parent.hoveredItem);
+                    TaskTools.createGroupDialog(parent.hoveredItem, tasks);
                 } else if (parent.hoveredItem.m.IsLauncher !== true) {
                     tasksModel.requestActivate(parent.hoveredItem.modelIndex());
                 }

@@ -33,7 +33,7 @@ T.ProgressBar {
             height: parent.height
 
             imagePath: "widgets/tasks"
-            prefix: TaskTools.taskPrefix("progress").concat(TaskTools.taskPrefix("hover"))
+            prefix: TaskTools.taskPrefix("progress", plasmoid.location).concat(TaskTools.taskPrefix("hover", plasmoid.location))
         }
     }
 
