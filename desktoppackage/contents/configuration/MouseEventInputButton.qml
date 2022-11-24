@@ -39,7 +39,7 @@ QQC2.Button {
         }
 
         onWheel: {
-            var newEventString = configDialog.currentContainmentActionsModel.wheelEventString(wheel.pixelDelta, wheel.buttons, wheel.modifiers);
+            var newEventString = configDialog.currentContainmentActionsModel.wheelEventString(wheel);
 
             if (eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
                 eventString = newEventString;
