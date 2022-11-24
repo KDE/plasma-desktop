@@ -160,6 +160,7 @@ function checkLastSpacer() {
         root.configOverlay = component.createObject(root, {
             "anchors.fill": root,
         });
+        component.destroy();
     }
 
 //END connections
