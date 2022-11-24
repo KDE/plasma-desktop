@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-07-01 20:23+0200\n"
+"PO-Revision-Date: 2022-11-22 19:06+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.11.80\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -76,10 +76,9 @@ msgid "File types:"
 msgstr "Types de fichiers :"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Afficher tous les fichiers"
+msgstr "Afficher les fichiers cachés :"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format

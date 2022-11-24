@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-11-22 17:52+0100\n"
+"PO-Revision-Date: 2022-11-23 15:52+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -233,7 +233,7 @@ msgstr "Rýchlejšie"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Opätovné viazanie ďalších tlačidiel myši..."
+msgstr "Nastavenie akcií extra tlačidiel myši"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "Extra tlačidlo %1:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr "Stlačte tlačidlo myši, pre ktoré chcete pridať väzbu na tlačidlo"
+msgstr "Stlačte tlačidlo myši, pre ktoré chcete pridať novú akciu"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
@@ -269,7 +269,7 @@ msgstr "Stlačte tlačidlo myši "
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr "Pridať väzbu..."
+msgstr "Pridať akciu..."
 
 #: kcm/libinput/main.qml:478
 #, kde-format
