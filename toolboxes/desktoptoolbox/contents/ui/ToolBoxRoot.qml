@@ -48,8 +48,9 @@ Item {
             return;
         }
 
-        const component = Qt.createComponent(Qt.resolvedUrl("./ToolBoxContent.qml"));
+        const component = Qt.createComponent(Qt.resolvedUrl("./ToolBoxContent.qml"), main);
         toolBoxContent = component.createObject(main);
+        component.destroy();
         placeToolBox(Plasmoid.configuration.ToolBoxButtonState);
         toolBoxContent.enterAnimation.start();
     }
