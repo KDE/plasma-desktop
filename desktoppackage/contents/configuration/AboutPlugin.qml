@@ -128,6 +128,7 @@ QQC2.Page {
                 QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
                 Kirigami.LinkButton {
                     text: plasmoid.metaData.license
+                    Accessible.description: i18nc("@info:whatsthis", "View license text")
                     onClicked: {
                         licenseSheet.text = plasmoid.metaData.licenseText
                         licenseSheet.title = plasmoid.metaData.license
