@@ -224,7 +224,9 @@ MouseArea {
         }
         // Create item on demand instead of using Loader to reduce memory consumption,
         // because only a few applications have audio streams.
-        audioStreamIcon = Qt.createComponent("AudioStream.qml").createObject(task);
+        const component = Qt.createComponent("AudioStream.qml");
+        audioStreamIcon = component.createObject(task);
+        component.destroy();
     }
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
@@ -635,6 +637,7 @@ MouseArea {
         if (!inPopup && model.IsWindow === true) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
+            component.destroy();
         }
 
         if (!inPopup && model.IsWindow !== true) {
