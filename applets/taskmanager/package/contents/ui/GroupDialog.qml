@@ -79,8 +79,6 @@ PlasmaCore.Dialog {
             anchors.fill: parent
             readonly property bool overflowing: leftPadding > 0 || rightPadding > 0 // Scrollbar is visible
 
-            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
             ListView {
                 id: groupListView
 
