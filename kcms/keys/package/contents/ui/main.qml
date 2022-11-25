@@ -23,7 +23,7 @@ KCM.AbstractKCM {
     readonly property bool errorOccured: kcm.lastError != ""
     Connections {
         target: kcm
-        function onShowComponent() {
+        function onShowComponent(row) {
             components.currentIndex = row
         }
     }
