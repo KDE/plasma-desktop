@@ -205,7 +205,6 @@ GridLayout {
                     QQC2.ScrollView {
                         id: dialogScrollView
                         anchors.fill: parent
-                        QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
                         QQC2.TextArea {
                             id: dialogTextArea
                             // HACK: silence binding loop warnings.
@@ -238,7 +237,6 @@ GridLayout {
         visible: !compactContentLoader.active
         Layout.fillHeight: true
         Layout.fillWidth: true
-        PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
         PC3.TextArea {
             id: textArea
             // HACK: silence binding loop warnings.
