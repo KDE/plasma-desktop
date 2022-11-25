@@ -271,9 +271,6 @@ PC3.Page {
         anchors.fill: parent
         anchors.rightMargin: - main.sidePanel.margins.right
 
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
-
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1
         Behavior on opacity {
