@@ -56,9 +56,6 @@ KCM.SimpleKCM {
             contentHeight: root.contentItem.height -  Kirigami.Units.gridUnit * 4
             contentWidth: Kirigami.Units.gridUnit * 13
 
-            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
-            QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOff
-
             Component.onCompleted: leftSidePaneBackground.background.visible = true
 
             ListView {
