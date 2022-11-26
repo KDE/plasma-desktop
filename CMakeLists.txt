@@ -276,3 +276,4 @@ set_package_properties(XdgUserDir PROPERTIES
 )
 
 ki18n_install(po)
+kdoctools_install(po)
