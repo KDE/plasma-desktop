@@ -15,7 +15,7 @@ import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 import "code/layout.js" as LayoutManager
 import "code/tools.js" as TaskTools
 
-MouseArea {
+PlasmaCore.ToolTipArea {
     id: task
 
     activeFocusOnTab: true
@@ -39,11 +39,9 @@ MouseArea {
     property int childCount: model.ChildCount !== undefined ? model.ChildCount : 0
     property int previousChildCount: 0
     property alias labelText: label.text
-    property bool pressed: false
     property QtObject contextMenu: null
     readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
-    property alias toolTipAreaItem: toolTipArea
 
     property Item audioStreamIcon: null
     property var audioStreams: []
@@ -60,6 +58,15 @@ MouseArea {
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
+
+    active: plasmoid.configuration.showToolTips && !inPopup && !tasks.groupDialog && (tasks.toolTipOpenedByClick === task || tasks.toolTipOpenedByClick === null)
+    interactive: model.IsWindow === true || mainItem.hasPlayer
+    location: plasmoid.location
+    mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
+    // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
+    // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
+    // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
+    timeout: (tasks.toolTipOpenedByClick === task) ? 2000 * 20 : 4000
 
     Accessible.name: model.display
     Accessible.description: {
@@ -101,19 +108,21 @@ MouseArea {
     }
     Accessible.role: Accessible.Button
 
+    onToolTipVisibleChanged: {
+        if (!toolTipVisible) {
+            tasks.toolTipOpenedByClick = null;
+        }
+    }
+
+    onContainsMouseChanged: if (containsMouse) {
+        task.forceActiveFocus(Qt.MouseFocusReason);
+        task.updateMainItemBindings();
+    }
+
     onHighlightedChanged: {
         // ensure it doesn't get stuck with a window highlighted
         backend.cancelHighlightWindows();
     }
-
-    function showToolTip() {
-        toolTipArea.showToolTip();
-    }
-    function hideToolTipTemporarily() {
-        toolTipArea.hideToolTip();
-    }
-
-    acceptedButtons: Qt.RightButton | Qt.MidButton | Qt.BackButton | Qt.ForwardButton
 
     onPidChanged: updateAudioStreams({delay: false})
     onAppNameChanged: updateAudioStreams({delay: false})
@@ -133,70 +142,12 @@ MouseArea {
     }
 
     onItemIndexChanged: {
-        hideToolTipTemporarily();
+        hideToolTip();
 
         if (!inPopup && !tasks.vertical
             && (LayoutManager.calculateStripes() > 1 || !plasmoid.configuration.separateLaunchers)) {
             tasks.requestLayout();
         }
-    }
-
-    onContainsMouseChanged:  {
-        if (containsMouse) {
-            if (inPopup) {
-                forceActiveFocus();
-            }
-        } else {
-            pressed = false;
-        }
-    }
-
-    onPressed: {
-        if (mouse.button == Qt.MidButton || mouse.button === Qt.BackButton || mouse.button === Qt.ForwardButton) {
-            pressed = true;
-        } else if (mouse.button == Qt.RightButton) {
-            // When we're a launcher, there's no window controls, so we can show all
-            // places without the menu getting super huge.
-            if (model.IsLauncher === true) {
-                showContextMenu({showAllPlaces: true})
-            } else {
-                showContextMenu();
-            }
-        }
-    }
-
-    onReleased: {
-        if (pressed) {
-            if (mouse.button == Qt.MidButton) {
-                if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
-                    tasksModel.requestNewInstance(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
-                    tasks.taskClosedWithMouseMiddleButton = winIdList.slice()
-                    tasksModel.requestClose(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
-                    tasksModel.requestToggleMinimized(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
-                    tasksModel.requestToggleGrouping(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
-                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
-                }
-            } else if (mouse.button === Qt.BackButton || mouse.button === Qt.ForwardButton) {
-                var sourceName = mpris2Source.sourceNameForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
-                if (sourceName) {
-                    if (mouse.button === Qt.BackButton) {
-                        mpris2Source.goPrevious(sourceName);
-                    } else {
-                        mpris2Source.goNext(sourceName);
-                    }
-                } else {
-                    mouse.accepted = false;
-                }
-            }
-
-            backend.cancelHighlightWindows();
-        }
-
-        pressed = false;
     }
 
     onSmartLauncherEnabledChanged: {
@@ -252,7 +203,7 @@ MouseArea {
     }
 
     function showContextMenu(args) {
-        toolTipArea.hideImmediately();
+        task.hideImmediately();
         contextMenu = tasks.createContextMenu(task, modelIndex(), args);
         contextMenu.show();
     }
@@ -300,6 +251,34 @@ MouseArea {
         }
     }
 
+    // Will also be called in activateTaskAtIndex(index)
+    function updateMainItemBindings() {
+        if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
+            return;
+        }
+
+        mainItem.parentTask = task;
+        mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
+
+        mainItem.appName = Qt.binding(() => model.AppName);
+        mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
+        mainItem.windows = Qt.binding(() => model.WinIdList);
+        mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
+        mainItem.icon = Qt.binding(() => model.decoration);
+        mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
+        mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
+        mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
+        mainItem.displayParent = Qt.binding(() => model.display);
+        mainItem.genericName = Qt.binding(() => model.GenericName);
+        mainItem.virtualDesktopParent = Qt.binding(() =>
+            (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
+        mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
+        mainItem.activitiesParent = Qt.binding(() => model.Activities);
+
+        mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
+        mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+    }
+
     Connections {
         target: pulseAudio.item
         ignoreUnknownSignals: true // Plasma-PA might not be available
@@ -309,20 +288,10 @@ MouseArea {
     }
 
     TapHandler {
+        id: menuTapHandler
         acceptedButtons: Qt.LeftButton
-        onTapped: {
-            if (plasmoid.configuration.showToolTips && toolTipArea.active) {
-                hideToolTipTemporarily();
-            }
-            TaskTools.activateTask(modelIndex(), model, eventPoint.event.modifiers, task, plasmoid, tasks);
-        }
+        acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
         onLongPressed: {
-            /* TODO: make press and hold to open menu exclusive to touch.
-             * I (ndavis) tried `if (lastDeviceType & ~(PointerDevice.Mouse | PointerDevice.TouchPad))`
-             * with a TapHandler. lastDeviceType was gotten from the EventPoint argument of the
-             * grabChanged() signal. ngraham said it wouldn't work because it was preventing single
-             * taps on touch. I didn't have a touch screen to test it with.
-             */
             // When we're a launcher, there's no window controls, so we can show all
             // places without the menu getting super huge.
             if (model.IsLauncher === true) {
@@ -330,6 +299,56 @@ MouseArea {
             } else {
                 showContextMenu();
             }
+        }
+    }
+
+    TapHandler {
+        acceptedButtons: Qt.RightButton
+        acceptedDevices: PointerDevice.Mouse
+        onTapped: menuTapHandler.longPressed();
+    }
+
+    TapHandler {
+        acceptedButtons: Qt.LeftButton
+        onTapped: {
+            if (plasmoid.configuration.showToolTips && task.active) {
+                hideToolTip();
+            }
+            TaskTools.activateTask(modelIndex(), model, eventPoint.event.modifiers, task, plasmoid, tasks);
+        }
+    }
+
+    TapHandler {
+        acceptedButtons: Qt.MidButton | Qt.BackButton | Qt.ForwardButton
+        onTapped: {
+            const button = eventPoint.event.button;
+            if (button == Qt.MidButton) {
+                if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
+                    tasksModel.requestNewInstance(modelIndex());
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                    tasks.taskClosedWithMouseMiddleButton = winIdList.slice()
+                    tasksModel.requestClose(modelIndex());
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
+                    tasksModel.requestToggleMinimized(modelIndex());
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
+                    tasksModel.requestToggleGrouping(modelIndex());
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
+                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
+                }
+            } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
+                var sourceName = mpris2Source.sourceNameForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
+                if (sourceName) {
+                    if (button === Qt.BackButton) {
+                        mpris2Source.goPrevious(sourceName);
+                    } else {
+                        mpris2Source.goNext(sourceName);
+                    }
+                } else {
+                    eventPoint.accepted = false;
+                }
+            }
+
+            backend.cancelHighlightWindows();
         }
     }
 

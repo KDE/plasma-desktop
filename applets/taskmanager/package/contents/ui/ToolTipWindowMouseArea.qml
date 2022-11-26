@@ -22,7 +22,7 @@ MouseArea {
         switch (mouse.button) {
         case Qt.LeftButton:
             tasksModel.requestActivate(modelIndex);
-            rootTask.toolTipAreaItem.hideImmediately();
+            rootTask.hideImmediately();
             backend.cancelHighlightWindows();
             break;
         case Qt.MiddleButton:
