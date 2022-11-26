@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-09-30 00:18+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -105,19 +105,24 @@ msgstr "Copyright"
 msgid "License:"
 msgstr "Licencia:"
 
-#: contents/configuration/AboutPlugin.qml:141
+#: contents/configuration/AboutPlugin.qml:131
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
 msgstr "Autores"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:152
 msgid "Credits"
 msgstr "Créditos"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:163
 msgid "Translators"
 msgstr "Traductores"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Report a Bug…"
 msgstr "Informar de fallo..."
 

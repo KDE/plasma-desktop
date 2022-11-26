@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-07-13 12:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -104,19 +104,24 @@ msgstr "저작권"
 msgid "License:"
 msgstr "라이선스:"
 
-#: contents/configuration/AboutPlugin.qml:141
+#: contents/configuration/AboutPlugin.qml:131
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
 msgstr "작성자"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:152
 msgid "Credits"
 msgstr "기타 만든 사람들"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:163
 msgid "Translators"
 msgstr "번역자"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Report a Bug…"
 msgstr ""
 

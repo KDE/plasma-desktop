@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-09-29 14:56+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -103,19 +103,24 @@ msgstr "Copyright"
 msgid "License:"
 msgstr "Licentie:"
 
-#: contents/configuration/AboutPlugin.qml:141
+#: contents/configuration/AboutPlugin.qml:131
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
 msgstr "Auteurs"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:152
 msgid "Credits"
 msgstr "Dankbetuigingen"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:163
 msgid "Translators"
 msgstr "Vertalers"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Report a Bug…"
 msgstr "Een bug rapporteren…"
 

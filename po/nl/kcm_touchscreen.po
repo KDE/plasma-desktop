@@ -1,27 +1,26 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-23 00:49+0000\n"
-"PO-Revision-Date: 2022-11-24 07:49+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2022-11-25 15:00+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: kcmtouchscreen.cpp:45
 #, kde-format
 msgid "Automatic"
-msgstr "Samodejno"
+msgstr "Automatisch"
 
 #: kcmtouchscreen.cpp:51
 #, kde-format
@@ -32,20 +31,20 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: package/contents/ui/main.qml:28
 #, kde-format
 msgid "No touchscreens found"
-msgstr "Ni zaznanih zaslonov na dotik"
+msgstr "Geen aanraakscherm gevonden"
 
 #: package/contents/ui/main.qml:44
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr "Naprava:"
+msgstr "Apparaat:"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Enabled:"
-msgstr "Omogočeno:"
+msgstr "Ingeschakeld:"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Target display:"
-msgstr "Ciljni zaslon:"
+msgstr "Doelbeeldscherm:"

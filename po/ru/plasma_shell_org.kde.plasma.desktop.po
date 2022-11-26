@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-09-29 10:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -113,19 +113,24 @@ msgstr "Авторские права"
 msgid "License:"
 msgstr "Лицензия: "
 
-#: contents/configuration/AboutPlugin.qml:141
+#: contents/configuration/AboutPlugin.qml:131
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
 msgstr "Авторы"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:152
 msgid "Credits"
 msgstr "Благодарности"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:163
 msgid "Translators"
 msgstr "Переводчики"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Report a Bug…"
 msgstr "Сообщить об ошибке…"
 

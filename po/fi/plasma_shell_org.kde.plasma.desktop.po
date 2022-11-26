@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-10-28 22:19+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -105,19 +105,24 @@ msgstr "Tekijänoikeudet"
 msgid "License:"
 msgstr "Lisenssi:"
 
-#: contents/configuration/AboutPlugin.qml:141
+#: contents/configuration/AboutPlugin.qml:131
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
 msgstr "Tekijät"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:152
 msgid "Credits"
 msgstr "Kiitokset"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:163
 msgid "Translators"
 msgstr "Kääntäjät"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Report a Bug…"
 msgstr "Ilmoita viasta…"
 
