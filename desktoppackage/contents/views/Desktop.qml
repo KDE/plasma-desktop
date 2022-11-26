@@ -74,7 +74,7 @@ Item {
 
             readonly property color backgroundColor: PlasmaCore.Theme.backgroundColor
             readonly property color textColor: PlasmaCore.Theme.textColor
-            property color colorFromPlugin: Qt.transparent
+            property color colorFromPlugin: "transparent"
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.backgroundColor: backgroundColor
@@ -91,7 +91,7 @@ Item {
                         return imageColors.colorFromPlugin;
                     }
                     if (imageColors.palette.length === 0) {
-                        return "#00000000";
+                        return "transparent";
                     }
                     return imageColors.dominant;
                 }
