@@ -242,16 +242,11 @@ function taskPrefix(prefix) {
 }
 
 function taskPrefixHovered(prefix) {
-    var effectivePrefix = taskPrefix(prefix);
-
-    if ("" !== prefix)
-        effectivePrefix = [
-            ...taskPrefix(prefix + "-hover"),
-            ...taskPrefix("hover"),
-            ...effectivePrefix
-        ];
-
-    return effectivePrefix;
+    return [
+        ...taskPrefix((prefix || "launcher") + "-hover"),
+        ...prefix ? taskPrefix("hover") : [],
+        ...taskPrefix(prefix)
+    ];
 }
 
 function createGroupDialog(visualParent) {
