@@ -28,6 +28,7 @@ target_link_libraries(kcm_splashscreen
   KF5::Plasma
   KF5::PlasmaQuick
   KF5::NewStuff
+  KF5::Package
 
   Qt::DBus
   Qt::Widgets
