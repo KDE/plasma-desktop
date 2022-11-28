@@ -47,6 +47,9 @@ Item {
     readonly property int rightFloatingPadding: floating && containment.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
     readonly property int topFloatingPadding: floating && containment.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
 
+    readonly property int minPanelHeight: translucentItem.minimumDrawingHeight
+    readonly property int minPanelWidth: translucentItem.minimumDrawingWidth
+
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
     }

@@ -287,8 +287,7 @@ Item {
 
             editable: true
             focus: !Kirigami.InputMethod.willShowOnActive
-
-            from: 20 // below this size, the panel is mostly unusable
+            from: Math.max(20, panel.minThickness) // below this size, the panel is mostly unusable
             to: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
 
             stepSize: 2
@@ -312,6 +311,12 @@ Item {
                         configDialog.y = Qt.binding(function() { return panel.y - configDialog.height });
                         break;
                 }
+            }
+            PlasmaCore.FrameSvgItem {
+                id: panelSvg
+                visible: false
+                prefix: 'normal'
+                imagePath: "widgets/panel-background"
             }
             DragHandler {
                 property int magnitude: PlasmaCore.Units.gridUnit
