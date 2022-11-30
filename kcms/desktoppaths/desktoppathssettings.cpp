@@ -31,6 +31,8 @@ class XdgPathsSettingsStore : public QObject
     Q_PROPERTY(QUrl musicLocation READ musicLocation WRITE setMusicLocation)
     Q_PROPERTY(QUrl picturesLocation READ picturesLocation WRITE setPicturesLocation)
     Q_PROPERTY(QUrl videosLocation READ videosLocation WRITE setVideosLocation)
+    Q_PROPERTY(QUrl publicLocation READ publicLocation WRITE setPublicLocation)
+    Q_PROPERTY(QUrl templatesLocation READ templatesLocation WRITE setTemplatesLocation)
 public:
     XdgPathsSettingsStore(DesktopPathsSettings *parent = nullptr)
         : QObject(parent)
@@ -98,6 +100,26 @@ public:
         writeUrl(QStringLiteral("XDG_VIDEOS_DIR"), url);
     }
 
+    QUrl publicLocation() const
+    {
+        return readUrl(QStringLiteral("XDG_PUBLICSHARE_DIR"), m_settings->defaultPublicLocation());
+    }
+
+    void setPublicLocation(const QUrl &url)
+    {
+        writeUrl(QStringLiteral("XDG_PUBLICSHARE_DIR"), url);
+    }
+
+    QUrl templatesLocation() const
+    {
+        return readUrl(QStringLiteral("XDG_TEMPLATES_DIR"), m_settings->defaultTemplatesLocation());
+    }
+
+    void setTemplatesLocation(const QUrl &url)
+    {
+        writeUrl(QStringLiteral("XDG_TEMPLATES_DIR"), url);
+    }
+
 private:
     QUrl readUrl(const QString &key, const QUrl &defaultValue) const
     {
@@ -147,6 +169,8 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     addItemInternal("musicLocation", defaultMusicLocation());
     addItemInternal("picturesLocation", defaultPicturesLocation());
     addItemInternal("videosLocation", defaultVideosLocation());
+    addItemInternal("publicLocation", defaultPublicLocation());
+    addItemInternal("templatesLocation", defaultTemplatesLocation());
 }
 
 void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue)
@@ -246,6 +270,36 @@ void DesktopPathsSettings::setVideosLocation(const QUrl &url)
 QUrl DesktopPathsSettings::defaultVideosLocation() const
 {
     return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs", "Videos"));
+}
+
+QUrl DesktopPathsSettings::publicLocation() const
+{
+    return findItem("publicLocation")->property().toUrl();
+}
+
+void DesktopPathsSettings::setPublicLocation(const QUrl &url)
+{
+    findItem("publicLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultPublicLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs", "Public"));
+}
+
+QUrl DesktopPathsSettings::templatesLocation() const
+{
+    return findItem("templatesLocation")->property().toUrl();
+}
+
+void DesktopPathsSettings::setTemplatesLocation(const QUrl &url)
+{
+    findItem("templatesLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultTemplatesLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs", "Templates"));
 }
 
 #include "desktoppathssettings.moc"

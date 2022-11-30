@@ -12,7 +12,7 @@
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_1">
      <property name="text">
       <string>Desktop path:</string>
      </property>
@@ -107,6 +107,40 @@
     <widget class="KUrlRequester" name="kcfg_musicLocation">
      <property name="whatsThis">
       <string>This folder will be used by default to load or save music from or to.</string>
+     </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Public path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="KUrlRequester" name="kcfg_publicLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save public shares from or to.</string>
+     </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Templates path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="KUrlRequester" name="kcfg_templatesLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save templates from or to.</string>
      </property>
      <property name="mode">
          <enum>KFile::Directory</enum>

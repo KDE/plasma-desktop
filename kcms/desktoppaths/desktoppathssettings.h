@@ -41,6 +41,14 @@ public:
     void setVideosLocation(const QUrl &url);
     QUrl defaultVideosLocation() const;
 
+    QUrl publicLocation() const;
+    void setPublicLocation(const QUrl &url);
+    QUrl defaultPublicLocation() const;
+
+    QUrl templatesLocation() const;
+    void setTemplatesLocation(const QUrl &url);
+    QUrl defaultTemplatesLocation() const;
+
 Q_SIGNALS:
     void widgetChanged();
 

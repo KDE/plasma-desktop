@@ -51,6 +51,8 @@ void DesktopPathConfig::updateDefaultIndicator()
     setDefaultIndicatorVisible(m_ui->kcfg_musicLocation, m_data->settings()->defaultMusicLocation());
     setDefaultIndicatorVisible(m_ui->kcfg_picturesLocation, m_data->settings()->defaultPicturesLocation());
     setDefaultIndicatorVisible(m_ui->kcfg_videosLocation, m_data->settings()->defaultVideosLocation());
+    setDefaultIndicatorVisible(m_ui->kcfg_publicLocation, m_data->settings()->defaultPublicLocation());
+    setDefaultIndicatorVisible(m_ui->kcfg_templatesLocation, m_data->settings()->defaultTemplatesLocation());
 }
 
 void DesktopPathConfig::setDefaultIndicatorVisible(KUrlRequester *widget, const QVariant &defaultValue)
