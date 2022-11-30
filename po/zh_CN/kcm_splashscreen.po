@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-11-19 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -37,25 +37,25 @@ msgstr "您不能删除当前选中的欢迎屏幕"
 msgid "This module lets you choose the splash screen theme."
 msgstr "此模块允许您选择欢迎屏幕主题。"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "显示欢迎屏幕预览失败。"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "预览欢迎屏幕"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "卸载"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "获取新欢迎屏幕(&G)…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -68,3 +68,6 @@ msgstr "用于以后使用"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "当前欢迎屏幕主题名称"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "获取新欢迎屏幕(&G)…"

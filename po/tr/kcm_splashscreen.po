@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-03-12 13:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -38,25 +38,25 @@ msgstr "Şu anda seçili olan açılış ekranını silemezsiniz"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Bu modül, açılış ekranı temasını seçmenizi sağlar."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Açılış ekranı önizlemesi gösterilemedi."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Açılış Ekranını Önizle"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Kaldır"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Yeni Açılış Ekranları Al…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -69,3 +69,6 @@ msgstr "Gelecekteki kullanım için"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Geçerli açılış temasının adı"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Yeni Açılış Ekranları Al…"

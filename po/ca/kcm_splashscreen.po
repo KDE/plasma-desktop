@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-05-26 10:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -42,25 +42,25 @@ msgstr "No es pot suprimir la pantalla de presentació seleccionada actualment"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Aquest mòdul permet triar el tema de la pantalla de presentació."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Ha fallat en mostrar la vista prèvia de la pantalla de presentació."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Vista prèvia de la pantalla de presentació"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstal·la"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Obtén pantalles noves de presentació…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -73,6 +73,9 @@ msgstr "Per a un ús futur"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nom del tema actual de pantalla de presentació"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Obtén pantalles noves de presentació…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

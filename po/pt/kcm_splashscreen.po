@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-06-07 15:26+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -32,25 +32,25 @@ msgstr "Não pode remover o ecrã inicial seleccionado de momento"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Este módulo permite-lhe escolher o tema do ecrã inicial."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Não foi possível mostrar a antevisão do ecrã inicial."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Antever o Ecrã Inicial"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalar"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Obter Novos Ecrãs Iniciais…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -63,6 +63,9 @@ msgstr "Para utilização futura"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nome do tema de ecrãs iniciais actual"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Obter Novos Ecrãs Iniciais…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

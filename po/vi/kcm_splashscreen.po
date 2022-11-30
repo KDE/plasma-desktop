@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-05-26 21:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -37,25 +37,25 @@ msgstr "Bạn không thể xoá màn hình khởi động đang được chọn"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Khối này cho phép bạn chọn chủ đề màn hình khởi động."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Hiện xem thử màn hình khởi động thất bại."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Xem thử màn hình khởi động"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Gỡ cài đặt"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Lấy màn hình khởi động mới…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -68,6 +68,9 @@ msgstr "Để dùng sau"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Tên chủ đề khởi động hiện tại"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Lấy màn hình khởi động mới…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

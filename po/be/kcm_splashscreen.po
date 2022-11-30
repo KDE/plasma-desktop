@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-09-30 11:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -41,25 +41,25 @@ msgstr "Вы не можаце выдаліць абраную застаўку"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Гэты модуль дазваляе абраць тэму застаўкі."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Не ўдалося запусціць папярэдні прагляд застаўкі."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Папярэдні прагляд застаўкі"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Выдаліць"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Атрымаць новыя застаўкі…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -72,3 +72,6 @@ msgstr "Для далейшага выкарыстання"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Назва бягучай тэмы застаўкі"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Атрымаць новыя застаўкі…"

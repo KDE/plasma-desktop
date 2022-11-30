@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-06-02 16:15+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -38,25 +38,25 @@ msgstr "Momentálně vybranou úvodní obrazovku nelze smazat"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Tento modul vám umožní nastavit motiv úvodní obrazovky."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Zobrazení náhledu úvodní obrazovky selhalo."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Náhled úvodní obrazovky"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Odinstalovat"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "Získat nové motivy o&brazovky při spuštění…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -69,3 +69,6 @@ msgstr "Pro použití v budoucnosti"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Název nynějšího motivu úvodní obrazovky"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "Získat nové motivy o&brazovky při spuštění…"

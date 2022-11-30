@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-05-27 08:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -40,25 +40,25 @@ msgstr "Ne morete brisati trenutno izbranega uvodnega pozdravnega zaslona"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Ta modul vam omogoča izbiro teme pozdravnega okna."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Ni bilo mogoče pokazati predogleda pozdravnega okna."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Predogled pozdravnega okna"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Odstrani namestitev"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "Prenesi nova pozdravna okna…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -71,6 +71,9 @@ msgstr "Za rabo v bodoče"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Ime trenutne pozdravne teme"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "Prenesi nova pozdravna okna…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

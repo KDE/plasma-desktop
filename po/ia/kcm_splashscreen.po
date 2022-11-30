@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-08-04 22:04+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -37,25 +37,25 @@ msgstr "Tu non pote deler le schermo de splash currentemente seligite"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Iste modulo te permitte seliger le thema de schermo de splash."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Il falleva a monstrar e vista preliminar del schermo de splash."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Vista preliminari per le schermo de Splash"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "De-installa"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Obtene nove schermos de Splash..."
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -68,6 +68,9 @@ msgstr "Per uso future"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nomine del thema de splash currente"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Obtene nove schermos de Splash..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

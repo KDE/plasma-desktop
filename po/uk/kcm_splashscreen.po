@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-05-26 09:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,25 +40,25 @@ msgstr "Не можна вилучати поточне позначене ві�
 msgid "This module lets you choose the splash screen theme."
 msgstr "За допомогою цього модуля ви зможете вибрати тему вікна вітання."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Не вдалося показати попередній перегляд вікна вітання."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Ескіз вікна вітання"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Вилучити"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Отримати нові вікна вітання…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -71,6 +71,9 @@ msgstr "Для наступного використання"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Назва поточної теми вікна вітання"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Отримати нові вікна вітання…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-08-18 09:16+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -38,25 +38,25 @@ msgstr "現在選択されているスプラッシュスクリーンは削除で
 msgid "This module lets you choose the splash screen theme."
 msgstr "このモジュールでスプラッシュスクリーンのテーマを選択できます。"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "スプラッシュスクリーンの表示に失敗しました。"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "スプラッシュスクリーンをプレビュー"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "アンインストール"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "新しいスプラッシュスクリーンを入手(&G)..."
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -69,3 +69,6 @@ msgstr "For future use"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "現在のスプラッシュテーマの名前"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "新しいスプラッシュスクリーンを入手(&G)..."

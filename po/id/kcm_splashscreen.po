@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-03-24 07:06+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -37,25 +37,25 @@ msgstr "Kamu tidak bisa menghapus layar splash yang dipilih saat ini"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Modul ini memungkinkanmu memilih tema layar splash."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Gagal menampilkan pratinjau layar splash."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Pratinjau Layar Splash"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Copot"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Dapatkan Layar Splash Baru..."
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -68,6 +68,9 @@ msgstr "Untuk penggunaan di masa depan"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nama dari tema splash saat ini"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Dapatkan Layar Splash Baru..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

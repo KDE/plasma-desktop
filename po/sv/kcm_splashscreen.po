@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-05-27 18:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -37,25 +37,25 @@ msgstr "Du kan inte ta bort startskärmen som för närvarande är vald"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Modulen låter dig välja startskärmstemat."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Misslyckades visa förhandsgranskning av startskärm."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Förhandsgranska startskärm"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Avinstallera"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Hämta nya startskärmar…"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -68,6 +68,9 @@ msgstr "För framtida användning"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Namn på aktuellt starttema"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Hämta nya startskärmar…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

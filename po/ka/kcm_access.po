@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-12 00:47+0000\n"
-"PO-Revision-Date: 2022-11-07 07:11+0100\n"
+"PO-Revision-Date: 2022-11-29 07:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -36,37 +36,37 @@ msgstr "Super"
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა NumLock, CapsLock და ScrollLock აქტიურია"
 
 #: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა CapsLock და ScrollLock აქტიურია"
 
 #: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა NumLock დაScrollLock აქტიურია"
 
 #: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა ScrollLock აქტიურია"
 
 #: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა NumLock და CapsLock აქტიურია"
 
 #: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა CapsLock აქტიურია"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
-msgstr ""
+msgstr "დააწექით %1-ს, როცა NumLock აქტიურია"
 
 #: kcmaccess.cpp:137
 #, kde-format
@@ -81,7 +81,7 @@ msgstr ""
 #: kcmaccess.cpp:189
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr ""
+msgstr "შეცდომა: \"orca --setup\" -ის გაშვების შეცდომა"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -105,7 +105,7 @@ msgstr "სისტემური ზარის დაკვრა"
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "ხმის მაგიერ ვიზუალური ზარის გამოყენება"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
@@ -148,31 +148,31 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr ""
+msgstr "პიპინი, როცა წებოვან ღილაკებს დააწვებით"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "ღილაკების გადართვის პიპინი"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "შეტყობინება, როცა კლავიატურის მოდიფიკატორს დააწვებით"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
-msgstr ""
+msgstr "დაყოვნების ვადის გამოყენება"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
 #, kde-format
 msgid "Use a beep for access"
-msgstr ""
+msgstr "წვდომისთვის პიპინის გამოყენება"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -184,25 +184,25 @@ msgstr ""
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "ღილაკის დაწოლის დაყოვნება"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "პიპინი ღილაკების ნელა დაწყოლაზე"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "პიპინი დათანხმებულ ღილაკებზე"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "პიპინი უარყოფილ ღილაკებზე"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -251,58 +251,58 @@ msgstr ""
 #: kcmaccessibilitymouse.kcfg:28
 #, kde-format
 msgid "Maximum velocity"
-msgstr ""
+msgstr "მაქსიმალური აჩქარება"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:32
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "მაქსიმალური აჩქარება"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "თაგუნას ღილაკის მრუდი"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:41
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "ჟესტების გამოყენება"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:45
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "ჟესტის დადასტურების მოთხოვნა"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:49
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "კლავიატურასთან წვდომის დადასტურება"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
-msgstr ""
+msgstr "ეკრანის მკითხველის ჩართვა"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "აირჩიეთ აუდიო ფაილი"
 
 #: package/contents/ui/Bell.qml:22
 #, kde-format
 msgid "Audio Files (*.mp3 *.ogg *.wav)"
-msgstr ""
+msgstr "აუდიო ფაილები (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format
 msgid "Audible bell:"
-msgstr ""
+msgstr "გასაგონი ზარი:"
 
 #: package/contents/ui/Bell.qml:32
 #, kde-format
@@ -387,19 +387,19 @@ msgstr "სისტემური ზარის დარეკვა:"
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr ""
+msgstr "როცა ნებისმიერი ღილაკი &დაწოლილია"
 
 #: package/contents/ui/KeyboardFilters.qml:65
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr ""
+msgstr "როცა ნებისმიერი ღილაკი &მიღებულია"
 
 #: package/contents/ui/KeyboardFilters.qml:79
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr ""
+msgstr "როცა ნებისმიერი ღილაკი &უარყოფილია"
 
 #: package/contents/ui/KeyboardFilters.qml:96
 #, kde-format

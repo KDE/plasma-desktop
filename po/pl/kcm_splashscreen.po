@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2021-06-06 07:11+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -38,25 +38,25 @@ msgstr "Nie możesz usunąć obecnie wybranego ekranu powitalnego"
 msgid "This module lets you choose the splash screen theme."
 msgstr "Ten moduł umożliwia określenie wyglądu ekranu powitalnego."
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Nie udało się pokazać podglądu ekranu powitalnego."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Podgląd ekranu powitalnego"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Usuń"
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgid "&Get New Splash Screens…"
-msgstr "&Pobierz ekrany powitalne..."
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -69,6 +69,9 @@ msgstr "Do przyszłego użytku"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nazwa obecnego ekranu powitalnego"
+
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "&Pobierz ekrany powitalne..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

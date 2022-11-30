@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2016-01-22 22:51+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -37,28 +37,27 @@ msgstr ""
 msgid "This module lets you choose the splash screen theme."
 msgstr ""
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "Failed to successfully test the splash screen."
 msgid "Failed to show the splash screen preview."
 msgstr "Αποτυχία επιτυχούς δοκιμής της οθόνης εκκίνησης."
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:83
 #, fuzzy, kde-format
 #| msgid "Test Splashscreen"
 msgid "Preview Splash Screen"
 msgstr "Δοκιμή οθόνης εκκίνησης"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr ""
-
-#: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
-msgid "&Get New Splash Screens…"
-msgstr "Δοκιμή οθόνης εκκίνησης"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -71,6 +70,11 @@ msgstr ""
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "&Get New Splash Screens…"
+#~ msgstr "Δοκιμή οθόνης εκκίνησης"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
