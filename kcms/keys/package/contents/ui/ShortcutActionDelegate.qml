@@ -16,6 +16,7 @@ import org.kde.private.kcms.keys 2.0 as Private
 
 Kirigami.AbstractListItem {
     id: root
+    property bool showExpandButton: true
     highlighted: false
     hoverEnabled: true
     width: shortcutsList.width
@@ -64,6 +65,7 @@ Kirigami.AbstractListItem {
                 QQC2.ToolButton {
                     Layout.alignment: Qt.AlignRight
                     id: expandButton
+                    visible: root.showExpandButton
                     icon.name: "expand"
                     activeFocusOnTab: false
                     onClicked: expandAction.trigger()

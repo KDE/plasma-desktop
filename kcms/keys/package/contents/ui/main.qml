@@ -212,7 +212,9 @@ KCM.AbstractKCM {
                     model: DelegateModel {
                         id: dm
                         model: rootIndex.valid ?  kcm.filteredModel : undefined
-                        delegate: ShortcutActionDelegate {}
+                        delegate: ShortcutActionDelegate {
+                            showExpandButton: shortcutsList.count > 1
+                        }
                         KeyNavigation.left: components
                     }
 
