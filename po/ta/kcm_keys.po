@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-04-02 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -112,73 +112,73 @@ msgstr "நீக்கியதை மீட்டமை"
 msgid "No items matched the search terms"
 msgstr "தேடலுக்கு எதுவும் பொருந்தவில்லை"
 
-#: package/contents/ui/main.qml:224
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "ஒன்றன் சுருக்குவழிகளை இங்கு காண, பட்டியலிலிருந்து அதை தேர்ந்தெடுக்கவும்"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgid "Add Application…"
 msgstr "செயலியை சேர்…"
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Import Scheme…"
 msgstr "இறக்குமதி செய்…"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Cancel Export"
 msgstr "ஏற்றுமதியை ரத்து செய்"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Export Scheme…"
 msgstr "ஏற்றுமதி செய்…"
 
-#: package/contents/ui/main.qml:268
+#: package/contents/ui/main.qml:270
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்க:"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:26
+#: package/contents/ui/ShortcutActionDelegate.qml:27
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "சுருக்குவழியை திருத்துதல்: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:38
+#: package/contents/ui/ShortcutActionDelegate.qml:39
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -186,12 +186,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:51
+#: package/contents/ui/ShortcutActionDelegate.qml:52
 #, kde-format
 msgid "No active shortcuts"
 msgstr "சுருக்குவழிகள் செயலில் இல்லை"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:90
+#: package/contents/ui/ShortcutActionDelegate.qml:92
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -199,37 +199,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "இயல்பிருப்பு சுருக்குவழி"
 msgstr[1] "இயல்பிருப்பு சுருக்குவழிகள்"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:94
 #, kde-format
 msgid "No default shortcuts"
 msgstr "இயல்பிருப்பு சுருக்குவழிகள் இல்லை"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 செயலில் உள்ளது."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 முடங்கியுள்ளது."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:121
+#: package/contents/ui/ShortcutActionDelegate.qml:123
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "தனிப்பட்ட சுருக்குவழிகள்"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:145
+#: package/contents/ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "இந்த சுருக்குவழியை நீக்கு"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:151
+#: package/contents/ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "தனிப்பட்ட சுருக்குவழியை சேர்"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:185
+#: package/contents/ui/ShortcutActionDelegate.qml:187
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"

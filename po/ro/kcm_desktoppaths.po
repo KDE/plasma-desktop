@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-02-04 16:00+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -20,35 +20,45 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Birou"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, kde-format
 msgid "Documents"
 msgstr "Documente"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, kde-format
 msgid "Downloads"
 msgstr "Descărcări"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, kde-format
 msgid "Music"
 msgstr "Muzică"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, kde-format
 msgid "Pictures"
 msgstr "Poze"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, kde-format
 msgid "Videos"
 msgstr "Video"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -64,7 +74,7 @@ msgstr ""
 "Folosiți „Ce înseamnă aceasta?” (Shift+F1) pentru a obține ajutor pentru "
 "opțiunile individuale."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, kde-format
 msgid "Desktop path:"
@@ -150,6 +160,40 @@ msgstr "Cale muzică:"
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva muzică."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "Music path:"
+msgid "Public path:"
+msgstr "Cale muzică:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgid "Templates path:"
+msgstr "Cale poze:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Cale autostart:"

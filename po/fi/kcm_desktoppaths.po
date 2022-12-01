@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2021-04-06 11:08+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,35 +29,45 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:19+0000\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Työpöytä"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, kde-format
 msgid "Documents"
 msgstr "Asiakirjat"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, kde-format
 msgid "Downloads"
 msgstr "Lataukset"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, kde-format
 msgid "Music"
 msgstr "Musiikki"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, kde-format
 msgid "Pictures"
 msgstr "Kuvat"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, kde-format
 msgid "Videos"
 msgstr "Videot"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -73,7 +83,7 @@ msgstr ""
 "valinnasta, käytä ”Mikä tämä on?” -toimintoa näppäinyhdistelmällä\n"
 "Vaihto+F1."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, kde-format
 msgid "Desktop path:"
@@ -161,6 +171,42 @@ msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Tätä kansiota käytetään oletuskansiona avattaville tai tallennettaville "
 "musiikkitiedostoille."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "Music path:"
+msgid "Public path:"
+msgstr "Musiikin sijainti:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr ""
+"Tätä kansiota käytetään oletuskansiona avattaville tai tallennettaville "
+"kuville."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgid "Templates path:"
+msgstr "Kuvien sijainti:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
+msgstr ""
+"Tätä kansiota käytetään oletuskansiona avattaville tai tallennettaville "
+"kuville."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Automaattikäynnistyksen sijainti:"

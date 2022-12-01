@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2010-02-11 21:34+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -19,36 +19,46 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "พื้นที่หน้าจอ"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, kde-format
 msgid "Documents"
 msgstr "เอกสารต่าง ๆ"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, kde-format
 msgid "Downloads"
 msgstr "แฟ้มดาวน์โหลดต่าง ๆ"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, kde-format
 msgid "Music"
 msgstr "ดนตรีต่าง ๆ"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, kde-format
 msgid "Pictures"
 msgstr "รูปภาพต่าง ๆ"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos"
 msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -62,7 +72,7 @@ msgstr ""
 "มอดูลนี้ ให้คุณเลือกที่จะเก็บแฟ้มบนพื้นที่หน้าจอของคุณไว้ที่ไหนในระบบแฟ้ม\n"
 "เลือกใช้เมนู \"นี่คืออะไร ?\" (หรือกด Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือกที่ต้องการ"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, kde-format
 msgid "Desktop path:"
@@ -141,6 +151,38 @@ msgstr "พาธตำแหน่งเก็บแฟ้มดนตรี:"
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกแฟ้มดนตรี"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "Music path:"
+msgid "Public path:"
+msgstr "พาธตำแหน่งเก็บแฟ้มดนตรี:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกรูปภาพ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgid "Templates path:"
+msgstr "พาธตำแหน่งเก็บรูปภาพ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกรูปภาพ"
 
 #~ msgid "Autostart path:"
 #~ msgstr "พาธของโฟลเดอร์เริ่มอัตโนมัติ:"

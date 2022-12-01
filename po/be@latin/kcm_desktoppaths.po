@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-11-04 17:48+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -20,40 +20,50 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Rabočy stoł"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Documents"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Downloads"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Music"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Pictures"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Videos"
 msgstr "Ściežka &dakumentaŭ:"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -69,7 +79,7 @@ msgstr ""
 "Kab atrymać daviedku pra peŭnyja opcyi, vykarystaj mahčymaść „Što heta?”, "
 "jakuju možna vyklikać klavijaturnym skarotam „Shift+F1”."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
@@ -161,6 +171,38 @@ msgstr "Ściežka &dakumentaŭ:"
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
 msgid "This folder will be used by default to load or save music from or to."
+msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Public path:"
+msgstr "Ściežka &dakumentaŭ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Templates path:"
+msgstr "Ściežka &dakumentaŭ:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #, fuzzy

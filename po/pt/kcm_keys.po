@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2021-10-29 09:41+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -110,73 +110,73 @@ msgstr "Desfazer a remoção"
 msgid "No items matched the search terms"
 msgstr "Sem itens correspondentes aos termos da pesquisa"
 
-#: package/contents/ui/main.qml:224
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccione um item na lista para ver aqui os atalhos do mesmo"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgid "Add Application…"
 msgstr "Adicionar uma Aplicação…"
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importar um Esquema…"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Cancel Export"
 msgstr "Cancelar a Exportação"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Exportar o Esquema…"
 
-#: package/contents/ui/main.qml:268
+#: package/contents/ui/main.qml:270
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exportar o Esquema de Atalhos"
 
-#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importar um Esquema de Atalhos"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de Atalhos (*.kksrc)"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Seleccione o esquema a importar:"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema Personalizado"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Select File…"
 msgstr "Seleccionar o Ficheiro…"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Import"
 msgstr "Importar"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:26
+#: package/contents/ui/ShortcutActionDelegate.qml:27
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "A editar o atalho: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:38
+#: package/contents/ui/ShortcutActionDelegate.qml:39
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -184,12 +184,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:51
+#: package/contents/ui/ShortcutActionDelegate.qml:52
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Sem atalhos activos"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:90
+#: package/contents/ui/ShortcutActionDelegate.qml:92
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -197,37 +197,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Atalho predefinido"
 msgstr[1] "Atalhos predefinidos"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:94
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Sem atalhos predefinidos"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "O atalho predefinido %1 está activo."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "O atalho predefinido %1 está inactivo."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:121
+#: package/contents/ui/ShortcutActionDelegate.qml:123
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Atalhos personalizados"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:145
+#: package/contents/ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Apagar este atalho"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:151
+#: package/contents/ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Adicionar um atalho personalizado"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:185
+#: package/contents/ui/ShortcutActionDelegate.qml:187
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar a captura do novo atalho"

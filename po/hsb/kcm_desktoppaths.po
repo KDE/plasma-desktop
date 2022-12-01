@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-11-19 23:51+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,40 +17,50 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Dźěłowy powjerch"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, kde-format
 msgid "Documents"
 msgstr "Dokumenty"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, fuzzy, kde-format
 #| msgid "Download"
 msgid "Downloads"
 msgstr "Sćahnyć"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, fuzzy, kde-format
 #| msgctxt "Name"
 #| msgid "MusE"
 msgid "Music"
 msgstr "MusE"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, fuzzy, kde-format
 #| msgid "All Pictures"
 msgid "Pictures"
 msgstr "Wšitke wobrazy"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Videos"
 msgstr "Puć za &dokumenty:"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -65,7 +75,7 @@ msgstr ""
 "dźěłowym powjerchu składuja.\n"
 "Wužiwajće \"Što to je?\" (Wulkopis+F1) po pomoc za specielne opcije."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
@@ -157,6 +167,38 @@ msgstr "Puć za &dokumenty:"
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
 msgid "This folder will be used by default to load or save music from or to."
+msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Public path:"
+msgstr "Puć za &dokumenty:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Templates path:"
+msgstr "Puć za &dokumenty:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #, fuzzy

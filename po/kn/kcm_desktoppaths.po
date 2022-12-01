@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-12-28 23:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -18,40 +18,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "ಗಣಕತೆರೆ"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Documents"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Downloads"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Music"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Pictures"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Videos"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -66,7 +76,7 @@ msgstr ""
 "ನಿರ್ಧರಿಸಲು ಈ ಘಟಕವು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ.\n"
 "ನಿಗದಿತ ಆಯ್ಕೆಗಳ ಬಗ್ಗೆ ಸಹಾಯ ಪಡೆಯಲು \"ಏನಿದು?\" (ಶಿಫ್ಟ್+F1) ಅನ್ನು ಬಳಸಿ."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
@@ -166,6 +176,42 @@ msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
 msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+"ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
+"ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Public path:"
+msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr ""
+"ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
+"ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "D&ocuments path:"
+msgid "Templates path:"
+msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default to load or save templates from or to."
 msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."

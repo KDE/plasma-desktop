@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2021-10-06 09:47+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -113,73 +113,73 @@ msgstr "Annuler la suppression"
 msgid "No items matched the search terms"
 msgstr "Aucun élément ne correspond aux critères de recherche"
 
-#: package/contents/ui/main.qml:224
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Sélectionner un élément dans la liste pour afficher ses raccourcis ici"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgid "Add Application…"
 msgstr "Ajouter une application..."
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importer un thème..."
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Cancel Export"
 msgstr "Annuler une exportation"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Exporter un thème..."
 
-#: package/contents/ui/main.qml:268
+#: package/contents/ui/main.qml:270
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exporter un schéma de raccourcis"
 
-#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importer un schéma de raccourcis"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Schéma de raccourcis (*.kksrc)"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Sélectionner un schéma à importer :"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Schéma personnalisé"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Select File…"
 msgstr "Sélectionner un fichier..."
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Import"
 msgstr "Importer"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:26
+#: package/contents/ui/ShortcutActionDelegate.qml:27
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Modification du raccourci : %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:38
+#: package/contents/ui/ShortcutActionDelegate.qml:39
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -187,12 +187,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1 :"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:51
+#: package/contents/ui/ShortcutActionDelegate.qml:52
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Aucun raccourci actif"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:90
+#: package/contents/ui/ShortcutActionDelegate.qml:92
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -200,37 +200,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Raccourci par défaut"
 msgstr[1] "Raccourcis par défaut"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:94
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Aucun raccourci par défaut"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Le raccourci par défaut %1 est activé."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Le raccourci par défaut %1 est désactivé."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:121
+#: package/contents/ui/ShortcutActionDelegate.qml:123
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Raccourcis personnalisés"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:145
+#: package/contents/ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Supprimer ce raccourci"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:151
+#: package/contents/ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Ajouter un raccourci personnalisé"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:185
+#: package/contents/ui/ShortcutActionDelegate.qml:187
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Annuler la construction d'un nouveau raccourci"

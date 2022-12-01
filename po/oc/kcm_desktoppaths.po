@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -20,40 +20,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Burèu"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgid "Documents"
 msgstr "Montar"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgid "Downloads"
 msgstr "Montar"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgid "Music"
 msgstr "Montar"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgid "Pictures"
 msgstr "Montar"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgid "Videos"
 msgstr "Montar"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -64,7 +74,7 @@ msgid ""
 "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, fuzzy, kde-format
 #| msgid "Desktop"
@@ -145,6 +155,34 @@ msgstr "Montar"
 #: globalpaths.ui:109
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Public path:"
+msgstr "Montar"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgid "Templates path:"
+msgstr "Montar"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save templates from or to."
 msgstr ""
 
 #, fuzzy
