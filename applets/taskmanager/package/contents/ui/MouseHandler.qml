@@ -23,6 +23,22 @@ Item {
     property alias hoveredItem: dropHandler.hoveredItem
     property alias handleWheelEvents: wheelHandler.active
 
+    function insertIndexAt(above, x, y) {
+        if (above) {
+            return above.itemIndex;
+        } else {
+            var distance = tasks.vertical ? x : y;
+            var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
+            var stripe = Math.ceil(distance / step);
+
+            if (stripe === LayoutManager.calculateStripes()) {
+                return tasks.tasksModel.count - 1;
+            } else {
+                return stripe * LayoutManager.tasksPerStripe();
+            }
+        }
+    }
+
     Timer {
         id: ignoreItemTimer
 
@@ -117,7 +133,7 @@ Item {
                     return;
                 }
 
-                var insertAt = TaskTools.insertIndexAt(above, event.x, event.y, tasks, LayoutManager);
+                var insertAt = insertIndexAt(above, event.x, event.y);
 
                 if (tasks.dragSource !== above && tasks.dragSource.itemIndex !== insertAt) {
                     if (!!tasks.groupDialog) {

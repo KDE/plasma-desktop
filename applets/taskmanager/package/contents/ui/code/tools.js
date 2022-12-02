@@ -198,22 +198,6 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
     }
 }
 
-function insertIndexAt(above, x, y, tasks, LayoutManager) {
-    if (above) {
-        return above.itemIndex;
-    } else {
-        var distance = tasks.vertical ? x : y;
-        var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
-        var stripe = Math.ceil(distance / step);
-
-        if (stripe === LayoutManager.calculateStripes()) {
-            return tasks.tasksModel.count - 1;
-        } else {
-            return stripe * LayoutManager.tasksPerStripe();
-        }
-    }
-}
-
 function taskPrefix(prefix, location) {
     var effectivePrefix;
 
