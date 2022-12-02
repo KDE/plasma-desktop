@@ -20,6 +20,12 @@ KCM.SimpleKCM {
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the file indexer and search functionality.")
 
+    Connections {
+        target: kcm
+        function onIndexingSettingsChanged() {
+            needToRebootAfterChangingIndexingSettingsMessage.visible = true;
+        }
+    }
     Baloo.Monitor {
         id: monitor
 
@@ -67,6 +73,27 @@ KCM.SimpleKCM {
                     indexingDisabledWarning.visible = false;
                 }
             }
+        }
+
+        // TODO: remove this message (and the associated Connections object here
+        // plus the signal and function on the cpp side) once
+        // https://bugs.kde.org/show_bug.cgi?id=462009 is fixed because indexing
+        // workers either respect changed settings immediately, or else get killed
+        // and re-launched in the background
+        Kirigami.InlineMessage {
+            id: needToRebootAfterChangingIndexingSettingsMessage
+            Layout.fillWidth: true
+            visible: false
+            type: Kirigami.MessageType.Information
+            showCloseButton: true
+            text: i18n("The system must be restarted before these changes will take effect.");
+            actions: [
+                Kirigami.Action {
+                    icon.name: "system-reboot"
+                    text: i18nc("@action:button", "Restart")
+                    onTriggered: kcm.requestReboot();
+                }
+            ]
         }
 
         QQC2.Label {

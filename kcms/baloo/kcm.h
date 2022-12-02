@@ -35,10 +35,14 @@ public:
     Q_INVOKABLE void deleteIndex();
     Q_INVOKABLE int rawIndexFileSize();
     Q_INVOKABLE QString prettyIndexFileSize();
+    Q_INVOKABLE void requestReboot();
 
 public Q_SLOTS:
     void load() override;
     void save() override;
+
+Q_SIGNALS:
+    void indexingSettingsChanged();
 
 private:
     BalooData *m_data;

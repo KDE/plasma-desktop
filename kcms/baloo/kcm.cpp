@@ -81,6 +81,7 @@ void ServerConfigModule::save()
         // Trying to start baloo when it is already running is fine
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe, QStringList());
+        Q_EMIT indexingSettingsChanged();
     } else {
         QDBusMessage message =
             QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"), QStringLiteral("/"), QStringLiteral("org.kde.baloo.main"), QStringLiteral("quit"));
@@ -117,6 +118,15 @@ int ServerConfigModule::rawIndexFileSize()
 QString ServerConfigModule::prettyIndexFileSize()
 {
     return KFormat().formatByteSize(rawIndexFileSize());
+}
+
+void ServerConfigModule::requestReboot()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.LogoutPrompt"),
+                                                      QStringLiteral("/LogoutPrompt"),
+                                                      QStringLiteral("org.kde.LogoutPrompt"),
+                                                      QStringLiteral("promptReboot"));
+    QDBusConnection::sessionBus().asyncCall(msg);
 }
 
 #include "kcm.moc"
