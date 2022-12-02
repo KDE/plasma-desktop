@@ -91,8 +91,8 @@ QtObject {
             readonly property int pid: model.Client ? model.Client.properties["application.process.id"] : 0
             // Determined on demand.
             property int parentPid: -1
-            readonly property string appName: model.Client ? model.Client.properties["application.name"] : ""
-            readonly property string portalAppId: model.Client ? model.Client.properties["pipewire.access.portal.app_id"] : ""
+            readonly property string appName: model.Client && model.Client.properties["application.name"] || ""
+            readonly property string portalAppId: model.Client && model.Client.properties["pipewire.access.portal.app_id"] || ""
             readonly property bool muted: model.Muted
             // whether there is nothing actually going on on that stream
             readonly property bool corked: model.Corked
