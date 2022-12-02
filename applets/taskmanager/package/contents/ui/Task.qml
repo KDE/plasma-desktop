@@ -308,30 +308,6 @@ MouseArea {
         }
     }
 
-    Component {
-        id: taskInitComponent
-
-        Timer {
-            id: timer
-
-            interval: PlasmaCore.Units.longDuration
-            repeat: false
-
-            onTriggered: {
-                parent.hoverEnabled = true;
-
-                if (parent.isWindow) {
-                    tasksModel.requestPublishDelegateGeometry(parent.modelIndex(),
-                        backend.globalRect(parent), parent);
-                }
-
-                timer.destroy();
-            }
-
-            Component.onCompleted: timer.start()
-        }
-    }
-
     TapHandler {
         acceptedButtons: Qt.LeftButton
         onTapped: {

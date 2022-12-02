@@ -374,6 +374,28 @@ MouseArea {
         }
     }
 
+    Component {
+        id: taskInitComponent
+
+        Timer {
+            id: timer
+
+            interval: PlasmaCore.Units.longDuration
+            running: true
+
+            onTriggered: {
+                parent.hoverEnabled = true;
+
+                if (parent.isWindow) {
+                    tasksModel.requestPublishDelegateGeometry(parent.modelIndex(),
+                        backend.globalRect(parent), parent);
+                }
+
+                timer.destroy();
+            }
+        }
+    }
+
     // Save drag data
     TaskManagerApplet.DragHelper {
         id: dragHelper
