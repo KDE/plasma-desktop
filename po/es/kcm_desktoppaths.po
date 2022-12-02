@@ -12,14 +12,14 @@
 # Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2009, 2014, 2017, 2020, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2009, 2014, 2017, 2020, 2021, 2022.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-03-19 12:51+0100\n"
+"PO-Revision-Date: 2022-12-01 16:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.11.90\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: desktoppathssettings.cpp:197
@@ -64,12 +64,12 @@ msgstr "Vídeos"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Público"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Plantillas"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -168,35 +168,31 @@ msgstr "Esta carpeta será la predeterminada para cargar o guardar música."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Ruta para música:"
+msgstr "Ruta de uso público:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "Esta carpeta será la predeterminada para cargar o guardar imágenes."
+msgstr ""
+"Esta carpeta será la predeterminada para cargar o guardar elementos "
+"compartidos públicamente."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Ruta para imágenes:"
+msgstr "Ruta para plantillas:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "Esta carpeta será la predeterminada para cargar o guardar imágenes."
+msgstr "Esta carpeta será la predeterminada para cargar o guardar plantillas."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ruta de inicio automático:"

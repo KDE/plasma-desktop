@@ -1,27 +1,26 @@
 # Translation for kcm_desktoppaths.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, The Free Software Foundation, Inc.
-# Copyright (C) 2019-2021, This file is copyright:
+# Copyright (C) 2002-2022, This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Juan Irigoien <juanirigoien@irakasle.net>
 # Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007, 2010.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2018, 2020, 2021.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2018, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-03-31 09:24+0200\n"
+"PO-Revision-Date: 2022-12-01 23:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: desktoppathssettings.cpp:197
@@ -57,12 +56,12 @@ msgstr "Bideoak"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Publikoa"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Txantiloiak"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -166,39 +165,32 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Musikaren bide-izena:"
+msgstr "Bide-izen publikoa:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
-"lehenetsia."
+"Karpeta hau erabiliko da, era lehenetsian, partekatze publikoak zamatzeko/"
+"gordetzeko."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Irudien bide-izena:"
+msgstr "Txantiloien bide-izena:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
-"lehenetsia."
+"Karpeta hau erabiliko da, era lehenetsian, txantiloiak zamatzeko/gordetzeko."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autoabioaren bide-izena:"

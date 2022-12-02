@@ -1,13 +1,13 @@
 # translation of kcmkonq.po to Tamil
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-08-05 21:06+0530\n"
+"PO-Revision-Date: 2022-12-01 22:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -50,12 +50,12 @@ msgstr "ஒளிக்காட்சிகள்"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "பொதுவானவை"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "வார்ப்புருகள்"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -154,35 +154,32 @@ msgstr "பாடல்களை ஏற்ற/சேமிக்க பயன்
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "பாடல்களுக்கான பாதை:"
+msgstr "பொதுவானவற்றிற்கான பாதை:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+msgstr ""
+"பொதுவாக பகிரப்படுபவற்றை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு "
+"பயன்படுத்தப்படும்."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "படங்களுக்கான பாதை:"
+msgstr "வார்ப்புருகளுக்கான பாதை:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+msgstr ""
+"வார்ப்புருகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #, fuzzy
 #~| msgid "A&utostart path:"
