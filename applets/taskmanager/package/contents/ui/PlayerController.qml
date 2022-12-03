@@ -41,8 +41,8 @@ RowLayout {
         const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
         return decodeURIComponent(lastUrlPart) || "";
     }
-    readonly property var artists: currentMetadata["xesam:artist"] || [""] // stringlist
-    readonly property var albumArtists: currentMetadata["xesam:albumArtist"] || [""] // stringlist
+    readonly property var artists: currentMetadata["xesam:artist"] || [] // stringlist
+    readonly property var albumArtists: currentMetadata["xesam:albumArtist"] || [] // stringlist
     readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
 
     ColumnLayout {
