@@ -41,7 +41,8 @@ RowLayout {
         const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
         return decodeURIComponent(lastUrlPart) || "";
     }
-    readonly property string artist: currentMetadata["xesam:artist"] || ""
+    readonly property var artists: currentMetadata["xesam:artist"] || [""] // stringlist
+    readonly property var albumArtists: currentMetadata["xesam:albumArtist"] || [""] // stringlist
     readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
 
     ColumnLayout {
@@ -88,7 +89,7 @@ RowLayout {
                 wrapMode: Text.NoWrap
                 lineHeight: 1
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
-                text: artist
+                text: artists.length > 0 ? artists.join(", ") : albumArtists.join(", ")
                 font: PlasmaCore.Theme.smallestFont
                 textFormat: Text.PlainText
             }
