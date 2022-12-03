@@ -107,6 +107,9 @@ MouseArea {
     }
 
     function publishIconGeometries(taskItems) {
+        if (TaskTools.taskManagerInstanceCount >= 2) {
+            return;
+        }
         for (var i = 0; i < taskItems.length - 1; ++i) {
             var task = taskItems[i];
 
@@ -221,9 +224,7 @@ MouseArea {
         readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
     }
 
-    TaskManagerApplet.Backend {
-        id: backend
-
+    property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         taskManagerItem: tasks
         highlightWindows: plasmoid.configuration.highlightWindows
 
@@ -355,6 +356,9 @@ MouseArea {
         target: plasmoid
 
         function onLocationChanged() {
+            if (TaskTools.taskManagerInstanceCount >= 2) {
+                return;
+            }
             // This is on a timer because the panel may not have
             // settled into position yet when the location prop-
             // erty updates.
@@ -379,9 +383,7 @@ MouseArea {
         }
     }
 
-    Component {
-        id: taskInitComponent
-
+    property Component taskInitComponent: Component {
         Timer {
             id: timer
 
@@ -389,11 +391,7 @@ MouseArea {
             running: true
 
             onTriggered: {
-                if (parent.isWindow) {
-                    tasksModel.requestPublishDelegateGeometry(parent.modelIndex(),
-                        backend.globalRect(parent), parent);
-                }
-
+                tasksModel.requestPublishDelegateGeometry(parent.modelIndex(), backend.globalRect(parent), parent);
                 timer.destroy();
             }
         }
@@ -568,9 +566,14 @@ MouseArea {
     }
 
     Component.onCompleted: {
+        TaskTools.taskManagerInstanceCount += 1;
         tasks.requestLayout.connect(layoutTimer.restart);
         tasks.requestLayout.connect(iconGeometryTimer.restart);
         tasks.windowsHovered.connect(backend.windowsHovered);
         tasks.activateWindowView.connect(backend.activateWindowView);
+    }
+
+    Component.onDestruction: {
+        TaskTools.taskManagerInstanceCount -= 1;
     }
 }
