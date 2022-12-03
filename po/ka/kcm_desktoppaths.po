@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:49+0200\n"
+"PO-Revision-Date: 2022-12-02 06:53+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -51,12 +51,12 @@ msgstr "ვიდეო"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "საჯარო"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "ნიმუშები"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -164,36 +164,30 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "მუსიკის ბილიკი:"
+msgstr "საჯარო ბილიკი:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება სურათების ჩასატვირთად ან "
-"შესანახად."
+"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება საჯარო გაზიარებულების "
+"ჩასატვირთად ან შესანახად."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "სურათების ბილიკი:"
+msgstr "შაბლონების ბილიკი:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება სურათების ჩასატვირთად ან "
+"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება შაბლონების ჩასატვირთად ან "
 "შესანახად."

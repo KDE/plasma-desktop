@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-04 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2021-03-21 17:32+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -22,35 +22,45 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: desktoppathssettings.cpp:173
+#: desktoppathssettings.cpp:197
 #, kde-format
 msgid "Desktop"
 msgstr "Skrivebord"
 
-#: desktoppathssettings.cpp:188
+#: desktoppathssettings.cpp:212
 #, kde-format
 msgid "Documents"
 msgstr "Dokument"
 
-#: desktoppathssettings.cpp:203
+#: desktoppathssettings.cpp:227
 #, kde-format
 msgid "Downloads"
 msgstr "Nedlastingar"
 
-#: desktoppathssettings.cpp:218
+#: desktoppathssettings.cpp:242
 #, kde-format
 msgid "Music"
 msgstr "Musikk"
 
-#: desktoppathssettings.cpp:233
+#: desktoppathssettings.cpp:257
 #, kde-format
 msgid "Pictures"
 msgstr "Bilete"
 
-#: desktoppathssettings.cpp:248
+#: desktoppathssettings.cpp:272
 #, kde-format
 msgid "Videos"
 msgstr "Videoar"
+
+#: desktoppathssettings.cpp:287
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:302
+#, kde-format
+msgid "Templates"
+msgstr ""
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -65,7 +75,7 @@ msgstr ""
 "Bruk funksjonen «Kva er dette?» (Shift&nbsp;+ F1) for å få hjelp om "
 "spesifikke innstillingar."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, kde-format
 msgid "Desktop path:"
@@ -147,3 +157,29 @@ msgstr "Mappe for musikk:"
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Dette er mappa som musikkfiler vanlegvis vert lagra til eller lesne frå."
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: globalpaths.ui:119
+#, kde-format
+msgid "Public path:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
+#: globalpaths.ui:126
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save public shares from or to."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: globalpaths.ui:136
+#, kde-format
+msgid "Templates path:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
+#: globalpaths.ui:143
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save templates from or to."
+msgstr ""

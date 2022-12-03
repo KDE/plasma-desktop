@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:48+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-01-15 18:11+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -122,73 +122,73 @@ msgstr "Angra fjerning"
 msgid "No items matched the search terms"
 msgstr "Ingen element passar til søkjeteksten"
 
-#: package/contents/ui/main.qml:224
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Vel eit element frå lista for å visa snøggtastane her"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:234
 #, kde-format
 msgid "Add Application…"
 msgstr "Legg til program …"
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importer oppsett …"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Cancel Export"
 msgstr "Avbryt eksport"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Eksporter oppsett …"
 
-#: package/contents/ui/main.qml:268
+#: package/contents/ui/main.qml:270
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Eksporter snøggtastoppsett"
 
-#: package/contents/ui/main.qml:268 package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importer snøggtastoppsett"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Snøggtastoppsett (*.kksrc)"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Vel oppsett å importera:"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Tilpassa oppsett"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Select File…"
 msgstr "Vel fil …"
 
-#: package/contents/ui/main.qml:313
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgid "Import"
 msgstr "Importer"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:26
+#: package/contents/ui/ShortcutActionDelegate.qml:27
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Redigerer snøggtast: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:38
+#: package/contents/ui/ShortcutActionDelegate.qml:39
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -196,12 +196,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:51
+#: package/contents/ui/ShortcutActionDelegate.qml:52
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Ingen verksame snøggtastar"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:90
+#: package/contents/ui/ShortcutActionDelegate.qml:92
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -209,37 +209,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standard snøggtast"
 msgstr[1] "Standard snøggtastar"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:94
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Ingen standard snøggtastar"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Standard snøggtast %1 er slått på."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:100
+#: package/contents/ui/ShortcutActionDelegate.qml:102
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Standard snøggtast %1 er slått av."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:121
+#: package/contents/ui/ShortcutActionDelegate.qml:123
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Tilpassa snøggtastar"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:145
+#: package/contents/ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Fjern snøggtasten"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:151
+#: package/contents/ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Tilordna eigen snøggtast"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:185
+#: package/contents/ui/ShortcutActionDelegate.qml:187
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Avbryt tilordning av ny snøggtast"
