@@ -24,7 +24,7 @@ Item {
             anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? -offset : 0
             y: shiftBadgeDown ? (icon.height/2) : 0
             Behavior on y {
-                NumberAnimation { duration: Kirigami.Durations.longDuration }
+                NumberAnimation { duration: PlasmaCore.Units.longDuration }
             }
 
             visible: task.smartLauncherItem.countVisible
