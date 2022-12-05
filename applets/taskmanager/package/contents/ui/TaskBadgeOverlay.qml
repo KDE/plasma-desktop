@@ -7,7 +7,6 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
@@ -83,7 +82,7 @@ Item {
         anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
         y: offset + (shiftBadgeDown ? (icon.height/2) : 0)
         Behavior on y {
-            NumberAnimation { duration: Kirigami.Units.longDuration }
+            NumberAnimation { duration: PlasmaCore.Units.longDuration }
         }
         height: Math.round(parent.height * 0.4)
         visible: task.smartLauncherItem.countVisible
