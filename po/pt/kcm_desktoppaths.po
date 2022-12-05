@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-03-21 18:51+0000\n"
+"PO-Revision-Date: 2022-12-04 02:27+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -47,12 +47,12 @@ msgstr "Vídeos"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Público"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Modelos"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -151,32 +151,27 @@ msgstr "Esta pasta será usada por omissão para gravar ou ler as músicas."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Local das músicas:"
+msgstr "Localização pública:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "Esta pasta será usada por omissão para gravar ou ler as imagens."
+msgstr ""
+"Esta pasta será usada por omissão para carregar ou gravar partilhas públicas."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Localização das imagens:"
+msgstr "Localização dos modelos:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "Esta pasta será usada por omissão para gravar ou ler as imagens."
+msgstr "Esta pasta será usada por omissão para gravar ou ler os modelos."
