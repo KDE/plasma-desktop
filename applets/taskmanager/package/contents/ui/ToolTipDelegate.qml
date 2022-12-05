@@ -107,8 +107,8 @@ Loader {
                 id: delegateModel
 
                 // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
-                readonly property int estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
-                readonly property int estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
+                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
+                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
 
                 model: tasksModel
 
