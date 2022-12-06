@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-09-27 23:06+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -261,7 +261,7 @@ msgstr "Input di Sini"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Hapus Panel"
 
@@ -410,21 +410,17 @@ msgstr ""
 "Kamu bisa menyeret Panel dan Desktop disekitar untuk memindahnya ke layar "
 "yang berbeda."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (primer)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (dinonfungsikan)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Bertukar dengan Desktop pada Layar %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Pindah ke Layar %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (primer)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -478,6 +474,9 @@ msgstr "Tidak ada widget yang cocok dengan butir yang dicari"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Tidak ada widget yang tersedia"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (dinonfungsikan)"
 
 #~ msgid "Appearance"
 #~ msgstr "Penampilan"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-11-26 09:25+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -262,7 +262,7 @@ msgstr "Datu sarrera hemen"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Kendu panela"
 
@@ -413,21 +413,17 @@ msgstr ""
 "Panelak eta mahaigainak arrasta ditzakezu beste pantaila batzuetara "
 "eramateko."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (nagusia)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (desgaituta)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Trukatu %1 pantailako mahaigainarekin"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Eraman %1 pantailara"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (nagusia)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -481,6 +477,9 @@ msgstr "Ez dago bilatutako terminoekin bat datorren trepetarik"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Ez dago trepeta erabilgarririk"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (desgaituta)"
 
 #~ msgid "Appearance"
 #~ msgstr "Itxura"

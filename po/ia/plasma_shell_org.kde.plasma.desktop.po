@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-07-08 18:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -261,7 +261,7 @@ msgstr "Inserta ci"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Remove pannello"
 
@@ -410,21 +410,17 @@ msgstr ""
 "tu pote traher circa Pannellos e Scriptorios pro mover los a schermos "
 "differente."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (Primari)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (Dishabilitate)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Commuta con Scriptorio sur Schermo %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Move a Schermo %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (Primari)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -478,6 +474,9 @@ msgstr "Necun widgets coincideva con le terminos de cerca"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Necun widgets disponibile"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (Dishabilitate)"
 
 #~ msgid "Appearance"
 #~ msgstr "Apparentia"

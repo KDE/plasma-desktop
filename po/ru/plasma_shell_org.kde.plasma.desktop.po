@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-09-29 10:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -270,7 +270,7 @@ msgstr "Нажимайте здесь"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Удалить панель"
 
@@ -419,21 +419,17 @@ msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "Панели с столы возможно перетаскивать на другие экраны."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (основной)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (отключён)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Обменять с рабочим столом на экране %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Переместить на экран %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (основной)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -487,6 +483,9 @@ msgstr "Не найдено ни одного виджета, удовлетво
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (отключён)"
 
 #~ msgid "Appearance"
 #~ msgstr "Внешний вид"

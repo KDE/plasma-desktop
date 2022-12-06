@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-09-30 18:07+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -257,7 +257,7 @@ msgstr "Skriv in här"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Ta bort panel"
 
@@ -408,21 +408,17 @@ msgstr ""
 "Du kan dra omkring paneler och skrivbord för att flytta dem till andra "
 "skärmar."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (primär)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (inaktiverad)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Byt med skrivbord på skärm %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Flytta till skärm %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (primär)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -476,6 +472,9 @@ msgstr "Inga grafiska komponenter motsvarade sökbegreppen"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Inga grafiska komponenter tillgängliga"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (inaktiverad)"
 
 #~ msgid "Appearance"
 #~ msgstr "Utseende"

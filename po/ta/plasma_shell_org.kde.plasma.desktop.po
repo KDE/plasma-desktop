@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-12-01 22:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -257,7 +257,7 @@ msgstr "இங்கு உள்ளிடவும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "பலகையை நீக்கு"
 
@@ -406,21 +406,17 @@ msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "பலகைகளையும் பணிமேடைகளையும் இழுத்து அவற்றை வெவ்வேறு திரைகளுக்கு நகர்த்தலாம்."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (முதன்மையானது)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (முடக்கப்பட்டுள்ளது)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "%1 என்ற திரையிலுள்ள பணிமேடையுடன் இடமாற்று"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "%1 என்ற திரைக்கு நகர்த்து"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (முதன்மையானது)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -474,6 +470,9 @@ msgstr "தேடலுக்கு எந்த பிளாஸ்மாய்�
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "பிளாஸ்மாய்டுகள் ஏதுமில்லை"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (முடக்கப்பட்டுள்ளது)"
 
 #~ msgid "Appearance"
 #~ msgstr "தோற்றம்"

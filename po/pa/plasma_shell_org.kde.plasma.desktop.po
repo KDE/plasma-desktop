@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-11-19 06:16-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -255,7 +255,7 @@ msgstr "ਇੱਥੇ ਇਨਪੁਟ ਕਰੋ"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "ਪੈਨਲ ਹਟਾਓ"
 
@@ -402,21 +402,17 @@ msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (ਪ੍ਰਾਈਮਰੀ)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (ਅਸਮਰੱਥ ਹੈ)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "%1 ਸਕਰੀਨ ਉੱਤੇ ਡੈਸਕਟਾਪ ਨਾਲ ਬਦਲੋ"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "ਸਕਰੀਨ %1 ਉੱਤੇ ਭੇਜੋ"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (ਪ੍ਰਾਈਮਰੀ)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -470,6 +466,9 @@ msgstr ""
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "ਕੋਈ ਵਿਜੈਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (ਅਸਮਰੱਥ ਹੈ)"
 
 #~ msgid "Appearance"
 #~ msgstr "ਦਿੱਖ"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# giovanni <g.sora@tiscali.it>, 2021.
+# giovanni <g.sora@tiscali.it>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:48+0000\n"
-"PO-Revision-Date: 2021-12-27 12:03+0100\n"
+"PO-Revision-Date: 2022-12-05 18:21+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -48,9 +48,7 @@ msgid "Follow the active screen"
 msgstr "Seque le schermo active"
 
 #: kcmtablet.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "model - (x,y widthxheight)"
-#| msgid "%1 - (%2,%3 %4x%5)"
+#, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4x%5)"
@@ -68,7 +66,7 @@ msgstr ""
 #: kcmtablet.cpp:140
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Dimension personalisate"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
@@ -76,8 +74,7 @@ msgid "No drawing tablets found."
 msgstr "Necun tabletta de designar trovate."
 
 #: package/contents/ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
@@ -100,7 +97,7 @@ msgstr "Modo pro usator de mano sinistre"
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "Area:"
 
 #: package/contents/ui/main.qml:206
 #, kde-format
@@ -138,12 +135,12 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "Reimple (Pad):"
 
 #: package/contents/ui/main.qml:322
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "Button %1:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

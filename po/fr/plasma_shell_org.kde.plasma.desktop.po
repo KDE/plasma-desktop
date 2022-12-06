@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-29 00:48+0000\n"
-"PO-Revision-Date: 2022-09-29 22:18+0200\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"PO-Revision-Date: 2022-12-04 17:05+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.11.90\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -113,7 +113,7 @@ msgstr "Licence :"
 #: contents/configuration/AboutPlugin.qml:131
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Afficher le texte de license"
 
 #: contents/configuration/AboutPlugin.qml:142
 msgid "Authors"
@@ -268,7 +268,7 @@ msgstr "Saisir ici"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:205
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Supprimer le tableau de bord"
 
@@ -419,21 +419,17 @@ msgstr ""
 "Vous pouvez faire glisser les panneaux et les bureaux pour les déplacer vers "
 "d'autres écrans."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:36
-msgid "%1 (primary)"
-msgstr "%1 (primaire)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:39
-msgid "%1 (disabled)"
-msgstr "%1 (désactivé)"
-
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "Permutation avec le bureau sur l'écran %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "Déplacement vers l'écran %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+msgid "%1 (primary)"
+msgstr "%1 (primaire)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
@@ -487,6 +483,9 @@ msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
+
+#~ msgid "%1 (disabled)"
+#~ msgstr "%1 (désactivé)"
 
 #~ msgid "Appearance"
 #~ msgstr "Apparence"
