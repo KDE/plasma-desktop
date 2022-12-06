@@ -44,15 +44,6 @@ KCM.SimpleKCM {
                 settingName: "confirmLogout"
             }
         }
-        CheckBox {
-            text: i18nc("@option:check", "Offer shutdown options")
-            checked: Settings.offerShutdown
-            onToggled: Settings.offerShutdown = checked
-            KCM.SettingStateBinding {
-                configObject: Settings
-                settingName: "offerShutdown"
-            }
-        }
         Item {
             Kirigami.FormData.isSection: true
         }
