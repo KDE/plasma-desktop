@@ -25,6 +25,10 @@
 
 #include <KWindowSystem>
 
+#if HAVE_X11
+#include <KX11Extras>
+#endif
+
 #include <KActivities/Controller>
 
 using namespace TaskManager;
@@ -59,7 +63,7 @@ public:
     QList<WindowModel *> windowModels;
 
 #if HAVE_X11
-    QList<WId> cachedStackingOrder = KWindowSystem::stackingOrder();
+    QList<WId> cachedStackingOrder = KX11Extras::stackingOrder();
 #endif
 
     void refreshDataSource();
@@ -111,8 +115,8 @@ PagerModel::Private::Private(PagerModel *q)
     QObject::connect(qGuiApp, &QGuiApplication::screenRemoved, q, &PagerModel::pagerItemSizeChanged);
 
 #if HAVE_X11
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q, [this]() {
-        cachedStackingOrder = KWindowSystem::stackingOrder();
+    QObject::connect(KX11Extras::self(), &KX11Extras::stackingOrderChanged, q, [this]() {
+        cachedStackingOrder = KX11Extras::stackingOrder();
 
         for (auto windowModel : qAsConst(windowModels)) {
             windowModel->refreshStackingOrder();

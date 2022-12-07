@@ -20,10 +20,8 @@
 #include <KDirWatch>
 #include <KLocalizedString>
 #include <KSharedConfig>
-
-#define KWINDOWSYSTEM_NO_DEPRECATED
-
-#include <KWindowSystem>
+#include <KWindowInfo>
+#include <KX11Extras>
 
 static const char *s_plasma_config = "plasma-org.kde.plasma.desktop-appletsrc";
 
@@ -213,7 +211,7 @@ SortedActivitiesModel::SortedActivitiesModel(const QVector<KActivities::Info::St
 
     backgrounds().subscribe(this);
 
-    const QList<WId> windows = KWindowSystem::stackingOrder();
+    const QList<WId> windows = KX11Extras::stackingOrder();
 
     for (const auto &window : windows) {
         KWindowInfo info(window, NET::WMVisibleName, NET::WM2Activities);
@@ -227,12 +225,9 @@ SortedActivitiesModel::SortedActivitiesModel(const QVector<KActivities::Info::St
         }
     }
 
-    connect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &SortedActivitiesModel::onWindowAdded);
-    connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &SortedActivitiesModel::onWindowRemoved);
-    connect(KWindowSystem::self(),
-            SIGNAL(windowChanged(WId, NET::Properties, NET::Properties2)),
-            this,
-            SLOT(onWindowChanged(WId, NET::Properties, NET::Properties2)));
+    connect(KX11Extras::self(), &KX11Extras::windowAdded, this, &SortedActivitiesModel::onWindowAdded);
+    connect(KX11Extras::self(), &KX11Extras::windowRemoved, this, &SortedActivitiesModel::onWindowRemoved);
+    connect(KX11Extras::self(), &KX11Extras::windowChanged, this, &SortedActivitiesModel::onWindowChanged);
 }
 
 SortedActivitiesModel::~SortedActivitiesModel()

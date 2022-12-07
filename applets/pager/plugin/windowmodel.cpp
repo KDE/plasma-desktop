@@ -13,6 +13,7 @@
 #include <QScreen>
 
 #include <KWindowSystem>
+#include <KX11Extras>
 
 #include <algorithm>
 
@@ -72,7 +73,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
             windowGeo.setBottomRight(windowGeo.bottomRight() / ratio);
         }
 
-        if (KWindowSystem::isPlatformX11() && KWindowSystem::mapViewport()) {
+        if (KWindowSystem::isPlatformX11() && KX11Extras::mapViewport()) {
             int x = windowGeo.center().x() % desktopSize.width();
             int y = windowGeo.center().y() % desktopSize.height();
 

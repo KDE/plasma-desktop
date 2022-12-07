@@ -29,6 +29,7 @@
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
 #include <KWindowSystem>
+#include <KX11Extras>
 #include <windowtasksmodel.h>
 #include <xwindowtasksmodel.h>
 
@@ -419,7 +420,7 @@ void SwitcherBackend::drop(QMimeData *mimeData, int modifiers, const QVariant &a
                 activities << newActivity;
             }
 
-            KWindowSystem::setOnActivities(id, activities);
+            KX11Extras::setOnActivities(id, activities);
         }
     }
 #endif

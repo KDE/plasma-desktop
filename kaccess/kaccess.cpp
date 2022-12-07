@@ -34,6 +34,7 @@
 #include <KSharedConfig>
 #include <KUserTimestamp>
 #include <KWindowSystem>
+#include <KX11Extras>
 #include <QDialog>
 #include <QDialogButtonBox>
 
@@ -120,11 +121,11 @@ static const ModifierKey modifierKeys[] = {
 KAccessApp::KAccessApp()
     : overlay(nullptr)
     , _player(nullptr)
-    , _activeWindow(KWindowSystem::activeWindow())
+    , _activeWindow(KX11Extras::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
-    connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
+    connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     features = 0;
     requestedFeatures = 0;

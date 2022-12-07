@@ -7,8 +7,8 @@
 #include "layout_memory.h"
 #include "debug.h"
 
-
 #include <KWindowSystem>
+#include <KX11Extras>
 
 #include "xkb_helper.h"
 
@@ -34,18 +34,18 @@ void LayoutMemory::configChanged()
 void LayoutMemory::registerListeners()
 {
     if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_WINDOW || keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_APPLICATION) {
-        connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &LayoutMemory::windowChanged);
+        connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &LayoutMemory::windowChanged);
         //		connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
     }
     if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_DESKTOP) {
-        connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
+        connect(KX11Extras::self(), &KX11Extras::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
     }
 }
 
 void LayoutMemory::unregisterListeners()
 {
-    disconnect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &LayoutMemory::windowChanged);
-    disconnect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
+    disconnect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &LayoutMemory::windowChanged);
+    disconnect(KX11Extras::self(), &KX11Extras::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
     //	disconnect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
 }
 
@@ -53,7 +53,7 @@ QString LayoutMemory::getCurrentMapKey()
 {
     switch (keyboardConfig.switchingPolicy()) {
     case KeyboardConfig::SWITCH_POLICY_WINDOW: {
-        WId wid = KWindowSystem::self()->activeWindow();
+        WId wid = KX11Extras::self()->activeWindow();
         KWindowInfo winInfo(wid, NET::WMWindowType);
         NET::WindowType windowType = winInfo.windowType(NET::NormalMask | NET::DesktopMask | NET::DialogMask);
         qCDebug(KCM_KEYBOARD, ) << "window type" << windowType;
@@ -67,7 +67,7 @@ QString LayoutMemory::getCurrentMapKey()
         return QString::number(wid);
     }
     case KeyboardConfig::SWITCH_POLICY_APPLICATION: {
-        WId wid = KWindowSystem::self()->activeWindow();
+        WId wid = KX11Extras::self()->activeWindow();
         KWindowInfo winInfo(wid, NET::WMWindowType, NET::WM2WindowClass);
         NET::WindowType windowType = winInfo.windowType(NET::NormalMask | NET::DesktopMask | NET::DialogMask);
         qCDebug(KCM_KEYBOARD, ) << "window type" << windowType;
@@ -86,7 +86,7 @@ QString LayoutMemory::getCurrentMapKey()
         //		return QString::number(winInfoForPid.pid());
     }
     case KeyboardConfig::SWITCH_POLICY_DESKTOP:
-        return QString::number(KWindowSystem::self()->currentDesktop());
+        return QString::number(KX11Extras::self()->currentDesktop());
     default:
         return QString();
     }
