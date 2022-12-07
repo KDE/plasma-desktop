@@ -55,7 +55,9 @@
 
 #include <QLoggingCategory>
 
-Q_LOGGING_CATEGORY(logKAccess, "kcm_kaccess")
+#include "config-sound.h"
+
+Q_LOGGING_CATEGORY(logKAccess, "kccurkaccess")
 
 struct ModifierKey {
     const unsigned int mask;
@@ -166,7 +168,8 @@ void KAccessApp::readSettings()
     // bell
     _systemBell = cg.readEntry("SystemBell", true);
     _artsBell = cg.readEntry("ArtsBell", false);
-    _currentPlayerSource = cg.readPathEntry("ArtsBellFile", QString());
+    m_currentPlayerSource =
+        QUrl(cg.readPathEntry("ArtsBellFile", QUrl::fromLocalFile(QStringLiteral("KDE_INSTALL_SOUNDDIR/freedesktop/stereo/bell.oga")).toString()));
     _visibleBell = cg.readEntry("VisibleBell", false);
     _visibleBellInvert = cg.readEntry("VisibleBellInvert", false);
     _visibleBellColor = cg.readEntry("VisibleBellColor", QColor(Qt::red));
@@ -545,12 +548,12 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             m_player = new QMediaPlayer(this, QMediaPlayer::LowLatency);
             m_player->setAudioRole(QAudio::AccessibilityRole);
-            m_player->setMedia(QMediaContent(QUrl(_currentPlayerSource)));
+            m_player->setMedia(QMediaContent(m_currentPlayerSource));
 #else
             m_audioOutput = new QAudioOutput(this);
             m_player = new QMediaPlayer(m_audioOutput);
             m_player->setAudioOutput(m_audioOutput);
-            m_player->setSource(QUrl(_currentPlayerSource));
+            m_player->setSource(m_currentPlayerSource);
 #endif
         } else {
             m_player->stop();

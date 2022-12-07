@@ -1,6 +1,8 @@
 # KI18N Translation Domain for this application
 add_definitions(-DTRANSLATION_DOMAIN=\"kaccess\")
 
+configure_file(config-sound.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-sound.h @ONLY)
+
 set(kaccess_SRCS kaccess.cpp main.cpp )
 
 add_executable(kaccess ${kaccess_SRCS})

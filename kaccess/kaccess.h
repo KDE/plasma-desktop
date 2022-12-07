@@ -84,7 +84,7 @@ private:
     QAudioOutput *m_audioOutput = nullptr;
 #endif
 
-    QString _currentPlayerSource;
+    QUrl m_currentPlayerSource;
 
     WId _activeWindow;
 
