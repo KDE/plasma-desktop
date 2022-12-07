@@ -148,21 +148,21 @@ QHash<int, QByteArray> DevicesModel::roleNames() const
 
 void DevicesModel::defaults()
 {
-    for (auto &device : qAsConst(m_devices)) {
+    for (auto &device : m_devices) {
         device->defaults();
     }
 }
 
 void DevicesModel::load()
 {
-    for (auto &device : qAsConst(m_devices)) {
+    for (auto &device : m_devices) {
         device->load();
     }
 }
 
 void DevicesModel::save()
 {
-    for (auto &device : qAsConst(m_devices)) {
+    for (auto &device : m_devices) {
         device->save();
     }
 }
