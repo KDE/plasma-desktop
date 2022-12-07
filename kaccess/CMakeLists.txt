@@ -12,6 +12,7 @@ target_link_libraries(kaccess
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::Completion
+    KF5::DBusAddons
     KF5::GlobalAccel
     KF5::I18n
     KF5::Notifications
@@ -31,5 +32,8 @@ install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_AUTOSTARTDIR} )
+configure_file(kaccess.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/kaccess.desktop @ONLY)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kaccess.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/kaccess.desktop  DESTINATION  ${KDE_INSTALL_AUTOSTARTDIR} )
 install( FILES kaccess.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFYRCDIR} )

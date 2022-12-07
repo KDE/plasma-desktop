@@ -8,6 +8,7 @@
 #include "kaccess.h"
 
 #include <KAboutData>
+#include <KDBusService>
 #include <KLocalizedString>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
@@ -46,7 +47,12 @@ int main(int argc, char *argv[])
     // we need an application object for QX11Info
     QApplication app(argc, argv);
 
-    KAboutData about(QStringLiteral("kaccess"), QString(), i18n("Accessibility"), {}, KAboutLicense::GPL_V2, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData about(QStringLiteral("kaccess"),
+                     QString(),
+                     QString(),
+                     i18n("Accessibility"),
+                     KAboutLicense::GPL_V2,
+                     i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
     // set data as used for D-Bus by KAccessApp
@@ -74,5 +80,8 @@ int main(int argc, char *argv[])
     app.setQuitOnLastWindowClosed(false);
 
     acc.setXkbOpcode(xkb_opcode);
+
+    KDBusService service(KDBusService::Unique | KDBusService::Replace);
+
     return app.exec();
 }
