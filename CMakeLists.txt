@@ -33,6 +33,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     QuickWidgets
     DBus
+    Multimedia # KAccess bell
     Widgets
     Svg
     Concurrent

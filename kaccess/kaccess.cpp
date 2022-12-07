@@ -10,6 +10,10 @@
 
 #include "kaccess.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <QAudioOutput>
+#endif
+#include <QMediaPlayer>
 #include <QMessageBox>
 #include <QPainter>
 #include <QProcess>
@@ -120,7 +124,6 @@ static const ModifierKey modifierKeys[] = {
 
 KAccessApp::KAccessApp()
     : overlay(nullptr)
-    , _player(nullptr)
     , _activeWindow(KX11Extras::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
@@ -536,14 +539,21 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         QCoreApplication::sendPostedEvents();
     }
 
-    // ask Phonon to ring a nice bell
+    // ask the player to ring a nice bell
     if (_artsBell) {
-        if (!_player) { // as creating the player is expensive, delay the creation
-            _player = Phonon::createPlayer(Phonon::AccessibilityCategory);
-            _player->setParent(this);
-            _player->setCurrentSource(_currentPlayerSource);
+        if (!m_player) { // as creating the player is expensive, delay the creation
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+            m_player = new QMediaPlayer(this, QMediaPlayer::LowLatency);
+            m_player->setAudioRole(QAudio::AccessibilityRole);
+            m_player->setMedia(QMediaContent(QUrl(_currentPlayerSource)));
+#else
+            m_audioOutput = new QAudioOutput(this);
+            m_player = new QMediaPlayer(m_audioOutput);
+            m_player->setAudioOutput(m_audioOutput);
+            m_player->setSource(QUrl(_currentPlayerSource));
+#endif
         }
-        _player->play();
+        m_player->play();
     }
 }
 
