@@ -552,6 +552,8 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
             m_player->setAudioOutput(m_audioOutput);
             m_player->setSource(QUrl(_currentPlayerSource));
 #endif
+        } else {
+            m_player->stop();
         }
         m_player->play();
     }
