@@ -31,10 +31,10 @@
 </authorgroup>
 
 <date
->2020-06-30</date>
+>2022-05-18</date>
 
 <releaseinfo
->&plasma; 5.20</releaseinfo>
+>&plasma; 5.25</releaseinfo>
 
 <keywordset>
 <keyword
@@ -144,6 +144,32 @@
 <listitem>
 <para
 >Durch Klicken in die Bildlaufleiste gehen Sie direkt zur entsprechenden Position im Dokument. Diese Verhalten kennen Sie wahrscheinlich von anderen Arbeitsflächen oder Betriebssystemen,</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Touch-Modus</guimenu
+><guimenuitem
+>Bei Bedarf automatisch aktiviert/Niemals aktiviert</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Der Touch-Modus wird automatisch aktiviert, wenn das System einen Touchscreen erkennt, aber keine Maus oder kein Touchpad. Zum Beispiel, wenn die Tastatur eines 2-in-1-Notebooks umgedreht oder abgenommen wird.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Immer aktiviert (Standard) / Niemals aktiviert</guimenuitem
+></term>
+<listitem>
+<para
+>Im Touch-Modus werden viele Elemente der Benutzeroberfläche vergrößert, um die Bedienung zu erleichtern.</para>
 </listitem>
 </varlistentry>
 

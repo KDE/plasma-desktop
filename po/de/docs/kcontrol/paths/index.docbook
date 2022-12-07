@@ -54,9 +54,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2021-09-05</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.22</releaseinfo>
 
 <keywordset>
 <keyword
@@ -93,6 +93,11 @@
 </screenshot>
 </para>
 
+<note>
+    <para
+>Laufwerke, die bei der Anmeldung automatisch gemountet werden, können nicht als Pfade verwendet werden. Solche Laufwerke werden beim Neustart von &plasma; auf die Standardeinstellungen zurückgesetzt. </para>
+</note>
+
 <variablelist>
 <varlistentry>
 <term
@@ -106,16 +111,6 @@
 > angezeigt werden. Als Standardpfad ist normalerweise <filename class="directory"
 >~/Desktop</filename
 > eingestellt, aber Sie können hier einen anderen Pfad eingeben. </para
-></listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Pfad zu Autostart:</guilabel
-></term>
-<listitem
-><para
->Der Autostartordner enthält Anwendungen, Verknüpfungen zu Anwendungen oder Skripte, die bei jedem Start von &plasma; aufgerufen werden. Sie können hier einen anderen Pfad eingeben.  </para
 ></listitem>
 </varlistentry>
 <varlistentry>
