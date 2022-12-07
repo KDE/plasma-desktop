@@ -29,11 +29,11 @@ Item {
             target: switcher.keyboardLayout
 
             function onLayoutsListChanged() {
-                plasmoid.clearActions()
+                root.Plasmoid.clearActions()
 
                 switcher.keyboardLayout.layoutsList.forEach(
                             function(layout, index) {
-                                plasmoid.setAction(
+                                root.Plasmoid.setAction(
                                             index,
                                             layout.longName,
                                             iconURL(layout.shortName).toString().substring(7) // remove file:// scheme
