@@ -18,6 +18,8 @@ QQC2.Page {
     id: page
     title: i18n("About")
 
+    property var metaData: plasmoid.metaData
+
     Component {
         id: personDelegate
 
@@ -68,6 +70,21 @@ QQC2.Page {
         }
     }
 
+    Component {
+        id: licenseComponent
+
+        Kirigami.OverlaySheet {
+            property alias text: licenseLabel.text
+
+            contentItem: Kirigami.SelectableLabel {
+                id: licenseLabel
+                wrapMode: Text.WordWrap
+            }
+
+            Component.onCompleted: open();
+        }
+    }
+
     ColumnLayout {
         width: parent.width
         spacing: Kirigami.Units.largeSpacing * 3
@@ -84,18 +101,18 @@ QQC2.Page {
                     Layout.preferredWidth: height
                     Layout.maximumWidth: page.width / 3;
                     Layout.rightMargin: Kirigami.Units.largeSpacing
-                    source: plasmoid.metaData.iconName || plasmoid.metaData.pluginId
+                    source: page.metaData.iconName || page.metaData.pluginId
                     fallback: "application-x-plasma"
                 }
                 Kirigami.Heading {
                     Layout.fillWidth: true
-                    text: plasmoid.metaData.name + " " + plasmoid.metaData.version
+                    text: page.metaData.name + " " + page.metaData.version
                 }
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     level: 2
                     wrapMode: Text.WordWrap
-                    text: plasmoid.metaData.description
+                    text: page.metaData.description
                 }
             }
 
@@ -109,17 +126,17 @@ QQC2.Page {
             }
             QQC2.Label {
                 Layout.leftMargin: Kirigami.Units.gridUnit
-                text: plasmoid.metaData.extraInformation
+                text: page.metaData.extraInformation
                 visible: text.length > 0
             }
             QQC2.Label {
                 Layout.leftMargin: Kirigami.Units.gridUnit
-                text: plasmoid.metaData.copyrightText
+                text: page.metaData.copyrightText
                 visible: text.length > 0
             }
             Kirigami.UrlButton {
                 Layout.leftMargin: Kirigami.Units.gridUnit
-                url: plasmoid.metaData.website
+                url: page.metaData.website
                 visible: url.length > 0
             }
 
@@ -127,12 +144,13 @@ QQC2.Page {
                 Layout.leftMargin: Kirigami.Units.smallSpacing
                 QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
                 Kirigami.LinkButton {
-                    text: plasmoid.metaData.license
+                    text: page.metaData.license
                     Accessible.description: i18nc("@info:whatsthis", "View license text")
                     onClicked: {
-                        licenseSheet.text = plasmoid.metaData.licenseText
-                        licenseSheet.title = plasmoid.metaData.license
-                        licenseSheet.open()
+                        licenseComponent.incubateObject(page, {
+                            "text": page.metaData.licenseText,
+                            "title": page.metaData.license,
+                        }, Qt.Asynchronous);
                     }
                 }
             }
@@ -140,10 +158,10 @@ QQC2.Page {
                 Layout.fillWidth: true
                 Kirigami.FormData.isSection: visible
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
-                visible: plasmoid.metaData.authors.length > 0
+                visible: page.metaData.authors.length > 0
             }
             Repeater {
-                model: plasmoid.metaData.authors
+                model: page.metaData.authors
                 delegate: personDelegate
             }
             Kirigami.Heading {
@@ -154,7 +172,7 @@ QQC2.Page {
             }
             Repeater {
                 id: repCredits
-                model: plasmoid.metaData.otherContributors
+                model: page.metaData.otherContributors
                 delegate: personDelegate
             }
             Kirigami.Heading {
@@ -165,7 +183,7 @@ QQC2.Page {
             }
             Repeater {
                 id: repTranslators
-                model: plasmoid.metaData.translators
+                model: page.metaData.translators
                 delegate: personDelegate
             }
         }
@@ -176,21 +194,9 @@ QQC2.Page {
             icon.name: "tools-report-bug"
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Report a Bug…")
 
-            visible: plasmoid.metaData.bugReportUrl.length > 0
+            visible: page.metaData.bugReportUrl.length > 0
 
-            onClicked: Qt.openUrlExternally(plasmoid.metaData.bugReportUrl)
-        }
-    }
-
-    Kirigami.OverlaySheet {
-        id: licenseSheet
-
-        property alias text: licenseLabel.text
-
-        contentItem: Kirigami.SelectableLabel {
-            id: licenseLabel
-            wrapMode: Text.WordWrap
+            onClicked: Qt.openUrlExternally(page.metaData.bugReportUrl)
         }
     }
 }
-
