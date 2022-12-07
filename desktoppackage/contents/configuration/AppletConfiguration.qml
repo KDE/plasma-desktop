@@ -2,16 +2,17 @@
     SPDX-FileCopyrightText: 2013 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
     SPDX-FileCopyrightText: 2020 Carl Schwan <carlschwan@kde.org>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 import QtQuick 2.15
-import QtQuick.Dialogs 1.1
-import QtQuick.Controls 2.3 as QQC2
-import QtQuick.Layouts 1.1
+import QtQuick.Dialogs 1.3
+import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.plasma.configuration 2.0
 
@@ -210,7 +211,7 @@ Rectangle {
                     id: delegate
                     onActivated: categories.openCategory(model);
                     highlighted: {
-                        if ( app.pageStack.currentItem ){
+                        if (app.pageStack.currentItem) {
                             if (model.kcm && app.pageStack.currentItem.kcm) {
                                 return model.kcm == app.pageStack.currentItem.kcm
                             } else if (app.pageStack.currentItem.configItem) {
