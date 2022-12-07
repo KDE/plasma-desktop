@@ -8,6 +8,8 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.0
 
+import org.kde.kirigami 2.20 as Kirigami
+
 Item {
     id: root
 
@@ -39,6 +41,26 @@ Item {
         target: configDialog.currentContainmentActionsModel
         function onConfigurationChanged() {
             root.configurationChanged()
+        }
+    }
+
+    Component {
+        id: aboutComponent
+
+        Kirigami.OverlaySheet {
+            id: internalAboutDialog
+
+            property alias metaData: aboutPluginPage.metaData
+
+            contentItem: ColumnLayout {
+                AboutPlugin {
+                    id: aboutPluginPage
+                    metaData: internalAboutDialog.metaData
+                    Layout.maximumWidth: Math.min(Kirigami.Units.gridUnit * 30, Math.round(root.width * 0.8))
+                }
+            }
+
+            Component.onCompleted: open();
         }
     }
 
@@ -136,7 +158,14 @@ Item {
                     icon.name: "dialog-information"
                     width: height
                     onClicked: {
-                        configDialog.currentContainmentActionsModel.showAbout(index, this);
+                        const metaData = configDialog.currentContainmentActionsModel.aboutMetaData(index);
+                        if (!metaData) {
+                            return;
+                        }
+                        aboutComponent.incubateObject(root, {
+                            "metaData": metaData,
+                            "title": i18nc("@title", "About"),
+                        }, Qt.Asynchronous);
                     }
                 }
                 QQC2.Button {
