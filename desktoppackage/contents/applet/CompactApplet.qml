@@ -85,6 +85,7 @@ PlasmaCore.ToolTipArea {
 
     PlasmaCore.FrameSvgItem {
         id: expandedItem
+        z: -100
 
         property var containerMargins: {
             let item = root;
