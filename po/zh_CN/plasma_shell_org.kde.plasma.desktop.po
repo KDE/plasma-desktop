@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-12-01 06:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -87,41 +87,41 @@ msgstr "打开 %1"
 msgid "About"
 msgstr "关于"
 
-#: contents/configuration/AboutPlugin.qml:45
+#: contents/configuration/AboutPlugin.qml:47
 msgid "Send an email to %1"
 msgstr "发送电子邮件给 %1"
 
-#: contents/configuration/AboutPlugin.qml:59
+#: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "打开网站 %1"
 
-#: contents/configuration/AboutPlugin.qml:108
+#: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:128 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "许可证："
 
-#: contents/configuration/AboutPlugin.qml:131
+#: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "查看许可证"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
 msgstr "作者"
 
-#: contents/configuration/AboutPlugin.qml:152
+#: contents/configuration/AboutPlugin.qml:170
 msgid "Credits"
 msgstr "致谢"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:181
 msgid "Translators"
 msgstr "翻译人员"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
 msgstr "报告程序缺陷…"
 
@@ -156,56 +156,63 @@ msgstr "取消"
 msgid "Open configuration page"
 msgstr "打开配置页面"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:19
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
 msgstr "左键"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
 msgstr "右键"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
 msgstr "中间键"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
 msgstr "后退键"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
 msgstr "前进键"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
 msgstr "垂直滚动"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
 msgstr "水平滚动"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+#, fuzzy
+#| msgid "About"
+msgctxt "@title"
+msgid "About"
+msgstr "关于"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
 msgstr "添加操作"

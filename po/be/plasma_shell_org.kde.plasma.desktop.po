@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-09-26 14:52\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -91,41 +91,41 @@ msgstr "Адкрыць %1"
 msgid "About"
 msgstr "Пра праграму"
 
-#: contents/configuration/AboutPlugin.qml:45
+#: contents/configuration/AboutPlugin.qml:47
 msgid "Send an email to %1"
 msgstr "Адправіць электронны ліст да %1"
 
-#: contents/configuration/AboutPlugin.qml:59
+#: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Адкрыць вэб-сайт %1"
 
-#: contents/configuration/AboutPlugin.qml:108
+#: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
 msgstr "Аўтарскія правы"
 
-#: contents/configuration/AboutPlugin.qml:128 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Ліцэнзія:"
 
-#: contents/configuration/AboutPlugin.qml:131
+#: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
 msgstr "Стваральнікі"
 
-#: contents/configuration/AboutPlugin.qml:152
+#: contents/configuration/AboutPlugin.qml:170
 msgid "Credits"
 msgstr "Падзякі"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:181
 msgid "Translators"
 msgstr "Перакладчыкі"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
 msgstr ""
 
@@ -162,56 +162,63 @@ msgstr "Скасаваць"
 msgid "Open configuration page"
 msgstr "Адкрыць старонку канфігурацыі"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:19
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
 msgstr "Левая кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
 msgstr "Правая кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
 msgstr "Сярэдняя кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
 msgstr "Кнопка \"Назад\""
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
 msgstr "Кнопка \"Наперад\""
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
 msgstr "Вертыкальнае пракручванне"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
 msgstr "Гарызантальнае пракручванне"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+#, fuzzy
+#| msgid "About"
+msgctxt "@title"
+msgid "About"
+msgstr "Пра праграму"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
 msgstr "Дадаць дзеянне"

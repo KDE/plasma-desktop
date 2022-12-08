@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-11-27 07:25+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -89,41 +89,41 @@ msgstr "Odpri %1"
 msgid "About"
 msgstr "O programu"
 
-#: contents/configuration/AboutPlugin.qml:45
+#: contents/configuration/AboutPlugin.qml:47
 msgid "Send an email to %1"
 msgstr "Pošlji e-pošto za %1"
 
-#: contents/configuration/AboutPlugin.qml:59
+#: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Odpri spletišče %1"
 
-#: contents/configuration/AboutPlugin.qml:108
+#: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:128 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Licenca:"
 
-#: contents/configuration/AboutPlugin.qml:131
+#: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Poglej besedilo dovoljenja"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
 msgstr "Avtorji"
 
-#: contents/configuration/AboutPlugin.qml:152
+#: contents/configuration/AboutPlugin.qml:170
 msgid "Credits"
 msgstr "Zasluge"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:181
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
 msgstr "Poročaj o hrošču…"
 
@@ -160,56 +160,63 @@ msgstr "Prekliči"
 msgid "Open configuration page"
 msgstr "Odpri stran z nastavitvami"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:19
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
 msgstr "Levi gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
 msgstr "Desni gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
 msgstr "Srednji gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
 msgstr "Gumb za premik nazaj"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
 msgstr "Gumb za premik naprej"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
 msgstr "Navpično drsenje"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
 msgstr "Vodoravno drsenje"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
 msgstr "Dvigalka"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+#, fuzzy
+#| msgid "About"
+msgctxt "@title"
+msgid "About"
+msgstr "O programu"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
 msgstr "Dodaj dejanje"

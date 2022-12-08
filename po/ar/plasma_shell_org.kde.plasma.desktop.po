@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-11-26 10:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -88,41 +88,41 @@ msgstr "افتح %1"
 msgid "About"
 msgstr "عن"
 
-#: contents/configuration/AboutPlugin.qml:45
+#: contents/configuration/AboutPlugin.qml:47
 msgid "Send an email to %1"
 msgstr "أرسِل بريد الإلكتروني إلى %1"
 
-#: contents/configuration/AboutPlugin.qml:59
+#: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "افتح موقع %1"
 
-#: contents/configuration/AboutPlugin.qml:108
+#: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
 msgstr "حقوق النسخ"
 
-#: contents/configuration/AboutPlugin.qml:128 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "الرّخصة:"
 
-#: contents/configuration/AboutPlugin.qml:131
+#: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "اعرض نص الترخيص"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
 msgstr "المؤلفين"
 
-#: contents/configuration/AboutPlugin.qml:152
+#: contents/configuration/AboutPlugin.qml:170
 msgid "Credits"
 msgstr "الإشادات"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:181
 msgid "Translators"
 msgstr "المترجمون"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
 msgstr "بلغ عن علة…"
 
@@ -157,56 +157,63 @@ msgstr "ألغ"
 msgid "Open configuration page"
 msgstr "افتح صفح الضبط"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:19
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
 msgstr "الزّرّ الأيسر"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
 msgstr "الزّرّ الأيمن"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
 msgstr "الزّرّ الأوسط"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
 msgstr "زرّ العودة"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
 msgstr "زرّ التّقدّم"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
 msgstr "التّمرير الرّأسيّ"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
 msgstr "التّمرير الأفقيّ"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:153
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+#, fuzzy
+#| msgid "About"
+msgctxt "@title"
+msgid "About"
+msgstr "عن"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
 msgstr "أضف إجراءً"

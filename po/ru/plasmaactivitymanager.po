@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2016-09-03 22:46+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: sortedactivitiesmodel.cpp:316
+#: sortedactivitiesmodel.cpp:311
 #, kde-format
 msgid "Used some time ago"
 msgstr "Использовалась когда-то"
 
-#: sortedactivitiesmodel.cpp:332
+#: sortedactivitiesmodel.cpp:327
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "Использовалась больше года назад"
 
-#: sortedactivitiesmodel.cpp:333
+#: sortedactivitiesmodel.cpp:328
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -41,7 +41,7 @@ msgstr[1] "Использовалась %1 месяца назад"
 msgstr[2] "Использовалась %1 месяцев назад"
 msgstr[3] "Использовалась %1 месяц назад"
 
-#: sortedactivitiesmodel.cpp:334
+#: sortedactivitiesmodel.cpp:329
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -51,7 +51,7 @@ msgstr[1] "Использовалась %1 дня назад"
 msgstr[2] "Использовалась %1 дней назад"
 msgstr[3] "Использовалась %1 день назад"
 
-#: sortedactivitiesmodel.cpp:335
+#: sortedactivitiesmodel.cpp:330
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -61,7 +61,7 @@ msgstr[1] "Использовалась %1 часа назад"
 msgstr[2] "Использовалась %1 часов назад"
 msgstr[3] "Использовалась %1 час назад"
 
-#: sortedactivitiesmodel.cpp:336
+#: sortedactivitiesmodel.cpp:331
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -71,17 +71,17 @@ msgstr[1] "Использовалась %1 минуты назад"
 msgstr[2] "Использовалась %1 минут назад"
 msgstr[3] "Использовалась %1 минуту назад"
 
-#: sortedactivitiesmodel.cpp:337
+#: sortedactivitiesmodel.cpp:332
 #, kde-format
 msgid "Used a moment ago"
 msgstr "Использовалась только что"
 
-#: switcherbackend.cpp:166
+#: switcherbackend.cpp:167
 #, kde-format
 msgid "Walk through activities"
 msgstr "На одну комнату вперёд"
 
-#: switcherbackend.cpp:171
+#: switcherbackend.cpp:172
 #, kde-format
 msgid "Walk through activities (Reverse)"
 msgstr "На одну комнату назад"
