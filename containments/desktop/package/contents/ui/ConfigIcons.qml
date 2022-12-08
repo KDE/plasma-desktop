@@ -38,7 +38,7 @@ Item {
     property alias cfg_renameInline: renameInline.checked
     property alias cfg_popups: popups.checked
     property alias cfg_previews: previews.checked
-    property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
+    property var cfg_previewPlugins
     property alias cfg_viewMode: viewMode.currentIndex
     property alias cfg_iconSize: iconSize.value
     property alias cfg_labelWidth: labelWidth.currentIndex
@@ -345,12 +345,12 @@ Item {
             text: i18n("Configure Preview Plugins…")
 
             onClicked: {
-                previewPluginsDialog.visible = true;
+                const component = Qt.createComponent(Qt.resolvedUrl("FolderItemPreviewPluginsDialog.qml"));
+                component.incubateObject(configIcons, {
+                    "previewPlugins": configIcons.cfg_previewPlugins,
+                }, Qt.Asynchronous);
+                component.destroy();
             }
         }
-    }
-
-    FolderItemPreviewPluginsDialog {
-        id: previewPluginsDialog
     }
 }
