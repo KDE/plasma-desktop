@@ -397,61 +397,6 @@ PlasmaCore.ToolTipArea {
         property bool isHovered: task.highlighted && plasmoid.configuration.taskHoverEffect
         property string basePrefix: "normal"
         prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix, plasmoid.location) : TaskTools.taskPrefix(basePrefix, plasmoid.location)
-
-        PlasmaCore.ToolTipArea {
-            id: toolTipArea
-
-            anchors.fill: parent
-            location: plasmoid.location
-
-            enabled: plasmoid.configuration.showToolTips && !inPopup && !tasks.groupDialog && (tasks.toolTipOpenedByClick === task || tasks.toolTipOpenedByClick === null)
-            interactive: model.IsWindow === true || mainItem.hasPlayer
-
-            // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
-            // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
-            // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
-            timeout: (tasks.toolTipOpenedByClick === task) ? 2000*20 : 4000
-
-            mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
-
-            onToolTipVisibleChanged: {
-                if (!toolTipVisible) {
-                    tasks.toolTipOpenedByClick = null;
-                }
-            }
-
-            onContainsMouseChanged: if (containsMouse) {
-                updateMainItemBindings();
-            }
-
-            // Will also be called in activateTaskAtIndex(index)
-            function updateMainItemBindings() {
-                if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
-                    return;
-                }
-
-                mainItem.parentTask = task;
-                mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
-
-                mainItem.appName = Qt.binding(() => model.AppName);
-                mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
-                mainItem.windows = Qt.binding(() => model.WinIdList);
-                mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
-                mainItem.icon = Qt.binding(() => model.decoration);
-                mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
-                mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
-                mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
-                mainItem.displayParent = Qt.binding(() => model.display);
-                mainItem.genericName = Qt.binding(() => model.GenericName);
-                mainItem.virtualDesktopParent = Qt.binding(() =>
-                    (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
-                mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
-                mainItem.activitiesParent = Qt.binding(() => model.Activities);
-
-                mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
-                mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
-            }
-        }
     }
 
     Loader {
