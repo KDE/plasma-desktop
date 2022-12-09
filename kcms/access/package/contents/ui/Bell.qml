@@ -19,7 +19,7 @@ Kirigami.FormLayout {
         id: fileDialog
         title: i18n("Please choose an audio file")
         folder: shortcuts.home
-        nameFilters: [i18n("Audio Files (*.mp3 *.ogg *.wav)")]
+        nameFilters: [i18nc("Name filters in a file dialog", "Audio Files (*.ogg *.wav)")]
         onAccepted: {
             kcm.bellSettings.customBellFile = fileDialog.fileUrls[0]
         }

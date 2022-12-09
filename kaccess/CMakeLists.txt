@@ -18,8 +18,8 @@ target_link_libraries(kaccess
     KF5::WidgetsAddons
     KF5::WindowSystem
     KF5::DBusAddons
-    Phonon::phonon4qt${QT_MAJOR_VERSION}
     X11::X11
+    Canberra::Canberra
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(kaccess Qt::X11Extras)
@@ -31,5 +31,6 @@ install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
+install(FILES kaccess.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_AUTOSTARTDIR} )
 install( FILES kaccess.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFYRCDIR} )

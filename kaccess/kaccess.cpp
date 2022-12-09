@@ -10,6 +10,7 @@
 
 #include "kaccess.h"
 
+#include <QFile>
 #include <QMessageBox>
 #include <QPainter>
 #include <QProcess>
@@ -50,6 +51,8 @@
 #endif
 
 #include <QLoggingCategory>
+
+#include <canberra.h>
 
 Q_LOGGING_CATEGORY(logKAccess, "kcm_kaccess")
 
@@ -120,7 +123,6 @@ static const ModifierKey modifierKeys[] = {
 
 KAccessApp::KAccessApp()
     : overlay(nullptr)
-    , _player(nullptr)
     , _activeWindow(KX11Extras::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
@@ -149,6 +151,13 @@ KAccessApp::KAccessApp()
     QTimer::singleShot(0, this, &KAccessApp::readSettings);
 }
 
+KAccessApp::~KAccessApp()
+{
+    if (m_caContext) {
+        ca_context_destroy(m_caContext);
+    }
+}
+
 void KAccessApp::newInstance()
 {
     KSharedConfig::openConfig()->reparseConfiguration();
@@ -163,7 +172,7 @@ void KAccessApp::readSettings()
     // bell
     _systemBell = cg.readEntry("SystemBell", true);
     _artsBell = cg.readEntry("ArtsBell", false);
-    _currentPlayerSource = cg.readPathEntry("ArtsBellFile", QString());
+    m_currentPlayerSource = QUrl(cg.readPathEntry("ArtsBellFile", QString()));
     _visibleBell = cg.readEntry("VisibleBell", false);
     _visibleBellInvert = cg.readEntry("VisibleBellInvert", false);
     _visibleBellColor = cg.readEntry("VisibleBellColor", QColor(Qt::red));
@@ -531,14 +540,42 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         QCoreApplication::sendPostedEvents();
     }
 
-    // ask Phonon to ring a nice bell
+    // ask canberra to ring a nice bell
     if (_artsBell) {
-        if (!_player) { // as creating the player is expensive, delay the creation
-            _player = Phonon::createPlayer(Phonon::AccessibilityCategory);
-            _player->setParent(this);
-            _player->setCurrentSource(_currentPlayerSource);
+        if (!m_caContext) {
+            int ret = ca_context_create(&m_caContext);
+            if (ret != CA_SUCCESS) {
+                qCWarning(logKAccess) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
+                m_caContext = nullptr;
+                return;
+            }
+
+            ret = ca_context_change_props(m_caContext,
+                                          CA_PROP_APPLICATION_NAME,
+                                          qApp->applicationDisplayName().toUtf8().constData(),
+                                          CA_PROP_APPLICATION_ID,
+                                          qApp->desktopFileName().toUtf8().constData(),
+                                          nullptr);
+            if (ret != CA_SUCCESS) {
+                qCWarning(logKAccess) << "Failed to set application properties on canberra context for audio notification:" << ca_strerror(ret);
+            }
+        } else {
+            ca_context_cancel(m_caContext, 0);
         }
-        _player->play();
+
+        if (m_currentPlayerSource.isValid()) {
+            ca_context_play(m_caContext,
+                            0,
+                            CA_PROP_MEDIA_FILENAME,
+                            QFile::encodeName(m_currentPlayerSource.toLocalFile()).constData(),
+                            CA_PROP_MEDIA_ROLE,
+                            "event",
+                            CA_PROP_CANBERRA_CACHE_CONTROL,
+                            "permanent",
+                            nullptr);
+        } else {
+            ca_context_play(m_caContext, 0, CA_PROP_EVENT_ID, "bell", CA_PROP_MEDIA_ROLE, "event", CA_PROP_CANBERRA_CACHE_CONTROL, "permanent", nullptr);
+        }
     }
 }
 

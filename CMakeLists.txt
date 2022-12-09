@@ -162,6 +162,11 @@ if(X11_FOUND)
   set(HAVE_X11 1)
 endif()
 
+find_package(Canberra)
+set_package_properties(Canberra PROPERTIES
+    PURPOSE "Support audible bell in kaccess"
+    TYPE REQUIRED)
+
 find_package(UDev)
 set_package_properties(UDev PROPERTIES
     DESCRIPTION "API for enumerating and introspecting local devices (part of systemd)"

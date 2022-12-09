@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
     KAboutData about(QStringLiteral("kaccess"), QString(), i18n("Accessibility"), {}, KAboutLicense::GPL_V2, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
+    about.setDesktopFileName(QStringLiteral("kaccess"));
     // set data as used for D-Bus by KAccessApp
     KAboutData::setApplicationData(about);
 
