@@ -63,12 +63,10 @@ KCM.SimpleKCM {
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case, which means "instant speed / no animations"
         ColumnLayout {
+            Layout.preferredWidth: appearanceButtonsRow.width
+
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
-
-            // Match width of feedback slider for aesthetics
-            Layout.minimumWidth: feedbackLoader.active ? feedbackLoader.item.sliderWidth : implicitWidth
-            Layout.maximumWidth: feedbackLoader.active ? feedbackLoader.item.sliderWidth : implicitWidth
 
             QQC2.Slider {
                 id: slider
@@ -106,6 +104,8 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
+            id: appearanceButtonsRow
+
             QQC2.Button {
                 icon.name: "preferences-desktop-wallpaper"
                 text: i18n("Change Wallpaper…")
@@ -175,21 +175,6 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        // This is in a loader because the import FeedbackControls uses won't always exist being KUserFeedback optional
-        Loader {
-            id: feedbackLoader
-            visible: item !== null
-            active: kcm.hasOwnProperty("feedbackEnabled")
-            Kirigami.FormData.label: item ? i18n("Send User Feedback:") : ""
-            Kirigami.FormData.buddyFor: item ? item.slider : null
-            source: Qt.resolvedUrl("FeedbackControls.qml")
-        }
-
-        Item {
-            visible: feedbackLoader.visible
             Kirigami.FormData.isSection: false
         }
 
