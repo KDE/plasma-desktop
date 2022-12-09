@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-22 17:58+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -395,20 +395,10 @@ msgstr "Mostra sfondo"
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Estensioni di anteprima"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "OK"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Annulla"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -601,6 +591,12 @@ msgstr "Mostra anteprime"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloccate"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

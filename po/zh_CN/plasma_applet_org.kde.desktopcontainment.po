@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-12-01 06:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -396,20 +396,10 @@ msgstr "显示背景"
 msgid "Remove"
 msgstr "移除"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "预览插件"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "确定"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "取消"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -602,3 +592,9 @@ msgstr "显示预览"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "已锁定"
+
+#~ msgid "OK"
+#~ msgstr "确定"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"

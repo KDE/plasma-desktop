@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-07-13 12:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -397,20 +397,10 @@ msgstr "배경 표시"
 msgid "Remove"
 msgstr "삭제"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "미리 보기 플러그인"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "확인"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "취소"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -603,6 +593,12 @@ msgstr "미리 보기 표시"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "잠김"
+
+#~ msgid "OK"
+#~ msgstr "확인"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

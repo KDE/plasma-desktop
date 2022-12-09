@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-22 12:26+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -397,20 +397,10 @@ msgstr "Mostrar el fondo"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Complementos de vista previa"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "Aceptar"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -603,6 +593,12 @@ msgstr "Mostrar vistas previas"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloqueado"
+
+#~ msgid "OK"
+#~ msgstr "Aceptar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

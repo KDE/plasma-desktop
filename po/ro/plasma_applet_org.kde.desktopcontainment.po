@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-04-04 09:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -402,20 +402,10 @@ msgstr "Arată fundalul"
 msgid "Remove"
 msgstr "Elimină"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Extensii de previzualizare"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "Bine"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Renunță"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -612,6 +602,12 @@ msgstr "Arată previzualizări"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
+
+#~ msgid "OK"
+#~ msgstr "Bine"
+
+#~ msgid "Cancel"
+#~ msgstr "Renunță"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

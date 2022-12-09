@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-10-09 05:49\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -404,20 +404,10 @@ msgstr "Паказаць фон"
 msgid "Remove"
 msgstr "Выдаліць"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Убудовы папярэдняга прагляду"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "Добра"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Скасаваць"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -610,6 +600,12 @@ msgstr "Паказваць мініяцюры"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Заблакавана"
+
+#~ msgid "OK"
+#~ msgstr "Добра"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасаваць"
 
 #, fuzzy
 #~| msgid "Create &Folder..."

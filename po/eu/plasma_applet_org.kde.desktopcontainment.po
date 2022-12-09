@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-24 05:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -401,20 +401,10 @@ msgstr "Erakutsi atzealdea"
 msgid "Remove"
 msgstr "Kendu"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Aurreikusteko pluginak"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "Ados"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Utzi"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -607,6 +597,12 @@ msgstr "Erakutsi aurreikuspegiak"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Giltzatuta"
+
+#~ msgid "OK"
+#~ msgstr "Ados"
+
+#~ msgid "Cancel"
+#~ msgstr "Utzi"
 
 #, fuzzy
 #~| msgid "Rows"

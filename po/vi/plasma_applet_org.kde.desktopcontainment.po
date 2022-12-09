@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-07-11 09:23+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -397,20 +397,10 @@ msgstr "Hiện nền"
 msgid "Remove"
 msgstr "Xoá"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Phần cài cắm xem thử"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "OK"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Huỷ"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -603,6 +593,12 @@ msgstr "Hiện xem thử"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Đã khoá"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Cancel"
+#~ msgstr "Huỷ"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

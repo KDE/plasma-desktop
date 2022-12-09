@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -413,20 +413,10 @@ msgstr "പശ്ചാത്തലം കാണിക്കുക"
 msgid "Remove"
 msgstr ""
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, fuzzy, kde-format
 msgid "Preview Plugins"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr ""
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "റദ്ദാക്കുക"
 
 #: package/contents/ui/main.qml:356
 #, fuzzy, kde-format
@@ -634,6 +624,9 @@ msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര�
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "പൂട്ടി"
+
+#~ msgid "Cancel"
+#~ msgstr "റദ്ദാക്കുക"
 
 #~ msgid "Features:"
 #~ msgstr "വിശേഷതകൾ:"

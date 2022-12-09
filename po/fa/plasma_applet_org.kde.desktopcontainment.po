@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2007-07-31 19:30+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -413,22 +413,11 @@ msgstr "زمینه"
 msgid "Remove"
 msgstr ""
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Preview Plugins"
 msgstr "پیش‌نمایش در"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr ""
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "C&ancel"
-msgid "Cancel"
-msgstr "&لغو‌"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -625,6 +614,11 @@ msgstr "پیش‌نمایش"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "C&ancel"
+#~ msgid "Cancel"
+#~ msgstr "&لغو‌"
 
 #, fuzzy
 #~| msgid "Create &Folder..."

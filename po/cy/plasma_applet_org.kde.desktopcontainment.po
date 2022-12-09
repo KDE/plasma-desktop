@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2004-01-05 15:00+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -418,22 +418,11 @@ msgstr "Cefndir"
 msgid "Remove"
 msgstr ""
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Preview Plugins"
 msgstr "Rhagolwg"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr ""
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, fuzzy, kde-format
-#| msgid "C&ancel"
-msgid "Cancel"
-msgstr "&Diddymu"
 
 #: package/contents/ui/main.qml:356
 #, fuzzy, kde-format
@@ -638,6 +627,11 @@ msgstr "Rhagolwg"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "C&ancel"
+#~ msgid "Cancel"
+#~ msgstr "&Diddymu"
 
 #, fuzzy
 #~| msgid "Create &Folder..."

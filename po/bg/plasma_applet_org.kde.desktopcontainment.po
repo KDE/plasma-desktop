@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-23 23:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -397,20 +397,10 @@ msgstr "Показване на фона"
 msgid "Remove"
 msgstr "Премахване"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Визуализация на приставки"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "Добре"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Отказ"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -603,3 +593,9 @@ msgstr "Показване на предварителен преглед"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Заключени"
+
+#~ msgid "OK"
+#~ msgstr "Добре"
+
+#~ msgid "Cancel"
+#~ msgstr "Отказ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-22 19:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -397,20 +397,10 @@ msgstr "أظهر الخلفية"
 msgid "Remove"
 msgstr "أزل"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "عاين الملحقات"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "حسنًا"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "ألغِ"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -603,6 +593,12 @@ msgstr "اعرض المعاينات"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "مقفل"
+
+#~ msgid "OK"
+#~ msgstr "حسنًا"
+
+#~ msgid "Cancel"
+#~ msgstr "ألغِ"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Rows"

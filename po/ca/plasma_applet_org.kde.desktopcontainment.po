@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-22 10:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -400,20 +400,10 @@ msgstr "Mostra el fons"
 msgid "Remove"
 msgstr "Elimina"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:24
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Connectors de vista prèvia"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:82
-#, kde-format
-msgid "OK"
-msgstr "D'acord"
-
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:95
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel·la"
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -606,3 +596,9 @@ msgstr "Mostra les vistes prèvies"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
+
+#~ msgid "OK"
+#~ msgstr "D'acord"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"
