@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-27 07:25+0100\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
+"PO-Revision-Date: 2022-12-09 09:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -85,7 +85,7 @@ msgid "Open %1"
 msgstr "Odpri %1"
 
 #: contents/configuration/AboutPlugin.qml:19
-#: contents/configuration/AppletConfiguration.qml:247
+#: contents/configuration/AppletConfiguration.qml:248
 msgid "About"
 msgstr "O programu"
 
@@ -127,15 +127,15 @@ msgstr "Prevajalci"
 msgid "Report a Bug…"
 msgstr "Poročaj o hrošču…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovne bližnjice"
 
-#: contents/configuration/AppletConfiguration.qml:295
+#: contents/configuration/AppletConfiguration.qml:296
 msgid "Apply Settings"
 msgstr "Uveljavi nastavitve"
 
-#: contents/configuration/AppletConfiguration.qml:296
+#: contents/configuration/AppletConfiguration.qml:297
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -143,15 +143,15 @@ msgstr ""
 "Nastavitve trenutnega modula so se spremenile. Ali želite spremembe "
 "uveljaviti ali zavreči?"
 
-#: contents/configuration/AppletConfiguration.qml:326
+#: contents/configuration/AppletConfiguration.qml:327
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:334
+#: contents/configuration/AppletConfiguration.qml:335
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: contents/configuration/AppletConfiguration.qml:340
+#: contents/configuration/AppletConfiguration.qml:341
 #: contents/explorer/AppletAlternatives.qml:179
 msgid "Cancel"
 msgstr "Prekliči"
@@ -210,8 +210,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "O programu"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2022-09-02 07:47+0200\n"
+"PO-Revision-Date: 2022-12-09 08:03+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -136,6 +136,7 @@ msgstr "შუა-წკაპისთვის მარჯვენა და
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
 
 #: kcm/libinput/touchpad.qml:258
 #, kde-format
@@ -397,6 +398,8 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"მნიშვნელობების ჩატვირთვის შეცდომა. მეტი ინფორმაციის მისაღებად იხილეთ "
+"ჟურნალი. საჭიროა ამ კონფიგურაციის მოდულის გადატვირთვა."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
@@ -548,7 +551,7 @@ msgstr "აქტიური პარამეტრების ჩვენ�
 #: kcm/xlib/touchpadconfigxlib.cpp:159
 #, kde-format
 msgid "These settings won't take effect in the testing area"
-msgstr ""
+msgstr "ამ პარამეტრებს სატესტო ადგილას ეფექტი არ გააჩნიათ"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:164
 #, kde-format

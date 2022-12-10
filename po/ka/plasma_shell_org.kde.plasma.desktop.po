@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:32+0200\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
+"PO-Revision-Date: 2022-12-09 07:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -79,7 +79,7 @@ msgid "Open %1"
 msgstr "%1-ის გახსნა"
 
 #: contents/configuration/AboutPlugin.qml:19
-#: contents/configuration/AppletConfiguration.qml:247
+#: contents/configuration/AppletConfiguration.qml:248
 msgid "About"
 msgstr "შესახებ"
 
@@ -103,7 +103,7 @@ msgstr "ლიცენზია:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "ლიცენზიის ტექსტის ნახვა"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -119,17 +119,17 @@ msgstr "მთარგმნელები"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "შეცდომის პატაკი…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
 msgstr "სხარტი კლავიშები"
 
-#: contents/configuration/AppletConfiguration.qml:295
+#: contents/configuration/AppletConfiguration.qml:296
 msgid "Apply Settings"
 msgstr "პარამეტრების გადატარება"
 
-#: contents/configuration/AppletConfiguration.qml:296
+#: contents/configuration/AppletConfiguration.qml:297
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -137,15 +137,15 @@ msgstr ""
 "მიმდინარე მოდულის პარამეტრები შეიცვალა. გნებავთ გადაატაროთ ეს ცვლილებები თუ "
 "მოვაშოროთ ისინი?"
 
-#: contents/configuration/AppletConfiguration.qml:326
+#: contents/configuration/AppletConfiguration.qml:327
 msgid "OK"
 msgstr "დიახ"
 
-#: contents/configuration/AppletConfiguration.qml:334
+#: contents/configuration/AppletConfiguration.qml:335
 msgid "Apply"
 msgstr "გამოყენება"
 
-#: contents/configuration/AppletConfiguration.qml:340
+#: contents/configuration/AppletConfiguration.qml:341
 #: contents/explorer/AppletAlternatives.qml:179
 msgid "Cancel"
 msgstr "გაუქმება"
@@ -204,8 +204,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "შესახებ"
@@ -387,7 +385,7 @@ msgstr "გადასატანად გადაათრიეთ"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "პანელის გადასატანად ისრების ღილაკები გამოიყენეთ"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"

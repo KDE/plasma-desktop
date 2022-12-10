@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-09-12 09:53+0200\n"
+"PO-Revision-Date: 2022-12-09 08:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,6 +73,8 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"მნიშვნელობების ჩატვირთვის შეცდომა. მეტი ინფორმაციის მისაღებად იხილეთ "
+"ჟურნალი. საჭიროა ამ კონფიგურაციის მოდულის გადატვირთვა."
 
 #: kcm/libinput/libinput_config.cpp:114
 #, kde-format
@@ -154,6 +156,7 @@ msgstr "შუა-წკაპისთვის მარჯვენა და
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
 
 #: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
 #, kde-format
@@ -227,7 +230,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "დამატებითი ღილაკი %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
@@ -257,7 +260,7 @@ msgstr "დააწექით თაგუნას ღილაკს "
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "მიბმის დამატება…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
@@ -339,7 +342,7 @@ msgstr "კურსორის აჩქარება:"
 #: kcm/xlib/kcmmouse.ui:174
 #, kde-format
 msgid "Pointer threshold:"
-msgstr ""
+msgstr "კურსორის ზღვარი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/kcmmouse.ui:184

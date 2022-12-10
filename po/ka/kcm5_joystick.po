@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-25 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 08:00+0200\n"
+"PO-Revision-Date: 2022-12-09 07:59+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,17 +41,17 @@ msgstr "შემდეგი"
 #: caldialog.cpp:50
 #, kde-format
 msgid "Please wait a moment to calculate the precision"
-msgstr ""
+msgstr "მიმდინარეობს სიზუსტის გამოთვლა. მოითმინეთ"
 
 #: caldialog.cpp:79
 #, kde-format
 msgid "(usually X)"
-msgstr ""
+msgstr "(ჩვეულებრივ X)"
 
 #: caldialog.cpp:81
 #, kde-format
 msgid "(usually Y)"
-msgstr ""
+msgstr "(ჩვეულებრივ Y)"
 
 #: caldialog.cpp:87
 #, kde-format
@@ -83,12 +83,12 @@ msgstr ""
 #: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
 #, kde-format
 msgid "Communication Error"
-msgstr ""
+msgstr "კომუნიკაციის შეცდომა"
 
 #: caldialog.cpp:164
 #, kde-format
 msgid "You have successfully calibrated your device"
-msgstr ""
+msgstr "თქვენი მოწყობილობის კალიბრაცია წარამატებულია"
 
 #: caldialog.cpp:164 joywidget.cpp:363
 #, kde-format
@@ -98,22 +98,24 @@ msgstr "კალიბრაცია წარმატებულია"
 #: caldialog.cpp:184
 #, kde-format
 msgid "Value Axis %1: %2"
-msgstr ""
+msgstr "მნიშვნელობის ღერძი %1: %2"
 
 #: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
-msgstr ""
+msgstr "მითითებული მოწყობილობის (%1) გახსნის შეცდომა: %2"
 
 #: joydevice.cpp:45
 #, kde-format
 msgid "The given device %1 is not a joystick."
-msgstr ""
+msgstr "მითითებული მოწყობილობა %1 ჯოისტიკი არაა."
 
 #: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
 msgstr ""
+"შეცდომა ჯოისტიკის მოწყობილობისთვის (%1) ბირთვის დრაივერის ვერსიის მიღებისას: "
+"%2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -125,52 +127,58 @@ msgstr ""
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr ""
+msgstr "ჯოისტიკის მოწყობილობის (%1) ღილაკების რაოდენობის მიღების შეცდომა: %2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr ""
+msgstr "ჯოისტიკის მოწყობილობის (%1) ღერძების რაოდენობის მიღების შეცდომა: %2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
 msgstr ""
+"ჯოისტიკის მოწყობილობის (%1) კალიბრაციის მნიშვნელობების მიღების შეცდომა: %2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
 msgstr ""
+"ჯოისტიკის მოწყობილობის (%1) კალიბრაციის მნიშვნელობების აღდგენის შეცდომა: %2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
 msgstr ""
+"ჯოისტიკის მოწყობილობის (%1) კალიბრაციის მნიშვნელობების ინიციალიზაციის "
+"შეცდომა: %2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
 msgstr ""
+"ჯოისტიკის მოწყობილობის (%1) კალიბრაციის მნიშვნელობების გადატარების შეცდომა: "
+"%2"
 
 #: joydevice.cpp:95
 #, kde-format
 msgid "internal error - code %1 unknown"
-msgstr ""
+msgstr "შიდა შეცდომა - კოდი %1 უცნობია"
 
 #: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
-msgstr ""
+msgstr "KDE -ის ჯოისტიკის კონტროლის მოდული"
 
 #: joystick.cpp:31
 #, kde-format
 msgid "KDE System Settings Module to test Joysticks"
-msgstr ""
+msgstr "KDE -ის სისტემის მორგების მოდული ჯოისტიკების დასატესტად"
 
 #: joystick.cpp:33
 #, kde-format
 msgid "(c) 2004, Martin Koller"
-msgstr ""
+msgstr "(c) 2004, Martin Koller"
 
 #: joystick.cpp:38
 #, kde-format
@@ -202,7 +210,7 @@ msgstr "მდებარეობა:"
 #: joywidget.cpp:87
 #, kde-format
 msgid "Show trace"
-msgstr ""
+msgstr "ტრეისის ჩვენება"
 
 #: joywidget.cpp:96 joywidget.cpp:300
 #, kde-format
@@ -282,3 +290,4 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""
+"ჯოისტიკის მოწყობილობისთვის %1 ყველა კალიბრაციის მნიშვნელობა აღდგენილია."
