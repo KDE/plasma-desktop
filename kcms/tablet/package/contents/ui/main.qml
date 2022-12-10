@@ -298,6 +298,8 @@ SimpleKCM {
             onCountChanged: if (count > 0 && currentIndex < 0) {
                 currentIndex = 0;
             }
+            enabled: count > 0
+            displayText: enabled ? currentText : i18n("None")
         }
 
         TabletEvents {
