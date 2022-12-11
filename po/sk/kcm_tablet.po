@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2022-11-22 17:53+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -141,7 +141,12 @@ msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Podložka:"
 
-#: package/contents/ui/main.qml:322
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
 msgstr "Tlačidlo %1:"

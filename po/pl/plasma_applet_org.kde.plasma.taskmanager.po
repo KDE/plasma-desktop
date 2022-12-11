@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:48+0000\n"
-"PO-Revision-Date: 2022-07-31 09:08+0200\n"
+"PO-Revision-Date: 2022-12-10 11:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -70,16 +70,14 @@ msgid "General:"
 msgstr "Ogólne:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Pokaż okno po najechaniu na jego podgląd"
+msgstr "Pokaż małe okno podglądu po najechaniu na zadanie"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Pokaż okno po najechaniu na jego podgląd"
+msgstr "Ukryj pozostałe okna po najechaniu na podgląd"
 
 #: package/contents/ui/ConfigAppearance.qml:50
 #, kde-format
@@ -168,25 +166,19 @@ msgid "Cycles through tasks"
 msgstr "Krąży pomiędzy zadaniami"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Pokaż okna obok siebie"
+msgstr "Pokaż małe podglądy okien"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Pokaż okna obok siebie"
+msgstr "Pokaż duże podglądy okien"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2022-11-27 03:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -139,7 +139,12 @@ msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Panel táctil:"
 
-#: package/contents/ui/main.qml:322
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
 msgstr "Botón %1:"

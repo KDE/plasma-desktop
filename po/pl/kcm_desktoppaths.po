@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1639248 $
+# Version: $Revision: 1639772 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -12,13 +12,13 @@
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2006, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005, 2006.
 # Marta Rybczynska <kde-i18n@rybczynska.net>, 2009.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2020, 2021.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-05-02 07:28+0200\n"
+"PO-Revision-Date: 2022-12-10 11:29+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -28,7 +28,7 @@ msgstr ""
 ">\n"
 ">\n"
 ">\n"
-"X-Generator: Lokalize 20.12.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -65,12 +65,12 @@ msgstr "Filmy"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Publiczne"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Wzorce"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -177,39 +177,33 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Ścieżka do muzyki:"
+msgstr "Ścieżka do publicznego:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
-"obrazków."
+"plików i katalogów udostępnianych publicznie."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Ścieżka do obrazów:"
+msgstr "Ścieżka do wzorców:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
-"obrazków."
+"wzorców."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ścieżka do programów Autostartu:"
