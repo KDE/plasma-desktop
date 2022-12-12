@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2013 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -111,6 +112,7 @@ Item {
                 break;
             }
         }
+        objectName: "configurePanelButton" // used for stable accessible id
         Accessible.name: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel…")
         Accessible.description: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
