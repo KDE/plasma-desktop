@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-02-21 19:33+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -49,53 +49,23 @@ msgstr "Yleisulkoasun ja -tuntuman paketti, vaihtoehtoinen"
 msgid "Animation speed"
 msgstr "Animointinopeus"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"Voit auttaa KDE:ta Plasman kehityksessä lahjoittamalla tietoa sen käytöstä, "
-"jotta voimme keskittyä sinulle tärkeisiin asioihin.<nl/><nl/>Tiedon "
-"lahjoittaminen on vapaaehtoista ja tapahtuu täysin nimettömästi. Emme "
-"koskaan kerää henkilökohtaisia tietojasi, käyttämiäsi tiedostoja, sivustoja "
-"joilla käyt tai muuta tietoa, josta sinut voisi tunnistaa."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Tietoja ei lähetetä."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Lähetetään seuraavat tiedot:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Teema:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animointinopeus:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Hidas"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -140,20 +110,40 @@ msgstr "valitsee ne"
 msgid "Open by double-clicking instead"
 msgstr "Avaaminen tapahtuu kaksoisnapsautuksella"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Lähetä käyttäjäpalautetta:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Lisää toiminta-asetuksia…"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Käytetyimmät sivut:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "Voit auttaa KDE:ta Plasman kehityksessä lahjoittamalla tietoa sen "
+#~ "käytöstä, jotta voimme keskittyä sinulle tärkeisiin asioihin.<nl/><nl/"
+#~ ">Tiedon lahjoittaminen on vapaaehtoista ja tapahtuu täysin nimettömästi. "
+#~ "Emme koskaan kerää henkilökohtaisia tietojasi, käyttämiäsi tiedostoja, "
+#~ "sivustoja joilla käyt tai muuta tietoa, josta sinut voisi tunnistaa."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Tietoja ei lähetetä."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Lähetetään seuraavat tiedot:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Lähetä käyttäjäpalautetta:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

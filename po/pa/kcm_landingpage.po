@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2021-10-09 09:33-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -49,59 +49,24 @@ msgstr "ਗਲੋਬਲ ਦਿੱਖ ਅਤੇ ਛੋਹ ਪੈਕੇਜ, ਬਦ
 msgid "Animation speed"
 msgstr "ਐਨੀਮੇਸ਼ਨ ਗਤੀ"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "ਪਲਾਜ਼ਮਾ"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you."
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"ਤੁਸੀਂ ਕੇਡੀਈ ਦੀ ਪਲਾਜ਼ਮਾ ਨੂੰ ਸੁਧਾਰਨ ਵਾਸਤੇ ਤੁਹਾਡੇ ਵਲੋਂ ਇਹ ਕਿਵੇਂ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਬਾਰੇ ਜਾਣਕਾਰੀ "
-"ਭੇਜ ਕੇ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ।<nl/><nl/>ਇਹ ਜਾਣਕਾਰੀ ਲਈ ਯੋਗਦਾਨ ਪਾਉਣਾ ਮਨਮਰਜ਼ੀ ਮੁਤਾਬਕ ਹੈ ਅਤੇ ਪੂਰੀ "
-"ਤਰ੍ਹਾਂ ਅਣਪਛਾਤਾ ਰਹਿੰਦਾ ਹੈ। ਅਸੀਂ ਕਦੇ ਵੀ ਤੁਹਾਡੀ ਨਿੱਜੀ ਡਾਟਾ, ਤੁਹਾਡੇ ਵਲੋਂ ਵਰਤੀਆਂ ਫਾਈਲਾਂ, ਤੁਹਾਡੇ "
-"ਵਲੋਂ ਖੋਲ੍ਹੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਜਾਂ ਕੋਈ ਐਸੀ ਜਾਣਕਾਰੀ, ਜਿਸ ਤੋਂ ਤੁਹਾਡੀ ਪਛਾਣ ਹੁੰਦੀ ਹੋਵੇ, ਇਕੱਤਰ ਨਹੀਂ ਕਰਦੇ ਹਾਂ।"
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "ਕੋਈ ਵੀ ਡਾਟਾ ਨਹੀਂ ਭੇਜਿਆ ਜਾਵੇਗਾ।"
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "ਹੇਠ ਦਿੱਤੀ ਜਾਣਕਾਰੀ ਭੇਜੀ ਜਾਵੇਗੀ:"
-
 #: package/contents/ui/main.qml:27
 #, fuzzy, kde-format
 #| msgid "Dark Theme"
 msgid "Theme:"
 msgstr "ਗੂੜ੍ਹਾ ਥੀਮ"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "ਐਨੀਮੇਸ਼ਨ ਗਤੀ:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "ਹੌਲੀ"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -146,21 +111,48 @@ msgstr "ਉਹਨਾਂ ਨੂੰ ਚੁਣੋ"
 msgid "Open by double-clicking instead"
 msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਫੀਡਬੈਕ ਭੇਜੋ:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "…ਹੋਰ ਰਵੱਈਆ ਸੈਟਿੰਗਾਂ"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, fuzzy, kde-format
 #| msgid "Most Used Settings"
 msgid "Most Used Pages:"
 msgstr "ਅਕਸਰ ਵਰਤੀਆਂ ਸੈਟਿੰਗਾਂ"
+
+#~ msgid "Plasma"
+#~ msgstr "ਪਲਾਜ਼ਮਾ"
+
+#, fuzzy
+#~| msgid ""
+#~| "You can help KDE improve Plasma by contributing information on how you "
+#~| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#~| ">Contributing this information is optional and entirely anonymous. We "
+#~| "never collect your personal data, files you use, websites you visit, or "
+#~| "information that could identify you."
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "ਤੁਸੀਂ ਕੇਡੀਈ ਦੀ ਪਲਾਜ਼ਮਾ ਨੂੰ ਸੁਧਾਰਨ ਵਾਸਤੇ ਤੁਹਾਡੇ ਵਲੋਂ ਇਹ ਕਿਵੇਂ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਬਾਰੇ "
+#~ "ਜਾਣਕਾਰੀ ਭੇਜ ਕੇ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ।<nl/><nl/>ਇਹ ਜਾਣਕਾਰੀ ਲਈ ਯੋਗਦਾਨ ਪਾਉਣਾ ਮਨਮਰਜ਼ੀ "
+#~ "ਮੁਤਾਬਕ ਹੈ ਅਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਅਣਪਛਾਤਾ ਰਹਿੰਦਾ ਹੈ। ਅਸੀਂ ਕਦੇ ਵੀ ਤੁਹਾਡੀ ਨਿੱਜੀ ਡਾਟਾ, ਤੁਹਾਡੇ ਵਲੋਂ "
+#~ "ਵਰਤੀਆਂ ਫਾਈਲਾਂ, ਤੁਹਾਡੇ ਵਲੋਂ ਖੋਲ੍ਹੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਜਾਂ ਕੋਈ ਐਸੀ ਜਾਣਕਾਰੀ, ਜਿਸ ਤੋਂ ਤੁਹਾਡੀ ਪਛਾਣ "
+#~ "ਹੁੰਦੀ ਹੋਵੇ, ਇਕੱਤਰ ਨਹੀਂ ਕਰਦੇ ਹਾਂ।"
+
+#~ msgid "No data will be sent."
+#~ msgstr "ਕੋਈ ਵੀ ਡਾਟਾ ਨਹੀਂ ਭੇਜਿਆ ਜਾਵੇਗਾ।"
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "ਹੇਠ ਦਿੱਤੀ ਜਾਣਕਾਰੀ ਭੇਜੀ ਜਾਵੇਗੀ:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਫੀਡਬੈਕ ਭੇਜੋ:"
 
 #, fuzzy
 #~| msgid "Light Theme"

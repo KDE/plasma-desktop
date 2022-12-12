@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-06-26 14:57+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -48,53 +48,23 @@ msgstr "Balíček Globálny vzhľad a dojem, alternatívny"
 msgid "Animation speed"
 msgstr "Rýchlosť animácií"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"Môžete pomôcť vylepšiť KDE Plasma prispením informácií o tom, ako ju "
-"používate, takže sa môžeme sústrediť na veci, na ktorých vám záleží.<br/><br/"
-">Prispievanie týmito informáciami je voliteľné a úplne anonymné. Nikdy "
-"nezhromažďujeme vaše osobné údaje, súbory, ktoré používate, navštívené "
-"webové stránky ani informácie, ktoré by vás mohli identifikovať."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Žiadne údaje nebudú odoslané."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Nasledovné informácie budú odoslané:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Téma"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Rýchlosť animácie:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Pomalá"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -139,20 +109,41 @@ msgstr "Vyberie položku"
 msgid "Open by double-clicking instead"
 msgstr "Otvoriť radšej dvoj-klikom"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Odoslať používateľskú odozvu:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Ďalšie nastavenia správania..."
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Najpoužívanejšie stránky:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "Môžete pomôcť vylepšiť KDE Plasma prispením informácií o tom, ako ju "
+#~ "používate, takže sa môžeme sústrediť na veci, na ktorých vám záleží.<br/"
+#~ "><br/>Prispievanie týmito informáciami je voliteľné a úplne anonymné. "
+#~ "Nikdy nezhromažďujeme vaše osobné údaje, súbory, ktoré používate, "
+#~ "navštívené webové stránky ani informácie, ktoré by vás mohli "
+#~ "identifikovať."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Žiadne údaje nebudú odoslané."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Nasledovné informácie budú odoslané:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Odoslať používateľskú odozvu:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

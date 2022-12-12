@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-09-23 11:13+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -50,55 +50,23 @@ msgstr "Pakiet globalnego wyglądu, zamienny"
 msgid "Animation speed"
 msgstr "Szybkość animacji"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plazma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"Możesz pomóc KDE ulepszyć Plazmę poprzez dzielenie się tym jak z niej "
-"korzystasz. Umożliwia nam to skupianie się na rzeczach, które mają dla "
-"ciebie znaczenie.<br/><br/>Dzielenie się danymi nt sposobu korzystania z "
-"programów jest dobrowolne i całkowicie anonimowe. Dane te nie zostaną "
-"skojarzone z jakimkolwiek niepowtarzalnym identyfikatorem oraz nigdy nie "
-"będą śledzone dokumenty, które otwierasz, strony które odwiedzasz, czy żadne "
-"inne dane osobiste."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Nie zostaną wysłane żadne dane."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Zostaną wysłane następujące dane:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Tryb:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Szybkość animacji:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Wolne"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -143,20 +111,42 @@ msgstr "Zaznacza je"
 msgid "Open by double-clicking instead"
 msgstr "Otwórz dwukrotnym kliknięciem"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Wysyłanie informacji zwrotnej:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Więcej ustawień zachowania..."
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Najczęściej używane strony:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plazma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "Możesz pomóc KDE ulepszyć Plazmę poprzez dzielenie się tym jak z niej "
+#~ "korzystasz. Umożliwia nam to skupianie się na rzeczach, które mają dla "
+#~ "ciebie znaczenie.<br/><br/>Dzielenie się danymi nt sposobu korzystania z "
+#~ "programów jest dobrowolne i całkowicie anonimowe. Dane te nie zostaną "
+#~ "skojarzone z jakimkolwiek niepowtarzalnym identyfikatorem oraz nigdy nie "
+#~ "będą śledzone dokumenty, które otwierasz, strony które odwiedzasz, czy "
+#~ "żadne inne dane osobiste."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Nie zostaną wysłane żadne dane."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Zostaną wysłane następujące dane:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Wysyłanie informacji zwrotnej:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

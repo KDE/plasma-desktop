@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-09-02 07:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -50,54 +50,23 @@ msgstr "გარეგნობის გლობალური პაკე�
 msgid "Animation speed"
 msgstr "ანიმაციის სიჩქარე"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"თქვენ შეგიძლიათ დაეხმაროთ KDE-ს პლაზმის გაუმჯობესებაში ინფორმაციის "
-"მიწოდებით, თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება "
-"მოახდინოთ თქვენთვის მნიშვნელოვან საკითხებზე.<br/><br/>ამ ინფორმაციის "
-"კონტრიბუცია არჩევითია და სრულიად ანონიმური. ჩვენ არასოდეს ვაგროვებთ თქვენს "
-"პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, ვებსაიტებს, რომლებსაც "
-"სტუმრობთ, ან ინფორმაციას, რომელსაც შეუძლია თქვენი იდენტიფიცირება."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "მონაცემები გადაგზავნილი არ იქნება."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "გაგზავნილი იქნება შემდეგი ინფორმაცია:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "თემა:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "ანიმაციის სიჩქარე:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "ნელი"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -142,20 +111,42 @@ msgstr "მონიშნავს"
 msgid "Open by double-clicking instead"
 msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "მომხმარებლის უკუკავშირის გაგზავნა:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "ქცევის მეტი პარამეტრი…"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "ყველაზე ხშირად გამოყენებული გვერდები:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "თქვენ შეგიძლიათ დაეხმაროთ KDE-ს პლაზმის გაუმჯობესებაში ინფორმაციის "
+#~ "მიწოდებით, თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება "
+#~ "მოახდინოთ თქვენთვის მნიშვნელოვან საკითხებზე.<br/><br/>ამ ინფორმაციის "
+#~ "კონტრიბუცია არჩევითია და სრულიად ანონიმური. ჩვენ არასოდეს ვაგროვებთ "
+#~ "თქვენს პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, ვებსაიტებს, "
+#~ "რომლებსაც სტუმრობთ, ან ინფორმაციას, რომელსაც შეუძლია თქვენი "
+#~ "იდენტიფიცირება."
+
+#~ msgid "No data will be sent."
+#~ msgstr "მონაცემები გადაგზავნილი არ იქნება."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "გაგზავნილი იქნება შემდეგი ინფორმაცია:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "მომხმარებლის უკუკავშირის გაგზავნა:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

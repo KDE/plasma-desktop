@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-09-20 13:27+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -50,53 +50,23 @@ msgstr "Оформление рабочей среды, альтернативн
 msgid "Animation speed"
 msgstr "Скорость анимации"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"Обратная связь помогает разработчикам обратить своё внимание на то, что "
-"необходимо пользователям Участие в предоставлении сведений необязательно и "
-"анонимно. <br/><br/>Передаваемая информация не содержит персональных данных, "
-"сведений об используемых файлах, а также никаких других данных, которые "
-"могут быть использованы для идентификации."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Никакие данные не будут передаваться."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Будут передаваться следующие сведения:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Оформление:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Скорость анимации:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Медленнее"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -141,20 +111,40 @@ msgstr "Выделяет объект"
 msgid "Open by double-clicking instead"
 msgstr "Открывать двойным щелчком"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Обратная связь:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Расширенные параметры поведения..."
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Часто используемые страницы:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "Обратная связь помогает разработчикам обратить своё внимание на то, что "
+#~ "необходимо пользователям Участие в предоставлении сведений необязательно "
+#~ "и анонимно. <br/><br/>Передаваемая информация не содержит персональных "
+#~ "данных, сведений об используемых файлах, а также никаких других данных, "
+#~ "которые могут быть использованы для идентификации."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Никакие данные не будут передаваться."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Будут передаваться следующие сведения:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Обратная связь:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

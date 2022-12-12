@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-11-30 19:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -50,54 +50,23 @@ msgstr "Global Görünüm ve His paketi, alternatif"
 msgid "Animation speed"
 msgstr "Canlandırma hızı"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"KDE'nin Plasma'yı nasıl kullandığınıza dair bilgileri paylaşarak Plasma'nın "
-"geliştirmesine yardımcı olabilirsiniz, böylece sizin için önemli olan "
-"şeylere odaklanabiliriz. <nl/><nl/>Bu bilgilere katkıda bulunmak isteğe "
-"bağlıdır ve tamamen anonimdir. Kişisel verilerinizi, kullandığınız "
-"dosyaları, ziyaret ettiğiniz web sitelerini veya sizi tanımlayabilecek "
-"bilgileri asla toplamayız."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Herhangi bir veri gönderilmeyecek."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Aşağıdaki bilgiler gönderilecektir:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Tema:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Canlandırma hızı:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Yavaş"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -142,17 +111,38 @@ msgstr "Onları seçer"
 msgid "Open by double-clicking instead"
 msgstr "Ögeleri açmak için çift tıklayın"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Kullanıcı geri bildirimi gönder:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Diğer Davranış Ayarları…"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "En sık kullanılan sayfalar:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "KDE'nin Plasma'yı nasıl kullandığınıza dair bilgileri paylaşarak "
+#~ "Plasma'nın geliştirmesine yardımcı olabilirsiniz, böylece sizin için "
+#~ "önemli olan şeylere odaklanabiliriz. <nl/><nl/>Bu bilgilere katkıda "
+#~ "bulunmak isteğe bağlıdır ve tamamen anonimdir. Kişisel verilerinizi, "
+#~ "kullandığınız dosyaları, ziyaret ettiğiniz web sitelerini veya sizi "
+#~ "tanımlayabilecek bilgileri asla toplamayız."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Herhangi bir veri gönderilmeyecek."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Aşağıdaki bilgiler gönderilecektir:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Kullanıcı geri bildirimi gönder:"

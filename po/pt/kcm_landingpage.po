@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-03-26 23:19+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -44,53 +44,23 @@ msgstr "Pacote de Aparência e Comportamento global (alternativo)"
 msgid "Animation speed"
 msgstr "Velocidade da animação"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"Poderá ajudar o KDE a melhorar o Plasma, contribuindo com informações sobre "
-"como o usa, para que nos possamos focar nas coisas importantes para si.<br/"
-"><br/>Contribuir com esta informação é opcional e é totalmente anónimo. "
-"Nunca recolhemos os seus dados pessoais, os ficheiros que usa, as páginas "
-"Web que visita ou outras informações que o possam identificar."
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "Não serão enviados dados."
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "Será enviada a seguinte informação:"
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "Tema:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "Velocidade da animação:"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lenta"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -135,20 +105,40 @@ msgstr "Selecciona-os"
 msgid "Open by double-clicking instead"
 msgstr "Abrir com duplo-click em alternativa"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "Enviar as Reacções do Utilizador:"
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Mais Configurações de Comportamento…"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Páginas Mais Usadas:"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "Poderá ajudar o KDE a melhorar o Plasma, contribuindo com informações "
+#~ "sobre como o usa, para que nos possamos focar nas coisas importantes para "
+#~ "si.<br/><br/>Contribuir com esta informação é opcional e é totalmente "
+#~ "anónimo. Nunca recolhemos os seus dados pessoais, os ficheiros que usa, "
+#~ "as páginas Web que visita ou outras informações que o possam identificar."
+
+#~ msgid "No data will be sent."
+#~ msgstr "Não serão enviados dados."
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "Será enviada a seguinte informação:"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Enviar as Reacções do Utilizador:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"

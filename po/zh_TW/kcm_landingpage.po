@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-06-08 19:36+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -46,52 +46,23 @@ msgstr "全域「外觀與感覺」套件（替代）"
 msgid "Animation speed"
 msgstr "動畫速度"
 
-#: package/contents/ui/FeedbackControls.qml:64
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: package/contents/ui/FeedbackControls.qml:72
-#, kde-format
-msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<br/><br/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you."
-msgstr ""
-"您可以藉由貢獻自己日常使用 Plasma 的資訊來協助 KDE 團隊，讓我們能更聚焦在改善"
-"您重視的功能。<br/><br/>您能自行選擇資訊揭露的程度且上傳的資訊是完全匿名的。"
-"我們永遠不會收集您的個人資料、使用的檔案、瀏覽的網站或能識別您的任何隱私資"
-"訊。"
-
-#: package/contents/ui/FeedbackControls.qml:75
-#, kde-format
-msgid "No data will be sent."
-msgstr "不傳送任何資訊。"
-
-#: package/contents/ui/FeedbackControls.qml:77
-#, kde-format
-msgid "The following information will be sent:"
-msgstr "將會傳送下列資訊："
-
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Theme:"
 msgstr "主題："
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Animation speed:"
 msgstr "動畫速度："
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "慢"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
@@ -136,20 +107,39 @@ msgstr "選取它"
 msgid "Open by double-clicking instead"
 msgstr "點兩下開啟檔案"
 
-#: package/contents/ui/main.qml:186
-#, kde-format
-msgid "Send User Feedback:"
-msgstr "傳送使用者回饋："
-
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "更多行為設定…"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "常用頁面："
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgid ""
+#~ "You can help KDE improve Plasma by contributing information on how you "
+#~ "use it, so we can focus on things that matter to you.<br/><br/"
+#~ ">Contributing this information is optional and entirely anonymous. We "
+#~ "never collect your personal data, files you use, websites you visit, or "
+#~ "information that could identify you."
+#~ msgstr ""
+#~ "您可以藉由貢獻自己日常使用 Plasma 的資訊來協助 KDE 團隊，讓我們能更聚焦在"
+#~ "改善您重視的功能。<br/><br/>您能自行選擇資訊揭露的程度且上傳的資訊是完全匿"
+#~ "名的。我們永遠不會收集您的個人資料、使用的檔案、瀏覽的網站或能識別您的任何"
+#~ "隱私資訊。"
+
+#~ msgid "No data will be sent."
+#~ msgstr "不傳送任何資訊。"
+
+#~ msgid "The following information will be sent:"
+#~ msgstr "將會傳送下列資訊："
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "傳送使用者回饋："
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"
