@@ -171,4 +171,10 @@ void SMServerConfig::defaults()
     setRestartInSetupScreen(false);
 }
 
+void SMServerConfig::save()
+{
+    ManagedConfigModule::save();
+    Q_EMIT ksmserverSettingsChanged();
+}
+
 #include "kcmsmserver.moc"

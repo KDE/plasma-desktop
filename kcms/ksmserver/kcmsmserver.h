@@ -54,10 +54,14 @@ public:
 
     void defaults() override;
 
+public Q_SLOTS:
+    void save() override;
+
 Q_SIGNALS:
     void isUefiChanged();
     void restartInSetupScreenChanged();
     void errorChanged();
+    void ksmserverSettingsChanged();
 
 private:
     bool isSaveNeeded() const override;
