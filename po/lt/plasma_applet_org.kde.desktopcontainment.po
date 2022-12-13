@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-11-17 00:54+0200\n"
+"PO-Revision-Date: 2022-12-12 22:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -76,10 +76,9 @@ msgid "File types:"
 msgstr "Failų tipai:"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Rodyti visus failus"
+msgstr "Rodyti paslėptus failus:"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format

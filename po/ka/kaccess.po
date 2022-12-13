@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-12-02 06:49+0100\n"
+"PO-Revision-Date: 2022-12-12 09:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -33,6 +33,8 @@ msgid ""
 "The Shift key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Shift დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:70
 msgid "The Shift key is now active."
@@ -47,6 +49,8 @@ msgid ""
 "The Control key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Control დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:76
 msgid "The Control key is now active."
@@ -61,6 +65,8 @@ msgid ""
 "The Alt key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Alt დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:82
 msgid "The Alt key is now active."
@@ -75,6 +81,8 @@ msgid ""
 "The Win key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Win დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:88
 msgid "The Win key is now active."
@@ -89,6 +97,8 @@ msgid ""
 "The Meta key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Meta დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:94
 msgid "The Meta key is now active."
@@ -103,6 +113,8 @@ msgid ""
 "The Super key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Super დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:100
 msgid "The Super key is now active."
@@ -117,6 +129,8 @@ msgid ""
 "The Hyper key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Hyper დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:106
 msgid "The Hyper key is now active."
@@ -131,6 +145,8 @@ msgid ""
 "The Alt Graph key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
+"ღილაკი Alt Graph დაბლოკილია და ახლა აქტიურია ყველა შემდეგი ღილაკების "
+"მიმდევრობისთვის."
 
 #: kaccess.cpp:112
 msgid "The Alt Graph key is now active."
@@ -218,7 +234,7 @@ msgstr "დადასტურების ფანჯრის ჩვენ�
 #: kaccess.cpp:679
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
-msgstr ""
+msgstr "AccessX-ის ყველა ჟესტისა და ფუნქციის გათიშვა"
 
 #: kaccess.cpp:722 kaccess.cpp:724
 #, kde-format
@@ -330,7 +346,7 @@ msgstr "მართლა გნებავთ \"%1\"-ის, \"%2\"-ის, \
 #: kaccess.cpp:831
 #, kde-format
 msgid "An application has requested to change this setting."
-msgstr ""
+msgstr "აპლიკაციამ ამ პარამეტრის ცვლილება მოითხოვა."
 
 #: kaccess.cpp:835
 #, kde-format
@@ -338,6 +354,7 @@ msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
 "change this setting."
 msgstr ""
+"Shift ღილაკი 8 წამით გეჭირათ ან აპლიკაციამ ამ პარამეტრის შეცვლა მოითხოვა."
 
 #: kaccess.cpp:837
 #, kde-format
@@ -345,11 +362,13 @@ msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
 "requested to change this setting."
 msgstr ""
+"Shift ღილაკს ხუთჯერ ზედიზედ დააჭირეთ ან აპლიკაციამ ამ პარამეტრის შეცვლა "
+"მოითხოვა."
 
 #: kaccess.cpp:841
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
+msgstr "%1-ს დააწექით ან აპლიკაციამ ამ პარამეტრის ცვლილება მოითხოვა."
 
 #: kaccess.cpp:846
 #, kde-format
@@ -357,11 +376,13 @@ msgid ""
 "An application has requested to change these settings, or you used a "
 "combination of several keyboard gestures."
 msgstr ""
+"აპლიკაციამ ამ პარამეტრის ცვლილება მოითხოვა ან კლავიატურის რამდენიმე ჟესტი "
+"ერთად გამოიყენეთ."
 
 #: kaccess.cpp:848
 #, kde-format
 msgid "An application has requested to change these settings."
-msgstr ""
+msgstr "აპლიკაციამ ამ პარამეტრების შეცვლა მოითხოვა."
 
 #: kaccess.cpp:853
 #, kde-format

@@ -80,7 +80,7 @@ msgstr ""
 "l'option « Montage automatique lors de la connexion » est cochée, le "
 "périphérique sera automatiquement monté, même si l'option « Monter tous les "
 "média amovibles lors de la connexion » est décoché. Il en va de même pour le "
-"paramètre « Montage automatique lors de la connexion »."
+"paramètre « Montage automatique lors du raccordement »."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -148,7 +148,7 @@ msgstr "À la connexion"
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr "À la connexion"
+msgstr "Au raccordement"
 
 #: DeviceModel.cpp:258
 #, kde-format
@@ -163,7 +163,7 @@ msgstr "Tous les périphériques connus"
 #: DeviceModel.cpp:260
 #, kde-format
 msgid "Attached Devices"
-msgstr "Périphériques attachés"
+msgstr "Périphériques raccordés"
 
 #: DeviceModel.cpp:262
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-12 00:47+0000\n"
-"PO-Revision-Date: 2022-12-09 08:01+0100\n"
+"PO-Revision-Date: 2022-12-12 09:39+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -220,7 +220,7 @@ msgstr "ხტუნვისას დაყოვნების გამო�
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "დაპიპინება, თუ მხტუნავი ღილაკის მოვლენა უარყოფილია"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
@@ -429,6 +429,8 @@ msgid ""
 "This module lets you configure the accessibility features such as a screen "
 "reader."
 msgstr ""
+"მოდული საშუალებას გაძლევთ მოირგოთ წვდომადობის საშუალებები. როგორიცაა, "
+"მაგალითად, ეკრანის წამკითხავი."
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -500,7 +502,7 @@ msgstr "სისტემური ზარის დარეკვა ღი
 #: package/contents/ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr ""
+msgstr "მოდიფიკატორი ან ჩამკეტი ღილაკების გამოყენებისას შეტყობინების ჩვენება"
 
 #: package/contents/ui/ModifierKeys.qml:95
 #, kde-format
@@ -510,7 +512,7 @@ msgstr "შეტყობინებების მორგება…"
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
-msgstr ""
+msgstr "კურსორის გადასაადგილებლად ციფრული კლავიატურის გამოყენება:"
 
 #: package/contents/ui/MouseNavigation.qml:18
 #, kde-format
@@ -565,7 +567,7 @@ msgstr "აჩქარების პროფილი:"
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr ""
+msgstr "Orca - ეკრანის მკითხველის მორგების გაშვება…"
 
 #: package/contents/ui/ScreenReader.qml:41
 #, kde-format
@@ -573,6 +575,8 @@ msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
+"დაიმახსოვრეთ, რომ Orca-ის სწორად მუშაობისთვის შეიძლება გასვლა/შემოსვლა ან "
+"გადატვირთვა დაგჭირდეთ."
 
 #: package/contents/ui/ScreenReader.qml:42
 #, kde-format
@@ -580,3 +584,6 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"როგორც ჩანს, Orca - ეკრანი წამკითხველი დაყენებული არაა. სანამ ცდით, ეს "
+"ფუნქცია გამოიყენოთ, დააყენეთ ის და ან გადით და თავიდან შემოდით, ან "
+"გადატვირთეთ კომპიუტერი"
