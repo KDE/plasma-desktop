@@ -34,6 +34,10 @@ public:
 
 public Q_SLOTS:
     void save() override;
+    void requestReboot();
+
+Q_SIGNALS:
+    void primarySelectionOptionSaved();
 
 private:
     WorkspaceOptionsData *m_data;

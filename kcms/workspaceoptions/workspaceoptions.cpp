@@ -12,6 +12,7 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusPendingCall>
 
 #include "workspaceoptions_kdeglobalssettings.h"
 #include "workspaceoptions_kwinsettings.h"
@@ -48,6 +49,8 @@ WorkspaceOptionsKwinSettings *KCMWorkspaceOptions::kwinSettings() const
 
 void KCMWorkspaceOptions::save()
 {
+    const bool primarySelectionSaved = m_data->workspaceOptionsKwinSettings()->findItem(QStringLiteral("primarySelection"))->isSaveNeeded();
+
     ManagedConfigModule::save();
 
     {
@@ -67,6 +70,19 @@ void KCMWorkspaceOptions::save()
         message.setArguments({QVariant::fromValue(changes)});
         QDBusConnection::sessionBus().send(message);
     }
+
+    if (primarySelectionSaved) {
+        Q_EMIT primarySelectionOptionSaved();
+    }
+}
+
+void KCMWorkspaceOptions::requestReboot()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.LogoutPrompt"),
+                                                      QStringLiteral("/LogoutPrompt"),
+                                                      QStringLiteral("org.kde.LogoutPrompt"),
+                                                      QStringLiteral("promptReboot"));
+    QDBusConnection::sessionBus().asyncCall(msg);
 }
 
 #include "moc_workspaceoptions.cpp"
