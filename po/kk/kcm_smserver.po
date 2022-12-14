@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2010-01-05 06:59+0600\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -69,20 +69,13 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "Аяқтауда құп&тау сұралсын"
 
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "Өшіру мүмкіндігі ұс&ынылсын"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option:"
 msgstr "Сеанс аяқталғанда әдетте"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "&End current session"
 msgctxt ""
@@ -92,26 +85,26 @@ msgctxt ""
 msgid "End current session"
 msgstr "Сеанс &бітсін"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "Компьютер жаңадан &жүктелсін"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "Компьютер ө&шірілсін"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -121,7 +114,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "&Әдейі сақталған сеанс қалпына келтірілсін"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -131,7 +124,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "&Әдейі сақталған сеанс қалпына келтірілсін"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -141,12 +134,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "&Бос сеанстан басталсын"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -158,13 +151,13 @@ msgstr ""
 "Сонымен осы қолданбалар келесіде, сеансты қалпына келтіргенде, автоматты "
 "түрде жегілмейді."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -177,33 +170,37 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "Аяқтауда құп&тау сұралсын"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgid "Offer shutdown options"
-msgstr "Өшіру мүмкіндігі ұс&ынылсын"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option"
 msgstr "Сеанс аяқталғанда әдетте"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
 msgstr "Сеансты бастағанда"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "Орындалуы сақтал&майтын қолданбалар:"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "Өшіру мүмкіндігі ұс&ынылсын"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgid "Offer shutdown options"
+#~ msgstr "Өшіру мүмкіндігі ұс&ынылсын"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

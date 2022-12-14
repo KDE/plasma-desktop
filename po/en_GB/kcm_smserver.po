@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2022-04-02 17:05+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -69,18 +69,12 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "Confirm logout"
 
-#: package/contents/ui/main.qml:48
-#, kde-format
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "Offer shutdown options"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr "Default leave option:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -89,24 +83,24 @@ msgctxt ""
 msgid "End current session"
 msgstr "End current session"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "Restart computer"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "Turn off computer"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr "When logging in:"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -115,7 +109,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "Restore last session"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -124,7 +118,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "Restore last manually saved session"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -133,12 +127,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Start with an empty session"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr "Don't restore these applications:"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -149,14 +143,14 @@ msgstr ""
 "should not be saved in sessions, and therefore will not be started when "
 "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr "Enter UEFI setup on next restart"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -168,29 +162,30 @@ msgstr "Enter firmware setup screen on next restart"
 msgid "Confirm logout"
 msgstr "Confirm logout"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr "Offer shutdown options"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr "Default leave option"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
 msgstr "On login"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Applications to be excluded from session"
+
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "Offer shutdown options"
+
+#~ msgid "Offer shutdown options"
+#~ msgstr "Offer shutdown options"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

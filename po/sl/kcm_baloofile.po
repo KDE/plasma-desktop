@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-27 08:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,7 +26,7 @@ msgid ""
 "This module lets you configure the file indexer and search functionality."
 msgstr "Ta modul omogoča nastavitev kazala datotek in funkcionalnosti iskanja."
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -35,7 +35,7 @@ msgstr ""
 "To bo onemogočilo iskanje datoteke v programu KRunner in zagonskem meniju in "
 "odstranilo prikaz metapodatkov iz vseh KDE aplikacij."
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -47,12 +47,23 @@ msgstr ""
 "znova ustvariti iz nič. To lahko traja nekaj časa odvisno od števila "
 "datotek, ki jih imate."
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Izbriši indeksne podatke"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -60,77 +71,77 @@ msgstr ""
 "Iskanje datotek vam pomaga hitro najti vaše datoteke glede na njihovo "
 "vsebino."
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Omogoči Iskanje datotek"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "V kazalo vključi tudi vsebino datotek"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Pokaži skrite datoteke in mape"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Status: %1, %2% končano"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Začasno ustavi izgrajevalnik"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Nadaljuj indeksiranje"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Trenutno indeksiram: %1"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Posebna nastavitev za mapo:"
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Začni indeksirati mapo…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Zaustavi indeksiranje mape…"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr "Ni indeksirano"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksirano"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr "Izbriši vnos"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Izberite mapo za vključitev"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Izberite mapo za izključitev"

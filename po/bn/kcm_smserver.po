@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2004-05-22 22:42-0500\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -65,18 +65,12 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "ল&গ-আউট অনুমোদন"
 
-#: package/contents/ui/main.qml:48
-#, kde-format
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr ""
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr ""
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -85,26 +79,26 @@ msgctxt ""
 msgid "End current session"
 msgstr ""
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "কমপিউটার &বন্ধ করে আবার চালাও"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "কমপি&উটার বন্ধ করো"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -114,7 +108,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "নিজে হাতে সংরক্ষি&ত সেশন পুনঃস্থাপিত করো"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -124,7 +118,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "নিজে হাতে সংরক্ষি&ত সেশন পুনঃস্থাপিত করো"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -133,12 +127,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "কো&ন কিছু ছাড়া শুরু করো"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, fuzzy, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -148,13 +142,13 @@ msgstr ""
 "এখানে আপনি পারে ঢুকুন একটি কোলন বিচ্ছিন্ন তালিকা -র ঐ উচিত নয় সংরক্ষিত -এ সেশন "
 "এবং আরম্ভকৃত যখন একটি সেশন জন্য উদাহরণ"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -167,27 +161,21 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "ল&গ-আউট অনুমোদন"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr ""
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr ""
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
 msgstr "লগ-ইন করাকালীন"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 msgid "Applications to be excluded from session"
 msgstr "সেশন থেকে যে সব অ্যাপলিকেশন বহির্ভূত হবে:"

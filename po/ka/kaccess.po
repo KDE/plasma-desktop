@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-12-12 09:36+0100\n"
+"PO-Revision-Date: 2022-12-13 03:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -394,6 +394,12 @@ msgid ""
 "If you do not need them, you can select \"Deactivate all AccessX features "
 "and gestures\"."
 msgstr ""
+"AccessX -ის ეს პარამეტრები აუცილებელია ზოგიერთი გადაადგილებაშეზღუდული "
+"მომხმარებლისთვის და შეგიძლიათ KDE-ის სისტემურ პარამეტრებში მოირგოთ. "
+"სტანდარტული კლავიატურის ჟესტებით მისი ჩართვა და გამორთვაც შეგიძლიათ.\n"
+"\n"
+"თუ არ გჭირდებათ, აირჩიეთ \"AccessX -ის ყველა ფუნქციისა და ჟესის დეაქტივაცია"
+"\"."
 
 #: kaccess.cpp:874
 #, kde-format
@@ -401,6 +407,8 @@ msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
 "certain length of time before it gets accepted."
 msgstr ""
+"ნელი ღილაკები ჩართულია. ამის შემდეგ იმისთვის, რომ ღილაკი მივიღოთ, დაჭერის "
+"შემდეგ ცოტა ხანს უნდა დაელოდოთ."
 
 #: kaccess.cpp:876
 #, kde-format
@@ -413,6 +421,8 @@ msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
 "certain length of time after it was used."
 msgstr ""
+"მხტუნავი ღილაკები ჩართულია. ამის შემდეგ, ღილაკი გამოყენების შემდეგ ცოტა ხნით "
+"დაიბლოკება."
 
 #: kaccess.cpp:882
 #, kde-format
@@ -425,6 +435,8 @@ msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
 "after you have released them."
 msgstr ""
+"წებოვანი ღილაკები ჩართულია. ამის შემდეგ მოდიფიკატორი ღილაკები დაწოლილ "
+"მდგომარეობაში იქნება მას შემდეგაც კი, რაც თქვენ ხელს გაუშვებთ მათ."
 
 #: kaccess.cpp:888
 #, kde-format
@@ -437,6 +449,8 @@ msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
 "keyboard in order to control the mouse."
 msgstr ""
+"თაგუნას ღილაკები ჩართულია. ამის შემდეგ თაგუნას სამართავად ციფრული ღილაკების "
+"(ბუღალტრის კლავიატურა) გამოყენება შეგიძლიათ."
 
 #: kaccess.cpp:894
 #, kde-format

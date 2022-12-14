@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-27 18:53+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgid ""
 "This module lets you configure the file indexer and search functionality."
 msgstr "Modulen låter dig anpassa filindexering och sökfunktioner."
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -32,7 +32,7 @@ msgstr ""
 "Inaktiverar filsökning i Kör program och startmenyer, och tar bort visning "
 "av utökad metadata från alla KDE-program."
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -43,12 +43,23 @@ msgstr ""
 "om indexering aktiveras igen senare, måste hela indexet skapas om från "
 "början. Det kan ta en stund, beroende på hur många filer du har."
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Ta bort indexerad data"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -56,77 +67,77 @@ msgstr ""
 "Filsökning hjälper dig att snabbt lokalisera alla dina filer baserat på "
 "innehåll."
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Aktivera filsökning"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Indexera också filinnehåll"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indexera dolda filer och kataloger"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Status: %1, %2% färdiga"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Pausa indexering"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Återuppta indexering"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Indexerar för närvarande: %1"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Katalogspecifik inställning:"
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Starta indexering av en katalog…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Stoppa indexering av en katalog…"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr "Inte indexerad"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
 msgstr "Indexerad"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr "Ta bort post"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Välj en katalog att inkludera"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Välj en katalog att undanta"

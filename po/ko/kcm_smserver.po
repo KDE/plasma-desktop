@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2022-04-16 02:13+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -65,18 +65,12 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "로그아웃 확인"
 
-#: package/contents/ui/main.qml:48
-#, kde-format
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "시스템 종료 옵션 제공"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr "기본 떠나기 옵션:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -85,24 +79,24 @@ msgctxt ""
 msgid "End current session"
 msgstr "현재 세션 끝내기"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "컴퓨터 다시 시작"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "컴퓨터 끄기"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr "로그인 시:"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -111,7 +105,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "이전 세션 복원"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -120,7 +114,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "수동으로 저장된 세션 복원"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -129,12 +123,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "빈 세션으로 시작"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr "다음 프로그램 복원하지 않기:"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -145,14 +139,14 @@ msgstr ""
 "오.  세션을 다시 시작할 때 이 프로그램은 다시 시작되지 않습니다. 예를 들어 'xterm:"
 "konsole' 또는 'xterm,konsole'과 같이 입력하면 됩니다."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr "다음에 다시 시작할 때 UEFI 설정 진입"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -164,29 +158,30 @@ msgstr "다음에 다시 시작할 때 펌웨어 설정 진입"
 msgid "Confirm logout"
 msgstr "로그아웃 확인"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr "시스템 종료 옵션 제공"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr "기본 떠나기 옵션"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
 msgstr "로그인할 때"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "세션에서 제외할 프로그램"
+
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "시스템 종료 옵션 제공"
+
+#~ msgid "Offer shutdown options"
+#~ msgstr "시스템 종료 옵션 제공"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

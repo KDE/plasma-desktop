@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2021-07-25 13:31+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Acest modul vă permite să configurați indexatorul de fișiere și "
 "funcționalitatea de căutare."
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -36,7 +36,7 @@ msgstr ""
 "lansatorilor și va elimina afișarea metadatelor extinse din toate "
 "aplicațiile KDE."
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,12 +48,23 @@ msgstr ""
 "recreat de la zero. Aceasta poate dura ceva timp, în dependență de câte "
 "fișiere aveți."
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Șterge datele indexului"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -61,77 +72,77 @@ msgstr ""
 "Căutarea de fișiere vă ajută să localizați rapid toate fișierele pe baza "
 "conținutului acestora."
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Activează căutarea de fișiere"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Indexează și conținutul fișierelor"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indexează fișiere și dosare ascunse"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Stare: %1, %2% încheiat"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Întrerupe indexatorul"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Reia indexatorul"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Acum se indexează: %1"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Configurări specifice dosarului:"
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Începe indexarea dosarului…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Oprește indexarea dosarului…"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr "Neindexat"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
 msgstr "Indexat"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr "Șterge înregistrarea"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Alege un dosar de inclus"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Alege un dosar de exclus"

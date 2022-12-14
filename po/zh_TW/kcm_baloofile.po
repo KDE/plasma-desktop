@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2020-04-12 00:42+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -25,14 +25,14 @@ msgid ""
 "This module lets you configure the file indexer and search functionality."
 msgstr "此模組讓你能設定檔案索引器及搜尋功能。"
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -40,95 +40,106 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Delete entry"
 msgid "Delete Index Data"
 msgstr "刪除項目"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
 msgstr "檔案搜尋能依據檔案內容協助您快速找到您的檔案。"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "啟用檔案搜尋"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "也索引檔案內容"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "索引隱藏檔案及資料夾"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr ""
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Not indexed"
 msgid "Pause Indexer"
 msgstr "未索引"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr ""
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Full content indexing"
 msgid "Currently indexing: %1"
 msgstr "完整內容索引"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "資料夾指定設定："
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder..."
 msgid "Start indexing a folder…"
 msgstr "開始索引資料夾…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder..."
 msgid "Stop indexing a folder…"
 msgstr "停止索引資料夾…"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr "未索引"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Not indexed"
 msgid "Indexed"
 msgstr "未索引"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr "刪除項目"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to include"
 msgstr "選擇要過濾的資料夾"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to exclude"

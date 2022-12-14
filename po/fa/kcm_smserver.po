@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2007-02-01 10:26+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -68,20 +68,13 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "&تأیید‌ خروج‌"
 
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "&ارائه گزینه‌های تعطیل‌"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Default Shutdown Option"
 msgid "Default leave option:"
 msgstr "گزینه تعطیل پیش‌فرض"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "&End current session"
 msgctxt ""
@@ -91,26 +84,26 @@ msgctxt ""
 msgid "End current session"
 msgstr "&پایان نشست جاری‌"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "&بازآغازی رایانه‌"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "&خاموش کردن رایانه‌"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -120,7 +113,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -130,7 +123,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -140,12 +133,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "آغاز با یک &نشست خالی‌"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, fuzzy, kde-format
 #| msgid ""
 #| "Here you can enter a comma-separated list of applications that should not "
@@ -160,13 +153,13 @@ msgstr ""
 "در نشستها ذخیره شوند، و بنابراین هنگام بازگرداندن یک نشست آغاز نمی‌شوند. برای "
 "مثال، »xterm،xconsole«."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -179,33 +172,37 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "&تأیید‌ خروج‌"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgid "Offer shutdown options"
-msgstr "&ارائه گزینه‌های تعطیل‌"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Default Shutdown Option"
 msgid "Default leave option"
 msgstr "گزینه تعطیل پیش‌فرض"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
 msgstr "هنگام ورود"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "&ارائه گزینه‌های تعطیل‌"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgid "Offer shutdown options"
+#~ msgstr "&ارائه گزینه‌های تعطیل‌"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

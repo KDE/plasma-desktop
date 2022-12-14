@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2022-06-28 10:51+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -65,18 +65,12 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "Potvrdit odhlášení"
 
-#: package/contents/ui/main.qml:48
-#, kde-format
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "Nabídnout volby vypnutí"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr "Výchozí volba pro odchod:"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -85,24 +79,24 @@ msgctxt ""
 msgid "End current session"
 msgstr "Ukončit současné sezení"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "Restartovat počítač"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "Vypnout počítač"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr "Při přihlašování:"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -111,7 +105,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "Obnovit poslední sezení"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -120,7 +114,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "Obnovit naposled ručně uložené sezení"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -129,12 +123,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Spustit s prázdnou relací"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr "Neobnovovat tyto aplikace:"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -145,7 +139,7 @@ msgstr ""
 "nemají být ukládány, a tudíž nebudou spuštěny při obnovení sezení. Např: "
 "'xterm,konsole' nebo 'xterm:konsole'."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen on next restart"
@@ -153,7 +147,7 @@ msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr "Při dalším restartu spustit nastavení firmware"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -165,26 +159,27 @@ msgstr "Při dalším restartu spustit nastavení firmware"
 msgid "Confirm logout"
 msgstr "Potvrdit odhlášení"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr "Nabídnout volby vypnutí"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr "Výchozí volba pro odchod"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
 msgstr "Při přihlášení"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Vyjmout tyto aplikace ze sezení"
+
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "Nabídnout volby vypnutí"
+
+#~ msgid "Offer shutdown options"
+#~ msgstr "Nabídnout volby vypnutí"

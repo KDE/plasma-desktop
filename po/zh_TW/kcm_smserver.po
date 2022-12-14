@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2021-09-06 02:03+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -68,19 +68,12 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "確認登出"
 
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Offer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "提供關機選項"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr "預設離開選項"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "End current session"
 msgctxt ""
@@ -90,26 +83,26 @@ msgctxt ""
 msgid "End current session"
 msgstr "結束目前的工作階段"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "重新啟動電腦"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "關閉電腦"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr "登入時："
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore manually saved session"
 msgctxt ""
@@ -119,7 +112,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "回復手動儲存的工作階段"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore manually saved session"
 msgctxt ""
@@ -129,7 +122,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "回復手動儲存的工作階段"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty session"
 msgctxt ""
@@ -139,12 +132,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "使用空白的工作階段來啟動"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr "不要回復以下應用程式："
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -154,14 +147,14 @@ msgstr ""
 "您可以在這裡輸入不想儲存在工作階段中的應用程式清單(以逗號或冒號分隔)，這樣下"
 "次恢復工作階段時它們就不會被啟動。例如「xterm,konsole」或「xterm:konsole」。"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr "下次重開機進入 UEFI 設定介面"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
@@ -174,29 +167,32 @@ msgstr "下次重開機進入韌體設定介面"
 msgid "Confirm logout"
 msgstr "確認登出"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr "提供關機選項"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr "預設離開選項"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
 msgstr "登入時"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "要自工作階段排除的應用程式"
+
+#, fuzzy
+#~| msgid "Offer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "提供關機選項"
+
+#~ msgid "Offer shutdown options"
+#~ msgstr "提供關機選項"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

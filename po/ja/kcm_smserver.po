@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2022-08-18 11:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -71,19 +71,13 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "ログアウトを確認する"
 
-#: package/contents/ui/main.qml:48
-#, kde-format
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "シャットダウンオプションを提供する"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Default leave option:"
 msgstr "デフォルトの終了オプション:"
 
 # ACCELERATOR changed by translator
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -93,24 +87,24 @@ msgid "End current session"
 msgstr "現在のセッションを終了"
 
 # ACCELERATOR changed by translator
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "コンピュータを再起動"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "コンピュータを停止"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr "ログイン時:"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -119,7 +113,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "前回のセッションを復元"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -128,7 +122,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "最後の手動で保存したセッションを復元"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -137,12 +131,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "空のセッションで開始"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr "これらのアプリケーションを復元しない:"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -153,7 +147,7 @@ msgstr ""
 "“xterm,konsole” のようにコロンかコンマで区切って入力します。指定されたアプリ"
 "ケーションはセッションを復元する際に起動されません。"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen on next restart"
@@ -161,7 +155,7 @@ msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr "次の再起動時ファームウェア設定画面に入る"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -173,26 +167,27 @@ msgstr "次の再起動時ファームウェア設定画面に入る"
 msgid "Confirm logout"
 msgstr "ログアウトを確認する"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, kde-format
-msgid "Offer shutdown options"
-msgstr "シャットダウンオプションを提供する"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
 msgstr "デフォルトの終了オプション"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
 msgstr "ログイン時"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "セッションから除外するアプリケーション"
+
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "シャットダウンオプションを提供する"
+
+#~ msgid "Offer shutdown options"
+#~ msgstr "シャットダウンオプションを提供する"

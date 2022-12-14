@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2009-04-09 11:27+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -70,23 +70,15 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "អះអាង​ការ​ចេញ"
 
-#  i18n: file smserverconfigdlg.ui line 62
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "ផ្ដល់​ជម្រើស​បិទ"
-
 #  i18n: file smserverconfigdlg.ui line 116
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option:"
 msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
 
 #  i18n: file smserverconfigdlg.ui line 130
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "&End current session"
 msgctxt ""
@@ -97,7 +89,7 @@ msgid "End current session"
 msgstr "បញ្ចប់​សម័យ​បច្ចុប្បន្ន"
 
 #  i18n: file smserverconfigdlg.ui line 146
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
@@ -105,20 +97,20 @@ msgid "Restart computer"
 msgstr "ចាប់​ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
 
 #  i18n: file smserverconfigdlg.ui line 138
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "បិទ​កុំព្យូទ័រ"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
 #  i18n: file smserverconfigdlg.ui line 98
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -129,7 +121,7 @@ msgid "Restore last session"
 msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
 
 #  i18n: file smserverconfigdlg.ui line 98
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -140,7 +132,7 @@ msgid "Restore last manually saved session"
 msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
 
 #  i18n: file smserverconfigdlg.ui line 106
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -150,13 +142,13 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "ចាប់ផ្តើម​ជាមួយ​សម័យ​ទទេ​"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
 #  i18n: file smserverconfigdlg.ui line 178
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -167,13 +159,13 @@ msgstr ""
 "ក្នុង​សម័យ ហើយ​ដូច្នេះ​នឹង​មិន​ត្រូវ​បាន​ចាប់ផ្ដើម​នៅពេល​ដែលស្ដារ​សម័យ​ទេ ។ ឧទាហរណ៍  'xterm:konsole' "
 "or 'xterm,konsole' ។"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -187,17 +179,9 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "អះអាង​ការ​ចេញ"
 
-#  i18n: file smserverconfigdlg.ui line 62
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgid "Offer shutdown options"
-msgstr "ផ្ដល់​ជម្រើស​បិទ"
-
 #  i18n: file smserverconfigdlg.ui line 116
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option"
@@ -205,7 +189,7 @@ msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម
 
 #  i18n: file smserverconfigdlg.ui line 72
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
@@ -213,11 +197,24 @@ msgstr "ពេល​ចូល"
 
 #  i18n: file smserverconfigdlg.ui line 167
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "កម្មវិធី​ដែល​ត្រូវ​បាន​យក​ចេញ​ពី​សម័យ ៖"
+
+#  i18n: file smserverconfigdlg.ui line 62
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "ផ្ដល់​ជម្រើស​បិទ"
+
+#  i18n: file smserverconfigdlg.ui line 62
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgid "Offer shutdown options"
+#~ msgstr "ផ្ដល់​ជម្រើស​បិទ"
 
 #  i18n: file smserverconfigdlg.ui line 90
 #, fuzzy

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-06-26 00:19+0000\n"
-"PO-Revision-Date: 2022-12-12 09:41+0100\n"
+"PO-Revision-Date: 2022-12-13 03:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -148,6 +148,13 @@ msgid ""
 "%d: Path to the device node - Block devices only\n"
 "%i: The identifier of the device"
 msgstr ""
+"ბრძანება ქმედებას გამოიწვევს\n"
+"ეს შეიძლება მოიცავდეს ნებისმიერს ამ რეგისტრის მიმართ არამგრძნობიარე "
+"გაფართოებას:\n"
+"\n"
+"%f: მოწყობილობის მიმაგრების წერტილი - მხოლოდ საცავის მოწყობილობები\n"
+"%d: მოწყობილობის კვანძის ბილიკი - მხოლოდ ბლოკური მოწყობილობები\n"
+"%I: მოწყობილობის იდენტიფიკატორი"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
@@ -170,7 +177,7 @@ msgstr "შეიყვანეთ ახალი ქმედების ს
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr ""
+msgstr "მალსახმობების გენერაცია ქმედებისთვის Solid"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -178,6 +185,8 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
+"პროგრამა Solid DeviceInterface-ის კლასებიდან სათარგმნად Desktop ფაილების "
+"ავტომატურად შესაქმნელად"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
@@ -242,7 +251,7 @@ msgstr "Plasma 5-ზე გადატანა"
 #: SolidActions.cpp:152
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr ""
+msgstr "ამ ქმედების პრედიკატი არასწორია."
 
 #: SolidActions.cpp:152
 #, kde-format

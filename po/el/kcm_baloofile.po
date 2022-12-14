@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2017-06-12 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -24,14 +24,14 @@ msgid ""
 "This module lets you configure the file indexer and search functionality."
 msgstr ""
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -39,12 +39,23 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr ""
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their content"
@@ -54,84 +65,84 @@ msgstr ""
 "Η αναζήτηση αρχείων σας βοηθά να εντοπίσετε γρήγορα όλα τα αρχεία σας με "
 "βάση το περιεχόμενό τους"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, fuzzy, kde-format
 #| msgid "Enable File Search"
 msgid "Enable File Search"
 msgstr "Ενεργοποίηση της υπηρεσίας αναζήτησης αρχείων"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Δεικτοδότηση επίσης και του περιεχομένου των αρχείων"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Show hidden folders"
 msgid "Index hidden files and folders"
 msgstr "Εμφάνιση κρυφών φακέλων"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr ""
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Desktop File Indexer"
 msgid "Pause Indexer"
 msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Desktop File Indexer"
 msgid "Resume Indexer"
 msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "File Indexing"
 msgid "Currently indexing: %1"
 msgstr "Δεικτοδότηση αρχείων"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr ""
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr ""
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr ""
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr ""
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Index Audio"
 msgid "Indexed"
 msgstr "Δεικτοδότηση ήχου"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr ""
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgid "Select a folder to include"
 msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgid "Select a folder to exclude"

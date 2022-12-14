@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2009-12-15 08:14+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -66,20 +66,13 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "පිටවීම තහවුරු කරන්න (&i)"
 
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option:"
 msgstr "පෙරනිමි පිටවීම් විකල්ප"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "&End current session"
 msgctxt ""
@@ -89,26 +82,26 @@ msgctxt ""
 msgid "End current session"
 msgstr "වත්මන් වාරය නිම කරන්න (&E)"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "පරිගණකය ප්‍රථිපණගන්වන්න (&R)"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "පරිගණකය වසාදමන්න (&T)"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -118,7 +111,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "ශ්‍රමිකව සුරැකුනු සැසිය ප්‍රථිස්තාපනය කරන්න (&m)"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -128,7 +121,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "ශ්‍රමිකව සුරැකුනු සැසිය ප්‍රථිස්තාපනය කරන්න (&m)"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -138,12 +131,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "හිස් සැසියක් සමඟ අරඹන්න (&s)"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -154,13 +147,13 @@ msgstr ""
 "ලැයිස්තුවක දැකිවිය හැක. ඒවා සැසි ප්‍රථිස්තාපනයන් හීදී ආරම්භ නොවේ. උදාහරණකයක් ලෙස 'xterm:"
 "konsole' හෝ 'xterm,konsole'."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -173,33 +166,37 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "පිටවීම තහවුරු කරන්න (&i)"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgid "Offer shutdown options"
-msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
 msgid "Default leave option"
 msgstr "පෙරනිමි පිටවීම් විකල්ප"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
 msgstr "පිවිසීමේදී"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "සැසියන්ට පරිබාහිර භාවිත යෙදවුම් (&x):"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgid "Offer shutdown options"
+#~ msgstr "වසාදැමීමේ විකල්ප පිළිගන්වන්න (&f)"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

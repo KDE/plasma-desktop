@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2008-11-20 16:11+0530\n"
 "Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
@@ -66,20 +66,13 @@ msgctxt "@option:check"
 msgid "Confirm logout"
 msgstr "સત્ર અંતની ખાતરી કરો (&i)"
 
-#: package/contents/ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgctxt "@option:check"
-msgid "Offer shutdown options"
-msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
-
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Default Shutdown Option"
 msgid "Default leave option:"
 msgstr "બંધ કરવાના મૂળભૂત વિકલ્પ"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:57
 #, fuzzy, kde-format
 #| msgid "&End current session"
 msgctxt ""
@@ -89,26 +82,26 @@ msgctxt ""
 msgid "End current session"
 msgstr "ચાલતો સત્ર સમાપ્ત કરો (&E)"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
 msgid "Restart computer"
 msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "&Turn off computer"
 msgctxt "@option:radio"
 msgid "Turn off computer"
 msgstr "ગણકયંત્ર(કોમ્પ્યુટર) બંધ કરો (&T)"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "When logging in:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -118,7 +111,7 @@ msgctxt ""
 msgid "Restore last session"
 msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt ""
@@ -128,7 +121,7 @@ msgctxt ""
 msgid "Restore last manually saved session"
 msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -138,12 +131,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "ખાલી સત્ર સાશે શરુઆત કરો (&s)"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Don't restore these applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Here you can enter a colon or comma separated list of applications that "
@@ -154,13 +147,13 @@ msgstr ""
 "જોઇએ નહીં અને જેથી ફરીથી સત્ર શરુ કરતી વખતે તેને શરુ કરવી નહીં. જેમ કે 'xterm:konsole' "
 "અથવા 'xterm,konsole'."
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen on next restart"
@@ -173,33 +166,37 @@ msgstr ""
 msgid "Confirm logout"
 msgstr "સત્ર અંતની ખાતરી કરો (&i)"
 
-#. i18n: ectx: label, entry (offerShutdown), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "O&ffer shutdown options"
-msgid "Offer shutdown options"
-msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
-
 #. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:17
+#: smserversettings.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Default Shutdown Option"
 msgid "Default leave option"
 msgstr "બંધ કરવાના મૂળભૂત વિકલ્પ"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:26
+#: smserversettings.kcfg:22
 #, fuzzy, kde-format
 #| msgid "On Login"
 msgid "On login"
 msgstr "પ્રવેશ સમયે"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:30
+#: smserversettings.kcfg:26
 #, fuzzy, kde-format
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "સત્રમાથી કાઢી નાખવાના કાર્યક્રમો (&x)"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
+
+#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgid "Offer shutdown options"
+#~ msgstr "બંધ કરવાના વિકલ્પો બતાવો (&f)"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

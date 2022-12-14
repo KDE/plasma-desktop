@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
 "PO-Revision-Date: 2022-04-26 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgid ""
 "This module lets you configure the file indexer and search functionality."
 msgstr "கோப்பு அட்டவணையாக்கியையும் தேடல் அம்சங்களையும் அமைக்க இக்கூறு உதவும்."
 
-#: package/contents/ui/main.qml:52
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -32,7 +32,7 @@ msgstr ""
 "கேரன்னரிலும் ஏவிகளிலும் கோப்புத் தேடலை இது முடக்கும், மேலும் அனைத்து கே.டீ.யீ. "
 "செயலிகளிலிருந்தும் மேம்பட்ட மேனிலைத் தரவு காட்டிகளை நீக்கும்."
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -44,12 +44,23 @@ msgstr ""
 "உருவாக்கும் தேவை ஏற்படும். உங்கள் கோப்புகளின் எண்ணிக்கை அதிகமாக இருந்தால், இதற்கு நிறைய "
 "நேரமாகலாம்."
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "அட்டவணையாக்கத் தரவை நீக்கு"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -57,77 +68,77 @@ msgstr ""
 "உங்கள் கோப்புகளை, அவற்றின் உள்ளடக்கத்தின் அடிப்படையில் எளிதில் கண்டுபிடிக்க கோப்புத் தேடல் "
 "உதவும்."
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "கோப்புத் தேடலை இயக்கு"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "கோப்புகளின் உள்ளடக்கத்தையும் அட்டவணையாக்கு"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "மறைந்துள்ள கோப்புகளையும் அடைவுகளையும் அட்டவணையாக்கு"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "நிலை: %1, %2 முடிந்தது"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "அட்டவணையாக்கியை இடைநிறுத்து"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "அட்டவணையாக்கியை தொடரசெய்"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "அட்டவணையாக்கம் நடைபெறுகிறது: %1"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "தனிப்பட்ட அடைவிற்கான அமைப்பு:"
 
-#: package/contents/ui/main.qml:186
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "இன்னொரு அடைவை அட்டவணையாக்கு…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "இன்னொரு அடைவை அட்டவணையாக்குவதை நிறுத்து…"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
 msgstr "அட்டவணையாக்கப்படாது"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
 msgstr "அட்டவணையாக்கப்படும்"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
 msgstr "பதிவை நீக்கு"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to include"
 msgstr "பொருட்படுத்த வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"
 
-#: package/contents/ui/main.qml:294
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "தவிர்க்க வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"
