@@ -17,6 +17,10 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18n("Slow keys:")
         text: i18nc("Enable slow keys", "Enable")
+        
+        QQC2.ToolTip {
+            text: i18n("For a key to be accepted, it has to be held until the set amount of time")
+        }
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -95,6 +99,10 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18n("Bounce keys:")
         text: i18nc("Bounce keys enable", "Enable");
+
+        QQC2.ToolTip {
+            text: i18n("Ignore rapid, repeated keypresses of the same key")
+        }
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
