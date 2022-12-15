@@ -21,15 +21,12 @@ ecm_qt_install_logging_categories(
     EXPORT kcm_touchscreen
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
-qt_add_dbus_interface(common_SRCS "${KWIN_INPUTDEVICE_INTERFACE}" InputDevice_interface)
 
 kcmutils_generate_desktop_file(kcm_touchscreen)
 
 target_sources(kcm_touchscreen PRIVATE
     ${common_SRCS}
     kcmtouchscreen.cpp
-    devicesmodel.cpp
-    inputdevice.cpp
 )
 
 target_link_libraries(kcm_touchscreen
@@ -39,6 +36,7 @@ target_link_libraries(kcm_touchscreen
     KF5::QuickAddons
 
     Qt::DBus
+    kwindevices
 )
 
 kpackage_install_package(package kcm_touchscreen kcms)

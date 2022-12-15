@@ -5,12 +5,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KWINWAYLANDDEVICE_H
-#define KWINWAYLANDDEVICE_H
+#pragma once
 
 #include "InputDevice_interface.h"
+
 #include <QObject>
 #include <QString>
+
 #include <optional>
 
 class InputDevice : public QObject
@@ -20,6 +21,7 @@ class InputDevice : public QObject
     Q_PROPERTY(QString sysName READ sysName CONSTANT)
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(QSizeF size READ size CONSTANT)
+    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT)
     Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
 
@@ -30,7 +32,6 @@ class InputDevice : public QObject
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
-    ~InputDevice() override;
 
     void load();
     void save();
@@ -42,6 +43,7 @@ public:
     {
         return m_name.value();
     }
+
     QString sysName() const
     {
         return m_sysName.value();
@@ -82,6 +84,13 @@ public:
     }
     void setOutputArea(const QRectF &outputArea);
 
+    bool isEnabled() const
+    {
+        return m_enabled.value();
+    }
+
+    void setEnabled(bool enabled);
+
 Q_SIGNALS:
     void needsSaveChanged();
 
@@ -89,6 +98,7 @@ Q_SIGNALS:
     void orientationChanged();
     void outputNameChanged();
     void outputAreaChanged();
+    void enabledChanged();
 
 private:
     template<typename T>
@@ -196,6 +206,8 @@ private:
                                          &InputDevice::leftHandedChanged);
     Prop<int> m_orientation =
         Prop<int>(this, "orientationDBus", nullptr, &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix, &InputDevice::orientationChanged);
+    Prop<bool> m_enabled = Prop<bool>(this, "enabled", &OrgKdeKWinInputDeviceInterface::enabledByDefault, nullptr, &InputDevice::enabledChanged);
+
     Prop<QString> m_outputName = Prop<QString>(this, "outputName", nullptr, nullptr, &InputDevice::outputNameChanged);
     Prop<QRectF> m_outputArea = Prop<QRectF>(this,
                                              "outputArea",
@@ -205,5 +217,3 @@ private:
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
-
-#endif // KWINWAYLANDDEVICE_H

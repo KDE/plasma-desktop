@@ -16,7 +16,7 @@ template<typename T>
 bool InputDevice::Prop<T>::save()
 {
     if (!isSupported() || !m_value || m_prop.isConstant()) {
-        qCDebug(KCM_TABLET) << "skipping" << this << m_value.has_value() << isSupported() << m_prop.name();
+        qCDebug(LIBKWINDEVICES) << "skipping" << this << m_value.has_value() << isSupported() << m_prop.name();
         return false;
     }
 
@@ -53,18 +53,15 @@ bool InputDevice::Prop<T>::changed() const
 InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     : QObject(parent)
 {
-    m_iface.reset(new OrgKdeKWinInputDeviceInterface(QStringLiteral("org.kde.KWin"),
-                                                     QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
-                                                     QDBusConnection::sessionBus(),
-                                                     this));
+    m_iface = std::make_unique<OrgKdeKWinInputDeviceInterface>(QStringLiteral("org.kde.KWin"),
+                                                               QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
+                                                               QDBusConnection::sessionBus(),
+                                                               this);
     connect(this, &InputDevice::leftHandedChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::orientationChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::outputNameChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::outputAreaChanged, this, &InputDevice::needsSaveChanged);
-}
-
-InputDevice::~InputDevice()
-{
+    connect(this, &InputDevice::enabledChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -73,11 +70,12 @@ void InputDevice::save()
     m_outputName.save();
     m_leftHanded.save();
     m_outputArea.save();
+    m_enabled.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
-    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed();
+    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed();;
 }
 
 void InputDevice::defaults()
@@ -86,11 +84,12 @@ void InputDevice::defaults()
     m_orientation.resetFromDefaults();
     m_outputName.resetFromDefaults();
     m_outputArea.resetFromDefaults();
+    m_enabled.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
-    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults();
+    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults();
 }
 
 void InputDevice::load()
@@ -99,6 +98,7 @@ void InputDevice::load()
     m_leftHanded.resetFromSaved();
     m_outputName.resetFromSaved();
     m_outputArea.resetFromSaved();
+    m_enabled.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -119,4 +119,9 @@ void InputDevice::setLeftHanded(bool set)
 void InputDevice::setOutputArea(const QRectF &outputArea)
 {
     m_outputArea.set(outputArea);
+}
+
+void InputDevice::setEnabled(bool enabled)
+{
+    m_enabled.set(enabled);
 }

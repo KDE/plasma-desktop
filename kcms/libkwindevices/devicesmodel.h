@@ -9,6 +9,7 @@
 #include <QAbstractListModel>
 
 #include <memory>
+#include <vector>
 
 class QDBusInterface;
 class InputDevice;
@@ -17,7 +18,7 @@ class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    DevicesModel(const QByteArray &kind, QObject *parent = nullptr);
+    explicit DevicesModel(const QByteArray &kind, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
