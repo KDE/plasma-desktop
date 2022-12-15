@@ -20,6 +20,21 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 32
     implicitHeight: Kirigami.Units.gridUnit * 18
 
+    action.left: Kirigami.Action {
+        text: i18n("Configure KRunner…")
+        onTriggered: kcm.showKRunnerKCM()
+    }
+    action.main: NewStuff.Action {
+        text: i18n("Get New…")
+        visible: KAuthorized.authorize(KAuthorized.GHNS)
+        configFile: "krunner.knsrc"
+        onEntryEvent: function (entry, event) {
+            if (event === NewStuff.Entry.StatusChangedEvent) {
+                kcm.reloadPlugin();
+            }
+        }
+    }
+
     header: ColumnLayout {
         QQC2.Label {
             text: i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect)")
@@ -39,26 +54,5 @@ KCM.ScrollViewKCM {
             highlighted: false
             hoverEnabled: false
         }
-    }
-
-    footer: Kirigami.ActionToolBar {
-        flat: false
-        alignment: Qt.AlignRight
-        actions: [
-            Kirigami.Action {
-                text: i18n("Configure KRunner…")
-                onTriggered: kcm.showKRunnerKCM()
-            },
-            NewStuff.Action {
-                text: i18n("Get New Plugins…")
-                visible: KAuthorized.authorize(KAuthorized.GHNS)
-                configFile: "krunner.knsrc"
-                onEntryEvent: function (entry, event) {
-                    if (event == NewStuff.Entry.StatusChangedEvent) {
-                        kcm.reloadPlugin()
-                    }
-                }
-            } 
-        ]
     }
 }
