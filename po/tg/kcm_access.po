@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"POT-Creation-Date: 2022-12-15 00:49+0000\n"
 "PO-Revision-Date: 2019-09-16 18:54+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -370,53 +370,64 @@ msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:33
+#: package/contents/ui/KeyboardFilters.qml:22
+#, kde-format
+msgid ""
+"For a key to be accepted, it has to be held until the set amount of time"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:50
+#: package/contents/ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:51
+#: package/contents/ui/KeyboardFilters.qml:55
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:65
+#: package/contents/ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:79
+#: package/contents/ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:96
+#: package/contents/ui/KeyboardFilters.qml:100
 #, kde-format
 msgid "Bounce keys:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:97
+#: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:111
+#: package/contents/ui/KeyboardFilters.qml:104
+#, kde-format
+msgid "Ignore rapid, repeated keypresses of the same key"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:126
+#: package/contents/ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr ""

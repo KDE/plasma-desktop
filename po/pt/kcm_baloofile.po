@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2021-06-07 15:28+0100\n"
+"PO-Revision-Date: 2022-12-14 09:40+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -53,12 +53,14 @@ msgstr "Apagar os Dados do Índice"
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
+"É necessário reiniciar o sistema antes de estas alterações começarem a fazer "
+"efeito."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Reiniciar"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
@@ -142,29 +144,3 @@ msgstr "Seleccione uma pasta a incluir"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccione uma pasta a excluir"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "José Nuno Pires"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "zepires@gmail.com"
-
-#~ msgid "File Search"
-#~ msgstr "Pesquisa de Ficheiros"
-
-#~ msgid "Copyright 2007-2010 Sebastian Trüg"
-#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
-
-#~ msgid "Sebastian Trüg"
-#~ msgstr "Sebastian Trüg"
-
-#~ msgid "Vishesh Handa"
-#~ msgstr "Vishesh Handa"
-
-#~ msgid "Tomaz Canabrava"
-#~ msgstr "Tomaz Canabrava"
-
-#~ msgid "Add folder configuration…"
-#~ msgstr "Adicionar uma configuração da pasta…"

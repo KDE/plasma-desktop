@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-12 00:47+0000\n"
+"POT-Creation-Date: 2022-12-15 00:49+0000\n"
 "PO-Revision-Date: 2009-01-06 14:07+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -387,19 +387,25 @@ msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:33
+#: package/contents/ui/KeyboardFilters.qml:22
+#, kde-format
+msgid ""
+"For a key to be accepted, it has to be held until the set amount of time"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:50
+#: package/contents/ui/KeyboardFilters.qml:54
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "Zingila &pergalê bi kar bîne"
 
-#: package/contents/ui/KeyboardFilters.qml:51
+#: package/contents/ui/KeyboardFilters.qml:55
 #, fuzzy, kde-format
 #| msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
 msgctxt "Use system bell when a key is pressed"
@@ -408,7 +414,7 @@ msgstr ""
 "Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
 "pergalê bi kar bîne"
 
-#: package/contents/ui/KeyboardFilters.qml:65
+#: package/contents/ui/KeyboardFilters.qml:69
 #, fuzzy, kde-format
 #| msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
 msgctxt "Use system bell when a key is accepted"
@@ -417,7 +423,7 @@ msgstr ""
 "Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
 "pergalê bi kar bîne"
 
-#: package/contents/ui/KeyboardFilters.qml:79
+#: package/contents/ui/KeyboardFilters.qml:83
 #, fuzzy, kde-format
 #| msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
 msgctxt "Use system bell when a key is rejected"
@@ -426,25 +432,30 @@ msgstr ""
 "Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
 "pergalê bi kar bîne"
 
-#: package/contents/ui/KeyboardFilters.qml:96
+#: package/contents/ui/KeyboardFilters.qml:100
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "Bişkojkên Hilpekînê"
 
-#: package/contents/ui/KeyboardFilters.qml:97
+#: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:111
+#: package/contents/ui/KeyboardFilters.qml:104
+#, kde-format
+msgid "Ignore rapid, repeated keypresses of the same key"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:126
+#: package/contents/ui/KeyboardFilters.qml:134
 #, fuzzy, kde-format
 #| msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
 msgid "Ring system bell when rejected"
