@@ -110,7 +110,7 @@ void KCMKeyboardWidget::save()
         return;
 
     keyboardConfig->setKeyboardModel(keyboardModelFromUI());
-    keyboardConfig->setSwitchingPolicy(switcingPolicyFromUI());
+    keyboardConfig->setSwitchingPolicy(switchingPolicyFromUI());
 
     saveXkbOptions();
 }
@@ -118,7 +118,7 @@ void KCMKeyboardWidget::save()
 void KCMKeyboardWidget::defaults()
 {
     updateHardwareUI(keyboardConfig->defaultKeyboardModelValue());
-    updateSwitcingPolicyUI(keyboardConfig->defaultSwitchingPolicyValue());
+    updateSwitchingPolicyUI(keyboardConfig->defaultSwitchingPolicyValue());
     auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
     xkbOptionModel->setXkbOptions(keyboardConfig->defaultXkbOptionsValue());
     keyboardConfig->setDefaults();
@@ -127,7 +127,7 @@ void KCMKeyboardWidget::defaults()
 bool KCMKeyboardWidget::isSaveNeeded() const
 {
     return keyboardModelFromUI() != keyboardConfig->keyboardModel() ||
-            switcingPolicyFromUI() != keyboardConfig->switchingPolicy() ||
+            switchingPolicyFromUI() != keyboardConfig->switchingPolicy() ||
             xkbOptionsFromUI() != keyboardConfig->xkbOptions() ||
             keyboardConfig->layoutsSaveNeeded();
 }
@@ -135,7 +135,7 @@ bool KCMKeyboardWidget::isSaveNeeded() const
 bool KCMKeyboardWidget::isDefault() const
 {
     return keyboardModelFromUI() == keyboardConfig->defaultKeyboardModelValue() &&
-            switcingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue() &&
+            switchingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue() &&
             xkbOptionsFromUI() == keyboardConfig->xkbOptions();
 }
 
@@ -148,7 +148,7 @@ void KCMKeyboardWidget::setDefaultIndicator(bool visible)
 void KCMKeyboardWidget::updateUiDefaultIndicator()
 {
     setDefaultIndicatorVisible(uiWidget->keyboardModelComboBox, m_highlightVisible && keyboardModelFromUI() != keyboardConfig->defaultKeyboardModelValue());
-    const auto isDefaultswitchingPolicy = switcingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue();
+    const auto isDefaultswitchingPolicy = switchingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue();
     for (auto button : uiWidget->switchingPolicyButtonGroup->buttons()) {
         setDefaultIndicatorVisible(button, m_highlightVisible && !isDefaultswitchingPolicy && uiWidget->switchingPolicyButtonGroup->checkedButton() == button);
     }
@@ -165,7 +165,7 @@ void KCMKeyboardWidget::updateUI()
 
     uiUpdating = true;
     updateHardwareUI(keyboardConfig->keyboardModel());
-    updateSwitcingPolicyUI(keyboardConfig->switchingPolicy());
+    updateSwitchingPolicyUI(keyboardConfig->switchingPolicy());
     XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
     model->setXkbOptions(keyboardConfig->xkbOptions());
     updateLayoutsUI();
@@ -612,7 +612,7 @@ QStringList KCMKeyboardWidget::xkbOptionsFromUI() const
     return model->xkbOptions();
 }
 
-void KCMKeyboardWidget::updateSwitcingPolicyUI(KeyboardConfig::SwitchingPolicy policy)
+void KCMKeyboardWidget::updateSwitchingPolicyUI(KeyboardConfig::SwitchingPolicy policy)
 {
     switch (policy) {
     case KeyboardConfig::SWITCH_POLICY_DESKTOP:
@@ -732,7 +732,7 @@ QString KCMKeyboardWidget::keyboardModelFromUI() const
     return uiWidget->keyboardModelComboBox->itemData(uiWidget->keyboardModelComboBox->currentIndex()).toString();
 }
 
-KeyboardConfig::SwitchingPolicy KCMKeyboardWidget::switcingPolicyFromUI() const
+KeyboardConfig::SwitchingPolicy KCMKeyboardWidget::switchingPolicyFromUI() const
 {
     if (uiWidget->switchByDesktopRadioBtn->isChecked()) {
         return KeyboardConfig::SWITCH_POLICY_DESKTOP;

@@ -85,7 +85,7 @@ private:
     void updateHardwareUI(const QString &model);
     void updateLayoutsUI();
     void updateShortcutsUI();
-    void updateSwitcingPolicyUI(KeyboardConfig::SwitchingPolicy policy);
+    void updateSwitchingPolicyUI(KeyboardConfig::SwitchingPolicy policy);
     void updateXkbShortcutButton(const QString &groupName, QPushButton *button);
     void clearXkbGroup(const QString &groupName);
     void moveSelectedLayouts(int shift);
@@ -97,7 +97,7 @@ private:
     QStringList xkbOptionsFromUI() const;
 
     QString keyboardModelFromUI() const;
-    KeyboardConfig::SwitchingPolicy switcingPolicyFromUI() const;
+    KeyboardConfig::SwitchingPolicy switchingPolicyFromUI() const;
     void setDefaultIndicatorVisible(QWidget *widget, bool visible);
 };
 
