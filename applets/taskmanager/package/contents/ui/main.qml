@@ -23,6 +23,11 @@ MouseArea {
     anchors.fill: parent
     hoverEnabled: true
 
+    // For making a bottom to top layout since qml flow can't do that.
+    // We just hang the task manager upside down to achieve that.
+    // This mirrors the tasks as well, so we just rotate them again to fix that (see Task.qml).
+    rotation: plasmoid.configuration.reverseMode && plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
+
     readonly property bool shouldShirnkToZero: !LayoutManager.logicalTaskCount()
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     property bool iconsOnly: plasmoid.pluginName === "org.kde.plasma.icontasks"

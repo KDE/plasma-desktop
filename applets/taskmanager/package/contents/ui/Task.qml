@@ -24,6 +24,10 @@ PlasmaCore.ToolTipArea {
 
     visible: false
 
+    // To achieve a bottom to top layout, the task manager is rotated by 180 degrees(see main.qml).
+    // This makes the tasks mirrored, so we mirror them again to fix that.
+    rotation: plasmoid.configuration.reverseMode && plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
+
     LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
     LayoutMirroring.childrenInherit: (Qt.application.layoutDirection == Qt.RightToLeft)
 
