@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LAYOUT_MEMORY_PERSISTER_H_
-#define LAYOUT_MEMORY_PERSISTER_H_
+#pragma once
 
 #include <QString>
 
@@ -45,5 +44,3 @@ private:
 
     bool canPersist();
 };
-
-#endif /* LAYOUT_MEMORY_PERSISTER_H_ */

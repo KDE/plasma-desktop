@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PREVIEWPLUGINSMODEL_H
-#define PREVIEWPLUGINSMODEL_H
+#pragma once
 
 #include <KPluginMetaData>
 #include <QAbstractListModel>
@@ -44,5 +43,3 @@ private:
     QVector<KPluginMetaData> m_plugins;
     QVector<bool> m_checkedRows;
 };
-
-#endif

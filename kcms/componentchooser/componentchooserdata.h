@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef COMPONENTCHOOSERDATA_H
-#define COMPONENTCHOOSERDATA_H
+#pragma once
 
 #include <QObject>
 
@@ -41,5 +40,3 @@ private:
     ComponentChooser *m_geoUriHandlers;
     ComponentChooser *m_telUriHandlers;
 };
-
-#endif // COMPONENTCHOOSERDATA_H

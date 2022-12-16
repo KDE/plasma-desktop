@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SOLIDACTIONS_H
-#define SOLIDACTIONS_H
+#pragma once
 
 #include <KCModule>
 
@@ -45,5 +44,3 @@ private:
     Ui::AddAction addUi;
     QDialog *addDialog;
 };
-
-#endif

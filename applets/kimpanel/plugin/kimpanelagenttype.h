@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KIMPANEL_AGENTTYPE_H
-#define KIMPANEL_AGENTTYPE_H
+#pragma once
 
 // Qt
 #include <QList>
@@ -67,5 +66,3 @@ struct KimpanelLookupTable {
     bool has_prev;
     bool has_next;
 };
-
-#endif // KIMPANEL_AGENTTYPE_H

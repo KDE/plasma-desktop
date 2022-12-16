@@ -7,8 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef __GLOBALPATHS_H
-#define __GLOBALPATHS_H
+#pragma once
 
 #include <KCModule>
 #include <memory>
@@ -41,5 +40,3 @@ private:
     std::unique_ptr<Ui::DesktopPathsView> m_ui;
     DesktopPathsData *const m_data;
 };
-
-#endif

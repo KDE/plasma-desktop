@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _JOYSTICK_H_
-#define _JOYSTICK_H_
+#pragma once
 
 #define KDE3_SUPPORT
 #include <KCModule>
@@ -28,5 +27,3 @@ public:
 private:
     JoyWidget *joyWidget;
 };
-
-#endif

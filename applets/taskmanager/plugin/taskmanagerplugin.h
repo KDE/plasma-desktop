@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TASKMANAGERPLUGIN_H
-#define TASKMANAGERPLUGIN_H
+#pragma once
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
@@ -18,5 +17,3 @@ class TaskManagerPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // TASKMANAGERPLUGIN_H

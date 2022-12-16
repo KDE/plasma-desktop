@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWPROPERTIESMENU_H
-#define VIEWPROPERTIESMENU_H
+#pragma once
 
 #include "folderplugin_private_export.h"
 #include <QObject>
@@ -103,5 +102,3 @@ private:
     QAction *m_previews;
     QAction *m_locked;
 };
-
-#endif

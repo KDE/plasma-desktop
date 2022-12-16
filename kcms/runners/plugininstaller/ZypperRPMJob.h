@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ZYPPERRPMJOB_H
-#define ZYPPERRPMJOB_H
+#pragma once
 
 #include "AbstractJob.h"
 
@@ -16,5 +15,3 @@ class ZypperRPMJob : public AbstractJob
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install) override;
 };
-
-#endif // ZYPPERRPMJOB_H

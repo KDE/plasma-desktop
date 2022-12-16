@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef COMPONENTCHOOSERTERMINAL_H
-#define COMPONENTCHOOSERTERMINAL_H
+#pragma once
 
 #include "componentchooser.h"
 
@@ -17,5 +16,3 @@ public:
     void load() override;
     void save() override;
 };
-
-#endif

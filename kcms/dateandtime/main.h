@@ -3,8 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 
 */
-#ifndef main_included
-#define main_included
+#pragma once
 
 #include <KCModule>
 
@@ -30,5 +29,3 @@ private:
 
     bool m_haveTimedated = false;
 };
-
-#endif // main_included

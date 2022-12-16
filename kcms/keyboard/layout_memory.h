@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LAYOUT_MEMORY_H_
-#define LAYOUT_MEMORY_H_
+#pragma once
 
 #include <QMap>
 #include <QString>
@@ -49,5 +48,3 @@ protected:
 
     friend class LayoutMemoryPersister;
 };
-
-#endif /* LAYOUT_MEMORY_H_ */

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef PLASMADESKTOPRUNNER_H
-#define PLASMADESKTOPRUNNER_H
+#pragma once
 
 #include <krunner/abstractrunner.h>
 
@@ -30,5 +29,3 @@ private:
     const QString m_desktopConsoleKeyword;
     const QString m_kwinConsoleKeyword;
 };
-
-#endif

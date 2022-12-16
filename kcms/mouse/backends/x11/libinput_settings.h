@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LIBINPUTSETTINGS_H
-#define LIBINPUTSETTINGS_H
+#pragma once
 
 #include <QString>
 
@@ -16,5 +15,3 @@ struct LibinputSettings {
     template<class T>
     void save(QString key, T val);
 };
-
-#endif // LIBINPUTSETTINGS_H

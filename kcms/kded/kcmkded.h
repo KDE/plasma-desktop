@@ -5,8 +5,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef KCMKDED_H
-#define KCMKDED_H
+#pragma once
 
 #include <KQuickAddons/ConfigModule>
 
@@ -93,5 +92,3 @@ private:
     QString m_lastStartedModule;
     QStringList m_runningModulesBeforeReconfigure;
 };
-
-#endif // KCMKDED_H

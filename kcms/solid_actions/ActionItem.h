@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ACTION_ITEM_H
-#define ACTION_ITEM_H
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -58,5 +57,3 @@ private:
 };
 
 Q_DECLARE_METATYPE(ActionItem *)
-
-#endif

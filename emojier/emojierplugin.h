@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMOJIERDECLARATIVEPLUGIN_H
-#define EMOJIERDECLARATIVEPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -16,5 +15,3 @@ class EmojierDeclarativePlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef MAIN_CONFIGURATION_WIDGET_H
-#define MAIN_CONFIGURATION_WIDGET_H
+#pragma once
 
 #include <KActivities/Consumer>
 #include <KActivities/Info>
@@ -32,5 +31,3 @@ public Q_SLOTS:
 private:
     D_PTR;
 };
-
-#endif // MAIN_CONFIGURATION_WIDGET_H

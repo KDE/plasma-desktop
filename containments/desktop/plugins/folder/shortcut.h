@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHORTCUT_H
-#define SHORTCUT_H
+#pragma once
 
 #include <QObject>
 
@@ -39,5 +38,3 @@ Q_SIGNALS:
 protected:
     bool eventFilter(QObject *obj, QEvent *e) override;
 };
-
-#endif // SHORTCUT_H

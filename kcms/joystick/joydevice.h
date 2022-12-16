@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _JOYDEVICE_H_
-#define _JOYDEVICE_H_
+#pragma once
 
 #include <QString>
 
@@ -113,5 +112,3 @@ private:
     struct js_corr *corr; // calibration values during the calib. steps
     struct js_corr *origCorr; // original calibration correction values
 };
-
-#endif

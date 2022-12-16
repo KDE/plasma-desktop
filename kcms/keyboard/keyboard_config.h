@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KEYBOARD_CONFIG_H_
-#define KEYBOARD_CONFIG_H_
+#pragma once
 
 #include "x11_helper.h"
 
@@ -58,5 +57,3 @@ private:
     QList<LayoutUnit> m_referenceLayouts;
     int m_referenceLayoutLoopCount;
 };
-
-#endif /* KEYBOARD_CONFIG_H_ */

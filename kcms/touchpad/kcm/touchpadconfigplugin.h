@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADCONFIGPLUGIN_H
-#define TOUCHPADCONFIGPLUGIN_H
+#pragma once
 
 #include <QWidget>
 
@@ -40,5 +39,3 @@ protected:
     TouchpadConfigContainer *m_parent;
     TouchpadBackend *m_backend;
 };
-
-#endif // TOUCHPADCONFIGPLUGIN_H

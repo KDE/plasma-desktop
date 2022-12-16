@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XLIBBACKEND_H
-#define XLIBBACKEND_H
+#pragma once
 
 #include <QLatin1String>
 #include <QMap>
@@ -98,5 +97,3 @@ protected:
     std::unique_ptr<XlibNotifications> m_notifications;
     std::unique_ptr<XRecordKeyboardMonitor> m_keyboard;
 };
-
-#endif // XLIBBACKEND_H

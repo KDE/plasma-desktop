@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _CALDIALOG_H_
-#define _CALDIALOG_H_
+#pragma once
 
 #include <QLabel>
 
@@ -37,5 +36,3 @@ private:
     QLabel *text;
     QLabel *valueLbl;
 };
-
-#endif

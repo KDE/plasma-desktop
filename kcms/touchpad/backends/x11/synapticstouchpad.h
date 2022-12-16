@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SYNAPTICSTOUCHPAD_H
-#define SYNAPTICSTOUCHPAD_H
+#pragma once
 
 #include "xcbatom.h"
 #include "xlibtouchpad.h"
@@ -30,5 +29,3 @@ private:
     int m_resX, m_resY;
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
 };
-
-#endif // SYNAPTICSTOUCHPAD_H

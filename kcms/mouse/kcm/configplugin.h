@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIGPLUGIN_H
-#define CONFIGPLUGIN_H
+#pragma once
 
 #include <QWidget>
 
@@ -42,5 +41,3 @@ protected:
     ConfigContainer *m_parent;
     InputBackend *m_backend;
 };
-
-#endif // CONFIGPLUGIN_H

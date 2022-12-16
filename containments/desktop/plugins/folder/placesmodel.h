@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PLACESMODEL_H
-#define PLACESMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -42,5 +41,3 @@ private:
     KFilePlacesModel *const m_sourceModel;
     bool m_showDesktopEntry = true;
 };
-
-#endif

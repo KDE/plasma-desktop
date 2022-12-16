@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef APPLICATION_H
-#define APPLICATION_H
+#pragma once
 
 #include <QGuiApplication>
 
@@ -25,5 +24,3 @@ public:
 Q_SIGNALS:
     void keyEvent(QKeyEvent *event);
 };
-
-#endif // APPLICATION_H

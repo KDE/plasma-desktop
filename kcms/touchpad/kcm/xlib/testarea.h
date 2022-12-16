@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TESTAREA_H
-#define TESTAREA_H
+#pragma once
 
 #include "ui_testarea.h"
 
@@ -30,5 +29,3 @@ protected:
 private:
     Ui::TestArea m_ui;
 };
-
-#endif // TESTAREA_H

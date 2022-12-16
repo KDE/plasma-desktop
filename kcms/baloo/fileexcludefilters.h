@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef _FILE_EXCLUDE_FILTERS_H_
-#define _FILE_EXCLUDE_FILTERS_H_
+#pragma once
 
 #include <QStringList>
 
@@ -31,5 +30,3 @@ int defaultExcludeMimetypesVersion();
 
 QStringList sourceCodeMimeTypes();
 }
-
-#endif

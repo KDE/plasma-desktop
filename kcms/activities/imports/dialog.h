@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef DIALOG_H
-#define DIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QKeySequence>
@@ -57,5 +56,3 @@ private:
 
     D_PTR;
 };
-
-#endif // DIALOG_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SWITCHING_TAB_H
-#define SWITCHING_TAB_H
+#pragma once
 
 #include <QWidget>
 
@@ -32,5 +31,3 @@ private Q_SLOTS:
 private:
     D_PTR;
 };
-
-#endif // SWITCHING_TAB_H

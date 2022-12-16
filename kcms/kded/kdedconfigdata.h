@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KDEDCONFIGDATA_H
-#define KDEDCONFIGDATA_H
+#pragma once
 
 #include <KCModuleData>
 #include <QObject>
@@ -20,5 +19,3 @@ public:
 
     bool isDefaults() const override;
 };
-
-#endif // KDEDCONFIGDATA_H

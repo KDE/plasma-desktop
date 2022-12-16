@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INPUTBACKEND_H
-#define INPUTBACKEND_H
+#pragma once
 
 #include <QObject>
 #include <QVariantHash>
@@ -95,5 +94,3 @@ Q_SIGNALS:
     void deviceAdded(bool success);
     void deviceRemoved(int index);
 };
-
-#endif // INPUTBACKEND_H

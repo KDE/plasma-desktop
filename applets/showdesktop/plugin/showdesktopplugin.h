@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHOWDESKTOPPLUGIN_H
-#define SHOWDESKTOPPLUGIN_H
+#pragma once
 
 #include <QObject>
 #include <QQmlEngine>
@@ -19,5 +18,3 @@ class ShowDesktopPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // SHOWDESKTOPPLUGIN_H

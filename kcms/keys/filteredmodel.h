@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef FILTEREDMODEL_H
-#define FILTEREDMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -29,4 +28,3 @@ Q_SIGNALS:
 private:
     QString m_filter;
 };
-#endif

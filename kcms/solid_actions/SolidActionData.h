@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SOLIDACTIONDATA_H
-#define SOLIDACTIONDATA_H
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -40,5 +39,3 @@ private:
     QMap<Solid::DeviceInterface::Type, QMap<QString, QString>> values;
     QMap<Solid::DeviceInterface::Type, QString> types;
 };
-
-#endif

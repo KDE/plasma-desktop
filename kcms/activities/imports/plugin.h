@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef KACTIVITIES_IMPORTS_PLUGIN_H
-#define KACTIVITIES_IMPORTS_PLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -18,5 +17,3 @@ public:
     ActivitiesSettingsPlugin(QObject *parent = nullptr);
     void registerTypes(const char *uri) override;
 };
-
-#endif // KACTIVITIES_IMPORTS_PLUGIN_H

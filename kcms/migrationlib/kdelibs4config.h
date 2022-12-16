@@ -6,8 +6,7 @@
 
 */
 
-#ifndef KDELIBS4CONFIG_H
-#define KDELIBS4CONFIG_H
+#pragma once
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -28,5 +27,3 @@ public:
         kde4ConfigGroup.sync();
     }
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ITEMVIEWADAPTER_H
-#define ITEMVIEWADAPTER_H
+#pragma once
 
 #include <QRect>
 
@@ -55,5 +54,3 @@ private:
     int m_adapterIconSize;
     QRect m_adapterVisibleArea;
 };
-
-#endif

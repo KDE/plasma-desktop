@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERMODELTEST_H
-#define FOLDERMODELTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -42,5 +41,3 @@ private:
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;
 };
-
-#endif // FOLDERMODELTEST_H

@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef EMOJIPARSER_H
-#define EMOJIPARSER_H
+#pragma once
 
 #include <QByteArray>
 #include <QDataStream>
@@ -42,5 +41,3 @@ struct EmojiDict {
     QList<Emoji> m_emojis;
     QMap<QString, int> m_processedEmojis;
 };
-
-#endif

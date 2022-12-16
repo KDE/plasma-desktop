@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef OUTLINE_H
-#define OUTLINE_H
+#pragma once
 
 #include "xkbobject.h"
 
@@ -31,5 +30,3 @@ public:
     XkbOutlinePtr outline = nullptr;
     QVariantList points;
 };
-
-#endif // OUTLINE_H

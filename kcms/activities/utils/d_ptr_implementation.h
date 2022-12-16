@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef D_PTR_IMPLEMENTATION_H
-#define D_PTR_IMPLEMENTATION_H
+#pragma once
 
 #include <utility>
 
@@ -39,5 +38,3 @@ T *d_ptr<T>::operator->() const
 
 } // namespace utils
 } // namespace kamd
-
-#endif

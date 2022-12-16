@@ -6,8 +6,7 @@
 
 // clang-format off
 
-#ifndef DBUS_COMMON_H
-#define DBUS_COMMON_H
+#pragma once
 
 #define KAMD_DBUS_SERVICE "org.kde.ActivityManager"
 
@@ -18,4 +17,3 @@
 #define KAMD_DBUS_RESOURCES_PATH KAMD_DBUS_ACTIVITYMANAGER_PATH"/Resources"
 #define KAMD_DBUS_RESOURCES_SCORING_PATH KAMD_DBUS_RESOURCES_PATH"/Scoring"
 
-#endif // DBUS_COMMON_H

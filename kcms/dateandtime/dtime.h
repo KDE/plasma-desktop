@@ -3,8 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef dtime_included
-#define dtime_included
+#pragma once
 
 #include "ui_dateandtime.h"
 
@@ -106,5 +105,3 @@ private:
     QPixmap m_glassCache;
     qreal m_verticalTranslation;
 };
-
-#endif // dtime_included

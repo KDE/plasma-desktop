@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XKB_RULES_H_
-#define XKB_RULES_H_
+#pragma once
 
 #include <QList>
 #include <QStringList>
@@ -119,5 +118,3 @@ struct Rules {
     static QString getRulesName();
     static QString findXkbDir();
 };
-
-#endif /* XKB_RULES_H_ */

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KWINWAYLANDTOUCHPAD_H
-#define KWINWAYLANDTOUCHPAD_H
+#pragma once
 
 #include <QString>
 #include <backends/libinputcommon.h>
@@ -169,5 +168,3 @@ private:
 
     QDBusInterface *m_iface;
 };
-
-#endif

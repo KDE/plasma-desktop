@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KCM_ADD_LAYOUT_DIALOG_H_
-#define KCM_ADD_LAYOUT_DIALOG_H_
+#pragma once
 
 #include <QDialog>
 #include <QListWidgetItem>
@@ -47,5 +46,3 @@ private:
     QString selectedLayout;
     LayoutUnit selectedLayoutUnit;
 };
-
-#endif /* KCM_ADD_LAYOUT_DIALOG_H_ */

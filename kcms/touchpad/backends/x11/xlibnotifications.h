@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XLIBNOTIFICATIONS_H
-#define XLIBNOTIFICATIONS_H
+#pragma once
 
 #include <QSocketNotifier>
 #include <QWidget>
@@ -43,5 +42,3 @@ private:
     uint8_t m_inputOpcode;
     int m_device;
 };
-
-#endif // XLIBNOTIFICATIONS_H

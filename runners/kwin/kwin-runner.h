@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef KWINRUNNER_H
-#define KWINRUNNER_H
+#pragma once
 
 #include <krunner/abstractrunner.h>
 
@@ -29,5 +28,3 @@ private:
 private:
     bool m_enabled = false;
 };
-
-#endif

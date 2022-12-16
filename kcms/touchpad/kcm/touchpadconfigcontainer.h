@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADCONFIGCONTAINER_H
-#define TOUCHPADCONFIGCONTAINER_H
+#pragma once
 
 #include <KCModule>
 
@@ -52,5 +51,3 @@ protected:
 private:
     TouchpadConfigPlugin *m_plugin = nullptr;
 };
-
-#endif // TOUCHPADCONFIGCONTAINER_H

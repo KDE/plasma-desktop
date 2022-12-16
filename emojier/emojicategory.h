@@ -4,11 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMOJICATEGORY_H
-#define EMOJICATEGORY_H
+#pragma once
 #include <KLocalizedString>
 #include <QStringList>
 
 const QStringList &getCategoryNames();
-
-#endif

@@ -3,8 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef WINDOWMODEL_H
-#define WINDOWMODEL_H
+#pragma once
 
 #include "taskfilterproxymodel.h"
 
@@ -35,5 +34,3 @@ private:
     class Private;
     std::unique_ptr<Private> d;
 };
-
-#endif

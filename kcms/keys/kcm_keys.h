@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef KCM_KEYS_H
-#define KCM_KEYS_H
+#pragma once
 
 #include <QKeySequence>
 #include <QObject>
@@ -65,5 +64,3 @@ private:
     StandardShortcutsModel *m_standardShortcutsModel;
     QString m_argument;
 };
-
-#endif

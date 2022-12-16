@@ -4,9 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INTERFACEUTIL_H
-#define INTERFACEUTIL_H
+#pragma once
 
 // needed by the DBUS interface
 Q_DECLARE_METATYPE(QList<int>)
-#endif

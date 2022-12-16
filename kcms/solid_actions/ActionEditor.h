@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ACTIONEDITOR_H
-#define ACTIONEDITOR_H
+#pragma once
 
 #include <QDialog>
 
@@ -44,5 +43,3 @@ private Q_SLOTS:
     void saveParameter();
     void setPredicate(Solid::Predicate predicate);
 };
-
-#endif

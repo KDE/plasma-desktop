@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef REMOVEACTION_H
-#define REMOVEACTION_H
+#pragma once
 
 #include <KActionCollection>
 #include <QAction>
@@ -45,5 +44,3 @@ private:
     QPointer<KActionCollection> m_collection;
     QPointer<QAction> m_action;
 };
-
-#endif // REMOVEACTION_H

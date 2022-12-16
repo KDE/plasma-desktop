@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIGCONTAINER_H
-#define CONFIGCONTAINER_H
+#pragma once
 
 #include <KCModule>
 
@@ -45,5 +44,3 @@ protected:
 private:
     ConfigPlugin *m_plugin = nullptr;
 };
-
-#endif // CONFIGCONTAINER_H

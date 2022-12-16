@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SCRIPTJOB_H
-#define SCRIPTJOB_H
+#pragma once
 
 #include "AbstractJob.h"
 
@@ -19,5 +18,3 @@ public:
 private:
     QString formatScriptCommand(bool install, const QString &installerPath);
 };
-
-#endif // SCRIPTJOB_H

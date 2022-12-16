@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef _BALOO_FILE_KCM_H_
-#define _BALOO_FILE_KCM_H_
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -49,5 +48,3 @@ private:
     FilteredFolderModel *m_filteredFolderModel;
 };
 }
-
-#endif

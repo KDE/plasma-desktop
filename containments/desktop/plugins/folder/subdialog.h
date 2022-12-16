@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SUBDIALOG_H
-#define SUBDIALOG_H
+#pragma once
 
 #include <PlasmaQuick/Dialog>
 
@@ -22,5 +21,3 @@ public:
 
     QPoint popupPosition(QQuickItem *item, const QSize &size) override;
 };
-
-#endif

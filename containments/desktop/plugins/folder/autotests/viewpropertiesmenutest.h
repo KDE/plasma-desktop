@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWPROPERTIESMENUTEST_H
-#define VIEWPROPERTIESMENUTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,5 +16,3 @@ class ViewPropertiesMenuTest : public QObject
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
-
-#endif // VIEWPROPERTIESMENUTEST_H

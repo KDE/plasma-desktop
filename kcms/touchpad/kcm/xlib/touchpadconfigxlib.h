@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADCONFIGXLIB_H
-#define TOUCHPADCONFIGXLIB_H
+#pragma once
 
 #include "../touchpadconfigplugin.h"
 
@@ -86,5 +85,3 @@ private:
     Ui::SensitivityForm m_sensitivity;
     Ui::KdedForm m_kded;
 };
-
-#endif // TOUCHPADCONFIGXLIB_H

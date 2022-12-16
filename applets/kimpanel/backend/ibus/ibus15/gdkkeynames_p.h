@@ -7,8 +7,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef GDKKEYNAMES_H
-#define GDKKEYNAMES_H
+#pragma once
 
 #include <glib.h>
 
@@ -17,5 +16,3 @@ G_BEGIN_DECLS
 guint _gdk_keyval_from_name(const gchar *keyval_name);
 
 G_END_DECLS
-
-#endif // GDKKEYNAMES_H

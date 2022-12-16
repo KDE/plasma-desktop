@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHOWDESKTOP_HEADER
-#define SHOWDESKTOP_HEADER
+#pragma once
 
 #include <QObject>
 
@@ -32,5 +31,3 @@ Q_SIGNALS:
 private:
     OrgKdeKWinInterface *m_interface;
 };
-
-#endif // SHOWDESKTOP_HEADER

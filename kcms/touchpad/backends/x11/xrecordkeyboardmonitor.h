@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XRECORDKEYBOARDMONITOR_H
-#define XRECORDKEYBOARDMONITOR_H
+#pragma once
 
 #include <QSocketNotifier>
 #include <QVector>
@@ -48,5 +47,3 @@ private:
     QVector<bool> m_modifier, m_ignore, m_pressed;
     int m_modifiersPressed, m_keysPressed;
 };
-
-#endif // XRECORDKEYBOARDMONITOR_H

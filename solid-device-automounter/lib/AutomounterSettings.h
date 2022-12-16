@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMOUNTERSETTINGS_H
-#define AUTOMOUNTERSETTINGS_H
+#pragma once
 
 #include "AutomounterSettingsBase.h"
 #include "DeviceSettings.h"
@@ -41,5 +40,3 @@ private:
 private:
     QHash<QString, DeviceSettings *> m_devices;
 };
-
-#endif

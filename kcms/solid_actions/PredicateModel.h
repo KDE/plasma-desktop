@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PREDICATEMODEL_H
-#define PREDICATEMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 
@@ -39,5 +38,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

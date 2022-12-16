@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DEVICEMODEL_H
-#define DEVICEMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QHash>
@@ -73,5 +72,3 @@ private:
     QList<QString> m_disconnected;
     AutomounterSettings *const m_settings;
 };
-
-#endif

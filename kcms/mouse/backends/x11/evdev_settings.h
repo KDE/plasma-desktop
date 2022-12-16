@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVDEVSETTINGS_H
-#define EVDEVSETTINGS_H
+#pragma once
 
 class X11EvdevBackend;
 
@@ -33,5 +32,3 @@ struct EvdevSettings {
     int wheelScrollLines;
     bool reverseScrollPolarity;
 };
-
-#endif // EVDEVSETTINGS_H

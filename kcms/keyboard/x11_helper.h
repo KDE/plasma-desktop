@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef X11_HELPER_H_
-#define X11_HELPER_H_
+#pragma once
 
 #include <QAbstractNativeEventFilter>
 #include <QKeySequence>
@@ -258,5 +257,3 @@ public:
     static unsigned int getGroup();
     static bool setGroup(unsigned int group);
 };
-
-#endif /* X11_HELPER_H_ */

@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SONNETSPELLCHECKINGMODULE_H
-#define SONNETSPELLCHECKINGMODULE_H
+#pragma once
 
 #include "spellcheckingskeleton.h"
 #include <KCModule>
@@ -43,5 +42,3 @@ private:
     SpellCheckingData *m_data;
     KConfigDialogManager *m_managedConfig;
 };
-
-#endif

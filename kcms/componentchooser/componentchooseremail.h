@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef COMPONENTCHOOSEREMAIL_H
-#define COMPONENTCHOOSEREMAIL_H
+#pragma once
 
 #include "componentchooser.h"
 
@@ -16,5 +15,3 @@ public:
 
     void save() override;
 };
-
-#endif

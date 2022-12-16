@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef X11EVDEVBACKEND_H
-#define X11EVDEVBACKEND_H
+#pragma once
 
 #include "evdev_settings.h"
 #include "x11_backend.h"
@@ -70,5 +69,3 @@ private:
     int m_threshold = 0;
     int m_middleButton = -1;
 };
-
-#endif // X11EVDEVBACKEND_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SHAPE_H
-#define SHAPE_H
+#pragma once
 
 #include <QRect>
 
@@ -24,5 +23,3 @@ public:
     QList<QObject *> outlines;
     QRect bounds;
 };
-
-#endif // SHAPE_H

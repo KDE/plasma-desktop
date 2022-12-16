@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ABSTRACTJOB_H
-#define ABSTRACTJOB_H
+#pragma once
 
 #include <QObject>
 
@@ -31,5 +30,3 @@ protected:
     void runScriptInTerminal(const QString &script, const QString &pwd);
     QString terminalCloseMessage(bool install);
 };
-
-#endif // ABSTRACTJOB_H

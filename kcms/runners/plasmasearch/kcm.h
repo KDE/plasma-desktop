@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef _KCM_SEARCH_H
-#define _KCM_SEARCH_H
+#pragma once
 
 #include <KPluginModel>
 #include <KQuickAddons/ManagedConfigModule>
@@ -49,5 +48,3 @@ private:
     QString m_pluginID;
     KCMultiDialog *m_krunnerSettingsDialog = nullptr;
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ISO_CODES_H_
-#define ISO_CODES_H_
+#pragma once
 
 #include <QList>
 #include <QMap>
@@ -54,5 +53,3 @@ public:
 private:
     IsoCodesPrivate *const d;
 };
-
-#endif /* ISO_CODES_H_ */

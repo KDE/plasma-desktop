@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SORTED_ACTIVITIES_MODEL_H
-#define SORTED_ACTIVITIES_MODEL_H
+#pragma once
 
 // Qt
 #include <QSortFilterProxyModel>
@@ -77,5 +76,3 @@ private:
 
     QHash<QString, QVector<WId>> m_activitiesWindows;
 };
-
-#endif // SORTED_ACTIVITIES_MODEL_H

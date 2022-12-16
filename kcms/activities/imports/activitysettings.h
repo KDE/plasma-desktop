@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef ACTIVITYSETTINGS_H
-#define ACTIVITYSETTINGS_H
+#pragma once
 
 #include <QObject>
 
@@ -30,5 +29,3 @@ public Q_SLOTS:
 private:
     bool m_newActivityAuthorized;
 };
-
-#endif // ACTIVITYSETTINGS_H

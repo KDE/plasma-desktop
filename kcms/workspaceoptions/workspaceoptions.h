@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _KCM_WORKSPACEOPTIONS_H
-#define _KCM_WORKSPACEOPTIONS_H
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -42,5 +41,3 @@ Q_SIGNALS:
 private:
     WorkspaceOptionsData *m_data;
 };
-
-#endif // _KCM_WORKSPACEOPTIONS_H

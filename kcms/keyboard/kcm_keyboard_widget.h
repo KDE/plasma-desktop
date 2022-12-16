@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KCM_KEYBOARD_WIDGET_H_
-#define KCM_KEYBOARD_WIDGET_H_
+#pragma once
 
 #include "ui_kcm_keyboard.h"
 
@@ -100,5 +99,3 @@ private:
     KeyboardConfig::SwitchingPolicy switchingPolicyFromUI() const;
     void setDefaultIndicatorVisible(QWidget *widget, bool visible);
 };
-
-#endif /* KCM_KEYBOARD_WIDGET_H_ */

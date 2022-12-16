@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRASHPLUGIN_H
-#define TRASHPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -17,5 +16,3 @@ class TrashPrivatePlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif

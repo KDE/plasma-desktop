@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ACTIONMODEL_H
-#define ACTIONMODEL_H
+#pragma once
 
 #include <QAbstractTableModel>
 
@@ -30,5 +29,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

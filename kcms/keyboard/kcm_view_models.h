@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KCM_VIEW_MODELS_H_
-#define KCM_VIEW_MODELS_H_
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QAbstractTableModel>
@@ -154,5 +153,3 @@ private:
     Rules *rules;
     QStringList m_xkbOptions;
 };
-
-#endif /* KCM_VIEW_MODELS_H_ */

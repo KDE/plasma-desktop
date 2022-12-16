@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DESKTOPPLUGIN_H
-#define DESKTOPPLUGIN_H
+#pragma once
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
@@ -18,5 +17,3 @@ class DesktopPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // DESKTOPPLUGIN_H

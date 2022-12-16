@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef _KCM_SEARCH_H
-#define _KCM_SEARCH_H
+#pragma once
 
 #include <KNSCore/EntryWrapper>
 #include <KPackage/Package>
@@ -67,5 +66,3 @@ private:
     QString m_packageRoot;
     QSortFilterProxyModel *m_sortModel = nullptr;
 };
-
-#endif

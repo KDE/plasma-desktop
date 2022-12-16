@@ -6,8 +6,7 @@
 
 #include "AbstractJob.h"
 
-#ifndef PACKAGEKITJOB_H
-#define PACKAGEKITJOB_H
+#pragma once
 
 #include <PackageKit/Transaction>
 
@@ -29,5 +28,3 @@ private Q_SLOTS:
     void transactionError(PackageKit::Transaction::Error, const QString &details);
     void transactionFinished(PackageKit::Transaction::Exit status, uint);
 };
-
-#endif // PACKAGEKITJOB_H

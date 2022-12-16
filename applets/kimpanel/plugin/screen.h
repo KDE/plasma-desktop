@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SCREEN_H
-#define SCREEN_H
+#pragma once
 
 #include <QObject>
 #include <QRect>
@@ -20,5 +19,3 @@ public:
     Q_INVOKABLE QRect geometryForPoint(int x, int y);
     Q_INVOKABLE qreal devicePixelRatioForPoint(int x, int y);
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MENUHELPER_H
-#define MENUHELPER_H
+#pragma once
 
 #include <QObject>
 
@@ -23,5 +22,3 @@ public:
 
     Q_INVOKABLE void setMenu(QAction *action, QObject *menu);
 };
-
-#endif

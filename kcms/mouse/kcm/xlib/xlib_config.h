@@ -7,8 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XLIBCONFIG_H
-#define XLIBCONFIG_H
+#pragma once
 
 #include "../configplugin.h"
 #include "backends/x11/evdev_settings.h"
@@ -52,5 +51,3 @@ private:
 
     X11EvdevBackend *m_backend;
 };
-
-#endif // XLIBCONFIG_H

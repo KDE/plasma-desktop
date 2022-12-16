@@ -4,8 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef KIMPANEL_AGENT_H
-#define KIMPANEL_AGENT_H
+#pragma once
 
 #include "kimpanelagenttype.h"
 
@@ -95,5 +94,3 @@ private:
     QDBusConnection m_connection;
     static int m_connectionIndex;
 };
-
-#endif // KIMPANEL_AGENT_H

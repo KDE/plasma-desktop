@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef XKBOBJECT_H
-#define XKBOBJECT_H
+#pragma once
 
 #include <QObject>
 
@@ -34,5 +33,3 @@ protected:
 
     XkbDescPtr xkb = nullptr;
 };
-
-#endif // XKBOBJECT_H

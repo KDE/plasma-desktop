@@ -3,8 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CLOCK_HELPER_H
-#define CLOCK_HELPER_H
+#pragma once
 #include <QObject>
 #include <kauth_version.h>
 #if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
@@ -34,5 +33,3 @@ private:
 
     void toHwclock();
 };
-
-#endif // CLOCK_HELPER_H

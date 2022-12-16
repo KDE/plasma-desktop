@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CUSTOMSLIDER_H
-#define CUSTOMSLIDER_H
+#pragma once
 
 #include <QSlider>
 
@@ -77,5 +76,3 @@ private:
     double m_min, m_max, m_value;
     const Interpolator *m_interpolator;
 };
-
-#endif // CUSTOMSLIDER_H

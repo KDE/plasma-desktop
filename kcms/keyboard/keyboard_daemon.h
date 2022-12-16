@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KEYBOARD_DAEMON_H_
-#define KEYBOARD_DAEMON_H_
+#pragma once
 
 #include <KDEDModule>
 #include <QStringList>
@@ -57,5 +56,3 @@ public:
     KeyboardDaemon(QObject *parent, const QList<QVariant> &);
     ~KeyboardDaemon() override;
 };
-
-#endif /* KEYBOARD_DAEMON_H_ */

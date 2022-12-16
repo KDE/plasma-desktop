@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SHORTCUTSMODEL_H
-#define SHORTCUTSMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <memory>
@@ -121,5 +120,3 @@ private:
     friend class ShortcutsModelPrivate;
     const std::unique_ptr<ShortcutsModelPrivate> d;
 };
-
-#endif

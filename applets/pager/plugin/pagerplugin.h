@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PAGERPLUGIN_H
-#define PAGERPLUGIN_H
+#pragma once
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
@@ -17,5 +16,3 @@ class KickoffPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // PAGERPLUGIN_H

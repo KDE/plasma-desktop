@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef WHEELINTERCEPTOR_H
-#define WHEELINTERCEPTOR_H
+#pragma once
 
 #include <QPointer>
 #include <QQuickItem>
@@ -32,5 +31,3 @@ protected:
 private:
     QPointer<QObject> m_destination;
 };
-
-#endif

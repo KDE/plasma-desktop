@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SMARTLAUNCHER_BACKEND_H
-#define SMARTLAUNCHER_BACKEND_H
+#pragma once
 
 #include <QDBusContext>
 #include <QHash>
@@ -119,5 +118,3 @@ private:
 };
 
 } // namespace SmartLauncher
-
-#endif // SMARTLAUNCHER_BACKEND_H

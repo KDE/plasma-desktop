@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef UTILS_CONTINUE_WITH_H
-#define UTILS_CONTINUE_WITH_H
+#pragma once
 
 #include <QDebug>
 #include <QFuture>
@@ -87,5 +86,3 @@ inline void continue_with(const QFuture<_ReturnType> &future, _Continuation &&co
 
 } // namespace utils
 } // namespace kamd
-
-#endif /* !UTILS_CONTINUE_WITH_H */

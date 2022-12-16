@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADPARAMETERSBASE_H
-#define TOUCHPADPARAMETERSBASE_H
+#pragma once
 
 #include <QVariantHash>
 
@@ -33,5 +32,3 @@ public:
         return static_cast<T>(systemDefault(name, static_cast<int>(hardcoded)));
     }
 };
-
-#endif // TOUCHPADPARAMETERSBASE_H

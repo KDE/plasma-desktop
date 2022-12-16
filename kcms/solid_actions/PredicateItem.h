@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PREDICATEITEM_H
-#define PREDICATEITEM_H
+#pragma once
 
 #include <Solid/Predicate>
 
@@ -40,5 +39,3 @@ private:
 };
 
 Q_DECLARE_METATYPE(PredicateItem *)
-
-#endif

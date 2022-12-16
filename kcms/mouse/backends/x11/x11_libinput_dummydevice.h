@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef X11LIBINPUTDUMMYDEVICE_H
-#define X11LIBINPUTDUMMYDEVICE_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -299,5 +298,3 @@ private:
     LibinputSettings *m_settings;
     Display *m_dpy = nullptr;
 };
-
-#endif // X11LIBINPUTDUMMYDEVICE_H

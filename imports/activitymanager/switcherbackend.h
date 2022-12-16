@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SWITCHER_BACKEND_H
-#define SWITCHER_BACKEND_H
+#pragma once
 
 // Qt
 #include <QHash>
@@ -103,5 +102,3 @@ private:
     SortedActivitiesModel *m_runningActivitiesModel = nullptr;
     SortedActivitiesModel *m_stoppedActivitiesModel = nullptr;
 };
-
-#endif // SWITCHER_BACKEND_H

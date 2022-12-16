@@ -4,8 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-#ifndef __PANEL_IMPANEL_H__
-#define __PANEL_IMPANEL_H__
+#pragma once
 
 #include <ibus.h>
 
@@ -34,5 +33,3 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel *impanel, gboolean start, gboo
 void ibus_panel_impanel_move_next(IBusPanelImpanel *impanel);
 
 G_END_DECLS
-
-#endif

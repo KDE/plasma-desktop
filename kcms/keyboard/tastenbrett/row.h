@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef ROW_H
-#define ROW_H
+#pragma once
 
 #include <QRect>
 
@@ -38,5 +37,3 @@ public:
     QList<QObject *> keys;
     QRect bounds;
 };
-
-#endif // ROW_H

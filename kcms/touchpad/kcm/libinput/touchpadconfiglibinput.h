@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADCONFIGLIBINPUT_H
-#define TOUCHPADCONFIGLIBINPUT_H
+#pragma once
 
 #include "../touchpadconfigplugin.h"
 
@@ -49,5 +48,3 @@ private:
 
     bool m_initError;
 };
-
-#endif // TOUCHPADCONFIGLIBINPUT_H

@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LIBINPUTCOMMON_H
-#define LIBINPUTCOMMON_H
+#pragma once
 
 #include <QObject>
 #include <QVariant>
@@ -562,5 +561,3 @@ protected:
     Prop<bool> m_defaultClickMethodClickfinger = Prop<bool>("defaultClickMethodClickfinger");
     Prop<bool> m_clickMethodClickfinger = Prop<bool>("clickMethodClickfinger");
 };
-
-#endif // LIBINPUTCOMMON_H

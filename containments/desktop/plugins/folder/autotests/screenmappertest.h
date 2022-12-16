@@ -7,8 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SCREENMAPPERTEST_H
-#define SCREENMAPPERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -42,5 +41,3 @@ private:
     QString m_currentActivity;
     QString m_alternativeActivity;
 };
-
-#endif // SCREENMAPPERTEST_H

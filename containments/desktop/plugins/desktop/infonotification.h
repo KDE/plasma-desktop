@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INFONOTIFICATION_H
-#define INFONOTIFICATION_H
+#pragma once
 
 #include <QObject>
 #include <QPointer>
@@ -59,5 +58,3 @@ private:
     QString m_acknowledgeActionText;
     QPointer<KNotification> m_notification;
 };
-
-#endif

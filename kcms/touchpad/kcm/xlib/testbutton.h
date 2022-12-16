@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TESTBUTTON_H
-#define TESTBUTTON_H
+#pragma once
 
 #include <QPushButton>
 
@@ -26,5 +25,3 @@ private:
     QString m_originalText;
     bool m_firstClick;
 };
-
-#endif // TESTBUTTON_H

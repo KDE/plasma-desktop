@@ -7,8 +7,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef GTKACCELPARSE_P_H
-#define GTKACCELPARSE_P_H
+#pragma once
 
 #include <glib.h>
 
@@ -63,5 +62,3 @@ typedef enum {
 void _gtk_accelerator_parse(const gchar *accelerator, guint *accelerator_key, GdkModifierType *accelerator_mods);
 
 G_END_DECLS
-
-#endif // GDKACCELPARSE_P_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KEYBOARDSETTINGSDATA_H
-#define KEYBOARDSETTINGSDATA_H
+#pragma once
 
 #include <QObject>
 
@@ -28,5 +27,3 @@ private:
     KeyboardConfig *m_keyboardConfig;
     KeyboardMiscSettings *m_miscSettings;
 };
-
-#endif // KEYBOARDSETTINGSDATA_H

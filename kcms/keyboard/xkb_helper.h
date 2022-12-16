@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XKB_HELPER_H_
-#define XKB_HELPER_H_
+#pragma once
 
 #include <QStringList>
 
@@ -19,5 +18,3 @@ public:
     static bool initializeKeyboardLayouts(const QList<LayoutUnit> &layouts);
     static bool runConfigLayoutCommand(const QStringList &setxkbmapCommandArguments);
 };
-
-#endif /* XKB_HELPER_H_ */

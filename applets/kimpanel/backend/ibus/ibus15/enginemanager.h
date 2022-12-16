@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-#ifndef ENGINEMANAGER_H
-#define ENGINEMANAGER_H
+#pragma once
 #include <QByteArray>
 #include <QList>
 #include <QMap>
@@ -51,5 +50,3 @@ private:
     bool m_useGlobalEngine;
     void freeOldEngine();
 };
-
-#endif // PROPERTYMANAGER_H

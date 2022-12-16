@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef BLACKLISTED_APPLICATIONS_MODEL_H
-#define BLACKLISTED_APPLICATIONS_MODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -53,5 +52,3 @@ public Q_SLOTS:
 private:
     D_PTR;
 };
-
-#endif // BLACKLISTED_APPLICATIONS_MODEL_H

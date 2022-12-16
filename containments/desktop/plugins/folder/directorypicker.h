@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DIRECTORYPICKER_H
-#define DIRECTORYPICKER_H
+#pragma once
 
 #include <QObject>
 #include <QUrl>
@@ -36,5 +35,3 @@ private:
     QFileDialog *m_dialog = nullptr;
     QUrl m_url;
 };
-
-#endif

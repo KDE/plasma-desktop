@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERMODEL_H
-#define FOLDERMODEL_H
+#pragma once
 
 #include <QImage>
 #include <QItemSelection>
@@ -385,5 +384,3 @@ private:
     bool m_dragInProgress = false;
     QPointer<FolderModel> m_dragOwner;
 };
-
-#endif

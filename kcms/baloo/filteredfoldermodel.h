@@ -7,8 +7,7 @@
 
 */
 
-#ifndef FILTEREDFOLDERMODEL_H
-#define FILTEREDFOLDERMODEL_H
+#pragma once
 
 #include <Baloo/IndexerConfig>
 #include <QAbstractListModel>
@@ -56,5 +55,3 @@ private:
 
     void syncFolderConfig(const FolderInfo &entry);
 };
-
-#endif // FILTEREDFOLDERMODEL_H

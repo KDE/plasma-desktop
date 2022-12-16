@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FLAGS_H_
-#define FLAGS_H_
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -33,5 +32,3 @@ private:
 
     QMap<QString, QIcon> iconMap;
 };
-
-#endif /* FLAGS_H_ */

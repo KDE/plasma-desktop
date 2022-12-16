@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef UDEV_HELPER_H_
-#define UDEV_HELPER_H_
+#pragma once
 
 #include <QObject>
 
@@ -28,5 +27,3 @@ private:
     struct udev *m_udev;
     struct udev_monitor *m_monitor;
 };
-
-#endif // UDEV_HELPER_H_

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LIBINPUTTOUCHPAD_H
-#define LIBINPUTTOUCHPAD_H
+#pragma once
 
 #include "backends/libinputcommon.h"
 #include "xlibtouchpad.h"
@@ -145,5 +144,3 @@ private:
 
     QString m_name;
 };
-
-#endif // LIBINPUTTOUCHPAD_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KDED_H
-#define KDED_H
+#pragma once
 
 #include <QDBusPendingCallWatcher>
 #include <QDBusServiceWatcher>
@@ -72,5 +71,3 @@ private:
 
     bool m_preparingForSleep = false;
 };
-
-#endif // KDED_H

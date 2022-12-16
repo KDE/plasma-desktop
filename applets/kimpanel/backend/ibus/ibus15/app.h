@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef APP_H
-#define APP_H
+#pragma once
 #include <ibus.h>
 #include <xcb/xcb.h>
 #include <xcb/xcb_keysyms.h>
@@ -70,5 +69,3 @@ private:
     QMap<QByteArray, QByteArray> m_iconMap;
     QDBusServiceWatcher *m_watcher;
 };
-
-#endif // APP_H

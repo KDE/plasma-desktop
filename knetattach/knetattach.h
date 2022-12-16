@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KNETATTACH_H
-#define KNETATTACH_H
+#pragma once
 
 #include "ui_knetattach.h"
 
@@ -35,5 +34,3 @@ private Q_SLOTS:
     void slotHelpClicked();
     void slotPageChanged(int);
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LAUNCHFEEDBACKSETTINGS_H
-#define LAUNCHFEEDBACKSETTINGS_H
+#pragma once
 
 #include "launchfeedbacksettingsbase.h"
 
@@ -48,5 +47,3 @@ private:
     using NotifySignalType = void (LaunchFeedbackSettings::*)();
     void addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue, NotifySignalType notifySignal);
 };
-
-#endif // LAUNCHFEEDBACKSETTINGS_H

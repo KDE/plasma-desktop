@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef POSITIONER_H
-#define POSITIONER_H
+#pragma once
 
 #include <QAbstractItemModel>
 
@@ -135,5 +134,3 @@ private:
     QHash<int, int> m_sourceToProxy;
     bool m_beginInsertRowsCalled = false; // used to sync the amount of begin/endInsertRows calls
 };
-
-#endif

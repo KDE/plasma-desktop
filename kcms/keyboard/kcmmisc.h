@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef __KCMMISC_H__
-#define __KCMMISC_H__
+#pragma once
 
 #include <QMap>
 #include <QString>
@@ -105,5 +104,3 @@ private:
     Ui_KeyboardConfigWidget &ui;
     KeyboardMiscSettings *m_settings;
 };
-
-#endif

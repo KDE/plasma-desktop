@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LIBINPUTCONFIG_H
-#define LIBINPUTCONFIG_H
+#pragma once
 
 #include "../configplugin.h"
 
@@ -47,5 +46,3 @@ private:
 
     bool m_initError;
 };
-
-#endif // LIBINPUTCONFIG_H

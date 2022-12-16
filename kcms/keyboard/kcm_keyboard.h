@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KCM_KEYBOARD_H_
-#define KCM_KEYBOARD_H_
+#pragma once
 
 #include "workspace_options.h"
 #include <KCModule>
@@ -37,5 +36,3 @@ private:
     KCMKeyboardWidget *widget;
     KCMiscKeyboardWidget *m_miscWidget;
 };
-
-#endif /* KCM_KEYBOARD_H_ */

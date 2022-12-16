@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef GEOMETRY_H
-#define GEOMETRY_H
+#pragma once
 
 #include "xkbobject.h"
 
@@ -28,5 +27,3 @@ public:
     qreal widthMM = -1;
     qreal heightMM = -1;
 };
-
-#endif // GEOMETRY_H

@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERPLUGIN_PRIVATE_EXPORT_H
-#define FOLDERPLUGIN_PRIVATE_EXPORT_H
+#pragma once
 
 #include "folderplugin_export.h"
 
@@ -18,5 +17,3 @@
 #else /* not compiling tests */
 #define FOLDERPLUGIN_TESTS_EXPORT
 #endif
-
-#endif // FOLDERPLUGIN_PRIVATE_EXPORT_H

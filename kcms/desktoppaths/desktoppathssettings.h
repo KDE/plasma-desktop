@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DESKTOPPATHSSETTINGS_H
-#define DESKTOPPATHSSETTINGS_H
+#pragma once
 
 #include <KCoreConfigSkeleton>
 
@@ -58,5 +57,3 @@ private:
 private:
     XdgPathsSettingsStore *const m_xdgPathsStore;
 };
-
-#endif

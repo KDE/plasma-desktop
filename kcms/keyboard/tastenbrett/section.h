@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef SECTION_H
-#define SECTION_H
+#pragma once
 
 #include "xkbobject.h"
 
@@ -38,5 +37,3 @@ public:
     QList<QObject *> rows;
     QList<QObject *> doodads;
 };
-
-#endif // SECTION_H

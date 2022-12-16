@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SLIDERPAIR_H
-#define SLIDERPAIR_H
+#pragma once
 
 #include <QObject>
 
@@ -24,5 +23,3 @@ private Q_SLOTS:
 private:
     QSlider *m_minSlider, *m_maxSlider;
 };
-
-#endif // SLIDERPAIR_H

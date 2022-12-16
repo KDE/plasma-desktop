@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-#ifndef XKBLAYOUTMANAGER_H
-#define XKBLAYOUTMANAGER_H
+#pragma once
 
 #include <QSet>
 #include <QString>
@@ -35,5 +34,3 @@ private:
     bool m_useXkbModmap;
     void runXmodmap();
 };
-
-#endif // XKBLAYOUT_H

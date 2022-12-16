@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XCBATOM_H
-#define XCBATOM_H
+#pragma once
 
 #include <xcb/xcb.h>
 
@@ -32,5 +31,3 @@ private:
     xcb_intern_atom_reply_t *m_reply;
     bool m_fetched;
 };
-
-#endif // XCBATOM_H

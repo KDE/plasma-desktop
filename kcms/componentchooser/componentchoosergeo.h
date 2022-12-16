@@ -3,8 +3,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef COMPONENTCHOOSERGEO_H
-#define COMPONENTCHOOSERGEO_H
+#pragma once
 
 #include "componentchooser.h"
 
@@ -14,5 +13,3 @@ public:
     explicit ComponentChooserGeo(QObject *parent);
     void save() override;
 };
-
-#endif

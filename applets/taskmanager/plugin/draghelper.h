@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DRAGHELPER_H
-#define DRAGHELPER_H
+#pragma once
 
 #include <QQuickItem>
 #include <QVariantMap>
@@ -22,5 +21,3 @@ public:
 
     Q_INVOKABLE QVariantMap generateMimeData(const QString &mimeType, const QVariant &mimeData, const QUrl &url) const;
 };
-
-#endif

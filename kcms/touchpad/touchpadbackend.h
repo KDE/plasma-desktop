@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TOUCHPADBACKEND_H
-#define TOUCHPADBACKEND_H
+#pragma once
 
 #include <QObject>
 #include <QVariantHash>
@@ -132,5 +131,3 @@ Q_SIGNALS:
     void touchpadAdded(bool success);
     void touchpadRemoved(int index);
 };
-
-#endif // TOUCHPADBACKEND_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BINDINGS_H_
-#define BINDINGS_H_
+#pragma once
 
 #include <KActionCollection>
 
@@ -30,5 +29,3 @@ public:
 private:
     bool configAction;
 };
-
-#endif /* BINDINGS_H_ */

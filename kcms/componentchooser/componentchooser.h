@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef COMPONENTCHOOSER_H
-#define COMPONENTCHOOSER_H
+#pragma once
 
 #include <QString>
 #include <QVariant>
@@ -51,5 +50,3 @@ protected:
     QString m_previousApplication;
     QString m_dialogText;
 };
-
-#endif

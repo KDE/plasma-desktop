@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef RUBBERBAND_H
-#define RUBBERBAND_H
+#pragma once
 
 #include <QQuickPaintedItem>
 
@@ -31,5 +30,3 @@ protected:
 private:
     QRectF m_geometry;
 };
-
-#endif

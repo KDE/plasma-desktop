@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ACTIVITY_SWITCHER_EXTENSION_PLUGIN_H
-#define ACTIVITY_SWITCHER_EXTENSION_PLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -18,5 +17,3 @@ public:
     explicit ActivitySwitcherExtensionPlugin(QObject *parent = nullptr);
     void registerTypes(const char *uri) override;
 };
-
-#endif // ACTIVITY_SWITCHER_EXTENSION_PLUGIN_H

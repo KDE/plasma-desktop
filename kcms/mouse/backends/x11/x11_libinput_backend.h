@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef X11LIBINPUTBACKEND_H
-#define X11LIBINPUTBACKEND_H
+#pragma once
 
 #include "x11_backend.h"
 
@@ -45,5 +44,3 @@ private:
     QObject *m_device;
     QString m_errorString = QString();
 };
-
-#endif // X11LIBINPUTBACKEND_H

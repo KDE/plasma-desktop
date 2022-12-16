@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KDEDACTIONS_H
-#define KDEDACTIONS_H
+#pragma once
 
 #include <KActionCollection>
 
@@ -20,5 +19,3 @@ Q_SIGNALS:
     void disableTriggered();
     void toggleTriggered();
 };
-
-#endif // KDEDACTIONS_H

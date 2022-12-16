@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef EXTRA_ACTIVITIES_INTERFACE_H
-#define EXTRA_ACTIVITIES_INTERFACE_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -32,5 +31,3 @@ public Q_SLOTS:
 private:
     D_PTR;
 };
-
-#endif // EXTRA_ACTIVITIES_INTERFACE_H

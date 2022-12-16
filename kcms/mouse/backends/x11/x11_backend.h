@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef X11BACKEND_H
-#define X11BACKEND_H
+#pragma once
 
 #include "inputbackend.h"
 
@@ -42,5 +41,3 @@ protected:
     Display *m_dpy = nullptr;
     bool m_platformX11;
 };
-
-#endif // X11BACKEND_H

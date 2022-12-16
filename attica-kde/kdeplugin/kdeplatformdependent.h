@@ -8,8 +8,7 @@
 
 */
 
-#ifndef ATTICA_KDEPLATFORMDEPENDENT_H
-#define ATTICA_KDEPLATFORMDEPENDENT_H
+#pragma once
 
 #include <attica/platformdependent.h>
 
@@ -55,5 +54,3 @@ private:
 };
 
 }
-
-#endif

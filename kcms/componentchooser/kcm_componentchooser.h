@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KCMCOMPONENTCHOOSER_H
-#define KCMCOMPONENTCHOOSER_H
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -42,5 +41,3 @@ public:
 private:
     ComponentChooserData *const m_data;
 };
-
-#endif

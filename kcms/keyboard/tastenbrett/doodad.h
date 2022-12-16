@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef DOODAD_H
-#define DOODAD_H
+#pragma once
 
 #include <QColor>
 
@@ -153,5 +152,3 @@ public:
 
     Shape *shape = nullptr;
 };
-
-#endif // DOODAD_H

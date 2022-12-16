@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XINPUT_HELPER_H_
-#define XINPUT_HELPER_H_
+#pragma once
 
 #include "x11_helper.h"
 
@@ -43,5 +42,3 @@ private:
     QTimer *keyboardNotificationTimer;
     QTimer *mouseNotificationTimer;
 };
-
-#endif /* XINPUT_HELPER_H_ */

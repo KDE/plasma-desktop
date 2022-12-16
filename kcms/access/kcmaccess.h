@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#ifndef __kcmaccess_h__
-#define __kcmaccess_h__
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 #include <QColor>
@@ -76,5 +75,3 @@ private:
     QString m_desktopShortcutInfo;
     bool m_screenReaderInstalled;
 };
-
-#endif

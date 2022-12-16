@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef TOUCHPADSERVICE_H
-#define TOUCHPADSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 
@@ -24,5 +23,3 @@ private:
     OrgKdeTouchpadInterface *m_daemon;
     QString m_destination;
 };
-
-#endif // TOUCHPADSERVICE_H

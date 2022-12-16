@@ -4,9 +4,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KEYBOARD_HARDWARE_H_
-#define KEYBOARD_HARDWARE_H_
+#pragma once
 
 void init_keyboard_hardware();
-
-#endif /* KEYBOARD_HARDWARE_H_ */

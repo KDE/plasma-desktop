@@ -6,8 +6,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef SCREENMAPPER_H
-#define SCREENMAPPER_H
+#pragma once
 
 #include <QObject>
 #include <QVariantHash>
@@ -100,5 +99,3 @@ private:
 
     friend class ScreenMapperTest;
 };
-
-#endif // SCREENMAPPER_H

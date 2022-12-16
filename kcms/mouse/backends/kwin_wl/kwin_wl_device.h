@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KWINWAYLANDDEVICE_H
-#define KWINWAYLANDDEVICE_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -295,5 +294,3 @@ private:
 
     QString m_dbusName;
 };
-
-#endif // KWINWAYLANDDEVICE_H

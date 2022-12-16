@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef RECENT_FILES_H
-#define RECENT_FILES_H
+#pragma once
 
 #include <KCModule>
 #include <KPluginFactory>
@@ -54,5 +53,3 @@ private:
 
     D_PTR;
 };
-
-#endif // RECENT_FILES_H

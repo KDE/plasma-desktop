@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef UTILS_OPTIONAL_VIEW_H
-#define UTILS_OPTIONAL_VIEW_H
+#pragma once
 
 namespace kamd
 {
@@ -65,5 +64,3 @@ optional_view<T> make_optional_view(const T &value)
 
 } // namespace utils
 } // namespace kamd
-
-#endif // UTILS_OPTIONAL_VIEW_H

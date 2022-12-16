@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DEVICEAUTOMOUNTERKCM_H
-#define DEVICEAUTOMOUNTERKCM_H
+#pragma once
 
 #include <KCModule>
 
@@ -41,5 +40,3 @@ private:
     DeviceModel *const m_devices;
     bool m_unmanagedChanges = false;
 };
-
-#endif

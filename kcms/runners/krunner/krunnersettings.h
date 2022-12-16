@@ -7,8 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KRUNNERSETTINGS_H
-#define KRUNNERSETTINGS_H
+#pragma once
 
 #include <KActivities/Consumer>
 #include <KConfigGroup>
@@ -71,5 +70,3 @@ private:
 
     const QString nullUuid = QStringLiteral("00000000-0000-0000-0000-000000000000");
 };
-
-#endif // KRUNNERSETTINGS_H

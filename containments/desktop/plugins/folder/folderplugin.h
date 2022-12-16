@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERPLUGIN_H
-#define FOLDERPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -17,5 +16,3 @@ class FolderPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // FOLDERPLUGIN_H

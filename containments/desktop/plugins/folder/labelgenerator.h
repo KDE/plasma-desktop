@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LABELGENERATOR_H
-#define LABELGENERATOR_H
+#pragma once
 
 #include <QObject>
 #include <QPointer>
@@ -64,5 +63,3 @@ private:
     QString m_displayLabel;
     QString m_labelText;
 };
-
-#endif

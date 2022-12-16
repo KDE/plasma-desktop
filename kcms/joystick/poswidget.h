@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _POSWIDGET_H_
-#define _POSWIDGET_H_
+#pragma once
 
 #include <QList>
 #include <QWidget>
@@ -37,5 +36,3 @@ private:
     bool trace;
     QList<QPoint> tracePoints;
 };
-
-#endif

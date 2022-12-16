@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef KIMPANELPLUGIN_H
-#define KIMPANELPLUGIN_H
+#pragma once
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
@@ -18,5 +17,3 @@ class KimpanelPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // KIMPANELPLUGIN_H

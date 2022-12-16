@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BACKEND_H
-#define BACKEND_H
+#pragma once
 
 #include <QObject>
 #include <QRect>
@@ -100,5 +99,3 @@ private:
     KActivities::Consumer *m_activitiesConsumer = nullptr;
     bool m_windowViewAvailable = false;
 };
-
-#endif

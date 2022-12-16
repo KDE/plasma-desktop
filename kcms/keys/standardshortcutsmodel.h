@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef STANDARDSHORTCUTSMODEL_H
-#define STANDARDSHORTCUTSMODEL_H
+#pragma once
 
 #include "basemodel.h"
 
@@ -21,5 +20,3 @@ public:
     void exportToConfig(const KConfigBase &config) override;
     void importConfig(const KConfigBase &config) override;
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef BASEMODEL_H
-#define BASEMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QKeySequence>
@@ -77,5 +76,3 @@ public:
 protected:
     QVector<Component> m_components;
 };
-
-#endif

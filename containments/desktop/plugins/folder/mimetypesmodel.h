@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MIMETYPESMODEL_H
-#define MIMETYPESMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QMimeType>
@@ -43,5 +42,3 @@ private:
     QList<QMimeType> m_mimeTypesList;
     QVector<bool> m_checkedRows;
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CUSTOMCONFIGDIALOGMANAGER_H
-#define CUSTOMCONFIGDIALOGMANAGER_H
+#pragma once
 
 #include <QMap>
 #include <QVariantHash>
@@ -30,5 +29,3 @@ private:
     QMap<QString, QWidget *> m_widgets;
     KCoreConfigSkeleton *m_config;
 };
-
-#endif // CUSTOMCONFIGDIALOGMANAGER_H

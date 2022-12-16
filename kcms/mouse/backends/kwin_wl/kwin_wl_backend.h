@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KWINWAYLANDBACKEND_H
-#define KWINWAYLANDBACKEND_H
+#pragma once
 
 #include "inputbackend.h"
 
@@ -62,5 +61,3 @@ private:
 
     QString m_errorString = QString();
 };
-
-#endif // KWINWAYLANDBACKEND_H

@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef TOUCHPADENGINE_H
-#define TOUCHPADENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -30,5 +29,3 @@ private:
     QString m_source;
     OrgKdeTouchpadInterface *m_daemon;
 };
-
-#endif // TOUCHPADENGINE_H

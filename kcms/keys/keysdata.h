@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef KEYSDATA_H
-#define KEYSDATA_H
+#pragma once
 
 #include <KCModuleData>
 
@@ -20,5 +19,3 @@ private:
     bool m_isDefault = true;
     int m_pendingComponentCalls = 0;
 };
-
-#endif

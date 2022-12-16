@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef XLIBTOUCHPAD_H
-#define XLIBTOUCHPAD_H
+#pragma once
 
 #include <QObject>
 #include <QSet>
@@ -97,5 +96,3 @@ protected:
     QStringList m_supported;
     const struct Parameter *m_paramList;
 };
-
-#endif

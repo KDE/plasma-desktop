@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _JOYWIDGET_H_
-#define _JOYWIDGET_H_
+#pragma once
 
 #include <QWidget>
 
@@ -60,5 +59,3 @@ private:
 
     JoyDevice *joydev;
 };
-
-#endif

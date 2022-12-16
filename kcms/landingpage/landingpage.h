@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef _KCM_LANDINGPAGE_H
-#define _KCM_LANDINGPAGE_H
+#pragma once
 
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
@@ -101,5 +100,3 @@ private:
 
     bool m_lnfDirty = false;
 };
-
-#endif // _KCM_LANDINGPAGE_H

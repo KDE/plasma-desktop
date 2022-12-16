@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DIRMODEL_H
-#define DIRMODEL_H
+#pragma once
 
 #include <KDirModel>
 #include <KSharedDataCache>
@@ -84,5 +83,3 @@ private:
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
     KImageCache *m_imageCache = nullptr;
 };
-
-#endif // DIRMODEL_H

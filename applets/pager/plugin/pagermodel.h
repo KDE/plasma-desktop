@@ -3,8 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PAGERMODEL_H
-#define PAGERMODEL_H
+#pragma once
 
 #include <config-X11.h>
 
@@ -121,5 +120,3 @@ private:
     class Private;
     std::unique_ptr<Private> d;
 };
-
-#endif

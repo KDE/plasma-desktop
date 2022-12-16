@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef DEVICEAUTOMOUNTER_H
-#define DEVICEAUTOMOUNTER_H
+#pragma once
 
 #include "AutomounterSettings.h"
 #include <KDEDModule>
@@ -27,5 +26,3 @@ private:
 
     AutomounterSettings *m_settings;
 };
-
-#endif

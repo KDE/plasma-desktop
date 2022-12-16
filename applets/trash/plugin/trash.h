@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRASH_H
-#define TRASH_H
+#pragma once
 
 #include <QObject>
 #include <QUrl>
@@ -23,5 +22,3 @@ public:
     Q_INVOKABLE bool canBeTrashed(const QUrl &url) const;
     Q_INVOKABLE QList<QUrl> trashableUrls(const QList<QUrl> &urls) const;
 };
-
-#endif // TRASH_H
