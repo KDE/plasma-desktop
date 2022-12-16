@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-04-27 12:23+0200\n"
+"PO-Revision-Date: 2022-12-15 10:49+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:116
@@ -387,6 +387,8 @@ msgstr "Inschakelen"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Om een toets geaccepteerd te krijgen, moet het ingedrukt gehouden worden "
+"gedurende de ingestelde hoeveelheid tijd"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -431,7 +433,7 @@ msgstr "Inschakelen"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Snel negeren, herhaald indrukken van dezelfde toets"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-11-19 06:18-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -364,17 +364,27 @@ msgstr "ਜਦੋਂ ਵਿੰਡੋ ਨੂੰ ਧਿਆਨ ਲੈਣ ਦੀ ਲ
 msgid "New tasks appear:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:223
+#, kde-format
+msgid "On the bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgid "To the right"
 msgstr "ਸੱਜੇ ਵੱਲ"
 
-#: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the left"
 msgstr "ਖੱਬੇ ਵੱਲ"
+
+#: package/contents/ui/ConfigBehavior.qml:241
+#, kde-format
+msgid "On the Top"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -565,13 +575,13 @@ msgstr "ਇਸ ਗਰੁੱਪ ਨੂੰ ਗਰੁੱਪ ਬਣਾਉਣ ਦੀ 
 msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:82
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "%1 ਚਲਾਓ"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -579,25 +589,25 @@ msgid_plural "There are %1 new messages."
 msgstr[0] "%1 ਨਵਾਂ ਸੁਨੇਹਾ ਹੈ।"
 msgstr[1] "%1 ਨਵੇਂ ਸੁਨੇਹੇ ਹਨ।"
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "%1 ਲਈ ਟੂਲ-ਟਿੱਪ ਵੇਖੋ"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "%1 ਲਈ ਵਿੰਡੋਆਂ ਨਾਲ ਨਾਲ ਵੇਖੋ"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
 msgstr "%1 ਸਰਗਰਮ ਕਰੋ"

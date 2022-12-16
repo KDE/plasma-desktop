@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-12-13 12:21\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -367,17 +367,27 @@ msgstr "窗口请求注意时，取消隐藏"
 msgid "New tasks appear:"
 msgstr "新任务出现位置："
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:223
+#, kde-format
+msgid "On the bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgid "To the right"
 msgstr "右侧"
 
-#: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the left"
 msgstr "左侧"
+
+#: package/contents/ui/ConfigBehavior.qml:241
+#, kde-format
+msgid "On the Top"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -568,38 +578,38 @@ msgstr "允许将此程序的窗口显示为分组"
 msgid "&Close"
 msgstr "关闭(&C)"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:82
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "启动 %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "有 %1 条新消息。"
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "显示 %1 的悬停信息"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "并排显示 %1 的窗口"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "打开 %1 的文本窗口列表"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
 msgstr "激活 %1"

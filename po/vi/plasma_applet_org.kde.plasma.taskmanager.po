@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-11-14 14:44+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -370,17 +370,27 @@ msgstr "Ngừng ẩn khi một cửa sổ cần sự chú ý"
 msgid "New tasks appear:"
 msgstr "Tác vụ mới hiện ra:"
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:223
+#, kde-format
+msgid "On the bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgid "To the right"
 msgstr "Ở bên phải"
 
-#: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the left"
 msgstr "Ở bên trái"
+
+#: package/contents/ui/ConfigBehavior.qml:241
+#, kde-format
+msgid "On the Top"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -571,38 +581,38 @@ msgstr "Cho phép chương trình này được nhóm"
 msgid "&Close"
 msgstr "Đón&g"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:82
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Khởi chạy %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "Có %1 thông điệp mới."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Hiện chú giải tác vụ cho %1"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Hiện các cửa sổ ở cạnh nhau cho %1"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Mở danh sách dạng chữ của các cửa sổ cho %1"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
 msgstr "Kích hoạt %1"

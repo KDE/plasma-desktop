@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-05-04 18:58+0100\n"
+"PO-Revision-Date: 2022-12-15 09:34+0000\n"
 "Last-Translator: Pedro Morais <morasi@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -375,6 +375,8 @@ msgstr "Activar"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Para uma tecla ser aceite, tem de ficar carregada durante o período de tempo "
+"indicado"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -419,7 +421,7 @@ msgstr "Activar"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Ignorar as sequências rápidas repetidas da mesma tecla"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

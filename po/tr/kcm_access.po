@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-04-28 12:02+0300\n"
+"PO-Revision-Date: 2022-12-15 19:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -382,6 +382,7 @@ msgstr "Etkinleştir"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Bir düğmenin kabul edilmesi için ayarlanmış süre kadar basılı tutulmalıdır"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -426,7 +427,7 @@ msgstr "Etkinleştir"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Bir düğmenin art arda hızlıca ve yinelenmiş basımlarını yok say"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

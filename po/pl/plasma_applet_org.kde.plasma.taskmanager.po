@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-12-10 11:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -369,17 +369,27 @@ msgstr "Odkryj, gdy okno oczekuje uwagi"
 msgid "New tasks appear:"
 msgstr "Nowe zadania pojawiają się:"
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:223
+#, kde-format
+msgid "On the bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgid "To the right"
 msgstr "Po prawej"
 
-#: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the left"
 msgstr "Po lewej"
+
+#: package/contents/ui/ConfigBehavior.qml:241
+#, kde-format
+msgid "On the Top"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -570,13 +580,13 @@ msgstr "Pozwól na grupowanie tego programu"
 msgid "&Close"
 msgstr "&Zamknij"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:82
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Uruchom %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -585,25 +595,25 @@ msgstr[0] "Istnieje %1 nowa wiadomość."
 msgstr[1] "Istnieją %1 nowe wiadomości."
 msgstr[2] "Istnieje %1 nowych wiadomości."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Pokaż mały podgląd okna po najechaniu na jego zadanie dla %1"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Pokaż okna obok siebie dla %1"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Otwórz tekstowy wykaz okien dla %1"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
 msgstr "Uaktywnij %1"

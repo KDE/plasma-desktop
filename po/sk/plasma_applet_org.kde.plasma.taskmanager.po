@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-11-22 17:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -377,17 +377,27 @@ msgstr "Zobraziť, keď chce okno pozornosť"
 msgid "New tasks appear:"
 msgstr "Nové úlohy sa zobrazia:"
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:223
+#, kde-format
+msgid "On the bottom"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgid "To the right"
 msgstr "Napravo"
 
-#: package/contents/ui/ConfigBehavior.qml:221
 #: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the left"
 msgstr "Naľavo"
+
+#: package/contents/ui/ConfigBehavior.qml:241
+#, kde-format
+msgid "On the Top"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -578,13 +588,13 @@ msgstr "Povoliť programu zoskupovanie"
 msgid "&Close"
 msgstr "&Zavrieť"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:82
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Spustiť %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -593,25 +603,25 @@ msgstr[0] "Pribudla %1 nová správa."
 msgstr[1] "Pribudli %1 nové správy."
 msgstr[2] "Pribudli %1 nové správy."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Zobraziť popis k úlohe pre %1"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Zobrazenie okien vedľa seba pre %1"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Otvorenie textového zoznamu okien pre %1"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivovať %1"

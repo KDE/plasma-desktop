@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2021-09-11 18:55+0530\n"
+"PO-Revision-Date: 2022-12-15 21:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -159,7 +159,7 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "மாற்றிவிசை அழுத்தப்படும்போது அறிவி"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
@@ -376,6 +376,7 @@ msgstr "இயக்கு"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"ஓர் விசையின்மீது இது செயல்பட, அவ்விசையை இவ்வளவு நேரமாவது தொடர்ச்சியாக அழுத்த வேண்டும்"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -389,28 +390,22 @@ msgid "Ring system bell:"
 msgstr "கணினி மணியை ஒலிக்கச்செய்:"
 
 #: package/contents/ui/KeyboardFilters.qml:55
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "&when any key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "&ஏதாவதொரு விசை அழுத்தப்படும்போது"
+msgstr "ஏதாவதொரு விசை &அழுத்தப்படும்போது"
 
 #: package/contents/ui/KeyboardFilters.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "&when any key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "ஏ&தாவதொரு விசை ஏற்கப்படும்போது"
+msgstr "ஏதாவதொரு விசை &ஏற்கப்படும்போது"
 
 #: package/contents/ui/KeyboardFilters.qml:83
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "&when any key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "ஏதாவதொரு &விசை மறுக்கப்படும்போது"
+msgstr "ஏதாவதொரு விசை &மறுக்கப்படும்போது"
 
 #: package/contents/ui/KeyboardFilters.qml:100
 #, kde-format
@@ -426,7 +421,7 @@ msgstr "இயக்கு"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "ஓர் விசையை குறுகிய இடைவெளியிலேயே திரும்பத்திரும்ப அழுத்துவதைப் பொருட்படுத்தாதே"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
