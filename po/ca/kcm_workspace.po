@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2022-06-20 19:29+0200\n"
+"PO-Revision-Date: 2022-12-17 11:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -28,11 +28,13 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Cal reiniciar el sistema perquè els canvis a la configuració d'enganxament"
+" amb el clic del mig tinguin efecte."
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Reinicia"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
@@ -227,22 +229,3 @@ msgstr "OSD en canvi de disposició"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Mostra un missatge emergent en canvis de disposició"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "General Behavior"
-#~ msgstr "Comportament general"
-
-#~ msgid "System Settings module for configuring general workspace behavior."
-#~ msgstr ""
-#~ "Mòdul de l'Arranjament del sistema per a configurar el comportament "
-#~ "general de l'espai de treball."
-
-#~ msgid "Furkan Tokac"
-#~ msgstr "Furkan Tokac"

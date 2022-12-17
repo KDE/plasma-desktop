@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-04-28 07:41+0200\n"
+"PO-Revision-Date: 2022-12-16 20:56+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -394,6 +394,8 @@ msgstr "Activer"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Pour qu'une touche soit acceptée, elle doit être maintenue enfoncée durant "
+"une certaine durée de temps."
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -438,7 +440,7 @@ msgstr "Activer"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Ignorer les appuis répétés et rapides de la même touche."
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
