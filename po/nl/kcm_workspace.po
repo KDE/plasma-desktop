@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 00:51+0000\n"
 "PO-Revision-Date: 2022-06-20 10:20+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -18,75 +18,87 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"The system must be restarted before changes to the middle-click paste "
+"setting can take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Visueel gedrag:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:26 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Informatieve tekstballonnen tonen bij erboven zweven met de muis"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:37 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Visuele terugkoppeling voor statuswijzigingen tonen"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animatiesnelheid:"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Traag"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:109
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Snel"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Op bestanden of mappen klikken:"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Ze openen"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:137
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Selecteren door te klikken op de selectiemarkering van het item"
 
-#: package/contents/ui/main.qml:122
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Ze selecteren"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "In plaats daarvan door dubbelklikken openen"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klikken in schuifbalktrack:"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -94,12 +106,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Schuift één pagina omhoog of omlaag"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Middelste muisklik om te schuiven naar locatie waarop is geklikt"
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -107,34 +119,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Schuift naar de locatie waarop is geklikt"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Middle Click:"
 msgstr "Middelste muisklik:"
 
-#: package/contents/ui/main.qml:194
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Paste selected text"
 msgstr "Geselecteerde tekst plakken"
 
-#: package/contents/ui/main.qml:211
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Aanraakmodus:"
 
-#: package/contents/ui/main.qml:213
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatisch inschakelen zoals nodig"
 
-#: package/contents/ui/main.qml:213 package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nooit ingeschakeld"
 
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -145,13 +157,13 @@ msgstr ""
 "aanraakscherm detecteert maar geen muis of touchpad. Bijvoorbeeld: wanneer "
 "een te transformeren toetsenbord van een laptop wordt afgekoppeld."
 
-#: package/contents/ui/main.qml:230
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Altijd ingeschakeld"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

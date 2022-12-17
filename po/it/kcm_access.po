@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-04-27 22:24+0200\n"
+"PO-Revision-Date: 2022-12-16 11:07+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -382,6 +382,8 @@ msgstr "Abilita"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Affinché un tasto sia accettato, deve essere trattenuto fino al periodo di "
+"tempo stabilito"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -426,7 +428,7 @@ msgstr "Abilita"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Ignora le pressioni rapide e ripetute dello stesso tasto"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

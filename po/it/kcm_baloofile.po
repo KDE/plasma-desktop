@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2014, 2017.
-# Paolo Zamponi <zapaolo@email.it>, 2017, 2019, 2020, 2021.
+# Paolo Zamponi <zapaolo@email.it>, 2017, 2019, 2020, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2021-05-29 14:28+0200\n"
+"PO-Revision-Date: 2022-12-14 19:03+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -57,12 +57,14 @@ msgstr "Elimina i dati indice"
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
+"Il sistema deve essere riavviato affinché che queste modifiche abbiano "
+"effetto."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Riavvia"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
