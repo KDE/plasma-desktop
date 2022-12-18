@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Window 2.15
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
@@ -60,9 +61,9 @@ Item {
 
     property bool touchingWindow: false
 
-    function rectOverlap(a, b) {
-        return (Math.max(a.left, b.left) - 1 <= Math.min(a.right, b.right) &&
-                Math.max(a.top, b.top) - 1 <= Math.min(a.bottom, b.bottom))
+    function rectOverlap(a, b, dpr) {
+        return (Math.max(a.left, b.left / dpr) - 1 <= Math.min(a.right, b.right / dpr) &&
+                Math.max(a.top, b.top / dpr) - 1 <= Math.min(a.bottom, b.bottom / dpr))
     }
 
     function updateWindows() {
@@ -71,8 +72,9 @@ Item {
             return
         }
         let panelGeo = panel.geometryByDistance(0)
+        const screenDevicePixelRatio = kwindowsystem.isPlatformX11 ? Screen.devicePixelRatio : 1
         for( var i = 0; i < visibleWindowsModel.rowCount(); i++ ) {
-            if (rectOverlap(panelGeo, visibleWindowsModel.get(i).Geometry)) {
+            if (rectOverlap(panelGeo, visibleWindowsModel.get(i).Geometry, screenDevicePixelRatio)) {
                 root.touchingWindow = true
                 return
             }
