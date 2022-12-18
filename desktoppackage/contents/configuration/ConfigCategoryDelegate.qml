@@ -25,7 +25,7 @@ QQC2.ItemDelegate {
 
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.name
-    Accessible.description: i18n("Open configuration page")
+    Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open configuration page")
 
     property var item
 //END properties

@@ -17,8 +17,8 @@ PlasmaCore.FrameSvgItem {
     property alias minimumLength: rightMinimumLengthHandle.value
     property alias maximumLength: rightMaximumLengthHandle.value
 
-    property string maximumText: (dialogRoot.vertical ? i18n("Drag to change maximum height.") : i18n("Drag to change maximum width.")) + "\n" + i18n("Double click to reset.")
-    property string minimumText: (dialogRoot.vertical ? i18n("Drag to change minimum height.") : i18n("Drag to change minimum width.")) + "\n" + i18n("Double click to reset.")
+    property string maximumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
+    property string minimumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
 
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
@@ -66,7 +66,7 @@ PlasmaCore.FrameSvgItem {
     SliderHandle {
         id: offsetHandle
         graphicElementName: "offsetslider"
-        description: i18n("Drag to change position on this screen edge.\nDouble click to reset.")
+        description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
         onValueChanged: panel.offset = value
         property int position: (dialogRoot.vertical) ? y : x
         /* The maximum/minimumPosition values are needed to prevent the user from moving a panel with

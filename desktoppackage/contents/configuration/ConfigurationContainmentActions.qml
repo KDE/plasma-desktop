@@ -92,7 +92,7 @@ Item {
 
                     return parts.map(function (item) {
                         return prettyStrings[item] || item;
-                    }).join(i18nc("Concatenation sign for shortcuts, e.g. Ctrl+Shift", "+"));
+                    }).join(i18ndc("plasma_shell_org.kde.plasma.desktop", "Concatenation sign for shortcuts, e.g. Ctrl+Shift", "+"));
                 }
                 eventString: model.action
                 onEventStringChanged: {
@@ -164,7 +164,7 @@ Item {
                         }
                         aboutComponent.incubateObject(root, {
                             "metaData": metaData,
-                            "title": i18nc("@title", "About"),
+                            "title": i18ndc("plasma_shell_org.kde.plasma.desktop", "@title", "About"),
                         }, Qt.Asynchronous);
                     }
                 }
