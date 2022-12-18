@@ -364,27 +364,6 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    // Avoid repositioning delegate item after dragFinished
-    Item {
-        anchors.fill: parent
-
-        DragHandler {
-            id: dragHandler
-
-            onActiveChanged: if (active) {
-                icon.grabToImage((result) => {
-                    tasks.dragSource = task;
-                    dragHelper.Drag.imageSource = result.url;
-                    dragHelper.Drag.mimeData = dragHelper.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
-                    dragHelper.Drag.active = dragHandler.active;
-                });
-            } else {
-                dragHelper.Drag.active = false;
-                dragHelper.Drag.imageSource = "";
-            }
-        }
-    }
-
     PlasmaCore.FrameSvgItem {
         id: frame
 
@@ -401,6 +380,23 @@ PlasmaCore.ToolTipArea {
         property bool isHovered: task.highlighted && plasmoid.configuration.taskHoverEffect
         property string basePrefix: "normal"
         prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix, plasmoid.location) : TaskTools.taskPrefix(basePrefix, plasmoid.location)
+
+        // Avoid repositioning delegate item after dragFinished
+        DragHandler {
+            id: dragHandler
+
+            onActiveChanged: if (active) {
+                icon.grabToImage((result) => {
+                    tasks.dragSource = task;
+                    dragHelper.Drag.imageSource = result.url;
+                    dragHelper.Drag.mimeData = dragHelper.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
+                    dragHelper.Drag.active = dragHandler.active;
+                });
+            } else {
+                dragHelper.Drag.active = false;
+                dragHelper.Drag.imageSource = "";
+            }
+        }
     }
 
     Loader {
