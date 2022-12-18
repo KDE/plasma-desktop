@@ -83,7 +83,7 @@ PlasmaCore.ToolTipArea {
         }
 
         let smartLauncherDescription = "";
-        if (taskBadgeOverlayLoader.active) {
+        if (iconBox.active) {
             smartLauncherDescription += i18ncp("@info:tooltip", "There is %1 new message.", "There are %1 new messages.", task.smartLauncherItem.count);
         }
 
@@ -413,7 +413,7 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    Item {
+    Loader {
         id: iconBox
 
         anchors {
@@ -426,6 +426,11 @@ PlasmaCore.ToolTipArea {
         width: height
         height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
             - adjustMargin(false, parent.height, taskFrame.margins.bottom))
+
+        asynchronous: true
+        active: height >= PlasmaCore.Units.iconSizes.small
+                && task.smartLauncherItem && task.smartLauncherItem.countVisible
+        source: "TaskBadgeOverlay.qml"
 
         function adjustMargin(vert, size, margin) {
             if (!size) {
@@ -451,19 +456,6 @@ PlasmaCore.ToolTipArea {
             usesPlasmaTheme: false
 
             source: model.decoration
-        }
-
-        Loader {
-            id: taskBadgeOverlayLoader
-            // QTBUG anchors.fill in conjunction with the Loader doesn't reliably work on creation:
-            // have a window with a badge, move it from one screen to another, the new task item on the
-            // other screen will now have a glitched out badge mask.
-            width: parent.width
-            height: parent.height
-            asynchronous: true
-            source: "TaskBadgeOverlay.qml"
-            active: height >= PlasmaCore.Units.iconSizes.small
-                    && task.smartLauncherItem && task.smartLauncherItem.countVisible
         }
 
         states: [
