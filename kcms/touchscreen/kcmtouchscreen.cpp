@@ -8,7 +8,6 @@
 */
 
 #include "kcmtouchscreen.h"
-#include "devicesmodel.h"
 #include "inputdevice.h"
 
 #include <KConfigGroup>

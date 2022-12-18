@@ -5,7 +5,6 @@
 */
 
 #include "kcmtablet.h"
-#include "devicesmodel.h"
 #include "inputdevice.h"
 #include "tabletevents.h"
 
