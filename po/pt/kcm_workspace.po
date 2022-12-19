@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2022-06-20 13:55+0100\n"
+"PO-Revision-Date: 2022-12-18 12:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -19,11 +19,13 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"É necessário reiniciar o sistema antes que as alterações da definição de "
+"colagem com o botão do meio do rato façam efeito."
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Reiniciar"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
@@ -219,22 +221,3 @@ msgstr "OSD por mudança da disposição"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Mostrar uma mensagem em caso de mudança da disposição"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "José Nuno Pires"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "zepires@gmail.com"
-
-#~ msgid "General Behavior"
-#~ msgstr "Comportamento Geral"
-
-#~ msgid "System Settings module for configuring general workspace behavior."
-#~ msgstr ""
-#~ "Módulo da Configuração do Sistema para configurar o comportamento geral "
-#~ "da área de trabalho."
-
-#~ msgid "Furkan Tokac"
-#~ msgstr "Furkan Tokac"
