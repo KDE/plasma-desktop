@@ -43,7 +43,7 @@ Kicker.DashboardWindow {
 
     keyEventProxy: searchField
 
-    backgroundColor: Qt.rgba(PlasmaCore.Theme.backgroundColor.r, PlasmaCore.Theme.backgroundColor.g, PlasmaCore.Theme.backgroundColor.b, 0.75)
+    backgroundColor: Qt.rgba(PlasmaCore.Theme.backgroundColor.r, PlasmaCore.Theme.backgroundColor.g, PlasmaCore.Theme.backgroundColor.b, 1.0)
 
     onKeyEscapePressed: {
         if (searching) {
