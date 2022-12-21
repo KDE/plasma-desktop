@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-24 11:58-0300\n"
+"PO-Revision-Date: 2022-12-20 11:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -151,11 +151,10 @@ msgstr ""
 "konsole'."
 
 #: package/contents/ui/main.qml:152
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen on next restart"
-msgstr "Entrar na configuração do UEFI ao reiniciar"
+msgstr "Entrar na tela de configuração do UEFI ao reiniciar"
 
 #: package/contents/ui/main.qml:153
 #, kde-format

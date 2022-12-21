@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-03 00:48+0000\n"
-"PO-Revision-Date: 2022-10-19 15:26-0300\n"
+"PO-Revision-Date: 2022-12-20 11:23-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -59,7 +59,7 @@ msgstr "Ícone:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Alterar o ícone do lançador de aplicativos"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -68,6 +68,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"O ícone atual é %1. Clique para abrir o menu para alterar o ícone atual ou "
+"redefinir para o ícone padrão."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -79,7 +81,7 @@ msgstr "Escolher..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Escolha um ícone para o lançador de aplicativos"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -109,7 +111,7 @@ msgstr "Digite aqui para adicionar uma etiqueta de texto"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Redefinir etiqueta do menu"
 
 #: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
@@ -220,7 +222,7 @@ msgstr "Locais"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nenhuma correspondência"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format

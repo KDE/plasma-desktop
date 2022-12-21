@@ -2,20 +2,21 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006-2008, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2019-08-06 23:02+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2022-12-21 04:17+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 19.07.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kcmaccess.cpp:116
@@ -85,63 +86,58 @@ msgstr "錯誤：無法執行「orca --setup」"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "使用系統響鈴(&S)"
+msgstr "使用系統響鈴"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Customize system bell"
-msgstr "使用系統響鈴(&S)"
+msgstr "自訂系統響鈴"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr ""
+msgstr "響鈴用的音效檔"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "使用可視化響鈴而非音效響鈴"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "觸發響鈴時反轉系統色彩"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Color of the Visible Bell"
-msgstr "使用系統響鈴(&S)"
+msgstr "可視化響鈴的色彩"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr ""
+msgstr "可視化響鈴的持續時間"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "使用相黏按鍵(&S)"
+msgstr "使用相黏按鍵"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "鎖定相黏按鍵(&L)"
+msgstr "鎖定相黏按鍵"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
@@ -151,22 +147,21 @@ msgstr "當同時按下兩個按鍵時關閉相黏(sticky)鍵"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Beep on a sticky key press"
-msgstr "使用相黏按鍵(&S)"
+msgstr "按下相黏按鍵時發出嗶聲"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "切換按鍵嗶聲"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "按下鍵盤修飾鍵時發送通知"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
@@ -182,10 +177,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Use slow keypresses"
-msgstr "使用慢速按鍵(&U)"
+msgstr "使用慢速按鍵"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
@@ -221,68 +215,68 @@ msgstr "彈回按鍵"
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "為彈回鍵使用延遲"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "彈回鍵事件被拒絕時觸發響鈴"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "用按鍵控制滑鼠"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "滑鼠移動的延遲"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "滑鼠移動的重複間隔"
 
 #. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "需要多久達到最大速率"
 
 #. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:28
 #, kde-format
 msgid "Maximum velocity"
-msgstr ""
+msgstr "最大速率"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:32
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "最大速率"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "滑鼠按鍵曲線"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:41
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "使用手勢"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:45
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "使用手勢前詢問確認"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:49
@@ -292,38 +286,36 @@ msgstr ""
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgid "Enable Screen Reader"
-msgstr "螢幕閱讀器"
+msgstr "啟用螢幕閱讀器"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "請選擇一個音效檔"
 
 #: package/contents/ui/Bell.qml:22
 #, kde-format
 msgid "Audio Files (*.mp3 *.ogg *.wav)"
-msgstr ""
+msgstr "音效檔 (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
-#, fuzzy, kde-format
-#| msgid "Audible Bell"
+#, kde-format
 msgid "Audible bell:"
-msgstr "有聲響鈴"
+msgstr "有聲響鈴："
 
 #: package/contents/ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/Bell.qml:43
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "自訂音效："
 
 #: package/contents/ui/Bell.qml:76
 #, kde-format
@@ -336,296 +328,263 @@ msgid "Button search audio file"
 msgstr ""
 
 #: package/contents/ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visual Bell"
+#, kde-format
 msgid "Visual bell:"
-msgstr "可視化響鈴"
+msgstr "可視化響鈴："
 
 #: package/contents/ui/Bell.qml:94
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/Bell.qml:108
-#, fuzzy, kde-format
-#| msgid "I&nvert screen"
+#, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr "反白螢幕(&N)"
+msgstr "反轉螢幕"
 
 #: package/contents/ui/Bell.qml:125
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
-msgstr ""
+msgstr "閃光"
 
 #: package/contents/ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
-msgstr ""
+msgstr "色彩"
 
 #: package/contents/ui/Bell.qml:147
-#, fuzzy, kde-format
-#| msgid "&Duration:"
+#, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
-msgstr "持續時間(&D)："
+msgstr "持續時間："
 
 #: package/contents/ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Slow keys:"
-msgstr "使用慢速按鍵(&U)"
+msgstr "慢速按鍵："
 
 #: package/contents/ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "按鍵要被接受必須要先被持續按著一段時間"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "延遲："
 
 #: package/contents/ui/KeyboardFilters.qml:54
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring system bell:"
-msgstr "使用系統響鈴(&S)"
+msgstr "觸發系統響鈴："
 
 #: package/contents/ui/KeyboardFilters.qml:55
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "當按鍵被按下時使用系統鈴聲(&U)"
+msgstr "當任何按鍵被按下時(&P)"
 
 #: package/contents/ui/KeyboardFilters.qml:69
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "當按鍵被接受時使用系統鈴聲(&U)"
+msgstr "當任何按鍵被接受時(&A)"
 
 #: package/contents/ui/KeyboardFilters.qml:83
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "當按鍵被拒絕時使用系統鈴聲(&U)"
+msgstr "當任何按鍵被拒絕時(&R)"
 
 #: package/contents/ui/KeyboardFilters.qml:100
-#, fuzzy, kde-format
-#| msgid "Bounce Keys"
+#, kde-format
 msgid "Bounce keys:"
-msgstr "彈回按鍵"
+msgstr "彈回按鍵："
 
 #: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "忽略快速重複按下同一個按鍵的動作"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "延遲："
 
 #: package/contents/ui/KeyboardFilters.qml:134
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgid "Ring system bell when rejected"
-msgstr "當按鍵被拒絕時使用系統鈴聲(&U)"
+msgstr "拒絕按鍵時觸發系統響鈴"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid ""
 "This module lets you configure the accessibility features such as a screen "
 "reader."
-msgstr ""
+msgstr "此模組能讓您設定無障礙輔助功能，例如螢幕閱讀器。"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Bell"
+#, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr "響鈴(&B)"
+msgstr "響鈴"
 
 #: package/contents/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "&Modifier Keys"
+#, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "變更鍵 (&M)"
+msgstr "修飾鍵"
 
 #: package/contents/ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "&Keyboard Filters"
+#, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr "鍵盤過濾器(&K)"
+msgstr "鍵盤過濾器"
 
 #: package/contents/ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr "滑鼠導航"
+msgstr "滑鼠導覽"
 
 #: package/contents/ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "螢幕閱讀器"
 
 #: package/contents/ui/ModifierKeys.qml:16
-#, fuzzy, kde-format
-#| msgid "Sticky Keys"
+#, kde-format
 msgid "Sticky keys:"
-msgstr "相黏鍵"
+msgstr "相黏鍵："
 
 #: package/contents/ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
-msgstr ""
+msgstr "鎖定"
 
 #: package/contents/ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "同時按下兩個按鍵時停用"
 
 #: package/contents/ui/ModifierKeys.qml:54
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "當按鍵被按下時使用系統鈴聲(&U)"
+msgstr "使用修飾鍵時觸發系統響鈴"
 
 #: package/contents/ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
-msgstr ""
+msgstr "回饋："
 
 #: package/contents/ui/ModifierKeys.qml:72
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "當按鍵被接受時使用系統鈴聲(&U)"
+msgstr "切換鎖定鍵時觸發系統響鈴"
 
 #: package/contents/ui/ModifierKeys.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use Plasma's notification mechanism for modifier or locking key state "
-#| "changes"
+#, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr "當輔助鍵或鎖定鍵改變其狀態時使用 Plasma 的通知機制"
+msgstr "使用修飾鍵或鎖定鍵時顯示通知"
 
 #: package/contents/ui/ModifierKeys.qml:95
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgid "Configure Notifications…"
-msgstr "設定通知(&N)..."
+msgstr "設定通知…"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
-msgstr ""
+msgstr "使用數字鍵盤移動游標："
 
 #: package/contents/ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: package/contents/ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
-msgstr ""
+msgstr "手勢被使用時："
 
 #: package/contents/ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "顯示確認對話框"
 
 #: package/contents/ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring the System Bell"
-msgstr "使用系統響鈴(&S)"
+msgstr "觸發系統響鈴"
 
 #: package/contents/ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgid "Show a notification"
-msgstr "通知"
+msgstr "顯示一個通知"
 
 #: package/contents/ui/MouseNavigation.qml:68
-#, fuzzy, kde-format
-#| msgid "&Acceleration delay:"
+#, kde-format
 msgid "Acceleration delay:"
-msgstr "加速延遲(&A)："
+msgstr "加速延遲："
 
 #: package/contents/ui/MouseNavigation.qml:79
-#, fuzzy, kde-format
-#| msgid "R&epeat interval:"
+#, kde-format
 msgid "Repeat interval:"
-msgstr "重複間隔(&E)："
+msgstr "重複間隔："
 
 #: package/contents/ui/MouseNavigation.qml:90
-#, fuzzy, kde-format
-#| msgid "Acceleration &time:"
+#, kde-format
 msgid "Acceleration time:"
-msgstr "加速時間(&T)："
+msgstr "加速時間："
 
 #: package/contents/ui/MouseNavigation.qml:101
-#, fuzzy, kde-format
-#| msgid "Ma&ximum speed:"
+#, kde-format
 msgid "Maximum speed:"
-msgstr "最快速度(&X)："
+msgstr "最快速度："
 
 #: package/contents/ui/MouseNavigation.qml:112
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "加速設定檔(&P)："
+msgstr "加速設定檔："
 
 #: package/contents/ui/ScreenReader.qml:28
-#, fuzzy, kde-format
-#| msgid "&Launch Orca Configuration"
+#, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "啟動 Orca 配置 (&L)"
+msgstr "開啟 Orca 螢幕閱讀器設定…"
 
 #: package/contents/ui/ScreenReader.qml:41
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please note that you may have to log out once to allow the screen reader "
-#| "to work properly."
+#, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
-msgstr "請注意，您可能需要登出一次，才能讓螢幕閱讀器正確運作。"
+msgstr "請注意，您可能需要登出或重新開機一次，才能讓螢幕閱讀器正確運作。"
 
 #: package/contents/ui/ScreenReader.qml:42
 #, kde-format
@@ -633,6 +592,7 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"Orca 螢幕閱讀器看起來尚未安裝。使用這個功能前請先安裝它並重新登入或重新開機"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
