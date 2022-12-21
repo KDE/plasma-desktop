@@ -854,7 +854,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
                                           "Settings. You can also turn them on and off with standardized keyboard gestures.\n\nIf you do not need them, you "
                                           "can select \"Deactivate all AccessX features and gestures\"."));
 
-            KWindowSystem::setState(dialog->winId(), NET::KeepAbove);
+            dialog->setWindowFlag(Qt::WindowStaysOnTopHint);
             KUserTimestamp::updateUserTimestamp(0);
             dialog->show();
         }
