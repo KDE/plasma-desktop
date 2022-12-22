@@ -53,6 +53,7 @@ void StandardShortcutsModel::load()
     }
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
+    collator.setNumericMode(true);
     std::for_each(m_components.begin(), m_components.end(), [&](Component &c) {
         std::sort(c.actions.begin(), c.actions.end(), [&](const Action &a1, const Action &a2) {
             return collator.compare(a1.displayName, a2.displayName) < 0;
