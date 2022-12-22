@@ -14,7 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
 
-Item {
+MouseArea {
     id: toolBoxContent
 
     property alias enterAnimation: enterAnimation
@@ -55,6 +55,62 @@ Item {
 
     state: "topcenter"
 
+    property QtObject container: main
+    property int pressedX
+    property int pressedY
+    property int snapStartX
+    property bool snapX: false;
+    property bool dragging: false
+
+    drag {
+        filterChildren: true
+        target: main.Plasmoid.immutable ? undefined : toolBoxContent
+        minimumX: 0
+        maximumX: container.width - toolBoxContent.width
+        minimumY: 0
+        maximumY: container.height
+    }
+
+    hoverEnabled: true
+
+    onPressed: {
+        pressedX = toolBoxContent.x
+        pressedY = toolBoxContent.y
+    }
+    onPositionChanged: {
+        if (pressed && (Math.abs(toolBoxContent.x - pressedX) > iconSize ||
+            Math.abs(toolBoxContent.y - pressedY) > iconSize)) {
+            dragging = true;
+        }
+
+        // Center snapping X
+        if (snapX && Math.abs(snapStartX - mouse.x) > PlasmaCore.Units.gridUnit) {
+            toolBoxContent.anchors.horizontalCenter = undefined;
+            snapX = false;
+        } else if (!snapX && Math.abs(main.width/2 - (toolBoxContent.x + toolBoxContent.width/2)) < PlasmaCore.Units.gridUnit) {
+            toolBoxContent.anchors.horizontalCenter = main.horizontalCenter;
+            snapStartX = mouse.x;
+            snapX = true;
+        }
+    }
+
+    onReleased: {
+        toolBoxContent.anchors.horizontalCenter = undefined;
+        toolBoxContent.anchors.verticalCenter = undefined;
+        snapX = false;
+        main.Plasmoid.configuration.ToolBoxButtonState = toolBoxContent.state;
+        main.Plasmoid.configuration.ToolBoxButtonX = toolBoxContent.x;
+        main.Plasmoid.configuration.ToolBoxButtonY = toolBoxContent.y;
+        //print("Saved coordinates for ToolBox in config: " + toolBoxContent.x + ", " +toolBoxContent.x);
+        if (dragging) {
+            main.placeToolBox();
+        }
+        dragging = false;
+        stateTimer.stop();
+        updateState();
+    }
+    onCanceled: dragging = false;
+
     onXChanged: stateTimer.restart()
     onYChanged: stateTimer.restart()
 
@@ -88,7 +144,7 @@ Item {
             }
         }
 
-        if (!buttonMouse.pressed) {
+        if (!toolBoxContent.pressed) {
             main.placeToolBox(toolBoxContent.state);
         }
 
@@ -169,134 +225,72 @@ Item {
         height: Math.round(buttonLayout.height + margins.vertical)
     }
 
-    MouseArea {
-        id: buttonMouse
+    Row {
+        id: buttonRow
+        spacing: buttonLayout.columnSpacing
 
-        property QtObject container: main
-        property int pressedX
-        property int pressedY
-        property int snapStartX
-        property bool snapX: false;
-        property bool dragging: false
+        Grid {
+            id: buttonLayout
+            rowSpacing: PlasmaCore.Units.smallSpacing
+            columnSpacing: rowSpacing
 
-        anchors.fill: parent
+            // Show buttons in two lines if screen space is limited
+            readonly property int buttonWidth: addWidgetButton.implicitWidth
+                + configureButton.implicitWidth
+                + themeButton.implicitWidth
+                + displaySettingsButton.implicitWidth
+                + manageContainmentsButton.implicitWidth
+                + closeButton.implicitWidth
+            rows: Math.ceil(buttonWidth / (Screen.width * 0.8))
 
-        drag {
-            filterChildren: true
-            target: main.Plasmoid.immutable ? undefined : toolBoxContent
-            minimumX: 0
-            maximumX: container.width - toolBoxContent.width
-            minimumY: 0
-            maximumY: container.height
-        }
-
-        hoverEnabled: true
-
-        onPressed: {
-            pressedX = toolBoxContent.x
-            pressedY = toolBoxContent.y
-        }
-        onPositionChanged: {
-            if (pressed && (Math.abs(toolBoxContent.x - pressedX) > iconSize ||
-                Math.abs(toolBoxContent.y - pressedY) > iconSize)) {
-                dragging = true;
-            }
-
-            // Center snapping X
-            if (snapX && Math.abs(snapStartX - mouse.x) > PlasmaCore.Units.gridUnit) {
-                toolBoxContent.anchors.horizontalCenter = undefined;
-                snapX = false;
-            } else if (!snapX && Math.abs(main.width/2 - (toolBoxContent.x + toolBoxContent.width/2)) < PlasmaCore.Units.gridUnit) {
-                toolBoxContent.anchors.horizontalCenter = main.horizontalCenter;
-                snapStartX = mouse.x;
-                snapX = true;
-            }
-        }
-
-        onReleased: {
-            toolBoxContent.anchors.horizontalCenter = undefined;
-            toolBoxContent.anchors.verticalCenter = undefined;
-            snapX = false;
-            main.Plasmoid.configuration.ToolBoxButtonState = toolBoxContent.state;
-            main.Plasmoid.configuration.ToolBoxButtonX = toolBoxContent.x;
-            main.Plasmoid.configuration.ToolBoxButtonY = toolBoxContent.y;
-            //print("Saved coordinates for ToolBox in config: " + toolBoxContent.x + ", " +toolBoxContent.x);
-            if (dragging) {
-                main.placeToolBox();
-            }
-            dragging = false;
-            stateTimer.stop();
-            updateState();
-        }
-        onCanceled: dragging = false;
-
-        Row {
-            id: buttonRow
-            spacing: buttonLayout.columnSpacing
-
-            Grid {
-                id: buttonLayout
-                rowSpacing: PlasmaCore.Units.smallSpacing
-                columnSpacing: rowSpacing
-
-                // Show buttons in two lines if screen space is limited
-                readonly property int buttonWidth: addWidgetButton.implicitWidth
-                    + configureButton.implicitWidth
-                    + themeButton.implicitWidth
-                    + displaySettingsButton.implicitWidth
-                    + manageContainmentsButton.implicitWidth
-                    + closeButton.implicitWidth
-                rows: Math.ceil(buttonWidth / (Screen.width * 0.8))
-
-                PlasmaComponents3.ToolButton {
-                    id: addWidgetButton
-                    property QtObject qAction: plasmoid.action("add widgets")
-                    text: qAction.text
-                    icon.name: "list-add"
-                    onClicked: qAction.trigger()
-                }
-
-                PlasmaComponents3.ToolButton {
-                    id: configureButton
-                    property QtObject qAction: plasmoid.action("configure")
-                    text: qAction.text
-                    icon.name: "preferences-desktop-wallpaper"
-                    onClicked: qAction.trigger()
-                }
-
-                PlasmaComponents3.ToolButton {
-                    id: themeButton
-                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
-                    icon.name: "preferences-desktop-theme-global"
-                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
-                }
-
-                PlasmaComponents3.ToolButton {
-                    id: displaySettingsButton
-                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
-                    icon.name: "preferences-desktop-display"
-                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
-                }
-
-                PlasmaComponents3.ToolButton {
-                    id: manageContainmentsButton
-                    property QtObject qAction: plasmoid.globalAction("manage-containments")
-                    text: qAction.text
-                    visible: qAction.visible
-                    icon.name: "preferences-system-windows-effect-fadedesktop"
-                    onClicked: qAction.trigger()
-                }
+            PlasmaComponents3.ToolButton {
+                id: addWidgetButton
+                property QtObject qAction: plasmoid.action("add widgets")
+                text: qAction.text
+                icon.name: "list-add"
+                onClicked: qAction.trigger()
             }
 
             PlasmaComponents3.ToolButton {
-                id: closeButton
-                anchors.verticalCenter: buttonLayout.verticalCenter
-                height: addWidgetButton.height
-                icon.name: "window-close"
-                onClicked: plasmoid.editMode = false
-                PlasmaComponents3.ToolTip {
-                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
-                }
+                id: configureButton
+                property QtObject qAction: plasmoid.action("configure")
+                text: qAction.text
+                icon.name: "preferences-desktop-wallpaper"
+                onClicked: qAction.trigger()
+            }
+
+            PlasmaComponents3.ToolButton {
+                id: themeButton
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
+                icon.name: "preferences-desktop-theme-global"
+                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
+            }
+
+            PlasmaComponents3.ToolButton {
+                id: displaySettingsButton
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
+                icon.name: "preferences-desktop-display"
+                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
+            }
+
+            PlasmaComponents3.ToolButton {
+                id: manageContainmentsButton
+                property QtObject qAction: plasmoid.globalAction("manage-containments")
+                text: qAction.text
+                visible: qAction.visible
+                icon.name: "preferences-system-windows-effect-fadedesktop"
+                onClicked: qAction.trigger()
+            }
+        }
+
+        PlasmaComponents3.ToolButton {
+            id: closeButton
+            anchors.verticalCenter: buttonLayout.verticalCenter
+            height: addWidgetButton.height
+            icon.name: "window-close"
+            onClicked: plasmoid.editMode = false
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
             }
         }
     }
