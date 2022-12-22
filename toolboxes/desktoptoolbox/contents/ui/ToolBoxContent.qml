@@ -13,6 +13,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
     id: toolBoxContent
@@ -235,11 +236,12 @@ MouseArea {
             columnSpacing: rowSpacing
 
             // Show buttons in two lines if screen space is limited
-            readonly property int buttonWidth: addWidgetButton.implicitWidth
+            readonly property real buttonWidth: addWidgetButton.implicitWidth
                 + configureButton.implicitWidth
                 + themeButton.implicitWidth
                 + displaySettingsButton.implicitWidth
                 + manageContainmentsButton.implicitWidth
+                + (menuButton.visible ? menuButton.implicitWidth : 0)
                 + closeButton.implicitWidth
             rows: Math.ceil(buttonWidth / (Screen.width * 0.8))
 
@@ -280,6 +282,28 @@ MouseArea {
                 visible: qAction.visible
                 icon.name: "preferences-system-windows-effect-fadedesktop"
                 onClicked: qAction.trigger()
+            }
+
+            PlasmaComponents3.ToolButton {
+                id: menuButton
+
+                height: addWidgetButton.height
+                visible: Kirigami.Settings.hasTransientTouchInput || Kirigami.Settings.tabletMode
+
+                property var menuDialog: null
+
+                checked: menuDialog !== null
+                icon.name: "overflow-menu"
+                text: i18ndc("plasma_toolbox_org.kde.desktoptoolbox", "@action:button", "More")
+
+                onClicked: {
+                    if (menuDialog) {
+                        return;
+                    }
+                    const component = Qt.createComponent("MoreActionsMenu.qml");
+                    const incubator = component.incubateObject(toolBoxContent);
+                    component.destroy();
+                }
             }
         }
 
