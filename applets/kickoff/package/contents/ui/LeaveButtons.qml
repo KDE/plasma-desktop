@@ -15,6 +15,7 @@ import org.kde.kirigami 2.16 as Kirigami
 RowLayout {
     id: root
     property alias leave: leaveButton
+    property bool shouldCollapseButtons: false
     spacing: plasmoid.rootItem.backgroundMetrics.spacing
 
     Kicker.SystemModel {
@@ -31,6 +32,9 @@ RowLayout {
         model: systemModel
         delegate: PC3.ToolButton {
             id: buttonDelegate
+            // NOTE Don't use visible as it changes implicit width of LeaveButtons
+            enabled: !root.shouldCollapseButtons
+            opacity: root.shouldCollapseButtons ? 0 : 1
             text: model.display
             icon.name: model.decoration
             // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
@@ -66,10 +70,10 @@ RowLayout {
         Accessible.role: Accessible.ButtonMenu
         icon.width: PlasmaCore.Units.iconSizes.smallMedium
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
-        icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", ""][currentId];
-        display: PC3.AbstractButton.IconOnly;
-        text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
-        visible: plasmoid.configuration.primaryActions !== 3
+        icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", "view-more-symbolic"][currentId]
+        display: root.shouldCollapseButtons ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly
+        text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][leaveButton.currentId]
+        visible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
         PC3.ToolTip.text: text
@@ -91,7 +95,7 @@ RowLayout {
             text: model.display
             icon: model.decoration
             // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-            visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
+            visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId) || root.shouldCollapseButtons
             Accessible.role: Accessible.MenuItem
             onClicked: systemModel.trigger(index, "", null)
         }

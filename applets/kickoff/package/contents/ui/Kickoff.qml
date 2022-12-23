@@ -11,6 +11,7 @@
 */
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
 import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -35,7 +36,7 @@ Item {
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
     readonly property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
-        || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > 16)
+        || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
 
     //BEGIN Models
     readonly property Kicker.RootModel rootModel: Kicker.RootModel {
@@ -144,6 +145,8 @@ Item {
         indicator: null
     }
 
+    // Used to show smaller Kickoff on small screens
+    readonly property int minimumGridRowCount: Math.min(Screen.desktopAvailableWidth, Screen.desktopAvailableHeight) < KickoffSingleton.gridCellSize * 4 + (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.normalPage.preferredSideBarWidth : KickoffSingleton.gridCellSize * 2) ? 2 : 4
     //END
 
     Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1

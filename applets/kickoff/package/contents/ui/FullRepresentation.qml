@@ -33,6 +33,8 @@ EmptyPage {
     Layout.minimumHeight: implicitHeight
     Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
+    property alias normalPage: normalPage
+
     /* NOTE: Important things to know about keyboard input handling:
      *
      * - Key events are passed up to parent items until the end is reached.

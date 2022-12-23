@@ -83,19 +83,19 @@ EmptyPage {
         } else {
             return 0
         }
-        width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin) / cellWidth) * cellWidth + leftMargin + rightMargin)
+        width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (plasmoid.rootItem.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
 
         Accessible.description: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
 
 
         implicitWidth: {
-            let w = view.cellWidth * 4 + leftMargin + rightMargin
+            let w = view.cellWidth * plasmoid.rootItem.minimumGridRowCount + leftMargin + rightMargin
             if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
                 w += verticalScrollBar.implicitWidth
             }
             return w
         }
-        implicitHeight: view.cellHeight * 4 + topMargin + bottomMargin
+        implicitHeight: view.cellHeight * plasmoid.rootItem.minimumGridRowCount + topMargin + bottomMargin
 
         leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
         rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding

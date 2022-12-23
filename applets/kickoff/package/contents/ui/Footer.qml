@@ -18,7 +18,7 @@ PlasmaExtras.PlasmoidHeading {
     property real preferredTabBarWidth: 0
     readonly property alias leaveButtons: leaveButtons
 
-    contentWidth: tabBar.implicitWidth + root.spacing + root.spacing + leaveButtons.implicitWidth
+    contentWidth: tabBar.implicitWidth + root.spacing
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
@@ -160,6 +160,7 @@ PlasmaExtras.PlasmoidHeading {
             bottom: parent.bottom
             leftMargin: root.spacing
         }
+        shouldCollapseButtons: root.contentWidth + root.spacing + implicitWidth > root.width
         Keys.onUpPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
