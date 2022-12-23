@@ -8,14 +8,14 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-06-18 23:40+0400\n"
+"PO-Revision-Date: 2022-12-22 10:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -59,12 +59,12 @@ msgstr "الفيديوهات"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "العام"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "القوالب"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -107,7 +107,7 @@ msgstr "مسار المستندات:"
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
-msgstr "سيستخدم هذا المجلد افتراضيًا لتحميل المستندات منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد افتراضيًا لتحميل المستندات منه أو حفظها فيه."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: globalpaths.ui:51
@@ -119,7 +119,7 @@ msgstr "مسار التنزيلات:"
 #: globalpaths.ui:58
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "سيستخدم هذا المجلد افتراضياً لحفظ العناصر التي تنزلها من الإنترنت."
+msgstr "سيُستخدم هذا المجلد افتراضياً لحفظ العناصر التي تنزلها من الإنترنت."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
@@ -131,7 +131,7 @@ msgstr "مسار الفيديوهات:"
 #: globalpaths.ui:75
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: globalpaths.ui:85
@@ -144,7 +144,7 @@ msgstr "مسار الصور:"
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
-msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
@@ -156,39 +156,34 @@ msgstr "مسار الموسيقى:"
 #: globalpaths.ui:109
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
-msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الموسيقى منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الموسيقى منه أو حفظها فيه."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "مسار الموسيقى:"
+msgstr "مسار العام:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+msgstr ""
+"سيُستخدم هذا المجلد بشكل مبدئي لتحميل  أو حفظ المشاركات العامة مع الآخرين."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "مسار الصور:"
+msgstr "مسار القوالب:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "سيستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد بشكل مبدئي لتحميل القوالب منه أو حفظها فيه."
 
 #~ msgid "Autostart path:"
 #~ msgstr "مسار البدء التلقائي:"
