@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2022-09-23 22:43+0300\n"
+"PO-Revision-Date: 2022-12-23 11:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -118,22 +118,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 1"
-msgstr "Кнопка %1:"
+msgstr "Кнопка инструмента 1"
 
 #: package/contents/ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 2"
-msgstr "Кнопка %1:"
+msgstr "Кнопка инструмента 2"
 
 #: package/contents/ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 3"
-msgstr "Кнопка %1:"
+msgstr "Кнопка инструмента 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
@@ -144,7 +141,7 @@ msgstr "Устройство:"
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Отсутствует"
 
 #: package/contents/ui/main.qml:324
 #, kde-format

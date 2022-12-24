@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-15 00:49+0000\n"
-"PO-Revision-Date: 2022-05-03 22:32+0300\n"
+"PO-Revision-Date: 2022-12-23 11:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -389,6 +389,8 @@ msgstr "включить"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Принимать нажатие клавиши только при её удержании в нажатом состоянии в "
+"течении указанного времени"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -433,7 +435,7 @@ msgstr "включить"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Игнорировать быстрое последовательное нажатие одной и той же клавиши"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

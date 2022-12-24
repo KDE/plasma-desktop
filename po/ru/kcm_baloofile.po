@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2017, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2021-10-04 14:05+0300\n"
+"PO-Revision-Date: 2022-12-23 10:31+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -56,13 +56,13 @@ msgstr "Удалить данные индексирования"
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
+msgstr "Для применения новых параметров требуется перезагрузка системы."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Перезагрузить"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
@@ -126,7 +126,6 @@ msgstr "Не индексировать папку…"
 msgid "Not indexed"
 msgstr "Не индексировать"
 
-# BUGME: Do not index? --ayavorsky  20200412
 #: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
