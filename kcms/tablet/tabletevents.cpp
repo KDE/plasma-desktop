@@ -8,7 +8,7 @@
 #include "qwayland-tablet-unstable-v2.h"
 #include <QQuickWindow>
 #include <QWaylandClientExtensionTemplate>
-#include <libwacom-1.0/libwacom/libwacom.h>
+#include <libwacom/libwacom.h>
 #include <qguiapplication.h>
 #include <qpa/qplatformnativeinterface.h>
 #include <qtwaylandclientversion.h>
