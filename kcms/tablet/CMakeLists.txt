@@ -49,6 +49,7 @@ target_link_libraries(kcm_tablet
     Qt::GuiPrivate
     Wayland::Client
     kwindevices
+    wacom
 )
 
 kpackage_install_package(package kcm_tablet kcms)

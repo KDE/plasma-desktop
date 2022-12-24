@@ -191,6 +191,7 @@ add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required f
 pkg_check_modules(XORGLIBINPUT xorg-libinput IMPORTED_TARGET)
 pkg_check_modules(EVDEV xorg-evdev>=2.8.99.1 IMPORTED_TARGET)
 pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)
+pkg_check_modules(WACOM libwacom IMPORTED_TARGET)
 
 ecm_find_qmlmodule(org.kde.pipewire 0.1)
 

@@ -8,6 +8,7 @@
 #include "qwayland-tablet-unstable-v2.h"
 #include <QQuickWindow>
 #include <QWaylandClientExtensionTemplate>
+#include <libwacom-1.0/libwacom/libwacom.h>
 #include <qguiapplication.h>
 #include <qpa/qplatformnativeinterface.h>
 #include <qtwaylandclientversion.h>
@@ -58,12 +59,14 @@ public:
     Tool(TabletEvents *const events, ::zwp_tablet_tool_v2 *t)
         : QObject(events)
         , QtWayland::zwp_tablet_tool_v2(t)
+        , m_db(libwacom_database_new())
         , m_events(events)
     {
     }
 
     ~Tool()
     {
+        libwacom_database_destroy(m_db);
         destroy();
     }
 
@@ -77,8 +80,11 @@ public:
     {
         m_hardware_id_hi = hardware_id_hi;
         m_hardware_id_lo = hardware_id_lo;
-        qDebug() << "hi: " << hardware_id_hi;
-        qDebug() << "low: " << hardware_id_lo;
+        const WacomStylus *stylus = libwacom_stylus_get_for_id(m_db, hardware_id_lo);
+        if (stylus) {
+            int buttonNumber = libwacom_stylus_get_num_buttons(stylus);
+            Q_EMIT m_events->stylusButtonNumberChanged(buttonNumber);
+        }
     }
 
     void zwp_tablet_tool_v2_button(uint32_t /*serial*/, uint32_t button, uint32_t state) override
@@ -86,15 +92,11 @@ public:
         Q_EMIT m_events->toolButtonReceived(m_hardware_serial_hi, m_hardware_serial_lo, button, state);
     }
 
-    //    void zwp_tablet_tool_v2_proximity_in(uint32_t serial, struct ::zwp_tablet_v2 *tablet, struct ::wl_surface *surface) override
-    //    {
-
-    //    }
-
     uint32_t m_hardware_serial_hi = 0;
     uint32_t m_hardware_serial_lo = 0;
     uint32_t m_hardware_id_hi = 0;
     uint32_t m_hardware_id_lo = 0;
+    WacomDeviceDatabase *m_db;
     TabletEvents *const m_events;
 };
 

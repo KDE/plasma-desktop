@@ -247,6 +247,20 @@ SimpleKCM {
                 { value: 0x14c, text: i18nd("kcm_tablet", "Tool Button 2") },
                 { value: 0x149, text: i18nd("kcm_tablet", "Tool Button 3") }
             ] // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
+            Connections {
+                target: tabletEvents
+                function onStylusButtonNumberChanged(number) {
+                    let buttons = [
+                            { value: 0x14b, text: i18nd("kcm_tablet", "Tool Button 1") },
+                            { value: 0x14c, text: i18nd("kcm_tablet", "Tool Button 2") },
+                            { value: 0x149, text: i18nd("kcm_tablet", "Tool Button 3") }
+                        ]; // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
+                    if (number < 3) {
+                        buttons = buttons.subarray(0, number);
+                    }
+                    model = buttons;
+                }
+            }
 
             delegate: KeySequenceItem {
                 id: seq
