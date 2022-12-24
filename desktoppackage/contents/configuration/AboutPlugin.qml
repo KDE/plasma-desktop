@@ -122,7 +122,7 @@ QQC2.Page {
 
             Kirigami.Heading {
                 Kirigami.FormData.isSection: true
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+                text: "Copyright"
             }
             QQC2.Label {
                 Layout.leftMargin: Kirigami.Units.gridUnit
