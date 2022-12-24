@@ -8,10 +8,13 @@
 #include "qwayland-tablet-unstable-v2.h"
 #include <QQuickWindow>
 #include <QWaylandClientExtensionTemplate>
-#include <libwacom/libwacom.h>
 #include <qguiapplication.h>
 #include <qpa/qplatformnativeinterface.h>
 #include <qtwaylandclientversion.h>
+
+extern "C" {
+#include <libwacom/libwacom.h>
+}
 
 class TabletPad : public QObject, public QtWayland::zwp_tablet_pad_v2
 {
@@ -78,12 +81,11 @@ public:
 
     void zwp_tablet_tool_v2_hardware_id_wacom(uint32_t hardware_id_hi, uint32_t hardware_id_lo) override
     {
-        m_hardware_id_hi = hardware_id_hi;
-        m_hardware_id_lo = hardware_id_lo;
+        Q_UNUSED(hardware_id_hi) // higher bits is always zero
         const WacomStylus *stylus = libwacom_stylus_get_for_id(m_db, hardware_id_lo);
         if (stylus) {
-            int buttonNumber = libwacom_stylus_get_num_buttons(stylus);
-            Q_EMIT m_events->stylusButtonNumberChanged(buttonNumber);
+            m_stylusButtonNumber = libwacom_stylus_get_num_buttons(stylus);
+            Q_EMIT m_events->stylusButtonNumberChanged(m_stylusButtonNumber);
         }
     }
 
@@ -94,8 +96,7 @@ public:
 
     uint32_t m_hardware_serial_hi = 0;
     uint32_t m_hardware_serial_lo = 0;
-    uint32_t m_hardware_id_hi = 0;
-    uint32_t m_hardware_id_lo = 0;
+    int m_stylusButtonNumber = 3;
     WacomDeviceDatabase *m_db;
     TabletEvents *const m_events;
 };
