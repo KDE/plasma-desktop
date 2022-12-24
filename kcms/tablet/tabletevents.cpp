@@ -73,13 +73,28 @@ public:
         m_hardware_serial_lo = hardware_serial_lo;
     }
 
+    void zwp_tablet_tool_v2_hardware_id_wacom(uint32_t hardware_id_hi, uint32_t hardware_id_lo) override
+    {
+        m_hardware_id_hi = hardware_id_hi;
+        m_hardware_id_lo = hardware_id_lo;
+        qDebug() << "hi: " << hardware_id_hi;
+        qDebug() << "low: " << hardware_id_lo;
+    }
+
     void zwp_tablet_tool_v2_button(uint32_t /*serial*/, uint32_t button, uint32_t state) override
     {
         Q_EMIT m_events->toolButtonReceived(m_hardware_serial_hi, m_hardware_serial_lo, button, state);
     }
 
+    //    void zwp_tablet_tool_v2_proximity_in(uint32_t serial, struct ::zwp_tablet_v2 *tablet, struct ::wl_surface *surface) override
+    //    {
+
+    //    }
+
     uint32_t m_hardware_serial_hi = 0;
     uint32_t m_hardware_serial_lo = 0;
+    uint32_t m_hardware_id_hi = 0;
+    uint32_t m_hardware_id_lo = 0;
     TabletEvents *const m_events;
 };
 
