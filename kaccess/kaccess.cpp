@@ -279,17 +279,12 @@ void KAccessApp::readSettings()
     if (mouseGroup.readEntry("MouseKeys", false)) {
         xkb->ctrls->mk_delay = mouseGroup.readEntry("MKDelay", 160);
 
-        // Default for initial velocity: 200 pixels/sec
-        int interval = mouseGroup.readEntry("MKInterval", 5);
+        int interval = mouseGroup.readEntry("MKInterval", 40);
         xkb->ctrls->mk_interval = interval;
 
-        // Default time to reach maximum speed: 5000 msec
-        xkb->ctrls->mk_time_to_max = mouseGroup.readEntry("MKTimeToMax", (5000 + interval / 2) / interval);
+        xkb->ctrls->mk_time_to_max = mouseGroup.readEntry("MKTimeToMax", 30);
 
-        // Default maximum speed: 1000 pixels/sec
-        //     (The old default maximum speed from KDE <= 3.4
-        //     (100000 pixels/sec) was way too fast)
-        xkb->ctrls->mk_max_speed = mouseGroup.readEntry("MKMaxSpeed", interval);
+        xkb->ctrls->mk_max_speed = mouseGroup.readEntry("MKMaxSpeed", 30);
 
         xkb->ctrls->mk_curve = mouseGroup.readEntry("MKCurve", 0);
         xkb->ctrls->mk_dflt_btn = mouseGroup.readEntry("MKDefaultButton", 0);
