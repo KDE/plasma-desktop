@@ -67,6 +67,9 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration delay:")
 
+        from: 1
+        to: 490
+
         KCM.SettingStateBinding {
             configObject: kcm.mouseSettings
             settingName: "AccelerationDelay"
@@ -77,6 +80,9 @@ Kirigami.FormLayout {
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Repeat interval:")
+
+        from: 1
+        to: 130
 
         KCM.SettingStateBinding {
             configObject: kcm.mouseSettings
@@ -89,6 +95,9 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration time:")
 
+        from: 1
+        to: 100
+
         KCM.SettingStateBinding {
             configObject: kcm.mouseSettings
             settingName: "AccelerationTime"
@@ -100,6 +109,9 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label:  i18n("Maximum speed:")
 
+        from: 1
+        to: 100
+
         KCM.SettingStateBinding {
             configObject: kcm.mouseSettings
             settingName: "MaxSpeed"
@@ -110,6 +122,9 @@ Kirigami.FormLayout {
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration profile:")
+
+        from: -1000
+        to: 5000
 
         KCM.SettingStateBinding {
             configObject: kcm.mouseSettings
