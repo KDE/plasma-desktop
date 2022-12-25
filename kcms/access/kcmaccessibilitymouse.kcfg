@@ -11,19 +11,19 @@
     </entry>
     <entry name="AccelerationDelay" key="MKDelay" type="Int">
       <label>Delay for the mouse movement</label>
-      <default>1</default>
+      <default>160</default>
     </entry>
     <entry name="RepetitionInterval" key="MKInterval" type="Int">
       <label>Repetition interval for the mouse movement</label>
-      <default>1</default>
+      <default>40</default>
     </entry>
     <entry name="AccelerationTime" key="MKTimeToMax" type="Int">
       <label>Time to hit maximum velocity</label>
-      <default>5000</default>
+      <default>30</default>
     </entry>
     <entry name="MaxSpeed" key="MKMaxSpeed" type="Int">
       <label>Maximum Velocity</label>
-      <default>1000</default>
+      <default>30</default>
     </entry>
     <entry name="ProfileCurve" key="MKCurve" type="Int">
       <label>Mouse Key Curve</label>
