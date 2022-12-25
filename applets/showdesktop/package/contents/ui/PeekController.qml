@@ -14,7 +14,7 @@ Controller {
     titleInactive: i18nc("@action:button", "Peek at Desktop")
 
     descriptionActive: i18nc("@info:tooltip", "Moves windows back to their original positions")
-    descriptionInactive: i18nc("@info:tooltip", "Temporarily reveals the Desktop by moving open windows into screen corners")
+    descriptionInactive: i18nc("@info:tooltip", "Temporarily shows the desktop by moving windows away")
 
     active: showdesktop.showingDesktop
 
