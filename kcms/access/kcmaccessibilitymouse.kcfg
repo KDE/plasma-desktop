@@ -17,19 +17,13 @@
       <label>Repetition interval for the mouse movement</label>
       <default>1</default>
     </entry>
-    <entry name="MK_TimeToMax" key="MK_TimeToMax" type="Int">
+    <entry name="AccelerationTime" key="MKTimeToMax" type="Int">
       <label>Time to hit maximum velocity</label>
       <default>5000</default>
     </entry>
-    <entry name="AccelerationTime" key="MKTimeToMax" type="Int">
-      <label>Time to hit maximum velocity</label>
-    </entry>
-    <entry name="MK_MaxSpeed" key="MK_MaxSpeed" type="Int">
-      <label>Maximum velocity</label>
-      <default>1000</default>
-    </entry>
     <entry name="MaxSpeed" key="MKMaxSpeed" type="Int">
       <label>Maximum Velocity</label>
+      <default>1000</default>
     </entry>
     <entry name="ProfileCurve" key="MKCurve" type="Int">
       <label>Mouse Key Curve</label>
