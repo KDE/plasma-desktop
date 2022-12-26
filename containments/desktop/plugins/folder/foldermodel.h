@@ -31,13 +31,11 @@ class QItemSelectionModel;
 class QQuickItem;
 
 class KFileCopyToMenu;
-class KActionCollection;
 class KDirModel;
 class KDirWatch;
 class KFileItem;
 class KFileItemActions;
 class KJob;
-class KNewFileMenu;
 
 namespace KIO
 {

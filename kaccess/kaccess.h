@@ -22,7 +22,6 @@
 #undef explicit
 #include <fixx11h.h>
 
-class QLabel;
 class KComboBox;
 
 class KAccessApp : public QObject, public QAbstractNativeEventFilter

@@ -11,7 +11,6 @@
 #include <QString>
 #include <QIcon>
 
-class QIcon;
 class LayoutUnit;
 class KeyboardConfig;
 struct Rules;
