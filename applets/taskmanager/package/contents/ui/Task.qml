@@ -487,11 +487,6 @@ PlasmaCore.ToolTipArea {
             active: model.IsStartup === true
             sourceComponent: busyIndicator
         }
-
-        Component {
-            id: busyIndicator
-            PlasmaComponents3.BusyIndicator {}
-        }
     }
 
     PlasmaComponents3.Label {
