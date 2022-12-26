@@ -83,7 +83,11 @@ public:
     {
         Q_UNUSED(hardware_id_hi) // higher bits is always zero
         const WacomStylus *stylus = libwacom_stylus_get_for_id(m_db, hardware_id_lo);
+
         if (stylus) {
+            auto name = libwacom_stylus_get_name(stylus);
+
+            qDebug() << "name: " << name << ", hardware id: " << hardware_id_lo;
             m_stylusButtonNumber = libwacom_stylus_get_num_buttons(stylus);
             Q_EMIT m_events->stylusButtonNumberChanged(m_stylusButtonNumber);
         }
@@ -92,6 +96,10 @@ public:
     void zwp_tablet_tool_v2_button(uint32_t /*serial*/, uint32_t button, uint32_t state) override
     {
         Q_EMIT m_events->toolButtonReceived(m_hardware_serial_hi, m_hardware_serial_lo, button, state);
+    }
+
+    void zwp_tablet_tool_v2_proximity_in(uint32_t serial, struct ::zwp_tablet_v2 *tablet, struct ::wl_surface *surface)
+    {
     }
 
     uint32_t m_hardware_serial_hi = 0;
