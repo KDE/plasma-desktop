@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-12-24 11:42\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,27 +42,29 @@ msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "最小化所有窗口以显示桌面"
 
-#: package/contents/ui/PeekController.qml:13
-#, kde-format
-msgctxt "@action:button"
-msgid "Stop Peeking at Desktop"
-msgstr "停止暂时显示桌面"
-
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "暂时显示桌面"
 
-#: package/contents/ui/PeekController.qml:16
+#: package/contents/ui/PeekController.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "停止暂时显示桌面"
+
+#: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "还原所有窗口的原始位置"
 
-#: package/contents/ui/PeekController.qml:17
-#, kde-format
+#: package/contents/ui/PeekController.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgctxt "@info:tooltip"
-msgid ""
-"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgid "Temporarily shows the desktop by moving windows away"
 msgstr "将打开的窗口移动到屏幕角落，暂时显示桌面"

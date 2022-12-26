@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2009-02-13 11:53+0200\n"
 "Last-Translator: Toussis Manolis <manolis@koppermind.homelinux.org>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -38,98 +38,122 @@ msgstr ""
 "επαναφέρεται η προηγούμενη συνεδρία κατά την είσοδο και αν ο υπολογιστής θα "
 "κλείνει αυτόματα κατά την έξοδο από τη συνεδρία."
 
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+
+#: package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart"
+msgstr "&Επανεκκίνηση υπολογιστή"
+
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
-#: package/contents/ui/main.qml:27
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 
-#: package/contents/ui/main.qml:32
+#: package/contents/ui/main.qml:64
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgid "Restart Now"
 msgstr "&Επανεκκίνηση υπολογιστή"
 
-#: package/contents/ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "General"
-msgid "General:"
-msgstr "Γενικά"
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr ""
 
-#: package/contents/ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
-msgctxt "@option:check"
-msgid "Confirm logout"
-msgstr "Επι&βεβαίωση εξόδου"
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid "Show:"
+msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Default Leave Option"
-msgid "Default leave option:"
+msgid "Default option:"
 msgstr "Προκαθορισμένη επιλογή τερματισμού"
 
-#: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "&End current session"
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "End current session"
-msgstr "Τ&ερματισμός τρέχουσας συνεδρίας"
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgctxt "@option:radio"
+msgid "Log Out"
+msgstr ""
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:109
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgctxt "@option:radio"
-msgid "Restart computer"
+msgid "Restart"
 msgstr "&Επανεκκίνηση υπολογιστή"
 
-#: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off computer"
-msgctxt "@option:radio"
-msgid "Turn off computer"
-msgstr "&Κλείσιμο υπολογιστή"
-
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:119
 #, kde-format
-msgid "When logging in:"
+msgctxt "@option:radio"
+msgid "Shut Down"
 msgstr ""
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Session Manager"
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Διαχειριστής συνεδρίας"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr ""
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
 msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
 
-#: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last manually saved session"
-msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+#: package/contents/ui/main.qml:162
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:167
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -139,32 +163,43 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Εκκίνηση με μια &κενή συνεδρία"
 
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:181
 #, kde-format
-msgid "Don't restore these applications:"
+msgid "Ignored applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid ""
-"Here you can enter a colon or comma separated list of applications that "
-"should not be saved in sessions, and therefore will not be started when "
-"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-msgstr ""
-"Εδώ μπορείτε να δώσετε μια στήλη εφαρμογών, χωρισμένη με κόμματα, που δε θα "
-"πρέπει να αποθηκεύονται στις συνεδρίες και έτσι δε θα ξεκινούν κατά την "
-"επαναφορά μιας συνεδρίας. Για παράδειγμα 'xterm:konsole' ή 'xterm,konsole'."
-
-#: package/contents/ui/main.qml:152
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter UEFI setup screen on next restart"
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:212
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: package/contents/ui/main.qml:218
 #, kde-format
 msgctxt "@option:check"
-msgid "Enter firmware setup screen on next restart"
+msgid "Enter UEFI setup screen"
+msgstr ""
+
+#: package/contents/ui/main.qml:219
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
 msgstr ""
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -194,6 +229,57 @@ msgstr "Κατά την είσοδο"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συνεδρίες:"
+
+#, fuzzy
+#~| msgid "General"
+#~ msgid "General:"
+#~ msgstr "Γενικά"
+
+#, fuzzy
+#~| msgid "Conf&irm logout"
+#~ msgctxt "@option:check"
+#~ msgid "Confirm logout"
+#~ msgstr "Επι&βεβαίωση εξόδου"
+
+#, fuzzy
+#~| msgid "&End current session"
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "End current session"
+#~ msgstr "Τ&ερματισμός τρέχουσας συνεδρίας"
+
+#, fuzzy
+#~| msgid "&Restart computer"
+#~ msgctxt "@option:radio"
+#~ msgid "Restart computer"
+#~ msgstr "&Επανεκκίνηση υπολογιστή"
+
+#, fuzzy
+#~| msgid "&Turn off computer"
+#~ msgctxt "@option:radio"
+#~ msgid "Turn off computer"
+#~ msgstr "&Κλείσιμο υπολογιστή"
+
+#, fuzzy
+#~| msgid "Restore &manually saved session"
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "Restore last session"
+#~ msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+
+#~ msgid ""
+#~ "Here you can enter a colon or comma separated list of applications that "
+#~ "should not be saved in sessions, and therefore will not be started when "
+#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να δώσετε μια στήλη εφαρμογών, χωρισμένη με κόμματα, που δε "
+#~ "θα πρέπει να αποθηκεύονται στις συνεδρίες και έτσι δε θα ξεκινούν κατά "
+#~ "την επαναφορά μιας συνεδρίας. Για παράδειγμα 'xterm:konsole' ή 'xterm,"
+#~ "konsole'."
 
 #, fuzzy
 #~| msgid "O&ffer shutdown options"
@@ -268,9 +354,6 @@ msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συ�
 
 #~ msgid "Applications to be e&xcluded from sessions:"
 #~ msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συνεδρίες:"
-
-#~ msgid "Session Manager"
-#~ msgstr "Διαχειριστής συνεδρίας"
 
 #~ msgid "Advanced"
 #~ msgstr "Για προχωρημένους"

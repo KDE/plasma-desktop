@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-11 00:46+0000\n"
-"PO-Revision-Date: 2022-06-23 10:17+0900\n"
+"PO-Revision-Date: 2022-12-26 03:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
@@ -35,61 +35,61 @@ msgstr "啟用或停用外掛程式（在 KRunner、應用程式啟動器以及�
 #: plasmasearch/package/contents/ui/main.qml:49
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "設定 KRunner…"
 
 #: plasmasearch/package/contents/ui/main.qml:53
 #, kde-format
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "取得新的外掛程式…"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
-msgstr ""
+msgstr "在終端機執行安裝文稿失敗 <message>%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
-msgstr ""
+msgstr "成功執行安裝，您現在可以關閉這個視窗了"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
-msgstr ""
+msgstr "成功執行解除安裝，您現在可以關閉這個視窗了"
 
 #: plugininstaller/main.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "KRunner 外掛程式安裝失敗"
 
 #: plugininstaller/main.cpp:43
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
-msgstr ""
+msgstr "要執行的命令：安裝或解除安裝。"
 
 #: plugininstaller/main.cpp:44
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
-msgstr ""
+msgstr "封存檔路徑。"
 
 #: plugininstaller/main.cpp:84
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "沒有 PackageKit 支援"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "確認安裝"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -97,26 +97,26 @@ msgctxt "@info"
 msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
-msgstr ""
+msgstr "您將要安裝二進位軟體包。您應該只從您信任的作者/打包者安裝這種軟體包。"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "接受風險並繼續"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "檢視檔案"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "MIME 形態 %1 不受 packagekit 後端支援"
 
 #: plugininstaller/ScriptConfirmationDialog.h:32
 #, kde-kuit-format
@@ -126,6 +126,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式沒有提供解除安裝文稿。請與作者聯繫。您可以試著手動進行解除安裝。"
+"<nl/>如果您不覺得有能力或有信心這麼做，請現在點擊<interface>取消</"
+"interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-kuit-format
@@ -136,6 +139,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式沒有提供解除安裝文稿。請與作者聯繫。您可以試著手動進行解除安裝。"
+"請到 README 檔案尋找作者可能有寫的說明。<nl/>如果您不覺得有能力或有信心這麼"
+"做，請現在點擊<interface>取消</interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:43
 #, kde-kuit-format
@@ -145,6 +151,8 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式沒有提供安裝文稿。請與作者聯繫。您可以試著手動進行安裝。<nl/>如果"
+"您不覺得有能力或有信心這麼做，請現在點擊<interface>取消</interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:48
 #, kde-kuit-format
@@ -155,6 +163,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式沒有提供安裝文稿。請與作者聯繫。您可以試著手動進行安裝。請到 "
+"README 檔案尋找作者可能有寫的說明。<nl/>如果您不覺得有能力或有信心這麼做，請"
+"現在點擊<interface>取消</interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:54
 #, kde-kuit-format
@@ -165,6 +176,9 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式使用文稿進行安裝而可能有安全性的風險。請在安裝前檢查過整個外掛程"
+"式的內容，或至少讀過文稿的原始碼。<nl/>如果您不覺得有能力或有信心這麼做，請現"
+"在點擊<interface>取消</interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:60
 #, kde-kuit-format
@@ -175,48 +189,51 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"這個外掛程式使用文稿進行安裝而可能有安全性的風險。請在安裝前檢查過整個外掛程"
+"式的內容，或至少讀過它的 README 檔案和文稿的原始碼。<nl/>如果您不覺得有能力或"
+"有信心這麼做，請現在點擊<interface>取消</interface>。"
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "標記項目為未安裝"
 
 #: plugininstaller/ScriptConfirmationDialog.h:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "標記項目為已安裝"
 
 #: plugininstaller/ScriptConfirmationDialog.h:85
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "檢視文稿"
 
 #: plugininstaller/ScriptConfirmationDialog.h:91
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "檢視原始碼資料夾"
 
 #: plugininstaller/ScriptConfirmationDialog.h:102
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "檢視 %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "無法解析 %1 的軟體包名稱"
 
 #: plugininstaller/ZypperRPMJob.cpp:37
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "執行安裝命令失敗：<message>%1</message>"
 
 #, fuzzy
 #~| msgid "Clear History"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-09-16 15:59+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -36,29 +36,31 @@ msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Mostra o ecrã, minimizando todas as janelas"
 
-#: package/contents/ui/PeekController.qml:13
-#, kde-format
-msgctxt "@action:button"
-msgid "Stop Peeking at Desktop"
-msgstr "Parar de Espreitar o Ecrã"
-
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "Espreitar o Ecrã"
 
-#: package/contents/ui/PeekController.qml:16
+#: package/contents/ui/PeekController.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "Parar de Espreitar o Ecrã"
+
+#: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "Move as janelas de volta para as suas posições originais"
 
-#: package/contents/ui/PeekController.qml:17
-#, kde-format
+#: package/contents/ui/PeekController.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgctxt "@info:tooltip"
-msgid ""
-"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgid "Temporarily shows the desktop by moving windows away"
 msgstr ""
 "Revela temporariamente o ecrã, movendo as janelas abertas para os cantos do "
 "mesmo"

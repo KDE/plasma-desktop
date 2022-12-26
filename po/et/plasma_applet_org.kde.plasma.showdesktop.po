@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-11-14 00:36+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -43,29 +43,31 @@ msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Töölaua näitamine kõigi akende minimeerimise järel"
 
-#: package/contents/ui/PeekController.qml:13
-#, kde-format
-msgctxt "@action:button"
-msgid "Stop Peeking at Desktop"
-msgstr "Töölaua näitamise lõpetamine"
-
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "Töölaua näitamine"
 
-#: package/contents/ui/PeekController.qml:16
+#: package/contents/ui/PeekController.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "Töölaua näitamise lõpetamine"
+
+#: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "Akende liigutamine tagasi nende varasematesse asukohtadesse"
 
-#: package/contents/ui/PeekController.qml:17
-#, kde-format
+#: package/contents/ui/PeekController.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgctxt "@info:tooltip"
-msgid ""
-"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgid "Temporarily shows the desktop by moving windows away"
 msgstr "Töölaua näitamine ja avatud akende liigutamine ekraani nurkadesse"
 
 #~ msgid "Show Desktop"

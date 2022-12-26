@@ -10,65 +10,64 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:50+0000\n"
-"PO-Revision-Date: 2022-06-23 10:17+0900\n"
+"PO-Revision-Date: 2022-12-26 03:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/main.qml:29
 #, kde-format
 msgid "Position on screen:"
-msgstr ""
+msgstr "螢幕上的位置："
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Top"
-msgstr ""
+msgstr "頂端"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Center"
-msgstr ""
+msgstr "中央"
 
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgid "Activation:"
-msgstr ""
+msgstr "觸發："
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr ""
+msgstr "在桌面上按下任何按鍵時觸發"
 
 #: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "History:"
-msgstr "清除歷史"
+msgstr "歷史："
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
-msgstr ""
+msgstr "記住過去的搜尋"
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
-msgstr ""
+msgstr "重新開啟時保留上次的搜尋"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
-msgstr ""
+msgstr "為各個活動分別記住歷史與上次搜尋"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -79,31 +78,30 @@ msgstr "清除歷史"
 #, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
-msgstr ""
+msgstr "清除活動「%1」中的歷史"
 
 #: package/contents/ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "Clear History…"
-msgstr "清除歷史"
+msgstr "清除歷史…"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
-msgstr ""
+msgstr "所有活動"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr ""
+msgstr "僅活動「%1」"
 
 #: package/contents/ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "外掛程式："
 
 #: package/contents/ui/main.qml:174
 #, kde-format

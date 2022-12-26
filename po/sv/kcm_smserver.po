@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-03-23 18:37+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -33,12 +33,24 @@ msgstr ""
 "ska bekräftas, om sessionen ska återställas igen vid inloggning och om "
 "datorn normalt ska stängas av automatiskt efter sessionen avslutats."
 
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+
+#: package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "Restart"
+msgstr "Starta om nu"
+
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Misslyckades begära omstart till inställning av fast programvara: %1"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -46,7 +58,7 @@ msgstr ""
 "Nästa gång datorn startas om kommer den att gå till inställningsskärmen för "
 "UEFI."
 
-#: package/contents/ui/main.qml:27
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -54,72 +66,96 @@ msgstr ""
 "Nästa gång datorn startas om kommer den att gå till inställningsskärmen för "
 "fast programvara."
 
-#: package/contents/ui/main.qml:32
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "Restart Now"
 msgstr "Starta om nu"
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:72
 #, kde-format
-msgid "General:"
-msgstr "Allmänt:"
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr ""
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:75
 #, kde-format
-msgctxt "@option:check"
-msgid "Confirm logout"
-msgstr "Bekräfta utloggning"
+msgid "Show:"
+msgstr ""
 
-#: package/contents/ui/main.qml:56
-#, kde-format
-msgid "Default leave option:"
+#: package/contents/ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+
+#: package/contents/ui/main.qml:97
+#, fuzzy, kde-format
+#| msgid "Default leave option:"
+msgid "Default option:"
 msgstr "Förvalt alternativ när datorn lämnas:"
 
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "End current session"
-msgstr "Avsluta aktuell session"
-
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
-msgid "Restart computer"
-msgstr "Starta om datorn"
+msgid "Log Out"
+msgstr ""
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@option:radio"
+msgid "Restart"
+msgstr "Starta om nu"
+
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
-msgid "Turn off computer"
-msgstr "Stäng av datorn"
+msgid "Shut Down"
+msgstr ""
 
-#: package/contents/ui/main.qml:93
-#, kde-format
-msgid "When logging in:"
-msgstr "Vid inloggning:"
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Session Manager"
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Sessionshanteraren"
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:139
 #, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last session"
-msgstr "Återställ senaste session"
+msgid "On login, launch apps that were open:"
+msgstr ""
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:140
 #, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last manually saved session"
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: package/contents/ui/main.qml:153
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Restore last manually saved session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
 msgstr "Återställ senaste manuellt sparade session"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:162
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -128,34 +164,48 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Starta med en tom session"
 
-#: package/contents/ui/main.qml:126
-#, kde-format
-msgid "Don't restore these applications:"
+#: package/contents/ui/main.qml:181
+#, fuzzy, kde-format
+#| msgid "Don't restore these applications:"
+msgid "Ignored applications:"
 msgstr "Återställ inte följande program:"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid ""
-"Here you can enter a colon or comma separated list of applications that "
-"should not be saved in sessions, and therefore will not be started when "
-"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
 msgstr ""
-"Här kan du skriva in en lista av program åtskilda med kolon eller "
-"kommatecken, som inte ska sparas i sessioner, och därför inte startas igen "
-"när en session återställs. Till exempel 'xterm:xconsole' eller 'xterm,"
-"xconsole'."
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:212
+#, fuzzy, kde-format
+#| msgid "Firmware Setup"
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr "Inställning av fast programvara"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: package/contents/ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen on next restart"
+msgid "Enter UEFI setup screen"
 msgstr "Gå till inställning av UEFI vid nästa omstart"
 
-#: package/contents/ui/main.qml:153
-#, kde-format
+#: package/contents/ui/main.qml:219
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
-msgid "Enter firmware setup screen on next restart"
+msgid "Enter firmware setup screen"
 msgstr "Gå till skärmen för inställning av fast programvara vid nästa omstart"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -181,6 +231,48 @@ msgstr "Vid inloggning"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Program som ska undantas från session"
+
+#~ msgid "General:"
+#~ msgstr "Allmänt:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Confirm logout"
+#~ msgstr "Bekräfta utloggning"
+
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "End current session"
+#~ msgstr "Avsluta aktuell session"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart computer"
+#~ msgstr "Starta om datorn"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Turn off computer"
+#~ msgstr "Stäng av datorn"
+
+#~ msgid "When logging in:"
+#~ msgstr "Vid inloggning:"
+
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "Restore last session"
+#~ msgstr "Återställ senaste session"
+
+#~ msgid ""
+#~ "Here you can enter a colon or comma separated list of applications that "
+#~ "should not be saved in sessions, and therefore will not be started when "
+#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+#~ msgstr ""
+#~ "Här kan du skriva in en lista av program åtskilda med kolon eller "
+#~ "kommatecken, som inte ska sparas i sessioner, och därför inte startas "
+#~ "igen när en session återställs. Till exempel 'xterm:xconsole' eller "
+#~ "'xterm,xconsole'."
 
 #~ msgctxt "@option:check"
 #~ msgid "Offer shutdown options"
@@ -269,15 +361,9 @@ msgstr "Program som ska undantas från session"
 #~ msgid "Applications to be e&xcluded from sessions:"
 #~ msgstr "Program som ska &undantas från sessioner:"
 
-#~ msgid "Firmware Setup"
-#~ msgstr "Inställning av fast programvara"
-
 #~ msgid ""
 #~ "When the computer is restarted the next time, enter firmware setup screen "
 #~ "(e.g. UEFI or BIOS setup)"
 #~ msgstr ""
 #~ "Nästa gång datorn startas om kommer den att gå till inställningsskärmen "
 #~ "för fast programvara (t.ex. inställning av UEFI eller BIOS)"
-
-#~ msgid "Session Manager"
-#~ msgstr "Sessionshanteraren"

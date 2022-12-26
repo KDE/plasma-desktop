@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-11-18 23:16+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -44,29 +44,31 @@ msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Rodo darbalaukį, suskleisdamas visus langus"
 
-#: package/contents/ui/PeekController.qml:13
-#, kde-format
-msgctxt "@action:button"
-msgid "Stop Peeking at Desktop"
-msgstr "Nustoti žvelgti į darbalaukį"
-
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "Žvilgsnis į darbalaukį"
 
-#: package/contents/ui/PeekController.qml:16
+#: package/contents/ui/PeekController.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr "Nustoti žvelgti į darbalaukį"
+
+#: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "Perkelia langus atgal į jų pradinę poziciją"
 
-#: package/contents/ui/PeekController.qml:17
-#, kde-format
+#: package/contents/ui/PeekController.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Temporarily reveals the Desktop by moving open windows into screen corners"
 msgctxt "@info:tooltip"
-msgid ""
-"Temporarily reveals the Desktop by moving open windows into screen corners"
+msgid "Temporarily shows the desktop by moving windows away"
 msgstr ""
 "Laikinai atskleidžia darbalaukį, perkeldamas atvertus langus į ekrano kampus"
 
