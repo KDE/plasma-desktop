@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-10-19 22:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -79,66 +79,66 @@ msgstr "Üldine:"
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohale"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Akende esiletõstmine hiirekursori viimisel tegumi kohtspikri kohale"
 
-#: package/contents/ui/ConfigAppearance.qml:50
+#: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Heli esitavate rakenduste tähistamine"
 
-#: package/contents/ui/ConfigAppearance.qml:58
+#: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Paneeli vaba ruumi täitmine"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
 msgstr "Maksimaalselt veerge:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
 msgstr "Maksimaalselt ridu:"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
 msgstr "Ülesanded paigutatakse alati nii mitme veeruga ridadesse"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
 msgstr "Ülesanded paigutatakse alati nii mitme reaga veergudesse"
 
-#: package/contents/ui/ConfigAppearance.qml:83
+#: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Vahe ikoonide vahel:"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Väike"
 
-#: package/contents/ui/ConfigAppearance.qml:91
+#: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Tavaline"
 
-#: package/contents/ui/ConfigAppearance.qml:95
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Suur"
 
-#: package/contents/ui/ConfigAppearance.qml:119
+#: package/contents/ui/ConfigAppearance.qml:113
 #, fuzzy, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -194,29 +194,6 @@ msgstr "Näitab tekstilist loendit"
 #: package/contents/ui/ConfigBehavior.qml:73
 #, fuzzy, kde-format
 #| msgid ""
-#| "Tooltips are disabled, so the 'Present Windows' effect will be displayed "
-#| "instead."
-msgid ""
-"Tooltips are disabled, so the windows will be displayed side by side instead."
-msgstr ""
-"Kohtspikrid on välja lülitatud, seega näidatakse hoopis olemasolevate akende "
-"efekti."
-
-#: package/contents/ui/ConfigBehavior.qml:80
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tooltips are disabled, and the 'Present Windows' effect is not enabled or "
-#| "otherwise available right now, so a textual list will be displayed instead"
-msgid ""
-"Tooltips are disabled, and the compositor does not support displaying "
-"windows side by side, so a textual list will be displayed instead"
-msgstr ""
-"Kohtspikrid on välja lülitatud ja olemasolevate akende efekt on kas keelatud "
-"või muul põhjusel mittesaadaval, seega näidatakse hoopis tekstilist loendit."
-
-#: package/contents/ui/ConfigBehavior.qml:87
-#, fuzzy, kde-format
-#| msgid ""
 #| "The 'Present Windows' effect is not enabled or otherwise available right "
 #| "now, so a textual list will be displayed instead."
 msgid ""
@@ -226,87 +203,87 @@ msgstr ""
 "Olemasolevate akende efekt on kas keelatud või muul põhjusel mittesaadaval, "
 "seega näidatakse hoopis tekstilist loendit."
 
-#: package/contents/ui/ConfigBehavior.qml:97
+#: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
 msgstr "Ühendamine üheks nupuks"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "Rühmitamine ainult siis, kui tegumihaldur on täis"
 
-#: package/contents/ui/ConfigBehavior.qml:115
+#: package/contents/ui/ConfigBehavior.qml:101
 #, kde-format
 msgid "Sort:"
 msgstr "Sortimine:"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Do not sort"
 msgstr "Ei sordita"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Manually"
 msgstr "Käsitsi"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Alphabetically"
 msgstr "Tähestiku järgi"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By desktop"
 msgstr "Töölaua järgi"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By activity"
 msgstr "Tegevuse järgi"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "Käivitajate hoidmine eraldi"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "Klõps aktiivsel tegumil:"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Minimeerib tegumi"
 
-#: package/contents/ui/ConfigBehavior.qml:141
+#: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "Keskklõps suvalisel tegumil:"
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Ei tee midagi"
 
-#: package/contents/ui/ConfigBehavior.qml:146
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "Sulgeb akna või rühma"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "Avab uue akna"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -314,13 +291,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Minimeerib või taastab akna või rühma"
 
-#: package/contents/ui/ConfigBehavior.qml:149
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "Lülitab rühmitamist"
 
-#: package/contents/ui/ConfigBehavior.qml:150
+#: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -328,81 +305,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Toob selle aktiivsele virtuaalsele töölauale"
 
-#: package/contents/ui/ConfigBehavior.qml:160
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Hiireratas:"
 
-#: package/contents/ui/ConfigBehavior.qml:161
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Kerib läbi tegumite"
 
-#: package/contents/ui/ConfigBehavior.qml:170
+#: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "Minimeeritud tegumid jäetakse vahele"
 
-#: package/contents/ui/ConfigBehavior.qml:181
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "Show only tasks:"
 msgstr "Näidatakse ainult:"
 
-#: package/contents/ui/ConfigBehavior.qml:182
+#: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "From current screen"
 msgstr "Aktiivse ekraani tegumeid"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:173
 #, kde-format
 msgid "From current desktop"
 msgstr "Aktiivse töölaua tegumeid"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgid "From current activity"
 msgstr "Aktiivse tegevuse tegumeid"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: package/contents/ui/ConfigBehavior.qml:183
 #, kde-format
 msgid "That are minimized"
 msgstr "Minimeeritud tegumeid"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "Kui paneel on peidetud:"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "Tähelepanu nõudva akna korral tuuakse peidust välja"
 
-#: package/contents/ui/ConfigBehavior.qml:219
+#: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
 msgstr "Uued tegumid ilmuvad:"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:227
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
 msgstr "Paremale"
 
-#: package/contents/ui/ConfigBehavior.qml:229
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:215
+#: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
 msgstr "Vasakule"
 
-#: package/contents/ui/ConfigBehavior.qml:241
+#: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
 msgstr ""
@@ -740,6 +717,30 @@ msgstr "Unusta viimati avatud kohad"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"
+
+#, fuzzy
+#~| msgid ""
+#~| "Tooltips are disabled, so the 'Present Windows' effect will be displayed "
+#~| "instead."
+#~ msgid ""
+#~ "Tooltips are disabled, so the windows will be displayed side by side "
+#~ "instead."
+#~ msgstr ""
+#~ "Kohtspikrid on välja lülitatud, seega näidatakse hoopis olemasolevate "
+#~ "akende efekti."
+
+#, fuzzy
+#~| msgid ""
+#~| "Tooltips are disabled, and the 'Present Windows' effect is not enabled "
+#~| "or otherwise available right now, so a textual list will be displayed "
+#~| "instead"
+#~ msgid ""
+#~ "Tooltips are disabled, and the compositor does not support displaying "
+#~ "windows side by side, so a textual list will be displayed instead"
+#~ msgstr ""
+#~ "Kohtspikrid on välja lülitatud ja olemasolevate akende efekt on kas "
+#~ "keelatud või muul põhjusel mittesaadaval, seega näidatakse hoopis "
+#~ "tekstilist loendit."
 
 #~ msgid "Show tooltips"
 #~ msgstr "Kohtspikrite näitamine"

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 05:49\n"
+"PO-Revision-Date: 2022-12-26 10:01\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -55,12 +55,12 @@ msgstr "Відэа"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Публічныя рэсурсы"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Шаблоны"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -161,35 +161,32 @@ msgstr "Гэты каталог будзе выкарыстоўвацца для
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Шлях да каталога \"Музыка\":"
+msgstr "Шлях да публічных рэсурсаў:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання выяў."
+msgstr ""
+"Гэты каталог будзе прадвызначана выкарыстоўвацца для загрузкі або захавання "
+"абагуленых рэсурсаў."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Шлях да каталога \"Выявы\":"
+msgstr "Шлях да шаблонаў:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання выяў."
+msgstr ""
+"Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання шаблонаў."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

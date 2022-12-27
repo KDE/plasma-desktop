@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdeplasma-addons-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-08-01 14:43+0300\n"
+"PO-Revision-Date: 2022-12-26 21:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -63,12 +63,8 @@ msgid "Moves windows back to their original positions"
 msgstr "Pencereleri özgün konumlarına geri taşır"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
 msgstr ""
-"Açık pencereleri ekran köşelerine taşıyarak geçici olarak Masaüstü'nü ortaya "
-"çıkarır"
+"Pencereleri ortadan kaldırarak geçici olarak Masaüstü'nü ortaya çıkarır"

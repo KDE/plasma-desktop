@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-16 12:49+0200\n"
+"PO-Revision-Date: 2022-12-26 22:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -28,26 +28,29 @@ msgid ""
 "whether the computer should be automatically shut down after session exit by "
 "default."
 msgstr ""
-"<h1>Мениджър на сесии</h1> От тук може да настроите мениджъра на сесии. "
-"Става въпрос за записване състоянието на системата при изход и "
-"възстановяването му при включване."
+"<h1>Мениджър на сесии</h1> Тук можете да конфигурирате мениджъра на сесии. "
+"Този включва опции, като например дали излизането от сесията (logout) трябва "
+"да бъде потвърждава, дали сесията трябва да бъде възстановена отново при "
+"влизане и дали компютърът трябва да се изключва автоматично след излизане от "
+"сесията  по подразбиране."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Системата трябва да бъде рестартирана, преди да се запази ръчната сесия за "
+"спестяване на сесия."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Рестартиране сега"
+msgstr "Рестартиране"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Неуспешно рестартиране за инсталиране на фърмуер: %1"
+msgstr "Неуспешно рестартиране в настройките на фърмуер: %1"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -70,12 +73,12 @@ msgstr "Рестартиране сега"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Екран при излизане от сесия"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Показване:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -85,59 +88,57 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Когато тази настройка е включена, ще бъде показан екранът за потвърждение на "
+"излизане, когато излизате от сесия, изключвате, рестартирате, натискате "
+"бутона на захранването или щракнете върху бутони или елементи от менюто, "
+"обозначени с <interface> Напускане… </interface>."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Подразбиращо се действие при изход"
+msgstr "Стандартна настройка:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Излизане от сесия"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Рестартиране сега"
+msgstr "Рестартиране"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Изключване"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Възстановяване на сесия"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
+"При влизане в системата да се стартират приложенията, които са били отворени:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "При последното излизане от системата"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Възстановяване на последната ръчно запазена сесия"
+msgstr "Когато сесията е ръчно запазена"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -148,6 +149,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Бутон  <interface>Запазване на сесията</interface> ще се появи в менюто "
+"<interface>Стартиране на приложения</interface>. Като го натиснете, Plasma "
+"ще запомни приложенията, които са отворени и ще ги възстанови при следващото "
+"влизане.Щракнете отново върху него, за да замените запомнените приложения."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -159,10 +164,9 @@ msgid "Start with an empty session"
 msgstr "Стартиране с нова сесия"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Приложения за изключване:"
+msgstr "Игнориране приложения:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -171,12 +175,15 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Въведете изпълними имена на  приложения тук (разделени от запетая или "
+"двуеточие,например 'xterm:konsole' или 'xterm,konsole'), за да се "
+"предотвратиавтоматичното им стартиране заедно с други сесийни приложения."
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Фърмуер"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -184,23 +191,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "След следващо рестартиране:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Стартиране на инсталация на фърмуер при следващо рестартиране"
+msgstr "Влизане в екрана за настройка на UEFI"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Стартиране на инсталация на фърмуер при следващо рестартиране"
+msgstr "Влизане в екрана за настройка на фърмуер"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

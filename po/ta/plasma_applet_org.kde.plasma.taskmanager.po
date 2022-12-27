@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-12-20 19:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -73,66 +73,66 @@ msgstr "பொது:"
 msgid "Show small window previews when hovering over Tasks"
 msgstr "பணிகளின் மீது சுட்டியை வைக்கும்போது சாளரங்களின் முன்னோட்டத்தைக் சிறிய அளவில் காட்டு"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "முன்னோட்டங்களின் மீது சுட்டியை வைக்கும்போது மற்ற சாளரங்களை மறை"
 
-#: package/contents/ui/ConfigAppearance.qml:50
+#: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "ஒலியை இயக்கும் செயலிகளை குறி"
 
-#: package/contents/ui/ConfigAppearance.qml:58
+#: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "பலகையிலுள்ள காலியிடத்தை நிரப்பு"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
 msgstr "அதிகபட்ச நெடுவரிசைகள்:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
 msgstr "அதிகபட்ச வரிசைகள்:"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
 msgstr "இத்தனை நெடுவரிசைகளை எப்போதும் பயன்படுத்து"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
 msgstr "இத்தனை வரிசைகளை எப்போதும் பயன்படுத்து"
 
-#: package/contents/ui/ConfigAppearance.qml:83
+#: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "சின்னங்களுக்கிடையேயான இடைவெளி:"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "சிறியது"
 
-#: package/contents/ui/ConfigAppearance.qml:91
+#: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "நடுத்தரமானது"
 
-#: package/contents/ui/ConfigAppearance.qml:95
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "பெரியது"
 
-#: package/contents/ui/ConfigAppearance.qml:119
+#: package/contents/ui/ConfigAppearance.qml:113
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -188,110 +188,93 @@ msgstr "உரைமுறை பட்டியலை காட்டும்"
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
 msgid ""
-"Tooltips are disabled, so the windows will be displayed side by side instead."
-msgstr ""
-"கருவித்துப்புகள் முடக்கப்பட்டிருப்பதால், அதற்கு பதிலாக சாளரங்கள் பக்கத்துப் பக்கத்தில் "
-"காட்டப்படும்."
-
-#: package/contents/ui/ConfigBehavior.qml:80
-#, kde-format
-msgid ""
-"Tooltips are disabled, and the compositor does not support displaying "
-"windows side by side, so a textual list will be displayed instead"
-msgstr ""
-"கருவித்துப்புகள் முடக்கப்பட்டமையாலும், சாளரங்களை பக்கத்துப் பக்கத்தில் காட்டுவதை சாளரநிரல் "
-"(compositor) ஆதரிக்காத‍தாலும், பதிலாக ஒரு உரைமுறை பட்டியல் காட்டப்படும்"
-
-#: package/contents/ui/ConfigBehavior.qml:87
-#, kde-format
-msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
 "சாளரங்களைப் பக்கத்துப் பக்கத்தில் காட்டுவதை சாளரநிரல் (compositor) ஆதரிக்காத‍தால், பதிலாக "
 "ஒரு உரைமுறைப் பட்டியல் காட்டப்படும்."
 
-#: package/contents/ui/ConfigBehavior.qml:97
+#: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
 msgstr "பலவற்றை ஒரே பட்டனாக தொகுத்து காட்டு"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "பணி மேலாளரில் காலியிடம் இல்லாதபோது மட்டும் தொகு"
 
-#: package/contents/ui/ConfigBehavior.qml:115
+#: package/contents/ui/ConfigBehavior.qml:101
 #, kde-format
 msgid "Sort:"
 msgstr "வரிசைப்படுத்துதல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Do not sort"
 msgstr "வரிசைப்படுத்தாதே"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Manually"
 msgstr "கைமுறையாக"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Alphabetically"
 msgstr "அகரவரிசையாக"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By desktop"
 msgstr "பணிமேடை வாரியாக"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By activity"
 msgstr "செயல்பாடு வாரியாக"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "ஏவிகளை தொகுக்காதே"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "செயலில் உள்ள பணியை க்ளிக் செய்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "பணியை ஒதுக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:141
+#: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "ஏதாவதொரு பணியை க்ளிக் செய்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "ஒன்றும் செய்யாது"
 
-#: package/contents/ui/ConfigBehavior.qml:146
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "தொகுப்பை அல்லது சாளரத்தை மூடும்"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "புதிய சாளரத்தை திறக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -299,13 +282,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "சாளரத்தை அல்லது தொகுப்பை ஒதுக்கும்/மீட்டெடுக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:149
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "தொகுத்தலை நிலைமாற்றும்"
 
-#: package/contents/ui/ConfigBehavior.qml:150
+#: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -313,81 +296,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "தற்போதைய பணிமேடைக்கு கொண்டுவரும்"
 
-#: package/contents/ui/ConfigBehavior.qml:160
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "சுட்டியின் சக்கரம்:"
 
-#: package/contents/ui/ConfigBehavior.qml:161
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "பணிகளுக்கிடையே தாவும்"
 
-#: package/contents/ui/ConfigBehavior.qml:170
+#: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "ஒதுக்கப்பட்டுள்ள பணிகளைத் தவிர்"
 
-#: package/contents/ui/ConfigBehavior.qml:181
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "Show only tasks:"
 msgstr "இதிலிருந்து மட்டும் பணிகளை காட்டு:"
 
-#: package/contents/ui/ConfigBehavior.qml:182
+#: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "From current screen"
 msgstr "தற்போதைய திரை"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:173
 #, kde-format
 msgid "From current desktop"
 msgstr "தற்போதைய பணிமேடை"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgid "From current activity"
 msgstr "தற்போதைய செயல்பாடு"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: package/contents/ui/ConfigBehavior.qml:183
 #, kde-format
 msgid "That are minimized"
 msgstr "ஒதுக்கப்பட்டிருப்பவை"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "பலகை மறைந்திருக்கும்போது:"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "சாளரம் ஒன்று கவனம் கோரும்போது காட்டு"
 
-#: package/contents/ui/ConfigBehavior.qml:219
+#: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
 msgstr "புதிய பணிகள் இங்கு காட்டப்படும்:"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
 msgstr "கீழே"
 
-#: package/contents/ui/ConfigBehavior.qml:227
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
 msgstr "வலதில்"
 
-#: package/contents/ui/ConfigBehavior.qml:229
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:215
+#: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
 msgstr "இடதில்"
 
-#: package/contents/ui/ConfigBehavior.qml:241
+#: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
 msgstr "மேலே"
@@ -724,6 +707,20 @@ msgstr "சமீப இடங்களை மறந்துவிடு"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "சமீப கோப்புகளை மறந்துவிடு"
+
+#~ msgid ""
+#~ "Tooltips are disabled, so the windows will be displayed side by side "
+#~ "instead."
+#~ msgstr ""
+#~ "கருவித்துப்புகள் முடக்கப்பட்டிருப்பதால், அதற்கு பதிலாக சாளரங்கள் பக்கத்துப் பக்கத்தில் "
+#~ "காட்டப்படும்."
+
+#~ msgid ""
+#~ "Tooltips are disabled, and the compositor does not support displaying "
+#~ "windows side by side, so a textual list will be displayed instead"
+#~ msgstr ""
+#~ "கருவித்துப்புகள் முடக்கப்பட்டமையாலும், சாளரங்களை பக்கத்துப் பக்கத்தில் காட்டுவதை "
+#~ "சாளரநிரல் (compositor) ஆதரிக்காத‍தாலும், பதிலாக ஒரு உரைமுறை பட்டியல் காட்டப்படும்"
 
 #~ msgid "Show tooltips"
 #~ msgstr "கருவித் துப்புகளை காட்டு"

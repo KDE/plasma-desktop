@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:48+0000\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2022-10-15 06:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -33,12 +33,24 @@ msgstr ""
 "ავტომატურად უნდა დაიხუროს თუ არა კომპიუტერი სესიიდან გასვლის შემდეგ "
 "ნაგულისხმევად."
 
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+
+#: package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "Restart"
+msgstr "ახლა გადატვირთვა"
+
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "მიკროკოდის დაყენების თავიდან გაშვების მოთხოვნის შეცდომა: %1"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -46,7 +58,7 @@ msgstr ""
 "კომპიუტერის შემდეგი გადატვირთვის შემდეგ თქვენ UEFI-ის მორგების ეკრანზე "
 "მოხვდებით."
 
-#: package/contents/ui/main.qml:27
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -54,72 +66,95 @@ msgstr ""
 "კომპიუტერის შემდეგი გადატვირთვის შემდეგ თქვენ მიკროკოდის მორგების ეკრანზე "
 "მოხვდებით."
 
-#: package/contents/ui/main.qml:32
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "Restart Now"
 msgstr "ახლა გადატვირთვა"
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:72
 #, kde-format
-msgid "General:"
-msgstr "საერთო:"
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr ""
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:75
 #, kde-format
-msgctxt "@option:check"
-msgid "Confirm logout"
-msgstr "გასვლის დადასტურება"
+msgid "Show:"
+msgstr ""
 
-#: package/contents/ui/main.qml:56
-#, kde-format
-msgid "Default leave option:"
+#: package/contents/ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+
+#: package/contents/ui/main.qml:97
+#, fuzzy, kde-format
+#| msgid "Default leave option:"
+msgid "Default option:"
 msgstr "გასვლის ნაგულისხმები ვარიანტი:"
 
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "End current session"
-msgstr "მიმდინარე სესიის დასრულება"
-
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
-msgid "Restart computer"
-msgstr "კომპიუტერის რესტარტი"
+msgid "Log Out"
+msgstr ""
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@option:radio"
+msgid "Restart"
+msgstr "ახლა გადატვირთვა"
+
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
-msgid "Turn off computer"
-msgstr "კომპიუტერის გამორთვა"
+msgid "Shut Down"
+msgstr ""
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:131
 #, kde-format
-msgid "When logging in:"
-msgstr "შესვლისას:"
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr ""
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:139
 #, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last session"
-msgstr "ბოლო სესიის აღდგენა"
+msgid "On login, launch apps that were open:"
+msgstr ""
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:140
 #, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Restore last manually saved session"
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: package/contents/ui/main.qml:153
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Restore last manually saved session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
 msgstr "ბოლო ხელით შენახული სესიის აღდგენა"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:162
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -128,32 +163,48 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "ცარიელი სესიით დაწყება"
 
-#: package/contents/ui/main.qml:126
-#, kde-format
-msgid "Don't restore these applications:"
+#: package/contents/ui/main.qml:181
+#, fuzzy, kde-format
+#| msgid "Don't restore these applications:"
+msgid "Ignored applications:"
 msgstr "არ აღადგინო ეს აპლიკაციები:"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid ""
-"Here you can enter a colon or comma separated list of applications that "
-"should not be saved in sessions, and therefore will not be started when "
-"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
 msgstr ""
-"შეიყვანეთ ორიწერტილით ან მძიმით დაშორებული აპლიკაციების სია, რომელიც არ "
-"იქნება შენახული გასვლისას და შესაბამისად - გაშვებული სესიის აღდგენისას. "
-"მაგალითად 'xterm:konsole' ან 'xterm,konsole'."
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:212
 #, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: package/contents/ui/main.qml:218
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter UEFI setup screen on next restart"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen on next restart"
+msgid "Enter UEFI setup screen"
 msgstr "გადატვირთვისას UEFI-ის მორგების ეკრანზე გადასვლა"
 
-#: package/contents/ui/main.qml:153
-#, kde-format
+#: package/contents/ui/main.qml:219
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
-msgid "Enter firmware setup screen on next restart"
+msgid "Enter firmware setup screen"
 msgstr "გადატვირთვისას მიკროკოდის ეკრანზე გადასვლა"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -179,6 +230,47 @@ msgstr "შესვლისას"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "სესიიდან ამოსაღები აპლიკაციები"
+
+#~ msgid "General:"
+#~ msgstr "საერთო:"
+
+#~ msgctxt "@option:check"
+#~ msgid "Confirm logout"
+#~ msgstr "გასვლის დადასტურება"
+
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "End current session"
+#~ msgstr "მიმდინარე სესიის დასრულება"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart computer"
+#~ msgstr "კომპიუტერის რესტარტი"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Turn off computer"
+#~ msgstr "კომპიუტერის გამორთვა"
+
+#~ msgid "When logging in:"
+#~ msgstr "შესვლისას:"
+
+#~ msgctxt ""
+#~ "@option:radio Here 'session' refers to the technical concept of session "
+#~ "restoration, whereby the windows that were open on logout are re-opened "
+#~ "on the next login"
+#~ msgid "Restore last session"
+#~ msgstr "ბოლო სესიის აღდგენა"
+
+#~ msgid ""
+#~ "Here you can enter a colon or comma separated list of applications that "
+#~ "should not be saved in sessions, and therefore will not be started when "
+#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+#~ msgstr ""
+#~ "შეიყვანეთ ორიწერტილით ან მძიმით დაშორებული აპლიკაციების სია, რომელიც არ "
+#~ "იქნება შენახული გასვლისას და შესაბამისად - გაშვებული სესიის აღდგენისას. "
+#~ "მაგალითად 'xterm:konsole' ან 'xterm,konsole'."
 
 #~ msgctxt "@option:check"
 #~ msgid "Offer shutdown options"

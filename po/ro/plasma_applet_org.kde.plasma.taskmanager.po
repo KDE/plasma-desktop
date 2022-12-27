@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-06-01 18:36+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -87,67 +87,67 @@ msgstr "Generale:"
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:39
 #, fuzzy, kde-format
 #| msgid "Highlight windows when hovering over task tooltips"
 msgid "Hide other windows when hovering over previews"
 msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
 
-#: package/contents/ui/ConfigAppearance.qml:50
+#: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Marchează aplicațiile ce redau sunet"
 
-#: package/contents/ui/ConfigAppearance.qml:58
+#: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
 msgstr "Maxim coloane:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
 msgstr "Maxim rânduri:"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
 msgstr "Aranjează mereu sarcinile în rânduri de tot atâtea coloane"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
 msgstr "Aranjează mereu sarcinile în coloane de tot atâtea rânduri"
 
-#: package/contents/ui/ConfigAppearance.qml:83
+#: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Spațiere între pictograme:"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Mică"
 
-#: package/contents/ui/ConfigAppearance.qml:91
+#: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normală"
 
-#: package/contents/ui/ConfigAppearance.qml:95
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Mare"
 
-#: package/contents/ui/ConfigAppearance.qml:119
+#: package/contents/ui/ConfigAppearance.qml:113
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -209,109 +209,93 @@ msgstr "Arată lista textuală"
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
 msgid ""
-"Tooltips are disabled, so the windows will be displayed side by side instead."
-msgstr ""
-"Indiciile sunt dezactivate, deci ferestrele vor fi afișate una lângă alta."
-
-#: package/contents/ui/ConfigBehavior.qml:80
-#, kde-format
-msgid ""
-"Tooltips are disabled, and the compositor does not support displaying "
-"windows side by side, so a textual list will be displayed instead"
-msgstr ""
-"Indiciile sunt dezactivate și compozitorul nu susține afișarea ferestrelor "
-"una lângă alta, deci va fi afișată în schimb o listă textuală"
-
-#: package/contents/ui/ConfigBehavior.qml:87
-#, kde-format
-msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
 "Compozitorul nu susține afișarea ferestrelor una lângă alta, deci va fi "
 "afișată în schimb o listă textuală."
 
-#: package/contents/ui/ConfigBehavior.qml:97
+#: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
 msgstr "Combină într-un singur buton"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "Grupează numai când gestionarul de sarcini e plin"
 
-#: package/contents/ui/ConfigBehavior.qml:115
+#: package/contents/ui/ConfigBehavior.qml:101
 #, kde-format
 msgid "Sort:"
 msgstr "Sortare:"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Do not sort"
 msgstr "Nu sorta"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Manually"
 msgstr "Manual"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Alphabetically"
 msgstr "Alfabetic"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By desktop"
 msgstr "După birou"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By activity"
 msgstr "După activitate"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "Păstrează lansatorii separați"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "Apăsarea pe sarcina activă:"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Minimizează sarcina"
 
-#: package/contents/ui/ConfigBehavior.qml:141
+#: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "Clic-mijloc pe orice sarcină:"
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Nu face nimic"
 
-#: package/contents/ui/ConfigBehavior.qml:146
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "Închide fereastra sau grupul"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "Deschide o fereastră nouă"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -319,13 +303,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Minimizează/restabilește fereastra sau grupul"
 
-#: package/contents/ui/ConfigBehavior.qml:149
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "Comută gruparea"
 
-#: package/contents/ui/ConfigBehavior.qml:150
+#: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -333,81 +317,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "O aduce pe biroul virtual curent"
 
-#: package/contents/ui/ConfigBehavior.qml:160
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Rotița mausului:"
 
-#: package/contents/ui/ConfigBehavior.qml:161
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Ciclează printre sarcini"
 
-#: package/contents/ui/ConfigBehavior.qml:170
+#: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "Sari peste sarcini minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:181
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "Show only tasks:"
 msgstr "Arată numai sarcinile:"
 
-#: package/contents/ui/ConfigBehavior.qml:182
+#: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "From current screen"
 msgstr "De pe ecranul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:173
 #, kde-format
 msgid "From current desktop"
 msgstr "De pe biroul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgid "From current activity"
 msgstr "Din activitatea curentă"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: package/contents/ui/ConfigBehavior.qml:183
 #, kde-format
 msgid "That are minimized"
 msgstr "Care sunt minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "Când panoul e ascuns:"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "Demaschează când o fereastră vrea atenție"
 
-#: package/contents/ui/ConfigBehavior.qml:219
+#: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
 msgstr "Sarcinile noi apar:"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:227
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
 msgstr "La dreapta"
 
-#: package/contents/ui/ConfigBehavior.qml:229
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:215
+#: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
 msgstr "La stânga"
 
-#: package/contents/ui/ConfigBehavior.qml:241
+#: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
 msgstr ""
@@ -750,6 +734,19 @@ msgstr "Uită locurile recente"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
+
+#~ msgid ""
+#~ "Tooltips are disabled, so the windows will be displayed side by side "
+#~ "instead."
+#~ msgstr ""
+#~ "Indiciile sunt dezactivate, deci ferestrele vor fi afișate una lângă alta."
+
+#~ msgid ""
+#~ "Tooltips are disabled, and the compositor does not support displaying "
+#~ "windows side by side, so a textual list will be displayed instead"
+#~ msgstr ""
+#~ "Indiciile sunt dezactivate și compozitorul nu susține afișarea "
+#~ "ferestrelor una lângă alta, deci va fi afișată în schimb o listă textuală"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Arată indicii"

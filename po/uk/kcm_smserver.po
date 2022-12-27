@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-14 17:08+0300\n"
+"PO-Revision-Date: 2022-12-26 11:32+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -42,12 +42,12 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Систему слід перезапустити, перш ніж буде задіяно збереження сеансів вручну."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Перезавантажити зараз"
+msgstr "Перезапустити"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -80,12 +80,12 @@ msgstr "Перезавантажити зараз"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Вікно виходу"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Показати:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -95,59 +95,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Якщо позначено цей пункт, під час виходу з облікового запису, вимикання, "
+"перезапуску, натискання кнопки живлення або натискання кнопок або пунктів "
+"меню із міткою <interface>Вийти…</interface> буде показано вікно "
+"підтвердження виходу."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Типовий варіант виходу з системи:"
+msgstr "Типовий варіант:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Вийти"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Перезавантажити зараз"
+msgstr "Перезапустити"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Вимкнути"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Відновлення сеансу"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "При вході запустити програми, які було відкрито:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "На момент останнього виходу"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Відновлювати попередній збережений вручну сеанс"
+msgstr "Якщо сеанс було збережено вручну"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -158,6 +155,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"У меню <interface>Інструмента запуску програм</interface> буде показано "
+"кнопку <interface>Зберегти сеанс</interface>. Якщо ви натиснете його, Плазма "
+"запам'ятає програми, які було відкрито і відновить їх під час наступного "
+"входу до середовища. Натисніть кнопку ще раз, щоб замінити набір "
+"запам'ятованих програм."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -169,10 +171,9 @@ msgid "Start with an empty session"
 msgstr "Запускати з порожнім сеансом"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Не відновлювати такі програми:"
+msgstr "Ігноровані програми:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -181,13 +182,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Тут можна вказати назви виконуваних файлів (відокремленими комами або "
+"двокрапками, наприклад «xterm:konsole» або «xterm,konsole»), щоб запобігти "
+"їхньому автоматичному запуску разом із іншими програмами, які система "
+"відновлює у сеансі."
 
 #: package/contents/ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Налаштовування мікропрограми"
+msgstr "Мікропрограма"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -195,23 +199,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Після наступного перезапуску:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Налаштувати UEFI під час наступного перезапуску"
+msgstr "Налаштувати UEFI"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Налаштовування мікропрограми під час наступного перезавантаження"
+msgstr "Налаштовувати мікропрограму"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

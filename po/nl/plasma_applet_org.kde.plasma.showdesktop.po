@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-09-16 10:12+0200\n"
+"PO-Revision-Date: 2022-12-26 10:49+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -60,15 +60,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Zet vensters terug naar hun originele posities"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Tijdelijk het bureaublad onthullen door open vensters naar schermhoeken te "
-"verplaatsen"
+msgstr "Toont tijdelijk het bureaublad door vensters weg te schuiven"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Bureaublad tonen"

@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-14 10:13+0200\n"
+"PO-Revision-Date: 2022-12-26 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmsmserver.cpp:49
@@ -42,12 +42,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Het systeem moet opnieuw gestart worden alvorens handmatig opslaan van "
+"sessie actief wordt."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Nu herstarten"
+msgstr "Opnieuw starten"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -79,12 +80,12 @@ msgstr "Nu herstarten"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Afmeldscherm"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Tonen:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -94,60 +95,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Wanneer deze instelling aan is gezet zal het scherm voor afmeldbevestiging "
+"getoond worden wanneer u zich afmeld, systeem afsluiten, herstarten, de "
+"aanknop indrukt of klikt op knoppen of menu-items met label "
+"<interface>Verlaten…</interface>."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Standaard afmeldoptie:"
+msgstr "Standaardoptie:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Afmelden"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Nu herstarten"
+msgstr "Herstarten"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Systeem afsluiten"
 
 #: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Sessiebeheerder"
+msgstr "Sessie herstellen"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Bij aanmelden, start toepassingen die open waren:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Bij laatste afmelding"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Laatste handmatig opgeslagen sessie herstellen"
+msgstr "Wanneer de sessie handmatig was opgeslagen"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -158,6 +155,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Een knop <interface>Sessie opslaan</interface> zal in het menu "
+"<interface>Toepassingenstarter</interface> verschijnen. Wanneer u er op "
+"klikt, zal Plasma de toepassingen onthouden die open waren en ze herstellen "
+"bij de volgende keer aanmelden. Klik er nog eens op om de set van onthouden "
+"toepassingen te vervangen."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -169,10 +171,9 @@ msgid "Start with an empty session"
 msgstr "Met een lege sessie opstarten"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Deze toepassingen niet herstellen:"
+msgstr "Genegeerde toepassingen:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -181,13 +182,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Schrijf de uitvoeringsnamen van toepassingen hier (gescheiden door komma's "
+"of dubbele punten, bijvoorbeeld 'xterm:konsole' of 'xterm,konsole') om te "
+"voorkomen dat ze automatisch starten samen met andere sessie-herstel "
+"toepassingen."
 
 #: package/contents/ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Firmware setup"
+msgstr "Firmware"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -195,23 +199,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Na volgende herstart:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Met UEFI setup-scherm beginnen bij volgende herstart"
+msgstr "Het UEFI setup-scherm starten"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Ga naar firmware setup-scherm bij volgende herstart"
+msgstr "Het firmware setup-scherm starten"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

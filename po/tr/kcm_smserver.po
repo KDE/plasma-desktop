@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-14 12:04+0300\n"
+"PO-Revision-Date: 2022-12-26 22:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -43,12 +43,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Elle oturum kaydetme etkinleştirilmeden önce sistemin yeniden başlatılması "
+"gerekir."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Şimdi Yeniden Başlat"
+msgstr "Yeniden Başlat"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -79,12 +80,12 @@ msgstr "Şimdi Yeniden Başlat"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Ekrandan Çıkış Yap"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Göster:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -94,59 +95,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Bu ayar açıkken; çıkış yaparken, bilgisayarı kapatırken, yeniden "
+"başlatırken, güç düğmesine basıldığında veya <interface>Ayrıl…</interface> "
+"etiketli düğmelere veya menü ögelerine basıldığında çıkış onay ekranı "
+"gösterilecektir."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Öntanımlı ayrılma seçeneği:"
+msgstr "Öntanımlı seçenek:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Çıkış Yap"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Şimdi Yeniden Başlat"
+msgstr "Yeniden Başlat"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Kapat"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Oturum Geri Yükle"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Girişte, açık olan uygulamaları başlat:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Son girişte"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Elle kaydedilmiş son oturumu geri yükle"
+msgstr "Oturum elle kaydedildiğinde"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -157,6 +155,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>Uygulama Başlatıcı</interface> menüsünde bir <interface>Oturumu "
+"Kaydet</interface> düğmesi görünür. Ona tıkladığınızda, Plasma açık olan "
+"uygulamaları anımsar ve bir sonraki girişte onları başlatır. Anımsanan "
+"uygulamalar kümesini değiştirmek için ona yeniden tıklayın."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -165,13 +167,12 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Boş bir oturum ile başla"
+msgstr "Boş bir oturum ile başlat"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Şu uygulamaları geri yükleme:"
+msgstr "Yok sayılan uygulamalar:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -180,12 +181,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Uygulamaların başka oturum tarafından geri yüklenen uygulamalarla otomatik "
+"başlatılmasının önüne geçmek için uygulama yürütülebilirlerinin adlarını "
+"buraya yazın (virgülle veya iki noktayla ayrılmış bir biçimde; örneğin, "
+"'xterm:konsole' veya 'xterm,konsole')."
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Üretici Yazılımı"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -193,23 +198,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Bir sonraki yeniden başlatma sonrası:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Bir sonraki yeniden başlatmada UEFI ayarlarına gir"
+msgstr "UEFI ayar ekranına gir"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Bir sonraki yeniden başlatmada gömülü yazılım kurulum ekranına gir"
+msgstr "Üretici yazılımı ayar ekranına gir"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -227,7 +228,7 @@ msgstr "Öntanımlı çıkış seçeneği"
 #: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
-msgstr "Oturum açma esnasında"
+msgstr "Oturum açarken"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
