@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2021-08-23 00:41+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-12-28 01:05+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -59,12 +59,13 @@ msgstr "Ištrinti indeksavimo duomenis"
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
+"Prieš įsigaliojant šiems pakeitimams, sistema privalo būti paleista iš naujo."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Paleisti iš naujo"
 
 #: package/contents/ui/main.qml:100
 #, kde-format

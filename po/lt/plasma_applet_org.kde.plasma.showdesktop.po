@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-11-18 23:16+0200\n"
+"PO-Revision-Date: 2022-12-28 01:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -63,14 +63,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Perkelia langus atgal į jų pradinę poziciją"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Laikinai atskleidžia darbalaukį, perkeldamas atvertus langus į ekrano kampus"
+msgstr "Laikinai rodo darbalaukį perkeldamas langus į šalį"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Rodyti darbalaukį"

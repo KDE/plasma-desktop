@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-28 00:51+0000\n"
 "PO-Revision-Date: 2010-01-26 11:14+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -250,45 +250,38 @@ msgstr ""
 msgid "Repetition interval for the mouse movement"
 msgstr ""
 
-#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
 msgstr ""
 
-#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:28
-#, kde-format
-msgid "Maximum velocity"
-msgstr ""
-
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:32
+#: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
 msgstr ""
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:35
+#: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr ""
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:41
+#: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
 msgstr ""
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:45
+#: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
 msgstr ""
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:49
+#: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
 msgstr ""
@@ -589,23 +582,23 @@ msgstr "Obavijest"
 msgid "Acceleration delay:"
 msgstr "&Zadrška prihvaćanja:"
 
-#: package/contents/ui/MouseNavigation.qml:79
+#: package/contents/ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:90
+#: package/contents/ui/MouseNavigation.qml:96
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "&Zadrška prihvaćanja:"
 
-#: package/contents/ui/MouseNavigation.qml:101
+#: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:112
+#: package/contents/ui/MouseNavigation.qml:124
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration profile:"

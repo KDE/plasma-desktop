@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-28 00:51+0000\n"
 "PO-Revision-Date: 2022-12-21 04:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -241,45 +241,38 @@ msgstr "滑鼠移動的延遲"
 msgid "Repetition interval for the mouse movement"
 msgstr "滑鼠移動的重複間隔"
 
-#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
 msgstr "需要多久達到最大速率"
 
-#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:28
-#, kde-format
-msgid "Maximum velocity"
-msgstr "最大速率"
-
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:32
+#: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
 msgstr "最大速率"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:35
+#: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "滑鼠按鍵曲線"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:41
+#: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
 msgstr "使用手勢"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:45
+#: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
 msgstr "使用手勢前詢問確認"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:49
+#: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
 msgstr ""
@@ -554,22 +547,22 @@ msgstr "顯示一個通知"
 msgid "Acceleration delay:"
 msgstr "加速延遲："
 
-#: package/contents/ui/MouseNavigation.qml:79
+#: package/contents/ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr "重複間隔："
 
-#: package/contents/ui/MouseNavigation.qml:90
+#: package/contents/ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
 msgstr "加速時間："
 
-#: package/contents/ui/MouseNavigation.qml:101
+#: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr "最快速度："
 
-#: package/contents/ui/MouseNavigation.qml:112
+#: package/contents/ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "加速設定檔："
@@ -593,6 +586,9 @@ msgid ""
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
 "Orca 螢幕閱讀器看起來尚未安裝。使用這個功能前請先安裝它並重新登入或重新開機"
+
+#~ msgid "Maximum velocity"
+#~ msgstr "最大速率"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

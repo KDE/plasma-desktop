@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-15 06:27+0200\n"
+"PO-Revision-Date: 2022-12-27 07:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -38,12 +38,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"სესიების კონტროლის ხელით მორგების ძალაში შესასვლელად საჭიროა სისტემის "
+"გადატვირვა."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "ახლა გადატვირთვა"
+msgstr "გადატვირთვა"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -75,12 +76,12 @@ msgstr "ახლა გადატვირთვა"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "გასვლის ეკრანი"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "ჩვენება:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -90,59 +91,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"როცა ეს პარამეტრი ჩართულია, გასვლისას დადასტურების ფანჯარას გაჩვენებთ, სადაც "
+"შეგიძლიათ გახვიდეთ, გამორთოთ, გადატვირთოთ, დააწვეთ ჩართვის ღილაკს ან "
+"დააწკაპუნოთ მენიუს პუნქტებზე, რომლებსაც აწერია <interface>გასვლა…</"
+"interface>."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "გასვლის ნაგულისხმები ვარიანტი:"
+msgstr "ნაგულისხმები პარამეტრი:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "გასვლა"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "ახლა გადატვირთვა"
+msgstr "გადატვირთვა"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "გამორთვა"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "სესიის აღდგენა"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "შესვლისას წინა ჯერზე გაშვებული პროგრამების გაშვება:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "ბოლო გასვლისას"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "ბოლო ხელით შენახული სესიის აღდგენა"
+msgstr "როცა სესია ხელით იქნა შენახული"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -164,10 +162,9 @@ msgid "Start with an empty session"
 msgstr "ცარიელი სესიით დაწყება"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "არ აღადგინო ეს აპლიკაციები:"
+msgstr "იგნორირებული აპლიკაციები:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -181,7 +178,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "მიკროკოდი"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -189,20 +186,16 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "შემდეგი გადატვირთვის შემდეგ:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "გადატვირთვისას UEFI-ის მორგების ეკრანზე გადასვლა"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "გადატვირთვისას მიკროკოდის ეკრანზე გადასვლა"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-28 00:51+0000\n"
 "PO-Revision-Date: 2022-12-15 09:34+0000\n"
 "Last-Translator: Pedro Morais <morasi@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -238,45 +238,38 @@ msgstr "Atraso do movimento do rato"
 msgid "Repetition interval for the mouse movement"
 msgstr "Intervalo de repetição do movimento do rato"
 
-#. i18n: ectx: label, entry (MK_TimeToMax), group (Mouse)
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21 kcmaccessibilitymouse.kcfg:25
+#: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
 msgstr "Tempo até à velocidade máxima"
 
-#. i18n: ectx: label, entry (MK_MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:28
-#, kde-format
-msgid "Maximum velocity"
-msgstr "Velocidade máxima"
-
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:32
+#: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
 msgstr "Velocidade Máxima"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:35
+#: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "Curva das Teclas do Rato"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:41
+#: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
 msgstr "Usar os Gestos"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:45
+#: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
 msgstr "Pedir a confirmação de um gesto"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:49
+#: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
 msgstr "Confirmar o acesso ao teclado"
@@ -556,22 +549,22 @@ msgstr "Mostrar uma notificação"
 msgid "Acceleration delay:"
 msgstr "Atraso de aceleração:"
 
-#: package/contents/ui/MouseNavigation.qml:79
+#: package/contents/ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Intervalo de repetição:"
 
-#: package/contents/ui/MouseNavigation.qml:90
+#: package/contents/ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Tempo de aceleração:"
 
-#: package/contents/ui/MouseNavigation.qml:101
+#: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Velocidade máxima:"
 
-#: package/contents/ui/MouseNavigation.qml:112
+#: package/contents/ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Perfil de aceleração:"
@@ -599,3 +592,6 @@ msgstr ""
 "Parece que o Leitor do Ecrã Orca não está instalado. Instale-o por favor "
 "antes de tentar usar esta funcionalidade e depois encerre a sessão ou "
 "reinicie"
+
+#~ msgid "Maximum velocity"
+#~ msgstr "Velocidade máxima"
