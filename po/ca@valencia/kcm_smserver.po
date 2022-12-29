@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-14 12:28+0200\n"
+"PO-Revision-Date: 2022-12-27 14:20+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -43,12 +43,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Cal reiniciar el sistema perquè la guardada manual de la sessió estiga "
+"activa."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Reinicia ara"
+msgstr "Reinicia"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -82,12 +83,12 @@ msgstr "Reinicia ara"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Pantalla d'eixida"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Mostra:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -97,59 +98,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Quan esta opció de configuració està activa, es mostrarà la pantalla de "
+"confirmació d'eixida quan tanqueu la sessió, apagueu, premeu el botó "
+"d'iniciada o feu clic en els botons o elements de menú etiquetats "
+"<interface>Ix…</interface>"
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Opció predeterminada d'eixida:"
+msgstr "Opció predeterminada:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Eixida"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Reinicia ara"
+msgstr "Reinicia"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Para"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Restauració de la sessió"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "En iniciar la sessió, inicia les aplicacions que estaven obertes:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "En l'última eixida"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Restaura manualment l'última sessió guardada"
+msgstr "Quan la sessió es va guardar manualment"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -160,6 +158,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Apareixerà el botó <interface>Guarda la sessió</interface> en el menú de "
+"l'<interface>Iniciador d'aplicacions</interface>. Quan hi feu clic, Plasma "
+"recordarà les aplicacions que estan obertes i les restaurarà en iniciar la "
+"sessió següent. Feu-hi clic una altra vegada per a substituir el conjunt "
+"d'aplicacions recordades."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -171,10 +174,9 @@ msgid "Start with an empty session"
 msgstr "Comença amb una sessió buida"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "No restaures estes aplicacions:"
+msgstr "Aplicacions ignorades:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -183,12 +185,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Escriviu ací els noms dels executables de les aplicacions (separats per "
+"comes o punts i comes, per exemple, «xterm:konsole» o «xterm,konsole») per a "
+"evitar que s'inicien automàticament amb les aplicacions restaurades d'altres "
+"sessions."
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Microprogramari"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -196,24 +202,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Després del proper reinici:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Entra a la pantalla de configuració de la UEFI en el proper reinici"
+msgstr "Entra a la pantalla de configuració de la UEFI"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
-"Entra a la pantalla de configuració del microprogramari en el proper reinici"
+msgstr "Entra a la pantalla de configuració del microprogramari"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -238,52 +239,3 @@ msgstr "En connectar-se"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicacions que s'exclouran de la sessió"
-
-#~ msgid "General:"
-#~ msgstr "General:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Confirm logout"
-#~ msgstr "Confirma l'eixida"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "End current session"
-#~ msgstr "Finalitza la sessió actual"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Restart computer"
-#~ msgstr "Torna a iniciar l'ordinador"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Turn off computer"
-#~ msgstr "Apaga l'ordinador"
-
-#~ msgid "When logging in:"
-#~ msgstr "En iniciar la sessió:"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "Restore last session"
-#~ msgstr "Restaura l'última sessió"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "Ací podeu introduir, separades per dos punts o per comes, una llista de "
-#~ "les aplicacions que no s'haurien de guardar a les sessions, i que, per "
-#~ "tant, no s'iniciaran quan es restaure una sessió. Per exemple «xterm:"
-#~ "konsole» o «xterm,konsole»."
-
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "Oferix les opcions de parada"
-
-#~ msgid "Offer shutdown options"
-#~ msgstr "Oferix les opcions de parada"

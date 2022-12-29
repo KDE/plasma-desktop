@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-16 11:37+0100\n"
+"PO-Revision-Date: 2022-12-28 18:37+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: KDM xterm xconsole KWin Firmware BIOS firmware UEFI\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-POFile-SpellExtra: Oswald Buddenhagen Schwan konsole\n"
+"X-POFile-SpellExtra: Oswald Buddenhagen Schwan konsole repô\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -34,12 +34,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"É necessário reiniciar o sistema antes de a gravação manual da sessão ficar "
+"activa."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Reiniciar Agora"
+msgstr "Reiniciar"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -71,12 +72,12 @@ msgstr "Reiniciar Agora"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Ecrã de Encerramento"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Mostrar:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -86,59 +87,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Quando esta opção estiver ligada, o ecrã de confirmação de saída será "
+"apresentado quando sair, desligar, reiniciar, carregar no botão para ligar/"
+"desligar ou carregar nos botões ou opções do menu que digam "
+"<interface>Encerrar…</interface>."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Opção de encerramento predefinida:"
+msgstr "Opção predefinida:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Sair"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Reiniciar Agora"
+msgstr "Reiniciar"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Desligar"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Repor a Sessão"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "No início da sessão, lançar as aplicações que estavam abertas:"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "No último fim de sessão"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Recuperar a última sessão gravada manualmente"
+msgstr "Quando a sessão foi gravada manualmente"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -149,6 +147,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Irá aparecer um botão <interface>Gravar a Sessão</interface> no menu do "
+"<interface>Lançador de Aplicações</interface>. Quando carregar nele, o  "
+"Plasma irá recordar as aplicações que estavam abertas e repô-las no próximo "
+"início de sessão. Carregue nele de novo para substituir o conjunto de "
+"aplicações recordadas."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -160,10 +163,9 @@ msgid "Start with an empty session"
 msgstr "Iniciar com uma sessão vazia"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Não repor estas aplicações:"
+msgstr "Aplicações ignoradas:"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -172,12 +174,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Indique os nomes das aplicações executáveis (separados, por vírgulas ou dois-"
+"pontos, por exemplo 'xterm:konsole' ou 'xterm,konsole') para impedir que as "
+"mesmas sejam iniciadas automaticamente com as outras aplicações na reposição "
+"da sessão."
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Firmware"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -185,23 +191,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Após o próximo reinício:"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Entrar no ecrã de configuração do UEFI no próximo reinício"
+msgstr "Entrar no ecrã de configuração do UEFI"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Entrar no ecrã de configuração do 'firmware' no próximo reinício"
+msgstr "Entrar no ecrã de configuração do 'firmware'"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -226,52 +228,3 @@ msgstr "No arranque"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicações a excluir da sessão"
-
-#~ msgid "General:"
-#~ msgstr "Geral:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Confirm logout"
-#~ msgstr "Confirmar a saída"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "End current session"
-#~ msgstr "Encerrar a sessão actual"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Restart computer"
-#~ msgstr "Reiniciar o computador"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Turn off computer"
-#~ msgstr "Desligar o computador"
-
-#~ msgid "When logging in:"
-#~ msgstr "Ao autenticar-se:"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "Restore last session"
-#~ msgstr "Repor a última sessão"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "Aqui poderá entrar uma lista separada por dois-pontos ou vírgulas das "
-#~ "aplicações que não deverão ser gravadas nas sessões e que, como tal, não "
-#~ "serão iniciadas ao repor uma sessão. Por exemplo, 'xterm:konsole' ou "
-#~ "'xterm,konsole'."
-
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "Oferecer opções de desligar"
-
-#~ msgid "Offer shutdown options"
-#~ msgstr "Oferecer opções de desligar"

@@ -12,20 +12,21 @@
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-15 17:50+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2022-12-28 10:25+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -50,12 +51,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Le système doit être re-démarré afin que les modifications puissent être "
+"prises en compte."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Démarrer maintenant"
+msgstr "Re-démarrer"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -87,12 +89,12 @@ msgstr "Démarrer maintenant"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Écran de déconnexion"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Afficher :"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -102,60 +104,56 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Lorsque cette option est activée, l’écran de confirmation de déconnexion "
+"sera affiché lors d'une déconnexion, de l'extinction, d'un re-démarrage, de "
+"l'appui sur le bouton de mise sous tension ou  d'un clic sur les boutons ou "
+"les éléments de menu intitulés <interface>Quitter… </interface>."
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
+#, kde-format
 msgid "Default option:"
-msgstr "Option à la déconnexion par défaut :"
+msgstr "Option par défaut :"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "@option:radio"
 msgid "Log Out"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Restart"
-msgstr "Démarrer maintenant"
+msgstr "Re-démarrer"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Shut Down"
-msgstr ""
+msgstr "Éteindre"
 
 #: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Gestionnaire de sessions"
+msgstr "Restauration de la session"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "A la connexion, lancer les applications ayant été ouvertes :"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "A la dernière déconnexion"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Restaurer manuellement la dernière session enregistrée "
+msgstr "Lorsque la session a été enregistrée manuellement"
 
 #: package/contents/ui/main.qml:162
 #, kde-kuit-format
@@ -166,6 +164,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Un bouton <interface>Enregistrer une session</interface> apparaîtra dans le "
+"menu <interface>Lanceur d'applications</interface>. Lorsque vous cliquez "
+"dessus, Plasma se souviendra des applications ouvertes et les restaurera à "
+"la prochaine connexion. Veuillez cliquer à nouveau dessus pour remplacer "
+"l’ensemble des applications mémorisées."
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -177,10 +180,9 @@ msgid "Start with an empty session"
 msgstr "Démarrer avec une session vide"
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Ne pas restaurer ces applications :"
+msgstr "Applications ignorées :"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
@@ -189,13 +191,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Veuillez saisir ici les noms des exécutables correspondants aux applications "
+"(séparés par des virgules ou des deux points, par exemple, « xterm:konsole » "
+"ou « xterm, konsole ») pour les empêcher de démarrer automatiquement avec "
+"d’autres applications restaurées en session."
 
 #: package/contents/ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Configuration du firmware"
+msgstr "Micro-programme"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -203,24 +208,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Après le prochain re-démarrage :"
 
 #: package/contents/ui/main.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Activer l'écran de démarrage « UEFI » au prochain re-démarrage"
+msgstr "Activer l'écran de configuration « UEFI »"
 
 #: package/contents/ui/main.qml:219
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
-"Lancer l'écran de configuration du micro-programme au prochain redémarrage"
+msgstr "Lancer l'écran de configuration du micro-programme"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

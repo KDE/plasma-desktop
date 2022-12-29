@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-09-16 15:59+0100\n"
+"PO-Revision-Date: 2022-12-28 18:37+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -55,12 +55,7 @@ msgid "Moves windows back to their original positions"
 msgstr "Move as janelas de volta para as suas posições originais"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Revela temporariamente o ecrã, movendo as janelas abertas para os cantos do "
-"mesmo"
+msgstr "Revela temporariamente o ecrã, movendo as janelas abertas para fora"
