@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-10 00:47+0000\n"
-"PO-Revision-Date: 2022-05-05 12:53+0100\n"
+"PO-Revision-Date: 2022-12-28 21:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -92,11 +92,9 @@ msgid "Send an email to %1"
 msgstr "Trimite scrisoare către %1"
 
 #: contents/configuration/AboutPlugin.qml:61
-#, fuzzy
-#| msgid "Open %1"
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Deschide %1"
+msgstr "Deschide saitul %1"
 
 #: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
@@ -246,8 +244,6 @@ msgstr ""
 "modificări"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:199
-#, fuzzy
-#| msgid "Apply now"
 msgid "Apply Now"
 msgstr "Aplică acum"
 
@@ -352,30 +348,32 @@ msgstr "Scurtătură"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Trageți pentru a schimba înălțimea maximă."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Trageți pentru a schimba lățimea maximă."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Dublu-clic pentru reinițializare."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Trageți pentru a schimba înălțimea minimă."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Trageți pentru a schimba lățimea minimă."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
+"Dublu-clic pentru reinițializare."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"

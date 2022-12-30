@@ -1,0 +1,132 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Sergiu Bivol <sergiu@cip.md>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-16 00:47+0000\n"
+"PO-Revision-Date: 2022-12-28 21:27+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Câte luni să fie păstrat istoricul activității"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Ce date să fie păstrate în istoricul activității"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Lista aplicațiilor al căror istoric de activitate să fie salvat"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Lista aplicațiilor al căror istoric de activitate să nu fie salvat"
+
+#: kcm_recentFiles.cpp:64
+#, kde-format
+msgctxt "unlimited number of months"
+msgid "Forever"
+msgstr "Permanent"
+
+#: kcm_recentFiles.cpp:73
+#, kde-format
+msgid "Forget the last hour"
+msgstr "Uită ultima oră"
+
+#: kcm_recentFiles.cpp:74
+#, kde-format
+msgid "Forget the last two hours"
+msgstr "Uită ultimele două ore"
+
+#: kcm_recentFiles.cpp:75
+#, kde-format
+msgid "Forget a day"
+msgstr "Uită o zi"
+
+#: kcm_recentFiles.cpp:76
+#, kde-format
+msgid "Forget everything"
+msgstr "Uită tot"
+
+#: kcm_recentFiles.cpp:166
+#, kde-format
+msgctxt "unit of time. months to keep the history"
+msgid " month"
+msgid_plural " months"
+msgstr[0] " lună"
+msgstr[1] " luni"
+msgstr[2] " de luni"
+
+#: kcm_recentFiles.cpp:169
+#, kde-format
+msgctxt "for in 'keep history for 5 months'"
+msgid "For "
+msgstr "pentru "
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/RecentFiles.ui:17
+#, kde-format
+msgid "Cleared the activity history."
+msgstr "S-a curățat istoricul activității."
+
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/RecentFiles.ui:36
+#, kde-format
+msgid "Keep history:"
+msgstr "Păstrare istoric:"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/RecentFiles.ui:48
+#, kde-format
+msgid "Clear History"
+msgstr "Curăță istoricul"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/RecentFiles.ui:70
+#, kde-format
+msgid "For a&ll applications"
+msgstr "Pentru toate ap&licațiile"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/RecentFiles.ui:80
+#, kde-format
+msgid "&Do not remember"
+msgstr "N&u reține"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/RecentFiles.ui:87
+#, kde-format
+msgid "O&nly for specific applications:"
+msgstr "&Numai pentru anumite aplicații:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/RecentFiles.ui:97
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "Ține minte documentele deschise:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/RecentFiles.ui:130
+#, kde-format
+msgid "Blacklist applications not on the list"
+msgstr "Interzice aplicațiile ce nu sunt pe listă"

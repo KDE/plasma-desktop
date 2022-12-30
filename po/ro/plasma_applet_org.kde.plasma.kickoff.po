@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:51+0000\n"
-"PO-Revision-Date: 2022-04-04 10:00+0100\n"
+"PO-Revision-Date: 2022-12-28 21:19+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -87,25 +87,25 @@ msgstr "Lansator de aplicații"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Reinițializează la pictograma implicită"
 
 #: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Elimină pictograma"
 
 #: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Etichetă textuală:"
 
 #: package/contents/ui/ConfigGeneral.qml:101
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Tastați aici pentru a adăuga o etichetă textuală"
 
 #: package/contents/ui/ConfigGeneral.qml:116
 #, kde-format
@@ -117,11 +117,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Eticheta textuală nu poate fi adăugată când panoul e vertical."
 
 #: package/contents/ui/ConfigGeneral.qml:141
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Generale:"
@@ -134,13 +133,13 @@ msgstr "Sortează aplicațiile alfabetic întotdeauna"
 #: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Folosește stil compact pentru elementele listei"
 
 #: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Dezactivată automat în regim tactil"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
