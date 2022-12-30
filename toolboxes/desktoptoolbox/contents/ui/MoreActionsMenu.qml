@@ -14,13 +14,10 @@ import org.kde.plasma.plasmoid 2.0
 PlasmaCore.Dialog {
     id: menuDialog
 
-    x: (Screen.width - mainItem.width) / 2
-    y: (Screen.height - mainItem.height) / 2
     visible: true
 
     flags: Qt.WindowStaysOnTopHint
     hideOnWindowDeactivate: true
-    location: PlasmaCore.Types.Desktop
     type: PlasmaCore.Dialog.PopupMenu
 
     mainItem: PlasmaComponents3.ScrollView {
