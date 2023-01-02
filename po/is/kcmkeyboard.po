@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2010, 2011, 2016.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2016-04-08 22:57+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2022-12-10 21:00+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -23,33 +24,27 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sveinn í Felli"
+msgstr "Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sv1@fellsnet.is"
+msgstr "sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Lyklaborðsuppsetning"
+msgstr "Skiptir fyrir lyklaborðsskipan"
 
 #: bindings.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Lyklaborðsuppsetning"
+msgstr "Skipta í næstu lyklaborðsskipan"
 
 #: bindings.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Lyklaborðsuppsetning"
+msgstr "Skipta lyklaborðsskipan í %1"
 
 #: flags.cpp:122
 #, kde-format
@@ -61,13 +56,13 @@ msgstr "%1 - %2"
 #: kcm_add_layout_dialog.ui:14
 #, kde-format
 msgid "Add Layout"
-msgstr "Bæta við lyklaborðsuppsetningu"
+msgstr "Bæta við lyklaborðsskipan"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Leita…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
@@ -86,7 +81,7 @@ msgstr "Skýring:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Forskoða"
 
 #: kcm_keyboard.cpp:32
 #, kde-format
@@ -104,8 +99,8 @@ msgid ""
 "<h1>Keyboard</h1> This control module can be used to configure keyboard "
 "parameters and layouts."
 msgstr ""
-"<h1>Lyklaborð</h1> Þessi stjórnunareiningu má nota til að stilla ýmis "
-"viðföng og framsetningu á lyklaborðum."
+"<h1>Lyklaborð</h1> Þessa stjórneiningu má nota til að stilla ýmis atriði og "
+"framsetningu á lyklaborðum."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -117,7 +112,7 @@ msgstr "Vélbúnaður"
 #: kcm_keyboard.ui:33
 #, kde-format
 msgid "Keyboard &model:"
-msgstr "Te&gund Lyklaborðs:"
+msgstr "Teg&und lyklaborðs:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:53
@@ -131,15 +126,16 @@ msgid ""
 "have.\n"
 msgstr ""
 "Hér getur þú valið tegund lyklaborðsins. Þessi stilling er óháð "
-"lyklaborðsuppsetningu og á einungis við \"vélbúnaðinn\" sjálfann, þ.e.a.s. "
-"hvernig lyklaborðið er framleitt.  Flest nýleg lykaborð eru með tvo auka "
-"hnappa og eru kölluð \"104-hnappa\". Líklega ert þú með slíkt lyklaborð.\n"
+"lyklaborðsskipan og á einungis við \"vélbúnaðinn\" sjálfan, þ.e. hvernig "
+"lyklaborðið er framleitt.  Flest nýleg lyklaborð eru með tvo auka lykla og "
+"eru kölluð \"104-lykla\" (\"104-key\"). Líklega ert þú með slíkt lyklaborð "
+"ef þú ert ekki viss.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:94
 #, kde-format
 msgid "Layouts"
-msgstr "Lyklaborðsuppsetning"
+msgstr "Skipanir"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
@@ -148,20 +144,20 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"Ef þú velur \"Forrit\" eða \"Gluggi\" sem skiptistefnu mun skipting "
-"uppsetningar bara hafa áhrif á virkt forrit eða glugga."
+"Ef þú velur \"Forrit\" eða \"Gluggi\" sem skiptireglu hefur skipting á "
+"lyklaborðsskipan bara hafa áhrif á forrit eða glugga sem eru opin."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
 #, kde-format
 msgid "Switching Policy"
-msgstr "Skiptistefna"
+msgstr "Skiptiregla"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
 #: kcm_keyboard.ui:111
 #, kde-format
 msgid "&Global"
-msgstr "&Víðvær"
+msgstr "&Altækt"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
 #: kcm_keyboard.ui:124
@@ -185,7 +181,7 @@ msgstr "&Gluggi"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Flýtilyklar til að skipta um uppsetningu"
+msgstr "Flýtilyklar til að skipta um skipan"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
@@ -200,8 +196,8 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"Þetta er flýtilykill til að skipta um lyklaborðsútlit sem er meðhöndlaður af "
-"X.org. Það leyfir flýtilykla með breytilyklum eingöngu (modifier-only)."
+"Þetta er flýtilykill til að skipta um lyklaborðsskipan sem X.org sér um. "
+"Þessi skipan leyfir flýtilykla með breytilyklum eingöngu (modifier-only)."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -216,13 +212,13 @@ msgstr "Ekkert"
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
 #, kde-format
 msgid "3rd level shortcuts:"
-msgstr "3ja stigs flýtihnappar:"
+msgstr "3ja-stigs flýtilyklar:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -231,38 +227,34 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
-"Þetta er flýtilykill til að skipta í þriðja stig virks lyklaborðsútlits (ef "
-"slíkt er til staðar) sem er meðhöndlaður af X.org. Það leyfir flýtilykla með "
-"breytilyklum eingöngu (modifier-only)."
+"Þetta er flýtilykill til að skipta í þriðja stig virkrar skipanar (ef hún er "
+"til staðar) sem X.org sér um. Það leyfir flýtilykla með breytilyklum "
+"eingöngu (modifier-only)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "Auka flýtilykill:"
+msgstr "Aukaflýtilykill:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Þetta er flýtilykill til að skipta um lyklaborðsútlit sem er meðhöndlaður af "
-"KDE. Það leyfir ekki flýtilykla með breytilyklum eingöngu (modifier-only) og "
-"gæti ekki virkað í sumum tilvikum (t.d. þegar sprettgluggi er virkur eða "
-"þegar skjáhvíla er í gangi)."
+"Þetta er flýtilykill til að skipta um lyklaborðsskipan. Þessi skipan "
+"leyfirekki flýtilykla með breytilyklum eingöngu (modifier-only) og virkar "
+"kannski ekki í sumum tilvikum (t.d. þegar sprettgluggi er virkur eða "
+"skjáhvíla er í gangi)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
 #, kde-format
 msgid "Configure layouts"
-msgstr "Stilla lyklaborðsuppsetningar"
+msgstr "Stilla lyklaborðsskipan"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
@@ -292,13 +284,13 @@ msgstr "Færa niður"
 #: kcm_keyboard.ui:350
 #, kde-format
 msgid "Spare layouts"
-msgstr "Auka lyklaborðsuppsetningar"
+msgstr "Aukaskipanir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
 #, kde-format
 msgid "Main layout count:"
-msgstr "Fjöldi aðaluppsetninga:"
+msgstr "Fjöldi aðallyklaborðsskipana:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
@@ -310,13 +302,13 @@ msgstr "Nánar"
 #: kcm_keyboard.ui:418
 #, kde-format
 msgid "&Configure keyboard options"
-msgstr "Stilla valmöguleika lyklaborðsuppsetningar"
+msgstr "&Grunnstilla valkosti lyklaborðs"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr "Óþekktur"
+msgstr "Óþekkt"
 
 #: kcm_keyboard_widget.cpp:213
 #, kde-format
@@ -325,20 +317,17 @@ msgid "%1 | %2"
 msgstr "%1 | %2"
 
 #: kcm_keyboard_widget.cpp:643
-#, fuzzy, kde-format
-#| msgctxt "no shortcut defined"
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ekkert"
 
 #: kcm_keyboard_widget.cpp:657
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "Flýtilykill:"
-msgstr[1] "Flýtilykill:"
+msgstr[0] "%1 flýtilykill"
+msgstr[1] "%1 flýtilyklar"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -347,28 +336,24 @@ msgid "Map"
 msgstr "Vörpun"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgid "Layout"
-msgstr "Lyklaborðsuppsetning:"
+msgstr "Skipan"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Variant:"
+#, kde-format
 msgid "Variant"
-msgstr "Tilbrigði:"
+msgstr "Tilbrigði"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Label:"
+#, kde-format
 msgid "Label"
-msgstr "Skýring:"
+msgstr "Skýring"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "Shortcut"
-msgstr "Flýtilykill:"
+msgstr "Flýtilykill"
 
 #: kcm_view_models.cpp:273
 #, kde-format
@@ -380,25 +365,25 @@ msgstr "Sjálfgefið"
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "Þegar lykli er haldið niðri:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "&Sýna broddstafi og áþekka stafi "
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "Endu&rtaka lykilinn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "G&era ekkert"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
@@ -413,31 +398,26 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
-"Gerir kleift að prófa hraða lyklaborðs og hljóðstyrk lykilsmells (ekki "
-"gleyma að virkja breytingarnar)."
+"Gerir kleift að prófa endurtekningarhraða lyklanna og hljóðstyrk lykilsmells "
+"(ekki gleyma að virkja breytingarnar)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"Ef stuðningur er fyrir hendi getur þú sett stöðu talnalássins (NumLock) "
-"eftir KDE ræsingu.<p> Þú látið talnalásinn vera alltaf á/af eða stilla KDE "
-"til að láta hann vera óbreyttan."
+"Ef stuðningur er fyrir hendi getur þú stillt stöðu talnalássins (NumLock) "
+"eftir að Plasma er ræst.<p>Þú getur stillt talnalásinn þannig að hann sé af "
+"eða á, eða stillt Plasma þannig að staða talnalássins sé óbreytt."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "Tölulás (numlock) við KDE ræsingu"
+msgstr "Talnalás (NumLock) við ræsingu á Plasma"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -447,8 +427,7 @@ msgstr "&Kveikja á"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgid "&Turn off"
 msgstr "&Slökkva á"
 
@@ -456,7 +435,7 @@ msgstr "&Slökkva á"
 #: kcmmiscwidget.ui:111
 #, kde-format
 msgid "Leave unchan&ged"
-msgstr "&Láta vera"
+msgstr "&Láta vera óbreyttan"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRate)
 #: kcmmiscwidget.ui:148
@@ -473,9 +452,9 @@ msgid ""
 "key will start generating keycodes. The 'Repeat rate' option controls the "
 "frequency of these keycodes."
 msgstr ""
-"Ef þetta er virkt er hægt að stilla hér þá töf sem verður milli þess sem ýtt "
-"er á takka og þar til hann fer að framkalla endurtekningar. 'Hraði "
-"endurtekningar' valkosturinn stýrir tíðni þessara endurtekninga."
+"Ef stuðningur er fyrir hendi er hægt að stilla hér töfina sem verður milli "
+"þess sem ýtt er á lykil og þar til hann fer að framkalla endurtekningar. "
+"Valkosturinn 'Hraði endurtekningar' stýrir tíðni þessara endurtekninga."
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
 #. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
@@ -485,8 +464,8 @@ msgid ""
 "If supported, this option allows you to set the rate at which keycodes are "
 "generated while a key is pressed."
 msgstr ""
-"Ef þetta er virkt geturðu stillt hér hversu hratt lyklaborðsatburðir eiga "
-"sér stað meðan lykli er haldið niðri."
+"Ef þetta er stutt geturðu stillt hér hversu hratt lyklaborðsboð eru mynduð á "
+"meðan lykli er haldið niðri."
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
 #: kcmmiscwidget.ui:195
@@ -507,19 +486,16 @@ msgid "&Delay:"
 msgstr "&Töf:"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Endurtekning lyklaborðs"
+msgstr "Forskoðun lyklaborðs"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Lyklaborðsuppsetning"
+msgstr "Birting lyklaborðsskipanar"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -530,6 +506,10 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+"Ekki tókst að hlaða lyklaborðsuppröðun, Þetta bendir oft til þess að "
+"tegundin sem var valin styðji ekki tiltekna skipan eða tilbrigði hennar. "
+"Þetta vandamál verður líklega líka til staðar þegar þú reynir að nota þessa "
+"tegund, skipan og tilbrigði saman."
 
 #, fuzzy
 #~| msgctxt "tooltip title"

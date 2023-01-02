@@ -5,19 +5,20 @@
 # Richard Allen <ra@ra.is>, 2003.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2010, 2011, 2016, 2022.
+# gummi <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-27 00:49+0000\n"
-"PO-Revision-Date: 2022-08-15 14:09+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-10 20:29+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -26,12 +27,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Sveinn í Felli"
+msgstr "Richard Allen, Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, sv1@fellsnet.is"
+msgstr "ra@ra.is, sv1@fellsnet.is,gudmundure@gmail.com"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:22
@@ -55,7 +56,7 @@ msgstr "&Tímaþjónn:"
 #: dateandtime.ui:86
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Hér getur þú breytt mánuði og degi klukku tölvunnar."
+msgstr "Hér getur þú breytt degi, mánuði og ártali í klukku tölvunnar."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:122
@@ -68,7 +69,8 @@ msgstr "Tímabelti"
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
-"Til að breyta tímabeltinu, veldu svæðið sem þú býrð í úr listanum að neðan."
+"Til að breyta tímabeltinu velurðu svæðið sem þú býrð í úr listanum fyrir "
+"neðan."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
@@ -88,8 +90,8 @@ msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
-"Ekkert NTP tól hefur fundist. Settu upp 'ntpdate' eða 'rdate' forritin til "
-"að virkja sjálfvirka uppfærslu á dagsetningum og tíma."
+"Ekkert NTP-verkfæri fannst. Settu upp forritin 'ntpdate' eða 'rdate' til að "
+"virkja sjálfvirka uppfærslu á dagsetningu og tíma."
 
 #: dtime.cpp:91
 #, kde-format
@@ -98,9 +100,9 @@ msgid ""
 "seconds field to change the relevant value, either using the up and down "
 "buttons to the right or by entering a new value."
 msgstr ""
-"Hér getur þú breytt klukku tölvunnar. Smelltu á klukkutíma, mínútu eða "
-"sekúndu sviðin til að breyta samsvarandi gildi. Breytingar eru gerðar annað "
-"hvort með því að nota upp og niður takkana eða að slá inn gildi."
+"Hér getur þú breytt klukku tölvunnar. Smelltu á reitina fyrir klukkustund, "
+"mínútur eða sekúndur til að breyta viðeigandi gildi, annað hvort með því að "
+"nota upp- og niðurtakkana hægra megin eða að slá inn nýtt gildi."
 
 #: dtime.cpp:113
 #, kde-format
@@ -126,7 +128,7 @@ msgstr ""
 #: dtime.cpp:274
 #, kde-format
 msgid "Unable to contact time server: %1."
-msgstr "Get ekki náð sambandi við tímaþjóninn: %1."
+msgstr "Tókst ekki að ná sambandi við tímaþjón: %1."
 
 #: dtime.cpp:278
 #, kde-format
@@ -153,17 +155,17 @@ msgid ""
 "feel the system time should be corrected, please contact your system "
 "administrator."
 msgstr ""
-"<h1>Dagsetning & Tími</h1> Með þessari stjórneiningu er hægt að breyta "
+"<h1>Dagsetning og tími</h1> Með þessari stjórneiningu er hægt að breyta "
 "stillingum klukkunnar. Þar sem þessar breytingar hafa ekki bara áhrif á þig "
 "sem notanda heldur á allt kerfið er einungis hægt að breyta stillingum hér "
-"ef þú ræstir stjórnborðið sem ofurpaur. Ef þú veist ekki lykilorð ofurpaurs "
-"en finnst að það þyrfti að laga tímann á vélinni, hafðu þá samband við "
-"kerfisstjóra."
+"ef þú ræstir Kerfisstillingar sem rótarnotandi. Ef þú veist ekki lykilorð "
+"rótarnotanda en finnst þurfa að laga tímann á vélinni skaltu hafa samband "
+"við kerfisstjóra."
 
 #: main.cpp:49
 #, kde-format
 msgid "KDE Clock Control Module"
-msgstr "Stillieining KDE klukkunnar"
+msgstr "Stjórneining KDE fyrir klukku"
 
 #: main.cpp:53
 #, kde-format
@@ -188,7 +190,7 @@ msgstr "Paul Campbell"
 #: main.cpp:56
 #, kde-format
 msgid "Current Maintainer"
-msgstr "Núverandi yfirforritari"
+msgstr "Núverandi umsjónarmaður"
 
 #: main.cpp:57
 #, kde-format
@@ -198,7 +200,7 @@ msgstr "Benjamin Meyer"
 #: main.cpp:57
 #, kde-format
 msgid "Added NTP support"
-msgstr "Bætti við NTP stuðningi"
+msgstr "Bætti við NTP-stuðningi"
 
 #: main.cpp:60
 #, kde-format
@@ -209,32 +211,32 @@ msgid ""
 "Settings as root. If you do not have the root password, but feel the system "
 "time should be corrected, please contact your system administrator."
 msgstr ""
-"<h1>Dagsetning & tími</h1> Með þessari stjórneiningu er hægt að breyta "
+"<h1>Dagsetning og tími</h1> Með þessari stjórneiningu er hægt að breyta "
 "stillingum klukkunnar. Þar sem þessar breytingar hafa ekki bara áhrif á þig "
 "sem notanda heldur á allt kerfið er einungis hægt að breyta stillingum hér "
-"ef þú ræstir stjórnborðið sem ofurpaur. Ef þú veist ekki lykilorð ofurpaurs "
-"en finnst að það þyrfti að laga tímann á vélinni, hafðu þá samband við "
-"kerfisstjóra."
+"ef þú ræstir Kerfisstillingar sem rótarnotandi. Ef þú veist ekki lykilorð "
+"rótarnotanda en finnst þurfa að laga tímann á vélinni skaltu hafa samband "
+"við kerfisstjóra."
 
 #: main.cpp:113
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "Gat ekki fengið heimild á/framkvæmt aðgerðina: %1, %2"
+msgstr "Tókst ekki að sannvotta/framkvæma aðgerðina: %1, %2"
 
 #: main.cpp:133
 #, kde-format
 msgid "Unable to change NTP settings"
-msgstr "Gat ekki breytt NTP-stillingum"
+msgstr "Tókst ekki að breyta NTP-stillingum"
 
 #: main.cpp:144
 #, kde-format
 msgid "Unable to set current time"
-msgstr "Get ekki stillt núverandi tíma"
+msgstr "Tókst ekki að stilla núverandi tíma"
 
 #: main.cpp:154
 #, kde-format
 msgid "Unable to set timezone"
-msgstr "Get ekki stillt tímabelti"
+msgstr "Tókst ekki að stilla tímabelti"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

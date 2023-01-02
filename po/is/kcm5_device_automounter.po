@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2011, 2015.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-10 00:45+0000\n"
-"PO-Revision-Date: 2015-01-29 09:07+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2022-12-10 19:49+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -24,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sveinn í Felli"
+msgstr "Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sv1@fellsnet.is"
+msgstr "sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: DeviceAutomounterKCM.cpp:38
 #, kde-format
@@ -37,10 +38,9 @@ msgid "Device Automounter"
 msgstr "Sjálfvirk tenging tækja"
 
 #: DeviceAutomounterKCM.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Trever Fischer"
+#, kde-format
 msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 Trever Fischer"
+msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
 
 #: DeviceAutomounterKCM.cpp:43
 #, kde-format
@@ -50,42 +50,31 @@ msgstr "Trever Fischer"
 #: DeviceAutomounterKCM.cpp:43
 #, kde-format
 msgid "Original Author"
-msgstr ""
+msgstr "Upprunalegur höfundur"
 
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
 msgid "Plasma 5 Port"
-msgstr ""
+msgstr "Aðlögun að Plasma 5"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"Þetta er listi yfir öll tæki sem kerfið þekkir. Ef hakað er við \"Tengja við "
-"innskráningu\", verður tækið sjálfkrafa tengt jafnvel þótt ekki sé hakað við "
-"\"Tengja öll útskiptanleg tæki við innskráningu\". Það sama á við um "
-"\"Tengja þegar tæki er sett í samband\".\n"
-"\n"
-"Ef ekki er hakað við \"Virkja sjálfvirka tengingu útskiptanlegra tækja\", "
-"skipta hinar stillingarnar ekki máli og engin tæki verða tengd sjálfvirkt."
+"Þetta er listi yfir öll geymslutæki sem kerfið þekkir. Ef hakað er við "
+"\"Tengja við innskráningu\" verður tækið sjálfkrafa tengt jafnvel þótt ekki "
+"sé hakað við \"Tengja öll útskiptanleg tæki við innskráningu\". Það sama á "
+"við um \"Tengja þegar tæki er sett í samband\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -97,11 +86,11 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"Við að smella á þennan hnapp er völdum tækjum 'gleymt'. Þetta virkar bara ef "
-"hakað er við \"Aðeins tengja sjálfvirkt þau útskiptanlegu tæki sem áður hafa "
-"verið sett upp handvirkt\". Þegar búið er að gleyma tæki og að kerfið er "
-"sett upp til að einungis tengja sjálfvirkt þekkt tæki, þá verður tækið ekki "
-"tengt sjálfkrafa inn í skráakerfið."
+"Ef smellt er á þennan hnapp \"gleymir\" tölvan völdum tækjum. Þetta virkar "
+"bara ef hakað er við \"Aðeins tengja sjálfvirkt útskiptanlegt tæki sem hefur "
+"verið tengd handvirkt áður\". Þegar tæki er gleymt og  kerfið er sett upp "
+"til að einungis tengja sjálfvirkt þekkt tæki, þá verður tækið ekki tengt "
+"sjálfkrafa inn í skráakerfið."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -111,15 +100,7 @@ msgstr "Gleyma tæki"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -128,53 +109,46 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Þegar hakað er við þetta, munu tæki sem munað er eftir verða tengd "
+"Þegar ekki er hakað er við þetta verða aðeins tæki sem munað er eftir tengd "
 "sjálfvirkt inn í skráakerfi. Munað er eftir tæki ef það hefur verið tengt "
-"einhverntíma áður. Til dæmis er ekki endilega nóg að tengja USB "
-"margmiðlunarspilara til að muna eftir honum - ef engar skrár á honum hafa "
-"verið lesnar, er hann ekki sjálfvirkt tengdur í skráakerfið næst þegar hann "
-"sést. Hinsvegar, ef skrár á honum hafa verið lesnar áður, mun efni á "
-"spilaranum verða sjálfkrafa aðgengilegt í kerfinu."
+"einhvern tímann áður. Til dæmis er ekki nóg að tengja USB-spilara til að "
+"hlaða rafhlöðuna til að kerfið muni eftir honum; ef skrár á honum hafa ekki "
+"verið lesnar tengist hann ekki sjálfvirkt í skráakerfið næst þegar hannsést. "
+"Ef skrár á honum hafa verið lesnar áður verður efni á spilaranum sjálfkrafa "
+"aðgengilegt í kerfinu."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"Aðeins tengja sjálfvirkt þau útskiptanlegu tæki sem áður hafa verið sett upp "
-"handvirkt"
+msgstr "Tengja sjálfkrafa útskiptanleg tæki sem hafa ekki tengst áður"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Tengja við innskráningu"
+msgstr "Tengja tæki sjálfkrafa"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Við innskráningu"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Þegar stungið er í samband"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Tæki"
+msgstr "Öll tæki"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Öll þekkt tæki"
 
 #: DeviceModel.cpp:260
 #, kde-format

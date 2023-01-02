@@ -2,19 +2,20 @@
 # Copyright (C) 2003, 2008 Free Software Foundation, Inc.
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2015.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2015-10-22 09:20+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2022-12-10 20:17+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -22,24 +23,22 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Pjetur G. Hjaltason"
+msgstr "Richard Allen, Pjetur G. Hjaltason,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, pjetur@pjetur.net"
+msgstr "ra@ra.is, pjetur@pjetur.net,gudmundure@gmail.com"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "Ræsi þjónustur"
+msgstr "Bakgrunnsþjónustur"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "(c) 2002 Daniel Molkentin"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -49,49 +48,36 @@ msgstr "Daniel Molkentin"
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Get ekki stöðvað þjónustu <em>%1</em>."
+msgstr "Mistókst að stöðva þjónustu: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Get ekki ræst þjónustuna <em>%1</em>."
+msgstr "Mistókst að ræsa þjónustu: %1."
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Get ekki stöðvað þjónustu <em>%1</em>."
+msgstr "Mistókst að stöðva þjónustu."
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Get ekki ræst þjónustuna <em>%1</em>."
+msgstr "Mistókst að ræsa þjónustu."
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"Mistókst að tilkynna KDE-þjónustustjóranum (kded5) um vistaðar breytingar: %1"
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -102,15 +88,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>KDE þjónustur</h1> <p>Þessi eining sýnir þér yfirlit yfir allar viðbætur "
-"KDE þjónsins, einnig nefnt KDE þjónustur. Almennt talað eru tvær tegundir "
-"þjónusta:</p> <ul> <li>Þjónustur gangsettar í ræsingu</li> <li>Þjónustur "
-"gangsettar eftir þörfum</li></ul> <p>Þjónustur gangsettar eftir þörfum eru "
-"hér aðeins sýndar hér þér til þæginda. Þjónustur sem gangsettar eru í "
-"ræsingu má stöðva og ræsa. Í kerfisstjóraham getur þú einnig silgreint hvort "
-"þær skuli ræstar í byrjun.</p> <p><b> Notið þetta með varúð.  Sumar "
-"þjónustur eru lífsnauðsynlegar fyrir KDE. stöðvið ekki þjónustur nema þið "
-"vitið nákvæmlega hvað þið eruð að gera.</b></p>"
+"<p>Þessi eining sýnir þér yfirlit yfir allar tengiviðbætur KDE-miðlarans, "
+"einnig nefnt KDE-þjónustur. Almennt talað er um tvær tegundir af þjónustum "
+"að ræða:</p> <ul> <li>Þjónustur gangsettar í ræsingu</li> <li>Þjónustur "
+"gangsettar eftir þörfum</li></ul> <p>Þær síðarnefndu eru aðeins sýndar hér "
+"til þæginda. Þú getur einnig skilgreint hvort keyra eigi þjónustur við "
+"ræsingu.</p> <p><b> Notaðu þetta með varúð: sSumar þjónustur eru "
+"lífsnauðsynlegar fyrir KDE; ekki stöðva þjónustur nema þú vitir nákvæmlega "
+"hvað þú ert að gera.</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -118,6 +103,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Stjórinn fyrir bakgrunnsþjónustur (kded5) er ekki í gangi sem stendur. "
+"Gakktu úr skugga um að hann sé rétt uppsettur."
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -125,6 +112,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Sumar þjónustur slökkva á sér sjálfar eftir að þær eru ræstar handvirkt ef "
+"þær koma ekki að gagni í núverandi umhverfi."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -132,32 +121,30 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"Sumar þjónustur voru sjálfkrafa ræstar/stöðvaðar þegar bakgrunnsþjónustu- "
+"stjórinn (kded5) var endurræstur til að virkja breytingarnar þínar."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Þjónusta"
+msgstr "Allar þjónustur"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr "Keyrandi"
+msgstr "Í keyrslu"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr "Ekki keyrandi"
+msgstr "Ekki í keyrslu"
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Startup Services"
-msgstr "Ræsi þjónustur"
+msgstr "Þjónustur við ræsingu"
 
 #: package/contents/ui/main.qml:137
 #, kde-format
@@ -167,29 +154,27 @@ msgstr "Þjónustur sem ræstar eru eftir þörfum"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Víxla sjálfkrafa keyrslu á þessari þjónustu við ræsingu"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
 msgid "Not running"
-msgstr "Ekki keyrandi"
+msgstr "Ekki í keyrslu"
 
 #: package/contents/ui/main.qml:222
 #, kde-format
 msgid "Running"
-msgstr "Keyrandi"
+msgstr "Í keyrslu"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Þjónusta"
+msgstr "Stöðva þjónustu"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Þjónusta"
+msgstr "Ræsa þjónustu"
 
 #~ msgid "kcmkded"
 #~ msgstr "kcmkded"

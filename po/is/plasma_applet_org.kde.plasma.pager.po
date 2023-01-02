@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2022-08-25 23:23+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-11 13:50+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -33,7 +34,7 @@ msgstr "Almennt:"
 #: package/contents/ui/configGeneral.qml:42
 #, kde-format
 msgid "Show application icons on window outlines"
-msgstr "Birta táknmyndir forrita á útlínum glugga"
+msgstr "Sýna forritatákn á útlínum glugga"
 
 #: package/contents/ui/configGeneral.qml:47
 #, kde-format
@@ -43,7 +44,7 @@ msgstr "Sýna aðeins núverandi skjá"
 #: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "Fletting í gegn fer hringinn"
 
 #: package/contents/ui/configGeneral.qml:64
 #, kde-format
@@ -74,7 +75,7 @@ msgstr "Birting texta:"
 #: package/contents/ui/configGeneral.qml:83
 #, kde-format
 msgid "No text"
-msgstr "Engin texti"
+msgstr "Enginn texti"
 
 #: package/contents/ui/configGeneral.qml:91
 #, kde-format
@@ -89,7 +90,7 @@ msgstr "Númer skjáborðs"
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
 msgid "Activity name"
-msgstr "Nafn athafnar"
+msgstr "Heiti athafnar"
 
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
@@ -114,7 +115,7 @@ msgstr "Gerir ekkert"
 #: package/contents/ui/configGeneral.qml:124
 #, kde-format
 msgid "Shows the desktop"
-msgstr "Birtir skjáborðið"
+msgstr "Sýnir skjáborðið"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
@@ -134,8 +135,8 @@ msgstr[1] "%1 gluggar:"
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] "%1 lágmarkaður gluggi:"
-msgstr[1] "%1 lágmarkaðir gluggar:"
+msgstr[0] "%1 falinn gluggi:"
+msgstr[1] "%1 faldir gluggar:"
 
 #: package/contents/ui/main.qml:449
 #, kde-format
@@ -151,7 +152,7 @@ msgstr "Skipta yfir í %1"
 #: package/contents/ui/main.qml:595
 #, kde-format
 msgid "Show Activity Manager…"
-msgstr "Birta Athafnastjóra…"
+msgstr "Sýna athafnastjóra…"
 
 #: package/contents/ui/main.qml:598
 #, kde-format
@@ -166,7 +167,7 @@ msgstr "Fjarlægja sýndarskjáborð"
 #: package/contents/ui/main.qml:602
 #, kde-format
 msgid "Configure Virtual Desktops…"
-msgstr "Stilla sýndarskjáborð…"
+msgstr "Grunnstilla sýndarskjáborð…"
 
 #, fuzzy
 #~| msgid "Configure Desktops..."

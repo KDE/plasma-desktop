@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-12 00:48+0000\n"
-"PO-Revision-Date: 2022-09-21 11:42+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-10 18:50+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -27,13 +28,13 @@ msgstr "Heiti litastefs"
 #: landingpage_kdeglobalssettings.kcfg:15
 #, kde-format
 msgid "Single click to open files"
-msgstr "Einsmella til að opna skrár"
+msgstr "Smella einu sinni til að opna skrár"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr "Pakki fyrir útlit og áferð um allt kerfið"
+msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -41,7 +42,7 @@ msgstr "Pakki fyrir útlit og áferð um allt kerfið"
 #: landingpage_kdeglobalssettings.kcfg:27
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Pakki fyrir útlit og áferð um allt kerfið, tilbrigði"
+msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið, til vara"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:31
@@ -74,7 +75,7 @@ msgstr "Samstundis"
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Change Wallpaper…"
-msgstr "Skipta um bakgrunnsmynd…"
+msgstr "Skipta um veggfóður..."
 
 #: package/contents/ui/main.qml:118
 #, kde-format
@@ -92,12 +93,12 @@ msgstr "Við að smella á skrár eða möppur:"
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "Opna þær"
+msgstr "Opnar þær"
 
 #: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Velja með að smella á valmerkingu atriðis"
+msgstr "Veldu með því að smella á valmerkingu atriðis"
 
 #: package/contents/ui/main.qml:158
 #, kde-format
@@ -108,7 +109,7 @@ msgstr "Velur þær"
 #: package/contents/ui/main.qml:172
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr "Opna í staðinn með að tvísmella"
+msgstr "Opna í staðinn með því að tvísmella"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -118,7 +119,7 @@ msgstr "Fleiri hegðunarstillingar…"
 #: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Most Used Pages:"
-msgstr "Mest notuðu síður:"
+msgstr "Mest notuðu síðurnar:"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"
@@ -130,21 +131,17 @@ msgstr "Mest notuðu síður:"
 #~ "never collect your personal data, files you use, websites you visit, or "
 #~ "information that could identify you."
 #~ msgstr ""
-#~ "Þú getur hjálpað KDE að bæta Plasma með því að leggja fram upplýsingar um "
-#~ "hvernig þú notar Plasma, þannig að við getum lagt áherslu á atriði sem "
-#~ "skipta þig máli.<br/><br/>Upplýsingagjöf þessi er valkvæð og algjörlega "
-#~ "nafnlaus. Við söfnum aldrei persónulegum upplýsingum sem þér tengjast, um "
-#~ "skrár sem þú notar, um vefsvæði sem þú skoðar eða upplýsingum sem gætu "
-#~ "auðkennt þig."
+#~ "Þú getur hjálpað KDE að bæta Plasma með því að miðla upplýsingum um "
+#~ "notkun þína svo að við getum unnið að því sem skiptir þig máli.<br/><br/"
+#~ ">Þetta er algjörlega valkvætt og þessum upplýsingum er miðlað nafnlaust. "
+#~ "Við söfnum aldrei upplýsingum um einkagögn þín, skrár sem þú notar, "
+#~ "vefsvæði sem þúskoðar eða upplýsingum sem gætu auðkennt þig."
 
 #~ msgid "No data will be sent."
 #~ msgstr "Engin gögn verða send."
 
 #~ msgid "The following information will be sent:"
 #~ msgstr "Eftirfarandi upplýsingar verða sendar:"
-
-#~ msgid "Send User Feedback:"
-#~ msgstr "Senda notandaumsögn:"
 
 #~ msgctxt "Adjective; as in, 'light theme'"
 #~ msgid "Light"
@@ -153,3 +150,6 @@ msgstr "Mest notuðu síður:"
 #~ msgctxt "Adjective; as in, 'dark theme'"
 #~ msgid "Dark"
 #~ msgstr "Dökkt"
+
+#~ msgid "Send User Feedback:"
+#~ msgstr "Senda notandaumsögn:"

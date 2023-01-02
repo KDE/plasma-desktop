@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-04-16 02:13+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -86,49 +86,24 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
-msgid "Default option:"
-msgstr "기본 떠나기 옵션:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr ""
-
-#: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "지금 다시 시작"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr ""
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr ""
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio Here 'session' refers to the technical concept of session "
@@ -139,7 +114,7 @@ msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "수동으로 저장된 세션 복원"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +124,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -158,13 +133,13 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "빈 세션으로 시작"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Don't restore these applications:"
 msgid "Ignored applications:"
 msgstr "다음 프로그램 복원하지 않기:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -172,14 +147,14 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, fuzzy, kde-format
 #| msgid "Firmware Setup"
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "펌웨어 설정"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -187,14 +162,14 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "다음에 다시 시작할 때 UEFI 설정 진입"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen on next restart"
@@ -225,6 +200,17 @@ msgstr "로그인할 때"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "세션에서 제외할 프로그램"
+
+#, fuzzy
+#~| msgid "Default leave option:"
+#~ msgid "Default option:"
+#~ msgstr "기본 떠나기 옵션:"
+
+#, fuzzy
+#~| msgid "Restart Now"
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "지금 다시 시작"
 
 #~ msgid "General:"
 #~ msgstr "일반:"

@@ -5,19 +5,20 @@
 # Richard Allen <ra@ra.is>, 2004.
 # Þröstur Svanbergsson <throstur@bylur.net>, 2004.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2016.
+# gummi <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-25 00:48+0000\n"
-"PO-Revision-Date: 2016-04-08 22:57+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2022-12-10 20:08+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -25,12 +26,13 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Þröstur Svanbergsson, Sveinn í Felli"
+msgstr ""
+"Richard Allen, Þröstur Svanbergsson, Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, throstur@bylur.net, sv1@fellsnet.is"
+msgstr "ra@ra.is, throstur@bylur.net, sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: caldialog.cpp:26 joywidget.cpp:335
 #, kde-format
@@ -40,12 +42,12 @@ msgstr "Kvörðun"
 #: caldialog.cpp:40
 #, kde-format
 msgid "Next"
-msgstr "Næsta"
+msgstr "Áfram"
 
 #: caldialog.cpp:50
 #, kde-format
 msgid "Please wait a moment to calculate the precision"
-msgstr "Vinsamlega bíddu augnablik til að stilla nákvæmnina"
+msgstr "Hinkraðu augnablik til að stilla nákvæmnina"
 
 #: caldialog.cpp:79
 #, kde-format
@@ -65,10 +67,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Kvörðun felst í því að kanna hvernig tækið þitt vinnur.<br /><br /"
-">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>lágmarks</b> stöðuna.<br /"
-"><br />Þrýstu á einhvern hnappinn á tækinu eða smelltu á 'Næsta' til að "
-"halda áfram í næsta þrep.</qt>"
+"<qt>Kvörðun mun nú kanna hvaða gildissviði tækið skilar.<br /><br /"
+">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>lágmarksstöðuna</b>.<br /"
+"><br />Þrýstu á einhvern takka á tækinu eða smelltu á 'Áfram' til að halda "
+"áfram í næsta þrep.</qt>"
 
 #: caldialog.cpp:110
 #, kde-format
@@ -78,10 +80,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Kvörðun felst í því að kanna hvernig tækið þitt vinnur.<br /><br /"
-">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>miðju</b> stöðuna.<br /><br /"
-">Þrýstu á einhvern hnappinn á tækinu eða smelltu á 'Næsta' til að halda "
-"áfram í næsta þrep.</qt>"
+"<qt>Kvörðun mun nú kanna hvaða gildissviði tækið skilar.<br /><br /"
+">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>miðjustöðuna</b>.<br /><br /"
+">Ýttu á einhvern takka á tækinu eða smelltu á 'Áfram' til að halda áfram í "
+"næsta þrep.</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -91,10 +93,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>Kvörðun felst í því að kanna hvernig tækið þitt vinnur.<br /><br /"
-">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>hámarks</b> stöðuna.<br /"
-"><br />Þrýstu á einhvern hnappinn á tækinu eða smelltu á 'Næsta' til að "
-"halda áfram í næsta þrep.</qt>"
+"<qt>Kvörðun mun nú kanna hvaða gildissviði tækið skilar.<br /><br /"
+">Vinsamlega færðu <b>ás %1 %2</b> á tækinu í <b>hámarksstöðuna</b>.<br /"
+"><br />Ýttu á einhvern takka á tækinu eða smelltu á 'Áfram' til að halda "
+"áfram í næsta þrep.</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
 #, kde-format
@@ -119,7 +121,7 @@ msgstr "Gildi áss %1: %2"
 #: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
-msgstr "Uppgefið tæki %1 var ekki hægt að opna: %2"
+msgstr "Ekki var hægt að opna tækið %1: %2"
 
 #: joydevice.cpp:45
 #, kde-format
@@ -129,7 +131,7 @@ msgstr "Tækið %1 er ekki stýripinni."
 #: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
-msgstr "Gat ekki fundið útgáfu kjarnarekils fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að finna útgáfu kjarnarekils fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -137,38 +139,38 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
-"Útgáfa kjarnans sem er keyrandi (%1.%2.%3) er ekki sú sama og "
+"Útgáfa kjarnans sem er í notkun (%1.%2.%3) er ekki sú sama og "
 "kjarnarekillinn var vistþýddur fyrir (%4.%5.%6)."
 
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr "Gat ekki fundið fjölda takka fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að finna fjölda takka fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr "Gat ekki fundið fjölda ása fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að finna fjölda ása fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
-msgstr "Gat ekki fengið kvörðunargildi fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að finna kvörðunargildi fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
-msgstr "Gat ekki endurstillt kvörðunargildi fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að endurstilla kvörðunargildi fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
-msgstr "Gat ekki frumstillt kvörðunargildi fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að frumstilla kvörðunargildi fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
-msgstr "Gat ekki sett kvörðunargildi fyrir stýripinnatækið %1: %2"
+msgstr "Tókst ekki að nota kvörðunargildi fyrir stýripinnatækið %1: %2"
 
 #: joydevice.cpp:95
 #, kde-format
@@ -178,12 +180,12 @@ msgstr "innri villa - kóði %1 óþekktur"
 #: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
-msgstr "KDE stýripinnastillingar"
+msgstr "KDE-stýripinnastillingar"
 
 #: joystick.cpp:31
 #, kde-format
 msgid "KDE System Settings Module to test Joysticks"
-msgstr "KDE stjórnborðseining til að prófa stýripinna"
+msgstr "KDE kerfisstillingaeining til að prófa stýripinna"
 
 #: joystick.cpp:33
 #, kde-format
@@ -205,18 +207,18 @@ msgid ""
 "joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
 "can check your Linux source/Documentation/input/joystick.txt)"
 msgstr ""
-"<h1>Stýripinni</h1>Þessi eining aðstoðar þig við að athuga hvort "
-"stýripinninn þinn virki rétt.<br /> Ef hún gefur upp röng gildi fyrir ásana "
-"getur þú reynt að leysa það með því að stilla stýripinnann.<br />Þessi "
-"eining reynir að finna alla tengda stýripinna með því að athuga/dev/js[0-4] "
-"og /dev/input/js[0-4]<br />Ef tækjaskrá þín er annars staðar skaltu slá hana "
-"inn í innsláttarreitinn.<br />Takkalistinn birtir stöðu takkanna á "
-"stýripinnanum þínum. Ásalistinn birtir núverandi gildi fyrir alla ása.<br /"
-">ATHUGIÐ: Núverandi Linux rekillinn (kjarnar 2.4, 2.6) getur aðeins fundið "
-"sjálfkrafa<ul><li>2-ása, 4-takka stýripinna</li><li>3-ása, 4-takka "
-"stýripinna</li><li>4-ása, 4-takka stýripinna</li><li>Saitek Cyborg stafræna "
-"stýripinna</li></ul>(Athugaðu grunnkóða Linux/Documentation/input/joystick."
-"txt fyrir frekari upplýsingar)"
+"<h1>Stýripinni</h1>Með þessari einingu geturðu athugað hvort stýripinninn "
+"þinn virki rétt.<br /> Ef hún gefur upp röng gildi fyrir ásana getur þú "
+"reynt að leysa það með kvörðuninni.<br />Þessi eining reynir að finna alla "
+"tengda stýripinna með því að athuga/dev/js[0-4] og /dev/input/js[0-4]<br /"
+">Ef þú ert með aðra tækjaskrá skaltu slá hana inn í innsláttarreitinn.<br /"
+">Takkalistinn sýnir stöðu takkanna á stýripinnanum þínum, ásalistinn birtir "
+"núverandi gildi fyrir alla ása. <br />ATH.: Núverandi Linux-rekill (kjarnar "
+"2.4, 2.6) getur aðeins fundið sjálfkrafa<ul><li>tveggja ása, fjögurra takka "
+"stýripinna</li><li>þriggja ása, fjögurra takka stýripinna</li><li>fjögurra "
+"ása, fjögurra takka stýripinna</li><li>Saitek Cyborg-stafræna stýripinna</"
+"li></ul>(Frekari upplýsingar er að finna í grunnkóða Linux/Documentation/"
+"input/joystick.txt)"
 
 #: joywidget.cpp:67
 #, kde-format
@@ -232,7 +234,7 @@ msgstr "Staðsetning:"
 #: joywidget.cpp:87
 #, kde-format
 msgid "Show trace"
-msgstr "Sýna ferli"
+msgstr "Sýna feril"
 
 #: joywidget.cpp:96 joywidget.cpp:300
 #, kde-format
@@ -242,7 +244,7 @@ msgstr "ÝTT"
 #: joywidget.cpp:98
 #, kde-format
 msgid "Buttons:"
-msgstr "Hnappar:"
+msgstr "Takkar:"
 
 #: joywidget.cpp:102
 #, kde-format
@@ -272,8 +274,8 @@ msgid ""
 "one attached, please enter the correct device file."
 msgstr ""
 "Engin stýripinni fannst sjálfkrafa á þessari tölvu. <br />Leitað var í /dev/"
-"js[0-4] og /dev/input/js[0-4] <br />Vinsamlega sláðu inn rétta tækjaskrá ef "
-"þú veist að stýripinni er tengdur."
+"js[0-4] og /dev/input/js[0-4] <br />Sláðu inn rétta tækjaskrá ef þú veist að "
+"stýripinni er tengdur."
 
 #: joywidget.cpp:226
 #, kde-format
@@ -282,9 +284,9 @@ msgid ""
 "Please select a device from the list or\n"
 "enter a device file, like /dev/js0."
 msgstr ""
-"Uppgefin tækjaskrá var ekki gild (inniheldur ekki /dev).\n"
+"Tækisheitið sem var gefið upp er ógilt (inniheldur ekki /dev).\n"
 "Vinsamlega veldu tæki úr listanum eða\n"
-"sláðu inn tækjaskrá svo sem /dev/js0."
+"sláðu inn tækjaskrá, t.d. /dev/js0."
 
 #: joywidget.cpp:229
 #, kde-format
@@ -294,7 +296,7 @@ msgstr "Óþekkt tæki"
 #: joywidget.cpp:247
 #, kde-format
 msgid "Device Error"
-msgstr "Tækjavilla"
+msgstr "Tækisvilla"
 
 #: joywidget.cpp:265
 #, kde-format
@@ -313,9 +315,9 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
-"<qt>Forritið mun nú kvarða nákvæmnina. <br /><br /><b>Vinsamlega færðu alla "
-"ása í miðjustöðu og snertu svo ekki stýripinnann.</b><br /><br />Smelltu á "
-"'Í lagi' til að hefja stillinguna.</qt>"
+"<qt>Kvörðunin mun nú athuga nákvæmnina. <br /><br /><b>Færðu alla ása í "
+"miðjustöðu og snertu svo ekki stýripinnann.</b><br /><br />Smelltu á 'Í "
+"lagi' til að hefja kvörðunina.</qt>"
 
 #: joywidget.cpp:363
 #, kde-format

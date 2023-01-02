@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-26 11:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -102,53 +102,30 @@ msgstr ""
 "encendido o haga clic en los botones o entradas de menú con la etiqueta "
 "<interface>Salir...</interface>."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "Opción predeterminada:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "Cerrar sesión"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Reiniciar"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "Apagar"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Restaurar sesión"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Al iniciar sesión, lanzar las aplicaciones que estaban abiertas:"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Durante el último cierre de sesión"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Cuando se guardó la sesión manualmente"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -163,7 +140,7 @@ msgstr ""
 "siguiente inicio de sesión. Vuelva a pulsarlo para sustituir el conjunto de "
 "aplicaciones que se deben recordar."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -172,12 +149,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Comenzar con una sesión vacía"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Aplicaciones ignoradas:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -189,13 +166,13 @@ msgstr ""
 "inicien automáticamente junto al resto de aplicaciones de la sesión que se "
 "deben restaurar."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -203,13 +180,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Tras el siguiente reinicio:"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Entrar en la pantalla de configuración de UEFI"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -238,6 +215,21 @@ msgstr "Al iniciar sesión"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicaciones a excluir de la sesión"
+
+#~ msgid "Default option:"
+#~ msgstr "Opción predeterminada:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "Cerrar sesión"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Reiniciar"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "Apagar"
 
 #~ msgid "General:"
 #~ msgstr "General:"

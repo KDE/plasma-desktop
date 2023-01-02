@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2016.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-06-26 00:19+0000\n"
-"PO-Revision-Date: 2016-04-08 22:57+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2022-12-10 19:42+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -24,18 +25,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sveinn í Felli"
+msgstr "Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sv1@fellsnet.is"
+msgstr "sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: ActionEditor.cpp:60
-#, fuzzy, kde-format
-#| msgid "Editing Action %1"
+#, kde-format
 msgid "Editing Action '%1'"
-msgstr "Breyti aðgerð %1"
+msgstr "Breyti aðgerð '%1'"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -43,8 +43,8 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
-"Það lítur út fyrir að heiti aðgerðar, skipun, táknmynd eða skilyrði hennar "
-"séu ekki gild. Því verða breytingarnar ekki virkar."
+"Heiti aðgerðar, skipun, tákn eða skilyrði hennar virðast ekki vera gild.\n"
+"Því verða breytingarnar ekki virkar."
 
 #: ActionEditor.cpp:163
 #, kde-format
@@ -55,13 +55,13 @@ msgstr "Ógild aðgerð"
 #: ActionEditor.ui:17
 #, kde-format
 msgid "Edit Parameter"
-msgstr "Breyta viðfangi"
+msgstr "Breyta færibreytu"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
 #, kde-format
 msgid "Parameter type:"
-msgstr "Tegund viðfangs:"
+msgstr "Tegund færibreytu:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:51
@@ -73,19 +73,19 @@ msgstr "Samsvörun eiginleika"
 #: ActionEditor.ui:56
 #, kde-format
 msgid "Content Conjunction"
-msgstr ""
+msgstr "Samtenging efnis"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr ""
+msgstr "Sundurtekning efnis"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
 #, kde-format
 msgid "Device Interface Match"
-msgstr ""
+msgstr "Samsvörun tækisviðmóts"
 
 #. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
 #: ActionEditor.ui:96
@@ -115,19 +115,19 @@ msgstr "Inniheldur"
 #: ActionEditor.ui:208
 #, kde-format
 msgid "Reset Parameter"
-msgstr "Endurstilla viðfang"
+msgstr "Endurstilla færibreytu"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr "Vista breytingar viðfangs"
+msgstr "Vista breytingar færibreytu"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr "Táknmynd aðgerðar, smelltu til að breyta"
+msgstr "Tákn aðgerðar, smelltu til að breyta"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
@@ -152,12 +152,19 @@ msgid ""
 "%d: Path to the device node - Block devices only\n"
 "%i: The identifier of the device"
 msgstr ""
+"Skipunin virkjar aðgerðina\n"
+"Þetta getur falið í sér einhvern eða alla af eftirfarandi viðaukum:\n"
+"\n"
+"%f: Tengistaðinn fyrir tækið - einungis geymslumiðlar (Direct Storage Access "
+"Device)\n"
+"%d: Slóð á tækishnút - einungis bálktæki (Block devices)\n"
+"%i: Kennimerki tækisins"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr ""
+msgstr "Tæki verða að samsvara eftirfarandi færibreytum fyrir þessa aðgerð:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -169,12 +176,12 @@ msgstr "Heiti aðgerðar:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr "Settu inn heiti á nýju aðgerðina"
+msgstr "Settu inn heiti fyrir nýju aðgerðina"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr ""
+msgstr "Solid Action-skráamyndun á skjáborði"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -182,6 +189,8 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
+"Verkfæri til að útbúa sjálfkrafa skjáborðsskrár frá Solid DeviceInterface-"
+"klösum til þýðingar"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
@@ -206,48 +215,47 @@ msgstr "Tækið verður að vera af gerðinni %1"
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr ""
+msgstr "Einhver af inniföldum eiginleikum verða að passa"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr ""
+msgstr "Allir innifaldir eiginleikar verða að passa"
 
 #: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
-msgstr ""
+msgstr "Eiginleiki tækisins %1 verður að vera jafnt og %2"
 
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr ""
+msgstr "Eiginleiki tækisins %1 verður að innihalda %2"
 
 #: SolidActions.cpp:33
 #, kde-format
 msgid "Solid Device Actions Editor"
-msgstr "Ritill fyrir Solid tækjaaðgerðir"
+msgstr "Ritill fyrir Solid Device-aðgerðir"
 
 #: SolidActions.cpp:35
 #, kde-format
 msgid "Solid Device Actions Control Panel Module"
-msgstr "Stjórnunareining fyrir Solid tækjaaðgerðir"
+msgstr "Stjórnunareining fyrir Solid Device-aðgerðir"
 
 #: SolidActions.cpp:37
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Solid Device Actions team"
+#, kde-format
 msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009 Solid Device Actions hópurinn"
+msgstr "(c) 2009, 2014 Solid Device Actions-hópurinn"
 
 #: SolidActions.cpp:39
 #, kde-format
 msgid "Port to Plasma 5"
-msgstr ""
+msgstr "Aðlögun að Plasma 5"
 
 #: SolidActions.cpp:152
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr ""
+msgstr "Svo virðist sem umsögnin fyrir þessa aðgerð sé ekki gild."
 
 #: SolidActions.cpp:152
 #, kde-format
@@ -274,13 +282,13 @@ msgstr "Fjarlægja"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Breyta…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Bæta við…"
 
 #~ msgid "Edit..."
 #~ msgstr "Breyta..."

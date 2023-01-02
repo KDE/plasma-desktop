@@ -2,7 +2,7 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1641066 $
+# Version: $Revision: 1641230 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2009.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-29 11:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -99,53 +99,30 @@ msgstr ""
 "przycisk zasilania lub przycisk w menu oznaczony <interface>Wyjdź...</"
 "interface>."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "Domyślne ustawienie:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "Wyjdź"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Uruchom ponownie"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "Wyłącz"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Przywracanie posiedzenia"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Przy wejściu, uruchom aplikacje, które były otwarte:"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Przy ostatnim wyjściu"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Gdy posiedzenie zostało ręcznie zapisane"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -160,7 +137,7 @@ msgstr ""
 "uruchomieniu komputera. Naciśnij to ponownie, aby zastąpić zestaw "
 "zapamiętanych aplikacji."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -169,12 +146,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Rozpocznij puste posiedzenie"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Pomijane aplikacje:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -185,13 +162,13 @@ msgstr ""
 "dwukropkami, np. 'xterm:konsole' lub 'xterm,konsole'), aby uniemożliwić im "
 "uruchomienie wraz z innymi aplikacjami przywracanymi w ramach posiedzenia."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Oprogramowanie układowe"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -199,13 +176,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Po kolejnym uruchomieniu:"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Otwórz ekran ustawień UEFI"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -234,6 +211,21 @@ msgstr "Przy logowaniu"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Programy wykluczone z posiedzenia"
+
+#~ msgid "Default option:"
+#~ msgstr "Domyślne ustawienie:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "Wyjdź"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "Wyłącz"
 
 #~ msgid "General:"
 #~ msgstr "Ogólne:"

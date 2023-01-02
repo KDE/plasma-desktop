@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-27 22:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -86,53 +86,30 @@ msgstr ""
 "பட்டன்களை அழுத்தம்போதும், அமர்விலிருந்து வெளியேறும்போதும், கணினியை மீள்துவக்கும்போதும், "
 "கணினியை நிறுத்தும்போதும் உறுதித் திரை ஒன்று காட்டப்படும்."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "இயல்பிருப்பு தேர்வு:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "அமர்விலிருந்து வெளியேறு"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "மீள்துவக்கு"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "கணினியை நிறுத்து"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "அமர்வு மீட்டமைப்பு"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "இத்தருனத்தில் திறந்திருந்த செயலிகளை நுழையும்போது மறுபடியும் திற:"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "கடைசியாக வெளியேறியபோது"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "கைமுறையாக அமர்வு சேமிக்கப்பட்டபோது"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -145,7 +122,7 @@ msgstr ""
 "ஓர் பட்டன் காட்டப்படும். அதை நீங்கள் கிளிக் செய்யும்போது ஓடிக்கொண்டிருக்கும் செயலிகளை "
 "பிளாஸ்மா நினைவில் கொள்ளும். செமித்த அமர்வை மேலெழுத அதை மறுபடியும் கிளிக் செய்யலாம்."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -154,12 +131,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "காலியான அமர்வுடன் துவக்கு"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "பொருட்படுத்தப்படாத செயலிகள்:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -170,13 +147,13 @@ msgstr ""
 "'xterm:konsole' அல்லது 'xterm,konsole') இங்கு உள்ளிட்டால், அச்செயலிகளை பிளாஸ்மா "
 "மீட்டெடுக்காது."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "சாதனநிரல்"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -184,13 +161,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "அடுத்த மீள்துவக்கத்திற்குப் பின்:"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "சாதனநிரல் (UEFI) அமைப்புகளில் நுழை"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -219,6 +196,21 @@ msgstr "நுழையும்போது"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "அமர்வில் உட்படக்கூடாத செயலிகள்"
+
+#~ msgid "Default option:"
+#~ msgstr "இயல்பிருப்பு தேர்வு:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "அமர்விலிருந்து வெளியேறு"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "மீள்துவக்கு"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "கணினியை நிறுத்து"
 
 #~ msgid "General:"
 #~ msgstr "பொது:"

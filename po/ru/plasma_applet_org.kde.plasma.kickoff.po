@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-24 00:51+0000\n"
-"PO-Revision-Date: 2022-09-23 22:06+0300\n"
+"PO-Revision-Date: 2022-12-30 13:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -66,11 +66,10 @@ msgid "Icon:"
 msgstr "Значок:"
 
 #: package/contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Application Launcher Menu"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "Меню запуска приложений"
+msgstr "Изменить значок меню запуска приложений"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -79,19 +78,20 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Текущий значок: %1. Нажмите, чтобы открыть меню, позволяющее изменить значок "
+"или применить значок по умолчанию."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Выбрать..."
+msgstr "Выбрать…"
 
 #: package/contents/ui/ConfigGeneral.qml:78
-#, fuzzy, kde-format
-#| msgid "Kickoff Application Launcher"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Меню запуска приложений Kickoff"
+msgstr "Выберите значок меню запуска приложений"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Введите текст надписи…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Сбросить текст надписи"
 
 #: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
@@ -232,12 +232,12 @@ msgstr "Точки входа"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Совпадений не найдено"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format
 msgid "Open user settings"
-msgstr "Открыт настройки пользователя"
+msgstr "Открыть настройки пользователя"
 
 #: package/contents/ui/Header.qml:240
 #, kde-format

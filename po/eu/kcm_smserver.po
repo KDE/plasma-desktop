@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-10-14 07:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -97,49 +97,24 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default leave option:"
-msgid "Default option:"
-msgstr "Irteteko aukera lehenetsia:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr ""
-
-#: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Restart Now"
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Berrabiarazi orain"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr ""
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr ""
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio Here 'session' refers to the technical concept of session "
@@ -150,7 +125,7 @@ msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Leheneratu eskuz gordetako azken saioa"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -160,7 +135,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -169,13 +144,13 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Hasi saio huts batekin"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Don't restore these applications:"
 msgid "Ignored applications:"
 msgstr "Ez lehengoratu aplikazio hauek:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -183,14 +158,14 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, fuzzy, kde-format
 #| msgid "Firmware Setup"
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware ezarpena"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -198,7 +173,7 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter UEFI setup screen on next restart"
@@ -206,7 +181,7 @@ msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Sartu UEFI ezarpen pantailara hurrengo berrabiadan"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen on next restart"
@@ -237,6 +212,17 @@ msgstr "Saioa-hastean"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Saioetatik baztertu beharreko aplikazioak"
+
+#, fuzzy
+#~| msgid "Default leave option:"
+#~ msgid "Default option:"
+#~ msgstr "Irteteko aukera lehenetsia:"
+
+#, fuzzy
+#~| msgid "Restart Now"
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Berrabiarazi orain"
 
 #~ msgid "General:"
 #~ msgstr "Orokorra:"

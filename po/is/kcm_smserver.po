@@ -4,19 +4,20 @@
 #
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2009.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2009-04-08 22:27+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: icelandic <kde-isl@molar.is>\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"PO-Revision-Date: 2022-12-10 18:56+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -30,9 +31,10 @@ msgid ""
 "whether the computer should be automatically shut down after session exit by "
 "default."
 msgstr ""
-"<h1>Setustjóri</h1> Hér getur þú stillt setustjórann. Þar á meðal eru "
-"stillingar eins og hvort eigi að endurheimta stöðu kerfisins frá því síðast "
-"þegar notandinn stimplar sig inn."
+"<h1>Setustjóri</h1> Hér getur þú stillt setustjórann. Meðal annars er hægt "
+"að stilla hvort það eigi að staðfesta þegar hætt er í setu (útskráning), "
+"hvort eigi að endurheimta stöðu setunnar frá því notandinn skráði sig inn "
+"síðast og hvort slökkva eigi sjálfkrafa á tölvunni þegar setu er hætt."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -42,32 +44,31 @@ msgstr ""
 
 #: package/contents/ui/main.qml:35
 #, fuzzy, kde-format
-#| msgid "&Restart computer"
+#| msgid "Restart Now"
 msgid "Restart"
-msgstr "Endur&ræsa tölvu"
+msgstr "Endurræsa núna"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "Mistókst að biðja um endurræsingu til að setja upp fastbúnað: %1"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
+msgstr "Næst þegar tölvan er endurræst opnast UEFI-uppsetningarskjárinn."
 
 #: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
+msgstr "Næst þegar tölvan er endurræst opnast uppsetningarskjár fastbúnaðar."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart Now"
-msgstr "Endur&ræsa tölvu"
+msgstr "Endurræsa núna"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -89,57 +90,36 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
-msgid "Default option:"
-msgstr "Sjálfgefin aðferð við að slökkva á tölvunni"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr ""
-
-#: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Endur&ræsa tölvu"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr ""
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Setustjóri"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Restore last manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Sækja fyrri &geymda setu"
+msgstr "Endurheimta lotu sem notandi vistaði síðast"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,22 +129,22 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#: package/contents/ui/main.qml:132
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Byrja með &auða setu"
+msgstr "Byrja með auða lotu"
 
-#: package/contents/ui/main.qml:181
-#, kde-format
+#: package/contents/ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Don't restore these applications:"
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ekki endurheimta þessi forrit:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -172,13 +152,13 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -186,106 +166,103 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: package/contents/ui/main.qml:219
-#, kde-format
+#: package/contents/ui/main.qml:184
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Opna uppsetningarskjá fastbúnaðar við næstu endurræsingu"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "Stað&festa útstimplun"
+msgstr "Staðfesta útskráningu"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
+#, kde-format
 msgid "Default leave option"
-msgstr "Sjálfgefin aðferð við að slökkva á tölvunni"
+msgstr "Sjálfgefinn valkostur við lokun"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
-msgstr "Við innstimplun"
+msgstr "Við innskráningu"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Forrit sem sleppa skal úr setum:"
+msgstr "Forrit sem á að sleppa úr setu:"
 
-#, fuzzy
 #~| msgid "General"
 #~ msgid "General:"
-#~ msgstr "Almennt"
+#~ msgstr "Almennt:"
 
-#, fuzzy
 #~| msgid "Conf&irm logout"
 #~ msgctxt "@option:check"
 #~ msgid "Confirm logout"
-#~ msgstr "Stað&festa útstimplun"
+#~ msgstr "Staðfesta útskráningu"
 
-#, fuzzy
+#~| msgid "O&ffer shutdown options"
+#~ msgctxt "@option:check"
+#~ msgid "Offer shutdown options"
+#~ msgstr "Bjóða valkosti fyrir frágang"
+
+#~| msgid "Default Leave Option"
+#~ msgid "Default leave option:"
+#~ msgstr "Sjálfgefinn valkostur við lokun:"
+
 #~| msgid "&End current session"
 #~ msgctxt ""
 #~ "@option:radio Here 'session' refers to the technical concept of session "
 #~ "restoration, whereby the windows that were open on logout are re-opened "
 #~ "on the next login"
 #~ msgid "End current session"
-#~ msgstr "&Ljúka núverandi setu"
+#~ msgstr "Hætta í núverandi setu"
 
-#, fuzzy
 #~| msgid "&Restart computer"
 #~ msgctxt "@option:radio"
 #~ msgid "Restart computer"
-#~ msgstr "Endur&ræsa tölvu"
+#~ msgstr "Endurræsa tölvu"
 
-#, fuzzy
 #~| msgid "&Turn off computer"
 #~ msgctxt "@option:radio"
 #~ msgid "Turn off computer"
-#~ msgstr "&Slökkva á tölvu"
+#~ msgstr "Slökkva á tölvu"
 
-#, fuzzy
+#~ msgid "When logging in:"
+#~ msgstr "Við innskráningu:"
+
 #~| msgid "Restore &manually saved session"
 #~ msgctxt ""
 #~ "@option:radio Here 'session' refers to the technical concept of session "
 #~ "restoration, whereby the windows that were open on logout are re-opened "
 #~ "on the next login"
 #~ msgid "Restore last session"
-#~ msgstr "Sækja fyrri &geymda setu"
+#~ msgstr "Endurheimta fyrri lotu"
 
 #~ msgid ""
 #~ "Here you can enter a colon or comma separated list of applications that "
 #~ "should not be saved in sessions, and therefore will not be started when "
 #~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
 #~ msgstr ""
-#~ "Hér getur þú gefið upp kommu-aðgreindan lista af forritum sem á ekki að "
-#~ "vista í setuna þína og verða því ekki ræst þegar þú stimplar þig inn "
-#~ "aftur. Til dæmis:  'xterm,xconsole'."
+#~ "Hér getur þú slegið inn nöfn forrita, aðgreind með tvípunkti eða kommu, "
+#~ "sem á ekki að vista í setum og verða því ekki ræst þegar setan er "
+#~ "endurheimt. Til dæmis:  'xterm:konsole' eða 'xterm,konsole'."
 
-#, fuzzy
-#~| msgid "O&ffer shutdown options"
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "&Bjóða rofa fyrir 'shutdown' skipunina"
-
-#, fuzzy
 #~| msgid "O&ffer shutdown options"
 #~ msgid "Offer shutdown options"
-#~ msgstr "&Bjóða rofa fyrir 'shutdown' skipunina"
+#~ msgstr "Bjóða valkosti fyrir frágang"
 
 #, fuzzy
 #~| msgid "Restore &previous session"

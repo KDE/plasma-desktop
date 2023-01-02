@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2007-02-01 10:26+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -87,57 +87,32 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default Shutdown Option"
-msgid "Default option:"
-msgstr "گزینه تعطیل پیش‌فرض"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr ""
-
-#: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "&بازآغازی رایانه‌"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr ""
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "مدیر نشست"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "بازگرداندن &دستی نشست ذخیره‌شده‌"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -147,7 +122,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -157,12 +132,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "آغاز با یک &نشست خالی‌"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -170,13 +145,13 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -184,13 +159,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -223,6 +198,17 @@ msgstr "هنگام ورود"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default option:"
+#~ msgstr "گزینه تعطیل پیش‌فرض"
+
+#, fuzzy
+#~| msgid "&Restart computer"
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "&بازآغازی رایانه‌"
 
 #, fuzzy
 #~| msgid "General"

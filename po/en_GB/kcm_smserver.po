@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-31 17:02+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -93,53 +93,30 @@ msgstr ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labelled <interface>Leave…</interface>."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "Default option:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "Log Out"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Restart"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "Shut Down"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Session Restore"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "On login, launch apps that were open:"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "On last logout"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "When session was manually saved"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -153,7 +130,7 @@ msgstr ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -162,12 +139,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Start with an empty session"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Ignored applications:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -178,13 +155,13 @@ msgstr ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -192,13 +169,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "After next restart:"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Enter UEFI setup screen"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -227,6 +204,21 @@ msgstr "On login"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Applications to be excluded from session"
+
+#~ msgid "Default option:"
+#~ msgstr "Default option:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "Log Out"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Restart"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "Shut Down"
 
 #~ msgid "General:"
 #~ msgstr "General:"

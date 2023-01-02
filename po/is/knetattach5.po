@@ -2,19 +2,20 @@
 #
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2012.
+# gummi <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2012-04-08 16:49+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2022-12-10 22:03+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -23,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Arnar Leósson"
+msgstr "Arnar Leósson,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "leosson@frisurf.no"
+msgstr "leosson@frisurf.no,gudmundure@gmail.com"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -36,8 +37,8 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
-"Sláðu inn nafn fyrir þessa <i>vefmöppu</i> ásamt vistfangi miðlara, gátt og "
-"möppuslóð sem á að nota. Ýttu svo á <b>Vista & tengjast</b> hnappinn."
+"Sláðu inn heiti fyrir þessa <i>vefmöppu</i> ásamt vistfangi þjóns, gátt og "
+"möppuslóð sem á að nota, og smelltu svo á hnappinn <b>Vista og tengjast</b>."
 
 #: knetattach.cpp:82
 #, kde-format
@@ -46,9 +47,9 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Sláðu inn nafn á þessari <i>öruggu skeljartengingu</i> ásamt vistfangi "
-"miðlara, gátt og möppuslóð sem á að nota. Ýttu svo á <b>Vista & tengjast</b> "
-"hnappinn."
+"Sláðu inn heiti á þessari <i>öruggu skeljartengingu</i> ásamt vistfangi "
+"þjóns, gátt og möppuslóð sem á að nota. Smelltu svo á hnappinn <b>Vista og "
+"tengjast</b>."
 
 #: knetattach.cpp:86
 #, kde-format
@@ -57,8 +58,8 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Sláðu inn nafn á þessari <i>FTP tengingu</i> ásamt vistfangi miðlara, gátt "
-"og möppuslóð sem á að nota. Ýttu svo á <b>Vista & tengjast</b> hnappinn."
+"Sláðu inn heiti á þessari <i>FTP-tengingu</i> ásamt vistfangi þjóns, gátt og "
+"möppuslóð sem á að nota. Smelltu svo á hnappinn <b>Vista og tengjast</b>."
 
 #: knetattach.cpp:90
 #, kde-format
@@ -67,21 +68,20 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Sláðu inn nafn á þessu <i>Microsoft Windows netdrifi</i> ásamt vistfangi "
-"miðlara, gátt og möppuslóð sem á að nota. Ýttu svo á <b>Vista & tengjast</b> "
-"hnappinn."
+"Sláðu inn heiti á þessu <i>Microsoft Windows-netdrifi</i> ásamt vistfangi "
+"þjóns, gátt og möppuslóð sem á að nota. Smelltu svo á hnappinn <b>Vista & "
+"tengjast</b>."
 
 #: knetattach.cpp:208
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
 msgstr ""
-"Gat ekki tengst þjóni. Vinsamlega skoðaðu stillingarnar þínar og reyndu "
-"aftur."
+"Tókst ekki að tengjast þjóni. Skoðaðu stillingarnar þínar og reyndu aftur."
 
 #: knetattach.cpp:336
 #, kde-format
 msgid "Save && C&onnect"
-msgstr "Vista && t&engjast"
+msgstr "Vista og t&engjast"
 
 #: knetattach.cpp:338
 #, kde-format
@@ -92,13 +92,13 @@ msgstr "&Tengjast"
 #: knetattach.ui:14
 #, kde-format
 msgid "Network Folder Wizard"
-msgstr "Netmöppuálfur"
+msgstr "Netmöppuhjálp"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "Bæta netmöppu við"
+msgstr "Bæta við netmöppu"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -107,7 +107,7 @@ msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
 msgstr ""
-"Veldu tegund netmöppu sem þú vilt tengjast og ýttu svo á 'Næsta' hnappinn."
+"Veldu tegund netmöppu sem þú vilt tengjast og ýttu svo á hnappinn 'Áfram'."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -137,19 +137,19 @@ msgstr "FT&P"
 #: knetattach.ui:118
 #, kde-format
 msgid "&Microsoft® Windows® network drive"
-msgstr "&Microsoft® Windows® netdrif"
+msgstr "&Microsoft® Windows®-netdrif"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
 #: knetattach.ui:145
 #, kde-format
 msgid "Network Folder Information"
-msgstr "Netmöppu upplýsingar"
+msgstr "Netmöppuupplýsingar"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: knetattach.ui:177
 #, kde-format
 msgid "&Name:"
-msgstr "&Nafn:"
+msgstr "&Heiti:"
 
 #. i18n: ectx: property (text), widget (QLabel, _userText)
 #: knetattach.ui:196
@@ -173,7 +173,7 @@ msgstr "&Gátt:"
 #: knetattach.ui:283
 #, kde-format
 msgid "&Protocol:"
-msgstr "&Samskiptamáti:"
+msgstr "&Samskiptaregla:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: knetattach.ui:313
@@ -191,7 +191,7 @@ msgstr "Kóðun:"
 #: knetattach.ui:351
 #, kde-format
 msgid "Cr&eate an icon for this remote folder"
-msgstr "Búa til táknmynd fyrir þ&essa fjarlægu möppu"
+msgstr "Búa til tákn fyrir þ&essa fjartengdu möppu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
 #: knetattach.ui:361
@@ -202,7 +202,7 @@ msgstr "Nota d&ulritun"
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
-msgstr "KDE netálfur"
+msgstr "KDE nethjálp"
 
 #: main.cpp:25
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2009-04-09 11:27+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -88,61 +88,34 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#  i18n: file smserverconfigdlg.ui line 116
-#: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
-msgid "Default option:"
-msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr ""
-
-#  i18n: file smserverconfigdlg.ui line 146
-#: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "ចាប់​ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr ""
-
 #  i18n: file smserverconfigdlg.ui line 16
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "កម្មវិធី​គ្រប់​គ្រង​សម័យ"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
 #  i18n: file smserverconfigdlg.ui line 98
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "ស្ដារ​សម័យ​ដែល​បាន​រក្សា​ទុក​ដោយ​ដៃ"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -153,7 +126,7 @@ msgid ""
 msgstr ""
 
 #  i18n: file smserverconfigdlg.ui line 106
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -163,12 +136,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "ចាប់ផ្តើម​ជាមួយ​សម័យ​ទទេ​"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -176,13 +149,13 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -190,13 +163,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -233,6 +206,19 @@ msgstr "ពេល​ចូល"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "កម្មវិធី​ដែល​ត្រូវ​បាន​យក​ចេញ​ពី​សម័យ ៖"
+
+#  i18n: file smserverconfigdlg.ui line 116
+#, fuzzy
+#~| msgid "Default Leave Option"
+#~ msgid "Default option:"
+#~ msgstr "ជម្រើស​ចាកចេញ​​លំនាំ​ដើម"
+
+#  i18n: file smserverconfigdlg.ui line 146
+#, fuzzy
+#~| msgid "&Restart computer"
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "ចាប់​ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
 
 #  i18n: file smserverconfigdlg.ui line 40
 #, fuzzy

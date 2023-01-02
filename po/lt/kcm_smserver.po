@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-28 01:29+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -97,53 +97,30 @@ msgstr ""
 "paspausite maitinimo mygtuką ar spustelėsite ant mygtukų, ar meniu su užrašu "
 "<interface>Išeiti…</interface>."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "Numatytoji parinktis:"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "Atsijungti"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Paleisti iš naujo"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "Išjungti"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Seanso atkūrimas"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Prisijungiant, paleisti programas, kurios buvo atvertos:"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Paskiausio atsijungimo metu"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Kai seansas buvo įrašytas rankiniu būdu"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -157,7 +134,7 @@ msgstr ""
 "Plasma įsimins atvertas programas ir kito prisijungimo metu jas atkurs. "
 "Spustelėkite mygtuką dar kartą, norėdami pakeisti įsimintų programų rinkinį."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -166,12 +143,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Pradėti tuščią seansą"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Nepaisomos programos:"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -183,13 +160,13 @@ msgstr ""
 "neleistumėte joms automatiškai pasileisti kartu su kitomis seanso "
 "atkuriamomis programomis."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Programinė aparatinė įranga"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -197,13 +174,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Po kito paleidimo iš naujo:"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Įžengti į UEFI sąrankos langą"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -232,6 +209,21 @@ msgstr "Prisijungiant"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Programos, kurios bus išbrauktos iš seanso"
+
+#~ msgid "Default option:"
+#~ msgstr "Numatytoji parinktis:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "Atsijungti"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Paleisti iš naujo"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "Išjungti"
 
 #~ msgid "General:"
 #~ msgstr "Bendra:"

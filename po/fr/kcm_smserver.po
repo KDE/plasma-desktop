@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-12-28 10:25+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -109,53 +109,30 @@ msgstr ""
 "l'appui sur le bouton de mise sous tension ou  d'un clic sur les boutons ou "
 "les éléments de menu intitulés <interface>Quitter… </interface>."
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Default option:"
-msgstr "Option par défaut :"
-
-#: package/contents/ui/main.qml:98
-#, kde-format
-msgctxt "@option:radio"
-msgid "Log Out"
-msgstr "Se déconnecter"
-
-#: package/contents/ui/main.qml:109
-#, kde-format
-msgctxt "@option:radio"
-msgid "Restart"
-msgstr "Re-démarrer"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Shut Down"
-msgstr "Éteindre"
-
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Restauration de la session"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "A la connexion, lancer les applications ayant été ouvertes :"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "A la dernière déconnexion"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Lorsque la session a été enregistrée manuellement"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -170,7 +147,7 @@ msgstr ""
 "la prochaine connexion. Veuillez cliquer à nouveau dessus pour remplacer "
 "l’ensemble des applications mémorisées."
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -179,12 +156,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Démarrer avec une session vide"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Applications ignorées :"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -196,13 +173,13 @@ msgstr ""
 "ou « xterm, konsole ») pour les empêcher de démarrer automatiquement avec "
 "d’autres applications restaurées en session."
 
-#: package/contents/ui/main.qml:212
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Micro-programme"
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -210,13 +187,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Après le prochain re-démarrage :"
 
-#: package/contents/ui/main.qml:218
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Activer l'écran de configuration « UEFI »"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -245,6 +222,21 @@ msgstr "À la connexion"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Applications à exclure de la session"
+
+#~ msgid "Default option:"
+#~ msgstr "Option par défaut :"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Log Out"
+#~ msgstr "Se déconnecter"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Restart"
+#~ msgstr "Re-démarrer"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Shut Down"
+#~ msgstr "Éteindre"
 
 #~ msgid "General:"
 #~ msgstr "Général :"
