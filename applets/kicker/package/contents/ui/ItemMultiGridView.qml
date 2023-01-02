@@ -69,6 +69,9 @@ PlasmaExtras.ScrollArea {
             rows -= (target.lastRow() + 2);
             target.tryActivate(row - rows, col);
         }
+
+        root.reset();
+        root.dashWindow.reset();
     }
 
     Column {

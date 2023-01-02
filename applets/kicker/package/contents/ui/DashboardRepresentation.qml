@@ -370,6 +370,7 @@ Kicker.DashboardWindow {
             if (mouse.button === Qt.LeftButton) {
                 searchField.clear();
                 searchField.forceActiveFocus();
+                root.reset();
                 root.toggle();
             }
         }

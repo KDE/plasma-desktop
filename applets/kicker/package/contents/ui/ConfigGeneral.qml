@@ -20,7 +20,7 @@ Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdashforked")
+    property bool isDash: plasmoid.pluginName === "org.kde.plasma.kickerdashforked"
 
     property string cfg_icon: plasmoid.configuration.icon
     property bool cfg_useCustomButtonImage: plasmoid.configuration.useCustomButtonImage

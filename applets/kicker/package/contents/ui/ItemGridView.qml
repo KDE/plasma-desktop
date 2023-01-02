@@ -81,8 +81,11 @@ FocusScope {
                 : col,
                 count - 1);
 
-            focus = true;
+            focus = false;
         }
+
+        root.reset();
+        root.dashWindow.reset();
     }
 
     function forceLayout() {
