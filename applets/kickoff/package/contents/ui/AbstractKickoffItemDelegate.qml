@@ -34,6 +34,10 @@ T.ItemDelegate {
     property var actionList: null
     property bool isSearchResult: false
 
+    readonly property bool isSeparator: model && (model.isSeparator === true)
+    property int separatorHeight: lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
+    property int itemHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
+
     readonly property bool dragEnabled: enabled && !isCategoryListItem
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
@@ -79,12 +83,11 @@ T.ItemDelegate {
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
-                             implicitContentHeight + topPadding + bottomPadding)
+    implicitHeight: isSeparator ? separatorHeight: itemHeight
 
     spacing: KickoffSingleton.fontMetrics.descent
 
-    enabled: !model.disabled
+    enabled: !isSeparator && !model.disabled
     hoverEnabled: false
 
     text: model.name ?? model.display

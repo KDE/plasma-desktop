@@ -100,4 +100,29 @@ AbstractKickoffItemDelegate {
             }
         }
     }
+
+    Component {
+        id: separatorComponent
+
+        PlasmaCore.SvgItem {
+            width: parent.width
+            height: lineSvg.horLineHeight
+
+            svg: lineSvg
+            elementId: "horizontal-line"
+        }
+    }
+
+    Loader {
+        id: separatorLoader
+
+        anchors.left: root.left
+        anchors.right: root.right
+        anchors.verticalCenter: root.verticalCenter
+
+        active: root.isSeparator
+
+        asynchronous: false
+        sourceComponent: separatorComponent
+    }
 }

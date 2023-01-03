@@ -46,7 +46,7 @@ Item {
 
         flat: true // have categories, but no subcategories
         sorted: plasmoid.configuration.alphaSort
-        showSeparators: false
+        showSeparators: true
         showTopLevelItems: true
 
         showAllApps: true
@@ -288,6 +288,14 @@ Item {
 
     Kicker.ProcessRunner {
         id: processRunner;
+    }
+
+    PlasmaCore.Svg {
+        id: lineSvg
+        imagePath: "widgets/line"
+
+        property int horLineHeight: lineSvg.elementSize("horizontal-line").height
+        property int vertLineWidth: lineSvg.elementSize("vertical-line").width
     }
 
     function action_menuedit() {
