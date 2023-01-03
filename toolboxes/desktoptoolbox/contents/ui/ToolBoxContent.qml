@@ -290,22 +290,11 @@ MouseArea {
                 height: addWidgetButton.height
                 visible: Kirigami.Settings.hasTransientTouchInput || Kirigami.Settings.tabletMode
 
-                property var menuDialog: null
-
-                checked: menuDialog !== null
                 icon.name: "overflow-menu"
                 text: i18ndc("plasma_toolbox_org.kde.desktoptoolbox", "@action:button", "More")
 
                 onClicked: {
-                    if (menuDialog) {
-                        return;
-                    }
-                    const component = Qt.createComponent("MoreActionsMenu.qml");
-                    const incubator = component.incubateObject(toolBoxContent, {
-                        "location": toolBoxContent.state.startsWith("top") ? PlasmaCore.Types.TopEdge : PlasmaCore.Types.BottomEdge,
-                        "visualParent": menuButton,
-                    });
-                    component.destroy();
+                    Plasmoid.openContextMenu(mapToGlobal(0, height));
                 }
             }
         }
