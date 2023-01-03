@@ -1,6 +1,5 @@
 # Translation for kcmsmserver.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2014, Free Software Foundation, Inc.
-# Copyright (C) 2015-2022, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -8,21 +7,21 @@
 # Marcos  <marcos@euskalgnu.org>, 2002, 2006.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2004.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-10-14 07:02+0200\n"
+"PO-Revision-Date: 2023-01-02 19:52+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: kcmsmserver.cpp:49
@@ -44,12 +43,12 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Sistema berrabiarazi beharra dago saioa eskuz gordetzea aktibo egon dadin."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Berrabiarazi orain"
+msgstr "Berrabiarazi"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -81,12 +80,12 @@ msgstr "Berrabiarazi orain"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Saio-ixteko pantaila"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Erakutsi:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -96,34 +95,33 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Ezarpen hau piztuta dagoenean, saio-ixten, itzaltzen, berrabiatzen, pizteko "
+"botoia sakatzen, edo <interface>Irten...</interface> etiketa duten botoietan "
+"edo menu-elementuetan klik egiten duzunean saio-ixtea berresteko pantaila "
+"erakutsiko da."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Saioa lehengoratzea"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Saio-hastean, abiarazi irekita zeuden aplikazioak:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Azken saio-ixtean"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Leheneratu eskuz gordetako azken saioa"
+msgstr "Saioa eskuz gorde denean"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -134,6 +132,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>Gorde saioa</interface> botoi bat agertuko da "
+"<interface>Aplikazioak abiarazteko</interface> menuan. Hari klik egiten "
+"diozunean, Plasmak, irekita dauden aplikazioak gogoratu eta hurrengo saio-"
+"hastean lehengoratuko ditu. Berriro klik egin gogoratutako aplikazioen "
+"multzoa ordezkatzeko."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -145,10 +148,9 @@ msgid "Start with an empty session"
 msgstr "Hasi saio huts batekin"
 
 #: package/contents/ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Ez lehengoratu aplikazio hauek:"
+msgstr "Ezikusitako aplikazioak:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -157,13 +159,15 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Idatzi aplikazioen izen exekutagarriak hemen (koma bidez edo puntu eta koma "
+"bidez bereizita, adibidez 'xterm:konsole' edo 'xterm,konsole') haiek saioan "
+"lehengoratutako beste aplikazioekin batera auto-abiatzea saihesteko."
 
 #: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Firmware ezarpena"
+msgstr "Firmwarea"
 
 #: package/contents/ui/main.qml:182
 #, kde-format
@@ -171,23 +175,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Hurrengo berrabiatzearen ondoren:"
 
 #: package/contents/ui/main.qml:183
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Sartu UEFI ezarpen pantailara hurrengo berrabiadan"
+msgstr "Sartu UEFI ezarpen pantailara"
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Hurrengo berrabiadan sartu firmwarea ezartzeko pantailan"
+msgstr "Sartu firmware ezarpen pantailara"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

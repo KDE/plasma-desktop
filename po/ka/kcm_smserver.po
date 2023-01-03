@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-12-27 07:32+0100\n"
+"PO-Revision-Date: 2023-01-02 09:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -128,6 +128,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"ღილაკი <interface>სესიის შენახვა</interface> გამოჩნდება "
+"<interface>აპლიკაციების გამშვების</interface> მენიუში. როცა მას "
+"დააწკაპუნებთ, Plasma დაიმახსოვრებს გახსნილ აპლიკაციებს და მათ შემდეგი "
+"შესვლისას იგივე ადგილას გაუშვებს. დააწკაპუნეთ მას კიდევ ერთხელ, რათა ეს "
+"აპები შეცვალოთ."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -150,6 +155,9 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"ჩაწერეთ აპების გამშვები ფაილების სახელები აქ (დაშორებული მძიმეებით ან "
+"ორწერტილებით. მაგ: 'xterm:konsole' ან 'xterm,console'), რათა გამორიცხოთ "
+"ისინი სესიის აღდგენისას გაშვებული აპების სიიდან."
 
 #: package/contents/ui/main.qml:177
 #, kde-format
