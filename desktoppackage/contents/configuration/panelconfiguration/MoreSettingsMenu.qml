@@ -177,11 +177,13 @@ PlasmaCore.Dialog {
             icon.name: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
             onClicked: panel.maximize();
         }
-        PC3.ToolButton {
+        PC3.CheckBox {
             Layout.fillWidth: true
+            Layout.topMargin: mainItem.radioButtonGroupSpacing
+            Layout.bottomMargin: mainItem.radioButtonGroupSpacing
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating Panel")
             icon.name: "zoom-select"
-            onClicked: panel.floating = !panel.floating
+            onToggled: panel.floating = !panel.floating
             checked: panel.floating
         }
         PC3.ToolButton {
