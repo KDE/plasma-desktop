@@ -24,7 +24,7 @@ Item {
         && plasmoid.configuration.customButtonImage.length !== 0)
 
     readonly property Component dashWindowComponent: kicker.isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
-    readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent && dashWindowComponent.status == 3
+    readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent
         ? dashWindowComponent.createObject(root, { visualParent: root }) : null
 
     onWidthChanged: updateSizeHints()
