@@ -83,7 +83,7 @@ T.ItemDelegate {
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
-    implicitHeight: isSeparator ? separatorHeight: itemHeight
+    implicitHeight: isSeparator ? separatorHeight : itemHeight
 
     spacing: KickoffSingleton.fontMetrics.descent
 
