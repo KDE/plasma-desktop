@@ -35,7 +35,7 @@ T.ItemDelegate {
     property bool isSearchResult: false
 
     readonly property bool isSeparator: model && (model.isSeparator === true)
-    property int separatorHeight: lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
+    property int separatorHeight: KickoffSingleton.lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
     property int itemHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
 
     readonly property bool dragEnabled: enabled && !isCategoryListItem

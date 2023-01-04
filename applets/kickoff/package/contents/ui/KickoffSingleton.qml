@@ -36,6 +36,8 @@ Item {
     //BEGIN Reusable Objects
     readonly property PlasmaCore.Svg lineSvg: PlasmaCore.Svg {
         imagePath: "widgets/line"
+        property int horLineHeight: lineSvg.elementSize("horizontal-line").height
+        property int vertLineWidth: lineSvg.elementSize("vertical-line").width
     }
     readonly property PlasmaCore.Svg arrowsSvg: PlasmaCore.Svg {
         imagePath: "widgets/arrows"

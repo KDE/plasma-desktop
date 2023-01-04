@@ -113,9 +113,9 @@ AbstractKickoffItemDelegate {
         asynchronous: false
         sourceComponent: PlasmaCore.SvgItem {
             width: parent.width
-            height: lineSvg.horLineHeight
+            height: KickoffSingleton.lineSvg.horLineHeight
 
-            svg: lineSvg
+            svg: KickoffSingleton.lineSvg
             elementId: "horizontal-line"
         }
     }
