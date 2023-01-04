@@ -237,6 +237,11 @@ EmptyPage {
                 switch (event.key) {
                     case Qt.Key_Up: if (!atFirst) {
                         decrementCurrentIndex()
+
+                        if (currentItem.isSeparator) {
+                            decrementCurrentIndex()
+                        }
+
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
                     case Qt.Key_K: if (!atFirst && event.modifiers & Qt.ControlModifier) {
@@ -245,6 +250,11 @@ EmptyPage {
                     } break
                     case Qt.Key_Down: if (!atLast) {
                         incrementCurrentIndex()
+
+                        if (currentItem.isSeparator) {
+                            incrementCurrentIndex()
+                        }
+
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
                     case Qt.Key_J: if (!atLast && event.modifiers & Qt.ControlModifier) {
