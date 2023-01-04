@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017, 2019, 2020.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-06-28 10:48+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-03 15:52+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -74,7 +74,7 @@ msgstr "Typy souborů:"
 #: package/contents/ui/ConfigFilter.qml:83
 #, kde-format
 msgid "Show hidden files:"
-msgstr ""
+msgstr "Ukázat skryté soubory:"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
@@ -127,19 +127,19 @@ msgstr "Uspořádání:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Zleva doprava"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Zprava doleva"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Shora dolů"
 
 #: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
@@ -547,25 +547,25 @@ msgstr "Obrovská"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr ""
+msgstr "Uspořádat"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Zleva doprava"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Zprava doleva"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Shora dolů"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -594,9 +594,3 @@ msgstr "Zobrazit náhled"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Uzamčeno"
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušit"

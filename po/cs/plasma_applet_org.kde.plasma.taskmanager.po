@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2013, 2015, 2016, 2017, 2018, 2019, 2020.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2013.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-06-28 10:50+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-03 15:51+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -73,16 +73,14 @@ msgid "General:"
 msgstr "Obecné:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Zvýraznit okna při přejezdu myší nad nástrojovými tipy"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Zvýraznit okna při přejezdu myší nad nástrojovými tipy"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -171,25 +169,19 @@ msgid "Cycles through tasks"
 msgstr "Postupně prochází mezi úlohami"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Zobrazí okna vedle sebe"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Zobrazí okna vedle sebe"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -578,7 +570,7 @@ msgstr "&Zavřít"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Spustit %1"
 
 #: package/contents/ui/Task.qml:87
 #, kde-format
@@ -719,18 +711,3 @@ msgstr "Zapomenout nedávná místa"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Zapomenout nedávné soubory"
-
-#~ msgid ""
-#~ "Tooltips are disabled, so the windows will be displayed side by side "
-#~ "instead."
-#~ msgstr ""
-#~ "Nástrojové tipy jsou vypnuty aby bylo možno okna zobrazit vedle sebe."
-
-#~ msgid "Show tooltips"
-#~ msgstr "Zobrazovat nástrojové tipy"
-
-#~ msgctxt ""
-#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
-#~ "thumbnails' "
-#~ msgid "Shows tooltip window thumbnails"
-#~ msgstr "Zobrazí náhledy oken jako nápovědu"

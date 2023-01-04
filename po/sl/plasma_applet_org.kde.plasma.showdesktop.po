@@ -3,13 +3,13 @@
 #
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2008.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2015, 2016.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-09-17 07:13+0200\n"
+"PO-Revision-Date: 2023-01-03 16:48+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -64,13 +64,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Premakni okna nazaj na izvirne pozicije"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "Začasno razkrij namizje s pomikom odprtih oken v kote zaslona"
+msgstr "Začasno prikaži namizje s pomikom oken proč"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Pokaži namizje"

@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:47+0000\n"
-"PO-Revision-Date: 2022-06-28 10:45+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"POT-Creation-Date: 2023-01-04 00:50+0000\n"
+"PO-Revision-Date: 2023-01-03 15:52+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -209,8 +209,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "O aplikaci"
@@ -266,7 +264,7 @@ msgid "Input Here"
 msgstr "Vstup zde"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:192
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
 msgid "Remove Panel"
 msgstr "Odstranit panel"
@@ -335,11 +333,11 @@ msgstr "Průhledné"
 msgid "Maximize Panel"
 msgstr "Maximalizovat panel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid "Floating Panel"
 msgstr "Plovoucí panel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
 msgid "Shortcut"
 msgstr "Zkratka"
 
@@ -480,6 +478,3 @@ msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (zakázáno)"
