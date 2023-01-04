@@ -101,18 +101,6 @@ AbstractKickoffItemDelegate {
         }
     }
 
-    Component {
-        id: separatorComponent
-
-        PlasmaCore.SvgItem {
-            width: parent.width
-            height: lineSvg.horLineHeight
-
-            svg: lineSvg
-            elementId: "horizontal-line"
-        }
-    }
-
     Loader {
         id: separatorLoader
 
@@ -123,6 +111,12 @@ AbstractKickoffItemDelegate {
         active: root.isSeparator
 
         asynchronous: false
-        sourceComponent: separatorComponent
+        sourceComponent: PlasmaCore.SvgItem {
+            width: parent.width
+            height: lineSvg.horLineHeight
+
+            svg: lineSvg
+            elementId: "horizontal-line"
+        }
     }
 }
