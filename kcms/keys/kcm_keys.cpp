@@ -14,7 +14,9 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KDesktopFile>
 #include <KGlobalShortcutInfo>
+#include <KIO/DesktopExecParser>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KOpenWithDialog>
@@ -36,6 +38,7 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
 {
     constexpr char uri[] = "org.kde.private.kcms.keys";
     qmlRegisterUncreatableType<BaseModel>(uri, 2, 0, "BaseModel", "Can't create BaseModel");
+    qmlRegisterUncreatableMetaObject(ComponentNS::staticMetaObject, uri, 2, 0, "ComponentType", "Can't create Component namespace");
     qmlRegisterAnonymousType<ShortcutsModel>(uri, 2);
     qmlRegisterAnonymousType<FilteredShortcutsModel>(uri, 2);
     qmlProtectModule(uri, 2);
@@ -159,7 +162,7 @@ QVariantList KCMKeys::defaultSchemes() const
 
 void KCMKeys::addApplication(QQuickItem *ctx)
 {
-    auto dialog = new KOpenWithDialog;
+    KOpenWithDialog *dialog = new KOpenWithDialog();
     if (ctx && ctx->window()) {
         dialog->winId(); // so it creates windowHandle
         dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(ctx->window()));
@@ -180,6 +183,49 @@ void KCMKeys::addApplication(QQuickItem *ctx)
         }
         dialog->deleteLater();
     });
+}
+
+void KCMKeys::addCommand(const QString &exec)
+{
+    QString serviceName = KIO::DesktopExecParser::executableName(exec);
+    if (serviceName.isEmpty()) {
+        return;
+    }
+    QString menuId;
+    QString newPath = KService::newServicePath(false /* ignored argument */, serviceName, &menuId);
+
+    KDesktopFile desktopFile(newPath);
+    KConfigGroup cg = desktopFile.desktopGroup();
+    cg.writeEntry("Type", "Application");
+
+    // For the user visible name, use the executable name with any
+    // arguments appended, but with desktop-file specific expansion
+    // arguments removed. This is done to more clearly communicate the
+    // actual command used to the user and makes it easier to
+    // distinguish things like "qdbus".
+    QString name = KIO::DesktopExecParser::executableName(exec);
+    auto view = QStringView{exec}.trimmed();
+    int index = view.indexOf(QLatin1Char(' '));
+    if (index > 0) {
+        name.append(view.mid(index));
+    }
+    cg.writeEntry("Name", exec);
+    cg.writeEntry("Exec", exec);
+    cg.writeEntry("NoDisplay", true);
+    cg.writeEntry("StartupNotify", false);
+    cg.writeEntry("X-KDE-GlobalAccel-CommandShortcut", true);
+    cg.sync();
+
+    m_globalAccelModel->addApplication(newPath, name);
+}
+
+void KCMKeys::editCommand(const QString &componentName, const QString &newExec)
+{
+    KDesktopFile desktopFile(componentName);
+    KConfigGroup cg = desktopFile.desktopGroup();
+    cg.writeEntry("Name", newExec);
+    cg.writeEntry("Exec", newExec);
+    cg.sync();
 }
 
 QString KCMKeys::keySequenceToString(const QKeySequence &keySequence) const
@@ -221,7 +267,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     }
 
     qCDebug(KCMKEYS) << "Found conflict for" << newSequence << conflict;
-    const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole).toString() == i18n("Common Actions");
+    const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole) == ComponentType::CommonAction;
     const QString actionName = conflict.data().toString();
     const QString componentName = conflict.parent().data().toString();
     const QString keysString = newSequence.toString(QKeySequence::NativeText);

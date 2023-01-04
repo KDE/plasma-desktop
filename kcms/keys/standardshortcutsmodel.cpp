@@ -14,6 +14,7 @@
 #include <KLocalizedString>
 #include <KStandardShortcut>
 
+#include "basemodel.h"
 #include "kcmkeys_debug.h"
 
 StandardShortcutsModel::StandardShortcutsModel(QObject *parent)
@@ -26,7 +27,7 @@ void StandardShortcutsModel::load()
     beginResetModel();
     m_components.clear();
     m_components.resize(6);
-    const QString sectionName = i18n("Common Actions");
+    const ComponentType sectionName = ComponentType::CommonAction;
     auto index = [](KStandardShortcut::Category category) {
         return static_cast<int>(category);
     };

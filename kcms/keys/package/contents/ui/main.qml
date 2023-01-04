@@ -11,7 +11,7 @@ import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
 import QtQml.Models 2.3
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcm 1.4 as KCM
 import org.kde.private.kcms.keys 2.0 as Private
 
@@ -19,6 +19,10 @@ KCM.AbstractKCM {
     id: root
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 33
+
+    // order must be in sync with ComponentType enum in basemodel.h
+    readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Settings"), i18n("Common Actions")]
+
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError != ""
     Connections {
@@ -82,7 +86,9 @@ KCM.AbstractKCM {
             QQC2.ScrollView {
                 Component.onCompleted: background.visible = true
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 15
-                Layout.fillHeight:true
+                Layout.maximumWidth: addButtonsLayout.width
+                Layout.fillHeight: true
+                Layout.minimumWidth: addButtonsLayout.width
                 ListView {
                     id: components
                     clip: true
@@ -121,12 +127,35 @@ KCM.AbstractKCM {
                                 onToggled: model.checked = checked
                             }
                             QQC2.Button {
+                                id: editButton
+
+                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitWidth: implicitHeight
+
+                                visible: model.section == Private.ComponentType.Command
+                                         && !exportActive
+                                         && !model.pendingDeletion
+                                         && (componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem)
+                                icon.name: "edit-rename"
+                                onClicked: {
+                                    addCommandDialog.editing = true;
+                                    addCommandDialog.componentName = model.component;
+                                    // for commands, Name == Exec
+                                    addCommandDialog.oldExec = model.display;
+                                    addCommandDialog.commandListItemDelegate = componentDelegate;
+                                    addCommandDialog.open();
+                                }
+                                QQC2.ToolTip {
+                                    text: i18nc("@tooltip:button %1 is the text of a custom command", "Edit command for %1", model.display)
+                                }
+                            }
+                            QQC2.Button {
                                 id: deleteButton
 
                                 implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
                                 implicitWidth: implicitHeight
 
-                                visible: model.section != i18n("Common Actions") // FIXME: don't compare translated strings
+                                visible: model.section != Private.ComponentType.CommonAction
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem)
@@ -160,7 +189,7 @@ KCM.AbstractKCM {
                     }
                     section.property: "section"
                     section.delegate: Kirigami.ListSectionHeader {
-                        label: section
+                        label: root.sectionNames[section]
                         QQC2.CheckBox {
                             id: sectionCheckbox
                             Layout.alignment: Qt.AlignRight
@@ -227,17 +256,37 @@ KCM.AbstractKCM {
                     }
                 }
             }
-            QQC2.Button {
-                enabled: !exportActive
+            GridLayout {
+                id: addButtonsLayout
+                // if the left-hand-side components view (which is bound to the width of this) is getting too wide, switch to vertical stack
+                readonly property bool useStackedLayout: addAppButton.implicitWidth + addCommandButton.implicitWidth >= root.width/2
+                rows: 2
+                columns: 2
+                flow: useStackedLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
                 Layout.alignment: Qt.AlignRight
-                icon.name: "list-add"
-                text: i18n("Add Application…")
-                onClicked: {
-                    kcm.addApplication(this)
+                QQC2.Button {
+                    id: addAppButton
+                    Layout.alignment: Qt.AlignRight
+                    enabled: !exportActive
+                    icon.name: "list-add"
+                    text: i18nc("@action:button Keep translated text as short as possible", "Add Application…")
+                    onClicked: {
+                        kcm.addApplication(this)
+                    }
+                }
+                QQC2.Button {
+                    id: addCommandButton
+                    Layout.alignment: Qt.AlignRight
+                    enabled: !exportActive
+                    icon.name: "list-add"
+                    text: i18nc("@action:button Keep translated text as short as possible", "Add Command…")
+                    onClicked: {
+                        addCommandDialog.open()
+                    }
                 }
             }
             RowLayout {
-                Layout.alignment: Qt.AlignRight
+                Layout.alignment: Qt.AlignRight | Qt.AlignTop
                 QQC2.Button {
                     enabled: !exportActive
                     icon.name: "document-import"
@@ -287,6 +336,61 @@ KCM.AbstractKCM {
             onRejected: fileDialogLoader.active = false
         }
     }
+
+    Kirigami.PromptDialog {
+        id: addCommandDialog
+        property bool editing: false
+        property string componentName: ""
+        property string oldExec: ""
+        property Item commandListItemDelegate: null
+
+        title: editing ? i18n("Edit Command") : i18n("Add Command")
+
+        onVisibleChanged: {
+            if (visible) {
+                cmdField.clear();
+                cmdField.forceActiveFocus();
+                if (editing) {
+                    cmdField.text = oldExec;
+                }
+            }
+        }
+
+        property Kirigami.Action addCommandAction: Kirigami.Action {
+            text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
+            icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
+            onTriggered: {
+                if (addCommandDialog.editing) {
+                    kcm.editCommand(addCommandDialog.componentName, cmdField.text);
+                    if (addCommandDialog.commandListItemDelegate) {
+                        addCommandDialog.commandListItemDelegate.label = cmdField.text;
+                    }
+                } else {
+                    kcm.addCommand(cmdField.text);
+                }
+                addCommandDialog.editing = false;
+                addCommandDialog.close();
+            }
+        }
+
+        standardButtons: Kirigami.Dialog.NoButton
+
+        customFooterActions: [addCommandAction]
+
+        ColumnLayout {
+            anchors.centerIn: parent
+            QQC2.Label {
+                text: i18n("Enter a command or the full path to a script file:")
+            }
+            QQC2.TextField {
+                id: cmdField
+                Layout.fillWidth: true
+                font.family: "monospace"
+                onAccepted: addCommandDialog.addCommandAction.triggered()
+            }
+        }
+    }
+
     Kirigami.OverlaySheet {
         id: importSheet
 

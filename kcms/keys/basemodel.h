@@ -13,6 +13,21 @@
 
 class KConfigBase;
 
+// we need to do this to expose the enum to QML
+namespace ComponentNS
+{
+Q_NAMESPACE
+enum ComponentType {
+    Application,
+    Command,
+    SystemService,
+    CommonAction,
+};
+Q_ENUM_NS(ComponentType)
+};
+
+using namespace ComponentNS;
+
 struct Action {
     QString id;
     QString displayName;
@@ -24,7 +39,7 @@ struct Action {
 struct Component {
     QString id;
     QString displayName;
-    QString type;
+    ComponentType type;
     QString icon;
     QVector<Action> actions;
     bool checked;

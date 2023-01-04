@@ -6,6 +6,9 @@
 
 #include "basemodel.h"
 
+#include <KConfigGroup>
+#include <KDesktopFile>
+
 #include "kcmkeys_debug.h"
 
 BaseModel::BaseModel(QObject *parent)
@@ -143,8 +146,14 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
     if (index.parent().isValid()) {
         const Action &action = m_components[index.parent().row()].actions[index.row()];
         switch (role) {
-        case Qt::DisplayRole:
+        case Qt::DisplayRole: {
+            KDesktopFile desktopFile(action.id);
+            KConfigGroup cg = desktopFile.desktopGroup();
+            if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
+                return cg.readEntry("Exec");
+            }
             return action.displayName.isEmpty() ? action.id : action.displayName;
+        }
         case ActionRole:
             return action.id;
         case ActiveShortcutsRole:
@@ -164,8 +173,14 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
     }
     const Component &component = m_components[index.row()];
     switch (role) {
-    case Qt::DisplayRole:
+    case Qt::DisplayRole: {
+        KDesktopFile desktopFile(component.id);
+        KConfigGroup cg = desktopFile.desktopGroup();
+        if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
+            return cg.readEntry("Exec");
+        }
         return component.displayName;
+    }
     case Qt::DecorationRole:
         return component.icon;
     case SectionRole:
