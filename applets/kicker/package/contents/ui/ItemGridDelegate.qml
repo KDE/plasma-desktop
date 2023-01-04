@@ -86,7 +86,7 @@ Item {
         elide: Text.ElideMiddle
         wrapMode: Text.Wrap
 
-        color: "white" // FIXME TODO: Respect theming?
+        color: PlasmaCore.Theme.textColor
 
         text: ("name" in model ? model.name : model.display)
     }
