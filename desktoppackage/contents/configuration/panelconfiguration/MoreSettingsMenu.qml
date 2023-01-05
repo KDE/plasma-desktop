@@ -207,6 +207,13 @@ PlasmaCore.Dialog {
                 plasmoid.globalShortcut = button.keySequence
             }
         }
+        PC3.Label {
+            Layout.fillWidth: true
+            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 6
+            text: i18n("Press this keyboard shortcut to move focus to the Panel")
+            font: PlasmaCore.Theme.smallestFont
+            wrapMode: Text.Wrap
+        }
     }
 
     function hide() {
