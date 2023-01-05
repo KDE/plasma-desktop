@@ -1,17 +1,17 @@
 # translation of kaccess.po to esperanto
-# translation of kaccess.po to
 # Copyright (C) 2003, 2007 Free Software Foundation, Inc.
 # Heiko Evermann <heiko@evermann.de>, 2003.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2009-12-06 22:28+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 07:13+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -185,11 +185,10 @@ msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
 #: kaccess.cpp:329
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
-msgstr "Alirebleca ilo de KDE"
+msgstr "Alirebleco"
 
 #: kaccess.cpp:615
 #, kde-format
@@ -453,10 +452,9 @@ msgid "Mouse keys has been disabled."
 msgstr "Musklavoj malaktiviĝis."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgid "Accessibility"
-msgstr "Alirebleca ilo de KDE"
+msgstr "Alirebleco"
 
 #: main.cpp:49
 #, kde-format
@@ -472,39 +470,3 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Aŭtoro"
-
-#~ msgid "KDE Accessibility Tool"
-#~ msgstr "Alirebleca ilo de KDE"
-
-#~ msgid "kaccess"
-#~ msgstr "kaccess"
-
-#, fuzzy
-#~| msgid "Sticky keys"
-#~ msgid "Sticky Keys"
-#~ msgstr "Fiksaj klavoj"
-
-#, fuzzy
-#~| msgid "Sticky keys"
-#~ msgid "Use &sticky keys"
-#~ msgstr "Fiksaj klavoj"
-
-#, fuzzy
-#~| msgid "Sticky keys"
-#~ msgid "&Lock sticky keys"
-#~ msgstr "Fiksaj klavoj"
-
-#, fuzzy
-#~| msgid "Slow keys"
-#~ msgid "&Use slow keys"
-#~ msgstr "Malrapidaj klavoj"
-
-#, fuzzy
-#~| msgid "Bounce keys"
-#~ msgid "Bounce Keys"
-#~ msgstr "Prokrastaj klavoj"
-
-#, fuzzy
-#~| msgid "Bounce keys"
-#~ msgid "Use bou&nce keys"
-#~ msgstr "Prokrastaj klavoj"

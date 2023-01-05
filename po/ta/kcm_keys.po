@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2023-01-05 00:50+0000\n"
 "PO-Revision-Date: 2022-04-02 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,46 +17,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.03.80\n"
 
-#: globalaccelmodel.cpp:113
-#, kde-format
-msgid "Applications"
-msgstr "செயலிகள்"
-
-#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
-#, kde-format
-msgid "System Services"
-msgstr "கணினி சேவைகள்"
-
-#: globalaccelmodel.cpp:187
+#: globalaccelmodel.cpp:197
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "%1: %2 என்ற சுருக்குவழியை சேமிப்பதில் சிக்கல்"
 
-#: globalaccelmodel.cpp:295
+#: globalaccelmodel.cpp:309
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1 தனை சேர்ப்பதில் சிக்கல்; அதற்கான எந்த செயல்களும் இல்லை."
 
-#: globalaccelmodel.cpp:338
+#: globalaccelmodel.cpp:352
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "பொது சுருக்குவழி சேவையை தொடர்பு கொள்வதில் சிக்கல்"
 
-#: kcm_keys.cpp:50
+#: kcm_keys.cpp:53
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "பொது சுருக்குவழி பின்னணி சேவையை தொடர்பு கொள்ளுதல் தோல்வியடைந்தது"
 
-#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
-#: standardshortcutsmodel.cpp:29
-#, kde-format
-msgid "Common Actions"
-msgstr "பொதுவான செயல்கள்"
-
-#: kcm_keys.cpp:230
+#: kcm_keys.cpp:276
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -66,7 +50,7 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:234
+#: kcm_keys.cpp:280
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -75,100 +59,160 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, %3-யின் '%2' செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:235
+#: kcm_keys.cpp:281
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "முரண்பாடு கண்டுபிடிக்கப்பட்டது"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Applications"
+msgstr "செயலிகள்"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Commands"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgid "System Settings"
+msgstr "கணினி சேவைகள்"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Common Actions"
+msgstr "பொதுவான செயல்கள்"
+
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "சேமிக்கப்படாத மாற்றங்கள் இருக்கும்போது திட்டத்தை ஏற்றுமதி செய்ய முடியாது"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "ஏற்றுமதி செய்யும் திட்டத்தில் இருக்க வேண்டிய கூறுகளை தேர்ந்தெடுக்கவும்"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Save scheme"
 msgstr "திட்டத்தை சேமி"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:149
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "%1-க்கான அனைத்து சுருக்குவழிகளையும் நீக்கு"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Undo deletion"
 msgstr "நீக்கியதை மீட்டமை"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "தேடலுக்கு எதுவும் பொருந்தவில்லை"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "ஒன்றன் சுருக்குவழிகளை இங்கு காண, பட்டியலிலிருந்து அதை தேர்ந்தெடுக்கவும்"
 
-#: package/contents/ui/main.qml:234
-#, kde-format
+#: package/contents/ui/main.qml:272
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "செயலியை சேர்…"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr ""
+
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Scheme…"
 msgstr "இறக்குமதி செய்…"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Cancel Export"
 msgstr "ஏற்றுமதியை ரத்து செய்"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Export Scheme…"
 msgstr "ஏற்றுமதி செய்…"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:319
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Edit Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Add Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: package/contents/ui/main.qml:383
+#, kde-format
+msgid "Enter a command or the full path to a script file:"
+msgstr ""
+
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்க:"
 
-#: package/contents/ui/main.qml:310
+#: package/contents/ui/main.qml:414
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"
@@ -234,32 +278,32 @@ msgstr "தனிப்பட்ட சுருக்குவழியை ச�
 msgid "Cancel capturing of new shortcut"
 msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"
 
-#: standardshortcutsmodel.cpp:33
+#: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
 msgstr "கோப்பு"
 
-#: standardshortcutsmodel.cpp:34
+#: standardshortcutsmodel.cpp:35
 #, kde-format
 msgid "Edit"
 msgstr "திருத்து"
 
-#: standardshortcutsmodel.cpp:36
+#: standardshortcutsmodel.cpp:37
 #, kde-format
 msgid "Navigation"
 msgstr "உலாவல்"
 
-#: standardshortcutsmodel.cpp:37
+#: standardshortcutsmodel.cpp:38
 #, kde-format
 msgid "View"
 msgstr "காட்சி"
 
-#: standardshortcutsmodel.cpp:38
+#: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
-#: standardshortcutsmodel.cpp:39
+#: standardshortcutsmodel.cpp:40
 #, kde-format
 msgid "Help"
 msgstr "உதவி"

@@ -1,18 +1,19 @@
-# translation of kcminput.po to esperanto
+# translation of kcmmouse.pot to esperanto
 # Esperantaj mesaĝoj por "kcminput"
 # Copyright (C) 1998, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>, 2002.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2010-01-02 22:58+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -115,36 +116,34 @@ msgid "Device:"
 msgstr ""
 
 #: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgid "General:"
-msgstr "Ĝ&enerale"
+msgstr "Ĝ&enerale:"
 
 #: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Aparato ebilgita"
 
 #: kcm/libinput/main.qml:124
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "Akcepti enigojn per tiu aparato."
 
 #: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgid "Left handed mode"
-msgstr "Maldekstr&omana"
+msgstr "Maldekstromana reĝimo"
 
 #: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "Interŝanĝi maldekstran kaj dekstran butonon."
 
 #: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "Premi maldekstran kaj dekstran butonon for meza klako."
 
 #: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
 #, kde-format
@@ -153,82 +152,78 @@ msgid ""
 msgstr ""
 
 #: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Reagosojlo de la montrilo:"
+msgstr "Rapideco de la montrilo:"
 
 #: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "Akcela &profilo:"
+msgstr "Akcela profilo:"
 
 #: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Flat"
-msgstr ""
+msgstr "Plata"
 
 #: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "Kursoro moviĝas la saman distancon kiel la musmovo."
 
 #: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Adaptive"
-msgstr ""
+msgstr "Sinadapta"
 
 #: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
+msgstr "Kursora vojaĝdistanco dependas de la musmova rapideco."
 
 #: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rulumado:"
 
 #: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgid "Invert scroll direction"
-msgstr "In&versigi la ruluman direkton"
+msgstr "Inversigi la ruluman direkton"
 
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "Rulumado kvazaŭ tuŝekrana."
 
 #: kcm/libinput/main.qml:295
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "Reagosojlo de la montrilo:"
+msgstr "Rapideco de rulumado:"
 
 #: kcm/libinput/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Pli malrapida"
 
 #: kcm/libinput/main.qml:349
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Pli rapida"
 
 #: kcm/libinput/main.qml:360
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "Religi Pluajn Musbutonojn…"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Plua Butono %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
@@ -246,26 +241,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "Premu la Konekti butonon"
+msgstr "Premu musbutonon"
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Aldoni bindaĵon…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "Reiri"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14
@@ -478,10 +472,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
+#, kde-format
 msgid "Keyboard Navigation"
-msgstr "Musa navigado"
+msgstr "Klavara navigado"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
 #: kcm/xlib/kcmmouse.ui:395
@@ -531,10 +524,9 @@ msgid "Mouse"
 msgstr "Muso"
 
 #: kcm/xlib/xlib_config.cpp:83
-#, fuzzy, kde-format
-#| msgid "(c) 1997 - 2005 Mouse developers"
+#, kde-format
 msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2005 musaj programistoj"
+msgstr "(c) 1997 - 2018 Mouse programistoj"
 
 #: kcm/xlib/xlib_config.cpp:84
 #, kde-format
@@ -584,300 +576,3 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " linio"
 msgstr[1] " linioj"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#, fuzzy
-#~| msgid "Acceleration &time:"
-#~ msgid "Acceleration:"
-#~ msgstr "Akcelado &tempo:"
-
-#, fuzzy
-#~| msgid "Acceleration &profile:"
-#~ msgid "Acceleration Profile:"
-#~ msgstr "Akcela &profilo:"
-
-#~ msgid "Icons"
-#~ msgstr "Piktogramoj"
-
-#~ msgid ""
-#~ "The default behavior in KDE is to select and activate icons with a single "
-#~ "click of the left button on your pointing device. This behavior is "
-#~ "consistent with what you would expect when you click links in most web "
-#~ "browsers. If you would prefer to select with a single click, and activate "
-#~ "with a double click, check this option."
-#~ msgstr ""
-#~ "Normale KDE elektas kaj aktivigas piktogramon per simpla maldekstra "
-#~ "musklako. Tio koincidas kun la konduto de TTT-legiloj. Se vi anstataŭe "
-#~ "preferas elekti per simpla klako kaj aktivigi per duklako, enŝaltu tiun "
-#~ "opcion."
-
-#~ msgid ""
-#~ "Dou&ble-click to open files and folders (select icons on first click)"
-#~ msgstr ""
-#~ "&Duklako por malfermi dosierojn kaj dosierujojn (elekto de piktogramoj je "
-#~ "unua klako)"
-
-#~ msgid "Activates and opens a file or folder with a single click."
-#~ msgstr "Aktivigas kaj malfermas dosieron aŭ dosierujon per simpla klako."
-
-#~ msgid "&Single-click to open files and folders"
-#~ msgstr "&Simpla klako por malfermi dosierojn kaj dosierujojn"
-
-#~ msgid "Select the cursor theme you want to use:"
-#~ msgstr "Elektu la kursoran etoson kiun vi volas uzi:"
-
-#~ msgid "Name"
-#~ msgstr "Nomo"
-
-#~ msgid "Description"
-#~ msgstr "Priskribo"
-
-#~ msgid "You have to restart KDE for these changes to take effect."
-#~ msgstr "KDE devas esti relanĉata por ke tiuj ŝanĝoj efektiviĝas."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Kursoragordo ŝanĝis"
-
-#~ msgid "Small black"
-#~ msgstr "Malgranda nigra"
-
-#~ msgid "Small black cursors"
-#~ msgstr "Malgrandaj nigraj kursoroj"
-
-#~ msgid "Large black"
-#~ msgstr "Granda nigra"
-
-#~ msgid "Large black cursors"
-#~ msgstr "Grandaj nigraj kursoroj"
-
-#~ msgid "Small white"
-#~ msgstr "Malgranda blanka"
-
-#~ msgid "Small white cursors"
-#~ msgstr "Malgrandaj blankaj kursoroj"
-
-#~ msgid "Large white"
-#~ msgstr "Granda blanka"
-
-#~ msgid "Large white cursors"
-#~ msgstr "Grandaj blankaj kursoroj"
-
-#~ msgid "Cha&nge pointer shape over icons"
-#~ msgstr "Ŝa&nĝi la aspekton de la montrilo super piktogramoj"
-
-#~ msgid "A&utomatically select icons"
-#~ msgstr "Aŭtomate elekti pikto&gramojn"
-
-#, fuzzy
-#~| msgid "Dela&y:"
-#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
-#~ msgid "Delay"
-#~ msgstr "&Prokrasto:"
-
-#, fuzzy
-#~| msgid " msec"
-#~ msgctxt "milliseconds. time to automatically select the items"
-#~ msgid " ms"
-#~ msgstr " ms"
-
-#~ msgid ""
-#~ "If you check this option, pausing the mouse pointer over an icon on the "
-#~ "screen will automatically select that icon. This may be useful when "
-#~ "single clicks activate icons, and you want only to select the icon "
-#~ "without activating it."
-#~ msgstr ""
-#~ "Se vi enŝaltas tiun opcion, paŭzeto de la montrilo sur piktogramo elektos "
-#~ "ĝin. Tio povas helpi elektadon, se unu klako aktivigas ĝin, sed vi volas "
-#~ "elekti ĝin sen aktivigo."
-
-#~ msgid ""
-#~ "If you have checked the option to automatically select icons, this slider "
-#~ "allows you to select how long the mouse pointer must be paused over the "
-#~ "icon before it is selected."
-#~ msgstr ""
-#~ "Se vi enŝaltis la opcion pri aŭtomata elekto, la ŝovilo permesas difini, "
-#~ "kiom longe la montrilo restu super piktogramo ĝis ĝi elektiĝas."
-
-#~ msgid "Mouse type: %1"
-#~ msgstr "Mustipo: %1"
-
-#~ msgid ""
-#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
-#~ "establish link"
-#~ msgstr ""
-#~ "RF kanalo 1 agorditis. Bonvolu premi la Konekti butonon sur la muso por "
-#~ "reaktivi la ligon"
-
-#~ msgid ""
-#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
-#~ "establish link"
-#~ msgstr ""
-#~ "RF kanalo 2 agorditis. Bonvolu premi la Konekti butonon sur la muso por "
-#~ "reaktivi la ligon"
-
-#~ msgctxt "no cordless mouse"
-#~ msgid "none"
-#~ msgstr "neniu"
-
-#~ msgid "Cordless Mouse"
-#~ msgstr "Senkabla muso"
-
-#~ msgid "Cordless Wheel Mouse"
-#~ msgstr "Senkabla radmuso"
-
-#~ msgid "Cordless MouseMan Wheel"
-#~ msgstr "Senkabla MouseMan rado"
-
-#~ msgid "Cordless TrackMan Wheel"
-#~ msgstr "Senkabla TrackMan rado"
-
-#~ msgid "TrackMan Live"
-#~ msgstr "TrackMan Live"
-
-#~ msgid "Cordless TrackMan FX"
-#~ msgstr "Senkabla TrackMan FX"
-
-#~ msgid "Cordless MouseMan Optical"
-#~ msgstr "Senkabla Mouseman optika"
-
-#~ msgid "Cordless Optical Mouse"
-#~ msgstr "Senkabla optika muso"
-
-#~ msgid "Cordless MouseMan Optical (2ch)"
-#~ msgstr "Senkabla MouseMan optika (2k)"
-
-#~ msgid "Cordless Optical Mouse (2ch)"
-#~ msgstr "Senkabla optika muso (2k)"
-
-#~ msgid "Cordless Mouse (2ch)"
-#~ msgstr "Senkabla muso (2k)"
-
-#~ msgid "Cordless Optical TrackMan"
-#~ msgstr "Senkabla optika TrackMan"
-
-#~ msgid "MX700 Cordless Optical Mouse"
-#~ msgstr "MX700 senkabla optika muso"
-
-#~ msgid "MX700 Cordless Optical Mouse (2ch)"
-#~ msgstr "MX700 senkabla optika muso (2k)"
-
-#~ msgid "Unknown mouse"
-#~ msgstr "Nekonata muso"
-
-#~ msgid "Cordless Name"
-#~ msgstr "Senkabla nomo"
-
-#~ msgid "Sensor Resolution"
-#~ msgstr "Sentila difino"
-
-#~ msgid "400 counts per inch"
-#~ msgstr "400 eroj/colo"
-
-#~ msgid "800 counts per inch"
-#~ msgstr "800 eroj/colo"
-
-#~ msgid "Battery Level"
-#~ msgstr "Bateria nivelo"
-
-#~ msgid "RF Channel"
-#~ msgstr "RF kanalo"
-
-#~ msgid "Channel 1"
-#~ msgstr "Kanalo 1"
-
-#~ msgid "Channel 2"
-#~ msgstr "Kanalo 2"
-
-#~ msgid ""
-#~ "You have a Logitech Mouse connected, and libusb was found at compile "
-#~ "time, but it was not possible to access this mouse. This is probably "
-#~ "caused by a permissions problem - you should consult the manual on how to "
-#~ "fix this."
-#~ msgstr ""
-#~ "Vi konektis Logitech muson kaj libusb troviĝis dum la kompilado, tamen ne "
-#~ "eblis konekti tiun muson. Tio sendube estas pro rajta problemo. Vi devus "
-#~ "legi la manlibron por trovi kiel solvi ĝin."
-
-#, fuzzy
-#~| msgid "&Cursor Theme"
-#~ msgid "Cursor Theme"
-#~ msgstr "&Kursora etoso"
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Ektiru aŭ tajpu etosan URLon"
-
-#~ msgid "Unable to find the cursor theme archive %1."
-#~ msgstr "Ne eblas trovi la kursoretosan arkivon %1."
-
-#~ msgid ""
-#~ "Unable to download the cursor theme archive; please check that the "
-#~ "address %1 is correct."
-#~ msgstr ""
-#~ "Ne eblas elŝuti la kursoretosan arkivon. Bonvolu kontroli, ke la adreso "
-#~ "%1 estas valida."
-
-#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
-#~ msgstr "La dosiero %1 ŝajne ne estas valida kursoretosa arkivo."
-
-#~ msgid ""
-#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
-#~ "switch to another theme first.</qt>"
-#~ msgstr ""
-#~ "<qt>Vi ne povas forigi la nun uzatan etoson.<br /> Vi devas unue ŝanĝi al "
-#~ "alia etoso.</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
-#~ "will delete all the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>Ĉu vi vere volas forigi la <i>%1</i> kursoran etoson?<br /> Tio "
-#~ "forigos ĉiujn dosierojn instalitajn de tiu etoso.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Konfirmo"
-
-#~ msgid ""
-#~ "A theme named %1 already exists in your icon theme folder. Do you want "
-#~ "replace it with this one?"
-#~ msgstr ""
-#~ "Etoso kun la nomo %1 jam ekzistas en via piktogrametosa dosierujo. Ĉu vi "
-#~ "volas anstataŭigi ĝin per ĉi tiun?"
-
-#~ msgid "Overwrite Theme?"
-#~ msgstr "Anstataŭigi la etoson?"
-
-#~ msgid ""
-#~ "Select the cursor theme you want to use (hover preview to test cursor):"
-#~ msgstr ""
-#~ "Elektu la kursoran etoson kiun vi volas uzi (antaŭrigardo por testi "
-#~ "kursoron):"
-
-#, fuzzy
-#~| msgid "Install New Theme..."
-#~ msgid "Get New Theme..."
-#~ msgstr "Instali Novan Etoson..."
-
-#, fuzzy
-#~| msgid "Install New Theme..."
-#~ msgid "Install From File..."
-#~ msgstr "Instali Novan Etoson..."
-
-#~ msgid "Remove Theme"
-#~ msgstr "Forigi Etoson"
-
-#~ msgid "KDE Classic"
-#~ msgstr "KDE klasika"
-
-#~ msgid "The default cursor theme in KDE 2 and 3"
-#~ msgstr "La defaŭlta kursoretoso ĉe KDE 2 kaj 3"
-
-#~ msgid "No description available"
-#~ msgstr "Neniu priskribo havebla"
-
-#~ msgid "Short"
-#~ msgstr "Mallonga"
-
-#~ msgid "Long"
-#~ msgstr "Longa"

@@ -1,17 +1,17 @@
-# translation of kcmaccess.po to Esperanto
+# translation of kcm_access.pot to Esperanto
 # Copyright (C) 2004, 2007, 2008 Free Software Foundation, Inc.
 # Matthias Peick <matthias@peick.de>, 2004.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Cindy McKee <cfmckee@gmail.com>, 2008.
-# Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2009-10-17 20:17+0200\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -87,17 +87,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "Uzi &sistempepon"
+msgstr "Uzi Sistempepon"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Customize system bell"
-msgstr "Uzi &sistempepon"
+msgstr "Adapti sistempepon"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
@@ -120,10 +118,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Color of the Visible Bell"
-msgstr "Uzi &sistempepon"
+msgstr "Koloro de la Videbla Pepo"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
@@ -133,17 +130,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "Uzi &fiksajn klavojn"
+msgstr "Uzi fiksajn klavojn"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "&Ŝlosi fiksajn klavojn"
+msgstr "Ŝlosi la fiksajn klavojn"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
@@ -153,10 +148,9 @@ msgstr "Malaktivigi la fiksajn klavojn kiam du klavoj estas samtempe premitaj"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Uzi &fiksajn klavojn"
+msgstr "Pepi je premo de fiksa klavo"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -184,10 +178,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Use slow keypresses"
-msgstr "&Uzi malrapidajn klavojn"
+msgstr "Uzi malrapidajn klavpremojn"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
@@ -302,10 +295,9 @@ msgid "Audio Files (*.mp3 *.ogg *.wav)"
 msgstr ""
 
 #: package/contents/ui/Bell.qml:31
-#, fuzzy, kde-format
-#| msgid "Audible Bell"
+#, kde-format
 msgid "Audible bell:"
-msgstr "Aŭdebla pepo"
+msgstr "Aŭdebla pepo:"
 
 #: package/contents/ui/Bell.qml:32
 #, kde-format
@@ -330,10 +322,9 @@ msgid "Button search audio file"
 msgstr ""
 
 #: package/contents/ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visible Bell"
+#, kde-format
 msgid "Visual bell:"
-msgstr "Videbla pepo"
+msgstr "Videbla pepo:"
 
 #: package/contents/ui/Bell.qml:94
 #, kde-format
@@ -342,11 +333,10 @@ msgid "Enable"
 msgstr ""
 
 #: package/contents/ui/Bell.qml:108
-#, fuzzy, kde-format
-#| msgid "I&nvert screen"
+#, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr "&Inversigi la ekranon"
+msgstr "Inversigi la Ekranon"
 
 #: package/contents/ui/Bell.qml:125
 #, kde-format
@@ -361,17 +351,15 @@ msgid "Color"
 msgstr ""
 
 #: package/contents/ui/Bell.qml:147
-#, fuzzy, kde-format
-#| msgid "Duration:"
+#, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Daŭro:"
 
 #: package/contents/ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Slow keys:"
-msgstr "&Uzi malrapidajn klavojn"
+msgstr "Malrapidaj klavoj:"
 
 #: package/contents/ui/KeyboardFilters.qml:19
 #, kde-format
@@ -392,37 +380,32 @@ msgid "Delay:"
 msgstr ""
 
 #: package/contents/ui/KeyboardFilters.qml:54
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring system bell:"
-msgstr "Uzi &sistempepon"
+msgstr "Sonorigi sistempepon:"
 
 #: package/contents/ui/KeyboardFilters.qml:55
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "&Uzi la sisteman pepon kiam klavo estas premita"
+msgstr "kiam iu klavo estas &premita"
 
 #: package/contents/ui/KeyboardFilters.qml:69
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "&Uzi la sisteman pepon kiam klavo estas akceptita"
+msgstr "kiam iu klavo estas &akceptita"
 
 #: package/contents/ui/KeyboardFilters.qml:83
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "&Uzi la sisteman pepon kiam klavo estas malakceptita"
+msgstr "kiam iu klavo estas &malakceptita"
 
 #: package/contents/ui/KeyboardFilters.qml:100
-#, fuzzy, kde-format
-#| msgid "Bounce Keys"
+#, kde-format
 msgid "Bounce keys:"
-msgstr "Prokrastaj klavoj"
+msgstr "Prokrastaj klavoj:"
 
 #: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
@@ -442,10 +425,9 @@ msgid "Delay:"
 msgstr ""
 
 #: package/contents/ui/KeyboardFilters.qml:134
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgid "Ring system bell when rejected"
-msgstr "&Uzi la sisteman pepon kiam klavo estas malakceptita"
+msgstr "Sonorigi la sisteman pepon je malakcepto"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -455,49 +437,45 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Bell"
+#, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr "&Pepo"
+msgstr "Pepo"
 
 #: package/contents/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "&Modifier Keys"
+#, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "&Modifilaj klavoj"
+msgstr "Modifilaj klavoj"
 
 #: package/contents/ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "&Keyboard Filters"
+#, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr "&Klavaraj filtriloj"
+msgstr "Klavaraj filtriloj"
 
 #: package/contents/ui/main.qml:41
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "Musa Navigo"
 
 #: package/contents/ui/main.qml:46
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr ""
+msgstr "Ekranlegilo"
 
 #: package/contents/ui/ModifierKeys.qml:16
-#, fuzzy, kde-format
-#| msgid "S&ticky Keys"
+#, kde-format
 msgid "Sticky keys:"
-msgstr "&Fiksaj klavoj"
+msgstr "Fiksaj klavoj:"
 
 #: package/contents/ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "Ebligi"
 
 #: package/contents/ui/ModifierKeys.qml:28
 #, kde-format
@@ -511,10 +489,9 @@ msgid "Disable when two keys are held down"
 msgstr ""
 
 #: package/contents/ui/ModifierKeys.qml:54
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "&Uzi la sisteman pepon kiam klavo estas premita"
+msgstr "Sonorigi la sistempepon kiam modifklavoj estas uzataj"
 
 #: package/contents/ui/ModifierKeys.qml:71
 #, kde-format
@@ -522,24 +499,19 @@ msgid "Feedback:"
 msgstr ""
 
 #: package/contents/ui/ModifierKeys.qml:72
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "&Uzi la sisteman pepon kiam klavo estas akceptita"
+msgstr "Sonorigi la sistempepon kiam ŝlosklavoj estas baskulataj"
 
 #: package/contents/ui/ModifierKeys.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use KDE's system notification mechanism whenever a modifier or locking "
-#| "key changes its state"
+#, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr "Uzi la KDE sisteman avizilon kiam ŝlosanta klavo komutas ĝian staton"
+msgstr "Montri avizon kiam modifa aŭ ŝlosanta klavo estas uzata"
 
 #: package/contents/ui/ModifierKeys.qml:95
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgid "Configure Notifications…"
-msgstr "Agordi &avizojn..."
+msgstr "Agordi Avizojn…"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
@@ -562,20 +534,17 @@ msgid "Display a confirmation dialog"
 msgstr ""
 
 #: package/contents/ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring the System Bell"
-msgstr "Uzi &sistempepon"
+msgstr "Sonorigi la Sistempepon"
 
 #: package/contents/ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgid "Show a notification"
-msgstr "Avizo"
+msgstr "Montri avizon"
 
 #: package/contents/ui/MouseNavigation.qml:68
-#, fuzzy, kde-format
-#| msgid "Acceptance dela&y:"
+#, kde-format
 msgid "Acceleration delay:"
 msgstr "Akc&epta daŭro:"
 
@@ -585,10 +554,9 @@ msgid "Repeat interval:"
 msgstr ""
 
 #: package/contents/ui/MouseNavigation.qml:96
-#, fuzzy, kde-format
-#| msgid "Acceptance dela&y:"
+#, kde-format
 msgid "Acceleration time:"
-msgstr "Akc&epta daŭro:"
+msgstr "Akceladotempo:"
 
 #: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
@@ -596,10 +564,9 @@ msgid "Maximum speed:"
 msgstr ""
 
 #: package/contents/ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceptance dela&y:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "Akc&epta daŭro:"
+msgstr "Akceladprofilo:"
 
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
@@ -619,241 +586,3 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Wolfram Diestel,Steffen Pietsch"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de"
-
-#, fuzzy
-#~| msgid "KDE Accessibility Tool"
-#~ msgid "Accessibility"
-#~ msgstr "KDE Alirebleca ilo"
-
-#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
-#~ msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
-
-#~ msgid "Matthias Hoelzer-Kluepfel"
-#~ msgstr "Matthias Hoelzer-Kluepfel"
-
-#~ msgid "Author"
-#~ msgstr "Aŭtoro"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "Aktivigaj klavokombinoj"
-
-#, fuzzy
-#~| msgid ""
-#~| "If this option is checked, the default system bell will be used. See the "
-#~| "\"System Bell\" control module for how to customize the system bell. "
-#~| "Normally, this is just a \"beep\"."
-#~ msgid ""
-#~ "If this option is checked, the default system bell will be used. Usually, "
-#~ "this is just a \"beep\"."
-#~ msgstr ""
-#~ "Se enŝaltita, la normala sistempepo estas uzata. Vidu la agordmodulon "
-#~ "\"Sistempepo\" pri agordebleco de la sistempepo. Normale tiu nur estas "
-#~ "mallonga \"pepo\"."
-
-#, fuzzy
-#~| msgid ""
-#~| "<p>Check this option if you want to use a customized bell, playing a "
-#~| "sound file. If you do this, you will probably want to turn off the "
-#~| "system bell.</p><p> Please note that on slow machines this may cause a "
-#~| "\"lag\" between the event causing the bell and the sound being played.</"
-#~| "p>"
-#~ msgid ""
-#~ "Check this option if you want to use a customized bell, playing a sound "
-#~ "file. If you do this, you will probably want to turn off the system bell."
-#~ msgstr ""
-#~ "<p>Enŝaltu, se vi volas pepon ludatan el sondosiero. Tiukaze vi supozeble "
-#~ "volas elŝaltiu la sistempepon.</p><p>Bonvolu atenti, ke sur malrapidaj "
-#~ "komputiloj povas okazi prokrasto inter la evento kaŭzanta la pepon kaj la "
-#~ "ludata sono.</p>"
-
-#~ msgid "Us&e customized bell"
-#~ msgstr "Uzi &propran pepon"
-
-#~ msgid ""
-#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
-#~ "file here. Click \"Browse...\" to choose a sound file using the file "
-#~ "dialog."
-#~ msgstr ""
-#~ "Se \"propra pepo\" estas enŝaltita, vi povas elekti sondosieron tie ĉi. "
-#~ "Premu \"Rigardu...\" por elekti sondosieron per dosierodialogo."
-
-#~ msgid "Sound &to play:"
-#~ msgstr "Sonoro &ludenda:"
-
-#~ msgid "Browse..."
-#~ msgstr "Foliumi..."
-
-#, fuzzy
-#~| msgid ""
-#~| "This option will turn on the \"visible bell\", i.e. a visible "
-#~| "notification shown every time that normally just a bell would occur. "
-#~| "This is especially useful for deaf people."
-#~ msgid ""
-#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
-#~ "shown every time that normally just a bell would occur. This is "
-#~ "especially useful for deaf people."
-#~ msgstr ""
-#~ "Tio enŝaltos la \"videblan pepon\", t.e. videbla atentigo montriĝas "
-#~ "anstataŭ la normala pepo. Tio estas aparte utila por aŭdhandikapitaj "
-#~ "homoj."
-
-#, fuzzy
-#~| msgid "&Use visible bell"
-#~ msgid "&Use visual bell"
-#~ msgstr "&Uzi videblan pepon"
-
-#~ msgid ""
-#~ "The screen will turn to a custom color for the amount of time specified "
-#~ "below."
-#~ msgstr "La ekrano montriĝas per propra koloro dum la indikita tempo."
-
-#~ msgid "F&lash screen"
-#~ msgstr "Fu&lmi la ekranon"
-
-#~ msgid ""
-#~ "All screen colors will be inverted for the amount of time specified below."
-#~ msgstr "Ĉiuj ekrankoloroj estos inversigataj dum la indikita tempo."
-
-#~ msgid ""
-#~ "Click here to choose the color used for the \"flash screen\" visible bell."
-#~ msgstr "Tie ĉi elektu koloron uzatan por la videbla pepo \"fulmekrano\"."
-
-#~ msgid ""
-#~ "Here you can customize the duration of the \"visible bell\" effect being "
-#~ "shown."
-#~ msgstr "Tie ĉi vi povas agordi la daŭron de la \"videbla pepo\"-efekto."
-
-#~ msgid " msec"
-#~ msgstr " msek"
-
-#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
-#~ msgstr ""
-#~ "Uzi la sisteman pepon kiam modifila klavo fiksiĝas, ŝlosiĝas aŭ "
-#~ "malŝlosiĝas"
-
-#~ msgid "Locking Keys"
-#~ msgstr "Ŝlosantaj klavoj"
-
-#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
-#~ msgstr "Uzi la sisteman pepon kiam ŝlosanta klavo malaktiviĝas aŭ aktiviĝas"
-
-#~ msgid "Slo&w Keys"
-#~ msgstr "Mal&rapidaj klavoj"
-
-#~ msgid "Use bou&nce keys"
-#~ msgstr "Uzi &prokrastajn klavojn"
-
-#~ msgid "Use the system bell whenever a key is rejected"
-#~ msgstr "Uzi la sisteman pepon kiam klavo estas malakceptita"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation &Gestures"
-#~ msgstr "Aktivigaj klavokombinoj"
-
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Uzi klavokombinojn por aktivigi la fiksajn kaj malrapidajn klavojn"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "Malaktivigi la fiksajn kaj malrapidajn klavojn post difinita daŭro de "
-#~ "malaktiveco"
-
-#~ msgid " min"
-#~ msgstr " min"
-
-#, fuzzy
-#~| msgid ""
-#~| "Use the system bell whenever a gesture is used to turn an accessibility "
-#~| "feature on or off"
-#~ msgid ""
-#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
-#~ "feature"
-#~ msgstr ""
-#~ "Uzi la sisteman pepon kiam klavokombino estas uzata por malaktivigi aŭ "
-#~ "aktivigi faciluzilon"
-
-#~ msgid ""
-#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
-#~ "keyboard accessibility feature is turned on or off.\n"
-#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
-#~ "accessibility settings will then always be applied without confirmation."
-#~ msgstr ""
-#~ "Se tiu opcio estas aktiva, KDE montros konfirman fenestron kiam ajn "
-#~ "klavara faciluzilo malaktiviĝas aŭ aktiviĝas.\n"
-#~ "Atentu, ke vi scias tion kion vi faras, ĉar se vi malŝaltas ĝin, la "
-#~ "faciluziloj aktiviĝas sen peto de konfirmado."
-
-#, fuzzy
-#~| msgid ""
-#~| "Show a confirmation dialog whenever a keyboard accessibility feature is "
-#~| "turned on or off"
-#~ msgid ""
-#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
-#~ "toggled"
-#~ msgstr ""
-#~ "Montri konfirman fenestron kiam ajn klavara faciluzilo malaktiviĝas aŭ "
-#~ "aktiviĝas.Mo"
-
-#, fuzzy
-#~| msgid ""
-#~| "Use KDE's system notification mechanism whenever a keyboard "
-#~| "accessibility feature is turned on or off"
-#~ msgid ""
-#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
-#~ "feature is toggled"
-#~ msgstr ""
-#~ "Uzi la KDE sisteman avizilon kiam ajn klavara faciluzilo malaktiviĝas aŭ "
-#~ "aktiviĝas."
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Ĉi tie vi povas aktivigi klavokombinojn kiuj aktivas la jenajn "
-#~ "faciluzilojn:\n"
-#~ "Fiksaj klavoj: Premu Maj 5-ope sekve\n"
-#~ "Malrapidaj klavoj: Premu Maj dum 8 sekundoj"
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Mouse Keys: %1\n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Ĉi tie vi povas aktivigi klavokombinojn kiuj aktivas la jenajn "
-#~ "faciluzilojn:\n"
-#~ "Musaj klavoj: %1\n"
-#~ "Fiksaj klavoj: Premu Maj 5-ope sekve\n"
-#~ "Malrapidaj klavoj: Premu Maj dum 8 sekundoj"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "Aktivigaj klavokombinoj"
-
-#~ msgid "D&ebounce time:"
-#~ msgstr "M&alprokrasta daŭro:"
-
-#~ msgid "Timeout:"
-#~ msgstr "Tempolimo:"
-
-#~ msgid "kaccess"
-#~ msgstr "kaccess"
-
-#~ msgid "*.wav|WAV Files"
-#~ msgstr "*.wav|WAV-dosieroj"

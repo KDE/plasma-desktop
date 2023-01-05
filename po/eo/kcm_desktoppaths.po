@@ -1,18 +1,18 @@
-# translation of kcmkonq.po to Esperanto
+# translation of kcm_desktoppaths.pot to Esperanto
 # e-aj mesaĝoj por kcmkonq
 # Copyright (C) 1999, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wofram@steloj.de>, 1999.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
-#
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2009-12-11 15:41+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 07:13+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -47,20 +47,19 @@ msgid "Pictures"
 msgstr "Bildoj"
 
 #: desktoppathssettings.cpp:272
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos"
-msgstr "Filma vojo:"
+msgstr "Videofilmoj"
 
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Publika"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Ŝablonoj"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -126,10 +125,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "Filma vojo:"
+msgstr "Videofilma vojo:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
 #: globalpaths.ui:75
@@ -167,147 +165,29 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Muzika vojo:"
+msgstr "Publika vojo:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de bildoj."
+"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de/al "
+"publikaj komundosierujoj."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Bilda vojo:"
+msgstr "Ŝablona vojo:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de bildoj."
-
-#~ msgid "Autostart path:"
-#~ msgstr "Aŭtolanĉa vojo:"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder contains applications or links to applications (shortcuts) "
-#~| "that you want to have started automatically whenever KDE starts. You can "
-#~| "change the location of this folder if you want to, and the contents will "
-#~| "move automatically to the new location as well."
-#~ msgid ""
-#~ "This folder contains applications or links to applications (shortcuts) "
-#~ "that you want to have started automatically whenever the session starts. "
-#~ "You can change the location of this folder if you want to, and the "
-#~ "contents will move automatically to the new location as well."
-#~ msgstr ""
-#~ "Tiu dosierujo enhavas aplikaĵojn aŭ ligilojn al aplikaĵoj kiuj aŭtomate "
-#~ "lanĉiĝu ĉe la KDE-lanĉo. Vi povas ŝanĝi la lokon de tiu dosierujo se vi "
-#~ "volas, kaj la enhavo moviĝos aŭtomate al la nova loko."
-
-#~ msgid "Autostart"
-#~ msgstr "Aŭtolanĉo"
-
-#~ msgid "Movies"
-#~ msgstr "Filmoj"
-
-#~ msgid ""
-#~ "The path for '%1' has been changed.\n"
-#~ "Do you want the files to be moved from '%2' to '%3'?"
-#~ msgstr ""
-#~ "La vojo por '%1' estas ŝanĝita.\n"
-#~ "Ĉu vi volas movi la dosierojn de '%2' al '%3'?"
-
-#~ msgctxt "Move files from old to new place"
-#~ msgid "Move"
-#~ msgstr "Movi"
-
-#~ msgctxt "Use the new directory but do not move files"
-#~ msgid "Do not Move"
-#~ msgstr "Ne movi"
-
-#~ msgid ""
-#~ "The path for '%1' has been changed.\n"
-#~ "Do you want to move the directory '%2' to '%3'?"
-#~ msgstr ""
-#~ "La vojo por '%1' estas ŝanĝita.\n"
-#~ "Ĉu vi volas movi la dosierojn de '%2' al '%3'?"
-
-#~ msgctxt "Move the directory"
-#~ msgid "Move"
-#~ msgstr "Movi"
-
-#~ msgctxt "Use the new directory but do not move anything"
-#~ msgid "Do not Move"
-#~ msgstr "Ne movi"
-
-#~ msgid "Confirmation Required"
-#~ msgstr "Bezonas konfirmon"
-
-#~ msgid ""
-#~ "<h1>Konqueror Behavior</h1> You can configure how Konqueror behaves as a "
-#~ "file manager here."
-#~ msgstr ""
-#~ "<h1>Konkeranta konduto</h1> Vi povas agordi la konduton de Konkeranto "
-#~ "kiel dosiero-administrilo."
-
-#~ msgid "Misc Options"
-#~ msgstr "Diversaj opcioj"
-
-#~ msgid "Open folders in separate &windows"
-#~ msgstr "&Malfermi dosierujojn en apartaj fenestroj"
-
-#~ msgid ""
-#~ "If this option is checked, Konqueror will open a new window when you open "
-#~ "a folder, rather than showing that folder's contents in the current "
-#~ "window."
-#~ msgstr ""
-#~ "Se tiu opcio estas ebligita, Konkeranto malfermos novan fenestron kiam "
-#~ "ajn vi malfermas dosierujon, anstataŭ montri la dosierujon en la nuna "
-#~ "fenestro."
-
-#~ msgid "Show 'Delete' context me&nu entries which bypass the trashcan"
-#~ msgstr ""
-#~ "Montri 'Forigi' erojn en kuntekstaj &menuoj kiuj NE sendos la erojn "
-#~ "rubujen"
-
-#~ msgid ""
-#~ "Check this if you want 'Delete' menu commands to be displayed on the "
-#~ "desktop and in the file manager's context menus. You can always delete "
-#~ "files by holding the Shift key while calling 'Move to Trash'."
-#~ msgstr ""
-#~ "Marku ĉi tiun se vi volas montri 'Forigi' menuan komandojn sur la "
-#~ "labortablo kaj en la kuntekstaj menuoj de la dosiera administrilo. Notu "
-#~ "ke vi povas forigi dosierojn per premo de la majuskla klavo dum vi uzas "
-#~ "la 'Rubujen' opcion."
-
-#~ msgid "Menu Editor"
-#~ msgstr "Menua redaktilo"
-
-#~ msgid "Menu"
-#~ msgstr "Menuo"
-
-#~ msgid "New..."
-#~ msgstr "Nova..."
-
-#~ msgid "Remove"
-#~ msgstr "Forpreni"
-
-#~ msgid "Move Up"
-#~ msgstr "Supren"
-
-#~ msgid "Move Down"
-#~ msgstr "Malsupren"
+"Tiu dosierujo estos la defaŭlta por la ŝargado aŭ konservado de ŝablonoj."

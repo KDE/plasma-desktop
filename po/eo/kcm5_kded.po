@@ -1,9 +1,9 @@
-# translation of kcmkded.po to esperanto
-# translation of kcmkded.po to
+# translation of kcm5_kded.pot to esperanto
 # Copyright (C) 2003, 2007 Free Software Foundation, Inc.
 # Heiko Evermann <heiko@evermann.de>, 2003.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2007.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+#
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2012-06-12 15:53+0100\n"
-"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -33,16 +33,14 @@ msgstr ""
 "heiko@evermann.de, okellogg@users.sourceforge.net, michael.moroni@mailoo.org"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "Servoj ĉe startigo"
+msgstr "Fonaj Servoj"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "(c) 2002 Daniel MOLKENTIN"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -55,28 +53,24 @@ msgid "Kai Uwe Broulik"
 msgstr ""
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Servilo <em>%1</em> ne haltigeblas."
+msgstr "Malsukcesis halti servilon: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Servilo <em>%1</em> ne startigeblas."
+msgstr "Malsukcesis lanĉi servilon: %1"
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Servilo <em>%1</em> ne haltigeblas."
+msgstr "Malsukcesis halti servilon."
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Servilo <em>%1</em> ne startigeblas."
+msgstr "Malsukcesis lanĉi servilon."
 
 #: kcmkded.cpp:234
 #, kde-format
@@ -84,17 +78,7 @@ msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -105,14 +89,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>Servmastrumilo</h1><p>Ĉi tiu modulo permesas al vi superrigardi ĉiujn "
-"kromprogramojn de la demono de  KDE, ankaŭ nomataj servoj de KDE. Ĝenerale, "
-"estas du specoj de servoj:</p><ul><li>Servoj lanĉitaj dum la startigo</"
-"li><li>Servoj lanĉitaj laŭpete</li></ul><p>La lastaj estas listigitaj nur "
-"por facileco. La startigaj servojn povas esti startigitaj kaj haltigitaj. "
-"Per administra reĝimo, vi povas ankaŭ difini ĉu servoj lanĉu dum la startigo."
-"</p><p><b> Uzu tion zorge: kelkaj servoj estas vivgravaj por KDE, ne "
-"malŝaltu servojn se vi ne scias, kion vi faras.</b></p>"
+"<p>Ĉi tiu modulo permesas al vi superrigardi ĉiujn kromprogramojn de la KDE-"
+"Demono, ankaŭ nomataj Servoj de KDE. Ĝenerale, estas du specoj de servoj:</"
+"p> <ul><li>Servoj lanĉitaj dum la startigo</li><li>Servoj lanĉitaj laŭpete</"
+"li></ula ><p>La lastaj estas listigitaj nur por facileco. La startigaj "
+"servojn povas esti startigataj kaj haltigataj. Vi povas ankaŭ difini ĉu "
+"servoj lanĉu dum la startigo.</p> <p><b>Uzu tion zorge: kelkaj servoj estas "
+"vivgravaj por Plasma; ne malŝaltu servojn se vi ne scias, kion vi faras.</"
+"b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -136,30 +120,26 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Servo"
+msgstr "Ĉiuj Servoj"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Rulanta"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr "Ne rulanta"
+msgstr "Ne Rulanta"
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Startup Services"
-msgstr "Servoj ĉe startigo"
+msgstr "Servoj ĉe Startigo"
 
 #: package/contents/ui/main.qml:137
 #, kde-format
@@ -169,7 +149,7 @@ msgstr "Laŭpete lanĉitaj servoj"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Baskuligi aŭtomatan ŝargon de ĉi servo je starto"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -182,66 +162,11 @@ msgid "Running"
 msgstr "Rulanta"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Servo"
+msgstr "Halti Servon"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Servo"
-
-#~ msgid "kcmkded"
-#~ msgstr "kcmkded"
-
-#~ msgid "KDE Service Manager"
-#~ msgstr "Servoadministrilo de KDE"
-
-#~ msgid ""
-#~ "This is a list of available KDE services which will be started on demand. "
-#~ "They are only listed for convenience, as you cannot manipulate these "
-#~ "services."
-#~ msgstr ""
-#~ "Tio estas listo de disponeblaj servoj de KDE, kiuj estos lanĉitaj "
-#~ "laŭpete. Ili estas listigitaj nur por facileco, ĉar vi ne povas manipuli "
-#~ "ĉi tiujn servojn."
-
-#~ msgid "Status"
-#~ msgstr "Stato"
-
-#~ msgid "Description"
-#~ msgstr "Priskribo"
-
-#, fuzzy
-#~| msgid ""
-#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
-#~| "services will be invoked on next startup. Be careful with deactivation "
-#~| "of unknown services."
-#~ msgid ""
-#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
-#~ "services will be invoked on next startup. Be careful with deactivation of "
-#~ "unknown services."
-#~ msgstr ""
-#~ "Tio montras ĉiujn servojn de KDE, kiuj povas starti dum la startigo de "
-#~ "KDE. Ŝaltitaj servoj estos lanĉataj dum la sekva startigo. Atentu "
-#~ "malŝaltante nekonatajn servojn."
-
-#~ msgid "Use"
-#~ msgstr "Uzi"
-
-#~ msgid "Start"
-#~ msgstr "Startigi"
-
-#~ msgid "Stop"
-#~ msgstr "Haltigi"
-
-#~ msgid "Unable to contact KDED."
-#~ msgstr "KDED ne kontakteblas."
-
-#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr "Servo <em>%1</em> ne startigeblas.<br /><br /><i>Eraro: %2</i>"
-
-#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr "Servo <em>%1</em> ne haltigeblas.<br /><br /><i>Eraro: %2</i>"
+msgstr "Lanĉi Servon"

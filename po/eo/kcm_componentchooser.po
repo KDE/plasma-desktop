@@ -1,15 +1,18 @@
-# translation of kcmcomponentchooser.po to esperanto
+# translation of kcm_componentchooser.pot to esperanto
+# Copyright (C) 2005-2023 Free Software Foundation, Inc.
 # Matthias Peick <matthias@peick.de>, 2005.
 # Axel Rousseau <axel584@axel584.org>, 2007.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Michael Moroni <michael.moroni@mailoo.org>, 2012.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-09 00:48+0000\n"
-"PO-Revision-Date: 2012-05-27 23:27+0200\n"
-"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -22,277 +25,70 @@ msgstr ""
 #: browser_settings.kcfg:9
 #, kde-format
 msgid "Default web browser"
-msgstr ""
+msgstr "Defaŭlta retumilo"
 
 #: componentchooser.cpp:74 componentchooserterminal.cpp:74
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Alia…"
 
 #: componentchooserbrowser.cpp:18
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "Elekti defaŭltan retumilon"
 
 #: componentchooseremail.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use a different &email client:"
+#, kde-format
 msgid "Select default e-mail client"
-msgstr "Uzi alian &poŝtilon:"
+msgstr "Meti defaŭltan retpoŝtilon"
 
 #: componentchooserfilemanager.cpp:14
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "Elektu la preferatan retpoŝtilon:"
+msgstr "Elektu la defaŭltan dosiermastrumilon"
 
 #: componentchoosergeo.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default map"
-msgstr "Elektu la preferatan retpoŝtilon:"
+msgstr "Elektu la defaŭltan mapon"
 
 #: componentchoosertel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "Elektu la preferatan terminalon:"
+msgstr "Elektu la defaŭltan numerum-aplikaĵon"
 
 #: componentchooserterminal.cpp:24
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "Elektu la preferatan terminalon:"
+msgstr "Elektu la defaŭltan terminal-imitilon"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "Retumilo:"
 
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "Dosiermastrumilo:"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "Retpoŝtilo:"
 
 #: package/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Terminal emulator:"
-msgstr "Elektu la preferatan terminalon:"
+msgstr "Terminalimitilo:"
 
 #: package/contents/ui/main.qml:78
 #, kde-format
 msgid "Map:"
-msgstr ""
+msgstr "Mapo:"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Matthias Peick"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "matthias@peick.de"
-
-#~ msgid "Joseph Wenninger"
-#~ msgstr "Joseph Wenninger"
-
-#~ msgid "Unknown"
-#~ msgstr "Nekonata"
-
-#~ msgid "Component Chooser"
-#~ msgstr "Komponata elektilo"
-
-#~ msgid "(c), 2002 Joseph Wenninger"
-#~ msgstr "(c), 2002 Joseph Wenninger"
-
-#~ msgid ""
-#~ "Choose from the list below which component should be used by default for "
-#~ "the %1 service."
-#~ msgstr ""
-#~ "Elektu el la malsupra listo, kiun komponanton estus apriore uzata por la "
-#~ "servo %1."
-
-#~ msgid ""
-#~ "<qt>You changed the default component of your choice, do want to save "
-#~ "that change now ?</qt>"
-#~ msgstr ""
-#~ "<qt>Vi ŝanĝis la aprioran komponanton de via elekto. Ĉu vi volas konservi "
-#~ "ĉi tiun ŝanĝon nun?</qt>"
-
-#~ msgid "No description available"
-#~ msgstr "Neniu priskribo disponebla"
-
-#~ msgid ""
-#~ "Here you can change the component program. Components are programs that "
-#~ "handle basic tasks, like the terminal emulator, the text editor and the "
-#~ "email client. Different KDE applications sometimes need to invoke a "
-#~ "console emulator, send a mail or display some text. To do so "
-#~ "consistently, these applications always call the same components. You can "
-#~ "choose here which programs these components are."
-#~ msgstr ""
-#~ "Ĉi tie vi povas ŝanĝi la komponantan programon. Komponantoj estas "
-#~ "programoj, kiuj faras bazajn taskojn, kiel terminalo, redaktilo, kaj "
-#~ "poŝtilo. Kelkaj KDE-aplikaĵoj kelkfoje devas lanĉi konzolon, sendi "
-#~ "retleteron aŭ vidigi tekston. Por fari ĝin ĉiam sammaniere tiuj aplikaĵoj "
-#~ "ĉiam lanĉas la samajn komponantojn. Vi povas elekti ĉi tie, kiuj "
-#~ "programoj estas tiuj komponantoj."
-
-#~ msgid "Default Component"
-#~ msgstr "Defaŭlta komponanto"
-
-#~ msgid ""
-#~ "<qt>\n"
-#~ "<p>This list shows the configurable component types. Click the component "
-#~ "you want to configure.</p>\n"
-#~ "<p>In this dialog you can change KDE default components. Components are "
-#~ "programs that handle basic tasks, like the terminal emulator, the text "
-#~ "editor and the email client. Different KDE applications sometimes need to "
-#~ "invoke a console emulator, send a mail or display some text. To do so "
-#~ "consistently, these applications always call the same components. Here "
-#~ "you can select which programs these components are.</p>\n"
-#~ "</qt>"
-#~ msgstr ""
-#~ "<qt>\n"
-#~ "<p>La listo montras la agordeblajn komponantotipojn. Klaku la komponanton "
-#~ "agordotan.</p>\n"
-#~ "<p>En tiu dialogo vi povas ŝanĝi la defaŭltajn KDE-komponantojn. "
-#~ "Komponantoj estas programoj, kiuj faras bazajn taskojn, kiel terminalo, "
-#~ "redaktilo, kaj poŝtilo. Kelkaj KDE-aplikaĵoj kelkfoje devas lanĉi "
-#~ "konzolon, sendi retleteron aŭ vidigi tekston. Por fari ĝin ĉiam "
-#~ "sammaniere tiuj aplikaĵoj ĉiam lanĉas la samajn komponantojn. Vi povas "
-#~ "elekti ĉi tie, kiuj programoj estas tiuj komponantoj.</p>\n"
-#~ "</qt>"
-
-#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
-#~ msgstr "<qt>Malfermi <b>http-</b> kaj <b>https-</b>URLojn</qt>"
-
-#~ msgid "in an application based on the contents of the URL"
-#~ msgstr "en aplikaĵo, kiu bazas sur la URLa enhavo"
-
-#, fuzzy
-#~| msgid "in the following browser:"
-#~ msgid "in the following application:"
-#~ msgstr "en la sekvonta foliumilo:"
-
-#, fuzzy
-#~| msgid "in the following browser:"
-#~ msgid "with the following command:"
-#~ msgstr "en la sekvonta foliumilo:"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Select preferred Web browser application:"
-#~ msgstr "Elektu la preferatan retumilon:"
-
-#, fuzzy
-#~| msgid "Kmail is the standard Mail program for the KDE desktop."
-#~ msgid "Kmail is the standard Mail program for the Plasma desktop."
-#~ msgstr "KMail estas la norma poŝtilo de KDE."
-
-#~ msgid "&Use KMail as preferred email client"
-#~ msgstr "&Uzi KMail kiel preferatan poŝtilon"
-
-#~ msgid "Select this option if you want to use any other mail program."
-#~ msgstr "Marku la opcion, se vi volas uzi iun alian poŝtilon."
-
-#, fuzzy
-#~| msgid ""
-#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
-#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
-#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
-#~| "URL </li></ul>"
-#~ msgid ""
-#~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
-#~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
-#~ "(BCC)</li> <li>%B: Template body text</li> <li>%A: Attachment </li> <li>"
-#~ "%u: Full mailto: URL </li></ul>"
-#~ msgstr ""
-#~ "<ul> <li>%t: Adresato</li> <li>%s: Temo</li> <li>%c: Kopio</li> <li>%b: "
-#~ "Nevidebla kopio</li> <li>%B: Ŝablona teksto</li> <li>%A: Kunsendaĵo </li> "
-#~ "<li>%u: Plena adresato: URL </li> </ul>"
-
-#~ msgid ""
-#~ "Press this button to select your favorite email client. Please note that "
-#~ "the file you select has to have the executable attribute set in order to "
-#~ "be accepted.<br/> You can also use several placeholders which will be "
-#~ "replaced with the actual values when the email client is called:<ul> <li>"
-#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
-#~ "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
-#~ "text</li> <li>%A: Attachment </li> </ul>"
-#~ msgstr ""
-#~ "Premu la butonon por elekti vian preferatan poŝtilon. Notu, ke la dosiero "
-#~ "elektita de vi devas havi lanĉeblan atributon por esti elektebla.<br>Vi "
-#~ "ankaŭ povas uzi kelkajn anstataŭaĵojn, kiuj estos anstataŭigataj de la "
-#~ "nuna valoroj, kiam poŝtilo estas lanĉata: <ul> <li>%t: Adresato</li> <li>"
-#~ "%s: Temo</li> <li>%c: Kopio</li> <li>%b: Nevidebla kopio</li> <li>%B: "
-#~ "Ŝablona teksto</li> <li>%A: Kunsendaĵo </li> </ul>"
-
-#~ msgid "Click here to browse for the mail program file."
-#~ msgstr "Klaku ĉi tie por serĉi la poŝtilan dosieron."
-
-#~ msgid ""
-#~ "Activate this option if you want the selected email client to be executed "
-#~ "in a terminal (e.g. <em>Konsole</em>)."
-#~ msgstr ""
-#~ "Aktivigu la opcion, se vi volas, ke la elektita poŝtilo estos lanĉata "
-#~ "terminale (ekz. <em>Konzolo</em>)."
-
-#~ msgid "&Run in terminal"
-#~ msgstr "Lanĉi en te&rminalo"
-
-#~ msgid "&Use Konsole as terminal application"
-#~ msgstr "&Uzi Konzolon kiel terminalaplikaĵon"
-
-#~ msgid "Use a different &terminal program:"
-#~ msgstr "Uzi alian &terminalprogramon:"
-
-#~ msgid ""
-#~ "Press this button to select your favorite terminal client. Please note "
-#~ "that the file you select has to have the executable attribute set in "
-#~ "order to be accepted.<br/> Also note that some programs that utilize "
-#~ "Terminal Emulator will not work if you add command line arguments "
-#~ "(Example: konsole -ls)."
-#~ msgstr ""
-#~ "Premu la butonon por elekti vian preferatan poŝtilon. Notu, ke la dosiero "
-#~ "elektita de vi devas havi lanĉeblan atributon por esti elektebla."
-#~ "<br>Ankaŭ notu, ke kelkaj programoj, kiuj uzas terminalon, ne laboros, se "
-#~ "vi aldonas komandliniajn argumentojn."
-
-#~ msgid "Click here to browse for terminal program."
-#~ msgstr "Alklaku ĉi tie por serĉi terminalon."
-
-#~ msgid "&Use the default KDE window manager (KWin)"
-#~ msgstr "&Uzi la aprioran fenestran mastrumilon de KDE (KWin)"
-
-#~ msgid "Use a different &window manager:"
-#~ msgstr "Uzi alian &fenestran mastrumilon:"
-
-#~ msgid "Configure"
-#~ msgstr "Agordi"
-
-#~ msgid "kcmcomponentchooser"
-#~ msgstr "kcmcomponentchooser"
-
-#~ msgid ""
-#~ "Here you can read a small description of the currently selected "
-#~ "component. To change the selected component, click on the list to the "
-#~ "left. To change the component program,  please choose it below."
-#~ msgstr ""
-#~ "Ĉi tie vi povas legi malgrandan priskribon de la nun elektita komponanto. "
-#~ "Por ŝanĝi la elektitan komponanton, klaku en la maldekstra listo. Por "
-#~ "ŝanĝi la komponantan programon elektu ĝin malsupre."
-
-#~ msgid "Component Description"
-#~ msgstr "Komponanta priskribo"
+msgstr "Numerumilo:"

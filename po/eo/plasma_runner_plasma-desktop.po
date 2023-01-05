@@ -1,14 +1,16 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Translation of plasma_runner_plasma-desktop.pot into esperanto.
+# Copyright (C) 2009-2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-10-28 00:19+0000\n"
-"PO-Revision-Date: 2009-10-25 13:04+0200\n"
-"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"PO-Revision-Date: 2023-23-01-04 07:13+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +26,10 @@ msgid "desktop console"
 msgstr "labrortabla konsolo"
 
 #: plasma-desktop-runner.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword"
-#| msgid "desktop console"
+#, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console"
-msgstr "labrortabla konsolo"
+msgstr "wm konsolo"
 
 #: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
 #, kde-format
@@ -54,12 +54,10 @@ msgstr ""
 "Malfermas la KWin interagan konsolon kun dosiervojon al skripto sur la disko."
 
 #: plasma-desktop-runner.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword"
-#| msgid "desktop console :q:"
+#, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console :q:"
-msgstr "labortabla konsolo :q:"
+msgstr "wm konsolo :q:"
 
 #: plasma-desktop-runner.cpp:53
 #, kde-format

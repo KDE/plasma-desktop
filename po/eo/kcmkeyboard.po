@@ -1,16 +1,17 @@
 # translation of kcmkeyboard.po to esperanto
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Copyright (C) 2007-2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2009-11-02 23:18+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -30,10 +31,9 @@ msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "KDE-Klavaro-utilaĵo"
+msgstr "Klavararanĝilo"
 
 #: bindings.cpp:26
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Elekti sekvan klavararanĝon"
 
 #: bindings.cpp:49
-#, fuzzy, kde-format
-#| msgid "Error changing keyboard layout to '%1'"
+#, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Eraro dum ŝanĝo de klavararanĝo al '%1'"
+msgstr "Ŝanĝi klavararanĝon al '%1'"
 
 #: flags.cpp:122
 #, kde-format
@@ -54,23 +53,21 @@ msgstr "%1 - %2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
 #: kcm_add_layout_dialog.ui:14
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgid "Add Layout"
-msgstr "Aspekto"
+msgstr "Aldoni Aranĝon"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Serĉi…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Shortcut:"
-msgstr "Ĉefaj fulmoklavoj:"
+msgstr "Fulmoklavo:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
@@ -86,16 +83,14 @@ msgid "Preview"
 msgstr ""
 
 #: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "KDE Keyboard Control Module"
-msgstr "KDE-Klavaro-utilaĵo"
+msgstr "KDE Klavarstirila Modulo"
 
 #: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2006-2007 Andriy Rysin"
+#, kde-format
 msgid "(c) 2010 Andriy Rysin"
-msgstr "Copyright (C) 2006-2007 Andriy Rysin"
+msgstr "(c) 2010 Andriy Rysin"
 
 #: kcm_keyboard.cpp:40
 #, kde-format
@@ -112,10 +107,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm_keyboard.ui:33
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgid "Keyboard &model:"
-msgstr "Klavara ripeto"
+msgstr "Klavara &modelo:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:53
@@ -136,10 +130,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:94
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgid "Layouts"
-msgstr "Aspekto"
+msgstr "Aranĝoj"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
@@ -220,8 +213,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
-#, fuzzy, kde-format
-#| msgid "3d level shortcuts:"
+#, kde-format
 msgid "3rd level shortcuts:"
 msgstr "Fulmoklavoj de la 3a nivelo:"
 
@@ -244,11 +236,7 @@ msgstr "Alternativa fulmoklavo:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
 "shortcuts and also may not work in some situations (e.g. if popup is active "
@@ -260,49 +248,45 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Configure layouts"
-msgstr "&Aktivigi la klavaran ripeton"
+msgstr "Agordi aranĝojn"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
 #: kcm_keyboard.ui:285
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgid "Remove"
-msgstr "Aspekto"
+msgstr "Forigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:295
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Movi Supren"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
 #: kcm_keyboard.ui:305
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Movi Malsupren"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
 #: kcm_keyboard.ui:350
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "Spare layouts"
-msgstr "&Aktivigi la klavaran ripeton"
+msgstr "Kromaranĝoj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Main layout count:"
-msgstr "Ĉefaj fulmoklavoj:"
+msgstr "Nombro de ĉefaj aranĝoj:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
@@ -312,10 +296,9 @@ msgstr "Plie"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
 #: kcm_keyboard.ui:418
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
+#, kde-format
 msgid "&Configure keyboard options"
-msgstr "&Aktivigi la klavaran ripeton"
+msgstr "&Agordi klavarajn opciojn"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -330,36 +313,31 @@ msgid "%1 | %2"
 msgstr "%1 | %2"
 
 #: kcm_keyboard_widget.cpp:643
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Nenio"
 
 #: kcm_keyboard_widget.cpp:657
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "Ĉefaj fulmoklavoj:"
-msgstr[1] "Ĉefaj fulmoklavoj:"
+msgstr[0] "%1 fulmoklavo"
+msgstr[1] "%1 fulmoklavoj"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "layout map name"
 msgid "Map"
 msgstr "Klavomapo"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgid "Layout"
-msgstr "Aspekto"
+msgstr "Aranĝo"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgid "Variant"
 msgstr "Devio"
 
@@ -369,15 +347,12 @@ msgid "Label"
 msgstr "Etikedo"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Shortcut"
-msgstr "Ĉefaj fulmoklavoj:"
+msgstr "Fulmoklavo"
 
 #: kcm_view_models.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "Default variant"
-#| msgid "Default"
+#, kde-format
 msgctxt "variant"
 msgid "Default"
 msgstr "Defaŭlta"
@@ -422,26 +397,21 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
 "Se subtenata, tiu opcio permesas al vi agordi la staton de NumLock post la "
-"KDE lanĉo.<p>Vi povas agordi NumLock kiel aktiva aŭ malaktiva, aŭ agordi KDE "
-"por ke ĝi ne difinas la NumLock staton."
+"Plasma lanĉo.<p>Vi povas agordi NumLock kiel aktiva aŭ malaktiva, aŭ agordi "
+"Plasma por ke ĝi ne difinas la NumLock staton."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "NumLock dum KDE lanĉo"
+msgstr "NumLock dum Plasma Lanĉo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -451,8 +421,7 @@ msgstr "Akti&vigi"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgid "&Turn off"
 msgstr "Malaktivi&gi"
 
@@ -511,18 +480,16 @@ msgid "&Delay:"
 msgstr "&Prokrasto:"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Klavara ripeto"
+msgstr "Klavara Antaŭrigardo"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "KDE-Klavaro-utilaĵo"
+msgstr "Klavar-aranĝa montrilo"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -533,91 +500,3 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
-
-#, fuzzy
-#~| msgid "KDE Keyboard Layout Switcher"
-#~ msgid "KDE Keyboard Layout Switcher"
-#~ msgstr "KDE-Klavaro-utilaĵo"
-
-#, fuzzy
-#~| msgid "Layout"
-#~ msgid "Layout:"
-#~ msgstr "Aspekto"
-
-#, fuzzy
-#~| msgid "Variant"
-#~ msgid "Variant:"
-#~ msgstr "Devio"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgctxt "short layout label - full layout name"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~| msgid "Shortcuts for Switching Layout"
-#~ msgid "Show for single layout"
-#~ msgstr "Fulmoklavoj por ŝanĝi klavararanĝon"
-
-#, fuzzy
-#~| msgid "Keyboard Repeat"
-#~ msgctxt "tooltip title"
-#~ msgid "Keyboard Layout"
-#~ msgstr "Klavara ripeto"
-
-#, fuzzy
-#~| msgid "&Enable keyboard repeat"
-#~ msgid "Configure Layouts..."
-#~ msgstr "&Aktivigi la klavaran ripeton"
-
-#~ msgid "Keyboard Repeat"
-#~ msgstr "Klavara ripeto"
-
-#~ msgid "Turn o&ff"
-#~ msgstr "Malaktivi&gi"
-
-#, fuzzy
-#~| msgid "Leave unchan&ged"
-#~ msgid "&Leave unchanged"
-#~ msgstr "Lasi senŝa&nĝe"
-
-#, fuzzy
-#~| msgid "&Enable keyboard repeat"
-#~ msgid "Configure..."
-#~ msgstr "&Aktivigi la klavaran ripeton"
-
-#~ msgid ""
-#~ "If supported, this option allows you to hear audible clicks from your "
-#~ "computer's speakers when you press the keys on your keyboard. This might "
-#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
-#~ "that the keys make is very soft.<p>You can change the loudness of the key "
-#~ "click feedback by dragging the slider button or by clicking the up/down "
-#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
-#~ msgstr ""
-#~ "Se subtenata, tiu opcio permesas al vi aŭdi klaksonojn el via komputila "
-#~ "laŭtparolilo kiam vi premas klavojn sur la klavaro. Tio povas utiliĝi se "
-#~ "via klavaro ne hava meĥanikajn klavojn, aŭ la klavo elsonas malaŭdeblege."
-#~ "<p>Vi povas ŝanĝi la laŭtecon de la klavara klako per la ŝovilo aŭ la "
-#~ "nombrujo. Agordi la laŭtecon al 0% malaktivigas la klavaran klakon."
-
-#, fuzzy
-#~| msgid "Key click &volume:"
-#~ msgid "&Key click volume:"
-#~ msgstr "Klavara klako &laŭteco:"
-
-#~ msgid ""
-#~ "If you check this option, pressing and holding down a key emits the same "
-#~ "character over and over again. For example, pressing and holding down the "
-#~ "Tab key will have the same effect as that of pressing that key several "
-#~ "times in succession: Tab characters continue to be emitted until you "
-#~ "release the key."
-#~ msgstr ""
-#~ "Se vi ŝaltas tiun opcion, premado kaj tenado de klavo eligas la saman "
-#~ "signon senfine. Ekzemple, premado kaj tenado de la taba klavo havos la "
-#~ "saman efekton ol premi tiun klavon plurfoje sekve: tabaj signoj eliĝados "
-#~ "ĝis vi forlasos la klavon."
-
-#~ msgid "&Enable keyboard repeat"
-#~ msgstr "&Aktivigi la klavaran ripeton"

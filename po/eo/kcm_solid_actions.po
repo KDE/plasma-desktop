@@ -1,14 +1,16 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Translation of kcm_solid_actions.pot to esperanto.
+# Copyright (C) 2009-2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-06-26 00:19+0000\n"
-"PO-Revision-Date: 2009-11-02 23:28+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 07:13+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +30,9 @@ msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
 #: ActionEditor.cpp:60
-#, fuzzy, kde-format
-#| msgid "Editing Action %1"
+#, kde-format
 msgid "Editing Action '%1'"
-msgstr "Redakti agon %1"
+msgstr "Redaktanta Agon %1"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -47,10 +48,9 @@ msgstr "nevalida ago"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
 #: ActionEditor.ui:17
-#, fuzzy, kde-format
-#| msgid "Edit parameter"
+#, kde-format
 msgid "Edit Parameter"
-msgstr "Redakti parametron"
+msgstr "Redakti Parametron"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
@@ -60,34 +60,33 @@ msgstr "Parametra tipo:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:51
-#, fuzzy, kde-format
-#| msgid "Property match"
+#, kde-format
 msgid "Property Match"
-msgstr "Ecoj kongruas"
+msgstr "Kongruo de Trajtoj"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:56
 #, kde-format
 msgid "Content Conjunction"
-msgstr ""
+msgstr "Konjunkcio de Enhavo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr ""
+msgstr "Disjunkcio de Enhavo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
 #, kde-format
 msgid "Device Interface Match"
-msgstr ""
+msgstr "Kongruo de Aparatinterfaco"
 
 #. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
 #: ActionEditor.ui:96
 #, kde-format
 msgid "Device type:"
-msgstr ""
+msgstr "Aparatotipo:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblValueName)
 #: ActionEditor.ui:135
@@ -109,22 +108,21 @@ msgstr "Enhavas"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
 #: ActionEditor.ui:208
-#, fuzzy, kde-format
-#| msgid "Edit parameter"
+#, kde-format
 msgid "Reset Parameter"
-msgstr "Redakti parametron"
+msgstr "Restarigi parametron"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr ""
+msgstr "Konservi Parametroŝanĝojn"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr ""
+msgstr "Agopiktogramo, alklaku por ŝanĝi ĝin"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
@@ -154,7 +152,7 @@ msgstr ""
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr ""
+msgstr "Aparatoj devas kongrui al la sekvaj parametroj por tiu ago:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -166,7 +164,7 @@ msgstr "Aga nomo:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr ""
+msgstr "Enigi la nomon por via nova ago"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -198,27 +196,27 @@ msgstr "Administranto"
 #: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
-msgstr ""
+msgstr "La aparato devas esti de tipo %1"
 
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr ""
+msgstr "Iuj el la entenataj trajtoj devas kongrui"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr ""
+msgstr "Ĉiuj el la entenataj trajtoj devas kongrui"
 
 #: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
-msgstr ""
+msgstr "La aparatotrajto %1 devas egali al %2"
 
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr ""
+msgstr "La aparatotrajto %1 devas enhavi %2"
 
 #: SolidActions.cpp:33
 #, kde-format
@@ -243,12 +241,12 @@ msgstr ""
 #: SolidActions.cpp:152
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr ""
+msgstr "Ŝajnas ke la predikato por tiu ago ne estas valida."
 
 #: SolidActions.cpp:152
 #, kde-format
 msgid "Error Parsing Device Conditions"
-msgstr ""
+msgstr "Eraro Analizanta Aparatkondiĉojn"
 
 #: SolidActions.cpp:200
 #, kde-format
@@ -270,16 +268,10 @@ msgstr "Forigi"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Redakti…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
-
-#~ msgid "Edit..."
-#~ msgstr "Redakti..."
-
-#~ msgid "Add..."
-#~ msgstr "Aldonu..."
+msgstr "Aldoni…"

@@ -1,17 +1,18 @@
-# translation of plasma_applet_pager.po to Esperanto
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# translation of plasma_applet_org.kde.plasma.pager.pot to Esperanto
+# Copyright (C) 2007-2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Cindy McKee <cfmckee@gmail.com>, 2008, 2009.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2009-11-19 09:57+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 10:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,52 +27,50 @@ msgid "General"
 msgstr "Ĝenerala"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Ĝenerala"
+msgstr "Ĝenerala:"
 
 #: package/contents/ui/configGeneral.qml:42
 #, kde-format
 msgid "Show application icons on window outlines"
-msgstr ""
+msgstr "Montri aplikaĵajn piktogramojn en fenestraj konturoj"
 
 #: package/contents/ui/configGeneral.qml:47
 #, kde-format
 msgid "Show only current screen"
-msgstr ""
+msgstr "Montri nur aktualan ekranon"
 
 #: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "Navigado ĉirkaŭfluas"
 
 #: package/contents/ui/configGeneral.qml:64
 #, kde-format
 msgid "Layout:"
-msgstr ""
+msgstr "Aranĝo:"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
-msgstr ""
+msgstr "Defaŭlta"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontala"
 
 #: package/contents/ui/configGeneral.qml:66
 #, kde-format
 msgid "Vertical"
-msgstr ""
+msgstr "Vertikala"
 
 #: package/contents/ui/configGeneral.qml:80
-#, fuzzy, kde-format
-#| msgid "Display text:"
+#, kde-format
 msgid "Text display:"
-msgstr "Montri tekston:"
+msgstr "Teksta vidigo:"
 
 #: package/contents/ui/configGeneral.qml:83
 #, kde-format
@@ -81,7 +80,7 @@ msgstr "Nenio"
 #: package/contents/ui/configGeneral.qml:91
 #, kde-format
 msgid "Activity number"
-msgstr ""
+msgstr "Aktivecnumero"
 
 #: package/contents/ui/configGeneral.qml:91
 #, kde-format
@@ -91,7 +90,7 @@ msgstr "Numero de labortablo"
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
 msgid "Activity name"
-msgstr ""
+msgstr "Aktivecnomo"
 
 #: package/contents/ui/configGeneral.qml:99
 #, kde-format
@@ -99,16 +98,14 @@ msgid "Desktop name"
 msgstr "Nomo de labortablo"
 
 #: package/contents/ui/configGeneral.qml:113
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgid "Selecting current Activity:"
-msgstr "Elekto de nuna labrotablon:"
+msgstr "Elektante nunan Aktivecon:"
 
 #: package/contents/ui/configGeneral.qml:113
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgid "Selecting current virtual desktop:"
-msgstr "Elekto de nuna labrotablon:"
+msgstr "Elektante nunan virtualan labortablon:"
 
 #: package/contents/ui/configGeneral.qml:116
 #, kde-format
@@ -116,41 +113,35 @@ msgid "Does nothing"
 msgstr "Faras nenion"
 
 #: package/contents/ui/configGeneral.qml:124
-#, fuzzy, kde-format
-#| msgid "Shows desktop"
+#, kde-format
 msgid "Shows the desktop"
 msgstr "Montras la labortablon"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "and 1 other"
-#| msgid_plural "and %1 others"
+#, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "kaj unu plia"
-msgstr[1] "kaj unu plia"
+msgstr[0] "…kaj unu plia fenestro"
+msgstr[1] "…kaj %1 pliaj fenestroj"
 
 #: package/contents/ui/main.qml:362
-#, fuzzy, kde-format
-#| msgid "One window:"
-#| msgid_plural "%1 windows:"
+#, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
-msgstr[0] "Unu fenestro:"
-msgstr[1] "Unu fenestro:"
+msgstr[0] "Unu Fenestro:"
+msgstr[1] "%1 Fenestroj:"
 
 #: package/contents/ui/main.qml:374
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 Minimumigita Fenestro:"
+msgstr[1] "%1 Minimumigitaj Fenestroj:"
 
 #: package/contents/ui/main.qml:449
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgid "Desktop %1"
-msgstr "Nomo de labortablo"
+msgstr "Labortablo %1"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
@@ -164,54 +155,16 @@ msgid "Show Activity Manager…"
 msgstr ""
 
 #: package/contents/ui/main.qml:598
-#, fuzzy, kde-format
-#| msgid "&Add Virtual Desktop"
+#, kde-format
 msgid "Add Virtual Desktop"
-msgstr "A&ldoni virtualan labortablon"
+msgstr "Aldoni Virtualan Labortablon"
 
 #: package/contents/ui/main.qml:599
-#, fuzzy, kde-format
-#| msgid "&Remove Last Virtual Desktop"
+#, kde-format
 msgid "Remove Virtual Desktop"
-msgstr "Fo&rigi lastani virtualan labortablon"
+msgstr "Forigi Virtualan Labortablon"
 
 #: package/contents/ui/main.qml:602
-#, fuzzy, kde-format
-#| msgid "&Configure Virtual Desktops..."
+#, kde-format
 msgid "Configure Virtual Desktops…"
-msgstr "&Agordi la virtualaj labortablojn..."
-
-#, fuzzy
-#~| msgid "Configure Desktops..."
-#~ msgid "Configure Desktops..."
-#~ msgstr "Agordi la labortablojn..."
-
-#~ msgid "Shows the dashboard"
-#~ msgstr "Montras la stirtablon"
-
-#~ msgid "Display icons:"
-#~ msgstr "Montri piktogramojn:"
-
-#~ msgid "&Add Virtual Desktop"
-#~ msgstr "A&ldoni virtualan labortablon"
-
-#~ msgid "&Remove Last Virtual Desktop"
-#~ msgstr "Fo&rigi lastani virtualan labortablon"
-
-#~ msgid "Configure Pager"
-#~ msgstr "Agordi la paĝilon"
-
-#~ msgid "Number of columns:"
-#~ msgstr "Nombro da kolumnoj:"
-
-#~ msgid "Number of rows:"
-#~ msgstr "Nombro da vicoj:"
-
-#~ msgid "Change the number of rows"
-#~ msgstr "Ŝanĝi la nombron de vicoj"
-
-#~ msgid "None"
-#~ msgstr "Nenio"
-
-#~ msgid "What will appear when the mouse is over a desktop miniature"
-#~ msgstr "Kio aperas ĉe ŝvebo super labortabla miniaturo"
+msgstr "&Agordi Virtualajn Labortablojn…"

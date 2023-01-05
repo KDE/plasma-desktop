@@ -1,7 +1,8 @@
-# translation of kcmsmserver.po to Esperanto
+# translation of kcm_smserver.pot to Esperanto
 # Copyright (C) 2000, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 2000.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2009-12-16 09:49+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-04 10:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -39,12 +40,12 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"La sistemo devas esti reŝargata antaŭ ol mana seanckonservado aktiviĝas."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart"
-msgstr "&Reŝargi komputilon"
+msgstr "Reŝargi"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -64,21 +65,20 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart Now"
-msgstr "&Reŝargi komputilon"
+msgstr "Restartigi Nun"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Elsaulta Ekrano"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Montri:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -90,29 +90,27 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Seancoadministrilo"
+msgstr "Restarigo de Seanco"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Je ensaluto, lanĉ-aplikaĵoj estis malfermitaj:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Je lasta elsaluto"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Restarigi &mane konservitan seancon"
+msgstr "Kiam seanco estis mane konservita"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -125,19 +123,18 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Komenci en malplena &seanco"
+msgstr "Komenci en malplena seanco"
 
 #: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ignorataj aplikaĵoj:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -159,7 +156,7 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Post sekva restarto:"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -175,165 +172,24 @@ msgstr ""
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "Konf&irmi elsaluton"
+msgstr "Konfirmi elsaluton"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
+#, kde-format
 msgid "Default leave option"
-msgstr "Aprioraj konservitaj opcioj"
+msgstr "Defaŭlta elir-opcio"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
 msgstr "Ĉe ensaluto"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Aplikaĵojn kiujn vi volas e&kskluzivi de seancoj:"
-
-#, fuzzy
-#~| msgid "Default Leave Option"
-#~ msgid "Default option:"
-#~ msgstr "Aprioraj konservitaj opcioj"
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Restart"
-#~ msgstr "&Reŝargi komputilon"
-
-#, fuzzy
-#~| msgid "General"
-#~ msgid "General:"
-#~ msgstr "Ĝenerala"
-
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgctxt "@option:check"
-#~ msgid "Confirm logout"
-#~ msgstr "Konf&irmi elsaluton"
-
-#, fuzzy
-#~| msgid "&End current session"
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "End current session"
-#~ msgstr "Fini nunan s&eancon"
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Restart computer"
-#~ msgstr "&Reŝargi komputilon"
-
-#, fuzzy
-#~| msgid "&Turn off computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Turn off computer"
-#~ msgstr "Malŝal&ti komputilon"
-
-#, fuzzy
-#~| msgid "Restore &manually saved session"
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "Restore last session"
-#~ msgstr "Restarigi &mane konservitan seancon"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "Ĉi tie vi povas entajpi komo- aŭ dupunkta- apartigitan  liston de "
-#~ "aplikaĵoj kiujn vi ne volas konservi en seancoj, sekve ne estos lanĉitaj "
-#~ "dum la restarigo de seanco. Ekz. 'xterm,xconsole' aŭ 'xterm:konsole'"
-
-#, fuzzy
-#~| msgid "O&ffer shutdown options"
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "O&feri sistemfermajn opciojn"
-
-#, fuzzy
-#~| msgid "O&ffer shutdown options"
-#~ msgid "Offer shutdown options"
-#~ msgstr "O&feri sistemfermajn opciojn"
-
-#, fuzzy
-#~| msgid "Restore &previous session"
-#~ msgid "Desktop Session"
-#~ msgstr "&Restarigi antaŭan seancon"
-
-#, fuzzy
-#~| msgid "Restore &manually saved session"
-#~ msgid "Restore previous saved session"
-#~ msgstr "Restarigi &mane konservitan seancon"
-
-#~ msgid ""
-#~ "Check this option if you want the session manager to display a logout "
-#~ "confirmation dialog box."
-#~ msgstr ""
-#~ "Enŝaltu, se la seancoadministrilo montru konfirman dialogujon pri "
-#~ "elsaluto."
-
-#~ msgid "Conf&irm logout"
-#~ msgstr "Konf&irmi elsaluton"
-
-#~ msgid "O&ffer shutdown options"
-#~ msgstr "O&feri sistemfermajn opciojn"
-
-#~ msgid ""
-#~ "Here you can choose what should happen by default when you log out. This "
-#~ "only has meaning, if you logged in through KDM."
-#~ msgstr ""
-#~ "Tie ĉi vi povas elekti, kio okazu normale ĉe seancofino. Tio havas "
-#~ "signifon nur se vi lanĉis KDE per la grafika salutilo \"KDM\"."
-
-#~ msgid "Default Leave Option"
-#~ msgstr "Aprioraj konservitaj opcioj"
-
-#~ msgid ""
-#~ "<ul>\n"
-#~ "<li><b>Restore previous session:</b> Will save all applications running "
-#~ "on exit and restore them when they next start up</li>\n"
-#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
-#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
-#~ "currently started applications will reappear when they next start up.</"
-#~ "li>\n"
-#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
-#~ "up with an empty desktop on next start.</li>\n"
-#~ "</ul>"
-#~ msgstr ""
-#~ "<ul>\n"
-#~ "<li><b>Restarigi antaŭan seancon:</b> Konservos ĉiujn aplikaĵojn kiuj "
-#~ "ruliĝas dum vi elsalutas kaj malfermas ilin kiam vi denove ensalutas</"
-#~ "li>\n"
-#~ "<li><b>Restarigi seancon kiun vi konservis mane:</b> Vi povas konservi la "
-#~ "seancon kiam ajn vi volas per la \"Konservi seancon\" en la K-menuo. La "
-#~ "nunaj malfermitaj aplikaĵoj reaperos ĉe la sekva lanĉo.</li>\n"
-#~ "<li><b>Komenciĝi en malplena seanco:</b> Ne konservas ion. Via labortablo "
-#~ "estos malplena ĉe la sekva lanĉo.</li>\n"
-#~ "</ul>"
-
-#~ msgid "On Login"
-#~ msgstr "Ĉe ensaluto"
-
-#~ msgid "Applications to be e&xcluded from sessions:"
-#~ msgstr "Aplikaĵojn kiujn vi volas e&kskluzivi de seancoj:"
-
-#~ msgid "Advanced"
-#~ msgstr "Pluaj"
+msgstr "Aplikaĵoj kiujn vi volas ekskluzivi de seanco"

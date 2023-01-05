@@ -3,6 +3,7 @@
 # Matthias Peick <matthias@peick.de>, 2004.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2007.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+#
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-27 00:49+0000\n"
-"PO-Revision-Date: 2007-11-07 16:49+0100\n"
-"Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
+"PO-Revision-Date: 2023-01-04 07:13+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +35,7 @@ msgstr "wolfram@steloj.de,okellogg@users.sourceforge.net"
 #: dateandtime.ui:22
 #, kde-format
 msgid "Date and Time"
-msgstr ""
+msgstr "Dato kaj Tempo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
@@ -46,7 +47,7 @@ msgstr "Meti daton kaj tempon &aŭtomate"
 #: dateandtime.ui:53
 #, kde-format
 msgid "&Time server:"
-msgstr ""
+msgstr "&Temposervilo:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:86
@@ -57,10 +58,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:122
-#, fuzzy, kde-format
-#| msgid "Timezone Error"
+#, kde-format
 msgid "Time Zone"
-msgstr "Tempzona eraro"
+msgstr "Tempzono"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:128
@@ -79,7 +79,7 @@ msgstr "Aktuala loka tempozono:"
 #: dateandtime.ui:161
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Serĉi…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -141,14 +141,7 @@ msgid "Time zone Error"
 msgstr "Tempzona eraro"
 
 #: dtime.cpp:299
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Date & Time</h1> This control module can be used to set the system "
-#| "date and time. As these settings do not only affect you as a user, but "
-#| "rather the whole system, you can only change these settings when you "
-#| "start the Control Center as root. If you do not have the root password, "
-#| "but feel the system time should be corrected, please contact your system "
-#| "administrator."
+#, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
 "system date and time. As these settings do not only affect you as a user, "
@@ -204,14 +197,7 @@ msgid "Added NTP support"
 msgstr "Aldono de NTP-subteno"
 
 #: main.cpp:60
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Date & Time</h1> This control module can be used to set the system "
-#| "date and time. As these settings do not only affect you as a user, but "
-#| "rather the whole system, you can only change these settings when you "
-#| "start the Control Center as root. If you do not have the root password, "
-#| "but feel the system time should be corrected, please contact your system "
-#| "administrator."
+#, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
 "and time. As these settings do not only affect you as a user, but rather the "
@@ -228,32 +214,19 @@ msgstr ""
 #: main.cpp:113
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr ""
+msgstr "Ne eblas aŭtentigi/plenumigi la agon: %1, %2"
 
 #: main.cpp:133
 #, kde-format
 msgid "Unable to change NTP settings"
-msgstr ""
+msgstr "Ne eblas ŝanĝi NTP-agordojn"
 
 #: main.cpp:144
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#, kde-format
 msgid "Unable to set current time"
-msgstr "Ne eblas kontakti temposervilon: %1."
+msgstr "Ne eblas meti aktualan tempon"
 
 #: main.cpp:154
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#, kde-format
 msgid "Unable to set timezone"
-msgstr "Ne eblas kontakti temposervilon: %1."
-
-#~ msgid "kcmclock"
-#~ msgstr "kcmclock"
-
-#~ msgid "NTP"
-#~ msgstr "NTP"
-
-#, fuzzy
-#~| msgid "Timezone Error"
-#~ msgid "Date/Time Error"
-#~ msgstr "Tempzona eraro"
+msgstr "Ne eblas meti tempzonon"

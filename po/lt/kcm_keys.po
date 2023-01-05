@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2023-01-05 00:50+0000\n"
 "PO-Revision-Date: 2021-12-12 13:50+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,46 +19,30 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: globalaccelmodel.cpp:113
-#, kde-format
-msgid "Applications"
-msgstr "Programos"
-
-#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
-#, kde-format
-msgid "System Services"
-msgstr "Sistemos tarnybos"
-
-#: globalaccelmodel.cpp:187
+#: globalaccelmodel.cpp:197
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Klaida įrašant spartųjį klavišą %1: %2"
 
-#: globalaccelmodel.cpp:295
+#: globalaccelmodel.cpp:309
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Klaida pridedant %1, atrodo, kad programa neturi veiksmų."
 
-#: globalaccelmodel.cpp:338
+#: globalaccelmodel.cpp:352
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Klaida susisiekiant su visuotine sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:50
+#: kcm_keys.cpp:53
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Nepavyko susisiekti su visuotinių sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
-#: standardshortcutsmodel.cpp:29
-#, kde-format
-msgid "Common Actions"
-msgstr "Bendri veiksmai"
-
-#: kcm_keys.cpp:230
+#: kcm_keys.cpp:276
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -68,7 +52,7 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas bendram %2 veiksmui „%3“.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:234
+#: kcm_keys.cpp:280
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -77,18 +61,39 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas veiksmui „%2“, kuris priklauso %3.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:235
+#: kcm_keys.cpp:281
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Rastas konfliktas"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Applications"
+msgstr "Programos"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Commands"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgid "System Settings"
+msgstr "Sistemos tarnybos"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Common Actions"
+msgstr "Bendri veiksmai"
+
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Negalima eksportuoti schemos tol, kol yra neįrašytų pakeitimų"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -96,85 +101,124 @@ msgstr ""
 "Žemiau pasirinkite komponentus, kurie turėtų būti įtraukti į eksportuojamą "
 "schemą"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Save scheme"
 msgstr "Įrašyti schemą"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:149
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Šalinti visus sparčiuosius klavišus, skirtus %1"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Undo deletion"
 msgstr "Atšaukti ištrynimą"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Jokie elementai neatitiko paieškos žodžių"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Pasirinkite elementą iš sąrašo, norėdami čia pamatyti jo sparčiuosius "
 "klavišus"
 
-#: package/contents/ui/main.qml:234
-#, kde-format
+#: package/contents/ui/main.qml:272
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Pridėti programą…"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr ""
+
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importuoti schemą…"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Cancel Export"
 msgstr "Atsisakyti eksportavimo"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Eksportuoti schemą…"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:319
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Eksportuoti sparčiųjų klavišų schemą"
 
-#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importuoti sparčiųjų klavišų schemą"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Sparčiųjų klavišų schema (*.kksrc)"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Edit Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Add Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: package/contents/ui/main.qml:383
+#, kde-format
+msgid "Enter a command or the full path to a script file:"
+msgstr ""
+
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Pasirinkite norimą importuoti schemą:"
 
-#: package/contents/ui/main.qml:310
+#: package/contents/ui/main.qml:414
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Tinkinta schema"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Select File…"
 msgstr "Pasirinkti failą…"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Import"
 msgstr "Importuoti"
@@ -242,32 +286,32 @@ msgstr "Pridėti tinkintą spartųjį klavišą"
 msgid "Cancel capturing of new shortcut"
 msgstr "Atsisakyti naujo sparčiojo klavišo pagavimą"
 
-#: standardshortcutsmodel.cpp:33
+#: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
 msgstr "Failas"
 
-#: standardshortcutsmodel.cpp:34
+#: standardshortcutsmodel.cpp:35
 #, kde-format
 msgid "Edit"
 msgstr "Taisa"
 
-#: standardshortcutsmodel.cpp:36
+#: standardshortcutsmodel.cpp:37
 #, kde-format
 msgid "Navigation"
 msgstr "Naršymas"
 
-#: standardshortcutsmodel.cpp:37
+#: standardshortcutsmodel.cpp:38
 #, kde-format
 msgid "View"
 msgstr "Rodinys"
 
-#: standardshortcutsmodel.cpp:38
+#: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
 msgstr "Nuostatos"
 
-#: standardshortcutsmodel.cpp:39
+#: standardshortcutsmodel.cpp:40
 #, kde-format
 msgid "Help"
 msgstr "Pagalba"

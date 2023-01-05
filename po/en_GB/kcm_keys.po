@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:52+0000\n"
+"POT-Creation-Date: 2023-01-05 00:50+0000\n"
 "PO-Revision-Date: 2021-10-10 11:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -17,46 +17,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: globalaccelmodel.cpp:113
-#, kde-format
-msgid "Applications"
-msgstr "Applications"
-
-#: globalaccelmodel.cpp:113 globalaccelmodel.cpp:274
-#, kde-format
-msgid "System Services"
-msgstr "System Services"
-
-#: globalaccelmodel.cpp:187
+#: globalaccelmodel.cpp:197
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Error while saving shortcut %1: %2"
 
-#: globalaccelmodel.cpp:295
+#: globalaccelmodel.cpp:309
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Error while adding %1, it seems it has no actions."
 
-#: globalaccelmodel.cpp:338
+#: globalaccelmodel.cpp:352
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Error while communicating with the global shortcuts service"
 
-#: kcm_keys.cpp:50
+#: kcm_keys.cpp:53
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Failed to communicate with global shortcuts daemon"
 
-#: kcm_keys.cpp:224 package/contents/ui/main.qml:129
-#: standardshortcutsmodel.cpp:29
-#, kde-format
-msgid "Common Actions"
-msgstr "Common Actions"
-
-#: kcm_keys.cpp:230
+#: kcm_keys.cpp:276
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -66,7 +50,7 @@ msgstr ""
 "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
 "Do you want to reassign it?"
 
-#: kcm_keys.cpp:234
+#: kcm_keys.cpp:280
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -75,101 +59,161 @@ msgstr ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
 "Do you want to reassign it?"
 
-#: kcm_keys.cpp:235
+#: kcm_keys.cpp:281
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Found conflict"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Applications"
+msgstr "Applications"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Commands"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgid "System Settings"
+msgstr "System Services"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "Common Actions"
+msgstr "Common Actions"
+
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Cannot export scheme while there are unsaved changes"
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
 "Select the components below that should be included in the exported scheme"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Save scheme"
 msgstr "Save scheme"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:149
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Remove all shortcuts for %1"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Undo deletion"
 msgstr "Undo deletion"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "No items matched the search terms"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Select an item from the list to view its shortcuts here"
 
-#: package/contents/ui/main.qml:234
-#, kde-format
+#: package/contents/ui/main.qml:272
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Add Application…"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr ""
+
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Import Scheme…"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Cancel Export"
 msgstr "Cancel Export"
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Export Scheme…"
 
-#: package/contents/ui/main.qml:270
+#: package/contents/ui/main.qml:319
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Export Shortcut Scheme"
 
-#: package/contents/ui/main.qml:270 package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Import Shortcut Scheme"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:321
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Shortcut Scheme (*.kksrc)"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Edit Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:347
+#, kde-format
+msgid "Add Command"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: package/contents/ui/main.qml:383
+#, kde-format
+msgid "Enter a command or the full path to a script file:"
+msgstr ""
+
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Select the scheme to import:"
 
-#: package/contents/ui/main.qml:310
+#: package/contents/ui/main.qml:414
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Custom Scheme"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Select File…"
 msgstr "Select File…"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "Import"
 msgstr "Import"
@@ -235,32 +279,32 @@ msgstr "Add custom shortcut"
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancel capturing of new shortcut"
 
-#: standardshortcutsmodel.cpp:33
+#: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
 msgstr "File"
 
-#: standardshortcutsmodel.cpp:34
+#: standardshortcutsmodel.cpp:35
 #, kde-format
 msgid "Edit"
 msgstr "Edit"
 
-#: standardshortcutsmodel.cpp:36
+#: standardshortcutsmodel.cpp:37
 #, kde-format
 msgid "Navigation"
 msgstr "Navigation"
 
-#: standardshortcutsmodel.cpp:37
+#: standardshortcutsmodel.cpp:38
 #, kde-format
 msgid "View"
 msgstr "View"
 
-#: standardshortcutsmodel.cpp:38
+#: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
 msgstr "Settings"
 
-#: standardshortcutsmodel.cpp:39
+#: standardshortcutsmodel.cpp:40
 #, kde-format
 msgid "Help"
 msgstr "Help"
