@@ -175,6 +175,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 Kirigami.FormData.isSection: true
                 Kirigami.FormData.label: i18nc("@title:group", "Firmware")
+                visible: uefi.visible
             }
 
             CheckBox {
