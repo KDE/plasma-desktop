@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2020.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2020, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2021-10-05 12:32+0200\n"
+"PO-Revision-Date: 2023-01-05 03:24+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -77,13 +77,12 @@ msgstr "Aplicaciones"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Órdenes"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Servicios del sistema"
+msgstr "Preferencias del sistema"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -112,7 +111,7 @@ msgstr "Guardar esquema"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Editar orden para %1"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -135,8 +134,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccione un elemento de la lista para ver sus accesos rápidos"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Añadir aplicación..."
@@ -145,7 +143,7 @@ msgstr "Añadir aplicación..."
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Añadir orden..."
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -181,27 +179,27 @@ msgstr "Esquema de accesos rápidos (*.kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Editar orden"
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Añadir orden"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
-msgstr ""
+msgstr "Introduzca una orden o la ruta completa a un archivo de guion:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format

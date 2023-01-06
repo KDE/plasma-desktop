@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2022-09-12 09:54+0200\n"
+"PO-Revision-Date: 2023-01-05 03:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -74,13 +74,12 @@ msgstr "აპლიკაციები"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "ბრძანებები"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "სისტემური სერვისები"
+msgstr "სისტემის მორგება"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -109,7 +108,7 @@ msgstr "სქემის შენახვა"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1-სთვის ბრძანების ჩასწორება"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -132,8 +131,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "აირჩიეთ სიის ჩანაწერები, რომლის მალსახმობების ნახვაც აქ გსურთ"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "აპლიკაციის დამატება…"
@@ -142,7 +140,7 @@ msgstr "აპლიკაციის დამატება…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "ბრძანების დამატება…"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -178,27 +176,27 @@ msgstr "მალსახმობების სქემა(*.kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "ბრძანების ჩასწორება"
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "ბრძანების დამატება"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "დამატება"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
-msgstr ""
+msgstr "შეიყვანეთ ბრძანება ან სრული ბილიკი სკრიპტის ფაილამდე:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format

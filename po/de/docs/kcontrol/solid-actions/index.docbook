@@ -2,229 +2,167 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 <article id="solid-actions" lang="&language;">
 <articleinfo>
-<title
->Geräte-Aktionen</title>
+<title>Device Actions</title>
 <authorgroup>
-<author
-><firstname
->Ben</firstname
-><surname
->Cooksley</surname
-></author>
-<author
->&Anne-Marie.Mahfouf;</author>
-<othercredit role="translator"
-><firstname
->Johannes</firstname
-><surname
->Obermayr</surname
-><affiliation
-><address
-><email
->johannesobermayr@gmx.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author><firstname>Ben</firstname><surname>Cooksley</surname></author>
+<author>&Anne-Marie.Mahfouf;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2018-12-10</date>
-<releaseinfo
->&plasma; 5.14</releaseinfo>
+<date>2018-12-10</date>
+<releaseinfo>&plasma; 5.14</releaseinfo>
 
 <keywordset>
-<keyword
->Plasma</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Solid</keyword>
-<keyword
->Aktionen</keyword>
-<keyword
->Geräte</keyword>
-<keyword
->Hardware</keyword>
+<keyword>Plasma</keyword>
+<keyword>System Settings</keyword>
+<keyword>Solid</keyword>
+<keyword>actions</keyword>
+<keyword>devices</keyword>
+<keyword>hardware</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="kcm_solid_actions">
-<title
->Aktionen für neue Geräte</title>
+<title>Actions for new devices</title>
 <sect2 id="icons-intro">
-<title
->Einleitung</title>
+<title>Introduction</title>
 
-<para
->In diesem Modul können Aktionen eingerichtet werden, die für den Anwender verfügbar sein sollen, wenn neue Geräte an den Rechner angeschlossen werden.</para>
+<para>This module allows you to set up the actions you want to associate when
+you plug new devices.</para>
 <para>
 <screenshot>
-<screeninfo
->Bildschirmfoto des Dialogs „Geräte-Aktionen“</screeninfo>
+<screeninfo>Screenshot of the Device Actions Manager</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="main.png" format="PNG"/>
     </imageobject>
      <textobject>
-      <phrase
->Bildschirmfoto des Dialogs „Geräte-Aktionen“</phrase>
+      <phrase>Screenshot of the Device Actions Manager</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
 
-<para
->Es werden alle möglichen Aktionen aufgeführt, die verfügbar sind, sobald ein Gerät angeschlossen wird. Es ist zu beachten, dass die Aktionen nur unter bestimmten Voraussetzungen verfügbar sind.</para>
+<para>You will see listed all of the possible actions that are available when
+devices are plugged in.
+Please note that they will only be available under certain conditions.</para>
 
 <itemizedlist>
-<listitem
-><para
-><guibutton
->Hinzufügen</guibutton
->: Zunächst wird der Name für die neue Aktion abgefragt. Danach erscheint der Dialog zum Bearbeiten der Aktion. Werden in diesem Dialog nicht alle notwendigen Informationen eingegeben, wird die Aktion wieder gelöscht. </para
-></listitem>
-<listitem
-><para
-><guibutton
->Bearbeiten ...</guibutton
->: Hier können der Name, das Symbol, der auszuführende Befehl und die Bedingungen zur Anzeige der Aktion geändert werden. </para
-></listitem>
-<listitem
-><para
-><guibutton
->Verwerfen</guibutton
-> / <guibutton
->Kann nicht gelöscht werden</guibutton
-> / <guibutton
->Entfernen</guibutton
->: Hier werden unterschiedliche Aktionen ausgeführt - abhängig vom Dienst (systemweit oder benutzerdefiniert). Es können nur Änderungen an systemweiten Aktionen verworfen werden (aber nicht gelöscht werden). Benutzerdefinierte Aktionen können mit allen Änderungen vollständig entfernt werden. </para
-></listitem>
+<listitem><para><guibutton>Add</guibutton>
+   This will ask you to supply a name for your new action, then will open that
+action for editing.
+   If you do not supply all the required details in that dialog, then your
+action will be deleted.
+</para></listitem>
+<listitem><para>
+<guibutton>Edit</guibutton>
+   This will allow you to change the Name, Icon, command to execute 
+   and the conditions the action must match to be shown. 
+</para></listitem>
+<listitem><para>
+<guibutton>Discard / Cannot be deleted / Remove</guibutton>
+   This will do different actions, depending on if it was supplied with your
+system or created by you.
+   You can only discard changes to system wide actions, if there are no changes
+then these actions cannot be deleted.
+   User created actions are completely removed, including all changes.
+</para></listitem>
 </itemizedlist>
 
 </sect2>
 
 <sect2 id="add-action">
-<title
->Aktion hinzufügen</title>
+<title>Add Action</title>
 
-<para
->Der Knopf <guibutton
->Hinzufügen</guibutton
-> öffnet einen Dialog zur Eingabe des Namens für die neue Aktion. </para>
+<para>
+The <guibutton>Add</guibutton> button brings you a dialog to enter the
+new action name.
+</para>
 <para>
 <screenshot>
-<screeninfo
->Bildschirmfoto des Dialogs „Aktion hinzufügen“</screeninfo>
+<screeninfo>Screenshot of the Add Action dialog</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="add-action.png" format="PNG"/>
     </imageobject>
      <textobject>
-      <phrase
->Bildschirmfoto des Dialogs „Aktion hinzufügen“</phrase>
+      <phrase>Screenshot of the Add Action dialog</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
-<para
->Der Name für die Aktion sollte sie korrekt beschreiben. Nach Eingabe des Namens für die Aktion und anschließendem Klick auf <guibutton
->OK</guibutton
-> erscheint der Dialog <guilabel
->Aktion bearbeiten</guilabel
-> zum Einrichten der Eigenschaften der Aktion. </para>
+<para>
+The action name should correctly describe the action. After entering a name and
+clicking <guibutton>OK</guibutton>, the Edit Action dialog will show to allow
+you to set up the action properties.
+</para>
 </sect2>
 
 <sect2 id="edit-action">
-<title
->Aktion bearbeiten</title>
+<title>Edit Action</title>
 
-<para
->In diesem Dialog können die Einstellungen für die ausgewählte Aktion bearbeitet werden.</para>
+<para>This dialog allows you to change the settings of the action you
+selected.</para>
 <para>
 <screenshot>
-<screeninfo
->Bildschirmfoto des Dialogs „Aktion bearbeiten“</screeninfo>
+<screeninfo>Screenshot of the Edit Action dialog</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="edit-action.png" format="PNG"/>
     </imageobject>
      <textobject>
-      <phrase
->Bildschirmfoto des Dialogs „Aktion bearbeiten“</phrase>
+      <phrase>Screenshot of the Edit Action dialog</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
-<para
->Das beinhaltet das Symbol, den Namen der Aktion, den auszuführenden Befehl und die verschiedenen Bedingungen. Das Symbol kann durch ein Klick darauf geändert werden.</para>
-<para
->Die Elemente werden in einer Baumansicht angezeigt. Dabei muss die oberste Bedingung wahr sein, damit die Aktion angezeigt wird.</para>
+<para>
+This includes the icon, the action name, the action command and the various
+parameters.
+You can change the icon by clicking on it.</para>
+<para>The parameters are displayed in a
+tree, the top item having to be true in order for the action to be shown.</para>
 
 <sect3 id="edit-parameter">
-<title
->Parameter bearbeiten</title>
+<title>Edit parameter</title>
 
 <variablelist>
-<varlistentry
-><term
-><guilabel
->Parameter-Typ</guilabel
-></term>
+<varlistentry><term><guilabel>Parameter type</guilabel></term>
 <listitem>
-<para
->Diese Auswahl legt fest, was darin enthalten sein muss oder welche Übereinstimmung geprüft wird, um einen wahren Wert zu ergeben. <variablelist>
-<varlistentry
-><term
-><guilabel
->Eigenschaften-Übereinstimmung</guilabel
-></term>
+<para>This controls what can be contained inside it, or
+what matching is performed to check if it is true.
+
+<variablelist>
+<varlistentry><term><guilabel>Property Match</guilabel></term>
 <listitem>
-<para
->Vergleicht die angegebene Eigenschaft des Geräts (<guilabel
->Gerätetyp</guilabel
-> und <guilabel
->Name des Wertes</guilabel
->) unter Verwendung der Bedingung mit dem eingegebenen Text.</para>
+<para>Compares the specified property of the Device (using 
+<guilabel>Device type</guilabel> and <guilabel>Value name</guilabel>) and using the evaluator, compares it against the
+text provided.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Inhaltliche Übereinstimmung</guilabel
-></term>
+<varlistentry><term><guilabel>Content Conjunction</guilabel></term>
 <listitem>
-<para
->Alle untergeordneten Eigenschaften müssen wahr sein, damit diese Übereinstimmung wahr ist.</para>
+<para>All sub-properties of this must be true for
+it to be true itself.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Inhaltliche Nicht-Übereinstimmung</guilabel
-></term>
+<varlistentry><term><guilabel>Content Disjunction</guilabel></term>
 <listitem>
-<para
->Irgendeine untergeordnete Eigenschaft muss wahr sein, damit diese Übereinstimmung wahr ist.</para>
+<para>Any sub-property of this may be true for it
+to be true itself.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Geräteschnittstellen-Übereinstimmung</guilabel
-></term>
+<varlistentry><term><guilabel>Device interface match</guilabel></term>
 <listitem>
-<para
->Überprüft, ob das angegebene Gerät dem ausgewählten Gerätetyp entspricht.</para>
+<para>Checks to see if the Device can be
+classed as the selected Device type.</para>
 </listitem>
 </varlistentry>
 
@@ -233,51 +171,34 @@
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Gerätetyp</guilabel
-></term>
+<varlistentry><term><guilabel>Device type</guilabel></term>
 <listitem>
-<para
->Hier werden alle möglichen Gerätetypen aufgeführt, die von &plasma; auf Ihrem System unterstützt werden. Diese Auswahl des Typs wird sowohl beim Vergleich der Eigenschaften wie auch der Geräteschnittstellen verwendet. </para>
+<para>These are the possible device types supported by &plasma; on
+your system.
+They are used in both Property and Device interface matches.
+</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guilabel
->Name des Wertes</guilabel
-></term>
+<varlistentry><term><guilabel>Value name</guilabel></term>
 <listitem>
-<para
->Dies ist eine Liste der möglichen Wertenamen des ausgewählten Gerätetyps. Dazu ist die Auswahl einer Bedingung für diesen Wert (entweder <guilabel
->Ist gleich</guilabel
-> oder <guilabel
->Enthält</guilabel
->) und die Angabe des Textes zum Vergleich  möglich. </para>
+<para>This is a list of all possible property names for the
+selected device type.
+It also provides the selection of the value evaluator (which is either 
+<guilabel>Equals</guilabel> or <guilabel>Contains</guilabel>), and allows
+entry of the text to be compared with.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guibutton
->Parameter zurücksetzen</guibutton
-></term>
+<varlistentry><term><guibutton>Reset Parameter</guibutton></term>
 <listitem>
-<para
->Macht alle noch nicht gespeicherten Änderungen dieses Parameters rückgängig.</para>
+<para>Reverts any unsaved changes you have made to this parameter.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry
-><term
-><guibutton
->Änderungen der Parameter speichern</guibutton
-></term>
+<varlistentry><term><guibutton>Save Parameter changes</guibutton></term>
 <listitem>
-<para
->Speichert alle Änderungen diese Parameters.</para>
+<para>Saves the changes you have made to the parameter.</para>
 </listitem>
 </varlistentry>
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"POT-Creation-Date: 2023-01-06 00:49+0000\n"
 "PO-Revision-Date: 2022-12-11 13:39+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,23 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: contents/ui/ToolBoxContent.qml:269
+#: contents/ui/ToolBoxContent.qml:266
 #, kde-format
 msgid "Choose Global Theme…"
 msgstr "Veldu altækt þema…"
 
-#: contents/ui/ToolBoxContent.qml:276
+#: contents/ui/ToolBoxContent.qml:273
 #, kde-format
 msgid "Configure Display Settings…"
 msgstr "Breyta skjástillingum…"
 
-#: contents/ui/ToolBoxContent.qml:298
+#: contents/ui/ToolBoxContent.qml:294
+#, kde-format
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/ui/ToolBoxContent.qml:309
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Loka breytingasniði"

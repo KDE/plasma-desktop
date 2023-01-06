@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2022-04-02 21:33+0530\n"
+"PO-Revision-Date: 2023-01-05 21:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -73,13 +73,12 @@ msgstr "செயலிகள்"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "கட்டளைகள்"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "கணினி சேவைகள்"
+msgstr "கணினி அமைப்புகள்"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -106,7 +105,7 @@ msgstr "திட்டத்தை சேமி"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1-க்கான கட்டளையை இயக்கு"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -129,8 +128,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "ஒன்றன் சுருக்குவழிகளை இங்கு காண, பட்டியலிலிருந்து அதை தேர்ந்தெடுக்கவும்"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "செயலியை சேர்…"
@@ -139,7 +137,7 @@ msgstr "செயலியை சேர்…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "கட்டளையை சேர்…"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -175,32 +173,32 @@ msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "கட்டளையைத் திருத்து"
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "கட்டளையை சேர்"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "சேர்"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
-msgstr ""
+msgstr "கட்டளையையோ சிறுநிரலுக்கான முழு பாதையையோ உள்ளிடவும்:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Select the scheme to import:"
-msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்க:"
+msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்யவும்:"
 
 #: package/contents/ui/main.qml:414
 #, kde-format

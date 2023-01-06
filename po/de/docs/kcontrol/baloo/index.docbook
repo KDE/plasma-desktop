@@ -2,135 +2,92 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 <article id="baloo" lang="&language;">
-<title
->Dateisuche</title>
+<title>File Search</title>
 <articleinfo>
 <authorgroup>
-<author
-><firstname
->Vishesh</firstname
-> <surname
->Handa</surname
-> </author>
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author>
+    <firstname>Vishesh</firstname>
+    <surname>Handa</surname>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-06</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2021-04-06</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->Plasma</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Suchen</keyword>
-<keyword
->Datei</keyword>
-<keyword
->Baloo</keyword>
+<keyword>Plasma</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>search</keyword>
+<keyword>file</keyword>
+<keyword>baloo</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Mit diesem Modul der &systemsettings; können Sie einstellen, welche Dateien für die schnelle Suche indiziert werden sollen. Intern wird eine Technologie mit dem Namen Baloo für die effiziente Suche in den Dateien verwendet. </para>
+<para>
+This &systemsettings; module allows you to configure which files should be
+indexed for fast searching.
 
-<para
->Fügen Sie das Miniprogramm <guilabel
->Suche</guilabel
-> zur Kontrollleiste hinzu oder aktivieren Sie die Suche in &krunner;, um Ihre indizierten Dokumente schneller zu finden. </para>
+It internally uses a technology called Baloo to efficiently search through the files.
+</para>
 
-<para
->Aktivieren Sie <guilabel
->Dateisuche aktivieren</guilabel
->, um die Suchfunktion in &dolphin; und anderen &kde;-Anwendungen zu benutzen. Ist diese Einstellung abgeschaltet, wird die Dateisuche mit Baloo nicht benutzt. Sie können dann andere Verfahren zur Suche wie &eg; &kfind; verwenden. </para>
+<para>Add the widget <guilabel>Search</guilabel> to your panel or enable the search in &krunner;
+to use the indexing results for faster access to your documents.
+</para>
 
-<para
->Aktivieren Sie <guilabel
->Auch Dateiinhalt indizieren</guilabel
->, um zusätzlich zu den Dateinamen auch deren Inhalte zu indizieren. </para>
+<para>
+Activate the <guilabel>Enable File Search</guilabel> item if you want to use desktop search capabilities in &dolphin; and other &kde; applications. Uncheck the item if you do not want to use the file search with Baloo (it is possible to use other search technologies, &eg; &kfind;).
+</para>
 
-<para
->Aktivieren Sie <guilabel
->Versteckte Dateien und Ordner indizieren</guilabel
->, damit Baloo auch diese Elemente in den Index aufnimmt. </para>
+<para>Use <guilabel>Also index file content</guilabel> to also index the file contents additional to the file names.
+</para>
+
+<para>Check the <guilabel>Index hidden files and folders</guilabel> item to make Baloo index the hidden files and folders.
+</para>
 
 <note>
-    <para
->Jede Datei und jeder Ordner, dessen Name mit einem Punkt (<literal
->.</literal
->) beginnt, wird in der Standardeinstellung bei der Anzeige ausgeblendet. </para>
+    <para>
+        Any file or folder name that starts with a period (<literal>.</literal>) is hidden by default.
+    </para>
 </note>
 
 <variablelist>
-<varlistentry
-><term
-><guilabel
->Spezielle Ordnereinstellung</guilabel
-></term>
+<varlistentry><term><guilabel>Folder specific configuration</guilabel></term>
 <listitem>
-    <para
->Es wird eine Liste von Ordnern angezeigt, die indiziert werden können. In der Standardeinstellung wird Ihr gesamter Persönlicher Ordner  <filename class="directory"
-><envar
->$HOME</envar
-></filename
-> indiziert und alle anderen Laufwerke bzw. Ordner sind von der Indizierung ausgeschlossen. </para>
-    <para
->Wechselmedien werden in der Standardeinstellung niemals indiziert. Sie können explizit aus der Liste der ausgeschlossenen Ordner entfernt werden und werden dann indiziert. </para>
-    <para
->Im Kombinationsfeld neben jedem Eintrag in der Liste können Sie <guimenuitem
->Indiziert</guimenuitem
-> oder <guimenuitem
->Nicht indiziert</guimenuitem
-> einstellen. </para>
-    <para
->Benutzen Sie das Symbol „Papierkorb“, um einen Eintrag aus der Liste zu löschen. </para>
+    <para>
+        You are presented with a list of folders that can be indexed. By default only
+        your entire <filename class="directory"><envar>$HOME</envar></filename> folder is
+        indexed, and no other folders or drives are indexed.
+    </para>
+    <para>
+        Removable media is never indexed by default. It can be explicitly removed from
+        the list of excluded folders and it will then be indexed.
+    </para>
+    <para>
+        It is possible to use the combo box next to each item in the list to configure if it is <guimenuitem>Indexed</guimenuitem> or <guimenuitem>Not indexed</guimenuitem>.
+    </para>
+    <para>
+        Use the trash button to remove an item from the list.
+    </para>
 </listitem>
 </varlistentry>
-<varlistentry
-><term
-><guibutton
->Ordnereinstellung hinzufügen ...</guibutton
-></term>
+<varlistentry><term><guibutton>Add folder configuration...</guibutton></term>
 <listitem>
-    <para
->Klicken Sie auf diesen Knopf, können Sie die Einstellungen <guimenuitem
->Indizierung eines Ordner starten</guimenuitem
-> oder <guimenuitem
->Indizierung eines Ordner anhalten</guimenuitem
-> auswählen. </para>
-    <para
->Durch Klicken auf eine der oben genannten Einstellungen öffnen Sie den normalen &plasma;-Dateidialog, hier können Sie Ordner auswählen, die indiziert werden oder von der Indizierung ausgeschlossen werden. </para>
+    <para>
+        Press this button to open selector with two options, namely <guimenuitem>Start indexing a folder...</guimenuitem> and <guimenuitem>Stop indexing a folder...</guimenuitem>.
+    </para>
+    <para>
+        Clicking any of the above-mentioned options displays the standard &plasma; <guilabel>Select a folder to filter</guilabel> dialog and allows you to choose the folder to be treated accordingly.
+    </para>
 </listitem>
 </varlistentry>
 </variablelist>
 
-<para
->Weitere Informationen über zusätzliche Einstellungen um &eg; ein Laufwerk hinzuzufügen, das nicht in Ihrem persönlichen Ordner <filename class="directory"
-><envar
->$HOME</envar
-></filename
-> eingehängt ist, finden Sie auf <ulink url="https://community.kde.org/Baloo/Configuration"
->Baloo/Configuration</ulink
->.</para>
+<para>For more info about additional configuration options &eg; how to add a drive mounted outside your 
+<filename class="directory"><envar>$HOME</envar></filename> folder please read
+<ulink url="https://community.kde.org/Baloo/Configuration">Baloo/Configuration</ulink>.</para>
 
 </article>

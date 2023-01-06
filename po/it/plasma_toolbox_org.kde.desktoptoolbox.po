@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"POT-Creation-Date: 2023-01-06 00:49+0000\n"
 "PO-Revision-Date: 2021-10-23 02:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,17 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.08.2\n"
 
-#: contents/ui/ToolBoxContent.qml:269
+#: contents/ui/ToolBoxContent.qml:266
 #, kde-format
 msgid "Choose Global Theme…"
 msgstr "Scegli il tema globale..."
 
-#: contents/ui/ToolBoxContent.qml:276
+#: contents/ui/ToolBoxContent.qml:273
 #, kde-format
 msgid "Configure Display Settings…"
 msgstr "Configura le impostazioni dello schermo…"
 
-#: contents/ui/ToolBoxContent.qml:298
+#: contents/ui/ToolBoxContent.qml:294
+#, kde-format
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/ui/ToolBoxContent.qml:309
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Esci dalla modalità di modifica"

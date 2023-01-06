@@ -2,116 +2,76 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 <article id="splashscreen" lang="&language;">
-<title
->Startbildschirm</title>
+<title>Splash Screen</title>
 <articleinfo>
 <authorgroup>
-<author
-><firstname
->Anne-Marie</firstname
-> <surname
->Mahfouf</surname
-> <affiliation
-> <address
->&Anne-Marie.Mahfouf.mail;</address>
+<author>
+<firstname>Anne-Marie</firstname>
+<surname>Mahfouf</surname>
+<affiliation>
+<address>&Anne-Marie.Mahfouf.mail;</address>
 </affiliation>
 </author>
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-08</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Startbildschirm</keyword>
-<keyword
->Design</keyword>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>splash screen</keyword>
+<keyword>theme</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->In diesem Modul finden Sie eine Schnittstelle zur Vorschau und Installation von Programmstart-Grafiken und -Designs.</para>
+<para>This module provides an interface to view and select splash screen themes.</para>
 
 <para>
 <screenshot>
-<screeninfo
->Bildschirmfoto der Verwaltung für Startbildschirmdesigns</screeninfo>
+<screeninfo>Here's a screenshot of the splash screen manager</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="splash-main.png" format="PNG"/>
     </imageobject>
     <textobject>
-      <phrase
->Das Modul Verwaltung für Startbildschirmdesigns</phrase>
+      <phrase>The splash screen manager module</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
 
-<para
->Auf dieser Seite sehen Sie eine Liste der bereits installierten Startbildschirme, der gerade verwendete ist hervorgehoben.</para>
+<para>On this page you can see previews of already installed splash screens. The preview of the current splash screen is highlighted.</para>
 
-<para
->Halten Sie den Mauszeiger auf ein Vorschaubild, dann wird rechts unten im Bild der Knopf <guilabel
->Vorschau für den Startbildschirm</guilabel
-> angezeigt. Drücken Sie diesen Knopf, um den Startbildschirm in Aktion zu sehen.</para>
+<para>Hover a preview image with the mouse cursor then the button <guilabel>Preview Splash Screen</guilabel> appears at the bottom right of the image.
+Press this button to view the splashscreen in action.</para>
 
 <variablelist>
-<varlistentry
-><term
-><guilabel
->Neue Startbildschirme holen ...</guilabel
-></term>
+<varlistentry><term><guilabel>Get New Splash Screens...</guilabel></term>
 <listitem>
-<para
->Damit dies funktioniert, muss eine Verbindung zum Internet bestehen. Es erscheint ein Fenster, in dem verfügbare Designs von <ulink url="https://store.kde.org"
->https://store.kde.org</ulink
-> angezeigt werden. Klicken Sie auf <guibutton
->Installieren</guibutton
->, um das jeweilige Design herunterzuladen und auf Ihrem Rechner zu installieren. </para>
+<para>
+You need to be connected to the Internet to use this action. A dialog will display a list of themes from the <ulink url="https://store.kde.org">https://store.kde.org</ulink> website. Clicking the <guibutton>Install</guibutton> button associated with a theme will install this theme locally.
+</para>
 <para>
 <screenshot>
-<screeninfo
->Installation eines neuen Designs</screeninfo>
+<screeninfo>Installing a new theme</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="get-new-theme.png" format="PNG"/>
     </imageobject>
     <textobject>
-      <phrase
->Installation eines neuen Designs</phrase>
+      <phrase>Installing a new theme</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
-<para
->Das neue Design ist sofort verfügbar und wird hervorgehoben, wenn Sie den Installationsdialog geschlossen haben. Das Vorschaubild des neuen Designs wird angezeigt. Um das neue Design als Startbildschirm zu verwenden, müssen Sie den Knopf <guibutton
->Anwenden</guibutton
-> drücken. </para>
+<para>
+This new theme is immediately available after you close the &systemsettings; Download New Splash Screens dialog and is highlighted. The preview displays the picture. You need to click the <guibutton>Apply</guibutton> button to make this theme your current splash-screen theme.
+</para>
 </listitem>
 </varlistentry>
 </variablelist>

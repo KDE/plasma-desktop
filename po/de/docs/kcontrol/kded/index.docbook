@@ -2,100 +2,60 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 ]>
 
 <article id="kded" lang="&language;">
 <articleinfo>
 
-<title
->Hintergrunddienste</title>
+<title>Background Services</title>
 <authorgroup>
-<author
-><personname
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-></personname
-> <email
->lueck@hube-lueck.de</email
-> </author>
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author><personname><firstname>Burkhard</firstname><surname>Lück</surname></personname>
+<email>lueck@hube-lueck.de</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2015-04-08</date>
-<releaseinfo
->Plasma 5.3</releaseinfo>
+<date>2015-04-08</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Dienst</keyword>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Service</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Das Modul <guilabel
->Diensteverwaltung</guilabel
-> gibt Ihnen eine Übersicht über alle Module des &kde;-Daemon, auch &kde;-Systemdienst genannt. Es gibt zwei Arten von Diensten:</para>
+<para>
+The <guilabel>Service Manager</guilabel> module allows you to have an overview of all 
+plugins of the &kde; Daemon, also referred to as &kde; Services. Generally, 
+there are two types of service:</para>
 
 <variablelist>
 
 <varlistentry>
-<term
-><guilabel
->Dienste, die nur auf Anforderung gestartet werden</guilabel
-></term>
-<listitem
-><para
->Dies ist eine Liste sämtlicher verfügbarer &kde;-Dienste, die nur auf ausdrückliche Anforderung gestartet werden. Sie werden nur zu Ihrer Information gelistet. Es lassen sich keine Änderungen vornehmen. </para
-></listitem>
+<term><guilabel>Load-on-Demand Services</guilabel></term>
+<listitem><para>
+This is a list of available &kde; services which will be started on demand. 
+They are only listed for convenience, as you cannot manipulate these 
+services.
+</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->KDE-Dienste beim Start</guilabel
-></term>
-<listitem
-><para
->Hier sind alle &kde;-Dienste aufgeführt, die sich beim Start von &kde; laden lassen. Dienste, die in der Spalte <guilabel
->Benutzung</guilabel
-> markiert sind, werden beim nächsten Start aufgerufen. </para>
-<para
->Seien Sie bitte vorsichtig bei der Deaktivierung Ihnen unbekannter Dienste, einige sind sehr wichtig für das &kde;-System. </para>
-<para
->Um den <guilabel
->Status</guilabel
-> eines Dienstes zu ändern, wählen sie ihn in der Liste aus. Mit <guibutton
->Start</guibutton
-> und <guibutton
->Stopp</guibutton
-> kann dann der Status dieses Dienstes von <guilabel
->Nicht gestartet</guilabel
-> in <guilabel
->Läuft</guilabel
-> und umgekehrt geändert werden. </para>
+<term><guilabel>Startup Services</guilabel></term>
+<listitem><para>
+This shows all &kde; services that can be loaded on &kde; startup.  
+Services checked in the <guilabel>Use</guilabel> column will be invoked on next startup.</para>
+<para>Be careful with deactivation of 
+unknown services: some services are vital for &kde;; do 
+not deactivate services if you do not know what you are doing.
+</para>
+<para>To change the <guilabel>Status</guilabel> of a service, select it in the list. 
+Then you can use the <guibutton>Start</guibutton> and <guibutton>Stop</guibutton>
+to change the status of a service from <guilabel>Not running</guilabel> to <guilabel>Running</guilabel>
+and vice versa.
+</para>
 </listitem>
 </varlistentry>
 

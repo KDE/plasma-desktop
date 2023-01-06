@@ -2,87 +2,58 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 ]>
 
 <article lang="&language;" id="default-components">
 <articleinfo>
 
-<title
->Standard-Komponenten</title>
+<title>Default Applications</title>
 <authorgroup>
-<author
->&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+<author>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
 
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-06</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2022-01-12</date>
+<releaseinfo>Plasma 5.24</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Komponente</keyword>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>component</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->In diesem Modul können die Standard-Komponenten für &kde; eingestellt werden.</para>
+<para>In this module, you can change &kde; default components.</para>
 
-<para
->„Komponenten“ sind Programme, die elementare Aufgaben erledigen, so etwa der Webbrowser, der Terminal-Emulator, die Dateiverwaltung oder das E-Mail-Programm. &kde;-Programme müssen gelegentlich einen Terminal-Emulator aufrufen, eine E-Mail verschicken oder Dateien und Ordner verwalten</para
-> 
+<para>Components are programs that handle basic tasks, like the web browser, terminal emulator, the file manager, the email client, the electronic map, and the dialer. Different &kde; applications sometimes need to invoke a console emulator, send an email, manage files and folders, show the map or dial a number on your phone.</para> 
 
-<para
->Um die Einheitlichkeit zu wahren, verwenden die Anwendungen dieselben Standardkomponenten. Hier können Sie die Programme für diese Komponenten auswählen.</para>
+<para>To do so consistently, these applications always call the same components. Here you 
+can select which programs these components are.</para>
 
-<para
->Die Liste auf der linken Seite zeigt alle Arten von Komponenten, die eingerichtet werden können: </para>
+<para>The list on the left shows the configurable component types:</para>
 <itemizedlist>
 <listitem>
-<para
->Webbrowser</para>
+<para>Web Browser</para>
 </listitem>
 <listitem>
-<para
->Dateiverwaltung</para>
+<para>File Manager</para>
 </listitem>
 <listitem>
-<para
->E-Mail-Programm</para>
+<para>Email Client</para>
 </listitem>
 <listitem>
-<para
->Terminal-Emulator</para>
+<para>Terminal Emulator</para>
+</listitem>
+<listitem>
+<para>Map</para>
+</listitem>
+<listitem>
+<para>Dialer</para>
 </listitem>
 </itemizedlist>
 
-<para
->Klicken Sie auf das Kombinationsfeld der Komponente, die Sie einrichten möchten. Wählen Sie aus der Liste Ihren bevorzugten Webbrowser, Dateimanager, E-Mail-Client und Terminal-Emulator. Wählen Sie <guimenuitem
->Andere...</guimenuitem
->, um den Dialog <guilabel
->Anwendung auswählen</guilabel
-> zu öffnen und Ihre Anwendung manuell auszuwählen.</para>
+<para>Click the combo box of the component you want to configure. In the list, select your favorite web browser, file manager, email client, terminal emulator, map, and dialer. Choose <guimenuitem>Other...</guimenuitem> to open the <guilabel>Choose Application</guilabel> dialog and select your application manually.</para>
 
 </article>

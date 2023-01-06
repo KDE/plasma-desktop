@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:46+0000\n"
+"POT-Creation-Date: 2023-01-06 00:49+0000\n"
 "PO-Revision-Date: 2019-11-12 20:57+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: contents/ui/ToolBoxContent.qml:269
+#: contents/ui/ToolBoxContent.qml:266
 #, kde-format
 msgid "Choose Global Theme…"
 msgstr ""
 
-#: contents/ui/ToolBoxContent.qml:276
+#: contents/ui/ToolBoxContent.qml:273
 #, kde-format
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: contents/ui/ToolBoxContent.qml:298
+#: contents/ui/ToolBoxContent.qml:294
+#, kde-format
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/ui/ToolBoxContent.qml:309
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr ""

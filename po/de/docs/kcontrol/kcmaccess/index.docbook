@@ -2,263 +2,171 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 ]>
 
 <article id="kcmaccess" lang="&language;">
-<title
->Zugangshilfen</title>
+<title>Accessibility</title>
 <articleinfo>
-<authorgroup
->	
-<author
->&Mike.McBride; &Mike.McBride.mail;</author>
-<othercredit role="translator"
-><firstname
->Thomas</firstname
-><surname
->Reitelbach</surname
-><affiliation
-><address
-><email
->tr@erdfunkstelle.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<authorgroup>	
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-08</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->zugangshilfen</keyword>
-<keyword
->Tasten</keyword>
-<keyword
->Signalton</keyword>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>accessibility</keyword>
+<keyword>keys</keyword>
+<keyword>bell</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="accessibility">
-<title
->Zugangshilfen</title>
+<title>Accessibility</title>
 <sect2 id="accessibility-intro">
 
-<title
->Einleitung</title>
+<title>Introduction</title>
 
-<para
->Dieses Modul soll Benutzern helfen, die Schwierigkeiten dabei haben, akustische Signale zu hören oder die Maus zu benutzen. </para>
+<para>This module is designed to help users who have difficulty hearing
+audible cues, or who have difficulty using a keyboard.  </para>
 
-<para
->Das Modul ist in sechs Karteikarten aufgeteilt: <link linkend="access-bell"
-><guilabel
->Signale</guilabel
-></link
->, <link linkend="access-modifier-keys"
-><guilabel
->Sondertasten</guilabel
-></link
->, <link linkend="access-keyboard-filters"
-><guilabel
->Verlangsamte Tasten</guilabel
-></link
->, <link linkend="access-activation-gestures"
-><guilabel
->Aktivierungsgesten</guilabel
-></link
->, <link linkend="mouse-navigation"
-><guilabel
->Mausnavigation</guilabel
-></link
-> und <link linkend="access-screenreader"
-><guilabel
->Screenreader</guilabel
-></link
->. </para>
+<para>
+The module is divided into six tabs: <link
+linkend="access-bell"><guilabel>Bell</guilabel></link>, <link
+linkend="access-modifier-keys"><guilabel>Modifier keys</guilabel></link>, <link
+linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>, <link
+linkend="access-activation-gestures"><guilabel>Activation Gestures</guilabel></link>, <link
+linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, and <link
+linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>.
+</para>
 
 <sect3 id="access-bell">
-<title
-><guilabel
->Signale</guilabel
-></title>
+<title><guilabel>Bell</guilabel></title>
 
-<para
->Diese Karte ist aufgeteilt in die Abschnitte <guilabel
->Hörbares Signal</guilabel
-> und <guilabel
->Sichtbares Signal</guilabel
->. </para>
+<para>
+This panel is divided into an <guilabel>Audible Bell</guilabel> section
+and a <guilabel>Visible Bell</guilabel> section.
+</para>
 
-<para
->Das oberste Ankreuzfeld <guilabel
->Signalton des Systems verwenden</guilabel
-> legt fest, ob der normale Signalton Ihres Systems benutzt werden soll. Falls die Option deaktiviert ist, ist der Signallautsprecher des Rechners stillgelegt. </para>
+<para>
+The top check box labeled <guilabel>Use System Bell</guilabel>, determines
+whether the normal System bell rings.  If this option is disabled, the
+System bell will be silenced.
+</para>
 
-<para
->Mit dem nächsten Ankreuzfeld können Sie festlegen, dass ein beliebiger Klang abgespielt wird, wenn der Systemton ausgelöst wird. Um dies zu einzuschalten, aktivieren Sie das Ankreuzfeld <guilabel
->Benutzerdefiniertes Signal verwenden</guilabel
-> und geben den kompletten Pfad zur gewünschten Klangdatei im Eingabefeld hinter dem Text <guilabel
->Abzuspielender Klang</guilabel
-> ein. Mit dem Knopf <guibutton
->Durchsuchen</guibutton
-> können Sie die gewünschte Datei in einem Dateiauswahldialog festlegen. </para>
+<para>
+The next check box down can be used to play a different sound whenever
+the system bell is triggered.  To activate, place a mark in the check
+box labeled <guilabel>Use customized bell</guilabel>, and enter the
+complete pathname to the sound file in the text box labeled
+<guilabel>Sound to play</guilabel>.  If you want, you can select the
+<guibutton>Browse</guibutton> button to navigate through your filesystem
+to find the exact file.
+</para>
 
-<para
->Für Benutzer, die Schwierigkeiten haben, den Signalton zu hören, oder die an einem Rechner ohne Sound-Unterstützung arbeiten, bietet &kde; die Möglichkeit an, stattdessen ein <emphasis
->sichtbares Signal</emphasis
-> zu verwenden. Dieses kann entweder kurzzeitig die Farben des Bildschirms invertieren oder die Arbeitsfläche in einer wählbaren Farbe aufleuchten lassen, anstatt den Signalton auszugeben. </para>
+<para>
+For those users who have difficulty hearing the System bell, or those
+users who have a silent computer, &kde; offers the <emphasis>visual bell</emphasis>.  This
+provides a visual signal (inverting the screen or flashing a color
+across it) when the system bell would normally sound.
+</para>
 
-<para
->Um das sichtbare Signal zu benutzen, aktivieren Sie zuerst das Ankreuzfeld <guilabel
->Sichtbares Signal verwenden</guilabel
-> an. </para>
+<para>
+To use the visual bell, first place a mark in the check box labeled
+<guilabel>Use visual bell</guilabel>.
+</para>
 
-<para
->Sie können dann auswählen zwischen <guilabel
->Bildschirm invertieren</guilabel
->, oder <guilabel
->Aufleuchten des Bildschirms</guilabel
->. Wenn Sie <guilabel
->Bildschirm invertieren</guilabel
-> wählen, werden alle Farben auf dem Bildschirm kurzzeitig invertiert. Wenn Sie <guilabel
->Aufleuchten des Bildschirms</guilabel
-> wählen, können Sie die Farbe, in der der Bildschirm aufleuchten soll, mit dem daneben liegenden Knopf auswählen. </para>
+<para>
+You can then select between <guilabel>Invert screen</guilabel>, or
+<guilabel>Flash screen</guilabel>.  If you select <guilabel>Invert
+screen</guilabel>, all colors on the screen will be reversed.  If you
+choose <guilabel>Flash screen</guilabel>, you can choose the color by
+clicking the button to the right of the <guilabel>Flash
+screen</guilabel> selection.
+</para>
 
-<para
->Mit dem Drehfeld können Sie die Dauer des sichtbaren Signals verändern. Der Standardwert beträgt 500 msek, also eine halbe Sekunde. </para>
+<para>
+The spin box can be used to adjust the duration of the visible
+bell.  The default value is 500 msec, or half a second.
+</para>
 
 </sect3>
 
 <sect3 id="access-modifier-keys">
-<title
-><guilabel
->Klebende Tasten</guilabel
-></title>
+<title><guilabel>Modifier keys</guilabel></title>
 
-<para
->Auf dieser Karte gibt es die Abschnitte <guilabel
->„Klebende“ Tasten</guilabel
-> und <guilabel
->Sperrtasten</guilabel
->.</para>
+<para>There are the two sections <guilabel>Sticky Keys</guilabel>
+and <guilabel>Locking Keys</guilabel> to this panel.</para>
 
 <variablelist>
 <varlistentry>
-<term
-><guilabel
->„Klebende“ Tasten verwenden</guilabel
-></term>
+<term><guilabel>Use Sticky Keys</guilabel></term>
 <listitem>
-<para
->Wenn diese Einstellung aktiviert ist, müssen Sie die Tasten &Shift;, &Alt; oder &Ctrl; nicht gedrückt halten, um zusammen mit einer anderen Taste eine Tastenkombination zu bilden. Sie können dann zuerst eine der Tasten drücken, wieder loslassen und dann die weiteren Tasten drücken. Beispiel: <keycombo action="simul"
->&Ctrl; &Alt; &Del;</keycombo
-> könnte erreicht werden durch &Ctrl; dann &Alt; dann &Del;. </para>
+<para>
+If this option is enabled, you can press and release the &Shift;,
+&Alt; or &Ctrl; keys, and then press another key to get a key combo
+(example: <keycombo action="simul">&Ctrl;&Alt;&Del;</keycombo> could
+be done with &Ctrl;, then &Alt; and then &Del;).
+</para>
 
-<para
->In diesem Abschnitt gibt es noch ein Ankreuzfeld <guilabel
->Klebende Tasten einrasten</guilabel
->. Wenn dieses Feld markiert ist, bleiben die Tasten &Ctrl;, &Alt; und &Shift; so lange <quote
->aktiv</quote
->, bis sie vom Benutzer wieder <quote
->freigegeben</quote
-> werden. Beachten Sie: Um eine klebende Taste einzurasten muss sie zweimal gedrückt werden. </para>
+<para>
+Also in this section is a check box labeled <guilabel>Lock Sticky
+Keys</guilabel>.  If this check box is enabled, the &Alt;, &Ctrl;
+and &Shift; keys stay <quote>selected</quote> until you
+<quote>de-selected</quote> them.
+</para>
 
-<para
->Zum Beispiel: </para>
+<para>
+As an example:
+</para>
 <variablelist>
 <varlistentry>
-<term
->Mit nicht markiertem Feld <guilabel
->Klebende Tasten einrasten</guilabel
->:</term>
+<term>With <guilabel>Lock Sticky Keys</guilabel> disabled:</term>
 <listitem>
-<para
->Der Benutzer betätigt die Taste &Shift; und dann die Taste <keycap
->F</keycap
->. Daraus macht der Rechner <keycombo action="simul"
->&Shift;<keycap
->F</keycap
-></keycombo
->. Danach betätigt der Benutzer die Taste <keycap
->P</keycap
->. Der Rechner interpretiert das als Buchstabe p (ohne Umschalttaste). </para>
+<para>If you press the &Shift; key then press the
+<keycap>F</keycap> key, the computer interprets this as <keycombo
+action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
+type a <keycap>P</keycap>, the computer interprets this as the letter p
+(no shift).
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
->Mit markiertem Feld <guilabel
->Klebende Tasten einrasten</guilabel
->:</term>
+<term>With <guilabel>Lock Sticky Keys</guilabel> enabled:</term>
 <listitem>
-<para
->Der Benutzer drückt zweimal &Shift; und dann <keycap
->F</keycap
->. Daraus macht der Rechner <keycombo action="simul"
->&Shift; <keycap
->F</keycap
-></keycombo
->. Danach drückt der Benutzer die Taste <keycap
->P</keycap
->. Der Rechner interpretiert das als Buchstabe P (<keycombo action="simul"
->&Shift; <keycap
->P</keycap
-></keycombo
->). Um die Umschalttaste wieder freizugeben, drücken Sie sie erneut. </para>
+<para>
+If you press the &Shift; key <emphasis>twice</emphasis> then press the <keycap>F</keycap> key,
+the computer interprets this as <keycombo
+action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
+type a <keycap>P</keycap>, the computer interprets this as the letter P
+(<keycombo action="simul">&Shift;<keycap>P</keycap></keycombo>). To
+de-select the &Shift; key, press it again.
+</para>
 </listitem>
 </varlistentry>
 </variablelist>
 <!--this is missing - explain it
-<para
-><guilabel
->Turn sticky keys off when two keys are pressed simultaneously</guilabel
-></para>
-<para
-><guilabel
->Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
-></para>
+<para><guilabel>Turn sticky keys off when two keys are pressed simultaneously</guilabel></para>
+<para><guilabel>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel></para>
 -->
 </listitem>
 </varlistentry>
 <!-- explain use case etc
-<guilabel
->Locking Keys</guilabel
-> what is that?
+<guilabel>Locking Keys</guilabel> what is that?
 <varlistentry>
-<term
-><guilabel
->Use system bell whenever a locking key gets activated or deactivated</guilabel
-></term>
-<listitem
-><para
-></para
-></listitem>
+<term><guilabel>Use system bell whenever a locking key gets activated or deactivated</guilabel></term>
+<listitem><para></para></listitem>
 </varlistentry>
 <varlistentry>
-<term
-><guilabel
->Use Plasma's system notification mechanism whenever a modifier or locking key 
-changes its state</guilabel
-></term>
-<listitem
-><para
->Click the <guibutton
->Configure Notifications...</guibutton
-> button to open a dialog 
-which allows you to edit the notifications for status changes of all keys</para
-></listitem>
+<term><guilabel>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel></term>
+<listitem><para>Click the <guibutton>Configure Notifications...</guibutton> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para></listitem>
 </varlistentry>
 -->
 </variablelist>
@@ -266,36 +174,32 @@ which allows you to edit the notifications for status changes of all keys</para
 </sect3>
 
 <sect3 id="access-keyboard-filters">
-<title
-><guilabel
->Verlangsamte Tasten</guilabel
-></title>
+<title><guilabel>Keyboard Filters</guilabel></title>
 
-<para
->Auf dieser Seite befinden sich zwei Abschnitte.</para>
+<para>There are two sections to this panel.</para>
 
 <variablelist>
 <varlistentry>
-<term
-><guilabel
->Verlangsamte Tasten verwenden</guilabel
-></term>
+<term><guilabel>Use slow keys</guilabel></term>
 <listitem>
-<para
->Wenn diese Einstellung aktiviert ist, müssen Sie eine Taste für eine bestimmte Zeitspanne gedrückt halten, bevor der Tastendruck akzeptiert wird. Die Zeitspanne kann mit dem Drehfeld an Ihre Bedürfnisse angepasst werden. Diese Funktion hilft Ihnen, unbeabsichtigtes Tastendrücken zu vermeiden. </para>
+<para>
+If this option is enabled, you must hold the key down for a
+specified length of time (adjustable with the spin box) before the
+keystroke will be accepted. This helps prevent accidental key strokes.
+</para>
 </listitem>
 </varlistentry>
 <!-- Acceptance delay slider 500 ms default
 Use system bell whenever a key is pressed/accepted/rejected
 -->
 <varlistentry>
-<term
-><guilabel
->Zurückschnellende Tasten verwenden</guilabel
-></term>
+<term><guilabel>Use bounce keys</guilabel></term>
 <listitem>
-<para
->Wenn diese Einstellung aktiviert ist, müssen Sie nach einem Tastendruck eine gewisse Zeit warten, damit der nächste Tastendruck akzeptiert wird. Die Zeitspanne kann mit dem Drehfeld an Ihre Bedürfnisse angepasst werden. Diese Funktion hilft, unbeabsichtigtes Tastendrücken bei Menschen zu vermeiden, die &eg; Zuckungen haben. </para>
+<para>
+If this option is enabled, you must wait for a specified length of time
+(configurable with the spin box) before the next key press can be
+accepted. This prevents accidental multiple key strokes.
+</para>
 </listitem>
 </varlistentry>
 <!-- Debounce time slider 500 ms default
@@ -307,172 +211,117 @@ Use system bell whenever a key is rejected
 </sect3>
 
 <sect3 id="access-activation-gestures">
-<title
-><guilabel
->Aktivierungsgesten</guilabel
-></title>
+<title><guilabel>Activation Gestures</guilabel></title>
 
-<para
->Auf dieser Seite befinden sich zwei Abschnitte.</para>
+<para>There are two sections to this panel.</para>
 
 <variablelist>
 <varlistentry>
-<term
->Im Abschnitt <guilabel
->Aktivierungsgesten</guilabel
-> gibt es diese Optionen:</term>
+<term><guilabel>Activation Gestures</guilabel> with these options:</term>
 <listitem>
 <para>
 <simplelist>
-<member
-><guilabel
->Gesten zur Aktivierung klebender und verlangsamter Tasten verwenden</guilabel
-></member>
-<member
->Hier können Sie Tastaturgesten aktivieren, die folgende Funktionen einschalten:</member>
-<member
->Maustasten: Drücken Sie &Shift; + Zahlen-Feststelltaste</member>
-<member
->Klebende Tasten: Drücken Sie fünfmal hintereinander die &Shift;taste</member>
-<member
->Verlangsamte Tasten: Halten Sie die &Shift;taste für 8 Sekunden gedrückt</member>
-<member
-><guilabel
->Klebende und verlangsamte Tasten bei Inaktivität automatisch deaktivieren</guilabel
-></member>
+<member><guilabel>Use gestures for activating sticky keys and slow keys</guilabel></member>
+<member>Here you can activate keyboard gestures that turn on the following features:</member>
+<member>Mouse Keys: Press &Shift;+NumLock</member>
+<member>Sticky keys: Press &Shift; key 5 consecutive times</member>
+<member>Slow keys: Hold down &Shift; for 8 seconds</member>
+<member><guilabel>Turn sticky keys and slow keys off after a certain period of inactivity</guilabel></member>
 </simplelist>
 </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
->Im Abschnitt <guilabel
->Benachrichtigung</guilabel
-> gibt es diese Optionen:</term>
+<term><guilabel>Notification</guilabel> with these options:</term>
 <listitem>
 <para>
 <simplelist>
-<member
-><guilabel
->Signalton verwenden, wenn eine Aktivierungsgeste für die Zugangshilfen verwendet wurde</guilabel
-></member>
+<member><guilabel>Use the system bell whenever a gesture is used to turn an accessibility 
+feature on or off</guilabel></member>
 
-<member
-><guilabel
->Bestätigungsdialog anzeigen, wenn eine Geste angewendet wird</guilabel
-></member>
-<member
->Ist diese Einstellung aktiviert, zeigt &kde; einen Bestätigungsdialog an, sobald eine Geste angewendet wird.</member>
-<member
->Sie sollten wissen, was sie tun, wenn Sie diese Einstellung deaktivieren. In diesem Fall werden Einstellungen der Tastatur für Zugangshilfen ohne Rückfrage angewendet.</member>
+<member><guilabel>Show a confirmation dialog whenever a keyboard accessibility feature is 
+turned on or off</guilabel></member>
+<member>If this option is checked, &kde; will show a confirmation dialog whenever a 
+keyboard accessibility feature is turned on or off.</member>
+<member>Ensure you know what you are doing if you uncheck it, as the keyboard 
+accessibility settings will then always be applied without confirmation.</member>
 
-<member
-><guilabel
->&kde;-Systemnachrichten verwenden, wenn eine Tastatur-Zugangshilfe aktiviert/deaktiviert wurde</guilabel
-></member>
+<member><guilabel>Use &kde;'s system notification mechanism whenever a keyboard accessibility 
+feature is turned on or off</guilabel></member>
 </simplelist>
 </para>
 </listitem>
 </varlistentry>
 </variablelist>
-<para
->Klicken Sie auf den Knopf <guibutton
->Benachrichtigungen festlegen</guibutton
->, um einen Dialog zur Bearbeitung von Benachrichtigungen über Statusänderungen aller Tasten zu öffnen.</para>
+<para>Click the <guibutton>Configure Notifications</guibutton> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys.</para>
 
 </sect3>
 
 <sect3 id="mouse-navigation">
-<title
->Mausnavigation</title>
+<title>Mouse Navigation</title>
 
-<para
->Auf dieser Karteikarte können Sie den Zahlenblock auf der Tastatur wie ein mausähnliches Gerät einrichten. Das kann nützlich sein, wenn es keine Anschlußmöglichkeit für ein Zeigegerät gibt oder der Zahlenblock ansonsten nicht genutzt wird. </para>
+<para>
+This tab allows you to configure the keyboard number pad keys as a mouse-type device. This may be useful when you are working on a device without another pointing device, or where you have no other use for the number pad.
+</para>
 
 <variablelist>
 
 <varlistentry>
-<term
-><guilabel
->Maus per Tastatur bewegen (Zahlenblock)</guilabel
-></term>
+<term><guilabel>Move pointer with keyboard (using the num pad)</guilabel></term>
 <listitem>
-<para
->Um den Zahlenblock im Mausmodus zu verwenden, müssen Sie das Ankreuzfeld <guilabel
->Maus per Tastatur bewegen (Zahlenblock)</guilabel
-> aktivieren. Daraufhin werden die anderen Einstellungen freigeschaltet, und Sie können das Verhalten der Tastatur im Mausmodus, wenn nötig, an Ihre Bedürfnisse anpassen. </para>
-<para
->Die Tasten auf dem Zahlenblock führen eine Bewegung in die Richtung aus, die Sie auch erwarten würden. Beachten Sie, dass Aufwärts, Abwärts, Links und Rechts auch eine Bewegung in diagonaler Richtung möglich ist. Die Taste <keycap
->5</keycap
-> simuliert das Betätigen einer Maustaste, normalerweise ist das die linke Maustaste. Sie können die simulierte Maustaste mit <keycap
->/</keycap
-> (linke Maustaste), <keycap
->*</keycap
-> (mittlere Maustaste) und <keycap
->-</keycap
-> (rechte Maustaste) umschalten. Das Betätigen von <keycap
->+</keycap
-> simuliert einen Doppelklick mit der gewählten Maustaste. Über die Taste <keycap
->0</keycap
-> können Sie eine gedrückte Maustaste (&eg; für Ziehen und Fallenlassen) simulieren und die Taste <keycap
->,</keycap
-> für das Loslassen der Maustaste. </para>
+<para>
+To enable keyboard mouse mode, you need to select the check box labeled <guilabel>Move pointer with keyboard (using the num pad)</guilabel>. When you do this, the other settings will become enabled, and you can customize the keyboard pointer behavior further, if required.
+</para>
+<para>
+The various keys on the number pad move in the direction you would expect. Note that you can move diagonally as well as up, down, left and right.  The <keycap>5</keycap> key emulates a click to a pointer button, typically &LMB;. You change which button is emulated by using the <keycap>/</keycap> key (which makes it &LMB;), <keycap>*</keycap> key (which makes it &MMB;) and <keycap>-</keycap> (which makes it &RMB;). Using the <keycap>+</keycap> emulates a double click to the selected pointer button. You can use the <keycap>0</keycap> key to emulate holding down the selected pointer button (for easy dragging), and then use the <keycap>.</keycap> to emulate releasing the selected pointer button.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Zeigerverzögerung</guilabel
-></term>
+<term><guilabel>Acceleration delay</guilabel></term>
 <listitem>
-<para
->Das ist der Zeitraum (in Millisekunden) zwischen der ersten Tastenbetätigung und dem ersten Signal, das eine wiederholte Mausbewegung anzeigt, um die Zeigerbewegung zu beschleunigen. </para>
+<para>
+This is the time (in milliseconds) between the initial key press and the first repeated motion event for mouse key acceleration.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Wiederholungsabstand</guilabel
-></term>
+<term><guilabel>Repeat interval</guilabel></term>
 <listitem>
-<para
->Dies ist der Abstand in Millisekunden, der bei der Beschleunigung der Tastaturmaus zwischen den Signalen für eine wiederholte Bewegung vergeht. </para>
+<para>
+This is the time in milliseconds between repeated motion events for mouse key acceleration.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Zeigerbeschleunigung</guilabel
-></term>
+<term><guilabel>Acceleration time</guilabel></term>
 <listitem>
-<para
->Dies ist die Zeit in Millisekunden, bis die Beschleunigung des Mauszeigers ihren maximalen Wert erreicht. </para>
+<para>
+This is the time in milliseconds before the pointer reaches a maximum speed for mouse key acceleration.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Maximale Geschwindigkeit</guilabel
-></term>
+<term><guilabel>Maximum speed</guilabel></term>
 <listitem>
-<para
->Dies ist die maximale Geschwindigkeit in Pixeln pro Sekunde, die bei der Beschleunigung der Tastaturmaus erreicht werden kann. </para>
+<para>
+This is the maximum speed in pixels per second the pointer can reach for mouse key acceleration.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Beschleunigungsprofil</guilabel
-></term>
+<term><guilabel>Acceleration profile</guilabel></term>
 <listitem>
-<para
->Dies ist die Steigung der Beschleunigungskurve für die Tastaturmausbeschleunigung. </para>
+<para>
+This is the slope of the acceleration curve for mouse key acceleration.
+</para>
 </listitem>
 </varlistentry>
 
@@ -481,39 +330,29 @@ Use system bell whenever a key is rejected
 </sect3>
 
 <sect3 id="access-screenreader">
-<title
-><guilabel
->Screenreader</guilabel
-></title>
+<title><guilabel>Screen Reader</guilabel></title>
 
-<para
->Installieren Sie einen Screenreader wie <ulink url="https://de.wikipedia.org/wiki/Orca_(Screenreader)"
->Orca</ulink
-> zusammen mit dem Programm <application
->speech-dispatcher</application
->. </para>
+<para>Install a screen reader application like
+<ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)">Orca</ulink>
+together with <application>speech-dispatcher</application>.
+</para>
 
-<para
->Überprüfen Sie, ob die Soundausgabe von speech-dispatcher funktioniert, indem Sie den Befehl <command
->spd-say hello</command
-> in einem eingeben. </para>
+<para>Test that sound from speech dispatcher works using the command
+<command>spd-say hello</command> in a terminal.
+</para>
 
-<para
->Zusätzlich benötigen Sie einen Sprachsynthesizer wie &eg; <application
->espeak</application
->. </para>
+<para>In addition you need a text to speech synthesizer like &eg; <application>espeak</application>.
+</para>
 
-<para
->Aktivieren Sie den Screenreader im Ankreuzfeld, melden Sie sich ab und starten Sie Ihre Arbeitsfläche neu. </para>
+<para>Enable the screen reader in the checkbox, logout and restart your desktop session.
+</para>
 
-<para
->In &plasma; müssen Sie das traditionelle <guilabel
->Anwendungsmenü</guilabel
-> verwenden und überprüfen, das diesem Menü der Kurzbefehl (<keycombo action="simul"
->&Alt;<keycap
->F1</keycap
-></keycombo
->) zugewiesen ist. Wenn Sie diesen Kurzbefehl benutzen, sollte dieses Menü geöffnet werden und die Navigation im Menü mit den Cursortasten möglich sein. </para>
+<para>For &plasma; itself, make sure to use the traditional <guilabel>Application Menu</guilabel>,
+and check that this menu has a keyboard shortcut associated
+(<keycombo action="simul">&Alt;<keycap>F1</keycap></keycombo>).
+When pressing this shortcut, the menu should open and be read when navigating
+the menu with the arrow keys.
+</para>
 </sect3>
 
 </sect2>

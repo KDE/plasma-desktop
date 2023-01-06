@@ -2,174 +2,109 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 ]>
 
 <article id="workspaceoptions" lang="&language;">
 <articleinfo>
-<title
->Allgemeines Verhalten</title>
+<title>General Behavior</title>
 <authorgroup>
-<author
->&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2022-05-18</date>
+<date>2022-05-18</date>
 
-<releaseinfo
->&plasma; 5.25</releaseinfo>
+<releaseinfo>&plasma; 5.25</releaseinfo>
 
 <keywordset>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Arbeitsfläche</keyword>
-<keyword
->Arbeitsbereich</keyword>
+<keyword>System Settings</keyword>
+<keyword>desktop</keyword>
+<keyword>workspace</keyword>
 </keywordset>
 
 </articleinfo>
 
-<para
->Mit diesem Modul können Sie das allgemeine Verhalten des Arbeitsbereichs einrichten. </para>
+<para>This is a module to configure general workspace behavior.
+</para>
 
 <variablelist>
 
 <varlistentry>
-<term
-><guilabel
->Kurzinfos bei Überfahren mit dem Mauszeiger anzeigen</guilabel
-></term>
+<term><guilabel>Display informational tooltips on mouse hover</guilabel></term>
 <listitem>
-<para
->Ist dies aktiviert, werden beim Überfahren von Elementen in der &plasma;-Kontrollleiste oder auf der Arbeitsfläche Kurzinfos angezeigt.</para>
+<para>If this option is checked, tooltips are displayed hovering items in the
+&plasma; panel or on the desktop.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Visuelle Rückmeldung bei Statusänderungen anzeigen</guilabel
-></term>
+<term><guilabel>Display visual feedback for status changes</guilabel></term>
 <listitem>
-<para
->Wenn Sie &eg; Bildschirmhelligkeit und Lautstärke über die Tastatur ändern, wird der Status in einem OSD (On Screen Display) angezeigt.</para>
+<para>If you change &eg; brightness and volume using the keyboard these status
+changes are displayed in an OSD.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Animationsgeschwindigkeit</guilabel
-></term>
+<term><guilabel>Animation speed</guilabel></term>
 <listitem>
-    <para
->Stellen Sie hier die Geschwindigkeit der Animation für Arbeitsflächeneffekte von <guilabel
->Langsam</guilabel
-> bis <guilabel
->Sofort</guilabel
-> ein.</para>
+    <para>Allows you to set the speed of desktop effect animations from <guilabel>Slow</guilabel> to <guilabel>Instant</guilabel>.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Einfacher Klick zum Öffnen von Dateien und Ordnern</guilabel
-></term>
+<term><guilabel>Single-click to open files and folders</guilabel></term>
 <listitem>
-<para
->Dies ist die Standardeinstellung. Ein einfacher Klick auf ein Symbol öffnet es. Zur Auswahl können Sie einen Rahmen um die Symbole ziehen oder <keycombo action="simul"
->&Ctrl;<mousebutton
->Rechte Maustaste</mousebutton
-></keycombo
-> verwenden oder aber einfach klicken und die Taste zum Verschieben gedrückt halten. Außerdem können Sie durch Klicken auf die Auswahlmarkierung eines Eintrags auswählen.</para>
+<para>This is the default setting. Clicking once on an icon
+will open it.  To select you can drag around the icon(s) or <keycombo
+action="simul">&Ctrl;<mousebutton>Right</mousebutton></keycombo> click,
+or simply click and hold to drag it.
+Selection can also be done by clicking on item's selection marker.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Doppelklick zum Öffnen von Dateien und Ordnern</guilabel
-></term>
+<term><guilabel>Double-click to open files and folders</guilabel></term>
 <listitem>
-<para
->Wenn diese Option nicht markiert ist, werden Symbole/Dateien durch einen einfachen Klick der <mousebutton
->linken Maustaste</mousebutton
-> geöffnet. Dieses Verhalten stimmt mit dem Verhalten der meisten Internet-Browser überein. Wenn diese Option markiert ist, werden Symbole/Dateien durch einen Doppelklick geöffnet. Ein einfacher Klick wählt das Symbol nur. Dieses Verhalten kennen Sie vielleicht von anderen Benutzeroberflächen und Betriebssystemen.</para>
+<para>If this option is not checked, icons/files will be opened with a
+single click of the <mousebutton>left</mousebutton> mouse-button. This
+default behavior is consistent with what you would expect when you click
+links in most web browsers. If checked however, icons/files will be
+opened with a double click, while a single click will only select the
+icon or file. This is the behavior you may know from other desktops or
+operating systems.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Klicken in Bildlaufleiste</guimenu
-><guimenuitem
->Eine Seite hoch oder runter</guimenuitem
-></menuchoice
-></term>
+<term><menuchoice><guimenu>Clicking in scrollbar track</guimenu><guimenuitem>Scrolls one page up and down</guimenuitem></menuchoice></term>
 <listitem>
-<para
->Dies ist die Voreinstellung. Durch Linksklick in die Bildlaufleiste verschiebt die Bildlaufleiste um eine Seite nach oben oder unten.</para>
+<para>This is the default setting. Left-click in scrollbar track moves scrollbar by one page.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Klicken in Bildlaufleiste</guimenu
-><guimenuitem
->Geht zur angeklickten Position</guimenuitem
-></menuchoice
-></term>
+<term><menuchoice><guimenu>Clicking in scrollbar track</guimenu><guimenuitem>Scrolls to the clicked location</guimenuitem></menuchoice></term>
 <listitem>
-<para
->Durch Klicken in die Bildlaufleiste gehen Sie direkt zur entsprechenden Position im Dokument. Diese Verhalten kennen Sie wahrscheinlich von anderen Arbeitsflächen oder Betriebssystemen,</para>
+<para>Turns on the behavior when the scroll handle position jumps right to the position in the document where you have clicked. This is the behavior you may know from other desktops or operating systems.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><menuchoice
-><guimenu
->Touch-Modus</guimenu
-><guimenuitem
->Bei Bedarf automatisch aktiviert/Niemals aktiviert</guimenuitem
-></menuchoice
-></term>
+<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Automatically enable as needed/Never enabled</guimenuitem></menuchoice></term>
 <listitem>
-<para
->Der Touch-Modus wird automatisch aktiviert, wenn das System einen Touchscreen erkennt, aber keine Maus oder kein Touchpad. Zum Beispiel, wenn die Tastatur eines 2-in-1-Notebooks umgedreht oder abgenommen wird.</para>
+<para>Touch Mode will be automatically activated whenever the system detects a 
+touchscreen but no mouse or touchpad. For example: when a transformable 
+laptop's keyboard is flipped around or detached.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guimenuitem
->Immer aktiviert (Standard) / Niemals aktiviert</guimenuitem
-></term>
+<term><guimenuitem>Always enabled (default)/Never enabled</guimenuitem></term>
 <listitem>
-<para
->Im Touch-Modus werden viele Elemente der Benutzeroberfläche vergrößert, um die Bedienung zu erleichtern.</para>
+<para>In Touch Mode, many elements of the user interface will become larger to 
+more easily accommodate touch interaction.</para>
 </listitem>
 </varlistentry>
 

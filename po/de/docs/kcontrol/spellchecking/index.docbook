@@ -2,176 +2,114 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 <!ENTITY kappname "&sonnet;">
 ]>
 
 <article id="spellchecking" lang="&language;">
 <articleinfo>
-<title
->Rechtschreibprüfung</title>
+<title>Spell Checker</title>
 
 <authorgroup>
-<author
->&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author>&Lauri.Watts; &Lauri.Watts.mail;</author>
 
-<othercredit role="translator"
-><firstname
->Frank</firstname
-><surname
->Schütte</surname
-> <affiliation
-><address
-><email
->F.Schuette@t-online.de</email
-></address
-></affiliation
-> <contrib
->Deutsche Übersetzung</contrib
-></othercredit
-> 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-08</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Rechtschreibung</keyword>
-<keyword
->Wörterbuch</keyword>
+<keyword>KDE</keyword>
+<keyword>Spelling</keyword>
+<keyword>dictionary</keyword>
 </keywordset>
 
 </articleinfo>
 
 <sect1 id="spellchecker">
-<title
->Rechtschreibprüfung</title>
-<para
->Die Einstellungen in diesem Modul werden als Voreinstellung von allen &kde;-Anwendungen benutzt, die &sonnet; verwenden. &sonnet; ist eine Benutzeroberfläche für verschiedene freie Rechtschreibprüfungen.</para>
+<title>Spell Checker</title>
+<para>The configuration options available here are used as default by all &kde;
+applications that use &sonnet;, which is a frontend to various free spell checkers.</para>
 
-<para
->Um &sonnet; benutzen zu können, müssen Sie Rechtschreibprogramme wie &eg; <ulink url="http://aspell.net/"
->&GNU; Aspell</ulink
->, <ulink url="http://hspell.ivrix.org.il/"
->Hspell</ulink
->,  oder <ulink url="https://hunspell.github.io/"
->Hunspell</ulink
-> und zusätzlich auch die zugehörigen Wörterbücher für Ihre Sprache installieren.</para>
+<para>To use &sonnet; you need to install spell checkers like &eg; 
+<ulink url="http://aspell.net/">&GNU; Aspell</ulink>,
+<ulink url="http://hspell.ivrix.org.il/">Hspell</ulink> or 
+<ulink url="https://hunspell.github.io/">Hunspell</ulink>
+and additionally the corresponding dictionaries for your language.</para>
 
-<para
->Einstellungen in diesen Modul können in jeder Anwendung überschrieben werden.</para>
+<para>The configuration options selected here can be overridden by each application.</para>
 
-<para
->Wählen Sie aus dem Auswahlfeld <guilabel
->Standardsprache</guilabel
-> aus den verfügbaren Wörterbüchern eines aus, das &sonnet; verwenden soll. </para>
+<para>In the drop down box <guilabel>Default language</guilabel> choose from the 
+available dictionaries, which one to use for &sonnet;. </para>
 
 <sect2 id="spell-options">
-<title
->Einstellungen</title>
+<title>Options</title>
 
 <variablelist>
  
 <varlistentry>
-<term
-><guilabel
->Automatische Erkennung der Sprache aktivieren</guilabel
-></term>
+<term><guilabel>Enable autodetection of language</guilabel></term>
 <listitem>
-<para
->Diese Funktion basiert auf mehreren heuristischen Methoden, verwendetes Skript, Trigramm-Übereinstimmung und Rangordnung der Sprach in den verfügbaren Sprachen des Moduls zur Rechtschreibprüfung. Damit ist es möglich, in einem mehrsprachigen Dokument automatisch die Sprache für die Rechtschreibprüfung zu wechseln. </para>
+<para>This feature is based on several heuristics (script used, trigram matching and 
+language ranking on available languages in the spell-checking backend). 
+This allows it to automatically switch language in a multi-language document.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Automatische Rechtschreibprüfung in der Voreinstellung aktiviert</guilabel
-></term>
+<term><guilabel>Automatic spell checking enabled by default</guilabel></term>
 <listitem>
-<para
->Wenn Sie dieses Ankreuzfeld markiert haben werden die Wörter in Ihrem Dokument auf richtige Schreibweise überprüfen, während Sie schreiben. Falsch geschriebene Wörter werden rot unterstrichen dargestellt. </para>
+<para>If a mark is placed in this checkbox, the spelling of words will be check in your document 
+as you type them. Misspelled will have a red line drawn under them.
+</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Durchgehend groß geschriebene Wörter überspringen</guilabel
-></term>
+<term><guilabel>Skip all uppercase words</guilabel></term>
 <listitem>
-<para
->Wenn dieses Ankreuzfeld markiert ist, werden keine vollständig in Großbuchstaben geschrieben Wörter überprüft.</para>
-<tip
-><para
->Das ist dann nützlich, wenn Sie ein Dokument mit vielen Abkürzungen schreiben. Wenn dieses Ankreuzfeld nicht markiert ist, werden die meisten Abkürzungen fälschlicherweise als fehlerhaft markiert. Wenn Sie diese Einstellung aktivieren, werden diese Abkürzungen nicht als fehlerhaft geschrieben markiert.</para
-></tip>
+<para>If a mark is placed in this checkbox, the spelling of any word which consists of all capital 
+letters will not be checked.</para>
+<tip><para>This is useful for document using a large number of acronyms. If this box is left unchecked, 
+most of those acronyms will be incorrectly marked. By placing a mark in this checkbox, 
+the acronyms will not be marked as misspelled.</para></tip>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term
-><guilabel
->Zusammengezogene Wörter überspringen</guilabel
-></term>
-<listitem
-><para
->Ist diese Option markiert, werden Wörter, die im Wörterbuch getrennt auftauchen und im Text zusammengeschrieben erscheinen, als Rechtschreibfehler betrachtet. Zum Beispiel wird <quote
->Armbanduhr</quote
-> auch dann als Rechtschreibfehler betrachtet, wenn es nicht im Wörterbuch auftaucht, die Wörter <quote
->Armband</quote
-> und <quote
->Uhr</quote
->aber einzeln im Wörterbuch vorhanden sind. </para>
+<term><guilabel>Skip run-together words</guilabel></term>
+<listitem><para>If this box is not checked, then words that appear in the
+dictionary separately, but have been run together, are considered to be
+spelling errors. Examples of such words are shutout, cannot, and blackout.
+</para>
 
-<tip
-><para
->Mit dieser Einstellung werden Wörter wie Webseiten- und E-Mail-Adressen nicht als Fehler markieren. Diese Adressen enthalten oft zusammengeschriebene Wörter.</para
-></tip>
+<tip><para>Checking this box will help prevent applications from flagging website and email addresses 
+for spelling errors. These addresses often contain words run together.</para></tip>
 </listitem>
 </varlistentry>
 
 </variablelist>
 </sect2>
 <!-- from koffice/kword/opt.docbook 1.6.2--> 
-<sect2
-><title
->Ignorierte Wörter</title>
-<para
->In der unteren Hälfte des Dialogs können Sie besondere Wörter festlegen (z. B. Fachbegriffe, Eigennamen &etc;) die von der Rechtschreibprüfung ignoriert werden.</para>
+<sect2><title>Ignored words</title>
+<para>The bottom half of the dialog box allows you to designate specific words (they may be specialized terminology, proper names, &etc;) which
+should be ignored by the spelling program.</para>
 
-<sect3
-><title
->Ein Wort zur Ignorieren-Liste hinzufügen</title>
-<para
->Um hier ein Wort hinzuzufügen, geben Sie das Wort im Textfeld ein und klicken auf den Knopf <guibutton
->Hinzufügen</guibutton
->.</para>
+<sect3><title>Adding a word to the ignore list</title>
+<para>To add a word, type the word in the text box and click the <guibutton>Add</guibutton> button.</para>
 </sect3>
 
-<sect3
-><title
->Ein Wort aus der Ignorieren-Liste entfernen</title>
-<para
->Ein Wort in der aktuellen Ignorieren-Liste wird entfernt, indem Sie es mit einem Klick mit der &LMBn; markieren und anschließend auf den Knopf <guibutton
->Entfernen</guibutton
-> klicken.</para>
+<sect3><title>Deleting a word from the ignore list</title>
+<para>To remove a word, select the word in the listbox containing all the currently ignored words by clicking on it with
+the &LMB;.  Now click the <guibutton>Remove</guibutton> button.</para>
 
-<para
->Nachdem Sie alle Einstellungen angepasst haben, klicken sie auf <guibutton
->Anwenden</guibutton
->, um die Änderungen zu übernehmen.</para>
+<para>When you are happy with the changes, simply click
+<guibutton>Apply</guibutton>.</para>
 
-<para
->Mit dem Knopf <guibutton
->Voreinstellungen</guibutton
-> setzen Sie alle Einstellungen auf ihre Standardwerte zurück.</para>
+<para>Clicking on the <guibutton>Defaults</guibutton> button restores all
+values to their default values.</para>
 </sect3>
 
 </sect2>
