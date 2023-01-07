@@ -2,55 +2,70 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
 <article id="cursortheme" lang="&language;">
 <articleinfo>
-<title>Cursor Theme</title>
+<title
+>Zeigerdesign</title>
 <authorgroup>
-<author>&Mike.McBride; &Mike.McBride.mail;</author>
-<author>&Brad.Hards; &Brad.Hards.mail;</author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<!-- Unbekannt --> 
 </authorgroup>
 
-<date>2021-04-07</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date
+>2021-04-07</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
 
 <abstract>
-<para>This is the documentation for the &systemsettings; module to 
-customize the mouse cursor appearance.
-</para>
+<para
+>Dies ist die Dokumentation für das &systemsettings;-Modul, mit dem das Erscheinungsbild des Mauszeigers eingerichtet wird. </para>
 </abstract>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>Systemsettings</keyword>
-<keyword>mouse</keyword>
-<keyword>cursor</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>mouse</keyword>
+<keyword
+>cursor</keyword>
 </keywordset>
 </articleinfo>
 
-<para>
-This module allows you to select from several installed cursor themes
-from a preview of the cursor display.
-</para>
+<para
+>Dieses Modul erlaubt die Auswahl eines Zeigerdesigns aus einer Vorschau aller installierten Designs. </para>
 
-<para>The features provided by this module may not be available on some systems. 
-Your system may need to be updated to support cursor themes.
-</para>
+<para
+>Die auf diesem Modul angebotenen Funktionen sind nicht auf allen Systemen verfügbar. </para>
 
-<para>
-If you have additional cursor themes available, you can remove them using the trash button that appears when you hover the mouse pointer over the theme item in the list. Note that you cannot remove the default themes.
-</para>
+<para
+>Wenn Sie über weitere Zeigerdesigns verfügen, können Sie diese über den Knopf „Papierkorb“ löschen. Dieser Knopf wird angezeigt, wenn Sie den Mauszeiger auf ein Design in der Liste führen. Beachten Sie, dass Sie das Standard-Design nicht löschen können. </para>
 
-<para>Some themes allow choosing the cursor size. Use the <guilabel>Size</guilabel> field to select the appropriate size. Available sizes are displayed when you hoover the theme item in the list box with the mouse pointer.
-</para>
+<para
+>Bei einigen Designs können Sie die Zeigergröße einstellen. Benutzen Sie das Feld <guilabel
+>Größe</guilabel
+>, um einen passenden Wert auszuwählen. Die vorhandenen Größen werden angezeigt, wenn Sie den Mauszeiger auf ein Design in der Liste führen. </para>
 
-<para>
-If you have additional cursor themes available, you can install them using the <guibutton>Install from File...</guibutton> button below the list box. See <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme">these instructions</ulink> on the details on how to create the custom cursor theme.
-</para>
+<para
+>Wenn Sie über weitere Zeigerdesigns verfügen, können Sie diese über den Knopf <guibutton
+>Aus Datei installieren</guibutton
+> unter dem Listenfeld installieren. Auf dieser <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>Seite</ulink
+> finden Sie Angaben, wie ein eigenes angepasstes Zeigerdesign erstellt wird. </para>
 
-<para>Use the <guibutton>Get New Cursors...</guibutton> button to launch the <guilabel>Download New Cursors</guilabel> dialog and download additional themes from the Internet.</para>
+<para
+>Mit dem Knopf <guibutton
+>Neue Zeiger holen ...</guibutton
+> wird der Dialog <guilabel
+>Neue Zeiger herunterladen</guilabel
+> gestartet, hier können weitere Designs aus dem Internet heruntergeladen werden.</para>
 
 </article>

@@ -2,129 +2,218 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
 <article id="kcmactivities" lang="&language;">
-<title>Activities</title>
+<title
+>Aktivitäten</title>
 <articleinfo>
-<authorgroup>	
-<author><firstname>Yuri</firstname><surname>Chornoivan</surname>
-<email>yurchor@ukr.net</email></author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Deutsches</firstname
+><surname
+>KDE-Übersetzerteam</surname
+><affiliation
+><address
+><email
+>kde-i18n-de@kde.org</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
 </authorgroup>
 
-<date>2021-04-12</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date
+>2021-04-12</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>Systemsettings</keyword>
-<keyword>activity</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Aktivität</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="activities">
-<title>Activities</title>
+<title
+>Aktivitäten</title>
 <sect2 id="activities-intro">
 
-<title>Introduction</title>
+<title
+>Einführung</title>
 
-<para>
-    This module allows configuring activities. Activities are a way to have multiple &plasma; setups, with each a different set of widgets and themes. Some activities can be private. Such activities do not track your actions. For example, they do not track what recent document you opened.
-</para>
+<para
+>Dieses Modul ermöglicht die Einrichtung von Aktivitäten. Aktivitäten sind eine  Methode, mehrere &plasma;-Einrichtungen zu verwenden, mit jeweils einem anderen Satz von Miniprogrammen und Designs. Einige Aktivitäten können privat sein. In diesen Aktivitäten werden Ihre Aktionen nicht aufgezeichnet, z. B. welches Dokument Sie zuletzt geöffnet haben. </para>
 
-<para>
-    The module is divided into three tabs:
-    <link linkend="activities-main"><guilabel>Activities</guilabel></link>,
-    <link linkend="activities-switching"><guilabel>Switching</guilabel></link>, and
-    <link linkend="activities-privacy"><guilabel>Privacy</guilabel></link>.
-</para>
+<para
+>Dieses Modul enthält drei Karteikarten: <link linkend="activities-main"
+><guilabel
+>Aktivitäten</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Wechseln</guilabel
+></link
+> und <link linkend="activities-privacy"
+><guilabel
+>Privatsphäre</guilabel
+></link
+>. </para>
 
 <sect3 id="activities-main">
-<title><guilabel>Activities</guilabel></title>
+<title
+><guilabel
+>Aktivitäten</guilabel
+></title>
 
-<para>
-    This tab lists your current activities. Hover items in the list with the mouse pointer to reveal the buttons to configure or remove activities.
-</para>
+<para
+>Auf diese Karteikarte werden Ihre aktuellen Aktivitäten angezeigt, Führen Sie den Mauszeiger über einen Eintrag, dann werden Knöpfe angezeigt, um Aktivitäten einzurichten oder zu entfernen. </para>
 
-<para>
-    Use the <inlinemediaobject><imageobject><imagedata fileref="configure.png" format="PNG"/></imageobject></inlinemediaobject> overlay button to configure activity. You can change the following activity parameters:
-</para>
+<para
+>Verwenden Sie den Knopf <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+>zur Einrichtung der Aktivitäten.Sie können folgende Parameter einer Aktivität ändern: </para>
 
 <variablelist>
     <varlistentry>
-        <term><guilabel>Icon</guilabel></term>
+        <term
+><guilabel
+>Symbol</guilabel
+></term>
         <listitem>
-            <para>
-                The icon of activity can be seen on the activity manager selector of the &plasma; panel. Click on the current icon to choose some system-wide icon or browse the file system to select a custom icon.
-            </para>
+            <para
+>Das Symbol einer Aktivität wird in der Aktivitäts-Auswahl in der &plasma;-Kontrollleiste angezeigt. Klicken Sie auf das aktuelle Symbol und wählen Sie dann ein anderes systemweites Symbol oder Durchsuchen Sie das Dateisystem nach einem passenden Symbol. </para>
         </listitem>
     </varlistentry>
     <varlistentry>
-        <term><guilabel>Name</guilabel></term>
+        <term
+><guilabel
+>Name</guilabel
+></term>
         <listitem>
-            <para>
-                Give your activity a recognizable name.
-            </para>
+            <para
+>Geben Sie der Aktivität ein aussagekräftigen Namen. </para>
         </listitem>
     </varlistentry>
     <varlistentry>
-        <term><guilabel>Description</guilabel></term>
+        <term
+><guilabel
+>Beschreibung</guilabel
+></term>
         <listitem>
-            <para>
-                A free-form description of the activity that is shown below the name on the activity manager selector of the &plasma; panel.
-            </para>
+            <para
+>Eine freie Beschreibung der Aktivität, die unterhalb des Namens in der Aktivitäts-Auswahl in der &plasma;-Kontrollleiste angezeigt wird. </para>
         </listitem>
     </varlistentry>
     <varlistentry>
-        <term><guilabel>Privacy</guilabel></term>
+        <term
+><guilabel
+>Privatsphäre</guilabel
+></term>
         <listitem>
-            <para>
-                Check the <guilabel>Do not track usage for this activity</guilabel> item to switch off any tracking for your activity.
-            </para>
+            <para
+>Aktivieren Sie die Einstellung <guilabel
+>Die Benutzung dieser Aktivität nicht aufzeichnen</guilabel
+>, damit Ihre Aktionen nicht registriert werden. </para>
         </listitem>
     </varlistentry>
     <varlistentry>
-        <term><guilabel>Shortcut for switching</guilabel></term>
+        <term
+><guilabel
+>Kurzbefehl für das Wechseln</guilabel
+></term>
         <listitem>
-            <para>
-                Press the first button to input the new shortcut to switch to the activity. Press the second button to remove the current shortcut.
-            </para>
+            <para
+>Klicken Sie auf den ersten Knopf, um einen neuen Kurzbefehl zum Wechseln zur Aktivität einzugeben. Mit dem zweiten Knopf können Sie den aktuellen Kurzbefehl entfernen. </para>
         </listitem>
     </varlistentry>
 </variablelist>
-<para>
-    Clicking on the <inlinemediaobject><imageobject><imagedata fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> button removes the activity.
-</para>
-<para>
-    Clicking on the <guibutton>Create New...</guibutton> button below the list opens <guilabel>Create a New Activity</guilabel> dialog which is similar to the activity configuration dialog described above.
-</para>
+<para
+>Durch Klicken auf den Knopf <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> wird die Aktivität entfernt </para>
+<para
+>Klicken Sie auf den Knopf <guibutton
+>Neue Aktivität</guibutton
+> unter der Listen. Dann wird der Dialog <guilabel
+>Neue Aktivität erstellen</guilabel
+> geöffnet, der wie der bereits vorher beschrieben Einrichtungsdialog für Aktivitäten aufgebaut ist. </para>
 </sect3>
 
 <sect3 id="activities-switching">
-<title><guilabel>Switching</guilabel></title>
+<title
+><guilabel
+>Wechseln</guilabel
+></title>
 
-<para>
-    Here, you can configure if &plasma; should remember the <guilabel>Current virtual desktop</guilabel> for each activity (needs restart). It is also possible to configure shortcuts for walking through the list of activities.
-</para>
-<para>
-    For more information on how to use the &kde; shortcut system, see the <ulink url="help:/fundamentals/shortcuts.html"><emphasis>Using and Customizing Shortcuts</emphasis> section of the <emphasis>&kde; Fundamentals</emphasis> documentation</ulink>.
-</para>
+<para
+>Hier können Sie einstellen, ob &plasma; sich die <guilabel
+>Aktuelle virtuelle Arbeitsfläche</guilabel
+> für jeder Aktivität merkt. Das erfordert einen Neustart. Außerdem können Sie Kurzbefehle zum Wechseln der Aktivitäten eingeben. </para>
+<para
+>Weitere Informationen zum &kde;-Kurzbefehlsystem finden Sie im Abschnitt <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Kurzbefehle benutzen und anpassen</emphasis
+> der <emphasis
+>&kde;-Grundlagen</emphasis
+></ulink
+>. </para>
 </sect3>
 
 <sect3 id="activities-privacy">
-<title><guilabel>Privacy</guilabel></title>
+<title
+><guilabel
+>Privatsphäre</guilabel
+></title>
 
-<para>
-    This tab allows configuring the time for activities to <guilabel>Keep history</guilabel> and clean some tracking data. Use the <guibutton>Clear History</guibutton> drop-down button to make &plasma; <guimenuitem>Forget the last hour</guimenuitem>, <guimenuitem>Forget the last two hours</guimenuitem>, <guimenuitem>Forget a day</guimenuitem>, or <guimenuitem>Forget everything</guimenuitem>.
-</para>
-<para>
-    Below, you can configure the range of applications for memorizing opened documents in your activities. Use the <guilabel>For all applications</guilabel> item to store all data, the <guilabel>Do not remember</guilabel> item to switch off storing data, or <guilabel>Only for specific applications</guilabel> item for fine-grained selection (clicking on the application item toggles its current mode).
-</para>
-<para>
-    Check the <guilabel>Blacklist applications not on the list</guilabel> item to switch off tracking for all applications that are not on the list.
-</para>
+<para
+>Auf dieser Karteikarte können Sie für Aktivitäten die Zeit für <guilabel
+>Verlauf behalten</guilabel
+> einstellen und aufgezeichnete Daten löschen. Verwenden Sie die <guibutton
+>Verlauf leeren</guibutton
+>, <guimenuitem
+>Die letzte Stunde verwerfen</guimenuitem
+>, <guimenuitem
+>Die letzten zwei Stunden verwerfen</guimenuitem
+>, <guimenuitem
+>Einen Tag verwerfen</guimenuitem
+> oder <guimenuitem
+>Alles verwerfen</guimenuitem
+>. </para>
+<para
+>Darunter können Sie angeben, für welche Gruppe von Anwendungen geöffnete Dokumente in Ihren Aktivitäten aufgezeichnet werden. Mit <guilabel
+>Für alle Anwendungen</guilabel
+> werden alle Daten gespeichert, mit <guilabel
+>Nicht merken</guilabel
+> wird das Speichern von Daten vollständig abgeschaltet. Wählen Sie <guilabel
+>Nur für angegebene Anwendungen</guilabel
+>, um nur einzelne Anwendungen auszuwählen. Durch Klicken auf einen Eintrag können Sie den Status umschalten. </para>
+<para
+>Aktivieren Sie den Eintrag <guilabel
+>Nicht in dieser Liste aufgeführte Anwendungen ausschließen</guilabel
+>, um keine Aktionen für diese Anwendungen aufzuzeichnen. </para>
 </sect3>
 
 </sect2>

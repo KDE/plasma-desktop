@@ -2,59 +2,81 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
 <article id="mouse" lang="&language;">
 <articleinfo>
-<title>Mouse</title>
+<title
+>Maus</title>
 <authorgroup>
-<author>&Mike.McBride; &Mike.McBride.mail;</author>
-<author>&Brad.Hards; &Brad.Hards.mail;</author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<!-- Unbekannt --> 
 </authorgroup>
 
-<date>2021-04-06</date>
-<releaseinfo>Plasma 5.21</releaseinfo>
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
 
 <abstract>
-<para>This is the documentation for the &systemsettings; module that configures mice and other pointing devices.
-</para>
+<para
+>Dies ist die Dokumentation für das &systemsettings;-Modul, mit dem die Maus und andere Zeigegeräte eingerichtet werden. </para>
 </abstract>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>Systemsettings</keyword>
-<keyword>mouse</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>mouse</keyword>
 </keywordset>
 </articleinfo>
 
-<para>This module allows you to configure your pointing device. Your
-pointing device may be a mouse, a track ball, a touch-pad, or another piece
-of hardware that performs a similar function.</para>
+<para
+>Dieses Modul erlaubt Ihnen die Einrichtung Ihres Zeigegerätes. Das kann eine Maus, ein Trackball, ein Touchpad oder alles andere sein, das die gleiche Funktion erfüllt.</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>General</guilabel></term>
+<term
+><guilabel
+>Allgemein</guilabel
+></term>
 <listitem>
 <variablelist>
 <varlistentry>
-<term><guilabel>Left handed mouse</guilabel></term>
-<listitem><para>
-If you are left-handed, you may
-prefer to swap the functions of the <mousebutton>left</mousebutton> and
-<mousebutton>right</mousebutton> buttons on your pointing device by checking this option. If your pointing device has more than two
-buttons, only those that function as the <mousebutton>left</mousebutton> and
-<mousebutton>right</mousebutton> buttons are affected. For example, if you have
-a three-button mouse, the <mousebutton>middle</mousebutton> button is
-unaffected.</para>
+<term
+><guilabel
+>Linkshändige Bedienung</guilabel
+></term>
+<listitem
+><para
+>Falls Sie Linkshänder sind, wollen Sie vielleicht die Funktionen der <mousebutton
+>linken</mousebutton
+> und <mousebutton
+>rechten</mousebutton
+> Taste Ihres Zeigegerätes tauschen, indem Sie diese Einstellung wählen. Wenn Ihr Zeigegerät mehr als zwei Tasten hat, werden nur die <mousebutton
+>linke</mousebutton
+> und die <mousebutton
+>rechte</mousebutton
+> Taste angepasst. Haben Sie zum Beispiel eine Maus mit drei Tasten, so wird die <mousebutton
+>mittlere</mousebutton
+> Maustaste nicht verändert.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
-<term><guilabel>Press left and right buttons for middle-click</guilabel></term>
-<listitem><para>
-Check this item if you don't have a &MMB;. You can press the left and right mouse buttons at the same time to emulate middle-click.
-</para>
+<term
+><guilabel
+>Linke und rechte Taste für Mittelklick drücken</guilabel
+></term>
+<listitem
+><para
+>Haben Sie nur eine Maus mit zwei Tasten, aktivieren Sie diese Einstellung. Dann können Sie die linke und rechte Maustaste gleichzeitig drücken, um den Mittelklick zu emulieren. </para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -63,35 +85,47 @@ Check this item if you don't have a &MMB;. You can press the left and right mous
 
 <varlistentry>
 <term id="peripherals-mouse-acceleration">
-<guilabel>Pointer speed</guilabel></term>
-<listitem><para>
-This option allows you to change the relationship
-between the distance that the mouse pointer moves on the
-screen and the relative movement of the physical device
-itself (which may be a mouse, track-ball, or some other
-pointing device.)</para>
+<guilabel
+>Zeigergeschwindigkeit</guilabel
+></term>
+<listitem
+><para
+>Diese Option ermöglicht Ihnen die Einstellung der Beziehung zwischen der auf dem Monitor dargestellten Bewegung des Zeigers und der tatsächlichen Bewegung Ihres Zeigegerätes. Dabei ist es gleichgültig, um was für ein Gerät es sich dabei handelt (also Maus, Joystick, Trackball &etc;).</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Acceleration profile</guilabel></term>
-<listitem><para>
-The <guilabel>Adaptive</guilabel> profile is the default profile for all devices and takes the current speed of the device into account when deciding on acceleration. The <guilabel>Flat</guilabel> profile is simply a constant factor applied to all device deltas, regardless of the speed of motion.
-</para>
+<term
+><guilabel
+>Beschleunigungsprofil</guilabel
+></term>
+<listitem
+><para
+>Das Profil <guilabel
+>Adaptiv</guilabel
+> ist das Standardprofil für alle Geräte und berücksichtigt die aktuelle Geschwindigkeit des Geräts bei der Entscheidung über die Beschleunigung. Das Profil <guilabel
+>Flach</guilabel
+> ist einfach ein konstanter Faktor, der auf alle Geräte angewendet wird, unabhängig von der Bewegungsgeschwindigkeit. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Scrolling: Invert scroll direction</guilabel></term>
-<listitem><para>
-With this check box selected, the scroll wheel (if any) will work in the opposite direction (so that if rolling the top of the scroll wheel towards you previously causes a scroll down, then it will now cause a scroll up).
-</para>
+<term
+><guilabel
+>Bildlauf: Laufrichtung umkehren</guilabel
+></term>
+<listitem
+><para
+>Ist dieses Ankreuzfeld markiert, arbeitet das Mausrad (falls vorhanden) in entgegengesetzter Richtung. Wenn das Bewegen des Mausrades in ihre Richtung zuvor eine Bewegung nach unten auf dem Bildschirm ausgelöst hat, wird es nun eine Bewegung nach oben sein. </para>
 </listitem>
 </varlistentry>
 </variablelist>
 
-<note><para>In &plasma; 5.13 you find the setting to use single or double mouse clicks
-to open files and folders in the module <ulink url="help:/kcontrol/workspaceoptions/index.html">Workspace</ulink>.
-</para></note>
+<note
+><para
+>In &plasma; 5.13 finden Sie die Einstellung, ob Einzel- oder Doppelklicks mit der Maustaste Dateien und Ordner öffnen, im Modul <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Arbeitsbereich</ulink
+>. </para
+></note>
 
 </article>
