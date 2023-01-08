@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2022-06-28 09:54+0200\n"
+"PO-Revision-Date: 2023-01-07 17:57+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -73,13 +73,12 @@ msgstr "Приложения"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Команди"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Системни услуги"
+msgstr "Системни настройки"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -108,7 +107,7 @@ msgstr "Запазване на схема"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Редактиране на команда за %1"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -131,8 +130,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Изберете елемент от списъка, за да видите тук клавишните комбинации"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Добавяне на приложение…"
@@ -141,7 +139,7 @@ msgstr "Добавяне на приложение…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Добавяне на команда…"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -177,27 +175,27 @@ msgstr "Схема за клавишна комбинация (* .kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Редактиране на команда..."
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Добавяне на команда..."
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Запазване"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Добавяне"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
-msgstr ""
+msgstr "Въведете команда или пълния път до файла на скрипта:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format

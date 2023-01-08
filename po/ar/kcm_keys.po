@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2021-11-16 20:04+0400\n"
+"PO-Revision-Date: 2023-01-07 16:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -74,13 +74,12 @@ msgstr "التّطبيقات"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "الأوامر"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "خدمات النظام"
+msgstr "إعدادات النّظام"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -107,7 +106,7 @@ msgstr "احفظ التشكيلة"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "حرر أمر لـ%1"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -130,8 +129,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "حدد عنصرًا من القائمة لعرض اختصاراته هنا"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "أضف تطبيق..."
@@ -140,7 +138,7 @@ msgstr "أضف تطبيق..."
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "أضف أمر…"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -176,27 +174,27 @@ msgstr "تشكيلة اختصارات (*.kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "حرر أمر"
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "أضف أمر"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "احفظ"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "أضف"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
-msgstr ""
+msgstr "أدخِل أمرًا أو مسار كامل لملف برمجي نصي:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format
