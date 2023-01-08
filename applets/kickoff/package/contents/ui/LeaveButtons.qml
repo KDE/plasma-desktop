@@ -72,12 +72,12 @@ RowLayout {
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
         icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", "view-more-symbolic"][currentId]
         display: root.shouldCollapseButtons ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly
-        text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][leaveButton.currentId]
+        text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][currentId]
         visible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
         PC3.ToolTip.text: text
-        PC3.ToolTip.visible: leaveButton.hovered
+        PC3.ToolTip.visible: hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
         Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
             nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
