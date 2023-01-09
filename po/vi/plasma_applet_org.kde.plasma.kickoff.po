@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Lê Phương, 2014.
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2022-10-14 18:30+0200\n"
+"PO-Revision-Date: 2023-01-08 16:22+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Biểu tượng:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Đổi biểu tượng trình khởi chạy ứng dụng"
 
 #: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -66,6 +66,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Biểu tượng hiện tại là %1. Bấm để mở trình đơn để thay đổi biểu tượng hiện "
+"tại hoặc đặt lại về biểu tượng mặc định."
 
 #: package/contents/ui/ConfigGeneral.qml:76
 #, kde-format
@@ -77,7 +79,7 @@ msgstr "Chọn…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Chọn một biểu tượng cho trình khởi chạy ứng dụng"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -107,7 +109,7 @@ msgstr "Gõ vào đây để thêm nhãn cho phần chữ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Đặt lại nhãn trình đơn"
 
 #: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format

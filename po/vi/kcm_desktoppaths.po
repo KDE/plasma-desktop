@@ -2,13 +2,13 @@
 # Copyright © 2007 KDE i18n Project for Vietnamese.
 #
 # Clytie Siddall <clytie@riverland.net.au>, 2006-2007.
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-04-07 18:28+0200\n"
+"PO-Revision-Date: 2023-01-08 16:28+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -51,12 +51,12 @@ msgstr "Phim"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Công khai"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Bản mẫu"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -153,35 +153,30 @@ msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lư
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Đường dẫn \"Nhạc\":"
+msgstr "Đường dẫn \"Công khai\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lưu ảnh."
+msgstr ""
+"Thư mục này mặc định sẽ được dùng để tải hoặc lưu các chia sẻ công khai."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Đường dẫn \"Ảnh\":"
+msgstr "Đường dẫn \"Bản mẫu\":"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lưu ảnh."
+msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lưu các bản mẫu."
 
 #, fuzzy
 #~| msgid "A&utostart path:"
