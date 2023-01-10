@@ -10,27 +10,26 @@
 #include <KLocalizedString>
 
 #include <QFile>
+#include <QStandardPaths>
 #include <QXmlStreamReader>
 
 class IsoCodesPrivate
 {
 public:
-    IsoCodesPrivate(const QString &isoCode_, const QString &isoCodesXmlDir_)
+    IsoCodesPrivate(const QString &isoCode_)
         : isoCode(isoCode_)
-        , isoCodesXmlDir(isoCodesXmlDir_)
         , loaded(false)
     {
     }
     void buildIsoEntryList();
 
     const QString isoCode;
-    const QString isoCodesXmlDir;
     QList<IsoCodeEntry> isoEntryList;
     bool loaded;
 };
 
-IsoCodes::IsoCodes(const QString &isoCode, const QString &isoCodesXmlDir)
-    : d(new IsoCodesPrivate(isoCode, isoCodesXmlDir))
+IsoCodes::IsoCodes(const QString &isoCode)
+    : d(new IsoCodesPrivate(isoCode))
 {
 }
 
@@ -72,7 +71,8 @@ void IsoCodesPrivate::buildIsoEntryList()
 {
     loaded = true;
 
-    QFile file(QStringLiteral("%1/iso_%2.xml").arg(isoCodesXmlDir, isoCode));
+    QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("xml/iso-codes/iso_%1.xml").arg(isoCode));
+    QFile file(filePath);
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
         qCCritical(KCM_KEYBOARD) << "Can't open the xml file" << file.fileName();
         return;

@@ -38,7 +38,7 @@ public:
      * @param isoCode Code for iso standard, i.e. "639", for convenience there's iso_* constants defined
      * @param isoCodesXmlDir the directory where ISO data are stored
      */
-    explicit IsoCodes(const QString &isoCode, const QString &isoCodesXmlDir = QStringLiteral("/usr/share/xml/iso-codes"));
+    explicit IsoCodes(const QString &isoCode);
     ~IsoCodes();
 
     /**
