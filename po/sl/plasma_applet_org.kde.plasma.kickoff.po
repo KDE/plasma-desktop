@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-10 00:57+0000\n"
 "PO-Revision-Date: 2022-11-23 08:12+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -55,13 +55,13 @@ msgstr "Pokaži v priljubljenih"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:42
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Spremeni ikono zaganjalnika aplikacij"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,138 +71,144 @@ msgstr ""
 "Trenutna ikona je %1. Kliknite, da bi odprli menu za zamenjavo trenutne "
 "ikone ali ponovno nastavitev na privzeto ikono."
 
-#: package/contents/ui/ConfigGeneral.qml:76
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Icon name is \"%1\""
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Izberi…"
 
-#: package/contents/ui/ConfigGeneral.qml:78
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Izberite ikono zaganjalnika aplikacij"
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Ponovno nastavi na privzeto ikono"
 
-#: package/contents/ui/ConfigGeneral.qml:88
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Odstrani ikono"
 
-#: package/contents/ui/ConfigGeneral.qml:99
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Besedilna oznaka:"
 
-#: package/contents/ui/ConfigGeneral.qml:101
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Tu vtipkajte za dodajanje besedilne oznake"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Ponovno nastavi oznako menija"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Besedilne oznake ni mogoče nastaviti, kadar je plošča navpična."
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Splošno:"
 
-#: package/contents/ui/ConfigGeneral.qml:142
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Vedno razvrsti aplikacije po abecedi"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Uporabi slog kompaktnega seznama"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Samodejno onemogočeno v načinu dotikanja"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Nastavi omogočene vtičnike za iskanje…"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Show favorites:"
 msgstr "Pokaži priljubljene:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "V mreži"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Show other applications:"
 msgstr "Prikaži ostale aplikacije:"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "V mreži"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Prikaži gumbe za:"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:216
 #: package/contents/ui/LeaveButtons.qml:75
 #, kde-format
 msgid "Power"
 msgstr "Moč"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Session"
 msgstr "Sejo"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Power and session"
 msgstr "Izklop in sejo"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgid "Show action button captions"
 msgstr "Prikaži napise gumbov aktivnosti"

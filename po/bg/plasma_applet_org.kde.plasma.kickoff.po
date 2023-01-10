@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-10 00:57+0000\n"
 "PO-Revision-Date: 2022-11-23 23:11+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -52,13 +52,13 @@ msgstr "Показване в Предпочитани"
 msgid "Icon:"
 msgstr "Икона:"
 
-#: package/contents/ui/ConfigGeneral.qml:42
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Промяна на иконата на стартера на приложения"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -68,138 +68,144 @@ msgstr ""
 "Текущата икона е %1. Щракнете, за да отворите менюто за промяна на текущата "
 "икона или за връщане на иконата по подразбиране."
 
-#: package/contents/ui/ConfigGeneral.qml:76
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Icon name is \"%1\""
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Избиране…"
 
-#: package/contents/ui/ConfigGeneral.qml:78
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Избиране на икона за стартера на приложения"
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Възстановяване на стандартната икона"
 
-#: package/contents/ui/ConfigGeneral.qml:88
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Премахване на икона"
 
-#: package/contents/ui/ConfigGeneral.qml:99
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Надпис:"
 
-#: package/contents/ui/ConfigGeneral.qml:101
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Добавете надпис"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Възстановяване на етикета на менюто"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Не може да се зададе текстов етикет, когато панелът е вертикален."
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Общи:"
 
-#: package/contents/ui/ConfigGeneral.qml:142
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Сортиране на приложенията по азбучен ред винаги"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Компактен стил на списък"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Автоматично деактивиране в режим на таблет"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Конфигуриране на активираните приставки за търсене…"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Show favorites:"
 msgstr "Показване на Предпочитани:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Списък"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Show other applications:"
 msgstr "Показване на други приложения:"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Списък"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Показване на бутони за:"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:216
 #: package/contents/ui/LeaveButtons.qml:75
 #, kde-format
 msgid "Power"
 msgstr "Захранване"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Session"
 msgstr "Сесия"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Power and session"
 msgstr "Захранване и сесия"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgid "Show action button captions"
 msgstr "Показване на надписите на бутоните за действие"

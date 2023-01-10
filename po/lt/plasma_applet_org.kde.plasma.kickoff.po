@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-10 00:57+0000\n"
 "PO-Revision-Date: 2022-12-12 22:21+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -56,13 +56,13 @@ msgstr "Rodyti žymelėse"
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: package/contents/ui/ConfigGeneral.qml:42
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Keisti programų paleidyklės piktogramą"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -72,49 +72,55 @@ msgstr ""
 "Dabartinė piktograma yra %1. Spustelėkite, norėdami atverti meniu ir "
 "pakeisti dabartinę piktogramą ar atstatyti numatytąją piktogramą."
 
-#: package/contents/ui/ConfigGeneral.qml:76
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Icon name is \"%1\""
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Pasirinkti…"
 
-#: package/contents/ui/ConfigGeneral.qml:78
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Pasirinkti programų paleidyklės piktogramą"
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Atstatyti į numatytąją piktogramą"
 
-#: package/contents/ui/ConfigGeneral.qml:88
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Šalinti piktogramą"
 
-#: package/contents/ui/ConfigGeneral.qml:99
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Tekstinė etiketė:"
 
-#: package/contents/ui/ConfigGeneral.qml:101
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Rašykite, norėdami pridėti tekstinį užrašą"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Atstatyti meniu etiketę"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
@@ -122,90 +128,90 @@ msgstr ""
 "Tekstinė etiketė negali būti nustatyta, kai skydelis yra vertikalioje "
 "padėtyje."
 
-#: package/contents/ui/ConfigGeneral.qml:141
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Bendra:"
 
-#: package/contents/ui/ConfigGeneral.qml:142
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Visada rikiuoti programas pagal abėcėlę"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Naudoti glaustą sąrašo elementų stilių"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Lietimo veiksenoje yra automatiškai išjungiama"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Konfigūruoti įjungtus paieškos papildinius…"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Show favorites:"
 msgstr "Rodyti žymeles:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Tinkleliu"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Sąrašu"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Show other applications:"
 msgstr "Rodyti kitas programas:"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Tinkleliu"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Sąrašu"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Rodyti mygtukus į kuriuos įeina:"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:216
 #: package/contents/ui/LeaveButtons.qml:75
 #, kde-format
 msgid "Power"
 msgstr "Maitinimas"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Session"
 msgstr "Seansas"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Power and session"
 msgstr "Maitinimas ir seansas"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgid "Show action button captions"
 msgstr "Rodyti veiksmų mygtukų paaiškinimus"

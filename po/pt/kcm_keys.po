@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-05 00:50+0000\n"
-"PO-Revision-Date: 2021-10-29 09:41+0100\n"
+"PO-Revision-Date: 2023-01-09 09:58+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -69,13 +69,12 @@ msgstr "Aplicações"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Comandos"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Serviços do Sistema"
+msgstr "Configuração do Sistema"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -104,7 +103,7 @@ msgstr "Gravar o esquema"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Editar o comando de %1"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -127,8 +126,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccione um item na lista para ver aqui os atalhos do mesmo"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Adicionar uma Aplicação…"
@@ -137,7 +135,7 @@ msgstr "Adicionar uma Aplicação…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Adicionar um Comando…"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -173,27 +171,28 @@ msgstr "Esquema de Atalhos (*.kksrc)"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Editar o Comando"
 
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Adicionar um Comando"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Gravar"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Enter a command or the full path to a script file:"
 msgstr ""
+"Indique um comando ou a localização completa de um ficheiro de programa:"
 
 #: package/contents/ui/main.qml:402
 #, kde-format
@@ -305,17 +304,3 @@ msgstr "Configuração"
 #, kde-format
 msgid "Help"
 msgstr "Ajuda"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "José Nuno Pires"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "zepires@gmail.com"
-
-#~ msgid "Shortcuts"
-#~ msgstr "Atalhos"
-
-#~ msgid "David Redondo"
-#~ msgstr "David Redondo"
