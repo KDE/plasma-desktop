@@ -62,8 +62,8 @@ KCM.AbstractKCM {
                     iconName: "document-save"
                     text: i18n("Save scheme")
                     onTriggered: {
-                        fileDialogLoader.save = true
-                        fileDialogLoader.active = true
+                        shortcutSchemeFileDialogLoader.save = true
+                        shortcutSchemeFileDialogLoader.active = true
                         exportActive = false
                     }
                 }
@@ -310,17 +310,17 @@ KCM.AbstractKCM {
             }
         }
     }
+
     Loader {
-        id: fileDialogLoader
+        id: shortcutSchemeFileDialogLoader
         active: false
         property bool save
         sourceComponent: FileDialog {
-            id: fileDialog
             title: save ? i18n("Export Shortcut Scheme") : i18n("Import Shortcut Scheme")
             folder: shortcuts.home
             nameFilters: [ i18nc("Template for file dialog","Shortcut Scheme (*.kksrc)") ]
             defaultSuffix: ".kksrc"
-            selectExisting: !fileDialogLoader.save
+            selectExisting: !shortcutSchemeFileDialogLoader.save
             Component.onCompleted: open()
             onAccepted: {
                 if (save) {
@@ -331,9 +331,9 @@ KCM.AbstractKCM {
                     schemeBox.model = schemes
                     schemeBox.currentIndex = schemes.length - 2
                 }
-                fileDialogLoader.active = false
+                shortcutSchemeFileDialogLoader.active = false
             }
-            onRejected: fileDialogLoader.active = false
+            onRejected: shortcutSchemeFileDialogLoader.active = false
         }
     }
 
@@ -343,6 +343,8 @@ KCM.AbstractKCM {
         property string componentName: ""
         property string oldExec: ""
         property Item commandListItemDelegate: null
+
+        width: Math.max(root.width / 2, Kirigami.Units.gridUnit * 24)
 
         title: editing ? i18n("Edit Command") : i18n("Add Command")
 
@@ -361,9 +363,9 @@ KCM.AbstractKCM {
             icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
             onTriggered: {
                 if (addCommandDialog.editing) {
-                    kcm.editCommand(addCommandDialog.componentName, cmdField.text);
+                    const newLabel = kcm.editCommand(addCommandDialog.componentName, cmdField.text);
                     if (addCommandDialog.commandListItemDelegate) {
-                        addCommandDialog.commandListItemDelegate.label = cmdField.text;
+                        addCommandDialog.commandListItemDelegate.label = newLabel;
                     }
                 } else {
                     kcm.addCommand(cmdField.text);
@@ -380,14 +382,42 @@ KCM.AbstractKCM {
         ColumnLayout {
             anchors.centerIn: parent
             QQC2.Label {
-                text: i18n("Enter a command or the full path to a script file:")
+                text: i18n("Enter a command or choose a script file:")
             }
-            QQC2.TextField {
-                id: cmdField
+            RowLayout {
                 Layout.fillWidth: true
-                font.family: "monospace"
-                onAccepted: addCommandDialog.addCommandAction.triggered()
+                spacing: Kirigami.Units.smallSpacing
+
+                QQC2.TextField {
+                    id: cmdField
+                    Layout.fillWidth: true
+                    font.family: "monospace"
+                    onAccepted: addCommandDialog.addCommandAction.triggered()
+                }
+                QQC2.Button {
+                    icon.name: "document-open"
+                    text: i18nc("@action:button", "Choose…")
+                    onClicked: {
+                        openScriptFileDialogLoader.active = true
+                    }
+                }
             }
+        }
+    }
+
+    Loader {
+        id: openScriptFileDialogLoader
+        active: false
+        sourceComponent: FileDialog {
+            title: i18nc("@title:window", "Choose Script File")
+            folder: shortcuts.home
+            nameFilters: [ i18nc("Template for file dialog","Script file (*.*sh)") ]
+            Component.onCompleted: open()
+            onAccepted: {
+                cmdField.text = fileUrl
+                openScriptFileDialogLoader.active = false
+            }
+            onRejected: openScriptFileDialogLoader.active = false
         }
     }
 
@@ -419,8 +449,8 @@ KCM.AbstractKCM {
                     text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
                     onClicked: {
                         if (schemeBox.customSchemeSelected) {
-                            fileDialogLoader.save = false;
-                            fileDialogLoader.active = true;
+                            shortcutSchemeFileDialogLoader.save = false;
+                            shortcutSchemeFileDialogLoader.active = true;
                         } else {
                             kcm.loadScheme(schemeBox.model[schemeBox.currentIndex]["url"])
                             importSheet.close()

@@ -198,19 +198,28 @@ void KCMKeys::addCommand(const QString &exec)
     KConfigGroup cg = desktopFile.desktopGroup();
     cg.writeEntry("Type", "Application");
 
+    QString finalExec = exec;
+
+    // If it was added as a URL, convert it to a local path, because desktop
+    // files can't take URLs in their exec keys
+    const QUrl execAsURL = QUrl(exec);
+    if (!execAsURL.scheme().isEmpty()) {
+        finalExec = execAsURL.toLocalFile();
+    }
+
     // For the user visible name, use the executable name with any
     // arguments appended, but with desktop-file specific expansion
     // arguments removed. This is done to more clearly communicate the
     // actual command used to the user and makes it easier to
     // distinguish things like "qdbus".
-    QString name = KIO::DesktopExecParser::executableName(exec);
-    auto view = QStringView{exec}.trimmed();
+    QString name = KIO::DesktopExecParser::executableName(finalExec);
+    auto view = QStringView{finalExec}.trimmed();
     int index = view.indexOf(QLatin1Char(' '));
     if (index > 0) {
         name.append(view.mid(index));
     }
-    cg.writeEntry("Name", exec);
-    cg.writeEntry("Exec", exec);
+    cg.writeEntry("Name", finalExec);
+    cg.writeEntry("Exec", finalExec);
     cg.writeEntry("NoDisplay", true);
     cg.writeEntry("StartupNotify", false);
     cg.writeEntry("X-KDE-GlobalAccel-CommandShortcut", true);
@@ -219,13 +228,22 @@ void KCMKeys::addCommand(const QString &exec)
     m_globalAccelModel->addApplication(newPath, name);
 }
 
-void KCMKeys::editCommand(const QString &componentName, const QString &newExec)
+QString KCMKeys::editCommand(const QString &componentName, const QString &newExec)
 {
+    QString finalExec = newExec;
+
+    // If it was added as a URL, convert it to a local path, because desktop
+    // files can't take URLs in their exec keys
+    const QUrl execAsURL = QUrl(newExec);
+    if (!execAsURL.scheme().isEmpty()) {
+        finalExec = execAsURL.toLocalFile();
+    }
     KDesktopFile desktopFile(componentName);
     KConfigGroup cg = desktopFile.desktopGroup();
-    cg.writeEntry("Name", newExec);
-    cg.writeEntry("Exec", newExec);
+    cg.writeEntry("Name", finalExec);
+    cg.writeEntry("Exec", finalExec);
     cg.sync();
+    return finalExec;
 }
 
 QString KCMKeys::keySequenceToString(const QKeySequence &keySequence) const
