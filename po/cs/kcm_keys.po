@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2021-10-08 14:39+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "Při komunikaci s globální službou klávesových zkratek došlo k chy
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Komunikace s globálním démon klávesových zkratek se nezdařila"
 
-#: kcm_keys.cpp:276
+#: kcm_keys.cpp:294
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Zkratka %1 je již přiřazena společné %2 činnosti '%3'.\n"
 "Chcete ji přeřadit?"
 
-#: kcm_keys.cpp:280
+#: kcm_keys.cpp:298
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Zkratka %1 je již přiřazena činnosti '%2' of %3.\n"
 "Chcete ji přeřadit?"
 
-#: kcm_keys.cpp:281
+#: kcm_keys.cpp:299
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -73,13 +73,12 @@ msgstr "Aplikace"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Příkazy"
 
 #: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Systémové služby"
+msgstr "Nastavení systému"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -130,11 +129,10 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Výběrem položky v seznamu zobrazíte s ní spojené klávesové zkratky"
 
 #: package/contents/ui/main.qml:272
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
-msgstr "Přidat aplikaci…"
+msgstr ""
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -162,7 +160,7 @@ msgstr "Exportovat schéma…"
 msgid "Export Shortcut Scheme"
 msgstr "Exportovat schéma klávesových zkratek"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importovat schéma klávesových zkratek"
@@ -173,47 +171,65 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Schéma klávesových zkratek (*.kksrc)"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Příkaz pro úpravu"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Přidat příkaz"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Uložit"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
-#: package/contents/ui/main.qml:383
+#: package/contents/ui/main.qml:385
 #, kde-format
-msgid "Enter a command or the full path to a script file:"
+msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: package/contents/ui/main.qml:402
+#: package/contents/ui/main.qml:399
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/main.qml:412
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr ""
+
+#: package/contents/ui/main.qml:414
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr ""
+
+#: package/contents/ui/main.qml:432
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Vyberte schéma k importu:"
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Vlastní schéma"
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Select File…"
 msgstr "Vybrat soubor…"
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Import"
 msgstr "Importovat"

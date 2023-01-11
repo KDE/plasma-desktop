@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2023-01-05 22:31+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr "Fout bij communicatie met de globale sneltoetsservice"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Communiceren met de globale daemon voor sneltoetsen is mislukt"
 
-#: kcm_keys.cpp:276
+#: kcm_keys.cpp:294
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Sneltoets %1 is al toegekend aan de algemene %2 actie '%3'.\n"
 "Wilt u het opnieuw toekennen?"
 
-#: kcm_keys.cpp:280
+#: kcm_keys.cpp:298
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Sneltoets %1 is al toegekend aan de actie '%2' van %3.\n"
 "Wilt u het opnieuw toekennen?"
 
-#: kcm_keys.cpp:281
+#: kcm_keys.cpp:299
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -161,7 +161,7 @@ msgstr "Schema exporteren…"
 msgid "Export Shortcut Scheme"
 msgstr "Sneltoetsschema exporteren"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Sneltoetsschema importeren"
@@ -172,47 +172,66 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Sneltoetsschema (*.kksrc)"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Edit Command"
 msgstr "Commando bewerken"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Add Command"
 msgstr "Commando toevoegen"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Save"
 msgstr "Opslaan"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: package/contents/ui/main.qml:383
-#, kde-format
-msgid "Enter a command or the full path to a script file:"
+#: package/contents/ui/main.qml:385
+#, fuzzy, kde-format
+#| msgid "Enter a command or the full path to a script file:"
+msgid "Enter a command or choose a script file:"
 msgstr "Voer een commando in of het volledige pad naar een scriptbestand:"
 
-#: package/contents/ui/main.qml:402
+#: package/contents/ui/main.qml:399
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/main.qml:412
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr ""
+
+#: package/contents/ui/main.qml:414
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr ""
+
+#: package/contents/ui/main.qml:432
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Het te importeren schema selecteren:"
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Aangepast schema"
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Select File…"
 msgstr "Bestand selecteren…"
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Import"
 msgstr "Importeren"

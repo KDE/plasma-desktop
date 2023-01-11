@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-05 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2023-01-07 16:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -41,7 +41,7 @@ msgstr "حدث خطأ أثناء الاتصال بخدمة الاختصارات 
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "فشل الاتصال بخدمة الاختصارات العالمية"
 
-#: kcm_keys.cpp:276
+#: kcm_keys.cpp:294
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "عُين الاختصار %1 بالفعل إلى  '%3' من إجراءات %2 .\n"
 "هل تريد إعادة تعيينه؟"
 
-#: kcm_keys.cpp:280
+#: kcm_keys.cpp:298
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "عُين الاختصار %1 بالفعل إلى  '%2' من إجراءات %3. \n"
 "هل تريد إعادة تعيينه؟"
 
-#: kcm_keys.cpp:281
+#: kcm_keys.cpp:299
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -160,7 +160,7 @@ msgstr "صدر التشكيلة..."
 msgid "Export Shortcut Scheme"
 msgstr "صدّر تشكيلة الاختصارات"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:397
+#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "استورد تشكيلة الاختصارات"
@@ -171,47 +171,66 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "تشكيلة اختصارات (*.kksrc)"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Edit Command"
 msgstr "حرر أمر"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Add Command"
 msgstr "أضف أمر"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Save"
 msgstr "احفظ"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Add"
 msgstr "أضف"
 
-#: package/contents/ui/main.qml:383
-#, kde-format
-msgid "Enter a command or the full path to a script file:"
+#: package/contents/ui/main.qml:385
+#, fuzzy, kde-format
+#| msgid "Enter a command or the full path to a script file:"
+msgid "Enter a command or choose a script file:"
 msgstr "أدخِل أمرًا أو مسار كامل لملف برمجي نصي:"
 
-#: package/contents/ui/main.qml:402
+#: package/contents/ui/main.qml:399
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/main.qml:412
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr ""
+
+#: package/contents/ui/main.qml:414
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr ""
+
+#: package/contents/ui/main.qml:432
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "اختر تشكيلة لاستيرادها:"
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Custom Scheme"
 msgstr "تشكيلة مخصصة"
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Select File…"
 msgstr "اختر ملف..."
 
-#: package/contents/ui/main.qml:419
+#: package/contents/ui/main.qml:449
 #, kde-format
 msgid "Import"
 msgstr "استورد"

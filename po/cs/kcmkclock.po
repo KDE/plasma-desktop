@@ -3,22 +3,22 @@
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2013, 2014, 2015.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-27 00:49+0000\n"
-"PO-Revision-Date: 2021-06-02 16:16+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-05 11:35+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -132,12 +132,12 @@ msgstr "Není možné nastavit datum."
 #: dtime.cpp:281
 #, kde-format
 msgid "Error setting new time zone."
-msgstr "Chyba při nastavování nové časové zóny."
+msgstr "Chyba při nastavování nového časového pásma."
 
 #: dtime.cpp:281
 #, kde-format
 msgid "Time zone Error"
-msgstr "Chyba - časová zóna"
+msgstr "Chyba - časové pásmo"
 
 #: dtime.cpp:299
 #, kde-format
