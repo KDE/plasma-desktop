@@ -81,8 +81,6 @@ endif()
 
 find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 
-find_package(KUserFeedback)
-
 set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
     DESCRIPTION "Accounts management library for Qt applications"
     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
