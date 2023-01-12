@@ -7,9 +7,7 @@
 
 #pragma once
 
-#define KDE3_SUPPORT
 #include <KCModule>
-#undef KDE3_SUPPORT
 
 class JoyWidget;
 
