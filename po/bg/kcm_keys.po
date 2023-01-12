@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-07 17:57+0100\n"
+"PO-Revision-Date: 2023-01-11 20:11+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -193,28 +193,27 @@ msgid "Add"
 msgstr "Добавяне"
 
 #: package/contents/ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Enter a command or the full path to a script file:"
+#, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr "Въведете команда или пълния път до файла на скрипта:"
+msgstr "Въведете команда или изберете скрипт:"
 
 #: package/contents/ui/main.qml:399
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Избиране…"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Изберете скрипт"
 
 #: package/contents/ui/main.qml:414
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Скриптов файл (*.*sh)"
 
 #: package/contents/ui/main.qml:432
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-05 05:20+0100\n"
+"PO-Revision-Date: 2023-01-11 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -197,28 +197,27 @@ msgid "Add"
 msgstr "Afig"
 
 #: package/contents/ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Enter a command or the full path to a script file:"
+#, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr "Introduïu una ordre o el camí complet cap a un fitxer de script:"
+msgstr "Introduïu una ordre o trieu un fitxer de script:"
 
 #: package/contents/ui/main.qml:399
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Seleccioneu…"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Tria d'un fitxer de script"
 
 #: package/contents/ui/main.qml:414
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Fitxer de script (*.*sh)"
 
 #: package/contents/ui/main.qml:432
 #, kde-format

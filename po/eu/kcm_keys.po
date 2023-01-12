@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-05 22:43+0100\n"
+"PO-Revision-Date: 2023-01-11 21:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -196,28 +196,27 @@ msgid "Add"
 msgstr "Gehitu"
 
 #: package/contents/ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Enter a command or the full path to a script file:"
+#, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr "Sartu komando bat edo gidoi-fitxategi baten bide-izen osoa:"
+msgstr "Sartu komando bat edo hautatu gidoi-fitxategi bat:"
 
 #: package/contents/ui/main.qml:399
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Hautatu…"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Hautatu gidoi-fitxategia"
 
 #: package/contents/ui/main.qml:414
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Gidoi fitxategia (*.*sh)"
 
 #: package/contents/ui/main.qml:432
 #, kde-format

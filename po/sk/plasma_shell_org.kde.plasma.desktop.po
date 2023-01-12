@@ -1,21 +1,21 @@
 # translation of plasma_shell_org.kde.plasma.desktop.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:49+0000\n"
-"PO-Revision-Date: 2022-11-22 17:50+0100\n"
+"POT-Creation-Date: 2023-01-12 00:57+0000\n"
+"PO-Revision-Date: 2023-01-11 11:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.11.80\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
@@ -78,7 +78,7 @@ msgstr "Skopírovať do schránky"
 msgid "View Error Details…"
 msgstr "Zobraziť podrobnosti chyby..."
 
-#: contents/applet/CompactApplet.qml:70
+#: contents/applet/CompactApplet.qml:71
 msgid "Open %1"
 msgstr "Otvoriť %1"
 
@@ -107,7 +107,7 @@ msgstr "Licencia:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Zobraziť text licencie"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -208,11 +208,9 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
-msgstr "O"
+msgstr "O aplikácii"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
@@ -343,7 +341,7 @@ msgstr "Skratka"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "Stlačte túto klávesovú skratku na presun zamerania na panel"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
