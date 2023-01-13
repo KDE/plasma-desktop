@@ -14,6 +14,7 @@ import org.kde.kirigami 2.16 as Kirigami
 
 RowLayout {
     id: root
+    readonly property alias buttonImplicitWidth: buttonRepeaterRow.implicitWidth
     property alias leave: leaveButton
     property bool shouldCollapseButtons: false
     spacing: plasmoid.rootItem.backgroundMetrics.spacing
@@ -27,35 +28,39 @@ RowLayout {
         Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions && plasmoid.configuration.primaryActions === 3
     }
 
-    Repeater {
-        id: buttonRepeater
-        model: systemModel
-        delegate: PC3.ToolButton {
-            id: buttonDelegate
-            // NOTE Don't use visible as it changes implicit width of LeaveButtons
-            enabled: !root.shouldCollapseButtons
-            opacity: root.shouldCollapseButtons ? 0 : 1
-            text: model.display
-            icon.name: model.decoration
-            // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-            visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
-            onClicked: systemModel.trigger(index, "", null)
-            display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
-            Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
+    RowLayout {
+        id: buttonRepeaterRow
+        // HACK Can't use visible as buttons are invisible after switching from Power and session to Power
+        enabled: !root.shouldCollapseButtons
+        opacity: enabled ? 1 : 0
+        spacing: parent.spacing
+        Repeater {
+            id: buttonRepeater
+            model: systemModel
+            delegate: PC3.ToolButton {
+                id: buttonDelegate
+                text: model.display
+                icon.name: model.decoration
+                // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
+                visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
+                onClicked: systemModel.trigger(index, "", null)
+                display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
+                Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
 
-            PC3.ToolTip.text: text
-            PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-            PC3.ToolTip.visible: display === PC3.AbstractButton.IconOnly && hovered
+                PC3.ToolTip.text: text
+                PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                PC3.ToolTip.visible: display === PC3.AbstractButton.IconOnly && hovered
 
-            Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
-                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-            }
-            Keys.onRightPressed: if (LayoutMirroring.enabled) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
-                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                }
+                Keys.onRightPressed: if (LayoutMirroring.enabled) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                }
             }
         }
     }

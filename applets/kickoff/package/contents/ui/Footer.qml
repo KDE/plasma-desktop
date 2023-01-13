@@ -160,7 +160,7 @@ PlasmaExtras.PlasmoidHeading {
             bottom: parent.bottom
             leftMargin: root.spacing
         }
-        shouldCollapseButtons: root.contentWidth + root.spacing + implicitWidth > root.width
+        shouldCollapseButtons: root.contentWidth + root.spacing + buttonImplicitWidth > root.width
         Keys.onUpPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
