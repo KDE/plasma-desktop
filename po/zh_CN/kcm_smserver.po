@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -33,12 +33,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
-msgstr ""
+msgstr "系统必须重新启动才能手动保存会话。"
 
 #: package/contents/ui/main.qml:35
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "重启"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -66,12 +66,12 @@ msgstr "立即重新启动"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "注销屏幕"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "显示："
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -81,29 +81,31 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"启用此设置后，当您注销、关机、重启、按下电源键、点击标签为 <interface>离开…</"
+"interface> 的菜单项时，将显示注销确认屏幕。"
 
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "会话恢复"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "登录时启动之前打开的应用程序："
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "上次注销时"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "手动保存会话时"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -114,6 +116,9 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>保存会话</interface> 按钮将显示在 <interface>应用程序启动器</"
+"interface> 菜单。当您点击该按钮时，Plasma 将记住当前打开的应用程序，并在下次"
+"登录时恢复它们。再次点击该按钮以替换记忆的应用程序组合。"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -122,12 +127,12 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "以空会话启动"
+msgstr "启动为空会话"
 
 #: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "忽略的应用程序："
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -136,12 +141,15 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"在此输入应用程序的可执行名称 (用半角逗号或者冒号分隔，例如“xterm:konsole”或"
+"者“xterm,konsole”)，可以防止这些应用程序和其他会话恢复的应用程序一起自动启"
+"动。"
 
 #: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "固件"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -149,19 +157,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "下一次重启之后："
 
 #: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "进入 UEFI 设置屏幕"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "进入固件设置屏幕"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

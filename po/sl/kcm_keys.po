@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-06 11:05+0100\n"
+"PO-Revision-Date: 2023-01-12 08:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -192,28 +192,27 @@ msgid "Add"
 msgstr "Dodaj"
 
 #: package/contents/ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Enter a command or the full path to a script file:"
+#, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr "Vnesi ukaz ali polno pot do datoteke s skriptom:"
+msgstr "Vnesi ukaz ali izberi datoteko s skriptom:"
 
 #: package/contents/ui/main.qml:399
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Izberi…"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Izberi datoteko s skriptom"
 
 #: package/contents/ui/main.qml:414
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Datoteka s skriptom (*.*sh)"
 
 #: package/contents/ui/main.qml:432
 #, kde-format
