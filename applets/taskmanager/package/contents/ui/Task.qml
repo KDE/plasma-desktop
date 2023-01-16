@@ -297,6 +297,7 @@ PlasmaCore.ToolTipArea {
         id: menuTapHandler
         acceptedButtons: Qt.LeftButton
         acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
+        grabPermissions: PointerHandler.ApprovesTakeOverByAnything
         onLongPressed: {
             // When we're a launcher, there's no window controls, so we can show all
             // places without the menu getting super huge.
@@ -311,11 +312,13 @@ PlasmaCore.ToolTipArea {
     TapHandler {
         acceptedButtons: Qt.RightButton
         acceptedDevices: PointerDevice.Mouse
+        grabPermissions: PointerHandler.ApprovesTakeOverByAnything
         onTapped: menuTapHandler.longPressed();
     }
 
     TapHandler {
         acceptedButtons: Qt.LeftButton
+        grabPermissions: PointerHandler.ApprovesTakeOverByAnything
         onTapped: {
             if (plasmoid.configuration.showToolTips && task.active) {
                 hideToolTip();
@@ -326,6 +329,7 @@ PlasmaCore.ToolTipArea {
 
     TapHandler {
         acceptedButtons: Qt.MidButton | Qt.BackButton | Qt.ForwardButton
+        grabPermissions: PointerHandler.ApprovesTakeOverByAnything
         onTapped: {
             const button = eventPoint.event.button;
             if (button == Qt.MidButton) {
@@ -386,7 +390,7 @@ PlasmaCore.ToolTipArea {
         // Avoid repositioning delegate item after dragFinished
         DragHandler {
             id: dragHandler
-
+            acceptedButtons: Qt.LeftButton
             onActiveChanged: if (active) {
                 icon.grabToImage((result) => {
                     tasks.dragSource = task;
