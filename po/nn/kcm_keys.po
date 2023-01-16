@@ -1,12 +1,12 @@
 # Translation of kcm_keys to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-01-15 18:11+0100\n"
+"PO-Revision-Date: 2023-01-15 12:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -83,12 +83,12 @@ msgstr "Program"
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Kommandoar"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "System Settings"
-msgstr ""
+msgstr "Systemoppsett"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Lagra oppsett"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Rediger kommando for %1"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
@@ -141,13 +141,13 @@ msgstr "Vel eit element frå lista for å visa snøggtastane her"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
-msgstr ""
+msgstr "Legg til program …"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Legg til kommando …"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -183,45 +183,45 @@ msgstr "Snøggtastoppsett (*.kksrc)"
 #: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Rediger kommando"
 
 #: package/contents/ui/main.qml:349
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Legg til kommando"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Lagra"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Legg til"
 
 #: package/contents/ui/main.qml:385
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Skriv inn kommando eller vel skriptfil:"
 
 #: package/contents/ui/main.qml:399
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Vel …"
 
 #: package/contents/ui/main.qml:412
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Vel skriptfil"
 
 #: package/contents/ui/main.qml:414
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Skriptfil (*.*sh)"
 
 #: package/contents/ui/main.qml:432
 #, kde-format

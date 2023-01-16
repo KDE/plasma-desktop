@@ -1,13 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.kickoff to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:57+0000\n"
-"PO-Revision-Date: 2022-10-30 09:45+0100\n"
+"POT-Creation-Date: 2023-01-14 00:58+0000\n"
+"PO-Revision-Date: 2023-01-15 12:40+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "Ikon:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Byt ikon på programstartaren"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -68,24 +68,26 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Gjeldande ikon er %1. Trykk for å opna menyen for å endra ikonet eller "
+"tilbakestilla til standardikonet."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Ikonnamn er «%1»"
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Vel …"
+msgstr "Vel …"
 
 #: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Vel ikon for programstartaren"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
@@ -115,7 +117,7 @@ msgstr "Skriv her for å leggja til tekst-merkelapp"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Tilbakestill meny-tekst"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
@@ -191,7 +193,7 @@ msgid "Show buttons for:"
 msgstr "Vis knappar for:"
 
 #: package/contents/ui/ConfigGeneral.qml:216
-#: package/contents/ui/LeaveButtons.qml:75
+#: package/contents/ui/LeaveButtons.qml:80
 #, kde-format
 msgid "Power"
 msgstr "Straum"
@@ -247,12 +249,12 @@ msgstr "Rediger program …"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Rutenett med %1 rader og %2 kolonnar"
 
-#: package/contents/ui/LeaveButtons.qml:75
+#: package/contents/ui/LeaveButtons.qml:80
 #, kde-format
 msgid "Leave"
 msgstr "Avslutt"
 
-#: package/contents/ui/LeaveButtons.qml:75
+#: package/contents/ui/LeaveButtons.qml:80
 #, kde-format
 msgid "More"
 msgstr "Meir"
