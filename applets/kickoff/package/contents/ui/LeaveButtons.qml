@@ -15,7 +15,6 @@ import org.kde.kirigami 2.16 as Kirigami
 RowLayout {
     id: root
     readonly property alias buttonImplicitWidth: buttonRepeaterRow.implicitWidth
-    property alias leave: leaveButton
     property bool shouldCollapseButtons: false
     spacing: plasmoid.rootItem.backgroundMetrics.spacing
 
@@ -32,7 +31,7 @@ RowLayout {
         id: buttonRepeaterRow
         // HACK Can't use visible as buttons are invisible after switching from Power and session to Power
         enabled: !root.shouldCollapseButtons
-        opacity: enabled ? 1 : 0
+        opacity: !root.shouldCollapseButtons ? 1 : 0
         spacing: parent.spacing
         Repeater {
             id: buttonRepeater
@@ -53,12 +52,12 @@ RowLayout {
 
                 Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
                     nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                 }
                 Keys.onRightPressed: if (LayoutMirroring.enabled) {
                     nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                 }
             }
@@ -72,13 +71,14 @@ RowLayout {
     PC3.ToolButton {
         id: leaveButton
         readonly property int currentId: plasmoid.configuration.primaryActions
+        readonly property bool shouldBeVisible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
         Accessible.role: Accessible.ButtonMenu
         icon.width: PlasmaCore.Units.iconSizes.smallMedium
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
         icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", "view-more-symbolic"][currentId]
         display: root.shouldCollapseButtons ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly
         text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][currentId]
-        visible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
+        visible: shouldBeVisible
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
         PC3.ToolTip.text: text
