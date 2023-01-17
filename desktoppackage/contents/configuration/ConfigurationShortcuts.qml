@@ -20,10 +20,16 @@ Kirigami.ScrollablePage {
         plasmoid.globalShortcut = button.keySequence
     }
 
-    Kirigami.FormLayout {
+    ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "This shortcut will activate the applet as though it had been clicked.")
+            wrapMode: Text.WordWrap
+        }
 
         KeySequenceItem {
-            Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Use this shortcut to activate the applet:")
             id: button
             keySequence: plasmoid.globalShortcut
             onCaptureFinished: {
