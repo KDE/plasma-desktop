@@ -11,6 +11,7 @@ import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.16 as Kirigami
+import org.kde.kitemmodels 1.0 as KItemModels
 
 RowLayout {
     id: root
@@ -23,26 +24,60 @@ RowLayout {
         favoritesModel: plasmoid.rootItem.rootModel.systemFavoritesModel
     }
 
+    component FilteredModel : KItemModels.KSortFilterProxyModel {
+        sourceModel: systemModel
+        // BUG: Can't use const or let inside inline component due to QTBUG-91917
+        function systemFavoritesContainsRow(sourceRow, sourceParent) {
+            var FavoriteIdRole = Qt.UserRole + 3; // XXX: Change to real enum value when it's exported
+            var favoriteId = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), FavoriteIdRole);
+            return String(plasmoid.configuration.systemFavorites).includes(favoriteId);
+        }
+        function trigger(index) {
+            var sourceIndex = mapToSource(index(index, 0));
+            systemModel.trigger(sourceIndex.row, "", null);
+        }
+        Component.onCompleted: {
+            plasmoid.configuration.valueChanged.connect((key, value) => {
+                if (key === "systemFavorites") {
+                    invalidateFilter();
+                }
+            });
+        }
+    }
+
+    FilteredModel {
+        id: filteredButtonsModel
+        filterRowCallback: (sourceRow, sourceParent) =>
+            systemFavoritesContainsRow(sourceRow, sourceParent)
+    }
+
+    FilteredModel {
+        id: filteredMenuItemsModel
+        filterRowCallback: root.shouldCollapseButtons
+            ? null /*i.e. keep all rows*/
+            : (sourceRow, sourceParent) => !systemFavoritesContainsRow(sourceRow, sourceParent)
+    }
+
     Item {
         Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions && plasmoid.configuration.primaryActions === 3
     }
 
     RowLayout {
         id: buttonRepeaterRow
-        // HACK Can't use visible as buttons are invisible after switching from Power and session to Power
+        // HACK Can't use `visible` property, as the layout needs to be
+        // visible to be able to update its implicit size, which in turn is
+        // be used to set shouldCollapseButtons.
         enabled: !root.shouldCollapseButtons
         opacity: !root.shouldCollapseButtons ? 1 : 0
         spacing: parent.spacing
         Repeater {
             id: buttonRepeater
-            model: systemModel
+
+            model: filteredButtonsModel
             delegate: PC3.ToolButton {
-                id: buttonDelegate
                 text: model.display
                 icon.name: model.decoration
-                // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-                visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
-                onClicked: systemModel.trigger(index, "", null)
+                onClicked: filteredButtonsModel.trigger(index);
                 display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
                 Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
 
@@ -94,15 +129,13 @@ RowLayout {
     }
 
     Instantiator {
-        model: systemModel
+        model: filteredMenuItemsModel
         // Not a QQC1 MenuItem. It's actually a custom QQuickItem.
         delegate: PC2.MenuItem {
             text: model.display
             icon: model.decoration
-            // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-            visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId) || root.shouldCollapseButtons
             Accessible.role: Accessible.MenuItem
-            onClicked: systemModel.trigger(index, "", null)
+            onClicked: filteredMenuItemsModel.trigger(index)
         }
         onObjectAdded: contextMenu.addMenuItem(object)
         onObjectRemoved: contextMenu.removeMenuItem(object)
