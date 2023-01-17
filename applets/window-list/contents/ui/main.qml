@@ -46,10 +46,15 @@ Item {
                         id: iconItem
 
                         source: model.decoration
-                        visible: source !== ""
+                        visible: source !== "" && iconItem.valid
 
-                        anchors.top: parent.top
-                        anchors.verticalCenter: parent.verticalCenter
+                        implicitWidth: PlasmaCore.Units.roundToIconSize(parent.height)
+                        implicitHeight: PlasmaCore.Units.roundToIconSize(parent.height)
+                    }
+                    // Fall back to a generic icon if the application doesn't provide a valid one
+                    PlasmaCore.IconItem {
+                        source: "preferences-system-windows"
+                        visible: !iconItem.valid
 
                         implicitWidth: PlasmaCore.Units.roundToIconSize(parent.height)
                         implicitHeight: PlasmaCore.Units.roundToIconSize(parent.height)
@@ -80,7 +85,7 @@ Item {
             } else return i18n("Plasma Desktop")
             iconSource: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
-            } else return ""
+            } else return "start-here-kde"
 
             TaskManager.TasksModel {
                 id: tasksModel

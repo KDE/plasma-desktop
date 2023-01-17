@@ -54,7 +54,18 @@ AbstractButton {
     contentItem: RowLayout {
         PlasmaCore.IconItem {
             id: iconItem
-            visible: source !== ""
+            visible: source !== "" && iconItem.valid
+
+            implicitWidth: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
+            implicitHeight: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
+
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+        }
+        // Fall back to a generic icon if the application doesn't provide a valid one
+        PlasmaCore.IconItem {
+            visible: !iconItem.valid
+
+            source: "preferences-system-windows"
 
             implicitWidth: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
             implicitHeight: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
