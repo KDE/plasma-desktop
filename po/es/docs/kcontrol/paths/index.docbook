@@ -68,9 +68,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2021-09-05</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.22</releaseinfo>
 
 <keywordset>
 <keyword
@@ -107,6 +107,11 @@
 </screenshot>
 </para>
 
+<note>
+    <para
+>Las unidades que se montan automáticamente durante el inicio de la sesión no se pueden usar como rutas. Estas unidades se revertirán a sus valores predeterminados al reiniciar &plasma;. </para>
+</note>
+
 <variablelist>
 <varlistentry>
 <term
@@ -120,16 +125,6 @@
 > en el escritorio. La ruta predeterminada suele ser <filename class="directory"
 >~/Escritorio</filename
 >, aunque aquí puede cambiar la dirección de esta carpeta. </para
-></listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Ruta de inicio automático:</guilabel
-></term>
-<listitem
-><para
->La carpeta de inicio automático contiene aplicaciones o enlaces a aplicaciones o guiones que desee iniciar cuando inicie &plasma;. Puede cambiar la dirección de esta carpeta si lo desea. </para
 ></listitem>
 </varlistentry>
 <varlistentry>

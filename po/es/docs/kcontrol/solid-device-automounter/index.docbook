@@ -47,9 +47,9 @@
 </authorgroup>
 
 <date
->2016-08-24</date>
+>2021-04-08</date>
 <releaseinfo
->&plasma; 5.8</releaseinfo>
+>&plasma; 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -103,7 +103,7 @@
 <varlistentry
 ><term
 ><guilabel
->Montas todos los medios extraíbles durante al inicio</guilabel
+>Montar automáticamente todos los medios extraíbles durante al inicio</guilabel
 ></term>
 <listitem
 ><para
@@ -125,16 +125,16 @@
 <varlistentry
 ><term
 ><guilabel
->Sobre escritura de dispositivos</guilabel
+>Montaje automático</guilabel
 ></term>
 <listitem
 ><para
 >Esta lista contiene los dispositivos de almacenamiento conocidos por &plasma;. Si <guilabel
->Montar automáticamente al insertar</guilabel
-> está marcado, el dispositivo será montado automáticamente incluso aunque <guilabel
->Montar todos los medios extraíbles al inicio</guilabel
-> esté desmarcada. Lo mismo se aplica para <guilabel
->Montar automáticamente al insertar</guilabel
+>Durante el inicio</guilabel
+> está marcado, el dispositivo se montará automáticamente incluso aunque <guilabel
+>Montar automáticamente todos los medios extraíbles al inicio</guilabel
+> esté desmarcado. Lo mismo se aplica para <guilabel
+>Al insertar</guilabel
 >.</para>
 <para
 >Si <guilabel
