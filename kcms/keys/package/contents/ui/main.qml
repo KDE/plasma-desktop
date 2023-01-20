@@ -20,19 +20,22 @@ KCM.AbstractKCM {
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 33
 
+    framedView: false
+
     // order must be in sync with ComponentType enum in basemodel.h
     readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Settings"), i18n("Common Actions")]
 
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError != ""
+
     Connections {
         target: kcm
         function onShowComponent(row) {
             components.currentIndex = row
         }
     }
-    ColumnLayout {
-        anchors.fill: parent
+
+    header: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.InlineMessage {
@@ -82,15 +85,28 @@ KCM.AbstractKCM {
                 restoreMode: Binding.RestoreBinding
             }
         }
-        GridLayout  {
+    }
+
+    // Since we disabled the scroll views' frame and background, we're responsible
+    // for setting the background color ourselves, because the background color
+    // of the page it sits on top of doesn't have the right color for these views.
+    Rectangle {
+        anchors.fill: parent
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        color: Kirigami.Theme.backgroundColor
+
+        RowLayout  {
+            anchors.fill: parent
             enabled: !errorOccured
-            columns: 2
+            spacing: 0
+
             QQC2.ScrollView {
-                Component.onCompleted: background.visible = true
+                id: categoryList
+
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 15
-                Layout.maximumWidth: addButtonsLayout.width
                 Layout.fillHeight: true
-                Layout.minimumWidth: addButtonsLayout.width
+
                 ListView {
                     id: components
                     clip: true
@@ -231,13 +247,18 @@ KCM.AbstractKCM {
                     }
                 }
             }
+
+            Kirigami.Separator {
+                Layout.fillHeight: true
+            }
+
             QQC2.ScrollView  {
                 enabled: !exportActive
                 id: shortcutsScroll
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 clip: true
-                Component.onCompleted: background.visible = true
+
                 ListView {
                     clip:true
                     id: shortcutsList
@@ -259,57 +280,70 @@ KCM.AbstractKCM {
                     }
                 }
             }
-            GridLayout {
-                id: addButtonsLayout
-                // if the left-hand-side components view (which is bound to the width of this) is getting too wide, switch to vertical stack
-                readonly property bool useStackedLayout: addAppButton.implicitWidth + addCommandButton.implicitWidth >= root.width/2
-                rows: 2
-                columns: 2
-                flow: useStackedLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
-                Layout.alignment: Qt.AlignRight
-                QQC2.Button {
-                    id: addAppButton
-                    Layout.alignment: Qt.AlignRight
-                    enabled: !exportActive
-                    icon.name: "list-add"
-                    text: i18nc("@action:button Keep translated text as short as possible", "Add Application…")
-                    onClicked: {
-                        kcm.addApplication(this)
-                    }
-                }
-                QQC2.Button {
-                    id: addCommandButton
-                    Layout.alignment: Qt.AlignRight
-                    enabled: !exportActive
-                    icon.name: "list-add"
-                    text: i18nc("@action:button Keep translated text as short as possible", "Add Command…")
-                    onClicked: {
-                        addCommandDialog.open()
-                    }
+        }
+    }
+
+    footer: RowLayout {
+        enabled: !errorOccured
+
+        GridLayout {
+            id: addButtonsLayout
+            // if the left-hand-side components view (which is bound to the width of this) is getting too wide, switch to vertical stack
+            readonly property bool useStackedLayout: addAppButton.implicitWidth + addCommandButton.implicitWidth >= categoryList.width
+            rows: 2
+            columns: 2
+            flow: useStackedLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
+            Layout.alignment: Qt.AlignRight
+            Layout.maximumWidth: categoryList.width - (root.margins * 2)
+
+            QQC2.Button {
+                id: addAppButton
+                Layout.fillWidth: true
+                enabled: !exportActive
+                icon.name: "list-add"
+                text: i18nc("@action:button Keep translated text as short as possible", "Add Application…")
+                onClicked: {
+                    kcm.addApplication(this)
                 }
             }
-            RowLayout {
-                Layout.alignment: Qt.AlignRight | Qt.AlignTop
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Button {
-                    enabled: !exportActive
-                    icon.name: "document-import"
-                    text: i18n("Import Scheme…")
-                    onClicked: importSheet.open()
+            QQC2.Button {
+                id: addCommandButton
+                Layout.fillWidth: true
+                enabled: !exportActive
+                icon.name: "list-add"
+                text: i18nc("@action:button Keep translated text as short as possible", "Add Command…")
+                onClicked: {
+                    addCommandDialog.open()
                 }
-                QQC2.Button {
-                    icon.name: exportActive ? "dialog-cancel" : "document-export"
-                    text: exportActive ? i18n("Cancel Export") : i18n("Export Scheme…")
-                    onClicked: {
-                        if (exportActive) {
-                            exportActive = false
-                        } else if (kcm.needsSave) {
-                            exportWarning.visible = true
-                        } else {
-                            search.text = ""
-                            exportActive = true
-                        }
+            }
+        }
+
+        // To tighten up the button groups
+        Item {
+            Layout.fillWidth: true
+        }
+
+        RowLayout {
+            Layout.alignment: Qt.AlignTop | Qt.AlignRight
+            spacing: Kirigami.Units.smallSpacing
+
+            QQC2.Button {
+                enabled: !exportActive
+                icon.name: "document-import"
+                text: i18n("Import Scheme…")
+                onClicked: importSheet.open()
+            }
+            QQC2.Button {
+                icon.name: exportActive ? "dialog-cancel" : "document-export"
+                text: exportActive ? i18n("Cancel Export") : i18n("Export Scheme…")
+                onClicked: {
+                    if (exportActive) {
+                        exportActive = false
+                    } else if (kcm.needsSave) {
+                        exportWarning.visible = true
+                    } else {
+                        search.text = ""
+                        exportActive = true
                     }
                 }
             }
