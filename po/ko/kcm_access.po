@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-01-20 00:59+0000\n"
 "PO-Revision-Date: 2022-05-06 00:05+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -289,8 +289,10 @@ msgid "Please choose an audio file"
 msgstr "오디오 파일을 선택하십시오"
 
 #: package/contents/ui/Bell.qml:22
-#, kde-format
-msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, fuzzy, kde-format
+#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgctxt "Name filters in a file dialog"
+msgid "Audio Files (*.ogg *.wav)"
 msgstr "오디오 파일 (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31

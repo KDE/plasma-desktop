@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-01-20 00:59+0000\n"
 "PO-Revision-Date: 2022-12-10 18:43+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -293,8 +293,10 @@ msgid "Please choose an audio file"
 msgstr "Veldu hljóðskrá"
 
 #: package/contents/ui/Bell.qml:22
-#, kde-format
-msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, fuzzy, kde-format
+#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgctxt "Name filters in a file dialog"
+msgid "Audio Files (*.ogg *.wav)"
 msgstr "Hljóðskrár (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31

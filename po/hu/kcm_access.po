@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-01-20 00:59+0000\n"
 "PO-Revision-Date: 2021-09-04 09:20+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -295,8 +295,10 @@ msgid "Please choose an audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
 #: package/contents/ui/Bell.qml:22
-#, kde-format
-msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, fuzzy, kde-format
+#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+msgctxt "Name filters in a file dialog"
+msgid "Audio Files (*.ogg *.wav)"
 msgstr "Hangfájlok (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
