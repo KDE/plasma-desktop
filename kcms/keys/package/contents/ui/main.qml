@@ -33,6 +33,8 @@ KCM.AbstractKCM {
     }
     ColumnLayout {
         anchors.fill: parent
+        spacing: Kirigami.Units.smallSpacing
+
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             visible: errorOccured
@@ -121,6 +123,7 @@ KCM.AbstractKCM {
 
                         trailing: RowLayout {
                             spacing: Kirigami.Units.smallSpacing
+
                             QQC2.CheckBox {
                                 checked: model.checked
                                 visible: exportActive
@@ -287,6 +290,8 @@ KCM.AbstractKCM {
             }
             RowLayout {
                 Layout.alignment: Qt.AlignRight | Qt.AlignTop
+                spacing: Kirigami.Units.smallSpacing
+
                 QQC2.Button {
                     enabled: !exportActive
                     icon.name: "document-import"
@@ -381,6 +386,8 @@ KCM.AbstractKCM {
 
         ColumnLayout {
             anchors.centerIn: parent
+            spacing: Kirigami.Units.smallSpacing
+
             QQC2.Label {
                 text: i18n("Enter a command or choose a script file:")
             }
@@ -428,10 +435,14 @@ KCM.AbstractKCM {
 
         ColumnLayout {
             anchors.centerIn: parent
+            spacing: Kirigami.Units.smallSpacing
+
             QQC2.Label {
                 text: i18n("Select the scheme to import:")
             }
             RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
                 QQC2.ComboBox {
                     id: schemeBox
                     readonly property bool customSchemeSelected: currentIndex == count - 1
