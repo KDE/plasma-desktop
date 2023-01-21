@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 00:59+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -65,172 +65,172 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Tìm thấy xung đột"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Applications"
 msgstr "Ứng dụng"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
 msgstr "Lệnh"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "System Settings"
 msgstr "Thiết lập hệ thống"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Common Actions"
 msgstr "Hành động chung"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Không thể xuất khẩu quy hoạch khi có các thay đổi chưa được lưu"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
 "Chọn các thành phần bên dưới sẽ được bao gồm trong quy hoạch được xuất khẩu"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Save scheme"
 msgstr "Lưu quy hoạch"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Sửa lệnh cho %1"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Xoá tất cả phím tắt cho %1"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Undo deletion"
 msgstr "Đảo ngược việc xoá"
 
-#: package/contents/ui/main.qml:227
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Không có mục nào khớp với các từ khoá tìm kiếm"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:279
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Chọn một mục trong danh sách để xem các phím tắt của nó tại đây"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Thêm ứng dụng…"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "Thêm lệnh…"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:333
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Nhập khẩu quy hoạch…"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Cancel Export"
 msgstr "Huỷ xuất khẩu"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Xuất khẩu quy hoạch…"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Xuất khẩu quy hoạch phím tắt"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
+#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Nhập khẩu quy hoạch phím tắt"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Quy hoạch phím tắt (*.kksrc)"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
 msgstr "Sửa lệnh"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
 msgstr "Thêm lệnh"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
 msgstr "Lưu"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:426
 #, fuzzy, kde-format
 #| msgid "Enter a command or the full path to a script file:"
 msgid "Enter a command or choose a script file:"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
-#: package/contents/ui/main.qml:399
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Chọn quy hoạch để nhập khẩu:"
 
-#: package/contents/ui/main.qml:444
+#: package/contents/ui/main.qml:489
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Quy hoạch tự chọn"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Select File…"
 msgstr "Chọn tệp…"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Import"
 msgstr "Nhập khẩu"

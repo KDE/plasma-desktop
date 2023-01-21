@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 00:59+0000\n"
 "PO-Revision-Date: 2023-01-11 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -69,32 +69,32 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "S'ha trobat un conflicte"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
 msgstr "Ordres"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "System Settings"
 msgstr "Configuració del sistema"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Common Actions"
 msgstr "Accions comunes"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "No s'ha pogut exportar l'esquema mentre hi ha canvis sense guardar"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -102,139 +102,139 @@ msgstr ""
 "Seleccioneu els components següents que s'haurien d'incloure en l'esquema "
 "exportat"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Save scheme"
 msgstr "Guarda l'esquema"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Edita l'ordre per a %1"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Elimina totes les dreceres per a %1"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Undo deletion"
 msgstr "Desfés la supressió"
 
-#: package/contents/ui/main.qml:227
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "No hi ha cap element que coincidisca amb els termes de la busca"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:279
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccioneu un element de la llista per a veure ací les seues dreceres"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Afig una aplicació…"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "Afig una ordre…"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:333
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importa un esquema…"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Cancel Export"
 msgstr "Cancel·la l'exportació"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Exporta un esquema…"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exporta un esquema de dreceres"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
+#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importa un esquema de dreceres"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de dreceres (*.kksrc)"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
 msgstr "Edita una ordre"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
 msgstr "Afig una ordre"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
 msgstr "Guarda"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
 msgstr "Afig"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Introduïu una ordre o trieu un fitxer de script:"
 
-#: package/contents/ui/main.qml:399
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Seleccioneu…"
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Tria d'un fitxer de script"
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Fitxer de script (*.*sh)"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Seleccioneu l'esquema que s'ha d'importar:"
 
-#: package/contents/ui/main.qml:444
+#: package/contents/ui/main.qml:489
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema personalitzat"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Select File…"
 msgstr "Selecciona un fitxer…"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Import"
 msgstr "Importa"

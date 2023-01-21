@@ -5,13 +5,13 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2011, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-16 19:35+0300\n"
+"PO-Revision-Date: 2023-01-21 01:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Dokunmatik Kip'teyken kendiliğinden büyük olarak ayarla"
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
 msgid "Group:"
-msgstr "Grup:"
+msgstr "Grupla:"
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "Gruplandırma"
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
 msgid "By program name"
-msgstr "Uygulama Adına Göre"
+msgstr "Uygulama adına göre"
 
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
@@ -174,14 +174,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Küçük pencere önizlemeleri göster"
+msgstr "Küçük pencere önizlemelerini göster"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Büyük pencere önizlemeleri göster"
+msgstr "Büyük pencere önizlemelerini göster"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Yalnızca Görev Yöneticisi doluysa gruplandır"
 #: package/contents/ui/ConfigBehavior.qml:101
 #, kde-format
 msgid "Sort:"
-msgstr "Sıralama:"
+msgstr "Sırala:"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "Elle"
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Alphabetically"
-msgstr "Abecesel Olarak"
+msgstr "Abecesel olarak"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
@@ -603,19 +603,19 @@ msgstr "%1 için pencerelerin bir listesini aç"
 #: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
-msgstr "%1 Etkinleştir"
+msgstr "Etkinleştir: %1"
 
 #: package/contents/ui/ToolTipInstance.qml:326
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr "%1 Sesini Aç"
+msgstr "Sesini Aç: %1"
 
 #: package/contents/ui/ToolTipInstance.qml:327
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "%1 Ögesini Sessize Al"
+msgstr "Sessize Al: %1"
 
 #: package/contents/ui/ToolTipInstance.qml:350
 #, kde-format
@@ -645,7 +645,7 @@ msgstr "%1 Üzerinde"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr "Tüm masaüstlerine sabitlendi"
+msgstr "Tüm masaüstlerine sabit"
 
 #: package/contents/ui/ToolTipInstance.qml:407
 #, kde-format
