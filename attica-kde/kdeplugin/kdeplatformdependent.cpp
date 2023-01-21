@@ -35,7 +35,7 @@ KdePlatformDependent::KdePlatformDependent()
 
     const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/attica");
     QNetworkDiskCache *cache = new QNetworkDiskCache(m_accessManager);
-    QStorageInfo storageInfo(cacheDir);
+    QStorageInfo storageInfo(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
     cache->setCacheDirectory(cacheDir);
     cache->setMaximumCacheSize(storageInfo.bytesTotal() / 1000);
     m_accessManager->setCache(cache);
