@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 02:38+0000\n"
 "PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -65,170 +65,170 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "发现冲突"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Applications"
 msgstr "应用程序"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
 msgstr "命令"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "System Settings"
 msgstr "系统设置"
 
-#: package/contents/ui/main.qml:24
+#: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Common Actions"
 msgstr "通用操作"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "有未保存的更改时无法导出方案"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "选择要包含在导出方案中的组件"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Save scheme"
 msgstr "保存方案"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "编辑 %1 的命令"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "移除 %1 的所有快捷键"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Undo deletion"
 msgstr "撤销删除"
 
-#: package/contents/ui/main.qml:227
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "没有匹配搜索条件的项目"
 
-#: package/contents/ui/main.qml:255
+#: package/contents/ui/main.qml:279
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "在列表中选择一项以查看其快捷键"
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "添加应用程序…"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "添加命令…"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:333
 #, kde-format
 msgid "Import Scheme…"
 msgstr "导入方案…"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Cancel Export"
 msgstr "取消导出"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Export Scheme…"
 msgstr "导出方案…"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "导出快捷键方案"
 
-#: package/contents/ui/main.qml:319 package/contents/ui/main.qml:427
+#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "导入快捷键方案"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "快捷键方案 (*.kksrc)"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
 msgstr "编辑命令"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
 msgstr "添加命令"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
 msgstr "保存"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
 msgstr "添加"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: package/contents/ui/main.qml:399
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: package/contents/ui/main.qml:412
+#: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: package/contents/ui/main.qml:414
+#: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "选择要导入的方案："
 
-#: package/contents/ui/main.qml:444
+#: package/contents/ui/main.qml:489
 #, kde-format
 msgid "Custom Scheme"
 msgstr "自定义方案"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Select File…"
 msgstr "选择文件…"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Import"
 msgstr "导入"

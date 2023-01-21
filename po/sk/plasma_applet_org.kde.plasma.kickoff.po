@@ -1,14 +1,14 @@
 # translation of plasma_applet_org.kde.plasma.kickoff.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017, 2019.
 # Mthw <jari_45@hotmail.com>, 2018.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-14 00:58+0000\n"
-"PO-Revision-Date: 2022-11-22 17:51+0100\n"
+"PO-Revision-Date: 2023-01-20 20:28+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.11.80\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Ikona:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Zmena ikony spúšťača aplikácií"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -66,12 +66,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Aktuálna ikona je %1. Kliknutím otvorte ponuku na zmenu aktuálnej ikony "
+"alebo jej obnovenie na predvolenú ikonu."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Názov ikony je \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -83,7 +85,7 @@ msgstr "Zvoliť…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Výber ikony pre spúšťač aplikácií"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
@@ -113,7 +115,7 @@ msgstr "Tu zadajte textový štítok"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Obnoviť označenie ponuky"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
