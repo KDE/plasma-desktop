@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2017, 2019, 2020, 2021.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2017, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2021-11-28 08:30+0100\n"
+"PO-Revision-Date: 2023-01-21 10:07+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -54,13 +54,13 @@ msgstr "Usuń spis plików"
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
+msgstr "Należy ponownie uruchomić system, aby zmiany stały się widoczne."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Uruchom ponownie"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
