@@ -1,75 +1,70 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdeplasma-addons package.
 # Wantoyo <wantoyek@gmail.com>, 2018, 2021, 2022.
+# Linerly <linerly@protonmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2021-02-12 22:11+0700\n"
-"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2023-01-15 13:10+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restore All Minimized Windows"
-msgstr "Minimalkan Semua Window"
+msgstr "Kembalikan Semua Jendela yang Diminimalkan"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr "Minimalkan Semua Window"
+msgstr "Minimalkan Semua Jendela"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Mengembalikan jendela yang sebelumnya diminimalkan"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Tampilkan desktop dengan memindahkan window ke samping"
+msgstr "Menampilkan Desktop dengan meminimalkan semua jendela"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Lihat Desktop"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Berhenti Melihat Desktop"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Memindahkan jendela kembali ke posisi sebelumnya"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "Tampilkan desktop dengan memindahkan window ke samping"
+msgstr "Menampilkan desktop secara sementara dengan menyembunyikan jendela"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Tampilkan Desktop"

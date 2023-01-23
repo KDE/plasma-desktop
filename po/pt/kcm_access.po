@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-12-15 09:34+0000\n"
+"PO-Revision-Date: 2023-01-22 22:34+0000\n"
 "Last-Translator: Pedro Morais <morasi@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -286,11 +286,10 @@ msgid "Please choose an audio file"
 msgstr "Seleccione por favor um ficheiro de áudio"
 
 #: package/contents/ui/Bell.qml:22
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "Ficheiros de Áudio (*.mp3 *.ogg *.wav)"
+msgstr "Ficheiros de Áudio (*.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format
@@ -594,6 +593,3 @@ msgstr ""
 "Parece que o Leitor do Ecrã Orca não está instalado. Instale-o por favor "
 "antes de tentar usar esta funcionalidade e depois encerre a sessão ou "
 "reinicie"
-
-#~ msgid "Maximum velocity"
-#~ msgstr "Velocidade máxima"

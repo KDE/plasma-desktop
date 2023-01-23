@@ -4,13 +4,13 @@
 # Philip Bocharov  <rhfphd@mail.ru>, 2009.
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2015, 2016, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-09-23 22:08+0300\n"
+"PO-Revision-Date: 2023-01-22 15:29+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -67,14 +67,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Вернуть окна на их исходные позиции"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Временно освобождает рабочий стол, перемещая открытые окна в углы экрана"
+msgstr "Временно показывает рабочий стол, раздвигая окна"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Показать рабочий стол"
