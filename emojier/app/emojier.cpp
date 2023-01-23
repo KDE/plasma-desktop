@@ -10,6 +10,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>
+#include <KWindowSystem>
 #include <QAbstractListModel>
 #include <QApplication>
 #include <QCommandLineParser>
@@ -129,11 +130,13 @@ int main(int argc, char **argv)
             if (!w)
                 continue;
 
-            if (w && QX11Info::isPlatformX11())
-                KStartupInfo::setNewStartupId(w, QX11Info::nextStartupId());
-
             w->setVisible(true);
-            w->raise();
+            if (QX11Info::isPlatformX11()) {
+                KStartupInfo::setNewStartupId(w, QX11Info::nextStartupId());
+                w->raise();
+            } else if (KWindowSystem::isPlatformWayland()) {
+                KWindowSystem::activateWindow(w);
+            }
         }
     });
 
