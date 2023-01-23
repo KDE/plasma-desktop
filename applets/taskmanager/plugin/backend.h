@@ -72,6 +72,11 @@ public:
     static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
+    /**
+     * @return A mimedata map that contains required information to perform a task drag
+     */
+    Q_INVOKABLE static QVariantMap generateMimeData(const QString &mimeType, const QVariant &mimeData, const QUrl &url);
+
 public Q_SLOTS:
     void activateWindowView(const QVariant &winIds);
     void windowsHovered(const QVariant &winIds, bool hovered);

@@ -11,10 +11,12 @@
 #include <KWindowSystem>
 
 #include "backend.h"
+#include "log_settings.h"
 
 DragHelper::DragHelper(QQuickItem *parent)
     : QQuickItem(parent)
 {
+    qCWarning(TASKMANAGER_DEBUG, "DragHelper is deprecated in Plasma 5.27. Use Backend::generateMimeData and QtQuick.DragHandler instead.");
 }
 
 DragHelper::~DragHelper()
