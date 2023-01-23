@@ -53,7 +53,8 @@ target_link_libraries(kcm_tablet
 
 if (LINUX)
     target_sources(kcm_tablet PRIVATE
-    displaycontrol.cpp)
+    displaycontrol.cpp
+    displaymodel.cpp)
     target_link_libraries(kcm_tablet
     ddcutil)
 endif()
