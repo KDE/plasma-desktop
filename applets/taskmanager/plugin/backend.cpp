@@ -142,6 +142,31 @@ QStringList Backend::applicationCategories(const QUrl &launcherUrl)
     return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("Categories"));
 }
 
+QVariantMap Backend::generateMimeData(const QString &mimeType, const QVariant &mimeData, const QUrl &url)
+{
+    QVariantMap mimedata;
+
+    const QString &taskUrlData = Backend::tryDecodeApplicationsUrl(url).toString();
+    mimedata.insert(QStringLiteral("text/x-orgkdeplasmataskmanager_taskurl"), taskUrlData);
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 4, 2)
+    // Workaround for https://bugreports.qt.io/browse/QTBUG-71922
+    QString idString;
+    if (KWindowSystem::isPlatformX11()) {
+        const WId *const idData = reinterpret_cast<WId *>(mimeData.toByteArray().data());
+        idString = QStringLiteral("strnum-") % QString::number(*idData);
+    } else if (KWindowSystem::isPlatformWayland()) {
+        idString = QString::fromLatin1(mimeData.toByteArray());
+    }
+    mimedata.insert(mimeType, idString);
+    mimedata.insert(QStringLiteral("application/x-orgkdeplasmataskmanager_taskbuttonitem"), idString);
+#else
+    mimedata.insert(mimeType, mimeData);
+    mimedata.insert(QStringLiteral("application/x-orgkdeplasmataskmanager_taskbuttonitem"), mimeData);
+#endif
+    return mimedata;
+}
+
 QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 {
     QVariantList actions;

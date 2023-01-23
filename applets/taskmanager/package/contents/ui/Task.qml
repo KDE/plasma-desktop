@@ -391,7 +391,7 @@ PlasmaCore.ToolTipArea {
                 icon.grabToImage((result) => {
                     tasks.dragSource = task;
                     dragHelper.Drag.imageSource = result.url;
-                    dragHelper.Drag.mimeData = dragHelper.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
+                    dragHelper.Drag.mimeData = backend.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
                     dragHelper.Drag.active = dragHandler.active;
                 });
             } else {

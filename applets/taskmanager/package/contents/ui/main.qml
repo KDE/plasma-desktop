@@ -404,7 +404,7 @@ MouseArea {
     }
 
     // Save drag data
-    TaskManagerApplet.DragHelper {
+    Item {
         id: dragHelper
 
         Drag.dragType: Drag.Automatic
