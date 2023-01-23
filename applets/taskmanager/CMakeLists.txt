@@ -4,7 +4,6 @@ plasma_install_package(package org.kde.plasma.taskmanager)
 
 set(taskmanagerplugin_SRCS
     plugin/backend.cpp
-    plugin/draghelper.cpp
     plugin/taskmanagerplugin.cpp
 
     plugin/smartlaunchers/smartlauncherbackend.cpp
