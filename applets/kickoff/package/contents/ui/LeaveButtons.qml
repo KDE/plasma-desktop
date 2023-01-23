@@ -33,7 +33,7 @@ RowLayout {
             return String(plasmoid.configuration.systemFavorites).includes(favoriteId);
         }
         function trigger(index) {
-            var sourceIndex = mapToSource(index(index, 0));
+            var sourceIndex = mapToSource(this.index(index, 0));
             systemModel.trigger(sourceIndex.row, "", null);
         }
         Component.onCompleted: {
