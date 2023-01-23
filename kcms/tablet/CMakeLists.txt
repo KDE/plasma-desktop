@@ -51,4 +51,11 @@ target_link_libraries(kcm_tablet
     kwindevices
 )
 
+if (LINUX)
+    target_sources(kcm_tablet PRIVATE
+    displaycontrol.cpp)
+    target_link_libraries(kcm_tablet
+    ddcutil)
+endif()
+
 kpackage_install_package(package kcm_tablet kcms)

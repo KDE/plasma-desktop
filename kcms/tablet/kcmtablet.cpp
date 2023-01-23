@@ -298,4 +298,13 @@ DevicesModel *Tablet::padsModel() const
     return m_padsModel;
 }
 
+bool Tablet::supportDisplayControl() const
+{
+#ifdef Q_OS_LINUX
+    return true;
+#else
+    return false;
+#endif
+}
+
 #include "kcmtablet.moc"

@@ -28,6 +28,9 @@ include(FeatureSummary)
 include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+if (LINUX)
+    include(FindDDCUtil)
+endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick

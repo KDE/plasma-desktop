@@ -21,6 +21,7 @@ class Tablet : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)
     Q_PROPERTY(DevicesModel *padsModel READ padsModel CONSTANT)
+    Q_PROPERTY(bool supportDisplayControl READ supportDisplayControl CONSTANT)
 
 public:
     explicit Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
@@ -34,7 +35,7 @@ public:
 
     DevicesModel *toolsModel() const;
     DevicesModel *padsModel() const;
-
+    bool supportDisplayControl() const;
     Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
     Q_SCRIPTABLE void assignToolButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
     Q_SCRIPTABLE QKeySequence padButtonMapping(const QString &deviceName, uint button) const;
