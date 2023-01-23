@@ -4,20 +4,40 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#pragma once
+#ifndef DRAGHELPER_H
+#define DRAGHELPER_H
 
-#include <QQuickItem>
-#include <QVariantMap>
+#include <QObject>
 
+class QIcon;
+class QQuickItem;
 class QUrl;
 
-class DragHelper : public QQuickItem
+class DragHelper : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
+
 public:
-    explicit DragHelper(QQuickItem *parent = nullptr);
+    explicit DragHelper(QObject *parent = nullptr);
     ~DragHelper() override;
 
-    Q_INVOKABLE QVariantMap generateMimeData(const QString &mimeType, const QVariant &mimeData, const QUrl &url) const;
+    int dragIconSize() const;
+    void setDragIconSize(int size);
+
+    Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
+    Q_INVOKABLE void startDrag(QQuickItem *item, const QString &mimeType, const QVariant &mimeData, const QUrl &url, const QIcon &icon);
+
+Q_SIGNALS:
+    void dragIconSizeChanged() const;
+    void dropped() const;
+
+private Q_SLOTS:
+    void startDragInternal(QQuickItem *item, const QString &mimeType, const QVariant &mimeData, const QUrl &url, const QIcon &icon) const;
+
+private:
+    int m_dragIconSize;
 };
+
+#endif
