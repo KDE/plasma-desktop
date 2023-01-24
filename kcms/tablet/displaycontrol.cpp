@@ -1,9 +1,54 @@
 #include "displaycontrol.h"
 #include <KLocalizedString>
+#define VCP_BRIGHTNESS 0x10
+#define VCP_CONTRAST 0x12
 
-DisplayControl::DisplayControl(DDCA_Display_Ref ref)
-    : m_ref(ref)
+DisplayControl::DisplayControl()
 {
+    connect(Controller::inst(), &Controller::valueReturned, this, &DisplayControl::handleValueReturned);
+}
+
+DDCA_Display_Ref DisplayControl::ref() const
+{
+    return m_ref;
+}
+
+void DisplayControl::setRef(DDCA_Display_Ref ref)
+{
+    if (m_ref == ref) {
+        return;
+    }
+    m_ref = ref;
+    if (m_ref) {
+        Controller::inst()->getValue(ref, VCP_BRIGHTNESS);
+        Controller::inst()->getValue(ref, VCP_CONTRAST);
+    }
+}
+
+void DisplayControl::handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value)
+{
+    if (ref != m_ref) {
+        return;
+    }
+    switch (feature) {
+    case VCP_BRIGHTNESS:
+        m_brightness = value;
+        break;
+    case VCP_CONTRAST:
+        m_contrast = value;
+        break;
+    }
+    Q_EMIT refreshed();
+}
+
+void DisplayControl::setBrightness(int value)
+{
+    Controller::inst()->updateValue(m_ref, VCP_BRIGHTNESS, value);
+}
+
+void DisplayControl::setContrast(int value)
+{
+    Controller::inst()->updateValue(m_ref, VCP_CONTRAST, value);
 }
 
 Controller *Controller::inst()
@@ -18,32 +63,16 @@ Controller::Controller()
     ddca_enable_verify(false);
     m_worker->moveToThread(&m_workthread);
     connect(this, &Controller::updateValue_p, m_worker, &Worker::updateValue);
-    connect(m_worker, &Worker::valueUpdated, this, [this](DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value) {
-        m_lock.unlock();
-        Q_EMIT valueUpdated(ref, feature, value);
-    });
-    connect(m_worker, &Worker::valueUpdateFailed, this, [this](DDCA_Display_Ref ref, const QString &reason) {
-        m_lock.unlock();
-        Q_EMIT valueUpdateFailed(ref, reason);
-    });
-    connect(m_worker, &Worker::getValueFailed, this, [this](DDCA_Display_Ref ref, const QString &reason) {
-        m_lock.unlock();
-        Q_EMIT valueUpdateFailed(ref, reason);
-    });
-    connect(m_worker, &Worker::valueReturned, this, [this](DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value) {
-        m_lock.unlock();
-        Q_EMIT valueReturned(ref, feature, value);
-    });
+    connect(m_worker, &Worker::valueUpdated, this, &Controller::valueUpdated);
+    connect(m_worker, &Worker::valueUpdateFailed, this, &Controller::valueUpdateFailed);
+    connect(m_worker, &Worker::getValueFailed, this, &Controller::getValueFailed);
+    connect(m_worker, &Worker::valueReturned, this, &Controller::valueReturned);
     connect(this, &Controller::getValue_p, m_worker, &Worker::getValue);
 }
 
-bool Controller::updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value)
+void Controller::updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value)
 {
-    auto ret = m_lock.tryLock();
-    if (ret) {
-        Q_EMIT updateValue_p(ref, feature, value, QPrivateSignal());
-    }
-    return ret;
+    Q_EMIT updateValue_p(ref, feature, value, QPrivateSignal());
 }
 
 void Controller::Worker::updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value)
@@ -77,13 +106,9 @@ void Controller::Worker::updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code
     Q_EMIT valueUpdated(ref, feature, VALREC_CUR_VAL(valueRef));
 }
 
-bool Controller::getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature)
+void Controller::getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature)
 {
-    auto ret = m_lock.tryLock();
-    if (ret) {
-        Q_EMIT getValue_p(ref, feature, QPrivateSignal());
-    }
-    return ret;
+    Q_EMIT getValue_p(ref, feature, QPrivateSignal());
 }
 
 void Controller::Worker::getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature)
@@ -110,3 +135,6 @@ void Controller::Worker::getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code fe
     }
     Q_EMIT valueReturned(ref, feature, VALREC_CUR_VAL(valueRef));
 }
+
+#undef VCP_BRIGHTNESS
+#undef VCP_CONTRAST

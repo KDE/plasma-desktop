@@ -7,6 +7,10 @@
 #include "kcmtablet.h"
 #include "inputdevice.h"
 #include "tabletevents.h"
+#ifdef Q_OS_LINUX
+#include "displaycontrol.h"
+#include "displaymodel.h"
+#endif
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -146,12 +150,19 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantL
     : ManagedConfigModule(parent, metaData, list)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
+#ifdef Q_OS_LINUX
+    , m_displayModel(new DisplayModel())
+#endif
 {
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
+#ifdef Q_OS_LINUX
+    qmlRegisterType<DisplayControl>("org.kde.plasma.tablet.kcm", 1, 1, "DisplayControl");
+    qmlRegisterAnonymousType<DisplayModel>("org.kde.plasma.tablet.kcm", 1);
+#endif
 
     connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
     connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
@@ -298,6 +309,12 @@ DevicesModel *Tablet::padsModel() const
     return m_padsModel;
 }
 
+#ifdef Q_OS_LINUX
+DisplayModel *Tablet::displayModel() const
+{
+    return m_displayModel;
+}
+#endif
 bool Tablet::supportDisplayControl() const
 {
 #ifdef Q_OS_LINUX

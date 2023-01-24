@@ -8,21 +8,29 @@
 class DisplayControl : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int brightness READ brightness NOTIFY refreshed)
-    Q_PROPERTY(int contrast READ contrast NOTIFY refreshed)
+    Q_PROPERTY(DDCA_Display_Ref ref READ ref WRITE setRef NOTIFY refreshed)
+    Q_PROPERTY(int brightness READ brightness WRITE setBrightness NOTIFY refreshed)
+    Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY refreshed)
 public:
-    DisplayControl(DDCA_Display_Ref ref);
+    DisplayControl();
+
+    DDCA_Display_Ref ref() const;
+    void setRef(DDCA_Display_Ref ref);
     int brightness() const;
     int contrast() const;
+    void setBrightness(int value);
+    void setContrast(int value);
 
 Q_SIGNALS:
-    void loaded();
     void refreshed();
+
+private Q_SLOTS:
+    void handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value);
 
 private:
     int m_brightness = 0;
     int m_contrast = 0;
-    DDCA_Display_Ref m_ref;
+    DDCA_Display_Ref m_ref = nullptr;
 };
 
 class Controller : public QObject
@@ -46,21 +54,9 @@ public:
     Controller(const Controller &) = delete;
     Controller(Controller &&) = delete;
     Controller &operator=(const Controller &) = delete;
-    /**
-     * @brief updateValue
-     * @param ref
-     * @param feature
-     * @param value
-     * @return return false if there is an ongoing operation
-     */
-    bool updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value);
-    /**
-     * @brief getValue
-     * @param ref
-     * @param feature
-     * @return return false if there is an ongoing operation
-     */
-    bool getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature);
+
+    void updateValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t value);
+    void getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature);
 
 Q_SIGNALS:
     void valueUpdated(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, uint8_t currentValue);
@@ -84,7 +80,6 @@ Q_SIGNALS:
 
 private:
     Controller();
-    QMutex m_lock;
     QThread m_workthread;
     Worker *m_worker;
 };

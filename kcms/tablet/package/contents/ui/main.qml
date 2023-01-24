@@ -352,5 +352,36 @@ SimpleKCM {
                 }
             }
         }
+
+        Loader {
+            active: kcm.supportDisplayControl
+            sourceComponent: Item {
+                Kirigami.Separator {
+                    Layout.fillWidth: true
+                }
+                property var displayRef: null
+                QQC2.ComboBox {
+                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The drawing tablet we are configuring", "Tablet:")
+                    model: kcm.displayModel
+                    textRole: "name"
+                    enabled: count > 0
+                    displayText: enabled ? currentText : i18n("None")
+                    onCurrentIndexChanged: {
+                        parent.displayRef = kcm.displayModel.displayAt(currentIndex);
+                    }
+                }
+
+                DisplayControl {
+                    id: displayControl
+                    ref: parent.displayRef
+                }
+
+                QQC2.Slider {
+                    from: 0
+                    to: 100
+                    value: displayControl.brightness
+                }
+            }
+        }
     }
 }

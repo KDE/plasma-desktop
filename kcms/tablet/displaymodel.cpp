@@ -55,3 +55,11 @@ QHash<int, QByteArray> DisplayModel::roleNames() const
 {
     return {{Name, "name"}, {Manufacturer, "manufacturer"}, {DDCRef, "ref"}};
 }
+
+void *DisplayModel::displayAt(int index)
+{
+    if (index < 0 || index > (int)m_displays.size()) {
+        return nullptr;
+    }
+    return m_displays[index]->ref;
+}
