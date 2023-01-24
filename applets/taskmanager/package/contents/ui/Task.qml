@@ -259,9 +259,11 @@ PlasmaCore.ToolTipArea {
 
     // Will also be called in activateTaskAtIndex(index)
     function updateMainItemBindings() {
-        if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
+        if (mainItem.parentTask === task || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
             return;
         }
+
+        mainItem.blockingUpdates = (mainItem.isGroup !== (model.IsGroupParent === true)); // BUG 464597 Force unload the previous component
 
         mainItem.parentTask = task;
         mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
@@ -283,6 +285,8 @@ PlasmaCore.ToolTipArea {
 
         mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
         mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+
+        mainItem.blockingUpdates = false;
     }
 
     Connections {
