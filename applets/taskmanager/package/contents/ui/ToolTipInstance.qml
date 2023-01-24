@@ -161,7 +161,9 @@ ColumnLayout {
 
         Loader {
             id: thumbnailLoader
-            active: !albumArtImage.visible && Number.isInteger(thumbnailSourceItem.winId) && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+            active: !albumArtImage.visible
+                && (Number.isInteger(thumbnailSourceItem.winId) || pipeWireLoader.item && !pipeWireLoader.item.hasThumbnail)
+                && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
             anchors.fill: hoverHandler
@@ -169,7 +171,7 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: PlasmaCore.Units.smallSpacing * 2
 
-            sourceComponent: thumbnailSourceItem.isMinimized ? iconItem : x11Thumbnail
+            sourceComponent: thumbnailSourceItem.isMinimized || pipeWireLoader.active ? iconItem : x11Thumbnail
 
             Component {
                 id: x11Thumbnail
@@ -184,10 +186,30 @@ ColumnLayout {
                 id: iconItem
 
                 PlasmaCore.IconItem {
+                    id: realIconItem
                     source: icon
                     animated: false
                     usesPlasmaTheme: false
                     visible: valid
+                    opacity: pipeWireLoader.active ? 0 : 1
+
+                    SequentialAnimation {
+                        running: true
+
+                        PauseAnimation {
+                            duration: 300
+                        }
+
+                        NumberAnimation {
+                            id: showAnimation
+                            duration: PlasmaCore.Units.longDuration
+                            easing.type: Easing.OutCubic
+                            property: "opacity"
+                            target: realIconItem
+                            to: 1
+                        }
+                    }
+
                 }
             }
         }
@@ -206,7 +228,7 @@ ColumnLayout {
         }
 
         Loader {
-            active: (pipeWireLoader.item && pipeWireLoader.item.visible) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
+            active: (pipeWireLoader.item && pipeWireLoader.item.hasThumbnail) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
             asynchronous: true
             visible: active
             anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader

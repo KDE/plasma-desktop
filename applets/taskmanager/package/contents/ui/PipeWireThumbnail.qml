@@ -15,6 +15,8 @@ import org.kde.taskmanager 0.1 as TaskManager
 Item {
     anchors.fill: parent
 
+    readonly property alias hasThumbnail: pipeWireSourceItem.enabled
+
     TaskManager.ScreencastingRequest {
         id: waylandItem
         uuid: thumbnailSourceItem.winId
