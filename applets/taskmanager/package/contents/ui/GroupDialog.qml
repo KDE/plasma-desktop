@@ -26,9 +26,9 @@ PlasmaCore.Dialog {
     hideOnWindowDeactivate: true
     location: plasmoid.location
 
-    readonly property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
-    readonly property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
-    readonly property int contentWidth: mainItem.width // No padding here to avoid text elide.
+    readonly property real preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
+    readonly property real preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
+    readonly property real contentWidth: mainItem.width // No padding here to avoid text elide.
 
     property alias overflowing: scrollView.overflowing
     property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
@@ -84,19 +84,19 @@ PlasmaCore.Dialog {
             ListView {
                 id: groupListView
 
-                readonly property int maxWidth: groupFilter.maxTextWidth
+                readonly property real maxWidth: groupFilter.maxTextWidth
                                                 + LayoutManager.horizontalMargins()
                                                 + PlasmaCore.Units.iconSizes.medium
                                                 + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property int maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter
 
                     readonly property TextMetrics textMetrics: TextMetrics {}
-                    property int maxTextWidth: 0
+                    property real maxTextWidth: 0
 
                     model: tasksModel
                     rootIndex: tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex)
