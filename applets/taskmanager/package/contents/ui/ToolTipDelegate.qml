@@ -67,7 +67,7 @@ Loader {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    active: rootIndex !== undefined
+    active: rootIndex !== undefined && ((parentTask && parentTask.containsMouse) || Window.visibility !== Window.Hidden)
     asynchronous: true
 
     sourceComponent: isGroup ? groupToolTip : singleTooltip
