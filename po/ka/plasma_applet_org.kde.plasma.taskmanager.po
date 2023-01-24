@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-24 02:50+0000\n"
 "PO-Revision-Date: 2022-12-27 07:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -664,7 +664,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "ხელმისაწვდომია %1-ზე"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:351
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -672,40 +672,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "კიდევ %1 ადგილი"
 msgstr[1] "კიდევ %1 ადგილი"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:447
 #, kde-format
 msgid "Recent Downloads"
 msgstr "ახლახანს გადმოწერილები"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:449
 #, kde-format
 msgid "Recent Connections"
 msgstr "ახლახანს მიერთებული"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:451
 #, kde-format
 msgid "Recent Places"
 msgstr "ბოლოს ნანახი ადგილები"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:460
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "ახლახანს გადმოწერილების დავიწყება"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:462
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "ახლახანს მიერთებულების დავიწყება"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:464
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "ბოლოს ნანახი ადგილების დავიწყება"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:466
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

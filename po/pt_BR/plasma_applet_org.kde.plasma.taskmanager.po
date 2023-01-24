@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-24 02:50+0000\n"
 "PO-Revision-Date: 2022-12-20 11:26-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -673,7 +673,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Disponível em %1"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:351
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -681,40 +681,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "mais %1 lugar"
 msgstr[1] "mais %1 lugares"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:447
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Downloads recentes"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:449
 #, kde-format
 msgid "Recent Connections"
 msgstr "Conexões recentes"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:451
 #, kde-format
 msgid "Recent Places"
 msgstr "Locais recentes"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:460
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Esquecer os downloads recentes"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:462
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Esquecer as conexões recentes"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:464
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Esquecer os locais recentes"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:466
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the kcminput package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
 # Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2022.
+# Linerly <linerly@protonmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-09-27 15:39+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: https://matrix.to/#/#i18n_kde_id:matrix.org\n"
+"PO-Revision-Date: 2023-01-13 08:46+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,12 +34,12 @@ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"Pengquerian peranti input gagal. Silakan membuka-ulang modul pengaturan ini."
+"Pengkuerian peranti input gagal. Silakan membukaulang modul pengaturan ini."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr "Error kritis saat membaca asas info-info peranti %1."
+msgstr "Error kritis saat membaca asas info peranti %1."
 
 #: kcm/libinput/libinput_config.cpp:36
 #, kde-format
@@ -48,7 +49,7 @@ msgstr "Perangkat penunjuk KCM"
 #: kcm/libinput/libinput_config.cpp:38
 #, kde-format
 msgid "System Settings module for managing mice and trackballs."
-msgstr "Modul System Settings untuk mengelola mouse dan trackball."
+msgstr "Modul System Settings untuk mengelola tetikus dan trackball."
 
 #: kcm/libinput/libinput_config.cpp:40
 #, kde-format
@@ -72,7 +73,7 @@ msgid ""
 "this configuration module."
 msgstr ""
 "Error ketika memuat nilai. Lihat log untuk informasi selebihnya. Silakan "
-"restart modul konfigurasi ini."
+"mulai ulang modul konfigurasi ini."
 
 #: kcm/libinput/libinput_config.cpp:114
 #, kde-format
@@ -103,8 +104,8 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"Error ketika menambahkan peranti yang baru terkoneksi. Silakan koneksikan-"
-"ulang dan jalankan-ulang modul konfigurasi ini."
+"Error ketika menambahkan peranti yang baru terkoneksi. Silakan koneksikan "
+"ulang dan jalankan ulang modul konfigurasi ini."
 
 #: kcm/libinput/libinput_config.cpp:191
 #, kde-format
@@ -150,7 +151,7 @@ msgstr "Tukar tombol kiri dan kanan."
 #: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr "Tekan tombol kiri dan kanan untuk klik-tengah."
+msgstr "Tekan tombol kiri dan kanan untuk klik tengah."
 
 #: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
 #, kde-format
@@ -177,7 +178,7 @@ msgstr "Rata"
 #: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr "Pindahan kursor jaraknya sama dengan perpindahan mouse."
+msgstr "Pindahan kursor jaraknya sama dengan perpindahan tetikus."
 
 #: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -188,7 +189,7 @@ msgstr "Adaptif"
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
-"Perjalanan kursor jaraknya bergantung pada kecepatan perpindahan mouse."
+"Perjalanan kursor jaraknya bergantung pada kecepatan perpindahan tetikus."
 
 #: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
 #, kde-format
@@ -203,7 +204,7 @@ msgstr "Kebalikan arah gulir"
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Touchscreen seperti bergulir."
+msgstr "Bergulir seperti layar sentuh."
 
 #: kcm/libinput/main.qml:295
 #, kde-format
@@ -279,10 +280,10 @@ msgid ""
 "in which your pointing device works. Your pointing device may be a mouse, "
 "trackball, or some other hardware that performs a similar function."
 msgstr ""
-"<h1>Mouse</h1> Modul ini memungkinkan kamu untuk memilih beragam opsi bagi "
+"<h1>Tetikus</h1> Modul ini memungkinkan kamu untuk memilih beragam opsi bagi "
 "cara peranti penunjuk kamu bekerja. Perangkat penunjuk kamu dapat berupa "
-"mouse, trackball, atau beberapa peranti keras lainnya yang mempunyai fungsi "
-"serupa."
+"tetikus, trackball, atau beberapa peranti keras lainnya yang mempunyai "
+"fungsi serupa."
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: kcm/xlib/kcmmouse.ui:36
@@ -304,7 +305,7 @@ msgstr ""
 "dan kanan dari peranti penunjukmu dengan memilih opsi 'tangan kiri'. Jika "
 "peranti penunjukmu memiliki lebih dari dua tombol, hanya tombol yang "
 "berfungsi sebagai tombol kiri dan kanan yang terpengaruh. Misalnya, jika "
-"kamu memiliki mouse tiga tombol, maka tombol tengah tidak terpengaruh."
+"kamu memiliki tetikus tiga tombol, maka tombol tengah tidak terpengaruh."
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
 #: kcm/xlib/kcmmouse.ui:55
@@ -331,7 +332,8 @@ msgid ""
 "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
 "mouse buttons."
 msgstr ""
-"Ubah arah pengguliran untuk roda mouse atau tombol mouse keempat dan kelima."
+"Ubah arah pengguliran untuk roda tetikus atau tombol tetikus keempat dan "
+"kelima."
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:109
@@ -379,7 +381,7 @@ msgstr "Jarak mulai tarik:"
 #: kcm/xlib/kcmmouse.ui:214
 #, kde-format
 msgid "Mouse wheel scrolls by:"
-msgstr "Menggulir roda mouse dengan:"
+msgstr "Menggulir roda tetikus dengan:"
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
 #: kcm/xlib/kcmmouse.ui:230
@@ -395,12 +397,12 @@ msgid ""
 "control.</p>"
 msgstr ""
 "<p>Opsi ini memungkinkan kamu untuk mengubah hubungan antara jarak dari "
-"pergerakan penunjuk mouse di layar dan pergerakan relatif dari peranti fisik "
-"itu sendiri (yang dapat berupa mouse, trackball, atau beberapa peranti "
-"penunjuk lainnya.)</p><p> Nilai yang tinggi untuk akselerasi akan membawa "
-"pada pergerakan yang jauh dari penunjuk mouse di layar bahkan jika kamu "
-"hanya membuat pergerakan kecil dengan peranti fisik. Memilih nilai yang "
-"sangat tinggi dapat berakibat penunjuk mouse kamu melayang melewati layar, "
+"pergerakan penunjuk tetikus di layar dan pergerakan relatif dari peranti "
+"fisik itu sendiri (yang dapat berupa tetikus, trackball, atau beberapa "
+"peranti penunjuk lainnya.)</p><p> Nilai yang tinggi untuk akselerasi akan "
+"membawa pada pergerakan yang jauh dari penunjuk tetikus di layar bahkan jika "
+"kamu hanya membuat pergerakan kecil dengan peranti fisik. Memilih nilai yang "
+"sangat tinggi dapat berakibat penunjuk tetikus kamu melayang melewati layar, "
 "membuatnya sulit untuk dikendalikan.</p>"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
@@ -421,14 +423,14 @@ msgid ""
 "the mouse pointer. With larger movements of the physical device, you can "
 "move the mouse pointer rapidly to different areas on the screen.</p>"
 msgstr ""
-"<p>Ambang adalah jarak terkecil yang penunjuk mouse harus pindah di layar "
+"<p>Ambang adalah jarak terkecil yang penunjuk tetikus harus pindah di layar "
 "sebelum akselerasi berpengaruh. Jika pergerakan lebih kecil dari ambang, "
-"penunjuk mouse bergerak seperti akselerasi diset ke 1X;</p><p> sehingga, "
+"penunjuk tetikus bergerak seperti akselerasi diset ke 1X;</p><p> sehingga, "
 "ketika kamu membuat pergerakan kecil dengan peranti fisik, tidak ada "
 "akselerasi sama sekali, memberikan kamu kendali yang lebih besar terhadap "
-"penunjuk mouse. Dengan pergerakan yang lebih besar dari peranti fisik, kamu "
-"bisa memindahkan penunjuk mouse secara cepat ke berbagai area yang berbeda "
-"di layar.</p>"
+"penunjuk tetikus. Dengan pergerakan yang lebih besar dari peranti fisik, "
+"kamu bisa memindahkan penunjuk tetikus secara cepat ke berbagai area yang "
+"berbeda di layar.</p>"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
 #: kcm/xlib/kcmmouse.ui:280
@@ -462,8 +464,8 @@ msgid ""
 "If you click with the mouse (e.g. in a multi-line editor) and begin to move "
 "the mouse within the drag start time, a drag operation will be initiated."
 msgstr ""
-"Jika kamu klik dengan mouse (misalnya di penyunting multi baris) dan mulai "
-"memindahkan mouse di dalam waktu mulai tarik, operasi penarikan akan "
+"Jika kamu klik dengan tetikus (misalnya di penyunting multi baris) dan mulai "
+"memindahkan tetikus di dalam waktu mulai tarik, operasi penarikan akan "
 "dijalankan."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
@@ -473,8 +475,8 @@ msgid ""
 "If you click with the mouse and begin to move the mouse at least the drag "
 "start distance, a drag operation will be initiated."
 msgstr ""
-"Jika kamu klik dengan mouse dan mulai untuk memindahkan mouse sekurangnya "
-"jarak mulai tarik, operasi penarikan akan dijalankan."
+"Jika kamu klik dengan tetikus dan mulai untuk memindahkan tetikus "
+"sekurangnya jarak mulai tarik, operasi penarikan akan dijalankan."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
 #: kcm/xlib/kcmmouse.ui:355
@@ -485,7 +487,7 @@ msgid ""
 "number of visible lines, it will be ignored and the wheel movement will be "
 "handled as a page up/down movement."
 msgstr ""
-"Jika kamu menggunakan roda mouse, nilai ini menentukan jumlah baris untuk "
+"Jika kamu menggunakan roda tetikus, nilai ini menentukan jumlah baris untuk "
 "menggulir untuk tiap pergerakan roda. Perlu dicatat bahwa jika nomor ini "
 "melampaui jumlah baris terlihat, nomor akan diabaikan dan pergerakan roda "
 "akan ditangani sebagai pergerakan satu halaman ke atas/bawah."
@@ -541,12 +543,12 @@ msgstr "&Profil akselerasi"
 #: kcm/xlib/xlib_config.cpp:79
 #, kde-format
 msgid "Mouse"
-msgstr "Mouse"
+msgstr "Tetikus"
 
 #: kcm/xlib/xlib_config.cpp:83
 #, kde-format
 msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2018 Pengembang mouse "
+msgstr "(c) 1997 - 2018 Pengembang tetikus "
 
 #: kcm/xlib/xlib_config.cpp:84
 #, kde-format
