@@ -37,5 +37,9 @@ Item {
                 easing.type: Easing.OutCubic
             }
         }
+
+        Component.onDestruction: {
+            fd = undefined; // BUG 464597 Close stream immediately after the QML instance is destroyed
+        }
     }
 }
