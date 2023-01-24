@@ -8,13 +8,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-12-22 10:34+0400\n"
+"PO-Revision-Date: 2023-01-23 20:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -295,11 +295,10 @@ msgid "Please choose an audio file"
 msgstr "رجاءً اختر ملف صوتي"
 
 #: package/contents/ui/Bell.qml:22
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "الملفات الصوتية (*.mp3 *.ogg *.wav)"
+msgstr "الملفات الصوتية (*.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format

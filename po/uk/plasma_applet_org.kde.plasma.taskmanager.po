@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-24 01:00+0000\n"
 "PO-Revision-Date: 2022-12-16 08:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -666,7 +666,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Доступне у %1"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:351
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -676,40 +676,40 @@ msgstr[1] "І ще %1 місця"
 msgstr[2] "І ще %1 місць"
 msgstr[3] "І ще одне місце"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:447
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Нещодавні отримання"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:449
 #, kde-format
 msgid "Recent Connections"
 msgstr "Нещодавні з'єднання"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:451
 #, kde-format
 msgid "Recent Places"
 msgstr "Нещодавні місця"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:460
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Спорожнити список нещодавніх отримань"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:462
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Спорожнити список нещодавніх з'єднань"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:464
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Спорожнити список нещодавніх місць"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:466
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

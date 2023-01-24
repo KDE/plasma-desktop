@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-14 00:58+0000\n"
+"POT-Creation-Date: 2023-01-24 01:00+0000\n"
 "PO-Revision-Date: 2023-01-21 18:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -203,7 +203,7 @@ msgid "Show buttons for:"
 msgstr "Показывать кнопки:"
 
 #: package/contents/ui/ConfigGeneral.qml:216
-#: package/contents/ui/LeaveButtons.qml:80
+#: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
 msgstr "Управления питанием"
@@ -261,12 +261,12 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Сетка, строк: %1, столбцов: %2"
 
 # shutdown-method
-#: package/contents/ui/LeaveButtons.qml:80
+#: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Leave"
 msgstr "Выход"
 
-#: package/contents/ui/LeaveButtons.qml:80
+#: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "More"
 msgstr "Больше"
