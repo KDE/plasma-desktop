@@ -15,6 +15,11 @@ import org.kde.taskmanager 0.1 as TaskManager
 Item {
     anchors.fill: parent
 
+    TaskManager.ScreencastingRequest {
+        id: waylandItem
+        uuid: thumbnailSourceItem.winId
+    }
+
     PipeWire.PipeWireSourceItem {
         id: pipeWireSourceItem
 
@@ -25,11 +30,6 @@ Item {
         anchors.fill: parent
 
         opacity: enabled ? 1 : 0
-
-        TaskManager.ScreencastingRequest {
-            id: waylandItem
-            uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
-        }
 
         Behavior on opacity {
             OpacityAnimator {
