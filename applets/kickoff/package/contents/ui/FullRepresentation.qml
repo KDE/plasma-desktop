@@ -26,12 +26,14 @@ EmptyPage {
     rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: 0
     bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
-    readonly property var appletInterface: plasmoid.self
+    readonly property var appletInterface: Plasmoid.self
 
     Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
     Layout.minimumHeight: implicitHeight
     Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.preferredWidth: Math.max(implicitWidth, width)
+    Layout.preferredHeight: Math.max(implicitHeight, height)
 
     property alias normalPage: normalPage
 
@@ -86,8 +88,6 @@ EmptyPage {
                 id: searchView
                 objectName: "searchView"
                 mainContentView: true
-                implicitWidth: normalPage.implicitWidth
-                implicitHeight: normalPage.implicitHeight
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
                 model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
