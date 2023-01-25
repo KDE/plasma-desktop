@@ -17,6 +17,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <unistd.h>
+
 CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
     : QDialog(parent)
     , joydev(joy)
@@ -182,7 +184,8 @@ void CalDialog::waitButton(int axis, bool press, int &lastVal)
 
             if ((type == JoyDevice::AXIS) && (number == axis))
                 valueLbl->setText(i18n("Value Axis %1: %2", axis + 1, lastVal = value));
-        }
+        } else
+            usleep(10000);
     } while (!button && (result() == -1));
 }
 
