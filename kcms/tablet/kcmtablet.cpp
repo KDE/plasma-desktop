@@ -161,6 +161,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantL
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
 #ifdef Q_OS_LINUX
     qmlRegisterType<DisplayControl>("org.kde.plasma.tablet.kcm", 1, 1, "DisplayControl");
+    qmlRegisterType<ColorSpaceModel>("org.kde.plasma.tablet.kcm", 1, 1, "ColorspaceModel");
     qmlRegisterAnonymousType<DisplayModel>("org.kde.plasma.tablet.kcm", 1);
 #endif
 

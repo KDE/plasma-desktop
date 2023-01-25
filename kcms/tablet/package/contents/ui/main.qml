@@ -356,30 +356,55 @@ SimpleKCM {
         Loader {
             active: kcm.supportDisplayControl
             sourceComponent: Item {
-                Kirigami.Separator {
-                    Layout.fillWidth: true
-                }
-                property var displayRef: null
-                QQC2.ComboBox {
-                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The drawing tablet we are configuring", "Tablet:")
-                    model: kcm.displayModel
-                    textRole: "name"
-                    enabled: count > 0
-                    displayText: enabled ? currentText : i18n("None")
-                    onCurrentIndexChanged: {
-                        parent.displayRef = kcm.displayModel.displayAt(currentIndex);
+                ColumnLayout {
+                    Kirigami.Separator {
+                        Layout.fillWidth: true
                     }
-                }
 
-                DisplayControl {
-                    id: displayControl
-                    ref: parent.displayRef
-                }
+                    QQC2.ComboBox {
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The drawing tablet we are configuring", "Tablet:")
+                        model: kcm.displayModel
+                        textRole: "name"
+                        enabled: count > 0
+                        displayText: enabled ? currentText : i18n("None")
+                        onCurrentIndexChanged: {
+                            displayControl.ref = kcm.displayModel.displayAt(currentIndex);
+                        }
+                    }
 
-                QQC2.Slider {
-                    from: 0
-                    to: 100
-                    value: displayControl.brightness
+                    DisplayControl {
+                        id: displayControl
+                        onColorspaceChanged: {
+                            colorspaceComboBox.currentIndex = colorspaceModel.indexFromColorspaceValue(colorspace);
+                        }
+                    }
+
+                    ColorspaceModel {
+                        id: colorspaceModel
+                    }
+
+                    QQC2.Slider {
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for brightness config slider", "Brightness: ")
+                        from: 0
+                        to: 100
+                        value: displayControl.brightness
+                        onValueChanged: {
+                            displayControl.brightness = value
+                        }
+                    }
+
+                    QQC2.ComboBox {
+                        id: colorspaceComboBox
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The list of available colorspace options", "Colorspace:")
+                        model: colorspaceModel
+                        textRole: "display"
+                        valueRole: "rawValue"
+                        onCurrentIndexChanged: {
+                            if (currentValue) {
+                                displayControl.colorspace = currentValue;
+                            }
+                        }
+                    }
                 }
             }
         }
