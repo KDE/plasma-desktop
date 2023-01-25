@@ -29,6 +29,7 @@
 #include <KUrlCompletion>
 
 #include <stdio.h>
+#include <unistd.h>
 
 class TableWidget : public QTableWidget
 {
@@ -287,30 +288,35 @@ void JoyWidget::checkDevice()
     JoyDevice::EventType type;
     int number, value;
 
-    if (!joydev->getEvent(type, number, value))
-        return;
+    // process all pending events
+    while (true) {
+        if (!joydev->getEvent(type, number, value)) {
+            usleep(10000);
+            return;
+        }
 
-    if (type == JoyDevice::BUTTON) {
-        if (!buttonTbl->item(number, 0))
-            buttonTbl->setItem(number, 0, new QTableWidgetItem());
+        if (type == JoyDevice::BUTTON) {
+            if (!buttonTbl->item(number, 0))
+                buttonTbl->setItem(number, 0, new QTableWidgetItem());
 
-        if (value == 0) // button release
-            buttonTbl->item(number, 0)->setText(QStringLiteral("-"));
-        else
-            buttonTbl->item(number, 0)->setText(i18n("PRESSED"));
-    }
+            if (value == 0) // button release
+                buttonTbl->item(number, 0)->setText(QStringLiteral("-"));
+            else
+                buttonTbl->item(number, 0)->setText(i18n("PRESSED"));
+        }
 
-    if (type == JoyDevice::AXIS) {
-        if (number == 0) // x-axis
-            xyPos->changeX(value);
+        if (type == JoyDevice::AXIS) {
+            if (number == 0) // x-axis
+                xyPos->changeX(value);
 
-        if (number == 1) // y-axis
-            xyPos->changeY(value);
+            if (number == 1) // y-axis
+                xyPos->changeY(value);
 
-        if (!axesTbl->item(number, 0))
-            axesTbl->setItem(number, 0, new QTableWidgetItem());
+            if (!axesTbl->item(number, 0))
+                axesTbl->setItem(number, 0, new QTableWidgetItem());
 
-        axesTbl->item(number, 0)->setText(QStringLiteral("%1").arg(int(value)));
+            axesTbl->item(number, 0)->setText(QStringLiteral("%1").arg(int(value)));
+        }
     }
 }
 
