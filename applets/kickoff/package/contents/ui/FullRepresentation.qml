@@ -26,7 +26,7 @@ EmptyPage {
     rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: 0
     bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
-    readonly property var appletInterface: plasmoid.self
+    readonly property var appletInterface: Plasmoid.self
 
     Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
@@ -86,8 +86,7 @@ EmptyPage {
                 id: searchView
                 objectName: "searchView"
                 mainContentView: true
-                implicitWidth: normalPage.implicitWidth
-                implicitHeight: normalPage.implicitHeight
+                // implicitWidth/implicitHeight is set in replace()
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
                 model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
@@ -148,10 +147,16 @@ EmptyPage {
             function onSearchTextChanged() {
                 if (root.header.searchText.length === 0 && contentItemStackView.currentItem.objectName !== "normalPage") {
                     contentItemStackView.reverseTransitions = true
-                    contentItemStackView.replace(normalPage)
+                    contentItemStackView.replace(normalPage, {
+                        "implicitWidth": contentItemStackView.width,
+                        "implicitHeight": contentItemStackView.height,
+                    }) // BUG 463862 use existing dialog size to avoid resizing dialog
                 } else if (root.header.searchText.length > 0 && contentItemStackView.currentItem.objectName !== "searchView") {
                     contentItemStackView.reverseTransitions = false
-                    contentItemStackView.replace(searchViewComponent)
+                    contentItemStackView.replace(searchViewComponent, {
+                        "implicitWidth": contentItemStackView.width,
+                        "implicitHeight": contentItemStackView.height,
+                    }) // BUG 463862 use existing dialog size to avoid resizing dialog
                 }
             }
         }
