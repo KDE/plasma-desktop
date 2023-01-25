@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2023-01-21 07:31+0100\n"
+"PO-Revision-Date: 2023-01-24 06:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -59,6 +59,8 @@ msgstr ""
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
+"კრიტიკული შეცდომა მოწყობილობის ფუნდამენტალური ინფორმაციის წაკითხვისას "
+"თაჩპედისთვის %1."
 
 #: backends/x11/xlibbackend.cpp:74
 #, kde-format
@@ -166,7 +168,7 @@ msgstr "შეგუებადი"
 #: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
+msgstr "კურსორის გადატანის მანძილი თითის მოძრაობის სიჩქარეზეა დამოკიდებული."
 
 #: kcm/libinput/touchpad.qml:416
 #, kde-format
@@ -217,7 +219,7 @@ msgstr "მარჯვენა-ღილაკის-წკაპი (შუ�
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
+msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ, შუა-წკაპისთვის კი სამით."
 
 #: kcm/libinput/touchpad.qml:517
 #, kde-format
@@ -321,7 +323,7 @@ msgstr "დააჭირეთ ქვედა-მარჯვენა კუ
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
+msgstr "პროგრამულად ჩართული ღილაკები თქვენი თაჩპედის ქვედა ადგილას დაემატება."
 
 #: kcm/libinput/touchpad.qml:796
 #, kde-format
@@ -349,6 +351,7 @@ msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr ""
+"პროგრამულად ჩართული შუა-ღილაკი თქვენი თაჩპედის ქვედა ადგილას დაემატება."
 
 #: kcm/libinput/touchpad.qml:855
 #, kde-format
@@ -471,6 +474,8 @@ msgstr "შუა ღილაკი"
 msgid ""
 "System Settings module, daemon and Plasma applet for managing your touchpad"
 msgstr ""
+"სისტემის მორგების მოდული, დემონი და Plasma-ის აპლეტი თქვენი თაჩპედის "
+"სამართავად"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:86
 #, kde-format
@@ -544,6 +549,8 @@ msgid ""
 "Active settings don't match saved settings.\n"
 "You currently see saved settings."
 msgstr ""
+"აქტიური პარამეტრები შენახულ პარამეტრებს არ ემთხვევა.\n"
+"ამჟამად შენახულ პარამეტრებს უყურებთ."
 
 #: kcm/xlib/touchpadconfigxlib.cpp:122
 #, kde-format
@@ -791,6 +798,8 @@ msgstr "ჰორიზონტალური:"
 msgid ""
 "The minimum vertical hardware distance required to generate motion events"
 msgstr ""
+"მოძრაობის მოვლენების გენერირებისთვის საჭირო მინიმალური ვერტიკალური "
+"აპარატურის მანძილი"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
@@ -805,6 +814,8 @@ msgstr " ერთეული"
 msgid ""
 "The minimum horizontal hardware distance required to generate motion events"
 msgstr ""
+"მოძრაობის მოვლენების გენერირებისთვის საჭირო მინიმალური ჰორიზონტალური "
+"აპარატურის მანძილი"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
 #: kcm/xlib/ui/scroll.ui:14
@@ -910,7 +921,7 @@ msgstr "ვერტიკალური:"
 #: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
 #, kde-format
 msgid "Move distance of the finger for a scroll event"
-msgstr ""
+msgstr "თითის მოძრაობის მანძილი დაქაჩვის მოვლენისთვის"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)

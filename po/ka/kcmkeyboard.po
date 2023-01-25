@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2022-09-12 09:53+0200\n"
+"PO-Revision-Date: 2023-01-24 06:38+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -96,6 +96,8 @@ msgid ""
 "<h1>Keyboard</h1> This control module can be used to configure keyboard "
 "parameters and layouts."
 msgstr ""
+"<h1>კლავიატურა</h1> ეს მოდული შეგიძლიათ კლავიატურის პარამეტრებისა და "
+"განლაგებების მორგებისთვის გამოიყენოთ."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -134,6 +136,8 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
+"თუ აირჩევთ \"აპლიკაციის\" ან \"ფანჯრის\" გადართვის პოლიტიკას, კლავიატურის "
+"განლაგების ცვლილება მხოლოდ მიმდინარე აპლიკაციას ან ფანჯარას შეეხება."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
