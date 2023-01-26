@@ -29,7 +29,6 @@
 #include <KUrlCompletion>
 
 #include <stdio.h>
-#include <unistd.h>
 
 class TableWidget : public QTableWidget
 {
@@ -288,13 +287,12 @@ void JoyWidget::checkDevice()
     JoyDevice::EventType type;
     int number, value;
 
-    // process all pending events
-    while (true) {
-        if (!joydev->getEvent(type, number, value)) {
-            usleep(10000);
-            return;
-        }
+    // sleep-wait for the first event
+    if (!joydev->getEvent(type, number, value, true))
+        return;
 
+    // process all pending events
+    do {
         if (type == JoyDevice::BUTTON) {
             if (!buttonTbl->item(number, 0))
                 buttonTbl->setItem(number, 0, new QTableWidgetItem());
@@ -317,7 +315,7 @@ void JoyWidget::checkDevice()
 
             axesTbl->item(number, 0)->setText(QStringLiteral("%1").arg(int(value)));
         }
-    }
+    } while (joydev->getEvent(type, number, value, false)); // return immediately when no events are left
 }
 
 void JoyWidget::calibrateDevice()

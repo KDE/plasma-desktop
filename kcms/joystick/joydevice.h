@@ -86,7 +86,7 @@ public:
     int axisMax(int axis) const;
 
     // read next event from device; returns true if there was an event during the short timeout
-    bool getEvent(JoyDevice::EventType &type, int &number, int &value);
+    bool getEvent(JoyDevice::EventType &type, int &number, int &value, bool wait);
 
     // methods for calibration
     ErrorCode initCalibration(); // must be called first
