@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:48+0000\n"
+"POT-Creation-Date: 2023-01-26 00:59+0000\n"
 "PO-Revision-Date: 2022-12-23 10:31+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -110,38 +110,38 @@ msgstr "Выполняется индексирование: %1"
 msgid "Folder specific configuration:"
 msgstr "Параметры для отдельных папок:"
 
-#: package/contents/ui/main.qml:213
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Индексировать папку…"
 
-#: package/contents/ui/main.qml:224
+#: package/contents/ui/main.qml:221
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Не индексировать папку…"
 
 # BUGME: Do not index? --ayavorsky  20200412
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgid "Not indexed"
 msgstr "Не индексировать"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Indexed"
 msgstr "Индексировать"
 
-#: package/contents/ui/main.qml:306
+#: package/contents/ui/main.qml:303
 #, kde-format
 msgid "Delete entry"
 msgstr "Удалить запись"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Выбор папки для индексирования"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Выбор папки для исключения из индексирования"
