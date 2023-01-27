@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2023-01-25 10:04+0100\n"
+"PO-Revision-Date: 2023-01-26 23:01+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -24,9 +24,7 @@ msgid "Restore All Minimized Windows"
 msgstr "Restabili omne fenestras minimisate"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Minimisa omne fenestras"
@@ -38,8 +36,7 @@ msgid "Restores the previously minimized windows"
 msgstr "Restabili le previe fenestras minimisate"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Monstra le scriptorio per mover fenestras omne a latere"
@@ -60,14 +57,13 @@ msgstr "Reguarda a Scriptorio"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Regressa fenestras a lor positiones original"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "Monstra le scriptorio per mover fenestras omne a latere"
+msgstr "Temporaneemente monstra le scriptorio per remover fenestras "
 
 #~ msgid "Show Desktop"
 #~ msgstr "Monstra Scriptorio"

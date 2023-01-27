@@ -9,13 +9,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2015, 2016, 2017, 2018, 2019.
 # Yuri Efremov <yur.arh@gmail.com>, 2011.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2022-09-24 14:43+0300\n"
+"PO-Revision-Date: 2023-01-26 11:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -81,16 +81,16 @@ msgid "General:"
 msgstr "Основное:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Подсветка окна при наведении на соответствующий элемент в панели задач"
+msgstr ""
+"Показывать миниатюру окна при наведении указателя мыши на элемент в панели "
+"задач"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Подсветка окна при наведении на соответствующий элемент в панели задач"
+msgstr "Скрывать другие окна при наведении указателя мыши на миниатюру"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
