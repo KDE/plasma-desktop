@@ -82,10 +82,15 @@ Item {
             text: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
-            } else return i18n("Plasma Desktop")
+            } else {
+                return i18n("Plasma Desktop")
+            }
+
             iconSource: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
-            } else return "start-here-kde"
+            } else {
+                return "start-here-kde"
+            }
 
             TaskManager.TasksModel {
                 id: tasksModel
