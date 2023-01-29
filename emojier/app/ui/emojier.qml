@@ -36,11 +36,6 @@ Kirigami.ApplicationWindow
         window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))
     }
 
-    onVisibilityChanged: {
-        if (visible)
-            globalDrawer.actions[recentEmojiModel.count === 0 ? 1 : 0].trigger()
-    }
-
     Kirigami.Action {
         id: recentAction
         checked: window.pageStack.get(0).title === text
@@ -104,4 +99,6 @@ Kirigami.ApplicationWindow
         }
         actions: [recentAction, searchAction, allAction]
     }
+
+    Component.onCompleted: recentAction.trigger()
 }
