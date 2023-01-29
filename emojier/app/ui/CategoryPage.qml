@@ -49,6 +49,12 @@ Kirigami.ScrollablePage
             text: view.searchText
             visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
+            Keys.onEnterPressed: event => Keys.returnPressed(event)
+            Keys.onReturnPressed: event => {
+                if (emojiView.count > 0) {
+                    emojiView.itemAtIndex(0).Keys.returnPressed(event);
+                }
+            }
             onTextChanged: {
                 forceActiveFocus()
                 emojiModel.search = text
@@ -124,7 +130,7 @@ Kirigami.ScrollablePage
             opacity: hoverHandler.hovered ? 0.7 : 1
             scale: tapHandler.pressed ? 0.6 : 1
 
-            Keys.onReturnPressed: tapHandler.tapped()
+            Keys.onReturnPressed: tapHandler.tapped(null)
 
             HoverHandler {
                 id: hoverHandler
