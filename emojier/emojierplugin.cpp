@@ -136,20 +136,31 @@ public:
         QStringList recentDescriptions = m_settings.recentDescriptions();
 
         const int idx = recent.indexOf(emoji);
-        if (idx >= 0) {
-            recent.removeAt(idx);
-            recentDescriptions.removeAt(idx);
-        }
-        recent.prepend(emoji);
-        recent = recent.mid(0, 50);
-        m_settings.setRecent(recent);
+        if (idx > 0) {
+            Q_EMIT beginMoveRows(QModelIndex(), idx, idx, QModelIndex(), 0);
+            recent.move(idx, 0);
+            recentDescriptions.move(idx, 0);
+            m_emoji.move(idx, 0);
+            Q_EMIT endMoveRows();
+        } else if (idx < 0) {
+            Q_EMIT beginInsertRows(QModelIndex(), 0, 0);
+            recent.prepend(emoji);
+            recentDescriptions.prepend(emojiDescription);
+            m_emoji.prepend(Emoji{emoji, emojiDescription, 0, {}});
+            Q_EMIT endInsertRows();
 
-        recentDescriptions.prepend(emojiDescription);
-        recentDescriptions = recentDescriptions.mid(0, 50);
+            if (recent.size() > 50) {
+                Q_EMIT beginRemoveRows(QModelIndex(), 50, recent.size() - 1);
+                recent = recent.mid(0, 50);
+                recentDescriptions = recentDescriptions.mid(0, 50);
+                m_emoji = m_emoji.mid(0, 50);
+                Q_EMIT endRemoveRows();
+            }
+        }
+
+        m_settings.setRecent(recent);
         m_settings.setRecentDescriptions(recentDescriptions);
         m_settings.save();
-
-        refresh();
     }
 
     Q_INVOKABLE void clearHistory()
