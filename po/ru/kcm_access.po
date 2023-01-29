@@ -7,14 +7,14 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2006, 2016.
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015, 2016, 2017, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021, 2022, 2023.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-12-23 11:16+0300\n"
+"PO-Revision-Date: 2023-01-28 22:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -298,11 +298,10 @@ msgid "Please choose an audio file"
 msgstr "Выберите звуковой файл"
 
 #: package/contents/ui/Bell.qml:22
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "Звуковые файлы (*.mp3 *.ogg *.wav)"
+msgstr "Звуковые файлы (*.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format

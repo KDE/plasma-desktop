@@ -1,19 +1,20 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2017, 2018, 2019, 2021.
+# Jannick Kuhr <kde-dev@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 01:00+0000\n"
-"PO-Revision-Date: 2022-07-24 15:15+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-01-24 21:30+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Symbol:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Symbol des Anwendungsstarters ändern"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -63,12 +64,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Das aktuelle Symbol ist %1. Klicken Sie, um das Menü zum Ändern des "
+"aktuellen Symbols bzw. zur Wiederherstellung des Standardsymbols zu öffnen."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Symbolname ist „%1“"
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -80,47 +83,46 @@ msgstr "Auswählen ..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Wählen Sie ein Symbol für den Anwendungsstarter"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Auf Standardsymbol zurücksetzen"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Symbol entfernen"
 
 #: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Beschriftung:"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Tippen Sie hier, um eine Beschriftung hinzuzufügen"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Menübeschriftung zurücksetzen"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Bei senkrechter Leiste kann keine Beschriftung festgelegt werden."
 
 #: package/contents/ui/ConfigGeneral.qml:146
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Allgemein:"
@@ -133,13 +135,13 @@ msgstr "Anwendungen immer alphabetisch sortieren"
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Kompakten Listenstil verwenden"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Im Touch-Modus automatisch deaktiviert"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
@@ -205,7 +207,7 @@ msgstr "Energieverwaltung und Sitzung"
 #: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgid "Show action button captions"
-msgstr ""
+msgstr "Beschriftung von Aktionsknöpfen anzeigen"
 
 #: package/contents/ui/Footer.qml:97
 #, kde-format
@@ -221,7 +223,7 @@ msgstr "Orte"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Keine Übereinstimmungen"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format
