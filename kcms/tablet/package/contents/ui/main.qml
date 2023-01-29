@@ -372,7 +372,7 @@ SimpleKCM {
                         }
                     }
 
-                    DisplayControl {
+                    DDCDisplayControl {
                         id: displayControl
                         onColorspaceChanged: {
                             colorspaceComboBox.currentIndex = colorspaceModel.indexFromColorspaceValue(colorspace);

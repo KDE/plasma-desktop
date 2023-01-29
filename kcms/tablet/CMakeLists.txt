@@ -51,9 +51,9 @@ target_link_libraries(kcm_tablet
     kwindevices
 )
 
-if (LINUX)
+if (DDCUtil_FOUND)
     target_sources(kcm_tablet PRIVATE
-    displaycontrol.cpp
+    ddcdisplaycontrol.cpp
     displaymodel.cpp)
     target_link_libraries(kcm_tablet
     ddcutil)

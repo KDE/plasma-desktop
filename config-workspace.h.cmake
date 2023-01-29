@@ -10,3 +10,5 @@
 #cmakedefine01 HAVE_PACKAGEKIT
 
 #define WORKSPACE_VERSION_STRING "${PROJECT_VERSION}"
+
+#cmakedefine DDCUtil_FOUND

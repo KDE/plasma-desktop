@@ -11,7 +11,7 @@
 #include <ddcutil_c_api.h>
 #include <memory>
 
-class DisplayControl : public QObject
+class DDCDisplayControl : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QVariant ref READ ref WRITE setRef NOTIFY refreshed)
@@ -19,7 +19,7 @@ class DisplayControl : public QObject
     Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY refreshed)
     Q_PROPERTY(int colorspace READ colorspace WRITE setColorspace NOTIFY refreshed)
 public:
-    DisplayControl();
+    DDCDisplayControl();
 
     QVariant ref() const;
     void setRef(QVariant ref);

@@ -7,8 +7,8 @@
 #include "kcmtablet.h"
 #include "inputdevice.h"
 #include "tabletevents.h"
-#ifdef Q_OS_LINUX
-#include "displaycontrol.h"
+#ifdef DDCUtil_FOUND
+#include "ddcdisplaycontrol.h"
 #include "displaymodel.h"
 #endif
 
@@ -150,7 +150,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantL
     : ManagedConfigModule(parent, metaData, list)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
     , m_displayModel(new DisplayModel())
 #endif
 {
@@ -159,8 +159,8 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantL
     qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
-#ifdef Q_OS_LINUX
-    qmlRegisterType<DisplayControl>("org.kde.plasma.tablet.kcm", 1, 1, "DisplayControl");
+#ifdef DDCUtil_FOUND
+    qmlRegisterType<DDCDisplayControl>("org.kde.plasma.tablet.kcm", 1, 1, "DDCDisplayControl");
     qmlRegisterType<ColorSpaceModel>("org.kde.plasma.tablet.kcm", 1, 1, "ColorspaceModel");
     qmlRegisterAnonymousType<DisplayModel>("org.kde.plasma.tablet.kcm", 1);
 #endif
@@ -310,7 +310,7 @@ DevicesModel *Tablet::padsModel() const
     return m_padsModel;
 }
 
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
 DisplayModel *Tablet::displayModel() const
 {
     return m_displayModel;
@@ -318,7 +318,7 @@ DisplayModel *Tablet::displayModel() const
 #endif
 bool Tablet::supportDisplayControl() const
 {
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
     return true;
 #else
     return false;

@@ -28,9 +28,6 @@ include(FeatureSummary)
 include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
-if (LINUX)
-    include(FindDDCUtil)
-endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
@@ -231,6 +228,7 @@ set_package_properties(GLIB2 PROPERTIES
 pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
 pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
 pkg_check_modules(SCIM scim IMPORTED_TARGET)
+pkg_check_modules(DDCUtil IMPORTED_TARGET ddcutil)
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasma_version.h)
 

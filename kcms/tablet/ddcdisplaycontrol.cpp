@@ -3,7 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#include "displaycontrol.h"
+#include "ddcDDCDisplayControl.h"
 #include "displaymodel.h"
 #include "qdebug.h"
 #include <KLocalizedString>
@@ -11,17 +11,17 @@
 #define VCP_CONTRAST 0x12
 #define VCP_COLORSPACE 0xF0
 
-DisplayControl::DisplayControl()
+DDCDisplayControl::DDCDisplayControl()
 {
-    connect(Controller::inst(), &Controller::valueReturned, this, &DisplayControl::handleValueReturned);
+    connect(Controller::inst(), &Controller::valueReturned, this, &DDCDisplayControl::handleValueReturned);
 }
 
-QVariant DisplayControl::ref() const
+QVariant DDCDisplayControl::ref() const
 {
     return QVariant::fromValue(m_ref);
 }
 
-void DisplayControl::setRef(QVariant ref)
+void DDCDisplayControl::setRef(QVariant ref)
 {
     DDCA_Display_Ref_Wrapper wrapper = ref.value<DDCA_Display_Ref_Wrapper>();
     void *ref_p = wrapper.ref;
@@ -36,7 +36,7 @@ void DisplayControl::setRef(QVariant ref)
     }
 }
 
-void DisplayControl::handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, int value)
+void DDCDisplayControl::handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, int value)
 {
     if (ref != m_ref) {
         return;
@@ -55,22 +55,22 @@ void DisplayControl::handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_
     Q_EMIT refreshed();
 }
 
-int DisplayControl::brightness() const
+int DDCDisplayControl::brightness() const
 {
     return m_brightness;
 }
 
-int DisplayControl::contrast() const
+int DDCDisplayControl::contrast() const
 {
     return m_contrast;
 }
 
-int DisplayControl::colorspace() const
+int DDCDisplayControl::colorspace() const
 {
     return m_colorspace;
 }
 
-void DisplayControl::setBrightness(int value)
+void DDCDisplayControl::setBrightness(int value)
 {
     if (value == m_brightness) {
         return;
@@ -78,7 +78,7 @@ void DisplayControl::setBrightness(int value)
     Controller::inst()->updateValue(m_ref, VCP_BRIGHTNESS, value);
 }
 
-void DisplayControl::setContrast(int value)
+void DDCDisplayControl::setContrast(int value)
 {
     if (value == m_contrast) {
         return;
@@ -86,7 +86,7 @@ void DisplayControl::setContrast(int value)
     Controller::inst()->updateValue(m_ref, VCP_CONTRAST, value);
 }
 
-void DisplayControl::setColorspace(int value)
+void DDCDisplayControl::setColorspace(int value)
 {
     if (value <= 0 || value == m_colorspace) {
         return;

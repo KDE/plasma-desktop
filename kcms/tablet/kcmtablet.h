@@ -11,6 +11,7 @@
 #include <KSharedConfig>
 #include <QKeySequence>
 
+#include "config-workspace.h"
 #include "devicesmodel.h"
 
 class TabletSettings;
@@ -22,7 +23,7 @@ class Tablet : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)
     Q_PROPERTY(DevicesModel *padsModel READ padsModel CONSTANT)
     Q_PROPERTY(bool supportDisplayControl READ supportDisplayControl CONSTANT)
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
     Q_PROPERTY(DisplayModel *displayModel READ displayModel CONSTANT)
 #endif
 
@@ -39,7 +40,7 @@ public:
     DevicesModel *toolsModel() const;
     DevicesModel *padsModel() const;
     bool supportDisplayControl() const;
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
     DisplayModel *displayModel() const;
 #endif
     Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
@@ -55,7 +56,7 @@ private:
 
     DevicesModel *const m_toolsModel;
     DevicesModel *const m_padsModel;
-#ifdef Q_OS_LINUX
+#ifdef DDCUtil_FOUND
     DisplayModel *const m_displayModel;
 #endif
     QHash<QString, QHash<QString, QHash<uint, QKeySequence>>> m_unsavedMappings;
