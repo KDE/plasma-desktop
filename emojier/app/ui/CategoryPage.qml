@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.11
+import QtQuick 2.15
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.15 as Kirigami
 import QtQuick.Controls 2.11 as QQC2
@@ -81,16 +81,16 @@ Kirigami.ScrollablePage
         sequence: StandardKey.Copy
         enabled: emojiView.currentItem
         onActivated: {
-            emojiView.currentItem.reportEmoji()
+            emojiView.currentItem.Keys.returnPressed(null)
         }
     }
-
 
     GridView {
         id: emojiView
 
         readonly property real desiredSize: Kirigami.Units.gridUnit * 3
-        readonly property real columnsToHave: Math.ceil(width/desiredSize)
+        readonly property int columnsToHave: Math.ceil(width / desiredSize)
+        readonly property int delayInterval: Math.min(300, columnsToHave * 10)
 
         cellWidth: width/columnsToHave
         cellHeight: desiredSize
@@ -102,49 +102,50 @@ Kirigami.ScrollablePage
             }
         }
 
-        highlight: Rectangle {
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Selection
-            color: Kirigami.Theme.backgroundColor
-            z: -1
-        }
-        highlightMoveDuration: 0
-
         currentIndex: -1
+        reuseItems: true
 
-        delegate: MouseArea {
-            QQC2.Label {
-                font.pointSize: 25
-                font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-                fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
-                minimumPointSize: 10
-                text: model.display
-                horizontalAlignment: Text.AlignHCenter
-
-                anchors.fill: parent
-                anchors.margins: 1
-            }
+        delegate: QQC2.Label {
+            id: emojiLabel
             width: emojiView.cellWidth
             height: emojiView.cellHeight
 
+            font.pointSize: 25
+            font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
+            fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
+            minimumPointSize: 10
+            text: model.display
+            horizontalAlignment: Text.AlignHCenter
+
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
-            QQC2.ToolTip.visible: mouse.containsMouse
+            QQC2.ToolTip.visible: hoverHandler.hovered
 
-            opacity: mouse.containsMouse ? 0.7 : 1
-            
-            Keys.onReturnPressed: {
-                reportEmoji()
+            opacity: hoverHandler.hovered ? 0.7 : 1
+            scale: tapHandler.pressed ? 0.6 : 1
+
+            Keys.onReturnPressed: tapHandler.tapped()
+
+            HoverHandler {
+                id: hoverHandler
             }
 
-            function reportEmoji() {
-                window.report(model.display, model.toolTip)
+            TapHandler {
+                id: tapHandler
+                onTapped: window.report(model.display, model.toolTip)
             }
 
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: Kirigami.Units.longDuration
+                }
+            }
 
-            id: mouse
-            hoverEnabled: true
-            onClicked: reportEmoji()
+            Behavior on scale {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                }
+            }
         }
 
         Kirigami.PlaceholderMessage {
