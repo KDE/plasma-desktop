@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2021-04-06</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date>2023-01-30</date>
+<releaseinfo>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword>Plasma</keyword>
@@ -74,11 +74,8 @@ Activate the <guilabel>Enable File Search</guilabel> item if you want to use des
     </para>
 </listitem>
 </varlistentry>
-<varlistentry><term><guibutton>Add folder configuration...</guibutton></term>
+<varlistentry><term><guibutton>Start indexing a folder...</guibutton>/<guibutton>Stop indexing a folder...</guibutton></term>
 <listitem>
-    <para>
-        Press this button to open selector with two options, namely <guimenuitem>Start indexing a folder...</guimenuitem> and <guimenuitem>Stop indexing a folder...</guimenuitem>.
-    </para>
     <para>
         Clicking any of the above-mentioned options displays the standard &plasma; <guilabel>Select a folder to filter</guilabel> dialog and allows you to choose the folder to be treated accordingly.
     </para>
