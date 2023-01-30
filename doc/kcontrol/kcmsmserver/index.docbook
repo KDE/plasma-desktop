@@ -10,25 +10,24 @@
 <title>Session Management</title>
 <authorgroup>
 <author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author><firstname>Natalie</firstname><surname>Clarius</surname><email>natalie_clarius@yahoo.de</email></author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2022-03-22</date>
-<releaseinfo>Plasma 5.25</releaseinfo>
+<date>2023-01-30</date>
+<releaseinfo>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
 <keyword>KControl</keyword>
 <keyword>session</keyword>
 <keyword>System Settings</keyword>
+<keyword>logout</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="sessions">
 <title>Desktop Session</title>
-
-<sect2 id="sessions-use">
-<title>Use</title>
 
 <para>In this &systemsettings; module you can configure &plasma;'s session
 manager and logout settings.</para>
@@ -37,67 +36,36 @@ manager and logout settings.</para>
 of applications and windows when you log out of &plasma; and restore them
 when you log back in.</para>
 
-<sect3 id="sessions-general">
-<title>General</title>
+<sect2 id="sessions-logoutscreen">
+<title>Logout Screen</title>
 <variablelist>
 <varlistentry>
-<term><guilabel>Confirm logout</guilabel></term>
+<term><guilabel>Show</guilabel></term>
 <listitem>
-<para>If this option is checked, when logging out, &plasma; will display a
-dialog with a default timeout of 30 seconds asking for confirmation. In this dialog you can also choose
-whether you want to restore your current session when you login the next
-time.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term><guilabel>Offer shutdown options</guilabel></term>
-<listitem>
-<para>If this option is checked, &plasma; will offer a choice of actions during
-logout.  These include simply ending the current session (the
-action performed if shutdown options are not enabled) turning off the
-computer, or restarting the computer.</para>
+<para>If this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, restart, press the power button, or click on buttons or menu items labeled <guilabel>Leave…</guilabel>. When the setting is turned off, your computer will log out, shut down, etc. immediately after clicking the respective button.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-</sect3>
+</sect2>
 
-<sect3 id="sessions-default-leave-options">
-<title>Default Leave Option</title>
-<para>You can configure what should happen by default when you log out of
-&plasma;.  These options are not possible on all operating systems, and some of
-them may not appear unless you are using &SDDM; as your login manager.</para>
-<para>The options available are self explanatory, if you are in doubt,
-leave the default settings.  They are:</para>
-
-<itemizedlist>
-<listitem><para><guilabel>End current session</guilabel> (this is the default)</para></listitem>
-<listitem><para><guilabel>Turn off computer</guilabel></para></listitem>
-<listitem><para><guilabel>Restart computer</guilabel></para></listitem>
-</itemizedlist>
-</sect3>
-
-<sect3 id="sessions-on-login">
-<title>On Login</title>
+<sect2 id="sessions-restore">
+<title>On login, launch apps that were open</title>
 <para>You may choose one of three options on what should happen when
 you log into &plasma;:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Restore last session</guilabel></term>
+<term><guilabel>On last logout</guilabel></term>
 <listitem><para>If this option is checked, &plasma; will save your current
 session's state when you logout.  &plasma; will restore your session on the
 next login, so you can continue to work with a desktop just like you
-left it.</para>
-</listitem>
+left it.</para></listitem>
 </varlistentry>
 <varlistentry>
-<term><guilabel>Restore last manually saved session</guilabel></term>
+<term><guilabel>When session was manually saved</guilabel></term>
 <listitem><para>Instead of restoring &plasma; to the state it was when
 you logged out last, it will be restored to a specific state that you
-have saved manually.</para>
-<para>If this option is checked, the application menu offers an additional item 
-<menuchoice><guimenu>Power / Session</guimenu><guimenuitem>Save Session</guimenuitem></menuchoice>.
-</para></listitem>
+have saved manually.</para><para>A <guilabel>Save Session</guilabel> button will appear in the <guilabel>Application Launcher</guilabel> menu and &plasma; search. When you click it, &plasma; will remember the apps that are open and restore them on the next login. Click it again to replace the set of remembered apps.</para></listitem>
 </varlistentry>
 <varlistentry>
 <term><guilabel>Start with an empty session</guilabel></term>
@@ -110,9 +78,17 @@ have saved manually.</para>
 separated list of applications that should be excluded from sessions,
 and therefore will not be started when restoring a session.  For example
 <userinput>xterm:konsole</userinput> or <userinput>xterm,konsole</userinput>.</para>
-<!-- does this need the full path here? -->
-</sect3>
+</sect2>
 
+<sect2 id="sessions-firmware">
+<title>Firmware</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>After next restart: Enter UEFI setup screen</guilabel></term>
+<listitem><para>If this option is enabled, the next time you restart your computer, it will enter the firmware setup mode (BIOS/UEFI). This may be easier than trying to enter the firmware setup by quickly pressing special keys during boot.</para></listitem>
+</varlistentry>
+</variablelist>
 </sect2>
 
 </sect1>
