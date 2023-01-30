@@ -23,12 +23,21 @@ SimpleKCM {
     // So it doesn't scroll while dragging
     flickable.interactive: Kirigami.Settings.hasTransientTouchInput
 
-    header: Kirigami.InlineMessage {
-        Layout.fillWidth: true
+    header: ColumnLayout {
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
 
-        type: Kirigami.MessageType.Information
-        visible: combo.count === 0
-        text: i18nd("kcm_tablet", "No drawing tablets found.")
+            type: Kirigami.MessageType.Information
+            visible: combo.count === 0
+            text: i18nd("kcm_tablet", "No drawing tablets found.")
+        }
+        Kirigami.InlineMessage {
+            id: ddcDisplayErrorMsg
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Warning
+            visible: false
+        }
     }
 
     Kirigami.FormLayout {
@@ -388,6 +397,7 @@ SimpleKCM {
                         from: 0
                         to: 100
                         value: displayControl.brightness
+                        enabled: displayControl.canChangeBrightness
                         onValueChanged: {
                             displayControl.brightness = value
                         }
@@ -404,6 +414,12 @@ SimpleKCM {
                                 displayControl.colorspace = currentValue;
                             }
                         }
+                    }
+                }
+                Component.onCompleted: {
+                    if (!kcm.displayModel.requirementsSatisfied) {
+                        ddcDisplayErrorMsg.text = kcm.displayModel.requirementsDescription;
+                        ddcDisplayErrorMsg.visible = true;
                     }
                 }
             }

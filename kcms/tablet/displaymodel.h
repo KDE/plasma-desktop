@@ -28,6 +28,8 @@ Q_DECLARE_METATYPE(DDCA_Display_Ref_Wrapper)
 class DisplayModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool requirementsSatisfied READ requirementsStatisfied CONSTANT)
+    Q_PROPERTY(QString requirementsDescription READ requirementsDescription CONSTANT)
 public:
     enum Roles { Name = Qt::UserRole + 1, Manufacturer, DDCRef };
     DisplayModel(QObject *parent = nullptr);
@@ -40,9 +42,14 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    bool requirementsSatisfied() const;
+    QString requirementsDescription() const;
+
     Q_INVOKABLE QVariant displayAt(int index);
 
 private:
+    enum class Requirements { Group, Module, Success };
+    Requirements m_requirement = Requirements::Success;
     std::vector<std::unique_ptr<DDCDisplay>> m_displays;
 };
 

@@ -3,14 +3,15 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#include "ddcDDCDisplayControl.h"
+#include "ddcdisplaycontrol.h"
 #include "displaymodel.h"
 #include "qdebug.h"
 #include <KLocalizedString>
 #define VCP_BRIGHTNESS 0x10
 #define VCP_CONTRAST 0x12
 #define VCP_COLORSPACE 0xF0
-
+#define WACOM_COLOR_MANAGER_1 11
+#define WACOM_COLOR_MANAGER_2 12
 DDCDisplayControl::DDCDisplayControl()
 {
     connect(Controller::inst(), &Controller::valueReturned, this, &DDCDisplayControl::handleValueReturned);
@@ -68,6 +69,14 @@ int DDCDisplayControl::contrast() const
 int DDCDisplayControl::colorspace() const
 {
     return m_colorspace;
+}
+
+bool DDCDisplayControl::canChangeBrightness() const
+{
+    if (m_ref) {
+        return m_colorspace != WACOM_COLOR_MANAGER_1 && m_colorspace != WACOM_COLOR_MANAGER_2;
+    }
+    return false;
 }
 
 void DDCDisplayControl::setBrightness(int value)
@@ -194,3 +203,5 @@ void Worker::getValue(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature)
 #undef VCP_BRIGHTNESS
 #undef VCP_CONTRAST
 #undef VCP_COLORSPACE
+#undef WACOM_COLOR_MANAGER_1
+#undef WACOM_COLOR_MANAGER_2

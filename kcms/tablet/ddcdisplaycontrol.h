@@ -18,6 +18,7 @@ class DDCDisplayControl : public QObject
     Q_PROPERTY(int brightness READ brightness WRITE setBrightness NOTIFY refreshed)
     Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY refreshed)
     Q_PROPERTY(int colorspace READ colorspace WRITE setColorspace NOTIFY refreshed)
+    Q_PROPERTY(bool canChangeBrightness READ canChangeBrightness NOTIFY refreshed)
 public:
     DDCDisplayControl();
 
@@ -26,6 +27,7 @@ public:
     int brightness() const;
     int contrast() const;
     int colorspace() const;
+    bool canChangeBrightness() const;
     void setBrightness(int value);
     void setContrast(int value);
     void setColorspace(int value);

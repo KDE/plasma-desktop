@@ -4,26 +4,71 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include <ddcutil_status_codes.h>
+#include <grp.h>
+#include <pwd.h>
+#include <unistd.h>
+
+#include <KLocalizedString>
+#include <QFile>
 
 #include "displaymodel.h"
 
 DisplayModel::DisplayModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    DDCA_Display_Info_List *list = nullptr;
-    ddca_get_display_info_list2(true, &list);
-    for (int i = 0; i < list->ct; i++) {
-        auto display = std::make_unique<DDCDisplay>();
-        display->name = QString::fromUtf8(list->info[i].model_name);
-        // if name is empty, probably can't control with ddcutil
-        if (display->name.isEmpty()) {
-            continue;
+    __uid_t uid = getuid();
+    struct passwd *pw = getpwuid(uid);
+    if (pw) {
+        m_requirement = Requirements::Group;
+        int ngroups = 0;
+        getgrouplist(pw->pw_name, pw->pw_gid, nullptr, &ngroups);
+        gid_t *groups = new gid_t[ngroups];
+        getgrouplist(pw->pw_name, pw->pw_gid, groups, &ngroups);
+        for (int i = 0; i < ngroups; i++) {
+            struct group *gr = getgrgid(groups[i]);
+            if (gr == nullptr) {
+                continue;
+            }
+            if (memcmp(gr->gr_name, "i2c", 4) == 0) {
+                m_requirement = Requirements::Success;
+                break;
+            }
         }
-        display->ref = list->info[i].dref;
-        display->manufacturer = QString::fromUtf8(list->info[i].mfg_id);
-        m_displays.push_back(std::move(display));
+        delete[] groups;
+        if (m_requirement == Requirements::Success) {
+            m_requirement = Requirements::Module;
+            QFile modules(QStringLiteral("/proc/modules"));
+            modules.open(QIODevice::ReadOnly);
+            QByteArray data = modules.readLine();
+            while (!data.isEmpty()) {
+                if (data.contains("i2c_dev ")) {
+                    m_requirement = Requirements::Success;
+                    break;
+                }
+            }
+        }
+    } else {
+        m_requirement = Requirements::Group;
     }
-    ddca_free_display_info_list(list);
+
+    if (m_requirement == Requirements::Success) {
+        DDCA_Display_Info_List *list = nullptr;
+        DDCA_Status status = ddca_get_display_info_list2(true, &list);
+        if (status == 0) {
+            for (int i = 0; i < list->ct; i++) {
+                auto display = std::make_unique<DDCDisplay>();
+                display->name = QString::fromUtf8(list->info[i].model_name);
+                // if name is empty, probably can't control with ddcutil
+                if (display->name.isEmpty()) {
+                    continue;
+                }
+                display->ref = list->info[i].dref;
+                display->manufacturer = QString::fromUtf8(list->info[i].mfg_id);
+                m_displays.push_back(std::move(display));
+            }
+            ddca_free_display_info_list(list);
+        }
+    }
 }
 
 int DisplayModel::rowCount(const QModelIndex &parent) const
@@ -54,6 +99,23 @@ QVariant DisplayModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> DisplayModel::roleNames() const
 {
     return {{Name, "name"}, {Manufacturer, "manufacturer"}, {DDCRef, "ref"}};
+}
+
+bool DisplayModel::requirementsSatisfied() const
+{
+    return m_requirement == Requirements::Success;
+}
+QString DisplayModel::requirementsDescription() const
+{
+    switch (m_requirement) {
+    case Requirements::Success:
+        return QString();
+    case Requirements::Group:
+        return i18nc("error description in the form of inline message", "Tablet screen control disabled. Please make sure the current user is in group 'i2c'");
+    case Requirements::Module:
+        return i18nc("error description in the form of inline message",
+                     "Tablet screen control disabled. Please make sure you have loaded the kernel module 'i2c_dev'");
+    }
 }
 
 QVariant DisplayModel::displayAt(int index)
