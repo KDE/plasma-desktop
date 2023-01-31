@@ -164,7 +164,7 @@ void KeyboardDaemon::layoutChangedSlot()
     Q_EMIT layoutChanged(getLayout());
 }
 
-void layoutChangedByXKBShortcut()
+void KeyboardDaemon::layoutChangedByXKBShortcut()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                       QStringLiteral("/org/kde/osdService"),

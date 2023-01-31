@@ -316,7 +316,7 @@ bool XEventNotifier::processOtherEvents(xcb_generic_event_t *event)
         const xcb_keysym_t keySymX = xcb_key_press_lookup_keysym(symbols, reinterpret_cast<xcb_key_press_event_t *>(event), 0);
 
         if (keySymX == XK_ISO_Next_Group) {
-            emit layoutChangedByXKBShortcut();
+            Q_EMIT layoutChangedByXKBShortcut();
         }
     }
 

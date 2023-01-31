@@ -153,7 +153,7 @@ set_package_properties(UDev PROPERTIES
 
 find_package(XCB
     REQUIRED COMPONENTS
-        XCB SHM IMAGE
+        XCB SHM IMAGE KEYSYMS
     OPTIONAL_COMPONENTS
         XKB XINPUT ATOM RECORD
 )
