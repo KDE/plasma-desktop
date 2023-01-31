@@ -374,10 +374,12 @@ SimpleKCM {
                         Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The drawing tablet we are configuring", "Tablet:")
                         model: kcm.displayModel
                         textRole: "name"
+                        valueRole: "manufacturer"
                         enabled: count > 0
                         displayText: enabled ? currentText : i18n("None")
                         onCurrentIndexChanged: {
                             displayControl.ref = kcm.displayModel.displayAt(currentIndex);
+                            displayControl.manufacturer = currentValue;
                         }
                     }
 
@@ -400,6 +402,17 @@ SimpleKCM {
                         enabled: displayControl.canChangeBrightness
                         onValueChanged: {
                             displayControl.brightness = value
+                        }
+                    }
+
+                    QQC2.Slider {
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for contrast config slider", "Contrast: ")
+                        from: 0
+                        to: 100
+                        value: displayControl.contrast
+                        enabled: displayControl.canChangeBrightness
+                        onValueChanged: {
+                            displayControl.contrast = value
                         }
                     }
 

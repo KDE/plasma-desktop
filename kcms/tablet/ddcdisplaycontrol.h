@@ -15,6 +15,7 @@ class DDCDisplayControl : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QVariant ref READ ref WRITE setRef NOTIFY refreshed)
+    Q_PROPERTY(QString manufacturer READ manufacturer WRITE setManufacturer NOTIFY refreshed)
     Q_PROPERTY(int brightness READ brightness WRITE setBrightness NOTIFY refreshed)
     Q_PROPERTY(int contrast READ contrast WRITE setContrast NOTIFY refreshed)
     Q_PROPERTY(int colorspace READ colorspace WRITE setColorspace NOTIFY refreshed)
@@ -27,10 +28,12 @@ public:
     int brightness() const;
     int contrast() const;
     int colorspace() const;
+    const QString &manufacturer() const;
     bool canChangeBrightness() const;
     void setBrightness(int value);
     void setContrast(int value);
     void setColorspace(int value);
+    void setManufacturer(const QString &);
 
 Q_SIGNALS:
     void refreshed();
@@ -39,6 +42,7 @@ private Q_SLOTS:
     void handleValueReturned(DDCA_Display_Ref ref, DDCA_Vcp_Feature_Code feature, int value);
 
 private:
+    QString m_manufacturer;
     int m_brightness = 0;
     int m_contrast = 0;
     int m_colorspace = 0;

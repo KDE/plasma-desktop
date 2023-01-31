@@ -71,10 +71,16 @@ int DDCDisplayControl::colorspace() const
     return m_colorspace;
 }
 
+const QString &DDCDisplayControl::manufacturer() const
+{
+    return m_manufacturer;
+}
+
 bool DDCDisplayControl::canChangeBrightness() const
 {
     if (m_ref) {
-        return m_colorspace != WACOM_COLOR_MANAGER_1 && m_colorspace != WACOM_COLOR_MANAGER_2;
+        // brightness is auto controlled in wacom color mananger mode
+        return m_manufacturer != QStringLiteral("WAC") || (m_colorspace != WACOM_COLOR_MANAGER_1 && m_colorspace != WACOM_COLOR_MANAGER_2);
     }
     return false;
 }
@@ -102,6 +108,11 @@ void DDCDisplayControl::setColorspace(int value)
     }
 
     Controller::inst()->updateValue(m_ref, VCP_COLORSPACE, value);
+}
+
+void DDCDisplayControl::setManufacturer(const QString &manufacturer)
+{
+    m_manufacturer = manufacturer;
 }
 
 Controller *Controller::inst()
