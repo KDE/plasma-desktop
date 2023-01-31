@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 02:50+0000\n"
-"PO-Revision-Date: 2023-01-26 22:59+0100\n"
+"PO-Revision-Date: 2023-01-30 21:52+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -65,6 +65,8 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Icone currente es %1. Pulsa pro aperir menu per cambiar le icone currente o "
+"refixar al icone predefinite."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -88,7 +90,7 @@ msgstr "Selige un icone per Lanceator de application"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Refixa a icone predfinite"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
@@ -106,19 +108,20 @@ msgstr "Etiquetta de texto:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Typa hic pro adder un etiquetta de texto"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Refixa etiquetta de menu"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
+"Un etiquetta de texto non pote esser fixate quando le Pannello es vertical."
 
 #: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
@@ -134,13 +137,13 @@ msgstr "Sempre ordina applicationes alphabeticamente"
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Usa stilo le elemento de lista compacte"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automaticamente dishabilitate quando in modo de tocco (Touch Mode)"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
