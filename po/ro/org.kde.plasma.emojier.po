@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-11 00:48+0000\n"
+"POT-Creation-Date: 2023-01-31 01:00+0000\n"
 "PO-Revision-Date: 2022-02-04 15:42+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -45,37 +45,50 @@ msgstr "sergiu@cip.md"
 msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
-#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:57
+#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:52
 #, kde-format
 msgid "Search"
 msgstr "Caută"
 
-#: app/ui/CategoryPage.qml:74
+#: app/ui/CategoryPage.qml:80
 #, kde-format
 msgid "Clear History"
 msgstr "Curăță istoricul"
 
-#: app/ui/CategoryPage.qml:153
+#: app/ui/CategoryPage.qml:104
 #, kde-format
-msgid "No recent Emojis"
-msgstr "Niciun emoji recent"
+msgctxt "@item:inmenu"
+msgid "Copy Character"
+msgstr ""
 
+#: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
 #: app/ui/emojier.qml:36
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 copiat în clipboard"
 
-#: app/ui/emojier.qml:47
+#: app/ui/CategoryPage.qml:112
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Copy Description"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:205
+#, kde-format
+msgid "No recent Emojis"
+msgstr "Niciun emoji recent"
+
+#: app/ui/emojier.qml:42
 #, kde-format
 msgid "Recent"
 msgstr "Recente"
 
-#: app/ui/emojier.qml:68
+#: app/ui/emojier.qml:63
 #, kde-format
 msgid "All"
 msgstr "Toate"
 
-#: app/ui/emojier.qml:76
+#: app/ui/emojier.qml:71
 #, kde-format
 msgid "Categories"
 msgstr "Categorii"
