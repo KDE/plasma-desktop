@@ -13,13 +13,21 @@
 <authorgroup>
 <author
 >&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &traductor.Antoni.Bella; 
 </authorgroup>
 
 <date
->22 de març de 2022</date>
+>30 de gener de 2023</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -30,6 +38,8 @@
 >sessió</keyword>
 <keyword
 >Arranjament del sistema</keyword>
+<keyword
+>sortida</keyword>
 </keywordset>
 </articleinfo>
 
@@ -37,76 +47,34 @@
 <title
 >Sessió d'escriptori</title>
 
-<sect2 id="sessions-use">
-<title
->Ús</title>
-
 <para
 >En aquest mòdul de l'&systemsettings; podreu configurar les opcions del gestor de sessions i sortida del &plasma;.</para>
 
 <para
 >La gestió de sessions es refereix a la capacitat del &plasma; per a desar l'estat de les aplicacions i finestres quan sortiu del &plasma; i restaurar-les quan hi torneu a accedir.</para>
 
-<sect3 id="sessions-general">
+<sect2 id="sessions-logoutscreen">
 <title
->General</title>
+>Pantalla de sortida</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Confirma la sortida</guilabel
+>Mostra</guilabel
 ></term>
 <listitem>
 <para
->Si aquesta opció ha estat seleccionada, en sortir del &plasma; se us mostrarà un diàleg amb un temps d'espera predeterminat de 30 segons per a la seva confirmació. En aquest diàleg podeu escollir si desitgeu restaurar la vostra sessió actual quan la inicieu la pròxima vegada.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Ofereix les opcions d'aturada</guilabel
-></term>
-<listitem>
-<para
->Si està marcada aquesta opció, el &plasma; mostrarà la possibilitat d'escollir entre diverses opcions d'apagada. Això inclou finalitzar la sessió actual (l'opció utilitzada si les opcions d'apagada no estan disponibles), l'apagada de l'ordinador o reiniciar-lo.</para>
+>Si aquesta opció està activada, la pantalla de confirmació de sortida es mostrarà quan tanqueu la sessió, apagueu, reinicieu, premeu el botó d'engegada o feu clic als botons o elements del menú etiquetats <guilabel
+>Surt…</guilabel
+>. Quan l'opció està desactivada, l'ordinador tancarà la sessió, s'apagarà, etc. immediatament després de fer clic al botó respectiu.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-</sect3>
+</sect2>
 
-<sect3 id="sessions-default-leave-options">
+<sect2 id="sessions-restore">
 <title
->Opció predeterminada de sortida</title>
-<para
->Finalment podeu configurar què haurà de passar de manera predeterminada quan sortiu del &plasma;. Aquestes opcions no són possibles en tots els sistemes operatius i requereixen l'ús de l'&SDDM; com al vostre gestor d'accés.</para>
-<para
->Les opcions disponibles són autoexplicatives. Si teniu cap dubte, deixeu l'opció predeterminada. Són les següents:</para>
-
-<itemizedlist>
-<listitem
-><para
-><guilabel
->Finalitza la sessió actual</guilabel
-> (aquesta és la predeterminada)</para
-></listitem>
-<listitem
-><para
-><guilabel
->Apaga l'ordinador</guilabel
-></para
-></listitem>
-<listitem
-><para
-><guilabel
->Torna a engegar l'ordinador</guilabel
-></para
-></listitem>
-</itemizedlist>
-</sect3>
-
-<sect3 id="sessions-on-login">
-<title
->En connectar-se</title>
+>En iniciar la sessió, llança les aplicacions que estaven obertes</title>
 <para
 >Podeu escollir una de les tres opcions per a com s'haurà d'accedir al &plasma;:</para>
 
@@ -114,29 +82,27 @@
 <varlistentry>
 <term
 ><guilabel
->Restaura l'última sessió</guilabel
+>En la darrera sortida</guilabel
 ></term>
 <listitem
 ><para
->Si seleccioneu aquesta opció, el &plasma; desarà l'estat de la vostra sessió actual quan en sortiu. El &plasma; la restaurarà en el següent accés, de manera que pugueu continuar amb la vostra tasca amb l'escriptori en el mateix estat en el qual el vàreu deixar.</para>
-</listitem>
+>Si seleccioneu aquesta opció, el &plasma; desarà l'estat de la vostra sessió actual quan en sortiu. El &plasma; la restaurarà en el següent accés, de manera que pugueu continuar amb la vostra tasca amb l'escriptori en el mateix estat en el qual el vàreu deixar.</para
+></listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Restaura manualment l'última sessió desada</guilabel
+>Quan la sessió es va desar manualment</guilabel
 ></term>
 <listitem
 ><para
->En comptes de restaurar el &plasma; l'estat en el qual estava quan vàreu accedir-hi l'última vegada, es restaurarà a un estat específic que hàgiu desat manualment.</para>
-<para
->Si aquesta opció està marcada, el menú de l'aplicació oferirà un element addicional <menuchoice
-><guimenu
->Energia / Sessió</guimenu
-><guimenuitem
->Desa la sessió</guimenuitem
-></menuchoice
->. </para
+>En comptes de restaurar el &plasma; l'estat en el qual estava quan vàreu accedir-hi l'última vegada, es restaurarà a un estat específic que hàgiu desat manualment.</para
+><para
+>Apareixerà el botó <guilabel
+>Desa la sessió</guilabel
+> en el menú del <guilabel
+>Llançador d'aplicacions</guilabel
+> i a la cerca del &plasma;. Quan hi feu clic, el &plasma; recordarà les aplicacions que estan obertes i les restaurarà en iniciar la sessió següent. Feu-hi clic una altra vegada per a substituir el conjunt d'aplicacions recordades.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -160,9 +126,24 @@
 > o <userinput
 >xterm,konsole</userinput
 >.</para>
-<!-- does this need the full path here? -->
-</sect3>
+</sect2>
 
+<sect2 id="sessions-firmware">
+<title
+>Microprogramari</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Després del proper reinici: Entra a la pantalla de configuració de la UEFI</guilabel
+></term>
+<listitem
+><para
+>Si aquesta opció està activada, la propera vegada que reinicieu l'ordinador entrarà en el mode de configuració del microprogramari (BIOS/UEFI). Això pot ser més fàcil que intentar entrar a la configuració del microprogramari prement ràpidament les tecles especials durant l'arrencada.</para
+></listitem>
+</varlistentry>
+</variablelist>
 </sect2>
 
 </sect1>

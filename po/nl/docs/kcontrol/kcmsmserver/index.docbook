@@ -13,13 +13,21 @@
 <authorgroup>
 <author
 >&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &Niels.Reedijk;&Sander.Koning; 
 </authorgroup>
 
 <date
->2022-03-22</date>
+>2023-01-30</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -30,6 +38,8 @@
 >sessie</keyword>
 <keyword
 >Systeeminstellingen</keyword>
+<keyword
+>afmelden</keyword>
 </keywordset>
 </articleinfo>
 
@@ -37,76 +47,34 @@
 <title
 >Bureaubladsessie</title>
 
-<sect2 id="sessions-use">
-<title
->Gebruik</title>
-
 <para
 >In deze &systemsettings;-module kunt &plasma;'s sessiebeheerder en afmeldinstellingen instellen.</para>
 
 <para
 >Sessiebeheer is de mogelijkheid binnen &plasma; om de huidige staat van toepassingen en vensters op te slaan als u zich afmeldt uit &plasma; en deze weer te herstellen als u zich weer aanmeldt.</para>
 
-<sect3 id="sessions-general">
+<sect2 id="sessions-logoutscreen">
 <title
->Algemeen</title>
+>Afmeldscherm</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Afmelden bevestigen</guilabel
+>Tonen</guilabel
 ></term>
 <listitem>
 <para
->Als deze optie geactiveerd is, toont &plasma; bij het afmelden een dialoogvenster met een standaard timeout van 30 seconden, waarin gevraagd wordt om bevestiging. In dit venster kunt u ook kiezen of u de huidige sessie bij de volgende keer dat u zich aanmeldt wilt herstellen.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Afsluitopties aanbieden</guilabel
-></term>
-<listitem>
-<para
->Als deze optie ingeschakeld is, biedt &plasma; een keuze uit acties tijdens het afmelden. Deze zijn het beëindigen van de huidige sessie (de actie die wordt uitgevoerd als de opties niet aangeboden worden), het uitschakelen van de computer, en het herstarten van de computer.</para>
+>Als deze instelling aan is gezet, zal het afmeldbevestigingsscherm getoond worden wanneer u zich afmeldt, systeem afsluit, opnieuw start, op de powerknop drukt of klikt op knoppen of menu-items met label <guilabel
+>Verlaten…</guilabel
+>. Wanneer de instelling is uitgezet, zal uw computer u afmelden, systeem afsluiten, etc. onmiddellijk na het klikken op de respectievelijke knop.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-</sect3>
+</sect2>
 
-<sect3 id="sessions-default-leave-options">
+<sect2 id="sessions-restore">
 <title
->Standaard afmeldoptie</title>
-<para
->U kunt instellen wat er standaard dient te gebeuren als u zich afmeldt bij &plasma;. Deze opties zijn niet op alle besturingssystemen mogelijk, en vereisen het gebruik van &SDDM; als aanmeldbeheerder.</para>
-<para
->De beschikbare opties zijn zelfverklarend. Als u twijfelt kunt u het beste de standaardinstelling aanhouden. De opties zijn:</para>
-
-<itemizedlist>
-<listitem
-><para
-><guilabel
->Huidige sessie beëindigen</guilabel
-> (standaard)</para
-></listitem>
-<listitem
-><para
-><guilabel
->Computer uitschakelen</guilabel
-></para
-></listitem>
-<listitem
-><para
-><guilabel
->Computer herstarten</guilabel
-></para
-></listitem>
-</itemizedlist>
-</sect3>
-
-<sect3 id="sessions-on-login">
-<title
->Bij het aanmelden</title>
+>Bij aanmelden, start toepassingen die open waren</title>
 <para
 >U kunt uit drie opties kiezen voor wat er gebeurt als u zich bij &plasma; aanmeldt:</para>
 
@@ -114,29 +82,27 @@
 <varlistentry>
 <term
 ><guilabel
->Laatste sessie herstellen</guilabel
+>Bij laatste afmelding</guilabel
 ></term>
 <listitem
 ><para
->Als deze optie is aangevinkt, slaat &plasma; uw huidige sessie op wanneer u zich afmeldt. &plasma; herstelt de sessie bij de volgende keer dat u zich aanmeldt zodat u kunt doorgaan met het bureaublad zoals u het hebt verlaten.</para>
-</listitem>
+>Als deze optie is aangevinkt, slaat &plasma; uw huidige sessie op wanneer u zich afmeldt. &plasma; herstelt de sessie bij de volgende keer dat u zich aanmeldt zodat u kunt doorgaan met het bureaublad zoals u het hebt verlaten.</para
+></listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Laatste handmatig opgeslagen sessie herstellen</guilabel
+>Wanneer de sessie handmatig was opgeslagen</guilabel
 ></term>
 <listitem
 ><para
->In plaats van &plasma; te herstellen naar de staat zoals die was was toen u zich afmeldde, wordt het hersteld naar een specifieke staat die u handmatig hebt opgeslagen.</para>
-<para
->Als deze optie is geactiveerd biedt het toepassingenmenu een extra item <menuchoice
-><guimenu
->Power / Sessie</guimenu
-><guimenuitem
->Sessie opslaan</guimenuitem
-></menuchoice
->. </para
+>In plaats van &plasma; te herstellen naar de staat zoals die was was toen u zich afmeldde, wordt het hersteld naar een specifieke staat die u handmatig hebt opgeslagen.</para
+><para
+>Een knop <guilabel
+>Sessie opslaan</guilabel
+> zal in het menu <guilabel
+>Programmastarter</guilabel
+> en &plasma;-zoeken verschijnen. Wanneer u er op klikt, zal &plasma; de toepassingen onthouden die open waren en ze herstellen bij de volgende keer aanmelden. Klik er nog eens op om de set van onthouden toepassingen te vervangen.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -160,9 +126,24 @@
 > of <userinput
 >xterm,konsole</userinput
 >.</para>
-<!-- does this need the full path here? -->
-</sect3>
+</sect2>
 
+<sect2 id="sessions-firmware">
+<title
+>Firmware</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Na volgende herstart: het UEFI setup-scherm starten</guilabel
+></term>
+<listitem
+><para
+>Als deze optie is ingeschakeld, zal de volgende keer dat u uw computer herstart, het in de modus firmware setup mode (BIOS/UEFI) gaan. Dit kan gemakkelijker zijn dan in die modus te gaan door snel speciale toetsen in te drukken tijdens opstarten.</para
+></listitem>
+</varlistentry>
+</variablelist>
 </sect2>
 
 </sect1>
