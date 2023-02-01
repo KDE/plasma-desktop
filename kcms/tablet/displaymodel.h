@@ -28,7 +28,7 @@ Q_DECLARE_METATYPE(DDCA_Display_Ref_Wrapper)
 class DisplayModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(bool requirementsSatisfied READ requirementsStatisfied CONSTANT)
+    Q_PROPERTY(bool requirementsSatisfied READ requirementsSatisfied CONSTANT)
     Q_PROPERTY(QString requirementsDescription READ requirementsDescription CONSTANT)
 public:
     enum Roles { Name = Qt::UserRole + 1, Manufacturer, DDCRef };

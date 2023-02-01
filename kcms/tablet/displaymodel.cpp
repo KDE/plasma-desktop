@@ -24,6 +24,7 @@ DisplayModel::DisplayModel(QObject *parent)
         getgrouplist(pw->pw_name, pw->pw_gid, nullptr, &ngroups);
         gid_t *groups = new gid_t[ngroups];
         getgrouplist(pw->pw_name, pw->pw_gid, groups, &ngroups);
+
         for (int i = 0; i < ngroups; i++) {
             struct group *gr = getgrgid(groups[i]);
             if (gr == nullptr) {
@@ -45,6 +46,7 @@ DisplayModel::DisplayModel(QObject *parent)
                     m_requirement = Requirements::Success;
                     break;
                 }
+                data = modules.readLine();
             }
         }
     } else {
@@ -116,6 +118,8 @@ QString DisplayModel::requirementsDescription() const
         return i18nc("error description in the form of inline message",
                      "Tablet screen control disabled. Please make sure you have loaded the kernel module 'i2c_dev'");
     }
+    Q_UNREACHABLE();
+    return QString();
 }
 
 QVariant DisplayModel::displayAt(int index)
