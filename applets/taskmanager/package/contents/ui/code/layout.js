@@ -12,12 +12,12 @@ const labelMargin = PlasmaCore.Units.smallSpacing;
 
 function horizontalMargins() {
     const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
-    return (taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment;
+    return (taskFrame.margins.left + taskFrame.margins.right) * (tasks.vertical ? 1 : spacingAdjustment);
 }
 
 function verticalMargins() {
     const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
-    return (taskFrame.margins.top + taskFrame.margins.bottom) * spacingAdjustment;
+    return (taskFrame.margins.top + taskFrame.margins.bottom) * (tasks.vertical ? spacingAdjustment : 1);
 }
 
 function adjustMargin(height, margin) {
