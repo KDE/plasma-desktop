@@ -365,7 +365,7 @@ SimpleKCM {
         Loader {
             active: kcm.supportDisplayControl
             sourceComponent: Item {
-                ColumnLayout {
+                Kirigami.FormLayout {
                     Kirigami.Separator {
                         Layout.fillWidth: true
                     }
@@ -422,6 +422,7 @@ SimpleKCM {
                         model: colorspaceModel
                         textRole: "display"
                         valueRole: "rawValue"
+                        currentIndex: 0
                         onCurrentIndexChanged: {
                             if (currentValue) {
                                 displayControl.colorspace = currentValue;
