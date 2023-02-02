@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+    SPDX-FileCopyrightText: 2022 Méven Car <meven@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -15,7 +16,9 @@ ComponentChooserFileManager::ComponentChooserFileManager(QObject *parent)
 {
 }
 
-void ComponentChooserFileManager::save()
+static const QStringList fileManagerMimetypes{"inode/directory"};
+
+QStringList ComponentChooserFileManager::mimeTypes() const
 {
-    saveMimeTypeAssociation(QStringLiteral("inode/directory"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    return fileManagerMimetypes;
 }

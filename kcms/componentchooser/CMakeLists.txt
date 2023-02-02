@@ -4,13 +4,19 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_componentchooser\")
 set(componentchooser_SRCS
     kcm_componentchooser.cpp
     componentchooser.cpp
-    componentchooserbrowser.cpp
-    componentchooseremail.cpp
-    componentchooserterminal.cpp
-    componentchooserfilemanager.cpp
-    componentchooserdata.cpp
-    componentchoosergeo.cpp
-    componentchoosertel.cpp
+    applicationmodel.cpp
+    components/componentchooserbrowser.cpp
+    components/componentchooseremail.cpp
+    components/componentchooserterminal.cpp
+    components/componentchooserfilemanager.cpp
+    components/componentchoosertexteditor.cpp
+    components/componentchooserimageviewer.cpp
+    components/componentchoosermusicplayer.cpp
+    components/componentchooservideoplayer.cpp
+    components/componentchooserpdfviewer.cpp
+    components/componentchooserarchivemanager.cpp
+    components/componentchoosergeo.cpp
+    components/componentchoosertel.cpp
 )
 
 kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)

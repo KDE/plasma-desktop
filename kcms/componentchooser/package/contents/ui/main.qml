@@ -6,91 +6,316 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.12 as QQC2
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.kcm 1.5 as KCM
+import org.kde.kcm 1.6 as KCM
 
 KCM.SimpleKCM {
+
+    function unsupportedMimeText(kcm_component) {
+        return i18n("’%1’ seems to not support the following mimetypes associated with this kind of application: %2", kcm_component.applications[kcm_component.index]["name"], kcm_component.unsupportedMimeTypes.join(", "))
+    }
+
+    topPadding: 0
+    bottomPadding: Kirigami.Units.gridUnit
+
+    ComponentOverlay {
+        id: overlay
+    }
+
     Kirigami.FormLayout {
         id: form
 
         readonly property int longestComboBox: Math.max(browserCombo.implicitWidth,
                                                         fileManagerCombo.implicitWidth,
+                                                        textEditorCombo.implicitWidth,
+                                                        pdfViewerCombo.implicitWidth,
+                                                        imageViewerCombo.implicitWidth,
+                                                        musicPlayerCombo.implicitWidth,
+                                                        videoPlayerCombo.implicitWidth,
                                                         emailCombo.implicitWidth,
+                                                        archiveCombo.implicitWidth,
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
                                                         dialerCombo.implicitWidth)
 
-        ComponentComboBox {
-            id: browserCombo
 
-            Layout.preferredWidth: form.longestComboBox
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("Internet related application’s category’s name", "Internet")
+            Kirigami.FormData.isSection: true
+        }
+        RowLayout {
+            Kirigami.FormData.label: i18n("Web browser:")
 
-            component: kcm.browsers
-            label: i18n("Web browser:")
+            ComponentComboBox {
+                id: browserCombo
+                component: kcm.browsers
+                Layout.preferredWidth: form.longestComboBox
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.browsers.isDefaults
+                KCM.SettingHighlighter {
+                    highlight: !kcm.browsers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.browsers.isSaveNeeded && (kcm.browsers.unsupportedMimeTypes.length > 0 || kcm.browsers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.browsers
+                    overlay.open()
+                }
             }
         }
-        ComponentComboBox {
-            id: fileManagerCombo
+        RowLayout {
+            Kirigami.FormData.label: i18n("Email client:")
 
-            Layout.preferredWidth: form.longestComboBox
+            ComponentComboBox {
+                id: emailCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.emailClients
 
-            component: kcm.fileManagers
-            label: i18n("File manager:")
+                KCM.SettingHighlighter {
+                    highlight: !kcm.emailClients.isDefaults
+                }
+            }
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.fileManagers.isDefaults
+            QQC2.Button {
+                visible: !kcm.emailClients.isSaveNeeded && (kcm.emailClients.unsupportedMimeTypes.length > 0 || kcm.emailClients.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.emailClients
+                    overlay.open()
+                }
             }
         }
-        ComponentComboBox {
-            id: emailCombo
+        RowLayout {
+            Kirigami.FormData.label: i18nc("Default phone app", "Dialer:")
 
-            Layout.preferredWidth: form.longestComboBox
+            ComponentComboBox {
+                id: dialerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.telUriHandlers
 
-            component: kcm.emailClients
-            label: i18n("Email client:")
+                KCM.SettingHighlighter {
+                    highlight: !kcm.telUriHandlers.isDefaults
+                }
+            }
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.emailClients.isDefaults
+            QQC2.Button {
+                visible: !kcm.telUriHandlers.isSaveNeeded && (kcm.telUriHandlers.unsupportedMimeTypes.length > 0 || kcm.telUriHandlers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.telUriHandlers
+                    overlay.open()
+                }
             }
         }
-        ComponentComboBox {
-            id: terminalCombo
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("Multimedia related application’s category’s name", "Multimedia")
+            Kirigami.FormData.isSection: true
+        }
 
-            Layout.preferredWidth: form.longestComboBox
+        RowLayout {
+            Kirigami.FormData.label: i18n("Image viewer:")
 
-            component: kcm.terminalEmulators
-            label: i18n("Terminal emulator:")
+            ComponentComboBox {
+                id: imageViewerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.imageViewers
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.terminalEmulators.isDefaults
+                KCM.SettingHighlighter {
+                    highlight: !kcm.imageViewers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.imageViewers.isSaveNeeded && (kcm.imageViewers.unsupportedMimeTypes.length > 0 || kcm.imageViewers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.imageViewers
+                    overlay.open()
+                }
             }
         }
-        ComponentComboBox {
-            id: mapCombo
 
-            Layout.preferredWidth: form.longestComboBox
 
-            component: kcm.geoUriHandlers
-            label: i18n("Map:")
+        RowLayout {
+            Kirigami.FormData.label: i18n("Music player:")
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.geoUriHandlers.isDefaults
+            ComponentComboBox {
+                id: musicPlayerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.musicPlayers
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.musicPlayers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.musicPlayers.isSaveNeeded && (kcm.musicPlayers.unsupportedMimeTypes.length > 0 || kcm.musicPlayers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.musicPlayers
+                    overlay.open()
+                }
             }
         }
-        ComponentComboBox {
-            id: dialerCombo
 
-            Layout.preferredWidth: form.longestComboBox
+        RowLayout {
+            Kirigami.FormData.label: i18n("Video player:")
 
-            component: kcm.telUriHandlers
-            label: i18nc("Default phone app", "Dialer:")
+            ComponentComboBox {
+                id: videoPlayerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.videoPlayers
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.telUriHandlers.isDefaults
+                KCM.SettingHighlighter {
+                    highlight: !kcm.videoPlayers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.videoPlayers.isSaveNeeded && (kcm.videoPlayers.unsupportedMimeTypes.length > 0 || kcm.videoPlayers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.videoPlayers
+                    overlay.open()
+                }
+            }
+        }
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("Documents related application’s category’s name", "Documents")
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Text editor:")
+
+            ComponentComboBox {
+                id: textEditorCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.textEditors
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.textEditors.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.textEditors.isSaveNeeded && (kcm.textEditors.unsupportedMimeTypes.length > 0 || kcm.textEditors.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.textEditors
+                    overlay.open()
+                }
+            }
+        }
+        RowLayout {
+            Kirigami.FormData.label: i18n("PDF viewer:")
+
+            ComponentComboBox {
+                id: pdfViewerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.pdfViewers
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.pdfViewers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.pdfViewers.isSaveNeeded && (kcm.pdfViewers.unsupportedMimeTypes.length > 0 || kcm.pdfViewers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.pdfViewers
+                    overlay.open()
+                }
+            }
+        }
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("Utilities related application’s category’s name", "Utilities")
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("File manager:")
+
+            ComponentComboBox {
+                id: fileManagerCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.fileManagers
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.fileManagers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.fileManagers.isSaveNeeded && (kcm.fileManagers.unsupportedMimeTypes.length > 0 || kcm.fileManagers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.fileManagers
+                    overlay.open()
+                }
+            }
+        }
+        RowLayout {
+            Kirigami.FormData.label: i18n("Terminal emulator:")
+
+            ComponentComboBox {
+                id: terminalCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.terminalEmulators
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.terminalEmulators.isDefaults
+                }
+            }
+        }
+        RowLayout {
+            Kirigami.FormData.label: i18n("Archive manager:")
+
+            ComponentComboBox {
+                id: archiveCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.archiveManagers
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.archiveManagers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.archiveManagers.isSaveNeeded && (kcm.archiveManagers.unsupportedMimeTypes.length > 0 || kcm.archiveManagers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.archiveManagers
+                    overlay.open()
+                }
+            }
+        }
+        RowLayout {
+            Kirigami.FormData.label: i18nc("Map related application’s category’s name", "Map:")
+
+            ComponentComboBox {
+                id: mapCombo
+                Layout.preferredWidth: form.longestComboBox
+                component: kcm.geoUriHandlers
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.geoUriHandlers.isDefaults
+                }
+            }
+
+            QQC2.Button {
+                visible: !kcm.geoUriHandlers.isSaveNeeded && (kcm.geoUriHandlers.unsupportedMimeTypes.length > 0 || kcm.geoUriHandlers.mimeTypesNotAssociated.length > 0)
+                icon.name: "help-contextual"
+                onClicked: {
+                    overlay.componenChooser = kcm.geoUriHandlers
+                    overlay.open()
+                }
             }
         }
     }

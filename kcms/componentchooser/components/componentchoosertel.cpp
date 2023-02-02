@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2022 Kai Uwe Broulik <kde@broulik.de>
+    SPDX-FileCopyrightText: 2022 Méven Car <meven@kde.org>
+
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -10,19 +12,15 @@
 ComponentChooserTel::ComponentChooserTel(QObject *parent)
     : ComponentChooser(parent,
                        QStringLiteral("x-scheme-handler/tel"),
-                       QString(),
+                       QStringLiteral("Dialer"),
                        QStringLiteral("org.kde.kdeconnect.handler.desktop"),
                        i18n("Select default dialer application"))
 {
 }
 
-void ComponentChooserTel::save()
-{
-    const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
-    const KService::Ptr telClientService = KService::serviceByStorageId(storageId);
-    if (!telClientService) {
-        return;
-    }
+static const QStringList telMimetypes{"x-scheme-handler/tel"};
 
-    saveMimeTypeAssociation(QStringLiteral("x-scheme-handler/tel"), storageId);
+QStringList ComponentChooserTel::mimeTypes() const
+{
+    return telMimetypes;
 }

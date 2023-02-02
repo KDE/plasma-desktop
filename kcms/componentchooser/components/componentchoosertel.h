@@ -11,5 +11,6 @@ class ComponentChooserTel : public ComponentChooser
 {
 public:
     explicit ComponentChooserTel(QObject *parent);
-    void save() override;
+
+    QStringList mimeTypes() const override;
 };

@@ -8,10 +8,10 @@
 
 #include "componentchooser.h"
 
-class ComponentChooserEmail : public ComponentChooser
+class ComponentChooserFileManager : public ComponentChooser
 {
 public:
-    ComponentChooserEmail(QObject *parent);
+    ComponentChooserFileManager(QObject *parent);
 
-    void save() override;
+    QStringList mimeTypes() const override;
 };

@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+    SPDX-FileCopyrightText: 2022 Méven Car <meven@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -8,11 +9,11 @@
 
 #include "componentchooser.h"
 
-class ComponentChooserTerminal : public ComponentChooser
+class ComponentChooserEmail : public ComponentChooser
 {
 public:
-    ComponentChooserTerminal(QObject *parent);
+    ComponentChooserEmail(QObject *parent);
 
-    void load() override;
+    QStringList mimeTypes() const override;
     void save() override;
 };

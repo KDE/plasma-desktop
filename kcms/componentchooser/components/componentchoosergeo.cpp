@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2021 Volker Krause <vkrause@kde.org>
+    SPDX-FileCopyrightText: 2022 Méven Car <meven@kde.org>
+
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -12,13 +14,9 @@ ComponentChooserGeo::ComponentChooserGeo(QObject *parent)
 {
 }
 
-void ComponentChooserGeo::save()
-{
-    const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
-    const KService::Ptr geoClientService = KService::serviceByStorageId(storageId);
-    if (!geoClientService) {
-        return;
-    }
+static const QStringList geolocationMimetypes{"x-scheme-handler/geo"};
 
-    saveMimeTypeAssociation(QStringLiteral("x-scheme-handler/geo"), storageId);
+QStringList ComponentChooserGeo::mimeTypes() const
+{
+    return geolocationMimetypes;
 }

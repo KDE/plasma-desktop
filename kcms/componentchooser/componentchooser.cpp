@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2002 Joseph Wenninger <jowenn@kde.org>
     SPDX-FileCopyrightText: 2020 Méven Car <meven.car@kdemail.net>
     SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+    SPDX-FileCopyrightText: 2022 Méven Car <meven@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,84 +14,56 @@
 #include <QDBusMessage>
 
 #include <KApplicationTrader>
+#include <KBuildSycocaProgressDialog>
 #include <KConfigGroup>
 #include <KOpenWithDialog>
 #include <KQuickAddons/ConfigModule>
 #include <KService>
 #include <KSharedConfig>
 
-ComponentChooser::ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText)
+extern KSERVICE_EXPORT int ksycoca_ms_between_checks;
+
+ComponentChooser::ComponentChooser(QObject *parent,
+                                   const QString &mimeType,
+                                   const QString &applicationCategory,
+                                   const QString &defaultApplication,
+                                   const QString &dialogText)
     : QObject(parent)
     , m_mimeType(mimeType)
-    , m_type(type)
+    , m_applicationCategory(applicationCategory)
     , m_defaultApplication(defaultApplication)
     , m_dialogText(dialogText)
 {
+    qRegisterMetaType<QList<PairQml>>("QList<PairQml>");
+
+    m_model = new ApplicationModel(this);
+    connect(m_model, &QAbstractItemModel::modelReset, this, &ComponentChooser::modelChanged);
 }
 
 void ComponentChooser::defaults()
 {
-    if (m_defaultIndex) {
-        select(*m_defaultIndex);
+    const auto defaultIndex = m_model->defaultIndex();
+    if (defaultIndex) {
+        select(*defaultIndex);
     }
 }
 
 void ComponentChooser::load()
 {
-    m_applications.clear();
+    m_model->load(m_mimeType, m_applicationCategory, m_defaultApplication, KApplicationTrader::preferredService(m_mimeType));
 
-    bool preferredServiceAdded = false;
+    m_index = m_model->currentIndex();
 
-    KService::Ptr preferredService = KApplicationTrader::preferredService(m_mimeType);
+    m_currentApplication = currentStorageId();
 
-    KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || (!m_type.isEmpty() && !service->categories().contains(m_type)) || (!service->serviceTypes().contains(m_mimeType))) {
-            return false;
-        }
-        QVariantMap application;
-        application[QStringLiteral("name")] = service->name();
-        application[QStringLiteral("icon")] = service->icon();
-        application[QStringLiteral("storageId")] = service->storageId();
-        m_applications += application;
-        if ((preferredService && preferredService->storageId() == service->storageId())) {
-            m_index = m_applications.length() - 1;
-            preferredServiceAdded = true;
-        }
-        if (service->storageId() == m_defaultApplication) {
-            m_defaultIndex = m_applications.length() - 1;
-        }
-        return false;
-    });
-    if (preferredService && !preferredServiceAdded) {
-        // standard application was specified by the user
-        QVariantMap application;
-        application["name"] = preferredService->name();
-        application["icon"] = preferredService->icon();
-        application["storageId"] = preferredService->storageId();
-        m_applications += application;
-        m_index = m_applications.length() - 1;
-    }
-    QVariantMap application;
-    application["name"] = i18n("Other…");
-    application["icon"] = QStringLiteral("application-x-shellscript");
-    application["storageId"] = QString();
-    m_applications += application;
-    if (m_index == -1) {
-        m_index = 0;
-    }
-
-    m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
-    Q_EMIT applicationsChanged();
     Q_EMIT indexChanged();
     Q_EMIT isDefaultsChanged();
 }
 
 void ComponentChooser::select(int index)
 {
-    if (m_index == index && m_applications.size() != 1) {
-        return;
-    }
-    if (index == m_applications.length() - 1) {
+    // Other selection
+    if (index == m_model->rowCount() - 1) {
         KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString(), QApplication::activeWindow());
         dialog->setSaveNewApplications(true);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
@@ -101,65 +74,184 @@ void ComponentChooser::select(int index)
                 return;
             }
 
-            const KService::Ptr service = dialog->service();
+            const auto serviceStorageId = dialog->service()->storageId();
+
             // Check if the selected application is already in the list
-            for (int i = 0; i < m_applications.length(); i++) {
-                if (m_applications[i].toMap()["storageId"] == service->storageId()) {
-                    m_index = i;
-                    Q_EMIT indexChanged();
-                    Q_EMIT isDefaultsChanged();
-                    return;
-                }
+            QModelIndex modelIndex = m_model->findByStorageId(serviceStorageId);
+            if (modelIndex.isValid()) {
+                select(modelIndex.row());
+                return;
             }
-            const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-            QVariantMap application;
-            application["name"] = service->name();
-            application["icon"] = icon;
-            application["storageId"] = service->storageId();
-            application["execLine"] = service->exec();
-            m_applications.insert(m_applications.length() - 1, application);
-            m_index = m_applications.length() - 2;
-            Q_EMIT applicationsChanged();
-            Q_EMIT indexChanged();
-            Q_EMIT isDefaultsChanged();
+
+            auto newIndex = m_model->addApplicationBeforeLast(dialog->service());
+            select(newIndex);
         });
         dialog->open();
     } else {
         m_index = index;
+
+        const auto selectedIndex = m_model->index(index, 0);
+        m_model->setData(selectedIndex, true, ApplicationModel::Selected);
+
+        Q_EMIT indexChanged();
+        Q_EMIT isDefaultsChanged();
     }
+}
+
+void ComponentChooser::saveMimeTypeAssociations(const QString &storageId, const QStringList &mimeTypes, bool forceUnsupportedMimeType)
+{
+    if (storageId.isEmpty()) {
+        return;
+    }
+
+    // This grabs the configuration from mimeapps.list, which is DE agnostic and part of the XDG standard.
+    KSharedConfig::Ptr mimeAppsList = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+
+    if (mimeAppsList->isConfigWritable(true)) {
+        const auto appService = KService::serviceByStorageId(storageId);
+        const auto db = QMimeDatabase();
+
+        for (const QString &mimeType : mimeTypes) {
+            if (!forceUnsupportedMimeType && appService && !appService->serviceTypes().contains(mimeType)
+                && !db.mimeTypeForName(mimeType).inherits(m_mimeType)) {
+                // skip mimetype association if the app does not support it at all
+                continue;
+            }
+
+            KApplicationTrader::setPreferredService(mimeType, appService);
+        }
+
+        m_currentApplication = storageId;
+    }
+}
+
+void ComponentChooser::onSaved()
+{
     Q_EMIT indexChanged();
     Q_EMIT isDefaultsChanged();
 }
 
-void ComponentChooser::saveMimeTypeAssociation(const QString &mime, const QString &storageId)
+QStringList ComponentChooser::unsupportedMimeTypes() const
 {
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-    if (profile->isConfigWritable(true)) {
-        KConfigGroup defaultApp(profile, "Default Applications");
-        defaultApp.writeXdgListEntry(mime, QStringList(storageId));
+    const auto preferredApp = currentStorageId();
 
-        KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
-        QStringList apps = addedApps.readXdgListEntry(mime);
-        apps.removeAll(storageId);
-        apps.prepend(storageId); // make it the preferred app, i.e first in list
-        addedApps.writeXdgListEntry(mime, apps);
-        profile->sync();
-
-        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                              QStringLiteral("/KLauncher"),
-                                                              QStringLiteral("org.kde.KLauncher"),
-                                                              QStringLiteral("reparseConfiguration"));
-        QDBusConnection::sessionBus().send(message);
+    if (preferredApp.isEmpty()) {
+        return QStringList{};
     }
-    m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
+
+    const auto db = QMimeDatabase();
+
+    QStringList unsupportedMimeTypes;
+
+    const auto appService = KService::serviceByStorageId(preferredApp);
+    const auto supportedMimeTypes = appService->serviceTypes();
+    const auto componentMimeTypes = mimeTypes();
+    for (const QString &mimeType : componentMimeTypes) {
+        if (!supportedMimeTypes.contains(mimeType) && !db.mimeTypeForName(mimeType).inherits(m_mimeType)) {
+            const auto preferredService = KApplicationTrader::preferredService(mimeType);
+            if (!preferredService || (preferredService->storageId() != appService->storageId())) {
+                unsupportedMimeTypes << mimeType;
+            }
+        }
+    }
+
+    return unsupportedMimeTypes;
+}
+
+void ComponentChooser::saveAssociationUnsuportedMimeTypes()
+{
+    const auto storageId = currentStorageId();
+
+    saveMimeTypeAssociations(storageId, unsupportedMimeTypes(), true);
+    forceReloadServiceCache();
+    load();
+}
+
+QList<PairQml> ComponentChooser::mimeTypesNotAssociated() const
+{
+    auto ret = QList<PairQml>();
+
+    const auto db = QMimeDatabase();
+    const auto storageId = m_currentApplication;
+
+    const auto appService = KService::serviceByStorageId(storageId);
+
+    if (!appService) {
+        return ret;
+    }
+
+    const auto mimes = mimeTypes();
+    for (const QString &mimeType : mimes) {
+        const auto service = KApplicationTrader::preferredService(mimeType);
+
+        if (service && service->storageId() != storageId &&
+            // only explicitly supported mimetype
+            (appService->serviceTypes().contains(mimeType) || db.mimeTypeForName(mimeType).inherits(m_mimeType))) {
+            ret.append(PairQml(service->name(), mimeType));
+        }
+    }
+
+    return ret;
+}
+
+void ComponentChooser::saveMimeTypesNotAssociated()
+{
+    const auto mimeTypeNotAssociated = mimeTypesNotAssociated();
+
+    auto mimeTypeList = QList<QString>();
+    for (const auto &pair : mimeTypeNotAssociated) {
+        mimeTypeList.append(pair.second.toString());
+    }
+
+    const auto storageId = currentStorageId();
+    saveMimeTypeAssociations(storageId, mimeTypeList);
+
+    forceReloadServiceCache();
+    load();
+}
+
+QString ComponentChooser::currentStorageId() const
+{
+    return m_model->data(m_index, ApplicationModel::StorageId).toString();
+}
+
+QString ComponentChooser::applicationName() const
+{
+    return m_model->data(m_index, Qt::DisplayRole).toString();
+}
+
+QStringList ComponentChooser::mimeTypes() const
+{
+    return QStringList{};
+}
+
+void ComponentChooser::forceReloadServiceCache()
+{
+    KBuildSycocaProgressDialog::rebuildKSycoca(QApplication::activeWindow());
+
+    // HACK to ensure mime cache is updated right away
+    int previous_delay = ksycoca_ms_between_checks;
+    ksycoca_ms_between_checks = 0;
+    KService::allServices();
+    ksycoca_ms_between_checks = previous_delay;
+}
+
+void ComponentChooser::save()
+{
+    // default impl for simple application kinds
+    const auto storageId = currentStorageId();
+
+    saveMimeTypeAssociations(storageId, mimeTypes());
 }
 
 bool ComponentChooser::isDefaults() const
 {
-    return !m_defaultIndex.has_value() || *m_defaultIndex == m_index;
+    const auto defaultIndex = m_model->defaultIndex();
+    return !defaultIndex.has_value() || *defaultIndex == m_index;
 }
 
 bool ComponentChooser::isSaveNeeded() const
 {
-    return !m_applications.isEmpty() && (m_previousApplication != m_applications[m_index].toMap()["storageId"].toString());
+    const auto storageId = currentStorageId();
+    return m_model->rowCount() > 1 && (m_currentApplication != storageId) && storageId != "";
 }
