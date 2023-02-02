@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2013, 2014, 2020, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2013, 2014, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 01:00+0000\n"
-"PO-Revision-Date: 2022-03-16 22:36+0100\n"
+"PO-Revision-Date: 2023-02-01 23:08+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -53,11 +53,10 @@ msgid "Icon:"
 msgstr "Icone:"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "Lanceator de application"
+msgstr "Cambia icone de Lanceator de application"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -66,12 +65,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Icone currente es %1. Pulsa pro aperir menu per cambiar le icone currente o "
+"refixar al icone predefinite."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Nomine de icone es \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -80,51 +81,50 @@ msgid "Choose…"
 msgstr "Selige…"
 
 #: package/contents/ui/ConfigGeneral.qml:83
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Lanceator de application"
+msgstr "Selige un icone per Lanceator de application"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Refixa a icone predfinite"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Remove icone"
 
 #: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Etiquetta de texto:"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Typa hic pro adder un etiquetta de texto"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Refixa etiquetta de menu"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
+"Un etiquetta de texto non pote esser fixate quando le Pannello es vertical."
 
 #: package/contents/ui/ConfigGeneral.qml:146
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "General:"
@@ -137,13 +137,13 @@ msgstr "Sempre ordina applicationes alphabeticamente"
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Usa stilo le elemento de lista compacte"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automaticamente dishabilitate quando in modo de tocco (Touch Mode)"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
@@ -225,7 +225,7 @@ msgstr "Placias"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nulle correspondentias"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format
