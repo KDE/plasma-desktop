@@ -7,6 +7,7 @@
 #include "displaymodel.h"
 #include "qdebug.h"
 #include <KLocalizedString>
+#include <QCoreApplication>
 #define VCP_BRIGHTNESS 0x10
 #define VCP_CONTRAST 0x12
 #define VCP_COLORSPACE 0xF0
@@ -139,6 +140,10 @@ Controller::Controller()
     });
     connect(m_worker, &Worker::getValueFailed, this, [](DDCA_Display_Ref ref, QString reason) {
         qDebug() << reason;
+    });
+    // event loop in work thread never exit, directly quit
+    connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, this, [this] {
+        m_workthread.quit();
     });
     m_workthread.start();
 }
