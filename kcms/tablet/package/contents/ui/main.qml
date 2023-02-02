@@ -395,7 +395,7 @@ SimpleKCM {
                     }
 
                     QQC2.Slider {
-                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for brightness config slider", "Brightness: %1", ('0' + value.toFixed()).slice(-2))
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for brightness config slider", "Brightness: %1", value < 10 ? '0' + value.toFixed() : value.toFixed())
                         from: 0
                         to: 100
                         value: displayControl.brightness
@@ -406,7 +406,7 @@ SimpleKCM {
                     }
 
                     QQC2.Slider {
-                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for contrast config slider", "Contrast: %1", ('0' + value.toFixed()).slice(-2))
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for contrast config slider", "Contrast: %1", value < 10 ? '0' + value.toFixed() : value.toFixed())
                         from: 0
                         to: 100
                         value: displayControl.contrast
