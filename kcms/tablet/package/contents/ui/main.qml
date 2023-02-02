@@ -365,6 +365,7 @@ SimpleKCM {
         Loader {
             active: kcm.supportDisplayControl
             sourceComponent: Item {
+                enabled: kcm.displayModel.requirementsSatisfied
                 Kirigami.FormLayout {
                     Kirigami.Separator {
                         Layout.fillWidth: true
