@@ -395,7 +395,7 @@ SimpleKCM {
                     }
 
                     QQC2.Slider {
-                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for brightness config slider", "Brightness: ")
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for brightness config slider", "Brightness: %1", ('0' + value.toFixed()).slice(-2))
                         from: 0
                         to: 100
                         value: displayControl.brightness
@@ -406,7 +406,7 @@ SimpleKCM {
                     }
 
                     QQC2.Slider {
-                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for contrast config slider", "Contrast: ")
+                        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label label for contrast config slider", "Contrast: %1", ('0' + value.toFixed()).slice(-2))
                         from: 0
                         to: 100
                         value: displayControl.contrast
@@ -422,7 +422,7 @@ SimpleKCM {
                         model: colorspaceModel
                         textRole: "display"
                         valueRole: "rawValue"
-                        currentIndex: 0
+                        enabled: currentIndex >= 0
                         onCurrentIndexChanged: {
                             if (currentValue) {
                                 displayControl.colorspace = currentValue;
