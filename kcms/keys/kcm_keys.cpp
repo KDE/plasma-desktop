@@ -45,6 +45,9 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
     qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
     qDBusRegisterMetaType<QList<QStringList>>();
+    qDBusRegisterMetaType<QKeySequence>();
+    qDBusRegisterMetaType<QList<QKeySequence>>();
+
     m_globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
                                                        QStringLiteral("/kglobalaccel"),
                                                        QDBusConnection::sessionBus(),
