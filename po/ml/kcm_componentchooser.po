@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"POT-Creation-Date: 2023-02-03 01:01+0000\n"
 "PO-Revision-Date: 2019-12-12 23:04+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -20,101 +20,242 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "അനി പീറ്റര്‍,ഹരി വിഷ്ണു,ശേഷഗിരി പ്രഭു,പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#: applicationmodel.cpp:65
+#, kde-format
+msgid "Other…"
+msgstr ""
+
 #. i18n: ectx: label, entry (browserApplication), group (General)
 #: browser_settings.kcfg:9
 #, kde-format
 msgid "Default web browser"
 msgstr ""
 
-#: componentchooser.cpp:74 componentchooserterminal.cpp:74
-#, kde-format
-msgid "Other…"
-msgstr ""
+#: components/componentchooserarchivemanager.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default archive manager"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
 
-#: componentchooserbrowser.cpp:18
+#: components/componentchooserbrowser.cpp:15
 #, kde-format
 msgid "Select default browser"
 msgstr ""
 
-#: componentchooseremail.cpp:19
+#: components/componentchooseremail.cpp:20
 #, fuzzy, kde-format
 #| msgid "Use a different &email client:"
 msgid "Select default e-mail client"
 msgstr "മറ്റൊരു &ഈമെയില്‍ ക്ലയന്റ് ഉപയോഗിക്കുക:"
 
-#: componentchooserfilemanager.cpp:14
+#: components/componentchooserfilemanager.cpp:15
 #, fuzzy, kde-format
 #| msgid "Select preferred email client:"
 msgid "Select default file manager"
 msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
 
-#: componentchoosergeo.cpp:11
+#: components/componentchoosergeo.cpp:13
 #, fuzzy, kde-format
 #| msgid "Select preferred email client:"
 msgid "Select default map"
 msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
 
-#: componentchoosertel.cpp:15
+#: components/componentchooserimageviewer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default image viewer"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: components/componentchoosermusicplayer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default music player"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: components/componentchooserpdfviewer.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default PDF viewer"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: components/componentchoosertel.cpp:17
 #, fuzzy, kde-format
 #| msgid "Select preferred terminal application:"
 msgid "Select default dialer application"
 msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
 
-#: componentchooserterminal.cpp:24
+#: components/componentchooserterminal.cpp:25
 #, fuzzy, kde-format
 #| msgid "Select preferred terminal application:"
 msgid "Select default terminal emulator"
 msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
 
-#: package/contents/ui/main.qml:30
+#: components/componentchoosertexteditor.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default text editor"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#: components/componentchooservideoplayer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default video player"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ഈമെയില്‍ ക്ലൈന്റ് തിരഞ്ഞെടുക്കുക:"
+
+#: kcm_componentchooser.cpp:68
+#, kde-format
+msgid "Component Chooser"
+msgstr "ഘടകം തിരഞ്ഞെടുക്കുന്നതിനുള്ള ഉപാധി"
+
+#: package/contents/ui/ComponentOverlay.qml:23
+#, kde-format
+msgid "Details"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:29
+#, kde-format
+msgid ""
+"This application does not advertise support for the following file types:"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Force Open Anyway"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:51
+#, kde-format
+msgid ""
+"The following file types are still associated with a different application:"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:60
+#, kde-format
+msgctxt "@label %1 is a MIME type and %2 is an application name"
+msgid "%1 associated with %2"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:66
+#, kde-format
+msgctxt "@action:button %1 is an application name"
+msgid "Re-assign-all to %1"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:74
+#, kde-format
+msgid "Change file type association manually"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"’%1’ seems to not support the following mimetypes associated with this kind "
+"of application: %2"
+msgstr ""
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgctxt "Internet related application’s category’s name"
+msgid "Internet"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Web browser:"
 msgstr ""
 
-#: package/contents/ui/main.qml:42
-#, kde-format
-msgid "File manager:"
-msgstr ""
-
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Email client:"
 msgstr ""
 
-#: package/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
-msgid "Terminal emulator:"
-msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
-
-#: package/contents/ui/main.qml:78
-#, kde-format
-msgid "Map:"
-msgstr ""
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr ""
 
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "അനി പീറ്റര്‍,ഹരി വിഷ്ണു,ശേഷഗിരി പ്രഭു,പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "Multimedia related application’s category’s name"
+msgid "Multimedia"
+msgstr ""
 
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Image viewer:"
+msgstr ""
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Music player:"
+msgstr ""
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Video player:"
+msgstr ""
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgctxt "Documents related application’s category’s name"
+msgid "Documents"
+msgstr ""
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Text editor:"
+msgstr ""
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgid "PDF viewer:"
+msgstr ""
+
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgctxt "Utilities related application’s category’s name"
+msgid "Utilities"
+msgstr ""
+
+#: package/contents/ui/main.qml:243
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "നിങ്ങള്‍ക്കിഷ്ടമായ ടെര്‍മിനല്‍ പ്രയോഗം തിരഞ്ഞെടുക്കുക:"
+
+#: package/contents/ui/main.qml:278
+#, kde-format
+msgid "Archive manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:300
+#, kde-format
+msgctxt "Map related application’s category’s name"
+msgid "Map:"
+msgstr ""
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "ജോസഫ് വെന്നിങര്‍"
 
 #~ msgid "Unknown"
 #~ msgstr "അപരിചിതം"
-
-#~ msgid "Component Chooser"
-#~ msgstr "ഘടകം തിരഞ്ഞെടുക്കുന്നതിനുള്ള ഉപാധി"
 
 #~ msgid "(c), 2002 Joseph Wenninger"
 #~ msgstr "(c), 2002 ജോസഫ് വെന്നിങര്‍"

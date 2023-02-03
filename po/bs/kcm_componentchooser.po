@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-09 00:48+0000\n"
+"POT-Creation-Date: 2023-02-03 01:01+0000\n"
 "PO-Revision-Date: 2015-02-06 15:32+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -22,100 +22,242 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Samir Ribić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Samir.ribic@etf.unsa.ba"
+
+#: applicationmodel.cpp:65
+#, kde-format
+msgid "Other…"
+msgstr ""
+
 #. i18n: ectx: label, entry (browserApplication), group (General)
 #: browser_settings.kcfg:9
 #, kde-format
 msgid "Default web browser"
 msgstr ""
 
-#: componentchooser.cpp:74 componentchooserterminal.cpp:74
-#, kde-format
-msgid "Other…"
-msgstr ""
+#: components/componentchooserarchivemanager.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default archive manager"
+msgstr "Izaberite željeni klijent e‑pošte:"
 
-#: componentchooserbrowser.cpp:18
+#: components/componentchooserbrowser.cpp:15
 #, kde-format
 msgid "Select default browser"
 msgstr ""
 
-#: componentchooseremail.cpp:19
+#: components/componentchooseremail.cpp:20
 #, fuzzy, kde-format
 #| msgid "Use a different &email client:"
 msgid "Select default e-mail client"
 msgstr "Neki drugi klijent &e‑pošte:"
 
-#: componentchooserfilemanager.cpp:14
+#: components/componentchooserfilemanager.cpp:15
 #, fuzzy, kde-format
 #| msgid "Select preferred email client:"
 msgid "Select default file manager"
 msgstr "Izaberite željeni klijent e‑pošte:"
 
-#: componentchoosergeo.cpp:11
+#: components/componentchoosergeo.cpp:13
 #, fuzzy, kde-format
 #| msgid "Select preferred email client:"
 msgid "Select default map"
 msgstr "Izaberite željeni klijent e‑pošte:"
 
-#: componentchoosertel.cpp:15
+#: components/componentchooserimageviewer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default image viewer"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: components/componentchoosermusicplayer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default music player"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: components/componentchooserpdfviewer.cpp:11
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default PDF viewer"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: components/componentchoosertel.cpp:17
 #, fuzzy, kde-format
 #| msgid "Select preferred terminal application:"
 msgid "Select default dialer application"
 msgstr "Izaberite željeni terminalski program:"
 
-#: componentchooserterminal.cpp:24
+#: components/componentchooserterminal.cpp:25
 #, fuzzy, kde-format
 #| msgid "Select preferred terminal application:"
 msgid "Select default terminal emulator"
 msgstr "Izaberite željeni terminalski program:"
 
-#: package/contents/ui/main.qml:30
+#: components/componentchoosertexteditor.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Select default text editor"
+msgstr "Izaberite željeni terminalski program:"
+
+#: components/componentchooservideoplayer.cpp:15
+#, fuzzy, kde-format
+#| msgid "Select preferred email client:"
+msgid "Select default video player"
+msgstr "Izaberite željeni klijent e‑pošte:"
+
+#: kcm_componentchooser.cpp:68
+#, kde-format
+msgid "Component Chooser"
+msgstr "Birač komponenata"
+
+#: package/contents/ui/ComponentOverlay.qml:23
+#, kde-format
+msgid "Details"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:29
+#, kde-format
+msgid ""
+"This application does not advertise support for the following file types:"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Force Open Anyway"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:51
+#, kde-format
+msgid ""
+"The following file types are still associated with a different application:"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:60
+#, kde-format
+msgctxt "@label %1 is a MIME type and %2 is an application name"
+msgid "%1 associated with %2"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:66
+#, kde-format
+msgctxt "@action:button %1 is an application name"
+msgid "Re-assign-all to %1"
+msgstr ""
+
+#: package/contents/ui/ComponentOverlay.qml:74
+#, kde-format
+msgid "Change file type association manually"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"’%1’ seems to not support the following mimetypes associated with this kind "
+"of application: %2"
+msgstr ""
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgctxt "Internet related application’s category’s name"
+msgid "Internet"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Web browser:"
 msgstr ""
 
-#: package/contents/ui/main.qml:42
-#, kde-format
-msgid "File manager:"
-msgstr ""
-
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Email client:"
 msgstr ""
 
-#: package/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
-msgid "Terminal emulator:"
-msgstr "Izaberite željeni terminalski program:"
-
-#: package/contents/ui/main.qml:78
-#, kde-format
-msgid "Map:"
-msgstr ""
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr ""
 
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Samir Ribić"
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "Multimedia related application’s category’s name"
+msgid "Multimedia"
+msgstr ""
 
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "Samir.ribic@etf.unsa.ba"
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Image viewer:"
+msgstr ""
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Music player:"
+msgstr ""
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Video player:"
+msgstr ""
+
+#: package/contents/ui/main.qml:189
+#, kde-format
+msgctxt "Documents related application’s category’s name"
+msgid "Documents"
+msgstr ""
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Text editor:"
+msgstr ""
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgid "PDF viewer:"
+msgstr ""
+
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgctxt "Utilities related application’s category’s name"
+msgid "Utilities"
+msgstr ""
+
+#: package/contents/ui/main.qml:243
+#, kde-format
+msgid "File manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "Select preferred terminal application:"
+msgid "Terminal emulator:"
+msgstr "Izaberite željeni terminalski program:"
+
+#: package/contents/ui/main.qml:278
+#, kde-format
+msgid "Archive manager:"
+msgstr ""
+
+#: package/contents/ui/main.qml:300
+#, kde-format
+msgctxt "Map related application’s category’s name"
+msgid "Map:"
+msgstr ""
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Jozef Veninger"
 
 #~ msgid "Unknown"
 #~ msgstr "Nepoznato"
-
-#~ msgid "Component Chooser"
-#~ msgstr "Birač komponenata"
 
 #~ msgid "(c), 2002 Joseph Wenninger"
 #~ msgstr "© 2002, Jozef Veninger"
