@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2023-01-03 15:51+0100\n"
+"PO-Revision-Date: 2023-01-30 14:14+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -35,25 +35,25 @@ msgstr "Chování"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Povolit zvuk"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr ""
+msgstr "Ztlumit"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Povolit zvuk %1"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "Ztišit %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
@@ -75,12 +75,12 @@ msgstr "Obecné:"
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr ""
+msgstr "Při přejezdu myší nad úlohami zobrazovat malé okno s náhledem"
 
 #: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr ""
+msgstr "Skrýt ostatní okna při přejetí přes náhledy"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Označte aplikace přehrávající hudbu"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Vyplnit na panelu volné místo"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
@@ -174,14 +174,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Zobrazí malé náhledy oken"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Zobrazí velké náhledy oken"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -358,7 +358,7 @@ msgstr "Objeví se nové úkoly:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Dole"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -375,7 +375,7 @@ msgstr "Doleva"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Nahoře"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -577,27 +577,27 @@ msgstr "Spustit %1"
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Je zde %1 nová zpráva."
+msgstr[1] "Jsou zde %1 nové zprávy."
+msgstr[2] "Je zde %1 nových zpráv."
 
 #: package/contents/ui/Task.qml:96
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr ""
+msgstr "Zobrazit nástrojový tip pro %1"
 
 #: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Pro %1 zobrazit okna vedle sebe"
 
 #: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Pro %1 otevřít textový seznam oken"
 
 #: package/contents/ui/Task.qml:111
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 00:59+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2022-06-29 13:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -37,12 +37,12 @@ msgstr "新增 %1 時發生錯誤，它似乎沒有動作。"
 msgid "Error while communicating with the global shortcuts service"
 msgstr "與全域捷徑服務聯繫時發生錯誤失敗"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "與全域捷徑服務聯繫失敗"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 "快捷鍵「%1」已經指定為通用「%2」動作「%3」。\n"
 "您要重新指定它嗎？"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -61,7 +61,7 @@ msgstr ""
 "快捷鍵「%1」已經指定為「%3」的動作「%2」。\n"
 "您要重新指定它嗎？"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

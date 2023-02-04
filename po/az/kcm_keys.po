@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 00:59+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2021-10-10 16:08+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "%1 əlavə edilməsi zamanı xəta, deyəsən heç bir hərəkət yoxdur
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Qlobal qısayolu xidməti ilə əlaqə zamanı xəta"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Qlobal qısayollar xidməti ilə əlaqə qurula bilmədi"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "%1 qısayolu artıq ümumi %2 əməliyyatına '%3' təyin edilib.\n"
 "Bunu yenidən təyin etmək istəyirsiniz?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "%1 qısayolu artıq %3'n '%2' əməlinə təyin edildi\n"
 "Bunu yenidən təyin etmək istəyirsiniz?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2021.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-01-09 04:44+0100\n"
+"PO-Revision-Date: 2023-02-03 12:41+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Default web browser"
 msgstr "Navegador web predeterminado"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Seleccionar el gestor de archivos predeterminado"
+msgstr "Seleccionar el gestor de archivos comprimidos predeterminado"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -67,22 +66,19 @@ msgid "Select default map"
 msgstr "Seleccionar el mapa predeterminado"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Seleccionar el gestor de archivos predeterminado"
+msgstr "Seleccionar el visor de imágenes predeterminado"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Seleccionar el mapa predeterminado"
+msgstr "Seleccionar el reproductor de música predeterminado"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Seleccionar el navegador predeterminado"
+msgstr "Seleccionar el visor PDF predeterminado"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -95,26 +91,24 @@ msgid "Select default terminal emulator"
 msgstr "Seleccionar el emulador de terminal predeterminado"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Seleccionar el emulador de terminal predeterminado"
+msgstr "Seleccionar el editor de texto predeterminado"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Seleccionar el gestor de archivos predeterminado"
+msgstr "Seleccionar el reproductor de vídeo predeterminado"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
 msgid "Component Chooser"
-msgstr ""
+msgstr "Selector de componentes"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format

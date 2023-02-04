@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-09-02 07:36+0200\n"
+"PO-Revision-Date: 2023-02-03 06:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Temuri Doghonadze"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "Temuri.doghonadze@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -40,10 +40,9 @@ msgid "Default web browser"
 msgstr "ნაგულისხმები ბრაუზერი"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "აირჩიეთ ფაილების ნაგულისხმები მმართველი"
+msgstr "არჩიეთ ნაგულისხმები არქივების მმართველი"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -66,22 +65,19 @@ msgid "Select default map"
 msgstr "აირჩიეთ ნაგულისხმები რუკა"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "აირჩიეთ ფაილების ნაგულისხმები მმართველი"
+msgstr "აირჩიეთ ნაგულისხმები სურათების გამხსნელი"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "აირჩიეთ ნაგულისხმები რუკა"
+msgstr "აირჩიეთ ნაგულისხმები მუსიკის დამკვრელი"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "აირჩიეთ ნაგულისხმები ბრაუზერი"
+msgstr "აირჩიეთ ნაგულისხმები PDF-ების გამხსნელი"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -94,61 +90,60 @@ msgid "Select default terminal emulator"
 msgstr "აირჩიეთ ტერმინალის ნაგულისხმები ემულატორი"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "აირჩიეთ ტერმინალის ნაგულისხმები ემულატორი"
+msgstr "აირჩიეთ ნაგულისხმები ტექსტური რედაქტორი"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "აირჩიეთ ფაილების ნაგულისხმები მმართველი"
+msgstr "აირჩიეთ ნაგულისხმები ვიდეოს დამკვრელი"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
 msgid "Component Chooser"
-msgstr ""
+msgstr "კომპონენტის ამრჩევი"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "დეტალები"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr ""
+"ამ აპლიკაციას არ აქვს მითითებული, რომ აქვს ფაილის შემდეგი ტიპების მხარდაჭერა:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "ძალით, მაინც გახსნა"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "შემდეგი ფაილის ტიპები ჯერ კიდევ სხვა აპლიკაციაზეა მიბმული:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 ასოცირებულია %2-სთან"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "ყველას %1-ზე მინიჭება"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "ფაილის ტიპის ასოცირების ხელით შეცვლა"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -156,12 +151,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"როგორც ჩანს, '%1' -ს შემდეგი MIME ტიპების მხარდაჭერა არ გააჩნია ამ "
+"აპლიკაციით: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "ინტერნეტი"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -183,44 +180,44 @@ msgstr "დამრეკი:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "მულტიმედია"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "სურათების გამხსნელი:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "მუსკის დამკვრელი:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "ვიდეო დამკვრელი:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "დოკუმენტები"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "ტექსტური რედაქტორი:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-ების გამხსნელი:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "ხელსაწყოები"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -233,14 +230,12 @@ msgid "Terminal emulator:"
 msgstr "ტერმინალის ემულატორი:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "ფაილების მმართველი:"
+msgstr "არქივების მმართველი:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "რუკა:"

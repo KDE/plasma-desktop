@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2017, 2020.
+# Vít Pelčák <vit@pelcak.org>, 2017, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2020-09-14 12:33+0200\n"
+"PO-Revision-Date: 2023-01-27 17:15+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -155,7 +155,7 @@ msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládán
 #: globalpaths.ui:119
 #, kde-format
 msgid "Public path:"
-msgstr ""
+msgstr "Veřejná cesta:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
@@ -163,12 +163,14 @@ msgstr ""
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání veřejných "
+"sdílení."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
 #, kde-format
 msgid "Templates path:"
-msgstr ""
+msgstr "Cesta k šabloně:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
@@ -176,3 +178,4 @@ msgstr ""
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání šablon."

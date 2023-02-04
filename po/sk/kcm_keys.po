@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 00:59+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2023-01-11 11:54+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -34,12 +34,12 @@ msgstr "Chyba pri pridávaní %1, zdá sa, že nemá žiadne akcie."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Chyba počas komunikácie so službou globálnych skratiek"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Zlyhala komunikácia s démonom globálnych skratiek"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -49,7 +49,7 @@ msgstr ""
 "Skratka %1 je už priradená k bežnej %2 akcii '%3'.\n"
 "Chcete ju znova priradiť?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -58,7 +58,7 @@ msgstr ""
 "Skratka %1 je už priradená k akcii '%2' z %3.\n"
 "Chcete ju znova priradiť?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
