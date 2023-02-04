@@ -6,11 +6,11 @@
 
 #include "desktoppathssettings.h"
 
+#include <QDir>
+
 #include <KBookmark>
 #include <KFilePlacesModel>
 #include <KLocalizedString>
-
-#include <QDir>
 
 namespace
 {
@@ -163,22 +163,36 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     : KCoreConfigSkeleton(userDirsConfig(), parent)
     , m_xdgPathsStore(new XdgPathsSettingsStore(this))
 {
-    addItemInternal("desktopLocation", defaultDesktopLocation());
-    addItemInternal("documentsLocation", defaultDocumentsLocation());
-    addItemInternal("downloadsLocation", defaultDownloadsLocation());
-    addItemInternal("musicLocation", defaultMusicLocation());
-    addItemInternal("picturesLocation", defaultPicturesLocation());
-    addItemInternal("videosLocation", defaultVideosLocation());
-    addItemInternal("publicLocation", defaultPublicLocation());
-    addItemInternal("templatesLocation", defaultTemplatesLocation());
+    addItemInternal("desktopLocation", defaultDesktopLocation(), [this] {
+        Q_EMIT desktopLocationChanged();
+    });
+    addItemInternal("documentsLocation", defaultDocumentsLocation(), [this] {
+        Q_EMIT documentsLocationChanged();
+    });
+    addItemInternal("downloadsLocation", defaultDownloadsLocation(), [this] {
+        Q_EMIT downloadsLocationChanged();
+    });
+    addItemInternal("musicLocation", defaultMusicLocation(), [this] {
+        Q_EMIT musicLocationChanged();
+    });
+    addItemInternal("picturesLocation", defaultPicturesLocation(), [this] {
+        Q_EMIT picturesLocationChanged();
+    });
+    addItemInternal("videosLocation", defaultVideosLocation(), [this] {
+        Q_EMIT videosLocationChanged();
+    });
+    addItemInternal("publicLocation", defaultPublicLocation(), [this] {
+        Q_EMIT publicLocationChanged();
+    });
+    addItemInternal("templatesLocation", defaultTemplatesLocation(), [this] {
+        Q_EMIT templatesLocationChanged();
+    });
 }
 
-void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue)
+void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue, const std::function<void()> &signal)
 {
     auto *item = new KPropertySkeletonItem(m_xdgPathsStore, propertyName, defaultValue);
-    item->setNotifyFunction([this] {
-        Q_EMIT this->widgetChanged();
-    });
+    item->setNotifyFunction(signal);
     addItem(item, propertyName);
 }
 

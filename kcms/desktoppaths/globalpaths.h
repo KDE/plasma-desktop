@@ -9,34 +9,28 @@
 
 #pragma once
 
-#include <KCModule>
-#include <memory>
-
-namespace Ui
-{
-class DesktopPathsView;
-}
-
-class KUrlRequester;
-class DesktopPathsSettings;
-class DesktopPathsData;
+#include <KQuickAddons/ManagedConfigModule>
 
 // The "Path" Tab contains :
 // The paths for Desktop and Documents
 
-class DesktopPathConfig : public KCModule
+class DesktopPathsData;
+class DesktopPathsSettings;
+
+class DesktopPathConfig : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+
+    Q_PROPERTY(QObject *settings READ settings CONSTANT)
+
 public:
-    DesktopPathConfig(QWidget *parent, const QVariantList &args);
+    DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
     ~DesktopPathConfig() override;
 
-private Q_SLOTS:
-    void updateDefaultIndicator();
+    QObject *settings() const;
+
+    bool isDefaults() const override;
 
 private:
-    void setDefaultIndicatorVisible(KUrlRequester *widget, const QVariant &defaultValue);
-
-    std::unique_ptr<Ui::DesktopPathsView> m_ui;
     DesktopPathsData *const m_data;
 };
