@@ -197,6 +197,7 @@ FolderModel::FolderModel(QObject *parent)
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
+    m_dirModel->dirLister()->setAutoUpdate(true);
 
     // If we have dropped items queued for moving, go unsorted now.
     connect(this, &QAbstractItemModel::rowsAboutToBeInserted, this, [this]() {
