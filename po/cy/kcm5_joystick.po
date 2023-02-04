@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2004-07-03 11:25+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -25,7 +25,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kyfieithu@dotmon.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Graddnodi"
@@ -89,7 +89,7 @@ msgstr ""
 "<b>uchaf</b>. <br><br>Gwasgwch unrhyw botwm ar y dyfais i barhau efo'r cam "
 "nesaf.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Gwall Cyfathrebu"
@@ -99,7 +99,7 @@ msgstr "Gwall Cyfathrebu"
 msgid "You have successfully calibrated your device"
 msgstr "Rydych wedi graddnodi eich dyfais yn lwyddiannus"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Llwyddiant Graddnodi"
@@ -244,7 +244,7 @@ msgstr "Lleoliad:"
 msgid "Show trace"
 msgstr "Dangos olrheiniad"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "GWASGEDIG\t"
@@ -316,7 +316,7 @@ msgstr ""
 msgid "2(y)"
 msgstr ""
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>Calibration is about to check the precision.<br><br><b>Please move "
@@ -331,7 +331,7 @@ msgstr ""
 "echelin i'w lleoliad canolig, ac wedyn peidiwch â chyffwrdd y ffon rheoli yn "
 "bellach.</b><br><br>Cliciwch Iawn i ddechrau'r graddnodi.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Wedi adfer pob gwerth graddnodi ar gyfer dyfais ffon rheoli %1."

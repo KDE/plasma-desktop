@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
-"PO-Revision-Date: 2021-10-08 14:39+0200\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
+"PO-Revision-Date: 2023-01-27 15:35+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -35,12 +35,12 @@ msgstr "Chyba při přidávání %1. Zdá se, že nemá žádné činnosti."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Při komunikaci s globální službou klávesových zkratek došlo k chybě"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Komunikace s globálním démon klávesových zkratek se nezdařila"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Zkratka %1 je již přiřazena společné %2 činnosti '%3'.\n"
 "Chcete ji přeřadit?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Zkratka %1 je již přiřazena činnosti '%2' of %3.\n"
 "Chcete ji přeřadit?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -106,7 +106,7 @@ msgstr "Uložit schéma"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Upravit příkaz pro %1"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -132,13 +132,13 @@ msgstr "Výběrem položky v seznamu zobrazíte s ní spojené klávesové zkrat
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
-msgstr ""
+msgstr "Přidat aplikaci…"
 
 #: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Přidat příkaz…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -194,25 +194,25 @@ msgstr "Přidat"
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Zadejte příkaz nebo vyberte soubor skriptu:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Vybrat…"
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Vyberte soubor skriptu"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Soubor skriptu (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

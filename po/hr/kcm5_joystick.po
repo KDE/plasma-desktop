@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2009-11-30 00:03+0100\n"
 "Last-Translator: Andrej Dundović <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "renato@translator-shop.org, adundovi@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Uštimavanje"
@@ -94,7 +94,7 @@ msgstr ""
 "<br /><br />Pritisnite bilo koju tipku na uređaju ili pritisnite gumb "
 "'Sljedeće' kako biste nastavili.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Komunikacijska pogreška"
@@ -104,7 +104,7 @@ msgstr "Komunikacijska pogreška"
 msgid "You have successfully calibrated your device"
 msgstr "Uspješno ste uštimali svoj uređaj"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Uštimavanje je uspješno"
@@ -234,7 +234,7 @@ msgstr "Položaj:"
 msgid "Show trace"
 msgstr "Prikaži tragove"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PRITISNUTO"
@@ -307,7 +307,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -318,7 +318,7 @@ msgstr ""
 "pomaknite njihovu sredinu i ne dodirujte igraću palicu</b><br /><br />Kako "
 "biste započeli s uštimavanjem pritisnite gumb 'U redu'.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Obnovljene su sve uštimavačke vrijednosti za igraću palicu %1."

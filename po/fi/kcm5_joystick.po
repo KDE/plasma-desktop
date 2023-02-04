@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2014-11-08 23:25+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -40,7 +40,7 @@ msgstr ""
 "teemu.rytilahti@kde-fi.org,eleknader@phnet.fi,ilpo@iki.fi,piippo@cc.helsinki."
 "fi,karvonen.jorma@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrointi"
@@ -104,7 +104,7 @@ msgstr ""
 "jotakin ohjaimen näppäintä tai 'Seuraava'-painiketta, kun olet valmis "
 "seuraavaan vaiheeseen.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Viestintävirhe"
@@ -114,7 +114,7 @@ msgstr "Viestintävirhe"
 msgid "You have successfully calibrated your device"
 msgstr "Ohjain on kalibroitu onnistuneesti"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrointi onnistui"
@@ -244,7 +244,7 @@ msgstr "Sijainti:"
 msgid "Show trace"
 msgstr "Näytä jälki"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PAINETTU"
@@ -318,7 +318,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -329,7 +329,7 @@ msgstr ""
 "akseleilla keskelle, äläkä koske laitteeseen.</b><br /><br />Napsauta OK, "
 "niin kalibrointi aloitetaan.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Palautettiin kaikki kalibrointiarvot peliohjaimelle ”%1”."

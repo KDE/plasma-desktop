@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2012-01-12 17:47+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mirodav@gmail.com,visnovsky@kde.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrácia"
@@ -91,7 +91,7 @@ msgstr ""
 "b>. <br /><br />Stlačte ľubovolné tlačidlo na zariadení alebo tlačidlo "
 "'Ďalej' pre nasledujúci krok.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Chyba komunikácie"
@@ -101,7 +101,7 @@ msgstr "Chyba komunikácie"
 msgid "You have successfully calibrated your device"
 msgstr "Vaše zariadenie je úspešne nakalibrované"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Úspešná kalibrácia"
@@ -235,7 +235,7 @@ msgstr "Pozícia:"
 msgid "Show trace"
 msgstr "Zobraziť stopu"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "STLAČENÉ"
@@ -307,7 +307,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -318,7 +318,7 @@ msgstr ""
 "všetky osi do stredovej pozície a potom sa joysticku už nedotýkajte.</b> "
 "<br /><br />Stlačením OK spustíte kalibráciu.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Obnovené všetky hodnoty kalibrácie pre zariadenie joysticku %1."

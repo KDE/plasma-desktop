@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2010-02-07 01:08+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "md_najmi@yahoo.com, sharuzzaman@myrealbox.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Tentukuran"
@@ -91,7 +91,7 @@ msgstr ""
 "<b>maksimum</b>.<br /><br />Tekan sebarang butang pada peranti atau klik "
 "pada butang 'Maju' untuk meneruskan dengan langkah seterusnya.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Ralat Komunikasi"
@@ -101,7 +101,7 @@ msgstr "Ralat Komunikasi"
 msgid "You have successfully calibrated your device"
 msgstr "Anda telah berjaya menentukur peranti anda"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Tentukuran Berjaya"
@@ -237,7 +237,7 @@ msgstr "Kedudukan:"
 msgid "Show trace"
 msgstr "Tunjuk jejak"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "TELAH DITEKAN"
@@ -310,7 +310,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -321,7 +321,7 @@ msgstr ""
 "paksi ke posisi tengah dan jangan sentuh pedal permainan lagi.</b><br /><br /"
 ">Klik OK untuk memulakan tentukuran</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Kembalikan semua nilai tentukuran untuk peranti pedal permainan %1"

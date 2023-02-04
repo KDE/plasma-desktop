@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2020-04-05 02:01+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "조정"
@@ -89,7 +89,7 @@ msgstr ""
 "%1 %2</b>을(를) <b>최댓값</b> 위치로 움직이십시오.<br /><br />장치에 있는 어"
 "떤 단추나 '다음' 단추를 클릭하면 다음 단계로 넘어갑니다.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "통신 오류"
@@ -99,7 +99,7 @@ msgstr "통신 오류"
 msgid "You have successfully calibrated your device"
 msgstr "성공적으로 장치를 조정했습니다"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "조정 성공"
@@ -224,7 +224,7 @@ msgstr "위치:"
 msgid "Show trace"
 msgstr "추적 표시"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "눌렸음"
@@ -295,7 +295,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -306,7 +306,7 @@ msgstr ""
 "조이스틱을 만지지 마십시오.</b><br /><br />확인 단추를 클릭하면 조정을 시작합"
 "니다.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "조이스틱 장치 %1의 모든 조정값을 복원했습니다."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2022-03-12 16:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -33,7 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gorkem@kde.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Ayarlama"
@@ -97,7 +97,7 @@ msgstr ""
 "<b>maksimum</b> noktasına getirin. <br /><br />Bir sonraki adıma geçmek için "
 "herhangi bir düğmeye veya 'İleri' düğmesine basın.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "İletişim Hatası"
@@ -107,7 +107,7 @@ msgstr "İletişim Hatası"
 msgid "You have successfully calibrated your device"
 msgstr "Aygıtın kalibrasyon ayarlarını başarıyla tamamladınız"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrasyon Başarıyla Tamamlandı"
@@ -235,7 +235,7 @@ msgstr "Konum:"
 msgid "Show trace"
 msgstr "İzi göster"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "BASILDI"
@@ -307,7 +307,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -318,7 +318,7 @@ msgstr ""
 "konumuna getirin ve oyun kumandasına daha fazla dokunmayın. </b><br /><br /"
 ">Ayarlamayı başlatmak için Tamam düğmesine basın.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Oyun kumandası %1 için tüm kalibrasyon değerleri geri yüklendi."

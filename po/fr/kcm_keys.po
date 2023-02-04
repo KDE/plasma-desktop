@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2023-01-14 19:34+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -33,12 +33,12 @@ msgstr "Erreur durant l'ajout de %1. Il semble n'y avoir aucune action."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Erreur durant la communication avec le service des raccourcis globaux"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Impossible de communiquer avec le démon des raccourcis généraux"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 "Le raccourci %1 est déjà assigné à l'action commune %2 « %3 »\n"
 "Voulez-vous vraiment le ré-assigner ?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -57,7 +57,7 @@ msgstr ""
 "Le raccourci %1 est déjà assigné à l'action commune « %2 » de %3\n"
 "Voulez-vous vraiment le ré-assigner ?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2023-01-11 17:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -39,12 +39,12 @@ msgstr ""
 "Ha ocurrido un error durante la comunicación con el servicio de accesos "
 "rápidos globales"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Ha fallado la comunicación con el demonio de accesos rápidos globales"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 "El acceso rápido %1 ya está asignado a la acción común de %2 «%3».\n"
 "¿Desea cambiar la asignación?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -63,7 +63,7 @@ msgstr ""
 "El acceso rápido %1 ya está asignado a la acción «%2» de %3.\n"
 "¿Desea cambiar la asignación?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

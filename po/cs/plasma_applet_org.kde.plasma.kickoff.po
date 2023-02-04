@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 02:50+0000\n"
-"PO-Revision-Date: 2023-01-03 15:51+0100\n"
+"PO-Revision-Date: 2023-01-30 14:19+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -59,7 +59,7 @@ msgstr "Ikona:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Změnit ikonu spouštěče aplikace"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -68,12 +68,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Současná ikona je %1. Klikněte pro otevření nabídky pro změnu současné ikony "
+"nebo vrácení původní ikony."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Název ikony je \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -85,49 +87,49 @@ msgstr "Vybrat…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Vyberte ikonu spouštěče aplikace"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Obnovit výchozí ikonu"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Odstranit ikonu"
 
 #: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Textový popisek:"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Pro přidání textového popisku pište zde"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Resetovat štítek nabídky"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Pokud je panel svislý, nelze nastavit textový popisek."
 
 #: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr ""
+msgstr "Obecné:"
 
 #: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
@@ -137,13 +139,13 @@ msgstr "Vždy řadit aplikace podle abecedy"
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Použít kompaktní styl seznamu položek"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automaticky zakázáno v dotykovém režimu"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format

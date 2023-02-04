@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2011-05-19 10:19+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "erik@binghamton.edu,mschlander@opensuse.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrering"
@@ -93,7 +93,7 @@ msgstr ""
 "b>positionen.<br /><br />Tryk på en vilkårlig knap på enheden eller klik på "
 "knappen 'Næste' for at fortsætte med næste trin.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Kommunikationsfejl"
@@ -103,7 +103,7 @@ msgstr "Kommunikationsfejl"
 msgid "You have successfully calibrated your device"
 msgstr "Det er lykkedes at kalibrere din enhed"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibreringssucces"
@@ -233,7 +233,7 @@ msgstr "Position:"
 msgid "Show trace"
 msgstr "Vis spor"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "NEDTRYKKET"
@@ -305,7 +305,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -316,7 +316,7 @@ msgstr ""
 "alle akser til deres centerposition og rør så ikke mere ved dit joystick.</"
 "b><br /><br />Klik på OK for at starte kalibreringen.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Genoprettede alle kalibreringsværdier for joystickenheden %1."

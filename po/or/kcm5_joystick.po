@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2008-12-23 14:10+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mgiri@redhat.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "ମାପ"
@@ -94,7 +94,7 @@ msgstr ""
 "ଯେକୌଣସି ବଟନକୁ ଦବାନ୍ତୁ କିମ୍ବା ପରବର୍ତ୍ତି ପଦକ୍ଷେପ ସହିତ ଆଗକୁ ବଢ଼ିବା ପାଇଁ 'ପରବର୍ତ୍ତି' ବଟନକୁ ଦବାନ୍ତୁ।</"
 "qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "ସଞ୍ଚାର-ବ୍ୟବସ୍ଥା ତ୍ରୁଟି"
@@ -104,7 +104,7 @@ msgstr "ସଞ୍ଚାର-ବ୍ୟବସ୍ଥା ତ୍ରୁଟି"
 msgid "You have successfully calibrated your device"
 msgstr "ଆପଣ ସଫଳତାର ସହିତ ଆପଣଙ୍କର ଉପକରଣକୁ ମାପି ସାରିଛନ୍ତି"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "ମାପ ସଫଳତା"
@@ -232,7 +232,7 @@ msgstr "ସ୍ଥିତି:"
 msgid "Show trace"
 msgstr "ଲକ୍ଷଣ ଦର୍ଶାନ୍ତୁ"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PRESSED"
@@ -304,7 +304,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -315,7 +315,7 @@ msgstr ""
 "ମଧ୍ଯବର୍ତ୍ତି ସ୍ଥାନକୁ ଗତିକରାନ୍ତୁ ଏବଂ ତାପରେ joystickକୁ ଆଉ କେବେ ଛୁଅନ୍ତୁ ନାହିଁ। </b><br /><br /"
 ">ମାପ ଆରମ୍ଭ କରିବା ପାଇଁ ଠିକ ଅଛିକୁ ଦବାନ୍ତୁ।</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "joystick ଉପକରଣ %1 ପାଇଁ ସମସ୍ତ ମପାଯାଇଥିବା ମୂଲ୍ୟକୁ ପୁନଃ ସ୍ଥାପନ କରନ୍ତୁ।"

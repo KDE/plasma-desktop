@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2023-01-11 11:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -35,12 +35,12 @@ msgstr "Fout tijdens toevoegen van %1, er lijken geen acties te zijn."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fout bij communicatie met de globale sneltoetsservice"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Communiceren met de globale daemon voor sneltoetsen is mislukt"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Sneltoets %1 is al toegekend aan de algemene %2 actie '%3'.\n"
 "Wilt u het opnieuw toekennen?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Sneltoets %1 is al toegekend aan de actie '%2' van %3.\n"
 "Wilt u het opnieuw toekennen?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

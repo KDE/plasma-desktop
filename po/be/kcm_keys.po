@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2022-12-25 17:09\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -39,12 +39,12 @@ msgstr "Не ўдалося дадаць %1. Выглядае, што няма �
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Не ўдалося звязацца з глабальнай службай спалучэнняў клавіш"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не ўдалося звязацца з дэманам спалучэнняў клавіш"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 "Спалучэнне клавіш %1 ужо прызначана для глабальнага %2 дзеяння \"%3\".\n"
 "Хочаце перапрызначыць?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -63,7 +63,7 @@ msgstr ""
 "Спалучэнне клавіш %1 ужо прызначана для дзеяння \"%2\" у %3.\n"
 "Хочаце перапрызначыць?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

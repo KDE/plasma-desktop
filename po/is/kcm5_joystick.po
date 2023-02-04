@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2022-12-10 20:08+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ra@ra.is, throstur@bylur.net, sv1@fellsnet.is,gudmundure@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kvörðun"
@@ -98,7 +98,7 @@ msgstr ""
 "><br />Ýttu á einhvern takka á tækinu eða smelltu á 'Áfram' til að halda "
 "áfram í næsta þrep.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Samskiptavilla"
@@ -108,7 +108,7 @@ msgstr "Samskiptavilla"
 msgid "You have successfully calibrated your device"
 msgstr "Þú hefur kvarðað tækið þitt með góðum árangri"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kvörðun tókst"
@@ -236,7 +236,7 @@ msgstr "Staðsetning:"
 msgid "Show trace"
 msgstr "Sýna feril"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "ÝTT"
@@ -308,7 +308,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -319,7 +319,7 @@ msgstr ""
 "miðjustöðu og snertu svo ekki stýripinnann.</b><br /><br />Smelltu á 'Í "
 "lagi' til að hefja kvörðunina.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Endurstillti öll kvörðunargildi fyrir stýripinnann %1."

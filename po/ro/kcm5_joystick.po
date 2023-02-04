@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2020-09-26 18:22+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ",lbuz@rolix.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Calibrare"
@@ -94,7 +94,7 @@ msgstr ""
 "dispozitivului sau faceți clic pe butonul 'Următor' pentru a trece la pasul "
 "următor.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Eroare de comunicație"
@@ -104,7 +104,7 @@ msgstr "Eroare de comunicație"
 msgid "You have successfully calibrated your device"
 msgstr "Ați calibrat cu succes dispozitivul dvs."
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Calibrare reușită"
@@ -240,7 +240,7 @@ msgstr "Poziție:"
 msgid "Show trace"
 msgstr "Afișează urma"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "APĂSAT"
@@ -313,7 +313,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -324,7 +324,7 @@ msgstr ""
 "axele în poziția centrală și nu mai atingeți joystick-ul.</b><br /><br /"
 ">Apăsați butonul \"OK\" pentru a porni calibrarea.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""

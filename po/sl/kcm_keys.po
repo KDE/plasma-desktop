@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2023-01-12 08:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -36,12 +36,12 @@ msgstr "Napaka pri dodajanju %1, kot kaže nima nobene dejavnosti."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Napaka pri komunikacij z globalno storitvijo bližnjic"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neuspela komunikacija z demonom globalnih bližnjic"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Bližnjica %1 je že dodeljena običajnemu dejanju %2 '%3'.\n"
 "Ali jo želite dodeliti drugam?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Bližnjica %1 je že dodeljena dejanju '%2' od %3.\n"
 "Ali jo želite dodeliti drugam?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

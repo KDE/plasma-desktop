@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2010-06-21 21:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -33,7 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ivanpetrouchtchak@yahoo.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Калібрування"
@@ -97,7 +97,7 @@ msgstr ""
 "позицію <b>максимуму</b>.<br /><br />Натисніть будь-яку кнопку пристрою або "
 "клацніть «Далі», щоб перейти до наступного кроку.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Помилка зв'язку"
@@ -107,7 +107,7 @@ msgstr "Помилка зв'язку"
 msgid "You have successfully calibrated your device"
 msgstr "Ви успішно відкалібрували ваш пристрій"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Калібрування успішне"
@@ -235,7 +235,7 @@ msgstr "Позиція:"
 msgid "Show trace"
 msgstr "Показувати слід"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "НАТИСНУТО"
@@ -307,7 +307,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -318,7 +318,7 @@ msgstr ""
 "осі у їхні центральні позиції і не доторкайтесь до джойстика.</b><br /><br /"
 ">>Натисніть «Гаразд», щоб розпочати калібрування.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Відновлено значення калібрування для джойстика %1."

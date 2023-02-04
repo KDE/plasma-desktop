@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2023-01-03 15:52+0100\n"
+"PO-Revision-Date: 2023-01-30 14:20+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -28,40 +28,40 @@ msgstr "Obnovit všechna minimalizovaná okna"
 #, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr ""
+msgstr "Minimalizovat všechna okna"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Obnoví dříve minimalizovaná okna"
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr ""
+msgstr "Zobrazit plochu minimalizací všech oken"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Nakouknout na pracovní plochu"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Přestat nakukovat na pracovní plochu"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Přesune okna zpět na jejich původní pozice"
 
 #: package/contents/ui/PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
+msgstr "Dočasně zobrazí pracovní plochu posunutím oken stranou"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2009-12-06 22:27+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matthias@peick.de,axel@esperanto-jeunes.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrado"
@@ -95,7 +95,7 @@ msgstr ""
 "pozicio. <br /><br />Premu iun butonon de la aparato aŭ klaku la butonon "
 "'Sekva' por pluigi kun la venonta paŝo.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Komunikada eraro"
@@ -105,7 +105,7 @@ msgstr "Komunikada eraro"
 msgid "You have successfully calibrated your device"
 msgstr "Vi sukcesis kalibri vian aparaton"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrada sukceso"
@@ -233,7 +233,7 @@ msgstr "Pozicio:"
 msgid "Show trace"
 msgstr "Montru spuron"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PREMITA"
@@ -305,7 +305,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -316,7 +316,7 @@ msgstr ""
 "al siaj mezaj pozicioj kaj ne plu tuŝu la stirstangon.</b><br /><br />Klaku "
 "\"Konfirmu\" por lanĉi la kalibradon.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Restarigis ĉiujn kalibradajn valorojn por stirstanga aparato %1."

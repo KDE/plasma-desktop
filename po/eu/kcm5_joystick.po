@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2014-01-26 22:51+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "marcos@euskalgnu.org,juanirigoien@gmail.com,xalba@euskalnet.net,hizpol@ej-gv."
 "es"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrazioa"
@@ -99,7 +99,7 @@ msgstr ""
 "><br />Sakatu gailuko edozein botoi edo egin klik Hurrengoa botoian hurrengo "
 "urratsarekin jarraitzeko.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Komunikazio-errorea"
@@ -109,7 +109,7 @@ msgstr "Komunikazio-errorea"
 msgid "You have successfully calibrated your device"
 msgstr "Behar bezala kalibratu duzu gailua"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrazio egokia"
@@ -240,7 +240,7 @@ msgstr "Posizioa:"
 msgid "Show trace"
 msgstr "Erakutsi aztarna"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "SAKATUTA"
@@ -312,7 +312,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -324,7 +324,7 @@ msgstr ""
 "gehiago kontrol-palanka.</b><br /><br />Egin klik Ados botoian kontrol-"
 "palanka kalibratzen hasteko.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Leheneratu %1 kontrol-palankaren kalibrazio-balio guztiak."

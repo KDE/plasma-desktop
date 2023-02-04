@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2017-05-16 06:51-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org, israelb@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "כיול"
@@ -90,7 +90,7 @@ msgstr ""
 "הזז את <b>ציר %1 %2</b> במכשירך למיקום <b>המקסימלי.</b> <br /> <br />  הקש "
 "על מקש כלשהו במכשירך והקש על \"הבא\" כדי להמשיך לשלב הבא.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "שגיאת תקשורת"
@@ -100,7 +100,7 @@ msgstr "שגיאת תקשורת"
 msgid "You have successfully calibrated your device"
 msgstr "המכשיר כויל בהצלחה"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "הכיול עבר בהצלחה"
@@ -226,7 +226,7 @@ msgstr "מיקום:"
 msgid "Show trace"
 msgstr "הצג מסלול"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "לחוץ"
@@ -298,7 +298,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -308,7 +308,7 @@ msgstr ""
 "<qt>תהליך הכיול עומד לבדוק את הדיוק. <br /> <br /> <b>הזז את כל הצירים למרכז "
 "ואל תיגע בג'ויסטיק יותר.</b> <br /> <br />לחץ אישור כדי להתחיל בכיול.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "שוחזרו כל ערכי הכיול עבור התקן הג'ויסטיק %1."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2009-12-13 23:44+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tomalbers@kde.nl,rinsedevries@kde.nl"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Calibratie"
@@ -94,7 +94,7 @@ msgstr ""
 "><br />Druk vervolgens op een willekeurige knop op de joystick of op de knop "
 "'Volgende' om naar de volgende stap door te gaan.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Communicatiefout"
@@ -104,7 +104,7 @@ msgstr "Communicatiefout"
 msgid "You have successfully calibrated your device"
 msgstr "Uw apparaat is succesvol gekalibreerd"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Succesvol gekalibreerd"
@@ -233,7 +233,7 @@ msgstr "Positie:"
 msgid "Show trace"
 msgstr "Afgelegde weg tonen"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "INGEDRUKT"
@@ -305,7 +305,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -316,7 +316,7 @@ msgstr ""
 "assen in de middelste positie en laat de joystick vervolgens helemaal los</"
 "b><br /><br />Klik op OK om de calibratie te starten.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Calibratiewaarden van joystick %1 zijn hersteld."

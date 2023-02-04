@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 02:38+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2022-02-04 16:00+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -36,12 +36,12 @@ msgstr "Eroare la adăugarea %1, se pare că nu are acțiuni."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Eroare la comunicarea cu serviciul de scurtături globale"
 
-#: kcm_keys.cpp:53
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Comunicarea cu demonul de scurtături globale a eșuat"
 
-#: kcm_keys.cpp:294
+#: kcm_keys.cpp:297
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Scurtătura %1 e atribuită deja acțiunii comune %2 „%3”.\n"
 "Doriți să o reatribuiți?"
 
-#: kcm_keys.cpp:298
+#: kcm_keys.cpp:301
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Scurtătura %1 e atribuită deja acțiunii „%2” din %3.\n"
 "Doriți să o reatribuiți?"
 
-#: kcm_keys.cpp:299
+#: kcm_keys.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

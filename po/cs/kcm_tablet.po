@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2021-12-17 16:51+0100\n"
+"PO-Revision-Date: 2023-02-03 16:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -35,38 +35,38 @@ msgstr "Na šířku"
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "Obrácené na výšku"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "Obrácené na šířku"
 
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the active screen"
-msgstr ""
+msgstr "Následovat aktivní obrazovku"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "Uzpůsobit výstupu"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "Uzpůsobit výstup v tabletu"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Vlastní velikost"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
@@ -77,12 +77,12 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Zařízení:"
 
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "Cílová obrazovka:"
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -102,34 +102,34 @@ msgstr "Oblast:"
 #: package/contents/ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Změnit velikost oblasti tabletu"
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Uzamknout poměr stran"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr ""
+msgstr "Tlačítko nástrojů 1"
 
 #: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr ""
+msgstr "Tlačítko nástrojů 2"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr ""
+msgstr "Tlačítko nástrojů 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
@@ -146,4 +146,4 @@ msgstr "Nic"
 #: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "Tlačítko %1:"

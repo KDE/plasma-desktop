@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2012-02-09 14:09+0200\n"
 "Last-Translator: Abdalrahim Fakhouri <abdilra7eem@yahoo.com>\n"
 "Language-Team: Arabic <linuxac-kde-arabic-team@googlegroups.com>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "المُعايرة"
@@ -92,7 +92,7 @@ msgstr ""
 "<b>المحور %1 %2</b> في جهاز إلى<b>أقصى</b> موضع.<br /><br />اضغط أي زر في "
 "الجهاز أو انقر زر 'التالي' لتواصل إلى الخطوة التالية.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "خطأ في الاتصال"
@@ -102,7 +102,7 @@ msgstr "خطأ في الاتصال"
 msgid "You have successfully calibrated your device"
 msgstr "لقد قمت بمُعَايَرَة جهازك بنجاح"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "نجاح المُعَايَرَة"
@@ -229,7 +229,7 @@ msgstr "الموضع:"
 msgid "Show trace"
 msgstr "أظهر الأثر"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "مضغوط"
@@ -301,7 +301,7 @@ msgstr "1(س)"
 msgid "2(y)"
 msgstr "2(ص)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -312,7 +312,7 @@ msgstr ""
 "الوسطي ، ثم لا تحرك عصى الألعاب بعد ذلك.</b><br /><br />انقر موافق لبدأ "
 "المعايرة.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "قمت بإستعادة كل قيم المُعَايَرَة لجهاز عصا الألعاب %1."

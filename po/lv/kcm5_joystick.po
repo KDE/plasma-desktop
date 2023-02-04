@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2009-11-23 20:15+0200\n"
 "Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "viesturs.zarins@mii.lu.lv"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrēšana"
@@ -95,7 +95,7 @@ msgstr ""
 "stāvokli.<br /><br />Nospiediet jebkuru pogu uz ierīces vai nospiediet pogu "
 "'Nākamais', lai pārietu uz nākamo soli.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Saziņas kļūda"
@@ -105,7 +105,7 @@ msgstr "Saziņas kļūda"
 msgid "You have successfully calibrated your device"
 msgstr "Jūsu ierīcie ir veiksmīgi nokalibrēta"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrācija veiksmīga"
@@ -232,7 +232,7 @@ msgstr "Pozīcija:"
 msgid "Show trace"
 msgstr "Rādīt stāvokli"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "NOSPIESTS"
@@ -304,7 +304,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -315,7 +315,7 @@ msgstr ""
 "pakustiniet visasasis uz centrālo stāvokli un neaiztieciet kursorsviru.</"
 "b><br /><br />Nospiediet Ok lai sāktu kalibrāciju.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Atjaunotas visas kursorsviras %1 kalibrācijas vērtības."

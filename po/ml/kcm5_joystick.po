@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2019-12-12 22:18+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "ക്രമീകരണം"
@@ -92,7 +92,7 @@ msgstr ""
 "ചലിപ്പിക്കുക. <br /><br /> അടുത്ത ഘട്ടത്തിലേക്കു പോകാനായി ഏതെങ്കിലും ബട്ടണ്‍ അമര്‍ത്തുകയോ "
 "അല്ലെങ്കില്‍ 'അടുത്തത് ' എന്ന ബട്ടണ്‍ അമര്‍ത്തുകയോ ചെയ്യുകയോ ചെയ്യുക. </qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "ആശയവിനിമയത്തകരാറു്"
@@ -102,7 +102,7 @@ msgstr "ആശയവിനിമയത്തകരാറു്"
 msgid "You have successfully calibrated your device"
 msgstr "താങ്ക്ള്‍ വിജയകരമായി ഉപകരണ് ക്രമീകരണം പൂര്‍ത്തീകരിച്ചു "
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "ക്രമീകരണം വിജയിച്ചു "
@@ -219,7 +219,7 @@ msgstr "സ്ഥാനം:"
 msgid "Show trace"
 msgstr "അടയാളം കാണിക്കുക"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "അമര്‍ത്തി "
@@ -291,7 +291,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -302,7 +302,7 @@ msgstr ""
 "അച്ചുതണ്ടുകളും മധ്യത്തിലേക്കു നീക്കുക.</b><br /><br /> ക്രമീകരണത്തിനായി 'ശരി' അമര്‍ത്തുക. </"
 "qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""

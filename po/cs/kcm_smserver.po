@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2014, 2016, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-06-28 10:51+0200\n"
+"PO-Revision-Date: 2023-01-27 15:33+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -36,7 +36,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
-msgstr ""
+msgstr "K aktivaci ukládání sezení bude potřeba restartovat systém."
 
 #: package/contents/ui/main.qml:35
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "Restartovat nyní"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Obrazovka pro odhlášení"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -89,24 +89,24 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Obnovení sezení"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Při přihlášení spustit aplikace, které byly otevřeny:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Při posledním odhlášení"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "Pokud bylo sezení manuálně uloženo"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -130,7 +130,7 @@ msgstr "Spustit s prázdnou relací"
 #: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ignorované aplikace:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -144,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Firmware"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -152,19 +152,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Po následujícím restartu:"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "Spustit nastavení UEFI"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Spustit nastavení firmware"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

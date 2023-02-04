@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-04 03:17+0000\n"
 "PO-Revision-Date: 2009-12-30 21:23+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danishka@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "ක්‍රමාංකනය"
@@ -88,7 +88,7 @@ msgstr ""
 "උපකරණයේ <b>%1 %2 අක්‍ෂ</b> ඒවායේ <b>උපරිම</b> ස්ථානයට ගෙනයන්න.<br /><br />ඔබේ "
 "උපකරණයේ ඕනෑම බොත්තමක් හෝ 'ඊලඟ' බොත්තම  ක්ලික් කර ඊලඟ පියවරට යන්න.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "සන්නිවේදන වරදක්"
@@ -98,7 +98,7 @@ msgstr "සන්නිවේදන වරදක්"
 msgid "You have successfully calibrated your device"
 msgstr "ඔබ ඔබේ උපකරණය සාර්ථකව ක්‍රමාංකනය කර ඇත"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "ක්‍රමාංකනය සාර්ථකයි"
@@ -224,7 +224,7 @@ msgstr "ස්ථාන:"
 msgid "Show trace"
 msgstr "මාර්‍ගය පෙන්වන්න"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "එබූ"
@@ -296,7 +296,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -306,7 +306,7 @@ msgstr ""
 "<qt>ක්‍රමාංකනය සුමටතාව පිරික්සයි.<br /><br /><b>කරුණාකර සියළු අක්‍ෂ ඒවායේ මධ්‍යම ස්ථානයට "
 "ගෙනයන්න, ඉන් පසු එය නොඅල්ලන්න.</b><br /><br />ක්‍රමාංකනය ආරම්භ කිරීමට හරි ක්ලික් කරන්න.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "%1 ජෝයිස්ටික් උපකරණය සඳහා සියළු ක්‍රමාංකන අගයන් ප්‍රථිපිහිටුවිනි."
