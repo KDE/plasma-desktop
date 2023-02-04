@@ -181,7 +181,7 @@ Item {
     property bool isTransparent: panel.opacityMode === Panel.Global.Translucent
     property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
-    readonly property bool screenCovered: touchingWindow && !kwindowsystem.showingDesktop && panel.visibilityMode == Panel.Global.NormalPanel
+    readonly property bool screenCovered: !kwindowsystem.showingDesktop && touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, kwindowsystem.compositingActive]
     onStateTriggersChanged: {
         let opaqueApplets = false
