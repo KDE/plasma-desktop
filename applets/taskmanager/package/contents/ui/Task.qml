@@ -390,6 +390,7 @@ PlasmaCore.ToolTipArea {
         // Avoid repositioning delegate item after dragFinished
         DragHandler {
             id: dragHandler
+            grabPermissions: PointerHandler.TakeOverForbidden
 
             onActiveChanged: if (active) {
                 icon.grabToImage((result) => {
