@@ -315,7 +315,8 @@ PlasmaCore.ToolTipArea {
     TapHandler {
         acceptedButtons: Qt.RightButton
         acceptedDevices: PointerDevice.Mouse
-        onTapped: menuTapHandler.longPressed();
+        gesturePolicy: TapHandler.WithinBounds // Release grab when menu appears
+        onPressedChanged: if (pressed) menuTapHandler.longPressed()
     }
 
     TapHandler {
