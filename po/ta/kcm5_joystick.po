@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2022-04-02 21:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jvijay_loyola@hotmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "அளவொப்புமை"
@@ -89,7 +89,7 @@ msgstr ""
 "%1</b> உங்கள் சாதனத்தில் <b>அதிகபட்ச</b> நிலை.<br><br>சாதனத்தின் பொத்தனை அழுத்தி "
 "அடுத்த கட்டத்திற்க்கு செல்வும்.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "தகவல் தொடர்பு பிழை"
@@ -99,7 +99,7 @@ msgstr "தகவல் தொடர்பு பிழை"
 msgid "You have successfully calibrated your device"
 msgstr "உங்கள் சாதனத்தில் வெற்றிகரமாக அளவொப்புமைக்கபட்டது"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "அளவொப்புமையின் வெற்றி"
@@ -238,7 +238,7 @@ msgstr "இருப்பிடம்:"
 msgid "Show trace"
 msgstr "தடத்தை காட்டு"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PRESSED"
@@ -310,7 +310,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>Calibration is about to check the precision.<br><br><b>Please move "
@@ -325,7 +325,7 @@ msgstr ""
 "¿¸÷ò¾×õ ÁüÚõ ¡öº¢Êì¨¸ ¦¾¡¼¾£÷¸û .</b><br><br>«Ç¦Å¡ôÒÅ¨ÁOK «Øò¾¢ ¦¾¡¼í¸×õ.</"
 "qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "அனைத்து ஒழுங்கிணைப்பு மதிப்புகளை இயக்குகருவி சாதனம் %1க்காக திரும்ப அமைக்கும்."

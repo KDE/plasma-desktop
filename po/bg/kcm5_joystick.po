@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2010-10-05 22:46+0300\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "radnev@yahoo.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Калибриране"
@@ -92,7 +92,7 @@ msgstr ""
 "<b>минималната</b> позиция.<br /><br />Натиснете произволен бутон на "
 "устройството или \"Напред\", за да продължите със следващата стъпка.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Комуникационна грешка"
@@ -102,7 +102,7 @@ msgstr "Комуникационна грешка"
 msgid "You have successfully calibrated your device"
 msgstr "Калибрирането на устройството е успешно"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Калибрирането е успешно"
@@ -227,7 +227,7 @@ msgstr "Позиция:"
 msgid "Show trace"
 msgstr "Показване на следа"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "НАЛИЧЕН"
@@ -299,7 +299,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -311,7 +311,7 @@ msgstr ""
 "устройството повече. </b><br /><br />Натиснете \"ОК\", за да започнете с "
 "операцията по калибриране.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""

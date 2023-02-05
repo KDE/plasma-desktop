@@ -1,6 +1,5 @@
 # Translation for kcm_componentchooser.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2014, Free Software Foundation, Inc.
-# Copyright (C) 2015-2022, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -9,21 +8,21 @@
 # Juan Irigoien <juanirigoien@yahoo.es>, 2004.
 # Marcos  <marcos@euskalgnu.org>, 2005, 2006, 2007, 2008.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018, 2020, 2021, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-02-20 10:46+0100\n"
+"PO-Revision-Date: 2023-02-04 09:39+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -48,25 +47,24 @@ msgid "Default web browser"
 msgstr "Web arakatzaile lehenetsia"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Hautatu lehenetsitako fitxategi-kudeatzailea"
+msgstr "Hautatu fitxategi-kudeatzaile lehenetsia"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
 msgid "Select default browser"
-msgstr "Hautatu lehenetsitako arakatzailea"
+msgstr "Hautatu arakatzaile lehenetsia"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr "Hautatu lehenetsitako e-posta bezeroa"
+msgstr "Hautatu e-posta bezero lehenetsia"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "Hautatu lehenetsitako fitxategi-kudeatzailea"
+msgstr "Hautatu fitxategi-kudeatzaile lehenetsia"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
@@ -74,22 +72,19 @@ msgid "Select default map"
 msgstr "Hautatu mapa lehenetsia"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Hautatu lehenetsitako fitxategi-kudeatzailea"
+msgstr "Hautatu irudi-erakusle lehenetsia"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Hautatu mapa lehenetsia"
+msgstr "Hautatu musika-jotzaile lehenetsia"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Hautatu lehenetsitako arakatzailea"
+msgstr "Hautatu lehenetsitako PDF erakuslea"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -99,19 +94,17 @@ msgstr "Hautatu markatzeko aplikazio lehenetsia"
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "Hautatu lehenetsitako terminal emulatzailea"
+msgstr "Hautatu terminal emulatzaile lehenetsia"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Hautatu lehenetsitako terminal emulatzailea"
+msgstr "Hautatu testu editore lehenetsia"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Hautatu lehenetsitako fitxategi-kudeatzailea"
+msgstr "Hautatu bideo-jotzaile lehenetsia"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
@@ -121,42 +114,44 @@ msgstr "Osagai-hautatzailea"
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Xehetasunak"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr ""
+"Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Behartu irekitzera nolanahi ere"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr ""
+"Ondoko fitxategi-motak oraindik beste aplikazio batekin elkartuta daude:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 %2(e)rekin elkartuta"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Berresleitu guztiak %1(e)ra"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Aldatu fitxategi-mota elkarketa eskuz"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -164,12 +159,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Ematen du '%1'(e)k ez dituela onartzen aplikazio-mota honekin elkartutako "
+"ondoko MIME motak: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -191,44 +188,44 @@ msgstr "Markatzailea:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Irudi erakuslea:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Musika-jotzailea:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Bideo-jotzailea:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumentuak"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Testu-editorea:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF erakuslea:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Baliagarritasunak"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -241,14 +238,12 @@ msgid "Terminal emulator:"
 msgstr "Terminal emulatzailea:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Fitxategi-kudeatzailea:"
+msgstr "Artxibo-kudeatzailea:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"

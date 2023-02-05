@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2021-12-12 13:50+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-02-04 20:02+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -75,13 +75,12 @@ msgstr "Programos"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Komandos"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Sistemos tarnybos"
+msgstr "Sistemos nuostatos"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -110,7 +109,7 @@ msgstr "Įrašyti schemą"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Taisyti komandą, skirtą %1"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -135,8 +134,7 @@ msgstr ""
 "klavišus"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Pridėti programą…"
@@ -145,7 +143,7 @@ msgstr "Pridėti programą…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Pridėti komandą…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -181,45 +179,45 @@ msgstr "Sparčiųjų klavišų schema (*.kksrc)"
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Taisyti komandą"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Pridėti komandą"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Pridėti"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Įveskite komandą arba pasirinkite scenarijaus failą:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Pasirinkti…"
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Pasirinkti scenarijaus failą"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Scenarijaus failas (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "k.meetme@gmail.com,infyquest@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "కాలిబరేషన్"
@@ -80,7 +80,7 @@ msgid ""
 "button to continue with the next step.</qt>"
 msgstr ""
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "సంప్రదింపు దోషము"
@@ -90,7 +90,7 @@ msgstr "సంప్రదింపు దోషము"
 msgid "You have successfully calibrated your device"
 msgstr "మీరు మీ పరికరమును సమర్ధవంతంగా కాలిబరేట్ చేసినారు"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "కాలిబరేషన్ సఫలమైంది"
@@ -205,7 +205,7 @@ msgstr "స్థానము:"
 msgid "Show trace"
 msgstr "ట్రేస్‌ను చూపుము"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "PRESSED"
@@ -277,7 +277,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -288,7 +288,7 @@ msgstr ""
 "స్థానమునకు కదుపుము మరియు యిక జాయ్‌స్టిక్‌ను అంటుకొనవద్దు.</b><br /><br />కాలిబరేషన్ "
 "ప్రారంభించుటకు సరే నొక్కండి.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "జాయ్‌స్టిక్ పరికరము %1 కొరకు అన్ని కాలిబరేషన్ విలువలను తిరిగివుంచబడినవి."

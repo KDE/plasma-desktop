@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-11-17 00:43+0200\n"
+"PO-Revision-Date: 2023-02-04 23:30+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,10 +39,9 @@ msgid "Default web browser"
 msgstr "Numatytoji saityno naršyklė"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Pasirinkti numatytąją failų tvarkytuvę"
+msgstr "Pasirinkti numatytąją archyvų tvarkytuvę"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -65,22 +64,19 @@ msgid "Select default map"
 msgstr "Pasirinkti numatytąjį žemėlapį"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Pasirinkti numatytąją failų tvarkytuvę"
+msgstr "Pasirinkti numatytąją paveikslų žiūryklę"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Pasirinkti numatytąjį žemėlapį"
+msgstr "Pasirinkti numatytąjį muzikos grotuvą"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Pasirinkti numatytąją naršyklę"
+msgstr "Pasirinkti numatytąją PDF žiūryklę"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -93,16 +89,14 @@ msgid "Select default terminal emulator"
 msgstr "Pasirinkti numatytąjį terminalo emuliatorių"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Pasirinkti numatytąjį terminalo emuliatorių"
+msgstr "Pasirinkti numatytąjį tekstų redaktorių"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Pasirinkti numatytąją failų tvarkytuvę"
+msgstr "Pasirinkti numatytąją vaizdo leistuvę"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
@@ -112,42 +106,42 @@ msgstr "Komponentų parinkiklis"
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Išsamiau"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "Ši programa neskelbia palaikanti šiuos failų tipus:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Vis tiek priverstinai atverti"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "Šie failų tipai vis dar yra susieti su kita programa:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 yra susietas su %2"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Iš naujo priskirti visus prie %1"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Keisti failų tipo susiejimą rankiniu būdu"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -155,12 +149,13 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Atrodo, kad „%1“ nepalaiko su šio tipo programa susietų šių MIME tipų: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internetas"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -182,44 +177,44 @@ msgstr "Numerio rinkiklis:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedija"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Paveikslų žiūryklė:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Muzikos grotuvas:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Vaizdo leistuvė:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumentai"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Tekstų redaktorius:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF žiūryklė:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Paslaugų programos"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -232,14 +227,12 @@ msgid "Terminal emulator:"
 msgstr "Terminalo emuliatorius:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Failų tvarkytuvė:"
+msgstr "Archyvų tvarkytuvė:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Žemėlapis:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2012-01-12 16:51+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "درجه‌بندی"
@@ -93,7 +93,7 @@ msgstr ""
 "دهید.<br /><br />برای ادامه مرحله بعدی، هر دکمه روی دستگاه، یا دکمه »بعدی« "
 "را فشار دهید.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "خطای ارتباط"
@@ -103,7 +103,7 @@ msgstr "خطای ارتباط"
 msgid "You have successfully calibrated your device"
 msgstr "دستگاه خود را با موفقیت درجه‌بندی کرده‌اید"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "درجه‌بندی موفق"
@@ -232,7 +232,7 @@ msgstr "موقعیت:"
 msgid "Show trace"
 msgstr "نمایش ردیابی"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "فشار داده‌شده"
@@ -304,7 +304,7 @@ msgstr "۱(x)"
 msgid "2(y)"
 msgstr "۲(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -315,7 +315,7 @@ msgstr ""
 "موقعیت مرکزیشان حرکت داده، و دیگر به اهرم کنترل دست نزنید.</b><br /><br /"
 ">برای آغاز درجه‌بندی، تأیید را فشار دهید.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "همه مقادیر درجه‌بندی برای دستگاه اهرم کنترل %1 بازگردانده شد."

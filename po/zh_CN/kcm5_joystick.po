@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,7 +28,7 @@ msgid "Your emails"
 msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, shaodan1997@kde.org, tysontan@tysontan.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "校准"
@@ -89,7 +89,7 @@ msgstr ""
 "%1 %2 </b>推到<b>最大</b>位置。<br /><br />按下设备的任意按钮，或者单击“下一"
 "步”按钮，继续下一步校准操作。</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "通讯错误"
@@ -99,7 +99,7 @@ msgstr "通讯错误"
 msgid "You have successfully calibrated your device"
 msgstr "您已经成功校准了此设备"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "校准成功"
@@ -224,7 +224,7 @@ msgstr "位置："
 msgid "Show trace"
 msgstr "显示轨迹"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "已按下"
@@ -295,7 +295,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -305,7 +305,7 @@ msgstr ""
 "<qt>校准工具即将检查设备的输出精度。<br /><br /><b>请将控制器的全部轴归位到中"
 "间位置，此后不要再触碰控制器。</b><br /><br />单击确定按钮，开始校准。</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "已经恢复了游戏控制器设备 %1 的全部校准数值。"

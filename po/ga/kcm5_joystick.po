@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/joystick.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Calabrú"
@@ -91,7 +91,7 @@ msgstr ""
 "<br /><br />Brúigh cnaipe ar bith ar an ngléas nó cliceáil 'Ar Aghaidh' chun "
 "dul ar aghaidh leis an chéad chéim eile.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Earráid Chumarsáide"
@@ -101,7 +101,7 @@ msgstr "Earráid Chumarsáide"
 msgid "You have successfully calibrated your device"
 msgstr "D'éirigh le calabrú do ghléas"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "D'éirigh leis an gcalabrú"
@@ -241,7 +241,7 @@ msgstr "Ionad:"
 msgid "Show trace"
 msgstr "Taispeáin lorg"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "BRÚITE"
@@ -313,7 +313,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -325,7 +325,7 @@ msgstr ""
 "stiúrtha a thuilleadh.</b><br /><br />Cliceáil OK chun an calabrú a thosú.</"
 "qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Athchóiríodh gach luach calabraithe le haghaidh luamhán stiúrtha %1."

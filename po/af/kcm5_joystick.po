@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2005-10-06 21:18+0200\n"
 "Last-Translator: Kobus Venter <kabousv@therugby.co.za>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kabousv@therugby.co.za"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Kalibrering"
@@ -107,7 +107,7 @@ msgstr ""
 "posissie.<br><br>Druk enige knoppie op die toestel of kliek op die "
 "'Volgende' knoppie  om voort te gaan na die volgende stap.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Kommunikasie Fout"
@@ -117,7 +117,7 @@ msgstr "Kommunikasie Fout"
 msgid "You have successfully calibrated your device"
 msgstr "Jy het jou toestel suksesvol gekalibreer"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Kalibrering Suksesvol"
@@ -264,7 +264,7 @@ msgstr "Posissie"
 msgid "Show trace"
 msgstr "Wys spoor"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "GEDRUK"
@@ -341,7 +341,7 @@ msgstr ""
 msgid "2(y)"
 msgstr ""
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>Calibration is about to check the precision.<br><br><b>Please move "
@@ -356,7 +356,7 @@ msgstr ""
 "alle asse na die middel posissie en los dan die toestel alleen </"
 "b><br><br>Kliek REG om die kalibrering te begin.</qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Alle gekalibreerde waardes vir die speelstok toestel %1 is herstel"
