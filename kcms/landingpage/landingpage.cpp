@@ -166,7 +166,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData,
     qmlRegisterAnonymousType<MostUsedModel>("org.kde.plasma.landingpage.kcm", 0);
     qmlRegisterAnonymousType<LookAndFeelGroup>("org.kde.plasma.landingpage.kcm", 0);
 
-    setButtons(Apply | Help);
+    setButtons(Apply);
 
     m_mostUsedModel = new MostUsedModel(this);
     m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(12), this));
