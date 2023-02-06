@@ -185,7 +185,7 @@ Item {
                     return {
                         minimumWidth: -1,
                         maximumWidth: PlasmaCore.Units.iconSizeHints.panel,
-                        minimumHeight: impHeight,
+                        minimumHeight: -1,
                         maximumHeight: impHeight,
                     };
                 } else { // horizontal
