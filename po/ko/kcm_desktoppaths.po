@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2021-05-16 13:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,52 +27,52 @@ msgstr ""
 "X-Generator: Lokalize 20.12.3\n"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "바탕 화면"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, kde-format
 msgid "Documents"
 msgstr "문서"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, kde-format
 msgid "Downloads"
 msgstr "다운로드"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, kde-format
 msgid "Music"
 msgstr "음악"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, kde-format
 msgid "Pictures"
 msgstr "사진"
 
 # xdg-user-dirs
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, kde-format
 msgid "Videos"
 msgstr "동영상"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -85,14 +85,12 @@ msgstr ""
 "특정한 설정에 대한 도움말을 보시려면 \"이것에 대한 설명\" (Shift+F1)을 사용하"
 "십시오."
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "바탕 화면 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -102,99 +100,91 @@ msgstr ""
 "이 폴더에는 바탕 화면에서 볼 수 있는 모든 파일이 들어 있습니다. 이 폴더의 위"
 "치를 변경할 수 있으며 내용물은 자동으로 새로운 위치로 이동합니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "문서 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "이 폴더는 문서를 열거나 저장하는 기본 폴더로 사용됩니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "다운로드 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "이 폴더는 다운로드한 파일을 저장하는 기본 폴더로 사용됩니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Videos path:"
 msgstr "동영상 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "이 폴더는 동영상을 저장하는 기본 폴더로 사용됩니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "사진 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "음악 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "이 폴더는 음악을 저장하는 기본 폴더로 사용됩니다."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "음악 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "사진 경로:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save pictures from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
 
 #~ msgid "Autostart path:"
 #~ msgstr "자동 시작 경로:"

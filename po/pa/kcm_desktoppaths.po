@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2021-10-09 07:46-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -16,47 +16,47 @@ msgstr ""
 "X-Generator: Lokalize 21.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "ਡੈਸਕਟਾਪ"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, kde-format
 msgid "Documents"
 msgstr "ਡੌਕੂਮੈਂਟ"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, kde-format
 msgid "Downloads"
 msgstr "ਡਾਊਨਲੋਡ"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, kde-format
 msgid "Music"
 msgstr "ਸੰਗੀਤ"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, kde-format
 msgid "Pictures"
 msgstr "ਤਸਵੀਰਾਂ"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, kde-format
 msgid "Videos"
 msgstr "ਵਿਡੀਓ"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -69,14 +69,12 @@ msgstr ""
 "ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ।\n"
 "ਖਾਸ ਚੋਣਾਂ ਬਾਰੇ ਮਦਦ ਲੈਣ ਲਈ \"ਇਹ ਕੀ ਹੈ?\" (Shift+F1) ਦੀ ਵਰਤੋਂ ਕਰੋ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "ਡੈਸਕਟਾਪ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -87,99 +85,91 @@ msgstr ""
 "ਟਿਕਾਣਾ ਬਦਲ ਸਕਦੇ ਹੋ, ਜੇ ਤੁਹਾਨੂੰ ਲੋੜ ਪਵੇ, ਅਤੇ ਸਮੱਗਰੀ ਨੂੰ ਵੀ ਆਟੋਮੈਟਿਕ ਨਵੇਂ ਟਿਕਾਣੇ ਉੱਤੇ ਭੇਜ ਦਿੱਤਾ "
 "ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "ਡੌਕੂਮੈਂਟ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਦਸਤਾਵੇਜ਼ ਸੰਭਾਲ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "ਡਾਊਨਲੋਡ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤੁਹਾਡੀਆਂ ਡਾਊਨਲੋਡ ਆਈਟਮਾਂ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Videos path:"
 msgstr "ਵੀਡਿਓ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਮੂਵੀ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "ਤਸਵੀਰ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤਸਵੀਰਾਂ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "ਸੰਗੀਤ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਸੰਗੀਤ ਸੰਭਾਲ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "ਸੰਗੀਤ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤਸਵੀਰਾਂ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "ਤਸਵੀਰ ਪਾਥ:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤਸਵੀਰਾਂ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save pictures from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr "ਇਸ ਫੋਲਡਰ ਨੂੰ ਮੂਲ ਰੂਪ ਵਿੱਚ ਤਸਵੀਰਾਂ ਸੰਭਾਲਣ ਜਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
 #~ msgid "Autostart path:"
 #~ msgstr "ਆਟੋ-ਸਟਾਰਟ ਪਾਥ:"

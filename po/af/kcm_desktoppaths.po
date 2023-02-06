@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2006-01-19 21:33+0200\n"
 "Last-Translator: Frikkie Thirion <frikkie.thirion@deneloptronics.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -18,52 +18,52 @@ msgstr ""
 "X-Generator: KBabel 1.10.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "Werkskerm"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Documents"
 msgstr "Dokumente gids soeklys:"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Downloads"
 msgstr "Dokumente gids soeklys:"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Music"
 msgstr "Dokumente gids soeklys:"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Pictures"
 msgstr "Dokumente gids soeklys:"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Videos"
 msgstr "Dokumente gids soeklys:"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, fuzzy, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -77,15 +77,13 @@ msgstr ""
 "Gebruik die \"Wat is Hierdie?\" (Shift+F1) om hulp oor spesifieke opsies te "
 "kry"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
 msgid "Desktop path:"
 msgstr "Werkskerm gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -96,15 +94,13 @@ msgstr ""
 "ligging van hierdie vouer verander as jy wil hê, en die inhoud sal "
 "automaties  beweeg na die nuwe ligging."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Documents path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -112,15 +108,13 @@ msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Downloads path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -129,15 +123,13 @@ msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Videos path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -146,15 +138,13 @@ msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Pictures path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -164,15 +154,13 @@ msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Music path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -181,33 +169,19 @@ msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr ""
-"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
-"na toe te stoor."
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgid "Templates path:"
 msgstr "Dokumente gids soeklys:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -216,6 +190,22 @@ msgid ""
 msgstr ""
 "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
 "na toe te stoor."
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save documents from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr ""
+#~ "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak "
+#~ "of na toe te stoor."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

@@ -4,19 +4,21 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2016.
 # Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2021-05-26 06:35+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-01-31 20:52+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,13 +60,12 @@ msgstr "Standard-E-Mail-Programm auswählen"
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "Standard-Dateiverwaltungs-Programm auswählen"
+msgstr "Standard-Dateiverwaltung auswählen"
 
 #: components/componentchoosergeo.cpp:13
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default map"
-msgstr "Standard-Dateiverwaltungs-Programm auswählen"
+msgstr "Standard-Karte auswählen"
 
 #: components/componentchooserimageviewer.cpp:15
 #, fuzzy, kde-format
@@ -85,10 +86,9 @@ msgid "Select default PDF viewer"
 msgstr "Standard-Webbrowser auswählen"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "Standard-Terminalprogramm auswählen"
+msgstr "Standard-Wählprogramm auswählen"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "E-Mail-Programm:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
-msgstr ""
+msgstr "Wählprogramm:"
 
 #: package/contents/ui/main.qml:115
 #, kde-format

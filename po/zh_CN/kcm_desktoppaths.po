@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,47 +17,47 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm_desktoppaths.pot\n"
 "X-Crowdin-File-ID: 4349\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "桌面"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, kde-format
 msgid "Documents"
 msgstr "文档"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, kde-format
 msgid "Downloads"
 msgstr "下载"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, kde-format
 msgid "Music"
 msgstr "音乐"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, kde-format
 msgid "Pictures"
 msgstr "图片"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, kde-format
 msgid "Videos"
 msgstr "视频"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr "公共"
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr "模板"
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -69,14 +69,12 @@ msgstr ""
 "此模块允许您选择要在文件系统的什么地方存储桌面上的文件。\n"
 "请使用“这是什么？”(Shift+F1)在特定选项取得帮助。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "桌面路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -86,90 +84,81 @@ msgstr ""
 "该文件夹中包含了桌面上显示的所有文件。您可以更改该文件夹的位置，原文件夹内容"
 "将会自动移动到新的位置。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "文档路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "该文件夹默认将被用来加载或者保存文档。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "下载路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "该文件夹默认将被用来保存下载到本机的内容。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Videos path:"
 msgstr "视频路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "该文件夹默认将被用来加载或者保存影片。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "图片路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "该文件夹默认将被用来加载或者保存图片。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "音乐路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "该文件夹默认将被用来加载或者保存音乐。"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Public path:"
 msgstr "公共路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr "该文件夹默认将被用来加载或者保存公共的共享内容。"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Templates path:"
 msgstr "模板路径："
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "该文件夹默认将被用来加载或者保存模板。"
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr "该文件夹默认将被用来加载或者保存公共的共享内容。"

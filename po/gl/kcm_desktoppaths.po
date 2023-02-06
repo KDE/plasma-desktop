@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2019-10-19 22:07+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -32,48 +32,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.11.70\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, kde-format
 msgid "Documents"
 msgstr "Documentos"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, kde-format
 msgid "Downloads"
 msgstr "Descargas"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, kde-format
 msgid "Music"
 msgstr "Música"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, kde-format
 msgid "Pictures"
 msgstr "Imaxes"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos"
 msgstr "Ruta dos filmes:"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -86,14 +86,12 @@ msgstr ""
 "deberán almacenar os ficheiros do escritorio.\n"
 "Use «Que é Isto?» (Maiús+F1) para obter axuda sobre opcións específicas."
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "Ruta do escritorio:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -104,14 +102,12 @@ msgstr ""
 "cambiar a localización deste cartafol se o quere, e o contido será "
 "automaticamente movido ao novo lugar."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "Ruta dos documentos:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -119,43 +115,37 @@ msgstr ""
 "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
 "documentos."
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "Ruta das descargas:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Este cartafol usarase de maneira predeterminada para gardar o elementos "
 "descargados."
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "Ruta dos filmes:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
 "filmes recibidos ou enviados."
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "Ruta das imaxes:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -163,47 +153,31 @@ msgstr ""
 "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
 "imaxes recibidas ou enviadas."
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "Ruta da música:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
 "música."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Ruta da música:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"imaxes recibidas ou enviadas."
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "Ruta das imaxes:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -212,6 +186,22 @@ msgid ""
 msgstr ""
 "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
 "imaxes recibidas ou enviadas."
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save pictures from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr ""
+#~ "Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
+#~ "imaxes recibidas ou enviadas."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ruta do inicios automáticos:"

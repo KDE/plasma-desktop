@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2015-02-04 15:17+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,48 +20,48 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, kde-format
 msgid "Desktop"
 msgstr "Radna površina"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, kde-format
 msgid "Documents"
 msgstr "Dokumenti"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, kde-format
 msgid "Downloads"
 msgstr "Preuzimanja"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, kde-format
 msgid "Music"
 msgstr "Muzika"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, kde-format
 msgid "Pictures"
 msgstr "Slike"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos"
 msgstr "Putanja filmova:"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -74,14 +74,12 @@ msgstr ""
 "ovo?“ (<shortcut>Shift+F1</shortcut>) za objašnjenja pojedinih opcija.</p></"
 "html>."
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "Putanja radne površi:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -92,56 +90,48 @@ msgstr ""
 "promijeniti mjesto gdje se on nalazi, a njegov sadržaj će biti automatski "
 "premješten na novo mjesto."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "Putanja dokumenata:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "Ovaj direktorij će biti default za učitavanje i snimanje dokumenata."
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "Putanja preuzimanja:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Ovaj direktorij se koristi kao podrazumijevani za upisivanje preuzetih "
 "stavki."
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "Putanja filmova:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Ovaj direktorij se koristi kao podrazumijevani za učitavanje ili upisivanje "
 "filmova."
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "Putanja slika:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -149,47 +139,31 @@ msgstr ""
 "Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili upisivanje "
 "slika."
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "Putanja muzike:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Ovaj direktorij se koristi kao podrazumijevani za učitavanje ili upisivanje "
 "muzike."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Putanja muzike:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr ""
-"Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili upisivanje "
-"slika."
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "Putanja slika:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -198,6 +172,22 @@ msgid ""
 msgstr ""
 "Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili upisivanje "
 "slika."
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save pictures from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr ""
+#~ "Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili "
+#~ "upisivanje slika."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Putanja samopokretanja:"

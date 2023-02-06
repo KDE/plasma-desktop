@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2010-06-29 16:06+0530\n"
 "Last-Translator: arkarjun <arkarjun@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -18,48 +18,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: desktoppathssettings.cpp:197
+#: desktoppathssettings.cpp:211
 #, fuzzy, kde-format
 msgid "Desktop"
 msgstr "പണിയിടം"
 
-#: desktoppathssettings.cpp:212
+#: desktoppathssettings.cpp:226
 #, fuzzy, kde-format
 msgid "Documents"
 msgstr "രേഖകള്‍"
 
-#: desktoppathssettings.cpp:227
+#: desktoppathssettings.cpp:241
 #, fuzzy, kde-format
 msgid "Downloads"
 msgstr "ഡൌണ്‍ലോഡുക്കള്‍"
 
-#: desktoppathssettings.cpp:242
+#: desktoppathssettings.cpp:256
 #, fuzzy, kde-format
 msgid "Music"
 msgstr "സംഗീതം"
 
-#: desktoppathssettings.cpp:257
+#: desktoppathssettings.cpp:271
 #, fuzzy, kde-format
 msgid "Pictures"
 msgstr "ചിത്രങ്ങള്‍"
 
-#: desktoppathssettings.cpp:272
+#: desktoppathssettings.cpp:286
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos"
 msgstr "ചലചിത്രങ്ങളുടെ പാത:"
 
-#: desktoppathssettings.cpp:287
+#: desktoppathssettings.cpp:301
 #, kde-format
 msgid "Public"
 msgstr ""
 
-#: desktoppathssettings.cpp:302
+#: desktoppathssettings.cpp:316
 #, kde-format
 msgid "Templates"
 msgstr ""
 
-#: globalpaths.cpp:32
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -72,14 +72,12 @@ msgstr ""
 "നിങ്ങളെ അനുവദിക്കുന്നു.\n"
 "പ്രത്യേക ഐച്ഛികങ്ങളെക്കുറിച്ചുള്ള സഹായത്തിനായി \"എന്താണിതു്?\" (Shift+F1) ഉപയോഗിക്കുക."
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: globalpaths.ui:17
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Desktop path:"
 msgstr "പണിയിട പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
-#: globalpaths.ui:24
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -89,100 +87,92 @@ msgstr ""
 "പണിയിടത്തില്‍ കാ​ണുന്ന എല്ലാ ഫയലുകളും ഈ അറയിലാണുള്ളതു്. നിങ്ങള്‍ക്കു് ഈ അറയുടെ സ്ഥാനം മാറ്റാം, "
 "അതിലുള്ളവയും പുതിയ സ്ഥാനത്തേക്കു് സ്വയം മാറും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: globalpaths.ui:34
+#: package/contents/ui/main.qml:31
 #, kde-format
 msgid "Documents path:"
 msgstr "രേഖകളുടെ പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
-#: globalpaths.ui:41
+#: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "രചനകള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: globalpaths.ui:51
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Downloads path:"
 msgstr "ഡൌണ്‍ലോഡുകളുടെ പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
-#: globalpaths.ui:58
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "ഡൌണ്‍ലോഡു ചെയ്ത ഇനങ്ങള്‍ സൂക്ഷിക്കാന്‍ ഈ അറ സഹജമായി ഉപയോഗിക്കപ്പെടും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: globalpaths.ui:68
+#: package/contents/ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "ചലചിത്രങ്ങളുടെ പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
-#: globalpaths.ui:75
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "ചലചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും ലോഡു ചെയ്യാനും ഈ അറ സഹജമായി ഉപയോഗിക്കപ്പെടും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: globalpaths.ui:85
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid "Pictures path:"
 msgstr "ചിത്രങ്ങളുടെ പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
-#: globalpaths.ui:92
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: globalpaths.ui:102
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Music path:"
 msgstr "സംഗീതത്തിലേക്കുള്ള പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
-#: globalpaths.ui:109
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "സംഗീത സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: globalpaths.ui:119
+#: package/contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "സംഗീതത്തിലേക്കുള്ള പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
-#: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save public shares from or to."
-msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: globalpaths.ui:136
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "ചിത്രങ്ങളുടെ പാത:"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
-#: globalpaths.ui:143
+#: package/contents/ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save pictures from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save public shares from or "
+#~ "to."
+#~ msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനും തിരിച്ചെടുക്കാനും ഈ അറ തനതായി ഉപയോഗിക്കപ്പെടും."
 
 #~ msgid "Autostart path:"
 #~ msgstr "സ്വയാരംഭ പാത:"
