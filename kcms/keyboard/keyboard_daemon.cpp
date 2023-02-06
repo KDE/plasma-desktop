@@ -85,10 +85,10 @@ void KeyboardDaemon::configureKeyboard()
     registerShortcut();
 }
 
-void KeyboardDaemon::configureMouse()
+void KeyboardDaemon::configureInput()
 {
     QStringList modules;
-    modules << QStringLiteral("kcm_mouse");
+    modules << QStringLiteral("kcm_mouse") << QStringLiteral("kcm_touchpad");
     QProcess::startDetached(QStringLiteral("kcminit"), modules);
 }
 
@@ -136,7 +136,7 @@ void KeyboardDaemon::registerListeners()
     if (xEventNotifier == nullptr) {
         xEventNotifier = new XInputEventNotifier();
     }
-    connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
+    connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureInput);
     connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
     connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
@@ -147,7 +147,7 @@ void KeyboardDaemon::unregisterListeners()
 {
     if (xEventNotifier != nullptr) {
         xEventNotifier->stop();
-        disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
+        disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureInput);
         disconnect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
         disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
         disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);

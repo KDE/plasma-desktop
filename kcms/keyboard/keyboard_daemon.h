@@ -36,7 +36,7 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
 
 private Q_SLOTS:
     void configureKeyboard();
-    void configureMouse();
+    void configureInput();
     void layoutChangedSlot();
     void layoutMapChanged();
     bool setLayout(QAction *action);
