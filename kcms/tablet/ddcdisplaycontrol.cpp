@@ -5,7 +5,7 @@
 */
 #include "ddcdisplaycontrol.h"
 #include "displaymodel.h"
-#include "qdebug.h"
+#include "logging.h"
 #include <KLocalizedString>
 #include <QCoreApplication>
 #define VCP_BRIGHTNESS 0x10
@@ -136,10 +136,12 @@ Controller::Controller()
     connect(m_worker, &Worker::valueReturned, this, &Controller::valueReturned);
     connect(this, &Controller::getValue_p, m_worker, &Worker::getValue);
     connect(m_worker, &Worker::valueUpdateFailed, this, [](DDCA_Display_Ref ref, QString reason) {
-        qDebug() << reason;
+        Q_UNUSED(ref)
+        qCDebug(KCM_TABLET, ) << reason;
     });
     connect(m_worker, &Worker::getValueFailed, this, [](DDCA_Display_Ref ref, QString reason) {
-        qDebug() << reason;
+        Q_UNUSED(ref)
+        qCDebug(KCM_TABLET, ) << reason;
     });
     // event loop in work thread never exit, directly quit
     connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, this, [this] {
