@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Frederik Schwarzer <schwarzer@kde.org>, 2020, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2022-03-13 10:10+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-01 18:23+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -75,13 +76,12 @@ msgstr "Anwendungen"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Befehle"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Systemdienste"
+msgstr "Systemeinstellungen"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Schema speichern"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Befehl für %1 bearbeiten"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -136,8 +136,7 @@ msgstr ""
 "Wählen Sie einen Eintrag aus der Liste, um seine Kurzbefehle hier anzuzeigen"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Anwendung hinzufügen ..."
@@ -146,7 +145,7 @@ msgstr "Anwendung hinzufügen ..."
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Befehl hinzufügen ..."
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -182,45 +181,45 @@ msgstr "Kurzbefehl-Schema (*.kksrc)"
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Befehl bearbeiten"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Befehl hinzufügen"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Hinzufügen"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Geben Sie einen Befehl ein oder wählen Sie eine Skriptdatei:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Auswählen ..."
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Skriptdatei auswählen"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Skriptdatei (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

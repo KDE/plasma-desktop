@@ -4,19 +4,21 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2017, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2013.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-04-19 13:50+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-01-31 20:54+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -51,12 +53,12 @@ msgstr "Videos"
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Öffentlich"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Vorlagen"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -164,38 +166,32 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Pfad für Musik:"
+msgstr "Pfad für Öffentlich:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern "
-"benutzt."
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
+"öffentlichen Freigaben benutzt."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Pfad für Bilder:"
+msgstr "Pfad für Vorlagen:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern "
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Vorlagen "
 "benutzt."
 
 #~ msgid "Autostart path:"
