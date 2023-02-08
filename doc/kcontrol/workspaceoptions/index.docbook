@@ -10,12 +10,13 @@
 <title>General Behavior</title>
 <authorgroup>
 <author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author><firstname>Natalie</firstname><surname>Clarius</surname><email>natalie_clarius@yahoo.de</email></author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2022-05-18</date>
+<date>2023-01-30</date>
 
-<releaseinfo>&plasma; 5.25</releaseinfo>
+<releaseinfo>&plasma; 5.27</releaseinfo>
 
 <keywordset>
 <keyword>System Settings</keyword>
@@ -54,26 +55,16 @@ changes are displayed in an OSD.</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Single-click to open files and folders</guilabel></term>
+<term><menuchoice><guimenu>Clicking files or folders</guimenu><guimenuitem>Opens them</guimenuitem></menuchoice></term>
 <listitem>
-<para>This is the default setting. Clicking once on an icon
-will open it.  To select you can drag around the icon(s) or <keycombo
-action="simul">&Ctrl;<mousebutton>Right</mousebutton></keycombo> click,
-or simply click and hold to drag it.
-Selection can also be done by clicking on item's selection marker.</para>
+<para>If this option is checked, then files and folders will be opened with a single click of the <mousebutton>left</mousebutton> mouse button. To select files and folders, you can <mousebutton>left</mousebutton>-click on their selection markers, drag a selection rectangle around them, or <keycombo action="simul">&Ctrl;<mousebutton>Left</mousebutton></keycombo>-click. This is the default behavior, and it's designed to be consistent with what you would expect when you click links in web browsers.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Double-click to open files and folders</guilabel></term>
+<term><menuchoice><guimenu>Clicking files or folders</guimenu><guimenuitem>Selects them</guimenuitem></menuchoice></term>
 <listitem>
-<para>If this option is not checked, icons/files will be opened with a
-single click of the <mousebutton>left</mousebutton> mouse-button. This
-default behavior is consistent with what you would expect when you click
-links in most web browsers. If checked however, icons/files will be
-opened with a double click, while a single click will only select the
-icon or file. This is the behavior you may know from other desktops or
-operating systems.</para>
+<para>If this option is checked, then files and folders must be double-clicked to be opened, while a single click will select them. This is the behavior you may know from other desktops or operating systems.</para>
 </listitem>
 </varlistentry>
 
@@ -92,19 +83,40 @@ operating systems.</para>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Automatically enable as needed/Never enabled</guimenuitem></menuchoice></term>
+<term><menuchoice><guimenu>Middle Click</guimenu><guimenuitem>Paste selected text</guimenuitem></menuchoice></term>
 <listitem>
-<para>Touch Mode will be automatically activated whenever the system detects a 
+<para>If this option is checked, middle-clicking in a text field will paste from the clipboard, just like you would with <keycombo action="simul">&Ctrl;<keysym>V</keysym></keycombo>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Touch Mode</guimenuitem></term>
+<listitem>
+<para>In Touch Mode, many elements of the user interface will become larger to 
+more easily accommodate touch interaction.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Automatically enable as needed</guimenuitem></menuchoice></term>
+<listitem>
+<para>If this option is selected, Touch Mode will be automatically activated whenever the system detects a 
 touchscreen but no mouse or touchpad. For example: when a transformable 
 laptop's keyboard is flipped around or detached.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Always enabled (default)/Never enabled</guimenuitem></term>
+<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Always enabled</guimenuitem></menuchoice></term>
 <listitem>
-<para>In Touch Mode, many elements of the user interface will become larger to 
-more easily accommodate touch interaction.</para>
+<para>If this option is selected, Touch Mode will always be enabled. Use this option if you use &plasma; primarily with a touchscreen, or prefer larger click targets for other reasons.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Never enabled</guimenuitem></menuchoice></term>
+<listitem>
+<para>If this option is selected, Touch Mode will always be disabled. Use this option if you don't need Touch Mode on your device.</para>
 </listitem>
 </varlistentry>
 
