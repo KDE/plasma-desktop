@@ -8,21 +8,22 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2020-01-18 19:20+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-02-07 20:20+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,17 +81,7 @@ msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr "無法通知 KDE 服務管理員 (kded5) 儲存變更：%1"
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for Plasma; do not deactivate services if you do not know what you are "
-#| "doing.</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -101,26 +92,25 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>服務管理程式</h1><p>這模組讓您能夠概覽 KDE 伺服程式的所有外掛程式，也就是"
-"所謂 KDE 服務。一般來說，有兩種類型的服務：</p><ul><li>在啟動時呼叫服務</"
-"li><li>依需求呼叫服務</li></ul><p>這些順序只是方便列舉而已。在啟動時呼叫的服"
-"務可以啟動也可以停止。在管理員模式，您也可以定義何種服務要在啟動時載入。</"
-"p><p><b> 請小心使用這個功能：某些服務對於 Plasma 來說是必要的：如果您不知道您"
-"在做什麼，請不要停止服務。</b></p>"
+"<p>這模組讓您能夠概覽 KDE 伺服程式的所有外掛程式，也就是所謂 KDE 服務。一般來"
+"說，有兩種類型的服務：</p><ul><li>在啟動時呼叫服務</li><li>依需求呼叫服務</"
+"li></ul><p>這些順序只是方便列舉而已。在啟動時呼叫的服務可以啟動也可以停止。您"
+"也可以定義何種服務要在啟動時載入。</p><p><b>請小心使用這個功能：某些服務對於 "
+"Plasma 來說是必要的：如果您不知道您在做什麼，請不要停止服務。</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
-msgstr ""
+msgstr "背景服務管理員 (kded5) 目前沒有在執行。請確定它已正確安裝。"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
-msgstr ""
+msgstr "某些服務若目前環境下沒用時會在被手動啟動後自己又把自己停用。"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -128,32 +118,29 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"某些服務已在背景服務管理員 (kded5) 重新啟動以套用您的變更時被自動啟動或停止。"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "服務"
+msgstr "所有服務"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "執行中"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "並非執行中"
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Background Services"
+#, kde-format
 msgid "Startup Services"
-msgstr "背景服務"
+msgstr "自動啟動服務"
 
 #: package/contents/ui/main.qml:137
 #, kde-format
@@ -163,7 +150,7 @@ msgstr "需要時載入的服務"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "切換系統啟動時是否自動載入此服務"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -176,16 +163,14 @@ msgid "Running"
 msgstr "執行中"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "服務"
+msgstr "停止服務"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "服務"
+msgstr "啟動服務"
 
 #~ msgid "kcmkded"
 #~ msgstr "kcmkded"

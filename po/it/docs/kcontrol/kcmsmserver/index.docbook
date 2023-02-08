@@ -13,6 +13,14 @@
 <authorgroup>
 <author
 >&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Riccardo</firstname
@@ -35,13 +43,27 @@
 ><contrib
 >Manutenzione della traduzione</contrib
 ></othercredit
+><othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Manutenzione della traduzione</contrib
+></othercredit
 > 
 </authorgroup>
 
 <date
->22/03/2022</date>
+>30/01/2023</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -52,6 +74,8 @@
 >sessione</keyword>
 <keyword
 >Impostazioni di sistema</keyword>
+<keyword
+>Chiudi sessione</keyword>
 </keywordset>
 </articleinfo>
 
@@ -59,76 +83,34 @@
 <title
 >Sessione desktop</title>
 
-<sect2 id="sessions-use">
-<title
->Uso</title>
-
 <para
 >In questo modulo delle &systemsettings; puoi configurare il gestore della sessione e le impostazioni di uscita da &plasma;.</para>
 
 <para
 >La gestione delle sessione si riferisce alla capacità di &plasma; di salvare lo stato delle applicazioni e le finestre all'uscita da &plasma;, e di ripristinarlo al successivo accesso.</para>
 
-<sect3 id="sessions-general">
+<sect2 id="sessions-logoutscreen">
 <title
->Generale</title>
+>Schermata di chiusura della sessione</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Conferma l'uscita</guilabel
+>Mostra</guilabel
 ></term>
 <listitem>
 <para
->Se questa opzione è selezionata, in occasione dell'uscita &plasma; visualizzerà una finestra con un tempo rimanente di 30 secondi, e ti chiederà la conferma. In questa finestra potrai scegliere se vuoi ripristinare la sessione al prossimo accesso.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Offri le opzioni di spegnimento</guilabel
-></term>
-<listitem>
-<para
->Se questa opzione è selezionata, all'uscita &plasma; ti offrirà una scelta tra alcune azioni. Queste includono la semplice conclusione della sessione (l'azione che viene eseguita se non sono abilitate le opzioni di spegnimento), lo spegnimento del computer o il riavvio.</para>
+>Se questa impostazione è attiva, la schermata di conferma della chiusura della sessione verrà mostrata quando termini la sessione, spegni, riavvii, premi il pulsante di accensione o fai clic sui pulsanti o sulle voci di menu con l'etichetta <interface
+>Esci…</interface
+>. Quando invece non è invece attiva, il computer terminerà la sessione, si spegnerà eccetera immediatamente dopo il clic sul rispettivo pulsante.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-</sect3>
+</sect2>
 
-<sect3 id="sessions-default-leave-options">
+<sect2 id="sessions-restore">
 <title
->Opzione di uscita predefinita</title>
-<para
->Puoi configurare cosa dovrebbe succedere normalmente quando esci da &plasma;. Queste opzioni non sono possibili su tutti i sistemi operativi, inoltre alcune richiedono l'uso di &SDDM; come gestore degli accessi.</para>
-<para
->Le opzioni disponibili sono autoesplicative, ma se hai dei dubbi lascia le impostazioni predefinite. Esse sono:</para>
-
-<itemizedlist>
-<listitem
-><para
-><guilabel
->Termina la sessione corrente</guilabel
-> (l'opzione predefinita)</para
-></listitem>
-<listitem
-><para
-><guilabel
->Spegni il computer</guilabel
-></para
-></listitem>
-<listitem
-><para
-><guilabel
->Riavvia il computer</guilabel
-></para
-></listitem>
-</itemizedlist>
-</sect3>
-
-<sect3 id="sessions-on-login">
-<title
->All'accesso</title>
+>All'accesso, avvia le applicazioni che erano aperte</title>
 <para
 >Quello che accade quando accedi a &plasma; è regolato da queste tre opzioni:</para>
 
@@ -136,29 +118,27 @@
 <varlistentry>
 <term
 ><guilabel
->Ripristina la sessione precedente</guilabel
+>All'ultimo chiusura di sessione</guilabel
 ></term>
 <listitem
 ><para
->Se questa opzione è selezionata, all'uscita &plasma; salverà lo stato della sessione e la ripristinerà al prossimo accesso. In questo modo potrai continuare a lavorare in un desktop uguale a quello che avevi lasciato.</para>
-</listitem>
+>Se questa opzione è selezionata, all'uscita &plasma; salverà lo stato della sessione e la ripristinerà al prossimo accesso. In questo modo potrai continuare a lavorare in un desktop uguale a quello che avevi lasciato.</para
+></listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Ripristina l'ultima sessione salvata manualmente</guilabel
+>Quando la sessione è stata salvata manualmente</guilabel
 ></term>
 <listitem
 ><para
->Invece di ripristinare &plasma; allo stato che aveva quando sei uscito l'ultima volta, la sessione sarà ripristinata ad uno stato specifico che hai salvato manualmente.</para>
-<para
->Se questa opzione è selezionata, il menu dell'applicazione presenta un elemento <menuchoice
-><guimenu
->Alimentazione / Sessione</guimenu
-><guimenuitem
->Salva sessione</guimenuitem
-></menuchoice
->. </para
+>Invece di ripristinare &plasma; allo stato che aveva quando sei uscito l'ultima volta, la sessione sarà ripristinata ad uno stato specifico che hai salvato manualmente.</para
+><para
+>Nel menu del'<guilabel
+>avviatore di applicazioni</guilabel
+> e nella ricerca di &plasma; apparirà un pulsante <guilabel
+>Salva sessione</guilabel
+>. Quando ci fai clic sopra, &plasma; ricorderà i programmi che sono aperti e li ripristinerà all'accesso successivo. Facci clic di nuovo per sostituire l'insieme dei programmi che verranno ricordati.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -182,9 +162,24 @@
 > oppure <userinput
 >xterm,konsole</userinput
 >.</para>
-<!-- does this need the full path here? -->
-</sect3>
+</sect2>
 
+<sect2 id="sessions-firmware">
+<title
+>Firmware</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Dopo il prossimo riavvio: Accedi alla schermata di configurazione UEFI</guilabel
+></term>
+<listitem
+><para
+>Se questa opzione è abilitata, al prossimo riavvio il computer entrerà nella modalità di configurazione del firmware (BIOS/UEFI). Può essere più semplice fare in questo modo piuttosto che premere dei tasti speciali durante l'avvio.</para
+></listitem>
+</varlistentry>
+</variablelist>
 </sect2>
 
 </sect1>

@@ -7,20 +7,21 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009.
 # pan93412 <pan93412@gmail.com>, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2021-09-06 02:03+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-07 20:08+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -38,13 +39,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
-msgstr ""
+msgstr "系統必須重新啟動後，手動工作階段儲存才會啟用。"
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "立即重新啟動"
+msgstr "重新啟動"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -72,12 +72,12 @@ msgstr "立即重新啟動"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "登出畫面"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "顯示："
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -87,30 +87,31 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"開啟此設定時，登出確認畫面會在您登出、關機、重新啟動、按下電源鍵，或點擊標記"
+"<interface>離開…</interface>的按鈕或選單項目時顯示。"
 
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "工作階段回復"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "登入時，啟動何時曾經開啟的應用程式："
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "上次登出時"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Restore manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "回復手動儲存的工作階段"
+msgstr "手動儲存工作階段時"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -121,10 +122,12 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>應用程式啟動器</interface>選單裡會出現一個<interface>儲存工作階段"
+"</interface>按鈕。當您點擊它，Plasma 會記住當下開啟的應用程式，並且下次登入時"
+"會回復它們。再點擊一次時會取代掉目前記住的應用程式。"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
@@ -133,10 +136,9 @@ msgid "Start with an empty session"
 msgstr "使用空白的工作階段來啟動"
 
 #: package/contents/ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "不要回復以下應用程式："
+msgstr "忽略應用程式："
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -145,13 +147,14 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"在此輸入應用程式的執行檔名稱（用半形逗號或冒號分隔，例如 'xterm:konsole' 或 "
+"'xterm,konsole'）來讓它們不會跟著其他被工作階段回復的應用程式自動啟動。"
 
 #: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "韌體設定"
+msgstr "韌體"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -159,21 +162,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "下次重新啟動："
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "下次重開機進入 UEFI 設定介面"
+msgstr "進入 UEFI 設定介面"
 
 #: package/contents/ui/main.qml:185
-#, fuzzy, kde-format
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "下次重開機進入韌體設定介面"
+msgstr "進入韌體設定介面"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

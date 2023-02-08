@@ -2,148 +2,150 @@
 # plasma-desktop 套件的正體中文翻譯.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Automatically generated, 2022.
 #
+# Automatically generated, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2021-12-15 00:47+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-07 20:13+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Primary (default)"
-msgstr ""
+msgstr "主要（預設）"
 
 #: kcmtablet.cpp:33
 #, kde-format
 msgid "Portrait"
-msgstr ""
+msgstr "縱向"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Landscape"
-msgstr ""
+msgstr "橫向"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "縱向反轉"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "橫向反轉"
 
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the active screen"
-msgstr ""
+msgstr "跟隨作用中螢幕"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "符合輸出"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "符合繪圖板輸出"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "自訂大小"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found."
-msgstr ""
+msgstr "找不到繪圖平板。"
 
 #: package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "裝置："
 
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "目標顯示器："
 
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Orientation:"
-msgstr ""
+msgstr "方向："
 
 #: package/contents/ui/main.qml:108
 #, kde-format
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "左手模式："
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "區域："
 
 #: package/contents/ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "調整繪圖板區域"
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "鎖定寬高比"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr ""
+msgstr "工具按鈕 1"
 
 #: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr ""
+msgstr "工具按鈕 2"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr ""
+msgstr "工具按鈕 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "繪圖板："
 
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "無"
 
 #: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "按鈕 %1："
