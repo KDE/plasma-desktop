@@ -2,13 +2,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006-2008, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-12-21 04:17+0900\n"
+"PO-Revision-Date: 2023-02-07 19:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kcmaccess.cpp:116
@@ -167,13 +167,13 @@ msgstr "按下鍵盤修飾鍵時發送通知"
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
-msgstr ""
+msgstr "使用超時延遲"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
 #, kde-format
 msgid "Use a beep for access"
-msgstr ""
+msgstr "為無障礙使用嗶聲"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -185,25 +185,25 @@ msgstr "使用慢速按鍵"
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "按鍵延遲"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "進行慢速按鍵時發出嗶聲"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "在按鍵被接受時發出嗶聲"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "在按鍵被拒絕時發出嗶聲"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -275,7 +275,7 @@ msgstr "使用手勢前詢問確認"
 #: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "確認存取鍵盤"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
@@ -289,11 +289,10 @@ msgid "Please choose an audio file"
 msgstr "請選擇一個音效檔"
 
 #: package/contents/ui/Bell.qml:22
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "音效檔 (*.mp3 *.ogg *.wav)"
+msgstr "音效檔 (*.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format
@@ -315,12 +314,12 @@ msgstr "自訂音效："
 #: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr ""
+msgstr "搜尋系統響鈴用的音效檔"
 
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr ""
+msgstr "按鈕搜尋音效檔"
 
 #: package/contents/ui/Bell.qml:93
 #, kde-format

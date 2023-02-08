@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2022-06-29 12:21+0900\n"
+"PO-Revision-Date: 2023-02-07 20:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
-msgstr ""
+msgstr "系統必須重新啟動後中鍵貼上設定的變更才會生效。"
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "重新啟動"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
@@ -193,7 +193,7 @@ msgstr "左鍵捲軸列軌道："
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "自動切換到為觸控最佳化的模式"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
@@ -207,7 +207,7 @@ msgstr "啟用中鍵點擊貼上選取"
 msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
-msgstr ""
+msgstr "使用螢幕顯示（OSD）來顯示亮度或音量等等的狀態變更"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
@@ -219,7 +219,7 @@ msgstr "佈局變更時的螢幕顯示"
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "佈局變更時顯示彈出視窗"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
