@@ -115,12 +115,15 @@ PlasmaCore.ToolTipArea {
     onToolTipVisibleChanged: {
         if (!toolTipVisible) {
             tasks.toolTipOpenedByClick = null;
+        } else {
+            tasks.toolTipAreaItem = task;
         }
     }
 
     onContainsMouseChanged: if (containsMouse) {
         task.forceActiveFocus(Qt.MouseFocusReason);
         task.updateMainItemBindings();
+        tasks.toolTipAreaItem = task;
     } else {
         tasks.toolTipOpenedByClick = null;
     }
