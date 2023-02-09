@@ -13,14 +13,22 @@
 <authorgroup>
 <author
 >&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &Freek.de.Kruijf; 
 </authorgroup>
 
 <date
->2022-05-18</date>
+>2023-01-30</date>
 
 <releaseinfo
->&plasma; 5.25</releaseinfo>
+>&plasma; 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -77,29 +85,39 @@
 
 <varlistentry>
 <term
-><guilabel
->Enkele klik opent bestanden en mappen</guilabel
+><menuchoice
+><guimenu
+>Klikken op bestanden of mappen</guimenu
+><guimenuitem
+>Opent deze</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Dit is de standaardinstelling. U hoeft maar één keer op een pictogram te klikken om het te openen. Om het te selecteren kunt u met de muis rond het pictogram slepen, met <keycombo action="simul"
+>Als deze optie is geactiveerd zullen bestanden en mappen geopend worden met een enkele klik van de <mousebutton
+>linker</mousebutton
+> muisknop. Om bestanden en mappen te selecteren kunt u can <mousebutton
+>links</mousebutton
+> klikken op hun selectiemarkering, een selectierechthoek rond hen of <keycombo action="simul"
 >&Ctrl;<mousebutton
->rechts</mousebutton
+>Linker</mousebutton
 ></keycombo
-> klikken of alleen klikken en de knop ingedrukt houden. Selectie kan ook gedaan worden door te klikken op de selectiemarkering van het item.</para>
+>klik. Dit is het standaard gedrag en het is ontworpen om consistent te zijn met wat u zou verwachten wanneer u links klikt in webbrowsers.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
-><guilabel
->Dubbelklik opent bestanden en mappen</guilabel
+><menuchoice
+><guimenu
+>Klikken op bestanden of mappen</guimenu
+><guimenuitem
+>Selecteert deze</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Als deze optie niet is geselecteerd, worden pictogrammen/bestanden geopend door een enkele klik met de <mousebutton
->linker</mousebutton
-> muisknop. Dit standaardgedrag is consistent met wat u kunt verwachten wanneer u op een koppeling klikt in de meeste browsers. Als dit is geselecteerd, worden bestanden/pictogrammen geopend met een dubbele klik terwijl een enkelklik het bestand of pictogram alleen maar selecteert. Dit is het gedrag dat u misschien kent van andere bureaubladen of besturingssystemen.</para>
+>Als deze optie is geactiveerd moet er dubbel geklikt worden op bestanden en mappen om ze te openen, terwijl een enkele klik ze zal selecteren. Dit is het gedrag dat u kunt kennen van andere bureaubladen of besturingssystemen.</para>
 </listitem>
 </varlistentry>
 
@@ -137,25 +155,74 @@
 <term
 ><menuchoice
 ><guimenu
->Aanraakmodus</guimenu
+>Midden klik</guimenu
 ><guimenuitem
->Automatisch inschakelen indien nodig/Nooit inschakelen</guimenuitem
+>Geselecteerde tekst plakken</guimenuitem
 ></menuchoice
 ></term>
 <listitem>
 <para
->Aanraakmodus zal automatisch geactiveerd worden wanneer het systeem een aanraakscherm detecteert maar geen muis of touchpad. Bijvoorbeeld: wanneer een te transformeren toetsenbord van een laptop wordt afgekoppeld.</para>
+>Als deze optie is geactiveerd zal midden-klikken in een tekstveld plakken uit het klembord, net als u zou doen met <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guimenuitem
->Altijd ingeschakeld (standaard)/Nooit ingeschakeld</guimenuitem
+>Aanraakmodus</guimenuitem
 ></term>
 <listitem>
 <para
 >In aanraakmodus zullen veel elementen van het gebruikersinterface groter worden om gemakkelijker interactie met aanraken te kunnen doen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aanraakmodus</guimenu
+><guimenuitem
+>Automatisch inschakelen indien nodig</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Als deze optie is geactiveerd, zal aanraakmodus zal geactiveerd worden wanneer het systeem een aanraakscherm detecteert maar geen muis of touchpad. Bijvoorbeeld: wanneer een te transformeren toetsenbord van een laptop wordt afgekoppeld.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aanraakmodus</guimenu
+><guimenuitem
+>Altijd ingeschakeld</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Als deze optie is geactiveerd zal Aaanraakmodus altijd zijn ingeschakeld. Gebruik deze optie als u &plasma; primair met een aanraakscherm gebruikt of aan grotere klikdoelen voor andere redenen de voorkeur geeft.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aanraakmodus</guimenu
+><guimenuitem
+>Nooit ingeschakeld</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Als deze optie is geactiveerd zal Aanraakmodus altijd zijn uitgeschakeld. Gebruik deze optie als u aanraakmodus niet nodig hebt op uw apparaat.</para>
 </listitem>
 </varlistentry>
 

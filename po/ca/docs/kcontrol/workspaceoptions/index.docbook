@@ -13,14 +13,22 @@
 <authorgroup>
 <author
 >&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &traductor.Antoni.Bella; 
 </authorgroup>
 
 <date
->18 de maig de 2022</date>
+>30 de gener de 2023</date>
 
 <releaseinfo
->&plasma; 5.25</releaseinfo>
+>&plasma; 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -77,27 +85,39 @@
 
 <varlistentry>
 <term
-><guilabel
->Clic únic per a obrir fitxers i carpetes</guilabel
+><menuchoice
+><guimenu
+>En fer clic a fitxers o carpetes</guimenu
+><guimenuitem
+>S'obren</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Aquesta és l'opció predeterminada. Fent clic una sola vegada sobre la icona l'obrireu. Per a seleccionar-la/es podeu arrossegar-la/es o fer <keycombo action="simul"
+>Si aquesta opció està marcada, els fitxers i carpetes s'obriran amb un sol clic del botó <mousebutton
+>esquerre</mousebutton
+> del ratolí. Per seleccionar fitxers i carpetes, podeu fer clic amb el botó <mousebutton
+>esquerre</mousebutton
+> en els seus marcadors de selecció, arrossegar un rectangle de selecció al seu voltant, o fer clic amb <keycombo action="simul"
 >&Ctrl;<mousebutton
->clic dret</mousebutton
+>esquerre</mousebutton
 ></keycombo
->, o simplement fer clic i mantenir-la/es premuda/es per arrossegar-la/es. La selecció també es pot fer fent clic sobre el marcador de selecció de l'element.</para>
+>. Aquest és el comportament predeterminat, i està dissenyat per a ser coherent amb el que esperaríeu quan feu clic a enllaços en navegadors web.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
-><guilabel
->Doble clic per a obrir fitxers i carpetes</guilabel
+><menuchoice
+><guimenu
+>En fer clic a fitxers o carpetes</guimenu
+><guimenuitem
+>Se seleccionen</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Si aquesta opció no està marcada, les icones/fitxers s'obriran amb un sol clic del &BER;. Aquest comportament predeterminat és el que esperaríeu quan feu clic sobre els enllaços a la majoria dels navegadors. Encara que si la marqueu, les icones/fitxers s'obriran amb un doble clic, mentre que un sol clic només seleccionarà la icona o fitxer. Aquest és el comportament al qual esteu acostumat en altres escriptoris o sistemes operatius.</para>
+>Si aquesta opció està marcada, cal fer doble clic en els fitxers i carpetes per a obrir-los, mentre que un sol clic els seleccionarà. Aquest és el comportament que podríeu conèixer d'altres escriptoris o sistemes operatius.</para>
 </listitem>
 </varlistentry>
 
@@ -135,25 +155,74 @@
 <term
 ><menuchoice
 ><guimenu
->Mode tàctil</guimenu
+>Clic del mig</guimenu
 ><guimenuitem
->Activa automàticament quan calgui/Mai activat</guimenuitem
+>Enganxa el text seleccionat</guimenuitem
 ></menuchoice
 ></term>
 <listitem>
 <para
->El mode tàctil s'activarà automàticament quan el sistema detecti una pantalla tàctil però sense ratolí ni ratolí tàctil. Per exemple: quan el teclat d'un ordinador portàtil transformable es giri o se separi.</para>
+>Si aquesta opció està marcada, en fer un clic del mig en un camp de text s'enganxarà des del porta-retalls, com es faria amb <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guimenuitem
->Sempre activat (predeterminat)/Mai activat</guimenuitem
+>Mode tàctil</guimenuitem
 ></term>
 <listitem>
 <para
 >En el mode tàctil, molts elements de la interfície d'usuari es faran més grans per adaptar-se més fàcilment a la interacció tàctil.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mode tàctil</guimenu
+><guimenuitem
+>Activa automàticament quan calgui</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si aquesta opció està marcada, el mode tàctil s'activarà automàticament quan el sistema detecti una pantalla tàctil però sense ratolí ni ratolí tàctil. Per exemple: quan el teclat d'un ordinador portàtil transformable es giri o se separi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mode tàctil</guimenu
+><guimenuitem
+>Sempre activat</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si aquesta opció està marcada, el mode tàctil sempre estarà activat. Empreu aquesta opció si principalment useu el &plasma; amb una pantalla tàctil, o preferiu una àrea de clic més gran per altres motius.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Mode tàctil</guimenu
+><guimenuitem
+>Mai activat</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si aquesta opció està marcada, el mode tàctil sempre estarà desactivat. Empreu aquesta opció si no necessiteu el mode tàctil en el dispositiu.</para>
 </listitem>
 </varlistentry>
 
