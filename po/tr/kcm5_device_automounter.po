@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kde-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-10 00:45+0000\n"
-"PO-Revision-Date: 2023-01-27 20:02+0300\n"
+"PO-Revision-Date: 2023-02-08 14:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -72,10 +72,10 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Bu liste, sistem tarafından bilinen depolama aygıtlarını gösterir. Eğer, "
-"\"Girişte otomatik bağla\" seçiliyse \"Tüm çıkarılabilir ortamları girişte "
-"otomatik olarak bağla\" seçili olmasa dahi aygıt otomatik olarak "
-"bağlanacaktır. Aynı şey \"Takıldığında otomatik bağla\" seçeneği için de "
-"geçerlidir."
+"\"Oturum açılışında otomatik bağla\" seçiliyse \"Tüm çıkarılabilir ortamları "
+"oturum açılışında otomatik olarak bağla\" seçili olmasa dahi aygıt otomatik "
+"olarak bağlanacaktır. Aynı şey \"Takıldığında otomatik bağla\" seçeneği için "
+"de geçerlidir."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -132,7 +132,7 @@ msgstr "Aygıtı Otomatik Bağla"
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr "Girişte"
+msgstr "Oturum Açılışında"
 
 #: DeviceModel.cpp:56
 #, kde-format

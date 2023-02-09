@@ -8,19 +8,20 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2008.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009, 2010.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2020-02-20 19:09+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-02-09 01:01+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -37,28 +38,25 @@ msgstr "行為"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "取消靜音"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "靜音"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "靜音"
+msgstr "取消靜音 %1"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr "靜音"
+msgstr "靜音 %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
@@ -78,16 +76,14 @@ msgid "General:"
 msgstr "一般："
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over tasks"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "當游標停留在工作上時突顯視窗"
+msgstr "當游標停留在工作上時顯示小的視窗預覽"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over tasks"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "當游標停留在工作上時突顯視窗"
+msgstr "當游標停留在預覽上時隱藏其他視窗"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -98,7 +94,7 @@ msgstr "標記播放音訊的應用程式"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "填滿面板上的可用空間"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
@@ -123,11 +119,10 @@ msgstr "總是將工作安排在與行數一樣多的列中"
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "圖示間的距離："
 
 #: package/contents/ui/ConfigAppearance.qml:81
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
@@ -136,11 +131,10 @@ msgstr "小"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "中"
 
 #: package/contents/ui/ConfigAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
@@ -149,12 +143,12 @@ msgstr "大"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "觸控模式時自動設為「大」"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
 msgid "Group:"
-msgstr "群組："
+msgstr "分組："
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
@@ -169,11 +163,10 @@ msgstr "依程式名稱"
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "點擊已分組的工作時："
 
 #: package/contents/ui/ConfigBehavior.qml:62
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks"
+#, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr "循環切換工作"
@@ -184,27 +177,27 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "顯示小的視窗預覽"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "顯示大的視窗預覽"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "顯示文字型列表"
 
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
-msgstr ""
+msgstr "合成器不支援並排顯示視窗，因此會改為顯示文字型列表。"
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
@@ -255,73 +248,67 @@ msgstr "讓啟動器保持獨立"
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "點擊作用中的工作時："
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "將工作最小化"
 
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "中鍵點擊任何工作時："
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "什麼都不做"
 
 #: package/contents/ui/ConfigBehavior.qml:132
-#, fuzzy, kde-format
-#| msgid "Close window or group"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "關閉視窗或群組"
 
 #: package/contents/ui/ConfigBehavior.qml:133
-#, fuzzy, kde-format
-#| msgid "New instance"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr "新的實體"
+msgstr "開啟新視窗"
 
 #: package/contents/ui/ConfigBehavior.qml:134
-#, fuzzy, kde-format
-#| msgid "Minimize/Restore window or group"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr "最小化/復原視窗"
+msgstr "最小化/復原視窗或群組"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "切換群組"
 
 #: package/contents/ui/ConfigBehavior.qml:136
-#, fuzzy, kde-format
-#| msgid "Bring to the current virtual desktop"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "移至目前虛擬桌面"
+msgstr "將它移至目前虛擬桌面"
 
 #: package/contents/ui/ConfigBehavior.qml:146
-#, fuzzy, kde-format
-#| msgid "Mouse wheel:"
+#, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "滑鼠滾輪："
 
 #: package/contents/ui/ConfigBehavior.qml:147
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks"
+#, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "循環切換工作"
@@ -329,69 +316,69 @@ msgstr "循環切換工作"
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "忽略最小化工作"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "Show only tasks:"
-msgstr "只顯示工作："
+msgstr "只顯示哪些工作："
 
 #: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "From current screen"
-msgstr "從目前螢幕"
+msgstr "目前螢幕上的"
 
 #: package/contents/ui/ConfigBehavior.qml:173
 #, kde-format
 msgid "From current desktop"
-msgstr "從目前桌面"
+msgstr "目前桌面上的"
 
 #: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgid "From current activity"
-msgstr "從目前活動"
+msgstr "目前活動裡的"
 
 #: package/contents/ui/ConfigBehavior.qml:183
 #, kde-format
 msgid "That are minimized"
-msgstr "已最小化"
+msgstr "已最小化的"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "當面板已隱藏時："
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "有視窗請求注意時取消隱藏"
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "新工作出現在："
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "底部"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "右方"
 
 #: package/contents/ui/ConfigBehavior.qml:215
 #: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "左方"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "上方"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -399,10 +386,9 @@ msgid "Places"
 msgstr "位置"
 
 #: package/contents/ui/ContextMenu.qml:98
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "最近的文件"
+msgstr "最近的檔案"
 
 #: package/contents/ui/ContextMenu.qml:103
 #, kde-format
@@ -459,7 +445,7 @@ msgstr "靜音"
 #: package/contents/ui/ContextMenu.qml:283
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "開啟新視窗"
 
 #: package/contents/ui/ContextMenu.qml:299
 #, kde-format
@@ -503,10 +489,9 @@ msgid "All Activities"
 msgstr "所有的活動"
 
 #: package/contents/ui/ContextMenu.qml:471
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "移動到桌面(&D)"
+msgstr "移動到 %1"
 
 #: package/contents/ui/ContextMenu.qml:498
 #: package/contents/ui/ContextMenu.qml:515
@@ -532,7 +517,7 @@ msgstr "在工作管理員取消釘選"
 #: package/contents/ui/ContextMenu.qml:612
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "更多"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
@@ -572,12 +557,12 @@ msgstr "全螢幕(&F)"
 #: package/contents/ui/ContextMenu.qml:702
 #, kde-format
 msgid "&Shade"
-msgstr "隱藏(&S)"
+msgstr "收起(&S)"
 
 #: package/contents/ui/ContextMenu.qml:718
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr "允許此程式被歸類"
+msgstr "允許此程式被分組"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
@@ -588,71 +573,67 @@ msgstr "關閉(&C)"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "啟動 %1"
 
 #: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
+msgstr[0] "有 %1 個新訊息。"
 
 #: package/contents/ui/Task.qml:96
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "顯示工具提示"
+msgstr "為 %1 顯示工具提示"
 
 #: package/contents/ui/Task.qml:102
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "為 %1 並排顯示視窗"
 
 #: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "為 %1 開啟文字型視窗列表"
 
 #: package/contents/ui/Task.qml:111
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "將 %1 設為作用中"
 
 #: package/contents/ui/ToolTipInstance.qml:348
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "取消靜音 %1"
 
 #: package/contents/ui/ToolTipInstance.qml:349
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "靜音"
+msgstr "靜音 %1"
 
 #: package/contents/ui/ToolTipInstance.qml:372
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "調整 %1 的音量"
 
 #: package/contents/ui/ToolTipInstance.qml:388
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1 %2(&%1)"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:391
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:415
 #, kde-format
@@ -664,7 +645,7 @@ msgstr "於 %1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "釘選到所有桌面"
 
 #: package/contents/ui/ToolTipInstance.qml:429
 #, kde-format
@@ -682,60 +663,53 @@ msgstr "也可在 %1 上使用"
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr "於 %1 上使用"
+msgstr "於 %1 上可用"
 
 #: plugin/backend.cpp:351
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] "%1 個更多位置"
+msgstr[0] "還有 %1 個位置"
 
 #: plugin/backend.cpp:447
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "最近的文件"
+msgstr "最近的下載"
 
 #: plugin/backend.cpp:449
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Connections"
-msgstr "最近的文件"
+msgstr "最近的連線"
 
 #: plugin/backend.cpp:451
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Places"
-msgstr "最近的文件"
+msgstr "最近的位置"
 
 #: plugin/backend.cpp:460
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "忘掉最近的文件"
+msgstr "忘掉最近的下載"
 
 #: plugin/backend.cpp:462
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "忘掉最近的文件"
+msgstr "忘掉最近的連線"
 
 #: plugin/backend.cpp:464
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "忘掉最近的文件"
+msgstr "忘掉最近的位置"
 
 #: plugin/backend.cpp:466
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr "忘掉最近的文件"
+msgstr "忘掉最近的檔案"
 
 #~ msgid "Show tooltips"
 #~ msgstr "顯示工具提示"

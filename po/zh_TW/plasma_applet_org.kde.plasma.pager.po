@@ -8,20 +8,21 @@
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2021-09-04 12:22+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-09 00:47+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -139,16 +140,15 @@ msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 個已最小化的視窗："
 
 #: package/contents/ui/main.qml:449
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgid "Desktop %1"
-msgstr "桌面名稱"
+msgstr "桌面 %1"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "切換到 %1"
 
 #: package/contents/ui/main.qml:595
 #, kde-format

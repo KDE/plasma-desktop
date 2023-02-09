@@ -7,13 +7,13 @@
 # Serdar Soytetir, 2008.
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-12-26 22:09+0300\n"
+"PO-Revision-Date: 2023-02-08 21:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -32,11 +32,11 @@ msgid ""
 "whether the computer should be automatically shut down after session exit by "
 "default."
 msgstr ""
-"<h1>Oturum Yöneticisi</h1> Buradan oturum yöneticisi ile ilgili temel "
-"ayarlar yapılabilir. Bu, oturum çıkışının (logout) onaylanıp "
-"onaylanmayacağı, yeniden girişte oturumun geri yüklenip yüklenmeyeceği veya "
-"oturum çıkışında bilgisayarın kendiliğinden kapatılıp kapatılmayacağı gibi "
-"ayarları içerir."
+"<h1>Oturum Yöneticisi</h1> Oturum yöneticisini buradan "
+"yapılandırabilirsiniz. Bu, oturum çıkışının (logout) onaylanıp "
+"onaylanmaması, oturum açıldığında oturumun yeniden geri yüklenip "
+"yüklenmemesi ve öntanımlı olarak oturum çıkışından sonra bilgisayarın "
+"otomatik olarak kapatılması gerekip gerekmediği gibi seçenekleri içerir."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Şimdi Yeniden Başlat"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr "Ekrandan Çıkış Yap"
+msgstr "Oturumu Kapatma Ekranı"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -95,10 +95,10 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
-"Bu ayar açıkken; çıkış yaparken, bilgisayarı kapatırken, yeniden "
-"başlatırken, güç düğmesine basıldığında veya <interface>Ayrıl…</interface> "
-"etiketli düğmelere veya menü ögelerine basıldığında çıkış onay ekranı "
-"gösterilecektir."
+"Bu ayar açıldığında, oturumu kapattığınızda, bilgisayarı kapattığınızda, "
+"yeniden başlattığınızda, güç düğmesine bastığınızda veya düğmelere "
+"tıkladığınızda veya <interface>Ayrıl…</interface> etiketli menü ögelerini "
+"tıkladığınızda oturum kapatma onay ekranı gösterilecektir."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "Oturum Geri Yükle"
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "Girişte, açık olan uygulamaları başlat:"
+msgstr "Oturum açılışında, açık olan uygulamaları başlat:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "Son girişte"
+msgstr "Son oturum kapanışında"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
@@ -134,8 +134,8 @@ msgid ""
 msgstr ""
 "<interface>Uygulama Başlatıcı</interface> menüsünde bir <interface>Oturumu "
 "Kaydet</interface> düğmesi görünür. Ona tıkladığınızda, Plasma açık olan "
-"uygulamaları anımsar ve bir sonraki girişte onları başlatır. Anımsanan "
-"uygulamalar kümesini değiştirmek için ona yeniden tıklayın."
+"uygulamaları anımsar ve bir sonraki oturum açılışında onları başlatır. "
+"Anımsanan uygulamalar kümesini değiştirmek için ona yeniden tıklayın."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -193,7 +193,7 @@ msgstr "Üretici yazılımı ayar ekranına gir"
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr "Çıkışı onayla"
+msgstr "Oturumu kapatmayı onayla"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
