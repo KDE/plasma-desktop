@@ -25,8 +25,6 @@ QQC2.ToolButton {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    onClicked: kcm.openKCM(model.kcmPlugin)
-
     leftPadding: Kirigami.Units.smallSpacing
     rightPadding: Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.smallSpacing
