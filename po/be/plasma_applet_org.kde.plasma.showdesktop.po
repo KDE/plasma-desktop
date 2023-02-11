@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-07 06:00\n"
+"PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: kom <me@komzpa.net>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -65,13 +65,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Вяртае вокны назад на іх зыходныя пазіцыі"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "Паказвае адкрытыя вокны працоўнага стала ў кутах экрана"
+msgstr "Часова паказвае працоўны стол, прыбіраючы вокны"
 
 #, fuzzy
 #~| msgid "Show the Desktop"
