@@ -37,6 +37,7 @@ PlasmaCore.ToolTipArea {
     readonly property string appName: model.AppName || ""
     readonly property string appId: model.AppId.replace(/\.desktop/, '')
     readonly property variant winIdList: model.WinIdList
+    property bool toolTipOpen: false
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
@@ -113,6 +114,7 @@ PlasmaCore.ToolTipArea {
     Accessible.role: Accessible.Button
 
     onToolTipVisibleChanged: {
+        task.toolTipOpen = toolTipVisible;
         if (!toolTipVisible) {
             tasks.toolTipOpenedByClick = null;
         } else {
