@@ -27,13 +27,13 @@ kcmutils_generate_desktop_file(kcm_componentchooser)
 
 target_link_libraries(kcm_componentchooser
     Qt::Core
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::QuickAddons
-    KF5::Service
-    KF5::KIOWidgets
-    KF5::ConfigGui
-    KF5::KCMUtils
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::QuickAddons
+    KF6::Service
+    KF6::KIOWidgets
+    KF6::ConfigGui
+    KF6::KCMUtils
 )
 
 kpackage_install_package(package kcm_componentchooser kcms)

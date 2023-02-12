@@ -32,15 +32,15 @@ target_link_libraries(folderplugin
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
-                      KF5::Activities
-                      KF5::CoreAddons
-                      KF5::KIOCore
-                      KF5::KIOWidgets
-                      KF5::KIOFileWidgets
-                      KF5::I18n
-                      KF5::PlasmaQuick
-                      KF5::ConfigGui
-                      KF5::XmlGui)
+                      KF6::Activities
+                      KF6::CoreAddons
+                      KF6::KIOCore
+                      KF6::KIOWidgets
+                      KF6::KIOFileWidgets
+                      KF6::I18n
+                      KF6::PlasmaQuick
+                      KF6::ConfigGui
+                      KF6::XmlGui)
 
 install(TARGETS folderplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
 

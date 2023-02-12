@@ -5,12 +5,12 @@ add_library(kcm_plasmasearch MODULE kcm.cpp)
 kcmutils_generate_desktop_file(kcm_plasmasearch)
 
 target_link_libraries(kcm_plasmasearch
-  KF5::CoreAddons
-  KF5::KCMUtilsCore
-  KF5::KCMUtils
-  KF5::QuickAddons
-  KF5::Runner
-  KF5::I18n
+  KF6::CoreAddons
+  KF6::KCMUtilsCore
+  KF6::KCMUtils
+  KF6::QuickAddons
+  KF6::Runner
+  KF6::I18n
   Qt::DBus
 )
 

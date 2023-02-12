@@ -3,9 +3,9 @@ kcoreaddons_add_plugin(kded_touchpad SOURCES kded.cpp INSTALL_NAMESPACE kf${QT_M
 target_link_libraries(kded_touchpad
     PRIVATE
     Qt::DBus
-    KF5::DBusAddons
-    KF5::I18n
-    KF5::Notifications
+    KF6::DBusAddons
+    KF6::I18n
+    KF6::Notifications
     touchpad
 )
 

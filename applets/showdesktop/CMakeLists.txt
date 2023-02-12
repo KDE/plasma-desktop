@@ -16,7 +16,7 @@ target_link_libraries(showdesktopplugin
      Qt::DBus
      Qt::Qml
      Qt::Quick
-     KF5::WindowSystem
+     KF6::WindowSystem
     )
 
 install(TARGETS showdesktopplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/showdesktop)

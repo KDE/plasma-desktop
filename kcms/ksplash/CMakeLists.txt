@@ -19,16 +19,16 @@ kcoreaddons_add_plugin(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS} INSTALL
 kcmutils_generate_desktop_file(kcm_splashscreen)
 
 target_link_libraries(kcm_splashscreen
-  KF5::KIOWidgets
-  KF5::CoreAddons
-  KF5::ConfigWidgets
-  KF5::KCMUtils
-  KF5::QuickAddons
-  KF5::I18n
-  KF5::Plasma
-  KF5::PlasmaQuick
-  KF5::NewStuffCore
-  KF5::Package
+  KF6::KIOWidgets
+  KF6::CoreAddons
+  KF6::ConfigWidgets
+  KF6::KCMUtils
+  KF6::QuickAddons
+  KF6::I18n
+  KF6::Plasma
+  KF6::PlasmaQuick
+  KF6::NewStuffCore
+  KF6::Package
 
   Qt::DBus
   Qt::Widgets

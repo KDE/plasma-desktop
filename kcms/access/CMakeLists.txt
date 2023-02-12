@@ -24,15 +24,15 @@ kcmutils_generate_desktop_file(kcm_access)
 
 target_link_libraries(kcm_access
     Qt::DBus
-    KF5::KCMUtils
-    KF5::CoreAddons
-    KF5::Declarative
-    KF5::GuiAddons
-    KF5::I18n
-    KF5::NewStuffCore
-    KF5::QuickAddons
-    KF5::WindowSystem
-    KF5::NotifyConfig
+    KF6::KCMUtils
+    KF6::CoreAddons
+    KF6::Declarative
+    KF6::GuiAddons
+    KF6::I18n
+    KF6::NewStuffCore
+    KF6::QuickAddons
+    KF6::WindowSystem
+    KF6::NotifyConfig
     X11::X11
 )
 if (QT_MAJOR_VERSION EQUAL "5")

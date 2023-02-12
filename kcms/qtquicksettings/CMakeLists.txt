@@ -10,9 +10,9 @@ kcmutils_generate_desktop_file(kcm_qtquicksettings)
 
 target_link_libraries(kcm_qtquicksettings
     Qt::Widgets
-    KF5::WidgetsAddons
-    KF5::KCMUtils
-    KF5::I18n
+    KF6::WidgetsAddons
+    KF6::KCMUtils
+    KF6::I18n
 )
 
 ########### install files ###############

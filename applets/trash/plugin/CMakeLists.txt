@@ -8,10 +8,10 @@ add_library(trashplugin SHARED ${trashplugin_SRCS})
 target_link_libraries(trashplugin
         Qt::Core
         Qt::Qml
-        KF5::KIOCore
-        KF5::KIOWidgets
-        KF5::CoreAddons # KSharedDataCache required by KImageCache in GuiAddons
-        KF5::GuiAddons
+        KF6::KIOCore
+        KF6::KIOWidgets
+        KF6::CoreAddons # KSharedDataCache required by KImageCache in GuiAddons
+        KF6::GuiAddons
         Qt::DBus
         )
 

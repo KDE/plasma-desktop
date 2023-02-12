@@ -36,7 +36,7 @@ add_subdirectory(tablet)
 add_subdirectory(touchscreen)
 
 add_subdirectory(workspaceoptions)
-if (KF5Baloo_FOUND)
+if (KF6Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
 add_subdirectory(solid_actions)

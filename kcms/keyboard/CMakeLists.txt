@@ -43,24 +43,24 @@ target_link_libraries(kded_keyboard
     Qt::Concurrent
     Qt::Widgets
     Qt::Xml
-    KF5::ConfigCore
-    KF5::CoreAddons
-    KF5::KCMUtils
-    KF5::DBusAddons
-    KF5::GlobalAccel
-    KF5::I18n
-    KF5::Notifications
-    KF5::WindowSystem
-    KF5::Plasma
-    KF5::XmlGui
-    KF5::GuiAddons
+    KF6::ConfigCore
+    KF6::CoreAddons
+    KF6::KCMUtils
+    KF6::DBusAddons
+    KF6::GlobalAccel
+    KF6::I18n
+    KF6::Notifications
+    KF6::WindowSystem
+    KF6::Plasma
+    KF6::XmlGui
+    KF6::GuiAddons
     XCB::XCB
     XCB::XKB
     X11::X11
     X11::xkbfile
  )
 if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kded_keyboard Qt5::X11Extras)
+    target_link_libraries(kded_keyboard Qt6::X11Extras)
 else()
     target_link_libraries(kded_keyboard Qt::GuiPrivate)
 endif()
@@ -124,20 +124,20 @@ target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
     Qt::Xml
-    KF5::KCMUtils
-    KF5::GlobalAccel
-    KF5::I18n
-    KF5::WindowSystem
-    KF5::Plasma
-    KF5::XmlGui
-    KF5::GuiAddons
+    KF6::KCMUtils
+    KF6::GlobalAccel
+    KF6::I18n
+    KF6::WindowSystem
+    KF6::Plasma
+    KF6::XmlGui
+    KF6::GuiAddons
     XCB::XCB
     XCB::XKB
     X11::X11
     X11::xkbfile
 )
 if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kcm_keyboard_static Qt5::X11Extras)
+    target_link_libraries(kcm_keyboard_static Qt6::X11Extras)
 else()
     target_link_libraries(kcm_keyboard_static Qt::GuiPrivate)
 endif()

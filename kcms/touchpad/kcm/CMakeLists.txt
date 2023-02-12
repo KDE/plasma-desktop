@@ -30,14 +30,14 @@ target_link_libraries(kcm_touchpad
     Qt::Quick
     Qt::QuickWidgets
     Qt::DBus
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::Completion
-    KF5::ConfigWidgets
-    KF5::Plasma
-    KF5::WindowSystem
-    KF5::NotifyConfig
-    KF5::XmlGui
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::Completion
+    KF6::ConfigWidgets
+    KF6::Plasma
+    KF6::WindowSystem
+    KF6::NotifyConfig
+    KF6::XmlGui
     touchpad
 )
 

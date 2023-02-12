@@ -23,11 +23,11 @@ kcoreaddons_add_plugin(kcm_workspace SOURCES ${kcm_workspace_SRCS} INSTALL_NAMES
 kcmutils_generate_desktop_file(kcm_workspace)
 
 target_link_libraries(kcm_workspace
-    KF5::QuickAddons
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::ConfigWidgets
-    KF5::Declarative
+    KF6::QuickAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::ConfigWidgets
+    KF6::Declarative
 
     Qt::DBus
 )

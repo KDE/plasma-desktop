@@ -21,15 +21,15 @@ kcoreaddons_add_plugin(kcm_landingpage SOURCES ${kcm_landingpage_SRCS} INSTALL_N
 kcmutils_generate_desktop_file(kcm_landingpage)
 
 target_link_libraries(kcm_landingpage
-    KF5::QuickAddons
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::ConfigWidgets
-    KF5::Declarative
-    KF5::Package
+    KF6::QuickAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::ConfigWidgets
+    KF6::Declarative
+    KF6::Package
     PW::KWorkspace
-    KF5::ActivitiesStats
-    KF5::Service
+    KF6::ActivitiesStats
+    KF6::Service
 
     Qt::DBus
 )
@@ -37,7 +37,7 @@ target_link_libraries(kcm_landingpage
 if(X11_FOUND)
     target_link_libraries(kcm_landingpage X11::X11)
     if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(kcm_landingpage Qt5::X11Extras)
+        target_link_libraries(kcm_landingpage Qt6::X11Extras)
     endif()
 endif()
 

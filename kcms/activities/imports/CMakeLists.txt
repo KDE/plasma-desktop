@@ -2,10 +2,10 @@
 
 project (kactivities-settings)
 find_package (Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE COMPONENTS Sql Gui Widgets Qml Quick Sql QuickWidgets)
-find_package (KF5GlobalAccel ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5I18n       ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5WidgetsAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5Config     ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6GlobalAccel ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6I18n       ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6WidgetsAddons ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6Config     ${KF6_MIN_VERSION} CONFIG REQUIRED)
 
 set (
    kactivities_KCM_imports_LIB_SRCS
@@ -32,11 +32,11 @@ target_link_libraries (
    Qt::Quick
    Qt::Widgets
    Qt::QuickWidgets
-   KF5::I18n
-   KF5::Activities
-   KF5::ConfigCore
-   KF5::GlobalAccel
-   KF5::WidgetsAddons
+   KF6::I18n
+   KF6::Activities
+   KF6::ConfigCore
+   KF6::GlobalAccel
+   KF6::WidgetsAddons
    )
 
 ## install

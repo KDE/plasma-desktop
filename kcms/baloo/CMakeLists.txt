@@ -11,12 +11,12 @@ kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE 
 kcmutils_generate_desktop_file(kcm_baloofile)
 
 target_link_libraries(kcm_baloofile
-  KF5::CoreAddons
-  KF5::KCMUtils
-  KF5::I18n
-  KF5::Solid
-  KF5::Baloo
-  KF5::QuickAddons
+  KF6::CoreAddons
+  KF6::KCMUtils
+  KF6::I18n
+  KF6::Solid
+  KF6::Baloo
+  KF6::QuickAddons
   Qt::DBus
   Qt::Widgets
 )

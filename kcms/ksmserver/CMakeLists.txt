@@ -21,10 +21,10 @@ kcmutils_generate_desktop_file(kcm_smserver)
 target_link_libraries(kcm_smserver
     Qt::Core
     Qt::DBus
-    KF5::QuickAddons
-    KF5::I18n
-    KF5::ConfigCore
-    KF5::KCMUtils
+    KF6::QuickAddons
+    KF6::I18n
+    KF6::ConfigCore
+    KF6::KCMUtils
     PW::KWorkspace)
 
 add_subdirectory(kconf_update)

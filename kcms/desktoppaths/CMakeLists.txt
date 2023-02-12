@@ -18,13 +18,13 @@ kcoreaddons_add_plugin(kcm_desktoppaths SOURCES ${kcm_desktoppaths_PART_SRCS} IN
 kcmutils_generate_desktop_file(kcm_desktoppaths)
 
 target_link_libraries(kcm_desktoppaths
-    KF5::ConfigCore
-    KF5::QuickAddons
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::KIOFileWidgets
+    KF6::ConfigCore
+    KF6::QuickAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::KIOFileWidgets
 )
 
 kpackage_install_package(package kcm_desktoppaths kcms)

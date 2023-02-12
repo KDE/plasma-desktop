@@ -14,14 +14,14 @@ kcmutils_generate_desktop_file(kcm_clock)
 
 target_link_libraries(kcm_clock
     Qt::DBus
-    KF5::ItemViews
-    KF5::AuthCore
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::Plasma
-    KF5::KDELibs4Support
+    KF6::ItemViews
+    KF6::AuthCore
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::Plasma
+    KF6::KDELibs4Support
 )
 
 install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
@@ -33,7 +33,7 @@ endif()
 #This is only needed when not using timedated and can be removed in future
 
 add_executable(kcmdatetimehelper helper.cpp ${helper_mocs})
-target_link_libraries(kcmdatetimehelper KF5::AuthCore KF5::ConfigCore)
+target_link_libraries(kcmdatetimehelper KF6::AuthCore KF6::ConfigCore)
 
 install(TARGETS kcmdatetimehelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)

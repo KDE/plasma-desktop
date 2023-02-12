@@ -25,12 +25,12 @@ add_library(kcm_device_automounter MODULE ${kcm_device_automounter_SRCS} ${devic
 
 target_link_libraries(kcm_device_automounter
                       Qt::DBus
-                      KF5::CoreAddons
-                      KF5::KCMUtils
-                      KF5::ConfigWidgets
-                      KF5::Service
-                      KF5::I18n
-                      KF5::Solid)
+                      KF6::CoreAddons
+                      KF6::KCMUtils
+                      KF6::ConfigWidgets
+                      KF6::Service
+                      KF6::I18n
+                      KF6::Solid)
 
 install(TARGETS kcm_device_automounter DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
 

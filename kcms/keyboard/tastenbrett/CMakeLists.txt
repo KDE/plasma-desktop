@@ -24,15 +24,15 @@ target_link_libraries(tastenbrett
         Qt::Core
         Qt::Quick
         Qt::Gui
-        KF5::CoreAddons
-        KF5::I18n
+        KF6::CoreAddons
+        KF6::I18n
         XCB::XCB
         PkgConfig::XKBCommon
         X11::xkbfile
         X11::X11
 )
 if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(tastenbrett PRIVATE Qt5::X11Extras)
+    target_link_libraries(tastenbrett PRIVATE Qt6::X11Extras)
 else()
     target_link_libraries(tastenbrett PRIVATE Qt::GuiPrivate)
 endif()

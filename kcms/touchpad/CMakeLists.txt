@@ -29,18 +29,18 @@ set_property(TARGET touchpad PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(touchpad
     PUBLIC
     Qt::Core
-    KF5::XmlGui
+    KF6::XmlGui
     PRIVATE
     ${backend_LIBS}
     Qt::DBus
-    KF5::ConfigCore
-    KF5::ConfigGui
-    KF5::WindowSystem
-    KF5::I18n
-    KF5::GlobalAccel
+    KF6::ConfigCore
+    KF6::ConfigGui
+    KF6::WindowSystem
+    KF6::I18n
+    KF6::GlobalAccel
 )
 if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(touchpad PRIVATE Qt5::X11Extras)
+    target_link_libraries(touchpad PRIVATE Qt6::X11Extras)
 else()
     target_link_libraries(touchpad PRIVATE Qt::GuiPrivate)
 endif()

@@ -27,8 +27,8 @@ kcmutils_generate_desktop_file(kcm_solid_actions)
 
 add_executable(solid-action-desktop-gen ${solid_action_desktop_gen_srcs})
 
-target_link_libraries(kcm_solid_actions KF5::KIOCore KF5::KIOWidgets KF5::Solid KF5::I18n KF5::IconThemes KF5::ConfigWidgets KF5::CoreAddons)
-target_link_libraries(solid-action-desktop-gen KF5::Solid KF5::KIOCore KF5::I18n KF5::KIOWidgets)
+target_link_libraries(kcm_solid_actions KF6::KIOCore KF6::KIOWidgets KF6::Solid KF6::I18n KF6::IconThemes KF6::ConfigWidgets KF6::CoreAddons)
+target_link_libraries(solid-action-desktop-gen KF6::Solid KF6::KIOCore KF6::I18n KF6::KIOWidgets)
 
 ########### install files ###############
 

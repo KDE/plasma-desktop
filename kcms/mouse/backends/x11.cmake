@@ -12,7 +12,7 @@ set(backend_SRCS
 
 set(backend_LIBS
     ${backend_LIBS}
-    KF5::WindowSystem
+    KF6::WindowSystem
     PkgConfig::XORGLIBINPUT
     PkgConfig::EVDEV
     X11::X11

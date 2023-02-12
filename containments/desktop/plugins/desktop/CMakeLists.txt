@@ -12,6 +12,6 @@ target_link_libraries(desktopplugin
                       Qt::Qml
                       Qt::Quick
                       Qt::Widgets
-                      KF5::Notifications)
+                      KF6::Notifications)
 
 install(TARGETS desktopplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/desktop)

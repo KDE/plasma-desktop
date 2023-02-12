@@ -9,10 +9,10 @@ set(pager_SRCS
 add_library(pagerplugin SHARED ${pager_SRCS})
 
 target_link_libraries(pagerplugin
-                      KF5::KIOCore
-                      KF5::WindowSystem
-                      KF5::Plasma
-                      KF5::Activities
+                      KF6::KIOCore
+                      KF6::WindowSystem
+                      KF6::Plasma
+                      KF6::Activities
                       PW::LibTaskManager
                       Qt::Core
                       Qt::DBus

@@ -47,9 +47,9 @@ target_link_libraries(kapplymousetheme
     ${backend_LIBS}
     Qt::Gui
     Qt::DBus
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::I18n
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::I18n
     PW::KWorkspace
 )
 
@@ -78,10 +78,10 @@ kcmutils_generate_desktop_file(kcm_mouse)
 
 target_link_libraries(kcm_mouse
     ${backend_LIBS}
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOWidgets
     PW::KWorkspace
 
     Qt::DBus

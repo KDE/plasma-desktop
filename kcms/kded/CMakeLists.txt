@@ -25,6 +25,6 @@ ecm_qt_install_logging_categories(
 kcoreaddons_add_plugin(kcm_kded SOURCES ${kcm_kded_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file(kcm_kded)
 
-target_link_libraries(kcm_kded KF5::QuickAddons KF5::I18n KF5::KCMUtils Qt::DBus)
+target_link_libraries(kcm_kded KF6::QuickAddons KF6::I18n KF6::KCMUtils Qt::DBus)
 
 kpackage_install_package(package kcm_kded kcms)

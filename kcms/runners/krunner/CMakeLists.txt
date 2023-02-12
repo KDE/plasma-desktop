@@ -18,11 +18,11 @@ kcmutils_generate_desktop_file(kcm_krunnersettings)
 
 target_link_libraries(kcm_krunnersettings
     Qt::DBus
-    KF5::Activities
-    KF5::ConfigCore
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::QuickAddons
+    KF6::Activities
+    KF6::ConfigCore
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::QuickAddons
 )
 
 install(FILES krunnersettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

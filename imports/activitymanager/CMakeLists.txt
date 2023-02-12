@@ -16,15 +16,15 @@ target_link_libraries (
    Qt::Qml
    Qt::Widgets
 
-   KF5::I18n
-   KF5::Activities
-   KF5::ConfigCore
-   KF5::CoreAddons
-   KF5::GlobalAccel
-   KF5::GuiAddons
-   KF5::KIOCore
-   KF5::KIOWidgets
-   KF5::WindowSystem
+   KF6::I18n
+   KF6::Activities
+   KF6::ConfigCore
+   KF6::CoreAddons
+   KF6::GlobalAccel
+   KF6::GuiAddons
+   KF6::KIOCore
+   KF6::KIOWidgets
+   KF6::WindowSystem
 
    PW::LibTaskManager
    )

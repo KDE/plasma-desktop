@@ -19,7 +19,7 @@ qt_add_dbus_interfaces(Applet_SRCS
 kcoreaddons_add_plugin(plasma_engine_touchpad SOURCES ${Applet_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
 
 target_link_libraries(plasma_engine_touchpad
-    KF5::Plasma
+    KF6::Plasma
     Qt::DBus
 )
 

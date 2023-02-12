@@ -3,17 +3,17 @@ project (KCMActivities)
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_activities5\")
 
 find_package (Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
-find_package (KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5Declarative ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5XmlGui ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5GlobalAccel ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF5Activities ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6KCMUtils ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6Declarative ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6XmlGui ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6GlobalAccel ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6Activities ${KF6_MIN_VERSION} CONFIG REQUIRED)
 
 set (KAMD_KCM_DATADIR
-   ${KDE_INSTALL_DATADIR_KF5}/kactivitymanagerd/workspace/settings/
+   ${KDE_INSTALL_DATADIR_KF6}/kactivitymanagerd/workspace/settings/
    )
 
-if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR_KF5}")
+if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR_KF6}")
    set (KAMD_KCM_DATADIR "${CMAKE_INSTALL_PREFIX}/${KAMD_KCM_DATADIR}")
 endif ()
 
@@ -75,13 +75,13 @@ target_link_libraries (kcm_activities
    Qt::Sql
    Qt::Qml
    Qt::DBus
-   KF5::KCMUtils
-   KF5::I18n
-   KF5::Service
-   KF5::Declarative
-   KF5::XmlGui
-   KF5::GlobalAccel
-   KF5::Activities
+   KF6::KCMUtils
+   KF6::I18n
+   KF6::Service
+   KF6::Declarative
+   KF6::XmlGui
+   KF6::GlobalAccel
+   KF6::Activities
    )
 
 install (

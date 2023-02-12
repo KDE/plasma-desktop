@@ -47,12 +47,12 @@ kcmutils_generate_desktop_file(kcm_keys)
 
 target_link_libraries(kcm_keys
     Qt::DBus
-    KF5::ConfigGui
-    KF5::GlobalAccel
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::KIOWidgets
-    KF5::QuickAddons
+    KF6::ConfigGui
+    KF6::GlobalAccel
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::KIOWidgets
+    KF6::QuickAddons
 )
 
 kpackage_install_package(package kcm_keys kcms)

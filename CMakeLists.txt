@@ -6,11 +6,11 @@ set(PROJECT_VERSION "5.27.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.102.0")
+set(KF6_MIN_VERSION "5.102.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.85")
 set(ACCOUNTSQT_DEP_VERSION "1.13")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 include(KDEInstallDirs)
@@ -39,7 +39,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 )
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 if (QT_MAJOR_VERSION EQUAL "5")
-    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 
     find_package(QtWaylandScanner)
     set_package_properties(QtWaylandScanner PROPERTIES
@@ -48,7 +48,7 @@ if (QT_MAJOR_VERSION EQUAL "5")
     )
 endif()
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Crash
     Plasma
@@ -77,7 +77,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
 )
 if (QT_MAJOR_VERSION EQUAL "5")
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
+    find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
 endif()
 
 find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
@@ -105,15 +105,15 @@ set_package_properties(signon-oauth2plugin PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
-set_package_properties(KF5Kirigami2 PROPERTIES
+find_package(KF6Kirigami2 ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6Kirigami2 PROPERTIES
     DESCRIPTION "A QtQuick based components set"
     PURPOSE "Required at runtime by many KCMs"
     TYPE RUNTIME
 )
 
-find_package(KF5QQC2DesktopStyle ${KF5_MIN_VERSION} CONFIG)
-set_package_properties(KF5QQC2DesktopStyle PROPERTIES
+find_package(KF6QQC2DesktopStyle ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6QQC2DesktopStyle PROPERTIES
     DESCRIPTION "QtQuickControls 2 style that uses QWidget's QStyle for painting"
     PURPOSE "Required at runtime by many KCMs"
     TYPE RUNTIME
@@ -139,12 +139,12 @@ find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
-find_package(KF5ItemModels CONFIG REQUIRED)
+find_package(KF6ItemModels CONFIG REQUIRED)
 find_package(KSysGuard CONFIG REQUIRED)
 find_package(KDED CONFIG REQUIRED)
 
-find_package(KF5Baloo ${KF5_MIN_VERSION})
-set_package_properties(KF5Baloo PROPERTIES
+find_package(KF6Baloo ${KF6_MIN_VERSION})
+set_package_properties(KF6Baloo PROPERTIES
     DESCRIPTION "File Searching"
     PURPOSE "Needed to build the File Search KCM"
     TYPE RECOMMENDED

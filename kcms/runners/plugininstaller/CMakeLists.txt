@@ -11,12 +11,12 @@ if(HAVE_PACKAGEKIT)
 endif()
 
 target_link_libraries(krunner-plugininstaller
-  KF5::CoreAddons
-  KF5::I18n
+  KF6::CoreAddons
+  KF6::I18n
   Qt::Widgets
-  KF5::Service
-  KF5::KIOCore
-  KF5::KIOWidgets
+  KF6::Service
+  KF6::KIOCore
+  KF6::KIOWidgets
 )
 if(HAVE_PACKAGEKIT)
     target_link_libraries(krunner-plugininstaller PK::packagekitqt${QT_MAJOR_VERSION})

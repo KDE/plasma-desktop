@@ -25,17 +25,17 @@ target_link_libraries(taskmanagerplugin
                       Qt::DBus
                       Qt::Qml
                       Qt::Quick
-                      KF5::Activities
-                      KF5::ActivitiesStats
-                      KF5::I18n
-                      KF5::KIOCore
-                      KF5::KIOGui
-                      KF5::KIOFileWidgets # KFilePlacesModel
-                      KF5::Notifications # KNotificationJobUiDelegate
-                      KF5::Plasma
+                      KF6::Activities
+                      KF6::ActivitiesStats
+                      KF6::I18n
+                      KF6::KIOCore
+                      KF6::KIOGui
+                      KF6::KIOFileWidgets # KFilePlacesModel
+                      KF6::Notifications # KNotificationJobUiDelegate
+                      KF6::Plasma
                       KSysGuard::ProcessCore
-                      KF5::Service
-                      KF5::WindowSystem
+                      KF6::Service
+                      KF6::WindowSystem
                       PW::LibNotificationManager)
 
 install(TARGETS taskmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/taskmanager)

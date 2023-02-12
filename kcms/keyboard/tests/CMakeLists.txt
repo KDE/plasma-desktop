@@ -8,13 +8,13 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt::Widgets
                                      Qt::Xml
                                      Qt::Test
-                                     KF5::I18n
-                                     KF5::WindowSystem
+                                     KF6::I18n
+                                     KF6::WindowSystem
                                      X11::xkbfile
                                      X11::X11
                )
                if (QT_MAJOR_VERSION EQUAL "5")
-                  target_link_libraries(${_testname}_test Qt5::X11Extras)
+                  target_link_libraries(${_testname}_test Qt6::X11Extras)
                else()
                   target_link_libraries(${_testname}_test Qt::GuiPrivate)
                endif()
@@ -32,11 +32,11 @@ target_link_libraries(flags_test
                       Qt::Test
                       Qt::DBus
                       Qt::Widgets
-                      KF5::GuiAddons
-                      KF5::KCMUtils
-                      KF5::I18n
-                      KF5::Plasma
-                      KF5::WindowSystem
+                      KF6::GuiAddons
+                      KF6::KCMUtils
+                      KF6::I18n
+                      KF6::Plasma
+                      KF6::WindowSystem
                       XCB::XCB
                       XCB::XKB
                       X11::xkbfile
@@ -58,17 +58,17 @@ if( X11_XTest_FOUND )
                          Qt::Concurrent
                          Qt::Xml
                          Qt::Test
-                         KF5::ConfigCore
-                         KF5::CoreAddons
-                         KF5::KCMUtils
-                         KF5::DBusAddons
-                         KF5::GuiAddons
-                         KF5::I18n
-                         KF5::Notifications
-                         KF5::Plasma
-                         KF5::GlobalAccel
-                         KF5::WindowSystem
-                         KF5::XmlGui
+                         KF6::ConfigCore
+                         KF6::CoreAddons
+                         KF6::KCMUtils
+                         KF6::DBusAddons
+                         KF6::GuiAddons
+                         KF6::I18n
+                         KF6::Notifications
+                         KF6::Plasma
+                         KF6::GlobalAccel
+                         KF6::WindowSystem
+                         KF6::XmlGui
                          XCB::XCB
                          XCB::XKB
                          X11::xkbfile
@@ -76,7 +76,7 @@ if( X11_XTest_FOUND )
                          X11::X11
    )
    if (QT_MAJOR_VERSION EQUAL "5")
-      target_link_libraries(keyboard_daemon_test Qt5::X11Extras)
+      target_link_libraries(keyboard_daemon_test Qt6::X11Extras)
    endif()
 
    if (HAVE_XINPUT)

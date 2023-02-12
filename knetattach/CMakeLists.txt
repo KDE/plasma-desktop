@@ -9,7 +9,7 @@ add_executable(knetattach ${knetattach_SRCS})
 
 target_compile_definitions(knetattach PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
-target_link_libraries(knetattach KF5::KIOWidgets KF5::I18n KF5::Codecs)
+target_link_libraries(knetattach KF6::KIOWidgets KF6::I18n KF6::Codecs)
 
 install(TARGETS knetattach DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

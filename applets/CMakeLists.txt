@@ -9,7 +9,7 @@ plasma_install_package(window-list org.kde.plasma.windowlist)
 plasma_install_package(icontasks org.kde.plasma.icontasks)
 plasma_install_package(margins-separator org.kde.plasma.marginsseparator)
 
-if(KF5Activities_FOUND)
+if(KF6Activities_FOUND)
    add_subdirectory(pager)
    add_subdirectory(showActivityManager)
 endif()

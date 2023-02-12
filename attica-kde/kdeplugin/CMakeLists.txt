@@ -11,11 +11,11 @@ target_include_directories(attica_kde PRIVATE "${ACCOUNTSQT_INCLUDE_DIRS}")
 target_link_libraries(attica_kde
     PUBLIC
         Qt::Widgets
-        KF5::KIOWidgets
-        KF5::KCMUtils
-        KF5::Attica
-        KF5::I18n
-        KF5::Service
+        KF6::KIOWidgets
+        KF6::KCMUtils
+        KF6::Attica
+        KF6::I18n
+        KF6::Service
         KAccounts
         ${ACCOUNTSQT_LIBRARIES}
 )

@@ -1,11 +1,11 @@
 if(IBUS_FOUND AND GLIB2_FOUND AND GOBJECT_FOUND)
     configure_file(config-kimpanel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kimpanel.h)
     if (QT_MAJOR_VERSION EQUAL "5")
-        find_package(Qt5X11Extras)
+        find_package(Qt6X11Extras)
     endif()
     find_package(XCB COMPONENTS XCB KEYSYMS)
 
-    if (Qt5X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
+    if (Qt6X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
         set(CMAKE_C_STANDARD 99)
         add_executable(kimpanel-ibus-panel
             ibus15/xkblayoutmanager.cpp

@@ -1,5 +1,5 @@
 add_executable(plasma-emojier emojier.cpp resources.qrc)
-target_link_libraries(plasma-emojier Qt::Widgets Qt::Quick KF5::ConfigGui KF5::I18n KF5::CoreAddons KF5::Crash KF5::DBusAddons KF5::WindowSystem)
+target_link_libraries(plasma-emojier Qt::Widgets Qt::Quick KF6::ConfigGui KF6::I18n KF6::CoreAddons KF6::Crash KF6::DBusAddons KF6::WindowSystem)
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(plasma-emojier Qt::X11Extras)
 else()
