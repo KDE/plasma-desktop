@@ -1,0 +1,243 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Accesos rápidos</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>combinaciones de teclas</keyword>
+<keyword
+>asociaciones</keyword>
+<keyword
+>accesos rápidos</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Accesos rápidos</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Introducción</title
+> 
+
+<para
+>Aunque la mayor parte de la funcionalidad ofrecida por &plasma; se puede conseguir utilizando el interfaz «apuntar y pulsar», muchas personas prefieren usar el teclado para algunas tareas. Pulsando por ejemplo, <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> es más rápido que mover sus manos fuera del teclado para llevarlas al ratón, abrir el menú <guimenu
+>Editar</guimenu
+> y seleccionar <guimenuitem
+>Buscar</guimenuitem
+>.</para>
+
+<para
+>Como cada persona tiene diferentes preferencias sobre los accesos rápidos de teclado, &plasma; ofrece una personalización completa de las «asociaciones de teclas». Una asociación de tecla o un acceso rápido es una asociación de una acción con una tecla o una combinación de teclas.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Accesos rápidos estándar y accesos rápidos globales</title>
+
+<para
+>Los accesos rápidos estándar y los accesos rápidos globales funcionan del mismo modo. De hecho, en cierto modo los accesos rápidos estándar o de aplicaciones son también «globales». La única diferencia es:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Los «accesos rápidos estándar» se refieren a acciones que están normalmente disponibles en las aplicaciones tales como Guardar, Imprimir, Copiar, etc.</para
+></listitem
+> 
+<listitem
+><para
+>«Accesos rápidos globales» son los accesos rápidos que tienen sentido incluso cuando no hay ninguna aplicación abierta. Estos accesos rápidos normalmente se refieren a acciones como pasar a diferentes escritorios, manipulación de ventanas etc.</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Por favor tenga en cuenta que los accesos rápidos de aplicaciones configurados aquí son <emphasis
+>solo</emphasis
+> las acciones estándar encontradas frecuentemente en aplicaciones. La mayor parte de las aplicaciones definirán sus propias acciones también, para lo cual debe personalizar las asociaciones de teclas utilizando el diálogo de asociaciones de teclas.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Página de accesos rápidos estándar</title>
+<para
+>En la parte superior de este diálogo podrá ver un cuadro de entrada en el que puede buscar de manera interactiva los nombres de los accesos rápidos  (&eg;, Copiar) o de las combinaciones de teclas (&eg;, <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) escribiéndolos tal cual.</para>
+<para
+>Bajo el cuadro de búsqueda, podrá ver una lista de asociaciones de teclas, es decir, asociaciones entre acciones (&eg;, Copiar) que se muestran en la columna <guilabel
+>Acción</guilabel
+> y teclas o combinaciones de teclas (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) que aparecen en la columna <guilabel
+>Acceso rápido</guilabel
+> o <guilabel
+>Alternativa</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Página de accesos rápidos globales</title>
+<para
+>En la parte izquierda de esta página, hay una lista que permite seleccionar un <guilabel
+>Componente</guilabel
+>, como KWin, escritorio Plasma, etc. Los accesos rápidos definidos para el componente seleccionado se muestran en las columnas <guilabel
+>Acción</guilabel
+> y <guilabel
+>Global</guilabel
+> de la lista.</para>
+<para
+>Esta página tiene el mismo cuadro de búsqueda que la pestaña <guilabel
+>Accesos rápidos estándar</guilabel
+>.</para>
+<para
+>Use <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> o <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> para añadir o eliminar un componente. </para>
+
+<para
+>Al añadir un componente se abre un diálogo para seleccionar aplicaciones de la estructura del menú de inicio a las que añadir lanzadores que se puedan usar como accesos rápidos. Si una aplicación tiene opciones en la lista de saltos, estarán disponibles como acciones. </para>
+
+<para
+>Pulse la lista desplegable <guilabel
+>Archivo</guilabel
+> que hay a la derecha para importar/exportar un esquema, defina todos los accesos directos a ninguno.</para>
+<para
+>Los accesos directos globales se pueden configurar ahora para saltar a tareas específicas dentro de una aplicación.</para>
+
+<para
+>By default you can open the application menu by just pressing the <keysym
+>Meta</keysym
+> key. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Configuración de las asociaciones de teclas</title>
+
+<para
+>Configurar las asociaciones de teclas es bastante sencillo. En medio de los módulos de control de las asociaciones de teclas verá una lista de acciones disponibles. Si hay una combinación de teclas asociada a esa acción, aparecerá a la derecha. Únicamente tiene que seleccionar la acción que desea configurar.</para>
+
+<para
+>Después de haber seleccionado una acción, advertirá que dicho elemento está resaltado y verá dos casillas de verificación adicionales bajo dicho elemento en la vista de lista. Ahí, puede configurar una combinación de teclas o no asociar ninguna tecla para la acción seleccionada. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Predeterminada</guilabel
+>: la acción seleccionada estará asociada con el valor predeterminado de &kde;. Esta es una buena elección para la mayor parte de los casos, ya que &kde; incorpora unas asociaciones razonables de teclas bien planificadas. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Personalizada</guilabel
+>: si selecciona esta opción, puede crear una combinación de teclas para la acción seleccionada. Pulse el botón cuya etiqueta es, bien <guibutton
+>Ninguna</guibutton
+> o bien, el acceso rápido personalizado anteriormente. Ahora, la etiqueta cambia a <guibutton
+>Entrada</guibutton
+>. Después, pulse cualquier modificador (&ie;, &Shift;, &Ctrl; o &Alt;) y después seleccione la tecla normal o la tecla de función (&eg;, <keycap
+>F11</keycap
+>) que desea asignar a esta combinación de teclas.</para>
+<para
+>Al pulsar en la columna <guilabel
+>Alternativo</guilabel
+> de una fila de la lista, se puede editar al segundo acceso rápido para la acción.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

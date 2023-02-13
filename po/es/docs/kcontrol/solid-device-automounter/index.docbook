@@ -47,9 +47,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2016-08-24</date>
 <releaseinfo
->&plasma; 5.20</releaseinfo>
+>&plasma; 5.8</releaseinfo>
 
 <keywordset>
 <keyword
@@ -94,16 +94,18 @@
 ></term>
 <listitem
 ><para
->Cuando está marcada, &plasma; montará automáticamente solo los dispositivos que recuerde. Un dispositivo es <quote
->recordado</quote
-> si ha sido montado antes; por ejemplo, conectar un reproductor multimedia &USB; no es suficiente para «recordarlo». Si los archivos no son accedidos, &plasma; no montará automáticamente el reproductor la próxima vez que lo veo. No obstante una vez hayan sido accedidos, &plasma; lo recordará para automáticamente hacer los contenidos accesibles a tu sistema. </para
+>When this is checked, &plasma; will only automatically mount devices it remembers. A device is <quote
+>remembered</quote
+> if it has ever been mounted before; &eg; plugging in a USB media player to charge is not sufficient to <quote
+>remember</quote
+> it. If the files are not accessed, &plasma; will not automatically mount the player next time it is seen. Once they have been accessed, however, &plasma; will remember to automatically make the contents accessible to your system. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Montar automáticamente todos los medios extraíbles durante al inicio</guilabel
+>Mount all removable media at login</guilabel
 ></term>
 <listitem
 ><para
@@ -125,16 +127,16 @@
 <varlistentry
 ><term
 ><guilabel
->Montaje automático</guilabel
+>Device Overrides</guilabel
 ></term>
 <listitem
 ><para
->Esta lista contiene los dispositivos de almacenamiento conocidos por &plasma;. Si <guilabel
->Durante el inicio</guilabel
-> está marcado, el dispositivo se montará automáticamente incluso aunque <guilabel
->Montar automáticamente todos los medios extraíbles al inicio</guilabel
-> esté desmarcado. Lo mismo se aplica para <guilabel
->Al insertar</guilabel
+>This list contains the storage devices known to &plasma;. If <guilabel
+>Automount on Login </guilabel
+>is checked, the device will be automatically mounted even though <guilabel
+>Mount all removable media at login</guilabel
+> is unchecked. The same applies for <guilabel
+>Automount on Attach</guilabel
 >.</para>
 <para
 >Si <guilabel

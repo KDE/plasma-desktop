@@ -47,9 +47,9 @@
 </authorgroup>
 
 <date
->2021-04-06</date>
+>2017-01-10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.8</releaseinfo>
 
 <keywordset>
 <keyword
@@ -62,10 +62,10 @@
 </articleinfo>
 
 <para
->En este módulo puede cambiar los componentes por defecto de &kde;.</para>
+>In this module you can change &kde; default components.</para>
 
 <para
->Los componentes son programas que manejan tareas básicas, como el navegador web, el emulador de terminal, el gestor de archivos y el cliente de correo electrónico. A veces, distintas aplicaciones de &kde; necesitan invocar un emulador de consola, enviar un correo electrónico o administrar archivos y carpetas.</para
+>Components are programs that handle basic tasks, like the terminal emulator, the text editor and the email client. Different &kde; applications sometimes need to invoke a console emulator, send a mail or display some text.</para
 > 
 
 <para
@@ -76,7 +76,7 @@
 <itemizedlist>
 <listitem>
 <para
->Navegador web</para>
+>Cliente de correo electrónico</para>
 </listitem>
 <listitem>
 <para
@@ -84,19 +84,15 @@
 </listitem>
 <listitem>
 <para
->Cliente de correo electrónico</para>
+>Emulador de terminal</para>
 </listitem>
 <listitem>
 <para
->Emulador de terminal</para>
+>Navegador web</para>
 </listitem>
 </itemizedlist>
 
 <para
->Pulse en la lista desplegable del componente que desee configurar. En la lista, seleccione su navegador web favorito, gestor de archivos, cliente de correo electrónico y emulador de terminal. Elija <guimenuitem
->Otro...</guimenuitem
-> para abrir el diálogo de <guilabel
->Escoger aplicación</guilabel
-> y seleccionar una aplicación de forma manual.</para>
+>Click the component you want to configure. In the right part of the dialog then all available applications for this service are displayed and you are able to select your favorite terminal emulator, text editor and the email client &etc;</para>
 
 </article>

@@ -76,9 +76,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2015-04-09</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword
@@ -98,13 +98,13 @@
 >Las opciones de configuración aquí disponibles se utilizan de manera predeterminada por todas las aplicaciones de &kde; que hacen uso de &sonnet;, una interfaz para varios correctores ortográficos libres.</para>
 
 <para
->Para usar &sonnet; debe instalar correctores ortográficos, como <ulink url="http://aspell.net/"
->&GNU; Aspell</ulink
+>To use &sonnet; you need to install spell checkers like &eg; <ulink url="http://aspell.net/"
+>GNU Aspell</ulink
 >, <ulink url="http://hspell.ivrix.org.il/"
 >Hspell</ulink
-> o <ulink url="https://hunspell.github.io/"
+> or <ulink url="https://hunspell.github.io/"
 >Hunspell</ulink
->, así como los correspondientes diccionarios para su idioma.</para>
+> and additionally the corresponding dictionaries for your language.</para>
 
 <para
 >Las opciones de configuración seleccionadas aquí se pueden anular en cada aplicación.</para>
@@ -116,7 +116,7 @@
 
 <sect2 id="spell-options">
 <title
->Opciones</title>
+>Spell Options</title>
 
 <variablelist>
  
@@ -178,7 +178,7 @@
 <!-- from koffice/kword/opt.docbook 1.6.2--> 
 <sect2
 ><title
->Palabras ignoradas</title>
+>Ignoring words</title>
 <para
 >La mitad inferior del cuadro de diálogo le permite indicar palabras específicas (pueden ser terminología específica, nombres propios, &etc;) que se deberían ignorar por parte del programa de comprobación ortográfica.</para>
 

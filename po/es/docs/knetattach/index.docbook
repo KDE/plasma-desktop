@@ -118,7 +118,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Uso de &knetattach;</title>
 
 <para
->Como puede ver en la captura de pantalla inferior, el asistente de carpetas de red le permite añadir cuatro tipos de carpetas de red: WebDav, &FTP;, &Microsoft; &Windows; (&Samba;) unidades de red y SSH. También puede seleccionar una conexión reciente de la lista. <screenshot>
+>As you will see in the screenshot below, the Network Folder Wizard currently allows you to add four types of network folders: WebDav, &FTP;, &Microsoft; &Windows; (Samba) network drives and SSH. Additionally you can select a recent connection for the list box. <screenshot>
 <screeninfo
 >Aquí puede ver una captura de pantalla de &knetattach;</screeninfo>
 <mediaobject>
@@ -173,9 +173,9 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >Hablando de asistentes, el asistente de carpetas de red pretende ser muy sencillo de utilizar. Después de abrir el asistente deberá seleccionar el tipo de red a la que desea acceder. Cuando se mueva a la siguiente pantalla necesitará rellenar la información que se le pida y lo peor ya habrá pasado. El paso final es introducir su nombre de usuario y la contraseña de acceso para la red compartida a la que ha decidido acceder. </para>
 <para
->A continuación puede ver una lista de la información que necesita el asistente para crear las carpetas de red. Si una opción no está disponible para una red particular no necesitará introducirla. Por ejemplo, las carpetas &Samba; no necesitan un <guilabel
->Puerto</guilabel
->. </para>
+>Below is a list of the information needed by the wizard to create the network folders. If an option is not available for a particular folder it does not have to be entered. The Samba folders &eg; do not require a <guilabel
+>Port</guilabel
+> entry. </para>
 
 <para>
 <variablelist>
@@ -218,7 +218,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >Aquí introducirá el número de puerto al que desea conectarse. Suele ser suficiente con los valores predeterminados. <note
 > <para
->No disponible para las carpetas &Microsoft; &Windows; (&Samba;). </para>
+>Not available for &Microsoft; &Windows; (Samba) folders. </para>
 </note>
 </para>
 </listitem>

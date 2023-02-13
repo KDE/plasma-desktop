@@ -77,26 +77,26 @@
 <varlistentry
 ><term
 ><guilabel
->No buscar en estas ubicaciones</guilabel
+>Do not search in these locations</guilabel
 ></term>
 <listitem>
     <para
->Se le muestra una lista de carpetas donde no se debe buscar. Por omisión, se indexará la totalidad de su carpeta <filename class="directory"
+>You are presented with a list of folders which should not be searched. By default only your entire <filename class="directory"
 ><envar
 >$HOME</envar
 ></filename
-> y ninguna otra carpeta ni dispositivo. </para>
+> folder is indexed, and no other folders or drives are indexed. </para>
     <para
->Los medios extraíbles nunca se indexan por omisión. Se pueden eliminar explícitamente de la lista de carpetas excluidas para que se indexen. </para>
+>Removable media is never indexed by default. It can be explicitly removed from the list of exclude folders and it will then be indexed. </para>
 </listitem>
 </varlistentry>
 
 </variablelist>
 
 <para
->Por omisión, <guilabel
->Activar la búsqueda de archivos</guilabel
-> estará activado. Quite la marca de esta opción si no desea usar la búsqueda de archivos. </para>
+>By default <guilabel
+>Enable File Search</guilabel
+> is activated, uncheck this setting if you do not want to use the file search at all. </para>
 
 <para
 >Use <guilabel

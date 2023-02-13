@@ -59,9 +59,9 @@
 </authorgroup>
 
 <date
->2022-03-22</date>
+>2018-11-28</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword
@@ -81,7 +81,7 @@
 
 <sect2 id="sessions-use">
 <title
->Uso</title>
+>Use</title>
 
 <para
 >En este módulo de &systemsettings; puede configurar el gestor de sesiones de &plasma; y las preferencias de cierre de sesión.</para>
@@ -96,21 +96,21 @@
 <varlistentry>
 <term
 ><guilabel
->Confirmar terminar</guilabel
+>Confirm logout</guilabel
 ></term>
 <listitem>
 <para
->Si esta opción ha sido seleccionada, al salir de &plasma; se le mostrará un diálogo para su confirmación con una cuenta atrás de 30 segundos por omisión. En este diálogo puede elegir si desea restaurar su sesión actual la siguiente vez que inicie su sesión.</para>
+>If this option is checked, when logging out, &plasma; will display a dialog with a default timeout of 30 seconds asking for confirmation. In this dialog you can also choose whether you want to restore your current session when you login the next time.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Ofrecer opciones de apagado</guilabel
+>Offer shutdown options</guilabel
 ></term>
 <listitem>
 <para
->Si está marcada esta opción, &plasma; mostrará la posibilidad de elegir entre varias opciones de apagado. Esto incluye el cierre de la sesión (la opción utilizada si las opciones de apagado no están disponibles), el apagado del ordenador o reiniciar el ordenador.</para>
+>If this option is checked, &plasma; will offer a choice of actions during logout. These include simply ending the current session (the action performed if shutdown options are not enabled) turning off the computer, or restarting the computer.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -118,29 +118,31 @@
 
 <sect3 id="sessions-default-leave-options">
 <title
->Opción de salida por omisión</title>
+>Default Leave Option</title>
 <para
->Puede configurar qué ocurriría de forma predeterminada cuando abandone &plasma;. Estas opciones no están accesibles en todos los sistemas operativos, y algunas de ellas no aparecerán a menos que utilice &SDDM; como su administrador de acceso.</para>
+>You can configure what should happen by default when you log out of &plasma;. These options are not possible on all operating systems, and some of them may not appear unless you are using <application
+>SDDM</application
+> as your login manager.</para>
 <para
->Las opciones disponibles son autoexplicativas. Si tiene dudas, deje la opción predefinida. Son las siguientes:</para>
+>The options available are self explanatory, if you are in doubt, leave the default settings. They are:</para>
 
 <itemizedlist>
 <listitem
 ><para
 ><guilabel
->Terminar sesión actual</guilabel
-> (predeterminado)</para
+>End current session</guilabel
+> (this is the default)</para
 ></listitem>
 <listitem
 ><para
 ><guilabel
->Apagar el equipo</guilabel
+>Turn off computer</guilabel
 ></para
 ></listitem>
 <listitem
 ><para
 ><guilabel
->Reiniciar el equipo</guilabel
+>Restart computer</guilabel
 ></para
 ></listitem>
 </itemizedlist>
@@ -148,7 +150,7 @@
 
 <sect3 id="sessions-on-login">
 <title
->Al iniciar sesión</title>
+>On Login</title>
 <para
 >Puede elegir una de las tres opciones siguientes al iniciar sesión en &plasma;:</para>
 
@@ -156,7 +158,7 @@
 <varlistentry>
 <term
 ><guilabel
->Restaurar la última sesión</guilabel
+>Restore previous session</guilabel
 ></term>
 <listitem
 ><para
@@ -166,17 +168,17 @@
 <varlistentry>
 <term
 ><guilabel
->Restaurar la última sesión guardada manualmente</guilabel
+>Restore manually saved session</guilabel
 ></term>
 <listitem
 ><para
 >En lugar de restaurar &plasma; al estado en el que estaba cuando accedió la última vez, se restaurará a un estado específico que usted haya guardado manualmente.</para>
 <para
->Si activa esta opción, el menú de aplicaciones mostrará el elemento adicional <menuchoice
+>If this option is checked, the application menu offers an additional item <menuchoice
 ><guimenu
->Apagado / Sesión</guimenu
+>Power / Session</guimenu
 ><guimenuitem
->Guardar sesión</guimenuitem
+>Save Session</guimenuitem
 ></menuchoice
 >. </para
 ></listitem>

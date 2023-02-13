@@ -61,9 +61,9 @@
 </authorgroup>
 
 <date
->2021-04-06</date>
+>2018-05-18</date>
 <releaseinfo
->Plasma 5.21</releaseinfo>
+>Plasma 5.13</releaseinfo>
 
 <abstract>
 <para
@@ -80,87 +80,65 @@
 </keywordset>
 </articleinfo>
 
+<sect1 id="kcm_mouse">
+<title
+>Ratón</title>
+
 <para
 >Este módulo le permite configurar su puntero. Su puntero puede ser un ratón, una bola, un panel o cualquier otra pieza de hardware que realice una función similar.</para>
 
+<para
+>This module is divided into several tabs: <link linkend="mouse-general"
+>General</link
+>, <link linkend="mouse-advanced"
+>Advanced</link
+> and <link linkend="keyboard-navigation"
+>Keyboard Navigation</link
+>. </para>
+
+<sect2 id="mouse-general">
+<title
+>General</title>
+
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->General</guilabel
-></term>
-<listitem>
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Ratón para zurdos</guilabel
+>Button Order</guilabel
 ></term>
 <listitem
 ><para
->Si usted es zurdo, puede preferir intercambiar las funciones de los botones <mousebutton
->izquierdo</mousebutton
-> y <mousebutton
->derecho</mousebutton
-> de su dispositivo apuntador marcando esta opción. Si su dispositivo apuntador tiene más de dos botones, solo se verán afectados los botones <mousebutton
->izquierdo</mousebutton
-> y <mousebutton
->derecho</mousebutton
->. Por ejemplo, si dispone de un ratón de tres botones, el botón <mousebutton
->central</mousebutton
-> no se verá afectado.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Pulsar los botones izquierdo y derecho para clic central</guilabel
-></term>
-<listitem
-><para
->Marque esta opción si no dispone de &MMB;. Puede pulsar los botones izquierdo y derecho del ratón simultáneamente para emular un clic central. </para>
-</listitem>
-</varlistentry>
-</variablelist>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term id="peripherals-mouse-acceleration">
-<guilabel
->Velocidad del puntero</guilabel
-></term>
-<listitem
-><para
->Esta opción le permite cambiar la relación entre la distancia que se mueve el puntero del ratón por la pantalla y el movimiento relativo del propio dispositivo físico (que puede ser un ratón, una bola o cualquier otro dispositivo puntero).</para>
+>If you are left-handed, you may prefer to swap the functions of the <mousebutton
+>left</mousebutton
+> and <mousebutton
+>right</mousebutton
+> buttons on your pointing device by choosing the <guilabel
+>Left handed</guilabel
+> option. If your pointing device has more than two buttons, only those that function as the <mousebutton
+>left</mousebutton
+> and <mousebutton
+>right</mousebutton
+> buttons are affected. For example, if you have a three-button mouse, the <mousebutton
+>middle</mousebutton
+> button is unaffected.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Perfil de aceleración</guilabel
+>Reverse scroll direction</guilabel
 ></term>
 <listitem
 ><para
->El perfil <guilabel
->Adaptable</guilabel
-> es el perfil predeterminado para todos los dispositivos y tiene en cuenta la velocidad actual del dispositivo al decidir la aceleración. El perfil <guilabel
->Plano</guilabel
-> es solamente un factor constante que se aplica a todos los deltas del dispositivo, independientemente de la velocidad de movimiento. </para>
+>With this check box selected, the scroll wheel (if any) will work in the opposite direction (so that if rolling the top of the scroll wheel towards you previously causes a scroll down, then it will now cause a scroll up). This may be useful to handle a unusual setup of the X server. </para>
 </listitem>
 </varlistentry>
+<!--FIXME http://kdeblog.mageprojects.com/2016/06/24/plasma-5-6-clean-installation-impression/
+Just tick the “reverse scroll direction” in your mouse settings (in the system settings under “Input Devices”). That did the trick, but not completely. It only seems to be applied for the Qt applications! Yay, we have a good old setting per UI Toolkit again… But that’s wrong., we have libinput now and we can set “natural sorting” there. Why isn’t the settings page doing that under the hood if libinput is being used? Anyway, the fix here (comes from this link) was to do:
 
-<varlistentry>
-<term
-><guilabel
->Desplazamiento: Invertir la dirección de desplazamiento</guilabel
-></term>
-<listitem
-><para
->Si está marcada esta casilla, la rueda de desplazamiento (si existe) funcionará en la dirección contraria (de forma que si antes al girar hacia arriba la rueda de desplazamiento se provocaba un desplazamiento hacia abajo, ahora el desplazamiento será hacia arriba). </para>
-</listitem>
-</varlistentry>
+xinput set-prop 11 282 1
+-->
 </variablelist>
 
 <note
@@ -169,5 +147,229 @@
 >Espacio de trabajo</ulink
 >. </para
 ></note>
+</sect2>
+
+<sect2 id="mouse-advanced">
+<title
+>Advanced</title>
+
+<variablelist>
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Pointer acceleration</guilabel
+></term>
+<listitem>
+<para
+>Esta opción le permite cambiar la relación entre la distancia que se mueve el puntero del ratón por la pantalla y el movimiento relativo del propio dispositivo físico (que puede ser un ratón, una bola o cualquier otro dispositivo puntero).</para>
+
+<para
+>A high value for the acceleration multiplier will lead to large movements of the mouse pointer on the screen, even when you only make a small movement with the physical device.</para>
+
+<tip
+><para
+>A multiplier between <guilabel
+>1x</guilabel
+> and <guilabel
+>3x</guilabel
+> will works well for many systems. With a multiplier over <guilabel
+>3x</guilabel
+> the mouse pointer may become difficult to control.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pointer threshold</guilabel
+></term>
+<listitem>
+<para
+>The threshold is the smallest distance that the mouse pointer must move on the screen before acceleration has any effect. If the movement is within the threshold, the mouse pointer moves as if the acceleration were set to <guilabel
+>1x</guilabel
+>.</para>
+
+<para
+>Thus, when you make small movements with the physical device (&eg; mouse), you still have fine control of the mouse pointer on the screen, whereas larger movements of the physical device will move the mouse pointer rapidly to different areas on the screen.</para>
+
+<para
+>You can set the threshold by entering a value into the edit box or by clicking the up/down arrows to the right of the box.</para>
+
+<tip
+><para
+>In general, the higher you set the <guilabel
+>Pointer acceleration</guilabel
+> value, the higher you will want to set the <guilabel
+>Pointer threshold</guilabel
+> value. For example, a <guilabel
+>Pointer threshold</guilabel
+> of 4 pixels may be appropriate for a <guilabel
+>Pointer Acceleration</guilabel
+> of 2x, but 10 pixels might be better for 3x.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Double click interval</guilabel
+></term>
+<listitem>
+<para
+>This is the maximum amount of time between clicks to register a double click. If you click twice, and the time between those two clicks is less than this number, that is recognized as a double click. If the time between these two clicks is greater than this number, it is recognized as two <emphasis
+>separate</emphasis
+> single clicks.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Drag start time</guilabel
+> and <guilabel
+>Drag start distance</guilabel
+></term>
+
+<listitem>
+<para
+>If you <itemizedlist
+> <listitem
+><para
+>click with the mouse</para
+></listitem
+> <listitem
+><para
+>drag within the time specified in <guilabel
+>Drag start time</guilabel
+>, and </para
+></listitem
+> <listitem
+><para
+>move a distance equal to or greater than the number (of pixels) specified in <guilabel
+>Drag start distance</guilabel
+></para
+> </listitem
+> </itemizedlist
+> the selected item will be dragged.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mouse wheel scrolls by</guilabel
+></term>
+<listitem>
+<para
+>If you have a wheel mouse, use the spin box to determine how many lines of text one <quote
+>step</quote
+> of the mouse wheel will scroll.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="keyboard-navigation">
+<title
+>Keyboard Navigation</title>
+
+<para
+>This tab allows you to configure the keyboard number pad keys as a mouse-type device. This may be useful when you are working on a device without another pointing device, or where you have no other use for the number pad. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Move pointer with keyboard (using the num pad)</guilabel
+></term>
+<listitem>
+<para
+>To enable keyboard mouse mode, you need to select the check box labeled <guilabel
+>Move pointer with keyboard (using the num pad)</guilabel
+>. When you do this, the other settings will become enabled, and you can customize the keyboard pointer behavior further, if required. </para>
+<para
+>The various keys on the number pad move in the direction you would expect. Note that you can move diagonally as well as up, down, left and right. The <keycap
+>5</keycap
+> key emulates a click to a pointer button, typically &LMB;. You change which button is emulated by using the <keycap
+>/</keycap
+> key (which makes it &LMB;), <keycap
+>*</keycap
+> key (which makes it &MMB;) and <keycap
+>-</keycap
+> (which makes it &RMB;). Using the <keycap
+>+</keycap
+> emulates a double click to the selected pointer button. You can use the <keycap
+>0</keycap
+> key to emulate holding down the selected pointer button (for easy dragging), and then use the <keycap
+>.</keycap
+> to emulate releasing the selected pointer button. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Acceleration delay</guilabel
+></term>
+<listitem>
+<para
+>This is the time (in milliseconds) between the initial key press and the first repeated motion event for mouse key acceleration. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Repeat interval</guilabel
+></term>
+<listitem>
+<para
+>This is the time in milliseconds between repeated motion events for mouse key acceleration. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Acceleration time</guilabel
+></term>
+<listitem>
+<para
+>This is the time in milliseconds before the pointer reaches a maximum speed for mouse key acceleration. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Maximum speed</guilabel
+></term>
+<listitem>
+<para
+>This is the maximum speed in pixels per second the pointer can reach for mouse key acceleration. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil de aceleración</guilabel
+></term>
+<listitem>
+<para
+>This is the slope of the acceleration curve for mouse key acceleration. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
 
 </article>

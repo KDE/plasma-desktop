@@ -68,9 +68,9 @@
 </authorgroup>
 
 <date
->2021-09-05</date>
+>2018-12-10</date>
 <releaseinfo
->Plasma 5.22</releaseinfo>
+>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword
@@ -107,11 +107,6 @@
 </screenshot>
 </para>
 
-<note>
-    <para
->Las unidades que se montan automáticamente durante el inicio de la sesión no se pueden usar como rutas. Estas unidades se revertirán a sus valores predeterminados al reiniciar &plasma;. </para>
-</note>
-
 <variablelist>
 <varlistentry>
 <term
@@ -130,6 +125,16 @@
 <varlistentry>
 <term
 ><guilabel
+>Autostart path:</guilabel
+></term>
+<listitem
+><para
+>The Autostart folder contains applications or links to applications or scripts you want to start whenever &plasma; starts. You can change the location of this folder if you want to. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
 >Ruta de documentos:</guilabel
 ></term>
 <listitem
@@ -140,7 +145,7 @@
 <varlistentry>
 <term
 ><guilabel
->Ruta de descargas:</guilabel
+>Download path:</guilabel
 ></term>
 <listitem
 ><para
@@ -150,7 +155,7 @@
 <varlistentry>
 <term
 ><guilabel
->Ruta de vídeos:</guilabel
+>Movies path:</guilabel
 ></term>
 <listitem
 ><para
