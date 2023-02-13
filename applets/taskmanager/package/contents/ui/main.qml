@@ -167,7 +167,7 @@ MouseArea {
         }
 
         groupMode: groupModeEnumValue(plasmoid.configuration.groupingStrategy)
-        groupInline: !plasmoid.configuration.groupPopups
+        groupInline: !plasmoid.configuration.groupPopups && !iconsOnly
         groupingWindowTasksThreshold: (plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
             ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
 
