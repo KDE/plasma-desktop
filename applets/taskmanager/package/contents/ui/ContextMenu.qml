@@ -763,7 +763,7 @@ PlasmaComponents.ContextMenu {
 
         enabled: visualParent && get(atm.IsClosable) === true
 
-        text: i18n("&Close")
+        text: get(atm.IsGroupParent) ? i18nc("@item:inmenu", "&Close All") : i18n("&Close")
         icon: "window-close"
 
         onClicked: {
