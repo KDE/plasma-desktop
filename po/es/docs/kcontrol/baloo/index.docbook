@@ -47,9 +47,9 @@
 </authorgroup>
 
 <date
->2017-07-28</date>
+>2023-01-30</date>
 <releaseinfo
->Plasma 5.10</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -73,35 +73,68 @@
 >Búsqueda</guilabel
 > a su panel o active la búsqueda en &krunner; para usar los resultados indexados para un rápido acceso a sus documentos. </para>
 
+<para
+>Marque la opción <guilabel
+>Activar búsqueda de archivos</guilabel
+> si desea usar las capacidades de búsqueda de escritorio en &dolphin; y otras aplicaciones de &kde;. Desmarque dicha opción si no desea usar la búsqueda de archivos con Baloo (puede usar usar otras tecnologías de búsqueda, como &kfind;). </para>
+
+<para
+>Use <guilabel
+>Indexar también el contenido de los archivos</guilabel
+> para indexar el contenido de los archivos además de su nombre. </para>
+
+<para
+>Marque la opción <guilabel
+>Indexar archivos y carpetas ocultos</guilabel
+> para que Baloo indexe los archivos y las carpetas ocultos. </para>
+
+<note>
+    <para
+>Cualquier nombre de archivo o carpeta que comience con un punto (<literal
+>.</literal
+>) está oculto de forma predeterminada. </para>
+</note>
+
 <variablelist>
 <varlistentry
 ><term
 ><guilabel
->No buscar en estas ubicaciones</guilabel
+>Configuración específica de la carpeta</guilabel
 ></term>
 <listitem>
     <para
->Se le muestra una lista de carpetas donde no se debe buscar. Por omisión, se indexará la totalidad de su carpeta <filename class="directory"
+>Se le muestra una lista de carpetas que se pueden indexar. Por omisión, se indexará la totalidad de su carpeta <filename class="directory"
 ><envar
 >$HOME</envar
 ></filename
 > y ninguna otra carpeta ni dispositivo. </para>
     <para
 >Los medios extraíbles nunca se indexan por omisión. Se pueden eliminar explícitamente de la lista de carpetas excluidas para que se indexen. </para>
+    <para
+>Puede usar la lista desplegable que hay junto a cada elemento de la lista para configurar si será <guimenuitem
+>Indexado</guimenuitem
+> o <guimenuitem
+>No indexado</guimenuitem
+>. </para>
+    <para
+>Use el botón de la papelera para eliminar un elemento de la lista. </para>
 </listitem>
 </varlistentry>
-
+<varlistentry
+><term
+><guibutton
+>Empezar a indexar una carpeta...</guibutton
+>/<guibutton
+>Detener la indexación de una carpeta...</guibutton
+></term>
+<listitem>
+    <para
+>Al pulsar en cualquiera de las opciones mencionadas anteriormente, se muestra el diálogo de &plasma; para <guilabel
+>Seleccionar una carpeta a filtrar</guilabel
+>, que le permite elegir la carpeta que se tratará en consecuencia. </para>
+</listitem>
+</varlistentry>
 </variablelist>
-
-<para
->Por omisión, <guilabel
->Activar la búsqueda de archivos</guilabel
-> estará activado. Quite la marca de esta opción si no desea usar la búsqueda de archivos. </para>
-
-<para
->Use <guilabel
->Indexar también el contenido de los archivos</guilabel
-> para indexar el contenido de los archivos además de su nombre. </para>
 
 <para
 >Para más información sobre las opciones de configuración (por ejemplo, cómo añadir una unidad montada fuera de su carpeta <filename class="directory"

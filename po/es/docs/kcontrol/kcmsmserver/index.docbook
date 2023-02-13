@@ -13,6 +13,14 @@
 <authorgroup>
 <author
 >&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 > <firstname
 >Rocío</firstname
@@ -59,9 +67,9 @@
 </authorgroup>
 
 <date
->2022-03-22</date>
+>2023-01-30</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -72,6 +80,8 @@
 >sesión</keyword>
 <keyword
 >Preferencias del sistema</keyword>
+<keyword
+>cierre de sesión</keyword>
 </keywordset>
 </articleinfo>
 
@@ -79,76 +89,34 @@
 <title
 >Sesión de escritorio</title>
 
-<sect2 id="sessions-use">
-<title
->Uso</title>
-
 <para
 >En este módulo de &systemsettings; puede configurar el gestor de sesiones de &plasma; y las preferencias de cierre de sesión.</para>
 
 <para
 >La gestión de sesiones se refiere a la capacidad de &plasma; para guardar el estado de las aplicaciones y ventanas cuando usted abandona &plasma; y restaurarlas cuando vuelve a acceder.</para>
 
-<sect3 id="sessions-general">
+<sect2 id="sessions-logoutscreen">
 <title
->General</title>
+>Pantalla de cierre de sesión</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Confirmar terminar</guilabel
+>Mostrar</guilabel
 ></term>
 <listitem>
 <para
->Si esta opción ha sido seleccionada, al salir de &plasma; se le mostrará un diálogo para su confirmación con una cuenta atrás de 30 segundos por omisión. En este diálogo puede elegir si desea restaurar su sesión actual la siguiente vez que inicie su sesión.</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Ofrecer opciones de apagado</guilabel
-></term>
-<listitem>
-<para
->Si está marcada esta opción, &plasma; mostrará la posibilidad de elegir entre varias opciones de apagado. Esto incluye el cierre de la sesión (la opción utilizada si las opciones de apagado no están disponibles), el apagado del ordenador o reiniciar el ordenador.</para>
+>Si esta opcioón está activada, la pantalla de confirmación de cierre de sesión se mostrará cuando cierre sesión, apague, reinicie, pulse el botón de encendido o haga clic en botones o elementos del menú etiquetados como <guilabel
+>Salir…</guilabel
+>. Cuando la opción está desactivada, su computadora se desconectará, se apagará, etc., inmediatamente después de pulsar el respectivo botón.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-</sect3>
+</sect2>
 
-<sect3 id="sessions-default-leave-options">
+<sect2 id="sessions-restore">
 <title
->Opción de salida por omisión</title>
-<para
->Puede configurar qué ocurriría de forma predeterminada cuando abandone &plasma;. Estas opciones no están accesibles en todos los sistemas operativos, y algunas de ellas no aparecerán a menos que utilice &SDDM; como su administrador de acceso.</para>
-<para
->Las opciones disponibles son autoexplicativas. Si tiene dudas, deje la opción predefinida. Son las siguientes:</para>
-
-<itemizedlist>
-<listitem
-><para
-><guilabel
->Terminar sesión actual</guilabel
-> (predeterminado)</para
-></listitem>
-<listitem
-><para
-><guilabel
->Apagar el equipo</guilabel
-></para
-></listitem>
-<listitem
-><para
-><guilabel
->Reiniciar el equipo</guilabel
-></para
-></listitem>
-</itemizedlist>
-</sect3>
-
-<sect3 id="sessions-on-login">
-<title
->Al iniciar sesión</title>
+>Al iniciar sesión, lanzar las aplicaciones que estaban abiertas</title>
 <para
 >Puede elegir una de las tres opciones siguientes al iniciar sesión en &plasma;:</para>
 
@@ -156,29 +124,27 @@
 <varlistentry>
 <term
 ><guilabel
->Restaurar la última sesión</guilabel
+>Durante el último cierre de sesión</guilabel
 ></term>
 <listitem
 ><para
->Si selecciona esta opción, &plasma; guardará el estado de su sesión actual cuando termine. &plasma; restaurará su sesión en el siguiente inicio, de modo que pueda continuar con su trabajo con el escritorio en el mismo estado en el que lo dejó.</para>
-</listitem>
+>Si selecciona esta opción, &plasma; guardará el estado de su sesión actual cuando termine. &plasma; restaurará su sesión en el siguiente inicio, de modo que pueda continuar con su trabajo con el escritorio en el mismo estado en el que lo dejó.</para
+></listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Restaurar la última sesión guardada manualmente</guilabel
+>Cuando se guardó la sesión manualmente</guilabel
 ></term>
 <listitem
 ><para
->En lugar de restaurar &plasma; al estado en el que estaba cuando accedió la última vez, se restaurará a un estado específico que usted haya guardado manualmente.</para>
-<para
->Si activa esta opción, el menú de aplicaciones mostrará el elemento adicional <menuchoice
-><guimenu
->Apagado / Sesión</guimenu
-><guimenuitem
->Guardar sesión</guimenuitem
-></menuchoice
->. </para
+>En lugar de restaurar &plasma; al estado en el que estaba cuando accedió la última vez, se restaurará a un estado específico que usted haya guardado manualmente.</para
+><para
+>El botón <guilabel
+>Guardar sesión</guilabel
+> aparecerá en el menú del <guilabel
+>Lanzador de aplicaciones</guilabel
+> y en la búsqueda de &plasma;. Si lo pulsa, &plasma; recordará las aplicaciones abiertas y las restaurará en el próximo inicio de sesión. Vuelva a pulsar para sustituir el conjunto de aplicaciones recordadas.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -202,9 +168,24 @@
 > o <userinput
 >xterm,konsole</userinput
 >.</para>
-<!-- does this need the full path here? -->
-</sect3>
+</sect2>
 
+<sect2 id="sessions-firmware">
+<title
+>Firmware</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tras el siguiente reinicio: Entrar en la pantalla de configuración de UEFI</guilabel
+></term>
+<listitem
+><para
+>Si esta opción está activada, la próxima vez que reinicie el equipo entrará en el modo de configuración del firmware (BIOS/UEFI). Esto puede resultar más fácil que entrar en la configuración del firmware pulsando rápidamente teclas especiales durante el arranque.</para
+></listitem>
+</varlistentry>
+</variablelist>
 </sect2>
 
 </sect1>

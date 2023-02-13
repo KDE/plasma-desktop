@@ -47,9 +47,9 @@
 </authorgroup>
 
 <date
->2021-04-06</date>
+>2022-01-12</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.24</releaseinfo>
 
 <keywordset>
 <keyword
@@ -65,7 +65,7 @@
 >En este módulo puede cambiar los componentes por defecto de &kde;.</para>
 
 <para
->Los componentes son programas que manejan tareas básicas, como el navegador web, el emulador de terminal, el gestor de archivos y el cliente de correo electrónico. A veces, distintas aplicaciones de &kde; necesitan invocar un emulador de consola, enviar un correo electrónico o administrar archivos y carpetas.</para
+>Los componentes son programas que manejan tareas básicas, como el navegador web, el emulador de terminal, el gestor de archivos, el cliente de correo electrónico, el mapa electrónico y el marcador. A veces, las aplicaciones de &kde; necesitan invocar un emulador de consola, enviar un correo electrónico o administrar archivos y carpetas, mostrar el mapa o marcar un número en el teléfono.</para
 > 
 
 <para
@@ -90,10 +90,18 @@
 <para
 >Emulador de terminal</para>
 </listitem>
+<listitem>
+<para
+>Mapa</para>
+</listitem>
+<listitem>
+<para
+>Marcador</para>
+</listitem>
 </itemizedlist>
 
 <para
->Pulse en la lista desplegable del componente que desee configurar. En la lista, seleccione su navegador web favorito, gestor de archivos, cliente de correo electrónico y emulador de terminal. Elija <guimenuitem
+>Pulse en la lista desplegable del componente que desee configurar. En la lista, seleccione su navegador web favorito, gestor de archivos, cliente de correo electrónico, emulador de terminal, mapa y marcador. Elija <guimenuitem
 >Otro...</guimenuitem
 > para abrir el diálogo de <guilabel
 >Escoger aplicación</guilabel
