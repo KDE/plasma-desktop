@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-13 00:59+0000\n"
+"POT-Creation-Date: 2023-02-14 01:00+0000\n"
 "PO-Revision-Date: 2022-12-17 14:44+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -570,6 +570,13 @@ msgstr "&Enrouler"
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Autoriser ce programme à être regroupé"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@item:inmenu"
+msgid "&Close All"
+msgstr "&Fermer"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

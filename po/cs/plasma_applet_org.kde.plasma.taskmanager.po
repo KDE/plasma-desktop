@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-13 00:59+0000\n"
+"POT-Creation-Date: 2023-02-14 01:00+0000\n"
 "PO-Revision-Date: 2023-01-30 14:14+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -560,6 +560,13 @@ msgstr "Z&asunout"
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Povolit programu seskupování"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@item:inmenu"
+msgid "&Close All"
+msgstr "&Zavřít"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

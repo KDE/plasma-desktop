@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-13 00:59+0000\n"
+"POT-Creation-Date: 2023-02-14 01:00+0000\n"
 "PO-Revision-Date: 2023-01-21 11:10+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -559,6 +559,13 @@ msgstr "&Zwiń"
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Pozwól na grupowanie tego programu"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@item:inmenu"
+msgid "&Close All"
+msgstr "&Zamknij"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

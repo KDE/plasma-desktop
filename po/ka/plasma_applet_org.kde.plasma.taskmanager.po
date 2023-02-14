@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-13 00:59+0000\n"
+"POT-Creation-Date: 2023-02-14 01:00+0000\n"
 "PO-Revision-Date: 2022-12-27 07:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -561,6 +561,13 @@ msgstr "&დაჩრდილვა"
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "პროგრამების დაჯგუფების ჩართვა"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@item:inmenu"
+msgid "&Close All"
+msgstr "დაკე&ტვა"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

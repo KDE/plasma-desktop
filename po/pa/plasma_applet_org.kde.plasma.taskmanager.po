@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-13 00:59+0000\n"
+"POT-Creation-Date: 2023-02-14 01:00+0000\n"
 "PO-Revision-Date: 2022-11-19 06:18-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -556,6 +556,13 @@ msgstr "ਸ਼ੇਡ(&S)"
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "ਇਸ ਗਰੁੱਪ ਨੂੰ ਗਰੁੱਪ ਬਣਾਉਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ"
+
+#: package/contents/ui/ContextMenu.qml:766
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@item:inmenu"
+msgid "&Close All"
+msgstr "ਬੰਦ ਕਰੋ(&C)"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
