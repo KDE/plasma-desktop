@@ -1,0 +1,77 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2023-01-23 19:20+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.1\n"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettingsbase.kcfg:15 launchfeedbacksettingsbase.kcfg:29
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Време за изчакване в секунди"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "Launch Feedback"
+msgstr "Обратна връзка"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Cursor:"
+msgstr "Курсор:"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "No Feedback"
+msgstr "Без икона"
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Static"
+msgstr "Статична икона"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Blinking"
+msgstr "Мигаща икона"
+
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Bouncing"
+msgstr "Подскачаща икона"
+
+#: package/contents/ui/main.qml:97
+#, kde-format
+msgid "Task Manager:"
+msgstr "Диспечер на задачите:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgid "Enable animation"
+msgstr "Активиране на анимация"
+
+#: package/contents/ui/main.qml:113
+#, kde-format
+msgid "Stop animation after:"
+msgstr "Спиране на анимация след:"
+
+#: package/contents/ui/main.qml:126 package/contents/ui/main.qml:138
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунди"
