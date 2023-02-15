@@ -1,17 +1,17 @@
 # Translation of plasma_applet_org.kde.plasma.taskmanager.po to Catalan
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-14 01:00+0000\n"
-"PO-Revision-Date: 2022-12-16 09:33+0100\n"
+"PO-Revision-Date: 2023-02-14 10:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -567,11 +567,10 @@ msgid "Allow this program to be grouped"
 msgstr "Permet que aquest programa s'agrupi"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "Tan&ca"
+msgstr "Tan&ca-ho tot"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
@@ -721,18 +720,3 @@ msgstr "Oblida els llocs recents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Oblida els fitxers recents"
-
-#~ msgid ""
-#~ "Tooltips are disabled, so the windows will be displayed side by side "
-#~ "instead."
-#~ msgstr ""
-#~ "S'han desactivat els consells d'eina, per tant, en el seu lloc les "
-#~ "finestres es mostraran una al costat de l'altra."
-
-#~ msgid ""
-#~ "Tooltips are disabled, and the compositor does not support displaying "
-#~ "windows side by side, so a textual list will be displayed instead"
-#~ msgstr ""
-#~ "S'han desactivat els consells d'eina i el compositor no permet mostrar "
-#~ "les finestres una al costat de l'altra, per tant, en el seu lloc es "
-#~ "mostrarà una llista de text"

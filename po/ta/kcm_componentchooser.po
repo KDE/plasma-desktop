@@ -3,13 +3,13 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
 # root <root@localhost.localdomain>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-04-26 21:29+0530\n"
+"PO-Revision-Date: 2023-02-14 22:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Default web browser"
 msgstr "இயல்பிருப்பு இணைய உலாவி"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "இயல்பிருப்பு கோப்பு மேலாளரைத் தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு காப்பக நிரலை தேர்ந்தெடு"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -67,89 +66,84 @@ msgid "Select default map"
 msgstr "இயல்பிருப்பு நிலப்படத்தை தேர்ந்தெடுங்கள்"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "இயல்பிருப்பு கோப்பு மேலாளரைத் தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு படக்காட்டியை தேர்ந்தெடு"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "இயல்பிருப்பு நிலப்படத்தை தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு பாடலிசைப்பியை தேர்ந்தெடு"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "இயல்பிருப்பு இணைய உலாவியை தேர்ந்தெடு"
+msgstr "இயல்பிருப்பு PDF காட்டியை தேர்ந்தெடு"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "இயல்பிருப்பு தொலைபேசி செயலியை தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு தொலைபேசி செயலியை தேர்ந்தெடு"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "இயல்பிருப்பு முனையக் கருவியை தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு முனையக் கருவியை தேர்ந்தெடு"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "இயல்பிருப்பு முனையக் கருவியை தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு உரைத்திருத்தியை தேர்ந்தெடு"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "இயல்பிருப்பு கோப்பு மேலாளரைத் தேர்ந்தெடுங்கள்"
+msgstr "இயல்பிருப்பு நிகழ்பட இயக்கயை தேர்ந்தெடு"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
 msgid "Component Chooser"
-msgstr "நிரல் தேர்வாளர்"
+msgstr "நிரல் தேர்வி"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "விவரங்கள்"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "பின்வரும் கோப்புவகைகளை ஆதரிப்பதாக இச்செயலி கூறவில்லை:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "கட்டாயப்படுத்தி திற"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "பின்வரும் கோப்புவகைகள் இன்னொரு செயலியுடன் இணைக்கப்பட்டுள்ளன:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 %2-உடன் இணைக்கப்பட்டுள்ளது"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "அனைத்துடனும் %1-ஐ இணை"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "கோப்புத்தொடர்புகளை கைமுறையாக அமை"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -157,12 +151,13 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"இவ்வகையான செயலி ஆதரிக்கவேண்டிய பின்வரும் மைம்வகைகளை '%1' ஆதரிப்பதுபோல் தெரியவில்லை: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "இணையம்"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -184,44 +179,44 @@ msgstr "தொலைபேசி:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "பல்லூடகம்"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "படக் காட்டி:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "பாடல் இசைப்பி:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "நிகழ்பட இயக்கி:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "ஆவணங்கள்"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "உரைத்திருத்தி:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF காட்டி:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "பயனுள்ளவை"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -234,14 +229,12 @@ msgid "Terminal emulator:"
 msgstr "முனைய கருவி:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "கோப்பு மேலாளர்"
+msgstr "காப்பக நிரல்:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "நிலப்படம்:"
