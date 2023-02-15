@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2021-10-05 17:33-0300\n"
+"PO-Revision-Date: 2023-02-14 10:24-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -73,13 +73,12 @@ msgstr "Aplicativos"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Comandos"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Serviços do sistema"
+msgstr "Configurações do sistema"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -108,7 +107,7 @@ msgstr "Salvar esquema"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Editar comando para %1"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -131,8 +130,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Selecione um item da lista para visualizar seus atalhos aqui"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Adicionar aplicativo..."
@@ -141,7 +139,7 @@ msgstr "Adicionar aplicativo..."
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Adicionar comando…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -177,45 +175,45 @@ msgstr "Esquema de atalhos (*.kksrc)"
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Editar comando"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Adicionar comando"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Digitar um comando ou escolher um arquivo de script:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Escolher..."
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Escolher arquivo de script"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Arquivo de script (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

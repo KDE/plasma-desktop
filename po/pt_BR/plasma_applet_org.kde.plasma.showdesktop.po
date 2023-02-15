@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2016.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-19 15:24-0300\n"
+"PO-Revision-Date: 2023-02-14 10:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -62,15 +62,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Move de volta a posição original todas as janelas"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Revela temporariamente a área de trabalho ao mover as janelas abertas para "
-"os cantos da tela"
+msgstr "Mostra temporariamente a área de trabalho afastando as janelas"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Mostrar a área de trabalho"
