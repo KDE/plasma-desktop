@@ -104,9 +104,7 @@ function preferredMinWidth() {
     var width = launcherWidth();
 
     if (!tasks.vertical && !tasks.iconsOnly) {
-      width +=
-          (PlasmaCore.Units.smallSpacing * 2) +
-          (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 12);
+      width = 142;
     }
 
     return width;
