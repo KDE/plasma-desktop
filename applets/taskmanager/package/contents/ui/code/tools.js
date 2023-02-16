@@ -44,8 +44,8 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
         var task = tasks.taskList.children[i];
         var modelIndex = task.modelIndex(i);
 
-        if (task.m.IsLauncher !== true && task.m.IsStartup !== true) {
-            if (task.m.IsGroupParent === true) {
+        if (!task.m.IsLauncher && !task.m.IsStartup) {
+            if (task.m.IsGroupParent) {
                 if (task == anchor) { // If the anchor is a group parent, collect only windows within the group.
                     taskIndexList = [];
                 }
@@ -105,7 +105,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
         tasks.tasksModel.requestPublishDelegateGeometry(task.modelIndex(), tasks.backend.globalRect(task), task);
     }
 
-    if (model.IsGroupParent === true) {
+    if (model.IsGroupParent) {
         // Option 1 (default): Cycle through this group's tasks
         // ====================================================
         // If the grouped task does not include the currently active task, bring
@@ -187,10 +187,10 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
             }
         }
     } else {
-        if (model.IsMinimized === true) {
+        if (model.IsMinimized) {
             tasks.tasksModel.requestToggleMinimized(index);
             tasks.tasksModel.requestActivate(index);
-        } else if (model.IsActive === true && plasmoid.configuration.minimizeActiveTaskOnClick) {
+        } else if (model.IsActive && plasmoid.configuration.minimizeActiveTaskOnClick) {
             tasks.tasksModel.requestToggleMinimized(index);
         } else {
             tasks.tasksModel.requestActivate(index);

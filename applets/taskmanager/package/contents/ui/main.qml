@@ -118,7 +118,7 @@ MouseArea {
         for (var i = 0; i < taskItems.length - 1; ++i) {
             var task = taskItems[i];
 
-            if (task.IsLauncher !== true && task.m.IsStartup !== true) {
+            if (!task.m.IsLauncher && !task.m.IsStartup) {
                 tasks.tasksModel.requestPublishDelegateGeometry(tasks.tasksModel.makeModelIndex(task.itemIndex),
                     backend.globalRect(task), task);
             }
@@ -138,7 +138,7 @@ MouseArea {
             for (var i = 0; i < taskRepeater.count; ++i) {
                 var item = taskRepeater.itemAt(i);
 
-                if (item && item.m.IsStartup === true && item.m.HasLauncher === true) {
+                if (item && item.m.IsStartup && item.m.HasLauncher) {
                     ++startupsWithLaunchers;
                 }
             }
@@ -559,7 +559,7 @@ MouseArea {
                 onItemAdded: taskList.layout()
                 onItemRemoved: {
                     if (tasks.containsMouse && index != taskRepeater.count &&
-                        item.winIdList && item.winIdList.length > 0 &&
+                        item.m.WinIdList.length > 0 &&
                         taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
                         needLayoutRefresh = true;
                     } else {

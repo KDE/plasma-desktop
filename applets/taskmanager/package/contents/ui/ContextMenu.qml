@@ -241,7 +241,7 @@ PlasmaComponents.ContextMenu {
 
                 // If we don't have a window associated with the player but we can raise
                 // it through MPRIS we'll offer a "Restore" option
-                if (get(atm.IsLauncher) === true && !startNewInstanceItem.visible && playerData.CanRaise) {
+                if (get(atm.IsLauncher) && !startNewInstanceItem.visible && playerData.CanRaise) {
                     menuItem = menu.newMenuItem(menu);
                     menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
                     menuItem.icon = playerData["Desktop Icon Name"];
@@ -290,9 +290,9 @@ PlasmaComponents.ContextMenu {
         id: virtualDesktopsMenuItem
 
         visible: virtualDesktopInfo.numberOfDesktops > 1
-            && (visualParent && get(atm.IsLauncher) !== true
-            && get(atm.IsStartup) !== true
-            && get(atm.IsVirtualDesktopsChangeable) === true)
+            && (visualParent && !get(atm.IsLauncher)
+            && !get(atm.IsStartup)
+            && get(atm.IsVirtualDesktopsChangeable))
 
         enabled: visible
 
@@ -332,7 +332,7 @@ PlasmaComponents.ContextMenu {
                 menuItem.text = i18n("&All Desktops");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
-                    return menu.visualParent && menu.get(atm.IsOnAllVirtualDesktops) === true;
+                    return menu.visualParent && menu.get(atm.IsOnAllVirtualDesktops);
                 });
                 menuItem.clicked.connect(function() {
                     tasksModel.requestVirtualDesktops(menu.modelIndex, []);
@@ -487,8 +487,8 @@ PlasmaComponents.ContextMenu {
         id: launcherToggleAction
 
         visible: visualParent
-                     && get(atm.IsLauncher) !== true
-                     && get(atm.IsStartup) !== true
+                     && !get(atm.IsLauncher)
+                     && !get(atm.IsStartup)
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
                      && !doesBelongToCurrentActivity()
@@ -516,7 +516,7 @@ PlasmaComponents.ContextMenu {
         icon: "window-pin"
 
         visible: visualParent
-                     && get(atm.IsStartup) !== true
+                     && !get(atm.IsStartup)
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities >= 2)
 
@@ -605,7 +605,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: moreActionsMenuItem
 
-        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
+        visible: (visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
         enabled: visible
 
@@ -616,7 +616,7 @@ PlasmaComponents.ContextMenu {
             visualParent: moreActionsMenuItem.action
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.get(atm.IsMovable) === true
+                enabled: menu.visualParent && menu.get(atm.IsMovable)
 
                 text: i18n("&Move")
                 icon: "transform-move"
@@ -625,7 +625,7 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.get(atm.IsResizable) === true
+                enabled: menu.visualParent && menu.get(atm.IsResizable)
 
                 text: i18n("Re&size")
                 icon: "transform-scale"
@@ -634,12 +634,12 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (menu.visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
+                visible: (menu.visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
-                enabled: menu.visualParent && get(atm.IsMaximizable) === true
+                enabled: menu.visualParent && get(atm.IsMaximizable)
 
                 checkable: true
-                checked: menu.visualParent && get(atm.IsMaximized) === true
+                checked: menu.visualParent && get(atm.IsMaximized)
 
                 text: i18n("Ma&ximize")
                 icon: "window-maximize"
@@ -648,12 +648,12 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (menu.visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
+                visible: (menu.visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
-                enabled: menu.visualParent && get(atm.IsMinimizable) === true
+                enabled: menu.visualParent && get(atm.IsMinimizable)
 
                 checkable: true
-                checked: menu.visualParent && get(atm.IsMinimized) === true
+                checked: menu.visualParent && get(atm.IsMinimized)
 
                 text: i18n("Mi&nimize")
                 icon: "window-minimize"
@@ -663,7 +663,7 @@ PlasmaComponents.ContextMenu {
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.get(atm.IsKeepAbove) === true
+                checked: menu.visualParent && menu.get(atm.IsKeepAbove)
 
                 text: i18n("Keep &Above Others")
                 icon: "window-keep-above"
@@ -673,7 +673,7 @@ PlasmaComponents.ContextMenu {
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.get(atm.IsKeepBelow) === true
+                checked: menu.visualParent && menu.get(atm.IsKeepBelow)
 
                 text: i18n("Keep &Below Others")
                 icon: "window-keep-below"
@@ -682,10 +682,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.get(atm.IsFullScreenable) === true
+                enabled: menu.visualParent && menu.get(atm.IsFullScreenable)
 
                 checkable: true
-                checked: menu.visualParent && menu.get(atm.IsFullScreen) === true
+                checked: menu.visualParent && menu.get(atm.IsFullScreen)
 
                 text: i18n("&Fullscreen")
                 icon: "view-fullscreen"
@@ -694,10 +694,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.get(atm.IsShadeable) === true
+                enabled: menu.visualParent && menu.get(atm.IsShadeable)
 
                 checkable: true
-                checked: menu.visualParent && menu.get(atm.IsShaded) === true
+                checked: menu.visualParent && menu.get(atm.IsShaded)
 
                 text: i18n("&Shade")
                 icon: "window-shade"
@@ -710,10 +710,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow) === true
+                visible: (plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow)
 
                 checkable: true
-                checked: menu.visualParent && menu.get(atm.IsGroupable) === true
+                checked: menu.visualParent && menu.get(atm.IsGroupable)
 
                 text: i18n("Allow this program to be grouped")
                 icon: "view-group"
@@ -759,9 +759,9 @@ PlasmaComponents.ContextMenu {
 
     PlasmaComponents.MenuItem {
         id: closeWindowItem
-        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
+        visible: (visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
-        enabled: visualParent && get(atm.IsClosable) === true
+        enabled: visualParent && get(atm.IsClosable)
 
         text: get(atm.IsGroupParent) ? i18nc("@item:inmenu", "&Close All") : i18n("&Close")
         icon: "window-close"

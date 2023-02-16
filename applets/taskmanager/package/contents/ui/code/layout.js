@@ -222,8 +222,8 @@ function layout(container) {
         adjustedWidth = width;
 
         if (!tasks.vertical && !tasks.iconsOnly && (plasmoid.configuration.separateLaunchers || stripes == 1)) {
-            if (item.m.IsLauncher === true
-                || (!plasmoid.configuration.separateLaunchers && item.m.IsStartup === true && item.m.HasLauncher === true)) {
+            if (item.m.IsLauncher
+                || (!plasmoid.configuration.separateLaunchers && item.m.IsStartup && item.m.HasLauncher)) {
                 adjustedWidth = launcherWidth();
             } else if (stripes > 1 && i == tasksModel.logicalLauncherCount) {
                 adjustedWidth += launcherLayoutWidthDiff();

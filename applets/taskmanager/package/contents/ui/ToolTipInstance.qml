@@ -19,7 +19,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
-    readonly property int appPid: isGroup && model.AppPid !== undefined ? model.AppPid : pidParent
+    readonly property int appPid: isGroup ? model.AppPid : pidParent
 
     // HACK: Avoid blank space in the tooltip after closing a window
     ListView.onPooled: width = height = 0
@@ -32,10 +32,10 @@ ColumnLayout {
 
         let text;
         if (isGroup) {
-            if (model.display === undefined) {
+            if (model.display.length === 0) {
                 return "";
             }
-            text = model.display.toString();
+            text = model.display;
         } else {
             text = displayParent;
         }
@@ -147,7 +147,7 @@ ColumnLayout {
         clip: true
         visible: toolTipDelegate.isWin
 
-        readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
+        readonly property bool isMinimized: isGroup ? IsMinimized : isMinimizedParent
         // TODO: this causes XCB error message when being visible the first time
         readonly property var winId: toolTipDelegate.isWin && toolTipDelegate.windows[flatIndex] !== undefined ? toolTipDelegate.windows[flatIndex] : 0
 
@@ -401,7 +401,7 @@ ColumnLayout {
 
         let subTextEntries = [];
 
-        const onAllDesktops = (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) === true;
+        const onAllDesktops = isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent;
         if (!plasmoid.configuration.showOnlyCurrentDesktop && virtualDesktopInfo.numberOfDesktops > 1) {
             const virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
 

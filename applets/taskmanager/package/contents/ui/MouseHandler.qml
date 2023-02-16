@@ -120,7 +120,7 @@ Item {
             // the movement direction has reversed, establishing user intent to
             // move back.
             if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
-                 && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
+                 && tasks.dragSource.m.IsLauncher && !above.m.IsLauncher
                  && above === ignoredItem) {
                 return;
             } else {
@@ -183,9 +183,9 @@ Item {
             repeat: false
 
             onTriggered: {
-                if (parent.hoveredItem.m.IsGroupParent === true) {
+                if (parent.hoveredItem.m.IsGroupParent) {
                     TaskTools.createGroupDialog(parent.hoveredItem, tasks);
-                } else if (parent.hoveredItem.m.IsLauncher !== true) {
+                } else if (!parent.hoveredItem.m.IsLauncher) {
                     tasksModel.requestActivate(parent.hoveredItem.modelIndex());
                 }
             }

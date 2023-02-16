@@ -33,19 +33,18 @@ PlasmaCore.ToolTipArea {
 
     readonly property var m: model
 
-    readonly property int pid: model.AppPid !== undefined ? model.AppPid : 0
-    readonly property string appName: model.AppName || ""
+    readonly property int pid: model.AppPid
+    readonly property string appName: model.AppName
     readonly property string appId: model.AppId.replace(/\.desktop/, '')
-    readonly property variant winIdList: model.WinIdList
     property bool toolTipOpen: false
     property int itemIndex: index
     property bool inPopup: false
-    property bool isWindow: model.IsWindow === true
-    property int childCount: model.ChildCount !== undefined ? model.ChildCount : 0
+    property bool isWindow: model.IsWindow
+    property int childCount: model.ChildCount
     property int previousChildCount: 0
     property alias labelText: label.text
     property QtObject contextMenu: null
-    readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
+    readonly property bool smartLauncherEnabled: !inPopup && !model.IsStartup
     property QtObject smartLauncherItem: null
 
     property Item audioStreamIcon: null
@@ -65,9 +64,9 @@ PlasmaCore.ToolTipArea {
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
     active: (plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog
-    interactive: model.IsWindow === true || mainItem.hasPlayer
+    interactive: model.IsWindow || mainItem.hasPlayer
     location: plasmoid.location
-    mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
+    mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
     // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
     // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
     // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
@@ -139,7 +138,7 @@ PlasmaCore.ToolTipArea {
     onAppNameChanged: updateAudioStreams({delay: false})
 
     onIsWindowChanged: {
-        if (isWindow) {
+        if (model.IsWindow) {
             taskInitComponent.createObject(task);
         }
     }
@@ -237,16 +236,16 @@ PlasmaCore.ToolTipArea {
         // https://docs.pipewire.org/page_portal.html
         var streams = pa.streamsForAppId(task.appId);
         if (!streams.length) {
-            streams = pa.streamsForPid(task.pid);
+            streams = pa.streamsForPid(model.AppPid);
             if (streams.length) {
-                pa.registerPidMatch(task.appName);
+                pa.registerPidMatch(model.AppName);
             } else {
                 // We only want to fall back to appName matching if we never managed to map
                 // a PID to an audio stream window. Otherwise if you have two instances of
                 // an application, one playing and the other not, it will look up appName
                 // for the non-playing instance and erroneously show an indicator on both.
-                if (!pa.hasPidMatch(task.appName)) {
-                    streams = pa.streamsForAppName(task.appName);
+                if (!pa.hasPidMatch(model.AppName)) {
+                    streams = pa.streamsForAppName(model.AppName);
                 }
             }
         }
@@ -268,24 +267,23 @@ PlasmaCore.ToolTipArea {
             return;
         }
 
-        mainItem.blockingUpdates = (mainItem.isGroup !== (model.IsGroupParent === true)); // BUG 464597 Force unload the previous component
+        mainItem.blockingUpdates = (mainItem.isGroup !== model.IsGroupParent); // BUG 464597 Force unload the previous component
 
         mainItem.parentTask = task;
         mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
 
         mainItem.appName = Qt.binding(() => model.AppName);
-        mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
+        mainItem.pidParent = Qt.binding(() => model.AppPid);
         mainItem.windows = Qt.binding(() => model.WinIdList);
-        mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
+        mainItem.isGroup = Qt.binding(() => model.IsGroupParent);
         mainItem.icon = Qt.binding(() => model.decoration);
         mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
-        mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
-        mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
+        mainItem.isLauncher = Qt.binding(() => model.IsLauncher);
+        mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized);
         mainItem.displayParent = Qt.binding(() => model.display);
         mainItem.genericName = Qt.binding(() => model.GenericName);
-        mainItem.virtualDesktopParent = Qt.binding(() =>
-            (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
-        mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
+        mainItem.virtualDesktopParent = Qt.binding(() => model.VirtualDesktops);
+        mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops);
         mainItem.activitiesParent = Qt.binding(() => model.Activities);
 
         mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
@@ -309,7 +307,7 @@ PlasmaCore.ToolTipArea {
         onLongPressed: {
             // When we're a launcher, there's no window controls, so we can show all
             // places without the menu getting super huge.
-            if (model.IsLauncher === true) {
+            if (model.IsLauncher) {
                 showContextMenu({showAllPlaces: true})
             } else {
                 showContextMenu();
@@ -348,7 +346,7 @@ PlasmaCore.ToolTipArea {
                 if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
-                    tasks.taskClosedWithMouseMiddleButton = winIdList.slice()
+                    tasks.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
                     tasksModel.requestClose(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
@@ -423,7 +421,7 @@ PlasmaCore.ToolTipArea {
 
         anchors.fill: frame
         asynchronous: true
-        active: task.isWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
+        active: model.IsWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
 
         sourceComponent: TaskProgressOverlay {
             from: 0
@@ -503,7 +501,7 @@ PlasmaCore.ToolTipArea {
             anchors.centerIn: parent
             width: Math.min(parent.width, parent.height)
             height: width
-            active: model.IsStartup === true
+            active: model.IsStartup
             sourceComponent: busyIndicator
         }
     }
@@ -511,7 +509,7 @@ PlasmaCore.ToolTipArea {
     PlasmaComponents3.Label {
         id: label
 
-        visible: (inPopup || !iconsOnly && model.IsLauncher !== true
+        visible: (inPopup || !iconsOnly && !model.IsLauncher
             && (parent.width - iconBox.height - PlasmaCore.Units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * LayoutManager.minimumMColumns()))
 
         anchors {
@@ -535,7 +533,7 @@ PlasmaCore.ToolTipArea {
 
             PropertyChanges {
                 target: label
-                text: model.display || ""
+                text: model.display
             }
         }
     }
@@ -543,7 +541,7 @@ PlasmaCore.ToolTipArea {
     states: [
         State {
             name: "launcher"
-            when: model.IsLauncher === true
+            when: model.IsLauncher
 
             PropertyChanges {
                 target: frame
@@ -552,7 +550,7 @@ PlasmaCore.ToolTipArea {
         },
         State {
             name: "attention"
-            when: model.IsDemandingAttention === true || (task.smartLauncherItem && task.smartLauncherItem.urgent)
+            when: model.IsDemandingAttention || (task.smartLauncherItem && task.smartLauncherItem.urgent)
 
             PropertyChanges {
                 target: frame
@@ -561,7 +559,7 @@ PlasmaCore.ToolTipArea {
         },
         State {
             name: "minimized"
-            when: model.IsMinimized === true
+            when: model.IsMinimized
 
             PropertyChanges {
                 target: frame
@@ -570,7 +568,7 @@ PlasmaCore.ToolTipArea {
         },
         State {
             name: "active"
-            when: model.IsActive === true
+            when: model.IsActive
 
             PropertyChanges {
                 target: frame
@@ -580,13 +578,13 @@ PlasmaCore.ToolTipArea {
     ]
 
     Component.onCompleted: {
-        if (!inPopup && model.IsWindow === true) {
+        if (!inPopup && model.IsWindow) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
             component.destroy();
         }
 
-        if (!inPopup && model.IsWindow !== true) {
+        if (!inPopup && !model.IsWindow) {
             taskInitComponent.createObject(task);
         }
 
