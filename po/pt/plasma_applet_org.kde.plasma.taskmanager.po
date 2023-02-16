@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-14 01:00+0000\n"
-"PO-Revision-Date: 2022-12-18 12:04+0000\n"
+"PO-Revision-Date: 2023-02-15 15:18+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -564,11 +564,10 @@ msgid "Allow this program to be grouped"
 msgstr "Permitir agrupar este programa"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "Fe&char"
+msgstr "Fechar &Tudo"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
@@ -718,17 +717,3 @@ msgstr "Esquecer os Locais Recentes"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Esquecer os Ficheiros Recentes"
-
-#~ msgid ""
-#~ "Tooltips are disabled, so the windows will be displayed side by side "
-#~ "instead."
-#~ msgstr ""
-#~ "As dicas estão desactivadas, pelo que as janelas serão apresentadas lado-"
-#~ "a-lado em alternativa."
-
-#~ msgid ""
-#~ "Tooltips are disabled, and the compositor does not support displaying "
-#~ "windows side by side, so a textual list will be displayed instead"
-#~ msgstr ""
-#~ "As dicas estão desactivadas e o compositor não suporta a apresentação das "
-#~ "janelas lado-a-lado, pelo que será apresentada uma lista de texto"
