@@ -65,7 +65,7 @@ KCM.SimpleKCM {
         ColumnLayout {
             Layout.preferredWidth: appearanceButtonsRow.width
 
-            Kirigami.FormData.label: i18n("Animation speed:")
+            Kirigami.FormData.label: slider.Accessible.name
             Kirigami.FormData.buddyFor: slider
 
             QQC2.Slider {
@@ -80,6 +80,8 @@ KCM.SimpleKCM {
                 value: (kcm.globalsSettings.animationDurationFactor === 0)
                     ? slider.to
                     : -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2))
+
+                Accessible.name: i18n("Animation speed:")
 
                 KCM.SettingStateBinding {
                     configObject: kcm.globalsSettings
