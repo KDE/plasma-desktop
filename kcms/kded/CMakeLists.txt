@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_kded\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_kded\")
 
 set(kcm_kded_SRCS
     kcmkded.cpp
@@ -27,4 +27,4 @@ kcmutils_generate_desktop_file(kcm_kded)
 
 target_link_libraries(kcm_kded KF5::QuickAddons KF5::I18n KF5::KCMUtils Qt::DBus)
 
-kpackage_install_package(package kcm5_kded kcms)
+kpackage_install_package(package kcm_kded kcms)

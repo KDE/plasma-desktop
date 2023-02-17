@@ -15,7 +15,6 @@
 #include <QDBusPendingCall>
 #include <QDBusPendingCallWatcher>
 
-#include <KAboutData>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -33,8 +32,8 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_kded.json", registerPlugin<KDED
 
 static const QString s_kdedServiceName = QStringLiteral("org.kde.kded5");
 
-KDEDConfig::KDEDConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KDEDConfig::KDEDConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_model(new ModulesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_kdedInterface(new org::kde::kded5(s_kdedServiceName, QStringLiteral("/kded"), QDBusConnection::sessionBus()))
@@ -44,15 +43,6 @@ KDEDConfig::KDEDConfig(QObject *parent, const QVariantList &args)
     qmlRegisterAnonymousType<ModulesModel>("org.kde.plasma.kded.kcm", 0);
     qmlRegisterAnonymousType<FilterProxyModel>("org.kde.plasma.kded.kcm", 0);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm5_kded"),
-                                       i18n("Background Services"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"));
-    about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
-    setAboutData(about);
     setButtons(Apply | Default | Help);
 
     m_filteredModel->setSourceModel(m_model);

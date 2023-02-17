@@ -37,7 +37,7 @@ class KDEDConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool kdedRunning READ kdedRunning NOTIFY kdedRunningChanged)
 
 public:
-    explicit KDEDConfig(QObject *parent, const QVariantList &foo = QVariantList());
+    explicit KDEDConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &foo);
     ~KDEDConfig() override
     {
     }
