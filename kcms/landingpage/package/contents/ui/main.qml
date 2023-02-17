@@ -136,6 +136,8 @@ KCM.SimpleKCM {
             onToggled: kcm.globalsSettings.singleClick = true
             QQC2.ButtonGroup.group: singleClickGroup
 
+            Accessible.description: i18n("Select by clicking on item's selection marker")
+
             KCM.SettingStateBinding {
                 configObject: kcm.globalsSettings
                 settingName: "singleClick"
@@ -144,7 +146,7 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: i18n("Select by clicking on item's selection marker")
+            text: singleClick.Accessible.description
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
@@ -160,6 +162,8 @@ KCM.SimpleKCM {
             onToggled: kcm.globalsSettings.singleClick = false
             QQC2.ButtonGroup.group: singleClickGroup
 
+            Accessible.description: i18n("Open by double-clicking instead")
+
             KCM.SettingStateBinding {
                 configObject: kcm.globalsSettings
                 settingName: "singleClick"
@@ -169,7 +173,7 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: i18n("Open by double-clicking instead")
+            text: doubleClick.Accessible.description
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
