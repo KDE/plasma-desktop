@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-14 01:00+0000\n"
-"PO-Revision-Date: 2022-12-20 19:33+0100\n"
+"PO-Revision-Date: 2023-02-16 09:37+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -564,11 +564,10 @@ msgid "Allow this program to be grouped"
 msgstr "Позволяване на тази програма да бъде групирана"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Затваряне"
+msgstr "Затваряне на вси&чки"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

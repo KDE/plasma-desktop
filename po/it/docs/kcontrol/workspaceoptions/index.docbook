@@ -13,6 +13,14 @@
 <authorgroup>
 <author
 >&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Paolo</firstname
@@ -31,10 +39,10 @@
 </authorgroup>
 
 <date
->18/05/2022</date>
+>30/01/2023</date>
 
 <releaseinfo
->&plasma; 5.25</releaseinfo>
+>&plasma; 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -91,29 +99,39 @@
 
 <varlistentry>
 <term
-><guilabel
->Clic singolo per aprire file e cartelle</guilabel
+><menuchoice
+><guimenu
+>Facendo clic su file o cartelle</guimenu
+><guimenuitem
+>Si aprono</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Questa è l'impostazione predefinita. Facendo clic su un'icona, si aprirà. Per selezionare puoi trascinare intorno le icone o usare <keycombo action="simul"
+>Se questa opzione è spuntata, i file e le cartelle verranno aperti con un clic singolo col pulsante <mousebutton
+>sinistro</mousebutton
+> del mouse. Per selezionarli puoi fare clic col pulsante <mousebutton
+>sinistro</mousebutton
+> del mouse sui loro marcatori di selezione, trascinare un rettangolo di selezione attorno ad essi, oppure utilizzare clic <keycombo action="simul"
 >&Ctrl;<mousebutton
->destro</mousebutton
+>sinistro</mousebutton
 ></keycombo
-> del mouse, oppure semplicemente fare clic e tenere premuto per trascinarla. La selezione può essere effettuata anche facendo clic sul marcatore di selezione degli elementi.</para>
+>. Questo è il comportamento predefinito, ed è progettato per essere coerente con quello che ti aspetteresti quando fai clic sui dei collegamenti nei browser web.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
-><guilabel
->Doppio clic per aprire file e cartelle</guilabel
+><menuchoice
+><guimenu
+>Facendo clic su file o cartelle</guimenu
+><guimenuitem
+>Si selezionano</guimenuitem
+></menuchoice
 ></term>
 <listitem>
 <para
->Se quest'opzione non è selezionata, i file e le icone verranno aperti con un clic singolo sul pulsante <mousebutton
->sinistro</mousebutton
-> del mouse. Questo comportamento predefinito è coerente con quello che si aspetta facendo clic sui collegamenti nella maggior parte dei browser. Tuttavia, se quest'opzione è selezionata, i file e le icone verranno aperti con un doppio clic; uno singolo, invece, li selezionerà solamente. Questo comportamento lo puoi conoscere se hai usato altri desktop o sistemi operativi.</para>
+>Se questa opzione è spuntata, per aprire i file e le cartelle occorre farci un doppio clic sopra, mentre con uno singolo vengono selezionati. Potresti conoscere questo comportamento da altri desktop o sistemi operativi.</para>
 </listitem>
 </varlistentry>
 
@@ -151,25 +169,74 @@
 <term
 ><menuchoice
 ><guimenu
->Modalità tattile</guimenu
+>Clic centrale</guimenu
 ><guimenuitem
->Abilita automaticamente se necessaria/Non abilitare mai</guimenuitem
+>Incolla il testo selezionato</guimenuitem
 ></menuchoice
 ></term>
 <listitem>
 <para
->La modalità tattile verrà attivata automaticamente se il sistema rileva uno schermo tattile, ma non un mouse o una tastiera. Ad esempio, quando la tastiera di un computer portatile convertibile viene capovolta o staccata.</para>
+>Se questa opzione è spuntata, un clic col pulsante centrale in un campo testuale incolla dagli appunti, proprio come se avessi fatto <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guimenuitem
->Sempre abilitata (predefinito)/Non abilitare mai</guimenuitem
+>Modalità tattile</guimenuitem
 ></term>
 <listitem>
 <para
 >In modalità tattile molti elementi dell'interfaccia utente diventeranno più grandi, per adattarsi più facilmente all'interazione al tocco.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modalità tattile</guimenu
+><guimenuitem
+>Abilita automaticamente se necessaria</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se questa opzione è spuntata, la modalità tattile verrà attivata automaticamente se il sistema rileva uno schermo tattile, ma non un mouse o una tastiera. Ad esempio, quando la tastiera di un computer portatile convertibile viene capovolta oppure staccata.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modalità tattile</guimenu
+><guimenuitem
+>Sempre abilitata</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, la modalità tattile verrà sempre abilitata. Utilizzala se usi &plasma; principalmente con uno schermo tattile, oppure se preferisci degli obiettivi di clic più grandi per altri motivi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modalità tattile</guimenu
+><guimenuitem
+>Non abilitare mai</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, la modalità tattile verrà sempre disabilitata. Utilizzala se il tuo dispositivo non necessita di questa modalità.</para>
 </listitem>
 </varlistentry>
 
