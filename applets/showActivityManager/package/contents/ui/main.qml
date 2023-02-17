@@ -26,7 +26,6 @@ DND.DropArea {
     Layout.maximumHeight: Infinity
 
     Layout.preferredWidth : icon.width + PlasmaCore.Units.smallSpacing + (root.showActivityName ? name.implicitWidth : 0)
-    Layout.preferredHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0

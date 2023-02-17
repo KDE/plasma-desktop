@@ -39,9 +39,6 @@ DragDrop.DropArea {
         return PlasmaCore.Units.iconSizes.small + text.height
     }
 
-    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-
     readonly property int formFactor: plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 

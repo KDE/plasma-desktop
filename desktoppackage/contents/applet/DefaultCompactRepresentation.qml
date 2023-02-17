@@ -36,9 +36,6 @@ PlasmaCore.IconItem {
         }
     }
 
-    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-
     source: Plasmoid.icon || "plasma"
     active: mouseArea.containsMouse
 

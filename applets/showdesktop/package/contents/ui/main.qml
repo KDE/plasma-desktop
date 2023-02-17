@@ -47,9 +47,6 @@ MouseArea {
     Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
     Layout.minimumHeight: PlasmaCore.Units.iconSizes.small
 
-    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-
     activeFocusOnTab: true
     hoverEnabled: true
 
