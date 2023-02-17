@@ -7,9 +7,6 @@
 
 #include "kcm_componentchooser.h"
 
-#include <kaboutdata.h>
-#include <plasma_version.h>
-
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -64,13 +61,6 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData 
     connect(videoPlayers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(pdfViewers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(archiveManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_componentchooser"), i18n("Component Chooser"), PLASMA_VERSION_STRING);
-    about->setLicense(KAboutLicense::GPL);
-    about->addAuthor(QStringLiteral("Tobias Fella"));
-    about->addAuthor(QStringLiteral("Méven Car"));
-    about->addAuthor(QStringLiteral("Thiago Sueto"));
-    setAboutData(about);
 }
 
 ComponentChooser *KcmComponentChooser::browsers() const
