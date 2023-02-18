@@ -141,7 +141,7 @@ find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF6ItemModels CONFIG REQUIRED)
 find_package(KSysGuard CONFIG REQUIRED)
-find_package(KDED CONFIG REQUIRED)
+find_package(KF6KDED CONFIG REQUIRED)
 
 find_package(KF6Baloo ${KF6_MIN_VERSION})
 set_package_properties(KF6Baloo PROPERTIES
