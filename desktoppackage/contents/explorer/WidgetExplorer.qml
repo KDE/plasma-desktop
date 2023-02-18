@@ -49,7 +49,7 @@ PC3.Page {
 
     onVisibleChanged: {
         if (!visible) {
-            kwindowsystem.showingDesktop = false
+            KWindowSystem.showingDesktop = false
         }
     }
 
@@ -88,10 +88,6 @@ PC3.Page {
         id: startupTimer
         interval: Kirigami.Units.humanMoment
         running: false
-    }
-
-    KWindowSystem {
-        id: kwindowsystem
     }
 
     QQC2.Action {

@@ -130,13 +130,9 @@ Kicker.DashboardWindow {
                     rootModel.refresh();
                 } else if (tabBar.activeTab === 1) {
                     root.toggle();
-                    kwindowsystem.showingDesktop = true;
+                    KWindowSystem.showingDesktop = true;
                 }
             }
-        }
-
-        KWindowSystem {
-            id: kwindowsystem
         }
 
         Component {
@@ -670,7 +666,7 @@ Kicker.DashboardWindow {
                             if (tabBar.activeTab === 1) {
                                 root.widgetExplorer.addApplet(currentItem.m.pluginName);
                                 root.toggle();
-                                kwindowsystem.showingDesktop = true;
+                                KWindowSystem.showingDesktop = true;
                             }
                         }
                     }

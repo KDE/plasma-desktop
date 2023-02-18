@@ -40,7 +40,7 @@ Item {
             "text/x-plasmoidservicename" : delegate.pluginName,
         }
         Drag.onDragStarted: {
-            kwindowsystem.showingDesktop = true;
+            KWindowSystem.showingDesktop = true;
             main.draggingWidget = true;
         }
         Drag.onDragFinished: {

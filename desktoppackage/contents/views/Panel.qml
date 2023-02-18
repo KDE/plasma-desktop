@@ -72,7 +72,7 @@ Item {
             return
         }
         let panelGeo = panel.geometryByDistance(0)
-        const screenDevicePixelRatio = kwindowsystem.isPlatformX11 ? Screen.devicePixelRatio : 1
+        const screenDevicePixelRatio = KWindowSystem.isPlatformX11 ? Screen.devicePixelRatio : 1
         for( var i = 0; i < visibleWindowsModel.rowCount(); i++ ) {
             if (rectOverlap(panelGeo, visibleWindowsModel.get(i).Geometry, screenDevicePixelRatio)) {
                 root.touchingWindow = true
@@ -101,10 +101,6 @@ Item {
             id: tasksModel
             groupMode: TaskManager.TasksModel.GroupDisabled
         }
-    }
-
-    KWindowSystem {
-        id: kwindowsystem
     }
 
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
@@ -181,8 +177,8 @@ Item {
     property bool isTransparent: panel.opacityMode === Panel.Global.Translucent
     property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
-    readonly property bool screenCovered: !kwindowsystem.showingDesktop && touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
-    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, kwindowsystem.compositingActive]
+    readonly property bool screenCovered: !KWindowSystem.showingDesktop && touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
+    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, KWindowSystem.compositingActive]
     onStateTriggersChanged: {
         let opaqueApplets = false
         if ((!floating || screenCovered) && (isOpaque || (screenCovered && isAdaptive))) {
@@ -200,7 +196,7 @@ Item {
             opaqueApplets = true
             floatingness = 1
         }
-        if (!kwindowsystem.compositingActive) {
+        if (!KWindowSystem.compositingActive) {
             opaqueApplets = false
             panelOpacity = 0
         }

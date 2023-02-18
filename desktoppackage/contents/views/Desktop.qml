@@ -58,10 +58,6 @@ Item {
         }
     }
 
-    KWindowSystem {
-        id: kwindowsystem
-    }
-
     Loader {
         id: wallpaperColors
 
@@ -194,7 +190,7 @@ Item {
                     }
                 }
                 sidePanel.visible = true;
-                kwindowsystem.forceActivateWindow(sidePanel)
+                KWindowSystem.forceActivateWindow(sidePanel)
             }
             onStateChanged: {
                 if (sidePanelStack.state == "closed") {
