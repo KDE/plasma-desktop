@@ -477,7 +477,7 @@ MouseArea {
     TriangleMouseFilter {
         id: tmf
         filterTimeOut: 300
-        active: tasks.toolTipAreaItem && tasks.toolTipAreaItem.toolTipOpen
+        active: false // Disabled in 5.27
         blockFirstEnter: false
 
         edge: {
