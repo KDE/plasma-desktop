@@ -167,6 +167,8 @@ Item {
         readonly property bool shouldHaveIcon: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.icon !== ""
         readonly property bool shouldHaveLabel: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.configuration.menuLabel !== ""
 
+        readonly property int iconSize: 48
+
         readonly property var sizing: {
             const displayedIcon = buttonIcon.valid ? buttonIcon : buttonIconFallback;
 
@@ -177,23 +179,23 @@ Item {
             if (shouldHaveLabel) {
                 impWidth += labelTextField.contentWidth + labelTextField.Layout.leftMargin + labelTextField.Layout.rightMargin;
             }
-            const impHeight = Math.max(PlasmaCore.Units.iconSizeHints.panel, displayedIcon.height);
+            const impHeight = Math.max(iconSize, displayedIcon.height);
 
             // at least square, but can be wider/taller
             if (kickoff.inPanel) {
                 if (kickoff.vertical) {
                     return {
                         minimumWidth: -1,
-                        maximumWidth: PlasmaCore.Units.iconSizeHints.panel,
+                        maximumWidth: iconSize,
                         minimumHeight: -1,
-                        maximumHeight: impHeight,
+                        maximumHeight: iconSize,
                     };
                 } else { // horizontal
                     return {
                         minimumWidth: impWidth,
                         maximumWidth: impWidth,
                         minimumHeight: -1,
-                        maximumHeight: PlasmaCore.Units.iconSizeHints.panel,
+                        maximumHeight: iconSize,
                     };
                 }
             } else {
@@ -206,8 +208,8 @@ Item {
             }
         }
 
-        implicitWidth: PlasmaCore.Units.iconSizeHints.panel
-        implicitHeight: PlasmaCore.Units.iconSizeHints.panel
+        implicitWidth: iconSize
+        implicitHeight: iconSize
 
         Layout.minimumWidth: sizing.minimumWidth
         Layout.maximumWidth: sizing.maximumWidth

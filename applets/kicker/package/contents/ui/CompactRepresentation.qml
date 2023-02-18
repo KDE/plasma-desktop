@@ -37,27 +37,15 @@ Item {
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
                 root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
-                root.Layout.maximumWidth = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             } else {
                 const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
                 root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
-                root.Layout.maximumHeight = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             }
         } else {
             root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
-            root.Layout.maximumWidth = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
-            root.Layout.maximumHeight = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
-        }
-    }
-
-    Connections {
-        target: PlasmaCore.Units.iconSizeHints
-
-        function onPanelChanged() {
-            root.updateSizeHints()
         }
     }
 
