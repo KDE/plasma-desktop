@@ -28,7 +28,7 @@ public:
 
     bool isDefaults() const override
     {
-        const QVector<KPluginMetaData> runnerData = Plasma::RunnerManager::runnerMetaDataList();
+        const QVector<KPluginMetaData> runnerData = KRunner::RunnerManager::runnerMetaDataList();
         KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
         return std::all_of(runnerData.begin(), runnerData.end(), [&cfgGroup](const KPluginMetaData &pluginData) {
             return pluginData.isEnabled(cfgGroup) != pluginData.isEnabledByDefault();
@@ -84,7 +84,7 @@ void SearchConfigModule::reloadPlugins()
     m_model->clear();
 
     m_model->setConfig(m_config->group("Plugins"));
-    m_model->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
+    m_model->addPlugins(KRunner::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
 }
 
 void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args, const KPluginMetaData &krunnerPluginData) const

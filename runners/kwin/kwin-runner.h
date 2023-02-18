@@ -9,7 +9,7 @@
 
 #include <krunner/abstractrunner.h>
 
-using namespace Plasma;
+using namespace KRunner;
 
 class KWinRunner : public AbstractRunner
 {
