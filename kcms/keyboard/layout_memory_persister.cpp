@@ -11,10 +11,10 @@
 #include <KSharedConfig>
 
 #include <QDir>
+#include <QDomDocument> // TODO port to QXmlStreamWriter to save memory, we don't actually need DOM
 #include <QFile>
 #include <QStandardPaths>
-#include <qdom.h>
-#include <qxml.h>
+#include <QXmlStreamReader>
 
 #include "keyboard_config.h"
 #include "layout_memory.h"
@@ -29,7 +29,7 @@ static const QString CURRENT_LAYOUT_ATTRIBUTE(QStringLiteral("currentLayout"));
 static const char OWNER_KEY_ATTRIBUTE[] = "ownerKey";
 static const char LAYOUTS_ATTRIBUTE[] = "layouts";
 
-static const char LIST_SEPARATOR_LM[] = ",";
+static const QChar LIST_SEPARATOR_LM = ',';
 
 static const char REL_SESSION_FILE_PATH[] = "/keyboard/session/layout_memory.xml";
 
@@ -137,7 +137,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile &file_)
     }
 }
 
-class MapHandler : public QXmlDefaultHandler
+class MapHandler
 {
 public:
     MapHandler(const KeyboardConfig::SwitchingPolicy &switchingPolicy_)
@@ -146,36 +146,44 @@ public:
     {
     }
 
-    bool startElement(const QString & /*namespaceURI*/, const QString & /*localName*/, const QString &qName, const QXmlAttributes &attributes) override
+    bool startElement(QXmlStreamReader &xml)
     {
-        if (qName == ROOT_NODE) {
-            if (attributes.value(VERSION_ATTRIBUTE) != VERSION)
-                return false;
-            if (attributes.value(SWITCH_MODE_ATTRIBUTE) != KeyboardConfig::getSwitchingPolicyString(switchingPolicy))
-                return false;
+        if (!verified && xml.name() == QLatin1String(ROOT_NODE)) {
+            if (xml.attributes().value(VERSION_ATTRIBUTE) != QLatin1String(VERSION))
+                xml.raiseError("Unexpected version!");
+            return false;
+            if (xml.attributes().value(SWITCH_MODE_ATTRIBUTE) != KeyboardConfig::getSwitchingPolicyString(switchingPolicy))
+                xml.raiseError("Unexpected switching mode!");
+            return false;
 
             verified = true;
-        }
-        if (qName == ITEM_NODE) {
-            if (!verified)
+        } else if (xml.name() == QLatin1String(ITEM_NODE)) {
+            if (!verified) {
+                xml.raiseError("Malformed xml structure!");
                 return false;
+            }
 
             if (switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
-                globalLayout = LayoutUnit(attributes.value(CURRENT_LAYOUT_ATTRIBUTE));
+                globalLayout = LayoutUnit(xml.attributes().value(CURRENT_LAYOUT_ATTRIBUTE).toString());
             } else {
-                const QStringList layoutStrings = attributes.value(LAYOUTS_ATTRIBUTE).split(LIST_SEPARATOR_LM);
+                const auto layoutStrings = xml.attributes().value(LAYOUTS_ATTRIBUTE).split(LIST_SEPARATOR_LM);
                 LayoutSet layoutSet;
-                for (const QString &layoutString : layoutStrings) {
-                    layoutSet.layouts.append(LayoutUnit(layoutString));
+                for (const auto &layoutString : layoutStrings) {
+                    layoutSet.layouts.append(LayoutUnit(layoutString.toString()));
                 }
-                layoutSet.currentLayout = LayoutUnit(attributes.value(CURRENT_LAYOUT_ATTRIBUTE));
-                QString ownerKey = attributes.value(OWNER_KEY_ATTRIBUTE);
+                layoutSet.currentLayout = LayoutUnit(xml.attributes().value(CURRENT_LAYOUT_ATTRIBUTE).toString());
+                QString ownerKey = xml.attributes().value(OWNER_KEY_ATTRIBUTE).toString();
 
-                if (ownerKey.trimmed().isEmpty() || !layoutSet.isValid())
+                if (ownerKey.trimmed().isEmpty() || !layoutSet.isValid()) {
+                    xml.raiseError("Invalid layout data!");
                     return false;
+                }
 
                 layoutMap[ownerKey] = layoutSet;
             }
+        } else {
+            verified = false;
+            xml.raiseError("Malformed xml structure! Unexpected element!");
         }
         return verified;
     }
@@ -213,15 +221,20 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
 
     MapHandler mapHandler(layoutMemory.keyboardConfig.switchingPolicy());
 
-    QXmlSimpleReader reader;
-    reader.setContentHandler(&mapHandler);
-    reader.setErrorHandler(&mapHandler);
-
-    QXmlInputSource xmlInputSource(&file);
+    QXmlStreamReader xml(&file);
     qCDebug(KCM_KEYBOARD) << "Restoring keyboard layout map from" << file.fileName();
 
-    if (!reader.parse(xmlInputSource)) {
-        qCWarning(KCM_KEYBOARD) << "Failed to parse the layout memory file" << file.fileName();
+    auto firstElement = xml.readNextStartElement();
+    do {
+        if (!firstElement || !mapHandler.startElement(xml)) {
+            qCWarning(KCM_KEYBOARD) << "Failed to parse the layout memory file" << file.fileName();
+            qCWarning(KCM_KEYBOARD) << xml.errorString();
+            return false;
+        }
+    } while (xml.readNextStartElement());
+
+    if (!xml.atEnd() || xml.hasError()) {
+        qCWarning(KCM_KEYBOARD) << xml.errorString();
         return false;
     }
 
