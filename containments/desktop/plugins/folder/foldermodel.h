@@ -12,7 +12,7 @@
 #include <QItemSelection>
 #include <QPointer>
 #include <QQmlParserStatus>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QSet>
 #include <QSortFilterProxyModel>
 #include <QStringList>
@@ -346,7 +346,7 @@ private:
     QString m_filterPattern;
     bool m_filterPatternMatchAll;
     QSet<QString> m_mimeSet;
-    QList<QRegExp> m_regExps;
+    QList<QRegularExpression> m_regExps;
     int m_screen = -1;
     bool m_screenUsed;
     ScreenMapper *m_screenMapper = nullptr;

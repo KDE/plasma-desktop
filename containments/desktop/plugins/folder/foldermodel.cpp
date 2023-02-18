@@ -673,9 +673,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
     m_regExps.reserve(patterns.count());
 
     for (const QString &pattern : patterns) {
-        QRegExp rx(pattern);
-        rx.setPatternSyntax(QRegExp::Wildcard);
-        rx.setCaseSensitivity(Qt::CaseInsensitive);
+        auto rx = QRegularExpression::fromWildcard(pattern);
         m_regExps.append(rx);
     }
 
@@ -1562,9 +1560,9 @@ inline bool FolderModel::matchPattern(const KFileItem &item) const
     }
 
     const QString name = item.name();
-    QListIterator<QRegExp> i(m_regExps);
+    QListIterator<QRegularExpression> i(m_regExps);
     while (i.hasNext()) {
-        if (i.next().exactMatch(name)) {
+        if (i.next().match(name).hasMatch()) {
             return true;
         }
     }
