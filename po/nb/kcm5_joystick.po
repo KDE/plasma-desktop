@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:48+0000\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2013-10-27 18:03+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -32,7 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org"
 
-#: caldialog.cpp:26 joywidget.cpp:335
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Oppstartsinnstilling"
@@ -96,7 +96,7 @@ msgstr ""
 "posisjon.<br /><br /> Trykk en knapp på enheten eller velg «Neste» for å "
 "fortsette med neste steg.</qt>"
 
-#: caldialog.cpp:160 joywidget.cpp:325 joywidget.cpp:361
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Kommunikasjonsfeil"
@@ -106,7 +106,7 @@ msgstr "Kommunikasjonsfeil"
 msgid "You have successfully calibrated your device"
 msgstr "Oppstartsinnstillinga er gjennomført med hell"
 
-#: caldialog.cpp:164 joywidget.cpp:363
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Oppstartsinnstillinga ble vellykket"
@@ -237,7 +237,7 @@ msgstr "Posisjon:"
 msgid "Show trace"
 msgstr "Vis spor"
 
-#: joywidget.cpp:96 joywidget.cpp:300
+#: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
 msgid "PRESSED"
 msgstr "TRYKKET"
@@ -309,7 +309,7 @@ msgstr "1(x)"
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:331
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -320,7 +320,7 @@ msgstr ""
 "><b>Sett alle akser i senterstilling og rør deretter ikke på styrespaken.</"
 "b><br /><br />Trykk OK for å starte oppstartsinnstillinga </qt>"
 
-#: joywidget.cpp:363
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Alle oppstartverdiene for styrespak-enhet %1 er tilbakestilt."
