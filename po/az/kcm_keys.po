@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2021-10-10 16:08+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2023-02-19 16:39+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -73,13 +73,12 @@ msgstr "Tətbiqlər"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Əmrlər"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Sistem xidmətləri"
+msgstr "Sistem ayarları"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -106,7 +105,7 @@ msgstr "Sxemlərii saxlayın"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1 üçün əmrə düzəliş et"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -130,17 +129,16 @@ msgstr ""
 "Elementin qısayollarını burada görmək üçün onlardan birini siyahıdan seçin"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
-msgstr "Tətbiq əlavə edin..."
+msgstr "Tətbiq əlavə et..."
 
 #: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Əmr əlavə et..."
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -176,45 +174,45 @@ msgstr "Qısayollar sxemi (*.kksrc)"
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Əmrə düzəliş et"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Əmr əlavə et"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Saxla"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Əlavə et"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Bir əmr əlavə et və ya bir əmr faylı seç:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Seç..."
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Əmr faylı seç..."
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Əmr faylı (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

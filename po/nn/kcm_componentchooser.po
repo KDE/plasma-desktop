@@ -1,7 +1,7 @@
 # Translation of kcm_componentchooser to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2002, 2003, 2004, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2007.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-03 01:01+0000\n"
-"PO-Revision-Date: 2022-01-15 18:10+0100\n"
+"PO-Revision-Date: 2023-02-19 20:19+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -47,7 +47,7 @@ msgstr "Standard nettlesar"
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
-msgstr ""
+msgstr "Vel standard arkivhandsamar"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -72,17 +72,17 @@ msgstr "Vel standardkart"
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr ""
+msgstr "Vel standard biletvisar"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr ""
+msgstr "Vel standard musikkspelar"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr ""
+msgstr "Vel standard PDF-visar"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -97,12 +97,12 @@ msgstr "Vel standard terminalprogram"
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr ""
+msgstr "Vel standard skriveprogram"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr ""
+msgstr "Vel standard videospelar"
 
 #: kcm_componentchooser.cpp:68
 #, kde-format
@@ -112,42 +112,42 @@ msgstr "Komponentveljar"
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detaljar"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "Dette programmet seier ikkje at det støttar desse filtypane:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Tving opning likevel"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "Desse filtypane er framleis knytte til eit anna program:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 knytt til %2"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Tilordna alle på nytt til %1"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Endra filtilknytingar manuelt"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -160,7 +160,7 @@ msgstr ""
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internett"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -182,44 +182,44 @@ msgstr "Telefonringjar:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Biletvisar:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Musikkspelar:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Videospelar:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokument"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Skriveprogram:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-visar:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Verktøy"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -234,10 +234,10 @@ msgstr "Terminalemulator:"
 #: package/contents/ui/main.qml:278
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "Arkivhandsamar:"
 
 #: package/contents/ui/main.qml:300
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "Kart:"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-01-15 12:36+0100\n"
+"PO-Revision-Date: 2023-02-19 20:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -40,6 +40,7 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Datamaskina må startast på nytt for at manuell øktlagring skal takast i bruk."
 
 #: package/contents/ui/main.qml:35
 #, kde-format
@@ -101,19 +102,19 @@ msgstr "Øktgjenoppretting"
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Opna ved innlogging program som var opne:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Ved siste utlogging"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "Når økta vart manuelt lagra"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -137,7 +138,7 @@ msgstr "Start med tom økt"
 #: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ignorerte program:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -151,7 +152,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Fastvare"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -165,13 +166,13 @@ msgstr "Etter neste omstart:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "Gå inn i UEFI-oppsettmenyen"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Gå til fastvareoppsett-skjermen"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 01:00+0000\n"
-"PO-Revision-Date: 2022-10-18 12:39+0400\n"
+"PO-Revision-Date: 2023-02-19 16:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "İkon:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Tətbiq başladıcının nişanını dəyiş"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -65,12 +65,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"%1 hazırkı nişandır. Nişanı dəyişmək menyusunu açmaq və ya standart nişana "
+"qaytarmaq üçün vurun."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Nişanın adı: \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -82,7 +84,7 @@ msgstr "Seçim…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Tətbiq başladıcı üçün bir nişan seç"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
@@ -112,7 +114,7 @@ msgstr "Mətnli etiketi buraya yazaraqəlavə edin"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Menyu başlığını sıfırla"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
