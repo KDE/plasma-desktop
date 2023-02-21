@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-03-24 18:41+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -18,16 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Andhika Padmawan,Wantoyèk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -105,11 +95,6 @@ msgstr "Pilih emulator terminal default"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "Pilih file manager default"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Pemilih Komponen"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -245,6 +230,17 @@ msgstr "File manager:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Peta:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andhika Padmawan,Wantoyèk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Pemilih Komponen"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

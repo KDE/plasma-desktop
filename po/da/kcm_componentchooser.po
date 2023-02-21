@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-08-20 17:40+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Erik Kjær Pedersen"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "erik@binghamton.edu"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -104,11 +94,6 @@ msgstr "Vælg standard terminalprogram"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "Vælg standard filhåndtering"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponentvælger"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -244,6 +229,17 @@ msgstr "Filhåndtering:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Kort:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentvælger"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

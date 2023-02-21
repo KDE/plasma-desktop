@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2009-05-18 20:46+0300\n"
 "Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -21,16 +21,6 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Aleksejs Zosims, Viesturs Zariņš"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -113,11 +103,6 @@ msgstr "Izvēlies vēlamo termināļa programmu:"
 #| msgid "Select preferred email client:"
 msgid "Select default video player"
 msgstr "Izvēlieties vēlamo e-pasta klientu:"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponenšu izvēlētājs"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -252,6 +237,17 @@ msgstr ""
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Aleksejs Zosims, Viesturs Zariņš"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponenšu izvēlētājs"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Jozefs Venningers (Joseph Wenninger)"

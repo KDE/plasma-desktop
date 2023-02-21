@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-15 15:17+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -12,16 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: Wenninger Méven Car Fella\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "José Nuno Pires"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "zepires@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -93,11 +83,6 @@ msgstr "Seleccione o editor de texto predefinido"
 #, kde-format
 msgid "Select default video player"
 msgstr "Seleccione o leitor de vídeos predefinido"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Selector de Componentes"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -236,3 +221,14 @@ msgstr "Gestor de pacotes:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "José Nuno Pires"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zepires@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Selector de Componentes"

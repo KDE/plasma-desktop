@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2012-07-13 21:56+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -26,16 +26,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.4\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "দীপায়ন সরকার"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "deepayan.sarkar@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -118,11 +108,6 @@ msgstr "পছন্দের টার্মিনাল অ্যাপলি�
 #| msgid "Select preferred email client:"
 msgid "Select default video player"
 msgstr "পছন্দের ই-মেল অ্যাপলিকেশন বেছে নিন:"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "উপাদান বাছাইকারক"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -257,6 +242,17 @@ msgstr ""
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "দীপায়ন সরকার"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "deepayan.sarkar@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "উপাদান বাছাইকারক"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

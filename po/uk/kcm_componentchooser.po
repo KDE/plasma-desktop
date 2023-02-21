@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-03 08:40+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -22,16 +22,6 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Andriy Rysin,Іван Петрущак"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "rysin@kde.org,ivanpetrouchtchak@yahoo.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -103,11 +93,6 @@ msgstr "Вкажіть типовий текстовий редактор"
 #, kde-format
 msgid "Select default video player"
 msgstr "Виберіть типову програму для відтворення відео"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Селектор компонентів"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -243,6 +228,17 @@ msgstr "Менеджер архівів:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Карта:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andriy Rysin,Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rysin@kde.org,ivanpetrouchtchak@yahoo.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Селектор компонентів"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-19 16:31+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Xəyyam Qocayev"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "xxmn77@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -97,11 +87,6 @@ msgstr "Standart mətn redaktorunu seç"
 #, kde-format
 msgid "Select default video player"
 msgstr "Standart video oynadıcını seç"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponentlərin seçilməsi"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -237,6 +222,17 @@ msgstr "Arxiv meneceri:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Xəritə:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentlərin seçilməsi"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-04 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -23,16 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Emir SARI"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "emir_sari@icloud.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -104,11 +94,6 @@ msgstr "Öntanımlı metin düzenleyiciyi seç"
 #, kde-format
 msgid "Select default video player"
 msgstr "Öntanımlı video oynatıcıyı seç"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Bileşen Seçici"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -245,3 +230,14 @@ msgstr "Arşiv yöneticisi:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Harita:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Emir SARI"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "emir_sari@icloud.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Bileşen Seçici"

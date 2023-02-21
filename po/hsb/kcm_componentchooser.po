@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2008-11-13 21:53+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Edward Wornar"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "edi.werner@gmx.de"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -108,11 +98,6 @@ msgstr "Preferowany terminalowy program wubrać"
 #| msgid "Select preferred email client:"
 msgid "Select default video player"
 msgstr "Preferowany emejlowy program wubrać:"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Wuběrak komponentow"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -247,6 +232,17 @@ msgstr ""
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Edward Wornar"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "edi.werner@gmx.de"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Wuběrak komponentow"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

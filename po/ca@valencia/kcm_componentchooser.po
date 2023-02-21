@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-04 12:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -23,16 +23,6 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Alfredo Vicente,Sebastià Pla i Sanz,Antoni Bella"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "alviboi@gmail.com,sps@sastia.com,antonibella5@yahoo.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -104,11 +94,6 @@ msgstr "Seleccioneu l'editor de text predeterminat"
 #, kde-format
 msgid "Select default video player"
 msgstr "Seleccioneu el reproductor de vídeo predeterminat"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Selector de components"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -246,3 +231,14 @@ msgstr "Gestor d'arxius:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Alfredo Vicente,Sebastià Pla i Sanz,Antoni Bella"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "alviboi@gmail.com,sps@sastia.com,antonibella5@yahoo.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Selector de components"

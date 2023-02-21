@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-04 23:30+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ričardas Čepas, Donatas Glodenis, Moo"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "rch@richard.eu.org, dgvirtual@akl.lt, <>"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -97,11 +87,6 @@ msgstr "Pasirinkti numatytąjį tekstų redaktorių"
 #, kde-format
 msgid "Select default video player"
 msgstr "Pasirinkti numatytąją vaizdo leistuvę"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponentų parinkiklis"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -236,6 +221,17 @@ msgstr "Archyvų tvarkytuvė:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Žemėlapis:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ričardas Čepas, Donatas Glodenis, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rch@richard.eu.org, dgvirtual@akl.lt, <>"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentų parinkiklis"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

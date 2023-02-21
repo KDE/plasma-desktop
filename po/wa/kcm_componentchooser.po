@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2011-12-18 18:18+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: Walloon\n"
 "X-Poedit-Country: BELGIUM\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Djan Cayron"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "jean.cayron@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -111,11 +101,6 @@ msgstr "Tchoezixhoz l' terminå ki vs inmez mia:"
 #| msgid "Select preferred email client:"
 msgid "Select default video player"
 msgstr "Tchoezi cliyint emile ki vs inmez mia:"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Tchoezixheu d' componint"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -250,6 +235,17 @@ msgstr ""
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Djan Cayron"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jean.cayron@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Tchoezixheu d' componint"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

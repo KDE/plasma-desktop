@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-07 23:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -24,16 +24,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Keng-Tso Ou, Jeff Huang"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "jupiter@ocool.org, s8321414@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -105,11 +95,6 @@ msgstr "選擇預設文字編輯器"
 #, kde-format
 msgid "Select default video player"
 msgstr "選擇預設影片播放器"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "元件選擇工具"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -243,6 +228,17 @@ msgstr "封存檔管理器："
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "地圖："
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Keng-Tso Ou, Jeff Huang"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jupiter@ocool.org, s8321414@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "元件選擇工具"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

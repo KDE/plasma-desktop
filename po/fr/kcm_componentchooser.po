@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-03 19:41+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -33,20 +33,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Gérard Delafond, Charles de Miramon, Nicolas Ternisien, Vincent Pinon, "
-"Xavier Besnard"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"gerard@delafond.org, cmiramon@kde-france.org, nicolas.ternisien@gmail.com, "
-"vpinon@kde.org, xavier.besnard@neuf.fr"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -118,11 +104,6 @@ msgstr "Sélectionner l'éditeur de texte par défaut"
 #, kde-format
 msgid "Select default video player"
 msgstr "Sélectionner le lecteur de vidéo par défaut"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Sélecteur de composants"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -262,6 +243,21 @@ msgstr "Gestionnaire d'archives :"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Carte :"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Gérard Delafond, Charles de Miramon, Nicolas Ternisien, Vincent Pinon, "
+#~ "Xavier Besnard"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "gerard@delafond.org, cmiramon@kde-france.org, nicolas.ternisien@gmail."
+#~ "com, vpinon@kde.org, xavier.besnard@neuf.fr"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Sélecteur de composants"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

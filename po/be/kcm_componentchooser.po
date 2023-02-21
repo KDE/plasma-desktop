@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-02-09 08:31\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,16 +21,6 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plasma-desktop/kcm_componentchooser.po\n"
 "X-Crowdin-File-ID: 8505\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Antikruk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "nashtlumach@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -102,11 +92,6 @@ msgstr "Абраць прадвызначаны рэдактар тэксту"
 #, kde-format
 msgid "Select default video player"
 msgstr "Абраць прадвызначаны відэапрайгравальнік"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Выбар кампанентаў"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -242,6 +227,17 @@ msgstr "Кіраўнік архіваў:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Мапа:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Antikruk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nashtlumach@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Выбар кампанентаў"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Джозэф Венінгер"

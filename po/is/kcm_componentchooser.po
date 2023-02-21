@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-10-10 19:59+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -22,16 +22,6 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Pjetur G. Hjaltason, Stígur Snæsson, Richard Allen, Sveinn í Felli"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "pjetur@pjetur.net, stigur@vortex.is, ra@ra.is, sv1@fellsnet.is"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -109,11 +99,6 @@ msgstr "Velja sjálfgefinn skjáhermi"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "Velja sjálfgefinn skráastjóra"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Einingaval"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -249,6 +234,17 @@ msgstr "Skráastjóri:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Kort:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Pjetur G. Hjaltason, Stígur Snæsson, Richard Allen, Sveinn í Felli"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "pjetur@pjetur.net, stigur@vortex.is, ra@ra.is, sv1@fellsnet.is"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Einingaval"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

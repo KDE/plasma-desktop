@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-01-09 22:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -23,16 +23,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.07.70\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -110,11 +100,6 @@ msgstr "اختر محاكي الطرفية المبدئي"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "اختر مدير الملفات المبدئي"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "مخيِّر المكونات"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -250,6 +235,17 @@ msgstr "مدير الملفات:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "الخريطة:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "مخيِّر المكونات"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

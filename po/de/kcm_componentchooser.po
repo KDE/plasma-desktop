@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2023-01-31 20:52+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Thomas Diehl,Thomas Reitelbach"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "thd@kde.org,tr@erdfunkstelle.de"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -106,11 +96,6 @@ msgstr "Standard-Terminalprogramm auswählen"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "Standard-Dateiverwaltungs-Programm auswählen"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponentenauswahl"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -245,6 +230,17 @@ msgstr "Dateiverwaltung:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thomas Diehl,Thomas Reitelbach"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "thd@kde.org,tr@erdfunkstelle.de"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponentenauswahl"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

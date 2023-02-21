@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2009-06-09 15:04+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -15,16 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Rinse de Vries, Berend Ytsma"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "rinsedevries@kde.nl, berendy@bigfoot.com"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -107,11 +97,6 @@ msgstr "Standert terminalprogramma selektearje:"
 #| msgid "Select preferred email client:"
 msgid "Select default video player"
 msgstr "Standert e-postprogramma selektearje:"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponintenkiezer"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -246,6 +231,17 @@ msgstr ""
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Rinse de Vries, Berend Ytsma"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rinsedevries@kde.nl, berendy@bigfoot.com"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponintenkiezer"
 
 #~ msgid "Joseph Wenninger"
 #~ msgstr "Joseph Wenninger"

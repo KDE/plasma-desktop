@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-02-20 20:55+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,16 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "박신조"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde@peremen.name"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -110,11 +100,6 @@ msgstr "기본 터미널 에뮬레이터 선택"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "기본 파일 관리자 선택"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "구성 요소 선택기"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -250,6 +235,17 @@ msgstr "파일 관리자:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "지도:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Component Chooser"
+#~ msgstr "구성 요소 선택기"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-03 01:01+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2022-01-28 10:57+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,20 +27,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
 "X-Generator: Lokalize 20.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Tapio Kautto, Kim Enkovaara, Teemu Rytilahti, Ilpo Kantonen, Jorma Karvonen, "
-"Tommi Nieminen"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"eleknader@phnet.fi,kim.enkovaara@iki.fi,teemu.rytilahti@kde-fi.org,ilpo@iki."
-"fi,karvonen.jorma@gmail.com, translator@legisign.org"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -118,11 +104,6 @@ msgstr "Valitse oletuspääteohjelma"
 #| msgid "Select default file manager"
 msgid "Select default video player"
 msgstr "Valitse oletustiedostonhallinta"
-
-#: kcm_componentchooser.cpp:68
-#, kde-format
-msgid "Component Chooser"
-msgstr "Komponenttivalitsin"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
@@ -258,6 +239,21 @@ msgstr "Tiedostonhallinta:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Kartta:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Tapio Kautto, Kim Enkovaara, Teemu Rytilahti, Ilpo Kantonen, Jorma "
+#~ "Karvonen, Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "eleknader@phnet.fi,kim.enkovaara@iki.fi,teemu.rytilahti@kde-fi.org,"
+#~ "ilpo@iki.fi,karvonen.jorma@gmail.com, translator@legisign.org"
+
+#~ msgid "Component Chooser"
+#~ msgstr "Komponenttivalitsin"
 
 #~ msgctxt "@title"
 #~ msgid "Default Applications"
