@@ -63,7 +63,6 @@ QQC2.Control {
                     border.color: Kirigami.Theme.textColor
                     color: Kirigami.Theme.backgroundColor
                     state: model.edge
-                    visible: !model.isDestroyed
                     z: state === "floating" ? 0 : 1
 
                     HoverHandler {
@@ -186,13 +185,22 @@ QQC2.Control {
                                 }
                             }
                             QQC2.MenuSeparator {
-                                visible: contRect.state !== "floating"
+                                visible: removeItem.visible
                             }
                             QQC2.MenuItem {
-                                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+                                id: removeItem
+                                text: contRect.state === "floating"
+                                    ? i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Desktop")
+                                    : i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
                                 icon.name: "edit-delete"
-                                onTriggered: containments.remove(containmentId)
-                                visible: contRect.state !== "floating"
+                                onTriggered: {
+                                    if (contRect.state === "floating") {
+                                        ShellContainmentModel.remove(screenId);
+                                    } else {
+                                        containments.remove(containmentId);
+                                    }
+                                }
+                                visible: contRect.state !== "floating" || !model.active
                             }
                         }
                     }
