@@ -1,8 +1,6 @@
 # KI18N Translation Domain for this application
 add_definitions(-DTRANSLATION_DOMAIN=\"kaccess\")
 
-find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE)
-
 set(kaccess_SRCS kaccess.cpp main.cpp )
 
 add_executable(kaccess ${kaccess_SRCS})
