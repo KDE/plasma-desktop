@@ -51,10 +51,10 @@ KickoffGridView {
             font.pixelSize: fontMetrics.font.pixelSize
             fontSizeMode: Text.VerticalFit
 
-            text: modelData["section"]
+            text: model.section
         }
 
-        onClicked: root.hideSectionViewRequested(modelData["firstIndex"])
+        onClicked: root.hideSectionViewRequested(model.firstIndex)
     }
 
     FontMetrics {
@@ -67,8 +67,8 @@ KickoffGridView {
     }
 
     Component.onCompleted: {
-        for (let i = 0; i < model.length; i++) {
-            if (model[i]["section"] === root.currentSection) {
+        for (let i = 0; i < model.count; i++) {
+            if (model.data(model.index([i], 0), Qt.DisplayRole) === root.currentSection) {
                 view.positionViewAtIndex(i, ListView.Beginning);
                 view.currentIndex = i;
                 return;
