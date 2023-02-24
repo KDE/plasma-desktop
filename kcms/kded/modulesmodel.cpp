@@ -10,8 +10,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KPluginInfo>
-#include <KServiceTypeTrader>
 
 #include <algorithm>
 
@@ -143,34 +141,6 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
     };
 }
 
-// This code was copied from kded.cpp
-// TODO: move this KCM to the KDED framework and share the code?
-static QVector<KPluginMetaData> availableModules()
-{
-    QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf5/kded"));
-    QSet<QString> moduleIds;
-    for (const KPluginMetaData &md : qAsConst(plugins)) {
-        moduleIds.insert(md.pluginId());
-    }
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    // also search for old .desktop based kded modules
-    const KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KDEDModule")));
-    for (const KPluginInfo &info : oldStylePlugins) {
-        if (moduleIds.contains(info.pluginName())) {
-            qCWarning(KCM_KDED).nospace() << "kded module " << info.pluginName()
-                                          << " has already been found using "
-                                             "JSON metadata, please don't install the now unneeded .desktop file ("
-                                          << info.entryPath() << ").";
-        } else {
-            qCDebug(KCM_KDED).nospace() << "kded module " << info.pluginName() << " still uses .desktop files (" << info.entryPath()
-                                        << "). Please port it to JSON metadata.";
-            plugins.append(info.toMetaData());
-        }
-    }
-#endif
-    return plugins;
-}
-
 void ModulesModel::load()
 {
     beginResetModel();
@@ -184,7 +154,7 @@ void ModulesModel::load()
     QVector<ModulesModelData> autostartModules;
     QVector<ModulesModelData> onDemandModules;
 
-    const auto modules = availableModules();
+    const auto modules = KPluginMetaData::findPlugins(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/kded"));
     for (const KPluginMetaData &module : modules) {
         QString servicePath = module.fileName();
 
