@@ -198,7 +198,7 @@ void ModulesModel::load()
 
     const auto modules = availableModules();
     for (const KPluginMetaData &module : modules) {
-        QString servicePath = module.metaDataFileName();
+        QString servicePath = module.fileName();
 
         // autoload defaults to false if it is not found
         const bool autoload = module.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
@@ -230,8 +230,7 @@ void ModulesModel::load()
             data.type = KDEDConfig::OnDemandType;
             onDemandModules << data;
         } else {
-            qCWarning(KCM_KDED) << "kcmkded: Module " << module.name() << "from file" << module.metaDataFileName()
-                                << " not loaded on demand or startup! Skipping.";
+            qCWarning(KCM_KDED) << "kcmkded: Module " << module.name() << "from file" << module.fileName() << " not loaded on demand or startup! Skipping.";
             continue;
         }
     }
