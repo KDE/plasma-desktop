@@ -171,18 +171,6 @@ static QVector<KPluginMetaData> availableModules()
     return plugins;
 }
 
-// this code was copied from kded.cpp
-static bool isModuleLoadedOnDemand(const KPluginMetaData &module)
-{
-    bool loadOnDemand = true;
-    // use toVariant() since it could be string or bool in the json and QJsonObject does not convert
-    QVariant p = module.rawData().value(QStringLiteral("X-KDE-Kded-load-on-demand")).toVariant();
-    if (p.isValid() && p.canConvert<bool>() && (p.toBool() == false)) {
-        loadOnDemand = false;
-    }
-    return loadOnDemand;
-}
-
 void ModulesModel::load()
 {
     beginResetModel();
@@ -201,7 +189,7 @@ void ModulesModel::load()
         QString servicePath = module.fileName();
 
         // autoload defaults to false if it is not found
-        const bool autoload = module.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
+        const bool autoload = module.value(QStringLiteral("X-KDE-Kded-autoload"), false);
 
         // keep estimating dbusModuleName in sync with KDEDModule (kdbusaddons) and kded (kded)
         // currently (KF5) the module name in the D-Bus object path is set by the pluginId
@@ -226,7 +214,7 @@ void ModulesModel::load()
         if (autoload) {
             data.type = KDEDConfig::AutostartType;
             autostartModules << data;
-        } else if (isModuleLoadedOnDemand(module)) {
+        } else if (module.value(QStringLiteral("X-KDE-Kded-load-on-demand"), false)) {
             data.type = KDEDConfig::OnDemandType;
             onDemandModules << data;
         } else {
