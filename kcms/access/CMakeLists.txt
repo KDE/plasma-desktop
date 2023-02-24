@@ -29,7 +29,7 @@ target_link_libraries(kcm_access
     KF5::Declarative
     KF5::GuiAddons
     KF5::I18n
-    KF5::NewStuff
+    KF5::NewStuffCore
     KF5::QuickAddons
     KF5::WindowSystem
     KF5::NotifyConfig
