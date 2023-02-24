@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-02-01 18:02+0100\n"
+"PO-Revision-Date: 2023-02-23 15:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -90,6 +90,10 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Quando iste preferentia es activate, le schermo de confirmation de abandono "
+"de session essera monstrate quando tu abandona, arresta, reinitia, pressa le "
+"button de actionar, o clicca sur buttones o elementos de menu etiquettate "
+"<interface>Abandona ...</interface>. "
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -123,6 +127,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Un button de <interface>Salvaguarda Session</interface> appare in le menu de "
+"<interface>Lanceator de Application</interface>. Quando tu lo clicca, Plasma "
+"memorara le apps que es aperite e restabilira illos al proxime accesso. "
+"Clicca illo novemente per reimplaciar le insimul de apps memorate."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -145,6 +153,9 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Scribe hic nomines executabile de apps (separate per virgulas e duo punctos, "
+"per exemplo 'xterm:konsole' o 'xternm,konsole' ) per impedir illos ab "
+"autoinitiar con altere apps restabilite de session."
 
 #: package/contents/ui/main.qml:177
 #, kde-format
