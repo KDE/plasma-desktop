@@ -680,7 +680,9 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
                 focus: true
 
-                PC3.ScrollBar.vertical: PC3.ScrollBar {}
+                PC3.ScrollBar.vertical: PC3.ScrollBar {
+                    id: verticalScrollBar
+                }
                 PC3.ScrollBar.horizontal: PC3.ScrollBar {}
 
                 function calcExtraSpacing(cellSize, containerSize) {
@@ -696,7 +698,7 @@ FocusScope {
 
                 cellWidth: {
                     if (root.useListViewMode) {
-                        return gridView.width;
+                        return gridView.width - (verticalScrollBar.visible ? verticalScrollBar.width : 0);
                     } else {
                         var iconWidth = iconSize + (2 * PlasmaCore.Units.largeSpacing) + (2 * PlasmaCore.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
