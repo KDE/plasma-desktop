@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:57+0000\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
 "PO-Revision-Date: 2023-01-06 05:35+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -267,7 +267,7 @@ msgstr "Introduïu-ho aquí"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Elimina el plafó"
 
@@ -422,15 +422,21 @@ msgstr ""
 "Podeu arrossegar els plafons i els escriptoris per moure'ls a pantalles "
 "diferents."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
 msgstr "Intercanvia amb l'escriptori de la pantalla %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Move to Screen %1"
 msgstr "Mou a la pantalla %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#, fuzzy
+#| msgid "Remove Panel"
+msgid "Remove Desktop"
+msgstr "Elimina el plafó"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (primària)"
 

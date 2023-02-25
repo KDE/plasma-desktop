@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2018.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-13 02:41+0000\n"
-"PO-Revision-Date: 2022-12-20 11:26-0300\n"
+"PO-Revision-Date: 2023-02-24 16:03-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -73,16 +73,16 @@ msgid "General:"
 msgstr "Geral:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Realçar as janelas ao passar o cursor sobre as dicas das tarefas"
+msgstr ""
+"Exibir visualizações em janelas pequenas quando passar o mouse sobre as "
+"tarefas"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Realçar as janelas ao passar o cursor sobre as dicas das tarefas"
+msgstr "Ocultar outras janelas ao passar o mouse sobre as visualizações"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -171,25 +171,19 @@ msgid "Cycles through tasks"
 msgstr "Percorrer as tarefas"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Mostrar janelas lado a lado"
+msgstr "Exibir visualizações em janelas pequenas"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Mostrar janelas lado a lado"
+msgstr "Exibir visualizações em janelas grandes"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format

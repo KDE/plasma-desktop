@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-02-14 10:25-0300\n"
+"PO-Revision-Date: 2023-02-24 16:06-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -42,6 +42,8 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"O sistema deve ser reiniciado antes que o salvamento manual da sessão se "
+"torne ativo."
 
 #: package/contents/ui/main.qml:35
 #, kde-format
@@ -113,15 +115,10 @@ msgid "On last logout"
 msgstr ""
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Restaurar última sessão salva manualmente"
+msgstr "Quando a sessão foi salva manualmente"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -167,23 +164,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Após a próxima reinicialização:"
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Entrar na tela de configuração do UEFI ao reiniciar"
+msgstr "Entrar na tela de configuração do UEFI"
 
 #: package/contents/ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Entrar na tela de configuração do firmware após reiniciar"
+msgstr "Entrar na tela de configuração do firmware"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:57+0000\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
 "PO-Revision-Date: 2023-01-06 17:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -270,7 +270,7 @@ msgstr "Escriba aquí"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Eliminar panel"
 
@@ -423,15 +423,21 @@ msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "Puede arrastrar paneles y escritorios para moverlos a otras pantallas."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
 msgstr "Intercambiar con el escritorio de la pantalla %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Move to Screen %1"
 msgstr "Mover a la pantalla %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#, fuzzy
+#| msgid "Remove Panel"
+msgid "Remove Desktop"
+msgstr "Eliminar panel"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (principal)"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:57+0000\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
 "PO-Revision-Date: 2023-01-07 09:47+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -267,7 +267,7 @@ msgstr "Vnesite sem"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:192
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Odstrani pult"
 
@@ -422,15 +422,21 @@ msgid ""
 msgstr ""
 "Plošče in namizja lahko vlečete okrog, da jih potegnete na različne zaslone."
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
 msgstr "Zamenjaj z namizjem na zaslonu %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Move to Screen %1"
 msgstr "Premakni na zaslon %1"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:259
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#, fuzzy
+#| msgid "Remove Panel"
+msgid "Remove Desktop"
+msgstr "Odstrani pult"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (primarni)"
 
