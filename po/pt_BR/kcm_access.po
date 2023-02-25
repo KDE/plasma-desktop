@@ -7,7 +7,7 @@
 # Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
 # Lisiane Sztoltz Teixeira <lisiane.teixeira@gmail.com>, 2005.
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2017, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2017, 2020, 2021, 2022, 2023.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2013, 2014, 2015, 2019.
 # Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-05-03 13:35-0300\n"
+"PO-Revision-Date: 2023-02-24 16:01-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -382,6 +382,8 @@ msgstr "Habilitar"
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"Para uma tecla ser aceita ela deve ser pressionada até a quantidade de tempo "
+"definida"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -426,7 +428,7 @@ msgstr "Habilitar"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Ignore pressionamentos rápidos e repetidos da mesma tecla"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
