@@ -88,7 +88,7 @@ Kirigami.AbstractListItem {
                     Layout.preferredWidth: parent.width * 0.5
                     Kirigami.Heading {
                         level: 4
-                        text: model.defaultShortcuts &&  model.defaultShortcuts.length != 0 ? 
+                        text: model.defaultShortcuts &&  model.defaultShortcuts.length != 0 ?
                             i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
                             "Default shortcuts", model.defaultShortcuts.length) :
                             i18n("No default shortcuts")
@@ -224,7 +224,7 @@ Kirigami.AbstractListItem {
         }
     ]
     Behavior on height {
-        NumberAnimation { 
+        NumberAnimation {
             properties: "height"
             duration: Kirigami.Units.shortDuration
         }
