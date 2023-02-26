@@ -2,6 +2,7 @@ import "components"
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as QQC2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -31,15 +32,24 @@ SessionManagementScreen {
     }
 
     onUserSelected: {
+        // Don't startLogin() here, because the signal is connected to the
+        // Escape key as well, for which it wouldn't make sense to trigger
+        // login.
+        focusFirstVisibleFormControl();
+    }
+
+    QQC2.StackView.onActivating: {
+        // Controls are not visible yet.
+        Qt.callLater(focusFirstVisibleFormControl);
+    }
+
+    function focusFirstVisibleFormControl() {
         const nextControl = (userNameInput.visible
             ? userNameInput
             : (passwordBox.visible
                 ? passwordBox
                 : loginButton));
-        // Don't startLogin() here, because the signal is connected to the
-        // Escape key as well, for which it wouldn't make sense to trigger
-        // login. Using TabFocusReason, so that the loginButton gets the
-        // visual highlight.
+        // Using TabFocusReason, so that the loginButton gets the visual highlight.
         nextControl.forceActiveFocus(Qt.TabFocusReason);
     }
 
