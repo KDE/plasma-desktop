@@ -249,19 +249,19 @@ PlasmaCore.ColorScope {
                 }
             }
 
-            readonly property real zoomFactor: 3
+            readonly property real zoomFactor: 1.5
 
             popEnter: Transition {
                 ScaleAnimator {
                     from: mainStack.zoomFactor
                     to: 1
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 0
                     to: 1
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -270,13 +270,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1
                     to: 1 / mainStack.zoomFactor
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -285,13 +285,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1 / mainStack.zoomFactor
                     to: 1
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 0
                     to: 1
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -300,13 +300,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1
                     to: mainStack.zoomFactor
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
