@@ -269,7 +269,7 @@ PlasmaCore.ColorScope {
             popExit: Transition {
                 ScaleAnimator {
                     from: 1
-                    to: 0
+                    to: 1 / mainStack.zoomFactor
                     duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
                     easing.type: Easing.OutCubic
                 }
@@ -283,7 +283,7 @@ PlasmaCore.ColorScope {
 
             pushEnter: Transition {
                 ScaleAnimator {
-                    from: 0
+                    from: 1 / mainStack.zoomFactor
                     to: 1
                     duration: PlasmaCore.Units.longDuration * (mainStack.zoomFactor / 2)
                     easing.type: Easing.OutCubic
