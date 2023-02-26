@@ -17,8 +17,12 @@ import org.kde.private.kcms.keys 2.0 as Private
 Kirigami.AbstractListItem {
     id: root
     property bool showExpandButton: true
+
     highlighted: false
-    hoverEnabled: true
+    // If it's the only one in the list, clicking it won't do anything, so don't provide any visual feedback.
+    hoverEnabled: showExpandButton
+    down: showExpandButton ? undefined : false
+
     width: shortcutsList.width
     action: QQC2.Action {
         id: expandAction
