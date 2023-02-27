@@ -39,7 +39,8 @@ target_link_libraries(folderplugin
                       KF5::KIOFileWidgets
                       KF5::I18n
                       KF5::PlasmaQuick
-                      KF5::ConfigGui)
+                      KF5::ConfigGui
+                      KF5::XmlGui)
 
 install(TARGETS folderplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
 
