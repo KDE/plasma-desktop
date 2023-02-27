@@ -1,14 +1,14 @@
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 01:00+0000\n"
-"PO-Revision-Date: 2022-07-04 12:29-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-02-22 23:19+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -95,7 +95,7 @@ msgstr "%1 にメールを送る"
 #: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr ""
+msgstr "ウェブサイト %1 を開く"
 
 #: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
@@ -108,7 +108,7 @@ msgstr "ライセンス:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "ライセンスのテキストを表示"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -124,7 +124,7 @@ msgstr "翻訳者"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "バグを報告..."
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
@@ -206,11 +206,9 @@ msgstr "Meta"
 #: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "情報"
@@ -251,8 +249,8 @@ msgstr "ショートカット"
 #: contents/configuration/ConfigurationShortcuts.qml:28
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
-"アプレットのクリック時と同じようにショートカットでアプレットをアクティブにし"
-"ます。"
+"ここで設定したショートカットで、アプレットがクリックされたときのようにアク"
+"ティブになります。"
 
 #: contents/configuration/ContainmentConfiguration.qml:29
 msgid "Wallpaper"
@@ -310,7 +308,7 @@ msgstr "自動的に隠す"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
 msgid "Windows Can Cover"
-msgstr "ウィンドウはパネルを覆える"
+msgstr "ウィンドウはパネルを覆う"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
 msgid "Windows Go Below"
@@ -346,34 +344,36 @@ msgstr "ショートカット"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "キーボードショートカットを押してパネルをフォーカス"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "ドラッグして最大の高さを変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "ドラッグして最大の幅を変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "ダブルクリックしてリセット"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "ドラッグして最小の高さを変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "ドラッグして最小の幅を変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"ドラッグしてこのスクリーンの端での位置を変更\n"
+"ダブルクリックしてリセット"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
@@ -395,7 +395,7 @@ msgstr "ドラッグして移動"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "矢印キーを使用してパネルを移動"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
