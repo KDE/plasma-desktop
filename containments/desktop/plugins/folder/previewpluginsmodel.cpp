@@ -7,8 +7,6 @@
 
 #include "previewpluginsmodel.h"
 
-#include <KServiceTypeTrader>
-
 #include <KIO/PreviewJob>
 
 #include <algorithm>
