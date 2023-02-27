@@ -29,6 +29,7 @@ target_link_libraries(kcm_landingpage
     KF5::Package
     PW::KWorkspace
     KF5::ActivitiesStats
+    KF5::Service
 
     Qt::DBus
 )
