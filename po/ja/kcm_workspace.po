@@ -1,12 +1,13 @@
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2021-09-26 16:45-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-02-23 18:20+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -23,16 +24,18 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"中クリック貼り付けの設定の変更を有効にするにはシステムを再起動する必要があり"
+"ます。"
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "再起動"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Visual behavior:"
-msgstr "視覚の挙動:"
+msgstr "視覚的挙動:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
@@ -103,12 +106,12 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "1ページ上下にスクロール"
+msgstr "1ページ分上下にスクロール"
 
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "中クリックでクリックした場所にスクロール"
+msgstr "中クリックでクリックした位置にスクロール"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
@@ -121,29 +124,29 @@ msgstr "クリックした位置にスクロール"
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Middle Click:"
-msgstr ""
+msgstr "中クリック:"
 
 #: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Paste selected text"
-msgstr ""
+msgstr "選択されたテキストを貼り付け"
 
 #: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "タッチモード:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "必要なとき自動的に有効化する"
 
 #: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "有効化しない"
 
 #: package/contents/ui/main.qml:250
 #, kde-format
@@ -152,12 +155,15 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"タッチモードはシステムがタッチスクリーンを検出し、かつマウスやタッチパッドが"
+"検出されないとき自動的に有効化されます。例: タブレット PC のキーボードがフ"
+"リップされたとき、もしくは取り外されたとき"
 
 #: package/contents/ui/main.qml:255
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "常に有効"
 
 #: package/contents/ui/main.qml:280
 #, kde-format
@@ -165,38 +171,40 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"タッチモードをオンにすると、ユーザインターフェースが大きくなりタッチ操作がし"
+"やすくなります。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Single-click to open files and folders"
+#, kde-format
 msgid "Single click to open files"
-msgstr "シングルクリックでファイルやフォルダを開く"
+msgstr "シングルクリックでファイルを開く"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgid "Animation speed"
-msgstr "アニメーションの速度:"
+msgstr "アニメーションの速度"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+"スクロールバーのスクロールエリアを左クリックしてスクロールバーを1ページ分動か"
+"す"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "自動的にタッチモードに切り替え"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "中クリックでの貼り付けを有効化する"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -205,15 +213,16 @@ msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
+"明るさや音量などの状態が変更された時にオンスクリーンディスプレイ (OSD) を表示"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "レイアウト変更時に OSD を表示"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "レイアウト変更時にポップアップを表示"

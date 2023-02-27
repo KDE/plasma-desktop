@@ -1,14 +1,14 @@
 # Translation of plasma_applet_showdesktop into Japanese.
 # This file is distributed under the same license as the kdeplasma-addons package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2008.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-08-18 08:53+0900\n"
+"PO-Revision-Date: 2023-02-23 11:07+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -27,9 +27,7 @@ msgid "Restore All Minimized Windows"
 msgstr "すべての最小化されたウィンドウを復元する"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "すべてのウィンドウを最小化する"
@@ -41,8 +39,7 @@ msgid "Restores the previously minimized windows"
 msgstr "前回最小化したウィンドウを復元する"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "すべてのウィンドウを最小化してデスクトップを表示"
@@ -57,19 +54,16 @@ msgstr "デスクトップを覗く"
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr "デスクトップを覗くのをやめる"
+msgstr "元に戻す"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr "ウィンドウをもとの位置に戻す"
+msgstr "ウィンドウを元の位置に戻す"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"開かれたウィンドウをスクリーンの角に移動させて一時的にデスクトップを表示"
+msgstr "ウィンドウを一時的に移動させてデスクトップを表示"
