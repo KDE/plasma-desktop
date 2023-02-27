@@ -180,14 +180,12 @@
         "Name[xh]": "Ubeko Lwebhodi yezitshixo",
         "Name[zh_CN]": "键盘布局",
         "Name[zh_TW]": "鍵盤佈局",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
-    "X-Plasma-NotificationAreaCategory": "Hardware"
+    "X-Plasma-NotificationAreaCategory": "Hardware",
+    "KPackageStructure": "Plasma/Applet"
 }

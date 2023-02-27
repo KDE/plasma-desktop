@@ -233,9 +233,6 @@
         "Name[x-test]": "xxApplication Launcherxx",
         "Name[zh_CN]": "应用程序启动器",
         "Name[zh_TW]": "應用程式啟動器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "2.0",
         "Website": "https://userbase.kde.org/Plasma/Kickoff"
     },
@@ -246,5 +243,6 @@
     ],
     "X-Plasma-RequiredExtensions": [
         "LaunchApp"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

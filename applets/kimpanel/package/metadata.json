@@ -149,9 +149,6 @@
         "Name[x-test]": "xxInput Method Panelxx",
         "Name[zh_CN]": "输入法面板",
         "Name[zh_TW]": "輸入法面板",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -201,5 +198,6 @@
     "Keywords[zh_CN]": "Input;IM;输入法;输入;",
     "Keywords[zh_TW]": "Input;IM;",
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

@@ -143,9 +143,6 @@
         "Name[x-test]": "xxMinimize all Windowsxx",
         "Name[zh_CN]": "最小化所有窗口",
         "Name[zh_TW]": "最小化所有視窗",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://kde.org/plasma-desktop"
     },
@@ -154,5 +151,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.windowmanagement"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.showdesktop"
+    "X-Plasma-RootPath": "org.kde.plasma.showdesktop",
+    "KPackageStructure": "Plasma/Applet"
 }

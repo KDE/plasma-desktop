@@ -188,9 +188,6 @@
         "Name[x-test]": "xxPagerxx",
         "Name[zh_CN]": "虚拟桌面切换器",
         "Name[zh_TW]": "虛擬桌面管理器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "4.0",
         "Website": "https://userbase.kde.org/Plasma/Pager"
     },
@@ -198,5 +195,6 @@
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.virtualdesktops"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

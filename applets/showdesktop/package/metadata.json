@@ -130,9 +130,6 @@
         "Name[x-test]": "xxPeek at Desktopxx",
         "Name[zh_CN]": "暂时显示桌面",
         "Name[zh_TW]": "看一下桌面",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://kde.org/plasma-desktop"
     },
@@ -140,5 +137,6 @@
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.windowmanagement"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

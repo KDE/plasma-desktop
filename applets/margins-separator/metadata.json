@@ -136,9 +136,6 @@
         "Name[x-test]": "xxMargins Separatorxx",
         "Name[zh_CN]": "边距分隔符",
         "Name[zh_TW]": "邊際分隔器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "0.1"
     },
     "Keywords": "separator",
@@ -176,5 +173,6 @@
     "Keywords[zh_CN]": "separator,分隔符,分割",
     "Keywords[zh_TW]": "分隔線",
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

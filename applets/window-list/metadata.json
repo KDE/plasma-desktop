@@ -97,9 +97,6 @@
         "Id": "org.kde.plasma.windowlist",
         "License": "GPL-2.0+",
         "Name": "Window List",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "2.0",
         "Website": "https://kde.org/plasma-desktop"
     },
@@ -107,5 +104,6 @@
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.multitasking"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

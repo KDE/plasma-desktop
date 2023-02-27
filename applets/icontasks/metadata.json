@@ -151,9 +151,6 @@
         "Name[x-test]": "xxIcons-only Task Managerxx",
         "Name[zh_CN]": "图标任务管理器",
         "Name[zh_TW]": "只有圖示的工作管理員",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "3.0",
         "Website": "https://userbase.kde.org/Plasma/Tasks"
     },
@@ -162,5 +159,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multitasking"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.taskmanager"
+    "X-Plasma-RootPath": "org.kde.plasma.taskmanager",
+    "KPackageStructure": "Plasma/Applet"
 }
