@@ -120,10 +120,6 @@
         "Name[xh]": "Iqela lenjongo ethile",
         "Name[zh_CN]": "面板",
         "Name[zh_TW]": "面板",
-        "ServiceTypes": [
-            "Plasma/Applet",
-            "Plasma/Containment"
-        ],
         "Version": "3.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -131,5 +127,6 @@
     "NoDisplay": true,
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-ContainmentType": "Panel",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

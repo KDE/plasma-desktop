@@ -235,10 +235,6 @@
         "Name[xh]": "Desktop",
         "Name[zh_CN]": "桌面",
         "Name[zh_TW]": "桌面",
-        "ServiceTypes": [
-            "Plasma/Applet",
-            "Plasma/Containment"
-        ],
         "Version": "3.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -250,5 +246,6 @@
         "http",
         "localio",
         "networkio"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

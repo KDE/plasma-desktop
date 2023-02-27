@@ -152,13 +152,11 @@
         "Name[x-test]": "xxDeclarative Toolboxxx",
         "Name[zh_CN]": "描述工具箱",
         "Name[zh_TW]": "宣告元件工具盒",
-        "ServiceTypes": [
-            "Plasma/Generic"
-        ],
         "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/ToolBoxRoot.qml",
-    "X-Plasma-RequiredExtensions": "LaunchApp,"
+    "X-Plasma-RequiredExtensions": "LaunchApp,",
+    "KPackageStructure": "Plasma/Generic"
 }

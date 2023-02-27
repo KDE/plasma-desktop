@@ -186,13 +186,11 @@
         "Name[xh]": "Desktop",
         "Name[zh_CN]": "桌面",
         "Name[zh_TW]": "桌面",
-        "ServiceTypes": [
-            "Plasma/Shell"
-        ],
         "Version": "",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "Keywords": "",
     "X-KDE-ParentApp": "org.kde.plasmashell",
-    "X-Plasma-MainScript": "layout.js"
+    "X-Plasma-MainScript": "layout.js",
+    "KPackageStructure": "Plasma/Shell"
 }

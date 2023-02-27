@@ -155,11 +155,9 @@
         "Name[x-test]": "xxPanel Toolboxxx",
         "Name[zh_CN]": "面板工具箱",
         "Name[zh_TW]": "面板工具盒",
-        "ServiceTypes": [
-            "Plasma/Generic"
-        ],
         "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     },
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Generic"
 }

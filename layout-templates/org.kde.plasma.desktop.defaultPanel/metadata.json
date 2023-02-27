@@ -151,13 +151,11 @@
         "Name[x-test]": "xxDefault Panelxx",
         "Name[zh_CN]": "默认面板",
         "Name[zh_TW]": "預設面板",
-        "ServiceTypes": [
-            "Plasma/LayoutTemplate"
-        ],
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-ContainmentCategories": [
         "panel"
     ],
-    "X-Plasma-Shell": "plasmashell"
+    "X-Plasma-Shell": "plasmashell",
+    "KPackageStructure": "Plasma/LayoutTemplate"
 }

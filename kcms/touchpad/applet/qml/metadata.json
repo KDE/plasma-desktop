@@ -149,9 +149,6 @@
         "Name[x-test]": "xxTouchpadxx",
         "Name[zh_CN]": "触摸板",
         "Name[zh_TW]": "觸控板",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Website": "https://projects.kde.org/projects/playground/utils/kcm-touchpad/"
     },
     "Keywords": "Touchpad",
@@ -207,5 +204,6 @@
     ],
     "X-Plasma-MainScript": "ui/touchpad.qml",
     "X-Plasma-NotificationArea": "true",
-    "X-Plasma-NotificationAreaCategory": "Hardware"
+    "X-Plasma-NotificationAreaCategory": "Hardware",
+    "KPackageStructure": "Plasma/Applet"
 }

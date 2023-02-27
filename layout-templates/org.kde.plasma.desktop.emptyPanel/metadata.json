@@ -157,13 +157,11 @@
         "Name[x-test]": "xxEmpty Panelxx",
         "Name[zh_CN]": "空面板",
         "Name[zh_TW]": "空白面板",
-        "ServiceTypes": [
-            "Plasma/LayoutTemplate"
-        ],
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-ContainmentCategories": [
         "panel"
     ],
-    "X-Plasma-Shell": "plasmashell"
+    "X-Plasma-Shell": "plasmashell",
+    "KPackageStructure": "Plasma/LayoutTemplate"
 }

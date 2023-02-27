@@ -154,10 +154,6 @@
         "Name[x-test]": "xxFolder Viewxx",
         "Name[zh_CN]": "文件夹视图",
         "Name[zh_TW]": "資料夾檢視",
-        "ServiceTypes": [
-            "Plasma/Applet",
-            "Plasma/Containment"
-        ],
         "Version": "3.0"
     },
     "X-Plasma-API": "declarativeappletscript",
@@ -175,5 +171,6 @@
         "localio",
         "networkio"
     ],
-    "X-Plasma-RootPath": "org.kde.desktopcontainment"
+    "X-Plasma-RootPath": "org.kde.desktopcontainment",
+    "KPackageStructure": "Plasma/Applet"
 }

@@ -149,13 +149,11 @@
         "Name[x-test]": "xxApplication Menu Barxx",
         "Name[zh_CN]": "应用程序菜单栏",
         "Name[zh_TW]": "應用程式選單列",
-        "ServiceTypes": [
-            "Plasma/LayoutTemplate"
-        ],
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-ContainmentCategories": [
         "panel"
     ],
-    "X-Plasma-Shell": "plasmashell"
+    "X-Plasma-Shell": "plasmashell",
+    "KPackageStructure": "Plasma/LayoutTemplate"
 }
