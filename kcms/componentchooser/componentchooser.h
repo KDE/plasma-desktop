@@ -73,6 +73,7 @@ public:
     virtual QStringList mimeTypes() const;
 
     static void forceReloadServiceCache();
+    static bool serviceSupportsMimeType(KService::Ptr service, const QString &mimeType);
 
 Q_SIGNALS:
     void indexChanged();

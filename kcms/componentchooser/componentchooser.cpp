@@ -109,11 +109,9 @@ void ComponentChooser::saveMimeTypeAssociations(const QString &storageId, const 
 
     if (mimeAppsList->isConfigWritable(true)) {
         const auto appService = KService::serviceByStorageId(storageId);
-        const auto db = QMimeDatabase();
 
         for (const QString &mimeType : mimeTypes) {
-            if (!forceUnsupportedMimeType && appService && !appService->serviceTypes().contains(mimeType)
-                && !db.mimeTypeForName(mimeType).inherits(m_mimeType)) {
+            if (!forceUnsupportedMimeType && appService && !serviceSupportsMimeType(appService, mimeType)) {
                 // skip mimetype association if the app does not support it at all
                 continue;
             }
@@ -144,10 +142,9 @@ QStringList ComponentChooser::unsupportedMimeTypes() const
     QStringList unsupportedMimeTypes;
 
     const auto appService = KService::serviceByStorageId(preferredApp);
-    const auto supportedMimeTypes = appService->serviceTypes();
     const auto componentMimeTypes = mimeTypes();
     for (const QString &mimeType : componentMimeTypes) {
-        if (!supportedMimeTypes.contains(mimeType) && !db.mimeTypeForName(mimeType).inherits(m_mimeType)) {
+        if (!serviceSupportsMimeType(appService, mimeType)) {
             const auto preferredService = KApplicationTrader::preferredService(mimeType);
             if (!preferredService || (preferredService->storageId() != appService->storageId())) {
                 unsupportedMimeTypes << mimeType;
@@ -181,12 +178,13 @@ QList<PairQml> ComponentChooser::mimeTypesNotAssociated() const
     }
 
     const auto mimes = mimeTypes();
+
     for (const QString &mimeType : mimes) {
         const auto service = KApplicationTrader::preferredService(mimeType);
 
         if (service && service->storageId() != storageId &&
             // only explicitly supported mimetype
-            (appService->serviceTypes().contains(mimeType) || db.mimeTypeForName(mimeType).inherits(m_mimeType))) {
+            serviceSupportsMimeType(appService, mimeType)) {
             ret.append(PairQml(service->name(), mimeType));
         }
     }
@@ -254,4 +252,25 @@ bool ComponentChooser::isSaveNeeded() const
 {
     const auto storageId = currentStorageId();
     return m_model->rowCount() > 1 && (m_currentApplication != storageId) && storageId != "";
+}
+
+bool ComponentChooser::serviceSupportsMimeType(KService::Ptr service, const QString &targetMimeType)
+{
+    static QMimeDatabase db;
+    const QStringList mimeTypes = service->mimeTypes();
+    for (const QString &supportedMimeType : mimeTypes) {
+        if (supportedMimeType == targetMimeType) {
+            return true;
+        }
+
+        if (db.mimeTypeForName(targetMimeType).inherits(supportedMimeType)) {
+            return true;
+        }
+    }
+
+    if (targetMimeType.startsWith(QLatin1String("x-scheme-handler/")) && service->supportedProtocols().contains(targetMimeType.mid(17))) {
+        return true;
+    }
+
+    return false;
 }
