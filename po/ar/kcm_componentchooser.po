@@ -7,13 +7,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2009, 2021, 2022.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2009, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-21 01:01+0000\n"
-"PO-Revision-Date: 2022-01-09 22:38+0400\n"
+"PO-Revision-Date: 2023-02-27 22:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: applicationmodel.cpp:65
 #, kde-format
@@ -36,10 +36,9 @@ msgid "Default web browser"
 msgstr "متصفح الوب المبدئي"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "اختر مدير الملفات المبدئي"
+msgstr "اختر مدير الأرشيف المبدئي"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -62,22 +61,19 @@ msgid "Select default map"
 msgstr "اختر خريطة مبدئية"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "اختر مدير الملفات المبدئي"
+msgstr "اختر عارض الصور المبدئي"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "اختر خريطة مبدئية"
+msgstr "اختر مشغل الصوتيات المبدئي"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "اختر المتصفح المبدئي"
+msgstr "اختر عارض بي دي اف المبدئي"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -90,56 +86,54 @@ msgid "Select default terminal emulator"
 msgstr "اختر محاكي الطرفية المبدئي"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "اختر محاكي الطرفية المبدئي"
+msgstr "اختر محرر النصوص المبدئي"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "اختر مدير الملفات المبدئي"
+msgstr "اختر مشغل الفيديو المبدئي"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "التفاصيل"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "هذا التطبيق لم يعلن أنه يدعم أنواع الملفات التالية:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "أجبره على الفتح على كل كل"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "ما زالت هذه الأنواع مسندة إلى تطبيق أخر:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "النوع %1 مسند إلى %2"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "أعد إسناد الكل إلى التطبيق %1"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "غيّر إسناد نوع الملف يدويا"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -147,12 +141,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"يبدو أن التطبيق ’%1’ لا يدعم الأنواع التالية التي في العادة مسندة إلى مثل "
+"هذه  التطبيقات: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "الشّابكة"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -174,44 +170,44 @@ msgstr "تطبيق الاتصال:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "الوسائط المتعدّدة"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "عارض الصور:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "مشغّل صوتي:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "مشغّل فيديوهات:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "المستندات"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "محرّر نصوص:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "عارض بي دي اف:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "الأدوات"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -224,14 +220,12 @@ msgid "Terminal emulator:"
 msgstr "محاكي الطرفية:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "مدير الملفات:"
+msgstr "مدير الأرشيف:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "الخريطة:"
