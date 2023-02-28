@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Generic",
     "KPlugin": {
         "Authors": [
             {
@@ -157,6 +158,5 @@
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/ToolBoxRoot.qml",
-    "X-Plasma-RequiredExtensions": "LaunchApp,",
-    "KPackageStructure": "Plasma/Generic"
+    "X-Plasma-RequiredExtensions": "LaunchApp,"
 }
