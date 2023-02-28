@@ -9,7 +9,6 @@ import QtQuick.Layouts 1.15
 // Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
 import QtQml 2.15
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 

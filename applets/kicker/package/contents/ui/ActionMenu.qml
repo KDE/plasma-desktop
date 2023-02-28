@@ -7,7 +7,7 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: root
@@ -15,7 +15,7 @@ Item {
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status !== PlasmaComponents.DialogStatus.Closed) : false
+    property bool opened: menu ? (menu.status !== PlasmaExtras.DialogStatus.Closed) : false
 
     signal actionClicked(string actionId, variant actionArgument)
     signal closed
@@ -78,7 +78,7 @@ Item {
     Component {
         id: contextMenuComponent
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             visualParent: root.visualParent
         }
     }
@@ -86,7 +86,7 @@ Item {
     Component {
         id: contextSubmenuItemComponent
 
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             id: submenuItem
 
             property variant actionItem
@@ -96,7 +96,7 @@ Item {
 
             property variant submenu : submenu_
 
-            PlasmaComponents.ContextMenu {
+            PlasmaExtras.Menu {
                 id: submenu_
                 visualParent: submenuItem.action
             }
@@ -106,7 +106,7 @@ Item {
     Component {
         id: contextMenuItemComponent
 
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             property variant actionItem
 
             text      : actionItem.text ? actionItem.text : ""

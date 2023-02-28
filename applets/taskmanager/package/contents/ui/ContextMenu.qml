@@ -10,13 +10,13 @@ import QtQuick 2.15
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.taskmanager 0.1 as TaskManager
 
 import "code/layout.js" as LayoutManager
 
-PlasmaComponents.ContextMenu {
+PlasmaExtras.Menu {
     id: menu
 
     property QtObject backend
@@ -41,16 +41,16 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaComponents.DialogStatus.Open) {
+        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaExtras.DialogStatus.Open) {
             activitiesDesktopsMenu.refresh();
 
-        } else if (status == PlasmaComponents.DialogStatus.Closed) {
+        } else if (status == PlasmaExtras.DialogStatus.Closed) {
             menu.destroy();
         }
     }
 
     Component.onCompleted: {
-        // Cannot have "Connections" as child of PlasmaCoponents.ContextMenu.
+        // Cannot have "Connections" as child of PlasmaExtras.Menu.
         backend.showAllPlaces.connect(showContextMenuWithAllPlaces);
     }
 
@@ -73,17 +73,17 @@ PlasmaComponents.ContextMenu {
 
     function newMenuItem(parent) {
         return Qt.createQmlObject(`
-            import org.kde.plasma.components 2.0 as PlasmaComponents
+            import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-            PlasmaComponents.MenuItem {}
+            PlasmaExtras.MenuItem {}
         `, parent);
     }
 
     function newSeparator(parent) {
         return Qt.createQmlObject(`
-            import org.kde.plasma.components 2.0 as PlasmaComponents
+            import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-            PlasmaComponents.MenuItem { separator: true }
+            PlasmaExtras.MenuItem { separator: true }
             `, parent);
     }
 
@@ -277,7 +277,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: startNewInstanceItem
         visible: get(atm.CanLaunchNewInstance)
         text: i18n("Open New Window")
@@ -286,7 +286,7 @@ PlasmaComponents.ContextMenu {
         onClicked: tasksModel.requestNewInstance(modelIndex)
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: virtualDesktopsMenuItem
 
         visible: virtualDesktopInfo.numberOfDesktops > 1
@@ -307,7 +307,7 @@ PlasmaComponents.ContextMenu {
             function onDesktopNamesChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
         }
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             id: virtualDesktopsMenu
 
             visualParent: virtualDesktopsMenuItem.action
@@ -368,7 +368,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-     PlasmaComponents.MenuItem {
+     PlasmaExtras.MenuItem {
         id: activitiesDesktopsMenuItem
 
         visible: activityInfo.numberOfRunningActivities > 1
@@ -388,7 +388,7 @@ PlasmaComponents.ContextMenu {
             }
         }
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             id: activitiesDesktopsMenu
 
             visualParent: activitiesDesktopsMenuItem.action
@@ -483,7 +483,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: launcherToggleAction
 
         visible: visualParent
@@ -509,7 +509,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: showLauncherInActivitiesItem
 
         text: i18n("&Pin to Task Manager")
@@ -527,7 +527,7 @@ PlasmaComponents.ContextMenu {
             }
         }
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             id: activitiesLaunchersMenu
             visualParent: showLauncherInActivitiesItem.action
 
@@ -588,7 +588,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         visible: (visualParent
                 && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                 && !launcherToggleAction.visible
@@ -602,7 +602,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: moreActionsMenuItem
 
         visible: (visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
@@ -612,10 +612,10 @@ PlasmaComponents.ContextMenu {
         text: i18n("More")
         icon: "view-more-symbolic"
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             visualParent: moreActionsMenuItem.action
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 enabled: menu.visualParent && menu.get(atm.IsMovable)
 
                 text: i18n("&Move")
@@ -624,7 +624,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestMove(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 enabled: menu.visualParent && menu.get(atm.IsResizable)
 
                 text: i18n("Re&size")
@@ -633,7 +633,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestResize(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 visible: (menu.visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
                 enabled: menu.visualParent && get(atm.IsMaximizable)
@@ -647,7 +647,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleMaximized(modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 visible: (menu.visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 
                 enabled: menu.visualParent && get(atm.IsMinimizable)
@@ -661,7 +661,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleMinimized(modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 checkable: true
                 checked: menu.visualParent && menu.get(atm.IsKeepAbove)
 
@@ -671,7 +671,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleKeepAbove(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 checkable: true
                 checked: menu.visualParent && menu.get(atm.IsKeepBelow)
 
@@ -681,7 +681,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleKeepBelow(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 enabled: menu.visualParent && menu.get(atm.IsFullScreenable)
 
                 checkable: true
@@ -693,7 +693,7 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleFullScreen(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 enabled: menu.visualParent && menu.get(atm.IsShadeable)
 
                 checkable: true
@@ -705,11 +705,11 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleShaded(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 separator: true
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 visible: (plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow)
 
                 checkable: true
@@ -721,11 +721,11 @@ PlasmaComponents.ContextMenu {
                 onClicked: tasksModel.requestToggleGrouping(menu.modelIndex)
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 separator: true
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 property QtObject configureAction: null
 
                 enabled: configureAction && configureAction.enabled
@@ -739,7 +739,7 @@ PlasmaComponents.ContextMenu {
                 Component.onCompleted: configureAction = plasmoid.action("configure")
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 property QtObject alternativesAction: null
 
                 enabled: alternativesAction && alternativesAction.enabled
@@ -755,9 +755,9 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem { separator: true }
+    PlasmaExtras.MenuItem { separator: true }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: closeWindowItem
         visible: (visualParent && !get(atm.IsLauncher) && !get(atm.IsStartup))
 

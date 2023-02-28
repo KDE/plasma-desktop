@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.10
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PC2
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -74,7 +74,7 @@ Item {
             Layout.fillWidth: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
             onClicked: tasksMenu.open()
-            down: pressed || tasksMenu.status === PC2.DialogStatus.Open
+            down: pressed || tasksMenu.status === PlasmaExtras.DialogStatus.Open
 
             Accessible.name: Plasmoid.title
             Accessible.description: Plasmoid.toolTipSubText
@@ -99,7 +99,7 @@ Item {
                 groupMode: TaskManager.TasksModel.GroupDisabled
             }
 
-            PC2.ModelContextMenu {
+            PlasmaExtras.ModelContextMenu {
                 id: tasksMenu
 
                 model: tasksModel

@@ -8,7 +8,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
 
 Item {
@@ -53,7 +53,7 @@ Item {
     Component {
         id: contextMenuComponent
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             visualParent: root.visualParent
 
             placement: {
@@ -73,7 +73,7 @@ Item {
     Component {
         id: contextMenuItemComponent
 
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             property variant actionItem
 
             text: actionItem.text ? actionItem.text : ""
@@ -89,7 +89,7 @@ Item {
 
     Component {
         id: emptyMenuItemComponent
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             text: i18n("(Empty)")
             enabled: false
         }

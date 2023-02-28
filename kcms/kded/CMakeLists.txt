@@ -28,3 +28,4 @@ kcmutils_generate_desktop_file(kcm_kded)
 target_link_libraries(kcm_kded KF6::QuickAddons KF6::I18n KF6::KCMUtils Qt::DBus)
 
 kpackage_install_package(package kcm_kded kcms)
+

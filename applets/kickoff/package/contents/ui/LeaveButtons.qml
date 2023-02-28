@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import org.kde.plasma.private.kicker 0.1 as Kicker
-import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.16 as Kirigami
@@ -115,7 +115,7 @@ RowLayout {
         text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][currentId]
         visible: shouldBeVisible
         // Make it look pressed while the menu is open
-        down: contextMenu.status === PC2.DialogStatus.Open || pressed
+        down: contextMenu.status === PlasmaExtras.DialogStatus.Open || pressed
         PC3.ToolTip.text: text
         PC3.ToolTip.visible: hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -130,8 +130,7 @@ RowLayout {
 
     Instantiator {
         model: filteredMenuItemsModel
-        // Not a QQC1 MenuItem. It's actually a custom QQuickItem.
-        delegate: PC2.MenuItem {
+        delegate: PlasmaExtras.MenuItem {
             text: model.display
             icon: model.decoration
             Accessible.role: Accessible.MenuItem
@@ -141,8 +140,7 @@ RowLayout {
         onObjectRemoved: contextMenu.removeMenuItem(object)
     }
 
-    // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
-    PC2.Menu {
+    PlasmaExtras.Menu {
         id: contextMenu
         visualParent: leaveButton
         placement: {

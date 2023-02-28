@@ -8,7 +8,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
 
 Item {
@@ -44,7 +44,7 @@ Item {
     Component {
         id: contextMenuItemComponent
 
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             property variant actionItem
 
             text: actionItem.label
@@ -59,7 +59,7 @@ Item {
     Component {
         id: contextMenuComponent
 
-        PlasmaComponents.ContextMenu {
+        PlasmaExtras.Menu {
             visualParent: root.visualParent
             property variant actionItem
             property Item separator: separatorItem
@@ -77,24 +77,24 @@ Item {
                 }
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 id: showItem
                 visible: separatorItem.visible
                 text: i18n("Show")
 
-                PlasmaComponents.ContextMenu {
+                PlasmaExtras.Menu {
                     id: subShowMenu
                     visualParent: showItem.action
                 }
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 id: separatorItem
                 separator: true
                 visible: false
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 text: i18n("Hide %1", actionItem.label);
                 onClicked: {
                     kimpanel.hideAction(actionItem.key);
@@ -103,7 +103,7 @@ Item {
                 visible: enabled
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 text: i18n("Configure Input Method")
                 icon: "configure"
                 onClicked: {
@@ -111,7 +111,7 @@ Item {
                 }
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 text: i18n("Reload Config")
                 icon: "view-refresh"
                 onClicked: {
@@ -119,7 +119,7 @@ Item {
                 }
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 text: i18n("Exit Input Method")
                 icon: "application-exit"
                 onClicked: {
@@ -127,7 +127,7 @@ Item {
                 }
             }
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 property QtObject configureAction: null
 
                 enabled: configureAction && configureAction.enabled

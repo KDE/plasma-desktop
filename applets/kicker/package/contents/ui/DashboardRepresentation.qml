@@ -11,7 +11,7 @@ import QtQml 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.shell 2.0
@@ -150,10 +150,10 @@ Kicker.DashboardWindow {
             }
         }
 
-        PlasmaComponents.Menu {
+        PlasmaExtras.Menu {
             id: contextMenu
 
-            PlasmaComponents.MenuItem {
+            PlasmaExtras.MenuItem {
                 action: plasmoid.action("configure")
             }
         }

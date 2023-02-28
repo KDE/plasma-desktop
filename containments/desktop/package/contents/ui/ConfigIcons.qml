@@ -12,7 +12,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
@@ -81,7 +81,7 @@ Item {
 
                 onClicked: {
                     checked = Qt.binding(() =>
-                        iconMenu.status === PlasmaComponents.DialogStatus.Open);
+                        iconMenu.status === PlasmaExtras.DialogStatus.Open);
 
                     iconMenu.open(0, height);
                 }
@@ -94,17 +94,17 @@ Item {
                 }
             }
 
-            PlasmaComponents.ContextMenu {
+            PlasmaExtras.Menu {
                 id: iconMenu
                 visualParent: iconButton
 
-                PlasmaComponents.MenuItem {
+                PlasmaExtras.MenuItem {
                     text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon: "document-open-folder"
                     onClicked: iconDialog.open()
                 }
 
-                PlasmaComponents.MenuItem {
+                PlasmaExtras.MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                     icon: "edit-clear"
                     onClicked: cfg_icon = "folder";

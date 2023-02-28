@@ -7,7 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // for DialogStatus
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
@@ -60,7 +60,7 @@ PlasmaCore.ToolTipArea {
     })
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
-        || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
+        || (task.contextMenu && task.contextMenu.status === PlasmaExtras.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
     active: (plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog

@@ -12,7 +12,7 @@ pragma Singleton // NOTE: Singletons are shared between all instances of a plasm
 import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import "code/tools.js" as Tools
 
 Item {
@@ -25,7 +25,7 @@ Item {
     property Plasmoid plasmoid: null
 
     // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
-    readonly property PC2.Menu menu: PC2.Menu {
+    readonly property PlasmaExtras.Menu menu: PlasmaExtras.Menu {
         id: menu
 
         visualParent: null
@@ -45,17 +45,17 @@ Item {
     Component {
         id: menuComponent
 
-        PC2.Menu {}
+        PlasmaExtras.Menu {}
     }
 
     Component {
         id: menuItemComponent
 
-        PC2.MenuItem {
+        PlasmaExtras.MenuItem {
             id: menuItem
 
             required property var modelData
-            property PC2.Menu subMenu: modelData.subActions
+            property PlasmaExtras.Menu subMenu: modelData.subActions
                 ? menuComponent.createObject(menuItem, { visualParent: menuItem.action })
                 : null
 
