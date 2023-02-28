@@ -74,6 +74,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Codecs
     Sonnet
     Package
+    IconThemes
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
