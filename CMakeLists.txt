@@ -36,6 +36,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Widgets
     Svg
     Concurrent
+    Core5Compat
 )
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 if (QT_MAJOR_VERSION EQUAL "5")
