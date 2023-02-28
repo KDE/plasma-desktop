@@ -109,7 +109,7 @@ QAbstractProxyModel *KCMSplashScreen::splashSortedModel() const
     return m_sortModel;
 }
 
-void KCMSplashScreen::ghnsEntryChanged(KNSCore::EntryWrapper *wrapper)
+void KCMSplashScreen::ghnsEntryChanged(const KNSCore::Entry &entry)
 {
     auto removeItemFromModel = [this](const QStringList &files) {
         if (!files.isEmpty()) {
@@ -121,10 +121,9 @@ void KCMSplashScreen::ghnsEntryChanged(KNSCore::EntryWrapper *wrapper)
         }
     };
 
-    const KNSCore::EntryInternal entry = wrapper->entry();
-    if (entry.status() == KNS3::Entry::Deleted) {
+    if (entry.status() == KNSCore::Entry::Deleted) {
         removeItemFromModel(entry.uninstalledFiles());
-    } else if (entry.status() == KNS3::Entry::Installed) {
+    } else if (entry.status() == KNSCore::Entry::Installed) {
         removeItemFromModel(entry.installedFiles());
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(entry.installedFiles().constFirst());

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <KNSCore/EntryWrapper>
+#include <KNSCore/Entry>
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -40,7 +40,7 @@ public:
     bool testing() const;
 
     Q_INVOKABLE int sortModelPluginIndex(const QString &pluginName) const;
-    Q_INVOKABLE void ghnsEntryChanged(KNSCore::EntryWrapper *wrapper);
+    Q_INVOKABLE void ghnsEntryChanged(const KNSCore::Entry &wrapper);
     QStringList pendingDeletions();
 
 public Q_SLOTS:
