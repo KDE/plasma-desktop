@@ -188,7 +188,7 @@ void ModulesModel::load()
             data.type = KDEDConfig::OnDemandType;
             onDemandModules << data;
         } else {
-            qCWarning(KCM_KDED) << "kcmkded: Module " << module.name() << "from file" << module.fileName() << " not loaded on demand or startup! Skipping.";
+            qCWarning(KCM_KDED) << "kcmkded: Module" << module.name() << "from file" << module.fileName() << "not loaded on demand or startup! Skipping.";
             continue;
         }
     }
