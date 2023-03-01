@@ -23,13 +23,11 @@ Item {
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]
         // For some reason, these signal handlers need to be here for `data` to actually contain data.
-        onSourceAdded: {
+        onSourceAdded: source => {
             disconnectSource(source);
             connectSource(source);
         }
-        onSourceRemoved: {
-            disconnectSource(source);
-        }
+        onSourceRemoved: source => disconnectSource(source);
     }
     //END
 
