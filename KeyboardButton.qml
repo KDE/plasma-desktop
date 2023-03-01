@@ -43,8 +43,8 @@ PlasmaComponents.ToolButton {
                 layouts.sort((a, b) => a.longName.localeCompare(b.longName));
                 return layouts;
             }
-            onObjectAdded: menu.insertItem(index, object)
-            onObjectRemoved: menu.removeItem(object)
+            onObjectAdded: (index, object) => menu.insertItem(index, object)
+            onObjectRemoved: (index, object) => menu.removeItem(object)
             delegate: PlasmaComponents.MenuItem {
                 text: modelData.longName
                 onTriggered: {
