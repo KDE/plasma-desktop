@@ -81,21 +81,22 @@ if (QT_MAJOR_VERSION EQUAL "5")
     find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
 endif()
 
-find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
-
-set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
-    DESCRIPTION "Accounts management library for Qt applications"
-    URL "https://gitlab.com/accounts-sso/libaccounts-qt"
-    PURPOSE "Required for building the OpenDesktop integration plugin"
-    TYPE OPTIONAL
-)
-
-find_package(KAccounts 20.04)
-set_package_properties(KAccounts PROPERTIES
-    DESCRIPTION "Accounts management library for KDE applications"
-    PURPOSE "Required for building the OpenDesktop integration plugin"
-    TYPE OPTIONAL
-)
+# TODO re-enable once KAccounts is ported to Qt6
+# find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+#
+# set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
+#     DESCRIPTION "Accounts management library for Qt applications"
+#     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
+#     PURPOSE "Required for building the OpenDesktop integration plugin"
+#     TYPE OPTIONAL
+# )
+#
+# find_package(KAccounts 20.04)
+# set_package_properties(KAccounts PROPERTIES
+#     DESCRIPTION "Accounts management library for KDE applications"
+#     PURPOSE "Required for building the OpenDesktop integration plugin"
+#     TYPE OPTIONAL
+# )
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
