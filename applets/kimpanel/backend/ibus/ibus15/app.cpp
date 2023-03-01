@@ -11,11 +11,7 @@
 #include <QDBusServiceWatcher>
 #include <QDebug>
 #include <QTimer>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
-#include <QtGui/private/qtx11extras_p.h>
-#endif
+#include <private/qtx11extras_p.h>
 
 #define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
 
@@ -206,8 +202,8 @@ bool App::nativeEvent(xcb_generic_event_t *event)
             auto sym = xcb_key_press_lookup_keysym(m_syms, keypress, 0);
             uint state = keypress->state & USED_MASK;
             bool forward;
-            if ((forward = m_triggersList.contains(qMakePair<uint, uint>(sym, state)))
-                || m_triggersList.contains(qMakePair<uint, uint>(sym, state & (~XCB_MOD_MASK_SHIFT)))) {
+            if ((forward = m_triggersList.contains(std::make_pair(sym, state)))
+                || m_triggersList.contains(std::make_pair(sym, state & (~XCB_MOD_MASK_SHIFT)))) {
                 if (m_keyboardGrabbed) {
                     ibus_panel_impanel_navigate(m_impanel, false, forward);
                 } else {

@@ -19,8 +19,6 @@ int main(int argc, char *argv[])
     qputenv("QT_IM_MODULE", "compose");
     App app(argc, argv);
 
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
-
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
     };

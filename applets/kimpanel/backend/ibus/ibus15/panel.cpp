@@ -513,7 +513,7 @@ static void impanel_update_triggers(IBusPanelImpanel *impanel, GVariant *variant
         GdkModifierType mod = (GdkModifierType)0;
         _gtk_accelerator_parse(triggers[i], &key, &mod);
         if (key) {
-            triggersList << qMakePair<uint, uint>(key, (uint)mod);
+            triggersList << std::make_pair(key, (uint)mod);
         }
     }
     impanel->app->setTriggerKeys(triggersList);

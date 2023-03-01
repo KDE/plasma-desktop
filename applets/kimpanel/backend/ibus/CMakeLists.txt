@@ -1,11 +1,8 @@
 if(IBUS_FOUND AND GLIB2_FOUND AND GOBJECT_FOUND)
     configure_file(config-kimpanel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kimpanel.h)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        find_package(Qt6X11Extras)
-    endif()
     find_package(XCB COMPONENTS XCB KEYSYMS)
 
-    if (Qt6X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
+    if (XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
         set(CMAKE_C_STANDARD 99)
         add_executable(kimpanel-ibus-panel
             ibus15/xkblayoutmanager.cpp
@@ -17,7 +14,7 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GOBJECT_FOUND)
             ibus15/panel.cpp
             ibus15/propertymanager.cpp)
         target_compile_definitions(kimpanel-ibus-panel PRIVATE -DQT_NO_KEYWORDS)
-        target_link_libraries(kimpanel-ibus-panel GLIB2::GLIB2 PkgConfig::IBUS PkgConfig::GOBJECT Qt::Core Qt::DBus Qt::Gui Qt::X11Extras XCB::KEYSYMS)
+        target_link_libraries(kimpanel-ibus-panel GLIB2::GLIB2 PkgConfig::IBUS PkgConfig::GOBJECT Qt::Core Qt::DBus Qt::Gui Qt::GuiPrivate XCB::KEYSYMS)
         # configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kimpanel.xml.in ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml @ONLY)
         # install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml DESTINATION ${CMAKE_INSTALL_PREFIX}/share/ibus/component)
 
