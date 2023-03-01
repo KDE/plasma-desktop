@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-11-30 03:38+0100\n"
+"POT-Creation-Date: 2022-12-26 00:54+0000\n"
 "PO-Revision-Date: 2016-03-13 14:33+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,19 +18,58 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/ui/main.qml:36
-#, kde-format
-msgid "Show Desktop"
-msgstr "Prikaži površ"
-
-#: package/contents/ui/main.qml:37
-#, kde-format
-msgid "Show the Plasma desktop"
-msgstr "Prikaži plasma površ"
-
-#: package/contents/ui/main.qml:44
+#: package/contents/ui/MinimizeAllController.qml:17
 #, fuzzy, kde-format
 #| msgid "Minimize All Windows"
-msgctxt "@action"
+msgctxt "@action:button"
+msgid "Restore All Minimized Windows"
+msgstr "Minimizuj sve prozore"
+
+#: package/contents/ui/MinimizeAllController.qml:18
+#, fuzzy, kde-format
+#| msgid "Minimize All Windows"
+msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Minimizuj sve prozore"
+
+#: package/contents/ui/MinimizeAllController.qml:20
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Restores the previously minimized windows"
+msgstr ""
+
+#: package/contents/ui/MinimizeAllController.qml:21
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Desktop by minimizing all windows"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Peek at Desktop"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:15
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Peeking at Desktop"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:17
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Moves windows back to their original positions"
+msgstr ""
+
+#: package/contents/ui/PeekController.qml:18
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Temporarily shows the desktop by moving windows away"
+msgstr ""
+
+#~ msgid "Show Desktop"
+#~ msgstr "Prikaži površ"
+
+#~ msgid "Show the Plasma desktop"
+#~ msgstr "Prikaži plasma površ"

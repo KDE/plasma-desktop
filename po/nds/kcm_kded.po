@@ -1,0 +1,235 @@
+# Translation of kcmkded.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2006, 2007, 2008.
+# Manfred Wiese <m.j.wiese@web.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2011-06-22 05:45+0200\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmkded.cpp:115
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "De Server <em></em> %1lett sik nich anhollen."
+
+#: kcmkded.cpp:117
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "De Server <em>%1</em> lett sik nich starten."
+
+#: kcmkded.cpp:124
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "De Server <em></em> %1lett sik nich anhollen."
+
+#: kcmkded.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "De Server <em>%1</em> lett sik nich starten."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
+#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
+#| "listed for convenience. The startup services can be started and stopped. "
+#| "In Administrator mode, you can also define whether services should be "
+#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
+#| "for KDE; do not deactivate services if you do not know what you are doing."
+#| "</b></p>"
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>Deenstpleger</h1><p>Dit Moduul gifft Di en Tosamenfaten över all Plugins "
+"vun den KDE-Dämoon, ok KDE-Deensten nöömt. Dat gifft twee Typen vun Deensten:"
+"</p><ul><li>Deensten, de bi't Hoochfohren start warrt</li><li>Deensten, de "
+"opropen warrt, wenn dat noot deit</li></ul><p>De twete Oort is bloots as "
+"Informatschoon oplist. De Duerdeensten köönt start un anhollen warrn. In den "
+"Plegerbedrief kannst Du ok fastleggen, wat Deensten direktemang bi't "
+"Hoochfohren starten schöölt.</p><p><b>Bitte mit Acht bruken! En Reeg "
+"Deensten deit för KDE noot; bitte maak keen Deensten ut, wenn Du nich nipp "
+"un nau weetst, wat Du deist.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "Deenst"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "Löppt"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Löppt nich"
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "Duerdeensten"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Oproop-Deensten"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Löppt nich"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Löppt"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "Deenst"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "Deenst"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de"
+
+#, fuzzy
+#~| msgid "Startup Services"
+#~ msgid "Background Services"
+#~ msgstr "Duerdeensten"
+
+#, fuzzy
+#~| msgid "(c) 2002 Daniel Molkentin"
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE-Deenstpleger"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Disse List wiest de verföögboren Deensten, de start, wenn dat noot deit. "
+#~ "Se sünd bloots as Informatschoon oplist, se köönt nich instellt warrn."
+
+#~ msgid "Status"
+#~ msgstr "Tostand"
+
+#~ msgid "Description"
+#~ msgstr "Beschrieven"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Disse List wiest all Deensten, de direktemang bi't Hoochfohren vun KDE "
+#~ "starten köönt. De Deensten mit en Haken warrt bi dat nakamen Hoochfohren "
+#~ "start. Bitte wees sinnig mit dat Utmaken vun Deensten, de Du nich kennst."
+
+#~ msgid "Use"
+#~ msgstr "Bruuk"
+
+#~ msgid "Start"
+#~ msgstr "Starten"
+
+#~ msgid "Stop"
+#~ msgstr "Anhollen"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED lett sik nich faatkriegen."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "De Deenst <em>%1</em> lett sik nich starten.<br /><br /><i>Fehler: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "De Deenst <em>%1</em> lett sik nich anhollen.<br /><br /><i>Fehler: %2</i>"

@@ -1,0 +1,155 @@
+# Translation of kcmkded.po into Serbian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2015, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2017-04-07 00:51+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: kcmkded.cpp:115
+#, fuzzy, kde-format
+#| msgid "Unable to stop service <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "Не могу да зауставим сервис <em>%1</em>."
+
+#: kcmkded.cpp:117
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "Не могу да покренем сервер <em>%1</em>."
+
+#: kcmkded.cpp:124
+#, fuzzy, kde-format
+#| msgid "Unable to stop service <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "Не могу да зауставим сервис <em>%1</em>."
+
+#: kcmkded.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "Не могу да покренем сервер <em>%1</em>."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr ""
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "Сервиси при покретању"
+
+#: package/contents/ui/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Load-on-Demand Services"
+msgstr "Сервиси при покретању"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr ""
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr ""
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Start Service"
+msgstr "Сервиси при покретању"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Топлица Танасковић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toptan@kde.org.yu"
+
+#, fuzzy
+#~| msgid "(c) 2002 Daniel Molkentin"
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "© 2002, Данијел Молкентин"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Данијел Молкентин"

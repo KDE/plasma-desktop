@@ -6,15 +6,15 @@
 # Hongsoo Byun <hsbyun@haansoft.com>, 2005.
 # Youngbin Park <shrike@nate.com>, 2005.
 # Sung-Jae, Cho <jachin@hanafos.com>, 2005.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
-"PO-Revision-Date: 2022-02-20 20:55+0100\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2023-03-01 00:21+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -22,9 +22,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
-#: applicationmodel.cpp:65
+#: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
 msgstr "기타…"
@@ -36,10 +36,9 @@ msgid "Default web browser"
 msgstr "기본 웹 브라우저 사용"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "기본 파일 관리자 선택"
+msgstr "기본 압축 프로그램 선택"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -62,22 +61,19 @@ msgid "Select default map"
 msgstr "기본 지도 선택"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "기본 파일 관리자 선택"
+msgstr "기본 그림 뷰어 선택"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "기본 지도 선택"
+msgstr "기본 음악 재생기 선택"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "기본 브라우저 선택"
+msgstr "기본 PDF 뷰어 선택"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -90,56 +86,54 @@ msgid "Select default terminal emulator"
 msgstr "기본 터미널 에뮬레이터 선택"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "기본 터미널 에뮬레이터 선택"
+msgstr "기본 텍스트 편집기 선택"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "기본 파일 관리자 선택"
+msgstr "기본 동영상 재생기 선택"
 
 #: package/contents/ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "자세히"
 
 #: package/contents/ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "이 프로그램은 다음 파일 형식을 지원하지 않습니다:"
 
 #: package/contents/ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "그래도 열기"
 
 #: package/contents/ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "다음 파일 형식이 다른 프로그램과 연결되어 있습니다:"
 
 #: package/contents/ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1이(가) %2에 연결됨"
 
 #: package/contents/ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "모두 %1(으)로 재연결"
 
 #: package/contents/ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "수동으로 파일 형식 연결 변경"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -147,12 +141,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"'%1'에서 비슷한 유형의 프로그램과 연관된 다음 MIME 형식을 지원하지 않는 것 같"
+"습니다: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "인터넷"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -174,44 +170,44 @@ msgstr "다이얼러:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "멀티미디어"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "그림 뷰어:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "음악 재생기:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "동영상 재생기:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "문서"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "텍스트 편집기:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF 뷰어:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "유틸리티"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -224,14 +220,12 @@ msgid "Terminal emulator:"
 msgstr "터미널 에뮬레이터:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "파일 관리자:"
+msgstr "압축 프로그램:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "지도:"

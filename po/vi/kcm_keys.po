@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -235,12 +235,12 @@ msgstr "Chọn tệp…"
 msgid "Import"
 msgstr "Nhập khẩu"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:27
+#: package/contents/ui/ShortcutActionDelegate.qml:31
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Sửa phím tắt: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:39
+#: package/contents/ui/ShortcutActionDelegate.qml:43
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -248,49 +248,49 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:52
+#: package/contents/ui/ShortcutActionDelegate.qml:56
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Không có phím tắt hoạt động"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:96
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "Phím tắt mặc định"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:94
+#: package/contents/ui/ShortcutActionDelegate.qml:98
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Không có phím tắt mặc định"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Phím tắt mặc định %1 đã được bật."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Phím tắt mặc định %1 đã được tắt."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:123
+#: package/contents/ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Phím tắt tự chọn"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:148
+#: package/contents/ui/ShortcutActionDelegate.qml:152
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Xoá phím tắt này"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:154
+#: package/contents/ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Thêm phím tắt tự chọn"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:189
+#: package/contents/ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Huỷ chờ nhập phím tắt mới"

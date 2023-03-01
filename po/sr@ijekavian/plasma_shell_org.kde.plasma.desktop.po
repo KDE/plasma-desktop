@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma__desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-13 02:18+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/activitymanager/ActivityItem.qml:225
+#: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
 msgstr "Тренутно се користи"
 
-#: contents/activitymanager/ActivityItem.qml:265
+#: contents/activitymanager/ActivityItem.qml:252
 #, fuzzy
 #| msgid "Stop activity"
 msgid ""
@@ -30,183 +30,253 @@ msgid ""
 "this activity"
 msgstr "Заустави активност"
 
-#: contents/activitymanager/ActivityItem.qml:295
+#: contents/activitymanager/ActivityItem.qml:282
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
 
-#: contents/activitymanager/ActivityItem.qml:355
+#: contents/activitymanager/ActivityItem.qml:342
 msgid "Configure"
 msgstr "Подеси"
 
-#: contents/activitymanager/ActivityItem.qml:371
+#: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
 msgstr "Заустави активност"
 
-#: contents/activitymanager/ActivityList.qml:155
+#: contents/activitymanager/ActivityList.qml:143
 msgid "Stopped activities:"
 msgstr "Заустављене активности:"
 
-#: contents/activitymanager/ActivityManager.qml:140
-msgid "Create activity..."
+#: contents/activitymanager/ActivityManager.qml:127
+#, fuzzy
+#| msgid "Create activity..."
+msgid "Create activity…"
 msgstr "Направи активност..."
 
-#: contents/activitymanager/Heading.qml:71
+#: contents/activitymanager/Heading.qml:61
 msgid "Activities"
 msgstr "Активности"
 
-#: contents/activitymanager/Heading.qml:86
-#: contents/explorer/WidgetExplorer.qml:250
-msgid "Search..."
-msgstr "Тражи..."
-
-#: contents/activitymanager/StoppedActivityItem.qml:146
+#: contents/activitymanager/StoppedActivityItem.qml:133
 msgid "Configure activity"
 msgstr "Подеси активност"
 
-#: contents/activitymanager/StoppedActivityItem.qml:161
+#: contents/activitymanager/StoppedActivityItem.qml:148
 msgid "Delete"
 msgstr "Обриши"
 
-#: contents/configuration/AppletConfiguration.qml:53
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr ""
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr ""
+
+#: contents/applet/CompactApplet.qml:71
+msgid "Open %1"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:248
+msgid "About"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:47
+msgid "Send an email to %1"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:61
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:125
+msgid "Copyright"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Лиценца:"
+
+#: contents/configuration/AboutPlugin.qml:148
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:160
+#, fuzzy
+#| msgid "Author:"
+msgid "Authors"
+msgstr "Аутор:"
+
+#: contents/configuration/AboutPlugin.qml:170
+msgid "Credits"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:181
+msgid "Translators"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:195
+msgid "Report a Bug…"
+msgstr ""
+
+#: contents/configuration/AppletConfiguration.qml:56
 #, fuzzy
 #| msgid "Keyboard shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Пречице са тастатуре"
 
-#: contents/configuration/AppletConfiguration.qml:132
+#: contents/configuration/AppletConfiguration.qml:296
 msgid "Apply Settings"
 msgstr "Примени поставке"
 
-#: contents/configuration/AppletConfiguration.qml:133
+#: contents/configuration/AppletConfiguration.qml:297
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
 msgstr ""
 "Измењене су поставке текућег модула. Желите ли да их примените или одбаците?"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:327
 msgid "OK"
 msgstr "У реду"
 
-#: contents/configuration/AppletConfiguration.qml:432
+#: contents/configuration/AppletConfiguration.qml:335
 msgid "Apply"
 msgstr "Примени"
 
-#: contents/configuration/AppletConfiguration.qml:438
-#: contents/explorer/AppletAlternatives.qml:185
+#: contents/configuration/AppletConfiguration.qml:341
+#: contents/explorer/AppletAlternatives.qml:179
 msgid "Cancel"
 msgstr "Одустани"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
 msgstr "Лево дугме"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
 msgstr "Десно дугме"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:33
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
 msgstr "Средње дугме"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:34
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
 msgstr "Дугме назад"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:35
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
 msgstr "Дугме напред"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:37
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
 msgstr "Усправно клизање"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:38
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
 msgstr "Водоравно клизање"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:40
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:41
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:42
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:43
+#: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:83
+#: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:163
-#: contents/configuration/MouseEventInputButton.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+msgctxt "@title"
+msgid "About"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
 msgstr "Додај радњу"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:75
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:90
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
 msgid "Layout:"
 msgstr "Распоред:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:105
-msgid "Wallpaper Type:"
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#, fuzzy
+#| msgid "Wallpaper Type:"
+msgid "Wallpaper type:"
 msgstr "Тип тапета:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:122
-msgid "Get New Plugins..."
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:140
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Промене распореда морају да се примене пре даљих измена."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:146
-msgid "Apply now"
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#, fuzzy
+#| msgid "Apply now"
+msgid "Apply Now"
 msgstr "Примени сада"
 
-#: contents/configuration/ConfigurationShortcuts.qml:39
+#: contents/configuration/ConfigurationShortcuts.qml:16
+#, fuzzy
+#| msgid "Keyboard shortcuts"
+msgid "Shortcuts"
+msgstr "Пречице са тастатуре"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
 
-#: contents/configuration/ContainmentConfiguration.qml:43
+#: contents/configuration/ContainmentConfiguration.qml:29
 msgid "Wallpaper"
 msgstr "Тапет"
 
-#: contents/configuration/ContainmentConfiguration.qml:48
+#: contents/configuration/ContainmentConfiguration.qml:34
 msgid "Mouse Actions"
 msgstr "Радње мишем"
 
-#: contents/configuration/MouseEventInputButton.qml:34
+#: contents/configuration/MouseEventInputButton.qml:20
 msgid "Input Here"
 msgstr "Унос овде"
 
-#: contents/configuration/panelconfiguration/EdgeHandle.qml:28
-msgid "Screen Edge"
-msgstr "Ивица екрана"
-
-#: contents/configuration/panelconfiguration/EdgeHandle.qml:40
-msgid "Click and drag the button to a screen edge to move the panel there."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:46
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Уклони панел"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 msgid "Panel Alignment"
 msgstr "Поравнање панела"
 
@@ -218,120 +288,226 @@ msgstr "Врх"
 msgid "Left"
 msgstr "Лево"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:74
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
 msgid "Center"
 msgstr "Средина"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:85
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
 msgid "Bottom"
 msgstr "Дно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:85
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
 msgid "Right"
 msgstr "Десно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
 msgid "Visibility"
 msgstr "Видљивост"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Always Visible"
 msgstr "Увек видљив"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:111
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid "Auto Hide"
 msgstr "Аутоматско сакривање"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:119
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
 msgid "Windows Can Cover"
 msgstr "Прозори могу да прекрију"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:127
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
 msgid "Windows Go Below"
 msgstr "Прозори иду испод"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid "Maximize Panel"
 msgstr "Максимизуј панел"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:34
-msgid "Add Widgets..."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
+msgid "Floating Panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
+#, fuzzy
+#| msgid "Keyboard shortcuts"
+msgid "Shortcut"
+msgstr "Пречице са тастатуре"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+#, fuzzy
+#| msgid "Add Widgets..."
+msgid "Add Widgets…"
 msgstr "Додај виџете..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:35
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
 msgid "Add Spacer"
 msgstr "Додај размакницу"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:36
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
 #, fuzzy
 #| msgid "More Settings..."
-msgid "More Options..."
+msgid "More Options…"
 msgstr "Више поставки..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:112
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:112
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Panel height:"
 msgstr "Поравнање панела"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:195
+#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Затвори"
 
-#: contents/explorer/AppletAlternatives.qml:83
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr ""
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
+msgid "Swap with Desktop on Screen %1"
+msgstr ""
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+msgid "Move to Screen %1"
+msgstr ""
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#, fuzzy
+#| msgid "Remove Panel"
+msgid "Remove Desktop"
+msgstr "Уклони панел"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
+msgid "%1 (primary)"
+msgstr ""
+
+#: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
 msgstr "Алтернативни виџети"
 
-#: contents/explorer/AppletAlternatives.qml:174
+#: contents/explorer/AppletAlternatives.qml:163
 msgid "Switch"
 msgstr "Пребаци"
 
-#: contents/explorer/AppletDelegate.qml:179
+#: contents/explorer/AppletDelegate.qml:175
 msgid "Undo uninstall"
 msgstr "Опозови деинсталирање"
 
-#: contents/explorer/AppletDelegate.qml:180
+#: contents/explorer/AppletDelegate.qml:176
 msgid "Uninstall widget"
 msgstr "Деинсталирај виџет"
 
-#: contents/explorer/Tooltip.qml:106
-msgid "License:"
-msgstr "Лиценца:"
-
-#: contents/explorer/Tooltip.qml:115
+#: contents/explorer/Tooltip.qml:102
 msgid "Author:"
 msgstr "Аутор:"
 
-#: contents/explorer/Tooltip.qml:123
+#: contents/explorer/Tooltip.qml:110
 msgid "Email:"
 msgstr "Е‑пошта:"
 
-#: contents/explorer/Tooltip.qml:142
+#: contents/explorer/Tooltip.qml:129
 msgid "Uninstall"
 msgstr "Деинсталирај"
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:129
+#: contents/explorer/WidgetExplorer.qml:240
+#, fuzzy
+#| msgid "Widgets"
+msgid "All Widgets"
+msgstr "Виџети"
+
+#: contents/explorer/WidgetExplorer.qml:194
 msgid "Widgets"
 msgstr "Виџети"
 
-#: contents/explorer/WidgetExplorer.qml:225
+#: contents/explorer/WidgetExplorer.qml:202
+#, fuzzy
+#| msgid "Get new widgets"
+msgid "Get New Widgets…"
+msgstr "Добави нове виџете"
+
+#: contents/explorer/WidgetExplorer.qml:251
 msgid "Categories"
 msgstr "Категорије"
 
-#: contents/explorer/WidgetExplorer.qml:342
+#: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets matched the search terms"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:342
+#: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:366
-#, fuzzy
-#| msgid "Get new widgets"
-msgid "Get New Widgets..."
-msgstr "Добави нове виџете"
+#~ msgid "Search..."
+#~ msgstr "Тражи..."
+
+#~ msgid "Screen Edge"
+#~ msgstr "Ивица екрана"

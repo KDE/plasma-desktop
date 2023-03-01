@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2020-10-07 22:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -239,7 +239,7 @@ msgstr "Vali fail ..."
 msgid "Import"
 msgstr "Impordi"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:27
+#: package/contents/ui/ShortcutActionDelegate.qml:31
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the name of the component, %2 is the action for which saving failed"
@@ -247,7 +247,7 @@ msgstr "Impordi"
 msgid "Editing shortcut: %1"
 msgstr "Tõrge kiirklahvi %1 salvestamisel: %2"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:39
+#: package/contents/ui/ShortcutActionDelegate.qml:43
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -255,12 +255,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:52
+#: package/contents/ui/ShortcutActionDelegate.qml:56
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Aktiivseid kiirklahve pole"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:96
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -268,12 +268,12 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Vaikimisi kiirklahv"
 msgstr[1] "Vaikimisi kiirklahvid"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:94
+#: package/contents/ui/ShortcutActionDelegate.qml:98
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Vaikimisi kiirklahve pole"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -281,7 +281,7 @@ msgstr "Vaikimisi kiirklahve pole"
 msgid "Default shortcut %1 is enabled."
 msgstr "Vaikimisi kiirklahv"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -289,22 +289,22 @@ msgstr "Vaikimisi kiirklahv"
 msgid "Default shortcut %1 is disabled."
 msgstr "Vaikimisi kiirklahv"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:123
+#: package/contents/ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Kohandatud kiirklahvid"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:148
+#: package/contents/ui/ShortcutActionDelegate.qml:152
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Selle kiirklahvi kustutamine"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:154
+#: package/contents/ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Lisa kohandatud kiirklahv"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:189
+#: package/contents/ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Uue kiirklahvi määramisest loobumine"

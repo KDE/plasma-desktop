@@ -1,0 +1,221 @@
+# Copyright (C) 2015 Free Software Foundation, Inc.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2002.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2015.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-12-14 17:42+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.70\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "A szolgáltatlás leállítása meghiúsult: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "A szolgáltatás elindítása meghiúsult: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "A szolgáltatlás leállítása meghiúsult."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "A szolgáltatás elindítása meghiúsult."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"A KDE Szolgáltatáskezelő (kded5) értesítése a mentett módosításokról "
+"meghiúsult: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>E modul segítségével könnyen áttekinthetők a KDE rendszerszolgáltatás "
+"bővítményei (más néven KDE szolgáltatások). Kétféle szolgáltatás létezik:</"
+"p><ul><li>Automatikusan elinduló szolgáltatások</li><li>Szükség esetén "
+"elinduló szolgáltatások</li></ul><p>Az utóbbiak csak tájékoztatásul vannak "
+"megjelenítve. Az automatikusan elinduló szolgáltatások azonban elindíthatók "
+"és leállíthatók, illetve a használatuk ki-be kapcsolható.</p> <p><b>A "
+"szolgáltatások jellemzőinek módosításánál kérjük legyen óvatosnak, mert "
+"néhány közülük mindenképpen kell a Plasma működéséhez. Csak akkor kapcsoljon "
+"ki egy szolgáltatást, ha tisztában van a leállás kihatásaival.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"A háttérszolgáltatás-kezelő (kded5) jelenleg nem fut. Ellenőrizze, hogy "
+"megfelelően lett-e telepítve."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Néhány szolgáltatás automatikusan leállítja magát manuális indításkor, ha "
+"nem hasznosak a jelenlegi környezetben."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Néhány szolgáltatás automatikusan elindult/leállt, amikor a "
+"háttérszolgáltatás-kezelő (kded5) újraindult a változtatások alkalmazásához."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Minden szolgáltatás"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Fut"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Nem fut"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Indítási szolgáltatások"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Szükség esetén elinduló szolgáltatások"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Szolgáltatás induláskori betöltésének be- vagy kikapcsolása"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Nem fut"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Fut"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Szolgáltatás leállítása"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Szolgáltatás indítása"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#~ msgid "Background Services"
+#~ msgstr "Háttérszolgáltatások"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr ""
+#~ "(c) Daniel Molkentin, 2002.\n"
+#~ "(c) Kai Uwe Broulik, 2020."
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE szolgáltatáskezelő"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Ez azoknak a szolgáltatásoknak a listája, melyek szükség esetén "
+#~ "automatikusan betöltődnek. A lista csak tájékoztató jellegű, a "
+#~ "szolgáltatások jellemzőit itt nem lehet módosítani."
+
+#~ msgid "Status"
+#~ msgstr "Állapot"
+
+#~ msgid "Description"
+#~ msgstr "Leírás"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Itt láthatók a Plasma elindulásakor betölthető egyéb szolgáltatások. Csak "
+#~ "a bejelölt szolgáltatások aktiválódnak a következő induláskor. Ne "
+#~ "kapcsoljon ki olyan szolgáltatást, melynek rendeltetését nem ismeri."
+
+#~ msgid "Use"
+#~ msgstr "Használat"
+
+#~ msgid "Start"
+#~ msgstr "Indítás"
+
+#~ msgid "Stop"
+#~ msgstr "Leállítás"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Nem sikerült kapcsolatot teremteni a KDED-vel."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nem sikerült elindítani ezt a szolgáltatást: <em>%1</em>.<br /><br /"
+#~ "><i>Hibaüzenet: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nem sikerült leállítani ezt a szolgáltatást: <em>%1</em>.<br /><br /"
+#~ "><i>Hibaüzenet: %2</i>"

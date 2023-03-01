@@ -1,0 +1,215 @@
+# translation of kcmkded.po to dansk
+# Danish translation of kcmkded
+# Copyright (C)
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2002, 2003, 2004.
+# Keld Simonsen <keld@dkuug.dk>, 2008.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2015, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-07-22 20:22+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Kunne ikke stoppe tjenesten: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Kunne ikke starte tjenesten: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Kunne ikke stoppe tjenesten."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Kunne ikke starte tjenesten."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Kunne ikke give KDE Service Manager (kded5) besked om gemte ændringer: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Dette modul tillader dig at få et overblik over alle plugin i KDE- "
+"dæmonen, også refereret til som KDE-tjenester. Generelt er der to typer "
+"tjenester:</p><ul><li>Tjenester der kaldes ved opstart</li><li>Tjenester der "
+"forspørges</li></ul><p>De sidste er kun anført af behagelighedsgrunde. "
+"Opstart-tjenester kan startes og stoppes. Du kan også definere om tjenester "
+"skal indlæses ved opstart.</p><p><b> Brug dette forsigtigt. Visse tjenester "
+"er vitale for Plasma. Deaktivér ikke tjenester hvis du ikke rigtigt ved hvad "
+"du gør.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Håndteringen af baggrundstjenester (kded5) kører ikke i øjeblikket. "
+"Kontrollér at den er installeret korrekt."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Nogle tjenester deaktiverer sig selv igen, når de startes manuelt, hvis de "
+"ikke er nyttige i det aktuelle miljø."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Nogle tjenester blev automatisk startet/stoppet når håndteringen af "
+"baggrundstjenester (kded5) blev genstartet for at anvende dine ændringer."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Alle tjenester"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Kører"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Kører ikke"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Opstartstjenester"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Load-on-Demand tjenester"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart til/fra"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Kører ikke"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Kører"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Stop tjeneste"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Start tjeneste"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu"
+
+#~ msgid "Background Services"
+#~ msgstr "Baggrundstjenester"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE's Tjeneste-håndtering"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Dette er en liste af tilgængelige KDE-tjenester der vil blive startet ved "
+#~ "forespørgsel. De er kun anført af behagelighedsgrunde, da du ikke kan "
+#~ "manipulere disse tjenester."
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Description"
+#~ msgstr "Beskrivelse"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Dette viser alle KDE-tjenester der kan indlæses ved opstart af Plasmas. "
+#~ "Afkrydsede tjenester vil blive kaldt ved næste opstart. Vær forsigtig med "
+#~ "deaktivering af ukendte tjenester."
+
+#~ msgid "Use"
+#~ msgstr "Brug"
+
+#~ msgid "Start"
+#~ msgstr "Start"
+
+#~ msgid "Stop"
+#~ msgstr "Stop"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Kan ikke kontakte KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Kan ikke starte tjenesten <em>%1</em>.<br /><br /><i>Fejl: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Kan ikke standse tjenesten <em>%1</em>.<br /><br /><i>Fejl: %2</i>"

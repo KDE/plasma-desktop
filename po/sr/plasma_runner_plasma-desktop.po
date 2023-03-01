@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:25+0200\n"
+"POT-Creation-Date: 2021-10-28 00:19+0000\n"
 "PO-Revision-Date: 2012-06-04 22:20+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,30 +18,20 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: plasma-desktop-runner.cpp:35
+#: plasma-desktop-runner.cpp:24
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "desktop console"
 msgstr "конзола површи"
 
 # well-spelled: мп
-#: plasma-desktop-runner.cpp:36
+#: plasma-desktop-runner.cpp:25
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console"
 msgstr "конзола мп"
 
-#: plasma-desktop-runner.cpp:61
-#, kde-format
-msgid "Open Plasma desktop interactive console"
-msgstr "Отвара интерактивну конзолу плазма површи"
-
-#: plasma-desktop-runner.cpp:70
-#, kde-format
-msgid "Open KWin interactive console"
-msgstr "Отвара интерактивну конзолу К‑вина"
-
-#: plasma-desktop-runner.cpp:127 plasma-desktop-runner.cpp:130
+#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
 #, kde-format
 msgid ""
 "Opens the Plasma desktop interactive console with a file path to a script on "
@@ -50,13 +40,13 @@ msgstr ""
 "Отвара интерактивну конзолу плазма површи с путањом фајла ка скрипти на "
 "диску."
 
-#: plasma-desktop-runner.cpp:129
+#: plasma-desktop-runner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "desktop console :q:"
 msgstr "конзола површи :q:"
 
-#: plasma-desktop-runner.cpp:133 plasma-desktop-runner.cpp:136
+#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
 #, kde-format
 msgid ""
 "Opens the KWin interactive console with a file path to a script on disk."
@@ -64,8 +54,18 @@ msgstr ""
 "Отвара интерактивну конзолу К‑вина с путањом фајла ка скрипти на диску."
 
 # well-spelled: мп
-#: plasma-desktop-runner.cpp:135
+#: plasma-desktop-runner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console :q:"
 msgstr "конзола мп :q:"
+
+#: plasma-desktop-runner.cpp:53
+#, kde-format
+msgid "Open Plasma desktop interactive console"
+msgstr "Отвара интерактивну конзолу плазма површи"
+
+#: plasma-desktop-runner.cpp:62
+#, kde-format
+msgid "Open KWin interactive console"
+msgstr "Отвара интерактивну конзолу К‑вина"

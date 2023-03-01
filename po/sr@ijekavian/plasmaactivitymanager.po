@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmaactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-12 03:59+0200\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2016-04-15 23:42+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Environment: kde\n"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:337
+#: sortedactivitiesmodel.cpp:311
 #, kde-format
 msgid "Used some time ago"
 msgstr "коришћено пре неког времена"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:349
+#: sortedactivitiesmodel.cpp:327
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "коришћено пре више од године"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:350
+#: sortedactivitiesmodel.cpp:328
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -42,7 +42,7 @@ msgstr[2] "коришћено пре %1 месеци"
 msgstr[3] "коришћено месец раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:351
+#: sortedactivitiesmodel.cpp:329
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -53,7 +53,7 @@ msgstr[2] "коришћено пре %1 дана"
 msgstr[3] "коришћено дан раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:352
+#: sortedactivitiesmodel.cpp:330
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -64,7 +64,7 @@ msgstr[2] "коришћено пре %1 сати"
 msgstr[3] "коришћено сат раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:353
+#: sortedactivitiesmodel.cpp:331
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -75,17 +75,17 @@ msgstr[2] "коришћено пре %1 минута"
 msgstr[3] "коришћено минут раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:354
+#: sortedactivitiesmodel.cpp:332
 #, kde-format
 msgid "Used a moment ago"
 msgstr "само што је коришћено"
 
-#: switcherbackend.cpp:256
+#: switcherbackend.cpp:167
 #, kde-format
 msgid "Walk through activities"
 msgstr "Шетај кроз активности"
 
-#: switcherbackend.cpp:261
+#: switcherbackend.cpp:172
 #, kde-format
 msgid "Walk through activities (Reverse)"
 msgstr "Шетај кроз активности (обрнуто)"

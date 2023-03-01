@@ -1,0 +1,222 @@
+# Translation of kcm5_kded.po to Ukrainian
+# Copyright (C) 2002-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Eugene Onischenko <oneugene@ukr.net>, 2002, 2003.
+# Andriy Rysin <arysin@bcsii.com>, 2002, 2003, 2004, 2006, 2007.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2015, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm5_kded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-07-03 09:56+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.07.70\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Не вдалося зупинити роботу служби: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Не вдалося запустити службу: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Не вдалося зупинити роботу служби."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Не вдалося запустити службу."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Не вдалося сповістити керування службами KDE (kded5) щодо збережених змін: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>За допомогою цього модуля ви зможете переглянути список всіх додатків до "
+"фонової служби KDE, які також називають службами KDE. Взагалі, є два типи "
+"служб:</p><ul> <li>служби, що викликаються при запуску Плазми</"
+"li><li>служби, що викликаються за запитом.</li></ul><p>Останні тут наведені "
+"лише для зручності. Служби, які викликаються при запуску KDE можна запускати "
+"або зупиняти. Також можна вказати, які служби запускати під час запуску KDE."
+"</p><p><b> Будьте обережні при користуванні: робота деяких служб життєво "
+"потрібна для Плазми. Не вимикайте служби, якщо ви не впевнені в тому, що "
+"робите.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Зараз керування фоновими службами (kded5) не запущено. Переконайтеся, що "
+"засоби керування встановлено належним чином."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Деякі служби, якщо запустити їх вручну, вимикаються автоматично, якщо вони є "
+"незастосовними до поточного середовища."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Деякі слуби було автоматично запущено або зупинено, коли було перезапущено "
+"засіб керування службами (kded5) для застосування внесених вами змін."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Усі служби"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Запущено"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Не запущено"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Служби, які завантажуються при запуску"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Служби, які завантажуються за запитом"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+"Увімкнути або вимкнути автоматичне завантаження цієї служби під час запуску"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Зупинено"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Запущено"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Зупинити службу"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Запустити службу"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eugene Onischenko,Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "oneugene@ukr.net,ivanpetrouchtchak@yahoo.com"
+
+#~ msgid "Background Services"
+#~ msgstr "Фонові служби"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "© Daniel Molkentin, 2002, © Kai Uwe Broulik, 2020"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Менеджер служб KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Це список наявних служб KDE, які завантажуються за потреби. Цей список "
+#~ "наведено лише для зручності, оскільки ви не можете керувати відповідними "
+#~ "службами."
+
+#~ msgid "Status"
+#~ msgstr "Стан"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Тут показано служби KDE, які можна завантажувати при запуску Плазми. "
+#~ "Позначені служби буде завантажено при наступному запуску Плазми. Будьте "
+#~ "обережні з вимиканням служб."
+
+#~ msgid "Use"
+#~ msgstr "Використовувати"
+
+#~ msgid "Start"
+#~ msgstr "Запустити"
+
+#~ msgid "Stop"
+#~ msgstr "Зупинити"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Неможливо зв'язатись з KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Неможливо запустити службу <em>%1</em>.<br /><br /><i>Помилка: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Неможливо зупинити службу <em>%1</em>.<br /><br /><i>Помилка: %2</i>"

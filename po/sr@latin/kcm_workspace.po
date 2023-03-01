@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-24 04:00+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,61 +19,63 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
+#: package/contents/ui/main.qml:23
 #, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Časlav Ilić"
+msgid ""
+"The system must be restarted before changes to the middle-click paste "
+"setting can take effect."
+msgstr ""
 
+#: package/contents/ui/main.qml:29
 #, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgid "Restart"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:46
 #, kde-format
 msgid "Visual behavior:"
 msgstr ""
 
-#: package/contents/ui/main.qml:39
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Informacioni oblačići pri lebdenju mišem"
 
-#: package/contents/ui/main.qml:53
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Vizuelni odziv pri promenama stanja"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
-
-#: package/contents/ui/main.qml:93
-#, kde-format
-msgctxt "Animation speed"
-msgid "Slow"
 msgstr ""
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Animation speed"
+msgid "Slow"
+msgstr ""
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Animation speed"
 msgid "Instant"
 msgstr ""
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:120
 #, kde-format
-msgid "Click behavior:"
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
 msgstr ""
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:121
 #, kde-format
-msgid "Single-click to open files and folders"
-msgstr ""
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Double-click to open files and folders"
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
 msgstr ""
 
 #: package/contents/ui/main.qml:133
@@ -81,17 +83,23 @@ msgstr ""
 msgid "Select by clicking on item's selection marker"
 msgstr ""
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:143
 #, kde-format
-msgid "Select by single-clicking"
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
 msgstr ""
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr ""
+
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr ""
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -99,7 +107,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr ""
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:184
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr ""
+
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -107,23 +120,113 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr ""
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:213
 #, kde-format
-msgid "Middle-click to scroll to clicked location"
+msgid "Middle Click:"
 msgstr ""
 
-#: workspaceoptions.cpp:44
+#: package/contents/ui/main.qml:215
 #, kde-format
-msgid "General Behavior"
+msgid "Paste selected text"
 msgstr ""
 
-#: workspaceoptions.cpp:46
-#, fuzzy, kde-format
-#| msgid "Global options for the Plasma Workspace"
-msgid "System Settings module for configuring general workspace behavior."
-msgstr "Globalne opcije za plasma radni prostor"
-
-#: workspaceoptions.cpp:49
+#: package/contents/ui/main.qml:232
 #, kde-format
-msgid "Furkan Tokac"
+msgid "Touch Mode:"
 msgstr ""
+
+#: package/contents/ui/main.qml:234
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr ""
+
+#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:263
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr ""
+
+#: package/contents/ui/main.qml:276
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr ""
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr ""
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr ""
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Časlav Ilić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#, fuzzy
+#~| msgid "Global options for the Plasma Workspace"
+#~ msgid "System Settings module for configuring general workspace behavior."
+#~ msgstr "Globalne opcije za plasma radni prostor"

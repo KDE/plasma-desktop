@@ -104,7 +104,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Usando o &knetattach;</title>
 
 <para
->Como irá ver na imagem abaixo, o Assistente de Pastas de Rede permite-lhe atualmente adicionar quatro tipos de pastas da rede: WebDav, &FTP;, unidades de rede do &Microsoft; &Windows; (Samba) e SSH. Adicionalmente, você pode selecionar uma conexão recente a partir da lista. <screenshot>
+>Como irá ver na imagem abaixo, o Assistente de Pastas de Rede permite-lhe atualmente adicionar quatro tipos de pastas da rede: WebDav, &FTP;, unidades de rede do &Microsoft; &Windows; (&Samba;) e SSH. Adicionalmente, você pode selecionar uma conexão recente a partir da lista. <screenshot>
 <screeninfo
 >Aqui está uma imagem do &knetattach;</screeninfo>
 <mediaobject>
@@ -159,7 +159,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >Falando em assistente, o Assistente de Pastas de Rede pretende ser bastante simples de usar. Depois de abrir o assistente, você deverá escolher o tipo de pasta de rede a que deseja acessar. Quando passar para a próxima tela, só terá que preencher as informações solicitadas. O passo final é inserir o seu nome de usuário e senha para o compartilhamento de rede que deseja acessar. </para>
 <para
->Abaixo encontra-se uma lista, com as informações que o assistente precisa para criar as pastas de rede. Se uma opção não estiver disponível para uma determinada pasta, ela não precisa ser fornecida. As pastas de rede de Samba &eg; não necessitam de um item <guilabel
+>Abaixo encontra-se uma lista, com as informações que o assistente precisa para criar as pastas de rede. Se uma opção não estiver disponível para uma determinada pasta, ela não precisa ser fornecida. As pastas de rede de &Samba; &eg; não necessitam de um item <guilabel
 >Porta</guilabel
 >. </para>
 
@@ -204,7 +204,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >Aqui você indica o número de porta a qual deseja conectar-se. Os valores padrão são normalmente adequados. <note
 > <para
->Não está disponível para as pastas do &Microsoft; &Windows; (Samba). </para>
+>Não está disponível para as pastas do &Microsoft; &Windows; (&Samba;). </para>
 </note>
 </para>
 </listitem>
@@ -380,8 +380,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Tradução de Marcus Gama <email
 >marcus.gama@gmail.com</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>

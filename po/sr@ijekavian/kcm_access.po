@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-15 03:54+0200\n"
+"POT-Creation-Date: 2023-01-20 00:59+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,580 +20,815 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Топлица Танасковић,Часлав Илић"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabBell)
-#: accessibility.ui:21
-#, kde-format
-msgid "&Bell"
-msgstr "&Звоно"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: accessibility.ui:27
-#, kde-format
-msgid "Audible Bell"
-msgstr "Чујно звоно"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, systemBell)
-#. i18n: ectx: property (toolTip), widget (QCheckBox, gestures)
-#: accessibility.ui:33 accessibility.ui:576
-#, kde-format
-msgid ""
-"If this option is checked, the default system bell will be used. Usually, "
-"this is just a \"beep\"."
-msgstr ""
-"Ако је ова опција укључена, користиће се подразумијевано системско звоно. "
-"Обично је то просто „бип“."
-
-#. i18n: ectx: property (text), widget (QCheckBox, systemBell)
-#: accessibility.ui:36
-#, kde-format
-msgid "Use &system bell"
-msgstr "Користи &системско звоно"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, customBell)
-#. i18n: ectx: property (toolTip), widget (QCheckBox, accessxBeep)
-#: accessibility.ui:43 accessibility.ui:660
-#, kde-format
-msgid ""
-"Check this option if you want to use a customized bell, playing a sound "
-"file. If you do this, you will probably want to turn off the system bell."
-msgstr ""
-"Укључите ово ако желите прилагођено звоно, односно да се оглашава неки "
-"звучни фајл. Ако се одлучите за ово, вјероватно ћете жељети да искључите "
-"системско звоно."
-
-#. i18n: ectx: property (text), widget (QCheckBox, customBell)
-#: accessibility.ui:46
-#, kde-format
-msgid "Us&e customized bell"
-msgstr "Користи &прилагођено звоно"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, soundLabel)
-#. i18n: ectx: property (toolTip), widget (QLineEdit, soundEdit)
-#. i18n: ectx: property (toolTip), widget (QPushButton, soundButton)
-#: accessibility.ui:71 accessibility.ui:84 accessibility.ui:91
-#, kde-format
-msgid ""
-"If the option \"Use customized bell\" is enabled, you can choose a sound "
-"file here. Click \"Browse...\" to choose a sound file using the file dialog."
-msgstr ""
-"Ако задате употребу прилагођеног звона, овдје можете изабрати жељени звучни "
-"фајл. Кликните на „Прегледај...“ да бисте га изабрали дијалогом фајлова."
-
-#. i18n: ectx: property (text), widget (QLabel, soundLabel)
-#: accessibility.ui:74
-#, kde-format
-msgid "Sound &to play:"
-msgstr "Име &звучног фајла:"
-
-#. i18n: ectx: property (text), widget (QPushButton, soundButton)
-#: accessibility.ui:94
-#, kde-format
-msgid "Browse..."
-msgstr "Прегледај..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: accessibility.ui:106
-#, kde-format
-msgid "Visual Bell"
-msgstr "Визуелно звоно"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, visibleBell)
-#: accessibility.ui:112
-#, kde-format
-msgid ""
-"This option will turn on the \"visual bell\", i.e. a visual notification "
-"shown every time that normally just a bell would occur. This is especially "
-"useful for deaf people."
-msgstr ""
-"Ова опција ће укључити „визуелно звоно“, тј. визуелно обавјештење умјесто "
-"уобичајеног звучног кад год би се звоно огласило. Врло згодно за кориснике "
-"са слабијим слухом."
-
-#. i18n: ectx: property (text), widget (QCheckBox, visibleBell)
-#: accessibility.ui:115
-#, kde-format
-msgid "&Use visual bell"
-msgstr "Користи &визуелно звоно"
-
-#. i18n: ectx: property (toolTip), widget (QRadioButton, flashScreen)
-#: accessibility.ui:122
-#, kde-format
-msgid ""
-"The screen will turn to a custom color for the amount of time specified "
-"below."
-msgstr "Екран ће задобити посебну боју током временског периода задатог испод."
-
-#. i18n: ectx: property (text), widget (QRadioButton, flashScreen)
-#: accessibility.ui:125
-#, kde-format
-msgid "F&lash screen"
-msgstr "&Трепћући екран"
-
-#. i18n: ectx: property (toolTip), widget (QRadioButton, invertScreen)
-#: accessibility.ui:132
-#, kde-format
-msgid ""
-"All screen colors will be inverted for the amount of time specified below."
-msgstr "Све екранске боје ће бити изврнуте за временски период задат испод."
-
-#. i18n: ectx: property (text), widget (QRadioButton, invertScreen)
-#: accessibility.ui:135
-#, kde-format
-msgid "I&nvert screen"
-msgstr "&Изврнут екран"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: accessibility.ui:158
-#, kde-format
-msgid ""
-"Click here to choose the color used for the \"flash screen\" visible bell."
-msgstr ""
-"Кликните овдје да изаберете боју која ће бити коришћена за трепћући екран."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: accessibility.ui:165
-#, kde-format
-msgid "&Duration:"
-msgstr "&Трајање:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, duration)
-#. i18n: ectx: property (toolTip), widget (QSpinBox, slowKeysDelay)
-#. i18n: ectx: property (toolTip), widget (QSpinBox, bounceKeysDelay)
-#. i18n: ectx: property (toolTip), widget (QSpinBox, timeoutDelay)
-#: accessibility.ui:178 accessibility.ui:389 accessibility.ui:486
-#: accessibility.ui:614
-#, kde-format
-msgid ""
-"Here you can customize the duration of the \"visible bell\" effect being "
-"shown."
-msgstr "Овдје можете прилагодити временски период за ефекат визуелног звона."
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, duration)
-#. i18n: ectx: property (suffix), widget (QSpinBox, slowKeysDelay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, bounceKeysDelay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: accessibility.ui:181 accessibility.ui:392 accessibility.ui:489
-#: accessibility.ui:766 accessibility.ui:808 accessibility.ui:840
-#, kde-format
-msgid " msec"
-msgstr " ms"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabModifier)
-#: accessibility.ui:224
-#, kde-format
-msgid "&Modifier Keys"
-msgstr "&Модификаторски тастери"
-
-#. i18n: ectx: property (title), widget (QGroupBox, sticky)
-#: accessibility.ui:230
-#, kde-format
-msgid "Sticky Keys"
-msgstr "Љепљиви тастери"
-
-#. i18n: ectx: property (text), widget (QCheckBox, stickyKeys)
-#: accessibility.ui:236
-#, kde-format
-msgid "Use &sticky keys"
-msgstr "Користи &љепљиве тастере"
-
-#. i18n: ectx: property (text), widget (QCheckBox, stickyKeysLock)
-#: accessibility.ui:263
-#, kde-format
-msgid "&Lock sticky keys"
-msgstr "&Закључај љепљиве тастере"
-
-#. i18n: ectx: property (text), widget (QCheckBox, stickyKeysAutoOff)
-#: accessibility.ui:270
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Искључи љепљиве тастере када се два тастера истовремено притисну"
-
-#. i18n: ectx: property (text), widget (QCheckBox, stickyKeysBeep)
-#: accessibility.ui:277
-#, kde-format
-msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
-msgstr ""
-"Употријеби системско звоно кад год се модификатор запне, закључа или откључа"
-
-#. i18n: ectx: property (title), widget (QGroupBox, locking)
-#: accessibility.ui:291
-#, kde-format
-msgid "Locking Keys"
-msgstr "Тастери за закључавање"
-
-#. i18n: ectx: property (text), widget (QCheckBox, toggleKeysBeep)
-#: accessibility.ui:297
-#, kde-format
-msgid "Use system bell whenever a locking key gets activated or deactivated"
-msgstr ""
-"Употријеби системско звони кад год се тастер за закључавање активира или "
-"деактивира"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kNotifyModifiers)
-#: accessibility.ui:304
-#, kde-format
-msgid ""
-"Use Plasma's notification mechanism for modifier or locking key state changes"
-msgstr ""
-"Употријеби Плазмин механизам обавјештења када модификаторски тастер или "
-"тастер за закључавање промијени стање"
-
-#. i18n: ectx: property (text), widget (QPushButton, kNotifyModifiersButton)
-#. i18n: ectx: property (text), widget (QPushButton, kNotifyAccessButton)
-#: accessibility.ui:329 accessibility.ui:706
-#, kde-format
-msgid "Configure &Notifications..."
-msgstr "Подеси &обавјештења..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabKeyFilters)
-#: accessibility.ui:368
-#, kde-format
-msgid "&Keyboard Filters"
-msgstr "&Филтери тастатуре"
-
-#. i18n: ectx: property (title), widget (QGroupBox, slowkeys)
-#: accessibility.ui:374
-#, kde-format
-msgid "Slo&w Keys"
-msgstr "&Спори тастери"
-
-#. i18n: ectx: property (text), widget (QCheckBox, slowKeys)
-#: accessibility.ui:382
-#, kde-format
-msgid "&Use slow keys"
-msgstr "Користи с&поре тастере"
-
-#. i18n: ectx: property (text), widget (QCheckBox, slowKeysPressBeep)
-#: accessibility.ui:443
-#, kde-format
-msgid "&Use system bell whenever a key is pressed"
-msgstr "&Огласи системско звоно увијек када се тастер притисне"
-
-#. i18n: ectx: property (text), widget (QCheckBox, slowKeysAcceptBeep)
-#: accessibility.ui:450
-#, kde-format
-msgid "&Use system bell whenever a key is accepted"
-msgstr "&Огласи системско звоно увијек када се тастер прихвати"
-
-#. i18n: ectx: property (text), widget (QCheckBox, slowKeysRejectBeep)
-#: accessibility.ui:457
-#, kde-format
-msgid "&Use system bell whenever a key is rejected"
-msgstr "&Огласи системско звоно увијек када се тастер одбаци"
-
-#. i18n: ectx: property (title), widget (QGroupBox, bouncekeys)
-#: accessibility.ui:471
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Одскачући тастери"
-
-#. i18n: ectx: property (text), widget (QCheckBox, bounceKeys)
-#: accessibility.ui:479
-#, kde-format
-msgid "Use bou&nce keys"
-msgstr "Користи &одскачуће тастере"
-
-#. i18n: ectx: property (text), widget (QCheckBox, bounceKeysRejectBeep)
-#: accessibility.ui:538
-#, kde-format
-msgid "Use the system bell whenever a key is rejected"
-msgstr "Огласи системско звоно увијек када се тастер одбаци"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabActivationGestures)
-#: accessibility.ui:564
-#, kde-format
-msgid "Activation &Gestures"
-msgstr "Активирајући &гестови"
-
-#. i18n: ectx: property (title), widget (QGroupBox, activationgestures)
-#: accessibility.ui:570
-#, kde-format
-msgid "Activation Gestures"
-msgstr "Активирајући гестови"
-
-#. i18n: ectx: property (text), widget (QCheckBox, gestures)
-#: accessibility.ui:579
-#, kde-format
-msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Користи гестове за активирање љепљивих и спорих тастера"
-
-#. i18n: ectx: property (text), widget (QCheckBox, timeout)
-#: accessibility.ui:589
-#, kde-format
-msgid ""
-"Turn sticky keys and slow keys off after a certain period of inactivity."
-msgstr ""
-"Искључи љепљиве и споре тастере послије извјесног периода неактивности."
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, timeoutDelay)
-#: accessibility.ui:617
-#, kde-format
-msgid " min"
-msgstr " мин."
-
-#. i18n: ectx: property (title), widget (QGroupBox, notification)
-#: accessibility.ui:654
-#, kde-format
-msgid "Notification"
-msgstr "Обавјештење"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accessxBeep)
-#: accessibility.ui:663
-#, kde-format
-msgid ""
-"Use the system bell whenever a gesture is used to toggle an accessibility "
-"feature"
-msgstr ""
-"Употријеби системско звоно увијек када се употријеби гест за укључивање или "
-"искључивање неке могућности приступачности"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, gestureConfirmation)
-#: accessibility.ui:671
-#, kde-format
-msgid ""
-"If this option is checked, KDE will show a confirmation dialog whenever a "
-"keyboard accessibility feature is turned on or off.\n"
-"Ensure you know what you are doing if you uncheck it, as the keyboard "
-"accessibility settings will then always be applied without confirmation."
-msgstr ""
-"Ако је ова опција укључена, КДЕ ће приказати дијалог за потврду увијек када "
-"се укључи или искључи нека могућност приступачности за тастатуру.\n"
-"Пазите да знате шта радите ако искључите ово, јер се тада поставке "
-"приступачности увијек примјењују без потврде."
-
-#. i18n: ectx: property (text), widget (QCheckBox, gestureConfirmation)
-#: accessibility.ui:674
-#, kde-format
-msgid ""
-"Show a confirmation dialog whenever a keyboard accessibility feature is "
-"toggled"
-msgstr ""
-"Прикажи дијалог за потврду увијек када се укључи или искључи нека могућност "
-"приступачности"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kNotifyAccess)
-#: accessibility.ui:681
-#, kde-format
-msgid ""
-"Use Plasma's notification mechanism whenever a keyboard accessibility "
-"feature is toggled"
-msgstr ""
-"Користи Плазмин механизам обавјештења увијек када се укључи или искључи нека "
-"могућност приступачности тастатуре"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabMouseKeys)
-#: accessibility.ui:745
-#, kde-format
-msgid "Mouse Navigation"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: accessibility.ui:753
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: accessibility.ui:782
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: accessibility.ui:792
-#, kde-format
-msgid "R&epeat interval:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: accessibility.ui:824
-#, kde-format
-msgid "Acceleration &time:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: accessibility.ui:856
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr ""
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: accessibility.ui:872
-#, kde-format
-msgid " pixel/sec"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: accessibility.ui:888
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabScreenReader)
-#: accessibility.ui:933
-#, kde-format
-msgid "Screen Reader"
-msgstr "Читач екрана"
-
-#. i18n: ectx: property (text), widget (QCheckBox, screenReaderEnabled)
-#: accessibility.ui:939
-#, kde-format
-msgid "Screen reader enabled"
-msgstr "Читач екрана укључен"
-
-#. i18n: ectx: property (text), widget (QPushButton, launchOrcaConfiguration)
-#: accessibility.ui:948
-#, kde-format
-msgid "&Launch Orca Configuration"
-msgstr "&Покрени подешавање Орке"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: accessibility.ui:973
-#, kde-format
-msgid ""
-"Please note that you may have to log out once to allow the screen reader to "
-"work properly."
-msgstr ""
-"Можда ћете морати да се одјавите једном да би читач екрана правилно прорадио."
-
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:123
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock, CapsLock и ScrollLock|/|Притисните "
 "$[аку %1] док су активни NumLock, CapsLock и ScrollLock"
 
-#: kcmaccess.cpp:139
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни CapsLock и ScrollLock|/|Притисните $[аку %1] "
 "док су активни CapsLock и ScrollLock"
 
-#: kcmaccess.cpp:141
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock и ScrollLock|/|Притисните $[аку %1] док "
 "су активни NumLock и ScrollLock"
 
-#: kcmaccess.cpp:143
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr ""
 "Притисните %1 док је активан ScrollLock|/|Притисните $[аку %1] док је "
 "активан ScrollLock"
 
-#: kcmaccess.cpp:146
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock и CapsLock|/|Притисните $[аку %1] док "
 "су активни NumLock и CapsLock"
 
-#: kcmaccess.cpp:148
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr ""
 "Притисните %1 док је активан CapsLock|/|Притисните $[аку %1] док је активан "
 "CapsLock"
 
-#: kcmaccess.cpp:150
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr ""
 "Притисните %1 док је активан NumLock|/|Притисните $[аку %1] док је активан "
 "NumLock"
 
-#: kcmaccess.cpp:152
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Притисните %1|/|Притисните $[аку %1]"
 
-#: kcmaccess.cpp:161
-#, kde-format
-msgid "KDE Accessibility Tool"
-msgstr ""
-"КДЕ‑ова алатка за приступачност|/|$[својства дат 'КДЕ‑овој алатки за "
-"приступачност']"
-
-#: kcmaccess.cpp:162
-#, kde-format
-msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
-msgstr "© 2000, Матијас Хелцер-Клипфел"
-
-#: kcmaccess.cpp:164
-#, kde-format
-msgid "Matthias Hoelzer-Kluepfel"
-msgstr "Матијас Хелцер-Клипфел"
-
-#: kcmaccess.cpp:164
-#, kde-format
-msgid "Author"
-msgstr "аутор"
-
-#: kcmaccess.cpp:219
-#, kde-format
-msgid ""
-"Here you can activate keyboard gestures that turn on the following "
-"features: \n"
-"Sticky keys: Press Shift key 5 consecutive times\n"
-"Slow keys: Hold down Shift for 8 seconds"
-msgstr ""
-"Овдје можете активирати гестове са тастатуре који укључују сљедеће "
-"могућности:\n"
-"Љепљиви тастери: притисните тастер Shift пет пута за редом\n"
-"Спори тастери: држите тастер Shift притиснут осам секунди"
-
-#: kcmaccess.cpp:223
-#, kde-format
-msgid ""
-"Here you can activate keyboard gestures that turn on the following "
-"features: \n"
-"Mouse Keys: %1\n"
-"Sticky keys: Press Shift key 5 consecutive times\n"
-"Slow keys: Hold down Shift for 8 seconds"
-msgstr ""
-"Овде можете активирати гестове са тастатуре који укључују следеће "
-"могућности:\n"
-"Тастери за миш: %1\n"
-"Љепљиви тастери: притисните тастер Shift пет пута за редом\n"
-"Спори тастери: држите тастер Shift осам секунди"
-
 # >> %1 is a command line
-#: kcmaccess.cpp:267
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Не могу да подесим Орку: „%1“ пропало"
 
-#: kcmaccess.cpp:274
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Грешка: Не могу да покренем „orca --setup“"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Use System Bell"
+msgstr "Користи &системско звоно"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Customize system bell"
+msgstr "Користи &системско звоно"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Use sticky Keys"
+msgstr "Користи &љепљиве тастере"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgid "Lock the sticky keys"
+msgstr "&Закључај љепљиве тастере"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Искључи љепљиве тастере када се два тастера истовремено притисну"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Use &sticky keys"
+msgid "Beep on a sticky key press"
+msgstr "Користи &љепљиве тастере"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Use slow keypresses"
+msgstr "Користи с&поре тастере"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Одскачући тастери"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, fuzzy, kde-format
+#| msgid "Screen Reader"
+msgid "Enable Screen Reader"
+msgstr "Читач екрана"
+
+#: package/contents/ui/Bell.qml:20
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:22
+#, kde-format
+msgctxt "Name filters in a file dialog"
+msgid "Audio Files (*.ogg *.wav)"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:31
+#, fuzzy, kde-format
+#| msgid "Audible Bell"
+msgid "Audible bell:"
+msgstr "Чујно звоно"
+
+#: package/contents/ui/Bell.qml:32
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:43
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:76
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:77
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visual Bell"
+msgid "Visual bell:"
+msgstr "Визуелно звоно"
+
+#: package/contents/ui/Bell.qml:94
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:108
+#, fuzzy, kde-format
+#| msgid "I&nvert screen"
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr "&Изврнут екран"
+
+#: package/contents/ui/Bell.qml:125
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:136
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: package/contents/ui/Bell.qml:147
+#, fuzzy, kde-format
+#| msgid "&Duration:"
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "&Трајање:"
+
+#: package/contents/ui/KeyboardFilters.qml:18
+#, fuzzy, kde-format
+#| msgid "&Use slow keys"
+msgid "Slow keys:"
+msgstr "Користи с&поре тастере"
+
+#: package/contents/ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:22
+#, kde-format
+msgid ""
+"For a key to be accepted, it has to be held until the set amount of time"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:37
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:54
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring system bell:"
+msgstr "Користи &системско звоно"
+
+#: package/contents/ui/KeyboardFilters.qml:55
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr "&Огласи системско звоно увијек када се тастер притисне"
+
+#: package/contents/ui/KeyboardFilters.qml:69
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr "&Огласи системско звоно увијек када се тастер прихвати"
+
+#: package/contents/ui/KeyboardFilters.qml:83
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr "&Огласи системско звоно увијек када се тастер одбаци"
+
+#: package/contents/ui/KeyboardFilters.qml:100
+#, fuzzy, kde-format
+#| msgid "Bounce Keys"
+msgid "Bounce keys:"
+msgstr "Одскачући тастери"
+
+#: package/contents/ui/KeyboardFilters.qml:101
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:104
+#, kde-format
+msgid "Ignore rapid, repeated keypresses of the same key"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:119
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: package/contents/ui/KeyboardFilters.qml:134
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is rejected"
+msgid "Ring system bell when rejected"
+msgstr "&Огласи системско звоно увијек када се тастер одбаци"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the accessibility features such as a screen "
+"reader."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "&Bell"
+msgctxt "System Bell"
+msgid "Bell"
+msgstr "&Звоно"
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid "&Modifier Keys"
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr "&Модификаторски тастери"
+
+#: package/contents/ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "&Keyboard Filters"
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr "&Филтери тастатуре"
+
+#: package/contents/ui/main.qml:41
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, fuzzy, kde-format
+#| msgid "Screen Reader"
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr "Читач екрана"
+
+#: package/contents/ui/ModifierKeys.qml:16
+#, fuzzy, kde-format
+#| msgid "Sticky Keys"
+msgid "Sticky keys:"
+msgstr "Љепљиви тастери"
+
+#: package/contents/ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:54
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgid "Ring system bell when modifier keys are used"
+msgstr "&Огласи системско звоно увијек када се тастер притисне"
+
+#: package/contents/ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: package/contents/ui/ModifierKeys.qml:72
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is accepted"
+msgid "Ring system bell when locking keys are toggled"
+msgstr "&Огласи системско звоно увијек када се тастер прихвати"
+
+#: package/contents/ui/ModifierKeys.qml:83
+#, fuzzy, kde-format
+#| msgid ""
+#| "Use Plasma's notification mechanism for modifier or locking key state "
+#| "changes"
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+"Употријеби Плазмин механизам обавјештења када модификаторски тастер или "
+"тастер за закључавање промијени стање"
+
+#: package/contents/ui/ModifierKeys.qml:95
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "Подеси &обавјештења..."
+
+#: package/contents/ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:41
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "Користи &системско звоно"
+
+#: package/contents/ui/MouseNavigation.qml:52
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "Обавјештење"
+
+#: package/contents/ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:82
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:96
+#, kde-format
+msgid "Acceleration time:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:110
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: package/contents/ui/MouseNavigation.qml:124
+#, kde-format
+msgid "Acceleration profile:"
+msgstr ""
+
+#: package/contents/ui/ScreenReader.qml:28
+#, fuzzy, kde-format
+#| msgid "&Launch Orca Configuration"
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "&Покрени подешавање Орке"
+
+#: package/contents/ui/ScreenReader.qml:41
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please note that you may have to log out once to allow the screen reader "
+#| "to work properly."
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+"Можда ћете морати да се одјавите једном да би читач екрана правилно прорадио."
+
+#: package/contents/ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Топлица Танасковић,Часлав Илић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+
+#~ msgid ""
+#~ "If this option is checked, the default system bell will be used. Usually, "
+#~ "this is just a \"beep\"."
+#~ msgstr ""
+#~ "Ако је ова опција укључена, користиће се подразумијевано системско звоно. "
+#~ "Обично је то просто „бип“."
+
+#~ msgid ""
+#~ "Check this option if you want to use a customized bell, playing a sound "
+#~ "file. If you do this, you will probably want to turn off the system bell."
+#~ msgstr ""
+#~ "Укључите ово ако желите прилагођено звоно, односно да се оглашава неки "
+#~ "звучни фајл. Ако се одлучите за ово, вјероватно ћете жељети да искључите "
+#~ "системско звоно."
+
+#~ msgid "Us&e customized bell"
+#~ msgstr "Користи &прилагођено звоно"
+
+#~ msgid ""
+#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
+#~ "file here. Click \"Browse...\" to choose a sound file using the file "
+#~ "dialog."
+#~ msgstr ""
+#~ "Ако задате употребу прилагођеног звона, овдје можете изабрати жељени "
+#~ "звучни фајл. Кликните на „Прегледај...“ да бисте га изабрали дијалогом "
+#~ "фајлова."
+
+#~ msgid "Sound &to play:"
+#~ msgstr "Име &звучног фајла:"
+
+#~ msgid "Browse..."
+#~ msgstr "Прегледај..."
+
+#~ msgid ""
+#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
+#~ "shown every time that normally just a bell would occur. This is "
+#~ "especially useful for deaf people."
+#~ msgstr ""
+#~ "Ова опција ће укључити „визуелно звоно“, тј. визуелно обавјештење умјесто "
+#~ "уобичајеног звучног кад год би се звоно огласило. Врло згодно за "
+#~ "кориснике са слабијим слухом."
+
+#~ msgid "&Use visual bell"
+#~ msgstr "Користи &визуелно звоно"
+
+#~ msgid ""
+#~ "The screen will turn to a custom color for the amount of time specified "
+#~ "below."
+#~ msgstr ""
+#~ "Екран ће задобити посебну боју током временског периода задатог испод."
+
+#~ msgid "F&lash screen"
+#~ msgstr "&Трепћући екран"
+
+#~ msgid ""
+#~ "All screen colors will be inverted for the amount of time specified below."
+#~ msgstr "Све екранске боје ће бити изврнуте за временски период задат испод."
+
+#~ msgid ""
+#~ "Click here to choose the color used for the \"flash screen\" visible bell."
+#~ msgstr ""
+#~ "Кликните овдје да изаберете боју која ће бити коришћена за трепћући екран."
+
+#~ msgid ""
+#~ "Here you can customize the duration of the \"visible bell\" effect being "
+#~ "shown."
+#~ msgstr ""
+#~ "Овдје можете прилагодити временски период за ефекат визуелног звона."
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgstr ""
+#~ "Употријеби системско звоно кад год се модификатор запне, закључа или "
+#~ "откључа"
+
+#~ msgid "Locking Keys"
+#~ msgstr "Тастери за закључавање"
+
+#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
+#~ msgstr ""
+#~ "Употријеби системско звони кад год се тастер за закључавање активира или "
+#~ "деактивира"
+
+#~ msgid "Slo&w Keys"
+#~ msgstr "&Спори тастери"
+
+#~ msgid "Use bou&nce keys"
+#~ msgstr "Користи &одскачуће тастере"
+
+#~ msgid "Use the system bell whenever a key is rejected"
+#~ msgstr "Огласи системско звоно увијек када се тастер одбаци"
+
+#~ msgid "Activation &Gestures"
+#~ msgstr "Активирајући &гестови"
+
+#~ msgid "Activation Gestures"
+#~ msgstr "Активирајући гестови"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Користи гестове за активирање љепљивих и спорих тастера"
+
+#~ msgid ""
+#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
+#~ msgstr ""
+#~ "Искључи љепљиве и споре тастере послије извјесног периода неактивности."
+
+#~ msgid " min"
+#~ msgstr " мин."
+
+#~ msgid ""
+#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
+#~ "feature"
+#~ msgstr ""
+#~ "Употријеби системско звоно увијек када се употријеби гест за укључивање "
+#~ "или искључивање неке могућности приступачности"
+
+#~ msgid ""
+#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
+#~ "keyboard accessibility feature is turned on or off.\n"
+#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
+#~ "accessibility settings will then always be applied without confirmation."
+#~ msgstr ""
+#~ "Ако је ова опција укључена, КДЕ ће приказати дијалог за потврду увијек "
+#~ "када се укључи или искључи нека могућност приступачности за тастатуру.\n"
+#~ "Пазите да знате шта радите ако искључите ово, јер се тада поставке "
+#~ "приступачности увијек примјењују без потврде."
+
+#~ msgid ""
+#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
+#~ "toggled"
+#~ msgstr ""
+#~ "Прикажи дијалог за потврду увијек када се укључи или искључи нека "
+#~ "могућност приступачности"
+
+#~ msgid ""
+#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
+#~ "feature is toggled"
+#~ msgstr ""
+#~ "Користи Плазмин механизам обавјештења увијек када се укључи или искључи "
+#~ "нека могућност приступачности тастатуре"
+
+#~ msgid "Screen reader enabled"
+#~ msgstr "Читач екрана укључен"
+
+#~ msgid "KDE Accessibility Tool"
+#~ msgstr ""
+#~ "КДЕ‑ова алатка за приступачност|/|$[својства дат 'КДЕ‑овој алатки за "
+#~ "приступачност']"
+
+#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
+#~ msgstr "© 2000, Матијас Хелцер-Клипфел"
+
+#~ msgid "Matthias Hoelzer-Kluepfel"
+#~ msgstr "Матијас Хелцер-Клипфел"
+
+#~ msgid "Author"
+#~ msgstr "аутор"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Овдје можете активирати гестове са тастатуре који укључују сљедеће "
+#~ "могућности:\n"
+#~ "Љепљиви тастери: притисните тастер Shift пет пута за редом\n"
+#~ "Спори тастери: држите тастер Shift притиснут осам секунди"
+
+#~ msgid ""
+#~ "Here you can activate keyboard gestures that turn on the following "
+#~ "features: \n"
+#~ "Mouse Keys: %1\n"
+#~ "Sticky keys: Press Shift key 5 consecutive times\n"
+#~ "Slow keys: Hold down Shift for 8 seconds"
+#~ msgstr ""
+#~ "Овде можете активирати гестове са тастатуре који укључују следеће "
+#~ "могућности:\n"
+#~ "Тастери за миш: %1\n"
+#~ "Љепљиви тастери: притисните тастер Shift пет пута за редом\n"
+#~ "Спори тастери: држите тастер Shift осам секунди"

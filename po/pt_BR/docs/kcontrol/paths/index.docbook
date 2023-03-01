@@ -68,13 +68,13 @@
 </authorgroup>
 
 <date
->09/04/2015</date>
+>05/09/2021</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.22</releaseinfo>
 
 <keywordset>
 <keyword
->KDE</keyword>
+>Plasma</keyword>
 <keyword
 >KControl</keyword>
 <keyword
@@ -89,7 +89,7 @@
 </articleinfo>
 
 <para
->Este é um módulo configura os caminhos essenciais para o ambiente de trabalho &kde;.</para>
+>Este é um módulo configura os caminhos essenciais para o ambiente de trabalho &plasma;.</para>
 
 <para>
 <screenshot>
@@ -107,6 +107,11 @@
 </screenshot>
 </para>
 
+<note>
+    <para
+>As unidades são montadas automaticamente na inicialização e não podem ser usadas como caminhos. Tais unidades serão revertidas para o padrão durante o reinício do &plasma;. </para>
+</note>
+
 <variablelist>
 <varlistentry>
 <term
@@ -115,19 +120,11 @@
 ></term>
 <listitem
 ><para
->A pasta da área de trabalho contém todos os arquivos que você vê na área de trabalho do seu computador. O caminho padrão normalmente é <filename class="directory"
+>A pasta da área de trabalho contém todos os arquivos que você vê no widget <guilabel
+>Visualização de pastas</guilabel
+> na sua área de trabalho. O caminho padrão normalmente é <filename class="directory"
 >~/Desktop</filename
 > mas você pode mudar aqui a localização desta pasta. </para
-></listitem>
-</varlistentry>
-<varlistentry>
-<term
-><guilabel
->Caminho de auto-início:</guilabel
-></term>
-<listitem
-><para
->A pasta de auto-início contém aplicativos ou ligações para aplicativos ou programas que você deseja que sejam iniciados sempre que o &kde; inicia. Você pode mudar a localização desta pasta se desejar. </para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -143,7 +140,7 @@
 <varlistentry>
 <term
 ><guilabel
->Caminho das transferências:</guilabel
+>Caminho dos downloads:</guilabel
 ></term>
 <listitem
 ><para
@@ -153,7 +150,7 @@
 <varlistentry>
 <term
 ><guilabel
->Caminho dos filmes:</guilabel
+>Caminho dos vídeos:</guilabel
 ></term>
 <listitem
 ><para

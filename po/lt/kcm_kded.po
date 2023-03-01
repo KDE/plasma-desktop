@@ -1,0 +1,217 @@
+# translation of kcmkded.po to Lithuanian
+#
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004, 2005.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2021-02-04 18:23+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Nepavyko sustabdyti tarnybos: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Nepavyko paleisti tarnybos: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Nepavyko sustabdyti tarnybos."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Nepavyko paleisti tarnybos."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Nepavyko pranešti KDE tarnybų tvarkytuvei (kded5) apie įrašytą pakeitimą: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Šis modulis jums leidžia matyti visų KDE tarnybos papildinių, taip pat "
+"vadinamų KDE tarnybomis, apžvalgą. Paprastai išskiriami du tarnybų tipai:</"
+"p> <ul><li>Tarnybos, paleidžiamos seanso pradžioje</li><li>Tarnybos, "
+"iškviečiamos esant poreikiui</li></ul> <p>Pastarosios pateiktos tik dėl "
+"patogumo. Kompiuterio paleidimo metu paleidžiamos tarnybos gali būti "
+"paleistos ir sustabdytos. Taip pat galite apibrėžti, ar tarnybos turėtų būti "
+"įkeltos paleidimo metu, ar ne.</p> <p><b>Naudokite tai atsargiai: kai kurios "
+"tarnybos yra būtinos Plasma veikimui. Neišjunginėkite tarnybų, jei nežinote, "
+"ką darote!</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Foninių tarnybų tvarkytuvė (kded5) šiuo metu neveikia. Įsitikinkite, kad ji "
+"teisingai įdiegta."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Kai kurios tarnybos, jas įjungus rankiniu būdu, pačios vėl išsijungia tuo "
+"atveju, jei jos nėra naudingos esamoje aplinkoje."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Kai kurios tarnybos buvo automatiškai paleistos/sustabdytos, kai foninių "
+"tarnybų tvarkytuvė (kded5) buvo paleista iš naujo, kad pritaikytų jūsų "
+"pakeitimus."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Visos tarnybos"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Veikia"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Neveikia"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Paleidimo metu paleidžiamos tarnybos"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Tarnybos, įkeliamos esant poreikiui"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Perjungti automatinį šios tarnybos įkėlimą paleidimo metu"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Neveikia"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Veikia"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Stabdyti tarnyba"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Paleisti tarnyba"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ričardas Čepas, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rch@richard.eu.org, <>"
+
+#~ msgid "Background Services"
+#~ msgstr "Foninės tarnybos"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE tarnybų tvarkytuvė"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Čia yra sąrašas prieinamų KDE tarnybų, kurios bus paleistos esant "
+#~ "poreikiui. Jos išvardytos tik dėl patogumo, kadangi jūs negalite "
+#~ "manipuliuoti šiomis tarnybomis."
+
+#~ msgid "Status"
+#~ msgstr "Būsena"
+
+#~ msgid "Description"
+#~ msgstr "Aprašas"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Tai rodo visas KDE tarnybas, kurios gali būti įkeltos Plasma paleidimo "
+#~ "metu. Pažymėtos tarnybos bus iškviestos kito paleidimo metu. Būkite "
+#~ "atsargūs išjungdami jums nežinomas tarnybas."
+
+#~ msgid "Use"
+#~ msgstr "Naudoti"
+
+#~ msgid "Start"
+#~ msgstr "Paleisti"
+
+#~ msgid "Stop"
+#~ msgstr "Stabdyti"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Nepavyko susisiekti su KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nepavyko paleisti tarnybos <em>%1</em>.<br /><br /><i>Klaida: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nepavyko sustabdyti tarnybos <em>%1</em>.<br /><br /><i>Klaida: %2</i>"

@@ -1,0 +1,238 @@
+# translation of kcmkded.po to Macedonian
+# Copyright (C) 2002,2003, 2004, 2007, 2008 Free Software Foundation, Inc.
+#
+# Novica Nakov <novica@bagra.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2008-12-21 16:39+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: kcmkded.cpp:115
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "Не можам да го запрам серверот <em>%1</em>."
+
+#: kcmkded.cpp:117
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "Не можам да го стартувам серверот <em>%1</em>."
+
+#: kcmkded.cpp:124
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "Не можам да го запрам серверот <em>%1</em>."
+
+#: kcmkded.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "Не можам да го стартувам серверот <em>%1</em>."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
+#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
+#| "listed for convenience. The startup services can be started and stopped. "
+#| "In Administrator mode, you can also define whether services should be "
+#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
+#| "for KDE; do not deactivate services if you do not know what you are doing."
+#| "</b></p>"
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>Менаџер на сервиси</h1><p>Овој модул ви овозможува да имате преглед на "
+"сите приклучоци на KDE-даемонот, познат и како KDE-Сервиси. Генерално, "
+"постојат два типа на сервиси:</p><ul><li>Сервиси кои се вклучуваат на "
+"стартување</li><li>Сервиси кои се вклучуваат на барање</li></"
+"ul><p>Последните се прикажани само заради прегледност. Сервисите кои се "
+"вклучуваат на стартување можат да бидат стартувани и стопирани. Во "
+"администраторскиот режим, може да дефинирате дали сервисите треба да бидат "
+"вчитани на стартување.</p><p><b> Користете го ова претпазливо. Некои сервиси "
+"се витални за KDE. Не деактивирајте сервиси, ако не знаете што правите</b></"
+"p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "Сервис"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "Работи"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Не работи"
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "Сервиси на стартување"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Сервиси кои се вчитуваат на барање"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Не работи"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Работи"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "Сервис"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "Сервис"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Божидар Проевски"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bobibobi@freemail.com.mk"
+
+#, fuzzy
+#~| msgid "Startup Services"
+#~ msgid "Background Services"
+#~ msgstr "Сервиси на стартување"
+
+#, fuzzy
+#~| msgid "(c) 2002 Daniel Molkentin"
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Менаџер на сервиси во KDE "
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Ова е листа на достапните сервиси во KDE кои ќе бидат стартувани на "
+#~ "барање. Тука само се покажани поради прегледност, бидејќи вие не може да "
+#~ "манипулирате со нив."
+
+#~ msgid "Status"
+#~ msgstr "Статус"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Ова е листа на сите сервиси во KDE кои можат да се вчитаат при стартување "
+#~ "на KDE. Избраните сервиси ќе бидат повикани на следното стартување. "
+#~ "Бидете внимателни со деактивација на непознати сервиси."
+
+#~ msgid "Use"
+#~ msgstr "Користи го"
+
+#~ msgid "Start"
+#~ msgstr "Старт"
+
+#~ msgid "Stop"
+#~ msgstr "Стоп"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Не можам да контактирам со KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Не можам да го стартувам сервисот <em>%1</em>.<br /><br /><i>Грешка: %2</"
+#~ "i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Не можам да го запрам сервисот <em>%1</em>.<br /><br /><i>Грешка: %2</i>"

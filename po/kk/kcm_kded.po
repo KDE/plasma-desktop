@@ -1,0 +1,231 @@
+# translation of kcmkded.po to Kazakh
+#
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2006, 2007, 2008, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2011-02-14 04:17+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+
+#: kcmkded.cpp:115
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service: %1"
+msgstr "<em>%1</em> сервері тоқтатылмады."
+
+#: kcmkded.cpp:117
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service: %1"
+msgstr "<em>%1</em> сервері жегілмеді."
+
+#: kcmkded.cpp:124
+#, fuzzy, kde-format
+#| msgid "Unable to stop server <em>%1</em>."
+msgid "Failed to stop service."
+msgstr "<em>%1</em> сервері тоқтатылмады."
+
+#: kcmkded.cpp:126
+#, fuzzy, kde-format
+#| msgid "Unable to start server <em>%1</em>."
+msgid "Failed to start service."
+msgstr "<em>%1</em> сервері жегілмеді."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:19
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
+#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
+#| "listed for convenience. The startup services can be started and stopped. "
+#| "In Administrator mode, you can also define whether services should be "
+#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
+#| "for KDE; do not deactivate services if you do not know what you are doing."
+#| "</b></p>"
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<h1>Қызметтер менеджері</h1><p> Бұл модульде барлық KDE қызметтін (басқаша "
+"KDE демоны деп аталатын) плагиндерінің шолуын көре аласыз. Жалпы, "
+"қызметтердің екі түрі болады:</p><ul> <li>KDE сеансы басталғанда жегілетін</"
+"li> <li>Арнаулы шақырлып жегілетін</li></ul><p> Соңғылары мұнда тек мәлімет "
+"үшін келтіріліген. Басталғанда жегілетін қызметтерді тоқтатуға, кейін қайта "
+"жегуге болады. Әкімші күйінде, қай қызметтер бастағанда жүктелетінін "
+"анықтауға болады.</p><p><b> Байқаңыз, кейбір қызметтер KDE істеуіне өте "
+"маңызды. Маңызың білмейтін қызметке тимеңіз.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "All Services"
+msgstr "Қызмет"
+
+#: package/contents/ui/main.qml:99
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "List running services"
+msgid "Running"
+msgstr "Жегілген"
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Жегілмеген"
+
+#: package/contents/ui/main.qml:136
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgid "Startup Services"
+msgstr "Басталғанда жегілетін қызметтер"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Арнаулы шақырлып жегілетін"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Жегілмеген"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Жегілген"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Stop Service"
+msgstr "Қызмет"
+
+#: package/contents/ui/main.qml:240
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Start Service"
+msgstr "Қызмет"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Сайран Киккарин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sairan@computer.org"
+
+#, fuzzy
+#~| msgid "Startup Services"
+#~ msgid "Background Services"
+#~ msgstr "Басталғанда жегілетін қызметтер"
+
+#, fuzzy
+#~| msgid "(c) 2002 Daniel Molkentin"
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE қызметтер менеджері"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Барлық арнаулы шақырлып жегілетін қызметтер тізімі. Бұлар мұнда тек "
+#~ "мәлімет үшін келтірілген."
+
+#~ msgid "Status"
+#~ msgstr "Күй-жайы"
+
+#~ msgid "Description"
+#~ msgstr "Сиптатамасы"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Мұнда KDE сеансы басталғанда жегілетін қызметтер көрсетілген. Құсбелгісі "
+#~ "қойылған қызметтер келесі сеанс басталғанда жегіледі. Білмейтін қызметті "
+#~ "тоқтатпаңыз."
+
+#~ msgid "Use"
+#~ msgstr "Таңдау"
+
+#~ msgid "Start"
+#~ msgstr "Жегу"
+
+#~ msgid "Stop"
+#~ msgstr "Тоқату"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED қызметімен байланыс жоқ."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "<em>%1</em> сервері жегілмеді.<br /><br /><i>Қатесі: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "<em>%1</em> сервері тоқтатылмады.<br /><br /><i>Қатесі: %2</i>"

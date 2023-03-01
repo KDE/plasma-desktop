@@ -1,0 +1,218 @@
+# translation of kcmkded.po to Arabic
+# translation of kcmkded.po to
+# Copyright (C) 2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Munzir Taha <munzirtaha@newhorizons.com.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2022-01-23 23:10+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "غير قادر على إيقاف خدمة: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "فشل في بدء خدمة: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "فشل في إيقاف الخدمة"
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "فشل في بدء الخدمة"
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr "فشل في إعلام مدير خدمات كي (kded5) بالتغيرات المحفوظة: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>هذه الوحدة تسمح لك بنظرة عامة لكل ملحقات رقيب كدي  و التنفيذ ، المعروف "
+"أيضاً تحت عنوان خدمات كدي. إجمالاً يوجد نوعين من الخدمات:</p><ul><li>الخدمات "
+"المستدعاة عند بدء التشغيل</li><li>الخدمات المستدعاة عند الحاجة</li></ul><p>و "
+"هذه الأخيرة فقط معروضة  للمناسبة. يمكن بدء و إيقاف تشغيل خدمات بدء التشغيل. "
+"تستطيع أيضاً تحديد أي من الخدمات يتم تحميلها عند بدء التشغيل .</p><p><b> "
+"استخدم هذا بحذر: بعض الخدمات هي حيوية لبلازما ، لا تعطل نشاط خدمات إذا لم "
+"تكن على علم تماماً بما تريد فعله. </b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr "مدير خدمات الخلفية (kded5) لا يعمل حاليًا. تأكد من تثبيته بشكل صحيح."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"تقوم بعض الخدمات بتعطيل نفسها مرة أخرى عند بدء التشغيل يدويًا إذا لم تكن "
+"مفيدة في البيئة الحالية."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"تم تشغيل / إيقاف بعض الخدمات تلقائيًا عند إعادة تشغيل مدير خدمات الخلفية "
+"(kded5) لتطبيق تغييراتك."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "جميع الخدمات"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "العاملة"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "غير عاملة"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "خدمات بدء التشغيل"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "خدمات التحميل عند الطلب"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "بدّل تحميل هذه الخدمة تلقائيا عند بدء التشغيل"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "متوقف عن التشغيل"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "قيد التشغيل"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "أوقف الخدمة"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "ابدأ الخدمة"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "Background Services"
+#~ msgstr "خدمات الخلفيّة"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "مدير الخدمات للكيدي"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "هذه لائحة بخدمات كيدي المتوفرة التي سيتم بدء تشغيلها عند الطلب. و هي فقط "
+#~ "معروضة لإعلامك ، لأنه ليس بإمكانك التلاعب بهذه الخدمات."
+
+#~ msgid "Status"
+#~ msgstr "الحالة"
+
+#~ msgid "Description"
+#~ msgstr "الوصف"
+
+#, fuzzy
+#~| msgid ""
+#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
+#~| "services will be invoked on next startup. Be careful with deactivation "
+#~| "of unknown services."
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "هذا يظهر كلّ الخدمات التي يمكن تحميلها عند بدء تشغيل كيدي. الخدمات المؤشر "
+#~ "عليها سيتم تشغيلها عند بدء التشغيل في المرة القادمة. كن حذراً عند تعطيل "
+#~ "الخدمات المجهولة."
+
+#~ msgid "Use"
+#~ msgstr "استخدم"
+
+#~ msgid "Start"
+#~ msgstr "إبدأ"
+
+#~ msgid "Stop"
+#~ msgstr "أوقف"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "غير قادر على الاتصال بــ KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "عاجز عن تشغيل خدمة <em>%1</em>.<br /><br /><i>الخطأ: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "عاجز عن إيقاف خدمة<em>%1</em>.<br /><br /><i>الخطأ: %2</i>"

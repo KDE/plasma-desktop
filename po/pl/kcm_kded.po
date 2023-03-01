@@ -1,0 +1,220 @@
+# translation of kcmkded.po to Polish
+# Version: $Revision: 1645807 $
+# Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
+#
+# Wojciech Milewski <Wojciech Milewski@wp.pl>, 2002.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004, 2008.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2022-08-07 08:16+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+">\n"
+">\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Nie można zatrzymać usługi: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Nie można rozpocząć usługi: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Nie można zatrzymać usługi."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Nie można rozpocząć usługi."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Nie udało się powiadomić zarządzania usługami KDE (kded5) o zapisanych "
+"zmianach: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Ten moduł dostarcza przegląd wszystkich usług KDE zwanych także demonami "
+"KDE. Są dwa podstawowe rodzaje usług:</p><ul><li>usługi uruchomieniowe</"
+"li><li>usługi na żądanie</li></ul><p>Te drugie pokazane są tylko w celach "
+"informacyjnych. Usługi uruchomieniowe można wyłączać i włączać. W trybie "
+"administratora można określić, czy usługa ma być uruchomieniową.</"
+"p><p><b>Proszę używać tej opcji ostrożnie. Niektóre usługi są bardzo ważne "
+"dla Plazmy. Nie wyłączaj usług, jeśli nie wiesz, co robisz!</b></p> "
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Zarządzanie usługami w tle (kded5) nie jest obecnie uruchomione. Upewnij "
+"się, że jest poprawnie wgrane."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Niektóre z usług same się wyłączają, nawet gdy zostały ręcznie uruchomione, "
+"w chwili gdy nie są już użyteczne w obecnym otoczeniu."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Aby zastosować twoje zmiany, należało ponownie uruchomić zarządzanie "
+"usługami (kded5), co mogło spowodować uruchomienie/zatrzymanie niektórych "
+"usług."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Wszystkie usługi"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Uruchomione"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Nieuruchomione"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Usługi ciągłe"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Usługi na żądanie"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Nieuruchomiona"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Uruchomiona"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Zatrzymaj usługę"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Uruchom usługę"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Michał Rudolf (aktualny tłumacz), Wojciech Milewski"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mrudolf@kdewebdev.org, Wojciech.Milewski@wp.pl"
+
+#~ msgid "Background Services"
+#~ msgstr "Usługi w tle"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Zarządzanie usługami KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Oto wykaz usług dostępnych w KDE, które będą uruchamiane na żądanie. "
+#~ "Wykaz ten jest przedstawiony jedynie w celach informacyjnych, tymi "
+#~ "usługami nie można zarządzać."
+
+#~ msgid "Status"
+#~ msgstr "Stan"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Ten wykaz zawiera wszystkie usługi, które można uruchamiać wraz z "
+#~ "uruchomieniem Plazmy. Wybrane usługi zostaną uruchomione przy "
+#~ "uruchomieniu Plazmy. Zachowaj rozwagę przy wyłączaniu usług o nieznanym "
+#~ "tobie przeznaczeniu."
+
+#~ msgid "Use"
+#~ msgstr "Używana"
+
+#~ msgid "Start"
+#~ msgstr "Uruchom"
+
+#~ msgid "Stop"
+#~ msgstr "Zatrzymaj"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Nie można połączyć się z KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Nie można uruchomić usługi <em>%1</em>.<br /><br /><i>Błąd: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr "Nie można zatrzymać usługi <em>%1</em>.<br /><br /><i>Błąd: %2</i>"

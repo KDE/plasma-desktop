@@ -1,0 +1,216 @@
+# translation of kcmkded.po to Slovak
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004.
+# Miroslav David <mirodav@gmail.com>, 2009.
+# Roman Paholik <wizzardsk@gmail.com>, 2015, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-07-05 21:03+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Nepodarilo sa zastaviť službu: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Nepodarilo sa spustiť službu: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Nepodarilo sa zastaviť službu."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Nepodarilo sa spustiť službu."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr "Nepodarilo sa oznámiť KDE Service Manager (kded5) uložené zmeny: %1 "
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Tento modul umožňuje, aby ste mali prehľad o všetkých moduloch KDE "
+"démona, niekedy označovaných ako služby KDE. Dá sa povedať, že existujú dva "
+"typy služieb:</p><ul><li>Služby spustené pri štarte</li><li>Služby spustené "
+"na požiadanie</li></ul><p>Tie druhé sú zobrazené iba pre informáciu. Služby "
+"spustené pri štarte je možné zastaviť a spustiť. V administrátorskom režime "
+"je možné aj definovať, ktoré služby budú spustené pri štarte.</"
+"p><p><b>Používajte tento modul opatrne. Niektoré služby sú pre KDE životne "
+"dôležité. Nevypínajte služby ak neviete, čo robíte.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Správca služieb na pozadí (kded5) momentálne nie je spustený. Skontrolujte, "
+"či je správne nainštalovaný."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Niektoré služby sa pri manuálnom spustení znova vypnú, ak nie sú užitočné v "
+"súčasnom prostredí."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Niektoré služby sa automaticky spustili / zastavili pri reštarte správcu "
+"služieb na pozadí (kded5), aby sa zmeny použili."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Všetky služby"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Beží"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Nebeží"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Služby pri spustení"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Služby načítané na požiadanie"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Prepnúť automatické načítanie tejto služby pri spustení"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Nebeží"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Beží"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Zastaviť službu"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Spustiť službu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stanislav Višňovský,Miroslav Dávid,Matej Mrenica"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com,matejm98mthw@gmail.com"
+
+#~ msgid "Background Services"
+#~ msgstr "Služby na pozadí"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Správca služieb KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Toto je zoznam dostupných služieb KDE, ktoré sa spustia v prípade, že "
+#~ "budú vyžadované. Sú tu zobrazené iba pre vašu informáciou, nie je možné s "
+#~ "nimi nič robiť."
+
+#~ msgid "Status"
+#~ msgstr "Stav"
+
+#~ msgid "Description"
+#~ msgstr "Popis"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Toto sú všetky služby KDE, ktoré je možné spustiť pri štarte KDE. "
+#~ "Označené služby budú pri budúcom štarte KDE spustené. Poriadne si "
+#~ "rozmyslite vypínanie neznámych služieb."
+
+#~ msgid "Use"
+#~ msgstr "Použiť"
+
+#~ msgid "Start"
+#~ msgstr "Spustiť"
+
+#~ msgid "Stop"
+#~ msgstr "Zastaviť"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "Nepodarilo sa kontaktovať KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nepodarilo sa spustiť službu <em>%1</em>.<br /><br /><i>Chyba: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Nepodarilo sa zastaviť službu <em>%1</em>.<br /><br /><i>Chyba: %2</i>"

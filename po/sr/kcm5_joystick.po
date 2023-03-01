@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-28 03:54+0100\n"
+"POT-Creation-Date: 2023-02-05 00:59+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,32 +31,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: caldialog.cpp:41 joywidget.cpp:380
+#: caldialog.cpp:26 joywidget.cpp:339
 #, kde-format
 msgid "Calibration"
 msgstr "Калибрација"
 
-#: caldialog.cpp:44
+#: caldialog.cpp:40
 #, kde-format
 msgid "Next"
 msgstr "Следеће"
 
-#: caldialog.cpp:59
+#: caldialog.cpp:50
 #, kde-format
 msgid "Please wait a moment to calculate the precision"
 msgstr "Сачекајте док израчунам прецизност"
 
-#: caldialog.cpp:90
+#: caldialog.cpp:79
 #, kde-format
 msgid "(usually X)"
 msgstr "(обично X)"
 
-#: caldialog.cpp:92
+#: caldialog.cpp:81
 #, kde-format
 msgid "(usually Y)"
 msgstr "(обично Y)"
 
-#: caldialog.cpp:97
+#: caldialog.cpp:87
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the value range your device delivers.<br /"
@@ -69,7 +69,7 @@ msgstr ""
 "које дугме на уређају или кликните на <i>Следеће</i> за наредни корак у "
 "поступку.</p></qt>"
 
-#: caldialog.cpp:114
+#: caldialog.cpp:110
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the value range your device delivers.<br /"
@@ -82,7 +82,7 @@ msgstr ""
 "на уређају или кликните на <i>Следеће</i> за наредни корак у поступку.</p></"
 "qt>"
 
-#: caldialog.cpp:131
+#: caldialog.cpp:133
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the value range your device delivers.<br /"
@@ -95,42 +95,42 @@ msgstr ""
 "које дугме на уређају или кликните на <i>Следеће</i> за наредни корак у "
 "поступку.</p></qt>"
 
-#: caldialog.cpp:154 joywidget.cpp:371 joywidget.cpp:406
+#: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
 msgid "Communication Error"
 msgstr "Грешка у комуникацији"
 
-#: caldialog.cpp:158
+#: caldialog.cpp:164
 #, kde-format
 msgid "You have successfully calibrated your device"
 msgstr "Успешно сте калибрисали уређај"
 
-#: caldialog.cpp:158 joywidget.cpp:412
+#: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
 msgstr "Калибрација је успела"
 
-#: caldialog.cpp:182
+#: caldialog.cpp:184
 #, kde-format
 msgid "Value Axis %1: %2"
 msgstr "Вредност осе %1: %2"
 
-#: joydevice.cpp:55
+#: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
 msgstr "Дати уређај %1 не може да се отвори: %2"
 
-#: joydevice.cpp:61
+#: joydevice.cpp:45
 #, kde-format
 msgid "The given device %1 is not a joystick."
 msgstr "Дати уређај %1 није џојстик."
 
-#: joydevice.cpp:66
+#: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
 msgstr "Не могу да добавим верзију драјвера у језгру за уређај %1: %2"
 
-#: joydevice.cpp:80
+#: joydevice.cpp:60
 #, kde-format
 msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
@@ -139,58 +139,58 @@ msgstr ""
 "Верзија драјвера у језгру које се извршава (%1.%2.%3) није она за коју је "
 "овај модул изграђен (%4.%5.%6)."
 
-#: joydevice.cpp:92
+#: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
 msgstr "Не могу да добавим број дугмади за уређај %1: %2"
 
-#: joydevice.cpp:98
+#: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
 msgstr "Не могу да добавим број оса за уређај %1: %2"
 
-#: joydevice.cpp:104
+#: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
 msgstr "Не могу да добавим калибрационе вредности за уређај %1: %2"
 
-#: joydevice.cpp:110
+#: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
 msgstr "Не могу да обновим калибрационе вредности за уређај %1: %2"
 
-#: joydevice.cpp:116
+#: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
 msgstr "Не могу да припремим калибрационе вредности за уређај %1: %2"
 
-#: joydevice.cpp:122
+#: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
 msgstr "Не могу да применим калибрационе вредности за уређај %1: %2"
 
-#: joydevice.cpp:126
+#: joydevice.cpp:95
 #, kde-format
 msgid "internal error - code %1 unknown"
 msgstr "унутрашња грешка - непознат кôд %1"
 
-#: joystick.cpp:47
+#: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
 msgstr "КДЕ‑ов контролни модул за џојстик"
 
-#: joystick.cpp:48
+#: joystick.cpp:31
 #, kde-format
 msgid "KDE System Settings Module to test Joysticks"
 msgstr "Модул Системских поставки КДЕ‑а за пробу џојстика"
 
-#: joystick.cpp:49
+#: joystick.cpp:33
 #, kde-format
 msgid "(c) 2004, Martin Koller"
 msgstr "© 2004, Мартин Колер"
 
 # literal-segment: source/Documentation/input/joystick.txt
-#: joystick.cpp:52
+#: joystick.cpp:38
 #, kde-format
 msgid ""
 "<h1>Joystick</h1>This module helps to check if your joystick is working "
@@ -219,53 +219,53 @@ msgstr ""
 "погледајте документацију џојстика под Линуксом, <tt>&lt;<i>linux_src</i>&gt;/"
 "Documentation/input/joystick.txt</tt>).</p></qt>"
 
-#: joywidget.cpp:48
-#, kde-format
-msgid "PRESSED"
-msgstr "ПРИТИСНУТО"
-
-#: joywidget.cpp:84
+#: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
 msgstr "Уређај:"
 
-#: joywidget.cpp:103
+#: joywidget.cpp:84
 #, kde-format
 msgctxt "Cue for deflection of the stick"
 msgid "Position:"
 msgstr "Отклон:"
 
-#: joywidget.cpp:106
+#: joywidget.cpp:87
 #, kde-format
 msgid "Show trace"
 msgstr "Прикажи траг"
 
-#: joywidget.cpp:119
+#: joywidget.cpp:96 joywidget.cpp:303
+#, kde-format
+msgid "PRESSED"
+msgstr "ПРИТИСНУТО"
+
+#: joywidget.cpp:98
 #, kde-format
 msgid "Buttons:"
 msgstr "Дугмад:"
 
-#: joywidget.cpp:123
+#: joywidget.cpp:102
 #, kde-format
 msgid "State"
 msgstr "Стање"
 
-#: joywidget.cpp:131
+#: joywidget.cpp:110
 #, kde-format
 msgid "Axes:"
 msgstr "Осе:"
 
-#: joywidget.cpp:135
+#: joywidget.cpp:114
 #, kde-format
 msgid "Value"
 msgstr "Вредност"
 
-#: joywidget.cpp:148
+#: joywidget.cpp:127
 #, kde-format
 msgid "Calibrate"
 msgstr "Калибриши"
 
-#: joywidget.cpp:220
+#: joywidget.cpp:190
 #, kde-format
 msgid ""
 "No joystick device automatically found on this computer.<br />Checks were "
@@ -277,7 +277,7 @@ msgstr ""
 "p><p>Ако сте сигурни да је џојстик прикључен, унесите исправан фајл уређаја."
 "</p></qt>"
 
-#: joywidget.cpp:265
+#: joywidget.cpp:226
 #, kde-format
 msgid ""
 "The given device name is invalid (does not contain /dev).\n"
@@ -288,27 +288,27 @@ msgstr ""
 "Одаберите уређај са списка или\n"
 "унесите фајл уређаја (као ‘/dev/js0’)."
 
-#: joywidget.cpp:267
+#: joywidget.cpp:229
 #, kde-format
 msgid "Unknown Device"
 msgstr "Непознат уређај"
 
-#: joywidget.cpp:285
+#: joywidget.cpp:247
 #, kde-format
 msgid "Device Error"
 msgstr "Грешка уређаја"
 
-#: joywidget.cpp:306
+#: joywidget.cpp:265
 #, kde-format
 msgid "1(x)"
 msgstr "1(x)"
 
-#: joywidget.cpp:307
+#: joywidget.cpp:266
 #, kde-format
 msgid "2(y)"
 msgstr "2(y)"
 
-#: joywidget.cpp:376
+#: joywidget.cpp:335
 #, kde-format
 msgid ""
 "<qt>Calibration is about to check the precision.<br /><br /><b>Please move "
@@ -319,7 +319,7 @@ msgstr ""
 "у њихове средишње положаје и не померајте џојстик.</b></p><p>Кликните на "
 "<i>У реду</i> да отпочнете калибрацију.</p></qt>"
 
-#: joywidget.cpp:411
+#: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Обновљене су све калибрационе вредности за уређај %1."

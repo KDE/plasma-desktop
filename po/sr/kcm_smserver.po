@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-01-04 03:50+0100\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Associated-UI-Catalogs: plasma_applet_org.kde.plasma.kicker\n"
 "X-Environment: kde\n"
 
-#: kcmsmserver.cpp:67
+#: kcmsmserver.cpp:49
 #, kde-format
 msgid ""
 "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -36,181 +36,232 @@ msgstr ""
 "обнавља при пријављивању и треба ли рачунар аутоматски и треба ли аутоматски "
 "угасити рачунар по напуштању сесије.</qt>"
 
-#: kcmsmserver.cpp:87
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+
+#: package/contents/ui/main.qml:35
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
-msgid "Restart Now"
+msgid "Restart"
 msgstr "&Поново покрени рачунар"
 
-#: kcmsmserver.cpp:128
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
-#: kcmsmserver.cpp:140
+#: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
-#: kcmsmserver.cpp:142
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 
-#: kcmsmserver.cpp:154
-#, kde-format
-msgid "UEFI Setup"
-msgstr ""
-
-#: kcmsmserver.cpp:155
-#, kde-format
-msgid "Enter UEFI setup on next restart"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, topBox)
-#: smserverconfigdlg.ui:17
-#, kde-format
-msgid "General"
-msgstr "Опште"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_confirmLogout)
-#: smserverconfigdlg.ui:23
-#, kde-format
-msgid ""
-"Check this option if you want the session manager to display a logout "
-"confirmation dialog box."
-msgstr ""
-"Укључите ако желите да менаџер сесија прикаже потврдни дијалог пре него што "
-"вас заиста одјави."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_confirmLogout)
-#: smserverconfigdlg.ui:26
-#, kde-format
-msgid "Conf&irm logout"
-msgstr "Потврди &одјављивање"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_offerShutdown)
-#: smserverconfigdlg.ui:33
-#, kde-format
-msgid "O&ffer shutdown options"
-msgstr "Понуди опције &гашења"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, kcfg_shutdownType)
-#: smserverconfigdlg.ui:46
-#, kde-format
-msgid ""
-"Here you can choose what should happen by default when you log out. This "
-"only has meaning, if you logged in through KDM."
-msgstr ""
-"Овде можете изабрати шта треба да се догоди након одјављивања. Ове опције "
-"важе само ако сте се пријавили из КДМ‑а."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_shutdownType)
-#: smserverconfigdlg.ui:49
-#, kde-format
-msgid "Default Leave Option"
-msgstr "Подразумевана опција напуштања"
-
-#. i18n: ectx: property (text), widget (QRadioButton, logoutRadio)
-#: smserverconfigdlg.ui:55
-#, kde-format
-msgid "&End current session"
-msgstr "&Окончај текућу сесију"
-
-#. i18n: ectx: property (text), widget (QRadioButton, rebootRadio)
-#: smserverconfigdlg.ui:62
-#, kde-format
-msgid "&Restart computer"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "&Restart computer"
+msgid "Restart Now"
 msgstr "&Поново покрени рачунар"
 
-#. i18n: ectx: property (text), widget (QRadioButton, haltRadio)
-#: smserverconfigdlg.ui:69
+#: package/contents/ui/main.qml:72
 #, kde-format
-msgid "&Turn off computer"
-msgstr "&Угаси рачунар"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, kcfg_loginMode)
-#: smserverconfigdlg.ui:83
-#, kde-format
-msgid ""
-"<ul>\n"
-"<li><b>Restore previous session:</b> Will save all applications running on "
-"exit and restore them when they next start up</li>\n"
-"<li><b>Restore manually saved session: </b> Allows the session to be saved "
-"at any time via \"Save Session\" in the K-Menu. This means the currently "
-"started applications will reappear when they next start up.</li>\n"
-"<li><b>Start with an empty session:</b> Do not save anything. Will come up "
-"with an empty desktop on next start.</li>\n"
-"</ul>"
+msgctxt "@title:group"
+msgid "Logout Screen"
 msgstr ""
-"<qt><ul><li><b>Поврати претходну сесију:</b> памти се који су све програми "
-"активни у тренутку напуштања сесије и поново се покрећу по следећем "
-"пријављивању.</li><li><b>Поврати ручно сачувану сесију:</b> у сваком "
-"тренутку сесија се може ручно сачувати опцијом <i>Сачувај сесију</i> у "
-"К‑менију. Овим ће се тако упамћени програми сами покренути по следећем "
-"пријављивању.</li><li><b>Покрени празну сесију:</b> не памти се ништа. По "
-"следећем пријављивању површ ће бити празна.</li></ul></qt>"
 
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_loginMode)
-#: smserverconfigdlg.ui:86
+#: package/contents/ui/main.qml:75
 #, kde-format
-msgid "On Login"
-msgstr "По пријављивању"
+msgid "Show:"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, previousSessionRadio)
-#: smserverconfigdlg.ui:92
-#, kde-format
-msgid "Restore &previous session"
-msgstr "Поврати &претходну сесију"
+#: package/contents/ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, savedSessionRadio)
-#: smserverconfigdlg.ui:99
+#: package/contents/ui/main.qml:96
 #, kde-format
-msgid "Restore &manually saved session"
-msgstr "Поврати &ручно сачувану сесију"
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, emptySessionRadio)
-#: smserverconfigdlg.ui:106
+#: package/contents/ui/main.qml:104
 #, kde-format
-msgid "Start with an empty &session"
+msgid "On login, launch apps that were open:"
+msgstr ""
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr ""
+
+#: package/contents/ui/main.qml:127
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Start with an empty &session"
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
 msgstr "Покрени празну &сесију"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: smserverconfigdlg.ui:113
+#: package/contents/ui/main.qml:146
 #, kde-format
-msgid "Applications to be e&xcluded from sessions:"
+msgid "Ignored applications:"
+msgstr ""
+
+#: package/contents/ui/main.qml:169
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+
+#: package/contents/ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr ""
+
+#: package/contents/ui/main.qml:183
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: package/contents/ui/main.qml:184
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr ""
+
+#: package/contents/ui/main.qml:185
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr ""
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "Потврди &одјављивање"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "Подразумевана опција напуштања"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "По пријављивању"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
 msgstr "Програми које треба &искључити из сесија:"
 
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_excludeApps)
-#: smserverconfigdlg.ui:126
-#, kde-format
-msgid ""
-"Here you can enter a colon or comma separated list of applications that "
-"should not be saved in sessions, and therefore will not be started when "
-"restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-msgstr ""
-"<qt>Овде можете унети двотачкама или запетама раздвојен списак програма које "
-"не треба уписивати у сесије, и који стога неће бити покренути при враћању "
-"сесије. На пример <tt>xterm:xconsole</tt> или <tt>xterm,xconsole</tt>.</qt>"
+#~ msgid "General"
+#~ msgstr "Опште"
 
-#. i18n: ectx: property (title), widget (QGroupBox, firmwareSetupBox)
-#: smserverconfigdlg.ui:136
-#, kde-format
-msgid "Firmware Setup"
-msgstr ""
+#~ msgid ""
+#~ "Check this option if you want the session manager to display a logout "
+#~ "confirmation dialog box."
+#~ msgstr ""
+#~ "Укључите ако желите да менаџер сесија прикаже потврдни дијалог пре него "
+#~ "што вас заиста одјави."
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, firmwareSetupCheck)
-#: smserverconfigdlg.ui:149
-#, kde-format
-msgid ""
-"When the computer is restarted the next time, enter firmware setup screen (e."
-"g. UEFI or BIOS setup)"
-msgstr ""
+#~ msgid "O&ffer shutdown options"
+#~ msgstr "Понуди опције &гашења"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firmwareSetupCheck)
-#: smserverconfigdlg.ui:152
-#, kde-format
-msgid "Enter firmware setup on next restart"
-msgstr ""
+#~ msgid ""
+#~ "Here you can choose what should happen by default when you log out. This "
+#~ "only has meaning, if you logged in through KDM."
+#~ msgstr ""
+#~ "Овде можете изабрати шта треба да се догоди након одјављивања. Ове опције "
+#~ "важе само ако сте се пријавили из КДМ‑а."
+
+#~ msgid "&End current session"
+#~ msgstr "&Окончај текућу сесију"
+
+#~ msgid "&Restart computer"
+#~ msgstr "&Поново покрени рачунар"
+
+#~ msgid "&Turn off computer"
+#~ msgstr "&Угаси рачунар"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li><b>Restore previous session:</b> Will save all applications running "
+#~ "on exit and restore them when they next start up</li>\n"
+#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
+#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
+#~ "currently started applications will reappear when they next start up.</"
+#~ "li>\n"
+#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
+#~ "up with an empty desktop on next start.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<qt><ul><li><b>Поврати претходну сесију:</b> памти се који су све "
+#~ "програми активни у тренутку напуштања сесије и поново се покрећу по "
+#~ "следећем пријављивању.</li><li><b>Поврати ручно сачувану сесију:</b> у "
+#~ "сваком тренутку сесија се може ручно сачувати опцијом <i>Сачувај сесију</"
+#~ "i> у К‑менију. Овим ће се тако упамћени програми сами покренути по "
+#~ "следећем пријављивању.</li><li><b>Покрени празну сесију:</b> не памти се "
+#~ "ништа. По следећем пријављивању површ ће бити празна.</li></ul></qt>"
+
+#~ msgid "Restore &previous session"
+#~ msgstr "Поврати &претходну сесију"
+
+#~ msgid "Restore &manually saved session"
+#~ msgstr "Поврати &ручно сачувану сесију"
+
+#~ msgid ""
+#~ "Here you can enter a colon or comma separated list of applications that "
+#~ "should not be saved in sessions, and therefore will not be started when "
+#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
+#~ msgstr ""
+#~ "<qt>Овде можете унети двотачкама или запетама раздвојен списак програма "
+#~ "које не треба уписивати у сесије, и који стога неће бити покренути при "
+#~ "враћању сесије. На пример <tt>xterm:xconsole</tt> или <tt>xterm,xconsole</"
+#~ "tt>.</qt>"

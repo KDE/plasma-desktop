@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-01-09 03:20+0100\n"
+"POT-Creation-Date: 2023-02-06 01:02+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,7 +22,47 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: globalpaths.cpp:55
+#: desktoppathssettings.cpp:211
+#, kde-format
+msgid "Desktop"
+msgstr ""
+
+#: desktoppathssettings.cpp:226
+#, kde-format
+msgid "Documents"
+msgstr ""
+
+#: desktoppathssettings.cpp:241
+#, kde-format
+msgid "Downloads"
+msgstr ""
+
+#: desktoppathssettings.cpp:256
+#, kde-format
+msgid "Music"
+msgstr ""
+
+#: desktoppathssettings.cpp:271
+#, kde-format
+msgid "Pictures"
+msgstr ""
+
+#: desktoppathssettings.cpp:286
+#, kde-format
+msgid "Videos"
+msgstr ""
+
+#: desktoppathssettings.cpp:301
+#, kde-format
+msgid "Public"
+msgstr ""
+
+#: desktoppathssettings.cpp:316
+#, kde-format
+msgid "Templates"
+msgstr ""
+
+#: globalpaths.cpp:27
 #, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
@@ -33,3 +73,90 @@ msgstr ""
 "<h1>Putanje</h1><p>Ovim modulom se određuje gdje se u fajl sistemu "
 "smiještaju fajlovi na površi.</p><p>Koristite „Šta je ovo?“ (<b>Shift+F1</"
 "b>) za objašnjenja pojedinih opcija.</p>"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Desktop path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:25
+#, kde-format
+msgid ""
+"This folder contains all the files which you see on your desktop. You can "
+"change the location of this folder if you want to, and the contents will "
+"move automatically to the new location as well."
+msgstr ""
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "Documents path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save documents from or to."
+msgstr ""
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Downloads path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:43
+#, kde-format
+msgid "This folder will be used by default to save your downloaded items."
+msgstr ""
+
+#: package/contents/ui/main.qml:49
+#, kde-format
+msgid "Videos path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:52 package/contents/ui/main.qml:79
+#, kde-format
+msgid "This folder will be used by default to load or save movies from or to."
+msgstr ""
+
+#: package/contents/ui/main.qml:58
+#, kde-format
+msgid "Pictures path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save pictures from or to."
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Music path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "This folder will be used by default to load or save music from or to."
+msgstr ""
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Public path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Templates path:"
+msgstr ""
+
+#: package/contents/ui/main.qml:88
+#, kde-format
+msgid ""
+"This folder will be used by default to load or save templates from or to."
+msgstr ""
+
+#: package/contents/ui/UrlRequester.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose new location"
+msgstr ""

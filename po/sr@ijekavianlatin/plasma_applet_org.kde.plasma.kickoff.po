@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-21 03:59+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,165 +18,314 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/config/config.qml:25
+#: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
 msgstr ""
 
-#: package/contents/ui/ApplicationsView.qml:121
-#, kde-format
-msgid "All Applications"
-msgstr "Svi programi"
-
-#: package/contents/ui/ApplicationsView.qml:273
-#, kde-format
-msgid "Applications updated."
-msgstr "Programi ažurirani."
-
-#: package/contents/ui/code/tools.js:55
+#: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Ukloni iz omiljenih"
 
-#: package/contents/ui/code/tools.js:59
+#: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj u omiljene"
 
-#: package/contents/ui/code/tools.js:83
+#: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
 msgstr "Na svim aktivnostima"
 
-#: package/contents/ui/code/tools.js:133
+#: package/contents/ui/code/tools.js:127
 #, fuzzy, kde-format
 #| msgid "On The Current Activity"
 msgid "On the Current Activity"
 msgstr "Na tekućoj aktivnosti"
 
-#: package/contents/ui/code/tools.js:147
+#: package/contents/ui/code/tools.js:141
 #, fuzzy, kde-format
 #| msgid "Show In Favorites"
 msgid "Show in Favorites"
 msgstr "Prikaži u omiljenima"
 
-#: package/contents/ui/ConfigButtons.qml:36
-#: package/contents/ui/FullRepresentation.qml:724
-#, kde-format
-msgid "Favorites"
-msgstr "Omiljeno"
-
-#: package/contents/ui/ConfigButtons.qml:37
-#: package/contents/ui/FullRepresentation.qml:726
-#, kde-format
-msgid "Applications"
-msgstr "Programi"
-
-#: package/contents/ui/ConfigButtons.qml:38
-#: package/contents/ui/FullRepresentation.qml:728
-#, kde-format
-msgid "Computer"
-msgstr "Računar"
-
-#: package/contents/ui/ConfigButtons.qml:39
-#: package/contents/ui/FullRepresentation.qml:730
-#, kde-format
-msgid "History"
-msgstr "Istorijat"
-
-#: package/contents/ui/ConfigButtons.qml:40
-#: package/contents/ui/FullRepresentation.qml:732
-#, kde-format
-msgid "Often Used"
-msgstr "Često korišćeno"
-
-# >> Leave as in logout, shutdown, reset...
-#: package/contents/ui/ConfigButtons.qml:41
-#: package/contents/ui/FullRepresentation.qml:734
-#, kde-format
-msgid "Leave"
-msgstr "Napusti"
-
-#: package/contents/ui/ConfigButtons.qml:214
-#, fuzzy, kde-format
-#| msgid "Hidden Tabs"
-msgid "Active Tabs"
-msgstr "Skriveni jezičci"
-
-#: package/contents/ui/ConfigButtons.qml:222
-#, kde-format
-msgid "Inactive Tabs"
-msgstr ""
-
-#: package/contents/ui/ConfigGeneral.qml:40
+#: package/contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonica:"
 
-#: package/contents/ui/ConfigGeneral.qml:75
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "Izaberite..."
-
-#: package/contents/ui/ConfigGeneral.qml:80
-#, kde-format
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Očisti ikonicu"
-
-#: package/contents/ui/ConfigGeneral.qml:94
-#, kde-format
-msgid "General:"
+msgctxt "@action:button"
+msgid "Change Application Launcher's icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
-msgid "Switch tabs on hover"
-msgstr "Prebacuj jezičke pri lebdenju"
+msgctxt "@info:whatsthis"
+msgid ""
+"Current icon is %1. Click to open menu to change the current icon or reset "
+"to the default icon."
+msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:101
+#: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
-msgid "Show applications by name"
-msgstr "Prikaži programe po imenu"
+msgctxt "@info:tooltip"
+msgid "Icon name is \"%1\""
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:81
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open icon chooser dialog"
+#| msgid "Choose..."
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Izaberite..."
+
+#: package/contents/ui/ConfigGeneral.qml:83
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose an icon for Application Launcher"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:87
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Reset to default icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:93
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:104
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
-msgid "Expand search to bookmarks, files and emails"
-msgstr "Proširi pretragu na obeleživače, fajlove i e‑poštu"
-
-#: package/contents/ui/ConfigGeneral.qml:111
-#, kde-format
-msgid "Sort alphabetically"
-msgstr "Poređaj abecedno"
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
-msgid ""
-"Drag tabs between the boxes to show/hide them, or reorder the visible tabs "
-"by dragging."
+msgctxt "@action:button"
+msgid "Reset menu label"
 msgstr ""
-"Prevlačite jezičke između okvira da ih prikažete ili sakrijete, ili menjajte "
-"redosled vidljivih jezičaka."
 
-#: package/contents/ui/Header.qml:158
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
-msgid "%2@%3 (%1)"
-msgstr "%2@%3 (%1)"
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
 
-#: package/contents/ui/Header.qml:158
+#: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
-msgid "%1@%2"
-msgstr "%1@%2"
+msgctxt "General options"
+msgid "General:"
+msgstr ""
 
-#: package/contents/ui/Header.qml:189
+#: package/contents/ui/ConfigGeneral.qml:147
 #, fuzzy, kde-format
-#| msgctxt "Type is a verb here, not a noun"
-#| msgid "Type to search..."
-msgid "Search..."
-msgstr "Kucajte za pretragu..."
+#| msgid "Sort alphabetically"
+msgid "Always sort applications alphabetically"
+msgstr "Poređaj abecedno"
 
-#: package/contents/ui/Kickoff.qml:145
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
-msgid "Edit Applications..."
+msgid "Use compact list item style"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:158
+#, kde-format
+msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+msgid "Automatically disabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:167
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:177
+#, fuzzy, kde-format
+#| msgid "Show In Favorites"
+msgid "Show favorites:"
+msgstr "Prikaži u omiljenima"
+
+#: package/contents/ui/ConfigGeneral.qml:178
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:186
+#, kde-format
+msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:194
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgid "Show other applications:"
+msgstr "Prikaži programe po imenu"
+
+#: package/contents/ui/ConfigGeneral.qml:195
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgid "In a grid"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:203
+#, kde-format
+msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgid "In a list"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:215
+#, kde-format
+msgid "Show buttons for:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/LeaveButtons.qml:115
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:225
+#, kde-format
+msgid "Session"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:234
+#, kde-format
+msgid "Power and session"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:243
+#, kde-format
+msgid "Show action button captions"
+msgstr ""
+
+#: package/contents/ui/Footer.qml:97
+#, kde-format
+msgid "Applications"
+msgstr "Programi"
+
+#: package/contents/ui/Footer.qml:110
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:119
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
+
+#: package/contents/ui/Header.qml:64
+#, kde-format
+msgid "Open user settings"
+msgstr ""
+
+#: package/contents/ui/Header.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/Kickoff.qml:304
+#, fuzzy, kde-format
+#| msgid "Edit Applications..."
+msgid "Edit Applications…"
 msgstr "Uredi programe..."
+
+#: package/contents/ui/KickoffGridView.qml:87
+#, kde-format
+msgid "Grid with %1 rows, %2 columns"
+msgstr ""
+
+# >> Leave as in logout, shutdown, reset...
+#: package/contents/ui/LeaveButtons.qml:115
+#, kde-format
+msgid "Leave"
+msgstr "Napusti"
+
+#: package/contents/ui/LeaveButtons.qml:115
+#, kde-format
+msgid "More"
+msgstr ""
+
+#: package/contents/ui/PlacesPage.qml:50
+#, fuzzy, kde-format
+#| msgid "Computer"
+msgctxt "category in Places sidebar"
+msgid "Computer"
+msgstr "Računar"
+
+#: package/contents/ui/PlacesPage.qml:51
+#, fuzzy, kde-format
+#| msgid "History"
+msgctxt "category in Places sidebar"
+msgid "History"
+msgstr "Istorijat"
+
+#: package/contents/ui/PlacesPage.qml:52
+#, kde-format
+msgctxt "category in Places sidebar"
+msgid "Frequently Used"
+msgstr ""
+
+#~ msgid "All Applications"
+#~ msgstr "Svi programi"
+
+#~ msgid "Applications updated."
+#~ msgstr "Programi ažurirani."
+
+#~ msgid "Favorites"
+#~ msgstr "Omiljeno"
+
+#~ msgid "Often Used"
+#~ msgstr "Često korišćeno"
+
+#, fuzzy
+#~| msgid "Hidden Tabs"
+#~ msgid "Active Tabs"
+#~ msgstr "Skriveni jezičci"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Očisti ikonicu"
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Prebacuj jezičke pri lebdenju"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Proširi pretragu na obeleživače, fajlove i e‑poštu"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Prevlačite jezičke između okvira da ih prikažete ili sakrijete, ili "
+#~ "menjajte redosled vidljivih jezičaka."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#, fuzzy
+#~| msgctxt "Type is a verb here, not a noun"
+#~| msgid "Type to search..."
+#~ msgid "Search..."
+#~ msgstr "Kucajte za pretragu..."

@@ -1,11 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
 
-  <!ENTITY kfontview "<application
->KFontview</application
->">
-  <!ENTITY kappname "&kfontview;">
-  <!ENTITY package "kdebase">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
@@ -37,9 +32,9 @@
 </authorgroup>
 
 <date
->10/04/2015</date>
+>31/03/2018</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword
@@ -55,7 +50,7 @@
 >O &kfontview; é um aplicativo para visualizar e instalar diferente tipos de fontes: <itemizedlist>
 <listitem
 ><para
->TrueType (<filename class="extension"
+>&TrueType; (<filename class="extension"
 >.ttf</filename
 >)</para
 ></listitem>
@@ -69,7 +64,7 @@
 ></listitem>
 <listitem
 ><para
->Postscript tipo 1 (extensão de arquivo no &Windows; &amp; OS/2 <filename class="extension"
+>&PostScript; tipo 1 (extensão de arquivo no &Windows; &amp; OS/2 <filename class="extension"
 >.pfb</filename
 >/<filename class="extension"
 >.pfm</filename
@@ -78,8 +73,7 @@
 >/<filename class="extension"
 >.afm</filename
 >)</para
-></listitem
-> 
+></listitem>
 <listitem
 ><para
 >BDF (Bitmap Distribution Format, extensão de arquivo <filename class="extension"
@@ -100,9 +94,15 @@
 <para
 >Adicionalmente, o &kfontview; poderá ser lançado a partir do módulo do &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
 > <guilabel
->Instalador de fontes</guilabel
+>Gerenciamento de fontes</guilabel
 ></ulink
 > para usar as capacidades de antevisão estendidas do &kfontview;.</para>
+
+<para
+>Alternativamente você pode usar o módulo <guilabel
+>Gerenciamento de fontes</guilabel
+> para instalar, remover, visualizar e gerenciar todas as fontes no seu sistema.</para>
+
 <!--FIXME still valid?
 <para
 >To use &kfontview; in &konqueror; select <guilabel

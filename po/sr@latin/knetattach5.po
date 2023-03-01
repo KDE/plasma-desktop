@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-11-14 03:35+0100\n"
+"POT-Creation-Date: 2022-05-14 00:46+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: knetattach.cpp:94
+#: knetattach.cpp:79
 #, kde-format
 msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
@@ -39,7 +39,7 @@ msgstr ""
 "Unesite ime za ovu <i>veb fasciklu</i>, kao i adresu servera, port i putanju "
 "fascikle koji se koriste i kliknite na <i>Sačuvaj i poveži se</i>."
 
-#: knetattach.cpp:96
+#: knetattach.cpp:82
 #, kde-format
 msgid ""
 "Enter a name for this <i>Secure shell connection</i> as well as a server "
@@ -50,7 +50,7 @@ msgstr ""
 "port i putanju fascikle koji se koriste i kliknite na <i>Sačuvaj i poveži "
 "se</i>."
 
-#: knetattach.cpp:98
+#: knetattach.cpp:86
 #, kde-format
 msgid ""
 "Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
@@ -61,7 +61,7 @@ msgstr ""
 "adresu servera i putanju fascikle koji se koriste i kliknite na <i>Sačuvaj i "
 "poveži se</i>."
 
-#: knetattach.cpp:100
+#: knetattach.cpp:90
 #, kde-format
 msgid ""
 "Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
@@ -71,18 +71,18 @@ msgstr ""
 "Unesite ime za ovu <i>Windowsovu mrežnu jedinicu</i>, kao i adresu servera i "
 "putanju fascikle koji se koriste i kliknite na <i>Sačuvaj i poveži se</i>."
 
-#: knetattach.cpp:220
+#: knetattach.cpp:208
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
 msgstr ""
 "Ne mogu da se povežem sa serverom. Proverite postavke pa pokušajte ponovo."
 
-#: knetattach.cpp:356
+#: knetattach.cpp:336
 #, kde-format
 msgid "Save && C&onnect"
 msgstr "Sačuvaj i &poveži se"
 
-#: knetattach.cpp:358
+#: knetattach.cpp:338
 #, kde-format
 msgid "C&onnect"
 msgstr "&Poveži se"
@@ -199,7 +199,7 @@ msgstr "&Napravi ikonicu za ovu udaljenu fasciklu"
 msgid "&Use encryption"
 msgstr "&Šifruj"
 
-#: main.cpp:33
+#: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
 msgstr ""
@@ -208,17 +208,17 @@ msgstr ""
 "           aku 'KDE‑ov čarobnjak za mrežu'\n"
 "]"
 
-#: main.cpp:33
+#: main.cpp:25
 #, kde-format
 msgid "(c) 2004 George Staikos"
 msgstr "© 2004, Džordž Stajkos"
 
-#: main.cpp:35
+#: main.cpp:28
 #, kde-format
 msgid "George Staikos"
 msgstr "Džordž Stajkos"
 
-#: main.cpp:35
+#: main.cpp:28
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "glavni autor i održavalac"

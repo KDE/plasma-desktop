@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
-"PO-Revision-Date: 2022-04-16 02:14+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2023-03-01 00:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "아이콘:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "프로그램 실행기 아이콘 변경"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -66,12 +66,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"현재 아이콘은 %1입니다. 현재 아이콘을 변경하거나 기본 아이콘으로 초기화하려"
+"면 클릭하여 메뉴를 여십시오."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "아이콘 이름: \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
@@ -83,47 +85,46 @@ msgstr "선택..."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "프로그램 실행기 아이콘 선택"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "기본 아이콘으로 초기화"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "아이콘 삭제"
 
 #: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "텍스트 이름표:"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "텍스트 이름표를 추가하려면 입력"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "메뉴 이름표 초기화"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "패널이 수직 방향일 때에는 텍스트 이름표를 설정할 수 없습니다."
 
 #: package/contents/ui/ConfigGeneral.qml:146
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "일반:"
@@ -136,13 +137,13 @@ msgstr "항상 가나다순으로 프로그램 정렬"
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "간략한 목록 항목 스타일 사용"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "터치 모드에서 자동으로 비활성화됨"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
@@ -224,7 +225,7 @@ msgstr "위치"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "검색 결과 없음"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format
@@ -241,7 +242,7 @@ msgstr "열린 상태로 유지"
 msgid "Edit Applications…"
 msgstr "프로그램 편집…"
 
-#: package/contents/ui/KickoffGridView.qml:88
+#: package/contents/ui/KickoffGridView.qml:87
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1줄, %2칸 크기 격자"

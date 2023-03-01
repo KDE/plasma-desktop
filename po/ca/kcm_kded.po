@@ -1,0 +1,222 @@
+# Translation of kcm5_kded.po to Catalan
+# Copyright (C) 2002-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 2002, 2004.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2015, 2020.
+# Ivan Lloro Boada <antispam@wanadoo.es>, 2004.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2015, 2017, 2020.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-07-30 12:05+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Ha fallat en aturar el servei: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Ha fallat en iniciar el servei: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Ha fallat en aturar el servei."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Ha fallat en iniciar el servei."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"Ha fallat en notificar al Gestor de servei del KDE (kded5) del canvi desat: "
+"%1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>Aquest mòdul permet tenir una visió general de tots els connectors de "
+"dimoni del KDE, anomenats també serveis KDE. Generalment hi ha dos tipus de "
+"servei:</p><ul><li>Serveis que s'invoquen en engegar</li><li>Serveis que es "
+"criden sota demanda</li></ul><p>Aquests darrers tan sols es llisten per "
+"comoditat. Els serveis d'inicialització es poden engegar i aturar. També "
+"podeu definir quins serveis s'haurien de carregar en engegar.</p><p><b> Useu "
+"això amb cura: alguns serveis són vitals per al Plasma. No desactiveu cap "
+"servei si no sabeu el que esteu fent.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Actualment el gestor de serveis en segon pla («kded5») no està en execució. "
+"Comproveu que estigui instal·lat correctament."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Alguns serveis es desactiven a si mateixos un altre cop que s'inicien "
+"manualment si no són útils a l'entorn actual."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Alguns serveis s'han aturat/iniciat automàticament quan el gestor de serveis "
+"en segon pla («kded5») s'ha reiniciat per a aplicar els canvis."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Tots els serveis"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "En execució"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "No estan en execució"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Serveis d'inicialització"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Serveis de càrrega sota demanda"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Commuta la càrrega automàtica d'aquest servei en iniciar"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Aturat"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "En execució"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Atura el servei"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Inicia el servei"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sebastià Pla i Sanz,Antoni Bella,Ivan Lloro Boada"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sps@sastia.com,antonibella5@yahoo.com,antispam@wanadoo.es"
+
+#~ msgid "Background Services"
+#~ msgstr "Serveis en segon pla"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "Gestor de serveis KDE"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "Aquesta és una llista dels serveis disponibles al KDE que s'engegaran "
+#~ "sota demanda. Només es llisten per comoditat, atès que no podeu manipular-"
+#~ "los."
+
+#~ msgid "Status"
+#~ msgstr "Estat"
+
+#~ msgid "Description"
+#~ msgstr "Descripció"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "Aquí es mostren tots els serveis KDE que es poden carregar a l'inici del "
+#~ "Plasma. Els serveis marcats s'invocaran a la propera inicialització. Aneu "
+#~ "amb compte amb la desactivació de serveis desconeguts."
+
+#~ msgid "Use"
+#~ msgstr "Utilitza"
+
+#~ msgid "Start"
+#~ msgstr "Engega"
+
+#~ msgid "Stop"
+#~ msgstr "Atura"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "No s'ha pogut contactar amb el KDED."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "No s'ha pogut engegar el servei <em>%1</em>.<br /><br /><i>Error: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "No s'ha pogut aturar el servei <em>%1</em>.<br /><br /><i>Error: %2</i>"

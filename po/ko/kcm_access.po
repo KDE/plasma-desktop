@@ -1,6 +1,6 @@
 # Translation of kcmaccess to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2015, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2015, 2017, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 # Yu-Chan, Park, 2001.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-20 00:59+0000\n"
-"PO-Revision-Date: 2022-05-06 00:05+0200\n"
+"PO-Revision-Date: 2023-03-01 00:19+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -289,11 +289,10 @@ msgid "Please choose an audio file"
 msgstr "오디오 파일을 선택하십시오"
 
 #: package/contents/ui/Bell.qml:22
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "오디오 파일 (*.mp3 *.ogg *.wav)"
+msgstr "오디오 파일 (*.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format
@@ -372,7 +371,7 @@ msgstr "활성화"
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "키가 눌린 것으로 간주되려면 지정한 시간 이상 눌려 있어야 함"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -417,7 +416,7 @@ msgstr "활성화"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "같은 키를 빠르게 반복해서 눌렀을 때 무시"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-05 03:43+0100\n"
+"POT-Creation-Date: 2021-06-26 00:19+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -30,12 +30,12 @@ msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
 # >> @title:window
-#: ActionEditor.cpp:72
+#: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
 msgstr "Uređivanje radnje „%1“"
 
-#: ActionEditor.cpp:173
+#: ActionEditor.cpp:162
 #, kde-format
 msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
@@ -45,7 +45,7 @@ msgstr ""
 "p><p>Izmjene zato neće biti primijenjene.</p>"
 
 # >> @title:window
-#: ActionEditor.cpp:173
+#: ActionEditor.cpp:163
 #, kde-format
 msgid "Invalid action"
 msgstr "Loša radnja"
@@ -175,14 +175,14 @@ msgstr "Ime radnje:"
 msgid "Enter the name for your new action"
 msgstr "Unesite ime za novu radnju."
 
-#: DesktopFileGenerator.cpp:37
+#: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
 msgstr ""
 "Solidov generator .desktop fajlova za radnje|/|$[svojstva dat 'Solidovom "
 "generatoru .desktop fajlova za radnje']"
 
-#: DesktopFileGenerator.cpp:38
+#: DesktopFileGenerator.cpp:27
 #, kde-format
 msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
@@ -191,87 +191,87 @@ msgstr ""
 "Alatka za automatsko stvaranje .desktop fajlova iz Solidovih DeviceInterface "
 "klasa, radi prevođenja."
 
-#: DesktopFileGenerator.cpp:39
+#: DesktopFileGenerator.cpp:29
 #, kde-format
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© 2009, Ben Kuksli"
 
-#: DesktopFileGenerator.cpp:40 SolidActions.cpp:49
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Kuksli"
 
-#: DesktopFileGenerator.cpp:40 SolidActions.cpp:49
+#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Održavalac"
 
 # >> @item
-#: PredicateItem.cpp:132
+#: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
 msgstr "uređaj mora biti tipa %1"
 
 # >> @item
-#: PredicateItem.cpp:135
+#: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
 msgstr "bar jedno sadržano svojstvo mora se poklopiti"
 
 # >> @item
-#: PredicateItem.cpp:138
+#: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
 msgstr "sva sadržana svojstva moraju se poklopiti"
 
 # >> @item
-#: PredicateItem.cpp:147
+#: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
 msgstr "svojstvo uređaja %1 mora biti jednako %2"
 
 # >> @item
-#: PredicateItem.cpp:150
+#: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
 msgstr "svojstvo uređaja %1 mora sadržati %2"
 
-#: SolidActions.cpp:45
+#: SolidActions.cpp:33
 #, kde-format
 msgid "Solid Device Actions Editor"
 msgstr "Uređivač Solidovih radnji uređaja"
 
-#: SolidActions.cpp:46
+#: SolidActions.cpp:35
 #, kde-format
 msgid "Solid Device Actions Control Panel Module"
 msgstr "Modul kontrolnog panela za Solidove radnje uređaja"
 
-#: SolidActions.cpp:48
+#: SolidActions.cpp:37
 #, kde-format
 msgid "(c) 2009, 2014 Solid Device Actions team"
 msgstr "© 2009, 2014, tim Solidovih radnji uređaja"
 
-#: SolidActions.cpp:50
+#: SolidActions.cpp:39
 #, kde-format
 msgid "Port to Plasma 5"
 msgstr "Prenos na Plasmu 5"
 
-#: SolidActions.cpp:163
+#: SolidActions.cpp:152
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Izgleda da je predikat za ovu radnju loš."
 
-#: SolidActions.cpp:163
+#: SolidActions.cpp:152
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Greška pri raščlanjivanju uslova uređaja"
 
-#: SolidActions.cpp:211
+#: SolidActions.cpp:200
 #, kde-format
 msgid "No Action Selected"
 msgstr "Nema izabrane radnje"
 
-#: SolidActions.cpp:232
+#: SolidActions.cpp:221
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Ne može se obrisati"
@@ -285,11 +285,17 @@ msgstr "Ukloni"
 #. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
 #: SolidActions.ui:29
 #, kde-format
-msgid "Edit..."
-msgstr "Uredi..."
+msgid "Edit…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
-msgid "Add..."
-msgstr "Dodaj..."
+msgid "Add…"
+msgstr ""
+
+#~ msgid "Edit..."
+#~ msgstr "Uredi..."
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."

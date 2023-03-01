@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-08 03:47+0100\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2015-03-28 11:52+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,57 +18,78 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Časlav Ilić"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
-
-#: kcm.cpp:47
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
-msgid "Splash Screen"
-msgstr "Probni uvodni ekran"
-
-#: kcm.cpp:49
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marko Martin"
-
 # >> @item
-#: kcm.cpp:115
+#: kcm.cpp:159
 #, kde-format
 msgid "None"
 msgstr "ništa"
 
-#: kcm.cpp:117
+#: kcm.cpp:161
 #, kde-format
 msgid "No splash screen will be shown"
 msgstr ""
 
-#: package/contents/ui/main.qml:28
+#: kcm.cpp:179
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr ""
+
+#: package/contents/ui/main.qml:16
 #, kde-format
 msgid "This module lets you choose the splash screen theme."
 msgstr ""
 
-#: package/contents/ui/main.qml:43
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "Failed to successfully test the splash screen."
-msgid "Failed to test the splash screen."
+msgid "Failed to show the splash screen preview."
 msgstr "Proba uvodnog ekrana nije uspela."
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:83
 #, fuzzy, kde-format
 #| msgid "Test Splashscreen"
 msgid "Preview Splash Screen"
 msgstr "Probni uvodni ekran"
 
-#: package/contents/ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
-msgid "&Get New Splash Screens..."
-msgstr "Probni uvodni ekran"
+#: package/contents/ui/main.qml:88
+#, kde-format
+msgid "Uninstall"
+msgstr ""
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr ""
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Časlav Ilić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "Splash Screen"
+#~ msgstr "Probni uvodni ekran"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marko Martin"
+
+#, fuzzy
+#~| msgid "Test Splashscreen"
+#~ msgid "&Get New Splash Screens..."
+#~ msgstr "Probni uvodni ekran"

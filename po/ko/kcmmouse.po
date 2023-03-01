@@ -1,14 +1,14 @@
 # translation of kcminput.po to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-04-16 23:17+0200\n"
+"PO-Revision-Date: 2023-03-01 00:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -223,50 +223,49 @@ msgstr "빠르게"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "추가 마우스 단추 재할당…"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "추가 단추 %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "키 바인딩을 추가할 마우스 단추를 누르십시오"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "%1의 새로운 키 조합 입력"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "연결 단추를 누르십시오"
+msgstr "마우스 단추를 누르십시오 "
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "바인딩 추가…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "뒤로 이동"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14

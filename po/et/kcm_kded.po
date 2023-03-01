@@ -1,0 +1,218 @@
+# translation of kcmkded.po to Estonian
+# Copyright (C) 2002, 2003, 2005 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@estpak.ee>, 2002, 2003.
+# Marek Laane <bald@starman.ee>, 2003-2004,2006-2008, 2016, 2019, 2020.
+# Hasso Tepper <hasso@kde.org>, 2005.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2020-10-08 12:00+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmkded.cpp:115
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Teenuse peatamine nurjus: %1"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Teenuse käivitamine nurjus: %1"
+
+#: kcmkded.cpp:124
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Teenuse peatamine nurjus."
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to start service."
+msgstr "Teenuse käivitamine nurjus."
+
+#: kcmkded.cpp:224
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgstr ""
+"KDE teenusehalduri (kded5) teavitamine muutuste salvestamisest nurjus: %1"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid ""
+"<p>This module allows you to have an overview of all plugins of the KDE "
+"Daemon, also referred to as KDE Services. Generally, there are two types of "
+"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
+"demand</li></ul> <p>The latter are only listed for convenience. The startup "
+"services can be started and stopped. You can also define whether services "
+"should be loaded at startup.</p> <p><b>Use this with care: some services are "
+"vital for Plasma; do not deactivate services if you  do not know what you "
+"are doing.</b></p>"
+msgstr ""
+"<p>See moodul annab ülevaate KDE deemoni pluginatest, mida kutsutakse ka KDE "
+"teenusteks. Üldiselt on teenuseid kahte tüüpi:</p> <ul> <li>Teenused, mis "
+"käivitatakse KDE käivitamisel</li> <li>Teenused, mis käivitatakse soovi "
+"korral</li></ul> <p>Viimased on siin ära toodud ainult mugavuse pärast. "
+"Esimest tüüpi teenuseid saad käivitada ja peatada. Samuti saad määrata, "
+"millised teenused käivitatakse KDE käivitamisel ja millised mitte.</p> "
+"<p><b> Kasuta seda moodulit ettevaatlikult. Mõned teenused on Plasma "
+"kasutamiseks hädavajalikud. Ära lülita teenuseid välja, kui sa ei tea, mida "
+"teed.</b></p>"
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid ""
+"The background services manager (kded5) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Taustateenuste haldur (kded5) ei tööta. Vaata, et see oleks õigesti "
+"paigaldatud."
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Mõned käsitsi käivitatud teenused lülituvad ise välja, kui neist praeguses "
+"keskkonnas kasu pole."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded5) was restarted to apply your changes."
+msgstr ""
+"Mõned teenused käivitati/peatati automaatselt, kui taustateenuste haldur "
+"(kded5) sinu muudatuste rakendamiseks taaskäivitati."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "All Services"
+msgstr "Kõik teenused"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "List running services"
+msgid "Running"
+msgstr "Käivitatud teenused"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "List not running services"
+msgid "Not Running"
+msgstr "Käivitamata teenused"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Startup Services"
+msgstr "Käivitusteenused"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Load-on-Demand Services"
+msgstr "Soovi korral laaditavad teenused"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Toggle automatically loading this service on startup"
+msgstr "Lülita selle teenuse automaatset laadimist süsteemi käivitudes"
+
+#: package/contents/ui/main.qml:221
+#, kde-format
+msgid "Not running"
+msgstr "Käivitamata"
+
+#: package/contents/ui/main.qml:222
+#, kde-format
+msgid "Running"
+msgstr "Käivitatud"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Stop Service"
+msgstr "Peata teenus"
+
+#: package/contents/ui/main.qml:240
+#, kde-format
+msgid "Start Service"
+msgstr "Käivita teenus"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Hasso Tepper"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "hasso@linux.ee"
+
+#~ msgid "Background Services"
+#~ msgstr "Taustateenused"
+
+#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
+#~ msgstr "(c) 2002: Daniel Molkentin, (c) 2020: Kai Uwe Broulik"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "kcmkded"
+#~ msgstr "kcmkded"
+
+#~ msgid "KDE Service Manager"
+#~ msgstr "KDE teenuste haldur"
+
+#~ msgid ""
+#~ "This is a list of available KDE services which will be started on demand. "
+#~ "They are only listed for convenience, as you cannot manipulate these "
+#~ "services."
+#~ msgstr ""
+#~ "See on nimekiri KDE teenustest, mis käivitatakse soovi korral. Need "
+#~ "teenused on siin ainult mugavuse pärast, sest midagi seadistada siin ei "
+#~ "saa."
+
+#~ msgid "Status"
+#~ msgstr "Olek"
+
+#~ msgid "Description"
+#~ msgstr "Kirjeldus"
+
+#~ msgid ""
+#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
+#~ "services will be invoked on next startup. Be careful with deactivation of "
+#~ "unknown services."
+#~ msgstr ""
+#~ "See on nimekiri kõigist KDE teenustest, mida on võimalik Plasma "
+#~ "käivitamisel laadida. Valitud teenused laaditakse järgmisel käivitamisel. "
+#~ "Ole tundmatute teenuste deaktiveerimisega ettevaatlik."
+
+#~ msgid "Use"
+#~ msgstr "Kasutuses"
+
+#~ msgid "Start"
+#~ msgstr "Käivita"
+
+#~ msgid "Stop"
+#~ msgstr "Peata"
+
+#~ msgid "Unable to contact KDED."
+#~ msgstr "KDED'ga ühenduse loomine pole võimalik."
+
+#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Teenuse <em>%1</em> käivitamine pole võimalik.<br /><br /><i>Viga: %2</i>"
+
+#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
+#~ msgstr ""
+#~ "Teenuse <em>%1</em> peatamine pole võimalik.<br /><br /><i>Viga: %2</i>"
