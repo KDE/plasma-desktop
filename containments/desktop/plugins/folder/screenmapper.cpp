@@ -328,7 +328,6 @@ QStringList ScreenMapper::disabledScreensMap() const
 
 void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
 {
-    decltype(m_itemsOnDisabledScreensMap) tempItemsOnDisabledScreensMap;
     m_itemsOnDisabledScreensMap.clear();
     bool readingScreenId = true;
     bool readingActivityId = true;
@@ -337,12 +336,10 @@ void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
     QString activityId;
     int vectorCounter = 0;
 
-    QMap<int, int> screenConsistencyMap;
 
     for (const auto &entry : serializedMap) {
         if (readingScreenId) {
             screenId = entry.toInt();
-            screenConsistencyMap[screenId] = -1;
             readingScreenId = false;
         } else if (readingActivityId) {
             // Missing activity ID in the old config before 5.25
@@ -358,9 +355,9 @@ void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
         } else {
             const auto url = stringToUrl(entry);
             const auto pair = std::make_pair(screenId, activityId);
-            auto urlVectorIt = tempItemsOnDisabledScreensMap.find(pair);
-            if (urlVectorIt == tempItemsOnDisabledScreensMap.end()) {
-                tempItemsOnDisabledScreensMap[pair] = {url};
+            auto urlVectorIt = m_itemsOnDisabledScreensMap.find(pair);
+            if (urlVectorIt == m_itemsOnDisabledScreensMap.end()) {
+                m_itemsOnDisabledScreensMap[pair] = {url};
             } else {
                 urlVectorIt->append(url);
             }
@@ -373,22 +370,6 @@ void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
                 vectorSize = -1;
             }
         }
-    }
-
-    // Find out what is the max screen number that was found in the saved screenMapping config key
-    int maxKnownScreen = -1;
-    for (auto it = m_screenItemMap.constBegin(); it != m_screenItemMap.constEnd(); it++) {
-        maxKnownScreen = std::max(maxKnownScreen, it.value());
-    }
-
-    // Make sure everything in disabled screens is numbered progressively from the first screen number that wasn't found in the saved screenMapping config key
-    int lastMappedScreen = maxKnownScreen + 1;
-    for (int key : screenConsistencyMap.keys()) {
-        screenConsistencyMap[key] = lastMappedScreen++;
-    }
-    for (auto it = tempItemsOnDisabledScreensMap.constBegin(); it != tempItemsOnDisabledScreensMap.constEnd(); it++) {
-        const auto newKey = std::pair<int, QString>(screenConsistencyMap.value(it.key().first), it.key().second);
-        m_itemsOnDisabledScreensMap[newKey] = it.value();
     }
 }
 
