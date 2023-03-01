@@ -26,7 +26,7 @@ Loader {
     property bool isGroup
 
     property var windows
-    readonly property bool isWin: windows.length > 0
+    readonly property bool isWin: Array.isArray(windows) ? windows.length > 0 : 0
 
     property variant icon
     property url launcherUrl
