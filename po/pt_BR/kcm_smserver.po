@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-02-24 16:06-0300\n"
+"PO-Revision-Date: 2023-02-28 10:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -81,7 +81,7 @@ msgstr "Reiniciar agora"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Tela de saída"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -96,6 +96,10 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Quando esta configuração estiver ativada, a tela de confirmação de saída "
+"será exibida quando você sair, desligar, reiniciar, pressionar o botão liga/"
+"desliga ou clicar em botões ou itens de menu rotulados como <interface>Sair…"
+"</interface>."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -106,13 +110,13 @@ msgstr "Restauração da sessão"
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Ao iniciar, lançar aplicativos que estavam abertos:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Na última saída"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
@@ -129,6 +133,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Um botão <interface >Salvar sessão</interface > aparecerá no menu <interface "
+">Lançador de aplicativos</interface > e na pesquisa do  Quando você clicar "
+"nele, o  lembrará os aplicativos que estão abertos e os restaurará no "
+"próximo login. Clique novamente para substituir o conjunto de aplicativos "
+"lembrados."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -151,6 +160,10 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Escreva os nomes dos executáveis dos aplicativos aqui (separados por "
+"vírgulas ou dois pontos, por exemplo 'xterm:konsole' ou 'xterm,konsole') "
+"para preveni-los de iniciar automaticamente junto com os outros aplicativos "
+"restaurados na sessão."
 
 #: package/contents/ui/main.qml:177
 #, kde-format

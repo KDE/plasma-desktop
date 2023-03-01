@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 03:17+0000\n"
+"POT-Creation-Date: 2023-03-01 00:52+0000\n"
 "PO-Revision-Date: 2023-01-11 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -239,12 +239,12 @@ msgstr "Selecciona un fitxer…"
 msgid "Import"
 msgstr "Importa"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:27
+#: package/contents/ui/ShortcutActionDelegate.qml:31
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Drecera en edició: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:39
+#: package/contents/ui/ShortcutActionDelegate.qml:43
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -252,12 +252,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:52
+#: package/contents/ui/ShortcutActionDelegate.qml:56
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Cap drecera activa"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:96
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -265,37 +265,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Drecera predeterminada"
 msgstr[1] "Dreceres predeterminades"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:94
+#: package/contents/ui/ShortcutActionDelegate.qml:98
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Sense dreceres predeterminades"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "La drecera predeterminada %1 està activada."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "La drecera predeterminada %1 està desactivada."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:123
+#: package/contents/ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Dreceres personalitzades"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:148
+#: package/contents/ui/ShortcutActionDelegate.qml:152
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Suprimix esta drecera"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:154
+#: package/contents/ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Afig una drecera personalitzada"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:189
+#: package/contents/ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancel·la la captura d'una drecera nova"
