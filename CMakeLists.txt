@@ -280,4 +280,4 @@ set_package_properties(XdgUserDir PROPERTIES
 )
 
 ki18n_install(po)
-kdoctools_install(po)
+# kdoctools_install(po) TODO re-enable once docbooks no longer use non-existing entities
