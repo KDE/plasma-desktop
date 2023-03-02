@@ -9,7 +9,7 @@ import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kconfig 1.0 // for KAuthorized
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -374,7 +374,7 @@ FocusScope {
                     width: root.isPopup ? Math.round(PlasmaCore.Units.gridUnit * 1.25) : 0
                     height: width
                     checkable: true
-                    iconSource: "window-pin"
+                    icon.name: "window-pin"
                     onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
                 }
             }
@@ -391,7 +391,7 @@ FocusScope {
 
                     width: root.isPopup ? Math.round(PlasmaCore.Units.gridUnit * 1.25) : 0
                     height: width
-                    iconSource: "go-home"
+                    icon.name: "go-home"
 
                     onClicked: goHome()
                 }
