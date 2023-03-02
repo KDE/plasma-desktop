@@ -9,7 +9,7 @@ import QtQuick 2.2
 import QtQuick.Layouts 1.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 // for KCMShell
@@ -81,7 +81,7 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: searchButton
-            iconSource: "edit-find"
+            icon.name: "edit-find"
 
             // checkable: true
             // onClicked: root.closeRequested()
@@ -91,7 +91,7 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: configureButton
-            iconSource: "configure"
+            icon.name: "configure"
             visible: KCMShell.authorize("kcm_activities.desktop").length > 0
             onClicked: {
                 KCMShell.openSystemSettings("kcm_activities");
@@ -101,7 +101,7 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: closeButton
-            iconSource: "window-close"
+            icon.name: "window-close"
             onClicked: root.closeRequested()
         }
 

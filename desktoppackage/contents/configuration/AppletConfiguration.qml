@@ -8,7 +8,7 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
@@ -291,16 +291,15 @@ Rectangle {
 
         MessageDialog {
             id: messageDialog
-            icon: StandardIcon.Warning
             property var item
             title: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Settings")
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
-            standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
-            onApply: {
+            buttons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
+            onAccepted: {
                 applyAction.trigger()
                 discard();
             }
-            onDiscard: {
+            onRejected: {
                 if (item) {
                     root.open(item);
                 } else {

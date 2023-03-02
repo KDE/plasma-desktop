@@ -8,7 +8,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -170,9 +170,11 @@ Item {
                     top: parent.top
                     right: parent.right
                 }
-                iconSource: delegate.pendingUninstall ? "edit-undo" : "edit-delete"
+                icon.name: delegate.pendingUninstall ? "edit-undo" : "edit-delete"
                 // we don't really "undo" anything but we'll pretend to the user that we do
-                tooltip: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
+                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
                                                     : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
                 flat: false
                 visible: model.local && delegate.GridView.isCurrentItem

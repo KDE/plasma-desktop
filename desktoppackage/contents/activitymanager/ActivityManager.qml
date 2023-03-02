@@ -8,7 +8,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -89,7 +89,7 @@ FocusScope {
             visible: !root.showSwitcherOnly
         }
 
-        PlasmaExtras.ScrollArea {
+        PlasmaComponents.ScrollView {
             anchors {
                 top:    heading.visible ? heading.bottom : parent.top
                 bottom: bottomPanel.visible ? bottomPanel.top : parent.bottom
@@ -125,7 +125,7 @@ FocusScope {
                 id: newActivityButton
 
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Create activity…")
-                iconSource: "list-add"
+                icon.name: "list-add"
 
                 width: parent.width
 

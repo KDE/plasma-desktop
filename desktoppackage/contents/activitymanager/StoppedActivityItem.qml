@@ -7,7 +7,7 @@
 
 import QtQuick 2.2
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -129,8 +129,10 @@ Item {
             PlasmaComponents.Button {
                 id: configButton
 
-                iconSource: "configure"
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure activity")
+                icon.name: "configure"
+                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure activity")
 
                 onClicked: ActivitySettings.configureActivity(root.activityId)
 
@@ -144,8 +146,10 @@ Item {
             PlasmaComponents.Button {
                 id: deleteButton
 
-                iconSource: "edit-delete"
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
+                icon.name: "edit-delete"
+                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
 
                 onClicked: ActivitySettings.deleteActivity(root.activityId)
                 visible: ActivitySettings.newActivityAuthorized
