@@ -7,7 +7,6 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.12
 import QtQuick.Window 2.2
-import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.14 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
@@ -69,7 +68,7 @@ KCM.SimpleKCM {
 
                 delegate: Kirigami.BasicListItem {
                     width: listView.width
-                    icon: modelData.icon
+                    icon.name: modelData.icon
                     label: modelData.title
                     onClicked: listView.forceActiveFocus()
                     Rectangle {
