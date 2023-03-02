@@ -1164,7 +1164,6 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
         for (const auto &url : mimeData->urls()) {
             m_dropTargetPositions.insert(url.fileName(), dropPos);
             m_screenMapper->addMapping(mappableUrl(url), m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
-            m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
         }
         Q_EMIT move(x, y, mimeData->urls());
 
@@ -1188,7 +1187,6 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             for (const auto &url : urls) {
                 m_dropTargetPositions.insert(url.fileName(), dropPos);
                 m_screenMapper->addMapping(mappableUrl(url), m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
-                m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
             }
             m_dropTargetPositionsCleanup->start();
             return;

@@ -55,7 +55,6 @@ public:
     void addScreen(int screenId, const QString &activity, const QUrl &screenUrl);
     void removeScreen(int screenId, const QString &activity, const QUrl &screenUrl);
     int firstAvailableScreen(const QUrl &screenUrl, const QString &activity) const;
-    void removeItemFromDisabledScreen(const QUrl &url);
 
     bool sharedDesktops() const
     {
@@ -74,23 +73,10 @@ Q_SIGNALS:
     void screensChanged() const;
 
 private:
-    /**
-     * The format of DisabledScreensMap is:
-     * - Screen ID (controlled by readingScreenId)
-     * - Activity ID (controlled by readingActivityId)
-     * - The number of items
-     * - List of items
-     *
-     * @return QStringList the formatted config strings in a list
-     */
-    QStringList disabledScreensMap() const;
-    void saveDisabledScreensMap() const;
-    void readDisabledScreensMap(const QStringList &serializedMap);
-
     ScreenMapper(QObject *parent = nullptr);
+    void loadMapping(int numScreens);
 
     QHash<std::pair<QUrl, QString /* activity ID */>, int> m_screenItemMap;
-    QHash<std::pair<int /* screen */, QString /* activity ID */>, QVector<QUrl>> m_itemsOnDisabledScreensMap;
     QHash<QUrl, QVector<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
     QVector<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
