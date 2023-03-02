@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcm 1.5 as KCM
 
@@ -26,13 +26,12 @@ Row {
     Component {
         id: fileDialogComponent
 
-        FileDialog {
+        FolderDialog {
             id: fileDialog
-            folder: shortcuts.home
-            selectFolder: true
+            currentFolder: shortcuts.home
 
             onAccepted: {
-                urlRequester.newLocationSelected(fileUrl);
+                urlRequester.newLocationSelected(selectedFolder);
                 destroy();
             }
             onRejected: destroy()
