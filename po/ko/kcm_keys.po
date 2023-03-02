@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2020, 2021, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2021-11-14 17:57+0100\n"
+"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"PO-Revision-Date: 2023-03-01 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: globalaccelmodel.cpp:197
 #, kde-format
@@ -74,13 +74,12 @@ msgstr "프로그램"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "명령"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "시스템 서비스"
+msgstr "시스템 설정"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -90,24 +89,24 @@ msgstr "공통 동작"
 #: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
-msgstr "저장되지 않은 변경 사항이 있는 배열을 내보낼 수 없음"
+msgstr "저장되지 않은 변경 사항이 있는 구성표를 내보낼 수 없음"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
-msgstr "내보낼 배열에 포함한 구성 요소 선택"
+msgstr "내보낼 구성표에 포함할 구성 요소 선택"
 
 #: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Save scheme"
-msgstr "배열 저장"
+msgstr "구성표 저장"
 
 #: package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1의 명령 편집"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -130,8 +129,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "여기에서 단축키를 보려면 목록에서 선택하십시오"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "프로그램 추가…"
@@ -140,12 +138,12 @@ msgstr "프로그램 추가…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "명령 추가…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
 msgid "Import Scheme…"
-msgstr "배열 가져오기…"
+msgstr "구성표 가져오기…"
 
 #: package/contents/ui/main.qml:338
 #, kde-format
@@ -155,76 +153,76 @@ msgstr "내보내기 취소"
 #: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Export Scheme…"
-msgstr "배열 내보내기…"
+msgstr "구성표 내보내기…"
 
 #: package/contents/ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
-msgstr "단축키 배열 내보내기"
+msgstr "단축키 구성표 내보내기"
 
 #: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
 #, kde-format
 msgid "Import Shortcut Scheme"
-msgstr "단축키 배열 가져오기"
+msgstr "단축키 구성표 가져오기"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr "단축키 배열 (*.kksrc)"
+msgstr "단축키 구성표 (*.kksrc)"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "편집 명령"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "명령 추가"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "저장"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "추가"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "명령을 입력하거나 스크립트 파일 선택:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "선택..."
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "스크립트 파일 선택"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "스크립트 파일 (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Select the scheme to import:"
-msgstr "가져올 배열 선택:"
+msgstr "가져올 구성표 선택:"
 
 #: package/contents/ui/main.qml:489
 #, kde-format
 msgid "Custom Scheme"
-msgstr "사용자 정의 배열"
+msgstr "사용자 정의 구성표"
 
 #: package/contents/ui/main.qml:494
 #, kde-format
@@ -236,12 +234,12 @@ msgstr "파일 선택…"
 msgid "Import"
 msgstr "가져오기"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:27
+#: package/contents/ui/ShortcutActionDelegate.qml:31
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "단축키 편집하기: %1"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:39
+#: package/contents/ui/ShortcutActionDelegate.qml:43
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -249,49 +247,49 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:52
+#: package/contents/ui/ShortcutActionDelegate.qml:56
 #, kde-format
 msgid "No active shortcuts"
 msgstr "활성 단축키 없음"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:92
+#: package/contents/ui/ShortcutActionDelegate.qml:96
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "기본 단축키"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:94
+#: package/contents/ui/ShortcutActionDelegate.qml:98
 #, kde-format
 msgid "No default shortcuts"
 msgstr "기본 단축키 없음"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "%1 기본 단축키가 활성화됩니다."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:102
+#: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "%1 기본 단축키가 비활성화됩니다."
 
-#: package/contents/ui/ShortcutActionDelegate.qml:123
+#: package/contents/ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "사용자 정의 단축키"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:148
+#: package/contents/ui/ShortcutActionDelegate.qml:152
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "이 단축키 삭제"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:154
+#: package/contents/ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "사용자 정의 단축키 추가"
 
-#: package/contents/ui/ShortcutActionDelegate.qml:189
+#: package/contents/ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "새 단축키 입력 취소"

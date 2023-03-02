@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2011, 2012, 2020.
+# Shinjo Park <kde@peremen.name>, 2011, 2012, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 02:53+0000\n"
-"PO-Revision-Date: 2020-03-30 00:53+0200\n"
+"PO-Revision-Date: 2023-03-01 00:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -48,11 +48,10 @@ msgid "Show the current activity name"
 msgstr "현재 활동 이름 표시"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
-msgstr "현재 활동 아이콘 표시"
+msgstr "현재 활동: %1"
 
 #: package/contents/ui/main.qml:84
 #, kde-format

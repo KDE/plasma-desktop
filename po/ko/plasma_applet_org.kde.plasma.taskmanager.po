@@ -1,7 +1,7 @@
 # Translation of plasma_applet_tasks to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2019, 2021.
 # 김태경 <kim@taekyeong.me>, 2022.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-13 02:41+0000\n"
-"PO-Revision-Date: 2022-07-13 12:11+0200\n"
+"PO-Revision-Date: 2023-03-01 00:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -31,32 +31,25 @@ msgid "Behavior"
 msgstr "행동"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "%1 음소거 해제"
+msgstr "음소거 해제"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "음소거"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "%1 음소거 해제"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "%1 음소거"
@@ -79,16 +72,14 @@ msgid "General:"
 msgstr "일반:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "작업 도구 설명 위로 마우스를 가져갈 때 창 강조 표시"
+msgstr "작업 도구 위로 마우스를 가져갈 때 작은 창 미리 보기 표시"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "작업 도구 설명 위로 마우스를 가져갈 때 창 강조 표시"
+msgstr "미리 보기 위로 마우스를 가져갈 때 다른 창 숨기기"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -177,25 +168,19 @@ msgid "Cycles through tasks"
 msgstr "작업 전환"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "창을 양쪽으로 표시"
+msgstr "작은 창 미리 보기 표시"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "창을 양쪽으로 표시"
+msgstr "큰 창 미리 보기 표시"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -373,7 +358,7 @@ msgstr "새 작업이 나타날 때:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "아래쪽에"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -390,7 +375,7 @@ msgstr "왼쪽에"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "위쪽에"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -585,36 +570,32 @@ msgstr "닫기(&C)"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "%1 실행"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
+msgstr[0] "새 메시지 %1개가 있습니다."
 
 #: package/contents/ui/Task.qml:97
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "풍선 도움말 표시"
+msgstr "%1의 작업 풍선 도움말 표시"
 
 #: package/contents/ui/Task.qml:103
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "창을 양쪽으로 표시"
+msgstr "%1의 창을 양쪽으로 표시"
 
 #: package/contents/ui/Task.qml:108
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "%1의 창 텍스트 목록 표시"
 
 #: package/contents/ui/Task.qml:112
 #, kde-format

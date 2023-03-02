@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Shinjo Park <kde@peremen.name>, 2022.
+# Shinjo Park <kde@peremen.name>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2022-02-20 20:56+0100\n"
+"PO-Revision-Date: 2023-03-01 00:30+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -48,27 +48,25 @@ msgid "Follow the active screen"
 msgstr "활성 화면 따라가기"
 
 #: kcmtablet.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "model - (x,y widthxheight)"
-#| msgid "%1 - (%2,%3 %4x%5)"
+#, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4x%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "출력에 맞춤"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "출력을 태블릿에 맞춤"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "사용자 정의 크기"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
@@ -76,8 +74,7 @@ msgid "No drawing tablets found."
 msgstr "그래픽 태블릿을 찾을 수 없습니다."
 
 #: package/contents/ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "장치:"
@@ -100,55 +97,55 @@ msgstr "왼손잡이 모드"
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "영역:"
 
 #: package/contents/ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "태블릿 영역 크기 조정"
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "종횡비 잠금"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr ""
+msgstr "도구 단추 1"
 
 #: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr ""
+msgstr "도구 단추 2"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr ""
+msgstr "도구 단추 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "패드:"
 
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "없음"
 
 #: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "단추 %1:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -1,0 +1,50 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Shinjo Park <kde@peremen.name>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2023-03-01 00:31+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: kcmtouchscreen.cpp:44
+#, kde-format
+msgid "Automatic"
+msgstr "자동"
+
+#: kcmtouchscreen.cpp:50
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: package/contents/ui/main.qml:28
+#, kde-format
+msgid "No touchscreens found"
+msgstr "터치스크린을 찾을 수 없음"
+
+#: package/contents/ui/main.qml:44
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "장치:"
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Enabled:"
+msgstr "활성화:"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Target display:"
+msgstr "대상 디스플레이:"
