@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1642898 2023-01-22 01:46:42Z scripty $
+# $Id: kcm_access.po 1645901 2023-03-03 02:37:51Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-20 00:59+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-21 09:34+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -296,69 +296,69 @@ msgstr "Omogoči bralnik zaslona"
 msgid "Please choose an audio file"
 msgstr "Izberi zvočno datoteko"
 
-#: package/contents/ui/Bell.qml:22
+#: package/contents/ui/Bell.qml:21
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "Zvočne datoteke (*.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:31
+#: package/contents/ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
 msgstr "Slišni zvonec:"
 
-#: package/contents/ui/Bell.qml:32
+#: package/contents/ui/Bell.qml:31
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Omogoči"
 
-#: package/contents/ui/Bell.qml:43
+#: package/contents/ui/Bell.qml:42
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Zvok po meri:"
 
-#: package/contents/ui/Bell.qml:76
+#: package/contents/ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Preišči zvočno datoteko za sistemski zvonec"
 
-#: package/contents/ui/Bell.qml:77
+#: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "Gumb za iskanje zvočne datoteke"
 
-#: package/contents/ui/Bell.qml:93
+#: package/contents/ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "Vidni zvonec:"
 
-#: package/contents/ui/Bell.qml:94
+#: package/contents/ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Omogoči"
 
-#: package/contents/ui/Bell.qml:108
+#: package/contents/ui/Bell.qml:107
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Obrni zaslon"
 
-#: package/contents/ui/Bell.qml:125
+#: package/contents/ui/Bell.qml:124
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "Blisk"
 
-#: package/contents/ui/Bell.qml:136
+#: package/contents/ui/Bell.qml:135
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Barva"
 
-#: package/contents/ui/Bell.qml:147
+#: package/contents/ui/Bell.qml:146
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
@@ -437,7 +437,7 @@ msgstr "Zamuda:"
 msgid "Ring system bell when rejected"
 msgstr "Pozvoni sistemski zvonec ob zavrnitvi"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid ""
 "This module lets you configure the accessibility features such as a screen "
@@ -446,31 +446,31 @@ msgstr ""
 "Ta modul vam omogoča nastavljanje funkcij za ljudi s posebnimi potrebami, "
 "kot je bralnik zaslona."
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Zvonec"
 
-#: package/contents/ui/main.qml:31
+#: package/contents/ui/main.qml:30
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Spremenilne tipke"
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtri za tipkovnico"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
-#: package/contents/ui/main.qml:46
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"

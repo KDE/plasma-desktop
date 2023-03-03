@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-04 12:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -90,12 +90,12 @@ msgstr "Seleccionar el editor de texto predeterminado"
 msgid "Select default video player"
 msgstr "Seleccionar el reproductor de vídeo predeterminado"
 
-#: package/contents/ui/ComponentOverlay.qml:23
+#: package/contents/ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
 msgstr "Detalles"
 
-#: package/contents/ui/ComponentOverlay.qml:29
+#: package/contents/ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
@@ -103,32 +103,32 @@ msgstr ""
 "Esta aplicación no anuncia compatibilidad con los siguientes tipos de "
 "archivo:"
 
-#: package/contents/ui/ComponentOverlay.qml:43
+#: package/contents/ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "Forzar apertura"
 
-#: package/contents/ui/ComponentOverlay.qml:51
+#: package/contents/ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr ""
 "Los siguientes tipos de archivo siguen asociados a otra aplicación distinta:"
 
-#: package/contents/ui/ComponentOverlay.qml:60
+#: package/contents/ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1 asociado con %2"
 
-#: package/contents/ui/ComponentOverlay.qml:66
+#: package/contents/ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Reasignar todo a %1"
 
-#: package/contents/ui/ComponentOverlay.qml:74
+#: package/contents/ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Cambiar la asociación del tipo de archivo a mano"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-20 00:59+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-20 21:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -291,69 +291,69 @@ msgstr "Bruk skjermlesar"
 msgid "Please choose an audio file"
 msgstr "Vel lydfil"
 
-#: package/contents/ui/Bell.qml:22
+#: package/contents/ui/Bell.qml:21
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "Lydfiler (*.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:31
+#: package/contents/ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
 msgstr "Lydsignal:"
 
-#: package/contents/ui/Bell.qml:32
+#: package/contents/ui/Bell.qml:31
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Slå på"
 
-#: package/contents/ui/Bell.qml:43
+#: package/contents/ui/Bell.qml:42
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Sjølvvald lyd:"
 
-#: package/contents/ui/Bell.qml:76
+#: package/contents/ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Søk etter lydfil for systembjølla"
 
-#: package/contents/ui/Bell.qml:77
+#: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "Knapp for søk etter lydfil"
 
-#: package/contents/ui/Bell.qml:93
+#: package/contents/ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "Visuell bjølle:"
 
-#: package/contents/ui/Bell.qml:94
+#: package/contents/ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Slå på"
 
-#: package/contents/ui/Bell.qml:108
+#: package/contents/ui/Bell.qml:107
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Negativ skjerm"
 
-#: package/contents/ui/Bell.qml:125
+#: package/contents/ui/Bell.qml:124
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "Blink"
 
-#: package/contents/ui/Bell.qml:136
+#: package/contents/ui/Bell.qml:135
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Farge"
 
-#: package/contents/ui/Bell.qml:147
+#: package/contents/ui/Bell.qml:146
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
@@ -433,7 +433,7 @@ msgstr "Forseinking:"
 msgid "Ring system bell when rejected"
 msgstr "Ring systembjølla ved avvising"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid ""
 "This module lets you configure the accessibility features such as a screen "
@@ -442,31 +442,31 @@ msgstr ""
 "Med denne modulen kan du setja opp tilgjenge­funksjonalitet, for eksempel ein "
 "skjermlesar."
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Bjølle"
 
-#: package/contents/ui/main.qml:31
+#: package/contents/ui/main.qml:30
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Valtastar"
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Tastefilter"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Musestyring"
 
-#: package/contents/ui/main.qml:46
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"

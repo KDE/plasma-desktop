@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-20 00:59+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-21 07:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -287,69 +287,69 @@ msgstr "ეკრანის მკითხველის ჩართვა"
 msgid "Please choose an audio file"
 msgstr "აირჩიეთ აუდიო ფაილი"
 
-#: package/contents/ui/Bell.qml:22
+#: package/contents/ui/Bell.qml:21
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "აუდიო ფაილები (*.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:31
+#: package/contents/ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
 msgstr "გასაგონი ზარი:"
 
-#: package/contents/ui/Bell.qml:32
+#: package/contents/ui/Bell.qml:31
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "ჩართვა"
 
-#: package/contents/ui/Bell.qml:43
+#: package/contents/ui/Bell.qml:42
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "ხმის მითითება:"
 
-#: package/contents/ui/Bell.qml:76
+#: package/contents/ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "სისტემური ზარის ხმოვანი ფაილის მოძებნა"
 
-#: package/contents/ui/Bell.qml:77
+#: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "ხმოვანი ფაილის მოძებნის ღილაკი"
 
-#: package/contents/ui/Bell.qml:93
+#: package/contents/ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "ვიზუალური ზარი:"
 
-#: package/contents/ui/Bell.qml:94
+#: package/contents/ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "ჩართვა"
 
-#: package/contents/ui/Bell.qml:108
+#: package/contents/ui/Bell.qml:107
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "ეკრანის ინვერსია"
 
-#: package/contents/ui/Bell.qml:125
+#: package/contents/ui/Bell.qml:124
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "განათება"
 
-#: package/contents/ui/Bell.qml:136
+#: package/contents/ui/Bell.qml:135
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "ფერი"
 
-#: package/contents/ui/Bell.qml:147
+#: package/contents/ui/Bell.qml:146
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
@@ -428,7 +428,7 @@ msgstr "დაყოვნება:"
 msgid "Ring system bell when rejected"
 msgstr "უარყოფისას სისტემური ზარის დარეკვა"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid ""
 "This module lets you configure the accessibility features such as a screen "
@@ -437,31 +437,31 @@ msgstr ""
 "მოდული საშუალებას გაძლევთ მოირგოთ წვდომადობის საშუალებები. როგორიცაა, "
 "მაგალითად, ეკრანის წამკითხავი."
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:25
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "ზარი"
 
-#: package/contents/ui/main.qml:31
+#: package/contents/ui/main.qml:30
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "მოდიფიკატორი ღილაკები"
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "კლავიატურის ფილტრები"
 
-#: package/contents/ui/main.qml:41
+#: package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "თაგუნით ნავიგაცა"
 
-#: package/contents/ui/main.qml:46
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
