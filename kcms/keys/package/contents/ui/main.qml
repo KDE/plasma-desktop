@@ -135,7 +135,7 @@ KCM.AbstractKCM {
 
                         KeyNavigation.right: shortcutsList
 
-                        icon: model.decoration
+                        icon.name: model.decoration
                         label: model.display
 
                         trailing: RowLayout {
