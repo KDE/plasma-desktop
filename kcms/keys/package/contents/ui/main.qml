@@ -4,8 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import QtCore
 import QtQuick 2.15
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
@@ -356,17 +357,17 @@ KCM.AbstractKCM {
         property bool save
         sourceComponent: FileDialog {
             title: save ? i18n("Export Shortcut Scheme") : i18n("Import Shortcut Scheme")
-            folder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18nc("Template for file dialog","Shortcut Scheme (*.kksrc)") ]
             defaultSuffix: ".kksrc"
-            selectExisting: !shortcutSchemeFileDialogLoader.save
+            fileMode: shortcutSchemeFileDialogLoader.save ? FileDialog.SaveFile : FileDialog.OpenFile
             Component.onCompleted: open()
             onAccepted: {
                 if (save) {
-                    kcm.writeScheme(fileUrls[0])
+                    kcm.writeScheme(selectedFile)
                 } else {
                     var schemes = schemeBox.model
-                    schemes.splice(schemes.length - 1, 0, {name: kcm.urlFilename(fileUrls[0]), url: fileUrls[0]})
+                    schemes.splice(schemes.length - 1, 0, {name: kcm.urlFilename(selectedFile), url: selectedFile})
                     schemeBox.model = schemes
                     schemeBox.currentIndex = schemes.length - 2
                 }
@@ -451,11 +452,11 @@ KCM.AbstractKCM {
         active: false
         sourceComponent: FileDialog {
             title: i18nc("@title:window", "Choose Script File")
-            folder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18nc("Template for file dialog","Script file (*.*sh)") ]
             Component.onCompleted: open()
             onAccepted: {
-                cmdField.text = fileUrl
+                cmdField.text = selectedFile
                 openScriptFileDialogLoader.active = false
             }
             onRejected: openScriptFileDialogLoader.active = false
