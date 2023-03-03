@@ -74,7 +74,7 @@ PlasmaCore.Dialog {
             onTriggered: mainList.currentIndex = desiredIndex
         }
 
-        PlasmaExtras.ScrollArea {
+        PlasmaComponents3.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
