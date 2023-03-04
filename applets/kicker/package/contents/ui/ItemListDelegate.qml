@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import "code/tools.js" as Tools
@@ -196,7 +196,7 @@ Item {
             source: model.decoration
         }
 
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             id: label
 
             enabled: !isParent || (isParent && item.hasChildren)
