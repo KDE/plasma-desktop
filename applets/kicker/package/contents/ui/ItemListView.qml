@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -115,7 +116,7 @@ FocusScope {
             }
         }
 
-        PlasmaExtras.ScrollArea {
+        ScrollView {
             anchors.fill: parent
 
             focus: true
