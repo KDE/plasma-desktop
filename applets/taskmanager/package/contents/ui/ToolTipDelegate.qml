@@ -54,16 +54,10 @@ Loader {
     readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
     readonly property bool hasPlayer: !!mprisSourceName && !!playerData
 
-    Binding on Layout.minimumWidth {
-        value: implicitWidth
-        delayed: true // Prevent early hide of tooltip (BUG439522)
-    }
+    Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: Layout.minimumWidth
 
-    Binding on Layout.minimumHeight {
-        value: implicitHeight
-        delayed: true // Prevent early hide of tooltip (BUG439522)
-    }
+    Layout.minimumHeight: implicitHeight
     Layout.maximumHeight: Layout.minimumHeight
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -93,8 +87,7 @@ Loader {
             ListView {
                 id: groupToolTipListView
 
-                // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-102811
-                model: delegateModel.count > 0 ? delegateModel : null
+                model: delegateModel
 
                 orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
