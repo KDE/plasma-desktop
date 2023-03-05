@@ -49,6 +49,7 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
+    'third-party/packagekit-qt': '@latest'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
