@@ -48,11 +48,8 @@ Item {
     readonly property int rightFloatingPadding: floating && containment.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
     readonly property int topFloatingPadding: floating && containment.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
 
-    // We divide by 2 when not floating as only one corner per side is drawn in that case,
-    // meaning the panel can be as small as that corner size without visual glitches,
-    // whereas the floating panel - with two corners - needs two times that. 
-    readonly property int minPanelHeight: translucentItem.minimumDrawingHeight / (floating ? 1 : 2)
-    readonly property int minPanelWidth: translucentItem.minimumDrawingWidth / (floating ? 1 : 2)
+    readonly property int minPanelHeight: translucentItem.minimumDrawingHeight
+    readonly property int minPanelWidth: translucentItem.minimumDrawingWidth
 
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
