@@ -63,6 +63,9 @@ BasePage {
 
         readonly property string preferredFavoritesViewObjectName: plasmoid.configuration.favoritesDisplay === 0 ? "favoritesGridView" : "favoritesListView"
         readonly property Component preferredFavoritesViewComponent: plasmoid.configuration.favoritesDisplay === 0 ? favoritesGridViewComponent : favoritesListViewComponent
+        readonly property string preferredAllAppsViewObjectName: plasmoid.configuration.applicationsDisplay === 0 ? "listOfGridsView" : "applicationsListView"
+        readonly property Component preferredAllAppsViewComponent: plasmoid.configuration.applicationsDisplay === 0 ? listOfGridsViewComponent : applicationsListViewComponent
+
         readonly property string preferredAppsViewObjectName: plasmoid.configuration.applicationsDisplay === 0 ? "applicationsGridView" : "applicationsListView"
         readonly property Component preferredAppsViewComponent: plasmoid.configuration.applicationsDisplay === 0 ? applicationsGridViewComponent : applicationsListViewComponent
         // NOTE: The 0 index modelForRow isn't supposed to be used. That's just how it works.
@@ -138,9 +141,32 @@ BasePage {
             }
         }
 
+        Component {
+            id: listOfGridsViewComponent
+
+            ListOfGridsView {
+                id: listOfGridsView
+                objectName: "listOfGridsView"
+                mainContentView: true
+                gridModel: stackView.appsModel
+
+                onShowSectionViewRequested: {
+                    stackView.push(applicationsSectionViewComponent, {
+                        "currentSection": sectionName,
+                        "parentView": listOfGridsView
+                    });
+                }
+            }
+        }
+
         onPreferredFavoritesViewComponentChanged: {
             if (root.sideBarItem !== null && root.sideBarItem.currentIndex === 0) {
                 stackView.replace(stackView.preferredFavoritesViewComponent)
+            }
+        }
+        onPreferredAllAppsViewComponentChanged: {
+            if (root.sideBarItem !== null && root.sideBarItem.currentIndex === 1) {
+                stackView.replace(stackView.preferredAllAppsViewComponent)
             }
         }
         onPreferredAppsViewComponentChanged: {
@@ -161,10 +187,8 @@ BasePage {
                     && stackView.currentItem.objectName !== stackView.preferredFavoritesViewObjectName) {
                     stackView.replace(stackView.preferredFavoritesViewComponent)
                 } else if (root.sideBarItem.currentIndex === 1
-                    && stackView.currentItem.objectName !== "applicationsListView") {
-                    // Always use list view for alphabetical apps view since grid view doesn't have sections
-                    // TODO: maybe find a way to have a list view with grids in each section?
-                    stackView.replace(applicationsListViewComponent)
+                    && stackView.currentItem.objectName !== stackView.preferredAllAppsViewObjectName) {
+                    stackView.replace(stackView.preferredAllAppsViewComponent)
                 } else if (root.sideBarItem.currentIndex > 1
                     && stackView.currentItem.objectName !== stackView.preferredAppsViewObjectName) {
                     stackView.replace(stackView.preferredAppsViewComponent)

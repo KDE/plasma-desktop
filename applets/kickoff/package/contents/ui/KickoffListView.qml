@@ -23,6 +23,7 @@ EmptyPage {
     property alias currentItem: view.currentItem
     property alias delegate: view.delegate
     property alias section: view.section
+    property alias highlight: view.highlight
     property alias view: view
 
     property bool mainContentView: false

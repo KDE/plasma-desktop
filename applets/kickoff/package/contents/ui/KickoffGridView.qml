@@ -21,6 +21,7 @@ EmptyPage {
     property alias currentIndex: view.currentIndex
     property alias currentItem: view.currentItem
     property alias delegate: view.delegate
+    property alias blockTargetWheel: wheelHandler.blockTargetWheel
     property alias view: view
 
     clip: view.height < view.contentHeight
@@ -155,6 +156,7 @@ EmptyPage {
         }
 
         Kirigami.WheelHandler {
+            id: wheelHandler
             target: view
             filterMouseEvents: true
             // `20 * Qt.styleHints.wheelScrollLines` is the default speed.

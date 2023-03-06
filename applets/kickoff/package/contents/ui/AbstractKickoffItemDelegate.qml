@@ -41,6 +41,8 @@ T.ItemDelegate {
     readonly property bool dragEnabled: enabled && !isCategoryListItem
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
+    readonly property alias mouseArea: mouseArea
+
     property bool labelTruncated: false
     property bool descriptionTruncated: false
     property bool descriptionVisible: true

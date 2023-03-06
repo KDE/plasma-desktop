@@ -54,7 +54,11 @@ KickoffGridView {
             text: model.section
         }
 
-        onClicked: root.hideSectionViewRequested(model.firstIndex)
+        onClicked: {
+            const isGridView = plasmoid.configuration.applicationsDisplay === 0
+            const destinationIndex = isGridView ? index : model.firstIndex
+            root.hideSectionViewRequested(destinationIndex)
+        }
     }
 
     FontMetrics {
