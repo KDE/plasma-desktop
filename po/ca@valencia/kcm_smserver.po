@@ -1,19 +1,19 @@
 # Translation of kcm_smserver.po to Catalan (Valencian)
-# Copyright (C) 2001-2022 This_file_is_part_of_KDE
+# Copyright (C) 2001-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2001, 2002, 2004.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022, 2023.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-12-27 14:20+0100\n"
+"PO-Revision-Date: 2023-01-02 14:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -101,7 +101,7 @@ msgstr ""
 "Quan esta opció de configuració està activa, es mostrarà la pantalla de "
 "confirmació d'eixida quan tanqueu la sessió, apagueu, premeu el botó "
 "d'iniciada o feu clic en els botons o elements de menú etiquetats "
-"<interface>Ix…</interface>"
+"<interface>Ix…</interface>."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -216,18 +216,3 @@ msgstr "En connectar-se"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicacions que s'exclouran de la sessió"
-
-#~ msgid "Default option:"
-#~ msgstr "Opció predeterminada:"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Log Out"
-#~ msgstr "Eixida"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Restart"
-#~ msgstr "Reinicia"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Shut Down"
-#~ msgstr "Para"
