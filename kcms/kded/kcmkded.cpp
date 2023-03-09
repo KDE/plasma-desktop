@@ -33,7 +33,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_kded.json", registerPlugin<KDED
 static const QString s_kdedServiceName = QStringLiteral("org.kde.kded5");
 
 KDEDConfig::KDEDConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, metaData, args)
+    : KQuickConfigModule(parent, metaData, args)
     , m_model(new ModulesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_kdedInterface(new org::kde::kded5(s_kdedServiceName, QStringLiteral("/kded"), QDBusConnection::sessionBus()))

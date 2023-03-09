@@ -7,6 +7,7 @@
 #pragma once
 
 #include <KCModule>
+#include <KPluginMetaData>
 
 class TouchpadConfigPlugin;
 class TouchpadConfigLibinput;
@@ -20,13 +21,9 @@ class TouchpadConfigContainer : public KCModule
     friend TouchpadConfigLibinput;
 
 public:
-    explicit TouchpadConfigContainer(QWidget *parent, const QVariantList &args = QVariantList());
+    explicit TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
 
     static void kcmInit();
-
-    QSize minimumSizeHint() const override;
-    QSize sizeHint() const override;
-    void resizeEvent(QResizeEvent *event) override;
 
     void load() override;
     void save() override;
@@ -45,8 +42,13 @@ public:
         KCModule::defaults();
     }
 
-protected:
-    void hideEvent(QHideEvent *) override;
+    /*
+        QSize minimumSizeHint() const override;
+        QSize sizeHint() const override;
+        void resizeEvent(QResizeEvent *event) override;
+    protected:
+        void hideEvent(QHideEvent *) override;
+    */
 
 private:
     TouchpadConfigPlugin *m_plugin = nullptr;

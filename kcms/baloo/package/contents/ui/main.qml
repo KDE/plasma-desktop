@@ -18,7 +18,6 @@ KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 42
     implicitHeight: Kirigami.Units.gridUnit * 25
 
-    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the file indexer and search functionality.")
 
     Connections {
         target: kcm

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <KSharedConfig>
 #include <QKeySequence>
@@ -16,7 +16,7 @@
 class TabletSettings;
 class TabletData;
 
-class Tablet : public KQuickAddons::ManagedConfigModule
+class Tablet : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)

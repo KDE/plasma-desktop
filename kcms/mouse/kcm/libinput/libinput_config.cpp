@@ -32,18 +32,6 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 {
     m_backend = backend;
 
-    KAboutData *data = new KAboutData(QStringLiteral("kcmmouse"),
-                                      i18n("Pointer device KCM"),
-                                      QStringLiteral("1.0"),
-                                      i18n("System Settings module for managing mice and trackballs."),
-                                      KAboutLicense::GPL_V2,
-                                      i18n("Copyright 2018 Roman Gilg"),
-                                      QString());
-
-    data->addAuthor(i18n("Roman Gilg"), i18n("Developer"), QStringLiteral("subdiff@gmail.com"));
-
-    m_parent->setAboutData(data);
-
     m_initError = !m_backend->errorString().isNull();
 
     m_view = new QQuickWidget(this);
@@ -53,11 +41,11 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_errorMessage->setWordWrap(true);
     m_errorMessage->setVisible(false);
 
-    QVBoxLayout *layout = new QVBoxLayout(parent);
+    QVBoxLayout *layout = new QVBoxLayout(parent->widget());
 
     layout->addWidget(m_errorMessage);
     layout->addWidget(m_view);
-    parent->setLayout(layout);
+    parent->widget()->setLayout(layout);
 
     m_view->setResizeMode(QQuickWidget::SizeRootObjectToView);
     m_view->setClearColor(Qt::transparent);
@@ -130,7 +118,7 @@ void LibinputConfig::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::defaults()
@@ -146,7 +134,7 @@ void LibinputConfig::defaults()
         m_errorMessage->animatedShow();
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onChange()
@@ -155,7 +143,7 @@ void LibinputConfig::onChange()
         return;
     }
     hideErrorMessage();
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onDeviceAdded(bool success)
@@ -203,7 +191,7 @@ void LibinputConfig::onDeviceRemoved(int index)
     QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::hideErrorMessage()

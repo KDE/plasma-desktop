@@ -7,7 +7,7 @@
 */
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 class QDBusServiceWatcher;
 
@@ -27,7 +27,7 @@ using kded5 = ::OrgKdeKded5Interface;
 }
 }
 
-class KDEDConfig : public KQuickAddons::ConfigModule
+class KDEDConfig : public KQuickConfigModule
 {
     Q_OBJECT
 

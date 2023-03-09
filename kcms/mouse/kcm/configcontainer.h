@@ -15,11 +15,11 @@ class ConfigContainer : public KCModule
     Q_OBJECT
 
 public:
-    explicit ConfigContainer(QWidget *parent, const QVariantList &args = QVariantList());
+    explicit ConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
 
-    QSize minimumSizeHint() const override;
+    /*QSize minimumSizeHint() const override;
     QSize sizeHint() const override;
-    void resizeEvent(QResizeEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;*/
 
     void load() override;
     void save() override;
@@ -38,8 +38,10 @@ public:
         KCModule::defaults();
     }
 
-protected:
-    void hideEvent(QHideEvent *) override;
+    /*
+    protected:
+        void hideEvent(QHideEvent *) override;
+    */
 
 private:
     ConfigPlugin *m_plugin = nullptr;

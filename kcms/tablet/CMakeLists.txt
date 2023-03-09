@@ -39,10 +39,11 @@ target_sources(kcm_tablet PRIVATE
 )
 
 target_link_libraries(kcm_tablet
+    Qt::Quick
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::I18n
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
 
     Qt::DBus
     Qt::WaylandClient

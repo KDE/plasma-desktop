@@ -44,7 +44,7 @@ static QString balooDatabaseLocation()
 using namespace Baloo;
 
 ServerConfigModule::ServerConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new BalooData(this))
     , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
 {
@@ -64,12 +64,12 @@ ServerConfigModule::~ServerConfigModule()
 
 void ServerConfigModule::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
 }
 
 void ServerConfigModule::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     // Update Baloo config or start Baloo
     if (balooSettings()->indexingEnabled()) {

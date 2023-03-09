@@ -24,8 +24,8 @@ Q_DECL_EXPORT void kcminit()
 }
 }
 
-TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)
+TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
 {
     TouchpadBackend *backend = TouchpadBackend::implementation();
     if (KWindowSystem::isPlatformX11()) {
@@ -52,19 +52,6 @@ void TouchpadConfigContainer::kcmInit()
     }
 }
 
-QSize TouchpadConfigContainer::minimumSizeHint() const
-{
-    return m_plugin->minimumSizeHint();
-}
-QSize TouchpadConfigContainer::sizeHint() const
-{
-    return m_plugin->sizeHint();
-}
-void TouchpadConfigContainer::resizeEvent(QResizeEvent * /*event*/)
-{
-    m_plugin->resize(this->size());
-}
-
 void TouchpadConfigContainer::load()
 {
     m_plugin->load();
@@ -80,10 +67,25 @@ void TouchpadConfigContainer::defaults()
     m_plugin->defaults();
 }
 
+/*
+QSize TouchpadConfigContainer::minimumSizeHint() const
+{
+    return m_plugin->minimumSizeHint();
+}
+QSize TouchpadConfigContainer::sizeHint() const
+{
+    return m_plugin->sizeHint();
+}
+void TouchpadConfigContainer::resizeEvent(QResizeEvent * event)
+{
+    m_plugin->resize(this->size());
+}
+
 void TouchpadConfigContainer::hideEvent(QHideEvent *e)
 {
     m_plugin->hideEvent(e);
     KCModule::hideEvent(e);
 }
+*/
 
 #include "touchpadconfigcontainer.moc"

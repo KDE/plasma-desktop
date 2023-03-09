@@ -11,6 +11,7 @@ import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.kiconthemes 1.0 as KIconThemes
 
 Kirigami.FormLayout {
     id: root
@@ -40,9 +41,9 @@ Kirigami.FormLayout {
         icon.name: "activities"
         Kirigami.FormData.label: i18nd("kcm_activities5", "Icon:")
 
-        KQuickControlsAddons.IconDialog {
+        KIconThemes.IconDialog {
             id: iconDialog
-            onIconNameChanged: activityIcon.icon.name = iconName
+            onIconNameChanged: iconName => activityIcon.icon.name = iconName
         }
 
         onClicked: {

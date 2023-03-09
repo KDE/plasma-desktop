@@ -74,22 +74,6 @@ XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
     connect(mk_time_to_max, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(mk_max_speed, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(mk_curve, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcmmouse"),
-                                       i18n("Mouse"),
-                                       QStringLiteral("1.0"),
-                                       QString(),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 1997 - 2018 Mouse developers"));
-    about->addAuthor(i18n("Patrick Dowler"));
-    about->addAuthor(i18n("Dirk A. Mueller"));
-    about->addAuthor(i18n("David Faure"));
-    about->addAuthor(i18n("Bernd Gehrmann"));
-    about->addAuthor(i18n("Rik Hemsley"));
-    about->addAuthor(i18n("Brad Hughes"));
-    about->addAuthor(i18n("Brad Hards"));
-    about->addAuthor(i18n("Roman Gilg"));
-    m_parent->setAboutData(about);
 }
 
 void XlibConfig::checkAccess()
@@ -203,7 +187,7 @@ void XlibConfig::load()
     mk_curve->setValue(group.readEntry("MKCurve", 0));
 
     checkAccess();
-    Q_EMIT m_parent->changed(false);
+    Q_EMIT m_parent->setNeedsSave(false);
 }
 
 void XlibConfig::save()
@@ -241,7 +225,7 @@ void XlibConfig::save()
     // restart kaccess
     QProcess::startDetached(QStringLiteral("kaccess"), {});
 
-    Q_EMIT m_parent->changed(false);
+    Q_EMIT m_parent->setNeedsSave(false);
 }
 
 void XlibConfig::defaults()
@@ -265,7 +249,7 @@ void XlibConfig::defaults()
     checkAccess();
     m_parent->kcmDefaults();
 
-    Q_EMIT m_parent->changed(true);
+    Q_EMIT m_parent->setNeedsSave(true);
 }
 
 /** No descriptions */

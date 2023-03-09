@@ -21,7 +21,7 @@ kcmutils_generate_desktop_file(kcm_smserver)
 target_link_libraries(kcm_smserver
     Qt::Core
     Qt::DBus
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::I18n
     KF6::ConfigCore
     KF6::KCMUtils

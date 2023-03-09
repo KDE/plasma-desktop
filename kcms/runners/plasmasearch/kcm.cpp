@@ -42,7 +42,7 @@ private:
 K_PLUGIN_FACTORY_WITH_JSON(SearchConfigModuleFactory, "kcm_plasmasearch.json", registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
 SearchConfigModule::SearchConfigModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_model(new KPluginModel(this))
     , m_config(KSharedConfig::openConfig("krunnerrc"))
 {
@@ -87,7 +87,7 @@ void SearchConfigModule::reloadPlugins()
     m_model->addPlugins(KRunner::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
 }
 
-void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args, const KPluginMetaData &krunnerPluginData) const
+void SearchConfigModule::showKCM(const KPluginMetaData &data, const QVariantList args, const KPluginMetaData &krunnerPluginData) const
 {
     auto dlg = new KCMultiDialog();
     dlg->addModule(data, args);
@@ -105,7 +105,7 @@ void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList 
 
 void SearchConfigModule::save()
 {
-    KQuickAddons::ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     m_model->save();
 
@@ -117,7 +117,7 @@ void SearchConfigModule::save()
 
 void SearchConfigModule::defaults()
 {
-    KQuickAddons::ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
 
     m_model->defaults();
 }

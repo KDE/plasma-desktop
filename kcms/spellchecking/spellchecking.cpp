@@ -18,13 +18,13 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(SpellFactory, "kcmspellchecking.json", registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
 
-SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget *parent, const QVariantList &)
-    : KCModule(parent)
+SonnetSpellCheckingModule::SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
     , m_data(new SpellCheckingData(this))
 {
-    QBoxLayout *layout = new QVBoxLayout(this);
+    QBoxLayout *layout = new QVBoxLayout(widget());
     layout->setContentsMargins(0, 0, 0, 0);
-    m_configWidget = new Sonnet::ConfigView(this);
+    m_configWidget = new Sonnet::ConfigView(widget());
     m_configWidget->setNoBackendFoundVisible(skeleton()->clients().isEmpty());
     layout->addWidget(m_configWidget);
     m_managedConfig = addConfig(skeleton(), m_configWidget);

@@ -17,7 +17,7 @@
 #include <KBuildSycocaProgressDialog>
 #include <KConfigGroup>
 #include <KOpenWithDialog>
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 #include <KService>
 #include <KSharedConfig>
 

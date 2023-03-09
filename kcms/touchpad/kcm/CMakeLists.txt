@@ -33,7 +33,7 @@ target_link_libraries(kcm_touchpad
     KF6::CoreAddons
     KF6::I18n
     KF6::Completion
-    KF6::ConfigWidgets
+    KF6::KCMUtils
     KF6::Plasma
     KF6::WindowSystem
     KF6::NotifyConfig

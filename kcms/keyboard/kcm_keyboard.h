@@ -20,7 +20,7 @@ class KCMKeyboard : public KCModule
     Q_OBJECT
 
 public:
-    KCMKeyboard(QWidget *parent, const QVariantList &);
+    KCMKeyboard(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMKeyboard() override;
 
 public Q_SLOTS:
@@ -33,6 +33,6 @@ private:
     Rules *rules;
     KeyboardSettingsData *m_data;
     WorkspaceOptions m_workspaceOptions;
-    KCMKeyboardWidget *widget;
+    KCMKeyboardWidget *m_widget;
     KCMiscKeyboardWidget *m_miscWidget;
 };

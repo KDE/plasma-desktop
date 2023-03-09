@@ -23,11 +23,11 @@ public:
     SwitchingTab *tabSwitching;
 };
 
-MainConfigurationWidget::MainConfigurationWidget(QWidget *parent, QVariantList args)
-    : KCModule(parent, args)
+MainConfigurationWidget::MainConfigurationWidget(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
     , d()
 {
-    d->setupUi(this);
+    d->setupUi(widget());
 
     d->tabs->insertTab(0, d->tabActivities = new ActivitiesTab(d->tabs), i18n("Activities"));
     d->tabs->insertTab(1, d->tabSwitching = new SwitchingTab(d->tabs), i18n("Switching"));

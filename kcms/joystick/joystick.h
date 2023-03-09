@@ -17,7 +17,7 @@ class Joystick : public KCModule
     Q_OBJECT
 
 public:
-    explicit Joystick(QWidget *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit Joystick(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
 
     void load() override;
     void defaults() override;

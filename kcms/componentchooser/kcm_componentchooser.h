@@ -7,13 +7,13 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "componentchooser.h"
 
 class ComponentChooserData;
 
-class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
+class KcmComponentChooser : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(ComponentChooser *browsers READ browsers CONSTANT)

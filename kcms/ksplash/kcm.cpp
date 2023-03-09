@@ -46,7 +46,7 @@ class SplashScreenSortModel : public QSortFilterProxyModel
 };
 
 KCMSplashScreen::KCMSplashScreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new SplashScreenData(this))
     , m_model(new QStandardItemModel(this))
 {
@@ -191,7 +191,7 @@ void KCMSplashScreen::save()
         });
     }
     m_data->settings()->setEngine(m_data->settings()->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 }
 
 int KCMSplashScreen::sortModelPluginIndex(const QString &pluginName) const
@@ -251,7 +251,7 @@ QStringList KCMSplashScreen::pendingDeletions()
 
 void KCMSplashScreen::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     // Make sure we clear all pending deletions
     for (int i = 0, count = m_model->rowCount(); i < count; ++i) {
         m_model->item(i)->setData(false, Roles::PendingDeletionRole);

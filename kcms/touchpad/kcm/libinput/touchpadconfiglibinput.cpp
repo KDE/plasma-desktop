@@ -26,26 +26,14 @@
 TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList & /*args*/)
     : TouchpadConfigPlugin(parent, backend)
 {
-    KAboutData *data = new KAboutData(QStringLiteral("kcm_touchpad"),
-                                      i18n("Touchpad KCM"),
-                                      PLASMA_VERSION_STRING,
-                                      i18n("System Settings module for managing your touchpad"),
-                                      KAboutLicense::GPL_V2,
-                                      i18n("Copyright © 2016 Roman Gilg"),
-                                      QString());
-
-    data->addAuthor(i18n("Roman Gilg"), i18n("Developer"), QStringLiteral("subdiff@gmail.com"));
-
-    m_parent->setAboutData(data);
-
     m_initError = !m_backend->errorString().isNull();
 
     m_view = new QQuickWidget(this);
 
-    QVBoxLayout *layout = new QVBoxLayout(parent);
+    QVBoxLayout *layout = new QVBoxLayout(parent->widget());
 
     layout->addWidget(m_view);
-    parent->setLayout(layout);
+    parent->widget()->setLayout(layout);
 
     m_view->setResizeMode(QQuickWidget::SizeRootObjectToView);
     m_view->setClearColor(Qt::transparent);
@@ -108,7 +96,7 @@ void TouchpadConfigLibinput::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::defaults()
@@ -122,7 +110,7 @@ void TouchpadConfigLibinput::defaults()
         Q_EMIT showMessage(i18n("Error while loading default values. Failed to set some options to their default values."));
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::onChange()
@@ -131,7 +119,7 @@ void TouchpadConfigLibinput::onChange()
         return;
     }
     hideErrorMessage();
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::onTouchpadAdded(bool success)
@@ -176,7 +164,7 @@ void TouchpadConfigLibinput::onTouchpadRemoved(int index)
     QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
-    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::hideErrorMessage()

@@ -16,8 +16,6 @@ import org.kde.private.kcms.style 1.0 as Private
 KCM.ScrollViewKCM {
     id: root
 
-    KCM.ConfigModule.quickHelp: i18n("<p>This module allows you to have an overview of all plugins of the KDE Daemon, also referred to as KDE Services. Generally, there are two types of service:</p> <ul><li>Services invoked at startup</li><li>Services called on demand</li></ul> <p>The latter are only listed for convenience. The startup services can be started and stopped. You can also define whether services should be loaded at startup.</p> <p><b>Use this with care: some services are vital for Plasma; do not deactivate services if you  do not know what you are doing.</b></p>")
-
     Binding {
         target: kcm.filteredModel
         property: "query"

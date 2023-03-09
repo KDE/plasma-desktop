@@ -20,13 +20,13 @@ Q_DECL_EXPORT void kcminit()
 }
 }
 
-ConfigContainer::ConfigContainer(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)
+ConfigContainer::ConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
 {
     m_plugin = ConfigPlugin::implementation(this);
 }
 
-QSize ConfigContainer::minimumSizeHint() const
+/*QSize ConfigContainer::minimumSizeHint() const
 {
     return m_plugin->minimumSizeHint();
 }
@@ -39,6 +39,7 @@ void ConfigContainer::resizeEvent(QResizeEvent *event)
     Q_UNUSED(event);
     m_plugin->resize(this->size());
 }
+*/
 
 void ConfigContainer::load()
 {
@@ -55,8 +56,10 @@ void ConfigContainer::defaults()
     m_plugin->defaults();
 }
 
-void ConfigContainer::hideEvent(QHideEvent *e)
+/*void ConfigContainer::hideEvent(QHideEvent *e)
 {
     m_plugin->hideEvent(e);
     KCModule::hideEvent(e);
 }
+
+*/

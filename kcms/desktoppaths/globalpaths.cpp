@@ -20,14 +20,9 @@
 K_PLUGIN_CLASS_WITH_JSON(DesktopPathConfig, "kcm_desktoppaths.json")
 
 DesktopPathConfig::DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new DesktopPathsData(this))
 {
-    setQuickHelp(
-        i18n("<h1>Paths</h1>\n"
-             "This module allows you to choose where in the filesystem the "
-             "files on your desktop should be stored.\n"
-             "Use the \"Whats This?\" (Shift+F1) to get help on specific options."));
 }
 
 DesktopPathConfig::~DesktopPathConfig()

@@ -138,7 +138,7 @@ QString mouseKeysShortcut(Display *display)
 }
 
 KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
@@ -151,7 +151,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData, c
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
 
-    setButtons(ConfigModule::Apply | ConfigModule::Default | ConfigModule::Help);
+    setButtons(KAbstractConfigModule::Apply | KAbstractConfigModule::Default | KAbstractConfigModule::Help);
 
     connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
     connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);
@@ -192,7 +192,7 @@ void KAccessConfig::launchOrcaConfiguration()
 
 void KAccessConfig::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);

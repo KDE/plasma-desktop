@@ -13,7 +13,6 @@ import org.kde.kcm 1.3 as KCM
 
 KCM.GridViewKCM {
     id: root
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the splash screen theme.")
 
     KCM.SettingStateBinding {
         configObject: kcm.splashScreenSettings

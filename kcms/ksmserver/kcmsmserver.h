@@ -10,7 +10,7 @@
 */
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 class QAction;
 
@@ -20,7 +20,7 @@ class OrgFreedesktopLogin1ManagerInterface;
 
 /// KCM handling the desktop session and in particular the login and logout
 /// handling.
-class SMServerConfig : public KQuickAddons::ManagedConfigModule
+class SMServerConfig : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

@@ -9,14 +9,14 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <KSharedConfig>
 #include <QKeySequence>
 
 #include "devicesmodel.h"
 
-class Touchscreen : public KQuickAddons::ManagedConfigModule
+class Touchscreen : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(DevicesModel *touchscreensModel READ touchscreensModel CONSTANT)

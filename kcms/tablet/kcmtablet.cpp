@@ -143,7 +143,7 @@ public:
 };
 
 Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list)
-    : ManagedConfigModule(parent, metaData, list)
+    : KQuickManagedConfigModule(parent, metaData, list)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
 {

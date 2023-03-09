@@ -20,7 +20,7 @@ class MainConfigurationWidget : public KCModule
 {
     Q_OBJECT
 public:
-    MainConfigurationWidget(QWidget *parent, QVariantList args);
+    MainConfigurationWidget(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~MainConfigurationWidget() override;
 
 public Q_SLOTS:

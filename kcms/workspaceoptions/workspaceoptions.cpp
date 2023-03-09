@@ -22,7 +22,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>(); registerPlugin<WorkspaceOptionsData>();)
 
 KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new WorkspaceOptionsData(this))
 {
     qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
@@ -51,7 +51,7 @@ void KCMWorkspaceOptions::save()
 {
     const bool primarySelectionSaved = m_data->workspaceOptionsKwinSettings()->findItem(QStringLiteral("primarySelection"))->isSaveNeeded();
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     {
         QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");

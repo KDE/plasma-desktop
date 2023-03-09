@@ -10,13 +10,13 @@
 #pragma once
 
 #include <KPluginModel>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 #include <KSharedConfig>
 
 class KPluginWidget;
 class KCMultiDialog;
 
-class SearchConfigModule : public KQuickAddons::ManagedConfigModule
+class SearchConfigModule : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractItemModel *model READ model CONSTANT)
@@ -34,7 +34,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
     void reloadPlugins();
-    void showKCM(const KPluginMetaData &data, const QStringList args = {}, const KPluginMetaData &krunnerPluginData = {}) const;
+    void showKCM(const KPluginMetaData &data, const QVariantList args = {}, const KPluginMetaData &krunnerPluginData = {}) const;
     void showKRunnerKCM() const
     {
         showKCM(KPluginMetaData(QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")), {QStringLiteral("openedFromPluginSettings")});

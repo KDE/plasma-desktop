@@ -19,7 +19,7 @@ kcmutils_generate_desktop_file(kcm_desktoppaths)
 
 target_link_libraries(kcm_desktoppaths
     KF6::ConfigCore
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::I18n
     KF6::KCMUtils
     KF6::KIOCore

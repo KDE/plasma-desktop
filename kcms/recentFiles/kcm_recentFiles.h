@@ -21,7 +21,7 @@ class RecentFilesKcm : public KCModule
 {
     Q_OBJECT
 public:
-    explicit RecentFilesKcm(QWidget *parent, QVariantList args);
+    explicit RecentFilesKcm(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~RecentFilesKcm() override;
 
     KCoreConfigSkeleton *pluginConfig();

@@ -7,8 +7,8 @@
 #include "touchpadconfigplugin.h"
 #include "touchpadconfigcontainer.h"
 
-TouchpadConfigPlugin::TouchpadConfigPlugin(QWidget *parent, TouchpadBackend *backend)
-    : QWidget(parent)
+TouchpadConfigPlugin::TouchpadConfigPlugin(KCModule *parent, TouchpadBackend *backend)
+    : QWidget(parent->widget())
     , m_parent(dynamic_cast<TouchpadConfigContainer *>(parent))
     , m_backend(backend)
 {

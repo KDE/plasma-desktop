@@ -8,7 +8,7 @@
 #pragma once
 
 #include <KPackage/Package>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <QJsonArray>
 #include <QJsonValue>
@@ -63,7 +63,7 @@ public:
     KPackage::Package m_package;
 };
 
-class KCMLandingPage : public KQuickAddons::ManagedConfigModule
+class KCMLandingPage : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(MostUsedModel *mostUsedModel READ mostUsedModel CONSTANT)

@@ -29,7 +29,7 @@ class KCMQtQuickSettingsModule : public KCModule
     Q_OBJECT
 
 public:
-    explicit KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &);
+    explicit KCMQtQuickSettingsModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMQtQuickSettingsModule() override;
 
 private:

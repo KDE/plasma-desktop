@@ -158,7 +158,7 @@ QString LookAndFeelGroup::thumbnail() const
 }
 
 KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new LandingPageData(this))
 {
     qmlRegisterAnonymousType<LandingPageGlobalsSettings>("org.kde.plasma.landingpage.kcm", 0);
@@ -200,7 +200,7 @@ LandingPageGlobalsSettings *KCMLandingPage::globalsSettings() const
 
 void KCMLandingPage::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
     QList<QVariant> args;

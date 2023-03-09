@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 // The "Path" Tab contains :
 // The paths for Desktop and Documents
@@ -17,7 +17,7 @@
 class DesktopPathsData;
 class DesktopPathsSettings;
 
-class DesktopPathConfig : public KQuickAddons::ManagedConfigModule
+class DesktopPathConfig : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

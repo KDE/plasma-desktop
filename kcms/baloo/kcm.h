@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "filteredfoldermodel.h"
 
@@ -18,7 +18,7 @@ class BalooData;
 
 namespace Baloo
 {
-class ServerConfigModule : public KQuickAddons::ManagedConfigModule
+class ServerConfigModule : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(FilteredFolderModel *filteredModel READ filteredModel CONSTANT)

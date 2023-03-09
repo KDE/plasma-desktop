@@ -36,7 +36,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "kcm_smserver.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
                                                                QStringLiteral("/org/freedesktop/login1"),
                                                                QDBusConnection::systemBus(),
@@ -44,14 +44,6 @@ SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData,
 {
     auto settings = new SMServerSettings(this);
     qmlRegisterSingletonInstance("org.kde.desktopsession.private", 1, 0, "Settings", settings);
-
-    setQuickHelp(
-        i18n("<h1>Session Manager</h1>"
-             " You can configure the session manager here."
-             " This includes options such as whether or not the session exit (logout)"
-             " should be confirmed, whether the session should be restored again when logging in"
-             " and whether the computer should be automatically shut down after session"
-             " exit by default."));
 
     checkFirmwareSetupRequested();
     m_restartInSetupScreenInitial = m_restartInSetupScreen;
@@ -167,13 +159,13 @@ bool SMServerConfig::isDefaults() const
 
 void SMServerConfig::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     setRestartInSetupScreen(false);
 }
 
 void SMServerConfig::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     Q_EMIT ksmserverSettingsChanged();
 }
 

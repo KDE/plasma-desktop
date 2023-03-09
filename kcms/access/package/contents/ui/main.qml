@@ -17,8 +17,6 @@ KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 25
 
-    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the accessibility features such as a screen reader.")
-
     property var elements: [
         {
             icon: "notifications",

@@ -10,6 +10,7 @@ import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.tablet.kcm 1.1
 import org.kde.kcm 1.3
+import org.kde.kcmutils 1.0
 import org.kde.kquickcontrols 2.0
 
 SimpleKCM {

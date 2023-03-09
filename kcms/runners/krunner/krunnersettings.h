@@ -11,12 +11,12 @@
 
 #include <KActivities/Consumer>
 #include <KConfigGroup>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 class KRunnerSettingsBase;
 class KRunnerSettingsData;
 
-class KRunnerSettings : public KQuickAddons::ManagedConfigModule
+class KRunnerSettings : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(KRunnerSettingsBase *krunnerSettings READ krunnerSettings CONSTANT)

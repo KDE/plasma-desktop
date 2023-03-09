@@ -8,7 +8,7 @@ target_link_libraries(kcm_plasmasearch
   KF6::CoreAddons
   KF6::KCMUtilsCore
   KF6::KCMUtils
-  KF6::QuickAddons
+  KF6::KCMUtilsQuick
   KF6::Runner
   KF6::I18n
   Qt::DBus

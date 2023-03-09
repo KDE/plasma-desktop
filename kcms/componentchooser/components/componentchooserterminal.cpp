@@ -12,7 +12,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 #include <KService>
 
 #include "terminal_settings.h"

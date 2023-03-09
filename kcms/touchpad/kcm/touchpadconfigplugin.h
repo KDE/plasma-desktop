@@ -10,13 +10,14 @@
 
 class TouchpadConfigContainer;
 class TouchpadBackend;
+class KCModule;
 
 class TouchpadConfigPlugin : public QWidget
 {
     Q_OBJECT
 
 public:
-    TouchpadConfigPlugin(QWidget *parent, TouchpadBackend *backend);
+    TouchpadConfigPlugin(KCModule *parent, TouchpadBackend *backend);
     virtual ~TouchpadConfigPlugin()
     {
     }

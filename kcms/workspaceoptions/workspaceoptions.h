@@ -7,14 +7,14 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 class WorkspaceOptionsData;
 class WorkspaceOptionsGlobalsSettings;
 class WorkspaceOptionsPlasmaSettings;
 class WorkspaceOptionsKwinSettings;
 
-class KCMWorkspaceOptions : public KQuickAddons::ManagedConfigModule
+class KCMWorkspaceOptions : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(WorkspaceOptionsGlobalsSettings *globalsSettings READ globalsSettings CONSTANT)

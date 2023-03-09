@@ -52,11 +52,11 @@ public:
     }
 };
 
-RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
-    : KCModule(parent, args)
+RecentFilesKcm::RecentFilesKcm(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
     , d(this)
 {
-    d->setupUi(this);
+    d->setupUi(widget());
 
     // Keep history initialization
 
@@ -68,7 +68,7 @@ RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
 
     // Clear recent history button
 
-    auto menu = new QMenu(this);
+    auto menu = new QMenu(widget());
 
     connect(menu->addAction(i18n("Forget the last hour")), &QAction::triggered, this, &RecentFilesKcm::forgetLastHour);
     connect(menu->addAction(i18n("Forget the last two hours")), &QAction::triggered, this, &RecentFilesKcm::forgetTwoHours);
@@ -94,8 +94,8 @@ RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
 
     d->messageWidget->setVisible(false);
 
-    addConfig(d->pluginConfig, this);
-    addConfig(d->mainConfig, this);
+    addConfig(d->pluginConfig, widget());
+    addConfig(d->mainConfig, widget());
 }
 
 RecentFilesKcm::~RecentFilesKcm()

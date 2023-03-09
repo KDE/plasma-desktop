@@ -31,7 +31,7 @@ ConfigPlugin *ConfigPlugin::implementation(ConfigContainer *parent)
 }
 
 ConfigPlugin::ConfigPlugin(ConfigContainer *parent)
-    : QWidget(parent)
+    : QWidget(parent->widget())
     , m_parent(parent)
 {
 }

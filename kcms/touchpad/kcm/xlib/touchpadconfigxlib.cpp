@@ -78,26 +78,6 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     : TouchpadConfigPlugin(parent, backend)
     , m_configOutOfSync(false)
 {
-    KAboutData *data = new KAboutData(QStringLiteral("kcm_touchpad"),
-                                      i18n("Touchpad KCM"),
-                                      PLASMA_VERSION_STRING,
-                                      i18n("System Settings module, daemon and Plasma applet for managing your touchpad"),
-                                      KAboutLicense::GPL_V2,
-                                      i18n("Copyright © 2013 Alexander Mezin"),
-                                      i18n("This program incorporates work covered by this copyright notice:\n"
-                                           "Copyright © 2002-2005,2007 Peter Osterlund"),
-                                      QStringLiteral("https://projects.kde.org/projects/playground/utils/kcm-touchpad/"),
-                                      QString());
-
-    data->addAuthor(i18n("Alexander Mezin"), i18n("Developer"), QStringLiteral("mezin.alexander@gmail.com"));
-    data->addCredit(i18n("Thomas Pfeiffer"), i18nc("Credits", "Usability, testing"));
-    data->addCredit(i18n("Alex Fiestas"), i18nc("Credits", "Helped a bit"));
-    data->addCredit(i18n("Peter Osterlund"), i18nc("Credits", "Developer of synclient"));
-    data->addCredit(i18n("Vadim Zaytsev"), i18nc("Credits", "Testing"));
-    data->addCredit(i18n("Violetta Raspryagayeva"), i18nc("Credits", "Testing"));
-
-    m_parent->setAboutData(data);
-
     QGridLayout *layout = new QGridLayout(this);
     QVBoxLayout *messageLayout = new QVBoxLayout();
     layout->addLayout(messageLayout, 0, 0, 1, 2);

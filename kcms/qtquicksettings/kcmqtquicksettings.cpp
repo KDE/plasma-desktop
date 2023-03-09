@@ -15,21 +15,13 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KCMQtQuickSettingsModule, "kcm_qtquicksettings.json")
 
-KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)
+KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
     , m_ui(new Ui::KCMQtQuickSettingsWidget)
     , m_settings(new PlasmaQtQuickSettings::RendererSettings(KSharedConfig::openConfig(QStringLiteral("kdeglobals"))))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("Plasma QtQuick Settings"),
-                                       i18n("Plasma QtQuick Settings"),
-                                       QString(),
-                                       i18n("Configure Plasma QtQuick Settings"),
-                                       KAboutLicense::GPL);
-    about->addAuthor(i18n("David Edmundson"), i18n("Maintainer"), QStringLiteral("davidedmundson@kde.org"));
-    setAboutData(about);
-
-    m_ui->setupUi(this);
-    addConfig(m_settings.get(), this);
+    m_ui->setupUi(widget());
+    addConfig(m_settings.get(), widget());
 }
 
 KCMQtQuickSettingsModule::~KCMQtQuickSettingsModule()

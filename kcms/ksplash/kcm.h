@@ -10,14 +10,14 @@
 
 #include <KNSCore/Entry>
 #include <KPackage/Package>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 class QStandardItemModel;
 class QSortFilterProxyModel;
 class SplashScreenSettings;
 class SplashScreenData;
 
-class KCMSplashScreen : public KQuickAddons::ManagedConfigModule
+class KCMSplashScreen : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(SplashScreenSettings *splashScreenSettings READ splashScreenSettings CONSTANT)

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 #include <QColor>
 #include <QString>
 
@@ -18,7 +18,7 @@ class KeyboardFiltersSettings;
 class ScreenReaderSettings;
 class AccessibilityData;
 
-class KAccessConfig : public KQuickAddons::ManagedConfigModule
+class KAccessConfig : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(MouseSettings *mouseSettings READ mouseSettings CONSTANT)

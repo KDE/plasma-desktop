@@ -9,7 +9,7 @@
 #include <QKeySequence>
 #include <QObject>
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 class FilteredShortcutsModel;
 class KGlobalAccelInterface;
@@ -17,7 +17,7 @@ class GlobalAccelModel;
 class ShortcutsModel;
 class StandardShortcutsModel;
 
-class KCMKeys : public KQuickAddons::ConfigModule
+class KCMKeys : public KQuickConfigModule
 {
     Q_OBJECT
 

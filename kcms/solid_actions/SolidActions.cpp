@@ -26,23 +26,14 @@
 
 K_PLUGIN_CLASS_WITH_JSON(SolidActions, "kcm_solid_actions.json")
 
-SolidActions::SolidActions(QWidget *parent, const QVariantList &)
-    : KCModule(parent)
+SolidActions::SolidActions(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("Device Actions"),
-                                       i18n("Solid Device Actions Editor"),
-                                       QStringLiteral("1.2"),
-                                       i18n("Solid Device Actions Control Panel Module"),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 2009, 2014 Solid Device Actions team"));
-    about->addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), QStringLiteral("ben@eclipse.endoftheinternet.org"));
-    about->addCredit(QStringLiteral("Lukáš Tinkl"), i18n("Port to Plasma 5"), QStringLiteral("ltinkl@redhat.com"));
-    setAboutData(about);
     setButtons(KCModule::Help);
 
     // Prepare main display dialog
     actionModel = new ActionModel(this);
-    mainUi.setupUi(this);
+    mainUi.setupUi(widget());
     mainUi.TvActions->setModel(actionModel);
     mainUi.TvActions->setHeaderHidden(true);
     mainUi.TvActions->setRootIsDecorated(false);
@@ -57,11 +48,11 @@ SolidActions::SolidActions(QWidget *parent, const QVariantList &)
     connect(mainUi.TvActions, &QTreeView::doubleClicked, this, &SolidActions::editAction);
 
     // Prepare + connect up with Edit dialog
-    editUi = new ActionEditor(this);
+    editUi = new ActionEditor(widget());
     connect(editUi, &ActionEditor::accepted, this, &SolidActions::acceptActionChanges);
 
     // Prepare + connect up add action dialog
-    addDialog = new QDialog(this);
+    addDialog = new QDialog(widget());
     addUi.setupUi(addDialog);
     addDialog->resize(QSize(300, 100)); // Set a sensible default size
 
@@ -149,13 +140,13 @@ void SolidActions::editAction()
 
     // We should error out here if we have to
     if (!selectedItem->predicate().isValid()) {
-        KMessageBox::error(this, i18n("It appears that the predicate for this action is not valid."), i18n("Error Parsing Device Conditions"));
+        KMessageBox::error(widget(), i18n("It appears that the predicate for this action is not valid."), i18n("Error Parsing Device Conditions"));
         return;
     }
 
     // Display us!
     editUi->setActionToEdit(selectedItem);
-    editUi->setWindowIcon(windowIcon());
+    editUi->setWindowIcon(widget()->windowIcon());
     editUi->show();
 }
 
@@ -188,7 +179,7 @@ void SolidActions::fillActionsList()
 void SolidActions::acceptActionChanges()
 {
     // Re-read the actions list to ensure changes are reflected
-    KBuildSycocaProgressDialog::rebuildKSycoca(this);
+    KBuildSycocaProgressDialog::rebuildKSycoca(widget());
     fillActionsList();
 }
 

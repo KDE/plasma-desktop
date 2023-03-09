@@ -21,41 +21,14 @@
 
 K_PLUGIN_CLASS_WITH_JSON(Joystick, "kcm_joystick.json")
 
-Joystick::Joystick(QWidget *parent, const QVariantList &)
-    : KCModule(parent)
+Joystick::Joystick(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
 {
     setButtons(Help | Default);
-    setAboutData(new KAboutData(QStringLiteral("kcmjoystick"),
-                                i18n("KDE Joystick Control Module"),
-                                QStringLiteral("1.0"),
-                                i18n("KDE System Settings Module to test Joysticks"),
-                                KAboutLicense::GPL,
-                                i18n("(c) 2004, Martin Koller"),
-                                QString(),
-                                QStringLiteral("kollix@aon.at")));
 
-    setQuickHelp(
-        i18n("<h1>Joystick</h1>"
-             "This module helps to check if your joystick is working correctly.<br />"
-             "If it delivers wrong values for the axes, you can try to solve this with "
-             "the calibration.<br />"
-             "This module tries to find all available joystick devices "
-             "by checking /dev/js[0-4] and /dev/input/js[0-4]<br />"
-             "If you have another device file, enter it in the combobox.<br />"
-             "The Buttons list shows the state of the buttons on your joystick, the Axes list "
-             "shows the current value for all axes.<br />"
-             "NOTE: the current Linux device driver (Kernel 2.4, 2.6) can only autodetect"
-             "<ul>"
-             "<li>2-axis, 4-button joystick</li>"
-             "<li>3-axis, 4-button joystick</li>"
-             "<li>4-axis, 4-button joystick</li>"
-             "<li>Saitek Cyborg 'digital' joysticks</li>"
-             "</ul>"
-             "(For details you can check your Linux source/Documentation/input/joystick.txt)"));
+    joyWidget = new JoyWidget(widget());
 
-    joyWidget = new JoyWidget(this);
-
-    QVBoxLayout *top = new QVBoxLayout(this);
+    QVBoxLayout *top = new QVBoxLayout(widget());
     top->setContentsMargins(0, 0, 0, 0);
     top->addWidget(joyWidget);
 }

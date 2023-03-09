@@ -21,8 +21,10 @@ kcoreaddons_add_plugin(kcm_landingpage SOURCES ${kcm_landingpage_SRCS} INSTALL_N
 kcmutils_generate_desktop_file(kcm_landingpage)
 
 target_link_libraries(kcm_landingpage
-    KF6::QuickAddons
+    Qt::Quick
+    Qt::DBus
     KF6::I18n
+    KF6::KCMUtilsQuick
     KF6::KCMUtils
     KF6::ConfigWidgets
     KF6::Declarative
@@ -30,8 +32,6 @@ target_link_libraries(kcm_landingpage
     PW::KWorkspace
     KF6::ActivitiesStats
     KF6::Service
-
-    Qt::DBus
 )
 
 if(X11_FOUND)
