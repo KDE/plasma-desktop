@@ -54,6 +54,8 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Crash
     Plasma
     PlasmaQuick
+    Plasma5Support
+    Config
     DocTools
     I18n
     KCMUtils

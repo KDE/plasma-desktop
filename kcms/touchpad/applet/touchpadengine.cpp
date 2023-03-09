@@ -13,7 +13,7 @@
 #include "touchpadservice.h"
 
 TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_source("touchpad")
     , m_daemon(nullptr)
 {
@@ -54,13 +54,13 @@ void TouchpadEngine::enabledChanged(bool value)
     setData(m_source, "enabled", value);
 }
 
-Plasma::Service *TouchpadEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *TouchpadEngine::serviceForSource(const QString &source)
 {
     if (source == m_source) {
         return new TouchpadService(m_daemon, source, this);
     }
 
-    return Plasma::DataEngine::serviceForSource(source);
+    return Plasma5Support::DataEngine::serviceForSource(source);
 }
 
 TouchpadEngine::~TouchpadEngine()

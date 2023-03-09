@@ -5,11 +5,11 @@
 */
 #pragma once
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 class OrgKdeTouchpadInterface;
 
-class TouchpadService : public Plasma::Service
+class TouchpadService : public Plasma5Support::Service
 {
     Q_OBJECT
 public:
@@ -17,7 +17,7 @@ public:
     ~TouchpadService();
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     OrgKdeTouchpadInterface *m_daemon;

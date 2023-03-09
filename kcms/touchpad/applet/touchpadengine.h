@@ -5,11 +5,11 @@
 */
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 class OrgKdeTouchpadInterface;
 
-class TouchpadEngine : public Plasma::DataEngine
+class TouchpadEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -17,7 +17,7 @@ public:
     TouchpadEngine(QObject *parent, const QVariantList &args);
     ~TouchpadEngine();
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 private Q_SLOTS:
     void workingTouchpadFoundChanged(bool);
