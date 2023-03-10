@@ -6,12 +6,12 @@
 
 #include "touchpadconfigcontainer.h"
 #include "libinput/touchpadconfiglibinput.h"
-#include "xlib/touchpadconfigxlib.h"
 #include "touchpadbackend.h"
 #include "touchpadconfigplugin.h"
+#include "xlib/touchpadconfigxlib.h"
 
-#include <KWindowSystem>
 #include <KPluginFactory>
+#include <KWindowSystem>
 
 K_PLUGIN_CLASS_WITH_JSON(TouchpadConfigContainer, "kcm_touchpad.json")
 
@@ -66,26 +66,5 @@ void TouchpadConfigContainer::defaults()
 {
     m_plugin->defaults();
 }
-
-/*
-QSize TouchpadConfigContainer::minimumSizeHint() const
-{
-    return m_plugin->minimumSizeHint();
-}
-QSize TouchpadConfigContainer::sizeHint() const
-{
-    return m_plugin->sizeHint();
-}
-void TouchpadConfigContainer::resizeEvent(QResizeEvent * event)
-{
-    m_plugin->resize(this->size());
-}
-
-void TouchpadConfigContainer::hideEvent(QHideEvent *e)
-{
-    m_plugin->hideEvent(e);
-    KCModule::hideEvent(e);
-}
-*/
 
 #include "touchpadconfigcontainer.moc"

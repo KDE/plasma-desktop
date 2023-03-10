@@ -72,17 +72,10 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
         connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
     }
 
+    // Just set it to a reasonable default size
+    // This only matters for kcmshell and most of the time we have the KCM in systemsettings open
+    m_view->resize(QSize(300, 300));
     m_view->show();
-}
-
-QSize LibinputConfig::sizeHint() const
-{
-    return QQmlProperty::read(m_view->rootObject(), QStringLiteral("sizeHint")).toSize();
-}
-
-QSize LibinputConfig::minimumSizeHint() const
-{
-    return QQmlProperty::read(m_view->rootObject(), QStringLiteral("minimumSizeHint")).toSize();
 }
 
 void LibinputConfig::load()

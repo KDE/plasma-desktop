@@ -12,17 +12,12 @@ import QtQuick.Layouts 1.3 as Layouts
 import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.4 as Kirigami
 
-import "components"
-
 // TODO: Change ScrollablePage as KCM.SimpleKCM
 // after rewrite the KCM in KConfigModule.
 Kirigami.ScrollablePage {
     id: root
     
     spacing: Kirigami.Units.smallSpacing
-    
-    property size sizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
-    property size minimumSizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
     
     signal changeSignal()
 
@@ -71,9 +66,9 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            ToolTip {
-                text: i18nd("kcmmouse", "Swap left and right buttons.")
-            }
+            QQC2.ToolTip.delay: 1000
+            QQC2.ToolTip.visible: hovered
+            QQC2.ToolTip.text: i18nd("kcmmouse", "Swap left and right buttons.")
         }
 
         QQC2.CheckBox {
@@ -96,9 +91,9 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            ToolTip {
-                text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
-            }
+            QQC2.ToolTip.delay: 1000
+            QQC2.ToolTip.visible: hovered
+            QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
         }
 
         Item {
@@ -172,9 +167,9 @@ Kirigami.ScrollablePage {
                 id: accelProfileFlat
                 text: i18nd("kcmmouse", "Flat")
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
                 onCheckedChanged: accelProfile.syncCurrent()
             }
 
@@ -182,9 +177,9 @@ Kirigami.ScrollablePage {
                 id: accelProfileAdaptive
                 text: i18nd("kcmmouse", "Adaptive")
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
                 onCheckedChanged: accelProfile.syncCurrent()
             }
         }
@@ -211,9 +206,9 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            ToolTip {
-                text: i18nd("kcmmouse", "Touchscreen like scrolling.")
-            }
+            QQC2.ToolTip.delay: 1000
+            QQC2.ToolTip.visible: hovered
+            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen like scrolling.")
         }
     }
 }

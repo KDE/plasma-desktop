@@ -28,7 +28,7 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
 {
     m_initError = !m_backend->errorString().isNull();
 
-    m_view = new QQuickWidget(this);
+    m_view = new QQuickWidget(parent->widget());
 
     QVBoxLayout *layout = new QVBoxLayout(parent->widget());
 
@@ -46,6 +46,7 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
     m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
+    m_view->resize(QSize(500, 600));
 
     if (m_initError) {
         Q_EMIT showMessage(m_backend->errorString());
@@ -54,18 +55,6 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
         connect(m_backend, SIGNAL(touchpadRemoved(int)), this, SLOT(onTouchpadRemoved(int)));
         connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
     }
-
-    m_view->show();
-}
-
-QSize TouchpadConfigLibinput::sizeHint() const
-{
-    return QQmlProperty::read(m_view->rootObject(), "sizeHint").toSize();
-}
-
-QSize TouchpadConfigLibinput::minimumSizeHint() const
-{
-    return QQmlProperty::read(m_view->rootObject(), "minimumSizeHint").toSize();
 }
 
 void TouchpadConfigLibinput::load()

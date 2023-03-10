@@ -32,10 +32,6 @@ public:
     {
     }
 
-    void hideEvent(QHideEvent *) override
-    {
-    }
-
 protected:
     TouchpadConfigContainer *m_parent;
     TouchpadBackend *m_backend;

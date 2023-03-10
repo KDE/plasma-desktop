@@ -42,14 +42,6 @@ public:
         KCModule::defaults();
     }
 
-    /*
-        QSize minimumSizeHint() const override;
-        QSize sizeHint() const override;
-        void resizeEvent(QResizeEvent *event) override;
-    protected:
-        void hideEvent(QHideEvent *) override;
-    */
-
 private:
     TouchpadConfigPlugin *m_plugin = nullptr;
 };

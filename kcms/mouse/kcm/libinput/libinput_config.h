@@ -26,13 +26,6 @@ public:
     void save() override;
     void defaults() override;
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
-
-    void hideEvent(QHideEvent *) override
-    {
-    }
-
 private Q_SLOTS:
     void onChange();
     void onDeviceAdded(bool success);

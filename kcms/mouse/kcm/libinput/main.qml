@@ -14,17 +14,12 @@ import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrols 2.0
 
-import "components"
-
 Kirigami.ApplicationItem {
     id: root
 
     pageStack.globalToolBar.style:  Kirigami.ApplicationHeaderStyle.None
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 20
-
-    property size sizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
-    property size minimumSizeHint: Qt.size(formLayout.width/2, Math.round(1.3 * formLayout.height))
 
     property alias deviceIndex: deviceSelector.currentIndex
     signal changeSignal()
@@ -120,9 +115,9 @@ Kirigami.ApplicationItem {
                     }
                 }
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Accept input through this device.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Accept input through this device.")
             }
 
             QQC2.CheckBox {
@@ -145,9 +140,9 @@ Kirigami.ApplicationItem {
                     }
                 }
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Swap left and right buttons.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Swap left and right buttons.")
             }
 
             QQC2.CheckBox {
@@ -170,9 +165,9 @@ Kirigami.ApplicationItem {
                     }
                 }
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
             }
 
             Item {
@@ -246,9 +241,9 @@ Kirigami.ApplicationItem {
                     id: accelProfileFlat
                     text: i18nd("kcmmouse", "Flat")
 
-                    ToolTip {
-                        text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
-                    }
+                    QQC2.ToolTip.delay: 1000
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
                     onCheckedChanged: accelProfile.syncCurrent()
                 }
 
@@ -256,9 +251,9 @@ Kirigami.ApplicationItem {
                     id: accelProfileAdaptive
                     text: i18nd("kcmmouse", "Adaptive")
 
-                    ToolTip {
-                        text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
-                    }
+                    QQC2.ToolTip.delay: 1000
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
                     onCheckedChanged: accelProfile.syncCurrent()
                 }
             }
@@ -285,9 +280,9 @@ Kirigami.ApplicationItem {
                     }
                 }
 
-                ToolTip {
-                    text: i18nd("kcmmouse", "Touchscreen like scrolling.")
-                }
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen like scrolling.")
             }
 
             // Scroll Speed aka scroll Factor

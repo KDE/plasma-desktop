@@ -9,19 +9,15 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
 
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.2 as KCM
 import org.kde.kirigami 2.13 as Kirigami
 
 import org.kde.touchpad.kcm 1.0
 
-// TODO: Change ScrollablePage as KCM.SimpleKCM
-// after rewrite the KCM in KConfigModule.
-Kirigami.ScrollablePage {
+KCM.SimpleKCM{
     id: root
 
     spacing: Kirigami.Units.smallSpacing
-
-    property size minimumSizeHint: Qt.size(formLayout.width/2, deviceSelector.height)
 
     property alias deviceIndex: deviceSelector.currentIndex
     signal changeSignal()

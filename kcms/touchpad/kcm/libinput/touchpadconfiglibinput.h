@@ -26,13 +26,6 @@ public:
     void save() override;
     void defaults() override;
 
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
-
-    void hideEvent(QHideEvent *) override
-    {
-    }
-
 Q_SIGNALS:
     void showMessage(const QString message, int type = 3 /*Kirigami.MessageType.Error*/);
 
