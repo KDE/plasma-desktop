@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-10 02:27+0000\n"
 "PO-Revision-Date: 2023-01-11 09:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -61,172 +61,172 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Conflito detectado"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Applications"
 msgstr "Aplicações"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Commands"
 msgstr "Comandos"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "System Settings"
 msgstr "Configuração do Sistema"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Common Actions"
 msgstr "Acções Comuns"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr ""
 "Não é possível exportar o esquema enquanto existirem modificações por gravar"
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
 "Seleccione os componentes abaixo que devem ser incluídos no esquema exportado"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Save scheme"
 msgstr "Gravar o esquema"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Editar o comando de %1"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Remover todos os atalhos do %1"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Undo deletion"
 msgstr "Desfazer a remoção"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Sem itens correspondentes aos termos da pesquisa"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccione um item na lista para ver aqui os atalhos do mesmo"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Adicionar uma Aplicação…"
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "Adicionar um Comando…"
 
-#: package/contents/ui/main.qml:333
+#: package/contents/ui/main.qml:334
 #, kde-format
 msgid "Import Scheme…"
 msgstr "Importar um Esquema…"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Cancel Export"
 msgstr "Cancelar a Exportação"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Export Scheme…"
 msgstr "Exportar o Esquema…"
 
-#: package/contents/ui/main.qml:358
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exportar o Esquema de Atalhos"
 
-#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importar um Esquema de Atalhos"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de Atalhos (*.kksrc)"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Edit Command"
 msgstr "Editar o Comando"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Add Command"
 msgstr "Adicionar um Comando"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Save"
 msgstr "Gravar"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: package/contents/ui/main.qml:426
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Indique um comando ou escolha um ficheiro de programa:"
 
-#: package/contents/ui/main.qml:440
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Escolher…"
 
-#: package/contents/ui/main.qml:453
+#: package/contents/ui/main.qml:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Escolher o Ficheiro do Programa"
 
-#: package/contents/ui/main.qml:455
+#: package/contents/ui/main.qml:456
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Ficheiro de programa (*.*sh)"
 
-#: package/contents/ui/main.qml:475
+#: package/contents/ui/main.qml:476
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Seleccione o esquema a importar:"
 
-#: package/contents/ui/main.qml:489
+#: package/contents/ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema Personalizado"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr "Seleccionar o Ficheiro…"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr "Importar"

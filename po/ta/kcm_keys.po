@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-10 02:27+0000\n"
 "PO-Revision-Date: 2023-01-12 21:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -65,170 +65,170 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "முரண்பாடு கண்டுபிடிக்கப்பட்டது"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Commands"
 msgstr "கட்டளைகள்"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "System Settings"
 msgstr "கணினி அமைப்புகள்"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Common Actions"
 msgstr "பொதுவான செயல்கள்"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "சேமிக்கப்படாத மாற்றங்கள் இருக்கும்போது திட்டத்தை ஏற்றுமதி செய்ய முடியாது"
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "ஏற்றுமதி செய்யும் திட்டத்தில் இருக்க வேண்டிய கூறுகளை தேர்ந்தெடுக்கவும்"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Save scheme"
 msgstr "திட்டத்தை சேமி"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1-க்கான கட்டளையை இயக்கு"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "%1-க்கான அனைத்து சுருக்குவழிகளையும் நீக்கு"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Undo deletion"
 msgstr "நீக்கியதை மீட்டமை"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "தேடலுக்கு எதுவும் பொருந்தவில்லை"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "ஒன்றன் சுருக்குவழிகளை இங்கு காண, பட்டியலிலிருந்து அதை தேர்ந்தெடுக்கவும்"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "செயலியை சேர்…"
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "கட்டளையை சேர்…"
 
-#: package/contents/ui/main.qml:333
+#: package/contents/ui/main.qml:334
 #, kde-format
 msgid "Import Scheme…"
 msgstr "இறக்குமதி செய்…"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Cancel Export"
 msgstr "ஏற்றுமதியை ரத்து செய்"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Export Scheme…"
 msgstr "ஏற்றுமதி செய்…"
 
-#: package/contents/ui/main.qml:358
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Edit Command"
 msgstr "கட்டளையைத் திருத்து"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Add Command"
 msgstr "கட்டளையை சேர்"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Save"
 msgstr "சேமி"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Add"
 msgstr "சேர்"
 
-#: package/contents/ui/main.qml:426
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "கட்டளையையோ சிறுநிரல்கோப்பையோ தேர்ந்தெடுக்கவும்:"
 
-#: package/contents/ui/main.qml:440
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "தேர்ந்தெடு…"
 
-#: package/contents/ui/main.qml:453
+#: package/contents/ui/main.qml:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: package/contents/ui/main.qml:455
+#: package/contents/ui/main.qml:456
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "சிறுநிரல் கோப்பு (*.*sh)"
 
-#: package/contents/ui/main.qml:475
+#: package/contents/ui/main.qml:476
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்யவும்:"
 
-#: package/contents/ui/main.qml:489
+#: package/contents/ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"

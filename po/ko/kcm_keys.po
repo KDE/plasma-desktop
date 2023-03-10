@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-10 02:27+0000\n"
 "PO-Revision-Date: 2023-03-01 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -66,170 +66,170 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "충돌 발견됨"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Applications"
 msgstr "프로그램"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Commands"
 msgstr "명령"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "System Settings"
 msgstr "시스템 설정"
 
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:27
 #, kde-format
 msgid "Common Actions"
 msgstr "공통 동작"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "저장되지 않은 변경 사항이 있는 구성표를 내보낼 수 없음"
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "내보낼 구성표에 포함할 구성 요소 선택"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Save scheme"
 msgstr "구성표 저장"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1의 명령 편집"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "%1의 모든 단축키 삭제"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Undo deletion"
 msgstr "삭제 실행 취소"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "검색어와 일치하는 항목 없음"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "여기에서 단축키를 보려면 목록에서 선택하십시오"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "프로그램 추가…"
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:315
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
 msgstr "명령 추가…"
 
-#: package/contents/ui/main.qml:333
+#: package/contents/ui/main.qml:334
 #, kde-format
 msgid "Import Scheme…"
 msgstr "구성표 가져오기…"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Cancel Export"
 msgstr "내보내기 취소"
 
-#: package/contents/ui/main.qml:338
+#: package/contents/ui/main.qml:339
 #, kde-format
 msgid "Export Scheme…"
 msgstr "구성표 내보내기…"
 
-#: package/contents/ui/main.qml:358
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "단축키 구성표 내보내기"
 
-#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "단축키 구성표 가져오기"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "단축키 구성표 (*.kksrc)"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Edit Command"
 msgstr "편집 명령"
 
-#: package/contents/ui/main.qml:388
+#: package/contents/ui/main.qml:389
 #, kde-format
 msgid "Add Command"
 msgstr "명령 추가"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Save"
 msgstr "저장"
 
-#: package/contents/ui/main.qml:401
+#: package/contents/ui/main.qml:402
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: package/contents/ui/main.qml:426
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "명령을 입력하거나 스크립트 파일 선택:"
 
-#: package/contents/ui/main.qml:440
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "선택..."
 
-#: package/contents/ui/main.qml:453
+#: package/contents/ui/main.qml:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "스크립트 파일 선택"
 
-#: package/contents/ui/main.qml:455
+#: package/contents/ui/main.qml:456
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "스크립트 파일 (*.*sh)"
 
-#: package/contents/ui/main.qml:475
+#: package/contents/ui/main.qml:476
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "가져올 구성표 선택:"
 
-#: package/contents/ui/main.qml:489
+#: package/contents/ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr "사용자 정의 구성표"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr "파일 선택…"
 
-#: package/contents/ui/main.qml:494
+#: package/contents/ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr "가져오기"
