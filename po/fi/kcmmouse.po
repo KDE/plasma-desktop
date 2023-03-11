@@ -10,7 +10,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2015, 2022.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2020.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2020, 2023.
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-10-28 22:13+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2023-01-17 15:52+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:22+0000\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -240,7 +240,7 @@ msgstr "Nopeampi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "Kytke hiiren lisäpainikkeet…"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
@@ -252,13 +252,13 @@ msgstr "Lisäpainike %1:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Paina hiiripainiketta, jonka haluat kytkeä toimintoon"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Anna painikkeen ”%1” uusi näppäinyhdistelmä"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
@@ -267,17 +267,16 @@ msgid "Cancel"
 msgstr "Peru"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "Paina Yhdistä-nappia"
+msgstr "Paina hiiripainiketta"
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Lisää kytkös…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format

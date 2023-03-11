@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@iki.fi>, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:59+0000\n"
-"PO-Revision-Date: 2022-07-21 18:57+0300\n"
+"PO-Revision-Date: 2023-03-04 19:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -71,16 +71,14 @@ msgid "General:"
 msgstr "Yleistä:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Korosta ikkunat tehtävien työkaluvihjeiden yllä leijuttaessa"
+msgstr "Näytä tehtävän yllä oltaessa pieni ikkunaesikatselu"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Korosta ikkunat tehtävien työkaluvihjeiden yllä leijuttaessa"
+msgstr "Piilota muut ikkunat esikatselujen yllä ollessa"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -169,25 +167,19 @@ msgid "Cycles through tasks"
 msgstr "vaihtaa tehtävää"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "näyttää ikkunat rinnakkain"
+msgstr "Näyttää pienet ikkunaesikatselut"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "näyttää ikkunat rinnakkain"
+msgstr "Näyttää suuret ikkunaesikatselut"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -366,7 +358,7 @@ msgstr "Uudet tehtävät ilmestyvät:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Alhaalla"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -383,7 +375,7 @@ msgstr "Vasemmalle"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Ylhäällä"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -572,11 +564,10 @@ msgid "Allow this program to be grouped"
 msgstr "Salli tämän ohjelman ryhmittely"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Sulje"
+msgstr "Sulje k&aikki"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

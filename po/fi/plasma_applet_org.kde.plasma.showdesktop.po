@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2018, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2018, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2022.
 #
 # KDE Finnish translation sprint participants:
@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-10-28 22:19+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2023-03-04 19:57+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:25:25+0000\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -63,14 +63,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Palauttaa ikkunat alkuperäisille paikoilleen"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Paljastaa työpöydän väliaikaisesti siirtämällä ikkunoita näytön kulmiin"
+msgstr "Näytä hetkellisesti työpöydän siirtämällä ikkunoita sivuun"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Näytä työpöytä"

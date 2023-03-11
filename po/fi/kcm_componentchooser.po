@@ -8,7 +8,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2013, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2020, 2021, 2022, 2023.
 # Copyright © 2010 This_file_is_part_of_KDE
 #
 # KDE Finnish translation sprint participants:
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2022-01-28 10:57+0200\n"
+"PO-Revision-Date: 2023-03-04 18:43+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -40,10 +40,9 @@ msgid "Default web browser"
 msgstr "Oletusverkkoselain"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Valitse oletustiedostonhallinta"
+msgstr "Valitse oletuspakkausohjelma"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -66,22 +65,19 @@ msgid "Select default map"
 msgstr "Valitse oletuskartta"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Valitse oletustiedostonhallinta"
+msgstr "Valitse oletuskuvankatseluohjelma"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Valitse oletuskartta"
+msgstr "Valitse oletusmusiikkisoitin"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Valitse oletusselain"
+msgstr "Valitse oletus-PDF-katselin"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -94,56 +90,54 @@ msgid "Select default terminal emulator"
 msgstr "Valitse oletuspääteohjelma"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Valitse oletuspääteohjelma"
+msgstr "Valitse oletustekstimuokkain"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Valitse oletustiedostonhallinta"
+msgstr "Valitse oletusvideosoitin"
 
 #: package/contents/ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Tiedot"
 
 #: package/contents/ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "Sovellus ei kerro tukevansa seuraavia tiedostotyyppejä:"
 
 #: package/contents/ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Pakota silti avaamaan"
 
 #: package/contents/ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "Seuraavat tiedostotyypit on yhä kytketty eri sovellukseen:"
 
 #: package/contents/ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 on kytketty sovellukseen %2"
 
 #: package/contents/ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Kytke kaikki sovellukseen %1"
 
 #: package/contents/ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Vaihda tiedostotyyppikytköstä itse"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -151,12 +145,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"”%1” ei vaikuta tukevan seuraavia tällaiseen sovellukseen kytkettyjä MIME-"
+"tyyppejä: %2"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -178,44 +174,44 @@ msgstr "Puhelut:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Kuvankatselin:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Musiikkisoitin:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Videosoitin:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Tiedostot"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Tekstimuokkain:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-katselin:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Apuohjelmat"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -228,14 +224,12 @@ msgid "Terminal emulator:"
 msgstr "Pääteohjelma:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Tiedostonhallinta:"
+msgstr "Pakkausohjelma:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Kartta:"
