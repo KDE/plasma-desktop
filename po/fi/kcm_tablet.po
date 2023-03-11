@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Tommi Nieminen <translator@legisign.org>, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2022, 2023.
 # Lasse Liehu <lasse.liehu@iki.fi>, 2022.
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2022-10-28 22:12+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2023-03-04 19:55+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -118,33 +118,30 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 – %3×%4"
 
 #: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 1"
-msgstr "Painike %1:"
+msgstr "Työkalupainike 1"
 
 #: package/contents/ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 2"
-msgstr "Painike %1:"
+msgstr "Työkalupainike 2"
 
 #: package/contents/ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 3"
-msgstr "Painike %1:"
+msgstr "Työkalupainike 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "Laite:"
 
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: package/contents/ui/main.qml:324
 #, kde-format

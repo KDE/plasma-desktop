@@ -7,7 +7,7 @@
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2022-06-05 20:02+0300\n"
+"PO-Revision-Date: 2023-03-04 19:54+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:20+0000\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -379,7 +379,7 @@ msgstr "Käytä"
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "Näppäimen hyväksymiseksi sitä tulee pitää pohjassa tietty aika"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -424,7 +424,7 @@ msgstr "Käytä"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Jätä huomiotta saman näppäimen nopea toisto"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format

@@ -7,7 +7,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2022.
-# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2022, 2023.
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-10-28 22:12+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2023-03-04 18:36+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:24+0000\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -46,12 +46,13 @@ msgstr ""
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Järjestelmä on käynnistettävä uudelleen, jotta käyttäjän tallentamat "
+"istunnot tulisivat käyttöön."
 
 #: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Käynnistä uudelleen nyt"
+msgstr "Käynnistä uudelleen"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -82,12 +83,12 @@ msgstr "Käynnistä uudelleen nyt"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Uloskirjautumisnäkymä"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Näytä:"
 
 #: package/contents/ui/main.qml:89
 #, kde-kuit-format
@@ -97,35 +98,34 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Kun asetus on valittu, uloskirjautumisvahvistus näytetään ulos "
+"kirjauduttaessa, sammutettaessa, käynnistettäessä uudelleen, tai "
+"painettaessa virtakytkintä tai painikkeita, joiden selite on "
+"<interface>Lopeta…</interface>."
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Istunnonhallinta"
+msgstr "Istunnon palautus"
 
+# Tämä jatkuu eri ehdoin, mikä pakottaa relatiivisivulauseen käyttöön
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Käynnistä kirjauduttaessa sovellukset, jotka olivat auki:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "viimeksi ulos kirjauduttaessa"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Palauta käyttäjän tallentama istunto"
+msgstr "käyttäjän tallentaessa istunnon"
 
 #: package/contents/ui/main.qml:127
 #, kde-kuit-format
@@ -136,6 +136,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>Sovelluskäynnistimen</interface> valikkoon ilmestyy "
+"<interface>Tallenna istunto</interface> -painike. Sitä painettaessa Plasma "
+"muistaa avoimena olleet sovellukset ja palauttaa ne seuraavalla "
+"kirjautumiskerralla. Muistettujen sovellusten joukon voi korvata painamalla "
+"painiketta uudelleen."
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -144,13 +149,12 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Aloita tyhjä istunto"
+msgstr "aloita tyhjä istunto"
 
 #: package/contents/ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Älä palauta näitä sovelluksia:"
+msgstr "Sivuutetut sovellukset:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -159,13 +163,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Kirjoita sovellusten ohjelmatiedostojen nimet tähän (pilkuin tai "
+"kaksoispistein erotettuna, esim. ”xterm:konsole” tai ”xterm,konsole”) "
+"estääksesi niitä käynnistymistä automaattisesti istunnosta palautettujen "
+"kanssa."
 
 #: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Laiteohjelmistoasetus"
+msgstr "Laiteohjelmisto"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -173,23 +180,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Seuraavassa uudelleenkäynnistyksessä:"
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter UEFI setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Siirry uudelleenkäynnistyksen jälkeen UEFI-asetusnäyttöön"
+msgstr "Siirry UEFI-asetusnäyttöön"
 
 #: package/contents/ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Siirry uudelleenkäynnistettäessä laiteohjelmistoasetukseen"
+msgstr "Siirry laiteohjelmiston asetusnäyttöön"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
