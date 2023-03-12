@@ -1,0 +1,309 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Acciones de dispositivos</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+><affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>acciones</keyword>
+<keyword
+>dispositivos</keyword>
+<keyword
+>hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Acciones para nuevos dispositivos</title>
+<sect2 id="icons-intro">
+<title
+>Introducción</title>
+
+<para
+>Este módulo le permite configurar las acciones a asociar cuando se conecten nuevos dispositivos.</para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del gestor de acciones de dispositivos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del gestor de acciones de dispositivos</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Verá una lista de todas las posibles acciones que están disponibles cuando los dispositivos están conectados. Tenga en cuenta que solo estarán disponibles bajo ciertas condiciones.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Añadir</guibutton
+> le solicitará que introduzca un nombre para la nueva acción; a continuación se abrirá dicha acción para poder editarla. Si no proporciona todos los detalles necesarios en este diálogo, se borrará la acción. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Editar</guibutton
+> le permite cambiar el nombre, el icono, la orden que se va a ejecutar y las condiciones que se deben cumplir para que se muestre la acción. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Descartar/No se puede borrar/Eliminar</guibutton
+> realizará acciones diferentes, según la acción pertenezca al sistema o haya sido creada por usted. Solo podrá descartar los cambios de las acciones que afectan a todo el sistema. Si no existen cambios, las acciones no se pueden borrar. Las acciones creadas por el usuario se eliminan completamente, incluidos todos los cambios. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Añadir acción</title>
+
+<para
+>El botón <guibutton
+>Añadir</guibutton
+> mostrará un cuadro de diálogo para introducir el nombre de la nueva acción. </para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del diálogo de añadir acción</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del diálogo de añadir acción</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>El nombre de la acción debe describir la acción de forma correcta. Tras introducir un nombre y pulsar <guibutton
+>Aceptar</guibutton
+>, el diálogo de edición de la acción se muestra para que pueda configurar las propiedades de la acción. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Editar acción</title>
+
+<para
+>Este diálogo le permite modificar las preferencia de la acción seleccionada.</para>
+<para>
+<screenshot>
+<screeninfo
+>Captura de pantalla del diálogo de edición de acción</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Captura de pantalla del diálogo de edición de acción</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Esto incluye el icono, el nombre de la acción, la orden de la acción y sus distintos parámetros. Puede cambiar el icono pulsando sobre él.</para>
+<para
+>Los parámetros de muestran en forma de árbol, donde el elemento superior tiene que ser cierto para que la acción se muestre.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Editar parámetro</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tipo de parámetro</guilabel
+></term>
+<listitem>
+<para
+>Esto controla lo que puede contener en su interior, o el tipo de comparación que se realiza para comprobar si es cierto. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Coincidencia de propiedad</guilabel
+></term>
+<listitem>
+<para
+>Compara la propiedad del dispositivo indicada (usando el <guilabel
+>Tipo de dispositivo</guilabel
+> y el <guilabel
+>Nombre del valor</guilabel
+>) y, usando el evaluador, la compara con el texto proporcionado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Conjunción de contenido</guilabel
+></term>
+<listitem>
+<para
+>Todas las propiedades anidadas de la actual deben ser ciertas para que esta sea cierta.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Disyunción de contenido</guilabel
+></term>
+<listitem>
+<para
+>Cualquier propiedad anidada de la actual puede ser cierta para que esta sea cierta.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Coincidencia de interfaz de dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Comprueba si el dispositivo se puede clasificar como el tipo de dispositivo seleccionado.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tipo de dispositivo</guilabel
+></term>
+<listitem>
+<para
+>Estos son todos los tipos de dispositivos posibles del sistema compatibles con &plasma;. Se usan tanto en coincidencias de la propiedad como de la interfaz del dispositivo. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nombre del valor</guilabel
+></term>
+<listitem>
+<para
+>Esta es la lista de todos los posibles nombres de propiedades para el tipo de dispositivo seleccionado. También proporciona la selección del evaluador del valor (que puede ser <guilabel
+>Es igual</guilabel
+> o <guilabel
+>Contiene</guilabel
+>) y permite comparar la entrada del texto.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Reiniciar parámetro</guibutton
+></term>
+<listitem>
+<para
+>Reinicia todos los cambios sin guardar que haya realizado sobre este parámetro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Guardar cambios en el parámetro</guibutton
+></term>
+<listitem>
+<para
+>Guarda los cambios que haya realizado sobre este parámetro.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

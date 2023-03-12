@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Actividades</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Eloy</firstname
+><surname
+>Cuadra</surname
+><affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-12</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>actividad</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Actividades</title>
+<sect2 id="activities-intro">
+
+<title
+>Introducción</title>
+
+<para
+>Este módulo permite configurar las actividades. Las actividades son una forma de tener múltiples configuraciones de &plasma;, cada una con un conjunto diferente de widgets y temas. Algunas actividades pueden ser privadas. Estas actividades no rastrean sus acciones. Por ejemplo, no rastrean los documentos recientes que abra. </para>
+
+<para
+>Este módulo contiene tres pestañas: <link linkend="activities-main"
+><guilabel
+>Actividades</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Cambio</guilabel
+></link
+> y <link linkend="activities-privacy"
+><guilabel
+>Privacidad</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Actividades</guilabel
+></title>
+
+<para
+>Esta pestaña lista todas las actividades actuales. Sitúe el cursor sobre los elementos de la lista para que se muestren los botones para configurar o eliminar las actividades. </para>
+
+<para
+>Use el <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> botón superpuesto para configurar la actividad. Puede cambiar los siguientes parámetros de la actividad: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Icono</guilabel
+></term>
+        <listitem>
+            <para
+>El icono de la actividad se puede ver en el selector del gestor de actividades del panel de &plasma;. Pulse sobre el icono actual para escoger un icono del sistema o explorar el sistema de archivos para seleccionar un icono personalizado. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Nombre</guilabel
+></term>
+        <listitem>
+            <para
+>Proporcione un nombre reconocible a la actividad. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Descripción</guilabel
+></term>
+        <listitem>
+            <para
+>Una descripción libre de la actividad que se muestra debajo de su nombre en el selector del gestor de actividades del panel de &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Privacidad</guilabel
+></term>
+        <listitem>
+            <para
+>Marque la casilla <guilabel
+>No rastrear el uso de esta actividad</guilabel
+> para desactivar cualquier tipo de seguimiento de dicha actividad. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Acceso rápido para cambiar</guilabel
+></term>
+        <listitem>
+            <para
+>Pulse el primer botón para introducir el nuevo acceso rápido para cambiar a la actividad. Pulse el segundo botón para eliminar el acceso rápido actual. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Pulse el botón <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> para eliminar la actividad. </para>
+<para
+>Pulse el botón <guibutton
+>Crear nueva...</guibutton
+> que hay debajo de la lista para abrir el diálogo <guilabel
+>Crear una nueva actividad</guilabel
+>, que es similar al diálogo de configuración de la actividad descrito anteriormente. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Cambio</guilabel
+></title>
+
+<para
+>Aquí puede configurar si &plasma; debe recordar el <guilabel
+>Escritorio virtual actual</guilabel
+> de cada actividad (necesita reiniciar). También puede configurar accesos rápidos de teclado para recorrer la lista de actividades. </para>
+<para
+>Para obtener más información sobre cómo se usa el sistema de accesos rápidos de teclado de &kde;, consulte la <ulink url="help:/fundamentals/shortcuts.html"
+>sección <emphasis
+>Uso y personalización de accesos rápidos de teclado</emphasis
+> de la documentación de los <emphasis
+>Fundamentos de &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Privacidad</guilabel
+></title>
+
+<para
+>Esta pestaña permite configurar el tiempo de las actividades para <guilabel
+>Mantener el historial</guilabel
+> y limpiar algunos datos de seguimiento. Use el botón desplegable <guibutton
+>Borrar el historial</guibutton
+> para que &plasma; <guimenuitem
+>Olvide la última hora</guimenuitem
+>, <guimenuitem
+>Olvide las dos últimas horas</guimenuitem
+>, <guimenuitem
+>Olvide un día</guimenuitem
+> u <guimenuitem
+>Olvide todo</guimenuitem
+>. </para>
+<para
+>A continuación puede configurar el intervalo de aplicaciones que memorizarán los documentos abiertos en las actividades. Use la opción <guilabel
+>Para todas las actividades</guilabel
+> para guardar todos los datos, el elemento <guilabel
+>No recordar</guilabel
+> para desactivar el almacenamiento de datos o la opción <guilabel
+>Solo para aplicaciones específicas</guilabel
+> para una selección más personalizada (si pulsa sobre una aplicación se conmuta su modo actual). </para>
+<para
+>Marque la opción <guilabel
+>Ignorar las aplicaciones que no estén en la lista</guilabel
+> para no rastrear las aplicaciones que no aparezcan en la lista. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
