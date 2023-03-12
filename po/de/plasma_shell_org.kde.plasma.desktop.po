@@ -1,19 +1,20 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2020, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-25 04:10+0000\n"
-"PO-Revision-Date: 2022-07-23 23:50+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-27 20:15+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -89,11 +90,9 @@ msgid "Send an email to %1"
 msgstr "Eine E-Mail an %1 senden"
 
 #: contents/configuration/AboutPlugin.qml:61
-#, fuzzy
-#| msgid "Open %1"
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "„%1“ öffnen"
+msgstr "Webseite „%1“ öffnen"
 
 #: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
@@ -106,7 +105,7 @@ msgstr "Lizenz:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Lizenztext ansehen"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -122,7 +121,7 @@ msgstr "Übersetzer"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Probleme oder Wünsche berichten ..."
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
@@ -207,8 +206,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "Über"
@@ -338,7 +335,7 @@ msgstr "Kontrollleiste maximieren"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid "Floating Panel"
-msgstr ""
+msgstr "Schwebende Kontrollleiste"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
 msgid "Shortcut"
@@ -347,33 +344,37 @@ msgstr "Kurzbefehl"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
+"Drücken Sie diesen Tastatur-Kurzbefehl, um den Fokus auf die Kontrollleiste "
+"zu setzen"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Ziehen, um die maximale Höhe zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Ziehen, um die maximale Breite zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Doppelklick zum Zurücksetzen."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Ziehen, um die minimale Höhe zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Ziehen, um die minimale Breite zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Ziehen, um die Position an diesem Bildschirmrand zu ändern.\n"
+"Doppelklick zum Zurücksetzen."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
@@ -390,12 +391,12 @@ msgstr "Weitere Einstellungen ..."
 #: contents/configuration/panelconfiguration/ToolBar.qml:222
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
-msgstr ""
+msgstr "Ziehen zum Verschieben"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "Verwenden Sie die Pfeiltasten zum Verschieben der Kontrollleiste"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
@@ -418,20 +419,20 @@ msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
+"Sie können Kontrollleisten und Arbeitsflächen auf verschiedene Bildschirme "
+"ziehen."
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
-msgstr ""
+msgstr "Mit Arbeitsfläche auf Bildschirm %1 tauschen"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Move to Screen %1"
 msgstr "Auf Bildschirm %1 verschieben"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "Kontrollleiste entfernen"
+msgstr "Arbeitsfläche entfernen"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"

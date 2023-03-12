@@ -3,19 +3,21 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2011.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-10 00:45+0000\n"
-"PO-Revision-Date: 2020-09-24 12:10+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-27 19:50+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,15 +61,7 @@ msgstr "Plasma 5 Port"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
@@ -77,12 +71,8 @@ msgstr ""
 "Diese Liste zeigt alle Geräte, die dem System bekannt sind. Wenn die "
 "Einstellung „Automatisches Einhängen beim Anmelden“ aktiviert ist, wird das "
 "Gerät automatisch eingebunden, selbst wenn die Einstellung „Alle "
-"Wechselmedien beim Anmelden einhängen nicht aktiviert ist. Das Gleiche gilt "
-"für die Einstellung „Automatisches Einhängen beim Anschluss des Gerätes“.\n"
-"\n"
-"Wenn die Einstellung „Automatisches Einhängen von Wechselmedien aktivieren“ "
-"ausgeschaltet ist, ist die vorrangige Geräte-Behandlung inaktiv und es "
-"werden keine Geräte automatisch eingehängt."
+"Wechselmedien beim Anmelden einhängen” nicht aktiviert ist. Das Gleiche gilt "
+"für die Einstellung „Automatisches Einhängen beim Anschluss des Gerätes“."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -108,15 +98,7 @@ msgstr "Gerät vergessen"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -125,29 +107,25 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Wenn diese Einstellung aktiviert ist, werden nur Geräte automatisch "
-"einhängen, die auch schon zuvor einmal eingehängt waren. Ein USB-"
+"Wenn diese Einstellung nicht aktiviert ist, werden nur Geräte automatisch "
+"eingehängt, die auch schon zuvor einmal eingehängt waren. Ein USB-"
 "Medienspieler, der lediglich zum Laden eingehängt war, wird hier nicht "
-"berücksichtigt, da dabei auf keine Dateien zugegriffen wurde, daher wird der "
+"berücksichtigt, da dabei auf keine Dateien zugegriffen wurde. Daher wird der "
 "Medienspieler beim nächsten Anschließen nicht automatisch eingehängt. Wenn "
 "allerdings einmal auf Dateien zugegriffen wurde, wird der Inhalt des "
 "Medienspielers auch beim nächsten Mal verfügbar gemacht."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
-"Nur Wechselmedien automatisch einhängen, die schon zuvor eingehängt waren"
+"Wechselmedien automatisch einhängen, die noch nie zuvor eingehängt waren"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Automatisches Einhängen beim Anmelden"
+msgstr "Geräte automatisch einhängen"
 
 #: DeviceModel.cpp:54
 #, kde-format
@@ -156,23 +134,20 @@ msgid "On Login"
 msgstr "Bei der Anmeldung"
 
 #: DeviceModel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "As in automoount on attach"
-#| msgid "On Attach"
+#, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
 msgstr "Beim Anschluss"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Gerät"
+msgstr "Alle Geräte"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Alle bekannten Geräte"
 
 #: DeviceModel.cpp:260
 #, kde-format
