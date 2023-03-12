@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.15 as QQC2
 
@@ -23,196 +23,268 @@ PlasmaCore.Dialog {
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
         id: menuColumn
-        Layout.minimumWidth: menuColumn.implicitWidth
+        Layout.minimumWidth: menuColumn.implicitWidth + PlasmaCore.Units.largeSpacing * 2 //for compensating for margins
         Layout.minimumHeight: menuColumn.implicitHeight
         spacing: PlasmaCore.Units.smallSpacing
-        readonly property int radioButtonGroupSpacing: PlasmaCore.Units.smallSpacing * 4
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        PC3.ToolButton {
+        readonly property int headingLabel: 2
+
+        RowLayout {
+            PlasmaExtras.Heading {
+                level: 3
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", " Panel Settings")
+            }
+
+            Item { Layout.fillWidth: true }
+
+            PC3.ToolButton {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+                icon.name: "delete"
+                onClicked: plasmoid.action("remove").trigger();
+            }
+
+        }
+
+        PlasmaCore.SvgItem {
             Layout.fillWidth: true
-            // we want destructive actions to be far from the initial cursor
-            // position, so show this on the top unless it's on a top panel
-            visible: location !== PlasmaCore.Types.TopEdge
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            icon.name: "delete"
-            onClicked: plasmoid.action("remove").trigger();
+            elementId: "horizontal-line"
+            svg: PlasmaCore.Svg {
+                imagePath: "widgets/line"
+            }
         }
 
         PlasmaExtras.Heading {
-            Layout.topMargin: menuColumn.radioButtonGroupSpacing
-            level: 3
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
+            level: menuColumn.headingLabel
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+            type: PlasmaExtras.Heading.Type.Primary
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", " Select Alignment")
         }
 
-        QQC2.ButtonGroup {
-            buttons: alignmentButtons.children
-        }
+        RowLayout {
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.leftMargin: PlasmaCore.Units.largeSpacing
+            Layout.rightMargin: PlasmaCore.Units.largeSpacing
 
-        Column {
-            id: alignmentButtons
-            spacing: PlasmaCore.Units.smallSpacing * 2
-            Layout.fillWidth: true
-            PC3.RadioButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+            PanelRepresentation {
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
-                checkable: true
+                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the top if the panel is not maximized.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel
+                to the left if the panel is not maximized.")
+                Layout.alignment: Qt.AlignTop
+                alignment: Qt.AlignLeft
                 checked: panel.alignment === Qt.AlignLeft
                 onClicked: panel.alignment = Qt.AlignLeft
             }
-            PC3.RadioButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+
+            PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Center")
-                checkable: true
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Center aligns the panel if the panel is not maximized.")
+                Layout.alignment: Qt.AlignTop
+                alignment: Qt.AlignCenter
                 checked: panel.alignment === Qt.AlignCenter
                 onClicked: panel.alignment = Qt.AlignCenter
             }
-            PC3.RadioButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+
+            PanelRepresentation {
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom") : i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
-                checkable: true
+                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the bottom if the panel is not maximized.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the right if the panel is not maximized.")
+                Layout.alignment: Qt.AlignTop
+                alignment: Qt.AlignRight
                 checked: panel.alignment === Qt.AlignRight
                 onClicked: panel.alignment = Qt.AlignRight
             }
         }
 
         PlasmaExtras.Heading {
-            Layout.topMargin: menuColumn.radioButtonGroupSpacing
-            level: 3
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
+            level: menuColumn.headingLabel
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: PlasmaCore.Units.largeSpacing
+            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+            type: PlasmaExtras.Heading.Type.Primary
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Visibility")
         }
 
-        QQC2.ButtonGroup {
-            buttons: visibilityButtons.children
-        }
+        RowLayout {
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
 
-        Column {
-            id: visibilityButtons
-            spacing: PlasmaCore.Units.smallSpacing * 2
-            Layout.fillWidth: true
-            Layout.minimumWidth: implicitWidth
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
+            PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
-                checkable: true
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
                 checked: configDialog.visibilityMode === Panel.Global.NormalPanel
                 onClicked: configDialog.visibilityMode = Panel.Global.NormalPanel
             }
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
+
+            PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
-                checkable: true
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel hidden always but reveals it when mouse enters the area where the panel would have been if it were not hidden.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                sunkenPanel: true
                 checked: configDialog.visibilityMode === Panel.Global.AutoHide
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
             }
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
-                checkable: true
+        }
+
+        RowLayout {
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: PlasmaCore.Units.largeSpacing
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows In Front")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always but maximized windows shall cover it. It is revealed when mouse enters the area where the panel would have been if it were not covered.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                windowVisible: true
+                windowZ: 1
                 checked: configDialog.visibilityMode === Panel.Global.LetWindowsCover
                 onClicked: configDialog.visibilityMode = Panel.Global.LetWindowsCover
             }
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
-                checkable: true
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Behind")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always but part of the maximized windows shall go below the panel as though the panel did not exist.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                windowVisible: true
                 checked: configDialog.visibilityMode === Panel.Global.WindowsGoBelow
                 onClicked: configDialog.visibilityMode = Panel.Global.WindowsGoBelow
             }
         }
+
         PlasmaExtras.Heading {
-            Layout.topMargin: menuColumn.radioButtonGroupSpacing
-            level: 3
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: PlasmaCore.Units.largeSpacing
+            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+            type: PlasmaExtras.Heading.Type.Primary
+            level: menuColumn.headingLabel
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Opacity")
             visible: panel.adaptiveOpacityEnabled
         }
 
-        QQC2.ButtonGroup {
-            buttons: opacityButtons.children
-        }
-
-        Column {
+        RowLayout {
             id: opacityButtons
-            spacing: PlasmaCore.Units.smallSpacing * 2
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.leftMargin: PlasmaCore.Units.largeSpacing
+            Layout.rightMargin: PlasmaCore.Units.largeSpacing
             visible: panel.adaptiveOpacityEnabled
-            Layout.fillWidth: true
-            Layout.minimumWidth: implicitWidth
-            Layout.bottomMargin: menuColumn.radioButtonGroupSpacing
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
-                checkable: true
-                checked: configDialog.opacityMode === Panel.Global.Adaptive
-                onClicked: configDialog.opacityMode = Panel.Global.Adaptive
-            }
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque")
-                checkable: true
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Fully Opaque")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel opaque always.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
                 checked: configDialog.opacityMode === Panel.Global.Opaque
                 onClicked: configDialog.opacityMode = Panel.Global.Opaque
             }
-            PC3.RadioButton {
-                width: Math.max(implicitWidth, parent.width)
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent exept when some windows touch it.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                adaptivePanel: true
+                checked: configDialog.opacityMode === Panel.Global.Adaptive
+                onClicked: configDialog.opacityMode = Panel.Global.Adaptive
+            }
+
+            PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
-                checkable: true
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent always.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                translucentPanel: true
                 checked: configDialog.opacityMode === Panel.Global.Translucent
                 onClicked: configDialog.opacityMode = Panel.Global.Translucent
             }
         }
-        PC3.ToolButton {
-            Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
-            icon.name: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
-            onClicked: panel.maximize();
-        }
-        PC3.CheckBox {
-            Layout.fillWidth: true
-            Layout.topMargin: mainItem.radioButtonGroupSpacing
-            Layout.bottomMargin: mainItem.radioButtonGroupSpacing
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating Panel")
-            icon.name: "zoom-select"
-            onToggled: panel.floating = !panel.floating
-            checked: panel.floating
-        }
-        PC3.ToolButton {
-            Layout.fillWidth: true
-            // we want destructive actions to be far from the initial cursor
-            // position, so show this on the bottom for top panels
-            visible: location === PlasmaCore.Types.TopEdge
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            icon.name: "delete"
-            onClicked: plasmoid.action("remove").trigger();
-        }
+
         PlasmaExtras.Heading {
-            level: 3
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Shortcut")
-            visible: panel.adaptiveOpacityEnabled
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: PlasmaCore.Units.largeSpacing
+            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+            type: PlasmaExtras.Heading.Type.Primary
+            level: menuColumn.headingLabel
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Edge Separation")
         }
-        KeySequenceItem {
-            id: button
-            keySequence: plasmoid.globalShortcut
-            onCaptureFinished: {
-                plasmoid.globalShortcut = button.keySequence
+
+        RowLayout {
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.leftMargin: PlasmaCore.Units.largeSpacing
+            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel float from the edge of the screen.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                checked: panel.floating
+                floatingGap: PlasmaCore.Units.smallSpacing
+                onClicked: panel.floating = true
+            }
+
+            PanelRepresentation {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Attached")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain attached to the edge of the panel.")
+                Layout.alignment: Qt.AlignTop
+                alignment: panel.alignment
+                checked: !panel.floating
+                floatingGap: 0
+                onClicked: panel.floating = false
             }
         }
-        PC3.Label {
+
+        PlasmaCore.SvgItem {
             Layout.fillWidth: true
-            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 6
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
-            font: PlasmaCore.Theme.smallestFont
-            wrapMode: Text.Wrap
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+
+            elementId: "horizontal-line"
+            svg: PlasmaCore.Svg {
+                imagePath: "widgets/line"
+            }
+        }
+
+        RowLayout {
+            spacing: PlasmaCore.Units.largeSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.leftMargin: PlasmaCore.Units.smallSpacing
+            Layout.rightMargin: PlasmaCore.Units.smallSpacing
+
+            PlasmaExtras.Heading {
+                level: menuColumn.headingLabel
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut")
+                visible: panel.adaptiveOpacityEnabled
+
+                MouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    hoverEnabled: true
+                }
+
+                PC3.ToolTip {
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
+                    visible: mouseArea.containsMouse
+                }
+            }
+
+            KeySequenceItem {
+                id: button
+                keySequence: plasmoid.globalShortcut
+                onCaptureFinished: {
+                    plasmoid.globalShortcut = button.keySequence
+                }
+            }
         }
     }
 

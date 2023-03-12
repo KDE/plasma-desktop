@@ -75,7 +75,7 @@ Item {
                 border.color: "transparent"
                 visible: panelRepresentation.panelVisible
                 clip: panelRepresentation.adaptivePanel
-                radius: clip ? 0 : 5 // Don't use radius when clip is true since clip cannot clip it
+                radius: clip ? 2 : 5 // Use very small radius when clip is true since clip cannot clip it. Zero radius will make it look too sharp
 
                 x: screenRect.calculateOrdinate(screenRect.width, width, true) + (screenRect.isVertical && sunkenPanel ? -Math.round(width / 2) : 0)
                 y: screenRect.calculateOrdinate(screenRect.height, height, false) + (!screenRect.isVertical && sunkenPanel ? Math.round(height / 2) : 0)
