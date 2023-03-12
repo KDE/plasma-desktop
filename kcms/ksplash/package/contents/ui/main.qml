@@ -25,7 +25,7 @@ KCM.GridViewKCM {
     //NOTE: pay attention to never break this binding
     view.currentIndex: kcm.sortModelPluginIndex(kcm.splashScreenSettings.theme)
 
-    actions.main: NewStuff.Action {
+    actions: NewStuff.Action {
         id: newStuffButton
         text: i18n("&Get New…")
         configFile: "ksplash.knsrc"
