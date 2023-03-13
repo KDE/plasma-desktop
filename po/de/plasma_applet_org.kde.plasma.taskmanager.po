@@ -4,20 +4,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2016, 2018, 2020, 2021, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2011, 2013, 2015, 2016, 2017, 2019, 2020, 2021.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:59+0000\n"
-"PO-Revision-Date: 2022-07-23 23:51+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-27 20:14+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -71,16 +72,14 @@ msgid "General:"
 msgstr "Allgemein:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Hervorheben von Fenstern beim Überfahren von Kurzinfos"
+msgstr "Kleine Fenster-Vorschauen beim Überfahren von Anwendungen anzeigen"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Hervorheben von Fenstern beim Überfahren von Kurzinfos"
+msgstr "Andere Fenster beim Überfahren von Vorschauen ausblenden"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -91,7 +90,7 @@ msgstr "Anwendung mit Audio-Wiedergabe markieren"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Freien Platz auf der Kontrollleiste füllen"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
@@ -137,12 +136,10 @@ msgid "Large"
 msgstr "Groß"
 
 #: package/contents/ui/ConfigAppearance.qml:113
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when tablet mode is on"
-#| msgid "Automatically set to Large when in tablet mode"
+#, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "Im Tablet-Modus automatisch auf „Groß“ einstellen"
+msgstr "Im Touch-Modus automatisch auf „Groß“ einstellen"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
@@ -171,25 +168,19 @@ msgid "Cycles through tasks"
 msgstr "Zwischen Anwendungen wechseln"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Fenster nebeneinander anzeigen"
+msgstr "Kleine Fenster-Vorschauen anzeigen"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Fenster nebeneinander anzeigen"
+msgstr "Große Fenster-Vorschauen anzeigen"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -321,11 +312,9 @@ msgid "Cycles through tasks"
 msgstr "Wechselt zwischen laufenden Anwendungen"
 
 #: package/contents/ui/ConfigBehavior.qml:156
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgid "Skip minimized tasks"
-msgstr "Fenster minimieren"
+msgstr "Minimierte Anwendungen überspringen"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
@@ -370,7 +359,7 @@ msgstr "Neue Anwendungen erscheinen:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Unten"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -387,7 +376,7 @@ msgstr "Am rechten Rand"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Oben"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -574,11 +563,10 @@ msgid "Allow this program to be grouped"
 msgstr "Gruppierung dieser Anwendung zulassen"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Schließen"
+msgstr "Alle &schließen"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
@@ -589,37 +577,33 @@ msgstr "&Schließen"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "%1 starten"
 
 #: package/contents/ui/Task.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Es gibt %1 neue Nachricht."
+msgstr[1] "Es gibt %1 neue Nachrichten."
 
 #: package/contents/ui/Task.qml:96
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Kurzinfos anzeigen"
+msgstr "Kurzinfo für %1 anzeigen"
 
 #: package/contents/ui/Task.qml:102
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "Fenster nebeneinander anzeigen"
+msgstr "Fenster von %1 nebeneinander anzeigen"
 
 #: package/contents/ui/Task.qml:107
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Liste der Fenster von %1 öffnen"
 
 #: package/contents/ui/Task.qml:111
 #, kde-format

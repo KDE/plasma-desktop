@@ -6,19 +6,21 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Felix Schweighofer <felix.schweighofer@googlemail.com>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2020-09-28 08:22+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-26 00:49+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -234,50 +236,51 @@ msgstr "Schneller"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "Zusätzliche Maustasten neu zuordnen ..."
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Zusatztaste %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
+"Drücken Sie die Maustaste, der Sie eine Taste auf der Tastatur zuordnen "
+"möchten"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Neue Tastenkombination für %1 eingeben"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "Drücken Sie den Knopf Connect"
+msgstr "Drücken Sie eine Maustaste "
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Zuordnung hinzufügen ..."
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "Zurück"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14

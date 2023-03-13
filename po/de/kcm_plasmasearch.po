@@ -1,19 +1,20 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2015, 2017, 2019, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-11 00:46+0000\n"
-"PO-Revision-Date: 2022-07-14 00:33+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-26 01:17+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
@@ -21,14 +22,13 @@ msgid "Available Plugins"
 msgstr "Verfügbare Module"
 
 #: plasmasearch/package/contents/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Enable or disable plugins (used in KRunner and Application Launcher)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect)"
 msgstr ""
-"Module aktivieren oder deaktivieren, wird in KRunner und im "
-"Anwendungsstarter benutzt"
+"Module aktivieren oder deaktivieren (wird in KRunner, im Anwendungsstarter "
+"und in den Übersicht-Effekten verwendet)"
 
 #: plasmasearch/package/contents/ui/main.qml:49
 #, kde-format
@@ -41,12 +41,12 @@ msgid "Get New Plugins…"
 msgstr "Neue Module holen ..."
 
 #: plugininstaller/AbstractJob.cpp:18
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Failed to run install script in terminal \"%1\""
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
-msgstr "Fehler beim Ausführen  des Skripts „%1“ im Terminal"
+msgstr ""
+"Fehler beim Ausführen des Installationsskripts im Terminal: <message>%1</"
+"message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
@@ -251,6 +251,7 @@ msgstr "Der Paketname von %1 kann nicht aufgelöst werden"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr ""
+"Ausführen des Installationsbefehls fehlgeschlagen: <message>%1</message>"
 
 #~ msgid "Position on screen:"
 #~ msgstr "Position auf dem Bildschirm"

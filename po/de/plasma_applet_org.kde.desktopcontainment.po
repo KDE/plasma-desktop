@@ -1,19 +1,20 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2015, 2016, 2020, 2022.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2022-04-15 04:43+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-26 00:39+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -67,10 +68,9 @@ msgid "File types:"
 msgstr "Dateitypen:"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Alle Dateien anzeigen"
+msgstr "Versteckte Dateien anzeigen:"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
@@ -123,19 +123,19 @@ msgstr "Anordnung:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Links nach Rechts"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Rechts nach Links"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Oben nach unten"
 
 #: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
@@ -267,7 +267,7 @@ msgstr "Textzeilen:"
 #: package/contents/ui/ConfigIcons.qml:294
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Beim Überfahren von Symbolen:"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
@@ -280,10 +280,9 @@ msgid "Show selection markers"
 msgstr "Auswahlmarkierungen anzeigen"
 
 #: package/contents/ui/ConfigIcons.qml:310
-#, fuzzy, kde-format
-#| msgid "Folder preview popups"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "Ordner-Voransicht"
+msgstr "Ordner-Voransichten anzeigen"
 
 #: package/contents/ui/ConfigIcons.qml:320
 #, kde-format
@@ -302,8 +301,7 @@ msgid "Previews:"
 msgstr "Vorschauen:"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Preview thumbnails"
+#, kde-format
 msgid "Show preview thumbnails"
 msgstr "Vorschaubilder anzeigen"
 
@@ -543,29 +541,28 @@ msgid "Huge"
 msgstr "Riesig"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "Anordnen in"
+msgstr "Anordnen"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Links nach Rechts"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Rechts nach Links"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "Oben nach unten"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
