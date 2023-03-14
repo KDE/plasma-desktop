@@ -18,6 +18,7 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
+#include <KPackage/PackageJob>
 #include <KPackage/PackageLoader>
 #include <KPackage/PackageStructure>
 
@@ -172,7 +173,6 @@ void KCMSplashScreen::load()
 void KCMSplashScreen::save()
 {
     using namespace KPackage;
-    PackageStructure *structure = PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/LookAndFeel"));
     const QStringList pendingDeletionPlugins = pendingDeletions();
     for (const QString &plugin : pendingDeletionPlugins) {
         if (plugin == m_data->settings()->theme()) {
@@ -181,7 +181,7 @@ void KCMSplashScreen::save()
             continue;
         }
 
-        KJob *uninstallJob = Package(structure).uninstall(plugin, m_packageRoot);
+        KJob *uninstallJob = KPackage::PackageJob::uninstall(QStringLiteral("Plasma/LookAndFeel"), plugin, m_packageRoot);
         connect(uninstallJob, &KJob::result, this, [this, uninstallJob, plugin]() {
             if (uninstallJob->error()) {
                 Q_EMIT error(uninstallJob->errorString());
