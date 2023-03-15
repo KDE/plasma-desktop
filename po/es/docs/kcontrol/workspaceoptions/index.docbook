@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportamiento general</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Eloy</firstname
+><surname
+>Cuadra</surname
+><affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-06-30</date>
+
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>escritorio</keyword>
+<keyword
+>espacio de trabajo</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Este módulo le permite configurar el comportamiento general del espacio de trabajo. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar ayudas informativas al situar el cursor encima</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está marcada, las ayudas emergentes se muestran al situar el puntero del ratón sobre los elementos del panel de &plasma; o del escritorio.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar información visual para cambios de estado</guilabel
+></term>
+<listitem>
+<para
+>Si cambia, por ejemplo, el brillo y el volumen usando el teclado, estos cambios de estado se muestran usando OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidad de las animaciones</guilabel
+></term>
+<listitem>
+    <para
+>Le permite definir la velocidad de las animaciones de los efectos del escritorio desde <guilabel
+>Baja</guilabel
+> a <guilabel
+>Instantánea</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Un solo clic para abrir archivos y carpetas</guilabel
+></term>
+<listitem>
+<para
+>Esta es la configuración predeterminada. Pulsando una sola vez sobre el icono, lo abrirá. Para seleccionarlo, puede arrastrar el puntero alrededor del icono o pulsar <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Derecha</mousebutton
+></keycombo
+> o simplemente mantenerlo pulsado y arrastrarlo. También puede realizar la selección pulsando en la casilla de selección del elemento.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Doble clic para abrir archivos y carpetas</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción no está marcada, los iconos/archivos se abrirán con un solo clic del botón <mousebutton
+>izquierdo</mousebutton
+> del ratón. Este comportamiento predeterminado es consistente con lo que cabría esperar al pulsar enlaces en la mayoría de los navegadores web. Por el contrario, si está marcada, los iconos/archivos se abrirán con un doble clic, mientras que un solo clic solo seleccionará el icono o archivo. Este es el comportamiento que seguramente le resulte familiar de otros escritorios o sistemas operativos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar en la barra de desplazamiento</guimenu
+><guimenuitem
+>Desplazar una página arriba o abajo</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Este es el ajuste predeterminado. Un clic izquierdo en la barra de desplazamiento mueve una página.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar en la barra de desplazamiento</guimenu
+><guimenuitem
+>Desplazar hasta la posición en la que se ha pulsado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Activa el comportamiento cuando la posición del controlador de desplazamiento salta a la derecha de la posición del documento donde haya pulsado. Este es el comportamiento que puede conocer de otros escritorios o sistemas operativos.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
