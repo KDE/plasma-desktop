@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.0
+import QtQuick.Window 2.15
 
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -58,8 +59,8 @@ Item {
             readonly property int floatingGap: panelRepresentation.floatingGap > -1 ? panelRepresentation.floatingGap : (panel.floating ? PlasmaCore.Units.smallSpacing : 0)
 
             Layout.alignment: Qt.AlignHCenter
-            implicitWidth: Math.round(PlasmaCore.Units.gridUnit * 6)
-            implicitHeight: Math.round(PlasmaCore.Units.gridUnit * 4)
+            implicitWidth: Math.round(Math.min(PlasmaCore.Units.gridUnit * 6, Screen.width * 0.1))
+            implicitHeight: Math.round(Math.min(PlasmaCore.Units.gridUnit * 4, Screen.width * 0.1))
             color: PlasmaCore.Theme.backgroundColor
             border.color: PlasmaCore.Theme.highlightColor
             radius: 5
