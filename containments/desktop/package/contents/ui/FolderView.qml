@@ -249,7 +249,7 @@ FocusScope {
             cPress = mapToItem(gridView.contentItem, pressX, pressY);
         }
 
-        onPressed: {
+        onPressed: mouse => {
             // Ignore press events outside the viewport (i.e. on scrollbars).
             if (!scrollArea.viewport.contains(Qt.point(mouse.x, mouse.y))) {
                 return;
@@ -341,7 +341,7 @@ FocusScope {
 
         onCanceled: pressCanceled()
 
-        onReleased: {
+        onReleased: mouse => {
             if (hoveredItem && !hoveredItem.blank && mouse.button !== Qt.RightButton) {
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
@@ -353,7 +353,7 @@ FocusScope {
             pressCanceled();
         }
 
-        onPressAndHold: {
+        onPressAndHold: mouse => {
             if (mouse.source === Qt.MouseEventSynthesizedByQt) {
                 if (pressedItem) {
                     if (pressedItem.toolTip && pressedItem.toolTip.active) {
@@ -367,7 +367,7 @@ FocusScope {
             }
         }
 
-        onClicked: {
+        onClicked: mouse => {
             clearPressState();
 
             if (mouse.button === Qt.RightButton ||
@@ -438,7 +438,7 @@ FocusScope {
             }
         }
 
-        onPositionChanged: {
+        onPositionChanged: mouse => {
             gridView.ctrlPressed = (mouse.modifiers & Qt.ControlModifier);
             gridView.shiftPressed = (mouse.modifiers & Qt.ShiftModifier);
 
