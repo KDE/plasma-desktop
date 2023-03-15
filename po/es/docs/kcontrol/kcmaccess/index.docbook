@@ -1,0 +1,551 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Accesibilidad</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>accesibilidad</keyword>
+<keyword
+>teclas</keyword>
+<keyword
+>timbre</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Accesibilidad</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Introducción</title>
+
+<para
+>Este módulo está diseñado para ayudar a los usuarios que tienen dificultades auditivas, o que tienen dificultades utilizando el teclado. </para>
+
+<para
+>El módulo está dividido en seis pestañas: <link linkend="access-bell"
+><guilabel
+>Timbre</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Teclas modificadoras</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtros del teclado</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Gestos de activación</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Navegación con el ratón</guilabel
+></link
+> y <link linkend="access-screenreader"
+><guilabel
+>Lector de pantalla</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Timbre</guilabel
+></title>
+
+<para
+>Este panel está dividido en una sección denominada <guilabel
+>Timbre audible</guilabel
+> y una sección denominada <guilabel
+>Timbre visible</guilabel
+>. </para>
+
+<para
+>La casilla de selección en la parte superior etiquetada <guilabel
+>Usar timbre del sistema</guilabel
+>, determina si el timbre normal del sistema suena. Si esta opción está desactivada el timbre del sistema se silenciará. </para>
+
+<para
+>La siguiente casilla de verificación puede reproducir un sonido diferente cada vez que hay que disparar el timbre del sistema. Para activarla, marque la casilla de verificación etiquetada <guilabel
+>Usar timbre personalizado</guilabel
+> e introduzca la ruta completa al archivo de sonido en el recuadro de texto etiquetado <guilabel
+>Sonido que se escuchará</guilabel
+>. Si lo desea, puede seleccionar el botón <guibutton
+>Explorar</guibutton
+> para navegar por su sistema de archivos para encontrar el archivo exacto. </para>
+
+<para
+>Para aquellos usuarios que tienen dificultades para oir el timbre del sistema, o para aquellos usuarios sin sonido en su ordenador, &kde; suministra un <emphasis
+>timbre visual</emphasis
+>. Proporciona una señal visual (invertir la pantalla, o iluminar la pantalla con un color) cuando debería sonar el timbre del sistema. </para>
+
+<para
+>Para utilizar el timbre visual, primero coloque una marca en la casilla de selección etiquetada como <guilabel
+>Utilizar timbre visual</guilabel
+>. </para>
+
+<para
+>Después puede seleccionar entre <guilabel
+>Invertir pantalla</guilabel
+>, o <guilabel
+>Iluminar pantalla</guilabel
+>. Si selecciona <guilabel
+>Invertir pantalla</guilabel
+>, todos los colores de la pantalla se invertirán. Si escoge <guilabel
+>iluminar pantalla</guilabel
+>, puede escoger el color pulsando el botón a la derecha de la selección <guilabel
+>Iluminar pantalla</guilabel
+>. </para>
+
+<para
+>La control numérico se puede usar para ajustar la duración del timbre visible. El valor predefinido es de 500 ms, o medio segundo. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Teclas modificadoras</guilabel
+></title>
+
+<para
+>Hay dos secciones <guilabel
+>Teclas adhesivas</guilabel
+> y <guilabel
+>Teclas de bloqueo</guilabel
+> en este panel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar teclas adhesivas</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está activada, podrá pulsar y soltar las teclas &Shift;, &Alt; o &Ctrl;, y después pulsar otra tecla para obtener un acceso rápido (por ejemplo: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> se puede realizar con &Ctrl;, luego &Alt; y luego &Del;). </para>
+
+<para
+>En esta sección también se encuentra la casilla <guilabel
+>Bloquear teclas adhesivas</guilabel
+>. Si esta casilla está seleccionada las teclas &Alt;, &Ctrl;, y &Shift; permanecen «seleccionadas» hasta que se «elimine la selección» por el usuario. </para>
+
+<para
+>Por ejemplo: </para>
+<variablelist>
+<varlistentry>
+<term
+>Con <guilabel
+>Bloquear teclas adhesivas</guilabel
+> desactivado:</term>
+<listitem>
+<para
+>Si pulsa la tecla &Shift; y después pulsa la tecla <keycap
+>F</keycap
+>. El ordenador traduce esto a <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Ahora si introduce <keycap
+>P</keycap
+>, el ordenador interpreta esto como la letra p (sin mayúsculas). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Con <guilabel
+>Bloquear teclas adhesivas</guilabel
+> activado:</term>
+<listitem>
+<para
+>Si el usuario pulsa la tecla &Shift;, <emphasis
+>dos veces</emphasis
+> y a continuación pulsa la tecla <keycap
+>F</keycap
+>, el ordenador traduce esto a <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Ahora, si el usuario introduce <keycap
+>P</keycap
+>, el ordenador interpreta esto como la letra P (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Para eliminar la selección pulse nuevamente la tecla &Shift;. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtros de teclado</guilabel
+></title>
+
+<para
+>Hay dos secciones en este panel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Usar teclas lentas</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está activada, deberá mantener la tecla pulsada durante el tiempo especificado (ajustable con el control numérico) antes de que la pulsación de la tecla sea aceptada. Esto impide que se produzcan pulsaciones accidentales de teclas. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Utilizar teclas que rebotan</guilabel
+></term>
+<listitem>
+<para
+>Si se activa esta opción, debe esperar el tiempo especificado (configurable con el control numérico), antes de que la siguiente pulsación de tecla sea aceptada. Esto impide múltiples pulsaciones. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Gestos de activación</guilabel
+></title>
+
+<para
+>Hay dos secciones en este panel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos de activación</guilabel
+> con estas opciones:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar gestos para activar teclas adhesivas y teclas lentas</guilabel
+></member>
+<member
+>Aquí, puede activar gestos de teclado que activan las siguientes funcionalidades:</member>
+<member
+>Teclas del ratón: pulse &Shift;+BloqNúm</member>
+<member
+>Teclas adhesivas: pulse la tecla &Shift; cinco veces consecutivas</member>
+<member
+>Teclas lentas: mantenga pulsada la tecla &Shift; durante 8 segundos</member>
+<member
+><guilabel
+>Desactivar las teclas adhesivas y las teclas lentas tras cierto periodo de inactividad</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificación</guilabel
+> con estas opciones:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar el timbre del sistema cuando se active o desactive una función de accesibilidad del teclado</guilabel
+></member>
+
+<member
+><guilabel
+>Mostrar un diálogo de confirmación cuando se active o desactive una función de accesibilidad del teclado</guilabel
+></member>
+<member
+>Si esta opción está marcada, &kde; mostrará un diálogo de configuración cada vez que se active o desactive una característica de accesibilidad.</member>
+<member
+>Asegúrese de que sabe lo que hace cuando desactiva esta opción, ya que entonces las preferencias de accesibilidad del teclado se aplicarán sin confirmación.</member>
+
+<member
+><guilabel
+>Utilizar el mecanismo de notificación del sistema de &kde; cada vez que una funcionalidad de accesibilidad de teclado se active o desactive.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Pulse el botón <guibutton
+>Configurar notificaciones</guibutton
+> para abrir un diálogo que le permita editar las notificaciones para los cambios de estado de todas las teclas.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Navegación con el ratón</title>
+
+<para
+>Esta pestaña le permite configurar las teclas del bloque numérico del teclado como un dispositivo de tipo ratón. Esto puede ser útil cuando está trabajando en un dispositivo sin otro dispositivo apuntador, o cuando no tiene otro uso para el bloque numérico. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mover el puntero con el teclado (usando el bloque numérico)</guilabel
+></term>
+<listitem>
+<para
+>Para activar el modo ratón del teclado debe marcar la casilla <guilabel
+>Mover el puntero con el teclado (usando el bloque numérico)</guilabel
+>. Si está marcada, el resto de preferencias estarán activas y podrá personalizar aún más el comportamiento del puntero del teclado, si es necesario. </para>
+<para
+>Las distintas teclas del bloque numérico mueven en la dirección que cabría esperar. Tenga en cuenta que puede mover en diagonal, así como hacia arriba, hacia abajo, hacia la izquierda y hacia la derecha. La tecla <keycap
+>5</keycap
+> emula un clic con el botón apuntador, normalmente el &LMB;. Puede cambiar el botón que se emula usando las teclas <keycap
+>/</keycap
+> (que hace que sea el &LMB;), <keycap
+>*</keycap
+> (que hace que sea el &MMB;) y <keycap
+>-</keycap
+> (que hace que sea el &RMB;). Use la tecla <keycap
+>+</keycap
+> para emular un doble clic con el botón apuntador que haya seleccionado. Puede usar la tecla <keycap
+>0</keycap
+> para emular que se mantiene pulsado el botón apuntador que haya seleccionado (para arrastrar con facilidad) y, posteriormente, puede usar la tecla <keycap
+>.</keycap
+> para emular que se ha soltado el botón apuntador que haya seleccionado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Demora de aceleración</guilabel
+></term>
+<listitem>
+<para
+>Este es el tiempo (en milisegundos) entre la pulsación inicial de la tecla y el primer evento de movimiento repetido para la aceleración de la tecla del ratón. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de repetición</guilabel
+></term>
+<listitem>
+<para
+>Este es el tiempo en milisegundos entre eventos de movimiento repetidos para la aceleración de las teclas del ratón. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tiempo de aceleración</guilabel
+></term>
+<listitem>
+<para
+>Este es el tiempo en milisegundos antes de que el puntero alcance una velocidad máxima para la aceleración de la tecla del ratón. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidad máxima</guilabel
+></term>
+<listitem>
+<para
+>Esta es la velocidad máxima en píxeles por segundo que el puntero puede alcanzar para la aceleración de la tecla del ratón. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil de aceleración</guilabel
+></term>
+<listitem>
+<para
+>Esta es la pendiente de la curva de aceleración para la aceleración de la tecla del ratón. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Lector de pantalla</guilabel
+></title>
+
+<para
+>Instale una aplicación de lectura de la pantalla, como <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> junto a <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Pruebe que el sonido del despachador de voz funciona con la orden <command
+>spd-say hola</command
+> en un terminal. </para>
+
+<para
+>Además, necesita un sintetizador de texto a voz, como <application
+>espeak</application
+>. </para>
+
+<para
+>Active el lector de pantalla marcando la casilla, cierre la sesión y vuelva a iniciar sesión en el escritorio. </para>
+
+<para
+>Para el propio &plasma;, asegúrese de usar el <guilabel
+>Menú de aplicaciones</guilabel
+> tradicional y compruebe que este menú tiene asociado un acceso rápido de teclado (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Cuando pulse este atajo, el menú debería abrirse y poderse leer al navegar por el menú con las teclas de las flechas. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

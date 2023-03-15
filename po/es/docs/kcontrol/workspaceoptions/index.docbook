@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportamiento general</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Eloy</firstname
+><surname
+>Cuadra</surname
+><affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+
+<releaseinfo
+>&plasma; 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>escritorio</keyword>
+<keyword
+>espacio de trabajo</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Este módulo le permite configurar el comportamiento general del espacio de trabajo. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar ayudas informativas al situar el cursor encima</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está marcada, las ayudas emergentes se muestran al situar el puntero del ratón sobre los elementos del panel de &plasma; o del escritorio.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar información visual para cambios de estado</guilabel
+></term>
+<listitem>
+<para
+>Si cambia, por ejemplo, el brillo y el volumen usando el teclado, estos cambios de estado se muestran usando OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidad de las animaciones</guilabel
+></term>
+<listitem>
+    <para
+>Le permite definir la velocidad de las animaciones de los efectos del escritorio desde <guilabel
+>Baja</guilabel
+> a <guilabel
+>Instantánea</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar archivos o carpetas</guimenu
+><guimenuitem
+>Se abren</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está marcada, los archivos y las carpetas se abrirán con un clic sencillo del botón <mousebutton
+>izquierdo</mousebutton
+> del ratón. Para seleccionar archivos y carpetas, puede hacer un clic <mousebutton
+>izquierdo</mousebutton
+> en sus marcas de selección, trazar un rectángulo de selección a su alrededor o usar un clic <keycombo action="simul"
+>&Ctrl;<mousebutton
+>izquierdo</mousebutton
+></keycombo
+>. Este es el comportamiento predeterminado, que está diseñado para que sea consistente con lo que cabría esperar al pulsar enlaces en un navegador web.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar archivos o carpetas</guimenu
+><guimenuitem
+>Se seleccionan</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está marcada, debe hacer doble clic sobre los archivos y las carpetas para abrirlos, mientras que un único clic los seleccionará. Este es el comportamiento típico de otros escritorios y sistemas operativos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar en la barra de desplazamiento</guimenu
+><guimenuitem
+>Desplazar una página arriba o abajo</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Este es el ajuste predeterminado. Un clic izquierdo en la barra de desplazamiento mueve una página.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Al pulsar en la barra de desplazamiento</guimenu
+><guimenuitem
+>Desplazar hasta la posición en la que se ha pulsado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Activa el comportamiento cuando la posición del controlador de desplazamiento salta a la derecha de la posición del documento donde haya pulsado. Este es el comportamiento que puede conocer de otros escritorios o sistemas operativos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clic central</guimenu
+><guimenuitem
+>Pegar el texto seleccionado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está marcada, un clic central sobre un campo de texto hará que se pegue allí el contenido del portapapeles, de modo similar a lo que ocurriría al pulsar <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Modo táctil</guimenuitem
+></term>
+<listitem>
+<para
+>En el modo táctil, muchos elementos de la interfaz de usuario se harán más grandes para que la interacción táctil sea más fácil.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo táctil</guimenu
+><guimenuitem
+>Activar automáticamente cuando sea necesario</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está seleccionada, el modo táctil se activará automáticamente cada vez que el sistema detecte una pantalla táctil sin ratón ni panel táctil. Por ejemplo: cuando el teclado de un portátil transformable se pliega o se desprende.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo táctil</guimenu
+><guimenuitem
+>Siempre activado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está seleccionada, el modo táctil estará activado siempre. Use esta opción si usa &plasma; principalmente con una pantalla táctil o si prefiere tener objetos grandes sobre los que pulsar por otros motivos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo táctil</guimenu
+><guimenuitem
+>Nunca activado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Si esta opción está seleccionada, el modo táctil estará desactivado siempre. Use esta opción si no necesita el modo táctil en su dispositivo.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
