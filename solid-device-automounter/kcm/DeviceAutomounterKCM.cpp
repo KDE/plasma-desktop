@@ -29,24 +29,14 @@
 K_PLUGIN_FACTORY_WITH_JSON(DeviceAutomounterKCMFactory, "device_automounter_kcm.json", registerPlugin<DeviceAutomounterKCM>();
                            registerPlugin<DeviceAutomounterData>();)
 
-DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args) // DeviceAutomounterKCMFactory::componentData(), parent)
-    , m_settings(new AutomounterSettings(this))
+DeviceAutomounterKCM::DeviceAutomounterKCM(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KCModule(parent, data, args)
+    , m_settings(new AutomounterSettings(widget()))
     , m_devices(new DeviceModel(m_settings, this))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"),
-                                       i18n("Device Automounter"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::GPL_V2,
-                                       i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
-    about->addAuthor(i18n("Trever Fischer"), i18n("Original Author"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), QStringLiteral("kde@privat.broulik.de"));
+    setupUi(widget());
 
-    setAboutData(about);
-    setupUi(this);
-
-    addConfig(m_settings, this);
+    addConfig(m_settings, widget());
 
     deviceView->setModel(m_devices);
 

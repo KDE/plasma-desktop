@@ -19,7 +19,7 @@ class DeviceAutomounterKCM : public KCModule, public Ui::DeviceAutomounterKCM
     Q_OBJECT
 
 public:
-    explicit DeviceAutomounterKCM(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit DeviceAutomounterKCM(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~DeviceAutomounterKCM() override;
 
 public Q_SLOTS:
