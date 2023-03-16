@@ -27,7 +27,6 @@ target_link_libraries(kcm_landingpage
     KF6::KCMUtilsQuick
     KF6::KCMUtils
     KF6::ConfigWidgets
-    KF6::Declarative
     KF6::Package
     PW::KWorkspace
     KF6::ActivitiesStats

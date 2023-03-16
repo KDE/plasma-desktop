@@ -68,7 +68,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     GlobalAccel
     CoreAddons # KSharedDataCache required by KImageCache, KStringHandler required by FolderModel
     GuiAddons # KImageCache
-    Declarative
     DBusAddons
     Activities
     ActivitiesStats

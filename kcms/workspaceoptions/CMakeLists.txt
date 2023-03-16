@@ -27,7 +27,6 @@ target_link_libraries(kcm_workspace
     KF6::I18n
     KF6::KCMUtils
     KF6::ConfigWidgets
-    KF6::Declarative
 
     Qt::DBus
 )

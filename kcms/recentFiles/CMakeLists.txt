@@ -3,7 +3,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_recentFiles\")
 
 find_package (Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
 find_package (KF6KCMUtils ${KF6_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF6Declarative ${KF6_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF6XmlGui ${KF6_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF6GlobalAccel ${KF6_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF6Activities ${KF6_DEP_VERSION} CONFIG REQUIRED)
@@ -63,7 +62,6 @@ target_link_libraries (kcm_recentFiles
    KF6::KCMUtils
    KF6::I18n
    KF6::Service
-   KF6::Declarative
    KF6::XmlGui
    KF6::Activities
    )
