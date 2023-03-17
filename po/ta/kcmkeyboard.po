@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-04-02 21:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -80,25 +80,6 @@ msgstr "பெயர்:"
 #, kde-format
 msgid "Preview"
 msgstr "முன்னோட்டம்"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "கே.டீ.யீ. விசைப்பலகை கட்டுப்பாடு கூறு"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr ""
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>விசைப்பலகை</h1> இக்கட்டுப்பாட்டுக்கூறில் விசைப்பலகை விருப்பங்களையும் தளவமைப்புகளையும் "
-"அமைக்கலாம்."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -502,6 +483,16 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "கே.டீ.யீ. விசைப்பலகை கட்டுப்பாடு கூறு"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>விசைப்பலகை</h1> இக்கட்டுப்பாட்டுக்கூறில் விசைப்பலகை விருப்பங்களையும் "
+#~ "தளவமைப்புகளையும் அமைக்கலாம்."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "கே.டீ.யீ. விசைப்பலகை தளவமைப்பு மாற்றி"

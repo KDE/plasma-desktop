@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-25 21:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -38,32 +38,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 என்பதன் அடிப்படை விவரங்களை கண்டறிவதில் சிக்கல்."
 
-#: kcm/libinput/libinput_config.cpp:36
-#, kde-format
-msgid "Pointer device KCM"
-msgstr "சுட்டி சாதன கட்டுப்பாட்டுக்கூறு"
-
-#: kcm/libinput/libinput_config.cpp:38
-#, kde-format
-msgid "System Settings module for managing mice and trackballs."
-msgstr "சுட்டிகளை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு"
-
-#: kcm/libinput/libinput_config.cpp:40
-#, kde-format
-msgid "Copyright 2018 Roman Gilg"
-msgstr "பதிப்புரிமை © 2018 ரோமன் கில்கு"
-
-#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
-#, kde-format
-msgid "Roman Gilg"
-msgstr "ரோமன் கில்கு"
-
-#: kcm/libinput/libinput_config.cpp:43
-#, kde-format
-msgid "Developer"
-msgstr "நிரலாளர்"
-
-#: kcm/libinput/libinput_config.cpp:109
+#: kcm/libinput/libinput_config.cpp:90
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -72,12 +47,12 @@ msgstr ""
 "மதிப்புகளை ஏற்றுவதில் சிக்கல். மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:114
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "எந்த சுட்டி சாதனமும் கண்டுபிடிக்கப்படவில்லை. சாதனத்தை இப்போது செருகுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:125
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -86,7 +61,7 @@ msgstr ""
 "சில மாற்றங்களை சேமிக்க முடியவில்லை. மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:145
+#: kcm/libinput/libinput_config.cpp:126
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -95,7 +70,7 @@ msgstr ""
 "இயல்பிருப்பு மதிப்புகளை ஏற்றுவதில் சிக்கல். சில விருப்பங்கள் அவற்றின் இயல்பிருப்பு "
 "மதிப்புகளுக்கு மாற்றப்படவில்லை."
 
-#: kcm/libinput/libinput_config.cpp:167
+#: kcm/libinput/libinput_config.cpp:148
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -104,162 +79,162 @@ msgstr ""
 "புதிதாக செருகிய சாதனத்தை சேர்ப்பதில் சிக்கல். அதை கழற்றி, மீண்டும் செருகிய பின் இக்கூறை "
 "மீள்துவக்குங்கள்."
 
-#: kcm/libinput/libinput_config.cpp:191
+#: kcm/libinput/libinput_config.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "சுட்டி கழற்றப்பட்டதால் அதன் அமைப்புச்சாளரம் மூடப்பட்டது."
 
-#: kcm/libinput/libinput_config.cpp:193
+#: kcm/libinput/libinput_config.cpp:174
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
 
-#: kcm/libinput/main.qml:79
+#: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
 #, kde-format
 msgid "General:"
 msgstr "பொது:"
 
-#: kcm/libinput/main.qml:105
+#: kcm/libinput/main.qml:100
 #, kde-format
 msgid "Device enabled"
 msgstr "சாதனம் இயக்கப்பட்டுள்ளது"
 
-#: kcm/libinput/main.qml:124
+#: kcm/libinput/main.qml:120
 #, kde-format
 msgid "Accept input through this device."
 msgstr "இந்த சாதனத்தின் வாயிலாக உள்ளீட்டை ஏற்க."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#: kcm/libinput/main.qml:170 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
-#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
-#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#: kcm/libinput/main.qml:211 kcm/libinput/main_deviceless.qml:137
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "வேகவளர்ச்சி முறை:"
 
-#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:242 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "Flat"
 msgstr "சமமானது"
 
-#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#: kcm/libinput/main.qml:246 kcm/libinput/main_deviceless.qml:172
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "சுட்டிக்குறியும் சுட்டியும் ஒரே தூரம் நகரும்."
 
-#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:252 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#: kcm/libinput/main.qml:256 kcm/libinput/main_deviceless.qml:182
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "சுட்டிக்குறி நகரும் தூரம் சுட்டியின் வேகத்தைப் பொறுத்து மாறும்."
 
-#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:193
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#: kcm/libinput/main.qml:269 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
-#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:211
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: kcm/libinput/main.qml:295
+#: kcm/libinput/main.qml:290
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:338
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: kcm/libinput/main.qml:349
+#: kcm/libinput/main.qml:344
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: kcm/libinput/main.qml:360
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
 
-#: kcm/libinput/main.qml:396
+#: kcm/libinput/main.qml:391
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "கூடுதல் பட்டன் %1"
 
-#: kcm/libinput/main.qml:426
+#: kcm/libinput/main.qml:421
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "எந்த பட்டனுக்கு விசைப்பிணைப்பை சேர்க்க வேண்டுமோ, அதை அழுத்துங்கள்"
 
-#: kcm/libinput/main.qml:427
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "%1-க்கான புதிய விசைக்கூட்டை அழுத்துங்கள்"
 
-#: kcm/libinput/main.qml:431
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: kcm/libinput/main.qml:448
+#: kcm/libinput/main.qml:443
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "ஒரு சுட்டி பட்டனை அழுத்துங்கள் "
 
-#: kcm/libinput/main.qml:449
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "பிணைப்பை சேர்…"
 
-#: kcm/libinput/main.qml:478
+#: kcm/libinput/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
@@ -545,64 +520,61 @@ msgstr " பிக்செல்கள் நொடிக்கு"
 msgid "Acceleration &profile:"
 msgstr "விரைவிப்படுத்தல் விளக்கக்குறிப்பு:"
 
-#: kcm/xlib/xlib_config.cpp:79
-#, kde-format
-msgid "Mouse"
-msgstr "சுட்டி"
-
-#: kcm/xlib/xlib_config.cpp:83
-#, kde-format
-msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2018 சுட்டி நிரலாளர்கள்"
-
-#: kcm/xlib/xlib_config.cpp:84
-#, kde-format
-msgid "Patrick Dowler"
-msgstr "பாட்ரிக் டவுலர்"
-
-#: kcm/xlib/xlib_config.cpp:85
-#, kde-format
-msgid "Dirk A. Mueller"
-msgstr "டிர்க் அ. முல்லர்"
-
-#: kcm/xlib/xlib_config.cpp:86
-#, kde-format
-msgid "David Faure"
-msgstr "டேவிட் ஃபவுர்"
-
-#: kcm/xlib/xlib_config.cpp:87
-#, kde-format
-msgid "Bernd Gehrmann"
-msgstr "பெர்ண்டு கேர்மான்"
-
-#: kcm/xlib/xlib_config.cpp:88
-#, kde-format
-msgid "Rik Hemsley"
-msgstr "ரிக் ஹெம்சுலி"
-
-#: kcm/xlib/xlib_config.cpp:89
-#, kde-format
-msgid "Brad Hughes"
-msgstr "பிராட் ஹியூக்சு"
-
-#: kcm/xlib/xlib_config.cpp:90
-#, kde-format
-msgid "Brad Hards"
-msgstr "பிராட் ஹார்ட்ஸ்"
-
-#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
 #, kde-format
 msgid " pixel"
 msgid_plural " pixels"
 msgstr[0] " பிக்செல்"
 msgstr[1] " பிக்செல்கள்"
 
-#: kcm/xlib/xlib_config.cpp:293
+#: kcm/xlib/xlib_config.cpp:277
 #, kde-format
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " வரி"
 msgstr[1] " வரிகள்"
+
+#~ msgid "Pointer device KCM"
+#~ msgstr "சுட்டி சாதன கட்டுப்பாட்டுக்கூறு"
+
+#~ msgid "System Settings module for managing mice and trackballs."
+#~ msgstr "சுட்டிகளை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு"
+
+#~ msgid "Copyright 2018 Roman Gilg"
+#~ msgstr "பதிப்புரிமை © 2018 ரோமன் கில்கு"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "ரோமன் கில்கு"
+
+#~ msgid "Developer"
+#~ msgstr "நிரலாளர்"
+
+#~ msgid "Mouse"
+#~ msgstr "சுட்டி"
+
+#~ msgid "(c) 1997 - 2018 Mouse developers"
+#~ msgstr "(c) 1997 - 2018 சுட்டி நிரலாளர்கள்"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "பாட்ரிக் டவுலர்"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "டிர்க் அ. முல்லர்"
+
+#~ msgid "David Faure"
+#~ msgstr "டேவிட் ஃபவுர்"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "பெர்ண்டு கேர்மான்"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "ரிக் ஹெம்சுலி"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "பிராட் ஹியூக்சு"
+
+#~ msgid "Brad Hards"
+#~ msgstr "பிராட் ஹார்ட்ஸ்"
 
 #, fuzzy
 #~| msgid "Acceleration &time:"

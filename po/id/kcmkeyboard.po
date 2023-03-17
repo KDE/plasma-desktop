@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-13 08:49+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Label:"
 #, kde-format
 msgid "Preview"
 msgstr "Pratinjau"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Modul Kendali Papan Ketik KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Papan Ketik</h1> Modul kendali ini dapat digunakan untuk mengonfigurasi "
-"parameter dan tata letak papan ketik."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -510,6 +491,19 @@ msgstr ""
 "dipilih tidak mendukung tata letak atau tata letak tertentu. Masalah ini "
 "kemungkinan akan hadir ketika Anda mencoba menggunakan kombinasi model, tata "
 "letak dan varian ini."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Modul Kendali Papan Ketik KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Papan Ketik</h1> Modul kendali ini dapat digunakan untuk "
+#~ "mengonfigurasi parameter dan tata letak papan ketik."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Pengalih Tataletak Keyboard KDE"

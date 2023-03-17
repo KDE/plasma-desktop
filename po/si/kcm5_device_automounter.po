@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2011-08-16 18:00+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <kde-i18n-doc@kde.org>\n"
@@ -26,37 +26,6 @@ msgstr "Danishka Navin"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danishka@gmail.com"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "උපකරණ ස්වයං රඳවනය"
-
-#: DeviceAutomounterKCM.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Trever Fischer"
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -200,6 +169,17 @@ msgstr "මෙම උපකරණය සබඳකල විට ස්වයං�
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "මෙම උපකරණය සබඳ කල විට ස්වයංක්‍රීයව නොරැඳවේ."
+
+#~ msgid "Device Automounter"
+#~ msgstr "උපකරණ ස්වයං රඳවනය"
+
+#, fuzzy
+#~| msgid "(c) 2009 Trever Fischer"
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "(c) 2009 Trever Fischer"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

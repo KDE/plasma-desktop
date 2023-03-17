@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-07-04 08:56+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -83,25 +83,6 @@ msgstr "Lebel:"
 #, kde-format
 msgid "Preview"
 msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE Toetseboerd konfiguraasjemodule"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Toetseboerd</h1> Dizze kontrôlemodule is te brûken foar it ynstellen fan "
-"toetseboerd parameters en yndielings."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -529,6 +510,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE Toetseboerd konfiguraasjemodule"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Toetseboerd</h1> Dizze kontrôlemodule is te brûken foar it ynstellen "
+#~ "fan toetseboerd parameters en yndielings."
 
 #, fuzzy
 #~| msgctxt "tooltip title"

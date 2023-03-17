@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-06-26 21:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -189,12 +189,12 @@ msgstr "أداة لتوليد ملفات سطح المكتب من أصناف و�
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "مشرف المشروع"
@@ -224,42 +224,22 @@ msgstr "خاصية الجهاز %1 يجب أن تساوي %2"
 msgid "The device property %1 must contain %2"
 msgstr "خاصية الجهاز %1 يجب أن تحوي %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "محرر إجراءات جهاز سولد"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "مكون لوحة تحكم إجراءات جهاز سولد"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 فريق إجراءات جهاز سولد"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "النقل إلى بلازما ٥"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "يبدو أن المسند لهذا الإجراء غير صالح."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "خطأ في قراءة حالة الجهاز"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "لم يختر أي إجراء"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "لا يمكن حذفه"
@@ -281,6 +261,18 @@ msgstr "حرّر…"
 #, kde-format
 msgid "Add…"
 msgstr "أضف…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "محرر إجراءات جهاز سولد"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "مكون لوحة تحكم إجراءات جهاز سولد"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 فريق إجراءات جهاز سولد"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "النقل إلى بلازما ٥"
 
 #~ msgid "Edit..."
 #~ msgstr "حرر..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-10-18 20:22+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -175,51 +175,6 @@ msgstr ""
 msgid "internal error - code %1 unknown"
 msgstr "interna greška - kod %1 je nepoznat"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE kontrolni modul za joystick"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Modul Sistemskih postavki KDE‑a za probu džojstika"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "© 2004, Martin Koler"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<qt><h1>Džojstik</h1><p>Ovaj modul vam pomaže da provjerite da li vaš "
-"džojstik radi ispravno.</p><p>Ako se sa osa očitavaju neispravne "
-"vrijednosti, možete pokušati da to popravite kalibracijom.</p><p>Modul "
-"pokušava da pronađe sve dostupne uređaje džojstika, isprobavajući <filename>/"
-"dev/js[0-4]</filename> i <filename>/dev/input/js[0-4]</filename>.</p><p>Ako "
-"imate neki drugi fajl uređaja, unesite ga ručno.</p><p>Spisak dugmadi "
-"prikazuje stanje dugmadi na džojstiku, a spisak osa tekuće vrijednosti za "
-"sve ose.</p><p>Napomena: Tekući drajveri u jezgru Linuxa (serije 2.4 i 2.6) "
-"može mogu automatski otkrivati samo:</p><ul><li>džojstike sa dvije ose i "
-"četiri dugmeta</li><li>džojstike sa tri ose i četiri dugmeta</"
-"li><li>džojstike sa četiri ose i četiri dugmeta</li><li>„digitalne“ "
-"džojstike Cyborg od Saiteka</li></ul><p>(Za detalje pogledajte dokumentaciju "
-"džojstika pod Linuxom, <filename><placeholder>linux_src</placeholder>/"
-"Documentation/input/joystick.txt</filename>).</p></qt>"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -325,3 +280,42 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Vraćene sve kalibracijske vrijednosti za joystick uređaj %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE kontrolni modul za joystick"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Modul Sistemskih postavki KDE‑a za probu džojstika"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "© 2004, Martin Koler"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<qt><h1>Džojstik</h1><p>Ovaj modul vam pomaže da provjerite da li vaš "
+#~ "džojstik radi ispravno.</p><p>Ako se sa osa očitavaju neispravne "
+#~ "vrijednosti, možete pokušati da to popravite kalibracijom.</p><p>Modul "
+#~ "pokušava da pronađe sve dostupne uređaje džojstika, isprobavajući "
+#~ "<filename>/dev/js[0-4]</filename> i <filename>/dev/input/js[0-4]</"
+#~ "filename>.</p><p>Ako imate neki drugi fajl uređaja, unesite ga ručno.</"
+#~ "p><p>Spisak dugmadi prikazuje stanje dugmadi na džojstiku, a spisak osa "
+#~ "tekuće vrijednosti za sve ose.</p><p>Napomena: Tekući drajveri u jezgru "
+#~ "Linuxa (serije 2.4 i 2.6) može mogu automatski otkrivati samo:</"
+#~ "p><ul><li>džojstike sa dvije ose i četiri dugmeta</li><li>džojstike sa "
+#~ "tri ose i četiri dugmeta</li><li>džojstike sa četiri ose i četiri "
+#~ "dugmeta</li><li>„digitalne“ džojstike Cyborg od Saiteka</li></ul><p>(Za "
+#~ "detalje pogledajte dokumentaciju džojstika pod Linuxom, "
+#~ "<filename><placeholder>linux_src</placeholder>/Documentation/input/"
+#~ "joystick.txt</filename>).</p></qt>"

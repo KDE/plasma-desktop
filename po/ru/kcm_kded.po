@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-10-08 18:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -51,28 +51,7 @@ msgstr ""
 "Не удалось передать в менеджер служб KDE (kded5) информацию о сохранённых "
 "изменениях: %1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>Этот модуль предоставляет обзор всех модулей Демона KDE, которые также "
-"известны как Службы KDE. Существует два вида служб:</p> <ul > <li>Службы, "
-"запускаемые при старте</li> <li>Службы, запускаемые при необходимости</li> </"
-"ul> <p>Последние перечислены только для справки. Службы, запускаемые при "
-"старте, могут быть остановлены и запущены вручную. Также возможно "
-"определить, какие службы загружаются при старте.</p> <p><b> Используйте с "
-"осторожностью. Некоторые службы жизненно важны для Plasma. Не отключайте "
-"службы, если не знаете что делаете.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -81,7 +60,7 @@ msgstr ""
 "Система управления службами (kded5) не запущена, проверьте, что она "
 "установлена."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -90,7 +69,7 @@ msgstr ""
 "Некоторые службы отключают себя при их запуске, если они не требуются в "
 "текущем окружении."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -99,57 +78,76 @@ msgstr ""
 "Некоторые службы были автоматически запущены или остановлены при перезапуске "
 "системы управления службами (kded5) для применения внесённых изменений."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "Все службы"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Запущенные"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Остановленные"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "Службы, загружаемые при запуске"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Службы, загружаемые при необходимости"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Включить или отключить автоматический запуск этой службы"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Не запущена"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Выполняется"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "Остановить службу"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "Запустить службу"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>Этот модуль предоставляет обзор всех модулей Демона KDE, которые также "
+#~ "известны как Службы KDE. Существует два вида служб:</p> <ul > <li>Службы, "
+#~ "запускаемые при старте</li> <li>Службы, запускаемые при необходимости</"
+#~ "li> </ul> <p>Последние перечислены только для справки. Службы, "
+#~ "запускаемые при старте, могут быть остановлены и запущены вручную. Также "
+#~ "возможно определить, какие службы загружаются при старте.</p> <p><b> "
+#~ "Используйте с осторожностью. Некоторые службы жизненно важны для Plasma. "
+#~ "Не отключайте службы, если не знаете что делаете.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

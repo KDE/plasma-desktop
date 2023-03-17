@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1645901 2023-03-03 02:37:51Z scripty $
+# $Id: kcm_access.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-21 09:34+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -437,40 +437,31 @@ msgstr "Zamuda:"
 msgid "Ring system bell when rejected"
 msgstr "Pozvoni sistemski zvonec ob zavrnitvi"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"Ta modul vam omogoča nastavljanje funkcij za ljudi s posebnimi potrebami, "
-"kot je bralnik zaslona."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Zvonec"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Spremenilne tipke"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtri za tipkovnico"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -601,6 +592,13 @@ msgid ""
 msgstr ""
 "Vse kaže, da bralnik zaslona Orca ni nameščen. Namestite ga pred poskusom "
 "uporabe te možnosti, potem se odjavite in ponovno zaženite računalnik"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "Ta modul vam omogoča nastavljanje funkcij za ljudi s posebnimi potrebami, "
+#~ "kot je bralnik zaslona."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Največja hitrost"

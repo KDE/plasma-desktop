@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-28 22:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -46,32 +46,7 @@ msgstr "فشل الاستعلام عن أجهزة الإدخال. يرجى إع�
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "خطأ فادح في قراءة معلومات الجهاز الأساسية لـ%1."
 
-#: kcm/libinput/libinput_config.cpp:36
-#, kde-format
-msgid "Pointer device KCM"
-msgstr "وحدة تحكم جهاز المؤشر"
-
-#: kcm/libinput/libinput_config.cpp:38
-#, kde-format
-msgid "System Settings module for managing mice and trackballs."
-msgstr "وحدة إعدادات النظام لإدارة الفئران وكرات التتبع."
-
-#: kcm/libinput/libinput_config.cpp:40
-#, kde-format
-msgid "Copyright 2018 Roman Gilg"
-msgstr "Copyright 2018 Roman Gilg"
-
-#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
-#, kde-format
-msgid "Roman Gilg"
-msgstr "Roman Gilg"
-
-#: kcm/libinput/libinput_config.cpp:43
-#, kde-format
-msgid "Developer"
-msgstr "المطور"
-
-#: kcm/libinput/libinput_config.cpp:109
+#: kcm/libinput/libinput_config.cpp:90
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -80,12 +55,12 @@ msgstr ""
 "خطأ أثناء تحميل القيم. انظر السجلات لمزيد من المعلومات. يرجى إعادة تشغيل "
 "وحدة الضبط هذه."
 
-#: kcm/libinput/libinput_config.cpp:114
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "لم يتم العثور على جهاز مؤشر. صل الآن."
 
-#: kcm/libinput/libinput_config.cpp:125
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -94,7 +69,7 @@ msgstr ""
 "غير قادر على حفظ كل التغييرات. انظر السجلات لمزيد من المعلومات. يرجى إعادة "
 "تشغيل وحدة الضبط هذه والمحاولة مرة أخرى."
 
-#: kcm/libinput/libinput_config.cpp:145
+#: kcm/libinput/libinput_config.cpp:126
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -102,7 +77,7 @@ msgid ""
 msgstr ""
 "خطأ أثناء تحميل القيم المبدئية. فشل في تعيين بعض الخيارات لقيمها المبدئية."
 
-#: kcm/libinput/libinput_config.cpp:167
+#: kcm/libinput/libinput_config.cpp:148
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -111,163 +86,163 @@ msgstr ""
 "خطأ أثناء إضافة جهاز متصل حديثًا. يرجى إعادة توصيله وإعادة تشغيل وحدة الضبط "
 "هذه. "
 
-#: kcm/libinput/libinput_config.cpp:191
+#: kcm/libinput/libinput_config.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "جهاز المؤشر غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
-#: kcm/libinput/libinput_config.cpp:193
+#: kcm/libinput/libinput_config.cpp:174
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "جهاز المؤشر غير متصل. لم يتم العثور على أجهزة أخرى."
 
-#: kcm/libinput/main.qml:79
+#: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
 msgstr "الجهاز:"
 
-#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
 #, kde-format
 msgid "General:"
 msgstr "عام:"
 
-#: kcm/libinput/main.qml:105
+#: kcm/libinput/main.qml:100
 #, kde-format
 msgid "Device enabled"
 msgstr "الجهاز مفعّل"
 
-#: kcm/libinput/main.qml:124
+#: kcm/libinput/main.qml:120
 #, kde-format
 msgid "Accept input through this device."
 msgstr "قبول الإدخال من خلال هذا الجهاز."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "وضع الأعسر"
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "بدّل الأزرار اليمنى واليسرى."
 
-#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "اضغط على الزرين الأيمن والأيسر للنقر الأوسط"
 
-#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#: kcm/libinput/main.qml:170 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "يؤدي النقر فوق الزر الأيمن والأيسر في نفس الوقت إلى إرسال نقرة الزر الأوسط."
 
-#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
 msgstr "سرعة المؤشر:"
 
-#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#: kcm/libinput/main.qml:211 kcm/libinput/main_deviceless.qml:137
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "نمط التسارع:"
 
-#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:242 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "Flat"
 msgstr "مسطح"
 
-#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#: kcm/libinput/main.qml:246 kcm/libinput/main_deviceless.qml:172
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "يتحرك المؤشر بنفس مسافة حركة الفأرة."
 
-#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:252 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Adaptive"
 msgstr "متكيف"
 
-#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#: kcm/libinput/main.qml:256 kcm/libinput/main_deviceless.qml:182
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "تعتمد مسافة انتقال المؤشر على سرعة حركة الفأرة."
 
-#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:193
 #, kde-format
 msgid "Scrolling:"
 msgstr "التمرير:"
 
-#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#: kcm/libinput/main.qml:269 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "اعكس اتّجاه التّمرير"
 
-#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:211
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "تمرير مثل الشاشة العاملة باللمس."
 
-#: kcm/libinput/main.qml:295
+#: kcm/libinput/main.qml:290
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "سرعة المؤشر:"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:338
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "أبطأ"
 
-#: kcm/libinput/main.qml:349
+#: kcm/libinput/main.qml:344
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "أسرع"
 
-#: kcm/libinput/main.qml:360
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "إعادة ربط أزرار الفأرة الإضافية..."
 
-#: kcm/libinput/main.qml:396
+#: kcm/libinput/main.qml:391
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "زر إضافي %1:"
 
-#: kcm/libinput/main.qml:426
+#: kcm/libinput/main.qml:421
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "اضغط زر الفأرة الذي تريد أن تضيف ربط إليه"
 
-#: kcm/libinput/main.qml:427
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "أدخل توليفة مفاتيح جديدة لـ %1"
 
-#: kcm/libinput/main.qml:431
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: kcm/libinput/main.qml:448
+#: kcm/libinput/main.qml:443
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "اضغط زر الفأرة "
 
-#: kcm/libinput/main.qml:449
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "أضف ربط…"
 
-#: kcm/libinput/main.qml:478
+#: kcm/libinput/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
@@ -530,52 +505,7 @@ msgstr "بكسل/ثانية"
 msgid "Acceleration &profile:"
 msgstr "مو&اصفات التسارع:"
 
-#: kcm/xlib/xlib_config.cpp:79
-#, kde-format
-msgid "Mouse"
-msgstr "فأرة"
-
-#: kcm/xlib/xlib_config.cpp:83
-#, kde-format
-msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2018 Mouse developers"
-
-#: kcm/xlib/xlib_config.cpp:84
-#, kde-format
-msgid "Patrick Dowler"
-msgstr "Patrick Dowler"
-
-#: kcm/xlib/xlib_config.cpp:85
-#, kde-format
-msgid "Dirk A. Mueller"
-msgstr "Dirk A. Mueller"
-
-#: kcm/xlib/xlib_config.cpp:86
-#, kde-format
-msgid "David Faure"
-msgstr "David Faure"
-
-#: kcm/xlib/xlib_config.cpp:87
-#, kde-format
-msgid "Bernd Gehrmann"
-msgstr "Bernd Gehrmann"
-
-#: kcm/xlib/xlib_config.cpp:88
-#, kde-format
-msgid "Rik Hemsley"
-msgstr "Rik Hemsley"
-
-#: kcm/xlib/xlib_config.cpp:89
-#, kde-format
-msgid "Brad Hughes"
-msgstr "Brad Hughes"
-
-#: kcm/xlib/xlib_config.cpp:90
-#, kde-format
-msgid "Brad Hards"
-msgstr "Brad Hards"
-
-#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
 #, kde-format
 msgid " pixel"
 msgid_plural " pixels"
@@ -586,7 +516,7 @@ msgstr[3] "بكسلات"
 msgstr[4] "بكسلا"
 msgstr[5] "بكسل"
 
-#: kcm/xlib/xlib_config.cpp:293
+#: kcm/xlib/xlib_config.cpp:277
 #, kde-format
 msgid " line"
 msgid_plural " lines"
@@ -596,6 +526,48 @@ msgstr[2] "سطران"
 msgstr[3] "أسطر"
 msgstr[4] "سطرا"
 msgstr[5] "سطر"
+
+#~ msgid "Pointer device KCM"
+#~ msgstr "وحدة تحكم جهاز المؤشر"
+
+#~ msgid "System Settings module for managing mice and trackballs."
+#~ msgstr "وحدة إعدادات النظام لإدارة الفئران وكرات التتبع."
+
+#~ msgid "Copyright 2018 Roman Gilg"
+#~ msgstr "Copyright 2018 Roman Gilg"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid "Developer"
+#~ msgstr "المطور"
+
+#~ msgid "Mouse"
+#~ msgstr "فأرة"
+
+#~ msgid "(c) 1997 - 2018 Mouse developers"
+#~ msgstr "(c) 1997 - 2018 Mouse developers"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
 
 #~ msgid "Ralf Nolden"
 #~ msgstr "Ralf Nolden"

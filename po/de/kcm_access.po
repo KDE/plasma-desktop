@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-01 18:22+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -433,39 +433,31 @@ msgstr "Verzögerung:"
 msgid "Ring system bell when rejected"
 msgstr "Signalton verwenden, wenn zurückgewiesen"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"Mit diesem Modul können Sie die Zugangshilfen wie Screenreader einrichten."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Signale"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Sondertasten"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Verlangsamte Tasten"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Mausnavigation"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -597,6 +589,12 @@ msgstr ""
 "Anscheinend ist der Orca-Screenreader nicht installiert. Bitte installieren "
 "Sie das Programm, ehe Sie diese Funktion verwenden und melden Sie sich ab "
 "oder starten den Rechner neu."
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "Mit diesem Modul können Sie die Zugangshilfen wie Screenreader einrichten."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Maximale Geschwindigkeit"

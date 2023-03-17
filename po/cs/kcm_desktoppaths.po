@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 09:40+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -56,18 +56,6 @@ msgstr "Veřejný"
 #, kde-format
 msgid "Templates"
 msgstr "Šablony"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Cesty</h1>\n"
-"Tento modul umožňuje nastavit si, kam se budou ukládat soubory pracovní "
-"plochy. Nápovědu k volbám získáte použitím funkce \"Co je toto\" (Shift+F1)."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -161,3 +149,14 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Vyberte nové místo"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Cesty</h1>\n"
+#~ "Tento modul umožňuje nastavit si, kam se budou ukládat soubory pracovní "
+#~ "plochy. Nápovědu k volbám získáte použitím funkce \"Co je toto\" (Shift"
+#~ "+F1)."

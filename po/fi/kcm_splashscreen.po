@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-04 19:55+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -33,27 +33,22 @@ msgstr "Tervetuloruutua ei näytetä"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Käytössä olevaa tervetuloruutua ei voi poistaa"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Tässä osiossa voit valita tervetuloruudun teeman."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Tervetuloruudun esikatselu epäonnistui."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Kokeile tervetuloruutua"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Poista asennus"
@@ -69,6 +64,9 @@ msgstr "Tulevaan käyttöön"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nykyisen tervetuloruututeeman nimi"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "Tässä osiossa voit valita tervetuloruudun teeman."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Hae uusia tervetuloikkunoita…"

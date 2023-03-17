@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2007-02-01 10:26+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>مدیر نشست</h1> شما می‌توانید مدیر نشست خود را در اینجا پیکربندی کنید. "
-"شامل گزینه‌هایی نظیر، آیا خروج نشست )خروج( باید تأیید شود یا نه، آیا نشست "
-"باید هنگام ورود دوباره بازگردانده شود و آیا به طور پیش‌فرض، رایانه‌ها باید بعد "
-"از خروج نشست به صورت خودکار تعطیل شوند."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -198,6 +184,18 @@ msgstr "هنگام ورود"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>مدیر نشست</h1> شما می‌توانید مدیر نشست خود را در اینجا پیکربندی کنید. "
+#~ "شامل گزینه‌هایی نظیر، آیا خروج نشست )خروج( باید تأیید شود یا نه، آیا نشست "
+#~ "باید هنگام ورود دوباره بازگردانده شود و آیا به طور پیش‌فرض، رایانه‌ها باید "
+#~ "بعد از خروج نشست به صورت خودکار تعطیل شوند."
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

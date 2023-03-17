@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-19 15:26-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -49,33 +49,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Erro crítico ao ler as informações fundamentais de dispositivo de %1."
 
-#: kcm/libinput/libinput_config.cpp:36
-#, kde-format
-msgid "Pointer device KCM"
-msgstr "KCM do dispositivo apontador"
-
-#: kcm/libinput/libinput_config.cpp:38
-#, kde-format
-msgid "System Settings module for managing mice and trackballs."
-msgstr ""
-"Módulo das configurações do sistema para gerenciar mouses e trackballs."
-
-#: kcm/libinput/libinput_config.cpp:40
-#, kde-format
-msgid "Copyright 2018 Roman Gilg"
-msgstr "Copyright 2018 Roman Gilg"
-
-#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
-#, kde-format
-msgid "Roman Gilg"
-msgstr "Roman Gilg"
-
-#: kcm/libinput/libinput_config.cpp:43
-#, kde-format
-msgid "Developer"
-msgstr "Desenvolvedor"
-
-#: kcm/libinput/libinput_config.cpp:109
+#: kcm/libinput/libinput_config.cpp:90
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -84,12 +58,12 @@ msgstr ""
 "Erro ao carregar valores. Veja os logs para mais informação. Reinicie este "
 "módulo de configuração."
 
-#: kcm/libinput/libinput_config.cpp:114
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenhum dispositivo apontador encontrado. Conectar agora."
 
-#: kcm/libinput/libinput_config.cpp:125
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -98,7 +72,7 @@ msgstr ""
 "Não foi possível salvar as alterações. Veja os logs para maiores informação. "
 "Reinicie este módulo de configuração e tente novamente."
 
-#: kcm/libinput/libinput_config.cpp:145
+#: kcm/libinput/libinput_config.cpp:126
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -107,7 +81,7 @@ msgstr ""
 "Erro ao carregar os valores padrão. Não foi possível definir os valores "
 "padrão em algumas opções."
 
-#: kcm/libinput/libinput_config.cpp:167
+#: kcm/libinput/libinput_config.cpp:148
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -116,56 +90,56 @@ msgstr ""
 "Erro ao adicionar o dispositivo conectado recentemente. Reconecte-o e "
 "reinicie este módulo de configuração."
 
-#: kcm/libinput/libinput_config.cpp:191
+#: kcm/libinput/libinput_config.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "O dispositivo apontador foi desconectado. A sua tela de configurações foi "
 "fechada."
 
-#: kcm/libinput/libinput_config.cpp:193
+#: kcm/libinput/libinput_config.cpp:174
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 "O dispositivo apontador foi desconectado. Não foi encontrado nenhum outro "
 "dispositivo."
 
-#: kcm/libinput/main.qml:79
+#: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
 #, kde-format
 msgid "General:"
 msgstr "Geral:"
 
-#: kcm/libinput/main.qml:105
+#: kcm/libinput/main.qml:100
 #, kde-format
 msgid "Device enabled"
 msgstr "Dispositivo habilitado"
 
-#: kcm/libinput/main.qml:124
+#: kcm/libinput/main.qml:120
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Aceitar entradas através deste dispositivo."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Modo canhoto"
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Inverte os botões direito e esquerdo."
 
-#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Emular botão do meio pressionando os botões esquerdo e direito"
 
-#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#: kcm/libinput/main.qml:170 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -173,113 +147,113 @@ msgstr ""
 "Ao clicar os botões esquerdo e direito simultaneamente é enviado um clique "
 "equivalente ao botão do meio."
 
-#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
-#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#: kcm/libinput/main.qml:211 kcm/libinput/main_deviceless.qml:137
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Perfil de aceleração:"
 
-#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:242 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "Flat"
 msgstr "Constante"
 
-#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#: kcm/libinput/main.qml:246 kcm/libinput/main_deviceless.qml:172
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "A distância percorrida pelo cursor é a mesma do mouse."
 
-#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:252 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Adaptive"
 msgstr "Adaptativo"
 
-#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#: kcm/libinput/main.qml:256 kcm/libinput/main_deviceless.qml:182
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "A distância percorrida pelo cursor depende da velocidade do movimento do "
 "mouse."
 
-#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:193
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolagem:"
 
-#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#: kcm/libinput/main.qml:269 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Inverter direção da rolagem"
 
-#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:211
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Rolagem similar à tela de toque."
 
-#: kcm/libinput/main.qml:295
+#: kcm/libinput/main.qml:290
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade de rolagem:"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:338
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mais lento"
 
-#: kcm/libinput/main.qml:349
+#: kcm/libinput/main.qml:344
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mais rápido"
 
-#: kcm/libinput/main.qml:360
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr ""
 
-#: kcm/libinput/main.qml:396
+#: kcm/libinput/main.qml:391
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Botão extra %1:"
 
-#: kcm/libinput/main.qml:426
+#: kcm/libinput/main.qml:421
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 
-#: kcm/libinput/main.qml:427
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr ""
 
-#: kcm/libinput/main.qml:431
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: kcm/libinput/main.qml:448
+#: kcm/libinput/main.qml:443
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Pressione um botão do mouse"
 
-#: kcm/libinput/main.qml:449
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr ""
 
-#: kcm/libinput/main.qml:478
+#: kcm/libinput/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
@@ -549,64 +523,62 @@ msgstr " pixels/s"
 msgid "Acceleration &profile:"
 msgstr "&Perfil de aceleração:"
 
-#: kcm/xlib/xlib_config.cpp:79
-#, kde-format
-msgid "Mouse"
-msgstr "Mouse"
-
-#: kcm/xlib/xlib_config.cpp:83
-#, kde-format
-msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2018 Desenvolvedores do mouse"
-
-#: kcm/xlib/xlib_config.cpp:84
-#, kde-format
-msgid "Patrick Dowler"
-msgstr "Patrick Dowler"
-
-#: kcm/xlib/xlib_config.cpp:85
-#, kde-format
-msgid "Dirk A. Mueller"
-msgstr "Dirk A. Mueller"
-
-#: kcm/xlib/xlib_config.cpp:86
-#, kde-format
-msgid "David Faure"
-msgstr "David Faure"
-
-#: kcm/xlib/xlib_config.cpp:87
-#, kde-format
-msgid "Bernd Gehrmann"
-msgstr "Bernd Gehrmann"
-
-#: kcm/xlib/xlib_config.cpp:88
-#, kde-format
-msgid "Rik Hemsley"
-msgstr "Rik Hemsley"
-
-#: kcm/xlib/xlib_config.cpp:89
-#, kde-format
-msgid "Brad Hughes"
-msgstr "Brad Hughes"
-
-#: kcm/xlib/xlib_config.cpp:90
-#, kde-format
-msgid "Brad Hards"
-msgstr "Brad Hards"
-
-#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
 #, kde-format
 msgid " pixel"
 msgid_plural " pixels"
 msgstr[0] " pixel"
 msgstr[1] " pixels"
 
-#: kcm/xlib/xlib_config.cpp:293
+#: kcm/xlib/xlib_config.cpp:277
 #, kde-format
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " linha"
 msgstr[1] " linhas"
+
+#~ msgid "Pointer device KCM"
+#~ msgstr "KCM do dispositivo apontador"
+
+#~ msgid "System Settings module for managing mice and trackballs."
+#~ msgstr ""
+#~ "Módulo das configurações do sistema para gerenciar mouses e trackballs."
+
+#~ msgid "Copyright 2018 Roman Gilg"
+#~ msgstr "Copyright 2018 Roman Gilg"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid "Developer"
+#~ msgstr "Desenvolvedor"
+
+#~ msgid "Mouse"
+#~ msgstr "Mouse"
+
+#~ msgid "(c) 1997 - 2018 Mouse developers"
+#~ msgstr "(c) 1997 - 2018 Desenvolvedores do mouse"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
 
 #~ msgid "Ralf Nolden"
 #~ msgstr "Ralf Nolden"

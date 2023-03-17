@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -173,49 +173,6 @@ msgstr "Tak bisa menerapkan nilai kalibrasi untuk peranti joystick %1: %2"
 msgid "internal error - code %1 unknown"
 msgstr "error internal - kode %1 tak diketahui"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Modul Kontrol Joystick KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Modul System Settings KDE untuk mencoba Joystick"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Joystick</h1>Modul ini membantu untuk memeriksa apakah joystick bekerja "
-"secara benar.<br />Jika modul mengantarkan nilai yang salah untuk poros, "
-"anda dapat mencoba untuk memecahkan masalah ini dengan kalibrasi.<br /> "
-"Modul ini mencoba untuk mencari semua peranti joystick yang tersedia dengan "
-"memeriksa /dev/js[0-4] dan /dev/input/js[0-4]<br />Jika anda memiliki file "
-"peranti lainnya, masukkan di dalam kotak kombo.<br />Senarai Tombol "
-"menampilkan kondisi tombol di joystick anda, senarai Poros menampilkan nilai "
-"saat ini untuk semua poros.<br />CATATAN: driver peranti Linux saat ini "
-"(Kernel 2.4, 2.6) hanya dapat mendeteksi secara otomatis joystick <ul><li>2-"
-"poros, 4-tombol</li><li>joystick 3-poros, 4-tombol</li><li>joystick 4-poros, "
-"4-tombol</li><li>Joystick 'digital' Saitek Cyborg</li></ul>(Untuk perincian "
-"anda dapat melihat source/Documentation/input/joystick.txt Linux anda)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -319,3 +276,40 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Kembalikan semua nilai kalibrasi untuk peranti joystick %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Modul Kontrol Joystick KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Modul System Settings KDE untuk mencoba Joystick"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Joystick</h1>Modul ini membantu untuk memeriksa apakah joystick "
+#~ "bekerja secara benar.<br />Jika modul mengantarkan nilai yang salah untuk "
+#~ "poros, anda dapat mencoba untuk memecahkan masalah ini dengan kalibrasi."
+#~ "<br /> Modul ini mencoba untuk mencari semua peranti joystick yang "
+#~ "tersedia dengan memeriksa /dev/js[0-4] dan /dev/input/js[0-4]<br />Jika "
+#~ "anda memiliki file peranti lainnya, masukkan di dalam kotak kombo.<br /"
+#~ ">Senarai Tombol menampilkan kondisi tombol di joystick anda, senarai "
+#~ "Poros menampilkan nilai saat ini untuk semua poros.<br />CATATAN: driver "
+#~ "peranti Linux saat ini (Kernel 2.4, 2.6) hanya dapat mendeteksi secara "
+#~ "otomatis joystick <ul><li>2-poros, 4-tombol</li><li>joystick 3-poros, 4-"
+#~ "tombol</li><li>joystick 4-poros, 4-tombol</li><li>Joystick 'digital' "
+#~ "Saitek Cyborg</li></ul>(Untuk perincian anda dapat melihat source/"
+#~ "Documentation/input/joystick.txt Linux anda)"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-01 07:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -83,25 +83,6 @@ msgstr "Oznaka:"
 #, kde-format
 msgid "Preview"
 msgstr "Predogled"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE-jevo orodje za nadzor tipkovnice"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tipkovnica</h1> Ta nadzorni modul lahko uporabite za nastavitev "
-"parametrov in razporeditev tipk."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "model ne podpira določene postavitve ali različice postavitve. Ta težava se "
 "bo verjetno pojavila tudi, ko poskusite uporabiti to kombinacijo modela,"
 "postavitve in varianto."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE-jevo orodje za nadzor tipkovnice"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tipkovnica</h1> Ta nadzorni modul lahko uporabite za nastavitev "
+#~ "parametrov in razporeditev tipk."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Preklopnik razporeditev tipk za KDE"

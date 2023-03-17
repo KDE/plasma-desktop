@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-07-03 09:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -49,29 +49,7 @@ msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 "Не вдалося сповістити керування службами KDE (kded5) щодо збережених змін: %1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>За допомогою цього модуля ви зможете переглянути список всіх додатків до "
-"фонової служби KDE, які також називають службами KDE. Взагалі, є два типи "
-"служб:</p><ul> <li>служби, що викликаються при запуску Плазми</"
-"li><li>служби, що викликаються за запитом.</li></ul><p>Останні тут наведені "
-"лише для зручності. Служби, які викликаються при запуску KDE можна запускати "
-"або зупиняти. Також можна вказати, які служби запускати під час запуску KDE."
-"</p><p><b> Будьте обережні при користуванні: робота деяких служб життєво "
-"потрібна для Плазми. Не вимикайте служби, якщо ви не впевнені в тому, що "
-"робите.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -80,7 +58,7 @@ msgstr ""
 "Зараз керування фоновими службами (kded5) не запущено. Переконайтеся, що "
 "засоби керування встановлено належним чином."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -89,7 +67,7 @@ msgstr ""
 "Деякі служби, якщо запустити їх вручну, вимикаються автоматично, якщо вони є "
 "незастосовними до поточного середовища."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -98,58 +76,78 @@ msgstr ""
 "Деякі слуби було автоматично запущено або зупинено, коли було перезапущено "
 "засіб керування службами (kded5) для застосування внесених вами змін."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "Усі служби"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Запущено"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Не запущено"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "Служби, які завантажуються при запуску"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Служби, які завантажуються за запитом"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 "Увімкнути або вимкнути автоматичне завантаження цієї служби під час запуску"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Зупинено"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Запущено"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "Зупинити службу"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "Запустити службу"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>За допомогою цього модуля ви зможете переглянути список всіх додатків "
+#~ "до фонової служби KDE, які також називають службами KDE. Взагалі, є два "
+#~ "типи служб:</p><ul> <li>служби, що викликаються при запуску Плазми</"
+#~ "li><li>служби, що викликаються за запитом.</li></ul><p>Останні тут "
+#~ "наведені лише для зручності. Служби, які викликаються при запуску KDE "
+#~ "можна запускати або зупиняти. Також можна вказати, які служби запускати "
+#~ "під час запуску KDE.</p><p><b> Будьте обережні при користуванні: робота "
+#~ "деяких служб життєво потрібна для Плазми. Не вимикайте служби, якщо ви не "
+#~ "впевнені в тому, що робите.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

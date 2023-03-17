@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-07-11 13:26+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -196,12 +196,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Underhâlder"
@@ -232,43 +232,22 @@ msgstr "It apparaat eigenskip %1 moat lyk wêze oan %2"
 msgid "The device property %1 must contain %2"
 msgstr "It apparaat eigenskip %1 moat befette %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid apparaat aksje bewurker"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Silid apparaat akjse kontrôle paniel module"
-
-#: SolidActions.cpp:37
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Solid Device Actions team"
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009 Solid Device Actions team"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "It blykt dat it predikaat foar dizze aksje net jildich is."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Flater by it ûntleden fan apparaat kondysjes"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Gjin aksje selektearre"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Kin net wiske wurde"
@@ -290,6 +269,17 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid apparaat aksje bewurker"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Silid apparaat akjse kontrôle paniel module"
+
+#, fuzzy
+#~| msgid "(c) 2009 Solid Device Actions team"
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009 Solid Device Actions team"
 
 #~ msgid "Edit..."
 #~ msgstr "Bewurkje..."

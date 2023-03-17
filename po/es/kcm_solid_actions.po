@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-27 00:52+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -198,12 +198,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Encargado"
@@ -233,42 +233,22 @@ msgstr "La propiedad %1 del dispositivo debe ser igual a %2"
 msgid "The device property %1 must contain %2"
 msgstr "La propiedad %1 del dispositivo debe contener %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Editor de acciones del dispositivo Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Módulo del panel de control de acciones del dispositivo Solid"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© 2009, 2014 Equipo de acciones de los dispositivos Solid"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Adaptación a Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Parece que el predicado de esta acción no es válido."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Error al procesar las condiciones del dispositivo"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "No hay seleccionada ninguna acción"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "No se puede borrar"
@@ -290,6 +270,18 @@ msgstr "Editar..."
 #, kde-format
 msgid "Add…"
 msgstr "Añadir..."
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Editor de acciones del dispositivo Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Módulo del panel de control de acciones del dispositivo Solid"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© 2009, 2014 Equipo de acciones de los dispositivos Solid"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Adaptación a Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Editar..."

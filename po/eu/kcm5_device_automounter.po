@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-13 22:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -32,36 +32,6 @@ msgstr "Iñigo Salvador Azurmendi,Hizkuntza Politikarako Sailburuordetza"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus,hizpol@ej-gv.es"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Gailuen muntaketa automatikoa"
-
-#: DeviceAutomounterKCM.cpp:42
-#, kde-format
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr "Jatorrizko egilea"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr "Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr "Plasma 5era egokitzea"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -185,6 +155,24 @@ msgstr "Gailu hau automatikoki muntatuko da eranstean."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Gailu hau ez da automatikoki muntatuko eranstean."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Gailuen muntaketa automatikoa"
+
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
+
+#~ msgid "Original Author"
+#~ msgstr "Jatorrizko egilea"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Plasma 5 Port"
+#~ msgstr "Plasma 5era egokitzea"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

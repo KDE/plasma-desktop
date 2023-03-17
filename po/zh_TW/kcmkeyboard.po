@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-06-12 04:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -86,23 +86,6 @@ msgstr "標籤："
 #, kde-format
 msgid "Preview"
 msgstr "預覽"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE 鍵盤控制模組"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr "<h1>鍵盤</h1>此控制模組可用於控制鍵盤參數與佈局。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -496,6 +479,17 @@ msgid ""
 msgstr ""
 "無法載入鍵位資訊 (geometry)。通常是由於使用者選擇的型號不支援特定的佈局或佈局"
 "分支。在此型號—佈局（及分支）的組合下本問題將一直存在。"
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE 鍵盤控制模組"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr "<h1>鍵盤</h1>此控制模組可用於控制鍵盤參數與佈局。"
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "鍵盤佈局切換器"

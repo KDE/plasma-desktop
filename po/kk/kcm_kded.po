@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2011-02-14 04:17+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -47,115 +47,115 @@ msgstr "<em>%1</em> сервері жегілмеді."
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<h1>Қызметтер менеджері</h1><p> Бұл модульде барлық KDE қызметтін (басқаша "
-"KDE демоны деп аталатын) плагиндерінің шолуын көре аласыз. Жалпы, "
-"қызметтердің екі түрі болады:</p><ul> <li>KDE сеансы басталғанда жегілетін</"
-"li> <li>Арнаулы шақырлып жегілетін</li></ul><p> Соңғылары мұнда тек мәлімет "
-"үшін келтіріліген. Басталғанда жегілетін қызметтерді тоқтатуға, кейін қайта "
-"жегуге болады. Әкімші күйінде, қай қызметтер бастағанда жүктелетінін "
-"анықтауға болады.</p><p><b> Байқаңыз, кейбір қызметтер KDE істеуіне өте "
-"маңызды. Маңызың білмейтін қызметке тимеңіз.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "Қызмет"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "Жегілген"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Жегілмеген"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "Басталғанда жегілетін қызметтер"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Арнаулы шақырлып жегілетін"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Жегілмеген"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Жегілген"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "Қызмет"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
 msgstr "Қызмет"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#~| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#~| "Generally, there are two types of service:</p><ul><li>Services invoked "
+#~| "at startup</li><li>Services called on demand</li></ul><p>The latter are "
+#~| "only listed for convenience. The startup services can be started and "
+#~| "stopped. In Administrator mode, you can also define whether services "
+#~| "should be loaded at startup.</p><p><b> Use this with care: some services "
+#~| "are vital for KDE; do not deactivate services if you do not know what "
+#~| "you are doing.</b></p>"
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<h1>Қызметтер менеджері</h1><p> Бұл модульде барлық KDE қызметтін "
+#~ "(басқаша KDE демоны деп аталатын) плагиндерінің шолуын көре аласыз. "
+#~ "Жалпы, қызметтердің екі түрі болады:</p><ul> <li>KDE сеансы басталғанда "
+#~ "жегілетін</li> <li>Арнаулы шақырлып жегілетін</li></ul><p> Соңғылары "
+#~ "мұнда тек мәлімет үшін келтіріліген. Басталғанда жегілетін қызметтерді "
+#~ "тоқтатуға, кейін қайта жегуге болады. Әкімші күйінде, қай қызметтер "
+#~ "бастағанда жүктелетінін анықтауға болады.</p><p><b> Байқаңыз, кейбір "
+#~ "қызметтер KDE істеуіне өте маңызды. Маңызың білмейтін қызметке тимеңіз.</"
+#~ "b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

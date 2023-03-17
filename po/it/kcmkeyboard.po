@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-30 15:26+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Etichetta:"
 #, kde-format
 msgid "Preview"
 msgstr "Anteprima"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Modulo di controllo della tastiera di KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastiera</h1> Questo modulo di controllo può essere usato per "
-"configurare i parametri e le mappature della tastiera."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "modello selezionato non supporta una mappatura o una sua variante specifica. "
 "È probabile che questo problema si presenterà anche se proverai ad "
 "utilizzare questa combinazione di modello, mappatura e variante."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Modulo di controllo della tastiera di KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastiera</h1> Questo modulo di controllo può essere usato per "
+#~ "configurare i parametri e le mappature della tastiera."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Cambiatastiera di KDE"

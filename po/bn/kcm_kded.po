@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2004-10-18 22:57-0500\n"
 "Last-Translator: Khandakar Mujahidul Islam <suzan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -40,115 +40,115 @@ msgstr "সার্ভিস আরম্ভ করতে ব্যর্থ।
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<h1>সার্ভিস ম্যানেজার</h1><p>এই মডিউল আপনাকে কে-ডি-ই ডীম্যানের সব প্লাগ-ইনের "
-"একটি সারমর্ম জানার অনুমতি দেবে, যেগুলো কে-ডি-ই সার্ভিস হিসেবে পরিচিত। সাধারণত, "
-"দুই ধরণের সার্ভিস আছে:</p><ul><li>শুরুতে আহবান করা সার্ভিস সমূহ</"
-"li><li>প্রয়োজনানুসারে ডাকা সার্ভিস সমূহ</li></ul><p>অপেক্ষাকৃত পরবর্তীটি শুধু সুবিধার "
-"জন্য তালিকাকৃত। শুরুতে চালু হওয়া সার্ভিস সমূহ আরম্ভ এবং বন্ধ হতে পারে। অ্যাডমিনিস্ট্রেটর "
-"মোডে, শুরুতে কখন সার্ভিস সমূহ চালু হবে তা আপনিও নির্দিষ্ট করে দিতে পারেন।</p><p><b> "
-"এটি যত্নের সাথে ব্যবহার করুন, কিছু সার্ভিস কে-ডি-ই'র জন্য অতীব গুরুত্বপূর্ণ; আপনি যদি "
-"না জানেন যে কি করছেন তাহলে সার্ভিস সমূহ নিষ্ক্রিয় করবেন না।</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "সার্ভিস"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "চলছে"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "চলছে না"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "শুরুতে চালু হওয়া সার্ভিস সমূহ"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "প্রয়োজনে-লোড-করা সার্ভিস-সমূহ"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "চলছে না"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "চলছে"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "সার্ভিস"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
 msgstr "সার্ভিস"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#~| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#~| "Generally, there are two types of service:</p><ul><li>Services invoked "
+#~| "at startup</li><li>Services called on demand</li></ul><p>The latter are "
+#~| "only listed for convenience. The startup services can be started and "
+#~| "stopped. In Administrator mode, you can also define whether services "
+#~| "should be loaded at startup.</p><p><b> Use this with care: some services "
+#~| "are vital for KDE; do not deactivate services if you do not know what "
+#~| "you are doing.</b></p>"
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<h1>সার্ভিস ম্যানেজার</h1><p>এই মডিউল আপনাকে কে-ডি-ই ডীম্যানের সব প্লাগ-ইনের "
+#~ "একটি সারমর্ম জানার অনুমতি দেবে, যেগুলো কে-ডি-ই সার্ভিস হিসেবে পরিচিত। "
+#~ "সাধারণত, দুই ধরণের সার্ভিস আছে:</p><ul><li>শুরুতে আহবান করা সার্ভিস সমূহ</"
+#~ "li><li>প্রয়োজনানুসারে ডাকা সার্ভিস সমূহ</li></ul><p>অপেক্ষাকৃত পরবর্তীটি শুধু "
+#~ "সুবিধার জন্য তালিকাকৃত। শুরুতে চালু হওয়া সার্ভিস সমূহ আরম্ভ এবং বন্ধ হতে পারে। "
+#~ "অ্যাডমিনিস্ট্রেটর মোডে, শুরুতে কখন সার্ভিস সমূহ চালু হবে তা আপনিও নির্দিষ্ট করে "
+#~ "দিতে পারেন।</p><p><b> এটি যত্নের সাথে ব্যবহার করুন, কিছু সার্ভিস কে-ডি-ই'র জন্য "
+#~ "অতীব গুরুত্বপূর্ণ; আপনি যদি না জানেন যে কি করছেন তাহলে সার্ভিস সমূহ নিষ্ক্রিয় "
+#~ "করবেন না।</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

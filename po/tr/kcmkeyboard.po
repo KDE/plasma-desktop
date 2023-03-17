@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-14 21:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -84,25 +84,6 @@ msgstr "Etiket:"
 #, kde-format
 msgid "Preview"
 msgstr "Önizleme"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE Klavye Denetim Modülü"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Klavye</h1> Bu denetim modülü, klavye parametrelerinin ve düzeninin "
-"yapılandırılması için kullanılır."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -510,3 +491,16 @@ msgstr ""
 "düzeni veya düzen çeşidini desteklemediğini gösterir. Bu sorun, bu model, "
 "düzen ve çeşidinin kombinasyonunu kullanmaya çalıştığınızda da ortaya "
 "çıkacaktır."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE Klavye Denetim Modülü"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Klavye</h1> Bu denetim modülü, klavye parametrelerinin ve düzeninin "
+#~ "yapılandırılması için kullanılır."

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-06 15:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -70,20 +70,6 @@ msgstr "Público"
 #, kde-format
 msgid "Templates"
 msgstr "Plantillas"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Rutas</h1>\n"
-"Este módulo le permite elegir en qué parte del sistema de archivos se "
-"almacenan los archivos del escritorio.\n"
-"Use «¿Qué es esto?» (Mayúsculas+F1) para obtener ayuda sobre las opciones "
-"específicas."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -175,6 +161,18 @@ msgstr "Esta carpeta será la predeterminada para cargar o guardar plantillas."
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Seleccionar nueva ubicación"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Rutas</h1>\n"
+#~ "Este módulo le permite elegir en qué parte del sistema de archivos se "
+#~ "almacenan los archivos del escritorio.\n"
+#~ "Use «¿Qué es esto?» (Mayúsculas+F1) para obtener ayuda sobre las opciones "
+#~ "específicas."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

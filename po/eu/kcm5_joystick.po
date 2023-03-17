@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2014-01-26 22:51+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -179,51 +179,6 @@ msgstr "Ezin izan dira %1 kontrol-palankaren kalibrazio-balioak aplikatu: %2"
 msgid "internal error - code %1 unknown"
 msgstr "barne-errorea: %1 kode ezezaguna"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDEren kontrol-palankaren aginte-modulua"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "KDEren kontrol-palanka probatzeko sistema-ezarpenen modulua"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Kontrol-palanka</h1>Kontrol-palankak behar bezala funtzionatzen duen "
-"egiaztatzen laguntzen du modulu honek.<br />Moduluak badio ardatzek balio "
-"okerrak dituztela, arazoa kalibrazioaren bidez konpontzen saia zaitezke.<br /"
-">Modulu hau erabilgarri dauden kontrol-palanka guztiak aurkitzen saiatzen "
-"da; horretarako, /dev/js[0-4] eta /dev/input/js[0-4] egiaztatzen ditu<br /"
-">Beste gailu-fitxategi bat baduzu, adierazi konbinazio-koadroan.<br />Botoi-"
-"zerrendan, kontrol-palankak dituen botoien egoera azaltzen da; ardatz-"
-"zerrendan, ardatz guztiek une honetan duten balioa bistaratzen da.<br /"
-">OHARRA: une honetako Linux-en gailu-kontrolatzaileak (nukleoa 2.4, 2.6) "
-"kontrol-palanka hauek soilik detekta ditzake automatikoki: <ul><li>2 ardatz "
-"eta 4 botoi dituzten kontrol-palankak</li><li>3 ardatz eta 4 botoi "
-"dituztenak</li><li>4 ardatz eta 4 botoi dituztenak</li><li>Saitek Cyborg "
-"kontrol-palanka 'digitala'</li></ul>(Xehetasun gehiago nahi badituzu, "
-"begiratu Linux-en source/Documentation/input/joystick.txt fitxategia)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -328,3 +283,42 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Leheneratu %1 kontrol-palankaren kalibrazio-balio guztiak."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDEren kontrol-palankaren aginte-modulua"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "KDEren kontrol-palanka probatzeko sistema-ezarpenen modulua"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Kontrol-palanka</h1>Kontrol-palankak behar bezala funtzionatzen duen "
+#~ "egiaztatzen laguntzen du modulu honek.<br />Moduluak badio ardatzek balio "
+#~ "okerrak dituztela, arazoa kalibrazioaren bidez konpontzen saia zaitezke."
+#~ "<br />Modulu hau erabilgarri dauden kontrol-palanka guztiak aurkitzen "
+#~ "saiatzen da; horretarako, /dev/js[0-4] eta /dev/input/js[0-4] egiaztatzen "
+#~ "ditu<br />Beste gailu-fitxategi bat baduzu, adierazi konbinazio-koadroan."
+#~ "<br />Botoi-zerrendan, kontrol-palankak dituen botoien egoera azaltzen "
+#~ "da; ardatz-zerrendan, ardatz guztiek une honetan duten balioa bistaratzen "
+#~ "da.<br />OHARRA: une honetako Linux-en gailu-kontrolatzaileak (nukleoa "
+#~ "2.4, 2.6) kontrol-palanka hauek soilik detekta ditzake automatikoki: "
+#~ "<ul><li>2 ardatz eta 4 botoi dituzten kontrol-palankak</li><li>3 ardatz "
+#~ "eta 4 botoi dituztenak</li><li>4 ardatz eta 4 botoi dituztenak</"
+#~ "li><li>Saitek Cyborg kontrol-palanka 'digitala'</li></ul>(Xehetasun "
+#~ "gehiago nahi badituzu, begiratu Linux-en source/Documentation/input/"
+#~ "joystick.txt fitxategia)"

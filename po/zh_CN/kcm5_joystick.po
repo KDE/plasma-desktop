@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -168,46 +168,6 @@ msgstr "无法将校准数值应用到游戏控制器设备 %1：%2"
 msgid "internal error - code %1 unknown"
 msgstr "内部错误 - 代码 %1 未知"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE 游戏控制器控制模块"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "用于测试游戏控制器的 KDE 系统设置模块"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>游戏控制器</h1>此模块可帮助您检查游戏控制器是否正常工作。<br />如果游戏控"
-"制器的轴输出的数值不正确，您可以尝试通过校准来解决。<br />此模块将会检查 /"
-"dev/js[0-4] 和 /dev/input/js[0-4] 上连接的全部游戏控制器设备。<br />如果您有"
-"其他设备文件，请在组合框中输入。<br />按钮列表将会显示您游戏控制器上按钮的状"
-"态，而轴列表将会显示全部轴的当前数值。<br />注意：目前的 Linux 设备驱动程序 "
-"(2.4、2.6 版内核) 只能自动检测以下类型的游戏控制器：<ul><li>2 轴 4 按钮</"
-"li><li>3 轴 4 按钮</li><li>4 轴 4 按钮</li><li>Saitek Cyborg Digital 系列游戏"
-"控制器</li></ul>(详情请查看 Linux 的相关文档 source/Documentation/input/"
-"joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -309,3 +269,36 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "已经恢复了游戏控制器设备 %1 的全部校准数值。"
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE 游戏控制器控制模块"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "用于测试游戏控制器的 KDE 系统设置模块"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>游戏控制器</h1>此模块可帮助您检查游戏控制器是否正常工作。<br />如果游"
+#~ "戏控制器的轴输出的数值不正确，您可以尝试通过校准来解决。<br />此模块将会检"
+#~ "查 /dev/js[0-4] 和 /dev/input/js[0-4] 上连接的全部游戏控制器设备。<br />如"
+#~ "果您有其他设备文件，请在组合框中输入。<br />按钮列表将会显示您游戏控制器上"
+#~ "按钮的状态，而轴列表将会显示全部轴的当前数值。<br />注意：目前的 Linux 设"
+#~ "备驱动程序 (2.4、2.6 版内核) 只能自动检测以下类型的游戏控制器：<ul><li>2 "
+#~ "轴 4 按钮</li><li>3 轴 4 按钮</li><li>4 轴 4 按钮</li><li>Saitek Cyborg "
+#~ "Digital 系列游戏控制器</li></ul>(详情请查看 Linux 的相关文档 source/"
+#~ "Documentation/input/joystick.txt)"

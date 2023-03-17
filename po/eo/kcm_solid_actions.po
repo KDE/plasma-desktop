@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-04 07:13+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -183,12 +183,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Administranto"
@@ -218,42 +218,22 @@ msgstr "La aparatotrajto %1 devas egali al %2"
 msgid "The device property %1 must contain %2"
 msgstr "La aparatotrajto %1 devas enhavi %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr ""
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr ""
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr ""
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Ŝajnas ke la predikato por tiu ago ne estas valida."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Eraro Analizanta Aparatkondiĉojn"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Neniu ago elektita"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Ne eblas forigi"

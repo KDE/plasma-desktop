@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-14 11:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -80,25 +80,6 @@ msgstr "Label:"
 #, kde-format
 msgid "Preview"
 msgstr "Voorbeeld"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE-Toetsenbordbesturingsprogramma"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Toetsenbord</h1> Deze besturingsmodule kan worden gebruikt om "
-"toetsenbordparameters en indelingen in te stellen."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "indeling niet ondersteunt. Dit probleem zal waarschijnlijk ook aanwezig zijn "
 "wanneer u deze combinatie van model, indeling en variant probeert te "
 "gebruiken."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE-Toetsenbordbesturingsprogramma"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Toetsenbord</h1> Deze besturingsmodule kan worden gebruikt om "
+#~ "toetsenbordparameters en indelingen in te stellen."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Omschakelaar van toetsenbordindeling van KDE"

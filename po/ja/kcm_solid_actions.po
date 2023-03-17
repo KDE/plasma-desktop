@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-07-11 15:43-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -195,12 +195,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "メンテナ"
@@ -231,43 +231,22 @@ msgstr "デバイスのプロパティ “%1” は “%2” と等しくなけ�
 msgid "The device property %1 must contain %2"
 msgstr "デバイスのプロパティ “%1” は “%2” を含まなくてはいけない"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid デバイスアクションエディタ"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "デバイスに対するアクションを管理する設定モジュール"
-
-#: SolidActions.cpp:37
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Solid Device Actions team"
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009 Solid デバイスアクション開発チーム"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "このアクションの述部は有効ではないようです。"
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "デバイスの条件の解析エラー"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "アクションが選択されていません"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "削除できません"
@@ -289,3 +268,14 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid デバイスアクションエディタ"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "デバイスに対するアクションを管理する設定モジュール"
+
+#, fuzzy
+#~| msgid "(c) 2009 Solid Device Actions team"
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009 Solid デバイスアクション開発チーム"

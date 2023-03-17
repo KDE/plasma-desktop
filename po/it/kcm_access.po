@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-20 16:18+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -435,40 +435,31 @@ msgstr "Ritardo:"
 msgid "Ring system bell when rejected"
 msgstr "Suona la campanella di sistema se rifiutato"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"Questo modulo consente di configurare le funzioni di accessibilità come un "
-"lettore dello schermo."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Campanella"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Tasti modificatori"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtri tastiera"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Navigazione con mouse"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -601,6 +592,13 @@ msgstr ""
 "Sembra che il lettore dello schermo Orca non sia installato. Installalo "
 "prima di provare a utilizzare questa funzione, quindi chiudi la sessione o "
 "riavvia"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "Questo modulo consente di configurare le funzioni di accessibilità come "
+#~ "un lettore dello schermo."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Velocità massima"

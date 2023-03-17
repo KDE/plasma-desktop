@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-10-01 20:16+0530\n"
 "Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
@@ -170,47 +170,6 @@ msgstr "જોયસ્ટીક ઉપકરણ %1: %2 માટે આંક�
 msgid "internal error - code %1 unknown"
 msgstr "આંતરિક ક્ષતિ - સંજ્ઞા %1 અજાણ્યી"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "કેડીઇ જોયસ્ટીક કાબૂ કરનાર મોડ્યુલ"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "જોયસ્ટીક ચકાસવા માટે કેડીઇ સિસ્ટમ ગોઠવણી મોડ્યુલ "
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) ૨૦૦૪, માર્ટિન કોલેર"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>જોયસ્ટીક</h1>આ મોડ્યુલ તમને તપાસવામાં મદદ કરે છે કે જોયસ્ટીક વ્યવસ્થિત રીતે કામ કરે છે."
-"<br />જો તેને અક્ષીસ પર ખોટા મૂલ્યો પહોચાડયા હશે, તો તમે તેને આંકેલથી તેને ઉકેલી શકો છો. "
-"<br />આ મોડ્યુલ /dev/js[0-4] અને /dev/input/js[0-4] માં તપાસીને જોયસ્ટીક શોધવા "
-"પ્રયત્ન કરે છે <br /> જો તમારી પાસે કોઇ બીજી કોઇ ઉપકરણ ફાઇલ હોય, કોમ્બોબોક્ષ માં લખી "
-"શકો છો.<br /> બટનોની યાદી જોયસ્ટીક પરના બટનોની સ્થિતિ બતાવે છે, અક્ષીસની યાદી "
-"હાલના બધી અક્ષીસનુ મૂલ્ય સૂચવે છે.<br />નોંધ: હાલનુ લિનક્ષ ઉપકરણ ડ્રાઇવર (કર્નલ ૨.૪,૨.૬) "
-"જ માત્ર જાતઓળખાણ કાઢી શકે છે<ul><li>૨-અક્ષીસ, ૪-બટન જોયસ્ટીક</li><li>૩-અક્ષીસ, ૪-"
-"બટન જોયસ્ટીક</li><li>૪-અક્ષીસ, ૪-બટન જોયસ્ટીક</li><li>સાઇટેક સાઇર્બોગ જોયસ્ટીકો</"
-"li></ul>(માહિતી માટે તમે તપાસી શકો છો Linux source/Documentation/input/"
-"joystick.txt"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -314,3 +273,37 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "જોયસ્ટીક ઉપકરણ %1 માટે પાછા લાગુ પાડેલ બધા આંકેલા મૂલ્યો."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "કેડીઇ જોયસ્ટીક કાબૂ કરનાર મોડ્યુલ"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "જોયસ્ટીક ચકાસવા માટે કેડીઇ સિસ્ટમ ગોઠવણી મોડ્યુલ "
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) ૨૦૦૪, માર્ટિન કોલેર"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>જોયસ્ટીક</h1>આ મોડ્યુલ તમને તપાસવામાં મદદ કરે છે કે જોયસ્ટીક વ્યવસ્થિત રીતે કામ "
+#~ "કરે છે.<br />જો તેને અક્ષીસ પર ખોટા મૂલ્યો પહોચાડયા હશે, તો તમે તેને આંકેલથી તેને ઉકેલી "
+#~ "શકો છો. <br />આ મોડ્યુલ /dev/js[0-4] અને /dev/input/js[0-4] માં તપાસીને "
+#~ "જોયસ્ટીક શોધવા પ્રયત્ન કરે છે <br /> જો તમારી પાસે કોઇ બીજી કોઇ ઉપકરણ ફાઇલ હોય, "
+#~ "કોમ્બોબોક્ષ માં લખી શકો છો.<br /> બટનોની યાદી જોયસ્ટીક પરના બટનોની સ્થિતિ બતાવે "
+#~ "છે, અક્ષીસની યાદી હાલના બધી અક્ષીસનુ મૂલ્ય સૂચવે છે.<br />નોંધ: હાલનુ લિનક્ષ ઉપકરણ "
+#~ "ડ્રાઇવર (કર્નલ ૨.૪,૨.૬) જ માત્ર જાતઓળખાણ કાઢી શકે છે<ul><li>૨-અક્ષીસ, ૪-બટન "
+#~ "જોયસ્ટીક</li><li>૩-અક્ષીસ, ૪-બટન જોયસ્ટીક</li><li>૪-અક્ષીસ, ૪-બટન જોયસ્ટીક</"
+#~ "li><li>સાઇટેક સાઇર્બોગ જોયસ્ટીકો</li></ul>(માહિતી માટે તમે તપાસી શકો છો Linux "
+#~ "source/Documentation/input/joystick.txt"

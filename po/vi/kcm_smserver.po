@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-08 17:40+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -18,20 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Trình quản lí phiên</h1> Bạn có thể cấu hình trình quản lí phiên tại "
-"đây. Nó bao gốm các lựa chọn như việc thoát phiên (đăng xuất) có cần được "
-"xác nhận hay không, phiên có cần được khôi phục lại khi đăng nhập hay không, "
-"và theo mặc định máy tính có tự động tắt sau khi thoát phiên hay không."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -204,6 +190,19 @@ msgstr "Khi đăng nhập"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Những ứng dụng sẽ bị loại trừ khỏi phiên"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Trình quản lí phiên</h1> Bạn có thể cấu hình trình quản lí phiên tại "
+#~ "đây. Nó bao gốm các lựa chọn như việc thoát phiên (đăng xuất) có cần được "
+#~ "xác nhận hay không, phiên có cần được khôi phục lại khi đăng nhập hay "
+#~ "không, và theo mặc định máy tính có tự động tắt sau khi thoát phiên hay "
+#~ "không."
 
 #, fuzzy
 #~| msgid "Default leave option:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-26 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-21 10:07+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,13 +18,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid ""
-"This module lets you configure the file indexer and search functionality."
-msgstr "Ten moduł umożliwia ustawienie spisywania oraz wyszukiwania plików."
-
-#: package/contents/ui/main.qml:58
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -34,7 +28,7 @@ msgstr ""
 "zaprzestanie wyświetlania rozszerzonych metadanych ze wszystkich aplikacji "
 "KDE"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -46,23 +40,23 @@ msgstr ""
 "nowa. Może to trochę potrwać, w zależności od liczby plików na twoim "
 "systemie."
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Usuń spis plików"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "Należy ponownie uruchomić system, aby zmiany stały się widoczne."
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Uruchom ponownie"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -70,80 +64,84 @@ msgstr ""
 "Wyszukiwanie plików umożliwia szybkie ustalenie położenia plików na "
 "podstawie ich zawartości."
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgid "Enable File Search"
 msgstr "Włącz wyszukiwanie plików"
 
-#: package/contents/ui/main.qml:122
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Also index file content"
 msgstr "Spisuj także zawartość plików"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Spisuj ukryte pliki i katalogi"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Stan: %1, ukończono %2"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Wstrzymaj spisywanie"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Wznów spisywanie"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Obecnie spisuję: %1"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Ustawienia osobno na katalog:"
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Rozpocznij spisywanie katalogu..."
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Zatrzymaj spisywanie katalogu..."
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Niespisany"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Spisany"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:302
 #, kde-format
 msgid "Delete entry"
 msgstr "Usuń wpis"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Wybierz katalog do uwzględnienia"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Wybierz katalog do wykluczenia"
+
+#~ msgid ""
+#~ "This module lets you configure the file indexer and search functionality."
+#~ msgstr "Ten moduł umożliwia ustawienie spisywania oraz wyszukiwania plików."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

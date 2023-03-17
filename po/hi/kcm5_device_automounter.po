@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-12-09 01:01+0530\n"
 "Last-Translator: G Karunakar\n"
 "Language-Team: Hindi <en@li.org>\n"
@@ -27,37 +27,6 @@ msgstr "जी करूणाकर"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karunakar@indlinux.org"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "उपकरण स्वतःमाउन्टर"
-
-#: DeviceAutomounterKCM.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Trever Fischer"
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 ट्रेवर फ़िशर"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "ट्रेवर फ़िशर"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -168,6 +137,17 @@ msgstr "यह उपकरण जुडने पर स्वतः माउ�
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "यह उपकरण जुडने पर स्वतः माउन्ट नहीं होगा"
+
+#~ msgid "Device Automounter"
+#~ msgstr "उपकरण स्वतःमाउन्टर"
+
+#, fuzzy
+#~| msgid "(c) 2009 Trever Fischer"
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "(c) 2009 ट्रेवर फ़िशर"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "ट्रेवर फ़िशर"
 
 #, fuzzy
 #~| msgid "Mount all removable media at login"

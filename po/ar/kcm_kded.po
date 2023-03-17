@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-01-23 23:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -48,34 +48,14 @@ msgstr "فشل في بدء الخدمة"
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr "فشل في إعلام مدير خدمات كي (kded5) بالتغيرات المحفوظة: %1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>هذه الوحدة تسمح لك بنظرة عامة لكل ملحقات رقيب كِيدِي  و التنفيذ ، المعروف "
-"أيضاً تحت عنوان خدمات كِيدِي. إجمالاً يوجد نوعين من الخدمات:</p><ul><li>الخدمات "
-"المستدعاة عند بدء التشغيل</li><li>الخدمات المستدعاة عند الحاجة</li></ul><p>و "
-"هذه الأخيرة فقط معروضة  للمناسبة. يمكن بدء و إيقاف تشغيل خدمات بدء التشغيل. "
-"تستطيع أيضاً تحديد أي من الخدمات يتم تحميلها عند بدء التشغيل .</p><p><b> "
-"استخدم هذا بحذر: بعض الخدمات هي حيوية لبلازما ، لا تعطل نشاط خدمات إذا لم "
-"تكن على علم تماماً بما تريد فعله. </b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "مدير خدمات الخلفية (kded5) لا يعمل حاليًا. تأكد من تثبيته بشكل صحيح."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -84,7 +64,7 @@ msgstr ""
 "تقوم بعض الخدمات بتعطيل نفسها مرة أخرى عند بدء التشغيل يدويًا إذا لم تكن "
 "مفيدة في البيئة الحالية."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -93,57 +73,75 @@ msgstr ""
 "تم تشغيل / إيقاف بعض الخدمات تلقائيًا عند إعادة تشغيل مدير خدمات الخلفية "
 "(kded5) لتطبيق تغييراتك."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "جميع الخدمات"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "العاملة"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "غير عاملة"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "خدمات بدء التشغيل"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "خدمات التحميل عند الطلب"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "بدّل تحميل هذه الخدمة تلقائيا عند بدء التشغيل"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "متوقف عن التشغيل"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "قيد التشغيل"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "أوقف الخدمة"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "ابدأ الخدمة"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>هذه الوحدة تسمح لك بنظرة عامة لكل ملحقات رقيب كِيدِي  و التنفيذ ، "
+#~ "المعروف أيضاً تحت عنوان خدمات كِيدِي. إجمالاً يوجد نوعين من الخدمات:</"
+#~ "p><ul><li>الخدمات المستدعاة عند بدء التشغيل</li><li>الخدمات المستدعاة عند "
+#~ "الحاجة</li></ul><p>و هذه الأخيرة فقط معروضة  للمناسبة. يمكن بدء و إيقاف "
+#~ "تشغيل خدمات بدء التشغيل. تستطيع أيضاً تحديد أي من الخدمات يتم تحميلها عند "
+#~ "بدء التشغيل .</p><p><b> استخدم هذا بحذر: بعض الخدمات هي حيوية لبلازما ، "
+#~ "لا تعطل نشاط خدمات إذا لم تكن على علم تماماً بما تريد فعله. </b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2019-12-12 22:30+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -78,25 +78,6 @@ msgstr ""
 #, kde-format
 msgid "Preview"
 msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "കെഡിഇ കീബോര്‍ഡു് ഘടന മാറ്റലുപാധി"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "പകര്‍പ്പവകാശം (C) 2006-2007 ആന്‍ഡ്രി റിസിന്‍"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>കീബോര്‍ഡ് </h1> ഈ നിയന്ത്രണ മോഡ്യൂള്‍ കീബോര്‍ഡ് പരാമീറ്ററുകളും വിന്യാസങ്ങളും പരിഷ്ക്കരിക്കാന്‍ "
-"ഉപയോഗിക്കാവന്നതാണ്."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -485,6 +466,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "കെഡിഇ കീബോര്‍ഡു് ഘടന മാറ്റലുപാധി"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "പകര്‍പ്പവകാശം (C) 2006-2007 ആന്‍ഡ്രി റിസിന്‍"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>കീബോര്‍ഡ് </h1> ഈ നിയന്ത്രണ മോഡ്യൂള്‍ കീബോര്‍ഡ് പരാമീറ്ററുകളും വിന്യാസങ്ങളും "
+#~ "പരിഷ്ക്കരിക്കാന്‍ ഉപയോഗിക്കാവന്നതാണ്."
 
 #, fuzzy
 #~ msgid "KDE Keyboard Layout Switcher"

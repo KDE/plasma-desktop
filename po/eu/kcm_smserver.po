@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-02 19:52+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -23,20 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Saio kudeatzailea</h1>Saio kudeatzailea hemen konfigura dezakezu. "
-"Aukeren tartean hauxek aurkituko dituzu: saiotik irtetea baieztatu behar "
-"duzun edo ez, saioa berezarri nahi duzun sartzen zaren hurrengo aldian edo "
-"konputagailua automatikoki itzaliko den saiotik ateratzean."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -212,6 +198,18 @@ msgstr "Saioa-hastean"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Saioetatik baztertu beharreko aplikazioak"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Saio kudeatzailea</h1>Saio kudeatzailea hemen konfigura dezakezu. "
+#~ "Aukeren tartean hauxek aurkituko dituzu: saiotik irtetea baieztatu behar "
+#~ "duzun edo ez, saioa berezarri nahi duzun sartzen zaren hurrengo aldian "
+#~ "edo konputagailua automatikoki itzaliko den saiotik ateratzean."
 
 #, fuzzy
 #~| msgid "Default leave option:"

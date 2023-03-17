@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-07-25 13:41+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -33,27 +33,22 @@ msgstr "Nu va fi arătat niciun ecran de întâmpinare"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Nu puteți șterge ecranul de întâmpinare ales acum"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Acest modul vă permite să alegeți tematica ecranului de întâmpinare."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr ""
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Afișarea previzualizării ecranului de întâmpinare a eșuat."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Previzualizează ecranul de întâmpinare"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Dezinstalează"
@@ -69,6 +64,10 @@ msgstr "Pentru uz ulterior"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Denumirea tematicii de întâmpinare actuale"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr ""
+#~ "Acest modul vă permite să alegeți tematica ecranului de întâmpinare."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Obține ecrane de întâmpinare noi…"

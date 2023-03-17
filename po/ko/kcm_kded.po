@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-05-15 22:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -43,27 +43,7 @@ msgstr "서비스를 시작할 수 없습니다."
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr "KDE 서비스 관리자(kded5)에 변경 사항 저장을 통보할 수 없음: %1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>이 모듈은 모든 KDE 데몬의 플러그인에 관한 정보를 표시합니다. KDE 데몬은 "
-"KDE 서비스라고도 합니다. 일반적으로 서비스에는 두 종류가 있습니다:</"
-"p><ul><li>시작 시 실행되는 서비스</li><li>필요할 때 호출되는 서비스</li></"
-"ul><p>후자는 편의를 위해서 목록에 표시됩니다. 시작 시 실행되는 서비스는 시작"
-"하고 중지할 수 있습니다. 어떤 서비스를 시작 시 불러올지 결정할 수 있습니다.</"
-"p><p><b>사용할 때 주의하십시오: 몇몇 서비스는 Plasma에 꼭 필요하며, 무엇을 하"
-"는 지 모르는 서비스를 비활성화 시키지 마십시오.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -71,7 +51,7 @@ msgid ""
 msgstr ""
 "배경 서비스 관리자(kded5)가 실행 중이 아닙니다. 설치 상태를 확인하십시오."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -80,7 +60,7 @@ msgstr ""
 "일부 서비스는 현재 환경에서 적합하지 않을 경우 수동으로 시작했을 때 자기 자신"
 "을 비활성화합니다."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -89,57 +69,75 @@ msgstr ""
 "일부 서비스는 배경 서비스 관리자(kded5)가 다시 시작되었을 때 변경 사항을 적용"
 "할 수 있도록 자동으로 다시 시작/정지되었습니다."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "모든 서비스"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "실행 중"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "실행 중이 아님"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "시작 서비스"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "필요할 때 불러오는 서비스"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "시작할 때 이 서비스 자동 시작 전환"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "정지됨"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "실행 중"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "서비스 중지"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "서비스 시작"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>이 모듈은 모든 KDE 데몬의 플러그인에 관한 정보를 표시합니다. KDE 데몬"
+#~ "은 KDE 서비스라고도 합니다. 일반적으로 서비스에는 두 종류가 있습니다:</"
+#~ "p><ul><li>시작 시 실행되는 서비스</li><li>필요할 때 호출되는 서비스</li></"
+#~ "ul><p>후자는 편의를 위해서 목록에 표시됩니다. 시작 시 실행되는 서비스는 시"
+#~ "작하고 중지할 수 있습니다. 어떤 서비스를 시작 시 불러올지 결정할 수 있습니"
+#~ "다.</p><p><b>사용할 때 주의하십시오: 몇몇 서비스는 Plasma에 꼭 필요하며, "
+#~ "무엇을 하는 지 모르는 서비스를 비활성화 시키지 마십시오.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

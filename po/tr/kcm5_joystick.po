@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-03-12 16:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -176,49 +176,6 @@ msgstr "Oyun kumandası %1 için kalibrasyon değerlerini uygulanamıyor:%2"
 msgid "internal error - code %1 unknown"
 msgstr "İç hata - kod %1 bilinmiyor"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE Oyun Çubuğu Denetim Modülü"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Oyun çubuklarını sınamak için KDE Sistem Ayarları Modülü"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Oyun kumandası</h1> Bu modül oyun kumandanızın düzgün çalışıp "
-"çalışmadığının denetimi içindir.<br /> Eğer aygıt eksenler için yanlış "
-"değerler gönderiyorsa bu sorunu ayarlama ile aşabilirsiniz.<br />Bu modül /"
-"dev/js[0-4] ve dev/input/js[0-4] denetimi yaparak uygun tüm oyun "
-"kumandalarını bulmaya çalışır.<br />Eğer başka bir aygıt dosyanız varsa bunu "
-"açılır kutuya girin.<br />Düğme listesi oyun kumandası üzerindeki tüm "
-"düğmeleri belirtir; Eksen listesi ise tüm eksenler için değerleri verir.<br /"
-">Not: Şu anki Linux Aygıt Sürücüsü (Çekirdek 2.4, 2.6) yalnızca otomatik "
-"tanıma yapabilir.<ul><li>2-eksen, 4-düğmeli oyun kumandası</li><li>3-eksen, "
-"4-düğmeli oyun kumandası</li><li>4-eksen, 4-düğmeli oyun kumandası</li> "
-"<li>Saitek Cyborg Sayısal Oyun kumandaları</li></ul>(Detaylar için Linux "
-"source/Documentation/input/joystick.txt dosyasını denetleyin)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -322,3 +279,40 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Oyun kumandası %1 için tüm kalibrasyon değerleri geri yüklendi."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE Oyun Çubuğu Denetim Modülü"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Oyun çubuklarını sınamak için KDE Sistem Ayarları Modülü"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Oyun kumandası</h1> Bu modül oyun kumandanızın düzgün çalışıp "
+#~ "çalışmadığının denetimi içindir.<br /> Eğer aygıt eksenler için yanlış "
+#~ "değerler gönderiyorsa bu sorunu ayarlama ile aşabilirsiniz.<br />Bu "
+#~ "modül /dev/js[0-4] ve dev/input/js[0-4] denetimi yaparak uygun tüm oyun "
+#~ "kumandalarını bulmaya çalışır.<br />Eğer başka bir aygıt dosyanız varsa "
+#~ "bunu açılır kutuya girin.<br />Düğme listesi oyun kumandası üzerindeki "
+#~ "tüm düğmeleri belirtir; Eksen listesi ise tüm eksenler için değerleri "
+#~ "verir.<br />Not: Şu anki Linux Aygıt Sürücüsü (Çekirdek 2.4, 2.6) "
+#~ "yalnızca otomatik tanıma yapabilir.<ul><li>2-eksen, 4-düğmeli oyun "
+#~ "kumandası</li><li>3-eksen, 4-düğmeli oyun kumandası</li><li>4-eksen, 4-"
+#~ "düğmeli oyun kumandası</li> <li>Saitek Cyborg Sayısal Oyun kumandaları</"
+#~ "li></ul>(Detaylar için Linux source/Documentation/input/joystick.txt "
+#~ "dosyasını denetleyin)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-11-11 12:32+0530\n"
 "Last-Translator: gayankalhara <gkgkalhara@gmail.com>\n"
 "Language-Team: Sinhalese <danishka@gmail.com>\n"
@@ -47,114 +47,113 @@ msgstr " ධාරකය ආරම්භ කිරීමට නොහැකි �
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<h1>සේවා පාලක</h1><p>මෙම මොඩියුලය ඔබට KDE ඩීමනය සතු සියළු ප්ලගින වල පෙර දැක්මක් පෙන්වයි "
-"ඒ අතරම KDE සේවා ලෙසද යෙදේ. සාමාන්‍යයෙන්, සේවා වර්‍ග දෙකක් ඇත:</p><ul><li>ආරම්භයේදී "
-"ඉල්ලා සිටින සේවා</li><li>ඉල්ලුම අනුව ක්‍රියාත්මක වන සේවා</li></ul><p> දෙවෙනියට සඳහන් කල "
-"සේවා දැක්ම සඳහා පමණක් ලැයිසතුගත කර ඇත.ආරම්භයේදී ක්‍රියාකරන සේවා ඇරඹීම හා නැවතීම කල හැක. "
-"පාලක ප්‍රකාරයේදී, ආරම්භයේදී එම සේවා ක්‍රියාත්මක විය යුතුද යන්නත් යෙදිය හැක.</p><p><b> මෙය ප්‍"
-"රමේශමෙන් භාවිත කරන්න: ඇතැම් සේවා KDE සඳහා අත්‍යාවශ්‍යයි; ඔබ කරන්නේ කුමක්ද යන්න නිවැරදිව "
-"නොදන්නේ නම් සේවා අක්‍රීය නොකරන්න.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "සේවාව"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "ධාවනය වෙමින්"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "ධාවනය නොවේ"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "ආරම්භක සේවාවන්"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "ඉල්ලුමට-අනුව-සේවා පූර්ණය කරන්න"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "ධාවනය නොවේ"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "ධාවනය වෙමින්"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "සේවාව"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
 msgstr "සේවාව"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#~| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#~| "Generally, there are two types of service:</p><ul><li>Services invoked "
+#~| "at startup</li><li>Services called on demand</li></ul><p>The latter are "
+#~| "only listed for convenience. The startup services can be started and "
+#~| "stopped. In Administrator mode, you can also define whether services "
+#~| "should be loaded at startup.</p><p><b> Use this with care: some services "
+#~| "are vital for KDE; do not deactivate services if you do not know what "
+#~| "you are doing.</b></p>"
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<h1>සේවා පාලක</h1><p>මෙම මොඩියුලය ඔබට KDE ඩීමනය සතු සියළු ප්ලගින වල පෙර දැක්මක් "
+#~ "පෙන්වයි ඒ අතරම KDE සේවා ලෙසද යෙදේ. සාමාන්‍යයෙන්, සේවා වර්‍ග දෙකක් ඇත:</"
+#~ "p><ul><li>ආරම්භයේදී ඉල්ලා සිටින සේවා</li><li>ඉල්ලුම අනුව ක්‍රියාත්මක වන සේවා</li></"
+#~ "ul><p> දෙවෙනියට සඳහන් කල සේවා දැක්ම සඳහා පමණක් ලැයිසතුගත කර ඇත.ආරම්භයේදී ක්‍රියාකරන "
+#~ "සේවා ඇරඹීම හා නැවතීම කල හැක. පාලක ප්‍රකාරයේදී, ආරම්භයේදී එම සේවා ක්‍රියාත්මක විය යුතුද "
+#~ "යන්නත් යෙදිය හැක.</p><p><b> මෙය ප්‍රමේශමෙන් භාවිත කරන්න: ඇතැම් සේවා KDE සඳහා අත්‍යාවශ්‍"
+#~ "යයි; ඔබ කරන්නේ කුමක්ද යන්න නිවැරදිව නොදන්නේ නම් සේවා අක්‍රීය නොකරන්න.</b></p>"
 
 #, fuzzy
 #~| msgid "Startup Services"

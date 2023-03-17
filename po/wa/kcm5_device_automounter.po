@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-10-22 18:27+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -26,37 +26,6 @@ msgstr "Djan Cayron"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jean.cayron@gmail.com"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Oto-monteu d' éndjin"
-
-#: DeviceAutomounterKCM.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Trever Fischer"
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "© 2009 Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -170,6 +139,17 @@ msgstr "Cist éndjin srè monté otomaticmint cwand i srè stitchî."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Cist éndjin n' serè nén monté otomaticmint cwand i srè stitchî."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Oto-monteu d' éndjin"
+
+#, fuzzy
+#~| msgid "(c) 2009 Trever Fischer"
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "© 2009 Trever Fischer"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
 
 #, fuzzy
 #~| msgid "Mount all removable media at login"

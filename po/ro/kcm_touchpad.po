@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-07-25 14:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Nu se poate conecta la serverul X"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
+#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Nu a fost detectată o zonă tactilă"
@@ -87,54 +87,54 @@ msgstr "Nu se poate citi configurația zonei tactile"
 msgid "Cannot read default touchpad configuration"
 msgstr "Nu se poate citi configurația implicită a zonei tactile"
 
-#: kcm/libinput/touchpad.qml:112
+#: kcm/libinput/touchpad.qml:108
 #, kde-format
 msgid "Device:"
 msgstr "Dispozitiv:"
 
-#: kcm/libinput/touchpad.qml:137
+#: kcm/libinput/touchpad.qml:133
 #, kde-format
 msgid "General:"
 msgstr "Generale:"
 
-#: kcm/libinput/touchpad.qml:139
+#: kcm/libinput/touchpad.qml:135
 #, kde-format
 msgid "Device enabled"
 msgstr "Dispozitiv activat"
 
-#: kcm/libinput/touchpad.qml:143
+#: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Acceptă introducerea prin acest dispozitiv."
 
-#: kcm/libinput/touchpad.qml:167
+#: kcm/libinput/touchpad.qml:163
 #, kde-format
 msgid "Disable while typing"
 msgstr "Dezactivează la tastare"
 
-#: kcm/libinput/touchpad.qml:171
+#: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
 "Dezactivează zona tactilă în timpul tastării pentru a preveni atingeri "
 "accidentale."
 
-#: kcm/libinput/touchpad.qml:195
+#: kcm/libinput/touchpad.qml:191
 #, kde-format
 msgid "Left handed mode"
 msgstr "Regim pentru stângaci"
 
-#: kcm/libinput/touchpad.qml:199
+#: kcm/libinput/touchpad.qml:195
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Schimbă butoanele stâng și drept."
 
-#: kcm/libinput/touchpad.qml:223
+#: kcm/libinput/touchpad.qml:219
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Apasă butoanele stâng și drept pentru clic mijlociu"
 
-#: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:859
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -142,83 +142,83 @@ msgstr ""
 "Apăsarea simultană a butoanelor stâng și drept trimite clic de buton din "
 "mijloc."
 
-#: kcm/libinput/touchpad.qml:258
+#: kcm/libinput/touchpad.qml:254
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Accelerație indicator:"
 
-#: kcm/libinput/touchpad.qml:353
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Profil de accelerare:"
 
-#: kcm/libinput/touchpad.qml:385
+#: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "Flat"
 msgstr "Plat"
 
-#: kcm/libinput/touchpad.qml:389
+#: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Cursorul se mișcă pe aceeași distanță ca degetul."
 
-#: kcm/libinput/touchpad.qml:398
+#: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Adaptive"
 msgstr "Adaptivă"
 
-#: kcm/libinput/touchpad.qml:402
+#: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
 "Distanța traversată de cursor depinde de viteza de mișcare a degetului."
 
-#: kcm/libinput/touchpad.qml:416
+#: kcm/libinput/touchpad.qml:412
 #, kde-format
 msgid "Tapping:"
 msgstr "Tapare:"
 
-#: kcm/libinput/touchpad.qml:418
+#: kcm/libinput/touchpad.qml:414
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Tapează-pentru-clic"
 
-#: kcm/libinput/touchpad.qml:422
+#: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "O singură tapare e clic cu butonul stâng."
 
-#: kcm/libinput/touchpad.qml:451
+#: kcm/libinput/touchpad.qml:447
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Tapează-și-trage"
 
-#: kcm/libinput/touchpad.qml:455
+#: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Glisarea peste zona tactilă imediat după tapare va trage."
 
-#: kcm/libinput/touchpad.qml:482
+#: kcm/libinput/touchpad.qml:478
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Blocaj tapează-și-trage"
 
-#: kcm/libinput/touchpad.qml:486
+#: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Tragerea continuă după o ridicare scurtă a degetului."
 
-#: kcm/libinput/touchpad.qml:505
+#: kcm/libinput/touchpad.qml:501
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Tapare cu două degete:"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:510
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic drept (tapare cu trei degete pentru clic mijlociu)"
 
-#: kcm/libinput/touchpad.qml:515
+#: kcm/libinput/touchpad.qml:511
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -226,12 +226,12 @@ msgstr ""
 "Tapați cu două degete pentru clic drept și cu trei degete pentru clic de "
 "mijloc."
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Clic mijlociu (tapare cu trei degete pentru clic drept)"
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -239,94 +239,94 @@ msgstr ""
 "Tapați cu două degete pentru clic de mijloc și cu trei degete pentru clic "
 "drept."
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Right-click"
 msgstr "Clic drept"
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Tapați cu două degete pentru clic drept."
 
-#: kcm/libinput/touchpad.qml:523
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic mijlociu"
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Tapați cu două degete pentru clic de mijloc."
 
-#: kcm/libinput/touchpad.qml:582
+#: kcm/libinput/touchpad.qml:578
 #, kde-format
 msgid "Scrolling:"
 msgstr "Derulare:"
 
-#: kcm/libinput/touchpad.qml:612
+#: kcm/libinput/touchpad.qml:608
 #, kde-format
 msgid "Two fingers"
 msgstr "Două degete"
 
-#: kcm/libinput/touchpad.qml:616
+#: kcm/libinput/touchpad.qml:612
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Glisarea cu două degete va derula."
 
-#: kcm/libinput/touchpad.qml:624
+#: kcm/libinput/touchpad.qml:620
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Margini zonă tactilă"
 
-#: kcm/libinput/touchpad.qml:628
+#: kcm/libinput/touchpad.qml:624
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Glisarea pe marginile zonei tactile va derula."
 
-#: kcm/libinput/touchpad.qml:638
+#: kcm/libinput/touchpad.qml:634
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inversează direcția derulării (derulare naturală)"
 
-#: kcm/libinput/touchpad.qml:654
+#: kcm/libinput/touchpad.qml:650
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Derulare ca pe ecran tactil."
 
-#: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
+#: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Dezactivează derularea orizontală"
 
-#: kcm/libinput/touchpad.qml:687
+#: kcm/libinput/touchpad.qml:683
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Viteză de derulare:"
 
-#: kcm/libinput/touchpad.qml:736
+#: kcm/libinput/touchpad.qml:732
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mai lentă"
 
-#: kcm/libinput/touchpad.qml:742
+#: kcm/libinput/touchpad.qml:738
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mai rapidă"
 
-#: kcm/libinput/touchpad.qml:751
+#: kcm/libinput/touchpad.qml:747
 #, kde-format
 msgid "Right-click:"
 msgstr "Clic drept:"
 
-#: kcm/libinput/touchpad.qml:784
+#: kcm/libinput/touchpad.qml:780
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Apasă colțul din dreapta-jos"
 
-#: kcm/libinput/touchpad.qml:788
+#: kcm/libinput/touchpad.qml:784
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
@@ -334,27 +334,27 @@ msgstr ""
 "Butoane activate prin program vor fi adăugate la partea de jos a zonei "
 "tactile."
 
-#: kcm/libinput/touchpad.qml:796
+#: kcm/libinput/touchpad.qml:792
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Apasă oriunde cu două degete"
 
-#: kcm/libinput/touchpad.qml:800
+#: kcm/libinput/touchpad.qml:796
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Apăsați cu două degete pentru a activa clicul drept."
 
-#: kcm/libinput/touchpad.qml:813
+#: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Middle-click: "
 msgstr "Clic mijlociu: "
 
-#: kcm/libinput/touchpad.qml:843
+#: kcm/libinput/touchpad.qml:839
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Apasă colțul din mijloc-jos"
 
-#: kcm/libinput/touchpad.qml:847
+#: kcm/libinput/touchpad.qml:843
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -363,49 +363,22 @@ msgstr ""
 "Un buton de mijloc activat prin program va fi adăugat la partea de jos a "
 "zonei tactile."
 
-#: kcm/libinput/touchpad.qml:855
+#: kcm/libinput/touchpad.qml:851
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Apasă colțurile din stânga-jos și dreapta-jos simultan"
 
-#: kcm/libinput/touchpad.qml:868
+#: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Apasă oriunde cu trei degete"
 
-#: kcm/libinput/touchpad.qml:874
+#: kcm/libinput/touchpad.qml:870
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Apăsați oriunde cu trei degete."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:30
-#: kcm/xlib/touchpadconfigxlib.cpp:82
-#, kde-format
-msgid "Touchpad KCM"
-msgstr "Modul de control pentru zona tactilă"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:32
-#, kde-format
-msgid "System Settings module for managing your touchpad"
-msgstr "Modul pentru Configurări de sistem pentru gestiunea zonei tactile"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:34
-#, kde-format
-msgid "Copyright © 2016 Roman Gilg"
-msgstr "Drept de autor © 2016 Roman Gilg"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:37
-#: kcm/xlib/touchpadconfigxlib.cpp:92
-#, kde-format
-msgid "Developer"
-msgstr "Dezvoltator"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:37
-#, kde-format
-msgid "Roman Gilg"
-msgstr "Roman Gilg"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:91
+#: kcm/libinput/touchpadconfiglibinput.cpp:68
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -414,12 +387,12 @@ msgstr ""
 "Eroare la încărcarea valorilor. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:94
+#: kcm/libinput/touchpadconfiglibinput.cpp:71
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nu a fost detectată o zonă tactilă. Conectați zona tactilă acum."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:103
+#: kcm/libinput/touchpadconfiglibinput.cpp:80
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -428,7 +401,7 @@ msgstr ""
 "Nu s-au putut salva toate modificările. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare și reîncercați."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:122
+#: kcm/libinput/touchpadconfiglibinput.cpp:99
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -437,7 +410,7 @@ msgstr ""
 "Eroare la încărcarea valorilor implicite. Stabilirea unor opțiuni la valori "
 "implicite a eșuat."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:119
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -446,12 +419,12 @@ msgstr ""
 "Eroare la adăugarea dispozitivului nou conectat. Reconectați-l și reporniți "
 "acest modul de configurare."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:165
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Zonă tactilă deconectată. Dialogul său de configurare a fost închis."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:167
+#: kcm/libinput/touchpadconfiglibinput.cpp:144
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Zonă tactilă deconectată. Nu au fost găsite alte zone tactile."
@@ -479,83 +452,7 @@ msgctxt "Mouse button"
 msgid "Middle button"
 msgstr "Buton mijlociu"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:84
-#, kde-format
-msgid ""
-"System Settings module, daemon and Plasma applet for managing your touchpad"
-msgstr ""
-"Modul pentru Configurări de sistem, demon și miniaplicație Plasma pentru "
-"gestiunea zonei tactile"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:86
-#, kde-format
-msgid "Copyright © 2013 Alexander Mezin"
-msgstr "Drept de autor © 2013 Alexander Mezin"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:87
-#, kde-format
-msgid ""
-"This program incorporates work covered by this copyright notice:\n"
-"Copyright © 2002-2005,2007 Peter Osterlund"
-msgstr ""
-"Acest program încorporează lucru acoperit de această notă:\n"
-"Copyright © 2002-2005,2007 Peter Osterlund"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:92
-#, kde-format
-msgid "Alexander Mezin"
-msgstr "Alexander Mezin"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:93
-#, kde-format
-msgid "Thomas Pfeiffer"
-msgstr "Thomas Pfeiffer"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:93
-#, kde-format
-msgctxt "Credits"
-msgid "Usability, testing"
-msgstr "Ușurință în utilizare, testare"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:94
-#, kde-format
-msgid "Alex Fiestas"
-msgstr "Alex Fiestas"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:94
-#, kde-format
-msgctxt "Credits"
-msgid "Helped a bit"
-msgstr "A ajutat un pic"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:95
-#, kde-format
-msgid "Peter Osterlund"
-msgstr "Peter Osterlund"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:95
-#, kde-format
-msgctxt "Credits"
-msgid "Developer of synclient"
-msgstr "Dezvoltatorul synclient"
-
 #: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid "Vadim Zaytsev"
-msgstr "Vadim Zaytsev"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96 kcm/xlib/touchpadconfigxlib.cpp:97
-#, kde-format
-msgctxt "Credits"
-msgid "Testing"
-msgstr "Testare"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:97
-#, kde-format
-msgid "Violetta Raspryagayeva"
-msgstr "Violetta Raspryagayeva"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:116
 #, kde-format
 msgid ""
 "Active settings don't match saved settings.\n"
@@ -564,17 +461,17 @@ msgstr ""
 "Configurările active nu se potrivesc cu cele salvate.\n"
 "Momentan vedeți configurările salvate."
 
-#: kcm/xlib/touchpadconfigxlib.cpp:122
+#: kcm/xlib/touchpadconfigxlib.cpp:102
 #, kde-format
 msgid "Show active settings"
 msgstr "Arată configurările active"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:159
+#: kcm/xlib/touchpadconfigxlib.cpp:139
 #, kde-format
 msgid "These settings won't take effect in the testing area"
 msgstr "Aceste configurări nu vor avea efect în zona de testare"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:164
+#: kcm/xlib/touchpadconfigxlib.cpp:144
 #, kde-format
 msgid "Enable/Disable Touchpad"
 msgstr "Activează/dezactivează zona tactilă"
@@ -1527,6 +1424,72 @@ msgstr "Marginea stângă"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Colțul din stânga-sus"
+
+#~ msgid "Touchpad KCM"
+#~ msgstr "Modul de control pentru zona tactilă"
+
+#~ msgid "System Settings module for managing your touchpad"
+#~ msgstr "Modul pentru Configurări de sistem pentru gestiunea zonei tactile"
+
+#~ msgid "Copyright © 2016 Roman Gilg"
+#~ msgstr "Drept de autor © 2016 Roman Gilg"
+
+#~ msgid "Developer"
+#~ msgstr "Dezvoltator"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid ""
+#~ "System Settings module, daemon and Plasma applet for managing your "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Modul pentru Configurări de sistem, demon și miniaplicație Plasma pentru "
+#~ "gestiunea zonei tactile"
+
+#~ msgid "Copyright © 2013 Alexander Mezin"
+#~ msgstr "Drept de autor © 2013 Alexander Mezin"
+
+#~ msgid ""
+#~ "This program incorporates work covered by this copyright notice:\n"
+#~ "Copyright © 2002-2005,2007 Peter Osterlund"
+#~ msgstr ""
+#~ "Acest program încorporează lucru acoperit de această notă:\n"
+#~ "Copyright © 2002-2005,2007 Peter Osterlund"
+
+#~ msgid "Alexander Mezin"
+#~ msgstr "Alexander Mezin"
+
+#~ msgid "Thomas Pfeiffer"
+#~ msgstr "Thomas Pfeiffer"
+
+#~ msgctxt "Credits"
+#~ msgid "Usability, testing"
+#~ msgstr "Ușurință în utilizare, testare"
+
+#~ msgid "Alex Fiestas"
+#~ msgstr "Alex Fiestas"
+
+#~ msgctxt "Credits"
+#~ msgid "Helped a bit"
+#~ msgstr "A ajutat un pic"
+
+#~ msgid "Peter Osterlund"
+#~ msgstr "Peter Osterlund"
+
+#~ msgctxt "Credits"
+#~ msgid "Developer of synclient"
+#~ msgstr "Dezvoltatorul synclient"
+
+#~ msgid "Vadim Zaytsev"
+#~ msgstr "Vadim Zaytsev"
+
+#~ msgctxt "Credits"
+#~ msgid "Testing"
+#~ msgstr "Testare"
+
+#~ msgid "Violetta Raspryagayeva"
+#~ msgstr "Violetta Raspryagayeva"
 
 #, fuzzy
 #~| msgid "Minimum pointer speed"

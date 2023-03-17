@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-02 07:28+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -431,40 +431,31 @@ msgstr "Tundaan:"
 msgid "Ring system bell when rejected"
 msgstr "Deringkan bel sistem ketika ditolak"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"Modul ini memungkinkanmu untuk mengkonfigurasi fitur aksesibilitas "
-"sepertihalnya screen reader."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Bel"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Tuts Pemodif"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filter Keyboard"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Navigasi Mouse"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -594,6 +585,13 @@ msgid ""
 msgstr ""
 "Tampaknya Orca Screen Reader tidak diinstal. Silakan instal sebelum mencoba "
 "menggunakan fitur ini, lalu logout atau reboot"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "Modul ini memungkinkanmu untuk mengkonfigurasi fitur aksesibilitas "
+#~ "sepertihalnya screen reader."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Kecepatan maksimum"

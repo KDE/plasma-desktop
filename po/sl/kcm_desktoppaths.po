@@ -1,7 +1,7 @@
 # translation of kcmkonq.po to Slovenian
 # Translation of kcmkonq.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKONQ.
-# $Id: kcm_desktoppaths.po 1645901 2023-03-03 02:37:51Z scripty $
+# $Id: kcm_desktoppaths.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 08:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -65,19 +65,6 @@ msgstr "Javno"
 #, kde-format
 msgid "Templates"
 msgstr "Predloge"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Poti</h1>\n"
-"Ta modul vam omogoča izbrati, kje v vašem datotečnem sistemu so shranjene "
-"datoteke na vašem namizju.\n"
-"Uporabite »Kaj je to?« (Shift+F1) za pomoč pri posameznih možnostih."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -167,6 +154,17 @@ msgstr "To bo privzeta mapa za nalaganje in shranjevanje predlog."
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Izberite novo lokacijo"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Poti</h1>\n"
+#~ "Ta modul vam omogoča izbrati, kje v vašem datotečnem sistemu so shranjene "
+#~ "datoteke na vašem namizju.\n"
+#~ "Uporabite »Kaj je to?« (Shift+F1) za pomoč pri posameznih možnostih."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

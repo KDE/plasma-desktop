@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-11 11:55+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -19,20 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Správca sedenia</h1> Tento modul umožňuje konfigurovať správcu sedenia. "
-"Je možné nastaviť potvrdzovanie pri odhlásení a či sa má pri odhlásení "
-"uložiť sedenie a pri ďalšom prihlásení obnoviť. Navyše môžete určiť, či sa "
-"má po ukončení sedenia počítač automaticky vypnúť."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -202,6 +188,18 @@ msgstr "Pri prihlásení"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplikácie vylúčené zo sedenia"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Správca sedenia</h1> Tento modul umožňuje konfigurovať správcu "
+#~ "sedenia. Je možné nastaviť potvrdzovanie pri odhlásení a či sa má pri "
+#~ "odhlásení uložiť sedenie a pri ďalšom prihlásení obnoviť. Navyše môžete "
+#~ "určiť, či sa má po ukončení sedenia počítač automaticky vypnúť."
 
 #, fuzzy
 #~| msgid "Default leave option:"

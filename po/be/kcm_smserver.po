@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,19 +21,6 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plasma-desktop/kcm_smserver.po\n"
 "X-Crowdin-File-ID: 8511\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Кіраўнік сеансаў</h1> Тут вы можаце наладзіць кіраўнік сеансаў, "
-"уключаючы пацвярджэнне перад завяршэннем сеанса, аднаўлення сеанса пасля "
-"ўваходу і аўтаматычнае адключэнне камп'ютара пасля завяршэння сеанса."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -205,6 +192,17 @@ msgstr "Падчас уваходу"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Праграмы будуць выключаныя з сеанса"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Кіраўнік сеансаў</h1> Тут вы можаце наладзіць кіраўнік сеансаў, "
+#~ "уключаючы пацвярджэнне перад завяршэннем сеанса, аднаўлення сеанса пасля "
+#~ "ўваходу і аўтаматычнае адключэнне камп'ютара пасля завяршэння сеанса."
 
 #, fuzzy
 #~| msgid "Default leave option:"

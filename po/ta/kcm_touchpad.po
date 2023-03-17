@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-05-08 15:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "%1 என்ற தொடுபலகையின் அடிப்ப�
 msgid "Cannot connect to X server"
 msgstr "X சேவையகத்தை தொடர்பு கொள்ள முடியவில்லை"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
+#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "தொடுபலகை கண்டுபிடிக்கப்படவில்லை"
@@ -84,134 +84,134 @@ msgstr "தொடுபலகையின் அமைப்பை படிக�
 msgid "Cannot read default touchpad configuration"
 msgstr "தொடுபலகையின் இயல்பிருப்பு அமைப்பை படிக்க முடியவில்லை"
 
-#: kcm/libinput/touchpad.qml:112
+#: kcm/libinput/touchpad.qml:108
 #, kde-format
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: kcm/libinput/touchpad.qml:137
+#: kcm/libinput/touchpad.qml:133
 #, kde-format
 msgid "General:"
 msgstr "பொது:"
 
-#: kcm/libinput/touchpad.qml:139
+#: kcm/libinput/touchpad.qml:135
 #, kde-format
 msgid "Device enabled"
 msgstr "சாதனத்தை இயக்கு"
 
-#: kcm/libinput/touchpad.qml:143
+#: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Accept input through this device."
 msgstr "இந்த சாதனம் மூலம் உள்ளீட்டை ஏற்றுக்கொள்."
 
-#: kcm/libinput/touchpad.qml:167
+#: kcm/libinput/touchpad.qml:163
 #, kde-format
 msgid "Disable while typing"
 msgstr "தட்டச்சிடும்போது முடக்கு"
 
-#: kcm/libinput/touchpad.qml:171
+#: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "தவறுதலான உள்ளீட்டை தவிர்க்க தட்டச்சிடும்போது தொடுபலகையை முடக்கு."
 
-#: kcm/libinput/touchpad.qml:195
+#: kcm/libinput/touchpad.qml:191
 #, kde-format
 msgid "Left handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: kcm/libinput/touchpad.qml:199
+#: kcm/libinput/touchpad.qml:195
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: kcm/libinput/touchpad.qml:223
+#: kcm/libinput/touchpad.qml:219
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:859
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:258
+#: kcm/libinput/touchpad.qml:254
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டிக்குறியின் வேகவளர்ச்சி:"
 
-#: kcm/libinput/touchpad.qml:353
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "வேகவளர்ச்சி முறை:"
 
-#: kcm/libinput/touchpad.qml:385
+#: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "Flat"
 msgstr "சமமானது"
 
-#: kcm/libinput/touchpad.qml:389
+#: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "விரல் நகரும் அதே தூரத்திற்கு சுட்டிக்குறியும் நகரும்."
 
-#: kcm/libinput/touchpad.qml:398
+#: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: kcm/libinput/touchpad.qml:402
+#: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "சுட்டிக்குறி நகரும் தூரம், விரலின் வேகத்தைப் பொறுத்து அமையும்."
 
-#: kcm/libinput/touchpad.qml:416
+#: kcm/libinput/touchpad.qml:412
 #, kde-format
 msgid "Tapping:"
 msgstr "தட்டுதல்:"
 
-#: kcm/libinput/touchpad.qml:418
+#: kcm/libinput/touchpad.qml:414
 #, kde-format
 msgid "Tap-to-click"
 msgstr "க்ளிக் செய்ய தட்டு"
 
-#: kcm/libinput/touchpad.qml:422
+#: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "ஒரு முறை தட்டுதல், இடது க்ளிக்காக கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:451
+#: kcm/libinput/touchpad.qml:447
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "தட்டி இழு"
 
-#: kcm/libinput/touchpad.qml:455
+#: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "தட்டிய உடனே விரலை தொடுபலகையில் தேய்த்தல், இழுத்ததாக கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:482
+#: kcm/libinput/touchpad.qml:478
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "தட்டி இழுத்தலைப் பூட்டு"
 
-#: kcm/libinput/touchpad.qml:486
+#: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
 "இழுக்கும்போது சிறிது நேரம் தொடுபலகையை விட்டு விரலை எடுத்தாலும், இழுத்தல் தொடரப்படும்."
 
-#: kcm/libinput/touchpad.qml:505
+#: kcm/libinput/touchpad.qml:501
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "இருவிரல் தட்டுதல்:"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:510
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "வலது க்ளிக் (நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: kcm/libinput/touchpad.qml:515
+#: kcm/libinput/touchpad.qml:511
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -219,12 +219,12 @@ msgstr ""
 "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "நடு க்ளிக் (வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -232,169 +232,142 @@ msgstr ""
 "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Right-click"
 msgstr "வலது க்ளிக்"
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:523
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Middle-click"
 msgstr "நடு க்ளிக்"
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:582
+#: kcm/libinput/touchpad.qml:578
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: kcm/libinput/touchpad.qml:612
+#: kcm/libinput/touchpad.qml:608
 #, kde-format
 msgid "Two fingers"
 msgstr "இரண்டு விரல்கள்"
 
-#: kcm/libinput/touchpad.qml:616
+#: kcm/libinput/touchpad.qml:612
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "இரண்டு விரல்களைக் கொண்டு தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:624
+#: kcm/libinput/touchpad.qml:620
 #, kde-format
 msgid "Touchpad edges"
 msgstr "தொடுபலகையின் விளிம்புகள்"
 
-#: kcm/libinput/touchpad.qml:628
+#: kcm/libinput/touchpad.qml:624
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "தொடுபலகையின் விளிம்பைத் தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:638
+#: kcm/libinput/touchpad.qml:634
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "உருளல் திசையைப் புரட்டு (இயற்கையான உருளல்)"
 
-#: kcm/libinput/touchpad.qml:654
+#: kcm/libinput/touchpad.qml:650
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
+#: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "கிடைமட்ட உருளலை முடக்கு"
 
-#: kcm/libinput/touchpad.qml:687
+#: kcm/libinput/touchpad.qml:683
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: kcm/libinput/touchpad.qml:736
+#: kcm/libinput/touchpad.qml:732
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: kcm/libinput/touchpad.qml:742
+#: kcm/libinput/touchpad.qml:738
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: kcm/libinput/touchpad.qml:751
+#: kcm/libinput/touchpad.qml:747
 #, kde-format
 msgid "Right-click:"
 msgstr "வலது க்ளிக்:"
 
-#: kcm/libinput/touchpad.qml:784
+#: kcm/libinput/touchpad.qml:780
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "வலது-கீழ் மூலையை அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:788
+#: kcm/libinput/touchpad.qml:784
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் மென்பொருள் பட்டன்கள் சேர்க்கப்படும்."
 
-#: kcm/libinput/touchpad.qml:796
+#: kcm/libinput/touchpad.qml:792
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "எங்கேயாவது இரண்டு விரல்களை கொண்டு அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:800
+#: kcm/libinput/touchpad.qml:796
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "வலது க்ளிக் செய்ய எங்கேயேனும் இரண்டு விரல்களை கொண்டு தட்டுங்கள்."
 
-#: kcm/libinput/touchpad.qml:813
+#: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Middle-click: "
 msgstr "நடு க்ளிக்: "
 
-#: kcm/libinput/touchpad.qml:843
+#: kcm/libinput/touchpad.qml:839
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "நடு-கீழ் பகுதியை அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:847
+#: kcm/libinput/touchpad.qml:843
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் இதற்கான மென்பொருள் பட்டன் சேர்க்கப்படும்."
 
-#: kcm/libinput/touchpad.qml:855
+#: kcm/libinput/touchpad.qml:851
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:868
+#: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "மூன்று விரல்களை கொண்டு அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:874
+#: kcm/libinput/touchpad.qml:870
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "மூன்று விரல்களை கொண்டு எங்கேயேனும் அழுத்தினால்."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:30
-#: kcm/xlib/touchpadconfigxlib.cpp:82
-#, kde-format
-msgid "Touchpad KCM"
-msgstr "தொடுபலகை கட்டுப்பாட்டுக்கூறு"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:32
-#, kde-format
-msgid "System Settings module for managing your touchpad"
-msgstr "உங்கள் தொடுபலகையை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:34
-#, kde-format
-msgid "Copyright © 2016 Roman Gilg"
-msgstr "பதிப்புரிமை © 2016 ரோமன் கில்கு"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:37
-#: kcm/xlib/touchpadconfigxlib.cpp:92
-#, kde-format
-msgid "Developer"
-msgstr "நிரலாளர்"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:37
-#, kde-format
-msgid "Roman Gilg"
-msgstr "ரோமன் கில்கு"
-
-#: kcm/libinput/touchpadconfiglibinput.cpp:91
+#: kcm/libinput/touchpadconfiglibinput.cpp:68
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -403,12 +376,12 @@ msgstr ""
 "மதிப்புகளை ஏற்றுவதில் சிக்கல். மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:94
+#: kcm/libinput/touchpadconfiglibinput.cpp:71
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "தொடுபலகை ஏதும் கண்டுபிடிக்கப்படவில்லை. தொடுபலகையை இப்போது செருகுங்கள்."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:103
+#: kcm/libinput/touchpadconfiglibinput.cpp:80
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -417,7 +390,7 @@ msgstr ""
 "சில மாற்றங்களை சேமிக்க முடியவில்லை. மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:122
+#: kcm/libinput/touchpadconfiglibinput.cpp:99
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -426,7 +399,7 @@ msgstr ""
 "இயல்பிருப்பு மதிப்புகளை ஏற்றுவதில் சிக்கல். சில விருப்பங்கள் அவற்றின் இயல்பிருப்பு "
 "மதிப்புகளுக்கு மாற்றப்படவில்லை."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:119
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -435,12 +408,12 @@ msgstr ""
 "புதிதாக செருகிய சாதனத்தை சேர்ப்பதில் சிக்கல். அதை கழற்றி, மீண்டும் செருகிய பின் இக்கூறை "
 "மீள்துவக்குங்கள்."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:165
+#: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "தொடுபலகை கழற்றப்பட்டது. அதன் அமைப்பு சாளரம் மூடப்பட்டது."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:167
+#: kcm/libinput/touchpadconfiglibinput.cpp:144
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "தொடுபலகை கழற்றப்பட்டது. வேறெந்த தொடுபலகையும் கண்டுபிடிக்கப்படவில்லை."
@@ -468,82 +441,7 @@ msgctxt "Mouse button"
 msgid "Middle button"
 msgstr "நடு பட்டன்"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:84
-#, kde-format
-msgid ""
-"System Settings module, daemon and Plasma applet for managing your touchpad"
-msgstr ""
-"தொடுபலகையை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு, பின்னணி சேவை, மற்றும் பிளாஸ்மாய்ட்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:86
-#, kde-format
-msgid "Copyright © 2013 Alexander Mezin"
-msgstr "பதிப்புரிமை © 2013 அலெக்சாண்டர் மெஜின்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:87
-#, kde-format
-msgid ""
-"This program incorporates work covered by this copyright notice:\n"
-"Copyright © 2002-2005,2007 Peter Osterlund"
-msgstr ""
-"இப்பதிப்புரிமைக்கு உட்படும் சிலவற்றை இந்நிரல் பயன்படுத்துகிறது:\n"
-"பதிப்புரிமை © 2002-2005,2007 பீட்டர் ஆஸ்டர்ளுண்ட்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:92
-#, kde-format
-msgid "Alexander Mezin"
-msgstr "அலெக்சாண்டர் மெஜின்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:93
-#, kde-format
-msgid "Thomas Pfeiffer"
-msgstr "தாமஸ் ஃபைஃபர்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:93
-#, kde-format
-msgctxt "Credits"
-msgid "Usability, testing"
-msgstr "பயன்படுதன்மை, சோதனை"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:94
-#, kde-format
-msgid "Alex Fiestas"
-msgstr "அலெக்ஸ் ஃபியெஸ்டாஸ்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:94
-#, kde-format
-msgctxt "Credits"
-msgid "Helped a bit"
-msgstr "சிறிதளவு உதவி செய்தார்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:95
-#, kde-format
-msgid "Peter Osterlund"
-msgstr "பீட்டர் ஆஸ்டர்ளுண்ட்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:95
-#, kde-format
-msgctxt "Credits"
-msgid "Developer of synclient"
-msgstr "synclient-ஐ உருவாக்கியவர்"
-
 #: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid "Vadim Zaytsev"
-msgstr "வாடிம் சேய்ட்ஸெவ்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96 kcm/xlib/touchpadconfigxlib.cpp:97
-#, kde-format
-msgctxt "Credits"
-msgid "Testing"
-msgstr "சோதனை"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:97
-#, kde-format
-msgid "Violetta Raspryagayeva"
-msgstr "வையொலெட்டா ராஸ்பிரியகயேவா"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:116
 #, kde-format
 msgid ""
 "Active settings don't match saved settings.\n"
@@ -552,17 +450,17 @@ msgstr ""
 "செயலிலுள்ள அமைப்புகளும் சேமிக்கப்பட்ட அமைப்புகளும் வேறுபடுகின்றன.\n"
 "சேமிக்கப்பட்ட அமைப்புகள் தற்போது காட்டப்படுகின்றன."
 
-#: kcm/xlib/touchpadconfigxlib.cpp:122
+#: kcm/xlib/touchpadconfigxlib.cpp:102
 #, kde-format
 msgid "Show active settings"
 msgstr "செயலிலுள்ள அமைப்புகளை காட்டு"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:159
+#: kcm/xlib/touchpadconfigxlib.cpp:139
 #, kde-format
 msgid "These settings won't take effect in the testing area"
 msgstr "இவ்வமைப்புகள் சோதனைக்கான இடத்தில் செயல்படா"
 
-#: kcm/xlib/touchpadconfigxlib.cpp:164
+#: kcm/xlib/touchpadconfigxlib.cpp:144
 #, kde-format
 msgid "Enable/Disable Touchpad"
 msgstr "தொடுபலகையை முடக்கு/இயக்கு"
@@ -1494,3 +1392,68 @@ msgstr "இடது ஓரம்"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "இடது-மேல் மூலை"
+
+#~ msgid "Touchpad KCM"
+#~ msgstr "தொடுபலகை கட்டுப்பாட்டுக்கூறு"
+
+#~ msgid "System Settings module for managing your touchpad"
+#~ msgstr "உங்கள் தொடுபலகையை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு"
+
+#~ msgid "Copyright © 2016 Roman Gilg"
+#~ msgstr "பதிப்புரிமை © 2016 ரோமன் கில்கு"
+
+#~ msgid "Developer"
+#~ msgstr "நிரலாளர்"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "ரோமன் கில்கு"
+
+#~ msgid ""
+#~ "System Settings module, daemon and Plasma applet for managing your "
+#~ "touchpad"
+#~ msgstr ""
+#~ "தொடுபலகையை நிர்வகிக்க உதவும் கணினி அமைப்புக்கூறு, பின்னணி சேவை, மற்றும் பிளாஸ்மாய்ட்"
+
+#~ msgid "Copyright © 2013 Alexander Mezin"
+#~ msgstr "பதிப்புரிமை © 2013 அலெக்சாண்டர் மெஜின்"
+
+#~ msgid ""
+#~ "This program incorporates work covered by this copyright notice:\n"
+#~ "Copyright © 2002-2005,2007 Peter Osterlund"
+#~ msgstr ""
+#~ "இப்பதிப்புரிமைக்கு உட்படும் சிலவற்றை இந்நிரல் பயன்படுத்துகிறது:\n"
+#~ "பதிப்புரிமை © 2002-2005,2007 பீட்டர் ஆஸ்டர்ளுண்ட்"
+
+#~ msgid "Alexander Mezin"
+#~ msgstr "அலெக்சாண்டர் மெஜின்"
+
+#~ msgid "Thomas Pfeiffer"
+#~ msgstr "தாமஸ் ஃபைஃபர்"
+
+#~ msgctxt "Credits"
+#~ msgid "Usability, testing"
+#~ msgstr "பயன்படுதன்மை, சோதனை"
+
+#~ msgid "Alex Fiestas"
+#~ msgstr "அலெக்ஸ் ஃபியெஸ்டாஸ்"
+
+#~ msgctxt "Credits"
+#~ msgid "Helped a bit"
+#~ msgstr "சிறிதளவு உதவி செய்தார்"
+
+#~ msgid "Peter Osterlund"
+#~ msgstr "பீட்டர் ஆஸ்டர்ளுண்ட்"
+
+#~ msgctxt "Credits"
+#~ msgid "Developer of synclient"
+#~ msgstr "synclient-ஐ உருவாக்கியவர்"
+
+#~ msgid "Vadim Zaytsev"
+#~ msgstr "வாடிம் சேய்ட்ஸெவ்"
+
+#~ msgctxt "Credits"
+#~ msgid "Testing"
+#~ msgstr "சோதனை"
+
+#~ msgid "Violetta Raspryagayeva"
+#~ msgstr "வையொலெட்டா ராஸ்பிரியகயேவா"

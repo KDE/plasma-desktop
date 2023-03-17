@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1641637 2023-01-07 01:46:40Z scripty $
+# $Id: kcm_smserver.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-02 20:29+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,19 +26,6 @@ msgstr ""
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Upravljalnik sej</h1>Tu lahko nastavite upravljalnika sej. To vključuje "
-"tudi, ali želite odjavo potrditi, ali želite prejšnjo sejo ob prijavi "
-"obnoviti in ali naj bo po koncu seje računalnik samodejno izklopljen."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -216,6 +203,18 @@ msgstr "Ob prijavi"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplikacije, ki naj bi bile izključene iz seje"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Upravljalnik sej</h1>Tu lahko nastavite upravljalnika sej. To "
+#~ "vključuje tudi, ali želite odjavo potrditi, ali želite prejšnjo sejo ob "
+#~ "prijavi obnoviti in ali naj bo po koncu seje računalnik samodejno "
+#~ "izklopljen."
 
 #, fuzzy
 #~| msgid "Default leave option:"

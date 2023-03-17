@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-12-26 16:55+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -180,49 +180,6 @@ msgstr ""
 msgid "internal error - code %1 unknown"
 msgstr "Внутренняя ошибка с неизвестным кодом %1"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Модуль KDE управления джойстиком"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Модуль настройки для проверки джойстиков"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "© Martin Koller, 2004"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Джойстик</h1>Этот модуль позволяет проверить правильность работы "
-"джойстика.<br/>Если значения для осей указаны неверно, это можно исправить с "
-"помощью процедуры калибровки.<br/>Устройства джойстика опрашиваются для /dev/"
-"js[0-4] и /dev/input/js[0-4]<br/>Если ваш джойстик работает на другом "
-"устройстве, укажите его в поле ввода.<br/>В списке «Кнопки» показано "
-"состояние кнопок джойстика, а списке «Оси» — состояние осей.<br/>Примечание: "
-"в текущей реализации драйвер джойстика ядра Linux (для 2.4 и 2.6) может "
-"правильно определить следующие устройства:<ul><li>джойстик с двумя осями и "
-"четырьмя кнопками</li><li>джойстик с тремя осями и четырьмя кнопками</"
-"li><li>джойстик с четырьмя осями и четырьмя кнопками</li><li>цифровые "
-"джойстики Saitek Cyborg</li></ul>(Подробнее об этом см. документацию ядра "
-"Linux, файл Documentation/input/joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -326,6 +283,43 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Все значения калибровки для джойстика %1 были восстановлены."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Модуль KDE управления джойстиком"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Модуль настройки для проверки джойстиков"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "© Martin Koller, 2004"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Джойстик</h1>Этот модуль позволяет проверить правильность работы "
+#~ "джойстика.<br/>Если значения для осей указаны неверно, это можно "
+#~ "исправить с помощью процедуры калибровки.<br/>Устройства джойстика "
+#~ "опрашиваются для /dev/js[0-4] и /dev/input/js[0-4]<br/>Если ваш джойстик "
+#~ "работает на другом устройстве, укажите его в поле ввода.<br/>В списке "
+#~ "«Кнопки» показано состояние кнопок джойстика, а списке «Оси» — состояние "
+#~ "осей.<br/>Примечание: в текущей реализации драйвер джойстика ядра Linux "
+#~ "(для 2.4 и 2.6) может правильно определить следующие устройства:"
+#~ "<ul><li>джойстик с двумя осями и четырьмя кнопками</li><li>джойстик с "
+#~ "тремя осями и четырьмя кнопками</li><li>джойстик с четырьмя осями и "
+#~ "четырьмя кнопками</li><li>цифровые джойстики Saitek Cyborg</li></"
+#~ "ul>(Подробнее об этом см. документацию ядра Linux, файл Documentation/"
+#~ "input/joystick.txt)"
 
 #~ msgid ""
 #~ "_: NAME OF TRANSLATORS\n"

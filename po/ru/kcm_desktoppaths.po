@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-17 11:20+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -69,20 +69,6 @@ msgstr "Общая"
 #, kde-format
 msgid "Templates"
 msgstr "Шаблоны"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Пути</h1>\n"
-"Этот модуль позволяет указать, где должны располагаться файлы рабочего стола "
-"в файловой системе.\n"
-"Используйте подсказку «Что это?» (Shift+F1) для вызова справки по отдельным "
-"параметрам."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -182,6 +168,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Задать новое расположение"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Пути</h1>\n"
+#~ "Этот модуль позволяет указать, где должны располагаться файлы рабочего "
+#~ "стола в файловой системе.\n"
+#~ "Используйте подсказку «Что это?» (Shift+F1) для вызова справки по "
+#~ "отдельным параметрам."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

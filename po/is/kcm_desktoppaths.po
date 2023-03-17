@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-10 20:06+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -66,20 +66,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Slóðir</h1>\n"
-"Hér getur þú stillt hvar í skráakerfinu skrárnar á skjáborðinu eru í raun "
-"geymdar.\n"
-"Þú getur notað \"Hvað er þetta?\" (Shift-F1) til að sjá hvað tilteknar "
-"stillingar þýða."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -181,6 +167,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Slóðir</h1>\n"
+#~ "Hér getur þú stillt hvar í skráakerfinu skrárnar á skjáborðinu eru í raun "
+#~ "geymdar.\n"
+#~ "Þú getur notað \"Hvað er þetta?\" (Shift-F1) til að sjá hvað tilteknar "
+#~ "stillingar þýða."
 
 #, fuzzy
 #~| msgid ""

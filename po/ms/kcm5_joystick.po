@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-07 01:08+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -177,50 +177,6 @@ msgstr ""
 msgid "internal error - code %1 unknown"
 msgstr "ralat dalaman - kod %1 tidak diketahui"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Modul Kawalan Pedal Permainan KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Modul Tetapan Sistem KDE untuk menguji Pedal Permainan"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Pedal permainan</h1>Modul ini membantu untuk memeriksa sama ada pedal "
-"permainan anda berfungsi dengan betul.<br />Jika ia memberikan nilai yang "
-"salah untuk paksinya, anda boleh mencuba untuk menyelesaikannya dengan "
-"tentukuran.<br />Modul ini cuba mencari semua peranti pedal permainan yang "
-"ada dengan memeriksa /dev/js[0-4] dan /dev/input/js[0-4]<br />Jika anda "
-"mempunyai fail peranti lain, masukkannya dalam kekotak kombo.<br />Senarai "
-"Butang memaparkan keadaan butang pada pedal permainan anda, senarai Paksi "
-"memaparkan nilai semasa untuk semua paksi.<br />NOTA: pemandu peranti Linux "
-"semasa (Kernel 2.4, 2.6) hanya boleh autokesan<ul><li>pedal permainan 2-"
-"paksi, 4 butang</li><li>pedal permainan 3-paksi, 4 butang</li><li>pedal "
-"permainan 4-paksi, 4-butang</li><li></li>pedal permainan Saitek Cyborg "
-"'digital'</ul>(Untuk perincian anda boleh memeriksa sumber Linux/"
-"Documentation/input/joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -325,3 +281,40 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Kembalikan semua nilai tentukuran untuk peranti pedal permainan %1"
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Modul Kawalan Pedal Permainan KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Modul Tetapan Sistem KDE untuk menguji Pedal Permainan"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Pedal permainan</h1>Modul ini membantu untuk memeriksa sama ada pedal "
+#~ "permainan anda berfungsi dengan betul.<br />Jika ia memberikan nilai yang "
+#~ "salah untuk paksinya, anda boleh mencuba untuk menyelesaikannya dengan "
+#~ "tentukuran.<br />Modul ini cuba mencari semua peranti pedal permainan "
+#~ "yang ada dengan memeriksa /dev/js[0-4] dan /dev/input/js[0-4]<br />Jika "
+#~ "anda mempunyai fail peranti lain, masukkannya dalam kekotak kombo.<br /"
+#~ ">Senarai Butang memaparkan keadaan butang pada pedal permainan anda, "
+#~ "senarai Paksi memaparkan nilai semasa untuk semua paksi.<br />NOTA: "
+#~ "pemandu peranti Linux semasa (Kernel 2.4, 2.6) hanya boleh "
+#~ "autokesan<ul><li>pedal permainan 2-paksi, 4 butang</li><li>pedal "
+#~ "permainan 3-paksi, 4 butang</li><li>pedal permainan 4-paksi, 4-butang</"
+#~ "li><li></li>pedal permainan Saitek Cyborg 'digital'</ul>(Untuk perincian "
+#~ "anda boleh memeriksa sumber Linux/Documentation/input/joystick.txt)"

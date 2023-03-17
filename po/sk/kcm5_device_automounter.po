@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-06-26 14:56+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -26,36 +26,6 @@ msgstr "Roman Paholík,Dušan Kazik"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Automatické pripájanie zariadení"
-
-#: DeviceAutomounterKCM.cpp:42
-#, kde-format
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr "Pôvodný autor"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr "Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr "Port pre Plasma 5"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -179,6 +149,24 @@ msgstr "Toto zariadenie bude automaticky pripojené po pripojení."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Toto zariadenie nebude automaticky pripojené po pripojení."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Automatické pripájanie zariadení"
+
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
+
+#~ msgid "Original Author"
+#~ msgstr "Pôvodný autor"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Plasma 5 Port"
+#~ msgstr "Port pre Plasma 5"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

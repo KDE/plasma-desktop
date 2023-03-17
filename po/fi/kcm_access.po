@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-04 19:54+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -438,38 +438,31 @@ msgstr "Viive:"
 msgid "Ring system bell when rejected"
 msgstr "Anna järjestelmän äänimerkki hylättäessä"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr "Tässä voit asettaa saavutettavuusominaisuuksia kuten näyttölukijan."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Äänimerkki"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Muuntonäppäimet"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Näppäimistösuodattimet"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Hiirinavigointi"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -599,6 +592,11 @@ msgid ""
 msgstr ""
 "Orca-näyttölukijaa ei vaikuta olevan asennettu. Ennen kuin yrität käytät "
 "tätä ominaisuutta, asenna se ja kirjaudu ulos tai käynnistä kone uudelleen"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr "Tässä voit asettaa saavutettavuusominaisuuksia kuten näyttölukijan."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Enimmäisnopeus"

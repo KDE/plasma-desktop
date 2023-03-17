@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Etiketa:"
 #, kde-format
 msgid "Preview"
 msgstr "Pregled"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE kontrolni modul tastature"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010, Andrij Risin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastatura</h1><p>Ova kontrolni modul služi za podešavanje parametara i "
-"rasporeda tastature.</p>"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -517,6 +498,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE kontrolni modul tastature"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010, Andrij Risin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastatura</h1><p>Ova kontrolni modul služi za podešavanje parametara "
+#~ "i rasporeda tastature.</p>"
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE‑ov menjač rasporeda tastature"

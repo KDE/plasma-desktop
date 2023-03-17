@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-20 17:45+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Sessionshåndtering</h1> Her kan du indstille sessionshåndteringen. Dette "
-"inkluderer valg, såsom hvorvidt du vil bekræfte, at du vil logge af, om den "
-"sidste session skal genskabes når du logger på igen, og om computeren skal "
-"lukke ned automatisk efter sessionsafslutning som standard."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -203,6 +189,19 @@ msgstr "Ved login"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Programmer der skal udelukkes fra session"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Sessionshåndtering</h1> Her kan du indstille sessionshåndteringen. "
+#~ "Dette inkluderer valg, såsom hvorvidt du vil bekræfte, at du vil logge "
+#~ "af, om den sidste session skal genskabes når du logger på igen, og om "
+#~ "computeren skal lukke ned automatisk efter sessionsafslutning som "
+#~ "standard."
 
 #, fuzzy
 #~| msgid "Default leave option:"

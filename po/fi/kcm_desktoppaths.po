@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-04 18:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -68,20 +68,6 @@ msgstr "Julkinen"
 #, kde-format
 msgid "Templates"
 msgstr "Mallipohjat"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Polut</h1>\n"
-"Tästä voit valita, mihin työpöydälläsi olevat tiedostot tallennetaan. Jos "
-"haluat ohjeen tietystä\n"
-"valinnasta, käytä ”Mikä tämä on?” -toimintoa näppäinyhdistelmällä\n"
-"Vaihto+F1."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -184,6 +170,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Valitse uusi sijainti"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Polut</h1>\n"
+#~ "Tästä voit valita, mihin työpöydälläsi olevat tiedostot tallennetaan. Jos "
+#~ "haluat ohjeen tietystä\n"
+#~ "valinnasta, käytä ”Mikä tämä on?” -toimintoa näppäinyhdistelmällä\n"
+#~ "Vaihto+F1."
 
 #, fuzzy
 #~| msgid ""

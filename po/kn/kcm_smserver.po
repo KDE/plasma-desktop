@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-12-29 15:40+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>ಅಧಿವೇಶನ ನಿರ್ವಾಹಕ</h1> ಇಲ್ಲಿ ನೀವು ಅಧಿವೇಶನದ ನಿರ್ವಾಹಕನನ್ನು ಸಂರಚಿಸಬಹುದಾಗಿದೆ. "
-"ಇದರಲ್ಲಿ ಅಧಿವೇಶನದ ನಿರ್ಗಮನವನ್ನು ಖಚಿತಪಡಿಸಬೇಕೆ (ನಿರ್ಗಮನ), ಮರಳಿ ಪ್ರವೇಶಿಸಿದಾಗ "
-"ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸಬೇಕೆ ಹಾಗು ಅಧಿವೇಶನದಿಂದ ನಿರ್ಗಮಿಸಿದಾಗ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ "
-"ಗಣಕವು ಸ್ಥಗಿತಗೊಳ್ಳಬೇಕೆ ಎನ್ನುಂತಹ ಹಲವಾರು ಆಯ್ಕೆಗಳು ಒಳಗೊಂಡಿವೆ."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -198,6 +184,18 @@ msgstr "ಪ್ರವೇಶಿಸಿದಾಗ"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "ಅಧಿವೇಶನಗಳಿಂದ ಹೊರಗಿಡಬೇಕಿರುವ ಅನ್ವಯಗಳು(&x):"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>ಅಧಿವೇಶನ ನಿರ್ವಾಹಕ</h1> ಇಲ್ಲಿ ನೀವು ಅಧಿವೇಶನದ ನಿರ್ವಾಹಕನನ್ನು ಸಂರಚಿಸಬಹುದಾಗಿದೆ. "
+#~ "ಇದರಲ್ಲಿ ಅಧಿವೇಶನದ ನಿರ್ಗಮನವನ್ನು ಖಚಿತಪಡಿಸಬೇಕೆ (ನಿರ್ಗಮನ), ಮರಳಿ ಪ್ರವೇಶಿಸಿದಾಗ "
+#~ "ಅಧಿವೇಶನವನ್ನು ಮರಳಿ ಸ್ಥಾಪಿಸಬೇಕೆ ಹಾಗು ಅಧಿವೇಶನದಿಂದ ನಿರ್ಗಮಿಸಿದಾಗ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ "
+#~ "ಗಣಕವು ಸ್ಥಗಿತಗೊಳ್ಳಬೇಕೆ ಎನ್ನುಂತಹ ಹಲವಾರು ಆಯ್ಕೆಗಳು ಒಳಗೊಂಡಿವೆ."
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

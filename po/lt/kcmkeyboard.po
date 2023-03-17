@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-12-12 13:46+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -82,25 +82,6 @@ msgstr "Pavadinimas:"
 #, kde-format
 msgid "Preview"
 msgstr "Peržiūra"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE Klaviatūros valdymo modulis"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "Autorių teisės (c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Klaviatūra</h1> Šio valdymo modulio pagalba galima konfigūruoti "
-"klaviatūros parametrus ir išdėstymus."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -515,6 +496,19 @@ msgstr ""
 "pasirinktas modelis nepalaiko tam tikro išdėstymo ar išdėstymo varianto. Ši "
 "problema, greičiausiai, atsiranda, kai bandote naudoti šio modelio, "
 "išdėstymo ir varianto kombinaciją."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE Klaviatūros valdymo modulis"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "Autorių teisės (c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Klaviatūra</h1> Šio valdymo modulio pagalba galima konfigūruoti "
+#~ "klaviatūros parametrus ir išdėstymus."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE klaviatūros išdėstymų perjungiklis"

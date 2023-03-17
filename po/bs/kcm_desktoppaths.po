@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2015-02-04 15:17+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -60,19 +60,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<html><h1>Putanje</h1><p>Ovim modulom se određuje gdje se u datotečnom "
-"sistemu smiještaju datoteke na površi.</p><p>Koristite „Šta je "
-"ovo?“ (<shortcut>Shift+F1</shortcut>) za objašnjenja pojedinih opcija.</p></"
-"html>."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -178,6 +165,17 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<html><h1>Putanje</h1><p>Ovim modulom se određuje gdje se u datotečnom "
+#~ "sistemu smiještaju datoteke na površi.</p><p>Koristite „Šta je "
+#~ "ovo?“ (<shortcut>Shift+F1</shortcut>) za objašnjenja pojedinih opcija.</"
+#~ "p></html>."
 
 #, fuzzy
 #~| msgid ""

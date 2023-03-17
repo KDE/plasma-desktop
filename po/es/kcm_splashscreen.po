@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-11-30 17:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -34,27 +34,22 @@ msgstr "No se mostrará ninguna pantalla de bienvenida"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "No puede borrar la pantalla de bienvenida actual"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Este módulo le permite escoger el tema de la pantalla de bienvenida."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Obtener novedades..."
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "No se ha podido mostrar la vista previa de la pantalla de bienvenida."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Vista previa de la pantalla de bienvenida"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalar"
@@ -70,6 +65,10 @@ msgstr "Para uso futuro"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nombre del tema de pantalla de bienvenida actual"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr ""
+#~ "Este módulo le permite escoger el tema de la pantalla de bienvenida."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Obtener nuevas pantallas de bienvenida..."

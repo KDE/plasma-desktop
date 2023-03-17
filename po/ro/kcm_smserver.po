@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-04-04 09:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,21 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Administratorul de sesiune</h1> Aici puteți configura administratorul de "
-"sesiune. Acesta include opțiuni printre care dacă ieșirea din mediul KDE va "
-"fi sau nu confirmată, dacă sesiunea precedentă va fi refăcută la următoarea "
-"autentificare și dacă mașina să fie oprită automat după ce închideți "
-"sesiunea."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -206,6 +191,19 @@ msgstr "La autentificare"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicații de exclus din sesiune"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Administratorul de sesiune</h1> Aici puteți configura administratorul "
+#~ "de sesiune. Acesta include opțiuni printre care dacă ieșirea din mediul "
+#~ "KDE va fi sau nu confirmată, dacă sesiunea precedentă va fi refăcută la "
+#~ "următoarea autentificare și dacă mașina să fie oprită automat după ce "
+#~ "închideți sesiunea."
 
 #, fuzzy
 #~| msgid "Default leave option:"

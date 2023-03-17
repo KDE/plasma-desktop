@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-10 20:36+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -179,49 +179,6 @@ msgstr ""
 msgid "internal error - code %1 unknown"
 msgstr "Bënowô fela - nieznóny kòd felë (%1)"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Kòntrolny mòduł KDE Joystica"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Systemòwi mòduł KDE do testowaniô joysticków"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Joystick</h1> Nen mòduł zezwôlô sprôwdzëc, czë Twój joystick dzéjô "
-"poprôwno.<br /> Eżlë pòdôwô niepòprôwné wôrtnotë dlô jedny z osë, mòżesz "
-"spróbòwac to zmienic przez przeprowadzenié kalibracëji.<br /> Nen mòduł "
-"próbùje nalezc przistãpné ùrządzenia joysticków sprôwdzając ùrządzenia /dev/"
-"js[0-4] ë /dev/input/js[0-4]<br /> Eżlë ùrządzenié joysticka mô jinszé "
-"miono, proszã je pòdac w môlu rozwijóny lëstë.<br /> Lësta Knąpë pòkazëwô "
-"stón knąpów joysticka, lësta Òsë pòkazëwô aktualné wôrtnotë dlô wszëtczich "
-"òsë.<br /> BÔCZËNK: bieżny czérownik dlô Linuksa (jądra 2.4 ë 2.6) wëkrëwô "
-"aùtomatno blós joysticki:<ul><li>2-òsowé, 4-knąpòwé</li><li>3-òsowé, 4-"
-"knąpòwé</li><li>4-òsowé, 4-knąpòwé</li> <li>cyfrowé Saitek Cyborg</li></ul> "
-"(Wicy nalezesz w zdrojach Linuksa, w lopku source/Documentation/input/"
-"joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -327,3 +284,39 @@ msgstr ""
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""
 "Przëwrócono nazôd wszëtczé wôrtnotë kalibracëji dlô ùrządzenia joysticka %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Kòntrolny mòduł KDE Joystica"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Systemòwi mòduł KDE do testowaniô joysticków"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Joystick</h1> Nen mòduł zezwôlô sprôwdzëc, czë Twój joystick dzéjô "
+#~ "poprôwno.<br /> Eżlë pòdôwô niepòprôwné wôrtnotë dlô jedny z osë, mòżesz "
+#~ "spróbòwac to zmienic przez przeprowadzenié kalibracëji.<br /> Nen mòduł "
+#~ "próbùje nalezc przistãpné ùrządzenia joysticków sprôwdzając ùrządzenia /"
+#~ "dev/js[0-4] ë /dev/input/js[0-4]<br /> Eżlë ùrządzenié joysticka mô "
+#~ "jinszé miono, proszã je pòdac w môlu rozwijóny lëstë.<br /> Lësta Knąpë "
+#~ "pòkazëwô stón knąpów joysticka, lësta Òsë pòkazëwô aktualné wôrtnotë dlô "
+#~ "wszëtczich òsë.<br /> BÔCZËNK: bieżny czérownik dlô Linuksa (jądra 2.4 ë "
+#~ "2.6) wëkrëwô aùtomatno blós joysticki:<ul><li>2-òsowé, 4-knąpòwé</"
+#~ "li><li>3-òsowé, 4-knąpòwé</li><li>4-òsowé, 4-knąpòwé</li> <li>cyfrowé "
+#~ "Saitek Cyborg</li></ul> (Wicy nalezesz w zdrojach Linuksa, w lopku source/"
+#~ "Documentation/input/joystick.txt)"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-01 00:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -71,19 +71,6 @@ msgstr "공개"
 #, kde-format
 msgid "Templates"
 msgstr "템플릿"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>경로</h1>\n"
-"이 모듈은 바탕 화면에 있는 파일이 파일 시스템에 저장될 위치를 지정합니다.\n"
-"특정한 설정에 대한 도움말을 보시려면 \"이것에 대한 설명\" (Shift+F1)을 사용하"
-"십시오."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -173,6 +160,18 @@ msgstr "이 폴더는 템플릿을 저장하는 기본 폴더로 사용됩니다
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "새 위치 선택"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>경로</h1>\n"
+#~ "이 모듈은 바탕 화면에 있는 파일이 파일 시스템에 저장될 위치를 지정합니"
+#~ "다.\n"
+#~ "특정한 설정에 대한 도움말을 보시려면 \"이것에 대한 설명\" (Shift+F1)을 사"
+#~ "용하십시오."
 
 #, fuzzy
 #~| msgid ""

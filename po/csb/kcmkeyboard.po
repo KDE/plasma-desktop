@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-15 19:24+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -82,25 +82,6 @@ msgstr "Òpisënk:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
-msgid "KDE Keyboard Control Module"
-msgstr "Przestôwnik ùstôwów klawiaturów KDE"
-
-#: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2006-2007 Andriy Rysin"
-msgid "(c) 2010 Andriy Rysin"
-msgstr "Copyright (C) 2006-2007 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
@@ -514,6 +495,16 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#, fuzzy
+#~| msgid "KDE Keyboard Layout Switcher"
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Przestôwnik ùstôwów klawiaturów KDE"
+
+#, fuzzy
+#~| msgid "Copyright (C) 2006-2007 Andriy Rysin"
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "Copyright (C) 2006-2007 Andriy Rysin"
 
 #, fuzzy
 #~| msgid "Keyboard Layout"

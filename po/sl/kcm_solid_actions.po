@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-27 08:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -194,12 +194,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
@@ -229,42 +229,22 @@ msgstr "Lastnost %1 naprave mora biti enaka %2"
 msgid "The device property %1 must contain %2"
 msgstr "Lastnost %1 naprave mora vsebovati %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solidov urejevalnik dejanj za naprave"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Modul nadzorne plošče za Solidova dejanja za naprave"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© 2009, 2014 ekipa Solidovih dejanj za naprave"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Predelava za Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Kot kaže, predikat za to dejanje ni veljaven."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Napaka med razčlenjevanjem pogojev za napravo"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Izbrano ni nobeno dejanje"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Ga ni mogoče izbrisati"
@@ -286,6 +266,18 @@ msgstr "Uredi…"
 #, kde-format
 msgid "Add…"
 msgstr "Dodaj…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solidov urejevalnik dejanj za naprave"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Modul nadzorne plošče za Solidova dejanja za naprave"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© 2009, 2014 ekipa Solidovih dejanj za naprave"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Predelava za Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Uredi ..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-05-16 06:51-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
@@ -169,47 +169,6 @@ msgstr "אין אפשרות ליישם את ערכי הכיול עבור התק�
 msgid "internal error - code %1 unknown"
 msgstr "שגיאה פנימית - קוד %1 לא ידוע"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "מודול מרכז בקרה לבקרת ג'ויסטיק"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "מודול הגדרות המערכת של KDE לבדיקת ג'ויסטיקים"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "כל הזכויות שמורות 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>ג'ויסטיק</h1> מודול זה עוזר לבדוק אם הג'ויסטיק שלך עובד כראוי. <br /> אם "
-"הוא מחזיר ערכים לא נכונים עבור הצירים באפשרותך לפתור זאת באמצעות הכיול. <br /"
-"> מודול זה מנסה למצוא את כל הג'ויסטיקים הזמינים באמצעות בדיקת ‪/dev/js[0-4]‬‎ "
-"וגם ‪/dev/input/js[0-4]‬ <br /> אם יש לך קובץ נוסף, הכנס אותו בתיבת הבחירה. "
-"<br /> רשימת הכפתורים מראה את מצב הכפתורים בג'ויסטיק  שלך. רשימת הצירים מראה "
-"את הערך הנוכחי של כל הצירים. <br />הערה: מנהל ההתקנים הנוכחי של לינוקס (קרנל "
-"2.4 ו־2.6) יכול לזהות אוטומטית רק  <ul> <li>ג'ויסטיק בעל 4 כפתורים ו2 צירים</"
-"li> <li>ג'ויסטיק בעל 4 כפתורים ו3 צירים</li> <li>ג'ויסטיק בעל 4 כפתורים ו4 "
-"צירים</li> <li>Saitek Cyborg 'digital' joysticks</li> </ul> (לפרטים נוספים "
-"בדוק ב־source/Documentation/input/joystick.txt בקוד המקור של Linux)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -312,3 +271,38 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "שוחזרו כל ערכי הכיול עבור התקן הג'ויסטיק %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "מודול מרכז בקרה לבקרת ג'ויסטיק"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "מודול הגדרות המערכת של KDE לבדיקת ג'ויסטיקים"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "כל הזכויות שמורות 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>ג'ויסטיק</h1> מודול זה עוזר לבדוק אם הג'ויסטיק שלך עובד כראוי. <br /> "
+#~ "אם הוא מחזיר ערכים לא נכונים עבור הצירים באפשרותך לפתור זאת באמצעות "
+#~ "הכיול. <br /> מודול זה מנסה למצוא את כל הג'ויסטיקים הזמינים באמצעות בדיקת"
+#~ " ‪/dev/js[0-4]‬‎ וגם ‪/dev/input/js[0-4]‬ <br /> אם יש לך קובץ נוסף, הכנס אותו "
+#~ "בתיבת הבחירה. <br /> רשימת הכפתורים מראה את מצב הכפתורים בג'ויסטיק  שלך. "
+#~ "רשימת הצירים מראה את הערך הנוכחי של כל הצירים. <br />הערה: מנהל ההתקנים "
+#~ "הנוכחי של לינוקס (קרנל 2.4 ו־2.6) יכול לזהות אוטומטית רק  <ul> "
+#~ "<li>ג'ויסטיק בעל 4 כפתורים ו2 צירים</li> <li>ג'ויסטיק בעל 4 כפתורים ו3 "
+#~ "צירים</li> <li>ג'ויסטיק בעל 4 כפתורים ו4 צירים</li> <li>Saitek Cyborg "
+#~ "'digital' joysticks</li> </ul> (לפרטים נוספים בדוק ב־source/Documentation/"
+#~ "input/joystick.txt בקוד המקור של Linux)"

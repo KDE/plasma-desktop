@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-07-12 23:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -52,28 +52,7 @@ msgstr ""
 "KDE-palvelunhallintaa (kded5) ei voitu tiedottaa tallennetuista muutoksista: "
 "%1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>Tämä moduuli tarjoaa yleiskuvan kaikista KDE-palvelun liitännäisistä eli "
-"KDE-palveluista. Palveluja on yleisesti kahdenlaisia:</"
-"p><ul><li>käynnistymisen yhteydessä käynnistettäviä</li><li>tarpeen mukaan "
-"käynnistettäviä</li></ul> <p>Jälkimmäiset luetellaan vain mukavuussyistä. "
-"Edellisiä voi käynnistää tai pysäyttää. Voi myös määrittää, ladataanko "
-"palvelut käyttöympäristön käynnistyessä.</p> <p><b>Käytä tätä varoen: jotkin "
-"palvelut ovat oleellisia Plasmalle. Älä poista käytöstä palveluja, ellet "
-"tiedä, mitä teet.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -82,7 +61,7 @@ msgstr ""
 "Taustapalveluiden hallinta (kded5) ei ole käynnissä. Varmista, että se on "
 "asennettu oikein."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -91,7 +70,7 @@ msgstr ""
 "Jotkin palvelut poistavat itsensä käytöstä käynnistämisen jälkeen, ellei "
 "niistä ole hyötyä nyky-ympäristössä."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -101,57 +80,76 @@ msgstr ""
 "taustapalveluiden hallinnan (kded5) käynnistyttyä uudelleen muutostesi "
 "jälkeen."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "Kaikki palvelut"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Käynnissä"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Ei käynnissä"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "Käynnistettävät palvelut"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Pyynnöstä ladattavat palvelut"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Ei käynnissä"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Käynnissä"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "Pysäytä palvelu"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "Käynnistä palvelu"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>Tämä moduuli tarjoaa yleiskuvan kaikista KDE-palvelun liitännäisistä "
+#~ "eli KDE-palveluista. Palveluja on yleisesti kahdenlaisia:</"
+#~ "p><ul><li>käynnistymisen yhteydessä käynnistettäviä</li><li>tarpeen "
+#~ "mukaan käynnistettäviä</li></ul> <p>Jälkimmäiset luetellaan vain "
+#~ "mukavuussyistä. Edellisiä voi käynnistää tai pysäyttää. Voi myös "
+#~ "määrittää, ladataanko palvelut käyttöympäristön käynnistyessä.</p> "
+#~ "<p><b>Käytä tätä varoen: jotkin palvelut ovat oleellisia Plasmalle. Älä "
+#~ "poista käytöstä palveluja, ellet tiedä, mitä teet.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

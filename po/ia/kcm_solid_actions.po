@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-05 22:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -196,12 +196,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenitor"
@@ -231,42 +231,22 @@ msgstr "Le proprietate de dispositivos %1 debe esser equal a  %2"
 msgid "The device property %1 must contain %2"
 msgstr "Le proprietate de dispositivo %1 debe continer %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Redactor de Actiones de Dispositivo de Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Modulo de pannello de controlo de Actiones de Dispositivo de Solid"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014  equipa de Actiones de Dispositivo de Solid"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Port a Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Il sembla que le predicate pro iste action non es valide."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Error analysante conditiones de dispositivo"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Nulle action on seligeva"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Il non pote esser cancellate"
@@ -288,6 +268,18 @@ msgstr "Modifica…"
 #, kde-format
 msgid "Add…"
 msgstr "Adde…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Redactor de Actiones de Dispositivo de Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Modulo de pannello de controlo de Actiones de Dispositivo de Solid"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014  equipa de Actiones de Dispositivo de Solid"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Port a Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Edita ..."

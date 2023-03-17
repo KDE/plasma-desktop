@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kappfinder\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-07-04 11:50+0530\n"
 "Last-Translator: ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -17,19 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>സെഷന്‍ മാനേജര്‍</h1> സെഷന്‍ മാനേജരെ ഇവിടെ നിന്ന് ക്രമീകരിക്കാം . സെഷനില്‍ നിന്ന് പുറത്ത് "
-"പോകുന്നതിനെ (ലോഗൌട്ട്) സ്ഥിരീകരിക്കണോ വേണ്ടയോ , സെഷന്‍ പുന:സ്ഥാപിക്കണോ വേണ്ടയോ , സെഷനില്‍ "
-"നിന്ന് പുറത്ത് പോയതിന് ശേഷം കമ്പ്യൂട്ടര്‍ സ്വയം അടച്ചു പൂട്ടണോ എന്നിവയൊക്കെ ഈക്രമീകരണങ്ങളില്‍ പെടും"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -194,6 +181,18 @@ msgstr "അകത്തുകയറുമ്പോള്‍"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "സെഷനുകളില്‍ നിന്നും &മാറ്റേണ്ട പ്രയോഗങ്ങള്‍:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>സെഷന്‍ മാനേജര്‍</h1> സെഷന്‍ മാനേജരെ ഇവിടെ നിന്ന് ക്രമീകരിക്കാം . സെഷനില്‍ നിന്ന് "
+#~ "പുറത്ത് പോകുന്നതിനെ (ലോഗൌട്ട്) സ്ഥിരീകരിക്കണോ വേണ്ടയോ , സെഷന്‍ പുന:സ്ഥാപിക്കണോ വേണ്ടയോ , "
+#~ "സെഷനില്‍ നിന്ന് പുറത്ത് പോയതിന് ശേഷം കമ്പ്യൂട്ടര്‍ സ്വയം അടച്ചു പൂട്ടണോ എന്നിവയൊക്കെ "
+#~ "ഈക്രമീകരണങ്ങളില്‍ പെടും"
 
 #, fuzzy
 #~ msgid "Default option:"

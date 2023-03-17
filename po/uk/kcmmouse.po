@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-25 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -50,34 +50,7 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Критична помилка під час читання основних відомостей щодо пристрою для %1."
 
-#: kcm/libinput/libinput_config.cpp:36
-#, kde-format
-msgid "Pointer device KCM"
-msgstr "Модуль керування координатними пристроями"
-
-#: kcm/libinput/libinput_config.cpp:38
-#, kde-format
-msgid "System Settings module for managing mice and trackballs."
-msgstr ""
-"Модуль «Системних параметрів» для керування мишами та координатними "
-"пристроями."
-
-#: kcm/libinput/libinput_config.cpp:40
-#, kde-format
-msgid "Copyright 2018 Roman Gilg"
-msgstr "© Roman Gilg, 2016"
-
-#: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
-#, kde-format
-msgid "Roman Gilg"
-msgstr "Roman Gilg"
-
-#: kcm/libinput/libinput_config.cpp:43
-#, kde-format
-msgid "Developer"
-msgstr "Розробник"
-
-#: kcm/libinput/libinput_config.cpp:109
+#: kcm/libinput/libinput_config.cpp:90
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -86,12 +59,12 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm/libinput/libinput_config.cpp:114
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не знайдено координатного пристрою. З'єднайте пристрій з комп'ютером."
 
-#: kcm/libinput/libinput_config.cpp:125
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -101,7 +74,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm/libinput/libinput_config.cpp:145
+#: kcm/libinput/libinput_config.cpp:126
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -110,7 +83,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm/libinput/libinput_config.cpp:167
+#: kcm/libinput/libinput_config.cpp:148
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -120,53 +93,53 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm/libinput/libinput_config.cpp:191
+#: kcm/libinput/libinput_config.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Координатний пристрій від’єднано. Діалогове вікно його параметрів закрито."
 
-#: kcm/libinput/libinput_config.cpp:193
+#: kcm/libinput/libinput_config.cpp:174
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Координатний пристрій від’єднано. Інших пристроїв не знайдено."
 
-#: kcm/libinput/main.qml:79
+#: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
 msgstr "Пристрій:"
 
-#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
+#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: kcm/libinput/main.qml:105
+#: kcm/libinput/main.qml:100
 #, kde-format
 msgid "Device enabled"
 msgstr "Пристрій увімкнено"
 
-#: kcm/libinput/main.qml:124
+#: kcm/libinput/main.qml:120
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Приймати вхідні дані з цього пристрою."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
+#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Режим шульги"
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
+#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
-#: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
+#: kcm/libinput/main.qml:170 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -174,113 +147,113 @@ msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
-#: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
+#: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
-#: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
+#: kcm/libinput/main.qml:211 kcm/libinput/main_deviceless.qml:137
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Профіль прискорення:"
 
-#: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:242 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "Flat"
 msgstr "Нейтральний"
 
-#: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
+#: kcm/libinput/main.qml:246 kcm/libinput/main_deviceless.qml:172
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Вказівник зсувається на ту саму відстань, що і миша."
 
-#: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:252 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Adaptive"
 msgstr "Адаптивний"
 
-#: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
+#: kcm/libinput/main.qml:256 kcm/libinput/main_deviceless.qml:182
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Вказівник зсувається на відстань, яка залежить від швидкості руху мишею."
 
-#: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:193
 #, kde-format
 msgid "Scrolling:"
 msgstr "Гортання:"
 
-#: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
+#: kcm/libinput/main.qml:269 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
-#: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
+#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:211
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
-#: kcm/libinput/main.qml:295
+#: kcm/libinput/main.qml:290
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:338
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Повільніше"
 
-#: kcm/libinput/main.qml:349
+#: kcm/libinput/main.qml:344
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Швидше"
 
-#: kcm/libinput/main.qml:360
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Повторно прив'язати додаткові кнопки…"
 
-#: kcm/libinput/main.qml:396
+#: kcm/libinput/main.qml:391
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Додаткова кнопка %1:"
 
-#: kcm/libinput/main.qml:426
+#: kcm/libinput/main.qml:421
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 "Натисніть кнопку миші, для якої ви хочете додати прив'язку до клавіатури"
 
-#: kcm/libinput/main.qml:427
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Введіть нову комбінацію клавіш для %1"
 
-#: kcm/libinput/main.qml:431
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: kcm/libinput/main.qml:448
+#: kcm/libinput/main.qml:443
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Натисніть кнопку миші"
 
-#: kcm/libinput/main.qml:449
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Додати прив'язку…"
 
-#: kcm/libinput/main.qml:478
+#: kcm/libinput/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
@@ -552,52 +525,7 @@ msgstr " пікселів/сек"
 msgid "Acceleration &profile:"
 msgstr "П&рофіль прискорення:"
 
-#: kcm/xlib/xlib_config.cpp:79
-#, kde-format
-msgid "Mouse"
-msgstr "Мишка"
-
-#: kcm/xlib/xlib_config.cpp:83
-#, kde-format
-msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "© Розробники Mouse, 1997–2018"
-
-#: kcm/xlib/xlib_config.cpp:84
-#, kde-format
-msgid "Patrick Dowler"
-msgstr "Patrick Dowler"
-
-#: kcm/xlib/xlib_config.cpp:85
-#, kde-format
-msgid "Dirk A. Mueller"
-msgstr "Dirk A. Mueller"
-
-#: kcm/xlib/xlib_config.cpp:86
-#, kde-format
-msgid "David Faure"
-msgstr "David Faure"
-
-#: kcm/xlib/xlib_config.cpp:87
-#, kde-format
-msgid "Bernd Gehrmann"
-msgstr "Bernd Gehrmann"
-
-#: kcm/xlib/xlib_config.cpp:88
-#, kde-format
-msgid "Rik Hemsley"
-msgstr "Rik Hemsley"
-
-#: kcm/xlib/xlib_config.cpp:89
-#, kde-format
-msgid "Brad Hughes"
-msgstr "Brad Hughes"
-
-#: kcm/xlib/xlib_config.cpp:90
-#, kde-format
-msgid "Brad Hards"
-msgstr "Brad Hards"
-
-#: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
+#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
 #, kde-format
 msgid " pixel"
 msgid_plural " pixels"
@@ -606,7 +534,7 @@ msgstr[1] " пікселі"
 msgstr[2] " пікселів"
 msgstr[3] " піксель"
 
-#: kcm/xlib/xlib_config.cpp:293
+#: kcm/xlib/xlib_config.cpp:277
 #, kde-format
 msgid " line"
 msgid_plural " lines"
@@ -614,6 +542,50 @@ msgstr[0] " рядок"
 msgstr[1] " рядки"
 msgstr[2] " рядків"
 msgstr[3] " рядок"
+
+#~ msgid "Pointer device KCM"
+#~ msgstr "Модуль керування координатними пристроями"
+
+#~ msgid "System Settings module for managing mice and trackballs."
+#~ msgstr ""
+#~ "Модуль «Системних параметрів» для керування мишами та координатними "
+#~ "пристроями."
+
+#~ msgid "Copyright 2018 Roman Gilg"
+#~ msgstr "© Roman Gilg, 2016"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid "Developer"
+#~ msgstr "Розробник"
+
+#~ msgid "Mouse"
+#~ msgstr "Мишка"
+
+#~ msgid "(c) 1997 - 2018 Mouse developers"
+#~ msgstr "© Розробники Mouse, 1997–2018"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
 
 #~ msgid "Ralf Nolden"
 #~ msgstr "Ralf Nolden"

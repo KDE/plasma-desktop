@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-09-04 09:15+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -195,12 +195,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© Ben Cooksley, 2009."
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
@@ -230,42 +230,22 @@ msgstr "A(z) %1 eszköztulajdonságnak egyeznie kell ezzel: %2"
 msgid "The device property %1 must contain %2"
 msgstr "A(z) %1 eszköztulajdonságnak tartalmaznia kell ezt: %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid eszközművelet-szerkesztő"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Solid eszközműveletek beállítómodul"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© A Solid eszközműveletek fejlesztői, 2009, 2014."
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Portolás Plasma 5-re"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Úgy tűnik, hogy ennek a műveletnek az állítmánya nem érvényes."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Hiba történt az eszköz feltételeinek feldolgozása közben"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Nincs kijelölve művelet"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Nem törölhető"
@@ -287,6 +267,18 @@ msgstr "Szerkesztés…"
 #, kde-format
 msgid "Add…"
 msgstr "Hozzáadás…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid eszközművelet-szerkesztő"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Solid eszközműveletek beállítómodul"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© A Solid eszközműveletek fejlesztői, 2009, 2014."
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Portolás Plasma 5-re"
 
 #~ msgid "Edit..."
 #~ msgstr "Szerkesztés…"

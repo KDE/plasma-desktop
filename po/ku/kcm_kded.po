@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-12-25 11:43+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -48,115 +48,115 @@ msgstr "Nikare pêşkêşkera <em>%1</em> bide destpêkirin."
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<h1>Rêveberê Servîsê</h1><p>Ev modûl dihêle ku tu hemû pêvekên KDE Deamon, "
-"wekî Servîsên KDE jî tê zanîn, binihêrî. Bi giştî, du cure yên servîsê heye:"
-"</p><ul><li>Servîsên di destpêkê de tên gazî kirin</li><li>Servîsên li gorê "
-"daxwazê tên gazî kirin</li></ul><p>Yê dawî yê tenê ji bo hevgirtinê tên "
-"lîste kirin. Servîsên destpêkê dikarin bên destpêkirin û rawestandin. Di "
-"moda rêveber de, tu dikarî servîsan nîşan bikî ku di destpêkê de bên "
-"barkirin an na.</p><p><b>Vê bi baldarî bi kar bîne: hinek servîs ji bo KDE "
-"pir girîng in; servîsan neçalak neke heke tu nizanî tu çi dikî.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "Servîs"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "Dixebite"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Naxebite"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "Servîsên Destpê kirinê"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Servîsên Bar bike-li gorê-Daxwazê"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Naxebite"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Dixebite"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "Servîs"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
 msgstr "Servîs"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
+#~| "all plugins of the KDE Daemon, also referred to as KDE Services. "
+#~| "Generally, there are two types of service:</p><ul><li>Services invoked "
+#~| "at startup</li><li>Services called on demand</li></ul><p>The latter are "
+#~| "only listed for convenience. The startup services can be started and "
+#~| "stopped. In Administrator mode, you can also define whether services "
+#~| "should be loaded at startup.</p><p><b> Use this with care: some services "
+#~| "are vital for KDE; do not deactivate services if you do not know what "
+#~| "you are doing.</b></p>"
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<h1>Rêveberê Servîsê</h1><p>Ev modûl dihêle ku tu hemû pêvekên KDE "
+#~ "Deamon, wekî Servîsên KDE jî tê zanîn, binihêrî. Bi giştî, du cure yên "
+#~ "servîsê heye:</p><ul><li>Servîsên di destpêkê de tên gazî kirin</"
+#~ "li><li>Servîsên li gorê daxwazê tên gazî kirin</li></ul><p>Yê dawî yê "
+#~ "tenê ji bo hevgirtinê tên lîste kirin. Servîsên destpêkê dikarin bên "
+#~ "destpêkirin û rawestandin. Di moda rêveber de, tu dikarî servîsan nîşan "
+#~ "bikî ku di destpêkê de bên barkirin an na.</p><p><b>Vê bi baldarî bi kar "
+#~ "bîne: hinek servîs ji bo KDE pir girîng in; servîsan neçalak neke heke tu "
+#~ "nizanî tu çi dikî.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

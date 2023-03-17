@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-11 21:34+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -59,18 +59,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>พาธ</h1>\n"
-"มอดูลนี้ ให้คุณเลือกที่จะเก็บแฟ้มบนพื้นที่หน้าจอของคุณไว้ที่ไหนในระบบแฟ้ม\n"
-"เลือกใช้เมนู \"นี่คืออะไร ?\" (หรือกด Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือกที่ต้องการ"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -165,6 +153,16 @@ msgstr "โฟลเดอร์นี้จะถูกใช้โดยปร
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>พาธ</h1>\n"
+#~ "มอดูลนี้ ให้คุณเลือกที่จะเก็บแฟ้มบนพื้นที่หน้าจอของคุณไว้ที่ไหนในระบบแฟ้ม\n"
+#~ "เลือกใช้เมนู \"นี่คืออะไร ?\" (หรือกด Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือกที่ต้องการ"
 
 #, fuzzy
 #~| msgid ""

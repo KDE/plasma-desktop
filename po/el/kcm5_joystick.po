@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-18 16:03+0200\n"
 "Last-Translator: Petros <pvidalis@gmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -178,49 +178,6 @@ msgstr "Δεν μπορούν να εφαρμοστούν οι τιμές ρύθ
 msgid "internal error - code %1 unknown"
 msgstr "Εσωτερικό σφάλμα - Κωδικός %1 άγνωστος"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Άρθρωμα Ρύθμισης Χειριστηρίου του KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Άρθρωμα ρυθμίσεων συστήματος KDE για τον έλεγχο χειριστηρίων"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Χειριστήριο</h1>Το άρθρωμα αυτό βοηθά στον έλεγχο καλής λειτουργίας του "
-"χειριστηρίου σας.<br />Αν αποδίδει λάθος τιμές στους άξονες, μπορείτε να "
-"δοκιμάσετε την επίλυσή του με τη Ρύθμιση αξόνων.<br />Το άρθρωμα αυτό "
-"προσπαθεί να αναζητήσει όλα τα χειριστήρια ελέγχοντας τις /dev/js[0-4] και /"
-"dev/input/js[0-4]<br />Αν έχετε κάποιο άλλο όνομα συσκευής, εισάγετέ το στο "
-"πλαίσιο.<br />Η λίστα κουμπιών δείχνει την κατάσταση του κουμπιών του "
-"χειριστηρίου, Η λίστα αξόνων δείχνει την τρέχουσα τιμή για όλους τους άξονες."
-"<br />ΣΗΜΕΙΩΣΗ: Ο τρέχων οδηγός πυρήνα (Kernel 2.4, 2.6) μπορεί να "
-"αναγνωρίσει<ul><li>Χειριστήριο με 2-άξονες, 4-κουμπιά</li><li>Χειριστήριο με "
-"3-άξονες, 4-κουμπιά</li><li>Χειριστήριο με 4-άξονες, 4-κουμπιά</"
-"li><li>Ψηφιακά Χειριστήρια Saitek Cyborg </li></ul> (Περισσότερες "
-"πληροφορίες στο Linux source/Documentation/input/joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -325,3 +282,39 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Όλες οι τιμές ρύθμισης του χειριστηρίου %1 Επανήλθαν."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Άρθρωμα Ρύθμισης Χειριστηρίου του KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Άρθρωμα ρυθμίσεων συστήματος KDE για τον έλεγχο χειριστηρίων"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Χειριστήριο</h1>Το άρθρωμα αυτό βοηθά στον έλεγχο καλής λειτουργίας "
+#~ "του χειριστηρίου σας.<br />Αν αποδίδει λάθος τιμές στους άξονες, μπορείτε "
+#~ "να δοκιμάσετε την επίλυσή του με τη Ρύθμιση αξόνων.<br />Το άρθρωμα αυτό "
+#~ "προσπαθεί να αναζητήσει όλα τα χειριστήρια ελέγχοντας τις /dev/js[0-4] "
+#~ "και /dev/input/js[0-4]<br />Αν έχετε κάποιο άλλο όνομα συσκευής, εισάγετέ "
+#~ "το στο πλαίσιο.<br />Η λίστα κουμπιών δείχνει την κατάσταση του κουμπιών "
+#~ "του χειριστηρίου, Η λίστα αξόνων δείχνει την τρέχουσα τιμή για όλους τους "
+#~ "άξονες.<br />ΣΗΜΕΙΩΣΗ: Ο τρέχων οδηγός πυρήνα (Kernel 2.4, 2.6) μπορεί να "
+#~ "αναγνωρίσει<ul><li>Χειριστήριο με 2-άξονες, 4-κουμπιά</li><li>Χειριστήριο "
+#~ "με 3-άξονες, 4-κουμπιά</li><li>Χειριστήριο με 4-άξονες, 4-κουμπιά</"
+#~ "li><li>Ψηφιακά Χειριστήρια Saitek Cyborg </li></ul> (Περισσότερες "
+#~ "πληροφορίες στο Linux source/Documentation/input/joystick.txt)"

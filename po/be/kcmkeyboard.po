@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-09 05:49\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -82,25 +82,6 @@ msgstr "Адмеціна:"
 #, kde-format
 msgid "Preview"
 msgstr "Папярэдні прагляд"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Модуль KDE для кіравання клавіятурай"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Клавіятура</h1> Гэты модуль можна выкарыстоўваць для наладжвання "
-"параметраў клавіятуры і раскладак."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "абраная мадэль не падтрымлівае пэўную раскладку або варыянт раскладкі. "
 "Верагодна, гэтая праблема таксама ўзнікне, калі вы паспрабуеце выкарыстаць "
 "гэтую мадэль з гэтай раскладкай або варыянтам раскладкі."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Модуль KDE для кіравання клавіятурай"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Клавіятура</h1> Гэты модуль можна выкарыстоўваць для наладжвання "
+#~ "параметраў клавіятуры і раскладак."
 
 #, fuzzy
 #~| msgid "Keyboard Repeat"

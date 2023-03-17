@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-23 15:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -16,21 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Gerente de Session</h1>Tu pote configurar le gerente de session ci. Isto "
-"include optiones tal como si le abandono de session (logout) il debe o non "
-"esser confirmate, si le session debe esser restabilite de nove quando on "
-"accede e si le computator debe esser automaticamente claudite (shutdown) "
-"postea abandono de session de modo predefinite."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -206,6 +191,19 @@ msgstr "Sur Accesso de Identification (Login)"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Applicationes que on debe excluder ab session:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Gerente de Session</h1>Tu pote configurar le gerente de session ci. "
+#~ "Isto include optiones tal como si le abandono de session (logout) il debe "
+#~ "o non esser confirmate, si le session debe esser restabilite de nove "
+#~ "quando on accede e si le computator debe esser automaticamente claudite "
+#~ "(shutdown) postea abandono de session de modo predefinite."
 
 #, fuzzy
 #~| msgid "Default leave option:"

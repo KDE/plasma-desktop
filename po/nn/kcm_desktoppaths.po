@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-20 21:17+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -61,19 +61,6 @@ msgstr "Offentleg"
 #, kde-format
 msgid "Templates"
 msgstr "Malar"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Stiar</h1>Her kan du velja kvar i filsystemet filene på skrivebordet "
-"skal lagrast.\n"
-"Bruk funksjonen «Kva er dette?» («Shift + F1») for å få hjelp om spesifikke "
-"innstillingar."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -167,3 +154,14 @@ msgstr "Dette er mappa som malar vanlegvis vert lagra til eller lesne frå."
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Vel ny mappe"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Stiar</h1>Her kan du velja kvar i filsystemet filene på skrivebordet "
+#~ "skal lagrast.\n"
+#~ "Bruk funksjonen «Kva er dette?» («Shift + F1») for å få hjelp om "
+#~ "spesifikke innstillingar."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-13 14:20+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -17,19 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ</h1> ਤੁਸੀਂ ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਨੂੰ ਇੱਥੇ ਸੰਰਚਿਤ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਵਿੱਚ ਇਹ ਵੀ ਸ਼ਾਮਿਲ ਹੈ ਕਿ "
-"ਸ਼ੈਸ਼ਨ ਲਾਗਆਉਟ ਦੀ ਪੁਸ਼ਟੀ ਕਰਵਾਈ ਜਾਵੇ, ਕੀ ਸ਼ੈਸ਼ਨ ਮੁੜ ਲੋਡ ਕੀਤਾ ਜਾਵੇ ਜਾਂ ਨਾ ਅਤੇ ਕੀ ਮੂਲ ਰੂਪ ਵਿੱਚ "
-"ਸ਼ੈਸ਼ਨ ਬੰਦ ਕਰਨ ਉੱਤੇ ਕੰਪਿਊਟਰ ਆਟੋਮੈਟਿਕ ਹੀ ਬੰਦ ਹੋ ਜਾਵੇ।"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -197,6 +184,17 @@ msgstr "ਲਾਗਇਨ ਸਮੇਂ"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "ਸ਼ੈਸ਼ਨ ਵਿੱਚੋਂ ਕੱਢਣ ਵਾਲੇ ਐਪਲੀਕੇਸ਼ਨ(&x):"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ</h1> ਤੁਸੀਂ ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਨੂੰ ਇੱਥੇ ਸੰਰਚਿਤ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਵਿੱਚ ਇਹ ਵੀ ਸ਼ਾਮਿਲ ਹੈ "
+#~ "ਕਿ ਸ਼ੈਸ਼ਨ ਲਾਗਆਉਟ ਦੀ ਪੁਸ਼ਟੀ ਕਰਵਾਈ ਜਾਵੇ, ਕੀ ਸ਼ੈਸ਼ਨ ਮੁੜ ਲੋਡ ਕੀਤਾ ਜਾਵੇ ਜਾਂ ਨਾ ਅਤੇ ਕੀ ਮੂਲ ਰੂਪ "
+#~ "ਵਿੱਚ ਸ਼ੈਸ਼ਨ ਬੰਦ ਕਰਨ ਉੱਤੇ ਕੰਪਿਊਟਰ ਆਟੋਮੈਟਿਕ ਹੀ ਬੰਦ ਹੋ ਜਾਵੇ।"
 
 #, fuzzy
 #~| msgid "Default Leave Option"

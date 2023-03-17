@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-01 08:29+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -169,46 +169,6 @@ msgstr "មិន​អាច​កំណត់​តម្លៃ​ក្រិ
 msgid "internal error - code %1 unknown"
 msgstr "កំហុស​ខាង​ក្នុង - មិន​ស្គាល់​កូដ %1"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "ម៉ូឌុលត្រួត​ពិនិត្យ​យ៉យស្ទីក​ KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "ម៉ូឌុល​​កំណត់​ប្រព័ន្ធ​របស់ KDE ដើម្បី​សាកល្បង​យ៉យស្ទីក"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០៤ ដោយ​ Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>យ៉យស្ទីក</h1>ម៉ូឌុល​នេះ​ជួយ​ពិនិត្យ​មើល​ថាតើ​យ៉យស្ទីក​របស់​អ្នក​ធ្វើការត្រឹមត្រូវឬទេ ។<br />បើ​វា​ផ្តល់​"
-"តម្លៃ​ខុស​សម្រាប់​អ័ក្ស អ្នក​អាច​សាកល្បង​ដោះស្រាយបញ្ហា​នោះ​ដោយ​ប្រើការក្រិត​តាមខ្នាត ។<br />ម៉ូឌុល​នេះ​"
-"ព្យាយាម​ស្វែងរក​ឧបករណ៍​យ៉យស្ទីក​ដែល​មាន​ទាំងអស់ ដោយ​ពិនិត្យ មើល /dev/js[0-4] និង /dev/input/"
-"js[0-4]<br />ប្រសិនបើ​អ្នក​មាន​ឯកសារ​ឧបករណ៍​ផ្សេងទៀត បញ្ចូល​វា​ក្នុង​ប្រអប់ បន្សំ ។<br />បញ្ជី​ប៊ូតុង​"
-"បង្ហាញ​សភាព​របស់​ប៊ូតុង​នៅ​លើ​យ៉យស្ទីក​របស់ អ្នក ។ បញ្ជី​អ័ក្ស​បង្ហាញ​តម្លៃ​បច្ចុប្បន្ន​សម្រាប់​អ័ក្សទាំងអស់ ។<br /"
-"> ចំណាំ ៖ កម្មវិធី​បញ្ជា​ឧបករណ៍ Linux បច្ចុប្បន្ន (ខឺណែល ២.៤ ២៦) អាច​រកឃើញ​តែ<ul><li> យ៉យស្ទីក "
-"អ័ក្ស ២ ប៊ូតុង ៤</li><li>យ៉យ​ស្ទីក អ័ក្ស ៣ ប៊ូតុង ៤</li><li>យ៉យស្ទីក អ័ក្ស ៤ ប៊ូតុង ៤ </"
-"li><li>យ៉យស្ទីក​ឌីជីថល Saitek Cyborg</li></ul> (ចំពោះ​សេចក្តី​លម្អិត អ្នក​អាច​ពិនិត្យ​មើល Linux "
-"source/Documentation/input/joystick.txt របស់​អ្នក)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -312,3 +272,36 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "បាន​ស្តារ​តម្លៃ​ក្រិត​ទាំងអស់ សម្រាប់​ឧបករណ៍​យ៉យស្ទីក %1 ។"
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "ម៉ូឌុលត្រួត​ពិនិត្យ​យ៉យស្ទីក​ KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "ម៉ូឌុល​​កំណត់​ប្រព័ន្ធ​របស់ KDE ដើម្បី​សាកល្បង​យ៉យស្ទីក"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០៤ ដោយ​ Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>យ៉យស្ទីក</h1>ម៉ូឌុល​នេះ​ជួយ​ពិនិត្យ​មើល​ថាតើ​យ៉យស្ទីក​របស់​អ្នក​ធ្វើការត្រឹមត្រូវឬទេ ។<br />បើ​វា​ផ្តល់​"
+#~ "តម្លៃ​ខុស​សម្រាប់​អ័ក្ស អ្នក​អាច​សាកល្បង​ដោះស្រាយបញ្ហា​នោះ​ដោយ​ប្រើការក្រិត​តាមខ្នាត ។<br />ម៉ូឌុល​នេះ​"
+#~ "ព្យាយាម​ស្វែងរក​ឧបករណ៍​យ៉យស្ទីក​ដែល​មាន​ទាំងអស់ ដោយ​ពិនិត្យ មើល /dev/js[0-4] និង /dev/input/"
+#~ "js[0-4]<br />ប្រសិនបើ​អ្នក​មាន​ឯកសារ​ឧបករណ៍​ផ្សេងទៀត បញ្ចូល​វា​ក្នុង​ប្រអប់ បន្សំ ។<br />បញ្ជី​ប៊ូតុង​"
+#~ "បង្ហាញ​សភាព​របស់​ប៊ូតុង​នៅ​លើ​យ៉យស្ទីក​របស់ អ្នក ។ បញ្ជី​អ័ក្ស​បង្ហាញ​តម្លៃ​បច្ចុប្បន្ន​សម្រាប់​អ័ក្សទាំងអស់ ។"
+#~ "<br /> ចំណាំ ៖ កម្មវិធី​បញ្ជា​ឧបករណ៍ Linux បច្ចុប្បន្ន (ខឺណែល ២.៤ ២៦) អាច​រកឃើញ​"
+#~ "តែ<ul><li> យ៉យស្ទីក អ័ក្ស ២ ប៊ូតុង ៤</li><li>យ៉យ​ស្ទីក អ័ក្ស ៣ ប៊ូតុង ៤</li><li>យ៉យស្ទីក អ័ក្ស "
+#~ "៤ ប៊ូតុង ៤ </li><li>យ៉យស្ទីក​ឌីជីថល Saitek Cyborg</li></ul> (ចំពោះ​សេចក្តី​លម្អិត អ្នក​អាច​"
+#~ "ពិនិត្យ​មើល Linux source/Documentation/input/joystick.txt របស់​អ្នក)"

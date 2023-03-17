@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -196,12 +196,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© 2009, Бен Куксли"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Бен Куксли"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Одржавалац"
@@ -236,42 +236,22 @@ msgstr "својство уређаја %1 мора бити једнако %2"
 msgid "The device property %1 must contain %2"
 msgstr "својство уређаја %1 мора садржати %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Уређивач Солидових радњи уређаја"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Модул контролног панела за Солидове радње уређаја"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© 2009, 2014, тим Солидових радњи уређаја"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Пренос на Плазму 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Изгледа да је предикат за ову радњу лош."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Грешка при рашчлањивању услова уређаја"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Нема изабране радње"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Не може се обрисати"
@@ -293,6 +273,18 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Уређивач Солидових радњи уређаја"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Модул контролног панела за Солидове радње уређаја"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© 2009, 2014, тим Солидових радњи уређаја"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Пренос на Плазму 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Уреди..."

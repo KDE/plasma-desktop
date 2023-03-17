@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-06 18:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -67,18 +67,6 @@ msgstr "Genel"
 #, kde-format
 msgid "Templates"
 msgstr "Şablonlar"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Yollar</h1>\n"
-"Bu modül, masaüstünüzdeki dosyaların nerede saklanacağını seçmenizi sağlar.\n"
-"Özel seçenekler hakkında bilgi almak için \"Bu Nedir?\" (Shift+F1) kullanın."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -178,6 +166,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Yeni konum seç"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Yollar</h1>\n"
+#~ "Bu modül, masaüstünüzdeki dosyaların nerede saklanacağını seçmenizi "
+#~ "sağlar.\n"
+#~ "Özel seçenekler hakkında bilgi almak için \"Bu Nedir?\" (Shift+F1) "
+#~ "kullanın."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

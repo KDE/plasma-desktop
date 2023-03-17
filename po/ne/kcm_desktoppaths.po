@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2007-11-04 18:19+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -63,19 +63,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>मार्ग</h1>\n"
-"तपाईँको डेस्कटपमा फाइल प्रणालीको कुन ठाउँमा फाइल भण्डारण गर्नुपर्छ रोज्न तपाईँलाई यो "
-"मोड्युलले अनुमति दिन्छ ।\n"
-"निर्दिष्ट विकल्पमा मद्दत प्राप्त गर्न \"यो के हो?\" (Shift+F1) प्रयोग गर्नुहोस् ।"
 
 #: package/contents/ui/main.qml:22
 #, fuzzy, kde-format
@@ -189,6 +176,17 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>मार्ग</h1>\n"
+#~ "तपाईँको डेस्कटपमा फाइल प्रणालीको कुन ठाउँमा फाइल भण्डारण गर्नुपर्छ रोज्न तपाईँलाई यो "
+#~ "मोड्युलले अनुमति दिन्छ ।\n"
+#~ "निर्दिष्ट विकल्पमा मद्दत प्राप्त गर्न \"यो के हो?\" (Shift+F1) प्रयोग गर्नुहोस् ।"
 
 #, fuzzy
 #~| msgid ""

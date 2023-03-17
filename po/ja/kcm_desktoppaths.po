@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-20 23:04-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -64,19 +64,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>パス</h1>\n"
-"このモジュールでは、デスクトップ上のファイルをファイルシステムのどこに保存す"
-"るかを設定します。\n"
-"各オプションのヘルプを見るには「これは何？」(Shift+F1) を使ってください。"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -173,6 +160,17 @@ msgstr "このフォルダは画像のデフォルトの読み込み/保存先�
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>パス</h1>\n"
+#~ "このモジュールでは、デスクトップ上のファイルをファイルシステムのどこに保存"
+#~ "するかを設定します。\n"
+#~ "各オプションのヘルプを見るには「これは何？」(Shift+F1) を使ってください。"
 
 #, fuzzy
 #~| msgid ""

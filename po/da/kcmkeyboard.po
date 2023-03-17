@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-20 17:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -79,25 +79,6 @@ msgstr "Etiket:"
 #, kde-format
 msgid "Preview"
 msgstr "Forhåndsvisning"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE kontrolmodul til tastatur"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastatur</h1> Dette kontrolmodul kan bruges til at indstille "
-"tastaturparametre og -layouts."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -508,6 +489,19 @@ msgstr ""
 "valgte mode ikke understøtter et specifikt layout eller variant af et "
 "layout. Dette problem vil sandsynligvis også forekomme, når du prøver at "
 "bruge denne kombination af model, layout og variant."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE kontrolmodul til tastatur"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastatur</h1> Dette kontrolmodul kan bruges til at indstille "
+#~ "tastaturparametre og -layouts."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE tastaturlayout-skifter"

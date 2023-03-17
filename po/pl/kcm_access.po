@@ -1,4 +1,4 @@
-# Version: $Revision: 1645901 $
+# Version: $Revision: 1647185 $
 # translation of kcmaccess.po to
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2002, 2005, 2006.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-04 08:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -431,40 +431,31 @@ msgstr "Opóźnienie:"
 msgid "Ring system bell when rejected"
 msgstr "Daj głos dzwonkiem systemowym, gdy odrzucono"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"Ten moduł umożliwia dostosowanie narzędzi dostępności, takich jak np. "
-"czytnik ekranowy."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Dzwonek"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Klawisze odmieniające"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtry klawiatury"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Poruszanie myszą"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -595,6 +586,13 @@ msgstr ""
 "Wygląda na to, że nie masz czytnika ekranowego Orca. Wgraj go, zanim "
 "zaczniesz używać tej możliwości, a następnie wyloguj i zaloguj się ponownie "
 "lub uruchom ponownie komputer."
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "Ten moduł umożliwia dostosowanie narzędzi dostępności, takich jak np. "
+#~ "czytnik ekranowy."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Największa szybkość"

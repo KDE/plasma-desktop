@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-10-07 23:02+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -33,28 +33,23 @@ msgstr "Tiitelkuva ei näidata"
 msgid "You cannot delete the currently selected splash screen"
 msgstr ""
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "See moodul võimaldab valida tiitelkuva teema."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr ""
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Failed to test the splash screen."
 msgid "Failed to show the splash screen preview."
 msgstr "Tiitelkuva testimine nurjus."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Tiitelkuva eelvaatlus"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr ""
@@ -70,6 +65,9 @@ msgstr "Edaspidiseks kasutuseks"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Aktiivse tiitelkuvateema nimi"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "See moodul võimaldab valida tiitelkuva teema."
 
 #, fuzzy
 #~| msgid "&Get New Splash Screens..."

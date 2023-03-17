@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-05-23 12:51+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -191,12 +191,12 @@ msgstr "เครื่องมือสร้างแฟ้มพื้นท
 msgid "(c) 2009, Ben Cooksley"
 msgstr "สงวนลิขสิทธิ์ (c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "ผู้ดูแล"
@@ -227,43 +227,22 @@ msgstr "คุณสมบัติ %1 ของอุปกรณ์ต่า�
 msgid "The device property %1 must contain %2"
 msgstr "คุณสมบัติ %1 ของอุปกรณ์ จะต้องบรรจุ %2 อยู่"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "เครื่องมือแก้ไขการกระทำกับอุปกรณ์ผ่านทาง Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "มอดูลควบคุมการกระทำกับอุปกรณ์ผ่านทาง Solid"
-
-#: SolidActions.cpp:37
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Solid Device Actions team"
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "สงวนลิขสิทธิ์ (c) 2009 Solid Device Actions team"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "มันปรากฎขึ้นเพื่อแสดงว่าการกระทำนี้ใช้ไม่ได้หรือไม่ถูกต้อง"
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "เกิดข้อผิดพลาดในการวิเคราะห์เงื่อนไขของอุปกรณ์"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "ยังไม่ได้เลือกการกระทำ"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "ไม่สามารถลบได้"
@@ -285,6 +264,17 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "เครื่องมือแก้ไขการกระทำกับอุปกรณ์ผ่านทาง Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "มอดูลควบคุมการกระทำกับอุปกรณ์ผ่านทาง Solid"
+
+#, fuzzy
+#~| msgid "(c) 2009 Solid Device Actions team"
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "สงวนลิขสิทธิ์ (c) 2009 Solid Device Actions team"
 
 #~ msgid "Edit..."
 #~ msgstr "แก้ไข..."

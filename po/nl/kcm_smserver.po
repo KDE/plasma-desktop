@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-26 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -22,20 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Sessiebeheerder</h1>U kunt hier de sessiebeheerder instellen. Dit omvat "
-"het instellen van opties, zoals of het afmelden zal worden bevestigd, of de "
-"sessie zal worden opgeslagen bij het afmelden, en of de computer standaard "
-"zal worden uitgeschakeld als u de sessie beëindigt."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -213,6 +199,18 @@ msgstr "Bij aanmelden"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Uit te sluiten toepassingen van sessie"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Sessiebeheerder</h1>U kunt hier de sessiebeheerder instellen. Dit "
+#~ "omvat het instellen van opties, zoals of het afmelden zal worden "
+#~ "bevestigd, of de sessie zal worden opgeslagen bij het afmelden, en of de "
+#~ "computer standaard zal worden uitgeschakeld als u de sessie beëindigt."
 
 #~ msgid "Default option:"
 #~ msgstr "Standaardoptie:"

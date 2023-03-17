@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2007-08-20 10:23+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -17,20 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n !=1\n"
 "\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>सत्र प्रबन्धक</h1> तपाईँ यहाँ सत्र प्रबन्धक कन्फिगर गर्न सक्नुहुन्छ । यसले यी विकल्प "
-"समावेश गर्दछ जस्तै सत्रको अन्त्य (लगआउट) निश्चित हुन्छ या हुँदैन, लग इन गर्दा सत्र फेरि "
-"पूर्वावस्थामा जान्छ या जाँदैन र पूर्वानिर्धारित रूपमा सत्रको अन्त्य पछि कम्प्युटर स्वचालित "
-"रूपमा बन्द हुन्छ या हुँदैन ।"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -198,6 +184,18 @@ msgstr "लगइनमा"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "सत्रबाट असामाहित गरिने अनुप्रयोग:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>सत्र प्रबन्धक</h1> तपाईँ यहाँ सत्र प्रबन्धक कन्फिगर गर्न सक्नुहुन्छ । यसले यी विकल्प "
+#~ "समावेश गर्दछ जस्तै सत्रको अन्त्य (लगआउट) निश्चित हुन्छ या हुँदैन, लग इन गर्दा सत्र फेरि "
+#~ "पूर्वावस्थामा जान्छ या जाँदैन र पूर्वानिर्धारित रूपमा सत्रको अन्त्य पछि कम्प्युटर स्वचालित "
+#~ "रूपमा बन्द हुन्छ या हुँदैन ।"
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

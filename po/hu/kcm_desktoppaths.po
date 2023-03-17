@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-09-04 09:01+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -56,19 +56,6 @@ msgstr ""
 #, kde-format
 msgid "Templates"
 msgstr ""
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Elérési utak</h1>\n"
-"Ebben a modulban azt lehet beállítani, hogy az asztalon látható fájlok hol "
-"legyenek tárolva.\n"
-"A „Mi ez?” (Shift+F1) funkcióval rövid leírás kapható a lehetőségekről."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -174,6 +161,17 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Elérési utak</h1>\n"
+#~ "Ebben a modulban azt lehet beállítani, hogy az asztalon látható fájlok "
+#~ "hol legyenek tárolva.\n"
+#~ "A „Mi ez?” (Shift+F1) funkcióval rövid leírás kapható a lehetőségekről."
 
 #, fuzzy
 #~| msgid ""

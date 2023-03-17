@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-27 18:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -194,12 +194,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Utvecklare"
@@ -229,42 +229,22 @@ msgstr "Enhetens egenskap %1 måste vara lika med %2"
 msgid "The device property %1 must contain %2"
 msgstr "Enhetens egenskap %1 måste innehålla %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid editor för enhetsåtgärder"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Solid kontrollpanelmodul för enhetsåtgärder"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© 2009, 2014 Solid-enhetsåtgärdsgruppen"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Konvertering till Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Det verkar som predikatet för åtgärden inte är giltigt."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Fel vid tolkning av enhetsvillkor"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Ingen åtgärd markerad"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Kan inte tas bort"
@@ -286,6 +266,18 @@ msgstr "Redigera…"
 #, kde-format
 msgid "Add…"
 msgstr "Lägg till…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid editor för enhetsåtgärder"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Solid kontrollpanelmodul för enhetsåtgärder"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© 2009, 2014 Solid-enhetsåtgärdsgruppen"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Konvertering till Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Redigera..."

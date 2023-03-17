@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-26 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-31 20:49+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -15,15 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.1\n"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid ""
-"This module lets you configure the file indexer and search functionality."
-msgstr ""
-"Mit diesem Modul können Sie die Datei.Indizierung und die Suchfunktion "
-"einrichten."
-
-#: package/contents/ui/main.qml:58
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -32,7 +24,7 @@ msgstr ""
 "Dadurch wird die Dateisuche in KRunner und den Startmenüs deaktiviert und "
 "die erweiterte Metadatenanzeige aus allen KDE-Anwendungen abgeschaltet."
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -44,24 +36,24 @@ msgstr ""
 "der gesamte Index von Grund auf neu erstellt werden. Dies kann einige Zeit "
 "dauern, je nachdem, wie viele Dateien Sie haben."
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Indexdaten löschen"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 "Das System muss neu gestartet werden, damit diese Änderungen wirksam werden."
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Neu starten"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -69,80 +61,86 @@ msgstr ""
 "Die Dateisuche hilft Ihnen, alle Ihre Dateien auf der Grundlage des Inhalts "
 "zu lokalisieren."
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgid "Enable File Search"
 msgstr "Dateisuche aktivieren"
 
-#: package/contents/ui/main.qml:122
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Also index file content"
 msgstr "Auch Dateiinhalt indizieren"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Versteckte Ordner und Dateien indizieren"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Status: %1, %2% fertiggestellt"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Indizierung anhalten"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Indizierung wieder aufnehmen"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "%1 wird gerade indiziert"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Spezielle Ordnereinstellung:"
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Indizierung eines Ordners starten ..."
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Indizierung eines Ordners anhalten ..."
 
-#: package/contents/ui/main.qml:272
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Nicht indiziert"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indiziert"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:302
 #, kde-format
 msgid "Delete entry"
 msgstr "Eintrag löschen"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Ordner zum Einschließen wählen"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Ordner zum Ausschließen wählen"
+
+#~ msgid ""
+#~ "This module lets you configure the file indexer and search functionality."
+#~ msgstr ""
+#~ "Mit diesem Modul können Sie die Datei.Indizierung und die Suchfunktion "
+#~ "einrichten."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

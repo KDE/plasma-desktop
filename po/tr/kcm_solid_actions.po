@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-03-12 16:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -194,12 +194,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Projeyi yürüten"
@@ -229,42 +229,22 @@ msgstr "Aygıt özelliği %1 %2 ile eşit olmalıdır"
 msgid "The device property %1 must contain %2"
 msgstr "Aygıt özelliği %1 %2 içermelidir"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid Aygıt Eylemleri Düzenleyici"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Solid Aygıt Eylemleri Denetim Paneli Modülü"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 Solid Aygıt Eylemleri ekibi"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Plasma 5'e dönüştür"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Bu eylemin doğrulaması geçersiz görünüyor."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Aygıt Durumu Ayrıştırılırken Bir Hata Oluştu"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Hiçbir Eylem Seçilmedi"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Silinemez"
@@ -286,3 +266,15 @@ msgstr "Düzenle…"
 #, kde-format
 msgid "Add…"
 msgstr "Ekle…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid Aygıt Eylemleri Düzenleyici"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Solid Aygıt Eylemleri Denetim Paneli Modülü"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 Solid Aygıt Eylemleri ekibi"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Plasma 5'e dönüştür"

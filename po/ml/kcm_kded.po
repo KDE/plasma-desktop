@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2019-12-12 22:26+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -45,104 +45,103 @@ msgstr "സെര്‍വര്‍ <em>%1</em> ആരംഭിക്കുവ�
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<h1>സേവന മാനേജര്‍</h1><p> നിങ്ങള്‍ക്കു് കെഡിഇ ഡെമണിലുള്ള എല്ലാ പ്ലഗിനുകളെപ്പറ്റിയുമുള്ള വിവരം "
-"ഈ ഘടകം നല്‍കുന്നു. കെഡിഇ സേവനങ്ങള്‍ എന്ന പേരിലും അറിയപ്പെടുന്ന ഇവ രണ്ടു് രീതിയില്‍ ലഭ്യമാണു്: </"
-"p><ul><li> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്ന സേവനങ്ങള്‍</li><li>ആവശ്യമനുസരിച്ചു് ലഭ്യമാകുന്ന സേവനങ്ങള്‍</"
-"li></ul><p> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്നവ ആരംഭിക്കുവാനും നിര്‍ത്തുവാനും സാധ്യമാകുന്നു. എന്നാല്‍ "
-"ആവശ്യാനുസരണമുള്ള സേവനങ്ങള്‍ നിങ്ങളുടെ സൌകര്യത്തിനു് മാത്രമുള്ളവയാകുന്നു. സേവനങ്ങള്‍ പ്രാരംഭത്തില്‍ "
-"ലഭ്യമാകണമെങ്കില്‍, അഡ്മിനിസ്ട്രേഷന്‍ മോഡില്‍ അവ വ്യക്തമാക്കേണ്ടതാകുന്നു. </p><p><b>ചില സേവനങ്ങള്‍ "
-"കെഡിഇയ്ക്കു് വളരെ പ്രധാനപ്പെട്ടവയാകുന്നു, അതിനാല്‍ അവ നിര്‍ജ്ജീവമാക്കുന്നതിനു് മുമ്പ് പ്രത്യേകം "
-"ശ്രദ്ധിക്കുക.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "സേവനം"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "പ്രവര്‍ത്തിക്കുന്നു"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "പ്രവര്‍ത്തിക്കുന്നില്ല"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "പ്രാരംഭ സേവനങ്ങള്‍"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "ആവശ്യാനുസരണം ലഭ്യമാക്കുന്ന സേവനങ്ങള്‍"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "പ്രവര്‍ത്തിക്കുന്നില്ല"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "പ്രവര്‍ത്തിക്കുന്നു"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "സേവനം"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
 msgstr "സേവനം"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<h1>സേവന മാനേജര്‍</h1><p> നിങ്ങള്‍ക്കു് കെഡിഇ ഡെമണിലുള്ള എല്ലാ പ്ലഗിനുകളെപ്പറ്റിയുമുള്ള "
+#~ "വിവരം ഈ ഘടകം നല്‍കുന്നു. കെഡിഇ സേവനങ്ങള്‍ എന്ന പേരിലും അറിയപ്പെടുന്ന ഇവ രണ്ടു് രീതിയില്‍ "
+#~ "ലഭ്യമാണു്: </p><ul><li> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്ന സേവനങ്ങള്‍</li><li>ആവശ്യമനുസരിച്ചു് "
+#~ "ലഭ്യമാകുന്ന സേവനങ്ങള്‍</li></ul><p> പ്രാരംഭത്തില്‍ ലഭ്യമാകുന്നവ ആരംഭിക്കുവാനും നിര്‍ത്തുവാനും "
+#~ "സാധ്യമാകുന്നു. എന്നാല്‍ ആവശ്യാനുസരണമുള്ള സേവനങ്ങള്‍ നിങ്ങളുടെ സൌകര്യത്തിനു് മാത്രമുള്ളവയാകുന്നു. "
+#~ "സേവനങ്ങള്‍ പ്രാരംഭത്തില്‍ ലഭ്യമാകണമെങ്കില്‍, അഡ്മിനിസ്ട്രേഷന്‍ മോഡില്‍ അവ വ്യക്തമാക്കേണ്ടതാകുന്നു. "
+#~ "</p><p><b>ചില സേവനങ്ങള്‍ കെഡിഇയ്ക്കു് വളരെ പ്രധാനപ്പെട്ടവയാകുന്നു, അതിനാല്‍ അവ നിര്‍"
+#~ "ജ്ജീവമാക്കുന്നതിനു് മുമ്പ് പ്രത്യേകം ശ്രദ്ധിക്കുക.</b></p>"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

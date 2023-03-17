@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-22 10:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,27 +34,22 @@ msgstr "لن تعرض شاشة بدء"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "لا يمكنك حذف شاشة البدء الحالية"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "هذه الوحدة تمكنك من اختيار سمة شاشة البدء"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "ا&حصل على جديدة…"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "فشل في عرض معاينة لشاشة البدء"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "عايش شاشة البدء"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "ألغ التثبيت"
@@ -70,6 +65,9 @@ msgstr "للاستعمال المستقبلي"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "اسم السمة الحالية لشاشة البدء"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "هذه الوحدة تمكنك من اختيار سمة شاشة البدء"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "ا&حصل على شاشات بدء جديدة..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-12 10:31+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -17,19 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>จัดการวาระงาน</h1> คุณสามารถปรับแต่งการทำงาน โปรแกรมจัดการวาระงาน ได้ที่นี่ "
-"ทั้งการแสดงกล่องยืนยันการออกจากระบบ และเรียกคืนวาระงานเดิมที่ทำงานค้างไว้ "
-"เมื่อล็อกอินเข้าระบบครั้งต่อไป"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -197,6 +184,17 @@ msgstr "เมื่อทำการล็อกอิน"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "โปรแกรมที่ควรไม่รวมอยู่ในวาระงาน:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>จัดการวาระงาน</h1> คุณสามารถปรับแต่งการทำงาน โปรแกรมจัดการวาระงาน ได้ที่นี่ "
+#~ "ทั้งการแสดงกล่องยืนยันการออกจากระบบ และเรียกคืนวาระงานเดิมที่ทำงานค้างไว้ "
+#~ "เมื่อล็อกอินเข้าระบบครั้งต่อไป"
 
 #, fuzzy
 #~| msgid "Default Leave Option"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-10-08 11:39+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -80,25 +80,6 @@ msgstr "Nimi:"
 #, kde-format
 msgid "Preview"
 msgstr "Eelvaatlus"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE klaviatuuri juhtimismoodul"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010: Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Klaviatuur</h1> See moodul võimaldab seadistada klaviatuuri parameetreid "
-"ja paigutusi."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -503,6 +484,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE klaviatuuri juhtimismoodul"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010: Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Klaviatuur</h1> See moodul võimaldab seadistada klaviatuuri "
+#~ "parameetreid ja paigutusi."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE klaviatuuripaigutuste vahetaja"

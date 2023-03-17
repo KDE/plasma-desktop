@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-03-19 20:51+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=1;\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Pengurus Sesi</h1> Anda boleh selaraskan pengurus sesi di sini. Ini "
-"termasuklah pilihan seperti patut atau tidak pemastian keluar sesi (log "
-"keluar), sama ada sesi patut dipulihkan semula semasa log masuk dan sama ada "
-"komputer patut ditutup default secara automatik selepas keluar sesi."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -198,6 +184,18 @@ msgstr "Semasa log masuk"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "&Aplikasi untuk dikecualikan daripada sesi:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Pengurus Sesi</h1> Anda boleh selaraskan pengurus sesi di sini. Ini "
+#~ "termasuklah pilihan seperti patut atau tidak pemastian keluar sesi (log "
+#~ "keluar), sama ada sesi patut dipulihkan semula semasa log masuk dan sama "
+#~ "ada komputer patut ditutup default secara automatik selepas keluar sesi."
 
 #, fuzzy
 #~| msgid "Default Leave Option"

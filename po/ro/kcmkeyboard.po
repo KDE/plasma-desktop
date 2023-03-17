@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-02-17 22:47+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -82,25 +82,6 @@ msgstr "Etichetă:"
 #, kde-format
 msgid "Preview"
 msgstr "Previzualizează"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Modul KDE de control al tastaturii"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastatură</h1> Acest modul de control poate fi folosit pentru a "
-"configura parametrii și aranjamentele tastaturii."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "ales nu susține un anumit aranjament sau variantă de aranjament. Această "
 "problemă se poate manifesta și când încercați să folosiți această combinație "
 "de model, aranjament și variantă."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Modul KDE de control al tastaturii"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastatură</h1> Acest modul de control poate fi folosit pentru a "
+#~ "configura parametrii și aranjamentele tastaturii."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Comutator de aranjament al tastaturii pentru KDE"

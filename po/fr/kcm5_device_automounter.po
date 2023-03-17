@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-09-24 14:45+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -36,36 +36,6 @@ msgstr "Joëlle Cornavin, Maxime Corteel"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jcorn@free.fr, mcorteel@gmail.com"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Monteur automatique de périphériques"
-
-#: DeviceAutomounterKCM.cpp:42
-#, kde-format
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr "Auteur original"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr "Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr "Port Plasma 5"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -196,6 +166,24 @@ msgstr "Ce périphérique sera monté automatiquement lors de son raccordement."
 msgid "This device will not be automatically mounted when attached."
 msgstr ""
 "Ce périphérique ne sera pas monté automatiquement lors de son raccordement."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Monteur automatique de périphériques"
+
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
+
+#~ msgid "Original Author"
+#~ msgstr "Auteur original"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Plasma 5 Port"
+#~ msgstr "Port Plasma 5"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

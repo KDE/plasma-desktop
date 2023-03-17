@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-19 14:38+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -79,25 +79,6 @@ msgstr "Nhãn:"
 #, kde-format
 msgid "Preview"
 msgstr "Xem thử"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Khối điều khiển bàn phím KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Bàn phím</h1> Khối điều khiển này có thể được dùng để cấu hình các bố "
-"cục và các tham số của bàn phím."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -504,6 +485,19 @@ msgstr ""
 "được chọn không hỗ trợ một bố cục hoặc biến thể bố cục nhất định. Vấn đề này "
 "cũng sẽ có thể xuất hiện khi bạn thử dùng mẫu mã, bố cục và biến thể này đi "
 "kèm với nhau."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Khối điều khiển bàn phím KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Bàn phím</h1> Khối điều khiển này có thể được dùng để cấu hình các bố "
+#~ "cục và các tham số của bàn phím."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Trình chuyển bố cục bàn phím KDE"

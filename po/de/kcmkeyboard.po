@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-07-14 00:32+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -79,25 +79,6 @@ msgstr "Beschriftung:"
 #, kde-format
 msgid "Preview"
 msgstr "Vorschau"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE-Modul zur Einrichtung der Tastatur"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastatur</h1> Dieses Modul kann zum Einstellen der Tastaturparameter und "
-"-belegung verwendet werden."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -515,6 +496,19 @@ msgstr ""
 "das ausgewählte Modell eine bestimmte Belegung oder eine Variante nicht "
 "unterstützt. Dieses Problem tritt wahrscheinlich auch auf, wenn Sie "
 "versuchen, die Kombination aus Modell, Belegung und Variante zu verwenden."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE-Modul zur Einrichtung der Tastatur"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastatur</h1> Dieses Modul kann zum Einstellen der Tastaturparameter "
+#~ "und -belegung verwendet werden."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Umschaltung der Tastaturbelegung für KDE"

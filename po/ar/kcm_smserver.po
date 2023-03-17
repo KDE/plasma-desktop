@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-27 20:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -24,19 +24,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>مدير الجلسة</h1>  يمكنك ضبط مدير الجلسة هنا. هذا يتضمن خيارات مثل ضرورة "
-"أو عدم ضرورة التأكيد على تسجيل الخروج و إذا كان واجباً استعادة الجلسة عند "
-"الدخول أو إيقاف تشغيل الحاسوب تلقائياً عند الخروج من الجلسة."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -208,6 +195,17 @@ msgstr "عند الولوج"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "التطبيقات المستثناة من الجلسات:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>مدير الجلسة</h1>  يمكنك ضبط مدير الجلسة هنا. هذا يتضمن خيارات مثل "
+#~ "ضرورة أو عدم ضرورة التأكيد على تسجيل الخروج و إذا كان واجباً استعادة "
+#~ "الجلسة عند الدخول أو إيقاف تشغيل الحاسوب تلقائياً عند الخروج من الجلسة."
 
 #~ msgid "Default option:"
 #~ msgstr "الخيار المبدئي:"

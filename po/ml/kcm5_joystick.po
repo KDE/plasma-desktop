@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2019-12-12 22:18+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -170,39 +170,6 @@ msgstr "ജോയിസ്റ്റിക്ക്  %1: %2 ഉപകരണത്
 msgid "internal error - code %1 unknown"
 msgstr "ആന്തരിക തകരാറു് %1 അറിയില്ല"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "കെ.ഡി.ഇ ജോയിസ്റ്റിക്ക് നിയന്ത്രണ വിഭാഗം"
-
-#: joystick.cpp:31
-#, fuzzy, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "കെ.ഡി.ഇ നിയന്ത്രണ കേന്ദ്രം"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, മാര്‍ടിന്‍ കോളര്‍"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>ജോയ്സ്റ്റിക്ക്</h1> ഈ വിഭാഗം നിങ്ങളുടെ ജോയ്സ്റ്റിക്ക് ഉപകരണം പ്രവര്‍ത്തനക്ഷമമാണോയെന്നു "
-"പരിശോധിക്കും.<br />"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -307,3 +274,30 @@ msgstr ""
 msgid "Restored all calibration values for joystick device %1."
 msgstr ""
 "%1 എന്ന ജോയിസ്റ്റിക്ക് ഉപകരണത്തിന്റെ ക്രമീകരിച്ച എല്ലാ മൂല്യങ്ങളും പഴയ പടിയാക്കിയിട്ടുണ്ടു്."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "കെ.ഡി.ഇ ജോയിസ്റ്റിക്ക് നിയന്ത്രണ വിഭാഗം"
+
+#, fuzzy
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "കെ.ഡി.ഇ നിയന്ത്രണ കേന്ദ്രം"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, മാര്‍ടിന്‍ കോളര്‍"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>ജോയ്സ്റ്റിക്ക്</h1> ഈ വിഭാഗം നിങ്ങളുടെ ജോയ്സ്റ്റിക്ക് ഉപകരണം പ്രവര്‍ത്തനക്ഷമമാണോയെന്നു "
+#~ "പരിശോധിക്കും.<br />"

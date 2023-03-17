@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-23 11:02+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -34,27 +34,22 @@ msgstr "Не использовать заставку"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Активная заставка не может быть удалена"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Этот модуль позволяет выбрать заставку."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Загрузить…"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Не удалось выполнить предварительный просмотр заставки."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Продемонстрировать заставку"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Удалить"
@@ -70,6 +65,9 @@ msgstr "Для использования в будущем\t"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Название текущей заставки"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "Этот модуль позволяет выбрать заставку."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Загрузить заставки..."

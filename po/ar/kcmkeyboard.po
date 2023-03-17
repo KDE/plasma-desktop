@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-16 20:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -85,25 +85,6 @@ msgstr "التّسمية:"
 #, kde-format
 msgid "Preview"
 msgstr "عاين"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "وحدة كِيدِي للتّحكّم بتخطيطات لوحة المفاتيح"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>لوحة الفاتيح</h1>يمكن استخدام هذه الوحدة لضبط معاملات لوحة المفاتيح "
-"وتخطيطاتها."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -510,6 +491,19 @@ msgstr ""
 "فشل تحميل أبعاد لوحة المفاتيح. يشير هذا غالبًا إلى أن النموذج المحدد لا يدعم "
 "تخطيطًا معينًا أو متغير تخطيط. من المحتمل أن تظهر هذه المشكلة أيضًا عند محاولة "
 "استخدام هذا المزيج من النموذج والتخطيط والمتغير. "
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "وحدة كِيدِي للتّحكّم بتخطيطات لوحة المفاتيح"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>لوحة الفاتيح</h1>يمكن استخدام هذه الوحدة لضبط معاملات لوحة المفاتيح "
+#~ "وتخطيطاتها."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "مبدّل «كِيدِي» لتخطيط لوحة المفاتيح"

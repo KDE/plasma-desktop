@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-15 08:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -91,25 +91,6 @@ msgstr "Étiquette :"
 #, kde-format
 msgid "Preview"
 msgstr "Aperçu"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Module de configuration du clavier de KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Clavier</h1> Ce module de configuration peut être utilisé pour "
-"configurer les paramètres du clavier et sa disposition."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -524,6 +505,19 @@ msgstr ""
 "modèle choisi ne prend pas en charge une disposition spécifique ou une "
 "variante de disposition. Ce problème se présentera aussi quand vous essayez "
 "d'utiliser une combinaison de modèle, une disposition et une variante."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Module de configuration du clavier de KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Clavier</h1> Ce module de configuration peut être utilisé pour "
+#~ "configurer les paramètres du clavier et sa disposition."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Changeur de disposition de clavier de KDE"

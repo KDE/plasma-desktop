@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2019-12-12 23:03+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -444,40 +444,33 @@ msgstr ""
 msgid "Ring system bell when rejected"
 msgstr "&ഏതെങ്കിലും കീ തിരസ്കരിക്കപ്പെട്ടാല്‍ സിസ്റ്റം മണി ഉപയോഗിക്കുക"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, fuzzy, kde-format
 #| msgid "&Bell"
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "&മണി"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, fuzzy, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "&മോഡിഫയര്‍ കീകള്‍"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "&Keyboard Filters"
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "&കീബോര്‍ഡ് ഫില്‍ട്ടറുകള്‍"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"

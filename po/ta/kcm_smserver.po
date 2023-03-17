@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-27 22:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -15,19 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.0\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>அமர்வு மேலாளி</h1> இங்கு நீங்கள் அமர்வு மேலாளரை அமைக்கலாம். இதில் அமர்விலிருந்து "
-"வெளியேறுமுன் உறுதிப்படுத்தவேண்டுமா, மற்றும் அடுத்த முறை அமர்வைத் தொடங்கும் போது நடப்பு "
-"அமர்வை மீளத்தர வேண்டுமா என்பவற்றை அமைக்கலாம்."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -196,6 +183,17 @@ msgstr "நுழையும்போது"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "அமர்வில் உட்படக்கூடாத செயலிகள்"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>அமர்வு மேலாளி</h1> இங்கு நீங்கள் அமர்வு மேலாளரை அமைக்கலாம். இதில் அமர்விலிருந்து "
+#~ "வெளியேறுமுன் உறுதிப்படுத்தவேண்டுமா, மற்றும் அடுத்த முறை அமர்வைத் தொடங்கும் போது "
+#~ "நடப்பு அமர்வை மீளத்தர வேண்டுமா என்பவற்றை அமைக்கலாம்."
 
 #~ msgid "Default option:"
 #~ msgstr "இயல்பிருப்பு தேர்வு:"

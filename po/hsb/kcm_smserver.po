@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-12-19 23:36+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -16,20 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Rjadowar posedźenja</h1>Tule móžeće rjadowar posedźenja připrawić. "
-"Móžeće rozsudźić, hač je wobkrućenje za zakónčenje posedźenja trěbne, hač ma "
-"sej KDE posedźenje spomjatkować a při přichodnym přizjewjenju znowić a hač "
-"ma so kompjuter po zakónčenju posedźenja awtomatisce hasnyć."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -197,6 +183,18 @@ msgstr "Při přizjewjenju"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "Aplikacije, kiž su wuzamknjene z posedźenjow:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Rjadowar posedźenja</h1>Tule móžeće rjadowar posedźenja připrawić. "
+#~ "Móžeće rozsudźić, hač je wobkrućenje za zakónčenje posedźenja trěbne, hač "
+#~ "ma sej KDE posedźenje spomjatkować a při přichodnym přizjewjenju znowić a "
+#~ "hač ma so kompjuter po zakónčenju posedźenja awtomatisce hasnyć."
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

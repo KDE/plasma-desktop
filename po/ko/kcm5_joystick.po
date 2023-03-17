@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-04-05 02:01+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -168,46 +168,6 @@ msgstr "조이스틱 장치 %1의 조정값을 적용할 수 없음: %2"
 msgid "internal error - code %1 unknown"
 msgstr "내부 오류 - 알 수 없는 코드 %1"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE 조이스틱 제어 모듈"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "조이스틱을 테스트하는 KDE 시스템 설정 모듈"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>조이스틱</h1>이 모듈은 조이스틱이 올바르게 작동하는가 검사합니다.<br />만"
-"약 축 값이 잘못되었으면 조정해 보십시오.<br />이 모듈은 /dev/js[0-4]와 /dev/"
-"input/js[0-4]를 검색해서 현재 사용 가능한 모든 장치를 찾습니다.<br />만약 다"
-"른 장치 파일을 사용하면 콤보 상자에 입력하십시오.<br />단추 목록은 조이스틱 "
-"단추의 상태를 표시하고, 축 목록은 모든 축의 값을 표시합니다.<br />메모: 현재 "
-"리눅스 장치 드라이버(커널 2.4, 2.6)에서는 <ul><li>2축 4단추 조이스틱</"
-"li><li>3축 4단추 조이스틱</li><li>4축 4단추 조이스틱</li><li>Saitek Cyborg 디"
-"지털 조이스틱</li></ul>만 자동으로 검사할 수 있습니다. 자세한 정보는 리눅스 "
-"소스 트리의 Documentation/input/joystick.txt를 참고하십시오."
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -310,3 +270,37 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "조이스틱 장치 %1의 모든 조정값을 복원했습니다."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE 조이스틱 제어 모듈"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "조이스틱을 테스트하는 KDE 시스템 설정 모듈"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>조이스틱</h1>이 모듈은 조이스틱이 올바르게 작동하는가 검사합니다.<br /"
+#~ ">만약 축 값이 잘못되었으면 조정해 보십시오.<br />이 모듈은 /dev/js[0-4]"
+#~ "와 /dev/input/js[0-4]를 검색해서 현재 사용 가능한 모든 장치를 찾습니다."
+#~ "<br />만약 다른 장치 파일을 사용하면 콤보 상자에 입력하십시오.<br />단추 "
+#~ "목록은 조이스틱 단추의 상태를 표시하고, 축 목록은 모든 축의 값을 표시합니"
+#~ "다.<br />메모: 현재 리눅스 장치 드라이버(커널 2.4, 2.6)에서는 <ul><li>2축 "
+#~ "4단추 조이스틱</li><li>3축 4단추 조이스틱</li><li>4축 4단추 조이스틱</"
+#~ "li><li>Saitek Cyborg 디지털 조이스틱</li></ul>만 자동으로 검사할 수 있습니"
+#~ "다. 자세한 정보는 리눅스 소스 트리의 Documentation/input/joystick.txt를 참"
+#~ "고하십시오."

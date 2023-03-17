@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-23 19:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -83,25 +83,6 @@ msgstr "Etiqueta:"
 #, kde-format
 msgid "Preview"
 msgstr "Vista prèvia"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Mòdul de control del teclat del KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Teclat</h1> Es pot usar aquest mòdul de control per a configurar els "
-"paràmetres del teclat i les disposicions."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -511,6 +492,19 @@ msgstr ""
 "model seleccionat no accepta una disposició específica o una variant de "
 "disposició. Aquest problema segurament també es produirà si intenteu usar "
 "aquesta combinació de model, disposició i variant."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Mòdul de control del teclat del KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Teclat</h1> Es pot usar aquest mòdul de control per a configurar els "
+#~ "paràmetres del teclat i les disposicions."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Commutador de disposició del teclat del KDE"

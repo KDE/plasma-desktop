@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-06-10 16:40+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -197,12 +197,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Prižiūrėtojas"
@@ -232,42 +232,22 @@ msgstr "Įrenginio savybė %1 privalo būti lygi %2"
 msgid "The device property %1 must contain %2"
 msgstr "Įrenginio savybė %1 privalo turėti %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid įrenginių veiksmų redaktorius"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Solid įrenginių veiksmų valdymo skydelio modulis"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 Solid įrenginių veiksmų komanda"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Perkėlimas į Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Panašu, kad šio veiksmo predikatas yra neteisingas."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Klaida analizuojant įrenginio sąlygas"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Nepasirinktas joks veiksmas"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Negali būti ištrintas"
@@ -289,6 +269,18 @@ msgstr "Taisyti…"
 #, kde-format
 msgid "Add…"
 msgstr "Pridėti…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid įrenginių veiksmų redaktorius"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Solid įrenginių veiksmų valdymo skydelio modulis"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 Solid įrenginių veiksmų komanda"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Perkėlimas į Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Taisyti..."

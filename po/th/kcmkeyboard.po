@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-12-21 09:03+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -84,23 +84,6 @@ msgstr "แถบป้าย:"
 #, kde-format
 msgid "Preview"
 msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "เครื่องมือควบคุมแป้นพิมพ์ของ KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "สงวนลิขสิทธิ์ (C) 2553 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr "<h1>แป้นพิมพ์</h1> โมดูลควบคุมนี้ใช้ปรับแต่งพารามิเตอร์และผังแป้นพิมพ์"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -521,6 +504,17 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "เครื่องมือควบคุมแป้นพิมพ์ของ KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "สงวนลิขสิทธิ์ (C) 2553 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr "<h1>แป้นพิมพ์</h1> โมดูลควบคุมนี้ใช้ปรับแต่งพารามิเตอร์และผังแป้นพิมพ์"
 
 #, fuzzy
 #~| msgctxt "tooltip title"

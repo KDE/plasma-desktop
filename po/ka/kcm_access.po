@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-21 07:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -428,40 +428,31 @@ msgstr "დაყოვნება:"
 msgid "Ring system bell when rejected"
 msgstr "უარყოფისას სისტემური ზარის დარეკვა"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr ""
-"მოდული საშუალებას გაძლევთ მოირგოთ წვდომადობის საშუალებები. როგორიცაა, "
-"მაგალითად, ეკრანის წამკითხავი."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "ზარი"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "მოდიფიკატორი ღილაკები"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "კლავიატურის ფილტრები"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "თაგუნით ნავიგაცა"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -592,6 +583,13 @@ msgstr ""
 "როგორც ჩანს, Orca - ეკრანი წამკითხველი დაყენებული არაა. სანამ ცდით, ეს "
 "ფუნქცია გამოიყენოთ, დააყენეთ ის და ან გადით და თავიდან შემოდით, ან "
 "გადატვირთეთ კომპიუტერი"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr ""
+#~ "მოდული საშუალებას გაძლევთ მოირგოთ წვდომადობის საშუალებები. როგორიცაა, "
+#~ "მაგალითად, ეკრანის წამკითხავი."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "მაქსიმალური აჩქარება"

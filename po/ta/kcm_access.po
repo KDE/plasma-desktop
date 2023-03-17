@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-24 21:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -428,38 +428,31 @@ msgstr "தாமதம்:"
 msgid "Ring system bell when rejected"
 msgstr "மறுக்கப்படும்போது கணினி மணியை ஒலிக்கச்செய்"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid ""
-"This module lets you configure the accessibility features such as a screen "
-"reader."
-msgstr "திரை வாசிப்பானை போன்ற அணுகல்தன்மை அம்சங்களை இந்த கூறு அமைக்க உதவும்."
-
-#: package/contents/ui/main.qml:25
+#: package/contents/ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "மணி"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "மாற்றி விசைகள்"
 
-#: package/contents/ui/main.qml:35
+#: package/contents/ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "விசைப்பலகை வடிகட்டிகள்"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "சுட்டிவழி உலாவல்"
 
-#: package/contents/ui/main.qml:45
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -589,6 +582,11 @@ msgid ""
 msgstr ""
 "ஆர்கா திரை வாசிப்பான் (Orca Screen Reader) நிறுவப்படாததுபோல் தெரிகிறது. இவ்வம்சத்தை "
 "பயன்படுத்தும் முன் அதை நிறுவி, வெளியேறி நுழையுங்கள் அல்லது மீள்துவக்குங்கள்"
+
+#~ msgid ""
+#~ "This module lets you configure the accessibility features such as a "
+#~ "screen reader."
+#~ msgstr "திரை வாசிப்பானை போன்ற அணுகல்தன்மை அம்சங்களை இந்த கூறு அமைக்க உதவும்."
 
 #~ msgid "Maximum velocity"
 #~ msgstr "அதிகபட்ச வேகம்"

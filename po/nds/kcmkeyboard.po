@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2014-08-11 12:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Beteken:"
 #, kde-format
 msgid "Preview"
 msgstr "Vöransicht"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Tastatuur-Kuntrullmoduul för KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010: Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tastatuur</h1> Mit dit Kuntrullmoduul laat sik Tastatuurvörgaven un "
-"Toornen instellen."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -520,6 +501,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Tastatuur-Kuntrullmoduul för KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010: Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tastatuur</h1> Mit dit Kuntrullmoduul laat sik Tastatuurvörgaven un "
+#~ "Toornen instellen."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Dat KDE-Tastatuurwarktüüch"

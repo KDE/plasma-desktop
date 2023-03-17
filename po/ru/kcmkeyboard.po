@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-22 21:09+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -89,25 +89,6 @@ msgstr "Подпись:"
 #, kde-format
 msgid "Preview"
 msgstr "Просмотр"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Модуль настройки клавиатуры"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© Andriy Rysin, 2010"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Клавиатура</h1> Этот модуль настройки позволяет выбрать параметры и "
-"раскладки клавиатуры."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -522,6 +503,19 @@ msgstr ""
 "при попытке использовать неподдерживаемую раскладку или вариант раскладки "
 "клавиатуры. Ошибка, скорее всего, будет присутствовать при попытке "
 "использовать это сочетание модели, раскладки и варианта раскладки клавиатуры."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Модуль настройки клавиатуры"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© Andriy Rysin, 2010"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Клавиатура</h1> Этот модуль настройки позволяет выбрать параметры и "
+#~ "раскладки клавиатуры."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Переключение раскладки клавиатуры в KDE"

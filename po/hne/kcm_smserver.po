@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-02-09 18:15+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -18,19 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"आप इहां <h1>सत्र प्रबंधक</h1> ल कान्फिगर कर सकथो. ये मां सामिल हे कि का सत्र से बाहिर "
-"(लाग आउट) होए के विकल्प के पुस्टि करे जाए, जब लागइन करव तहां का सत्र फिर से बहाल करे "
-"जाए, अउ का डिफाल्ट से कम्प्यूटर ल अपने अपन बन्द करे जाय जब सत्र से बाहिर हों."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -197,6 +184,17 @@ msgstr "लागिन पर"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "ए अनुपरयोग मन ल सत्र से बाहिर रखना हे: (&x)"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "आप इहां <h1>सत्र प्रबंधक</h1> ल कान्फिगर कर सकथो. ये मां सामिल हे कि का सत्र से "
+#~ "बाहिर (लाग आउट) होए के विकल्प के पुस्टि करे जाए, जब लागइन करव तहां का सत्र फिर से "
+#~ "बहाल करे जाए, अउ का डिफाल्ट से कम्प्यूटर ल अपने अपन बन्द करे जाय जब सत्र से बाहिर हों."
 
 #, fuzzy
 #~ msgid "Default option:"

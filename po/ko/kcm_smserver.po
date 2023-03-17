@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-01 00:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,19 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>세션 관리자</h1> 이 곳에서 세션 관리자를 설정할 수 있습니다. 이 모듈에서"
-"는 세션에서 로그아웃할 때 확인을 받을지, 다음에 로그인할 때 저장한 세션을 불"
-"러올지, 세션을 종료한 다음 기본적으로 시스템을 종료할지 설정할 수 있습니다."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -199,6 +186,18 @@ msgstr "로그인할 때"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "세션에서 제외할 프로그램"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>세션 관리자</h1> 이 곳에서 세션 관리자를 설정할 수 있습니다. 이 모듈에"
+#~ "서는 세션에서 로그아웃할 때 확인을 받을지, 다음에 로그인할 때 저장한 세션"
+#~ "을 불러올지, 세션을 종료한 다음 기본적으로 시스템을 종료할지 설정할 수 있"
+#~ "습니다."
 
 #, fuzzy
 #~| msgid "Default leave option:"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-01-05 06:59+0600\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -18,20 +18,6 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Сеанс менеджері</h1> Мұнда сеанс менеджерін баптай аласыз. Баптайтыны: "
-"сеансты аяқтауын құптауы керек пе, келесі кіргенде өткен сеансты қалпына "
-"келтіру керек пе, сеанстан шыққанда компьютерді автоматты түрде өшіруі керек "
-"пе деген мәселелер."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -199,6 +185,18 @@ msgstr "Сеансты бастағанда"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "Орындалуы сақтал&майтын қолданбалар:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Сеанс менеджері</h1> Мұнда сеанс менеджерін баптай аласыз. "
+#~ "Баптайтыны: сеансты аяқтауын құптауы керек пе, келесі кіргенде өткен "
+#~ "сеансты қалпына келтіру керек пе, сеанстан шыққанда компьютерді автоматты "
+#~ "түрде өшіруі керек пе деген мәселелер."
 
 #, fuzzy
 #~| msgid "Default Leave Option"

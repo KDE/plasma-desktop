@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -189,12 +189,12 @@ msgstr "根据 Solid 的 deviceInterface 类自动生成便于翻译的 desktop 
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "维护人员"
@@ -224,42 +224,22 @@ msgstr "设备属性 %1 必须等同于 %2"
 msgid "The device property %1 must contain %2"
 msgstr "设备属性 %1 必须包含 %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Solid 设备操作编辑器"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Solid 设备操作控制面板模块"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 Solid Device Actions team"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Plasma 5 移植版本"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "此操作的述词无效。"
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "解析设备状态出错"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "未选择操作"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "无法删除"
@@ -281,3 +261,15 @@ msgstr "编辑…"
 #, kde-format
 msgid "Add…"
 msgstr "添加…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Solid 设备操作编辑器"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Solid 设备操作控制面板模块"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 Solid Device Actions team"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Plasma 5 移植版本"

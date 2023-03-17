@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-05 20:41+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,36 +32,6 @@ msgstr "Tommi Nieminen,Jorma Karvonen"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org,karvonen.jorma@gmail.com"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Laitteen automaattiliittäjä"
-
-#: DeviceAutomounterKCM.cpp:42
-#, kde-format
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "© 2009 Trever Fischer, © 2015 Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr "Alkuperäinen tekijä"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr "Kai Uwe Broulik"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr "Plasma 5 -sovitus"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -186,6 +156,24 @@ msgstr "Laite liitetään automaattisesti kytkettäessä."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Laitetta ei liitetä automaattisesti kytkettäessä."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Laitteen automaattiliittäjä"
+
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "© 2009 Trever Fischer, © 2015 Kai Uwe Broulik"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
+
+#~ msgid "Original Author"
+#~ msgstr "Alkuperäinen tekijä"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Plasma 5 Port"
+#~ msgstr "Plasma 5 -sovitus"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

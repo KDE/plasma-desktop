@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-15 08:14+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -16,19 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 0.3\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>සැසි පාලකය</h1> ඔබට මෙහිදී වාර පාලකය සැකසිය හැක.  මෙහි මෙය පිටවීම තහවුරු කල යුතුද "
-"යන්න, නැවත පිවිසි විට වාරය ප්‍රථිස්තාපනය කල යුතුද යන්න හා වාරය පිටවූ විට පරිගණකය පෙරනිමියෙන් "
-"වසාදැමිය යුතුද යන්න වැනි විකල්ප අඩංගුවේ."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -195,6 +182,17 @@ msgstr "පිවිසීමේදී"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "සැසියන්ට පරිබාහිර භාවිත යෙදවුම් (&x):"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>සැසි පාලකය</h1> ඔබට මෙහිදී වාර පාලකය සැකසිය හැක.  මෙහි මෙය පිටවීම තහවුරු කල "
+#~ "යුතුද යන්න, නැවත පිවිසි විට වාරය ප්‍රථිස්තාපනය කල යුතුද යන්න හා වාරය පිටවූ විට පරිගණකය "
+#~ "පෙරනිමියෙන් වසාදැමිය යුතුද යන්න වැනි විකල්ප අඩංගුවේ."
 
 #, fuzzy
 #~| msgid "Default Leave Option"

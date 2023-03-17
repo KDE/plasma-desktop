@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-02-27 23:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -167,47 +167,6 @@ msgstr "ไม่สามารถปรับใช้ค่าปรับต
 msgid "internal error - code %1 unknown"
 msgstr "เกิดข้อผิดพลาดขึ้นภายใน - ไม่รู้จักรหัสผิดพลาด %1"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "มอดูลควบคุมแท่งควบคุมของ KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "มอดูล KDE ของการตั้งค่าระบบ เพื่อทดสอบแท่งควบคุม"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>แท่งควบคุม</h1>มอดูลนี้จะช่วยตรวจสอบว่าแท่งควบคุมของคุณทำงานอย่างถูกต้องหรือไม่ <br /"
-">หากค่าของแกนออกมาผิด คุณสามารถลองแก้ไขได้โดยทำการปรับตั้ง <br /"
-">มอดูลนี้จะลองหาอุปกรณ์แท่งควบคุมทั้งหมดที่มีอยู่ โดยการตรวจสอบที่ /dev/js[0-4] และ /dev/"
-"input/js[0-4]<br />หากคุณมีแฟ้มอุปกรณ์อันอื่น ให้ใส่ค่าลงไปที่กล่องคอมโบ <br /> รายการ "
-"'ปุ่ม' จะแสดงสถานะของปุ่มบนแท่งควบคุมของคุณ, รายการ 'แกน' "
-"จะแสดงค่าที่ใช้อยู่สำหรับแกนทุกแกน<br />หมายเหตุ: ไดรเวอร์อุปกรณ์ของ Linux ในปัจจุบัน "
-"(เคอร์เนล 2.4, 2.6) สามารถตรวจสอบโดยอัตโนมัติได้แค่<ul><li>แท่งควบคุม แบบ 2 แกน 4 "
-"ปุ่ม</li><li>แท่งควบคุม แบบ 3 แกน 4 ปุ่ม</li><li>แท่งควบคุม แบบ 4 แกน 4ปุ่ม</"
-"li><li>แท่งควบคุม Saitek Cyborg 'digital'</li></ul>(หากต้องการรายละเอียด "
-"คุณสามารถอ่านได้ที่ source/Documentation/input/joystick.txt ของ Linux ที่คุณกำลังใช้อยู่)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -310,3 +269,38 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "เรียกค่าการปรับตั้งสำหรับแท่งควบคุม อุปกรณ์ %1 คืนทั้งหมด"
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "มอดูลควบคุมแท่งควบคุมของ KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "มอดูล KDE ของการตั้งค่าระบบ เพื่อทดสอบแท่งควบคุม"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>แท่งควบคุม</h1>มอดูลนี้จะช่วยตรวจสอบว่าแท่งควบคุมของคุณทำงานอย่างถูกต้องหรือไม่ <br /"
+#~ ">หากค่าของแกนออกมาผิด คุณสามารถลองแก้ไขได้โดยทำการปรับตั้ง <br /"
+#~ ">มอดูลนี้จะลองหาอุปกรณ์แท่งควบคุมทั้งหมดที่มีอยู่ โดยการตรวจสอบที่ /dev/js[0-4] และ /dev/"
+#~ "input/js[0-4]<br />หากคุณมีแฟ้มอุปกรณ์อันอื่น ให้ใส่ค่าลงไปที่กล่องคอมโบ <br /> รายการ "
+#~ "'ปุ่ม' จะแสดงสถานะของปุ่มบนแท่งควบคุมของคุณ, รายการ 'แกน' "
+#~ "จะแสดงค่าที่ใช้อยู่สำหรับแกนทุกแกน<br />หมายเหตุ: ไดรเวอร์อุปกรณ์ของ Linux ในปัจจุบัน "
+#~ "(เคอร์เนล 2.4, 2.6) สามารถตรวจสอบโดยอัตโนมัติได้แค่<ul><li>แท่งควบคุม แบบ 2 แกน 4 "
+#~ "ปุ่ม</li><li>แท่งควบคุม แบบ 3 แกน 4 ปุ่ม</li><li>แท่งควบคุม แบบ 4 แกน 4ปุ่ม</"
+#~ "li><li>แท่งควบคุม Saitek Cyborg 'digital'</li></ul>(หากต้องการรายละเอียด "
+#~ "คุณสามารถอ่านได้ที่ source/Documentation/input/joystick.txt ของ Linux "
+#~ "ที่คุณกำลังใช้อยู่)"

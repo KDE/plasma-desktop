@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-14 11:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Напис:"
 #, kde-format
 msgid "Preview"
 msgstr "Переглянути"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Модуль керування клавіатурою KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© Андрій Рисін, 2010"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Клавіатура</h1> Цим модулем керування можна скористатися для "
-"налаштування параметрів та розкладок клавіатур."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -512,6 +493,19 @@ msgstr ""
 "моделі не передбачено підтримки певної розкладки або варіанта розкладки. "
 "Ймовірно, ця проблема також виникне, якщо ви спробуєте скористатися цією "
 "комбінацією моделі, розкладки і варіанта."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Модуль керування клавіатурою KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© Андрій Рисін, 2010"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Клавіатура</h1> Цим модулем керування можна скористатися для "
+#~ "налаштування параметрів та розкладок клавіатур."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Програма перемикання розкладки клавіатури KDE"

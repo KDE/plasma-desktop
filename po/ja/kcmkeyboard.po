@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2015-05-22 22:19-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -95,25 +95,6 @@ msgstr ""
 #, kde-format
 msgid "Preview"
 msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE キーボードコントロールモジュール"
-
-#: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, fuzzy, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>キーボード</h1> このコントロールモジュールを使ってキーボードのパラメータ"
-"や配置を変更することができます。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -517,3 +498,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#, fuzzy
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE キーボードコントロールモジュール"
+
+#, fuzzy
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>キーボード</h1> このコントロールモジュールを使ってキーボードのパラメー"
+#~ "タや配置を変更することができます。"

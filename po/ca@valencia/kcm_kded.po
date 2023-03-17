@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-07-30 12:05+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -51,28 +51,7 @@ msgstr ""
 "No s'ha pogut notificar al Gestor de servei de KDE (kded5) del canvi "
 "guardat: %1"
 
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid ""
-"<p>This module allows you to have an overview of all plugins of the KDE "
-"Daemon, also referred to as KDE Services. Generally, there are two types of "
-"service:</p> <ul><li>Services invoked at startup</li><li>Services called on "
-"demand</li></ul> <p>The latter are only listed for convenience. The startup "
-"services can be started and stopped. You can also define whether services "
-"should be loaded at startup.</p> <p><b>Use this with care: some services are "
-"vital for Plasma; do not deactivate services if you  do not know what you "
-"are doing.</b></p>"
-msgstr ""
-"<p>Este mòdul permet tindre una visió general de tots els connectors de "
-"dimoni de KDE, anomenats també serveis KDE. Generalment hi ha dos tipus de "
-"servei:</p><ul><li>Serveis que s'invoquen en iniciar</li><li>Serveis que es "
-"criden sota demanda</li></ul><p>Estos darrers tan sols es llisten per "
-"comoditat. Els serveis d'inicialització es poden iniciar i parar. També "
-"podeu definir quins serveis s'haurien de carregar en iniciar.</p><p><b> "
-"Utilitzeu-la amb cura: alguns serveis són vitals per a Plasma. No desactiveu "
-"cap servei si no sabeu el que esteu fent.</b></p>"
-
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -81,7 +60,7 @@ msgstr ""
 "Actualment el gestor de serveis en segon pla («kded5») no està en execució. "
 "Comproveu que estiga instal·lat correctament."
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -90,7 +69,7 @@ msgstr ""
 "Alguns serveis es desactiven a si mateixos una altra vegada que s'inicien "
 "manualment si no són útils en l'entorn actual."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -99,54 +78,73 @@ msgstr ""
 "Alguns serveis s'han parat/iniciat automàticament quan el gestor de serveis "
 "en segon pla («kded5») s'ha reiniciat per a aplicar els canvis."
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "Tots els serveis"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "En execució"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "No estan en execució"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "Serveis d'inicialització"
 
-#: package/contents/ui/main.qml:137
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Serveis de càrrega sota demanda"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Canvia la càrrega automàtica d'este servei en iniciar"
 
-#: package/contents/ui/main.qml:221
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Parat"
 
-#: package/contents/ui/main.qml:222
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "En execució"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "Para el servei"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "Inicia el servei"
+
+#~ msgid ""
+#~ "<p>This module allows you to have an overview of all plugins of the KDE "
+#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
+#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
+#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
+#~ "The startup services can be started and stopped. You can also define "
+#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
+#~ "care: some services are vital for Plasma; do not deactivate services if "
+#~ "you  do not know what you are doing.</b></p>"
+#~ msgstr ""
+#~ "<p>Este mòdul permet tindre una visió general de tots els connectors de "
+#~ "dimoni de KDE, anomenats també serveis KDE. Generalment hi ha dos tipus "
+#~ "de servei:</p><ul><li>Serveis que s'invoquen en iniciar</li><li>Serveis "
+#~ "que es criden sota demanda</li></ul><p>Estos darrers tan sols es llisten "
+#~ "per comoditat. Els serveis d'inicialització es poden iniciar i parar. "
+#~ "També podeu definir quins serveis s'haurien de carregar en iniciar.</"
+#~ "p><p><b> Utilitzeu-la amb cura: alguns serveis són vitals per a Plasma. "
+#~ "No desactiveu cap servei si no sabeu el que esteu fent.</b></p>"

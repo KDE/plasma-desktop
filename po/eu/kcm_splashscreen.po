@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-01 23:10+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -35,27 +35,22 @@ msgstr "Ez da Plasta pantailarik erakutsiko"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Ezin duzu kendu unean hautatuta dagoen plasta pantaila"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Modulu honek Plasta pantailaren gaia aukeratzen uzten dizu."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Lortu berria…"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Plasta pantailaren aurreikuspegia erakustea huts egin du."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Aurreikusi Plasta pantaila"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalatu"
@@ -71,6 +66,9 @@ msgstr "Etorkizunean erabiltzeko"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Uneko plasta gaiaren izena"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "Modulu honek Plasta pantailaren gaia aukeratzen uzten dizu."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Lortu Plasta pantaila berriak..."

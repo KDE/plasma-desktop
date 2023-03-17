@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 20:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -22,18 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.03.70\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>工作階段管理員</h1>您可以在這邊組態工作階段管理員。 這包含了登出時是否要"
-"經過確認、是否要在登出時儲存工作階段，以及是否要在工作階段結束後自動關機。"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -199,6 +187,17 @@ msgstr "登入時"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "要自工作階段排除的應用程式"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>工作階段管理員</h1>您可以在這邊組態工作階段管理員。 這包含了登出時是否"
+#~ "要經過確認、是否要在登出時儲存工作階段，以及是否要在工作階段結束後自動關"
+#~ "機。"
 
 #, fuzzy
 #~| msgid "Default leave option:"

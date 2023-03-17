@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -77,25 +77,6 @@ msgstr "برچسب:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
-
-#: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
-msgid "KDE Keyboard Control Module"
-msgstr "سوده طرح‌بندی صفحه کلید KDE"
-
-#: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2006-2007 Andriy Rysin"
-msgid "(c) 2010 Andriy Rysin"
-msgstr "حق نشر (ح) ۲۰۰۷-۲۰۰۶ Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
@@ -523,6 +504,16 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#, fuzzy
+#~| msgid "KDE Keyboard Layout Switcher"
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "سوده طرح‌بندی صفحه کلید KDE"
+
+#, fuzzy
+#~| msgid "Copyright (C) 2006-2007 Andriy Rysin"
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "حق نشر (ح) ۲۰۰۷-۲۰۰۶ Andriy Rysin"
 
 #, fuzzy
 #~| msgid "Keyboard Repeat"

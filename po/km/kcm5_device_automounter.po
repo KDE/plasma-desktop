@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-05-11 08:36+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -29,37 +29,6 @@ msgid "Your emails"
 msgstr ""
 "khoemsokhem@khmeros.info,mornmet@khmeros.info,sutha@khmeros.info,"
 "vannak@khmeros.info,piseth_dv@khmeros.info"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "កម្មវិធី​ម៉ោន​ឧបករណ៍​ដោយ​ស្វ័យ​ប្រវត្តិ"
-
-#: DeviceAutomounterKCM.cpp:42
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Trever Fischer"
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៩ ដោយ Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr ""
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -203,6 +172,17 @@ msgstr "ឧបករណ៍​នេះ​នឹង​ត្រូវ​បាន
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "ឧបករណ៍​នេះ​នឹង​មិន​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​ទេ​នៅពេល​ដែល​បានភ្ជាប់ ។"
+
+#~ msgid "Device Automounter"
+#~ msgstr "កម្មវិធី​ម៉ោន​ឧបករណ៍​ដោយ​ស្វ័យ​ប្រវត្តិ"
+
+#, fuzzy
+#~| msgid "(c) 2009 Trever Fischer"
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៩ ដោយ Trever Fischer"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Trever Fischer"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

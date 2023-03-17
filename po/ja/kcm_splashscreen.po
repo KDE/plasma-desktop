@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-18 09:16+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -33,27 +33,22 @@ msgstr "スプラッシュスクリーンは表示されません"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "現在選択されているスプラッシュスクリーンは削除できません。"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "このモジュールでスプラッシュスクリーンのテーマを選択できます。"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr ""
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "スプラッシュスクリーンの表示に失敗しました。"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "スプラッシュスクリーンをプレビュー"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "アンインストール"
@@ -69,3 +64,6 @@ msgstr "For future use"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "現在のスプラッシュテーマの名前"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "このモジュールでスプラッシュスクリーンのテーマを選択できます。"

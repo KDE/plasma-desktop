@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-27 22:30+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,21 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.2\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Sitzungsverwaltung</h1> Hier können Sie die Sitzungsverwaltung "
-"einrichten. Das schließt Auswahlmöglichkeiten ein wie die eventuelle "
-"Bestätigung der Abmeldung (Logout), die Wiederherstellung der vorherigen "
-"Sitzung oder das automatische Ausschalten des Rechners nach dem Beenden der "
-"Sitzung."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -199,6 +184,19 @@ msgstr "Bei der Anmeldung"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Von Sitzungen auszuschließende Programme:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Sitzungsverwaltung</h1> Hier können Sie die Sitzungsverwaltung "
+#~ "einrichten. Das schließt Auswahlmöglichkeiten ein wie die eventuelle "
+#~ "Bestätigung der Abmeldung (Logout), die Wiederherstellung der vorherigen "
+#~ "Sitzung oder das automatische Ausschalten des Rechners nach dem Beenden "
+#~ "der Sitzung."
 
 #, fuzzy
 #~| msgid "Default leave option:"

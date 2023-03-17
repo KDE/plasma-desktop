@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-28 10:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -22,20 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Gerenciador de sessões</h1> Você pode configurar aqui o gerenciador de "
-"sessões. Inclui opções como confirmação de saída (logout), salvamento da "
-"sessão para o próximo login e se o computador deve ser automaticamente "
-"desligado por padrão quando a sessão é encerrada."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -214,6 +200,18 @@ msgstr "Na inicialização"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicativos a serem excluídos da sessão"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Gerenciador de sessões</h1> Você pode configurar aqui o gerenciador "
+#~ "de sessões. Inclui opções como confirmação de saída (logout), salvamento "
+#~ "da sessão para o próximo login e se o computador deve ser automaticamente "
+#~ "desligado por padrão quando a sessão é encerrada."
 
 #, fuzzy
 #~| msgid "Default leave option:"

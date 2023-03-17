@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-13 03:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -193,12 +193,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "ბენ ქუქსლი"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "წამყვანი პროგრამისტი"
@@ -228,42 +228,22 @@ msgstr "მოწყობილობის თვისება %1 უნდ�
 msgid "The device property %1 must contain %2"
 msgstr "მოწყობილობის თვისება %1 %2-ს უნდა შეიცავდეს"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "მოწყობილობის ქმედებების ჩასწორება"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "კონტროლის პანელის მოდული მყარი მოწყობილობის ქმედებებისთვის"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 მყარი მოწყობილობების ქმედებების გუნდი"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Plasma 5-ზე გადატანა"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "ამ ქმედების პრედიკატი არასწორია."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "მოწყობილობის მდგომარეობის დამუსავების შეცდომა"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "ქმედება არჩეული არაა"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "წაშლა შეუძლებელია"
@@ -285,3 +265,15 @@ msgstr "ჩასწორება…"
 #, kde-format
 msgid "Add…"
 msgstr "დამატება…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "მოწყობილობის ქმედებების ჩასწორება"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "კონტროლის პანელის მოდული მყარი მოწყობილობის ქმედებებისთვის"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 მყარი მოწყობილობების ქმედებების გუნდი"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Plasma 5-ზე გადატანა"

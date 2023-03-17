@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-14 18:03+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -80,23 +80,6 @@ msgstr "이름표:"
 #, kde-format
 msgid "Preview"
 msgstr "미리 보기"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE 키보드 제어 모듈"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr "<h1>키보드</h1> 추가 키보드 옵션 및 레이아웃을 설정할 수 있습니다."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -498,6 +481,17 @@ msgstr ""
 "키보드 형상을 불러오지 못했습니다. 이는 종종 선택한 모델이 특정 레이아웃 또"
 "는 레이아웃 파생형을 지원하지 않음을 나타냅니다. 이 모델, 레이아웃, 파생형 조"
 "합을 사용하려고 할 때도 같은 문제가 발생할 수 있습니다."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE 키보드 제어 모듈"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr "<h1>키보드</h1> 추가 키보드 옵션 및 레이아웃을 설정할 수 있습니다."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE 키보드 레이아웃 전환기"

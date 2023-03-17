@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-13 22:42+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -87,25 +87,6 @@ msgstr "Etiketa:"
 #, kde-format
 msgid "Preview"
 msgstr "Aurrebista"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDEren teklatuaren aginte-modulua"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Teklatua</h1> Aginte-modulu hau teklatuen parametroak eta diseinuak "
-"konfiguratzeko erabil daiteke."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -515,6 +496,19 @@ msgstr ""
 "hautatutako ereduak, zehaztutako antolamendua edo antolamenduaren aldaera ez "
 "duela onartzen. Arazo hori, seguruenik, eredu, antolamendu eta aldaera "
 "konbinazio hori erabiltzen saiatzean ere gertatuko da."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDEren teklatuaren aginte-modulua"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Teklatua</h1> Aginte-modulu hau teklatuen parametroak eta diseinuak "
+#~ "konfiguratzeko erabil daiteke."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDEren teklatu-diseinuaren aldatzailea"

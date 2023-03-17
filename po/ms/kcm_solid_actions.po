@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-11-14 23:53+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -187,12 +187,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Penyelenggara"
@@ -222,42 +222,22 @@ msgstr "2"
 msgid "The device property %1 must contain %2"
 msgstr "peranti 2"
 
-#: SolidActions.cpp:33
-#, fuzzy, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Padu Peranti Tindakan Pengedit"
-
-#: SolidActions.cpp:35
-#, fuzzy, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Padu Peranti Tindakan Kawalan Panel Modul"
-
-#: SolidActions.cpp:37
-#, fuzzy, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "Padu Peranti Tindakan"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, fuzzy, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "ialah tidak."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, fuzzy, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Ralat Peranti Syarat-syarat"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Tiada Tindakan Dipilih"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Tidak boleh dipadam"
@@ -279,6 +259,18 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Padu Peranti Tindakan Pengedit"
+
+#, fuzzy
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Padu Peranti Tindakan Kawalan Panel Modul"
+
+#, fuzzy
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "Padu Peranti Tindakan"
 
 #~ msgid "Edit..."
 #~ msgstr "Sunting..."

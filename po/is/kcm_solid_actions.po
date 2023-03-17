@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-10 19:42+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -197,12 +197,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Umsjónarmaður"
@@ -232,42 +232,22 @@ msgstr "Eiginleiki tækisins %1 verður að vera jafnt og %2"
 msgid "The device property %1 must contain %2"
 msgstr "Eiginleiki tækisins %1 verður að innihalda %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Ritill fyrir Solid Device-aðgerðir"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Stjórnunareining fyrir Solid Device-aðgerðir"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 Solid Device Actions-hópurinn"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Aðlögun að Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Svo virðist sem umsögnin fyrir þessa aðgerð sé ekki gild."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Villa við þáttun tækjaskilyrða"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Engin aðgerð valin"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Er ekki hægt að eyða"
@@ -289,6 +269,18 @@ msgstr "Breyta…"
 #, kde-format
 msgid "Add…"
 msgstr "Bæta við…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Ritill fyrir Solid Device-aðgerðir"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Stjórnunareining fyrir Solid Device-aðgerðir"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 Solid Device Actions-hópurinn"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Aðlögun að Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Breyta..."

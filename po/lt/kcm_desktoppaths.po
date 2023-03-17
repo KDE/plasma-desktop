@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-28 01:34+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -59,20 +59,6 @@ msgstr "Vieša"
 #, kde-format
 msgid "Templates"
 msgstr "Šablonai"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Keliai</h1>\n"
-"Šis modulis jums leidžia pasirinkti, kurioje failų sistemos vietoje turetų "
-"būti saugomi jūsų darbalaukyje esantys failai.\n"
-"Pasinaudokite „Kas tai yra?“ (Lyg2+F1) pagalba, norėdami daugiau sužinoti "
-"apie atskiras parinktis."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -175,6 +161,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Keliai</h1>\n"
+#~ "Šis modulis jums leidžia pasirinkti, kurioje failų sistemos vietoje "
+#~ "turetų būti saugomi jūsų darbalaukyje esantys failai.\n"
+#~ "Pasinaudokite „Kas tai yra?“ (Lyg2+F1) pagalba, norėdami daugiau sužinoti "
+#~ "apie atskiras parinktis."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

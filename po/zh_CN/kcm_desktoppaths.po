@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -56,18 +56,6 @@ msgstr "公共"
 #, kde-format
 msgid "Templates"
 msgstr "模板"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>路径</h1>\n"
-"此模块允许您选择要在文件系统的什么地方存储桌面上的文件。\n"
-"请使用“这是什么？”(Shift+F1)在特定选项取得帮助。"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -157,3 +145,13 @@ msgstr "该文件夹默认将被用来加载或者保存模板。"
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "选择新位置"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>路径</h1>\n"
+#~ "此模块允许您选择要在文件系统的什么地方存储桌面上的文件。\n"
+#~ "请使用“这是什么？”(Shift+F1)在特定选项取得帮助。"

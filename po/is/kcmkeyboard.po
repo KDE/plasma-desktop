@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-10 21:00+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -82,25 +82,6 @@ msgstr "Skýring:"
 #, kde-format
 msgid "Preview"
 msgstr "Forskoða"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE-stjórneining fyrir lyklaborð"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Lyklaborð</h1> Þessa stjórneiningu má nota til að stilla ýmis atriði og "
-"framsetningu á lyklaborðum."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -510,6 +491,19 @@ msgstr ""
 "tegundin sem var valin styðji ekki tiltekna skipan eða tilbrigði hennar. "
 "Þetta vandamál verður líklega líka til staðar þegar þú reynir að nota þessa "
 "tegund, skipan og tilbrigði saman."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE-stjórneining fyrir lyklaborð"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Lyklaborð</h1> Þessa stjórneiningu má nota til að stilla ýmis atriði "
+#~ "og framsetningu á lyklaborðum."
 
 #, fuzzy
 #~| msgctxt "tooltip title"

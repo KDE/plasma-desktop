@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-26 21:17+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -192,12 +192,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Bảo trì viên"
@@ -227,42 +227,22 @@ msgstr "Thuộc tính thiết bị \"%1\" phải bằng \"%2\""
 msgid "The device property %1 must contain %2"
 msgstr "Thuộc tính thiết bị \"%1\" phải chứa \"%2\""
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Trình sửa hành động với thiết bị Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Khối bảng điều khiển \"Hành động với thiết bị Solid\""
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 đội ngũ \"Hành động với thiết bị Solid\""
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Chuyển sang Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Điều kiện cho hành động này không hợp lệ."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Lỗi khi phân tách điều kiện thiết bị"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Chưa chọn hành động nào"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Không thể xoá"
@@ -284,6 +264,18 @@ msgstr "Sửa…"
 #, kde-format
 msgid "Add…"
 msgstr "Thêm…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Trình sửa hành động với thiết bị Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Khối bảng điều khiển \"Hành động với thiết bị Solid\""
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 đội ngũ \"Hành động với thiết bị Solid\""
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Chuyển sang Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Sửa…"

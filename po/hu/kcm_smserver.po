@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-01-13 20:22+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -15,21 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.03.70\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Munkamenetkezelő</h1> Itt lehet módosítani a munkamenetkezelés "
-"beállításait. A beállítások közé tartozik például: megerősítés kérése "
-"kijelentkezés előtt, a munkamenet állapotának visszatöltése "
-"bejelentkezéskor, illetve hogy kijelentkezéskor automatikusan megtörténjen-e "
-"a gép lezárása."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -200,6 +185,19 @@ msgstr "Bejelentkezéskor"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Az állapotkezelésből kizárandó alkalmazások:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Munkamenetkezelő</h1> Itt lehet módosítani a munkamenetkezelés "
+#~ "beállításait. A beállítások közé tartozik például: megerősítés kérése "
+#~ "kijelentkezés előtt, a munkamenet állapotának visszatöltése "
+#~ "bejelentkezéskor, illetve hogy kijelentkezéskor automatikusan "
+#~ "megtörténjen-e a gép lezárása."
 
 #, fuzzy
 #~| msgid "Default leave option:"

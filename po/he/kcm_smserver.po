@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -25,20 +25,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>מנהל ההפעלה</h1> כאן באפשרותך לקבוע את הגדרות מנהל ההפעלה. הגדרות אלה "
-"כוללות אפשרויות כגון האם לבקש אישור לפני סיום ההפעלה (יציאה), האם לשחזר שוב "
-"את ההפעלה בעת הכניסה, והאם לכבות כברירת מחדל את המחשב באופן אוטומטי לאחר "
-"סיום ההפעלה."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -205,6 +191,18 @@ msgstr "בעת הכניסה למערכת"
 #| msgid "Applications to be e&xcluded from sessions:"
 msgid "Applications to be excluded from session"
 msgstr "יישומים ש&אין לשמור בהפעלות: "
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>מנהל ההפעלה</h1> כאן באפשרותך לקבוע את הגדרות מנהל ההפעלה. הגדרות אלה "
+#~ "כוללות אפשרויות כגון האם לבקש אישור לפני סיום ההפעלה (יציאה), האם לשחזר "
+#~ "שוב את ההפעלה בעת הכניסה, והאם לכבות כברירת מחדל את המחשב באופן אוטומטי "
+#~ "לאחר סיום ההפעלה."
 
 #, fuzzy
 #~| msgid "Default Leave Option"

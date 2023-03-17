@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-14 16:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -80,25 +80,6 @@ msgstr "Beteckning:"
 #, kde-format
 msgid "Preview"
 msgstr "Förhandsgranskning"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE:s tangentbordsinställningsmodul"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "© 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Tangentbord</h1> Den här inställningsmodulen kan användas för att ställa "
-"in tangentbordsparametrar och layouter."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -508,6 +489,19 @@ msgstr ""
 "modellen inte stöder en specifik layout eller layoutvariant. Problemet "
 "uppstår troligen också när du försöker använda den här kombinationen av "
 "modell, layout och variant."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE:s tangentbordsinställningsmodul"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Tangentbord</h1> Den här inställningsmodulen kan användas för att "
+#~ "ställa in tangentbordsparametrar och layouter."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE:s byte av tangentbordslayout"

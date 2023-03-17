@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 07:31+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -62,18 +62,6 @@ msgstr "Publikoa"
 #, kde-format
 msgid "Templates"
 msgstr "Txantiloiak"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Bide-izenak</h1> Modulu honek mahaigaineko fitxategiak fitxategi "
-"sisteman non gordeko diren hautatzen uzten dizu\n"
-"Erabili \"Zer da hau?\" (Maius+F1) laguntza lortzeko."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -173,6 +161,16 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Aukeratu kokaleku berria"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Bide-izenak</h1> Modulu honek mahaigaineko fitxategiak fitxategi "
+#~ "sisteman non gordeko diren hautatzen uzten dizu\n"
+#~ "Erabili \"Zer da hau?\" (Maius+F1) laguntza lortzeko."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

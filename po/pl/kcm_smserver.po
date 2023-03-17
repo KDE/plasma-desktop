@@ -2,7 +2,7 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1641637 $
+# Version: $Revision: 1647185 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2009.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-29 11:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -22,19 +22,6 @@ msgstr ""
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Zarządzanie posiedzeniami</h1> Człon zarządzania posiedzeniami umożliwia "
-"określenie, czy potwierdzać wylogowanie, czy odtwarzać poprzednie "
-"posiedzenie przy zalogowaniu i czy wyłączać komputer przy zakończeniu pracy."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -211,6 +198,18 @@ msgstr "Przy logowaniu"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Programy wykluczone z posiedzenia"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Zarządzanie posiedzeniami</h1> Człon zarządzania posiedzeniami "
+#~ "umożliwia określenie, czy potwierdzać wylogowanie, czy odtwarzać "
+#~ "poprzednie posiedzenie przy zalogowaniu i czy wyłączać komputer przy "
+#~ "zakończeniu pracy."
 
 #~ msgid "Default option:"
 #~ msgstr "Domyślne ustawienie:"

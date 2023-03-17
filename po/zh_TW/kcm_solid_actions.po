@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-09-06 01:02+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -192,12 +192,12 @@ msgstr "從實體裝置介面類別自動產生桌面檔的工具"
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
@@ -227,42 +227,22 @@ msgstr "裝置的屬性 %1 必須為 %2"
 msgid "The device property %1 must contain %2"
 msgstr "裝置的屬性 %1 必須包含 %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "實體裝置動作編輯器"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "實體裝置動作控制面板模組"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 Solid Device Actions 開發團隊"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "移植到 Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "此動作的描述似乎不正確。"
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "剖析裝置條件發生錯誤"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "沒有選取動作"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "無法刪除"
@@ -284,6 +264,18 @@ msgstr "編輯…"
 #, kde-format
 msgid "Add…"
 msgstr "新增…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "實體裝置動作編輯器"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "實體裝置動作控制面板模組"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 Solid Device Actions 開發團隊"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "移植到 Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "編輯..."

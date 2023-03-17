@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2012-06-13 15:41+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -193,12 +193,12 @@ msgstr "ឧបករណ៍​ត្រូវ​បង្កើត​ឯកសា
 msgid "(c) 2009, Ben Cooksley"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៩ ដោយ Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "អ្នក​ថែទាំ"
@@ -228,43 +228,22 @@ msgstr "លក្ខណ​សម្បត្តិ​ឧបករណ៍​ %1 �
 msgid "The device property %1 must contain %2"
 msgstr "លក្ខណសម្បត្តិ​ឧបករណ៍ %1 ត្រូវ​តែ​មាន %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "កម្មវិធី​កែសម្រួល​សកម្មភាព​ឧបករណ៍​តាន់"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "ម៉ូឌុល​បន្ទះ​ត្រួតពិនិត្យ​សកម្មភាព​ឧបករណ៍​តាន់"
-
-#: SolidActions.cpp:37
-#, fuzzy, kde-format
-#| msgid "(c) 2009 Solid Device Actions team"
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៩ ដោយ​ក្រុម​សកម្មភាព​ឧបករណ៍​តាន់"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr ""
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "វា​បង្ហាញ​ថា​ការ​ទាយ​សម្រាប់​សកម្មភាព​នេះ​មិន​ត្រឹមត្រូវ ។"
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "កំហុស​ក្នុងការ​ញែក​លក្ខខណ្ឌ​ឧបករណ៍"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "គ្មាន​សកម្មភាព​បាន​ជ្រើស"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "មិនអាច​ត្រូ​វបានលុប​ទេ"
@@ -286,6 +265,17 @@ msgstr ""
 #, kde-format
 msgid "Add…"
 msgstr ""
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "កម្មវិធី​កែសម្រួល​សកម្មភាព​ឧបករណ៍​តាន់"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "ម៉ូឌុល​បន្ទះ​ត្រួតពិនិត្យ​សកម្មភាព​ឧបករណ៍​តាន់"
+
+#, fuzzy
+#~| msgid "(c) 2009 Solid Device Actions team"
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៩ ដោយ​ក្រុម​សកម្មភាព​ឧបករណ៍​តាន់"
 
 #~ msgid "Edit..."
 #~ msgstr "កែសម្រួល..."

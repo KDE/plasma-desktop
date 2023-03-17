@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -19,20 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>Seansihaldur</h1> Siin saab seadistada seansihaldurit. See hõlmab endas "
-"valikuid, kas seansi lõpetamisel (väljalogimisel) küsitakse sult kinnitust, "
-"kas eelmine seanss taastatakse sisselogimisel ning kas arvuti töö "
-"lõpetatakse vaikimisi, kui seanss lõpetatakse."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -200,6 +186,18 @@ msgstr "Sisselogimisel"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Rakendused, mida ei taastata:"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>Seansihaldur</h1> Siin saab seadistada seansihaldurit. See hõlmab "
+#~ "endas valikuid, kas seansi lõpetamisel (väljalogimisel) küsitakse sult "
+#~ "kinnitust, kas eelmine seanss taastatakse sisselogimisel ning kas arvuti "
+#~ "töö lõpetatakse vaikimisi, kui seanss lõpetatakse."
 
 #, fuzzy
 #~| msgid "Default leave option"

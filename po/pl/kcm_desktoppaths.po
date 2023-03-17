@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1645901 $
+# Version: $Revision: 1647185 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-11 08:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -71,19 +71,6 @@ msgstr "Publiczne"
 #, kde-format
 msgid "Templates"
 msgstr "Wzorce"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Ścieżki</h1>\n"
-"Moduł pozwala na konfigurację katalogów, w których\n"
-"przechowywane są różne pliki pulpitu.\n"
-"Użyj \"Co to jest?\" (Shift+F1), by uzyskać pomoc o konkretnych opcjach."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -186,6 +173,17 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Wybierz nowe miejsce"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Ścieżki</h1>\n"
+#~ "Moduł pozwala na konfigurację katalogów, w których\n"
+#~ "przechowywane są różne pliki pulpitu.\n"
+#~ "Użyj \"Co to jest?\" (Shift+F1), by uzyskać pomoc o konkretnych opcjach."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

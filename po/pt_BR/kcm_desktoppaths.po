@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-28 10:57-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -64,20 +64,6 @@ msgstr "Público"
 #, kde-format
 msgid "Templates"
 msgstr "Modelos"
-
-#: globalpaths.cpp:27
-#, kde-format
-msgid ""
-"<h1>Paths</h1>\n"
-"This module allows you to choose where in the filesystem the files on your "
-"desktop should be stored.\n"
-"Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-msgstr ""
-"<h1>Caminhos</h1>\n"
-"Este módulo permite-lhe escolher qual local no sistema de arquivos, os "
-"arquivos de sua área de trabalho devem ser armazenados.\n"
-"Use o \"O que é isto?\" (Shift+F1) para obter ajuda sobre as opções "
-"específicas."
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -171,6 +157,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Escolher nova localização"
+
+#~ msgid ""
+#~ "<h1>Paths</h1>\n"
+#~ "This module allows you to choose where in the filesystem the files on "
+#~ "your desktop should be stored.\n"
+#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#~ msgstr ""
+#~ "<h1>Caminhos</h1>\n"
+#~ "Este módulo permite-lhe escolher qual local no sistema de arquivos, os "
+#~ "arquivos de sua área de trabalho devem ser armazenados.\n"
+#~ "Use o \"O que é isto?\" (Shift+F1) para obter ajuda sobre as opções "
+#~ "específicas."
 
 #~ msgid ""
 #~ "This folder will be used by default to load or save public shares from or "

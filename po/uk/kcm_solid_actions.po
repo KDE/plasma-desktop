@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-26 09:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -195,12 +195,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "© Ben Cooksley, 2009"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
@@ -230,42 +230,22 @@ msgstr "Значення властивості пристрою %1 має до�
 msgid "The device property %1 must contain %2"
 msgstr "Значення властивості пристрою %1 має містити %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Редактор дій з пристроями Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Модуль панелі керування діями з пристроями Solid"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "© Команда розроби дій з пристроями Solid, 2009, 2014"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Портування на платформу Плазма 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Логічна умова для цієї дії не є коректною."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Помилка під час обробки умов пристрою"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Не обрано жодної дії"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Не можна вилучати"
@@ -287,6 +267,18 @@ msgstr "Змінити…"
 #, kde-format
 msgid "Add…"
 msgstr "Додати…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Редактор дій з пристроями Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Модуль панелі керування діями з пристроями Solid"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "© Команда розроби дій з пристроями Solid, 2009, 2014"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Портування на платформу Плазма 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Змінити..."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,36 +28,6 @@ msgstr "Часлав Илић"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
-
-#: DeviceAutomounterKCM.cpp:38
-#, kde-format
-msgid "Device Automounter"
-msgstr "Аутомонтер уређаја"
-
-#: DeviceAutomounterKCM.cpp:42
-#, kde-format
-msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-msgstr "© 2009, Тревер Фишер; © 2015, Каи Уве Броулик"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Trever Fischer"
-msgstr "Тревер Фишер"
-
-#: DeviceAutomounterKCM.cpp:43
-#, kde-format
-msgid "Original Author"
-msgstr "Првобитни аутор"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr "Каи Уве Броулик"
-
-#: DeviceAutomounterKCM.cpp:44
-#, kde-format
-msgid "Plasma 5 Port"
-msgstr "Пренос на Плазму 5"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -204,6 +174,24 @@ msgstr "Овај уређај се аутоматски монтира по пр
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Овај уређај се не монтира аутоматски по прикључивању."
+
+#~ msgid "Device Automounter"
+#~ msgstr "Аутомонтер уређаја"
+
+#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
+#~ msgstr "© 2009, Тревер Фишер; © 2015, Каи Уве Броулик"
+
+#~ msgid "Trever Fischer"
+#~ msgstr "Тревер Фишер"
+
+#~ msgid "Original Author"
+#~ msgstr "Првобитни аутор"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Каи Уве Броулик"
+
+#~ msgid "Plasma 5 Port"
+#~ msgstr "Пренос на Плазму 5"
 
 #~ msgid ""
 #~ "When this is unchecked, no device automounting of any kind will happen, "

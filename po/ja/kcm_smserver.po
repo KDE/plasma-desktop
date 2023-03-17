@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-18 11:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -22,20 +22,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#: kcmsmserver.cpp:49
-#, kde-format
-msgid ""
-"<h1>Session Manager</h1> You can configure the session manager here. This "
-"includes options such as whether or not the session exit (logout) should be "
-"confirmed, whether the session should be restored again when logging in and "
-"whether the computer should be automatically shut down after session exit by "
-"default."
-msgstr ""
-"<h1>セッションマネージャ</h1>ここでセッションマネージャの設定を行います。これ"
-"には、セッションの終了 (ログアウト) を確認するかどうか、前回のセッションをロ"
-"グイン時に復元するかどうか、セッションの終了と同時にシャットダウンするかどう"
-"か、といったオプションが含まれます。"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -207,6 +193,18 @@ msgstr "ログイン時"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "セッションから除外するアプリケーション"
+
+#~ msgid ""
+#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
+#~ "includes options such as whether or not the session exit (logout) should "
+#~ "be confirmed, whether the session should be restored again when logging "
+#~ "in and whether the computer should be automatically shut down after "
+#~ "session exit by default."
+#~ msgstr ""
+#~ "<h1>セッションマネージャ</h1>ここでセッションマネージャの設定を行います。"
+#~ "これには、セッションの終了 (ログアウト) を確認するかどうか、前回のセッショ"
+#~ "ンをログイン時に復元するかどうか、セッションの終了と同時にシャットダウンす"
+#~ "るかどうか、といったオプションが含まれます。"
 
 #, fuzzy
 #~| msgid "Default leave option:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-02-23 17:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "लेबल :"
 #, kde-format
 msgid "Preview"
 msgstr "पूर्वावलोकन"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "केडीई कळफलक नियंत्रण विभाग"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 आंद्रिय रायसिन"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>कळफलक</h1> हा नियंत्रण विभाग कळफलक परिमाण व रचना संयोजीत करण्याकरिता वापरला "
-"जाऊ शकतो."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -490,6 +471,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "केडीई कळफलक नियंत्रण विभाग"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 आंद्रिय रायसिन"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>कळफलक</h1> हा नियंत्रण विभाग कळफलक परिमाण व रचना संयोजीत करण्याकरिता "
+#~ "वापरला जाऊ शकतो."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "केडीई कळफलक रचना बदलणारा"

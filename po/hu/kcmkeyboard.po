@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-17 16:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -81,25 +81,6 @@ msgstr "Címke:"
 #, kde-format
 msgid "Preview"
 msgstr "Előnézet"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE billentyűzetbeállító modul"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(C) Andriy Rysin, 2010."
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Billentyűzet</h1> Ebben a modulban állíthatja be a billentyűzet "
-"paramétereit és kiosztásait."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -509,6 +490,19 @@ msgstr ""
 "a kiválasztott modell nem támogat egy adott kiosztást vagy kiosztás-"
 "variációt. A probléma valószínűleg akkor is jelen lesz, ha egyszerre "
 "próbálja meg használni ezt a modellt, kiosztást és variációt."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE billentyűzetbeállító modul"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(C) Andriy Rysin, 2010."
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Billentyűzet</h1> Ebben a modulban állíthatja be a billentyűzet "
+#~ "paramétereit és kiosztásait."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "KDE billentyűzetkiosztás-váltó"

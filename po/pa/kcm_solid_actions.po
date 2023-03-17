@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-09 07:54-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -184,12 +184,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr ""
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "ਪਰਬੰਧਕ"
@@ -219,42 +219,22 @@ msgstr ""
 msgid "The device property %1 must contain %2"
 msgstr ""
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਨ ਐਡੀਟਰ"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਣ ਕੰਟਰੋਲ ਪੈਨਲ ਮੋਡੀਊਲ"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਨ ਟੀਮ"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "ਪਲਾਜ਼ਮਾ 5 ਲਈ ਲਿਆਂਦਾ"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr ""
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "ਜੰਤਰ ਹਾਲਤ ਪਾਰਸ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "ਐਕਸ਼ਨ ਨਹੀਂ ਚੁਣਿਆ"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
@@ -276,6 +256,18 @@ msgstr "…ਸੋਧੋ"
 #, kde-format
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਨ ਐਡੀਟਰ"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਣ ਕੰਟਰੋਲ ਪੈਨਲ ਮੋਡੀਊਲ"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 ਸਾਲਡ ਜੰਤਰ ਐਕਸ਼ਨ ਟੀਮ"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "ਪਲਾਜ਼ਮਾ 5 ਲਈ ਲਿਆਂਦਾ"
 
 #~ msgid "Edit..."
 #~ msgstr "ਸੋਧ..."

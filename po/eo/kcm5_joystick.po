@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-06 22:27+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -174,49 +174,6 @@ msgstr "Ne eblas apliki kalibrovalorojn por stirstanga aparato %1: %2"
 msgid "internal error - code %1 unknown"
 msgstr "interna eraro - kodo %1 nekonata"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "Stirstanga stirmodulo de KDE"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "Stirmodulo de KDE por testi stirstangojn"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Stirstango</h1> Tiu modulo helpas kontroli la korektan funkcion de via "
-"stirstango. <br />Se ĝi sendas nekorektajn valorojn de la aksoj, vi povas "
-"provi la kalibrecon pro solveco. <br />Tiu modulo provas trovi ciujn "
-"ekzistajn stirstangojn per esploro de /dev/js[0-4] kaj /dev/input/js[0-4]. "
-"<br />Se vi havas alian aparatan dosieron, entipu ĝin en la kombinliston. "
-"<br />La butonlisto montras la butonajn statojn de via stirstango, la "
-"akslisto montras la nunan valoro de ĉiuj aksoj. <br />Notu: la nuna linuksa "
-"aparatpelilo (kerno 2.4, 2.6) nur povas rimarki <ul> <li>du-aksa, kvar-"
-"butona stirstango</li> <li>tri-aksa, kvar-butona stirstango</li> <li>kvar-"
-"aksa, kvar-butona stirstango</li> <li>'digital'-stirstangoj de Saitek "
-"Cyborg</li> </ul> (Pri detaloj vi povas legi en la linuksa dosiero source/"
-"Documentation/input/joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -320,3 +277,39 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Restarigis ĉiujn kalibradajn valorojn por stirstanga aparato %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "Stirstanga stirmodulo de KDE"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "Stirmodulo de KDE por testi stirstangojn"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Stirstango</h1> Tiu modulo helpas kontroli la korektan funkcion de "
+#~ "via stirstango. <br />Se ĝi sendas nekorektajn valorojn de la aksoj, vi "
+#~ "povas provi la kalibrecon pro solveco. <br />Tiu modulo provas trovi "
+#~ "ciujn ekzistajn stirstangojn per esploro de /dev/js[0-4] kaj /dev/input/"
+#~ "js[0-4]. <br />Se vi havas alian aparatan dosieron, entipu ĝin en la "
+#~ "kombinliston. <br />La butonlisto montras la butonajn statojn de via "
+#~ "stirstango, la akslisto montras la nunan valoro de ĉiuj aksoj. <br /"
+#~ ">Notu: la nuna linuksa aparatpelilo (kerno 2.4, 2.6) nur povas rimarki "
+#~ "<ul> <li>du-aksa, kvar-butona stirstango</li> <li>tri-aksa, kvar-butona "
+#~ "stirstango</li> <li>kvar-aksa, kvar-butona stirstango</li> <li>'digital'-"
+#~ "stirstangoj de Saitek Cyborg</li> </ul> (Pri detaloj vi povas legi en la "
+#~ "linuksa dosiero source/Documentation/input/joystick.txt)"

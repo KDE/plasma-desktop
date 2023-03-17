@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-12 22:20+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -35,28 +35,22 @@ msgstr "Nebus rodomas joks prisistatymo langas"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Negalite ištrinti šiuo metu pasirinktą prisistatymo langą"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr ""
-"Šis modulis jums leidžia pasirinkti prisistatymo lango apipavidalinimą."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Gauti naują…"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Nepavyko parodyti prisistatymo lango peržiūros."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Peržiūrėti prisistatymo langą"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Šalinti"
@@ -72,6 +66,10 @@ msgstr "Naudojimui ateityje"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Dabartinio prisistatymo apipavidalinimo pavadinimas"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr ""
+#~ "Šis modulis jums leidžia pasirinkti prisistatymo lango apipavidalinimą."
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Gauti naujus prisistatymo langus…"

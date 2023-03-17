@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-05-22 12:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -79,25 +79,6 @@ msgstr "Етикет:"
 #, kde-format
 msgid "Preview"
 msgstr "Предварителен преглед"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "Управление на клавиатурата в KDE"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>Клавиатура</h1> Този модул служи за управление на настройките и "
-"подредбите на клавиатурата."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -516,3 +497,16 @@ msgstr ""
 "избраният модел не поддържа конкретна подредба или вариант на подредба. Този "
 "проблем вероятно ще се появи и когато се опитате да използвате тази "
 "комбинация от модел, подредба и вариант."
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "Управление на клавиатурата в KDE"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>Клавиатура</h1> Този модул служи за управление на настройките и "
+#~ "подредбите на клавиатурата."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-01-06 13:56+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -171,50 +171,6 @@ msgstr "Nirxê pîvanê ya amûrê joystick  bikar nehatin %1: %2"
 msgid "internal error - code %1 unknown"
 msgstr "Çewetîyek hundirî - kod %1 nenas"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE Joystick Control Module"
-
-#: joystick.cpp:31
-#, fuzzy, kde-format
-#| msgid "KDE Control Center Module to test Joysticks"
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "KDE Control Center Module, Joystickan azmûne dike"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>Joystick</h1>Ev module alîkarî dike ka joystick a te bi durustî kardike."
-"<br />Heke ew nirxin çewt dide tewereyan,tu dikare jibo çareserkirna vê bi "
-"rîya Pîvan hewl bide.<br />Ev module hew ldide jibo dîtina hemû amûrin "
-"joystick yên berdestbar bi azmûnkirina /dev/js[0-4] û /dev/input/js[0-4]<br /"
-">Heke dosya amûrekê dî hebe, vêna têke combobox.<br /> Lîsta bişkokan rewşa "
-"bişkokên  joystick a te diyar dike, lista tewereyan nirxa anha ya hemû "
-"tewreyan diyar dike.<br />TEBÎNÎ: ajokare amûra Linux yê niha (Kernel 2.4, "
-"2.6) dikare van cureyan tenê bibîne<ul><li> joystickê bi 2-tewre  û 4-"
-"bişkokan </li><li>joystickê bi 3-tewre  û 4-bişkokan</li><li>joystickê bi 4-"
-"tewre  û 4-bişkokan</li><li> û Saitek Cyborg 'digital' joysticks</li></"
-"ul>(Jibo bihtirîn hûragahîyan temaşke li Linux source/Documentation/input/"
-"joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -318,3 +274,41 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "Hemû nirxê pîvanê yê amûrê joystick vegerîne %1."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE Joystick Control Module"
+
+#, fuzzy
+#~| msgid "KDE Control Center Module to test Joysticks"
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "KDE Control Center Module, Joystickan azmûne dike"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>Joystick</h1>Ev module alîkarî dike ka joystick a te bi durustî "
+#~ "kardike.<br />Heke ew nirxin çewt dide tewereyan,tu dikare jibo "
+#~ "çareserkirna vê bi rîya Pîvan hewl bide.<br />Ev module hew ldide jibo "
+#~ "dîtina hemû amûrin joystick yên berdestbar bi azmûnkirina /dev/js[0-4] û /"
+#~ "dev/input/js[0-4]<br />Heke dosya amûrekê dî hebe, vêna têke combobox."
+#~ "<br /> Lîsta bişkokan rewşa bişkokên  joystick a te diyar dike, lista "
+#~ "tewereyan nirxa anha ya hemû tewreyan diyar dike.<br />TEBÎNÎ: ajokare "
+#~ "amûra Linux yê niha (Kernel 2.4, 2.6) dikare van cureyan tenê "
+#~ "bibîne<ul><li> joystickê bi 2-tewre  û 4-bişkokan </li><li>joystickê bi 3-"
+#~ "tewre  û 4-bişkokan</li><li>joystickê bi 4-tewre  û 4-bişkokan</li><li> û "
+#~ "Saitek Cyborg 'digital' joysticks</li></ul>(Jibo bihtirîn hûragahîyan "
+#~ "temaşke li Linux source/Documentation/input/joystick.txt)"

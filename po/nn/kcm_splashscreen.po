@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-15 12:37+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -35,27 +35,22 @@ msgstr "Velkomstbilete vert ikkje vist"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Du kan ikkje fjerna det gjeldande velkomstbiletet"
 
-#: package/contents/ui/main.qml:16
-#, kde-format
-msgid "This module lets you choose the splash screen theme."
-msgstr "Med denne modulen kan du velja temaet for velkomstbilete."
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:29
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hent nye …"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Klarte ikkje visa førehandsvising av velkomstbiletet."
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Førehandsvising av velkomstbilete"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Uninstall"
 msgstr "Avinstaller"
@@ -71,3 +66,6 @@ msgstr "For framtidig bruk"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Namn på gjeldande tema for velkomstbilete"
+
+#~ msgid "This module lets you choose the splash screen theme."
+#~ msgstr "Med denne modulen kan du velja temaet for velkomstbilete."

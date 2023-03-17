@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -79,25 +79,6 @@ msgstr "ئەن:"
 #, kde-format
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
-
-#: kcm_keyboard.cpp:32
-#, kde-format
-msgid "KDE Keyboard Control Module"
-msgstr "KDE ھەرپتاختا تىزگىن بۆلىكى"
-
-#: kcm_keyboard.cpp:36
-#, kde-format
-msgid "(c) 2010 Andriy Rysin"
-msgstr "(c) 2010 Andriy Rysin"
-
-#: kcm_keyboard.cpp:40
-#, kde-format
-msgid ""
-"<h1>Keyboard</h1> This control module can be used to configure keyboard "
-"parameters and layouts."
-msgstr ""
-"<h1>ھەرپتاختا</h1>بۇ تىزگىن بۆلىكى ھەرپتاختا پارامېتىرى ۋە جايلاشتۇرۇشلارنى "
-"سەپلەشكە ئىشلىتىلىدۇ."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -494,6 +475,19 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "KDE Keyboard Control Module"
+#~ msgstr "KDE ھەرپتاختا تىزگىن بۆلىكى"
+
+#~ msgid "(c) 2010 Andriy Rysin"
+#~ msgstr "(c) 2010 Andriy Rysin"
+
+#~ msgid ""
+#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#~ "parameters and layouts."
+#~ msgstr ""
+#~ "<h1>ھەرپتاختا</h1>بۇ تىزگىن بۆلىكى ھەرپتاختا پارامېتىرى ۋە "
+#~ "جايلاشتۇرۇشلارنى سەپلەشكە ئىشلىتىلىدۇ."
 
 #~ msgid "Only up to %1 keyboard layout is supported"
 #~ msgid_plural "Only up to %1 keyboard layouts are supported"

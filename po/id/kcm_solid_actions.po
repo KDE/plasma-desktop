@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -193,12 +193,12 @@ msgstr ""
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009, Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
-#: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
+#: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
 msgstr "Pemelihara"
@@ -228,42 +228,22 @@ msgstr "Properti peranti %1 harus sesuai %2"
 msgid "The device property %1 must contain %2"
 msgstr "Properti peranti %1 harus berisi %2"
 
-#: SolidActions.cpp:33
-#, kde-format
-msgid "Solid Device Actions Editor"
-msgstr "Pengedit Aksi Peranti Solid"
-
-#: SolidActions.cpp:35
-#, kde-format
-msgid "Solid Device Actions Control Panel Module"
-msgstr "Modul Panel Kendali Aksi Peranti Solid"
-
-#: SolidActions.cpp:37
-#, kde-format
-msgid "(c) 2009, 2014 Solid Device Actions team"
-msgstr "(c) 2009, 2014 tim Aksi Peranti Solid"
-
-#: SolidActions.cpp:39
-#, kde-format
-msgid "Port to Plasma 5"
-msgstr "Porta ke Plasma 5"
-
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "Kelihatannya predikat untuk aksi ini tidak absah."
 
-#: SolidActions.cpp:152
+#: SolidActions.cpp:143
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "Error Mengurai Kondisi Peranti"
 
-#: SolidActions.cpp:200
+#: SolidActions.cpp:191
 #, kde-format
 msgid "No Action Selected"
 msgstr "Tak Ada Aksi Terpilih"
 
-#: SolidActions.cpp:221
+#: SolidActions.cpp:212
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "Tak dapat dihapus"
@@ -285,6 +265,18 @@ msgstr "Edit..."
 #, kde-format
 msgid "Add…"
 msgstr "Tambah…"
+
+#~ msgid "Solid Device Actions Editor"
+#~ msgstr "Pengedit Aksi Peranti Solid"
+
+#~ msgid "Solid Device Actions Control Panel Module"
+#~ msgstr "Modul Panel Kendali Aksi Peranti Solid"
+
+#~ msgid "(c) 2009, 2014 Solid Device Actions team"
+#~ msgstr "(c) 2009, 2014 tim Aksi Peranti Solid"
+
+#~ msgid "Port to Plasma 5"
+#~ msgstr "Porta ke Plasma 5"
 
 #~ msgid "Edit..."
 #~ msgstr "Edit..."

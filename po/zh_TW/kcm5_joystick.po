@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-11-22 14:45+0800\n"
 "Last-Translator: Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv "
 "dot tw>\n"
@@ -165,44 +165,6 @@ msgstr "無法套用校正值到搖桿 %1: %2"
 msgid "internal error - code %1 unknown"
 msgstr "內部錯誤 - 代碼 %1 不明"
 
-#: joystick.cpp:29
-#, kde-format
-msgid "KDE Joystick Control Module"
-msgstr "KDE 搖桿控制模組"
-
-#: joystick.cpp:31
-#, kde-format
-msgid "KDE System Settings Module to test Joysticks"
-msgstr "KDE 系統設定搖桿測試模組"
-
-#: joystick.cpp:33
-#, kde-format
-msgid "(c) 2004, Martin Koller"
-msgstr "(c) 2004, Martin Koller"
-
-#: joystick.cpp:38
-#, kde-format
-msgid ""
-"<h1>Joystick</h1>This module helps to check if your joystick is working "
-"correctly.<br />If it delivers wrong values for the axes, you can try to "
-"solve this with the calibration.<br />This module tries to find all "
-"available joystick devices by checking /dev/js[0-4] and /dev/input/"
-"js[0-4]<br />If you have another device file, enter it in the combobox.<br /"
-">The Buttons list shows the state of the buttons on your joystick, the Axes "
-"list shows the current value for all axes.<br />NOTE: the current Linux "
-"device driver (Kernel 2.4, 2.6) can only autodetect<ul><li>2-axis, 4-button "
-"joystick</li><li>3-axis, 4-button joystick</li><li>4-axis, 4-button "
-"joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
-"can check your Linux source/Documentation/input/joystick.txt)"
-msgstr ""
-"<h1>搖桿</h1>該模組能幫您檢查搖桿是否設定正確.<br />如果搖桿送出錯誤的方向, "
-"您可以重新校正搖桿.<br />該模組會試著搜尋 /dev/js[0-4] 和 /dev/input/js[0-4] "
-"找出可使用的搖桿<br />如果您有其他的裝置檔, 輸入到裝置清單新增.<br />按鍵清單"
-"列出搖桿上的所有按鍵, 座標列表列出所有的座標位置.<br />注意: 現在的 Linux (核"
-"心 2.4, 2.6) 驅動程式可以自動偵測<ul><li>2-軸, 4-鍵 搖桿</li><li>3-軸, 4-鍵 "
-"搖桿</li><li>4-軸, 4-鍵 搖桿</li><li>Saitek Cyborg 'digital' 搖桿</li></"
-"ul>(更多的資訊請參閱 Linux 源碼中的 Documentation/input/joystick.txt)"
-
 #: joywidget.cpp:67
 #, kde-format
 msgid "Device:"
@@ -304,3 +266,35 @@ msgstr ""
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
 msgstr "還原搖桿裝置 %1 的設定值."
+
+#~ msgid "KDE Joystick Control Module"
+#~ msgstr "KDE 搖桿控制模組"
+
+#~ msgid "KDE System Settings Module to test Joysticks"
+#~ msgstr "KDE 系統設定搖桿測試模組"
+
+#~ msgid "(c) 2004, Martin Koller"
+#~ msgstr "(c) 2004, Martin Koller"
+
+#~ msgid ""
+#~ "<h1>Joystick</h1>This module helps to check if your joystick is working "
+#~ "correctly.<br />If it delivers wrong values for the axes, you can try to "
+#~ "solve this with the calibration.<br />This module tries to find all "
+#~ "available joystick devices by checking /dev/js[0-4] and /dev/input/"
+#~ "js[0-4]<br />If you have another device file, enter it in the combobox."
+#~ "<br />The Buttons list shows the state of the buttons on your joystick, "
+#~ "the Axes list shows the current value for all axes.<br />NOTE: the "
+#~ "current Linux device driver (Kernel 2.4, 2.6) can only "
+#~ "autodetect<ul><li>2-axis, 4-button joystick</li><li>3-axis, 4-button "
+#~ "joystick</li><li>4-axis, 4-button joystick</li><li>Saitek Cyborg "
+#~ "'digital' joysticks</li></ul>(For details you can check your Linux source/"
+#~ "Documentation/input/joystick.txt)"
+#~ msgstr ""
+#~ "<h1>搖桿</h1>該模組能幫您檢查搖桿是否設定正確.<br />如果搖桿送出錯誤的方"
+#~ "向, 您可以重新校正搖桿.<br />該模組會試著搜尋 /dev/js[0-4] 和 /dev/input/"
+#~ "js[0-4] 找出可使用的搖桿<br />如果您有其他的裝置檔, 輸入到裝置清單新增."
+#~ "<br />按鍵清單列出搖桿上的所有按鍵, 座標列表列出所有的座標位置.<br />注"
+#~ "意: 現在的 Linux (核心 2.4, 2.6) 驅動程式可以自動偵測<ul><li>2-軸, 4-鍵 搖"
+#~ "桿</li><li>3-軸, 4-鍵 搖桿</li><li>4-軸, 4-鍵 搖桿</li><li>Saitek Cyborg "
+#~ "'digital' 搖桿</li></ul>(更多的資訊請參閱 Linux 源碼中的 Documentation/"
+#~ "input/joystick.txt)"
