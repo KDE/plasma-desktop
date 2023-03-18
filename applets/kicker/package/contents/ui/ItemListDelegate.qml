@@ -25,6 +25,7 @@ Item {
 
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
     property bool isSeparator: (model.isSeparator === true)
+    property bool sorted: (model.sorted === true)
     property bool hasChildren: (model.hasChildren === true)
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList === true)))
@@ -251,7 +252,8 @@ Item {
         anchors.rightMargin: highlightItemSvg.margins.right
         anchors.verticalCenter: parent.verticalCenter
 
-        active: item.isSeparator
+        // Separator positions don't make sense when sorting everything alphabetically
+        active: item.isSeparator && !item.sorted
 
         asynchronous: false
         sourceComponent: separatorComponent
