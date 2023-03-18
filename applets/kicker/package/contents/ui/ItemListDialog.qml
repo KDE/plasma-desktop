@@ -70,6 +70,8 @@ Kicker.SubMenu {
         Kicker.FunnelModel {
             id: funnelModel
 
+            property bool sorted: sourceModel.hasOwnProperty("sorted") ? sourceModel.sorted : false
+
             Component.onCompleted: {
                 kicker.reset.connect(funnelModel.reset);
             }

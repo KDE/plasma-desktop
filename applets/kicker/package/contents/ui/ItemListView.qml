@@ -30,7 +30,7 @@ FocusScope {
     property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int separatorHeight: lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
+    property int separatorHeight: model.sorted === true ? 0 : lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
