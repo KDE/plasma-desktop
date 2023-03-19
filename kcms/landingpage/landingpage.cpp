@@ -278,7 +278,7 @@ void KCMLandingPage::openWallpaperDialog()
 
 Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
 {
-    QProcess::startDetached(QStringLiteral("systemsettings5"), QStringList({kcm}));
+    QProcess::startDetached(QStringLiteral("systemsettings"), QStringList({kcm}));
 }
 
 #include "landingpage.moc"
