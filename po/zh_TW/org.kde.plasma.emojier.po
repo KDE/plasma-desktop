@@ -6,20 +6,21 @@
 # Automatically generated, 2019.
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:00+0000\n"
-"PO-Revision-Date: 2021-09-06 01:13+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-03-19 09:06+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: app/emojier.cpp:84 app/emojier.cpp:86
 #, kde-format
@@ -62,7 +63,7 @@ msgstr "清除歷史"
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
-msgstr ""
+msgstr "複製字元"
 
 #: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
 #: app/ui/emojier.qml:36
@@ -74,12 +75,12 @@ msgstr "%1 已複製至剪貼簿"
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
-msgstr ""
+msgstr "複製描述"
 
 #: app/ui/CategoryPage.qml:205
 #, kde-format
 msgid "No recent Emojis"
-msgstr ""
+msgstr "沒有最近使用的顏文字"
 
 #: app/ui/emojier.qml:42
 #, kde-format
@@ -99,52 +100,52 @@ msgstr "分類"
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
 msgid "Smileys and Emotion"
-msgstr ""
+msgstr "微笑與表情"
 
 #: emojicategory.cpp:15
 msgctxt "Emoji Category"
 msgid "People and Body"
-msgstr ""
+msgstr "人物與身體"
 
 #: emojicategory.cpp:16
 msgctxt "Emoji Category"
 msgid "Component"
-msgstr ""
+msgstr "元件"
 
 #: emojicategory.cpp:17
 msgctxt "Emoji Category"
 msgid "Animals and Nature"
-msgstr ""
+msgstr "動物與自然"
 
 #: emojicategory.cpp:18
 msgctxt "Emoji Category"
 msgid "Food and Drink"
-msgstr ""
+msgstr "食物與飲料"
 
 #: emojicategory.cpp:19
 msgctxt "Emoji Category"
 msgid "Travel and Places"
-msgstr ""
+msgstr "旅遊與場所"
 
 #: emojicategory.cpp:20
 msgctxt "Emoji Category"
 msgid "Activities"
-msgstr ""
+msgstr "活動"
 
 #: emojicategory.cpp:21
 msgctxt "Emoji Category"
 msgid "Objects"
-msgstr ""
+msgstr "物件"
 
 #: emojicategory.cpp:22
 msgctxt "Emoji Category"
 msgid "Symbols"
-msgstr ""
+msgstr "符號"
 
 #: emojicategory.cpp:23
 msgctxt "Emoji Category"
 msgid "Flags"
-msgstr ""
+msgstr "旗幟"
 
 #~ msgid "Search…"
 #~ msgstr "搜尋…"
