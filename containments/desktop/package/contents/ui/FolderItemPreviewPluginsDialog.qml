@@ -18,7 +18,7 @@ Kirigami.OverlaySheet {
 
     title: i18n("Preview Plugins")
 
-    onSheetOpenChanged: if (!sheetOpen) {
+    onVisibleChanged: if (!visible) {
         dialog.destroy(Kirigami.Units.veryLongDuration); // longer than closeAnimation
     }
 
