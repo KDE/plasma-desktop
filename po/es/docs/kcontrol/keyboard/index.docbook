@@ -1,0 +1,326 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Teclado</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>teclado</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo le permite elegir el modo de funcionamiento de su teclado.</para>
+
+<para
+>Este módulo consta de tres pestañas.</para>
+
+<sect1 id="hardware">
+<title
+>La pestaña Hardware</title>
+<para
+>El efecto que produce la selección de estas opciones depende de las características del hardware de su teclado y del servidor X en el que se está ejecutando &plasma;. Por ejemplo, puede advertir que modificar el volumen de la pulsación de las teclas no produce efecto alguno porque dicha propiedad no está disponible en su sistema. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Modelo de teclado:</guilabel
+></term>
+<listitem>
+<para
+>Aquí puede configurar su modelo de teclado. Esta configuración es independiente del diseño del teclado y se refiere al modelo de «hardware»; es decir, a la forma en que se fabrica su teclado. Los teclados modernos que vienen con los equipos informáticos suelen tener dos teclas adicionales y se conocen como modelos de «104 teclas», que probablemente sea lo que quiera si no sabe qué tipo de teclado tiene. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bloqueo numérico en el inicio de Plasma</guilabel
+></term>
+<listitem>
+<para
+>Siempre puede elegir <guilabel
+>Encender</guilabel
+> o <guilabel
+>Apagar</guilabel
+> el teclado numérico cuando se inicia &plasma; o puede elegir que &plasma; deje el teclado numérico como estaba antes de iniciarse &plasma;.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Al mantener pulsada una tecla:</guilabel
+></term>
+<listitem>
+<para
+>Puede seleccionar una de las tres acciones existentes:</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Mostrar caracteres acentuados y similares</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está seleccionada, si se mantiene pulsada una tecla mientras se introduce texto, se muestra una ventana desplegable que le permite escoger entre varias formas acentuadas del carácter.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>No hacer nada</guilabel
+></term>
+<listitem>
+<para
+>Esta opción le permite desactivar cualquier actividad cuando mantiene pulsadas las teclas.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Repetir la tecla</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está seleccionada, si pulsa y mantiene una tecla pulsada se produce el mismo carácter repetidamente hasta que libere la tecla. Pulsar y mantener pulsada la tecla tendrá el mismo efecto que pulsarla repetidamente.</para>
+<tip
+><para
+>Casi todos los usuarios querrán mantener esta opción seleccionada, porque facilita significativamente la navegación por documentos con las teclas de las flechas. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Demora</guilabel
+></term>
+<listitem>
+<para
+>Esta opción le permite definir la demora tras la que una tecla pulsada empezará a generar códigos de teclado.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Frecuencia</guilabel
+></term>
+<listitem>
+<para
+>Esta opción le permite definir la frecuencia de generación de códigos de teclado mientras se pulsa una tecla.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Escriba algunos caracteres en el cuadro de texto <guilabel
+>Área de pruebas</guilabel
+> para verificar los ajustes.</para>
+<para
+>Muchas computadoras no admitirán esta función.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>La pestaña Diseños</title>
+<para
+>Esta pestaña le permite elegir los diseños de teclado que desea usar, el indicador quiere que se muestre en la bandeja del sistema, cómo desea cambiar de teclado y qué accesos directos se usarán para ello.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indicador del diseño</guilabel
+></term>
+<listitem>
+<para
+>Puede escoger <guilabel
+>Mostrar el indicador del diseño</guilabel
+>, que mostrará el nombre ISO del idioma en la bandeja del sistema. Puede elegir que se muestre el indicador incluso si solo tiene un diseño de teclado activo; también puede escoger que se muestre la bandera del idioma en lugar de solo el código ISO marcando <guilabel
+>Mostrar bandera</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Política de cambio</guilabel
+></term>
+<listitem>
+<para
+>Si selecciona una de las políticas de cambio <guilabel
+>Aplicación</guilabel
+> o <guilabel
+>Ventana</guilabel
+>, el cambio del diseño del teclado solo afectará a la aplicación o ventana actual. <guilabel
+>Global</guilabel
+> cambiará el diseño del teclado globalmente, mientras que <guilabel
+>Escritorio</guilabel
+> lo cambiará solo para el escritorio virtual actual. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Accesos rápidos para cambiar el diseño</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Accesos rápidos principales</guilabel
+> es un atajo para cambiar de diseño que maneja X.org. <guilabel
+>Accesos rápidos de tercer nivel</guilabel
+> es un atajo para cambiar a un tercer nivel del diseño activo (si existe alguno), que maneja X.org. Permite accesos rápidos de solo modificadores. <guilabel
+>Acceso rápido alternativo</guilabel
+> es un atajo para cambiar de diseño que maneja &plasma;. No permite atajos de solo modificadores y es posible que no funcione en algunas situaciones (por ejemplo, si hay una ventana emergente activa o si se ha activado el salvapantallas). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Configurar diseños</guilabel
+></term>
+<listitem>
+<para
+>Si marca <guilabel
+>Configurar diseños</guilabel
+> podrá añadir y eliminar diseños de teclado para poder cambiar entre ellos cuando sea necesario. </para>
+<para
+>Si pulsa <guibutton
+>Añadir</guibutton
+> se mostrará un diálogo donde podrá escoger el nuevo diseño de teclado que quiera añadir, así como su variante, una etiqueta y un atajo de teclado. </para>
+<para
+>Puede filtrar la lista de diseños que hay a la derecha de la etiqueta <guilabel
+>Diseño</guilabel
+> en el diálogo de <guilabel
+>Añadir diseño</guilabel
+> usando la lista desplegable <guilabel
+>Limitar selección por idioma</guilabel
+>. Puede pulsar el botón <guibutton
+>Vista previa</guibutton
+> para previsualizar el diseño que elija en una ventana independiente. </para>
+<para
+>Puede ordenar los diseños con los botones Arriba y Abajo. El primero de todos es el que se usa de forma predeterminada. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Diseños de repuesto</guilabel
+></term>
+<listitem>
+<para
+>Esta opción solo se puede activar si tiene más de dos diseños.</para>
+<para
+>Los diseños de repuesto le permiten cambiar fácilmente entre un pequeño número de diseños mientras dispone de más diseños a mano. Por ejemplo, puede usar tres idiomas: inglés, ucraniano y alemán, aunque solo usa con frecuencia los dos primeros y cambia al tercero ocasionalmente. En este caso, puede configurar los dos primeros como diseños principales (definiendo el <guilabel
+>Contador de diseños principales</guilabel
+> a 2) y el alemán como de repuesto: cuando cambie con el teclado y el botón izquierdo del ratón, solo cambiará entre los diseños principales, aunque siempre podrá seleccionar el tercer diseño con el menú de contexto.</para>
+<para
+>Cuando seleccione un diseño de repuesto, reemplazará al último diseño principal (esto se hace por motivos técnicos, ya que, por lo general, los accesos rápidos globales funcionan basados el primer diseño activo, por lo que resulta más fiable preservar el primer diseño cuando permita la activación de diseños de repuesto).</para>
+<!-- context menu ?-->
+<para
+>Como X.org solo permite tener 4 diseños entre los que cambiar, la función «diseños de repuesto» también permite superar esta limitación: el usuario puede tener hasta 4 diseños principales (gestionados por X.org) y hasta 4 más diseños de repuesto (gestionados por el selector de diseños). De este modo es posible trabajar convenientemente con hasta 8 diseños (aunque el límite de 4 diseños de repuesto se puede elevar en el futuro). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>La pestaña Avanzado</title>
+<para
+>En esta pestaña, si marca <guilabel
+>Configurar las opciones del teclado</guilabel
+>, podrá definir varias opciones relacionadas con algunas teclas especiales. Puede expandir estas opciones pulsando el símbolo &gt; que hay a la izquierda de la opción y, a continuación, escoger la preferencia en la lista expandida.</para>
+<para
+>Esto es una interfaz de usuario de ayuda para crear diseños de teclado personalizados para &X11; usando XKB. </para>
+<para
+>Para más información, consulte la sección de <emphasis
+>Enlaces</emphasis
+> en la <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>página de XKeyboardConfig en freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>
