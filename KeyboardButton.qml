@@ -17,7 +17,7 @@ PlasmaComponents.ToolButton {
     onCurrentIndexChanged: keyboard.currentLayout = currentIndex
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", keyboard.layouts[currentIndex].longName)
-    visible: menu.count > 1
+    visible: keyboard.layouts.length > 1
 
     checkable: true
     checked: menu.opened
@@ -36,13 +36,17 @@ PlasmaComponents.ToolButton {
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
         PlasmaCore.ColorScope.inherit: false
 
-        Instantiator {
-            id: instantiator
-            model: {
+        onAboutToShow: {
+            if (instantiator.model === null) {
                 let layouts = keyboard.layouts;
                 layouts.sort((a, b) => a.longName.localeCompare(b.longName));
-                return layouts;
+                instantiator.model = layouts;
             }
+        }
+
+        Instantiator {
+            id: instantiator
+            model: null
             onObjectAdded: (index, object) => menu.insertItem(index, object)
             onObjectRemoved: (index, object) => menu.removeItem(object)
             delegate: PlasmaComponents.MenuItem {
