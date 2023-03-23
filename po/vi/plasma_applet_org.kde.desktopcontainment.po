@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-23 02:36+0000\n"
 "PO-Revision-Date: 2023-01-08 16:13+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -95,219 +95,219 @@ msgstr "Chọn tất cả"
 msgid "Deselect All"
 msgstr "Bỏ chọn tất cả"
 
-#: package/contents/ui/ConfigIcons.qml:63
+#: package/contents/ui/ConfigIcons.qml:62
 #, kde-format
 msgid "Panel button:"
 msgstr "Nút trong bảng:"
 
-#: package/contents/ui/ConfigIcons.qml:69
+#: package/contents/ui/ConfigIcons.qml:68
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Dùng biểu tượng riêng"
 
-#: package/contents/ui/ConfigIcons.qml:102
+#: package/contents/ui/ConfigIcons.qml:101
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Chọn…"
 
-#: package/contents/ui/ConfigIcons.qml:108
+#: package/contents/ui/ConfigIcons.qml:107
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Đặt lại biểu tượng"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:127
 #, kde-format
 msgid "Arrangement:"
 msgstr "Sắp đặt:"
 
-#: package/contents/ui/ConfigIcons.qml:132
+#: package/contents/ui/ConfigIcons.qml:131
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "Trái sang phải"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:132
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "Phải sang trái"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "Trên xuống dưới"
 
-#: package/contents/ui/ConfigIcons.qml:143
+#: package/contents/ui/ConfigIcons.qml:142
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Căn trái"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Căn phải"
 
-#: package/contents/ui/ConfigIcons.qml:159
+#: package/contents/ui/ConfigIcons.qml:158
 #, kde-format
 msgid "Lock in place"
 msgstr "Cố định"
 
-#: package/contents/ui/ConfigIcons.qml:173
+#: package/contents/ui/ConfigIcons.qml:172
 #, kde-format
 msgid "Sorting:"
 msgstr "Sắp xếp:"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:180
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Tự làm"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:181
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Tên"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Cỡ"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Kiểu"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Ngày"
 
-#: package/contents/ui/ConfigIcons.qml:196
+#: package/contents/ui/ConfigIcons.qml:195
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Giảm dần"
 
-#: package/contents/ui/ConfigIcons.qml:204
+#: package/contents/ui/ConfigIcons.qml:203
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Thư mục lên đầu"
 
-#: package/contents/ui/ConfigIcons.qml:218
+#: package/contents/ui/ConfigIcons.qml:217
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Chế độ xem:"
 
-#: package/contents/ui/ConfigIcons.qml:220
+#: package/contents/ui/ConfigIcons.qml:219
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Danh sách"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Lưới"
 
-#: package/contents/ui/ConfigIcons.qml:232
+#: package/contents/ui/ConfigIcons.qml:231
 #, kde-format
 msgid "Icon size:"
 msgstr "Cỡ biểu tượng:"
 
-#: package/contents/ui/ConfigIcons.qml:247
+#: package/contents/ui/ConfigIcons.qml:246
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Nhỏ"
 
-#: package/contents/ui/ConfigIcons.qml:256
+#: package/contents/ui/ConfigIcons.qml:255
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Lớn"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:264
 #, kde-format
 msgid "Label width:"
 msgstr "Độ rộng nhãn:"
 
-#: package/contents/ui/ConfigIcons.qml:268
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Hẹp"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:268
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Vừa"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Rộng"
 
-#: package/contents/ui/ConfigIcons.qml:278
+#: package/contents/ui/ConfigIcons.qml:277
 #, kde-format
 msgid "Text lines:"
 msgstr "Số dòng chữ:"
 
-#: package/contents/ui/ConfigIcons.qml:294
+#: package/contents/ui/ConfigIcons.qml:293
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Khi đảo chuột trên biểu tượng:"
 
-#: package/contents/ui/ConfigIcons.qml:296
+#: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "Show tooltips"
 msgstr "Hiện chú giải"
 
-#: package/contents/ui/ConfigIcons.qml:303
+#: package/contents/ui/ConfigIcons.qml:302
 #, kde-format
 msgid "Show selection markers"
 msgstr "Hiện dấu chọn"
 
-#: package/contents/ui/ConfigIcons.qml:310
+#: package/contents/ui/ConfigIcons.qml:309
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Hiện ô bật lên xem thử thư mục"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:319
 #, kde-format
 msgid "Rename:"
 msgstr "Đổi tên:"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:323
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Đổi tên tại chỗ bằng cách bấm vào phần chữ của mục được chọn"
 
-#: package/contents/ui/ConfigIcons.qml:335
+#: package/contents/ui/ConfigIcons.qml:334
 #, kde-format
 msgid "Previews:"
 msgstr "Xem thử:"
 
-#: package/contents/ui/ConfigIcons.qml:337
+#: package/contents/ui/ConfigIcons.qml:336
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Hiện hình nhỏ xem thử"
 
-#: package/contents/ui/ConfigIcons.qml:345
+#: package/contents/ui/ConfigIcons.qml:344
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Cấu hình phần cài cắm xem thử…"

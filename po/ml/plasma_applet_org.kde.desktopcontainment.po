@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-23 02:36+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -95,234 +95,234 @@ msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 msgid "Deselect All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കാത്തതാക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:63
+#: package/contents/ui/ConfigIcons.qml:62
 #, kde-format
 msgid "Panel button:"
 msgstr "പാനൽ ബട്ടൺ:"
 
-#: package/contents/ui/ConfigIcons.qml:69
+#: package/contents/ui/ConfigIcons.qml:68
 #, kde-format
 msgid "Use a custom icon"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:102
+#: package/contents/ui/ConfigIcons.qml:101
 #, fuzzy, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "പരതുക..."
 
-#: package/contents/ui/ConfigIcons.qml:108
+#: package/contents/ui/ConfigIcons.qml:107
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "ചിഹ്നം മായ്ക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:127
 #, kde-format
 msgid "Arrangement:"
 msgstr "ചിഹ്നങ്ങളുടെ അടുക്കിവയ്ക്കല്‍"
 
-#: package/contents/ui/ConfigIcons.qml:132
+#: package/contents/ui/ConfigIcons.qml:131
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:132
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:133
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "മുകളില്‍ നിന്നും താഴെ വരെ"
 
-#: package/contents/ui/ConfigIcons.qml:143
+#: package/contents/ui/ConfigIcons.qml:142
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "ഇടത്തേക്ക് ചേര്‍ത്ത്"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:143
 #, fuzzy, kde-format
 #| msgid "Align right"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "വലത്തേക്ക് ചേര്‍ത്ത്"
 
-#: package/contents/ui/ConfigIcons.qml:159
+#: package/contents/ui/ConfigIcons.qml:158
 #, kde-format
 msgid "Lock in place"
 msgstr "സ്ഥാനത്തു് പൂട്ടുക"
 
-#: package/contents/ui/ConfigIcons.qml:173
+#: package/contents/ui/ConfigIcons.qml:172
 #, kde-format
 msgid "Sorting:"
 msgstr "വിന്യാസക്രമം:"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:180
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:181
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "പേര്"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:182
 #, fuzzy, kde-format
 #| msgid "Size"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "വലിപ്പമനുസരിച്ചു്"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:183
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "തരമനുസരിച്ചു്"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:184
 #, fuzzy, kde-format
 #| msgid "Date"
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "തിയ്യതിയ്ക്കനുസരിച്ചു്"
 
-#: package/contents/ui/ConfigIcons.qml:196
+#: package/contents/ui/ConfigIcons.qml:195
 #, fuzzy, kde-format
 #| msgid "Descending"
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "അവരോഹണക്രമത്തിൽ"
 
-#: package/contents/ui/ConfigIcons.qml:204
+#: package/contents/ui/ConfigIcons.qml:203
 #, fuzzy, kde-format
 #| msgid "Folders first"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "അറകളാദ്യം"
 
-#: package/contents/ui/ConfigIcons.qml:218
+#: package/contents/ui/ConfigIcons.qml:217
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:220
+#: package/contents/ui/ConfigIcons.qml:219
 #, fuzzy, kde-format
 #| msgid "List"
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "പട്ടിക"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:232
+#: package/contents/ui/ConfigIcons.qml:231
 #, kde-format
 msgid "Icon size:"
 msgstr "ചിഹ്നത്തിന്റെ വലിപ്പം:"
 
-#: package/contents/ui/ConfigIcons.qml:247
+#: package/contents/ui/ConfigIcons.qml:246
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "ചെറുതു്"
 
-#: package/contents/ui/ConfigIcons.qml:256
+#: package/contents/ui/ConfigIcons.qml:255
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "വലുതു്"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:264
 #, kde-format
 msgid "Label width:"
 msgstr "പേരിന്റെ വീതി:"
 
-#: package/contents/ui/ConfigIcons.qml:268
+#: package/contents/ui/ConfigIcons.qml:267
 #, fuzzy, kde-format
 #| msgid "Narrow"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "ഇടുങ്ങിയത്"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:268
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "ഇടത്തരം"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:269
 #, fuzzy, kde-format
 #| msgid "Wide"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "വീതിയില്‍"
 
-#: package/contents/ui/ConfigIcons.qml:278
+#: package/contents/ui/ConfigIcons.qml:277
 #, kde-format
 msgid "Text lines:"
 msgstr "പദാവലി വരികള്‍"
 
-#: package/contents/ui/ConfigIcons.qml:294
+#: package/contents/ui/ConfigIcons.qml:293
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:296
+#: package/contents/ui/ConfigIcons.qml:295
 #, fuzzy, kde-format
 #| msgid "Tooltips"
 msgid "Show tooltips"
 msgstr "സൂചനകള്‍"
 
-#: package/contents/ui/ConfigIcons.qml:303
+#: package/contents/ui/ConfigIcons.qml:302
 #, fuzzy, kde-format
 msgid "Show selection markers"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:310
+#: package/contents/ui/ConfigIcons.qml:309
 #, fuzzy, kde-format
 msgid "Show folder preview popups"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:319
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&പേരു് മാറ്റുക"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:323
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:335
+#: package/contents/ui/ConfigIcons.qml:334
 #, fuzzy, kde-format
 msgid "Previews:"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:337
+#: package/contents/ui/ConfigIcons.qml:336
 #, fuzzy, kde-format
 msgid "Show preview thumbnails"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/ConfigIcons.qml:345
+#: package/contents/ui/ConfigIcons.qml:344
 #, fuzzy, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"

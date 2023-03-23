@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-23 02:36+0000\n"
 "PO-Revision-Date: 2013-09-08 07:04+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -107,18 +107,18 @@ msgstr "ھەممىنى تاللا"
 msgid "Deselect All"
 msgstr "تاللاشنىڭ ھەممىسىنى بىكار قىل"
 
-#: package/contents/ui/ConfigIcons.qml:63
+#: package/contents/ui/ConfigIcons.qml:62
 #, kde-format
 msgid "Panel button:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:69
+#: package/contents/ui/ConfigIcons.qml:68
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgid "Use a custom icon"
 msgstr "ئۆزلەشتۈرگەن ماۋزۇ"
 
-#: package/contents/ui/ConfigIcons.qml:102
+#: package/contents/ui/ConfigIcons.qml:101
 #, fuzzy, kde-format
 #| msgctxt "@title:menu in Copy To or Move To submenu"
 #| msgid "Browse..."
@@ -126,73 +126,73 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "كۆز يۈگۈرت…"
 
-#: package/contents/ui/ConfigIcons.qml:108
+#: package/contents/ui/ConfigIcons.qml:107
 #, fuzzy, kde-format
 #| msgid "Sort Icons"
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "سىنبەلگىلەرنى تەرتىپلە"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:127
 #, fuzzy, kde-format
 #| msgid "Arrangement"
 msgid "Arrangement:"
 msgstr "تەرتىپلە"
 
-#: package/contents/ui/ConfigIcons.qml:132
+#: package/contents/ui/ConfigIcons.qml:131
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "ئۈستىدىن ئاستىغا، سولدىن ئوڭغا"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:132
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "ئۈستىدىن ئاستىغا، ئوڭدىن سولغا"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:133
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "ئۈستىدىن ئاستىغا، سولدىن ئوڭغا"
 
-#: package/contents/ui/ConfigIcons.qml:143
+#: package/contents/ui/ConfigIcons.qml:142
 #, fuzzy, kde-format
 #| msgid "Align"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "توغرىلا"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:143
 #, fuzzy, kde-format
 #| msgid "Align"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "توغرىلا"
 
-#: package/contents/ui/ConfigIcons.qml:159
+#: package/contents/ui/ConfigIcons.qml:158
 #, fuzzy, kde-format
 #| msgid "Lock in place:"
 msgid "Lock in place"
 msgstr "ئورنىدا قۇلۇپلا:"
 
-#: package/contents/ui/ConfigIcons.qml:173
+#: package/contents/ui/ConfigIcons.qml:172
 #, fuzzy, kde-format
 #| msgid "Sorting"
 msgid "Sorting:"
 msgstr "تەرتىپلەش"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:180
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:181
 #, fuzzy, kde-format
 #| msgctxt "Sort icons by"
 #| msgid "Name"
@@ -200,7 +200,7 @@ msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "ئاتى"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:182
 #, fuzzy, kde-format
 #| msgctxt "Sort icons by"
 #| msgid "Size"
@@ -208,7 +208,7 @@ msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "چوڭلۇقى"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:183
 #, fuzzy, kde-format
 #| msgctxt "Sort icons by"
 #| msgid "Type"
@@ -216,7 +216,7 @@ msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "تىپى"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:184
 #, fuzzy, kde-format
 #| msgctxt "Sort icons by"
 #| msgid "Date"
@@ -224,7 +224,7 @@ msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "چېسلا"
 
-#: package/contents/ui/ConfigIcons.qml:196
+#: package/contents/ui/ConfigIcons.qml:195
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Descending"
@@ -232,126 +232,126 @@ msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "كېمەيگۈچى"
 
-#: package/contents/ui/ConfigIcons.qml:204
+#: package/contents/ui/ConfigIcons.qml:203
 #, fuzzy, kde-format
 #| msgid "Folders first:"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "قىسقۇچ ئالدىدا:"
 
-#: package/contents/ui/ConfigIcons.qml:218
+#: package/contents/ui/ConfigIcons.qml:217
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:220
+#: package/contents/ui/ConfigIcons.qml:219
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:232
+#: package/contents/ui/ConfigIcons.qml:231
 #, fuzzy, kde-format
 #| msgid "Icon Text"
 msgid "Icon size:"
 msgstr "سىنبەلگىنىڭ تېكىستى"
 
-#: package/contents/ui/ConfigIcons.qml:247
+#: package/contents/ui/ConfigIcons.qml:246
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "كىچىك"
 
-#: package/contents/ui/ConfigIcons.qml:256
+#: package/contents/ui/ConfigIcons.qml:255
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "چوڭ"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:264
 #, kde-format
 msgid "Label width:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:268
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:268
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:278
+#: package/contents/ui/ConfigIcons.qml:277
 #, fuzzy, kde-format
 #| msgid " lines"
 msgid "Text lines:"
 msgstr " سىزىقلار"
 
-#: package/contents/ui/ConfigIcons.qml:294
+#: package/contents/ui/ConfigIcons.qml:293
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:296
+#: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:303
+#: package/contents/ui/ConfigIcons.qml:302
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgid "Show selection markers"
 msgstr "ھەممىنى تاللا"
 
-#: package/contents/ui/ConfigIcons.qml:310
+#: package/contents/ui/ConfigIcons.qml:309
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show folder preview popups"
 msgstr "ئالدىن كۆزەت:"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:319
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "ئات ئۆزگەرت(&R)"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:323
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:335
+#: package/contents/ui/ConfigIcons.qml:334
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Previews:"
 msgstr "ئالدىن كۆزەت:"
 
-#: package/contents/ui/ConfigIcons.qml:337
+#: package/contents/ui/ConfigIcons.qml:336
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show preview thumbnails"
 msgstr "ئالدىن كۆزەت:"
 
-#: package/contents/ui/ConfigIcons.qml:345
+#: package/contents/ui/ConfigIcons.qml:344
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
 msgid "Configure Preview Plugins…"

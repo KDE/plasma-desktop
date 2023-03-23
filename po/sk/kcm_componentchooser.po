@@ -5,19 +5,20 @@
 # Miroslav David <mirodav@gmail.com>, 2009.
 # Roman Paholik <wizzardsk@gmail.com>, 2016, 2017.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2022-01-25 14:25+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-03-20 19:10+0100\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: applicationmodel.cpp:67
@@ -32,10 +33,9 @@ msgid "Default web browser"
 msgstr "Predvolený webový prehliadač"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Vybrať predvoleného správcu súborov"
+msgstr "Vybrať predvoleného správcu archívov"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -58,22 +58,19 @@ msgid "Select default map"
 msgstr "Vybrať predvolenú mapu"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Vybrať predvoleného správcu súborov"
+msgstr "Vybrať predvolený prehliadač obrázkov"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Vybrať predvolenú mapu"
+msgstr "Vybrať predvolený hudobný prehrávač"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Vybrať predvolený webový prehliadač"
+msgstr "Vybrať predvolený prehliadač PDF"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -86,56 +83,54 @@ msgid "Select default terminal emulator"
 msgstr "Vyberte predvolený emulátor terminálu"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Vyberte predvolený emulátor terminálu"
+msgstr "Vybrať predvolený textový editor"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Vybrať predvoleného správcu súborov"
+msgstr "Vybrať predvolený prehrávač videa"
 
 #: package/contents/ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 #: package/contents/ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "Táto aplikácia neuvádza podporu pre nasledujúce typy súborov:"
 
 #: package/contents/ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Vynútiť otvorenie napriek tomu"
 
 #: package/contents/ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "Nasledujúce typy súborov sú stále priradené k inej aplikácii:"
 
 #: package/contents/ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 je priradený k %2"
 
 #: package/contents/ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Znovu priradiť všetko k %1"
 
 #: package/contents/ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Zmeniť priradenie typu súboru ručne"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -143,12 +138,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Zdá sa, že '%1' nepodporuje nasledujúce typy MIME priradené k tomuto druhu "
+"aplikácie: %2typ MIME"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -170,44 +167,44 @@ msgstr "Vytáčanie:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimédiá"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Prehliadač obrázkov:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Hudobný prehrávač:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Prehrávač videa:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenty"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Textový editor:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "Prehliadač PDF:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Nástroje"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -220,14 +217,12 @@ msgid "Terminal emulator:"
 msgstr "Emulátor terminálu:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Správca súborov:"
+msgstr "Správca archívov:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"

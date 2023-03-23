@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-23 02:36+0000\n"
 "PO-Revision-Date: 2022-12-12 22:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -100,219 +100,219 @@ msgstr "Žymėti visus"
 msgid "Deselect All"
 msgstr "Nuimti žymėjimą nuo visų"
 
-#: package/contents/ui/ConfigIcons.qml:63
+#: package/contents/ui/ConfigIcons.qml:62
 #, kde-format
 msgid "Panel button:"
 msgstr "Skydelio mygtukas:"
 
-#: package/contents/ui/ConfigIcons.qml:69
+#: package/contents/ui/ConfigIcons.qml:68
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Naudoti tinkintą piktogramą"
 
-#: package/contents/ui/ConfigIcons.qml:102
+#: package/contents/ui/ConfigIcons.qml:101
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Pasirinkti…"
 
-#: package/contents/ui/ConfigIcons.qml:108
+#: package/contents/ui/ConfigIcons.qml:107
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Išvalyti piktogramą"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:127
 #, kde-format
 msgid "Arrangement:"
 msgstr "Išdėstymas:"
 
-#: package/contents/ui/ConfigIcons.qml:132
+#: package/contents/ui/ConfigIcons.qml:131
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "Iš kairės į dešinę"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:132
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "Iš dešinės į kairę"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "Iš viršaus į apačią"
 
-#: package/contents/ui/ConfigIcons.qml:143
+#: package/contents/ui/ConfigIcons.qml:142
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Lygiuoti kairėje"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:143
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Lygiuoti dešinėje"
 
-#: package/contents/ui/ConfigIcons.qml:159
+#: package/contents/ui/ConfigIcons.qml:158
 #, kde-format
 msgid "Lock in place"
 msgstr "Užrakinti vietoje"
 
-#: package/contents/ui/ConfigIcons.qml:173
+#: package/contents/ui/ConfigIcons.qml:172
 #, kde-format
 msgid "Sorting:"
 msgstr "Rikiavimas:"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:180
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Rankiniu būdu"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:181
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Dydis"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tipas"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Data"
 
-#: package/contents/ui/ConfigIcons.qml:196
+#: package/contents/ui/ConfigIcons.qml:195
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Mažėjančiai"
 
-#: package/contents/ui/ConfigIcons.qml:204
+#: package/contents/ui/ConfigIcons.qml:203
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Pirma aplankai"
 
-#: package/contents/ui/ConfigIcons.qml:218
+#: package/contents/ui/ConfigIcons.qml:217
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Rodinio veiksena:"
 
-#: package/contents/ui/ConfigIcons.qml:220
+#: package/contents/ui/ConfigIcons.qml:219
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Sąrašas"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Tinklelis"
 
-#: package/contents/ui/ConfigIcons.qml:232
+#: package/contents/ui/ConfigIcons.qml:231
 #, kde-format
 msgid "Icon size:"
 msgstr "Piktogramų dydis:"
 
-#: package/contents/ui/ConfigIcons.qml:247
+#: package/contents/ui/ConfigIcons.qml:246
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Mažas"
 
-#: package/contents/ui/ConfigIcons.qml:256
+#: package/contents/ui/ConfigIcons.qml:255
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Didelis"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:264
 #, kde-format
 msgid "Label width:"
 msgstr "Etikečių plotis:"
 
-#: package/contents/ui/ConfigIcons.qml:268
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Siauras"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:268
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Vidutinis"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Platus"
 
-#: package/contents/ui/ConfigIcons.qml:278
+#: package/contents/ui/ConfigIcons.qml:277
 #, kde-format
 msgid "Text lines:"
 msgstr "Teksto eilutės:"
 
-#: package/contents/ui/ConfigIcons.qml:294
+#: package/contents/ui/ConfigIcons.qml:293
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Užvedant pele virš piktogramų:"
 
-#: package/contents/ui/ConfigIcons.qml:296
+#: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "Show tooltips"
 msgstr "Rodyti paaiškinimus"
 
-#: package/contents/ui/ConfigIcons.qml:303
+#: package/contents/ui/ConfigIcons.qml:302
 #, kde-format
 msgid "Show selection markers"
 msgstr "Rodyti žymėjimo žymeklius"
 
-#: package/contents/ui/ConfigIcons.qml:310
+#: package/contents/ui/ConfigIcons.qml:309
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Rodyti aplankų peržiūros iškylančiuosius langus"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:319
 #, kde-format
 msgid "Rename:"
 msgstr "Pervadinti:"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:323
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Pervadinti tiesiogiai, spustelėjant ant pažymėto elemento teksto"
 
-#: package/contents/ui/ConfigIcons.qml:335
+#: package/contents/ui/ConfigIcons.qml:334
 #, kde-format
 msgid "Previews:"
 msgstr "Peržiūros:"
 
-#: package/contents/ui/ConfigIcons.qml:337
+#: package/contents/ui/ConfigIcons.qml:336
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Rodyti peržiūros miniatiūras"
 
-#: package/contents/ui/ConfigIcons.qml:345
+#: package/contents/ui/ConfigIcons.qml:344
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Konfigūruoti peržiūros papildinius…"

@@ -1,19 +1,20 @@
 # translation of kcm_tablet.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2021.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2022, 2023.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-11 11:55+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-03-16 18:12+0100\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: kcmtablet.cpp:32
@@ -60,7 +61,7 @@ msgstr "Prispôsobiť výstupu"
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "Prispôsobiť výstup v tablete"
 
 #: kcmtablet.cpp:139
 #, kde-format
@@ -116,22 +117,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 1"
-msgstr "Tlačidlo %1:"
+msgstr "Tlačidlo nástroja 1"
 
 #: package/contents/ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 2"
-msgstr "Tlačidlo %1:"
+msgstr "Tlačidlo nástroja 2"
 
 #: package/contents/ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Tool Button 3"
-msgstr "Tlačidlo %1:"
+msgstr "Tlačidlo nástroja 3"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
