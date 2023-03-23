@@ -98,20 +98,9 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
             windowGeo.translate(0 - screenOffset.x(), 0 - screenOffset.y());
         }
 
-        // Clamp to desktop rect.
+        // Restrict to desktop/screen rect.
         const QRect clampingRect = filterByScreen() ? QRect({0, 0}, screenGeometry().size()) : QRect({0, 0}, desktopSize);
-        windowGeo.setX(std::clamp(windowGeo.x(), 0, clampingRect.width()));
-        windowGeo.setY(std::clamp(windowGeo.y(), 0, clampingRect.height()));
-
-        if ((windowGeo.x() + windowGeo.width()) > clampingRect.width()) {
-            windowGeo.setWidth(clampingRect.width() - windowGeo.x());
-        }
-
-        if ((windowGeo.y() + windowGeo.height()) > clampingRect.height()) {
-            windowGeo.setHeight(clampingRect.height() - windowGeo.y());
-        }
-
-        return windowGeo;
+        return windowGeo.intersected(clampingRect);
     } else if (role == StackingOrder) {
 #if HAVE_X11
         const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList).toList();
