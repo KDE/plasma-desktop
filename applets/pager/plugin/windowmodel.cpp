@@ -99,15 +99,16 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         }
 
         // Clamp to desktop rect.
-        windowGeo.setX(std::clamp(windowGeo.x(), 0, desktopSize.width()));
-        windowGeo.setY(std::clamp(windowGeo.y(), 0, desktopSize.height()));
+        const QRect clampingRect = filterByScreen() ? QRect({0, 0}, screenGeometry().size()) : QRect({0, 0}, desktopSize);
+        windowGeo.setX(std::clamp(windowGeo.x(), 0, clampingRect.width()));
+        windowGeo.setY(std::clamp(windowGeo.y(), 0, clampingRect.height()));
 
-        if ((windowGeo.x() + windowGeo.width()) > desktopSize.width()) {
-            windowGeo.setWidth(desktopSize.width() - windowGeo.x());
+        if ((windowGeo.x() + windowGeo.width()) > clampingRect.width()) {
+            windowGeo.setWidth(clampingRect.width() - windowGeo.x());
         }
 
-        if ((windowGeo.y() + windowGeo.height()) > desktopSize.height()) {
-            windowGeo.setHeight(desktopSize.height() - windowGeo.y());
+        if ((windowGeo.y() + windowGeo.height()) > clampingRect.height()) {
+            windowGeo.setHeight(clampingRect.height() - windowGeo.y());
         }
 
         return windowGeo;
