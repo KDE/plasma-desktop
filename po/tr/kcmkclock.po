@@ -8,13 +8,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2021.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-27 00:49+0000\n"
-"PO-Revision-Date: 2022-03-12 13:53+0300\n"
+"PO-Revision-Date: 2023-03-23 13:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,13 +38,13 @@ msgstr "tulliana@gmail.com, gorkem@kde.org"
 #: dateandtime.ui:22
 #, kde-format
 msgid "Date and Time"
-msgstr "Tarih ve Saat"
+msgstr "Tarih ve Zaman"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr "Tarihi ve s&aati otomatik olarak ayarla"
+msgstr "Tarihi ve z&amanı otomatik olarak ayarla"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
@@ -88,7 +88,7 @@ msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
-"Bir NTP aracı bulunamadı. Tarihi ve saati otomatik günceleyebilmek için "
+"Bir NTP aracı bulunamadı. Tarihi ve zamanı otomatik güncelleyebilmek için "
 "'ntpdate' veya 'rdate' uygulamalarını kurun."
 
 #: dtime.cpp:91
