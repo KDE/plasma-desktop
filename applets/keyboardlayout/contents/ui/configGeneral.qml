@@ -14,6 +14,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.workspace.keyboardlayout 1.0
 import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
+import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
 
 Kirigami.FormLayout {
     id: root
@@ -49,8 +50,7 @@ Kirigami.FormLayout {
                 height: PlasmaCore.Units.iconSizes.medium
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
-                                                      "kf5/locale/countries/" + root.layoutShortName + "/flag.png")
+                source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
                 visible: valid
             }
             RowLayout {
@@ -88,8 +88,7 @@ Kirigami.FormLayout {
                 height: PlasmaCore.Units.iconSizes.medium
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
-                                                      "kf5/locale/countries/" + root.layoutShortName + "/flag.png")
+                source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
                 visible: valid
 
                 WorkspaceComponents.BadgeOverlay {

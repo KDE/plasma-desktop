@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -7,40 +8,18 @@
 #include "flags.h"
 
 #include <KLocalizedString>
+#include <KCountryFlagEmojiIconEngine>
 
 #include <QPainter>
 #include <QPixmap>
 #include <QStandardPaths>
 #include <QStringList>
 
-#include <math.h>
-
-#include "x11_helper.h"
-
 // for text handling
 #include "keyboard_config.h"
 #include "xkb_rules.h"
 
-static const char flagTemplate[] = "kf5/locale/countries/%1/flag.png";
-
-int iconSize(int s)
-{
-    if (s < 16) {
-        return 16;
-    } else if (s < 22) {
-        return 22;
-    } else if (s < 32) {
-        return 32;
-    } else if (s < 48) {
-        return 48;
-    } else if (s < 64) {
-        return 64;
-    } else {
-        return 128;
-    }
-}
-
-const QIcon Flags::getIcon(const QString &layout)
+QIcon Flags::getIcon(const QString &layout)
 {
     if (!iconMap.contains(layout)) {
         iconMap[layout] = createIcon(layout);
@@ -50,31 +29,7 @@ const QIcon Flags::getIcon(const QString &layout)
 
 QIcon Flags::createIcon(const QString &layout)
 {
-    QIcon icon;
-    if (!layout.isEmpty()) {
-        QString countryCode = getCountryFromLayoutName(layout);
-        QString file;
-        if (!countryCode.isEmpty()) {
-            file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
-        }
-
-        if (!file.isEmpty()) {
-            QImage flagImg;
-            flagImg.load(file);
-            const int size = iconSize(qMax(flagImg.width(), flagImg.height()));
-            QPixmap iconPix(size, size);
-            iconPix.fill(Qt::transparent);
-            QRect dest(flagImg.rect());
-            dest.moveCenter(iconPix.rect().center());
-
-            QPainter painter(&iconPix);
-            painter.drawImage(dest, flagImg);
-            painter.end();
-
-            icon.addPixmap(iconPix);
-        }
-    }
-    return icon;
+    return QIcon(new KCountryFlagEmojiIconEngine(getCountryFromLayoutName(layout)));
 }
 
 // static

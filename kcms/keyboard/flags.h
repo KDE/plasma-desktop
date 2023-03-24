@@ -20,7 +20,9 @@ class Flags : public QObject
     Q_OBJECT
 
 public:
-    const QIcon getIcon(const QString &layout);
+    using QObject::QObject;
+
+    Q_INVOKABLE QIcon getIcon(const QString &layout);
 
     static QString getLongText(const LayoutUnit &layoutUnit, const Rules *rules);
     static QString getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig);

@@ -37,7 +37,7 @@ private Q_SLOTS:
 
         const QIcon iconUs(flags->getIcon(QStringLiteral("us")));
         QVERIFY(!iconUs.isNull());
-        QVERIFY(flags->getIcon("--").isNull());
+        QVERIFY(flags->getIcon(QString()).isNull());
 
         KeyboardConfig *keyboardConfig = new KeyboardConfig(this);
         LayoutUnit layoutUnit(QStringLiteral("us"));

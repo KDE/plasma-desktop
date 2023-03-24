@@ -158,3 +158,5 @@ if(BUILD_TESTING)
 endif()
 
 add_dependencies(kcm_keyboard tastenbrett)
+
+add_subdirectory(qml)

@@ -10,6 +10,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0
+import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
 
 Item {
     id: root
@@ -35,7 +36,7 @@ Item {
                 switcher.keyboardLayout.layoutsList.forEach((layout, layoutIndex) => {
                     const actionName = layoutIndex.toString();
                     const actionText = layout.longName;
-                    const icon = iconURL(layout.shortName).toString().substring("file://".length);
+                    const icon = KCMKeyboard.Flags.getIcon(layout.shortName)
                     root.Plasmoid.setAction(actionName, actionText, icon);
                 });
             }
@@ -60,7 +61,7 @@ Item {
             visible: valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2)
 
             active: containsMouse
-            source: iconURL(layoutNames.shortName)
+            source: KCMKeyboard.Flags.getIcon(layoutNames.shortName)
 
             BadgeOverlay {
                 anchors.bottom: parent.bottom
@@ -84,11 +85,6 @@ Item {
             verticalAlignment: Text.AlignVCenter
             text: layoutNames.displayName || layoutNames.shortName
         }
-    }
-
-    function iconURL(name) {
-        const path = `kf5/locale/countries/${name}/flag.png`;
-        return StandardPaths.locate(StandardPaths.GenericDataLocation, path);
     }
 
     function actionTriggered(actionName) {
