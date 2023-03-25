@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Dosya Arama</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Hasan</firstname
+><surname
+>Kiran</surname
+><affiliation
+><address
+><email
+>sunder67@hotmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>arama</keyword>
+<keyword
+>dosya</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu &systemsettings; modülü, hızlı arama için hangi dosyaların indeksleneceğini yapılandırmanızı sağlar. Dosyalar arasında hızlı arama yapmak için içerilen Baloo adı verilen teknolojiyi kullanır. </para>
+
+<para
+>Belgelerinize daha hızlı erişim için indekslenmiş sonuçları kullanmak üzere <guilabel
+>Arama</guilabel
+> araç takımını ekleyin veya &krunner; içinde aramayı etkinleştirin. </para>
+
+<para
+>&dolphin; ve diğer &kde; uygulamalarında masaüstü arama yeteneklerini etkinleştirmek için <guilabel
+>Dosya Arama'yı etkinleştir</guilabel
+> seçeneğini kullanın. Baloo ile dosya aramayı kullanmak istemiyorsanız bunu işaretlemeyin (&eg; &kfind; gibi başka arama teknolojilerini kullanmak olanaklıdır). </para>
+
+<para
+>Dosya adlarına ek olarak dosya içeriğini de indekslemek için <guilabel
+>Ayrıca dosya içeriğini indeksle</guilabel
+> seçeneğini kullanın. </para>
+
+<para
+>Baloo'nun gizli dosyaları ve klasörleri de indekslemesi için <guilabel
+>Gizli dosyaları ve klasörleri indeksle</guilabel
+> seçeneğini kullanın. </para>
+
+<note>
+    <para
+>Bir nokta (<literal
+>.</literal
+>) ile başlayan her dosya veya klasör öntanımlı olarak gizlidir. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Klasöre özgü yapılandırma</guilabel
+></term>
+<listitem>
+    <para
+>İndekslenebilecek bir klasör listesi size sunuldu. Öntanımlı olarak, yalnızca tüm <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> klasörünüz indekslenir ve başka klasörlere veya sürüclere dokunulmaz. </para>
+    <para
+>Çıkarılabilir ortamlar, öntanımlı olarak hiçbir zaman indekslenmez. İndekslenmeyecek dışarıda bırakılmış klasörler listesinden kaldırıldığında indekslenir. </para>
+    <para
+>Listedeki her bir ögenin yanındaki açılır menüyü kullanarak bir ögenin <guimenuitem
+>İndekslenmiş</guimenuitem
+> veya <guimenuitem
+>İndekslenmemiş</guimenuitem
+> olduğunu yapılandırmak olanaklıdır. </para>
+    <para
+>Listeden bir ögeyi kaldırmak için çöp kutusu simgesini kullanın. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>İndekslenecek Klasör Ekle...</guibutton
+>/<guibutton
+>Klasör İndekslemeyi Kaldır...</guibutton
+></term>
+<listitem>
+    <para
+>Yukarıda belirtilen seçeneklere tıklamak standart &plasma; <guilabel
+>İçerilecek bir klasör seç</guilabel
+> iletişim kutusunu açar ve seçeceğiniz klasörü öyle işler. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+><filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> klasörünüz dışında bağlanmış konumları; &eg;, klasörleri veya sürücüleri yapılandırma seçenekleri için lütfen <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Yapılandırma</ulink
+> sayfasına bakın.</para>
+
+</article>

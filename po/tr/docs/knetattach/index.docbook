@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>&knetattach; El Kitabı</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2015-04-10</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach;, &kde; masaüstünüz ile ağ kaynaklarınızı tümleştirmeyi kolaylaştıran bir sihirbazdır. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Ağ Klasörleri</keyword>
+<keyword
+>Ağ Klasörü Sihirbazı</keyword>
+<keyword
+>KDE Ağ Klasörü Sihirbazı</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Giriş</title>
+
+<para
+>Bundan böyle Ağ Klasörü Sihirbazı olarak anılacak olan &knetattach; sihirbazı, çeşitli ağ klasörlerinin &kde; masaüstüne kolayca eklenmesine ve tümleşmesine izin verir. Lütfen olası sorunları veya özellik isteklerini &kde; hata izleyicisinde raporlayın. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>&knetattach; Kullanımı</title>
+
+<para
+>Aşağıdaki ekran görüntüsünde göreceğiniz gibi, Ağ Klasörü Sihirbazı şu anda dört tür ağ klasörünü eklemenize izin verir: WebDav, &FTP;, &Microsoft; &Windows; (&Samba;) ağ sürücüleri ve SSH. Ek olarak, liste kutusu için yeni bir bağlantı seçebilirsiniz. <screenshot>
+<screeninfo
+>Burada bir &knetattach; ekran görüntüsü görebilirsiniz</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+<caption>
+<para
+>Ağ Klasörü Sihirbazı ana penceresi</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Ağ klasörleri eklemek</title>
+
+<para
+>Ağ klasörleri, &konqueror; ve &dolphin; bünyesinde özel bir konumda görünürler ve <emphasis
+>sanal klasör</emphasis
+> adını alırlar. Bu sanal klasöre, konum çubuğunda <userinput
+>remote:/</userinput
+> yazarak veya <guilabel
+>Yerler</guilabel
+> panelinden <guilabel
+>Ağ</guilabel
+>'ı seçerek erişilir. Sonrasında, daha önceden eklenmiş olan tüm klasörleri görebilir ve ayrıca yenilerini eklemek için sihirbazı kullanabilirsiniz. <screenshot>
+<screeninfo
+>Burada bir &knetattach; ekran görüntüsü görebilirsiniz</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+<caption>
+<para
+>Ağ Klasörü sihirbazıyla sanal klasör</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Sihirbazlardan bahsetmişken, Ağ Klasörü Sihirbazı, kullanımının çok kolay olmasını amaçlar. Sihirbazı açtıktan sonra, erişmek istediğiniz ağ klasörü türünü seçmelisiniz. Bir sonraki ekrana geçtiğinizde sizden istenen bilgileri doldurmanız yeterli olacaktır. Son adım, erişmeyi seçtiğiniz ağ paylaşımı için kullanıcı adınızı ve oturum açma şifrenizi girmektir. </para>
+<para
+>Aşağıda, sihirbazın ağ klasörlerini oluşturmak için gereksinim duyduğu bilgilerin bir listesi bulunmaktadır. Belirli bir klasör için bir seçenek yoksa girilmesi gerekmez. &Samba; klasörleri; &eg;. <guilabel
+>Kapı</guilabel
+> girdisi gerektirmez. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ad:</guilabel
+></term>
+<listitem>
+<para
+>Ağ bağlantısına bir ad verdiğiniz yer burasıdır. Yalnızca hayal gücünüzle sınırlıdır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kullanıcı:</guilabel
+></term>
+<listitem>
+<para
+>Bu, bağlantıyı kurmak için kullanılacak kullanıcı adıdır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sunucu:</guilabel
+></term>
+<listitem>
+<para
+>Bu, eklemeye çalıştığınız sunucunun adresidir. Bir IP adresi veya alan adı olabilir. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kapı:</guilabel
+></term>
+<listitem>
+<para
+>Buraya bağlanmak istediğiniz kapı numarasını girin. Öntanımlılar genellikle yeterlidir. <note
+> <para
+>&Microsoft; &Windows; (&Samba;) klasörleri için kullanılamaz. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Klasör:</guilabel
+></term>
+<listitem>
+<para
+>Bağlanmak istediğiniz klasörün yolu buraya gider. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kodlama:</guilabel
+></term>
+<listitem>
+<para
+>&FTP; ve ssh bağlantıları için bir kodlama seçmek üzere buradaki ögeleri kullanın. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Bu uzak klasör için bir simge oluştur</guilabel
+></term>
+<listitem>
+<para
+>Bu kutu işaretlenirse remote:/ sanal klasörü aracılığıyla erişime izin veren bir simge oluşturulur. İşaretlenmezse bağlantı kurulabilir; ancak remote:/ adresinden erişilemez. <note
+> <para
+><guilabel
+>Son bağlantı:</guilabel
+> seçeneği, bir simge oluşturulmuş olsun veya olmasın, sihirbazı kullanarak bağlandığınız son ağ bağlama noktasına yeniden bağlanmanıza olanak tanır. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Şifreleme kullan</guilabel
+></term>
+<listitem>
+<para
+>İşaretlenirse güvenli bağlantı kurma özelliği etkinleştirilir. <note
+> <para
+>Yalnızca WebDav klasörleri için kullanılabilir.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>&knetattach; Kılavuzu</title>
+
+
+<para
+>Bu, Ağ Klasörü Sihirbazı'nın hızlı bir incelemesi olacaktır. Gözünüzü kırpmayın yoksa kaçırabilirsiniz. </para>
+
+<para
+>Aşağıda Ağ Klasörü Sihirbazı'nın ana penceresini görüyorsunuz. Eklemek veya bağlanmak istediğimiz klasörün türünü burada seçiyoruz. Bu izlenecek yolun amaçları doğrultusunda &FTP; kullanacağız; bu sihirbazı kullanırken karşılaşacağınız seçeneklerin çoğunu içerir. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>İşte &knetattach; ana penceresinin bir ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Tamam, biz (yani ben), bir &FTP; klasörüt eklemeyi seçtik. Aşağıda, kendi &FTP; sunucunuz için eklemeniz gereken bilgi türlerinin bir örneğini görüyorsunuz. Doldurduktan sonra <guibutton
+>Kaydet ve Bağlan</guibutton
+>'a tıklayın ve sihri bekleyin. Ah evet, sunucunuz bir tür doğrulama gerektiriyorsa bu noktada bağlanmanıza izin verilmeden önce sizden istenecektir. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>&knetattach; kullanarak &FTP; klasörü eklemeyi gösteren ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Artık hepimiz bağlıyız ve yeni eklenen paylaşımımızda dolaşabiliyoruz. Yaşasın! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bağlı &FTP; klasörünün ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Ağ klasörlerimize geri dönmek için yapmamız gereken tek şey &konqueror; veya &dolphin; konum çubuğuna <action
+>remote:/</action
+> yazmak veya <guilabel
+>Places</guilabel
+> panelinden  <guilabel
+>Ağ</guilabel
+>'ı seçmektir. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ekli bağlantıyla birlikte remote:/ sanal klasörünün ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ekran Görüntüsü</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+><guilabel
+>Ağ Klasörü Ekle</guilabel
+> bağlantısını kullanarak aynı konumdan yeni klasörler bile ekleyebilirsiniz. Bu da bizi izlenecek yolun sonuna getiriyor (hızlı olacağını söylemiştim). Kendi ağ klasörü maceralarınızda size bol şans diliyorum ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Emeği Geçenler ve Lisans</title>
+
+<para
+>&knetattach; </para>
+<para
+>Program telif hakkı 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Belgelendirme telif hakkı &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Emir SARI<email
+>emir_sari@icloud.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

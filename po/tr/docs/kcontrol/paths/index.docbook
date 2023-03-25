@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Konumlar</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-09-05</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>masaüstü</keyword>
+<keyword
+>yollar</keyword>
+<keyword
+>konum</keyword>
+<keyword
+>sistem ayarları</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu, &plasma; masaüstü için gerekli olan yolları yapılandırmak için bir modüldür.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bazı &kde; yollarını yapılandır</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Bazı &kde; yollarını yapılandır</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Otomatik olarak bağlanan sürücüler, bu yollar için kullanılamazlar. Böyle sürücüler, &plasma;'nın yeniden başlatılması sonrası öntanımlı değerlere döndürülürler. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Masaüstü yolu:</guilabel
+></term>
+<listitem
+><para
+>Masaüstü klasörü, masaüstünüzdeki bir <guilabel
+>Klasör Görünümü</guilabel
+> araç takımında gördüğünüz tüm dosyaları içerir. Öntanımlı yol genellikle <filename class="directory"
+>~/Desktop</filename
+> biçimindedir; ancak bu klasörün konumunu buradan değiştirebilirsiniz. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Belgeler yolu:</guilabel
+></term>
+<listitem
+><para
+>Bu klasör, belgeleri yüklemek veya kaydetmek için öntanımlı olarak kullanılacaktır.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>İndirilenler yolu:</guilabel
+></term>
+<listitem
+><para
+>Bu klasör, indirdiğiniz ögeleri kaydetmek için öntanımlı olarak kullanılacaktır.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Videolar yolu:</guilabel
+></term>
+<listitem
+><para
+>Bu klasör öntanımlı olarak filmlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Resimler yolu:</guilabel
+></term>
+<listitem
+><para
+>Bu klasör öntanımlı olarak resimlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Müzik yolu:</guilabel
+></term>
+<listitem
+><para
+>Bu klasör öntanımlı olarak müziklerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Bir yolu değiştirir ve <guibutton
+>Uygula</guibutton
+>'ya tıklarsanız içeriği yeni klasöre taşımayı veya dosyaları taşımadan yeni klasörü kullanmayı seçebileceğiniz bir iletişim kutusu görüntülenir.</para>
+
+</article>

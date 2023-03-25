@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Klavye</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Sistem Ayarları</keyword>
+<keyword
+>klavye</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modül, klavyenizin nasıl çalıştığını seçmenize izin verir.</para>
+
+<para
+>Bu modülde üç adet sekme vardır.</para>
+
+<sect1 id="hardware">
+<title
+>Donanım sekmesi</title>
+<para
+>Bu seçeneklerin gerçekte yapacağı etki, klavye donanımınız ve &plasma;'nın üzerinde çalıştığı X sunucusu tarafından sağlanan özelliklere bağlıdır. Örnek olarak, düğme vuruş sesi düzeyini değiştirmenin bir etkisi olmadığını ayrımlayabilirsiniz; çünkü donanımınız bu özelliği desteklemiyordur. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Klavye modeli:</guilabel
+></term>
+<listitem>
+<para
+>Burada klavye modelinizi ayarlayabilirsiniz. Bu ayar klavye düzeninizden bağımsızdır ve &quot;donanım&quot; modeli, &ie; klavyenizin üretilme biçimidir. Bilgisayarınızla birlikte gelen çağdaş klavyelerde genellikle fazladan iki düğme bulunur ve bunlara &quot;104 düğmeli&quot; denir. Ne tür bir klavyeye sahip olduğunuzu bilmiyorsanız büyük olasılıkla bu ayara dokunmayın. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Plasma Başlangıcında NumLock Durumu</guilabel
+></term>
+<listitem>
+<para
+>&plasma; başlangıcında NumLock'u ister <guilabel
+>Açık</guilabel
+> veya <guilabel
+>Kapalı</guilabel
+> olarak ayarlayabilir veya &plasma;'nın NumLock'u &plasma; başlangıcı öncesi hangi durumdayse öyle bırakması gerektiğini söyleyebilirsiniz.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bir düğme basılı tutulduğunda:</guilabel
+></term>
+<listitem>
+<para
+>Bu iki seçenekten birini seçebilirsiniz</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Aksanlı ve benzer karakterleri göster</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse metin girerken bir düğme basılı tutulduğunda, karakterin çeşitli aksanlı biçimleri arasında seçim yapılmasını sağlayan bir açılır pencere gösterilir.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Hiçbir şey yapma</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek, düğmeleri basılı tuttuğunuzda tüm etkinlikleri kapatmanızı sağlar.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Düğmeyi yinele</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek seçildiğinde, bir düğmeye basıp basılı tutmak, düğme bırakılana kadar aynı karakteri yineler. Düğmeye basıp basılı tutmak, art arda birkaç kez basmakla aynı etkiye sahiptir.</para>
+<tip
+><para
+>Ok düğmeleriyle belgeler arasında gezinmeyi önemli ölçüde kolaylaştırdığından, neredeyse tüm kullanıcılar bu seçeneğin etkinleştirilmesini isteyecektir. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gecikme</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek, basılan bir düğmenin ardından düğme kodları oluşturmaya başlayacağı gecikmeyi ayarlamanıza olanak tanır.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Hız</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek, bir düğmeye basılırken düğme kodlarının oluşturulma hızını ayarlamanıza olanak tanır.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Ayarları doğrulamak için <guilabel
+>Sınama alanı</guilabel
+> metin kutusuna bir şeyler yazın.</para>
+<para
+>Birçok bilgisayar bu ayarı desteklemez.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Düzenler sekmesi</title>
+<para
+>Bu sekme, kullanmak istediğiniz klavye düzenlerini, sistem tepsisinde hangi göstergeyi istediğinizi, nasıl geçiş yapmak istediğinizi ve hangi kısayolları kullanacağınızı seçmenizi sağlar.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Düzen Göstergesi</guilabel
+></term>
+<listitem>
+<para
+>Sistem tepsisinde dilin ISO adını gösterecek olan <guilabel
+>Düzen göstergesini göster</guilabel
+>'i seçebilirsiniz. Tek bir düzeni etkinleştirmiş olsanız bile göstergeyi göstermeyi seçebilir ve <guilabel
+>Bayrağı göster</guilabel
+> seçeneğini işaretleyerek sadece ISO kodu yerine dil bayrağını gösterebilirsiniz.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Değiştirme Politikası</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Uygulama</guilabel
+> veya <guilabel
+>Pencere</guilabel
+> değiştirme politikasını seçerseniz klavye düzenini değiştirmek yalnızca geçerli uygulamayı veya pencereyi etkiler. <guilabel
+>Global</guilabel
+>, klavye düzenini genel olarak ve <guilabel
+>Masaüstü</guilabel
+> yalnızca geçerli sanal masaüstü için değiştirir. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Düzen Değiştirme Kısayolları</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Ana kısayollar</guilabel
+>, X.org tarafından yönetilen düzenleri değiştirmek için kullanılan bir kısayoldur. <guilabel
+>3. düzey kısayollar</guilabel
+>, X.org tarafından yönetilen etkin düzenin (varsa) üçüncü düzeyine geçmek için kullanılan bir kısayoldur. Yalnızca değiştirici kısayollara izin verir. <guilabel
+>Alternatif kısayol</guilabel
+>, &plasma; tarafından yönetilen düzenleri değiştirmek için kullanılan bir kısayoldur. Yalnızca değiştirici kısayolları desteklemez ve ayrıca bazı durumlarda çalışmayabilir (&eg;, açılır pencere etkinse veya ekran koruyucudansa). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Düzenleri yapılandır</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Düzenleri yapılandır</guilabel
+> seçeneğini tıklarsanız gerektiğinde birbirleri arasında geçiş yapmak üzere yeni klavye düzenleri ekleyebilir veya kaldırabilirsiniz. </para>
+<para
+><guibutton
+>Ekle</guibutton
+>'ye tıkladığınızda, eklemek istediğiniz yeni klavye düzeninin yanı sıra varyantını, etiketini ve kısayolunu seçebileceğiniz bir iletişim kutusu açılır. </para>
+<para
+><guilabel
+>Düzen Ekle</guilabel
+> iletişim kutusundaki <guilabel
+>Düzen</guilabel
+> etiketinin sağındaki düzen listesi, <guilabel
+>Seçimi dile göre sınırla</guilabel
+> açılır listesi kullanılarak daraltılabilir. Seçilen düzeni ayrı bir pencerede önizlemek için <guibutton
+>Önizleme</guibutton
+> düğmesine tıklayabilirsiniz. </para>
+<para
+>Düzenleri yukarı ve aşağı düğmeleriyle sıralayabilirsiniz, en üstteki öntanımlı olandır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Yedek düzenler</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek yalnızca ikiden fazla düzeniniz varsa etkinleştirilebilir.</para>
+<para
+>Yedek düzenler, daha fazla düzeni yakınınızda tutarken az sayıda düzen arasında kolayca geçiş yapmanızı sağlar. Örneğin, 3 dil konuşuyorsunuz: İngilizce, Rusça ve Japonca; ancak ilk ikisini sıklıkla, üçüncüsünü ise nadiren kullanıyor olabilirsiniz. Bu durumda, ilk ikisini ana düzen olarak (<guilabel
+>Ana düzen sayısı</guilabel
+>: 2) ve Japoncayı yedek olarak yapılandırabilirsiniz - klavye ve sol fare düğmesiyle geçiş yaptığınızda, geçiş yalnızca ana düzenler arasında gerçekleşir; ancak içerik menüsüyle her zaman 3. düzeni seçebilirsiniz.</para>
+<para
+>Yedek düzen seçildiğinde, son ana düzeni değiştirir (bu teknik nedenlerle yapılır, genellikle genel kısayollar 1. etkin düzene göre çalışır, bu nedenle yedek düzenleri etkinleştirmeye izin verirken 1. düzeni korumak daha güvenilirdir).</para>
+<!-- context menu ?-->
+<para
+>X.org aralarında geçiş yapmak için yalnızca 4 düzene izin verdiğinden, <quote
+>yedek düzenler</quote
+> özelliği, bu sınırlamanın üstesinden gelinmesine olanak tanır: Kullanıcı en fazla 4 ana düzene (X.org tarafından yönetilen) sahip olabilir; ancak 4 yedek düzene daha izin verilir (düzen değiştirici tarafından yönetilir). Böylece kullanıcı, toplam 8 düzene kadar rahat bir şekilde çalışabilir (yine de gelecekte 4 yedek düzen sınırı yükseltilebilir). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Gelişmiş sekmesi</title>
+<para
+>Bu sekmede, <guilabel
+>Klavye seçeneklerini yapılandır</guilabel
+> seçeneğini işaretlerseniz bazı özel düğme ayarlarıyla ilgili birkaç seçeneği belirleyebilirsiniz. Bu seçenekleri, seçeneğin solundaki &gt; sembolünü, ardından genişletilmiş listede ayarınızı seçerek değiştirin.</para>
+<para
+>XKB kullanarak &X11; için klavye düzenleri oluşturmaya yardımcı olmak için bir grafik arayüz vardır. </para>
+<para
+>Daha fazla bilgi için <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>freedesktop.org üzerindeki XKeyboardConfig sayfası</ulink
+> <emphasis
+>Links (Bağlantılar)</emphasis
+> bölümüne bakın. </para>
+</sect1>
+</article>

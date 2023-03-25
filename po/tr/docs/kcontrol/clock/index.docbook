@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Tarih ve Zaman</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>saat</keyword>
+<keyword
+>tarih</keyword>
+<keyword
+>zaman</keyword>
+<keyword
+>ayarla</keyword>
+<keyword
+>yapılandır</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Tarih ve Zaman</title>
+
+<para
+>Kullanımı kolay bir grafik arayüzle, sistem tarihini ve zamanını değiştirmek için bu modülü kullanabilirsiniz.</para>
+
+<note
+><para
+>Bu ayarlar yalnızca bir kullanıcı olarak sizi değil tüm sistemi etkilediğinden, sistem tarih ve saatini değiştirmek için sistem yöneticisi (<systemitem class="username"
+>root</systemitem
+>) erişiminiz olmalıdır. Bu erişim düzeyine sahip değilseniz bu modül size yalnızca geçerli ayarları gösterecek; ancak değişiklikleriniz kaydedilmeyecektir.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Tarih ve Zaman</title>
+
+<para
+><guilabel
+>Tarihi ve zamanı otomatik olarak ayarla</guilabel
+> onay kutusunu işaretlerseniz bu modül, tarih ve zaman bilgisini almak için <acronym
+>systemd</acronym
+> kullanır.</para>
+
+<para
+><acronym
+>systemd</acronym
+> olmayan bir bilgisayarda, <acronym
+>NTP</acronym
+> izlenceleri olan <command
+>rdate</command
+> veya <command
+>ntpdate</command
+> kullanılır. Bu izlenceler sisteminizde yoksa lütfen onları kurun. </para>
+
+<para
+>Çevrimiçiyken &plasma; oturumunu açtığınızda veya daha sonra internete bağlandığınızda, bir veya birden çok <acronym
+>NTP</acronym
+> sunucusuna erişim gerçekleşir.</para>
+<para
+>Ancak bu, uzun vadede doğru bir saat tutmak için yeterli değildir. Bu, dizüstü bilgisayarlar gibi tam zamanlı ağ erişimi olmayan makinelerde ara sıra zamanı ayarlamak için kullanışlıdır. </para>
+
+<para
+>Bir zaman sunucusu kullanmıyorsanız tarihi takvimde elle ayarlayabilirsiniz.</para>
+<para
+>Geçerli tarihi seçmek için takvimin altındaki denetimleri kullanın, tarihi düzenleme kutusuna girin veya açılan kutudan yılın haftasını seçin.</para>
+
+<para
+>Analog saatin altındaki döndürme kutularını kullanarak zamanı ayarlarsınız. Değerinizi doğrudan da girebilirsiniz.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Zaman Dilimi</title>
+<para
+>Yeni bir saat dilimi ayarlamak için aşağıdaki listeden bölgenizi seçmeniz yeterlidir. İstenen <guilabel
+>Alan</guilabel
+>'I veya <guilabel
+>Bölge</guilabel
+>'yi bulmak için süzgeç kutusunu kullanın.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Arka Plan Hizmetleri</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>Hizmet</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+><guilabel
+>Hizmet Yöneticisi</guilabel
+> modülü, &kde; Ardalan Süreçleri'nin, başka bir adıyla &kde; Hizmetleri'nin genel bir görünümünü sunar. Genelde iki tür hizmet vardır:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>İsteğe Bağlı Yüklenen Hizmetler</guilabel
+></term>
+<listitem
+><para
+>Bunlar, istendiğinde başlatılacak olan kullanılabilir &kde; hizmetlerinin bir listesidir. Yalnızca bilginiz olması için listelenirler ve bu hizmetleri manipüle edemezsiniz. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Başlangıç Hizmetleri</guilabel
+></term>
+<listitem
+><para
+>Burası, &kde; başlangıcında yüklenebilen tüm &kde; hizmetlerini gösterir. <guilabel
+>Kullanım</guilabel
+> sütununda işaretlenmiş hizmetler bir sonraki başlangıçta çağrılırlar.</para>
+<para
+>Ne yaptığını bilmediğiniz hizmetleri devre dışı bırakırken dikkatli olun. Bazı hizmetler, &kde;'nin düzgün çalışması için elzemdir. </para>
+<para
+>Bir hizmetin <guilabel
+>Durum</guilabel
+>'unu değiştirmek için onu listede seçin. Sonrasında hizmetlerin durumunu <guilabel
+>Çalışmıyor</guilabel
+>'dan <guilabel
+>Çalışıyor</guilabel
+>'a veya tam tersine değiştirmek için <guibutton
+>Başlat</guibutton
+> ve <guibutton
+>Durdur</guibutton
+> düğmelerini kullanabilirsiniz. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Yazıtipi Görüntüleyici</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>yazıtipi görünümü</keyword>
+<keyword
+>yazıtipleri</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview;, değişik türdeki yazıtiplerini görüntülemek ve kurmak için bir uygulamadır: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; type 1 (&Windows; &amp; OS/2  üzerinde <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; on &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, dosya uzantısı <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, dosya uzantısı<filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>İnternetten indirilen bir yazıtipini önizlemek ve yüklemek için bağımsız bir program olarak kullanabilirsiniz. Önizlemede, yazıtipinin gereksiniminiz olan tüm karakterlere sahip olup olmadığını denetleyebilirsiniz. </para>
+<para
+>Ek olarak &kfontview;, &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Yazıtipi Yönetimi </guilabel
+></ulink
+> modülünden de başlatılabilir. Buradan, &kfontview; yazılımının geniş önizleme yeteneklerinden yararlanabilirsiniz.</para>
+
+<para
+>Alternatif olarak, <guilabel
+>Yazıtipi Yönetimi</guilabel
+> modülünü kullanarak sisteminize yeni yazıtipleri kurabilir, kaldırabilr, onları önizleyebilir ve tümünü yönetebilirsiniz.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>&kfontview; uygulaması</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&kfontview; uygulaması</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>&kfontview; yazılımının <guilabel
+>Standart Önizleme</guilabel
+> özelliği, yazıtipinizi bir pangram (alfabenin her harfini en az bir kez kullanan bir tümce) kullanarak birkaç farklı boyutta görüntüler. Böylece nasıl görüneceği hakkında iyi bir fikir edinebilirsiniz. Araç çubuğundaki açılır kutudan ek önizleme türleri seçebilirsiniz: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Tüm Karakterler</guilabel
+>, yazıtipi tarafından sağlanan tüm karakterleri tek bir boyutta görüntüler. </para
+></listitem>
+<listitem
+><para
+>Unicode Bloku: Unicode standardı, karakterleri bloklar halinde düzenler</para
+></listitem>
+<listitem
+><para
+>Unicode Yazısı: Unicode'da bir yazı, bir veya daha fazla yazı sisteminde bulunan metinsel bilgileri temsil etmek için kullanılan harfler ve diğer yazılı işaretler topluluğudur</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Metni Değiştir</guibutton
+>: Bu düğmeyi kullanmak, bir kullanıcı tanımlı metni girebileceğiniz <guilabel
+>Diziyi Önizle</guilabel
+> iletişim kutusunu açar. Bu özellik, bir yazıtipinin gereksinim duyduğunuz karakterleri içerip içermediğini denetleyebilmenizi sağlar. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Tüm önizleme türlerinde yazıtipi boyutunu değiştirmek için yakınlaştırma düğmelerini veya fare tekerleğini kullanabilirsiniz.</para>
+<para
+><guilabel
+>Unicode Bloku</guilabel
+> ve <guilabel
+>Unicode Yazısı</guilabel
+> önizleme kiplerinde bir karakterin üzerine fare işaretçisiyle geldiğinizde ek bir bilgi araç ipucu görüntülenir: Karakterin Unicode <guilabel
+>Kategori</guilabel
+>'si ve <guilabel
+> UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> ve<guilabel
+>XML Ondalık Varlığı</guilabel
+> türünden değerleri içerilir.</para>
+
+<para
+>İnternetten indirdiğiniz bir yazıtipini kurman için sağ alt köşedeki <guibutton
+>Kur</guibutton
+> düğmesine tıklayın. </para>
+
+<para
+>Yazıtipini yalnızca sizin için kullanılabilir olan kişisel veya sistem genelinde tüm kullanıcılar için kurabilirsiniz; ikincisi yönetici ayrıcalıkları gerektirecektir.</para>
+
+<para
+>Yazıtipleri genellikle <literal role="extension"
+>zip</literal
+> gibi bir arşiv biçiminde sağlanır. Bu arşivleri, yazıtipleri için basit bir önizleyici sağlayan &ark; ile açın. &kfontview; yazılımının genişletilmiş özelliklerinden yararlanmak için yazıtiplerini çıkarın ve &kfontview; ile açın. </para
+><para
+>Yeni kurulan yazıtiplerini kullanabilmeleri için uygulamaların yeniden başlatılması gerekir.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Yazım Denetimi</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Yazım Denetimi</keyword>
+<keyword
+>sözlük</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Yazım Denetimi</title>
+<para
+>Burada bulunan yapılandırma seçenekleri, çeşitli ücretsiz yazım denetleyicilerin bir ön yüzü olan &sonnet; kullanan tüm &kde; uygulamaları tarafından öntanımlı olarak kullanılır.</para>
+
+<para
+>&sonnet;'i kullanmak için; &eg;, <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> veya <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> gibi yazım denetleyicilerini ve diliniz için ilgili sözlükleri kurmanız gerekir.</para>
+
+<para
+>Buradaki yapılandırma seçenekleri her uygulama tarafından geçersiz kılınabilir.</para>
+
+<para
+><guilabel
+>Öntanımlı dil</guilabel
+> açılır kutusunda kullanılabilir sözlükler arasından &sonnet; için hangisini kullanacağınızı seçin. </para>
+
+<sect2 id="spell-options">
+<title
+>Seçenekler</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Dili otomatik algılamayı etkinleştir</guilabel
+></term>
+<listitem>
+<para
+>Bu özellik, çeşitli buluşsal yöntemlere (kullanılan betik, trigram eşleştirme ve yazım denetimi arka ucundaki kullanılabilir dillerdeki dil sıralaması) dayalıdır. Bu, çok dilli bir belgede dilin otomatik olarak değiştirilebilmesine olanak tanır. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Otomatik yazım denetimi öntanımlı olarak etkin</guilabel
+></term>
+<listitem>
+<para
+>Bu onay kutusuna bir işaret konulursa siz yazarken sözcüklerin yazılışı belgenizde denetlenecektir. Yanlış yazılanların altlarına kırmızı bir çizgi çizilir. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tümü BÜYÜK harfli sözcükleri atla</guilabel
+></term>
+<listitem>
+<para
+>Bu onay kutusu işaretlenirse tamamı BÜYÜK harflerden oluşan sözcüklerin yazım denetimi yapılmaz.</para>
+<tip
+><para
+>Bu, çok sayıda kısaltma kullanan belgeler için kullanışlıdır. Bu kutu işaretlenmezse bu kısaltmaların çoğu yanlış işaretlenecektir. Bu onay kutusu işaretlendiğinde, kısaltmalar yanlış yazılmış olarak işaretlenmez.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bitişik sözcükleria atla</guilabel
+></term>
+<listitem
+><para
+>Bu kutu işaretlenmemişse sözlükte ayrı olarak görünen ancak bitişik kullanılan sözcükler yazım hatası olarak kabul edilir. </para>
+
+<tip
+><para
+>Bu kutunun işaretlenmesi, uygulamaların web sitesi ve e-posta adreslerini yazım hataları nedeniyle işaretlemesini önlemeye yardımcı olacaktır. Bu adresler genellikle bitişik yazılan sözcükler içerir.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Yok sayılan sözcükler</title>
+<para
+>İletişim kutusunun alt yarısı, yazım denetleme programı tarafından yok sayılması gereken belirli sözcükleri (özel terminoloji, özel adlar vb. olabilir) belirlemenize olanak tanır.</para>
+
+<sect3
+><title
+>Yok sayılanlar listesine sözcük eklemek</title>
+<para
+>Bir sözcük eklemek için metin kutusuna sözcüğü girin ve <guibutton
+>Ekle</guibutton
+> düğmesine tıklayın.</para>
+</sect3>
+
+<sect3
+><title
+>Yok sayılanlar listesinden bir sözcük silmek</title>
+<para
+>Bir sözcüğü silmek için yok sayılan sözcükleri içeren listeden sözcüğü seçin ve üzerine &LMB; ile tıklayın. Sonrasında <guibutton
+>Kaldır</guibutton
+> düğmesini kullanın.</para>
+
+<para
+>İstediğiniz değişiklikleri yaptığınızda <guibutton
+>Uygula</guibutton
+> düğmesine tıklayın.</para>
+
+<para
+><guibutton
+>Öntanımlılar</guibutton
+> düğmesine tıklamak, tüm değerleri öntanımlı değerlerine geri yükler.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

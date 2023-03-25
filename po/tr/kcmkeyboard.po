@@ -7,13 +7,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2022-10-14 21:13+0300\n"
+"PO-Revision-Date: 2023-03-24 16:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -265,7 +265,7 @@ msgstr "Aşağı Taşı"
 #: kcm_keyboard.ui:350
 #, kde-format
 msgid "Spare layouts"
-msgstr "Düzenleri ayır"
+msgstr "Yedek düzenler"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
@@ -390,15 +390,15 @@ msgid ""
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"Destekleniyorsa Plasma başlatıldıktan sonra NumLock düğmesinin durumunu "
-"belirlemenizi sağlar.<p>NumLock düğmesini açık, kapalı veya Plasma'nın "
+"Destekleniyorsa Plasma başlatıldıktan sonra Sayı Kilidi düğmesinin durumunu "
+"belirlemenizi sağlar.<p>Sayı Kilidi düğmesini açık, kapalı veya Plasma'nın "
 "değiştirmeyeceği şekilde ayarlayabilirsiniz."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
 #, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "Plasma Başlangıcında NumLock Açık"
+msgstr "Plasma Başlangıcında Sayı Kilidi Durumu"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -416,13 +416,13 @@ msgstr "&Kapat"
 #: kcmmiscwidget.ui:111
 #, kde-format
 msgid "Leave unchan&ged"
-msgstr "&Değiştirme"
+msgstr "&Aynı bırak"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRate)
 #: kcmmiscwidget.ui:148
 #, kde-format
 msgid "&Rate:"
-msgstr "&Oran:"
+msgstr "&Hız:"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
