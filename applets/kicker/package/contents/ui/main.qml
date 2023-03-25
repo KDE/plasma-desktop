@@ -145,10 +145,10 @@ Item {
         favoritesModel: globalFavorites
 
         runners: {
-            const results = ["services", "krunner_systemsettings"];
+            const results = ["krunner_services", "krunner_systemsettings"];
 
             if (kicker.isDash) {
-                results.push("desktopsessions", "PowerDevil", "calculator", "unitconverter");
+                results.push("krunner_sessions", "krunner_powerdevil", "calculator", "unitconverter");
             }
 
             if (plasmoid.configuration.useExtraRunners) {
