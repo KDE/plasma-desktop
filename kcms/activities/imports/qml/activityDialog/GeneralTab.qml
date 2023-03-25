@@ -11,7 +11,7 @@ import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
-import org.kde.kiconthemes 1.0 as KIconThemes
+import org.kde.iconthemes 1.0 as KIconThemes
 
 Kirigami.FormLayout {
     id: root
