@@ -124,7 +124,6 @@ PlasmaCore.ToolTipArea {
     onContainsMouseChanged: if (containsMouse) {
         task.forceActiveFocus(Qt.MouseFocusReason);
         task.updateMainItemBindings();
-        tasks.toolTipAreaItem = task;
     } else {
         tasks.toolTipOpenedByClick = null;
     }
@@ -264,7 +263,7 @@ PlasmaCore.ToolTipArea {
 
     // Will also be called in activateTaskAtIndex(index)
     function updateMainItemBindings() {
-        if (mainItem.parentTask === task || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
+        if (mainItem.parentTask === task || (tasks.toolTipOpenedByClick === null && !task.active) || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
             return;
         }
 
@@ -291,6 +290,7 @@ PlasmaCore.ToolTipArea {
         mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
 
         mainItem.blockingUpdates = false;
+        tasks.toolTipAreaItem = task;
     }
 
     Connections {
