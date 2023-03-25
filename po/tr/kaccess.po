@@ -8,13 +8,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2022-03-12 16:14+0300\n"
+"PO-Revision-Date: 2023-03-24 16:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,16 +39,16 @@ msgid ""
 "The Shift key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
-"Shift düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler için etkin "
-"olacak."
+"Üst Karakter düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler "
+"için etkin olacak."
 
 #: kaccess.cpp:70
 msgid "The Shift key is now active."
-msgstr "Shift düğmesi şimdi etkin."
+msgstr "Üst Karakter düğmesi şimdi etkin."
 
 #: kaccess.cpp:71
 msgid "The Shift key is now inactive."
-msgstr "Shift düğmesi şimdi etkin değil."
+msgstr "Üst Karakter düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:75
 msgid ""
@@ -71,16 +71,16 @@ msgid ""
 "The Alt key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
-"Alt düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler için etkin "
-"olacak."
+"Seçenek düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler için "
+"etkin olacak."
 
 #: kaccess.cpp:82
 msgid "The Alt key is now active."
-msgstr "Alt düğmesi şimdi etkin."
+msgstr "Seçenek düğmesi şimdi etkin."
 
 #: kaccess.cpp:83
 msgid "The Alt key is now inactive."
-msgstr "Alt düğmesi şimdi etkin değil."
+msgstr "Seçenek düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:87
 msgid ""
@@ -151,40 +151,40 @@ msgid ""
 "The Alt Graph key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
-"AltGraph düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler için "
+"Üst Seçenek düğmesi kilitlendi ve şu andan itibaren takip eden düğmeler için "
 "etkin olacak."
 
 #: kaccess.cpp:112
 msgid "The Alt Graph key is now active."
-msgstr "AltGraph düğmesi şimdi etkin."
+msgstr "Üst Seçenek düğmesi şimdi etkin."
 
 #: kaccess.cpp:113
 msgid "The Alt Graph key is now inactive."
-msgstr "AltGraph düğmesi şimdi etkin değil."
+msgstr "Üst Seçenek düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:114
 msgid "The Num Lock key has been activated."
-msgstr "Num Lock düğmesi etkinleştirildi."
+msgstr "Sayı Kilidi düğmesi etkinleştirildi."
 
 #: kaccess.cpp:114
 msgid "The Num Lock key is now inactive."
-msgstr "Num Lock düğmesi şimdi etkin değil."
+msgstr "Sayı Kilidi düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:115
 msgid "The Caps Lock key has been activated."
-msgstr "Caps Lock düğmesi etkinleştirildi."
+msgstr "Büyük Harf düğmesi etkinleştirildi."
 
 #: kaccess.cpp:115
 msgid "The Caps Lock key is now inactive."
-msgstr "Caps Lock düğmesi şimdi etkin değil."
+msgstr "Seçenek düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:116
 msgid "The Scroll Lock key has been activated."
-msgstr "Scroll Lock düğmesi etkinleştirildi."
+msgstr "Sarma Kilidi düğmesi etkinleştirildi."
 
 #: kaccess.cpp:116
 msgid "The Scroll Lock key is now inactive."
-msgstr "Scroll Lock düğmesi şimdi etkin değil."
+msgstr "Sarma Kilidi düğmesi şimdi etkin değil."
 
 #: kaccess.cpp:327
 #, kde-format
@@ -200,7 +200,7 @@ msgstr "Erişebilirlik"
 #: kaccess.cpp:615
 #, kde-format
 msgid "AltGraph"
-msgstr "AltGraph"
+msgstr "Üst Seçenek"
 
 #: kaccess.cpp:617
 #, kde-format
@@ -369,7 +369,7 @@ msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
 "change this setting."
 msgstr ""
-"Shift düğmesini 8 saniye basılı tuttunuz veya bir uygulama bu ayarın "
+"Üst Karakter düğmesini 8 saniye basılı tuttunuz veya bir uygulama bu ayarın "
 "değişmesini istedi."
 
 #: kaccess.cpp:832
@@ -378,13 +378,13 @@ msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
 "requested to change this setting."
 msgstr ""
-"Shift düğmesine art arda 5 kere bastınız veya bir uygulama bu ayarın "
+"Üst Karakter düğmesine art arda 5 kere bastınız veya bir uygulama bu ayarın "
 "değişmesini istedi."
 
 #: kaccess.cpp:836
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "%1'e bastınız veya bir uygulama bu ayarın değişmesini istedi."
+msgstr "%1 düğmesine bastınız veya bir uygulama bu ayarın değişmesini istedi."
 
 #: kaccess.cpp:841
 #, kde-format
