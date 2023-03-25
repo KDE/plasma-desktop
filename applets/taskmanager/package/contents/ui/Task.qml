@@ -191,6 +191,7 @@ PlasmaCore.ToolTipArea {
     }
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
+    Keys.onMenuPressed: contextMenuTimer.start()
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, plasmoid, tasks)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
     Keys.onSpacePressed: Keys.onReturnPressed(event);
