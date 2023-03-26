@@ -8,10 +8,10 @@ find_package (KF6GlobalAccel ${KF6_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF6Activities ${KF6_DEP_VERSION} CONFIG REQUIRED)
 
 set (KAMD_KCM_DATADIR
-   ${KDE_INSTALL_DATADIR_KF6}/kcm_recentFiles/workspace/settings/
+   ${KDE_INSTALL_DATADIR}/kcm_recentFiles/workspace/settings/
    )
 
-if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR_KF6}")
+if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR}")
    set (KAMD_KCM_DATADIR "${CMAKE_INSTALL_PREFIX}/${KAMD_KCM_DATADIR}")
 endif ()
 
