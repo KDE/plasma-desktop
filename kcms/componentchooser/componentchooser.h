@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 #include <QString>
 #include <QVariant>
 

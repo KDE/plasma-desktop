@@ -9,7 +9,7 @@
 
 #include "inputbackend.h"
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <kwindowsystem.h>
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()

@@ -19,8 +19,8 @@
 #include <KWindowEffects>
 #include <KWindowSystem>
 
+#include <KApplicationTrader>
 #include <KIO/ApplicationLauncherJob>
-#include <KService/KApplicationTrader>
 
 #include <QAction>
 #include <QActionGroup>

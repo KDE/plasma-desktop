@@ -7,7 +7,7 @@
 #include "applicationmodel.h"
 
 #include <KApplicationTrader>
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 #include <KService>
 
 #include <optional>
