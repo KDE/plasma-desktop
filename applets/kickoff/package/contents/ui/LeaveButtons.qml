@@ -136,8 +136,8 @@ RowLayout {
             Accessible.role: Accessible.MenuItem
             onClicked: filteredMenuItemsModel.trigger(index)
         }
-        onObjectAdded: contextMenu.addMenuItem(object)
-        onObjectRemoved: contextMenu.removeMenuItem(object)
+        onObjectAdded: (index, object) => contextMenu.addMenuItem(object)
+        onObjectRemoved: (index, object) => contextMenu.removeMenuItem(object)
     }
 
     PlasmaExtras.Menu {
