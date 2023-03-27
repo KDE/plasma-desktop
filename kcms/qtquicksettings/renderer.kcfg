@@ -18,6 +18,7 @@
                 <choice name="automaticbackend" />
                 <choice name="opengl" />
                 <choice name="software" />
+                <choice name="vulkan" />
             </choices>
             <default>automaticbackend</default>
         </entry>
