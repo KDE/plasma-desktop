@@ -1,18 +1,18 @@
 # translation of plasma_applet_pager.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2019-10-19 21:48+0200\n"
+"PO-Revision-Date: 2023-03-26 19:37+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -119,13 +119,11 @@ msgid "Shows the desktop"
 msgstr "Mostra o escritorio"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "...and %1 other window"
-#| msgid_plural "...and %1 other windows"
+#, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "…e %1 xanela máis"
-msgstr[1] "e %1 xanelas máis"
+msgstr[0] "…e outra xanela"
+msgstr[1] "…e outras %1 xanelas"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
@@ -142,22 +140,20 @@ msgstr[0] "%1 xanela minimizada:"
 msgstr[1] "%1 xanelas minimizadas:"
 
 #: package/contents/ui/main.qml:449
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgid "Desktop %1"
-msgstr "O nome do escritorio"
+msgstr "Escritorio %1"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Ir a %1"
 
 #: package/contents/ui/main.qml:595
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager..."
+#, kde-format
 msgid "Show Activity Manager…"
-msgstr "Mostrar o xestor de actividades…"
+msgstr "Mostrar o xestor da actividades…"
 
 #: package/contents/ui/main.qml:598
 #, kde-format
@@ -170,8 +166,7 @@ msgid "Remove Virtual Desktop"
 msgstr "Retirar o escritorio virtual"
 
 #: package/contents/ui/main.qml:602
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops..."
+#, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "Configurar os escritorios virtuais…"
 
