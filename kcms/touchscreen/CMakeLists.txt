@@ -35,6 +35,7 @@ target_link_libraries(kcm_touchscreen
     KF6::I18n
     KF6::KCMUtilsQuick
 
+    Qt::Gui
     Qt::DBus
     kwindevices
 )
