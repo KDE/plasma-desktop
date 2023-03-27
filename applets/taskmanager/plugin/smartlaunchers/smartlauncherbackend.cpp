@@ -17,7 +17,7 @@
 
 #include <algorithm>
 
-#include <notificationmanager/settings.h>
+#include <settings.h>
 
 using namespace SmartLauncher;
 using namespace NotificationManager;

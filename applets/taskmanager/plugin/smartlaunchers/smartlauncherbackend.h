@@ -11,7 +11,7 @@
 #include <QObject>
 #include <QVariantMap>
 
-#include <notificationmanager/jobsmodel.h>
+#include <jobsmodel.h>
 
 class QDBusServiceWatcher;
 class QString;
