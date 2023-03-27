@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2019-04-12 23:06+0200\n"
+"PO-Revision-Date: 2023-03-26 14:08+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -69,10 +70,9 @@ msgid "File types:"
 msgstr "Tipos de ficheiro:"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Mostrar todos os ficheiros"
+msgstr "Mostrar os ficheiros agochados:"
 
 #: package/contents/ui/ConfigFilter.qml:179
 #, kde-format
@@ -105,9 +105,7 @@ msgid "Use a custom icon"
 msgstr "Usar unha icona personalizada."
 
 #: package/contents/ui/ConfigIcons.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Escoller…"
@@ -127,30 +125,28 @@ msgstr "Disposición:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Da esquerda á dereita"
 
 #: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Da dereita á esquerda"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "De arriba a abaixo"
 
 #: package/contents/ui/ConfigIcons.qml:143
-#, fuzzy, kde-format
-#| msgid "Align left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Aliñar á esquerda"
 
 #: package/contents/ui/ConfigIcons.qml:144
-#, fuzzy, kde-format
-#| msgid "Align right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Aliñar á dereita"
@@ -166,50 +162,43 @@ msgid "Sorting:"
 msgstr "Orde:"
 
 #: package/contents/ui/ConfigIcons.qml:181
-#, fuzzy, kde-format
-#| msgid "Manual"
+#, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Manual"
 
 #: package/contents/ui/ConfigIcons.qml:182
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Nome"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Tamaño"
 
 #: package/contents/ui/ConfigIcons.qml:184
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tipo"
 
 #: package/contents/ui/ConfigIcons.qml:185
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Data"
 
 #: package/contents/ui/ConfigIcons.qml:196
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Descendente"
 
 #: package/contents/ui/ConfigIcons.qml:204
-#, fuzzy, kde-format
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Primeiro os cartafoles"
@@ -221,8 +210,7 @@ msgid "View mode:"
 msgstr "Modo da vista:"
 
 #: package/contents/ui/ConfigIcons.qml:220
-#, fuzzy, kde-format
-#| msgid "List"
+#, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Lista"
@@ -231,7 +219,7 @@ msgstr "Lista"
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "Grade"
 
 #: package/contents/ui/ConfigIcons.qml:232
 #, kde-format
@@ -239,15 +227,13 @@ msgid "Icon size:"
 msgstr "Tamaño das iconas:"
 
 #: package/contents/ui/ConfigIcons.qml:247
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Pequeno"
 
 #: package/contents/ui/ConfigIcons.qml:256
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Grande"
@@ -258,22 +244,19 @@ msgid "Label width:"
 msgstr "Anchura das etiquetas:"
 
 #: package/contents/ui/ConfigIcons.qml:268
-#, fuzzy, kde-format
-#| msgid "Narrow"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Estreita"
 
 #: package/contents/ui/ConfigIcons.qml:269
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
-msgstr "Mediana"
+msgstr "Media"
 
 #: package/contents/ui/ConfigIcons.qml:270
-#, fuzzy, kde-format
-#| msgid "Wide"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Ancha"
@@ -286,52 +269,45 @@ msgstr "Liñas de texto:"
 #: package/contents/ui/ConfigIcons.qml:294
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Ao cubrir iconas:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, fuzzy, kde-format
-#| msgid "Tooltips"
+#, kde-format
 msgid "Show tooltips"
-msgstr "Axudiñas"
+msgstr "Mostrar as axudiñas"
 
 #: package/contents/ui/ConfigIcons.qml:303
-#, fuzzy, kde-format
-#| msgid "Selection markers"
+#, kde-format
 msgid "Show selection markers"
-msgstr "Marcadores de selección"
+msgstr "Mostrar os marcadores de selección"
 
 #: package/contents/ui/ConfigIcons.qml:310
-#, fuzzy, kde-format
-#| msgid "Folder preview popups"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "Axudiñas da vista previa dos cartafoles"
+msgstr "Mostrar as axudiñas da vista previa dos cartafoles"
 
 #: package/contents/ui/ConfigIcons.qml:320
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Rename:"
-msgstr "&Renomear"
+msgstr "Cambiar de nome:"
 
 #: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
-msgstr ""
+msgstr "Cambiar de nome in situ premendo o texto do elemento seleccionado"
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgid "Previews:"
-msgstr "Mostrar vistas previas"
+msgstr "Vistas previas:"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Preview thumbnails"
+#, kde-format
 msgid "Show preview thumbnails"
-msgstr "Miniaturas da vista previa"
+msgstr "Mostras as miniaturas de vista previa"
 
 #: package/contents/ui/ConfigIcons.qml:345
-#, fuzzy, kde-format
-#| msgid "Configure Preview Plugins..."
+#, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Configurar os complementos de vista previa…"
 
@@ -361,8 +337,7 @@ msgid "Custom location:"
 msgstr "Lugar personalizado:"
 
 #: package/contents/ui/ConfigLocation.qml:138
-#, fuzzy, kde-format
-#| msgid "Type path or URL..."
+#, kde-format
 msgid "Type path or URL…"
 msgstr "Escriba unha ruta ou URL…"
 
@@ -392,8 +367,7 @@ msgid "Custom title"
 msgstr "Título personalizado"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Enter custom title..."
+#, kde-format
 msgid "Enter custom title…"
 msgstr "Escriba un título personalizado…"
 
@@ -405,17 +379,17 @@ msgstr "Rotar"
 #: package/contents/ui/ConfigOverlay.qml:181
 #, kde-format
 msgid "Open Externally"
-msgstr ""
+msgstr "Abrir externamente"
 
 #: package/contents/ui/ConfigOverlay.qml:193
 #, kde-format
 msgid "Hide Background"
-msgstr ""
+msgstr "Agochar o fondo"
 
 #: package/contents/ui/ConfigOverlay.qml:193
 #, kde-format
 msgid "Show Background"
-msgstr ""
+msgstr "Mostrar o fondo"
 
 #: package/contents/ui/ConfigOverlay.qml:241
 #, kde-format
@@ -428,10 +402,9 @@ msgid "Preview Plugins"
 msgstr "Vistas previas dos complementos"
 
 #: package/contents/ui/main.qml:356
-#, fuzzy, kde-format
-#| msgid "Configure Desktop..."
+#, kde-format
 msgid "Configure Desktop and Wallpaper…"
-msgstr "Configurar o escritorio…"
+msgstr "Configurar o escritorio e o fondo…"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format
@@ -480,50 +453,43 @@ msgid "Sort By"
 msgstr "Ordenar por"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
 msgstr "Sen ordenar"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
 msgstr "Nome"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
 msgstr "Tamaño"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
 msgstr "Tipo"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
 msgstr "Data"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
 msgstr "Descendente"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
 msgstr "Primeiro os cartafoles"
@@ -534,78 +500,70 @@ msgid "Icon Size"
 msgstr "Tamaño das iconas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr "Pequerrecha"
+msgstr "Pequerrecho"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "Pequeno"
+msgstr "Moi pequeno"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "Pequeno"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "Small Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr "Pequena"
+msgstr "Medianiño"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr "Mediana"
+msgstr "Mediano"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "Grande"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "Huge"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
 msgstr "Enorme"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "Dispor en"
+msgstr "Dispor"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "Da esquerda á dereita"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "Da dereita á esquerda"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "De arriba a abaixo"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -613,18 +571,16 @@ msgid "Align"
 msgstr "Aliñar"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
-msgstr "Á esquerda"
+msgstr "Esquerda"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
-msgstr "Á dereita"
+msgstr "Dereita"
 
 #: plugins/folder/viewpropertiesmenu.cpp:93
 #, kde-format
@@ -632,8 +588,7 @@ msgid "Show Previews"
 msgstr "Mostrar vistas previas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
-#, fuzzy, kde-format
-#| msgid "Locked"
+#, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloqueado"
