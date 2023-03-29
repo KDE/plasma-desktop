@@ -13,6 +13,7 @@ import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -48,7 +49,7 @@ ColumnLayout {
             ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", cfg_icon)
             ToolTip.visible: iconButton.hovered && cfg_icon.length > 0
 
-            KQuickAddons.IconDialog {
+            KIconThemes.IconDialog {
                 id: iconDialog
                 onIconNameChanged: cfg_icon = iconName || Tools.defaultIconName
             }

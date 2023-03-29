@@ -12,7 +12,7 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.1
+import org.kde.iconthemes as KIconThemes
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -45,7 +45,7 @@ Item {
 
     readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
-    IconDialog {
+    KIconThemes.IconDialog {
         id: iconDialog
         onIconNameChanged: cfg_icon = iconName || "folder";
     }
