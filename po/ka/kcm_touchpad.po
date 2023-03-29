@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-27 06:51+0100\n"
+"PO-Revision-Date: 2023-03-28 06:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -505,6 +505,8 @@ msgid ""
 "If there was no keyboard activity for more than specified\n"
 "number of milliseconds, touchpad will be enabled again"
 msgstr ""
+"თუ კლავიატურას არ შეეხებით მითითებულზე უფრო მეტ\n"
+"მილიწამში, თაჩპედი ისევ ჩაირთვება"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
@@ -525,6 +527,9 @@ msgid ""
 "You will be still able to move pointer using touchpad and perform clicks "
 "with hardware buttons."
 msgstr ""
+"წკაპის ემულაციისა და გადახვევის გამორთვა.\n"
+"თაჩპედით კურსორის გამოძრავება და ფიზიკურ ღილაკებზე დაჭერა ჯერ კიდევ "
+"შეგეძლებათ."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:109
@@ -558,6 +563,9 @@ msgid ""
 "You can add them to this list so that they will be ignored when they're "
 "plugged in."
 msgstr ""
+"ზოგიერთ მოწყობილობას შეიძლება სულ ტყუილად ვთვლით თაგუნად.\n"
+"ამ სიაში შეგიძლიათ ჩაამატოთ მოწყობილობები, რომლებიც შეერთებისას გამოტოვებული "
+"იქნება."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
 #: kcm/xlib/ui/pointermotion.ui:14
@@ -651,12 +659,14 @@ msgstr "მაქსიმალური ფაქტორი:"
 #, kde-format
 msgid "Finger pressure at which minimum pressure motion factor is applied"
 msgstr ""
+"თითის დაწოლა, როცა გამოიყენება მინიმალური დაწოლის გადაადგილების ფაქტორი"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
 #: kcm/xlib/ui/pointermotion.ui:166
 #, kde-format
 msgid "Finger pressure at which maximum pressure motion factor is applied"
 msgstr ""
+"თითის დაწოლა, როცა გამოიყენება მაქსიმალური დაწოლის გადაადგილების ფაქტორი"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
 #: kcm/xlib/ui/pointermotion.ui:179
