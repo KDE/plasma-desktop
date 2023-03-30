@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-03-30 02:10+0000\n"
 "PO-Revision-Date: 2023-01-11 21:52+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -50,18 +50,18 @@ msgstr "Uneko jardueran"
 msgid "Show in Favorites"
 msgstr "Erakutsi gogokoetan"
 
-#: package/contents/ui/ConfigGeneral.qml:37
+#: package/contents/ui/ConfigGeneral.qml:38
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Aldatu aplikazio-abiarazlearen ikonoa"
 
-#: package/contents/ui/ConfigGeneral.qml:44
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,144 +71,144 @@ msgstr ""
 "Uneko ikonoa %1 da. Egin klik uneko ikonoa aldatzeko menua irekitzeko edo "
 "berrezarri lehenetsitako ikonora."
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonoaren izena \"%1\" da"
 
-#: package/contents/ui/ConfigGeneral.qml:81
+#: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Hautatu..."
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Hautatu Aplikazio-abiarazlearentzako ikono bat"
 
-#: package/contents/ui/ConfigGeneral.qml:87
+#: package/contents/ui/ConfigGeneral.qml:88
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Berrezarri lehenetsitako ikonora"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Kendu ikonoa"
 
-#: package/contents/ui/ConfigGeneral.qml:104
+#: package/contents/ui/ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Testu-etiketa:"
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: package/contents/ui/ConfigGeneral.qml:107
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Tekleatu hemen testu-etiketa bat gehitzeko"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Berrezarri menuko etiketa"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: package/contents/ui/ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Testu etiketa bat ezin da ezarri panela bertikala denean."
 
-#: package/contents/ui/ConfigGeneral.qml:146
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Orokorra:"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Aplikazioak beti alfabetikoki sailkatu"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:153
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Erabili zerrenda-trinko elementu estiloa"
 
-#: package/contents/ui/ConfigGeneral.qml:158
+#: package/contents/ui/ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatikoki ezgaitua ukimen moduan"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: package/contents/ui/ConfigGeneral.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Konfiguratu gaitutako bilaketa pluginak..."
 
-#: package/contents/ui/ConfigGeneral.qml:177
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show favorites:"
 msgstr "Erakutsi gogokoak:"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: package/contents/ui/ConfigGeneral.qml:186
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgid "Show other applications:"
 msgstr "Erakutsi beste aplikazio batzuk:"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:216
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Erakutsi honetarako botoiak:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:217
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
 msgstr "Energia"
 
-#: package/contents/ui/ConfigGeneral.qml:225
+#: package/contents/ui/ConfigGeneral.qml:226
 #, kde-format
 msgid "Session"
 msgstr "Saioa"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:235
 #, kde-format
 msgid "Power and session"
 msgstr "Energia eta saioa"
 
-#: package/contents/ui/ConfigGeneral.qml:243
+#: package/contents/ui/ConfigGeneral.qml:244
 #, kde-format
 msgid "Show action button captions"
 msgstr "Erakutsi ekintza botoiko epigrafeak"
