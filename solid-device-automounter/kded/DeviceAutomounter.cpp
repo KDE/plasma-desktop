@@ -10,6 +10,7 @@
 
 #include <Solid/DeviceNotifier>
 #include <Solid/StorageAccess>
+#include <Solid/StorageDrive>
 #include <Solid/StorageVolume>
 
 #include <QDBusConnection>
@@ -94,6 +95,23 @@ void DeviceAutomounter::deviceAdded(const QString &udi)
     m_settings->load();
 
     Solid::Device dev(udi);
+
+    Solid::StorageDrive *drive = dev.parent().as<Solid::StorageDrive>();
+    if (!drive) {
+        return;
+    }
+
+    // If the partition appears a long time after the media is detected,
+    // the media was not actually plugged in, and it just appeared for
+    // a different reason. Possible causes:
+    //  - an eject call failed; which may happen when we try to unmount
+    //  - the user repartitioned the media
+    // Neither should result in an automount
+    const QDateTime timeMediaInserted = drive->timeMediaDetected();
+    if (timeMediaInserted.isValid() && timeMediaInserted.secsTo(QDateTime::currentDateTimeUtc()) > 5) {
+        return;
+    }
+
     automountDevice(dev, AutomounterSettings::Attach);
     m_settings->save();
 
