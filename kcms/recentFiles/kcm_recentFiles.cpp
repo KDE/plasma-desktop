@@ -112,7 +112,6 @@ RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
     d->messageWidget->setVisible(false);
 
     addConfig(d->pluginConfig, this);
-    addConfig(d->mainConfig, this);
 }
 
 RecentFilesKcm::~RecentFilesKcm()
