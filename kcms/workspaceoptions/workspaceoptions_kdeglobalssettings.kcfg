@@ -17,5 +17,11 @@
       <label>Left-click in scrollbar track moves scrollbar by one page</label>
       <default>false</default>
     </entry>
+    <entry name="doubleClickInterval" key="DoubleClickInterval" type="Int">
+      <label>Double click interval</label>
+      <default>400</default>
+      <min>100</min>
+      <max>2000</max>
+    </entry>
   </group>
 </kcfg>

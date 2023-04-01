@@ -319,5 +319,47 @@ KCM.SimpleKCM {
         // "click to zoom the handle" behavior because Qt doesn't invert the
         // middle-click functionality when using this; see
         // https://bugreports.qt.io/browse/QTBUG-80728
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Double-click interval:")
+            spacing: Kirigami.Units.smallSpacing
+
+            QQC2.SpinBox {
+                id: spinbox
+                from: 100
+                to: 2000
+                stepSize: 100
+
+                validator: IntValidator {
+                    bottom: Math.min(spinbox.from, spinbox.to)
+                    top: Math.max(spinbox.from, spinbox.to)
+                }
+
+                textFromValue: (value, locale) => {
+                    return i18np("%1 msec", "%1 msec", value)
+                }
+
+                valueFromText: (text, locale) => {
+                    return Number.fromLocaleString(locale, text.replace(i18n("msec"), ""))
+                }
+
+                onValueModified: kcm.globalsSettings.doubleClickInterval = value
+
+                value: kcm.globalsSettings.doubleClickInterval
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "doubleClickInterval"
+                }
+            }
+
+            KCM.ContextualHelpButton {
+                toolTipText: i18n("Two clicks within this duration are considered a double-click. Some applications may not honor this setting.")
+            }
+        }
     }
 }
