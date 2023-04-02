@@ -315,7 +315,7 @@ PlasmaComponents.ContextMenu {
             function refresh() {
                 clearMenuItems();
 
-                if (virtualDesktopInfo.numberOfDesktops <= 1) {
+                if (virtualDesktopInfo.numberOfDesktops <= 1 || !virtualDesktopsMenuItem.enabled) {
                     return;
                 }
 
