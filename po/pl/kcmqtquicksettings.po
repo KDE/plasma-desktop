@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2018.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2018, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-06-26 00:19+0000\n"
-"PO-Revision-Date: 2018-04-28 06:39+0100\n"
+"PO-Revision-Date: 2023-04-01 10:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,7 +55,7 @@ msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
 "you know what you are doing."
 msgstr ""
-"Te ustawienia dostosowują ustawienia QtQuick używane przez Plazmę. Zmieniaj "
+"Te ustawienia dostosują ustawienia QtQuick używane przez Plazmę. Zmień je "
 "tylko wtedy, gdy wiesz, co robisz."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -69,7 +69,7 @@ msgstr "Silnik wyświetlania:"
 #: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Automatic"
-msgstr "Samoczynnie"
+msgstr "Sam wybierz"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:51
@@ -81,7 +81,7 @@ msgstr "Open GL"
 #: kcmqtquicksettingswidget.ui:56
 #, kde-format
 msgid "Software"
-msgstr "Programowo"
+msgstr "Programowy"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmqtquicksettingswidget.ui:64
@@ -99,7 +99,7 @@ msgstr "Pętla wyświetlania:"
 #: kcmqtquicksettingswidget.ui:84
 #, kde-format
 msgid "Basic"
-msgstr "Podstawowe"
+msgstr "Podstawowa"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:89
