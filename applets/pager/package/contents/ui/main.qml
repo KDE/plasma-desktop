@@ -147,6 +147,7 @@ MouseArea {
             }
 
             increment += (increment < 0) ? 1 : -1;
+            wheelDelta = 0;
         }
     }
 
