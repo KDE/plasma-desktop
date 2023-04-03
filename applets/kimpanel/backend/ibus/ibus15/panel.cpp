@@ -1113,7 +1113,6 @@ static void ibus_panel_impanel_update_lookup_table(IBusPanelService *panel, IBus
     guint i;
 
     gchar label[16][4]; // WARNING large enough I think --- nihui
-    const gchar *candidate;
 
     GVariantBuilder builder_labels;
     GVariantBuilder builder_candidates;
@@ -1129,7 +1128,7 @@ static void ibus_panel_impanel_update_lookup_table(IBusPanelService *panel, IBus
         //         label = ibus_lookup_table_get_label(lookup_table, i)->text;
         g_variant_builder_add(&builder_labels, "s", label[i - start]);
 
-        candidate = ibus_text_get_text(ibus_lookup_table_get_candidate(lookup_table, i));
+        const gchar *candidate = ibus_text_get_text(ibus_lookup_table_get_candidate(lookup_table, i));
         g_variant_builder_add(&builder_candidates, "s", candidate);
 
         g_variant_builder_add(&builder_attrs, "s", attr);
