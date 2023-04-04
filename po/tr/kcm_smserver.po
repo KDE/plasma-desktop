@@ -81,8 +81,9 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 "Bu ayar açıksa oturumu ve bilgisayarı kapattığınızda, yeniden "
-"başlattığınızda, güç düğmesine bastığınızda veya <guilabel>Ayrıl…</guilabel> "
-"etiketli menü ögelerine tıkladığınızda oturum kapatma onay ekranı gösterilir."
+"başlattığınızda, güç düğmesine bastığınızda veya <interface>Ayrıl…</"
+"interface> etiketli menü ögelerine tıkladığınızda oturum kapatma onay ekranı "
+"gösterilir."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -196,80 +197,3 @@ msgstr "Oturum açarken"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Oturumlardan ayrı tutulacak uygulamalar"
-
-#~ msgid ""
-#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
-#~ "includes options such as whether or not the session exit (logout) should "
-#~ "be confirmed, whether the session should be restored again when logging "
-#~ "in and whether the computer should be automatically shut down after "
-#~ "session exit by default."
-#~ msgstr ""
-#~ "<h1>Oturum Yöneticisi</h1> Oturum yöneticisini buradan "
-#~ "yapılandırabilirsiniz. Bu, oturum çıkışının (logout) onaylanıp "
-#~ "onaylanmaması, oturum açıldığında oturumun yeniden geri yüklenip "
-#~ "yüklenmemesi ve öntanımlı olarak oturum çıkışından sonra bilgisayarın "
-#~ "otomatik olarak kapatılması gerekip gerekmediği gibi seçenekleri içerir."
-
-#~ msgid "Default option:"
-#~ msgstr "Öntanımlı seçenek:"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Log Out"
-#~ msgstr "Çıkış Yap"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Restart"
-#~ msgstr "Yeniden Başlat"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Shut Down"
-#~ msgstr "Kapat"
-
-#~ msgid "General:"
-#~ msgstr "Genel:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Confirm logout"
-#~ msgstr "Çıkışı onayla"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "End current session"
-#~ msgstr "Geçerli oturumu sonlandır"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Restart computer"
-#~ msgstr "Bilgisayarı yeniden başlat"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Turn off computer"
-#~ msgstr "Bilgisayarı kapat"
-
-#~ msgid "When logging in:"
-#~ msgstr "Oturum açarken:"
-
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "Restore last session"
-#~ msgstr "Son oturumu geri yükle"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "Oturumlarda kaydedilmesini istemediğiniz uygulamaları burada iki nokta "
-#~ "üstüste ile ayırarak liste şeklinde yazabilirsiniz. Oturumu tekrar "
-#~ "açtığınızda bu programlar başlatılmayacaklardır. Örneğin 'xterm:xconsole' "
-#~ "ya da 'xterm,konsole' gibi."
-
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "Kapatma seçenekleri sun"
-
-#~ msgid "Offer shutdown options"
-#~ msgstr "Kapatma seçenekleri sun"
