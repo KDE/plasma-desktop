@@ -39,12 +39,6 @@ int main(int argc, char *argv[])
 
     // Note: If you update this code, update main.cpp as well.
 
-    // use a default value for theme only if it's not configured at all, not even in X resources
-    if (theme.isEmpty() && backend->currentCursorTheme().isEmpty()) {
-        theme = "breeze_cursors";
-        ret = 10; // means to switch to default
-    }
-
     backend->applyCursorTheme(theme, size.toInt());
 
     delete backend;

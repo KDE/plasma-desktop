@@ -21,8 +21,6 @@
 #include <KSharedConfig>
 #include <QFile>
 
-#include <updatelaunchenvjob.h>
-
 #include <X11/X.h>
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
@@ -112,21 +110,10 @@ void X11Backend::kcmInit()
 {
     auto config = KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals);
     KConfigGroup group = config->group("Mouse");
-    QString theme = group.readEntry("cursorTheme", QString());
+    const QString theme = group.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
     const int size = group.readEntry("cursorSize", 24);
 
     // Note: If you update this code, update kapplymousetheme as well.
 
-    // use a default value for theme only if it's not configured at all, not even in X resources
-    if (theme.isEmpty() && currentCursorTheme().isEmpty()) {
-        theme = "breeze_cursors";
-    }
     applyCursorTheme(theme, size);
-
-    // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
-    // variables when launching applications.
-    if (!theme.isEmpty()) {
-        UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_THEME"), theme);
-    }
-    UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_SIZE"), QByteArray::number(size));
 }
