@@ -29,6 +29,7 @@ function wheelActivateNextPrevTask(anchor, wheelDelta, eventDelta, wheelSkipMini
     while (increment != 0) {
         activateNextPrevTask(anchor, increment < 0, wheelSkipMinimized, tasks)
         increment += (increment < 0) ? 1 : -1;
+        wheelDelta = 0;
     }
 
     return wheelDelta;
