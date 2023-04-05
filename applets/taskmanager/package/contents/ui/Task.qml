@@ -199,11 +199,13 @@ PlasmaCore.ToolTipArea {
     Keys.onDownPressed: Keys.onRightPressed(event)
     Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
         tasksModel.move(task.itemIndex, task.itemIndex - 1);
+        openWindowToolTipDelegate.parentTask = null;
     } else {
         event.accepted = false;
     }
     Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
         tasksModel.move(task.itemIndex, task.itemIndex + 1);
+        openWindowToolTipDelegate.parentTask = null;
     } else {
         event.accepted = false;
     }
