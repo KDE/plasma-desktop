@@ -13,12 +13,7 @@ import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.iconthemes 1.0 as KIconThemes
 
-Kirigami.FormLayout {
-    id: root
-
-    function setFocus() {
-        activityName.forceActiveFocus();
-    }
+Rectangle {
 
     property string activityId: ""
 
@@ -28,51 +23,58 @@ Kirigami.FormLayout {
     property alias activityIsPrivate   : activityIsPrivate.checked
     property alias activityShortcut    : activityShortcut.keySequence
 
-    Item {
-        height: Kirigami.Units.smallSpacing
-    }
+    color: Kirigami.Theme.backgroundColor
 
-    QQC2.Button {
-        id: activityIcon
-        implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
-        implicitWidth: height
-        icon.height: Kirigami.Units.iconSizes.medium
-        icon.width: Kirigami.Units.iconSizes.medium
-        icon.name: "activities"
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Icon:")
+    Kirigami.FormLayout {
 
-        KIconThemes.IconDialog {
-            id: iconDialog
-            onIconNameChanged: iconName => activityIcon.icon.name = iconName
+        anchors.fill: parent
+
+        Item {
+            height: Kirigami.Units.smallSpacing
         }
 
-        onClicked: {
-            iconDialog.open();
+        QQC2.Button {
+            id: activityIcon
+            implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
+            implicitWidth: height
+            icon.height: Kirigami.Units.iconSizes.medium
+            icon.width: Kirigami.Units.iconSizes.medium
+            icon.name: "activities"
+            Kirigami.FormData.label: i18nd("kcm_activities5", "Icon:")
+
+            KIconThemes.IconDialog {
+                id: iconDialog
+                onIconNameChanged: iconName => activityIcon.icon.name = iconName
+            }
+
+            onClicked: {
+                iconDialog.open();
+            }
         }
-    }
 
-    QQC2.TextField {
-        id: activityName
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Name:")
-    }
+        QQC2.TextField {
+            id: activityName
+            Kirigami.FormData.label: i18nd("kcm_activities5", "Name:")
+        }
 
-    QQC2.TextField {
-        id: activityDescription
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Description:")
-    }
+        QQC2.TextField {
+            id: activityDescription
+            Kirigami.FormData.label: i18nd("kcm_activities5", "Description:")
+        }
 
-    Kirigami.Separator {
-        Kirigami.FormData.isSection: true
-    }
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
 
-    QQC2.CheckBox {
-        id: activityIsPrivate
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Privacy:")
-        text: i18nd("kcm_activities5", "Do not track usage for this activity")
-    }
+        QQC2.CheckBox {
+            id: activityIsPrivate
+            Kirigami.FormData.label: i18nd("kcm_activities5", "Privacy:")
+            text: i18nd("kcm_activities5", "Do not track usage for this activity")
+        }
 
-    KQuickControls.KeySequenceItem {
-        id: activityShortcut
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Shortcut for switching:")
+        KQuickControls.KeySequenceItem {
+            id: activityShortcut
+            Kirigami.FormData.label: i18nd("kcm_activities5", "Shortcut for switching:")
+        }
     }
 }

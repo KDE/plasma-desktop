@@ -48,9 +48,6 @@ public Q_SLOTS:
     void create();
     void saveChanges(const QString &activityId);
 
-protected:
-    void showEvent(QShowEvent *event) override;
-
 private:
     Dialog(QObject *parent = nullptr);
 

@@ -54,49 +54,11 @@ public:
 
     Dialog *const q;
     QVBoxLayout *layout;
-    QTabWidget *tabs;
 
-    QQuickWidget *tabGeneral;
+    QQuickWidget *view;
     KMessageWidget *message;
     QDialogButtonBox *buttons;
     QString defaultOKText;
-
-    QQuickWidget *createTab(const QString &title, const QString &file)
-    {
-        auto view = new QQuickWidget();
-
-        view->setResizeMode(QQuickWidget::SizeRootObjectToView);
-
-        view->setClearColor(QGuiApplication::palette().window().color());
-
-        view->rootContext()->setContextProperty(QStringLiteral("dialog"), q);
-
-        view->rootContext()->setContextObject(new KLocalizedContext(view));
-
-        const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) + "qml/activityDialog/" + file;
-
-        if (QFile::exists(sourceFile)) {
-            view->setSource(QUrl::fromLocalFile(sourceFile));
-            tabs->addTab(view, title);
-        } else {
-            message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1", sourceFile));
-            message->setVisible(true);
-        }
-
-        return view;
-    }
-
-    void setFocus(QQuickWidget *widget)
-    {
-        // TODO: does not work...
-        widget->setFocus();
-        auto root = widget->rootObject();
-
-        if (!root)
-            return;
-
-        QMetaObject::invokeMethod(widget->rootObject(), "setFocus", Qt::DirectConnection);
-    }
 
     QString activityId;
 
@@ -140,10 +102,22 @@ Dialog::Dialog(QObject *parent)
     d->message->setWordWrap(true);
     d->layout->addWidget(d->message);
 
-    // Tabs
-    d->tabs = new QTabWidget(this);
-    d->layout->addWidget(d->tabs);
-    d->tabGeneral = d->createTab(i18n("General"), QStringLiteral("GeneralTab.qml"));
+    // Main view
+    d->view = new QQuickWidget();
+    d->view->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    d->view->rootContext()->setContextProperty(QStringLiteral("dialog"), this);
+    d->view->rootContext()->setContextObject(new KLocalizedContext(d->view));
+
+    const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) + "qml/activityDialog/GeneralTab.qml";
+
+    if (QFile::exists(sourceFile)) {
+        d->view->setSource(QUrl::fromLocalFile(sourceFile));
+    } else {
+        d->message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1", sourceFile));
+        d->message->setVisible(true);
+    }
+
+    d->layout->addWidget(d->view);
 
     // Buttons
     d->buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -161,8 +135,6 @@ void Dialog::init(const QString &activityId)
                                         : i18nc("@title:window", "Activity Settings"));
 
     d->buttons->button(QDialogButtonBox::Ok)->setText(activityId.isEmpty() ? i18nc("@action:button", "Create") : d->defaultOKText);
-
-    d->tabs->setCurrentIndex(0);
 
     setActivityId(activityId);
     setActivityName(QString());
@@ -200,17 +172,10 @@ Dialog::~Dialog()
 {
 }
 
-void Dialog::showEvent(QShowEvent *event)
-{
-    Q_UNUSED(event);
-    // Setting the focus
-    d->setFocus(d->tabGeneral);
-}
-
-#define IMPLEMENT_PROPERTY(Scope, Type, PType, PropName)                                                                                                       \
+#define IMPLEMENT_PROPERTY(Type, PType, PropName)                                                                                                              \
     Type Dialog::activity##PropName() const                                                                                                                    \
     {                                                                                                                                                          \
-        auto root = d->tab##Scope->rootObject();                                                                                                               \
+        auto root = d->view->rootObject();                                                                                                                     \
                                                                                                                                                                \
         if (!root) {                                                                                                                                           \
             qDebug() << "Root does not exist";                                                                                                                 \
@@ -222,7 +187,7 @@ void Dialog::showEvent(QShowEvent *event)
                                                                                                                                                                \
     void Dialog::setActivity##PropName(PType value)                                                                                                            \
     {                                                                                                                                                          \
-        auto root = d->tab##Scope->rootObject();                                                                                                               \
+        auto root = d->view->rootObject();                                                                                                                     \
                                                                                                                                                                \
         if (!root) {                                                                                                                                           \
             qDebug() << "Root does not exist";                                                                                                                 \
@@ -232,13 +197,13 @@ void Dialog::showEvent(QShowEvent *event)
         root->setProperty("activity" #PropName, value);                                                                                                        \
     }
 
-IMPLEMENT_PROPERTY(General, QString, const QString &, Id)
-IMPLEMENT_PROPERTY(General, QString, const QString &, Name)
-IMPLEMENT_PROPERTY(General, QString, const QString &, Description)
-IMPLEMENT_PROPERTY(General, QString, const QString &, Icon)
-IMPLEMENT_PROPERTY(General, QString, const QString &, Wallpaper)
-IMPLEMENT_PROPERTY(General, QKeySequence, const QKeySequence &, Shortcut)
-IMPLEMENT_PROPERTY(General, bool, bool, IsPrivate)
+IMPLEMENT_PROPERTY(QString, const QString &, Id)
+IMPLEMENT_PROPERTY(QString, const QString &, Name)
+IMPLEMENT_PROPERTY(QString, const QString &, Description)
+IMPLEMENT_PROPERTY(QString, const QString &, Icon)
+IMPLEMENT_PROPERTY(QString, const QString &, Wallpaper)
+IMPLEMENT_PROPERTY(QKeySequence, const QKeySequence &, Shortcut)
+IMPLEMENT_PROPERTY(bool, bool, IsPrivate)
 #undef IMPLEMENT_PROPERTY
 
 void Dialog::save()
