@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Genel Davranış</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+
+<releaseinfo
+>&plasma; 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>masaüstü</keyword>
+<keyword
+>çalışma alanı</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Bu, genel çalışma alanı davranışını yapılandırmak için bir modüldür. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Fareyle üzerine gelindiğinde bilgi amaçlı araç ipuçlarını göster</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek işaretliyse &plasma; panelleri veya masaüstünde ögelerin üzerine gelindiğinde araç ipuçları görüntülenir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Durum değişiklikleri için görsel geri bildirim göster</guilabel
+></term>
+<listitem>
+<para
+>Klavyeyi kullanarak parlaklığı veya ses düzeyini değiştirdiğinizde bu değişiklikler ekranda görüntülenir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Canlandırma hızı</guilabel
+></term>
+<listitem>
+    <para
+>Masaüstü canlandırma efektlerinin hızını <guilabel
+>Yavaş</guilabel
+>'tan <guilabel
+>Anında</guilabel
+> aralığında değiştirmenize izin verir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosyalara ve klasörlere tıklamak</guimenu
+><guimenuitem
+>Onları açar</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek işaretliyse dosyalar ve klasörler farenin <mousebutton
+>sol</mousebutton
+> düğmesine tek bir tıklamayla açılırlar. Dosyaları ve klasörleri seçmek için onların seçim imleyicilerine <mousebutton
+>sol</mousebutton
+>-fare düğmesiyle tıklayabilir, çevrelerinde bir seçim dörtgeni sürükleyip çizebilir veya <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Sol</mousebutton
+></keycombo
+> tık yapabilirsiniz. Bu, öntanımlı davranıştır ve web tarayıcılarındaki bağlantılara tıklamanızla eşdeğer bir deneyim sağlaması beklenir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dosyalara ve klasörlere tıklamak</guimenu
+><guimenuitem
+>Onları seçer</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek işaretliyse dosya ve klasörlerin açılabilmesi için çift tıklanması gerekirken, tek bir tıklama onları seçecektir. Bu, diğer masaüstlerinden veya işletim sistemlerinden aşina olduğunuz davranıştır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Sarma çubuğu alanına tıklamak</guimenu
+><guimenuitem
+>Bir sayfa yukarı veya aşağı sarar</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu, öntanımlı ayardır. Sarma çubuğu alanında sol tık, sarma çubuğunu bir sayfa hareket ettirir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Sarma çubuğu alanına tıklamak</guimenu
+><guimenuitem
+>Tıklanan konuma sarar</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu davranış, sarma çubuğundaki bir alana tıkladığınızda, belgedeki eşdeğer konumuna gitmenizi sağlayan davranışı etkinleştirir. Bu, diğer masaüstlerinden veya işletim sistemlerinden aşina olmuş olabileceğiniz davranıştır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Orta tık</guimenu
+><guimenuitem
+>Seçili metni yapıştır</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek işaretliyse bir metin alanında orta tıklamak, panodaki içeriği yapıştırır. <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+> ile eşdeğerdir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Dokunmatik Kip</guimenuitem
+></term>
+<listitem>
+<para
+>Dokunmatik Kip'te, kullanıcı arayüzünün birçok ögesi, dokunma etkileşimini daha kolay bir biçimde barındırmak için büyüyecektir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dokunmatik Kip</guimenu
+><guimenuitem
+>Gerektiğinde kendiliğinden etkinleştir</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse sistem bir dokunmatik ekran algıladığında; ancak fare veya dokunmatik yüzey olmadığında Dokunmatik Kip kendiliğinden etkinleştirilir. Örneğin: Dönüştürülebilir bir dizüstü bilgisayarın klavyesi ters çevrildiğinde veya çıkarıldığında.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dokunmatik Kip</guimenu
+><guimenuitem
+>Her zaman etkin</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse Dokunmatik Kip her zaman etkin olacaktır. &plasma; kullanıyorsanız bu seçeneği kullanın veya başka nedenlerle daha büyük tıklama hedeflerini tercih edin.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Dokunmatik Kip</guimenu
+><guimenuitem
+>Asla etkin değil</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse Dokunmatik Kip her zaman devre dışı bırakılır. Aygıtınızda Dokunmatik Kip'e gereksiniminiz yoksa bu seçeneği kullanın.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

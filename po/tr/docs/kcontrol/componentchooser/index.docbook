@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Öntanımlı Uygulamalar</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-01-12</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>bileşen</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modülde, &kde; tarafından kullanılan öntanımlı bileşenleri değiştirebilirsiniz.</para>
+
+<para
+>Bileşenler; web tarayıcı, uçbirim öykünücü, dosya yöneticisi, e-posta istemcisi, elektronik harita ve çevirici gibi temel görevleri yerine getiren programlardır. Farklı &kde; uygulamalarının bazen bir konsol öykünücüyü çalıştırması, bir e-posta göndermesi, dosya ve klasörleri yönetmesi, haritayı göstermesi veya telefonunuzda bir numara çevirmesi gerekir.</para
+> 
+
+<para
+>Bunu tutarlı bir şekilde yapmak için, bu uygulamalar her zaman aynı bileşenleri çağırır. Burada bu bileşenlerin hangi programlar olduğunu seçebilirsiniz.</para>
+
+<para
+>Soldaki liste yapılandırılabilir bileşen türlerini gösterir:</para>
+<itemizedlist>
+<listitem>
+<para
+>Web tarayıcı</para>
+</listitem>
+<listitem>
+<para
+>Dosya yöneticisi</para>
+</listitem>
+<listitem>
+<para
+>E-posta istemcisi</para>
+</listitem>
+<listitem>
+<para
+>Uçbirim öykünücü</para>
+</listitem>
+<listitem>
+<para
+>Harita</para>
+</listitem>
+<listitem>
+<para
+>Çevirici</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Yapılandırmak istediğiniz bileşenin birleşik giriş kutusuna tıklayın. Listede favori web tarayıcınızı, dosya yöneticinizi, e-posta istemcinizi, uçbirim öykünücünüzü, haritanızı ve çeviricinizi seçin. <guimenuitem
+>Diğer..</guimenuitem
+> ögesini seçerek <guilabel
+>Uygulama Seç</guilabel
+> iletişim kutusunu açın ve uygulamanızı elle seçin.</para>
+
+</article>

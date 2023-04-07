@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Aygıt Eylemleri</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>Katı</keyword>
+<keyword
+>eylemler</keyword>
+<keyword
+>aygıtlar</keyword>
+<keyword
+>donanım</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Yeni aygıtlar için eylemler</title>
+<sect2 id="icons-intro">
+<title
+>Giriş</title>
+
+<para
+>Bu modül, yeni aygıtlar taktığınızda ilişkilendirmek istediğiniz eylemleri ayarlamanıza olanak tanır.</para>
+<para>
+<screenshot>
+<screeninfo
+>Aygıt Eylemleri Yöneticisi'nin ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Aygıt Eylemleri Yöneticisinin Ekran Görüntüsü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Aygıtlar takıldığında kullanılabilecek tüm olası eylemlerin listelendiğini göreceksiniz. Lütfen bunların yalnızca belirli koşullar altında kullanılabileceğini unutmayın.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Ekle</guibutton
+> Bu, sizden yeni eyleminiz için bir ad vermenizi isteyecek ve ardından bu eylemi düzenleme için açacaktır. Bu iletişim kutusunda gerekli tüm ayrıntıları sağlamazsanız eyleminiz silinir. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Düzenle</guibutton
+> Bu; adı, simgeyi, yürütülecek komutu ve eylemin gösterilmesi için eşleşmesi gereken koşulları değiştirmenize izin verir. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>At / Silinemez / Kaldır</guibutton
+> Bu, sisteminizle birlikte sağlanmış veya sizin tarafınızdan oluşturulmuş olmasına bağlı olarak farklı eylemler gerçekleştirecektir. Değişiklikleri yalnızca sistem genelindeki eylemlerde iptal edebilirsiniz, herhangi bir değişiklik yoksa bu eylemler silinemez. Kullanıcı tarafından oluşturulan eylemler, tüm değişiklikler içerilmek üzere tamamen kaldırılır. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Eylem Ekle</title>
+
+<para
+><guibutton
+>Ekle</guibutton
+> düğmesi size yeni eylem adını girmeniz için bir iletişim kutusu getirir. </para>
+<para>
+<screenshot>
+<screeninfo
+>Eylem Ekle iletişim kutusunun ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Eylem Ekle iletişim kutusunun ekran görüntüsü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Eylem adı, eylemi doğru şekilde tanımlamalıdır. Bir ad girdikten ve <guibutton
+>Tamam</guibutton
+>'a tıkladıktan sonra, eylem özelliklerini ayarlamanıza izin vermek için Eylemi Düzenle iletişim kutusu görüntülenecektir. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Eylemi Düzenle</title>
+
+<para
+>Bu iletişim kutusu, seçtiğiniz eylemin ayarlarını değiştirmenizi sağlar.</para>
+<para>
+<screenshot>
+<screeninfo
+>Eylemi Düzenle iletişim kutusunun ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Eylemi Düzenle iletişim kutusunun ekran görüntüsü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Buna simge, eylem adı, eylem komutu ve çeşitli parametreler dahildir. Üzerine tıklayarak ikonu değiştirebilirsiniz.</para>
+<para
+>Parametreler bir ağaç biçiminde görüntülenir, eylemin gösterilmesi için en üstteki ögenin doğru olması gerekir.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Parametreyi Düzenle</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Parametre türü</guilabel
+></term>
+<listitem>
+<para
+>Bu, içinde nelerin bulunabileceğini veya doğru olup olmadığını denetlemek için hangi eşleştirmenin gerçekleştirileceğini denetler. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Özellik Eşleşmesi</guilabel
+></term>
+<listitem>
+<para
+>Aygıtın belirtilen özelliğini (<guilabel
+>Aygıt türü</guilabel
+> ve <guilabel
+>Değer adı</guilabel
+> kullanarak) karşılaştırır ve değerlendiriciyi kullanarak sağlanan metinle karşılaştırır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>İçerik Bağlantısı</guilabel
+></term>
+<listitem>
+<para
+>Bunun kendisinin doğru olması için tüm alt özelliklerinin doğru olması gerekir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>İçerik Ayrılığı</guilabel
+></term>
+<listitem>
+<para
+>Bunun herhangi bir alt özelliği, kendisinin doğru olması için doğru olabilir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Aygıt Arayüzü Eşleşmesi</guilabel
+></term>
+<listitem>
+<para
+>Aygıtın seçili aygıt türü olarak sınıflandırılıp sınıflandırılamayacağını denetler.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Aygıt türü</guilabel
+></term>
+<listitem>
+<para
+>Bunlar, &plasma; tarafından sisteminizde desteklenen olası aygıt türleridir. Hem özellik hem de aygıt arayüzü eşleşmelerinde kullanılırlar. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Değer adı</guilabel
+></term>
+<listitem>
+<para
+>Bu, seçili aygıt türü için olası tüm özellik adlarının bir listesidir. Ayrıca değer değerlendiricinin (<guilabel
+>Eşittir</guilabel
+> veya <guilabel
+>İçerir</guilabel
+>) seçimini sağlar ve karşılaştırılacak metnin girilmesine izin verir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parametreyi Sıfırla</guibutton
+></term>
+<listitem>
+<para
+>Bu parametrede yaptığınız kaydedilmemiş değişiklikleri geri alır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Parametre Değişikliklerini Kaydet</guibutton
+></term>
+<listitem>
+<para
+>Parametrede yaptığınız değişiklikleri kaydeder.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

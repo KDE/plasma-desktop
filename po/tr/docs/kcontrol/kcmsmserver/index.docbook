@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Oturum Yönetimi</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>oturum</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>oturumu kapat</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Masaüstü Oturumu</title>
+
+<para
+>Bu &systemsettings; modülünde, &plasma;'nın oturum yöneticisini ve oturumu kapatma ayarlarını yapılandırabilirsiniz.</para>
+
+<para
+>Oturum yönetimi, &plasma;'nın uygulamaların ve pencerelerin durumunu &plasma; oturumunu kapattığınızda kaydetme ve yeniden oturum açtığınızda geri yükleme yeteneği ile ilgilidir.</para>
+
+<sect2 id="sessions-logoutscreen">
+<title
+>Oturumu Kapat Ekranı</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Göster</guilabel
+></term>
+<listitem>
+<para
+>Bu ayar açıksa oturumu ve bilgisayarı kapattığınızda, yeniden başlattığınızda, güç düğmesine bastığınızda veya <guilabel
+>Ayrıl…</guilabel
+> etiketli menü ögelerine tıkladığınızda oturum kapatma onay ekranı gösterilir. Ayar kapatıldığında, ilgili düğmeyi tıkladıktan hemen sonra bilgisayarınız oturumu kapatır, gücü kapanır vb.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="sessions-restore">
+<title
+>Oturum açılışında, açık olan uygulamaları başiat</title>
+<para
+>&plasma; oturumunu açtığınızda olmasını istediğiniz üç seçenekten birini seçebilirsiniz:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Son oturum kapanışında</guilabel
+></term>
+<listitem
+><para
+>Bu seçenek işaretliyse &plasma; oturumunuzu kapatırken geçerli oturumunuzun durumunu kaydeder ve sonraki oturum açışınızda geri yükler; böylelikle masaüstünüzü nasıl bıraktıysanız öylece çalışmayı sürdürebilirsiniz.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Oturum elle kaydedildiğinde</guilabel
+></term>
+<listitem
+><para
+>&plasma;'yı oturum kapatılırken olan durum yerine elle kaydettiğiniz belirli bir duruma geri yükler.</para
+><para
+><guilabel
+>Application Launcher</guilabel
+> menüsünde ve &plasma; aramada bir <guilabel
+>Oturumu Kaydet</guilabel
+> düğmesi ortaya çıkar. Tıkladığınızda, &plasma; açık olan uygulamaları anımsar ve onları bir sonraki oturum açışınızda geri yükler. Anımsanan uygulamalar kümesini değiştirmek için bir kez daha tıklayın.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Boş bir oturum ile başlat</guilabel
+></term>
+<listitem>
+<para
+>Bu seçeneği seçerseniz &plasma; kaydettiği hiçbir oturumu geri yüklemez.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Son olarak, bir iki nokta (<literal
+>:</literal
+>) veya virgül (<literal
+>,</literal
+>) ile ayrılmış uygulamalar listesi ile bu uygulamaların yok sayılmasını ve bir oturum geri yüklenirken geri yüklenmemesini sağlayabilirsiniz. Örneğin, <userinput
+>xterm:konsole</userinput
+> veya <userinput
+>xterm,konsole</userinput
+>.</para>
+</sect2>
+
+<sect2 id="sessions-firmware">
+<title
+>Gömülü Yazılım</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Bir sonraki yeniden başlatma sonrası: UEFI ayar ekranına gir</guilabel
+></term>
+<listitem
+><para
+>Bu seçenek etkinleştirilirse bilgisayarınızı bir sonraki yeniden başlatışınızda gömülü yazılımı ayar kipine (BIOS/UEFI) girecektir. Bu, önyükleme sırasında özel düğmelere hızlıca basarak gömülü yazılım ayarlarına girmeye çalışmaktan daha kolay olabilir.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+</sect1>
+
+</article>
+

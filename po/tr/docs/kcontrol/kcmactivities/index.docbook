@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Etkinlikler</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-12</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>etkinlik</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Etkinlikler</title>
+<sect2 id="activities-intro">
+
+<title
+>Giriş</title>
+
+<para
+>Bu modül, etkinliklerin yapılandırılmasına izin verir. Etkinlikler, her biri birden çok &plasma; örneğini, her biri ayrı araç takımları ve temalarla ayarlamanıza izin verir. Bazı etkinlikler gizli olabilir. Bu tür etkinlikler eylemlerinizi izlemez. Örneğin, en son hangi belgeyi açtığınızı takip etmezler. </para>
+
+<para
+>Modül, üç ayrı sekmeye ayrılmıştır: <link linkend="activities-main"
+><guilabel
+>Etkinlikler</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Geçiş</guilabel
+></link
+>, ve <link linkend="activities-privacy"
+><guilabel
+>Gizlilik</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Etkinlikler</guilabel
+></title>
+
+<para
+>Bu sekme, geçerli etkinliklerinizi listeler. Etkinlikleri yapılandırmak veya kaldırmak için düğmeleri ortaya çıkarmak üzere fare imleciyle listedeki ögelerin üzerine gelin. </para>
+
+<para
+>Etkinliği yapılandırmak için <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> düğmesini kullanın. Aşağıdaki etkinlik parametrelerini değiştirebilirsiniz: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Simge</guilabel
+></term>
+        <listitem>
+            <para
+>Etkinliğin simgesi, &plasma; panelinin etkinlik yöneticisi seçicisinde görülebilir. Sistemde olan simgelerden birini veya dosya sisteminizden bir simgeyi seçmek için geçerli simgenin üzerine tıklayın. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Ad</guilabel
+></term>
+        <listitem>
+            <para
+>Etkinliğinize ayırt edilebilir bir ad verin. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Açıklama</guilabel
+></term>
+        <listitem>
+            <para
+>&plasma; panelinin etkinlik yöneticisi seçicisindeki adın altında gösterilen bir açıklama metni. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Gizlilik</guilabel
+></term>
+        <listitem>
+            <para
+>Etkinliğiniz için herhangi bir tür izlemeyi devre dışı bırakmak için <guilabel
+>Bu etkinlikte kullanımı izleme</guilabel
+> ögesini seçin. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Etkinlik geçişi kısayolu</guilabel
+></term>
+        <listitem>
+            <para
+>Etkinliğe geçmek için yeni kısayolu girmek üzere ilk düğmeye basın. Geçerli kısayolu kaldırmak için ikinci düğmeye basın. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+><inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> düğmesine tıklamak etkinliği kaldırır. </para>
+<para
+>Listenin altındaki <guibutton
+>Yeni Oluştur...</guibutton
+> düğmesine tıklamak, etkinlik yapılandırma iletişim kutusuna benzer bir <guilabel
+>Yeni Bir Etkinlik Oluştur</guilabel
+> iletişim kutusunu açar. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Geçiş</guilabel
+></title>
+
+<para
+>Buradan, &plasma;'nın her bir etkinlik için <guilabel
+>Geçerli sanal masaüstü</guilabel
+>'nü anımsayıp anımsamaması gerektiğini yapılandırabilirsiniz (yeniden başlatma gerektirir). Ayrıca, etkinlikler listesinde gezinmek için olan kısayolları yapılandırmak da olanaklıdır. </para>
+<para
+>&kde; kısayol sistemi hakkında daha fazla bilgi için <emphasis
+>&kde; Fundamentals</emphasis
+> belgelendirmesinin <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Kısayolları Kullanmak ve Özelleştirmek</emphasis
+></ulink
+> bölümüne bakın. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Gizlilik</guilabel
+></title>
+
+<para
+>Bu sekme, etkinliklerin <guilabel
+>Geçmişi tut</guilabel
+> ayarını yapabilir ve izleme verilerini temizleyebilirsiniz. <guibutton
+>Geçmişi Temizle</guibutton
+> açılır menüsünü kullanarak &plasma;'nın <guimenuitem
+>Son bir saati unut</guimenuitem
+>, <guimenuitem
+>Son iki saati unut</guimenuitem
+>, <guimenuitem
+>Son bir günü unut</guimenuitem
+>, veya <guimenuitem
+>Her şeyi unut</guimenuitem
+> yapmasını sağlayabilirsiniz. </para>
+<para
+>Aşağıda, etkinliklerinizde açılan belgeleri ezberlemek için uygulama yelpazesini yapılandırabilirsiniz. Tüm verileri depolamak için <guilabel
+>Tüm uygulamalar için</guilabel
+> ögesini, veri depolamayı kapatmak için <guilabel
+>Anımsama</guilabel
+> ögesini veya ince ayarlı seçim için <guilabel
+>Yalnızca belirli uygulamalar için</guilabel
+> ögesini kullanın (uygulama ögesine tıklamak, geçerli kipi değiştirir). </para>
+<para
+>Listede olmayan uygulamaların sizi izlemelerini engellemek için <guilabel
+>Listede olmayan uygulamaları engelle</guilabel
+> kutusunu işaretleyin. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

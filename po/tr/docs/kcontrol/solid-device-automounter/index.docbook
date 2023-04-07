@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Çıkarılabilir Aygıtlar</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>otomatik bağla</keyword>
+<keyword
+>aygıt</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu iletişim kutusu, çıkarılabilir depolama ortamlarının otomatik işlenmesini yapılandırmanıza izin verir. </para>
+
+<para
+>Bu modülde otomatik bağlama özelliklerini etkinleştirirseniz yenice takılmış bir aygıta erişmek için aygıt bildirici uygulamacığını veya dosya yöneticisindeki dolaşım panelini kullanmanıza gerek kalmaz. </para>
+
+<para
+>İletişim kutusunun en üstünde, <guilabel
+>Aygıt Geçersiz Kılmalar</guilabel
+> listesindeki her bir aygıt için geçersiz kılınabilen global ayarları bulabilirsiniz. Tek kullanıcılı bir masaüstü için, geçersiz kılmalar listesinin üzerindeki tüm onay kutularının etkinleştirilmesi önerilir. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Çıkarılabilir ortamların otomatik bağlanmasını etkinleştir</guilabel
+></term>
+<listitem
+><para
+>Bu seçilmediğinde, <guilabel
+>Aygıt Geçersiz Kılmalar</guilabel
+> bölümünde ne seçili olursa olsun hiçbir türlü bir aygıt otomatik bağlaması gerçekleşmeyecektir. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Yalnızca daha önce elle bağlanmış çıkarılabilir ortamı otomatik olarak bağla</guilabel
+></term>
+<listitem
+><para
+>Bu işaretlendiğinde, &plasma; yalnızca anımsadığı aygıtları otomatik olarak bağlar. Bir aygıt, daha önce bağlanmışsa <quote
+>anımsanır</quote
+>; &eg;, &USB; ortam oynatıcıyı şarj etmek onu <quote
+>anımsamak</quote
+> için yeterli değildir. Dosyalara erişilmezse &plasma; oynatıcı bir sonraki görüldüğünde otomatik olarak bağlamayacaktır. Ancak bunlara erişildikten sonra, &plasma; içeriği otomatik olarak sisteminiz için erişilebilir hale getirmeyi anımsar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Oturum açılışında tüm çıkarılabilir ortamları otomatik olarak bağla</guilabel
+></term>
+<listitem
+><para
+>Masaüstünüzde oturum açtığınızda sisteminize herhangi bir çıkarılabilir depolama aygıtı bağlıysa &plasma; diğer programların okuması için içeriği sisteminizde otomatik olarak kullanılabilir hale getirecektir. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Takıldığında çıkarılabilir ortamı otomatik olarak bağla</guilabel
+></term>
+<listitem
+><para
+>Bu işaretlendiğinde, &plasma; herhangi bir depolama aygıtı takıldığında onun içeriğini otomatik olarak sisteme sunar. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Otomatik bağla</guilabel
+></term>
+<listitem
+><para
+>Bu liste, &plasma; tarafından bilinen depolama aygıtlarını içerir. <guilabel
+>Oturum Açıldığında</guilabel
+> işaretliyse <guilabel
+>Oturum açılışında tüm çıkarılabilir ortamları otomatik olarak bağla</guilabel
+> işaretlenmemiş olsa bile aygıt otomatik olarak bağlanır. Aynı durum <guilabel
+>Takıldığında</guilabel
+> için de geçerlidir.</para>
+<para
+><guilabel
+>Çıkarılabilir ortamların otomatik bağlanmasını etkinleştir</guilabel
+> seçili değilse geçersiz kılmalar uygulanmaz ve hiçbir aygıt otomatik olarak bağlanmaz. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Aygıtı Unut</guibutton
+></term>
+<listitem
+><para
+>Bu düğmeye tıklamak &plasma;'nın seçili aygıtı <quote
+>unutmasını</quote
+> sağlar. Bu yalnızca <guilabel
+>Yalnızca daha önce elle bağlanmış çıkarılabilir ortamı otomatik olarak bağla</guilabel
+> seçiliyse işe yarar. Bir aygıt unutulduğunda ve &plasma; yalnızca tanınır aygıtları otomatik olarak bağlamaya ayarlıysa aygıt otomatik olarak bağlanmaz. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

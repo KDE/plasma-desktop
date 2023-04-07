@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Açılış Ekranı</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Mesutcan</firstname
+><surname
+>Kurt</surname
+><affiliation
+><address
+><email
+>mesutcank@gmail.com</email
+></address
+></affiliation
+><contrib
+>-</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>açılış ekranı</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modül, açılış ekranı temaları seçmek ve görüntülemek için bir arabirim sağlar.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>İşte açılış ekranı yöneticisinin bir ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Açılış ekranı yöneticisi modülü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Bu sayfada, halihazırda kurulu açılış ekranlarının önizlemelerini görebilirsiniz. Geçerli açılış ekranı önizlemesi vurgulanır.</para>
+
+<para
+>Önizleme görselinin üzerine fare imleci ile geldiğinizde <guilabel
+>Açılış Ekranını Önizle</guilabel
+> görselin sağ alt kısmında görünür. Açıllış ekranının nasıl görüneceğini önizlemek için bu düğmeye tıklayın.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Yeni Al...</guilabel
+></term>
+<listitem>
+<para
+>Bu eylemi kullanabilmek için internete bağlı olmanız gerekir. Bir iletişim kutusu, <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+> web sayfasından temaları listeler. Tema ile ilişkilendirilen <guibutton
+>Kur</guibutton
+> düğmesine tıklamak, bu temayı yerel olarak kurar. </para>
+<para>
+<screenshot>
+<screeninfo
+>Yeni bir tema kurmak</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Yeni bir tema kurmak</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Bu yeni tema, &systemsettings; Yeni Açılış Ekranları İndir iletişim kutusunu kapattıktan hemen sonra kullanılabilir. Önizleme, resmi görüntler. Bu temayı geçerli açılış ekranı temanız yapmak için <guibutton
+>Uygula</guibutton
+> düğmesine tıklamalısnız. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

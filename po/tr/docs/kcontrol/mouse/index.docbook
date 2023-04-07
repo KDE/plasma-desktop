@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Fare</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>Bu, fareyi ve diğer işaretleme aygıtlarını yapılandıran &systemsettings; modülünün belgelendirmesidir. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>fare</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modül, işaretleme aygıtınızı yapılandırmanıza izin verir. İşaretleme aygıtınız bir fare, hareket topu, dokunmatik yüzey veya benzer işlevi gerçekleştiren başka bir donanım parçası olabilir.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Genel</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Sol el kipi</guilabel
+></term>
+<listitem
+><para
+>Sol elinizi kullanıyorsanız bu seçeneği işaretleyerek işaretleme aygıtınızın <mousebutton
+>sol</mousebutton
+> ve <mousebutton
+>sağ</mousebutton
+> düğmelerinin işlevlerini birbirleriyle değiştirmek isteyebilirsiniz. İşaretleme aygıtınızın ikiden çok düğmesi varsa yalnızca <mousebutton
+>sol</mousebutton
+> ve <mousebutton
+>sağ</mousebutton
+> işlevlerini yerine getiren düğmeler etkilenir. Örneğin, üç düğmeli bir fareniz varsa <mousebutton
+>orta</mousebutton
+> düğme etkilenmez.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Orta tık için sağ ve sol düğmelere bas</guilabel
+></term>
+<listitem
+><para
+>Farenizde bir &MMB; yoksa bu ögeyi işaretleyin. Orta tıklamaya öykünmek için sağ ve sol düğmelere birlikte aynı anda basabilirsiniz. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>İşaretçi hızı</guilabel
+></term>
+<listitem
+><para
+>Bu seçenek, fare işaretçisinin ekranda hareket ettiği uzaklık ile fiziksel aygıtın (fare, iztopu veya başka bir işaretleme aygıtı olabilir) göreli hareketi arasındaki ilişkiyi değiştirmenize olanak tanır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>İvmelendirme profili</guilabel
+></term>
+<listitem
+><para
+><guilabel
+>Uyarlanabilir</guilabel
+> profili, tüm aygıtlar için öntanımlı profildir ve ivmelenmeye karar verirken aygıtın geçerli hızını dikkate alır. <guilabel
+>Düz</guilabel
+> profili, hareket hızından bağımsız olarak tüm aygıt deltalarına uygulanan sabit bir çarpandır. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sarma: Sarma yönünü tersine çevir</guilabel
+></term>
+<listitem
+><para
+>Bu onay kutusu seçildiğinde, sarma tekerleği (varsa) ters yönde çalışır (böylece, sarma tekerleğinin üst tarafını kendinize doğru döndürmek önceden aşağı sarmaya neden oluyorsa şimdi yukarı sarmaya neden olacaktır). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>&plasma; 5.13 sürümünde, dosya ve klasörleri açmak için tek veya çift tık kullanma ayarını <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Çalışma Alanı</ulink
+> modülünde bulacaksınız. </para
+></note>
+
+</article>
