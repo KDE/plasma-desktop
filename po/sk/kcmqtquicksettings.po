@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmqtquicksettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-07 02:03+0000\n"
 "PO-Revision-Date: 2018-09-14 11:44+0100\n"
 "Last-Translator: Mthw <jari_45@hotmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Vykresľovací Backend:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:84
 #, kde-format
 msgid "Automatic"
 msgstr "Automaticky"
@@ -61,32 +61,38 @@ msgstr "Open GL"
 msgid "Software"
 msgstr "Softvérový"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:61
+#, kde-format
+msgid "Vulkan"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmqtquicksettingswidget.ui:64
+#: kcmqtquicksettingswidget.ui:69
 #, kde-format
 msgid "GL Core Profile:"
 msgstr "GL Core Profile:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcmqtquicksettingswidget.ui:71
+#: kcmqtquicksettingswidget.ui:76
 #, kde-format
 msgid "Render Loop:"
 msgstr "Render Loop:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:84
+#: kcmqtquicksettingswidget.ui:89
 #, kde-format
 msgid "Basic"
 msgstr "Základný"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:89
+#: kcmqtquicksettingswidget.ui:94
 #, kde-format
 msgid "Threaded"
 msgstr "Viacvláknový"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
-#: kcmqtquicksettingswidget.ui:97
+#: kcmqtquicksettingswidget.ui:102
 #, kde-format
 msgid "Force"
 msgstr "Vynútiť"

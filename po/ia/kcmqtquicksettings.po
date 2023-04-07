@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-07 02:03+0000\n"
 "PO-Revision-Date: 2021-01-20 16:05+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Retro administration de rendition (rendering):"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:84
 #, kde-format
 msgid "Automatic"
 msgstr "Automatic"
@@ -62,32 +62,38 @@ msgstr "Open GL"
 msgid "Software"
 msgstr "Software"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:61
+#, kde-format
+msgid "Vulkan"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmqtquicksettingswidget.ui:64
+#: kcmqtquicksettingswidget.ui:69
 #, kde-format
 msgid "GL Core Profile:"
 msgstr "Profilo de nucleo GL:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcmqtquicksettingswidget.ui:71
+#: kcmqtquicksettingswidget.ui:76
 #, kde-format
 msgid "Render Loop:"
 msgstr "Anello de rendition:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:84
+#: kcmqtquicksettingswidget.ui:89
 #, kde-format
 msgid "Basic"
 msgstr "Basic"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:89
+#: kcmqtquicksettingswidget.ui:94
 #, kde-format
 msgid "Threaded"
 msgstr "Threaded (ampliate con topicos)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
-#: kcmqtquicksettingswidget.ui:97
+#: kcmqtquicksettingswidget.ui:102
 #, kde-format
 msgid "Force"
 msgstr "Fortia"
