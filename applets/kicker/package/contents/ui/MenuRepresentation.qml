@@ -212,6 +212,7 @@ FocusScope {
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
+                    visible: runnerModel.modelForRow(index).count > 0
 
                     onKeyNavigationAtListEnd: {
                         searchField.focus = true;
