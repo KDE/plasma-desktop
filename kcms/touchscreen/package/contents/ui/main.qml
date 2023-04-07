@@ -13,13 +13,14 @@ import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.touchscreen.kcm 1.0
 import org.kde.kcm 1.3
+import org.kde.kcmutils 1.0 as KCMUtils
 
 SimpleKCM {
     id: root
 
     property var device: null
 
-    ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
+    KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.Default | KCMUtils.ConfigModule.Apply
 
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
