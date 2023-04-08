@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2021-10-09 07:48-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -33,7 +33,7 @@ msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "ਕੀ ਤੁਸੀਂ %1 ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -42,55 +42,50 @@ msgstr ""
 "QML ਫਾਇਲਾਂ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ। ਆਪਣੀ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।\n"
 "%1 ਗੁੰਮ ਹੈ"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "ਆਮ"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "ਨਵੀਂ ਸਰਗਰਮੀ ਨੂੰ ਬਣਾਓ"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "ਸਰਗਰਮੀ ਸੈਟਿੰਗਾਂ"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "ਬਣਾਓ"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "ਨਾਂ:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "ਵੇਰਵਾ:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "ਪਰਦੇਦਾਰੀ:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "ਇਸ ਸਰਗਰਮੀ ਲਈ ਵਰਤੋਂ ਨੂੰ ਟਰੈਕ ਨਾ ਕਰੋ"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ:"
@@ -175,6 +170,9 @@ msgstr "ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ:"
 #, kde-format
 msgid "Shortcuts:"
 msgstr "ਸ਼ਾਰਟਕੱਟ:"
+
+#~ msgid "General"
+#~ msgstr "ਆਮ"
 
 #~ msgid "Privacy"
 #~ msgstr "ਪਰਦੇਦਾਰੀ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2022-09-02 07:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "აქტივობის წაშლა"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ '%1'?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -43,55 +43,50 @@ msgstr ""
 "QML ფაილების ჩატვირთვის შეცდომა. შეამოწმეთ თქვენი ფაილები.\n"
 "აკლია %1"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "მთავარი"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "ახალი აქტივობის შექმნა"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "აქტივობის მორგება"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "შექმნა"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "ხატულა:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "სახელი:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "აღწერა:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "პირადულბა:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "ამ აქტივობისთვის ყურადღების არ  მიქცევა"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "გადართვის მალსახმობი:"
@@ -176,3 +171,6 @@ msgstr "მიმდინარე ვირტუალური სამუ�
 #, kde-format
 msgid "Shortcuts:"
 msgstr "მალსახმობები:"
+
+#~ msgid "General"
+#~ msgstr "მთავარი"

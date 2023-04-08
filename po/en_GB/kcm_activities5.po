@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2021-06-12 13:13+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Delete Activity"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Are you sure you want to delete '%1'?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -42,55 +42,50 @@ msgstr ""
 "Error loading the QML files. Check your installation.\n"
 "Missing %1"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "General"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "Create a New Activity"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "Activity Settings"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Create"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "Icon:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "Name:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "Description:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "Privacy:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "Do not track usage for this activity"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Shortcut for switching:"
@@ -175,6 +170,9 @@ msgstr "Current virtual desktop:"
 #, kde-format
 msgid "Shortcuts:"
 msgstr "Shortcuts:"
+
+#~ msgid "General"
+#~ msgstr "General"
 
 #~ msgid "Privacy"
 #~ msgstr "Privacy"

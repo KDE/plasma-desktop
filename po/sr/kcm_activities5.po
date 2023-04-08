@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2016-04-03 12:10+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -35,7 +35,7 @@ msgstr "Брисање активности"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Желите ли заиста да обришете „%1“?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -44,59 +44,54 @@ msgstr ""
 "Грешка при учитавању КуМЛ фајлова. Проверите инсталацију.\n"
 "Недостаје %1."
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "Опште"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "Стварање нове активности"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "Поставке активности"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Направи"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, fuzzy, kde-format
 #| msgid "Icon"
 msgid "Icon:"
 msgstr "Иконица"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "Име:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "Опис:"
 
 # >> @title:tab
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, fuzzy, kde-format
 #| msgid "Privacy"
 msgid "Privacy:"
 msgstr "Приватност"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, fuzzy, kde-format
 #| msgid "Private - do not track usage for this activity"
 msgid "Do not track usage for this activity"
 msgstr "Приватна — не прати коришћење ове активности"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, fuzzy, kde-format
 #| msgid "Shortcut for switching to this activity:"
 msgid "Shortcut for switching:"
@@ -191,6 +186,9 @@ msgstr ""
 #| msgid "Shortcuts"
 msgid "Shortcuts:"
 msgstr "Пречице"
+
+#~ msgid "General"
+#~ msgstr "Опште"
 
 # >> @title:tab
 #~ msgid "Privacy"

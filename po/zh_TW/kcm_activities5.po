@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2023-02-18 00:25+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -36,7 +36,7 @@ msgstr "刪除活動"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "您確定要刪除「%1」嗎？"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -45,55 +45,50 @@ msgstr ""
 "載入 QML 檔時發生錯誤。請檢查您的安裝。\n"
 "缺少了 %1"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "一般"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "建立新活動"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "活動設定"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "建立"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "圖示："
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "名稱："
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "描述："
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "隱私："
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "請勿追蹤此活動的使用量"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "切換快捷鍵："
@@ -178,6 +173,9 @@ msgstr "目前虛擬桌面："
 #, kde-format
 msgid "Shortcuts:"
 msgstr "快捷鍵："
+
+#~ msgid "General"
+#~ msgstr "一般"
 
 #~ msgid "Privacy"
 #~ msgstr "隱私"

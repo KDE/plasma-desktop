@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2021-09-01 09:25+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "Aktivitás törlése"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Biztosan törli ezt: „%1”?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -43,55 +43,50 @@ msgstr ""
 "Hiba a QML-fájlok betöltésekor. Ellenőrizze a telepítést.\n"
 "Hiányzó %1"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "Általános"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "Új aktivitás létrehozása"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "Aktivitásbeállítások"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Létrehozás"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "Név:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "Leírás:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "Adatvédelem:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "Ne kövesse ezen aktivitás használatát"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Gyorsbillentyű a váltáshoz:"
@@ -178,6 +173,9 @@ msgstr "Jelenlegi virtuális asztal:"
 #, kde-format
 msgid "Shortcuts:"
 msgstr "Gyorsbillentyűk:"
+
+#~ msgid "General"
+#~ msgstr "Általános"
 
 #~ msgid "Privacy"
 #~ msgstr "Adatvédelem"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2021-08-05 20:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "செயல்பாட்டை நீக்குதல்"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "\"%1\" என்பதை உறுதியாக நீக்க விரும்புகிறீர்களா?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -42,55 +42,50 @@ msgstr ""
 "QML கோப்புகளை ஏற்றுவதில் சிக்கல். உங்கள் நிறுவலை சரிபாருங்கள்.\n"
 "%1 என்பதை காணவில்லை"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "பொது"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "புதிய செயல்பாட்டை உருவாக்குதல்"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "செயல்பாடு அமைப்புகள்"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "உருவாக்கு"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, kde-format
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "பெயர்:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "விவரணம்:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, kde-format
 msgid "Privacy:"
 msgstr "தனியுரிமை:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, kde-format
 msgid "Do not track usage for this activity"
 msgstr "இந்த செயல்பாட்டில் பயன்படுத்துபவற்றை கண்காணிக்காதே"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "இதற்கு தாவுவதற்கான சுருக்குவழி:"
@@ -175,6 +170,9 @@ msgstr "தற்போதைய மெய்நிகர் பணிமேட�
 #, kde-format
 msgid "Shortcuts:"
 msgstr "சுருக்குவழிகள்:"
+
+#~ msgid "General"
+#~ msgstr "பொது"
 
 #~ msgid "Privacy"
 #~ msgstr "தனியுரிமை"

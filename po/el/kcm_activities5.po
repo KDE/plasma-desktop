@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2016-06-04 15:11+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Διαγραφή δραστηριότητας"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Επιθυμείτε σίγουρα τη διαγραφή του '%1';"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -42,58 +42,53 @@ msgstr ""
 "Πρόβλημα φόρτωσης αρχείων QML. Ελέγξτε την εγκατάστασή σας.\n"
 "Έλλειψη %1"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "Γενικά"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "Δημιουργία νέας δραστηριότητας"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "Ρυθμίσεις δραστηριοτήτων"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Δημιουργία"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, fuzzy, kde-format
 #| msgid "Icon"
 msgid "Icon:"
 msgstr "Εικονίδιο"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "Περιγραφή:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, fuzzy, kde-format
 #| msgid "Privacy"
 msgid "Privacy:"
 msgstr "Ιδιωτικότητα"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, fuzzy, kde-format
 #| msgid "Private - do not track usage for this activity"
 msgid "Do not track usage for this activity"
 msgstr "Ιδιωτική - να μην καταγράφεται η χρήση για αυτήν τη δραστηριότητα"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, fuzzy, kde-format
 #| msgid "Shortcut for switching to this activity:"
 msgid "Shortcut for switching:"
@@ -189,6 +184,9 @@ msgstr ""
 #| msgid "Shortcuts"
 msgid "Shortcuts:"
 msgstr "Συντομεύσεις"
+
+#~ msgid "General"
+#~ msgstr "Γενικά"
 
 #~ msgid "Privacy"
 #~ msgstr "Ιδιωτικότητα"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2017-05-16 11:33-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "מחק פעילות"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "למחוק את '%1'?"
 
-#: imports/dialog.cpp:82
+#: imports/dialog.cpp:116
 #, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
@@ -43,58 +43,53 @@ msgstr ""
 "נכשל בטעינת קובצי QML. בדוק את ההתקנה.\n"
 "%1 חסר"
 
-#: imports/dialog.cpp:146
-#, kde-format
-msgid "General"
-msgstr "כללי"
-
-#: imports/dialog.cpp:160
+#: imports/dialog.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a New Activity"
 msgstr "צור פעילות חדשה"
 
-#: imports/dialog.cpp:161
+#: imports/dialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "הגדרות פעילות"
 
-#: imports/dialog.cpp:163
+#: imports/dialog.cpp:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "צור"
 
-#: imports/qml/activityDialog/GeneralTab.qml:42
+#: imports/qml/activityDialog/GeneralTab.qml:43
 #, fuzzy, kde-format
 #| msgid "Icon"
 msgid "Icon:"
 msgstr "סמל"
 
-#: imports/qml/activityDialog/GeneralTab.qml:56
+#: imports/qml/activityDialog/GeneralTab.qml:57
 #, kde-format
 msgid "Name:"
 msgstr "שם:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:61
+#: imports/qml/activityDialog/GeneralTab.qml:62
 #, kde-format
 msgid "Description:"
 msgstr "תיאור:"
 
-#: imports/qml/activityDialog/GeneralTab.qml:70
+#: imports/qml/activityDialog/GeneralTab.qml:71
 #, fuzzy, kde-format
 #| msgid "Privacy"
 msgid "Privacy:"
 msgstr "פרטיות"
 
-#: imports/qml/activityDialog/GeneralTab.qml:71
+#: imports/qml/activityDialog/GeneralTab.qml:72
 #, fuzzy, kde-format
 #| msgid "Private - do not track usage for this activity"
 msgid "Do not track usage for this activity"
 msgstr "פרטי – אל תעקוב אחר השימוש בפעילות זו"
 
-#: imports/qml/activityDialog/GeneralTab.qml:76
+#: imports/qml/activityDialog/GeneralTab.qml:77
 #, fuzzy, kde-format
 #| msgid "Shortcut for switching to this activity:"
 msgid "Shortcut for switching:"
@@ -188,6 +183,9 @@ msgstr ""
 #| msgid "Shortcuts"
 msgid "Shortcuts:"
 msgstr "קיצורי דרך"
+
+#~ msgid "General"
+#~ msgstr "כללי"
 
 #~ msgid "Privacy"
 #~ msgstr "פרטיות"
