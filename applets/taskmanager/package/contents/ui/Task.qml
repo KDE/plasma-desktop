@@ -199,13 +199,11 @@ PlasmaCore.ToolTipArea {
     Keys.onDownPressed: Keys.onRightPressed(event)
     Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
         tasksModel.move(task.itemIndex, task.itemIndex - 1);
-        openWindowToolTipDelegate.parentTask = null;
     } else {
         event.accepted = false;
     }
     Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
         tasksModel.move(task.itemIndex, task.itemIndex + 1);
-        openWindowToolTipDelegate.parentTask = null;
     } else {
         event.accepted = false;
     }
@@ -266,7 +264,7 @@ PlasmaCore.ToolTipArea {
 
     // Will also be called in activateTaskAtIndex(index)
     function updateMainItemBindings() {
-        if (mainItem.parentTask === task || (tasks.toolTipOpenedByClick === null && !task.active) || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
+        if ((mainItem.parentTask === task && mainItem.rootIndex.row === task.itemIndex) || (tasks.toolTipOpenedByClick === null && !task.active) || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
             return;
         }
 

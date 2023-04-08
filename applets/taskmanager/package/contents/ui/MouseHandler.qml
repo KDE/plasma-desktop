@@ -143,7 +143,6 @@ Item {
                         tasksModel.move(tasks.dragSource.itemIndex, insertAt);
                     }
 
-                    openWindowToolTipDelegate.parentTask = null;
                     ignoredItem = above;
                     ignoreItemTimer.restart();
                 }
