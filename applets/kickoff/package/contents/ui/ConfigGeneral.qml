@@ -45,9 +45,10 @@ ColumnLayout {
             Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", cfg_icon)
             Accessible.role: Accessible.ButtonMenu
 
-            ToolTip.delay: Kirigami.Units.toolTipDelay
-            ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", cfg_icon)
-            ToolTip.visible: iconButton.hovered && cfg_icon.length > 0
+            ToolTip {
+                visible: iconButton.hovered && cfg_icon.length > 0
+                text: i18nc("@info:tooltip", "Icon name is \"%1\"", cfg_icon)
+            }
 
             KIconThemes.IconDialog {
                 id: iconDialog
