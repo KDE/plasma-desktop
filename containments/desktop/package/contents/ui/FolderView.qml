@@ -421,10 +421,10 @@ FocusScope {
                     return;
                 }
 
-                // Single-click mode and single-clicked on the item or
+                // Single-click mode or list view and single-clicked on the item or
                 // double-click mode and double-clicked on the item: open it
-                if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
-                    var func = root.useListViewMode && (mouse.button === Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
+                if (Qt.styleHints.singleClickActivation || root.useListViewMode || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
+                    var func = mouse.button === Qt.LeftButton && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
                     previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;

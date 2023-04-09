@@ -116,7 +116,8 @@ Item {
 
             onHoveredChanged: {
                 if (hovered) {
-                    if (plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation) {
+                    // In list view, it behaves more like a menu, and menus always activate their items on a single click
+                    if (plasmoid.configuration.selectionMarkers && (Qt.styleHints.singleClickActivation || main.GridView.view.isRootView)) {
                         selectionButton = selectionButtonComponent.createObject(actions);
                     }
 
