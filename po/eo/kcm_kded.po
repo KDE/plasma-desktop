@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -45,6 +45,7 @@ msgstr "Malsukcesis lanĉi servilon."
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"Malsukcesis sciigi KDE Service Manager (kded5) pri konservita ŝanĝita: %1"
 
 #: package/contents/ui/main.qml:36
 #, kde-format
@@ -52,6 +53,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"La administranto de fonaj servoj (kded5) nuntempe ne funkcias. Certigu, ke "
+"ĝi estas instalita ĝuste."
 
 #: package/contents/ui/main.qml:45
 #, kde-format
@@ -59,6 +62,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Iuj servoj denove malŝaltas sin kiam mane komencitaj se ili ne estas utilaj "
+"en la nuna medio."
 
 #: package/contents/ui/main.qml:54
 #, kde-format
@@ -66,6 +71,8 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"Iuj servoj estis aŭtomate komencitaj/haltigitaj kiam la fona administranto "
+"de servoj (kded5) estis rekomencita por apliki viajn ŝanĝojn."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -118,41 +125,3 @@ msgstr "Halti Servon"
 #, kde-format
 msgid "Start Service"
 msgstr "Lanĉi Servon"
-
-#~ msgid ""
-#~ "<p>This module allows you to have an overview of all plugins of the KDE "
-#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
-#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
-#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
-#~ "The startup services can be started and stopped. You can also define "
-#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
-#~ "care: some services are vital for Plasma; do not deactivate services if "
-#~ "you  do not know what you are doing.</b></p>"
-#~ msgstr ""
-#~ "<p>Ĉi tiu modulo permesas al vi superrigardi ĉiujn kromprogramojn de la "
-#~ "KDE-Demono, ankaŭ nomataj Servoj de KDE. Ĝenerale, estas du specoj de "
-#~ "servoj:</p> <ul><li>Servoj lanĉitaj dum la startigo</li><li>Servoj "
-#~ "lanĉitaj laŭpete</li></ula ><p>La lastaj estas listigitaj nur por "
-#~ "facileco. La startigaj servojn povas esti startigataj kaj haltigataj. Vi "
-#~ "povas ankaŭ difini ĉu servoj lanĉu dum la startigo.</p> <p><b>Uzu tion "
-#~ "zorge: kelkaj servoj estas vivgravaj por Plasma; ne malŝaltu servojn se "
-#~ "vi ne scias, kion vi faras.</b></p>"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Heiko Evermann, Oliver Kellogg, Michael Moroni"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "heiko@evermann.de, okellogg@users.sourceforge.net, michael.moroni@mailoo."
-#~ "org"
-
-#~ msgid "Background Services"
-#~ msgstr "Fonaj Servoj"
-
-#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel MOLKENTIN"

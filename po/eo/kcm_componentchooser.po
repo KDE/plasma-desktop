@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"PO-Revision-Date: 2023-04-08 17:16+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -33,10 +33,9 @@ msgid "Default web browser"
 msgstr "Defaŭlta retumilo"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Elektu la defaŭltan dosiermastrumilon"
+msgstr "Elekti defaŭltan arkivmastrumilon"
 
 #: components/componentchooserbrowser.cpp:15
 #, kde-format
@@ -51,92 +50,87 @@ msgstr "Meti defaŭltan retpoŝtilon"
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "Elektu la defaŭltan dosiermastrumilon"
+msgstr "Elekti la defaŭltan dosiermastrumilon"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr "Elektu la defaŭltan mapon"
+msgstr "Elekti la defaŭltan mapon"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Elektu la defaŭltan dosiermastrumilon"
+msgstr "Elekti la defaŭltan bildmontrilon"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Elektu la defaŭltan mapon"
+msgstr "Elekti la defaŭltan muzikreproduktilon"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Elekti defaŭltan retumilon"
+msgstr "Elekti defaŭltan PDF-montrilon"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "Elektu la defaŭltan numerum-aplikaĵon"
+msgstr "Elekti la defaŭltan numerum-aplikaĵon"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "Elektu la defaŭltan terminal-imitilon"
+msgstr "Elekti la defaŭltan terminal-imitilon"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Elektu la defaŭltan terminal-imitilon"
+msgstr "Elektu la defaŭltan tekstredaktilon"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Elektu la defaŭltan dosiermastrumilon"
+msgstr "Elekti la defaŭltan videoreproduktilon"
 
 #: package/contents/ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detaloj"
 
 #: package/contents/ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "Tiu aplikaĵo ne reklamas subtenon pot la sekvaj dosiertipoj:"
 
 #: package/contents/ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "Devigi malfermon ĉiukaze"
 
 #: package/contents/ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "La sekvontaj dosiertipoj estas ankoraŭ asociitaj kun malsama aplikaĵo:"
 
 #: package/contents/ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 asociita kun %2"
 
 #: package/contents/ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "Re-assign-all al %1"
 
 #: package/contents/ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "Ŝanĝi dosiertipan asociiĝon permane"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
@@ -149,7 +143,7 @@ msgstr ""
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Interreto"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -171,44 +165,44 @@ msgstr "Numerumilo:"
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multmedia"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Bildrigardilo:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Muzikreproduktilo:"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Videoreproduktilo:"
 
 #: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumentoj"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Tekstredaktilo:"
 
 #: package/contents/ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-rigardilo:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilaĵoj"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
@@ -221,14 +215,12 @@ msgid "Terminal emulator:"
 msgstr "Terminalimitilo:"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Dosiermastrumilo:"
+msgstr "Arkivmastrumilo:"
 
 #: package/contents/ui/main.qml:300
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapo:"

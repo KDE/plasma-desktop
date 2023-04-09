@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:59+0000\n"
-"PO-Revision-Date: 2023-01-04 13:00+0100\n"
+"PO-Revision-Date: 2023-04-08 17:16+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@lists.kde.org>\n"
 "Language: eo\n"
@@ -104,12 +104,12 @@ msgstr "Maksimumaj vicoj:"
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr ""
+msgstr "Ĉiam aranĝi taskojn en vicoj de tiom da kolumnoj"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr ""
+msgstr "Ĉiam aranĝi taskojn en kolumnoj de tiom da vicoj"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
@@ -193,6 +193,8 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"La  kompostilo ne subtenas bildigon de fenestroj flank-al-flanke, do teksta "
+"listo aperos anstataŭe."
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
@@ -560,11 +562,10 @@ msgid "Allow this program to be grouped"
 msgstr "Permesi al ĉi programo esti grupata"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Fermi"
+msgstr "&Fermi Ĉiujn"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format
@@ -624,7 +625,7 @@ msgstr "Silentigi %1"
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr "Alĝustigi volumon por %1"
+msgstr "Alĝustigi laŭtecon por %1"
 
 #: package/contents/ui/ToolTipInstance.qml:388
 #, kde-format
@@ -673,8 +674,8 @@ msgstr "Havebla en %1"
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 plia Loko"
+msgstr[1] "%1 pliaj Lokoj"
 
 #: plugin/backend.cpp:447
 #, kde-format

@@ -1,5 +1,5 @@
 # translation of kcmmouse.pot to esperanto
-# Esperantaj mesaĝoj por "kcminput"
+# Esperantaj mesaĝoj por "plasma-desktop"
 # Copyright (C) 1998, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>, 2002.
@@ -9,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kcminput\n"
+"Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -25,22 +25,24 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Pierre-Marie Pédrot"
+msgstr "Pierre-Marie Pédrot,Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "pedrotpmx@wanadoo.fr"
+msgstr "pedrotpmx@wanadoo.fr,okellogg@users.sourceforge.net"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Pridemando de enigaparatoj malsukcesis. Bonvolu remalfermi ĉi tiun agordan "
+"modulon."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "Kritika eraro dum legado de fundamentaj aparataj informoj de %1."
 
 #: kcm/libinput/libinput_config.cpp:90
 #, kde-format
@@ -48,11 +50,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Eraro dum ŝarĝo de valoroj. Vidu protokolojn por pliaj informoj. Bonvolu "
+"rekomenci ĉi tiun agordan modulon."
 
 #: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Neniu montrila aparato trovita. Konektu nun."
 
 #: kcm/libinput/libinput_config.cpp:106
 #, kde-format
@@ -60,6 +64,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Ne eblas konservi ĉiujn ŝanĝojn. Vidu protokolojn por pliaj informoj. "
+"Bonvolu rekomenci ĉi tiun agordan modulon kaj provi denove."
 
 #: kcm/libinput/libinput_config.cpp:126
 #, kde-format
@@ -67,6 +73,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Eraro dum ŝargo de defaŭltaj valoroj. Malsukcesis agordi kelkajn opciojn al "
+"iliaj defaŭltaj valoroj."
 
 #: kcm/libinput/libinput_config.cpp:148
 #, kde-format
@@ -74,21 +82,23 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Eraro dum aldono de lastatempe konektita aparato. Bonvolu rekonekti ĝin kaj "
+"rekomenci ĉi tiun agordan modulon."
 
 #: kcm/libinput/libinput_config.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Montrilo malkonektita. Fermis ĝian agordan dialogon."
 
 #: kcm/libinput/libinput_config.cpp:174
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Montrilo malkonektita. Neniuj aliaj aparatoj trovitaj."
 
 #: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "Aparato:"
 
 #: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
 #, kde-format
@@ -125,6 +135,7 @@ msgstr "Premi maldekstran kaj dekstran butonon for meza klako."
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan butonklakon."
 
 #: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
 #, kde-format
@@ -204,13 +215,13 @@ msgstr "Plua Butono %1:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Premu la musbutonon por kiu vi volas aldoni klavbindadon"
 
 #: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Enigu la novan klavkombinon por %1"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
@@ -506,30 +517,3 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " linio"
 msgstr[1] " linioj"
-
-#~ msgid "Mouse"
-#~ msgstr "Muso"
-
-#~ msgid "(c) 1997 - 2018 Mouse developers"
-#~ msgstr "(c) 1997 - 2018 Mouse programistoj"
-
-#~ msgid "Patrick Dowler"
-#~ msgstr "Patrick Dowler"
-
-#~ msgid "Dirk A. Mueller"
-#~ msgstr "Dirk A. Mueller"
-
-#~ msgid "David Faure"
-#~ msgstr "David Faure"
-
-#~ msgid "Bernd Gehrmann"
-#~ msgstr "Bernd Gehrmann"
-
-#~ msgid "Rik Hemsley"
-#~ msgstr "Rik Hemsley"
-
-#~ msgid "Brad Hughes"
-#~ msgstr "Brad Hughes"
-
-#~ msgid "Brad Hards"
-#~ msgstr "Brad Hards"

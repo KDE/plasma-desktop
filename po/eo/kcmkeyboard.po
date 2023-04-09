@@ -1,6 +1,6 @@
 # translation of kcmkeyboard.po to esperanto
 # Copyright (C) 2007-2023 Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the plasma-desktop package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-04 09:00+0100\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -23,12 +23,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Axel Rousseau"
+msgstr "Axel Rousseau,Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
+msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
 
 #: bindings.cpp:24
 #, kde-format
@@ -80,13 +80,13 @@ msgstr "Etikedo:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Antaŭrigardo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
 #, kde-format
 msgid "Hardware"
-msgstr ""
+msgstr "Aparataro"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm_keyboard.ui:33
@@ -185,14 +185,14 @@ msgstr ""
 #, kde-format
 msgctxt "no shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
 #. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
@@ -287,7 +287,7 @@ msgstr "&Agordi klavarajn opciojn"
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "Nekonata"
 
 #: kcm_keyboard_widget.cpp:213
 #, kde-format
@@ -344,31 +344,31 @@ msgstr "Defaŭlta"
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "Kiam klavo estas tenata:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "Montri &supersignojn kaj similajn signojn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "&Ripeti la klavon"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "&Fari nenion"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
 #, kde-format
 msgid "Test area:"
-msgstr ""
+msgstr "Testareo:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
 #: kcmmiscwidget.ui:73
@@ -377,6 +377,8 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
+"Permesas testi klavaran ripeton kaj klaku laŭtecon (nur ne forgesu apliki la "
+"ŝanĝojn)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
@@ -448,7 +450,7 @@ msgstr ""
 #: kcmmiscwidget.ui:195
 #, kde-format
 msgid " repeats/s"
-msgstr ""
+msgstr " ripetoj/s"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:205
@@ -483,9 +485,7 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
-
-#~ msgid "KDE Keyboard Control Module"
-#~ msgstr "KDE Klavarstirila Modulo"
-
-#~ msgid "(c) 2010 Andriy Rysin"
-#~ msgstr "(c) 2010 Andriy Rysin"
+"La klavargeometrio malsukcesis ŝargiĝi. Ĉi tio ofte indikas, ke la elektita "
+"modelo ne subtenas specifan aranĝon aŭ aranĝan varianton. Ĉi tiu problemo "
+"verŝajne ankaŭ prezentiĝos kiam vi provos uzi ĉi tiun kombinaĵon de modelo, "
+"aranĝo kaj varianto."

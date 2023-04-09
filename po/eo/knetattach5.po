@@ -1,14 +1,17 @@
 # translation of knetattach.po to esperanto
-#
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2007-11-25 20:51+0100\n"
-"Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
+"PO-Revision-Date: 2023-04-08 17:16+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -21,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Cindy McKee,Pierre-Marie Pédrot"
+msgstr "Cindy McKee,Pierre-Marie Pédrot,Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "cfmckee@gmail.com,pedrotpmx@wanadoo.fr"
+msgstr "cfmckee@gmail.com,pedrotpmx@wanadoo.fr,okellogg@users.sourceforge.net"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -173,7 +176,7 @@ msgstr "&Pordo:"
 #: knetattach.ui:283
 #, kde-format
 msgid "&Protocol:"
-msgstr ""
+msgstr "&Protokolo:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: knetattach.ui:313
@@ -218,10 +221,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Ĉefa aŭtoro kaj prizorganto"
-
-#~ msgid ""
-#~ "Enter a name for this <i>%1</i> as well as the server address, port and "
-#~ "folder path to use and press the Next button."
-#~ msgstr ""
-#~ "Enskribu nomon por ĉi tiu <i>%1</i> kaj ankaŭ la servilan adreson, "
-#~ "pordon, kaj dosier-vojon kiujn vi volas uzi, sekve premu la Sekva butonon."

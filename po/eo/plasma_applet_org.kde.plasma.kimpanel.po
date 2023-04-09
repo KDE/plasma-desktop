@@ -1,13 +1,16 @@
-# Translation of kimpanel into esperanto.
+# Translation of plasma_applet_org.kde.plasma.kimpanel.po into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kimpanel\n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:46+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,113 +22,102 @@ msgstr ""
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Aspekto"
 
 #: package/contents/ui/ActionMenu.qml:93
 #, kde-format
 msgid "(Empty)"
-msgstr ""
+msgstr "(Malplena)"
 
 #: package/contents/ui/ConfigAppearance.qml:29
 #, kde-format
 msgid "Input method list:"
-msgstr ""
+msgstr "Listo de eniga metodo:"
 
 #: package/contents/ui/ConfigAppearance.qml:30
 #, kde-format
 msgid "Vertical"
-msgstr ""
+msgstr "Vertikala"
 
 #: package/contents/ui/ConfigAppearance.qml:36
 #, kde-format
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontala"
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Font:"
-msgstr ""
+msgstr "Tiparo:"
 
 #: package/contents/ui/ConfigAppearance.qml:49
 #, kde-format
 msgid "Use custom:"
-msgstr ""
+msgstr "Uzi propran:"
 
 #: package/contents/ui/ConfigAppearance.qml:55
 #, kde-format
 msgctxt "The selected font family and font size"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Select Font…"
-msgstr ""
+msgstr "Elekti tiparon…"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Grando de la piktogramo de la panelo:"
 
 #: package/contents/ui/ConfigAppearance.qml:74
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "Malgranda"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Skali kun Panela alteco"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Skali kun Panela larĝeco"
 
 #: package/contents/ui/ConfigAppearance.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
-msgstr ""
+msgstr "Elekti Tiparon"
 
 #: package/contents/ui/ContextMenu.qml:83
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "Montri"
 
 #: package/contents/ui/ContextMenu.qml:98
 #, kde-format
 msgid "Hide %1"
-msgstr ""
+msgstr "Kaŝi %1"
 
 #: package/contents/ui/ContextMenu.qml:107
 #, kde-format
 msgid "Configure Input Method"
-msgstr ""
+msgstr "Agordi Enigmetodon"
 
 #: package/contents/ui/ContextMenu.qml:115
 #, kde-format
 msgid "Reload Config"
-msgstr ""
+msgstr "Reŝargi Agordon"
 
 #: package/contents/ui/ContextMenu.qml:123
 #, kde-format
 msgid "Exit Input Method"
-msgstr ""
+msgstr "Eliri Enig-Metodon"
 
 #: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Input Method Panel"
-msgstr ""
-
-#~ msgid "kimpanel"
-#~ msgstr "kimpanel"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Axel Rousseau"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "axel@esperanto-jeunes.org"
+msgstr "Enigometoda Panelo"
