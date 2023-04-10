@@ -285,7 +285,7 @@ Kicker.DashboardWindow {
 
             color: "white"
 
-            text: root.searching ? i18n("Searching for '%1'", searchField.text) : i18n("Type to search…")
+            text: root.searching ? i18n("Searching for '%1'", searchField.text) : i18nc("@info:placeholder as in, 'start typing to initiate a search'", "Type to search…")
 
             function updateSelection() {
                 if (!searchField.selectedText) {
