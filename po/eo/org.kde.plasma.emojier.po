@@ -1,27 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# translation of org.kde.plasma.emojier.pot to esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-31 01:00+0000\n"
-"PO-Revision-Date: 2023-04-09 08:49+0200\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
-"Language: ka\n"
+"PO-Revision-Date: 2023-04-09 22:11+0000\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: app/emojier.cpp:84 app/emojier.cpp:86
 #, kde-format
 msgid "Emoji Selector"
-msgstr "Emoji -ების არჩევა"
+msgstr "Emoji-Selektilo"
 
 #: app/emojier.cpp:88
 #, kde-format
@@ -32,113 +32,113 @@ msgstr "(C) 2019 Aleix Pol i Gonzalez"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Temuri Doghonadze"
+msgstr "Viaj nomoj"
 
 #: app/emojier.cpp:90
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "Temuri.doghonadze@gmail.com"
+msgstr "Viaj retpoŝtoj"
 
 #: app/emojier.cpp:105
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "გაშვებული ასლის ჩანაცვლება"
+msgstr "Anstataŭigi ekzistantan petskribon"
 
 #: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:52
 #, kde-format
 msgid "Search"
-msgstr "ძებნა"
+msgstr "Serĉi"
 
 #: app/ui/CategoryPage.qml:80
 #, kde-format
 msgid "Clear History"
-msgstr "ისტორიის გაწმენდა"
+msgstr "Klara Historio"
 
 #: app/ui/CategoryPage.qml:104
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
-msgstr "სიმბლოს კოპირება"
+msgstr "Kopii Signon"
 
 #: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
 #: app/ui/emojier.qml:36
 #, kde-format
 msgid "%1 copied to the clipboard"
-msgstr "დაკოპირდა გაცვლის ბაფერში: %1"
+msgstr "%1 kopiita al la tondujo"
 
 #: app/ui/CategoryPage.qml:112
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
-msgstr "აღწერის კოპირება"
+msgstr "Kopii Priskribon"
 
 #: app/ui/CategoryPage.qml:205
 #, kde-format
 msgid "No recent Emojis"
-msgstr "ემოჯიების გარეშე"
+msgstr "Neniuj lastatempaj Emojis"
 
 #: app/ui/emojier.qml:42
 #, kde-format
 msgid "Recent"
-msgstr "Ბოლო"
+msgstr "Lastatempa"
 
 #: app/ui/emojier.qml:63
 #, kde-format
 msgid "All"
-msgstr "ყველა"
+msgstr "Ĉiuj"
 
 #: app/ui/emojier.qml:71
 #, kde-format
 msgid "Categories"
-msgstr "კატეგორიები"
+msgstr "Kategorioj"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
 msgid "Smileys and Emotion"
-msgstr "ღიმილი და ემოციები"
+msgstr "Smileys kaj Emocio"
 
 #: emojicategory.cpp:15
 msgctxt "Emoji Category"
 msgid "People and Body"
-msgstr "ადამიანის სხეულები"
+msgstr "Homoj kaj Korpo"
 
 #: emojicategory.cpp:16
 msgctxt "Emoji Category"
 msgid "Component"
-msgstr "კომპონენტი"
+msgstr "Komponanto"
 
 #: emojicategory.cpp:17
 msgctxt "Emoji Category"
 msgid "Animals and Nature"
-msgstr "ცხოველები და ბუნება"
+msgstr "Bestoj kaj Naturo"
 
 #: emojicategory.cpp:18
 msgctxt "Emoji Category"
 msgid "Food and Drink"
-msgstr "საჭმელ-სასმელი"
+msgstr "Manĝaĵo kaj trinkaĵo"
 
 #: emojicategory.cpp:19
 msgctxt "Emoji Category"
 msgid "Travel and Places"
-msgstr "მოგზაურობა და ადგილები"
+msgstr "Vojaĝoj kaj Lokoj"
 
 #: emojicategory.cpp:20
 msgctxt "Emoji Category"
 msgid "Activities"
-msgstr "ქმედებები"
+msgstr "Aktivecoj"
 
 #: emojicategory.cpp:21
 msgctxt "Emoji Category"
 msgid "Objects"
-msgstr "ობიექტები"
+msgstr "Objektoj"
 
 #: emojicategory.cpp:22
 msgctxt "Emoji Category"
 msgid "Symbols"
-msgstr "სიმბოლოები"
+msgstr "Simboloj"
 
 #: emojicategory.cpp:23
 msgctxt "Emoji Category"
 msgid "Flags"
-msgstr "დროშები"
+msgstr "Flagoj"

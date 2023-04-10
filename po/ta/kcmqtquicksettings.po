@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-07 02:03+0000\n"
-"PO-Revision-Date: 2022-04-02 21:48+0530\n"
+"PO-Revision-Date: 2023-04-09 21:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "கோ. கிஷோர்"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "Kde-l10n-ta@kde.org"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
@@ -34,12 +34,14 @@ msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
 "you know what you are doing."
 msgstr ""
+"பிளாஸ்மா பயன்படுத்தும் QtQuick அமைப்புகளை இது மாற்றும். கைதேர்ந்த பயனர்கள் மட்டுமே இதைப் "
+"பயன்படுத்த வேண்டும்."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:38
 #, kde-format
 msgid "Rendering Backend:"
-msgstr ""
+msgstr "வரைவு பின்நிலை:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
@@ -76,19 +78,19 @@ msgstr ""
 #: kcmqtquicksettingswidget.ui:76
 #, kde-format
 msgid "Render Loop:"
-msgstr ""
+msgstr "வரைவு சுழற்சி:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:89
 #, kde-format
 msgid "Basic"
-msgstr ""
+msgstr "அடிப்படையானது"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:94
 #, kde-format
 msgid "Threaded"
-msgstr ""
+msgstr "பற்பணியானது"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:102

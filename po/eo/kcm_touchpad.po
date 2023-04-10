@@ -1,349 +1,353 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# translation of kcm_touchpad.pot to esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-desktop\n"
+"Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-04-09 08:45+0200\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
-"Language: ka\n"
+"PO-Revision-Date: 2023-04-09 22:11+0000\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Temuri Doghonadze"
+msgstr "Viaj nomoj"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "Temuri.doghonadze@gmail.com"
+msgstr "Viaj retpoŝtoj"
 
 #: actions.cpp:19
 #, kde-format
 msgid "Touchpad"
-msgstr "თაჩპედი"
+msgstr "Touchpad (Tuŝplato)"
 
 #: actions.cpp:22
 #, kde-format
 msgid "Enable Touchpad"
-msgstr "თაჩპედის ჩართვა"
+msgstr "Ebligi Touchpad"
 
 #: actions.cpp:30
 #, kde-format
 msgid "Disable Touchpad"
-msgstr "თაჩპედის გამორთვა"
+msgstr "Malebligi Touchpad"
 
 #: actions.cpp:38
 #, kde-format
 msgid "Toggle Touchpad"
-msgstr "თაჩპედის ჩართ/გამორთ"
+msgstr "Baskuligi Touchpad"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"შეყვანის მოწყობილობის ინფორმაციის მოთხოვნის შეცდომა. ეს მოდული თავიდან "
-"გახსენით."
+"Pridemando de enigaparatoj malsukcesis. Bonvolu remalfermi ĉi tiun agordan "
+"modulon."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:78
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
-"კრიტიკული შეცდომა მოწყობილობის ფუნდამენტალური ინფორმაციის წაკითხვისას "
-"თაჩპედისთვის %1."
+"Kritika eraro dum legado de fundamentaj aparataj informoj por tuŝplato %1."
 
 #: backends/x11/xlibbackend.cpp:74
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "X სერვერთან დაკავშირების შეცდომა"
+msgstr "Ne povas konekti al X-servilo"
 
 #: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
-msgstr "თაჩპედის ვერ ვიპოვე"
+msgstr "Neniu tuŝplato trovita"
 
 #: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr "თაჩპედის კონფიგურაციის გადატარება შეუძლებელია"
+msgstr "Ne povas apliki agordon de tuŝopad"
 
 #: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr "თაჩპედის კონფიგურაციის წაკითხვის შეცდომა"
+msgstr "Ne povas legi la agordon de tuŝplato"
 
 #: backends/x11/xlibbackend.cpp:190
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr "ნაგულისხმები თაჩპედის კონფიგურაციის წაკითხვის შეცდომა"
+msgstr "Ne povas legi defaŭltan agordon de tuŝplato"
 
 #: kcm/libinput/touchpad.qml:108
 #, kde-format
 msgid "Device:"
-msgstr "მოწყობილობა:"
+msgstr "Aparato:"
 
 #: kcm/libinput/touchpad.qml:133
 #, kde-format
 msgid "General:"
-msgstr "ზოგადი:"
+msgstr "Ĝenerala:"
 
 #: kcm/libinput/touchpad.qml:135
 #, kde-format
 msgid "Device enabled"
-msgstr "მოწყობილობა ჩართულია"
+msgstr "Aparato ebligita"
 
 #: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Accept input through this device."
-msgstr "ამ მოწყობილობიდან შემოტანის ჩართვა."
+msgstr "Akcepti enigon per ĉi tiu aparato."
 
 #: kcm/libinput/touchpad.qml:163
 #, kde-format
 msgid "Disable while typing"
-msgstr "კრეფისას გამორთვა"
+msgstr "Malebligi dum tajpado"
 
 #: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"გამორთავს თაჩპედს კრეფისას, არასასურველი დაწოლების თავიდან ასაცილებლად."
+msgstr "Malŝalti tuŝplaton dum tajpado por malhelpi hazardajn enigojn."
 
 #: kcm/libinput/touchpad.qml:191
 #, kde-format
 msgid "Left handed mode"
-msgstr "ცაცია"
+msgstr "Maldekstramana reĝimo"
 
 #: kcm/libinput/touchpad.qml:195
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr "მარჯვენა და მარცხენა ღილაკებისთვის ადგილის შეცვლა."
+msgstr "Interŝanĝi maldekstrajn kaj dekstrajn butonojn."
 
 #: kcm/libinput/touchpad.qml:219
 #, kde-format
 msgid "Press left and right buttons for middle click"
-msgstr "შუა-წკაპისთვის მარჯვენა და მარცხენა ღილაკებს ერთდროულად დააწექით"
+msgstr "Premi maldekstrajn kaj dekstrajn butonojn por meza klako"
 
 #: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
-"მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
+"Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan butonklakon."
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr "კურსორის აჩქარება:"
+msgstr "Montrila akcelo:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Acceleration profile:"
-msgstr "აჩქარების პროფილი:"
+msgstr "Akcela profilo:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "Flat"
-msgstr "ბრტყელი"
+msgstr "Plata"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "Cursor moves the same distance as finger."
-msgstr "კურსორი იგივე მანძილით გაიწევა, როგორითაც თითი."
+msgstr "Kursoro movas la saman distancon kiel fingro."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Adaptive"
-msgstr "შეგუებადი"
+msgstr "Adaptiva"
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
-msgstr "კურსორის გადატანის მანძილი თითის მოძრაობის სიჩქარეზეა დამოკიდებული."
+msgstr "Kursora vojaĝdistanco dependas de movrapideco de fingro."
 
 #: kcm/libinput/touchpad.qml:412
 #, kde-format
 msgid "Tapping:"
-msgstr "დატყაპუნება:"
+msgstr "Frapado:"
 
 #: kcm/libinput/touchpad.qml:414
 #, kde-format
 msgid "Tap-to-click"
-msgstr "დასაწკაპუნებლად დაატყაპუნეთ"
+msgstr "Frapeto-al-klaki"
 
 #: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Single tap is left button click."
-msgstr "მარცხენა კლავიშის წკაპისთვის ერთი ტყაპი."
+msgstr "Unuopa frapeto estas maldekstra butono klako."
 
 #: kcm/libinput/touchpad.qml:447
 #, kde-format
 msgid "Tap-and-drag"
-msgstr "ტყაპი-და-გადათრევა"
+msgstr "Frapi kaj treni"
 
 #: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr "გაასრიალეთ თითი თაჩპედზე, დატყაპუნების შემდეგ."
+msgstr "Glitante super tuŝplato rekte post frapeto trenas."
 
 #: kcm/libinput/touchpad.qml:478
 #, kde-format
 msgid "Tap-and-drag lock"
-msgstr "ტყაპი-და-გადათრევის დაბლოკვა"
+msgstr "Frap-kaj-trena ŝloso"
 
 #: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Dragging continues after a short finger lift."
-msgstr "გადათრევა გრძელდება მოკლე თითის აწევის შემდეგ."
+msgstr "Trenado kontinuas post mallonga fingrolevo."
 
 #: kcm/libinput/touchpad.qml:501
 #, kde-format
 msgid "Two-finger tap:"
-msgstr "ორი თითით ტყაპუნი:"
+msgstr "Dufingra frapeto:"
 
 #: kcm/libinput/touchpad.qml:510
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "მარჯვენა-ღილაკის-წკაპი (შუა-ღილაკის-წკაპისთვის სამი თითით დაატყაპუნეთ)"
+msgstr "Dekstra alklako (trifingroklaku por mezklako)"
 
 #: kcm/libinput/touchpad.qml:511
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ, შუა-წკაპისთვის კი სამით."
+msgstr ""
+"Frapu per du fingroj por dekstre alklaki, frapeti per tri fingroj por "
+"mezklaki."
 
 #: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr "შუა-წკაპი (მარჯვენა-წკაპისთვის სამი თითით დაატყაპუნეთ)"
+msgstr "Mez-klako (tri-fingroklako dekstre-klako)"
 
 #: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ, მარჯვენა-წკაპისთვის კი სამით."
+msgstr ""
+"Frapu per du fingroj por mezklaki, frapeti per tri fingroj por dekstre "
+"alklaki."
 
 #: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Right-click"
-msgstr "მარჯვენა-წკაპი"
+msgstr "Dekstra alklako"
 
 #: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ."
+msgstr "Frapu per du fingroj por dekstre alklaki."
 
 #: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Middle-click"
-msgstr "შუა-წკაპი"
+msgstr "Mezklako"
 
 #: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ."
+msgstr "Frapu per du fingroj por mezklaki."
 
 #: kcm/libinput/touchpad.qml:578
 #, kde-format
 msgid "Scrolling:"
-msgstr "აწევ-ჩამოწევა:"
+msgstr "Rulumado:"
 
 #: kcm/libinput/touchpad.qml:608
 #, kde-format
 msgid "Two fingers"
-msgstr "ორი თითი"
+msgstr "Du fingroj"
 
 #: kcm/libinput/touchpad.qml:612
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "ორი თითის გასრიალება აწევ-ჩამოწევა."
+msgstr "Gliti kun du fingroj ruliĝas."
 
 #: kcm/libinput/touchpad.qml:620
 #, kde-format
 msgid "Touchpad edges"
-msgstr "თაჩპედის კიდეები"
+msgstr "Tuŝplat-eĝoj"
 
 #: kcm/libinput/touchpad.qml:624
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "თაჩპედის კიდეზე გასრიალება აწევ-ჩამოწევა."
+msgstr "Glitu sur la randoj de la touchpad ruliĝas."
 
 #: kcm/libinput/touchpad.qml:634
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "აწევ-ჩამოწევის მიმართულების ინვერსია (ჩვეულებრივი აწევ-ჩამოწევა)"
+msgstr "Inversigi ruldirekton (Natura movo)"
 
 #: kcm/libinput/touchpad.qml:650
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
+msgstr "Tuŝekrano kiel movo."
 
 #: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა"
+msgstr "Malebligi horizontalan movadon"
 
 #: kcm/libinput/touchpad.qml:683
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "აწევ-ჩამოწევის სიჩქარე:"
+msgstr "Rulumrapido:"
 
 #: kcm/libinput/touchpad.qml:732
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr "უფრო ნელა"
+msgstr "Pli malrapide"
 
 #: kcm/libinput/touchpad.qml:738
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr "უფრო სწრაფი"
+msgstr "Pli rapide"
 
 #: kcm/libinput/touchpad.qml:747
 #, kde-format
 msgid "Right-click:"
-msgstr "მარჯვენა-წკაპი:"
+msgstr "Dekstre alklaku:"
 
 #: kcm/libinput/touchpad.qml:780
 #, kde-format
 msgid "Press bottom-right corner"
-msgstr "დააჭირეთ ქვედა-მარჯვენა კუთხეში"
+msgstr "Premi malsupran dekstran angulon"
 
 #: kcm/libinput/touchpad.qml:784
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr "პროგრამულად ჩართული ღილაკები თქვენი თაჩპედის ქვედა ადგილას დაემატება."
+msgstr ""
+"Programaro ebligita butonoj estos aldonitaj al malsupra parto de via "
+"tuŝplato."
 
 #: kcm/libinput/touchpad.qml:792
 #, kde-format
 msgid "Press anywhere with two fingers"
-msgstr "სადმე ორი თითით დაატყაპუნეთ"
+msgstr "Premi ie ajn per du fingroj"
 
 #: kcm/libinput/touchpad.qml:796
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr "მარჯვენა წკაპით ჩასართავად ორი თითით დაატყაპუნეთ."
+msgstr "Frapi per du fingroj por ebligi dekstran klakon."
 
 #: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Middle-click: "
-msgstr "შუა-წკაპი: "
+msgstr "Mezklako:"
 
 #: kcm/libinput/touchpad.qml:839
 #, kde-format
 msgid "Press bottom-middle"
-msgstr "დააჭირეთ ქვედა შუაში"
+msgstr "Premi malsupre-meze"
 
 #: kcm/libinput/touchpad.qml:843
 #, kde-format
@@ -351,22 +355,23 @@ msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr ""
-"პროგრამულად ჩართული შუა-ღილაკი თქვენი თაჩპედის ქვედა ადგილას დაემატება."
+"Mezbutono ebligita programaro estos aldonita al la malsupra parto de via "
+"tuŝo."
 
 #: kcm/libinput/touchpad.qml:851
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
-msgstr "ერთდროულად დააწექით ქვედა მარცხენა და ქვედა მარჯვენა კუთხეებს"
+msgstr "Premi malsupran maldekstran kaj malsupran dekstran angulojn samtempe"
 
 #: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press anywhere with three fingers"
-msgstr "სადმე სამი თითით დაატყაპუნეთ"
+msgstr "Premi ie ajn per tri fingroj"
 
 #: kcm/libinput/touchpad.qml:870
 #, kde-format
 msgid "Press anywhere with three fingers."
-msgstr "სადმე სამი თითით დაატყაპუნეთ."
+msgstr "Premi ie ajn per tri fingroj."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:68
 #, kde-format
@@ -374,13 +379,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
-"მნიშვნელობების ჩატვირთვის შეცდომა. მეტი ინფორმაციის მისაღებად იხილეთ "
-"ჟურნალი. საჭიროა ამ კონფიგურაციის მოდულის გადატვირთვა."
+"Eraro dum ŝarĝo de valoroj. Vidu protokolojn por pliaj informoj. Bonvolu "
+"rekomenci ĉi tiun agordan modulon."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:71
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr "თაჩპედი ვერ ვიპოვე. შეაერთეთ."
+msgstr "Neniu tuŝplato trovita. Konektu tuŝplaton nun."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:80
 #, kde-format
@@ -388,8 +393,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"ყველა ცვლილების შენახვა შეუძლებელია. მეტი ინფორმაციისთვის იხილეთ ჟურნალი. "
-"გადატვირთეთ ეს მოდული და თავიდან სცადეთ."
+"Ne eblas konservi ĉiujn ŝanĝojn. Vidu protokolojn por pliaj informoj. "
+"Bonvolu rekomenci ĉi tiun agordan modulon kaj provi denove."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:99
 #, kde-format
@@ -397,8 +402,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
-"ნაგულისხმები მნიშვნელობების ჩატვირთვის შეცდომა. ზოგიერთი პარამეტრის მათ "
-"ნაგულისხმებ მნიშვნელობებზე დაყენების შეცდომა."
+"Eraro dum ŝarĝo de defaŭltaj valoroj. Malsukcesis agordi kelkajn opciojn al "
+"iliaj defaŭltaj valoroj."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:119
 #, kde-format
@@ -406,41 +411,41 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"შეცდომა ახლად შეერთებული მოწყობილობის დამატებისას. თავიდან მიაერთეთ ის და ეს "
-"მოდული თავიდან გაუშვით."
+"Eraro dum aldono de lastatempe konektita aparato. Bonvolu rekonekti ĝin kaj "
+"rekomenci ĉi tiun agordan modulon."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
-msgstr "თაჩპედი გაითიშა. მისი პარამეტრების ფანჯარა დაიხურა."
+msgstr "Tuŝplato malkonektita. Fermis ĝian agordan dialogon."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:144
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
-msgstr "თაჩპედი გაითიშა. სხვა თაჩპედები ვერ ვიპოვე."
+msgstr "Tuŝplato malkonektita. Neniuj aliaj tuŝplatoj trovitaj."
 
 #: kcm/xlib/testarea.cpp:20
 #, kde-format
 msgid "Drag me"
-msgstr "გადამათრიე"
+msgstr "Trenu min"
 
 #: kcm/xlib/testbutton.cpp:29
 #, kde-format
 msgctxt "Mouse button"
 msgid "Left button"
-msgstr "მარცხენა ღილაკი"
+msgstr "Maldekstra butono"
 
 #: kcm/xlib/testbutton.cpp:32
 #, kde-format
 msgctxt "Mouse button"
 msgid "Right button"
-msgstr "მარჯვენა ღილაკი"
+msgstr "Dekstra butono"
 
 #: kcm/xlib/testbutton.cpp:35
 #, kde-format
 msgctxt "Mouse button"
 msgid "Middle button"
-msgstr "შუა ღილაკი"
+msgstr "Meza butono"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:96
 #, kde-format
@@ -448,55 +453,55 @@ msgid ""
 "Active settings don't match saved settings.\n"
 "You currently see saved settings."
 msgstr ""
-"აქტიური პარამეტრები შენახულ პარამეტრებს არ ემთხვევა.\n"
-"ამჟამად შენახულ პარამეტრებს უყურებთ."
+"Aktivaj agordoj ne kongruas kun konservitaj agordoj.\n"
+"Vi nuntempe vidas konservitajn agordojn."
 
 #: kcm/xlib/touchpadconfigxlib.cpp:102
 #, kde-format
 msgid "Show active settings"
-msgstr "აქტიური პარამეტრების ჩვენება"
+msgstr "Montri aktivajn agordojn"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:139
 #, kde-format
 msgid "These settings won't take effect in the testing area"
-msgstr "ამ პარამეტრებს სატესტო ადგილას ეფექტი არ გააჩნიათ"
+msgstr "Ĉi tiuj agordoj ne efektiviĝos en la testa areo"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:144
 #, kde-format
 msgid "Enable/Disable Touchpad"
-msgstr "თაჩპედის ჩართ/გამორთ"
+msgstr "Ebligu/Malŝalti Touchpad"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
 #: kcm/xlib/ui/kded.ui:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Enable/Disable Touchpad"
-msgstr "თაჩპედის ჩართ/გამორთ"
+msgstr "Ebligu/Malŝalti Touchpad"
 
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
 #: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
 #, kde-format
 msgid "Configure…"
-msgstr "მორგება…"
+msgstr "Agordu…"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/kded.ui:47
 #, kde-format
 msgid "Keyboard shortcuts:"
-msgstr "კლავიატურის მალსახმობები:"
+msgstr "Klavaj ŝparvojoj:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:60
 #, kde-format
 msgid "Disable touchpad when typing"
-msgstr "კრეფისას თაჩპედის გამორთვა"
+msgstr "Malŝalti tuŝplaton dum tajpado"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/kded.ui:75
 #, kde-format
 msgid "Timeout:"
-msgstr "ხანგრძლივობა:"
+msgstr "Tempo:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
 #: kcm/xlib/ui/kded.ui:86
@@ -505,8 +510,8 @@ msgid ""
 "If there was no keyboard activity for more than specified\n"
 "number of milliseconds, touchpad will be enabled again"
 msgstr ""
-"თუ კლავიატურას არ შეეხებით მითითებულზე უფრო მეტ\n"
-"მილიწამში, თაჩპედი ისევ ჩაირთვება"
+"Se ne estis klavara aktivado dum pli ol specifita\n"
+"ombro da milisekundoj, tuŝplato denove estos ebligita"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
@@ -517,7 +522,7 @@ msgstr ""
 #: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
 #, kde-format
 msgid " ms"
-msgstr " მწმ"
+msgstr "ms"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:106
@@ -527,33 +532,33 @@ msgid ""
 "You will be still able to move pointer using touchpad and perform clicks "
 "with hardware buttons."
 msgstr ""
-"წკაპის ემულაციისა და გადახვევის გამორთვა.\n"
-"თაჩპედით კურსორის გამოძრავება და ფიზიკურ ღილაკებზე დაჭერა ჯერ კიდევ "
-"შეგეძლებათ."
+"Malebligu klak-imuladon kaj movadadon.\n"
+"Vi ankoraŭ povos movi montrilon per tuŝplato kaj fari klakojn per aparataj "
+"butonoj."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:109
 #, kde-format
 msgid "Disable taps and scrolling only"
-msgstr "ტყაპუნის გამორთვა. მხოლოდ აწევ-ჩამოწევა"
+msgstr "Malebligi frapetojn kaj movadadon nur"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
 #: kcm/xlib/ui/kded.ui:119
 #, kde-format
 msgid "Disable touchpad when mouse is plugged in"
-msgstr "თაჩპედის გამორთვა, როცა თაგუნა შეერთებულია"
+msgstr "Malŝalti tuŝplaton kiam muso estas enŝovita"
 
 #. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
 #: kcm/xlib/ui/kded.ui:136
 #, kde-format
 msgid "Notifications:"
-msgstr "შეტყობინებები:"
+msgstr "Sciigoj:"
 
 #. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
 #: kcm/xlib/ui/kded.ui:158
 #, kde-format
 msgid "Ignored devices:"
-msgstr "იგნორირებული მოწყობილობები:"
+msgstr "Ignoritaj aparatoj:"
 
 #. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
 #: kcm/xlib/ui/kded.ui:169
@@ -563,159 +568,155 @@ msgid ""
 "You can add them to this list so that they will be ignored when they're "
 "plugged in."
 msgstr ""
-"ზოგიერთ მოწყობილობას შეიძლება სულ ტყუილად ვთვლით თაგუნად.\n"
-"ამ სიაში შეგიძლიათ ჩაამატოთ მოწყობილობები, რომლებიც შეერთებისას გამოტოვებული "
-"იქნება."
+"Iuj aparatoj eble estos malĝuste traktataj kiel muso.\n"
+"Vi povas aldoni ilin al ĉi tiu listo, por ke ili estu ignoritaj kiam ili "
+"estas enŝaltitaj."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
 #: kcm/xlib/ui/pointermotion.ui:14
 #, kde-format
 msgid "Pointer Motion"
-msgstr "კურსორის მოძრაობა"
+msgstr "Montrilo Moviĝo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: kcm/xlib/ui/pointermotion.ui:20
 #, kde-format
 msgctxt "Mouse pointer motion parameters"
 msgid "Speed"
-msgstr "სიჩქარე"
+msgstr "Rapido"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/pointermotion.ui:29
 #, kde-format
 msgctxt "Minimum pointer movement speed"
 msgid "Minimum:"
-msgstr "მინიმუმი:"
+msgstr "Minimumo:"
 
 #. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
 #: kcm/xlib/ui/pointermotion.ui:39
 #, kde-format
 msgid "Minimum pointer speed"
-msgstr "კურსორის მინიმალური სიჩქარე"
+msgstr "Minimuma montrilo rapideco"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/pointermotion.ui:52
 #, kde-format
 msgctxt "Maximum pointer movement speed"
 msgid "Maximum:"
-msgstr "მაქსიმუმი:"
+msgstr "Maksimumo:"
 
 #. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
 #: kcm/xlib/ui/pointermotion.ui:62
 #, kde-format
 msgid "Maximum pointer speed"
-msgstr "კურსორის მაქსიმალური სიჩქარე"
+msgstr "Maksimuma montrilo rapideco"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/pointermotion.ui:75
 #, kde-format
 msgctxt "Pointer acceleration"
 msgid "Acceleration:"
-msgstr "აპარატურული აჩქარება:"
+msgstr "Akcelo:"
 
 #. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
 #: kcm/xlib/ui/pointermotion.ui:85
 #, kde-format
 msgid "Acceleration factor for normal pointer movements"
-msgstr "აჩქარების ფაქტორი კურსორის ნორმალური მოძრაობისას"
+msgstr "Akcela faktoro por normalaj montrilmovoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/pointermotion.ui:101
 #, kde-format
 msgctxt "Pointer motion"
 msgid "Pressure-Dependent Motion"
-msgstr "დაწოლაზე-დამოკიდებული მოძრაობა"
+msgstr "Premo-Dependa Moviĝo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/pointermotion.ui:113
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Minimum pressure:"
-msgstr "მინიმალური დაწოლა:"
+msgstr "Minimuma premo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/ui/pointermotion.ui:123
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Minimum factor:"
-msgstr "მინიმალური ფაქტორი:"
+msgstr "Minimuma faktoro:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/pointermotion.ui:133
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Maximum pressure:"
-msgstr "მაქსიმალური დაწოლა:"
+msgstr "Maksimuma premo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/ui/pointermotion.ui:143
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Maximum factor:"
-msgstr "მაქსიმალური ფაქტორი:"
+msgstr "Maksimuma faktoro:"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
 #: kcm/xlib/ui/pointermotion.ui:153
 #, kde-format
 msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr ""
-"თითის დაწოლა, როცა გამოიყენება მინიმალური დაწოლის გადაადგილების ფაქტორი"
+msgstr "Fingra premo ĉe kiu minimuma prema movfaktoro estas aplikata"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
 #: kcm/xlib/ui/pointermotion.ui:166
 #, kde-format
 msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr ""
-"თითის დაწოლა, როცა გამოიყენება მაქსიმალური დაწოლის გადაადგილების ფაქტორი"
+msgstr "Fingra premo ĉe kiu maksimumprema movfaktoro estas aplikata"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
 #: kcm/xlib/ui/pointermotion.ui:179
 #, kde-format
 msgid "Lowest setting for pressure motion factor"
-msgstr "დაწოლით გამოძრავების ფაქტორის უმდაბლესი მნიშვნელობა"
+msgstr "Plej malalta agordo por prema movadfaktoro"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
 #: kcm/xlib/ui/pointermotion.ui:189
 #, kde-format
 msgid "Greatest setting for pressure motion factor"
-msgstr "დაწოლით გამოძრავების ფაქტორის უმაღლესი მნიშვნელობა"
+msgstr "Plej bonega agordo por prema movfaktoro"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/pointermotion.ui:202
 #, kde-format
 msgctxt "Pointer motion"
 msgid "Noise Cancellation"
-msgstr "ხმაურის მოცილება"
+msgstr "Nuligo de Bruo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/pointermotion.ui:214
 #, kde-format
 msgctxt "Noise cancellation"
 msgid "Vertical:"
-msgstr "ვერტიკალური:"
+msgstr "Vertikala:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/pointermotion.ui:224
 #, kde-format
 msgctxt "Noise cancellation"
 msgid "Horizontal:"
-msgstr "ჰორიზონტალური:"
+msgstr "Horizontala:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
 #: kcm/xlib/ui/pointermotion.ui:234
 #, kde-format
 msgid ""
 "The minimum vertical hardware distance required to generate motion events"
-msgstr ""
-"მოძრაობის მოვლენების გენერირებისთვის საჭირო მინიმალური ვერტიკალური "
-"აპარატურის მანძილი"
+msgstr "La minimuma vertikala hardvardistanco necesa por generi moviĝokazaĵojn"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
 #: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
 #, kde-format
 msgid " units"
-msgstr " ერთეული"
+msgstr "unuoj"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
 #: kcm/xlib/ui/pointermotion.ui:250
@@ -723,27 +724,25 @@ msgstr " ერთეული"
 msgid ""
 "The minimum horizontal hardware distance required to generate motion events"
 msgstr ""
-"მოძრაობის მოვლენების გენერირებისთვის საჭირო მინიმალური ჰორიზონტალური "
-"აპარატურის მანძილი"
+"La minimuma horizontala hardvardistanco necesa por generi moviĝokazaĵojn"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
 #: kcm/xlib/ui/scroll.ui:14
 #, kde-format
 msgid "Scrolling"
-msgstr "სკროლინგი (დატრიალება)"
+msgstr "Rulumado"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/scroll.ui:28
 #, kde-format
 msgid "Edge scrolling:"
-msgstr "კიდით აწევ-ჩამოწევა:"
+msgstr "Randa movo:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
 #: kcm/xlib/ui/scroll.ui:38
 #, kde-format
 msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr ""
-"ვერტიკალური აწევ-ჩამოწევის ჩართვა მაშინ, როცა ათრევთ მარჯვენა კიდის გასწვრივ"
+msgstr "Ebligi vertikalan movadon dum trenado laŭ la dekstra rando"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
@@ -752,14 +751,13 @@ msgstr ""
 #, kde-format
 msgctxt "Scrolling direction"
 msgid "Vertical"
-msgstr "ვერტიკალური"
+msgstr "Vertikala"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
 #: kcm/xlib/ui/scroll.ui:48
 #, kde-format
 msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr ""
-"ჰორიზონტალურ აწევ-ჩამოწევის ჩართვა მაშინ, როცა ათრევთ ქვედა კიდის გასწვრივ"
+msgstr "Ebligi horizontalan movadon dum trenado laŭ la malsupra rando"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
@@ -768,7 +766,7 @@ msgstr ""
 #, kde-format
 msgctxt "Scrolling direction"
 msgid "Horizontal"
-msgstr "ჰორიზონტალური"
+msgstr "Horizontala"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
 #: kcm/xlib/ui/scroll.ui:58
@@ -776,7 +774,8 @@ msgstr "ჰორიზონტალური"
 msgid ""
 "Enable vertical scrolling when dragging with two fingers anywhere on the "
 "touchpad"
-msgstr "ვერტიკალური აწევ-ჩამოწევის ჩართვა მაშინ, როცა თაჩპედს ორი თითით ეხებით"
+msgstr ""
+"Ebligu vertikalan movadon dum trenado per du fingroj ie ajn sur la tuŝplato"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
 #: kcm/xlib/ui/scroll.ui:68
@@ -785,52 +784,52 @@ msgid ""
 "Enable horizontal scrolling when dragging with two fingers anywhere on the "
 "touchpad"
 msgstr ""
-"ჰორიზონტალური აწევ-ჩამოწევის ჩართვა მაშინ, როცა თაჩპედს ორი თითით ეხებით"
+"Ebligu horizontalan movadon dum trenado per du fingroj ie ajn sur la tuŝplato"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
 #: kcm/xlib/ui/scroll.ui:78
 #, kde-format
 msgid "Reverse vertical scrolling"
-msgstr "ვერტიკალური აწევ-ჩამოწევის რევერსი"
+msgstr "Inversa vertikala movo"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
 #: kcm/xlib/ui/scroll.ui:88
 #, kde-format
 msgid "Reverse horizontal scrolling"
-msgstr "ჰორიზონტალური აწევ-ჩამოწევის რევერსი"
+msgstr "Inversa horizontala movo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/ui/scroll.ui:98
 #, kde-format
 msgid "Two-finger scrolling:"
-msgstr "ორი თითით აწევ-ჩამოწევა:"
+msgstr "Dufingra movo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/scroll.ui:108
 #, kde-format
 msgid "Reverse scrolling:"
-msgstr "აწევ-ჩამოწევის რევერსი:"
+msgstr "Inversa movo:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/scroll.ui:126
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Scrolling Distance"
-msgstr "აწევ-ჩამოწევის მანძილი"
+msgstr "Scrolling Distanco"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/scroll.ui:138
 #, kde-format
 msgctxt "Scrolling distance"
 msgid "Vertical:"
-msgstr "ვერტიკალური:"
+msgstr "Vertikala:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
 #: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
 #, kde-format
 msgid "Move distance of the finger for a scroll event"
-msgstr "თითის მოძრაობის მანძილი დაქაჩვის მოვლენისთვის"
+msgstr "Movi distancon de la fingro por rula evento"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
@@ -838,14 +837,14 @@ msgstr "თითის მოძრაობის მანძილი და
 #: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
 #, kde-format
 msgid " mm"
-msgstr " მმ"
+msgstr " mm"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/scroll.ui:167
 #, kde-format
 msgctxt "Scrolling distance"
 msgid "Horizontal:"
-msgstr "ჰორიზონტალური:"
+msgstr "Horizontala:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
 #: kcm/xlib/ui/scroll.ui:199
@@ -853,21 +852,21 @@ msgstr "ჰორიზონტალური:"
 msgid ""
 "Continue scrolling after the finger is released from the edge of the touchpad"
 msgstr ""
-"აწევ-ჩამოწევის გაგრძელება მას შემდეგაც კი, რაც თითს თაჩპედის კიდიდან აიღებთ"
+"Daŭre rulu post kiam la fingro estas liberigita de la rando de la tuŝplato"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
 #: kcm/xlib/ui/scroll.ui:202
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Coasting"
-msgstr "ინერცია"
+msgstr "Marbordo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/scroll.ui:217
 #, kde-format
 msgctxt "Coasting"
 msgid "Minimum speed:"
-msgstr "მინიმალური სიჩქარე:"
+msgstr "Minimuma rapido:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:227
@@ -876,54 +875,52 @@ msgid ""
 "Your finger needs to produce this many scrolls per second in order to start "
 "coasting"
 msgstr ""
-"თქვენს თითს სჭირდება ამდენი გადახვევა წამში, რომ ინერციით გადახვევა დაიწყოთ"
+"Via fingro devas produkti tiom da volvlibroj je sekundo por komenci marŝi"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:233
 #, kde-format
 msgid " scrolls/sec"
-msgstr " აწევ-ჩამოწევა/წმ"
+msgstr "volvlibroj/sek"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/scroll.ui:240
 #, kde-format
 msgctxt "Coasting"
 msgid "Deceleration:"
-msgstr "შენელება:"
+msgstr "Malakceliĝo:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
 #: kcm/xlib/ui/scroll.ui:250
 #, kde-format
 msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "წამების/წამების² რაოდენობა ინერციით გადახვევის სიჩქარის შესამცირებლად"
+msgstr "Nombro da ruliloj/sekundo² por malpliigi la marbordan rapidecon"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
 #: kcm/xlib/ui/scroll.ui:256
 #, kde-format
 msgid " scrolls/sec²"
-msgstr " აწევ-ჩამოწევა/წმ²"
+msgstr "rullibroj/sek²"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/ui/scroll.ui:263
 #, kde-format
 msgid "Corner coasting:"
-msgstr "კუთხის ინერცია:"
+msgstr "Angula marbordo:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:273
 #, kde-format
 msgid ""
 "Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr ""
-"ჩაირთვება ფუნქცია, როცა კიდით აწევ-ჩამოწევა გაგრძელდება მანამდე, სანამ თითი "
-"კიდის კუთხეშია"
+msgstr "Ebligi randan ruladon kontinui dum la fingro restas en randangulo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:276
 #, kde-format
 msgctxt "Coasting"
 msgid "Enable"
-msgstr "ჩართვა"
+msgstr "Ebligi"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:288
@@ -933,39 +930,43 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
+"Rulumado estas engaĝita kiam trenado komenciĝas en la donita "
+"ellasilregiono.\n"
+"Movu vian fingron en dekstrume cirkloj ĉirkaŭ la centro de la tuŝplato\n"
+"rulumos malsupren kaj maldekstrume moviĝos supren."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:291
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Circular Scrolling"
-msgstr "წრიული აწევ-ჩამოწევა"
+msgstr "Cirkla Movo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/scroll.ui:306
 #, kde-format
 msgctxt "Circular scrolling"
 msgid "Trigger region:"
-msgstr "ტრიგერის რაიონი:"
+msgstr "Ekliga regiono:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
 #: kcm/xlib/ui/scroll.ui:316
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "ტრიგერის ადგილი თაჩპედზე მრგვლად გადახვევის დასაწყებად"
+msgstr "Ekfunkciigi regionon sur la tuŝplato por komenci cirklan movadon"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/scroll.ui:323
 #, kde-format
 msgctxt "Circular scrolling"
 msgid "Angle:"
-msgstr "კუთხე:"
+msgstr "Angulo:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:345
 #, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "თითის გადაადგილების კუთხე (გრადუსებში) გადახვევის მოვლენის დასაწყებად"
+msgstr "Movi angulon (gradojn) de fingro por generi rulokazaĵon"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348
@@ -981,31 +982,33 @@ msgid ""
 "When used together with vertical scrolling, hitting the upper or lower right "
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
+"Se uzata kune kun vertikala movo, trafi la supran aŭ malsupran dekstran "
+"angulon perfekte ŝanĝiĝos de vertikala al cirkla movo."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
 #: kcm/xlib/ui/sensitivity.ui:14
 #, kde-format
 msgid "Sensitivity"
-msgstr "მგრძნობიარობა"
+msgstr "Sentemeco"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: kcm/xlib/ui/sensitivity.ui:20
 #, kde-format
 msgctxt "Touchpad"
 msgid "Sensitivity"
-msgstr "მგრძნობიარობა"
+msgstr "Sentemeco"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/sensitivity.ui:29
 #, kde-format
 msgid "Pressure for detecting a touch:"
-msgstr "დაწოლა შეხების აღმოსაჩენად:"
+msgstr "Premo por detekti tuŝon:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/sensitivity.ui:39
 #, kde-format
 msgid "Pressure for detecting a release:"
-msgstr "დაწოლა აღების აღმოსაჩენად:"
+msgstr "Premo por detekti liberigon:"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
 #: kcm/xlib/ui/sensitivity.ui:49
@@ -1013,7 +1016,7 @@ msgstr "დაწოლა აღების აღმოსაჩენად:
 msgid ""
 "When finger pressure goes above this value, the driver counts it as a touch"
 msgstr ""
-"როცა თითის დაწოლა ამ მნიშვნელობაზე მეტია, დრაივერი ამას შეხებად ჩათვლის"
+"Kiam fingropremo superas ĉi tiun valoron, la ŝoforo kalkulas ĝin kiel tuŝon"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
 #: kcm/xlib/ui/sensitivity.ui:62
@@ -1022,8 +1025,8 @@ msgid ""
 "When finger pressure drops below this value, the driver counts it as a "
 "release"
 msgstr ""
-"როცა თითის დაწოლა ამ მნიშვნელობაზე დაბალია, დრაივერი ამას თითის აღებად "
-"ჩათვლით"
+"Kiam fingropremo falas sub ĉi tiu valoro, la ŝoforo kalkulas ĝin kiel "
+"liberigon"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
 #: kcm/xlib/ui/sensitivity.ui:78
@@ -1032,150 +1035,152 @@ msgid ""
 "If palm detection should be enabled. Note that this also requires hardware/"
 "firmware support from the touchpad"
 msgstr ""
+"Se palm-detekto devus esti ebligita. Notu, ke ĉi tio ankaŭ postulas "
+"aparataron/firmaran subtenon de la tuŝo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
 #: kcm/xlib/ui/sensitivity.ui:81
 #, kde-format
 msgctxt "Touchpad"
 msgid "Palm Detection"
-msgstr "ხელის მტევნის აღმოჩენა"
+msgstr "Palmo-Detekto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/sensitivity.ui:93
 #, kde-format
 msgctxt "Palm detection"
 msgid "Minimum width:"
-msgstr "მინიმალური სიგანე:"
+msgstr "Minimuma larĝo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/sensitivity.ui:103
 #, kde-format
 msgctxt "Palm detection"
 msgid "Minimum pressure:"
-msgstr "მინიმალური დაწოლა:"
+msgstr "Minimuma premo:"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
 #: kcm/xlib/ui/sensitivity.ui:113
 #, kde-format
 msgid "Minimum finger width at which touch is considered a palm"
-msgstr "თითის მინიმალური სიგანე, რომლის შემდეგაც ის ხელისგულად იქნება აღქმული"
+msgstr "Minimuma fingrolarĝo ĉe kiu tuŝo estas konsiderata palmo"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
 #: kcm/xlib/ui/sensitivity.ui:129
 #, kde-format
 msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "თითის მინიმალური წნევა, რომლის შემდეგაც ის ხელისგულად იქნება აღქმული"
+msgstr "Minimuma fingropremo ĉe kiu tuŝo estas konsiderata palmo"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
 #: kcm/xlib/ui/tap.ui:14
 #, kde-format
 msgctxt "Touchpad gesture"
 msgid "Taps"
-msgstr "ტყაპები"
+msgstr "Frapetoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
 #: kcm/xlib/ui/tap.ui:28
 #, kde-format
 msgid "Tap to Click"
-msgstr "დასაწკაპუნებლად დაატყაპუნეთ"
+msgstr "Frapi por Klaki"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/tap.ui:43
 #, kde-format
 msgctxt "Tapping"
 msgid "One finger:"
-msgstr "ერთი თითი:"
+msgstr "Unu fingro:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
 #: kcm/xlib/ui/tap.ui:53
 #, kde-format
 msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა არა-კუთხეში ერთი-თითით დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur ne-angula unufingra frapeto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/tap.ui:60
 #, kde-format
 msgctxt "Tapping"
 msgid "Two fingers:"
-msgstr "ორი თითი:"
+msgstr "Du fingroj:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
 #: kcm/xlib/ui/tap.ui:70
 #, kde-format
 msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა არა-კუთხეში ორი-თითით დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur ne-angula dufingrofrapeto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/tap.ui:77
 #, kde-format
 msgctxt "Tapping"
 msgid "Three fingers:"
-msgstr "სამი თითი:"
+msgstr "Tri fingroj:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
 #: kcm/xlib/ui/tap.ui:87
 #, kde-format
 msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა არა-კუთხეში სამი-თითით დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur ne-angula trifingra frapeto"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/tap.ui:107
 #, kde-format
 msgctxt "Touchpad"
 msgid "Corners"
-msgstr "კუთხეები"
+msgstr "Anguloj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/tap.ui:131
 #, kde-format
 msgctxt "Touchpad corner"
 msgid "Top left:"
-msgstr "ზედა მარცხენა:"
+msgstr "Supre maldekstre:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
 #: kcm/xlib/ui/tap.ui:144
 #, kde-format
 msgid "Which mouse button is reported on a left top corner tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა მარცხენა ზედა კუთხეში დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur maldekstra supra angula frapeto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/ui/tap.ui:151
 #, kde-format
 msgctxt "Touchpad corner"
 msgid "Bottom left:"
-msgstr "ქვედა მარცხენა:"
+msgstr "Malsupre maldekstre:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/tap.ui:164
 #, kde-format
 msgctxt "Touchpad corner"
 msgid "Top right:"
-msgstr "ზედა მარჯვენა:"
+msgstr "Supre dekstre:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
 #: kcm/xlib/ui/tap.ui:177
 #, kde-format
 msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა მარცხენა ქვედა კუთხეში დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur maldekstra malsupra angula frapeto"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
 #: kcm/xlib/ui/tap.ui:184
 #, kde-format
 msgid "Which mouse button is reported on a right top corner tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა მარჯვენა ზედა კუთხეში დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur dekstra supra angula frapeto"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
 #: kcm/xlib/ui/tap.ui:191
 #, kde-format
 msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "თაგუნას რომელი ღილაკი გადმოიცემა მარჯვენა ქვედა კუთხეში დატყაპუნებისას"
+msgstr "Kiu musbutono estas raportita sur dekstra malsupra angula frapeto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/tap.ui:214
 #, kde-format
 msgctxt "Touchpad corner"
 msgid "Bottom right:"
-msgstr "ქვედა მარჯვენა:"
+msgstr "Malsupre dekstre:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:251
@@ -1185,12 +1190,15 @@ msgid ""
 "(touching and releasing the finger), then touching again and moving the "
 "finger on the touchpad"
 msgstr ""
+"Ĉi tiu gesto estas alternativa maniero treni. Ĝi estas farita frapante "
+"(tuŝante kaj liberigante la fingron), tiam denove tuŝante kaj movante la "
+"fingron sur la tuŝplato"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:254
 #, kde-format
 msgid "Tap-and-Drag Gesture"
-msgstr "ტყაპი-და-გადათრევის მიხვედრები"
+msgstr "Tap-kaj-Trena Gesto"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:266
@@ -1199,20 +1207,23 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
+"Se estas malŝaltita, frapeti kaj treni geston finiĝas kiam vi liberigas la "
+"fingron. Se estas ŝaltita, la gesto estas aktiva ĝis vi frapetas duan fojon, "
+"aŭ ĝis la tempodaŭro eksvalidiĝas"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:269
 #, kde-format
 msgctxt "Touchpad gesture"
 msgid "Locked Drags"
-msgstr "დაბლოკილი გადათრევები"
+msgstr "Ŝlositaj Trenoj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/ui/tap.ui:284
 #, kde-format
 msgctxt "Locked drags"
 msgid "Timeout:"
-msgstr "ხანგრძლივობა:"
+msgstr "Tempo:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
 #: kcm/xlib/ui/tap.ui:294
@@ -1221,229 +1232,172 @@ msgid ""
 "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
+"Kiom da tempo necesas (en milisekundoj) por ke la reĝimo \"Locked Drags\" "
+"aŭtomate malŝaltas post kiam la fingro estas liberigita de la tuŝplato"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325
 #, kde-format
 msgid "Tap Detection"
-msgstr "ტყაპუნის აღმოჩენა"
+msgstr "Frap-Detekto"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/tap.ui:340
 #, kde-format
 msgid "Maximum time:"
-msgstr "მაქსიმალური დრო:"
+msgstr "Maksimuma tempo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/ui/tap.ui:353
 #, kde-format
 msgid "Maximum finger movement:"
-msgstr "თითის მაქსიმალური გადაადგილება:"
+msgstr "Maksimuma movo de fingroj:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #: kcm/xlib/ui/tap.ui:366
 #, kde-format
 msgid "Maximum time for double tap:"
-msgstr "ორმაგი ტყაპის მაქსიმალური დრო:"
+msgstr "Maksimuma tempo por duobla frapeto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: kcm/xlib/ui/tap.ui:379
 #, kde-format
 msgid "Single tap timeout:"
-msgstr "ერთ ტყაპის ვადა:"
+msgstr "Ununura frapeta tempodaŭro:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
 #: kcm/xlib/ui/tap.ui:389
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "დატყაპუნების აღმოჩენის მაქსიმალური დრო (მილიწამებში)"
+msgstr "Maksimuma tempo (en milisekundoj) por detekti frapeton"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
 #: kcm/xlib/ui/tap.ui:408
 #, kde-format
 msgid "Maximum movement of the finger for detecting a tap"
-msgstr "თითის მაქსიმალური გადაადგილება დატყაპუნების აღმოსაჩენად"
+msgstr "Maksimuma movo de la fingro por detekti frapeton"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
 #: kcm/xlib/ui/tap.ui:427
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "ორმაგი დატყაპუნების აღმოჩენის მაქსიმალური დრო (მილიწამებში)"
+msgstr "Maksimuma tempo (en milisekundoj) por detekti duoblan frapeton"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
 #: kcm/xlib/ui/tap.ui:446
 #, kde-format
 msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "დატყაპუნების შემდეგ გასული დრო მისი ერთ დატყაპუნებად მისაღებად"
+msgstr "Tempo post frapeto rekoni ĝin kiel ununura frapeto"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: kcm/xlib/ui/testarea.ui:20
 #, kde-format
 msgid "Testing area"
-msgstr "დასატესტი ფართობი"
+msgstr "Testa areo"
 
 #. i18n: ectx: property (text), widget (TestButton, pushButton)
 #: kcm/xlib/ui/testarea.ui:29
 #, kde-format
 msgid "Click me"
-msgstr "დამაწკაპუნე"
+msgstr "Klaku min"
 
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
-msgstr "თაგუნა შეერთებულია - თაჩპედის გამოირთო"
+msgstr "Tuŝplato estis malŝaltita ĉar muso estis enŝovita"
 
 #: kded/kded.cpp:204
 #, kde-format
 msgid "Touchpad was enabled because the mouse was unplugged"
-msgstr "თაგუნა გამოერთებულია - თაჩპედი ჩაირთო"
+msgstr "Tuŝplato estis ebligita ĉar la muso estis malkonektita"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:27
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "No action"
-msgstr "ქმედების გარეშე"
+msgstr "Neniu agado"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:30
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Left button"
-msgstr "მარცხენა ღილაკი"
+msgstr "Maldekstra butono"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:33
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Middle button"
-msgstr "შუა ღილაკი"
+msgstr "Meza butono"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:36
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Right button"
-msgstr "მარჯვენა ღილაკი"
+msgstr "Dekstra butono"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:285
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "All edges"
-msgstr "ყველა კიდე"
+msgstr "Ĉiuj randoj"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:288
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top edge"
-msgstr "ზედა წიბო"
+msgstr "Supra rando"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:291
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top right corner"
-msgstr "ზედა მარჯვენა კუთხე"
+msgstr "Supra dekstra angulo"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:294
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Right edge"
-msgstr "მარჯვენა კუთხე"
+msgstr "Dekstra rando"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:297
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom right corner"
-msgstr "ქვედა მარჯვენა კუთხე"
+msgstr "Malsupra dekstra angulo"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:300
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom edge"
-msgstr "ქვედა წიბო"
+msgstr "Malsupra rando"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:303
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom left corner"
-msgstr "ქვედა მარცხენა კუთხე"
+msgstr "Malsupra maldekstra angulo"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:306
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Left edge"
-msgstr "მარცხენა კუთხე"
+msgstr "Maldekstra rando"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:309
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
-msgstr "ქვედა მარცხენა კუთხე"
-
-#~ msgid "Touchpad KCM"
-#~ msgstr "თაჩპედის KCM"
-
-#~ msgid "System Settings module for managing your touchpad"
-#~ msgstr "სისტემური პარამეტრების მოდული თქვენი თაჩპედის სამართავად"
-
-#~ msgid "Copyright © 2016 Roman Gilg"
-#~ msgstr "© 2016 Roman Gilg, ყველა უფლება დაცულია"
-
-#~ msgid "Developer"
-#~ msgstr "პროგრამისტი"
-
-#~ msgid "Roman Gilg"
-#~ msgstr "Roman Gilg"
-
-#~ msgid ""
-#~ "System Settings module, daemon and Plasma applet for managing your "
-#~ "touchpad"
-#~ msgstr ""
-#~ "სისტემის მორგების მოდული, დემონი და Plasma-ის აპლეტი თქვენი თაჩპედის "
-#~ "სამართავად"
-
-#~ msgid "Copyright © 2013 Alexander Mezin"
-#~ msgstr "© 2013 Alexander Mezin, ყველა უფლება დაცულია"
-
-#~ msgid "Alexander Mezin"
-#~ msgstr "ალექსანდრე მეზინი"
-
-#~ msgid "Thomas Pfeiffer"
-#~ msgstr "Thomas Pfeiffer"
-
-#~ msgctxt "Credits"
-#~ msgid "Usability, testing"
-#~ msgstr "გამოყენებადობა, ტესტირება"
-
-#~ msgid "Alex Fiestas"
-#~ msgstr "Alex Fiestas"
-
-#~ msgctxt "Credits"
-#~ msgid "Helped a bit"
-#~ msgstr "ცოტა დაგვეხმარა"
-
-#~ msgid "Peter Osterlund"
-#~ msgstr "Peter Osterlund"
-
-#~ msgctxt "Credits"
-#~ msgid "Developer of synclient"
-#~ msgstr "Synclient-ის პროგრამისტი"
-
-#~ msgid "Vadim Zaytsev"
-#~ msgstr "Vadim Zaytsev"
-
-#~ msgctxt "Credits"
-#~ msgid "Testing"
-#~ msgstr "ტესტირება"
-
-#~ msgid "Violetta Raspryagayeva"
-#~ msgstr "Violetta Raspryagayeva"
+msgstr "Supra maldekstra angulo"

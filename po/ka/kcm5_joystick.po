@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2022-12-09 07:59+0100\n"
+"PO-Revision-Date: 2023-04-09 08:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -123,6 +123,8 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
+"ამჟამად გაშვებული ბირთვის დრაივერის ვერსია(%1.%2.%3) ის არაა, რომლითაც ეს "
+"მოდული იქნა აგებული (%4.%5.%6)."
 
 #: joydevice.cpp:71
 #, kde-format
@@ -226,6 +228,9 @@ msgid ""
 "Please select a device from the list or\n"
 "enter a device file, like /dev/js0."
 msgstr ""
+"მითითებული მოწყობილობის სახელი არასწორია (არ შეიცავს /dev).\n"
+"აირჩიეთ მოწყობილობა სიიდან ან შეიყვანეთ\n"
+"მოწყობილობის ფაილის სახელი. მაგ: /dev/js0."
 
 #: joywidget.cpp:229
 #, kde-format

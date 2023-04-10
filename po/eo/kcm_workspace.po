@@ -1,0 +1,226 @@
+# translation of kcm_workspace..pot to esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_workspace.\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2023-04-09 22:11+0000\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid ""
+"The system must be restarted before changes to the middle-click paste "
+"setting can take effect."
+msgstr ""
+"La sistemo devas esti rekomencita antaŭ ol ŝanĝoj al la mezklaka alglua "
+"agordo povas ekvalidi."
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Restart"
+msgstr "Rekomenci"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Vida konduto:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Montri informajn konsiletojn sur musoŝvebado"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Montri vidajn komentojn pri statusaj ŝanĝoj"
+
+#: package/contents/ui/main.qml:76
+#, kde-format
+msgid "Animation speed:"
+msgstr "Animacia rapideco:"
+
+#: package/contents/ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Malrapida"
+
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Tuj"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Klakante dosierojn aŭ dosierujojn:"
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Malfermas ilin"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Elekti klakante sur la elekta markilo de ero"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Elektas ilin"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Malfermi per duobla klako anstataŭe"
+
+#: package/contents/ui/main.qml:171
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Klakante en rulumbreto:"
+
+#: package/contents/ui/main.qml:172
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Rulumas unu paĝon supren aŭ malsupren"
+
+#: package/contents/ui/main.qml:184
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Mez-klaku por rulumi al klakita loko"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Rulumas al la klakita loko"
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Middle Click:"
+msgstr "Meza Klako:"
+
+#: package/contents/ui/main.qml:215
+#, kde-format
+msgid "Paste selected text"
+msgstr "Alglui elektitan tekston"
+
+#: package/contents/ui/main.qml:232
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Tuŝa Reĝimo:"
+
+#: package/contents/ui/main.qml:234
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Aŭtomate ebligi laŭbezone"
+
+#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:263
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Neniam ebligita"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Tuŝreĝimo aŭtomate aktiviĝos kiam la sistemo detektas tuŝekranon sed neniun "
+"muson aŭ tuŝplaton. Ekzemple: kiam la klavaro de transformebla tekkomputilo "
+"estas renversita aŭ dekroĉita."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Ĉiam ebligita"
+
+#: package/contents/ui/main.qml:276
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"En Tuŝa Reĝimo, multaj elementoj de la uzantinterfaco fariĝos pli grandaj "
+"por pli facile akomodi tuŝan interagon."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Ununura alklako por malfermi dosierojn"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Animacia rapideco"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Maldekstre alklaku en rulbreto trako movas rulobreton je unu paĝo"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Aŭtomate ŝanĝi al tuŝ-optimumigita reĝimo"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Ebligi mezklakan elekton alglui"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Montri ekranan ekranon por indiki statusajn ŝanĝojn kiel brilecon aŭ laŭtecon"
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "OSD pri aranĝoŝanĝo"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Montri ŝprucfenestron pri aranĝoŝanĝoj"

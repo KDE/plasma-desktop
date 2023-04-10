@@ -1,0 +1,488 @@
+# translation of plasma_shell_org.kde.plasma.desktop.pot esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"PO-Revision-Date: 2023-04-09 22:11+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/activitymanager/ActivityItem.qml:212
+msgid "Currently being used"
+msgstr "Nuntempe uzata"
+
+#: contents/activitymanager/ActivityItem.qml:252
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Movi al\n"
+"ĉi tiu agado"
+
+#: contents/activitymanager/ActivityItem.qml:282
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Montri ankaŭ\n"
+"en ĉi tiu agado"
+
+#: contents/activitymanager/ActivityItem.qml:344
+msgid "Configure"
+msgstr "Agordi"
+
+#: contents/activitymanager/ActivityItem.qml:363
+msgid "Stop activity"
+msgstr "Ĉesigi agadon"
+
+#: contents/activitymanager/ActivityList.qml:143
+msgid "Stopped activities:"
+msgstr "Ĉesigitaj agadoj:"
+
+#: contents/activitymanager/ActivityManager.qml:127
+msgid "Create activity…"
+msgstr "Krei agadon…"
+
+#: contents/activitymanager/Heading.qml:61
+msgid "Activities"
+msgstr "Aktivecoj"
+
+#: contents/activitymanager/StoppedActivityItem.qml:135
+msgid "Configure activity"
+msgstr "Agordi agadon"
+
+#: contents/activitymanager/StoppedActivityItem.qml:152
+msgid "Delete"
+msgstr "Forigi"
+
+#: contents/applet/AppletError.qml:123
+msgid "Sorry! There was an error loading %1."
+msgstr "Pardonu! Okazis eraro dum la ŝarĝo de %1."
+
+#: contents/applet/AppletError.qml:161
+msgid "Copy to Clipboard"
+msgstr "Kopii al tondujo"
+
+#: contents/applet/AppletError.qml:184
+msgid "View Error Details…"
+msgstr "Rigardi erardetalojn…"
+
+#: contents/applet/CompactApplet.qml:71
+msgid "Open %1"
+msgstr "Malfermi %1"
+
+#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AppletConfiguration.qml:248
+msgid "About"
+msgstr "Pri"
+
+#: contents/configuration/AboutPlugin.qml:47
+msgid "Send an email to %1"
+msgstr "Sendi retmesaĝon al %1"
+
+#: contents/configuration/AboutPlugin.qml:61
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr "Malfermi retejon %1"
+
+#: contents/configuration/AboutPlugin.qml:125
+msgid "Copyright"
+msgstr "Kopirajto"
+
+#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+msgid "License:"
+msgstr "Permesilo:"
+
+#: contents/configuration/AboutPlugin.qml:148
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr "Rigardi permesilan tekston"
+
+#: contents/configuration/AboutPlugin.qml:160
+msgid "Authors"
+msgstr "Aŭtoroj"
+
+#: contents/configuration/AboutPlugin.qml:170
+msgid "Credits"
+msgstr "Kreditigoj"
+
+#: contents/configuration/AboutPlugin.qml:181
+msgid "Translators"
+msgstr "Tradukistoj"
+
+#: contents/configuration/AboutPlugin.qml:195
+msgid "Report a Bug…"
+msgstr "Raporti cimon…"
+
+#: contents/configuration/AppletConfiguration.qml:56
+msgid "Keyboard Shortcuts"
+msgstr "Klavaraj ŝparvojoj"
+
+#: contents/configuration/AppletConfiguration.qml:295
+msgid "Apply Settings"
+msgstr "Apliki Agordojn"
+
+#: contents/configuration/AppletConfiguration.qml:296
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr ""
+"La agordoj de la nuna modulo ŝanĝiĝis. Ĉu vi volas apliki la ŝanĝojn aŭ "
+"forĵeti ilin?"
+
+#: contents/configuration/AppletConfiguration.qml:326
+msgid "OK"
+msgstr "bone"
+
+#: contents/configuration/AppletConfiguration.qml:334
+msgid "Apply"
+msgstr "Apliki"
+
+#: contents/configuration/AppletConfiguration.qml:340
+#: contents/explorer/AppletAlternatives.qml:179
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:28
+msgid "Open configuration page"
+msgstr "Malfermi agordan paĝon"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Left-Button"
+msgstr "Maldekstra-Butono"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Right-Button"
+msgstr "Dekstra-Butono"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Middle-Button"
+msgstr "Meza-Butono"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:24
+msgid "Back-Button"
+msgstr "Malantaŭa-Butono"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Forward-Button"
+msgstr "Antaŭen-Butono"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:27
+msgid "Vertical-Scroll"
+msgstr "Vertikala-Scroll"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Horizontal-Scroll"
+msgstr "Horizontala-Scroll"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:32
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:33
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:95
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+msgctxt "@title"
+msgid "About"
+msgstr "Pri"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Aldoni Agon"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+msgid "Layout changes have been restricted by the system administrator"
+msgstr "Aranĝŝanĝoj estis limigitaj de la sistemadministranto"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+msgid "Layout:"
+msgstr "Aranĝo:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+msgid "Wallpaper type:"
+msgstr "Tapeta tipo:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+msgid "Get New Plugins…"
+msgstr "Akiri novajn kromaĵojn…"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+msgid "Layout changes must be applied before other changes can be made"
+msgstr ""
+"Aranĝŝanĝoj devas esti aplikataj antaŭ ol aliaj ŝanĝoj povas esti faritaj"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+msgid "Apply Now"
+msgstr "Apliki Nun"
+
+#: contents/configuration/ConfigurationShortcuts.qml:16
+msgid "Shortcuts"
+msgstr "Ŝparvojoj"
+
+#: contents/configuration/ConfigurationShortcuts.qml:28
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr "Ĉi tiu ŝparvojo aktivigos la apleton kvazaŭ ĝi estus klakita."
+
+#: contents/configuration/ContainmentConfiguration.qml:29
+msgid "Wallpaper"
+msgstr "Tapeto"
+
+#: contents/configuration/ContainmentConfiguration.qml:34
+msgid "Mouse Actions"
+msgstr "Musaj Agoj"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Enigo Ĉi tie"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+msgid "Remove Panel"
+msgstr "Forigi Panelon"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
+msgid "Panel Alignment"
+msgstr "Panela Alineado"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Top"
+msgstr "Supre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+msgid "Left"
+msgstr "Maldekstre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+msgid "Center"
+msgstr "Centro"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Bottom"
+msgstr "Fundo"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+msgid "Right"
+msgstr "Ĝuste"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+msgid "Visibility"
+msgstr "Videbleco"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+msgid "Always Visible"
+msgstr "Ĉiam Videbla"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+msgid "Auto Hide"
+msgstr "Aŭtomata Kaŝado"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
+msgid "Windows Can Cover"
+msgstr "Fenestroj Povas Kovri"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
+msgid "Windows Go Below"
+msgstr "Fenestroj Iru Malsupre"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
+msgid "Opacity"
+msgstr "Opakeco"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+msgid "Adaptive"
+msgstr "Adaptiva"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
+msgid "Opaque"
+msgstr "Opaka"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+msgid "Translucent"
+msgstr "Travidebla"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid "Maximize Panel"
+msgstr "Maksimumigi Panelon"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
+msgid "Floating Panel"
+msgstr "Flosanta Panelo"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
+msgid "Shortcut"
+msgstr "Ŝparvojo"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr "Premu ĉi tiun klavkombinon por movi fokuson al la Panelo"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum height."
+msgstr "Trenu por ŝanĝi maksimuman altecon."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+msgid "Drag to change maximum width."
+msgstr "Trenu por ŝanĝi maksimuman larĝon."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Double click to reset."
+msgstr "Duoble alklaku por restarigi."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum height."
+msgstr "Trenu por ŝanĝi minimuman altecon."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:21
+msgid "Drag to change minimum width."
+msgstr "Trenu por ŝanĝi minimuman larĝon."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:69
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+"Trenu por ŝanĝi pozicion sur ĉi tiu ekranrando.\n"
+"Duoble alklaku por restarigi."
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:24
+msgid "Add Widgets…"
+msgstr "Aldoni Fenestraĵojn…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:25
+msgid "Add Spacer"
+msgstr "Aldoni Spacigilon"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
+msgid "More Options…"
+msgstr "Pli da Opcioj…"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:222
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Drag to move"
+msgstr "Treni por movi"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:261
+msgctxt "@info:tooltip"
+msgid "Use arrow keys to move the panel"
+msgstr "Uzi sagoklavojn por movi la panelon"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel width:"
+msgstr "Larĝo de panelo:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:282
+msgid "Panel height:"
+msgstr "Panela alteco:"
+
+#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Fermi"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Administrado de Paneloj kaj Labortabloj"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+"Vi povas treni Panelojn kaj Labortablojn por movi ilin al malsamaj ekranoj."
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
+msgid "Swap with Desktop on Screen %1"
+msgstr "Interŝanĝi kun Labortablo sur Ekrano %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+msgid "Move to Screen %1"
+msgstr "Movi al Ekrano %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+msgid "Remove Desktop"
+msgstr "Forigi Labortablon"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
+msgid "%1 (primary)"
+msgstr "%1 (ĉefa)"
+
+#: contents/explorer/AppletAlternatives.qml:63
+msgid "Alternative Widgets"
+msgstr "Alternativaj Fenestraĵoj"
+
+#: contents/explorer/AppletAlternatives.qml:163
+msgid "Switch"
+msgstr "Ŝalti"
+
+#: contents/explorer/AppletDelegate.qml:177
+msgid "Undo uninstall"
+msgstr "Malfari malinstalon"
+
+#: contents/explorer/AppletDelegate.qml:178
+msgid "Uninstall widget"
+msgstr "Malinstali fenestraĵon"
+
+#: contents/explorer/Tooltip.qml:102
+msgid "Author:"
+msgstr "Aŭtoro:"
+
+#: contents/explorer/Tooltip.qml:110
+msgid "Email:"
+msgstr "Retpoŝto:"
+
+#: contents/explorer/Tooltip.qml:129
+msgid "Uninstall"
+msgstr "Malinstali"
+
+#: contents/explorer/WidgetExplorer.qml:129
+#: contents/explorer/WidgetExplorer.qml:240
+msgid "All Widgets"
+msgstr "Ĉiuj Fenestraĵoj"
+
+#: contents/explorer/WidgetExplorer.qml:194
+msgid "Widgets"
+msgstr "Fenestraĵoj"
+
+#: contents/explorer/WidgetExplorer.qml:202
+msgid "Get New Widgets…"
+msgstr "Akiri novajn fenestraĵojn…"
+
+#: contents/explorer/WidgetExplorer.qml:251
+msgid "Categories"
+msgstr "Kategorioj"
+
+#: contents/explorer/WidgetExplorer.qml:331
+msgid "No widgets matched the search terms"
+msgstr "Neniuj fenestraĵoj kongruis kun la serĉaj terminoj"
+
+#: contents/explorer/WidgetExplorer.qml:331
+msgid "No widgets available"
+msgstr "Neniuj fenestraĵoj haveblaj"
