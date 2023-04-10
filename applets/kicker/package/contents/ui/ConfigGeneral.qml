@@ -34,7 +34,6 @@ Kirigami.FormLayout {
     property alias cfg_recentOrdering: recentOrdering.currentIndex
     property alias cfg_showRecentApps: showRecentApps.checked
     property alias cfg_showRecentDocs: showRecentDocs.checked
-    property alias cfg_showRecentContacts: showRecentContacts.checked
 
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
@@ -199,14 +198,6 @@ Kirigami.FormLayout {
         text: recentOrdering.currentIndex == 0
                 ? i18n("Recent files")
                 : i18n("Often used files")
-    }
-
-    CheckBox {
-        id: showRecentContacts
-
-        text: recentOrdering.currentIndex == 0
-                ? i18n("Recent contacts")
-                : i18n("Often used contacts")
     }
 
     ComboBox {

@@ -78,7 +78,6 @@ Item {
         showTopLevelItems: !kicker.isDash
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
-        showRecentContacts: plasmoid.configuration.showRecentContacts
         recentOrdering: plasmoid.configuration.recentOrdering
 
         onShowRecentAppsChanged: {
@@ -87,10 +86,6 @@ Item {
 
         onShowRecentDocsChanged: {
             plasmoid.configuration.showRecentDocs = showRecentDocs;
-        }
-
-        onShowRecentContactsChanged: {
-            plasmoid.configuration.showRecentContacts = showRecentContacts;
         }
 
         onRecentOrderingChanged: {

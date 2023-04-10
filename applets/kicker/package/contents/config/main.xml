@@ -33,7 +33,7 @@
     </entry>
 
     <entry name="recentOrdering" type="Int">
-      <label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
+      <label>How should the previously used apps/docs be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
       <default>0</default>
     </entry>
     <entry name="favoriteApps" type="StringList">
@@ -60,10 +60,6 @@
     <entry name="showRecentDocs" type="Bool">
       <label>Whether to show the "Recent Files" category.</label>
       <default>true</default>
-    </entry>
-    <entry name="showRecentContacts" type="Bool">
-      <label>Whether to show the "Recent Contacts" category.</label>
-      <default>false</default>
     </entry>
 
     <entry name="useExtraRunners" type="Bool">

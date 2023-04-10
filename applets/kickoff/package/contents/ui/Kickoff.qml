@@ -53,7 +53,6 @@ Item {
         showAllAppsCategorized: false
         showRecentApps: false
         showRecentDocs: false
-        showRecentContacts: false
         showPowerSession: false
         showFavoritesPlaceholder: true
 
