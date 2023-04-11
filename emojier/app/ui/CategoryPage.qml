@@ -132,7 +132,7 @@ Kirigami.ScrollablePage
             QQC2.ToolTip.visible: mouse.containsMouse
 
             opacity: mouse.containsMouse ? 0.7 : 1
-            
+
             Keys.onReturnPressed: {
                 reportEmoji()
             }

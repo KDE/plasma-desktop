@@ -15,8 +15,6 @@ Kirigami.ApplicationWindow
     id: window
 
     minimumWidth: Math.round(minimumHeight * 1.25)
-    // The extra gridUnit is to account for the header that appears when expanded
-    minimumHeight: drawer.contentHeight + Kirigami.Units.gridUnit * 2
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
 
@@ -65,40 +63,84 @@ Kirigami.ApplicationWindow
         category: ""
     }
 
-    globalDrawer: Kirigami.GlobalDrawer {
-        id: drawer
+    Component {
+        id: drawerComponent
 
-        title: i18n("Categories")
-        collapsible: !topContent.activeFocus
-        collapsed: true
-        modal: false
+        Kirigami.GlobalDrawer {
+            id: drawer
 
-        header: Kirigami.AbstractApplicationHeader {
-            topPadding: Kirigami.Units.smallSpacing
-            bottomPadding: Kirigami.Units.smallSpacing
-            leftPadding: Kirigami.Units.largeSpacing
-            rightPadding: Kirigami.Units.smallSpacing
+            title: i18n("Categories")
+            collapsible: !topContent.activeFocus
+            collapsed: true
+            modal: false
 
-            Kirigami.Heading {
-                level: 1
-                text: drawer.title
-                Layout.fillWidth: true
+            header: Kirigami.AbstractApplicationHeader {
+                topPadding: Kirigami.Units.smallSpacing
+                bottomPadding: Kirigami.Units.smallSpacing
+                leftPadding: Kirigami.Units.largeSpacing
+                rightPadding: Kirigami.Units.smallSpacing
+
+                Kirigami.Heading {
+                    level: 1
+                    text: drawer.title
+                    Layout.fillWidth: true
+                }
+            }
+
+            function getIcon(category: string) {
+                switch (category.trim()) {
+                    case 'Activities': return 'games-highscores'
+                    case 'Animals and Nature': return 'animal'
+                    case 'Flags': return 'flag'
+                    case 'Food and Drink': return 'food'
+                    case 'Objects': return 'object'
+                    case 'People and Body': return 'user'
+                    case 'Smileys and Emotion': return 'smiley'
+                    case 'Symbols': return 'checkmark'
+                    case 'Travel and Places': return 'globe'
+                    default: return 'folder'
+                }
+            }
+
+            Instantiator {
+                id: instantiator
+                property int loadCount: 0
+                asynchronous: true
+                model: emoji.categories
+                CategoryAction {
+                    category: modelData
+                    icon.name: drawer.getIcon(category)
+                }
+                onObjectAdded: (index, object) => {
+                    if (++loadCount !== model.length) {
+                        return;
+                    }
+
+                    let actions = [recentAction, searchAction, allAction];
+                    for (let i = 0; i < count; ++i) {
+                        actions.push(this.objectAt(i));
+                    }
+                    drawer.actions = actions;
+                    // The extra gridUnit is to account for the header that appears when expanded
+                    window.minimumHeight = Qt.binding(() => drawer.contentHeight + Kirigami.Units.gridUnit * 2);
+
+                }
             }
         }
-
-        Instantiator {
-            model: emoji.categories
-            CategoryAction {
-                category: modelData
-            }
-            onObjectAdded: {
-                var actions = Array.prototype.map.call(drawer.actions, i => i)
-                actions.splice(index + 3, 0, object)
-                drawer.actions = actions
-            }
-        }
-        actions: [recentAction, searchAction, allAction]
     }
 
-    Component.onCompleted: recentAction.trigger()
+    Component.onCompleted: {
+        recentAction.trigger();
+
+        const incubator = drawerComponent.incubateObject(window);
+        if (incubator.status !== Component.Ready) {
+            incubator.onStatusChanged = function(status) {
+                if (status === Component.Ready) {
+                    window.globalDrawer = incubator.object;
+                }
+            };
+        } else {
+            window.globalDrawer = incubator.object;
+        }
+    }
 }
