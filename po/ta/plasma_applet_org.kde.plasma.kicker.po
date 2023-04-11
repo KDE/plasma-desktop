@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2021-08-24 21:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -184,7 +184,9 @@ msgid "Searching for '%1'"
 msgstr "'%1' தேடப்படுகிறது"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type to search…"
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "தேட தட்டச்சிடவும்..."
 

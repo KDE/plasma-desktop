@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2021-09-04 09:23+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -186,7 +186,9 @@ msgid "Searching for '%1'"
 msgstr "„'%1” keresése"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type to search…"
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Kezdjen el gépelni a kereséshez…"
 

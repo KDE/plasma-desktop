@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2021-06-26 21:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -186,7 +186,9 @@ msgid "Searching for '%1'"
 msgstr "نتائج البحث عن '%1'"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type to search…"
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "اكتب لتبحث…"
 

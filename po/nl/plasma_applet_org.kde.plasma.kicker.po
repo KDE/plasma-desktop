@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2021-05-26 14:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -184,7 +184,9 @@ msgid "Searching for '%1'"
 msgstr "Zoeken naar '%1'"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type to search…"
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Typen om te zoeken…"
 

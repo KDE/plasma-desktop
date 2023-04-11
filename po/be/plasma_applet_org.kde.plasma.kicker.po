@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2022-10-12 04:09\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -189,7 +189,9 @@ msgid "Searching for '%1'"
 msgstr "Пошук \"%1\""
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type to search…"
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Увядзіце для пошуку…"
 

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:59+0000\n"
-"PO-Revision-Date: 2023-01-21 11:10+0100\n"
+"PO-Revision-Date: 2023-04-10 10:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -561,11 +561,10 @@ msgid "Allow this program to be grouped"
 msgstr "Pozwól na grupowanie tego programu"
 
 #: package/contents/ui/ContextMenu.qml:766
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Zamknij"
+msgstr "Za&mknij wszystkie"
 
 #: package/contents/ui/ContextMenu.qml:766
 #, kde-format

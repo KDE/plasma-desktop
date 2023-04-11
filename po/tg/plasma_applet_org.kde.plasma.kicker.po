@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2019-09-16 14:24+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -187,9 +187,11 @@ msgid "Searching for '%1'"
 msgstr ""
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
-msgstr ""
+msgstr "Ҷустуҷӯ..."
 
 #: package/contents/ui/DashboardRepresentation.qml:388
 #, kde-format
@@ -212,11 +214,6 @@ msgstr ""
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Таҳрир кардани барномаҳо..."
-
-#, fuzzy
-#~| msgid "Search..."
-#~ msgid "Search…"
-#~ msgstr "Ҷустуҷӯ..."
 
 #~ msgid "Open with:"
 #~ msgstr "Кушодан ба воситаи:"
