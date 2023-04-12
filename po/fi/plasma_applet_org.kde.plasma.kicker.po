@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-06-07 16:52+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -48,133 +48,123 @@ msgstr "Nykyisessä aktiviteetissa"
 msgid "Show in Favorites"
 msgstr "Näytä suosikeissa"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "Kuvake:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Valitse…"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Poista kuvake"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Show applications as:"
 msgstr "Näytä sovellukset muodossa:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name only"
 msgstr "Vain nimi"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description only"
 msgstr "Vain kuvaus"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name (Description)"
 msgstr "Nimi (Kuvaus)"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description (Name)"
 msgstr "Kuvaus (Nimi)"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgid "Behavior:"
 msgstr "Toiminta:"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Aakkosta sovellukset"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Tasoita alivalikot yhteen tasoon"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Näytä kuvakkeet valikon alimmalla tasolla"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show categories:"
 msgstr "Näytä luokat:"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgid "Recent applications"
 msgstr "Viimeisimmät sovellukset"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Often used applications"
 msgstr "Usein käytetyt sovellukset"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Recent files"
 msgstr "Viimeisimmät tiedostot"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Often used files"
 msgstr "Usein käytetyt tiedostot"
 
-#: package/contents/ui/ConfigGeneral.qml:208
-#, kde-format
-msgid "Recent contacts"
-msgstr "Viimeisimmät yhteystiedot"
-
-#: package/contents/ui/ConfigGeneral.qml:209
-#, kde-format
-msgid "Often used contacts"
-msgstr "Usein käytetyt yhteystiedot"
-
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Lajittele luokat:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Äskettäin käytetyt"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Usein käytetyt"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Search:"
 msgstr "Etsi:"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Laajenna haku kirjanmerkkeihin, tiedostoihin ja sähköposteihin"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Tasaa hakutulokset alareunaan"
@@ -207,10 +197,16 @@ msgstr "Sovelmat"
 msgid "Apps & Docs"
 msgstr "Sovellukset ja tiedostot"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Muokkaa sovelluksia…"
+
+#~ msgid "Recent contacts"
+#~ msgstr "Viimeisimmät yhteystiedot"
+
+#~ msgid "Often used contacts"
+#~ msgstr "Usein käytetyt yhteystiedot"
 
 #~ msgid "Search…"
 #~ msgstr "Etsi…"

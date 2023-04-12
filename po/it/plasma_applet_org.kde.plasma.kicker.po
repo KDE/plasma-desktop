@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-05-28 09:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -47,133 +47,123 @@ msgstr "Sull'attività attuale"
 msgid "Show in Favorites"
 msgstr "Mostra nei preferiti"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "Icona:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Scegli…"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Ripristina icona"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Show applications as:"
 msgstr "Mostra applicazioni come:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name only"
 msgstr "Solo il nome"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description only"
 msgstr "Solo la descrizione"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name (Description)"
 msgstr "Nome (Descrizione)"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description (Name)"
 msgstr "Descrizione (Nome)"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgid "Behavior:"
 msgstr "Comportamento:"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Ordine alfabetico delle applicazioni"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Appiattisci i sottomenu a un singolo livello"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Mostra le icone nel livello principale del menu"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show categories:"
 msgstr "Mostra categorie:"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgid "Recent applications"
 msgstr "Applicazioni recenti"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Often used applications"
 msgstr "Applicazioni utilizzate spesso"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Recent files"
 msgstr "File recenti"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Often used files"
 msgstr "File utilizzati spesso"
 
-#: package/contents/ui/ConfigGeneral.qml:208
-#, kde-format
-msgid "Recent contacts"
-msgstr "Contatti recenti"
-
-#: package/contents/ui/ConfigGeneral.qml:209
-#, kde-format
-msgid "Often used contacts"
-msgstr "Contatti utilizzati spesso"
-
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Ordina gli elementi in categorie per:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Utilizzati di recente"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Utilizzati spesso"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Search:"
 msgstr "Cerca:"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Espandi la ricerca a segnalibri, file e messaggi di posta"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Allinea i risultati della ricerca in basso"
@@ -206,10 +196,16 @@ msgstr "Oggetti"
 msgid "Apps & Docs"
 msgstr "Applicazioni e documenti"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Modifica applicazioni..."
+
+#~ msgid "Recent contacts"
+#~ msgstr "Contatti recenti"
+
+#~ msgid "Often used contacts"
+#~ msgstr "Contatti utilizzati spesso"
 
 #~ msgid "Search…"
 #~ msgstr "Cerca…"

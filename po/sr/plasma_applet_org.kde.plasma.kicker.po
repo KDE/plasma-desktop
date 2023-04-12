@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -50,12 +50,12 @@ msgstr "На текућој активности"
 msgid "Show in Favorites"
 msgstr "Прикажи у омиљенима"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "Иконица:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:125
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -63,80 +63,80 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Изабери..."
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Очисти иконицу"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Show applications as:"
 msgstr "Приказуј програме као:"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name only"
 msgstr "само име"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description only"
 msgstr "само опис"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name (Description)"
 msgstr "име (опис)"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description (Name)"
 msgstr "опис (име)"
 
 # >> @title:group
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:160
 #, fuzzy, kde-format
 #| msgid "Behavior"
 msgid "Behavior:"
 msgstr "Понашање"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:162
 #, fuzzy, kde-format
 #| msgid "Sort alphabetically"
 msgid "Sort applications alphabetically"
 msgstr "Поређај азбучно"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:170
 #, fuzzy, kde-format
 #| msgid "Flatten menu to a single level"
 msgid "Flatten sub-menus to a single level"
 msgstr "Мени спљоштен на један ниво"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:188
 #, fuzzy, kde-format
 #| msgid "Categories"
 msgid "Show categories:"
 msgstr "Категорије"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:191
 #, fuzzy, kde-format
 #| msgid "Recent Applications"
 msgid "Recent applications"
 msgstr ""
 "Недавни програми|/|$[својства ген 'недавних програма' аку 'недавне програме']"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:192
 #, fuzzy, kde-format
 #| msgid "Often Used Applications"
 msgid "Often used applications"
@@ -144,7 +144,7 @@ msgstr ""
 "Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
 "'често коришћене програме']"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:199
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent files"
@@ -152,32 +152,18 @@ msgstr ""
 "Недавни документи|/|$[својства ген 'недавних докумената' аку 'недавне "
 "документе']"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:200
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgid "Often used files"
 msgstr "Често коришћено"
 
-#: package/contents/ui/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Recent Contacts"
-msgid "Recent contacts"
-msgstr ""
-"Недавни контакти|/|$[својства ген 'недавних контаката' аку 'недавне "
-"контакте']"
-
-#: package/contents/ui/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Show often used contacts"
-msgid "Often used contacts"
-msgstr "Прикажи често коришћене контакте"
-
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, fuzzy, kde-format
 #| msgid "Recently used"
 msgctxt ""
@@ -185,7 +171,7 @@ msgctxt ""
 msgid "Recently used"
 msgstr "Недавно коришћено"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgctxt ""
@@ -194,20 +180,20 @@ msgid "Often used"
 msgstr "Често коришћено"
 
 # >> @title:group
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search:"
 msgstr "Претрага"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Претражуј и обележиваче, фајлове и е‑пошту"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Равнај резултате претраге уз дно"
@@ -241,11 +227,23 @@ msgstr "Виџети"
 msgid "Apps & Docs"
 msgstr "Програми и документација"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:254
 #, fuzzy, kde-format
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Уреди програме..."
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr ""
+#~ "Недавни контакти|/|$[својства ген 'недавних контаката' аку 'недавне "
+#~ "контакте']"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "Прикажи често коришћене контакте"
 
 #, fuzzy
 #~| msgid "Often Used Documents"

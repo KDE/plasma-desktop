@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-05-26 21:20+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -47,133 +47,123 @@ msgstr "Ở Hoạt động hiện tại"
 msgid "Show in Favorites"
 msgstr "Hiện trong \"Ưa thích\""
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Chọn…"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Đặt lại biểu tượng"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Show applications as:"
 msgstr "Hiện ứng dụng thành:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name only"
 msgstr "Chỉ tên"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description only"
 msgstr "Chỉ mô tả"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Name (Description)"
 msgstr "Tên (mô tả)"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Description (Name)"
 msgstr "Mô tả (tên)"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgid "Behavior:"
 msgstr "Ứng xử:"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Sắp xếp ứng dụng theo bảng chữ cái"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Làm phẳng các trình đơn con thành chỉ còn một cấp"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Hiện biểu tượng ở cấp gốc của trình đơn"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show categories:"
 msgstr "Hiện các mục:"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgid "Recent applications"
 msgstr "Ứng dụng gần đây"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Often used applications"
 msgstr "Ứng dụng hay dùng"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Recent files"
 msgstr "Tệp gần đây"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Often used files"
 msgstr "Tệp hay dùng"
 
-#: package/contents/ui/ConfigGeneral.qml:208
-#, kde-format
-msgid "Recent contacts"
-msgstr "Liên hệ gần đây"
-
-#: package/contents/ui/ConfigGeneral.qml:209
-#, kde-format
-msgid "Often used contacts"
-msgstr "Liên hệ hay dùng"
-
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Sắp xếp các thứ trong mục theo:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Dùng gần đây"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Hay dùng"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Search:"
 msgstr "Tìm kiếm:"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Mở rộng tìm kiếm ra cả dấu nhớ, tệp và thư"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Căn kết quả tìm kiếm về cuối"
@@ -206,10 +196,16 @@ msgstr "Phụ kiện"
 msgid "Apps & Docs"
 msgstr "Ứng dụng & tài liệu"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Sửa ứng dụng…"
+
+#~ msgid "Recent contacts"
+#~ msgstr "Liên hệ gần đây"
+
+#~ msgid "Often used contacts"
+#~ msgstr "Liên hệ hay dùng"
 
 #~ msgid "Search…"
 #~ msgstr "Tìm kiếm…"
