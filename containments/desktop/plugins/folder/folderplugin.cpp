@@ -5,6 +5,7 @@
 */
 
 #include "folderplugin.h"
+#include "applauncher.h"
 #include "directorypicker.h"
 #include "foldermodel.h"
 #include "itemviewadapter.h"
@@ -30,6 +31,13 @@ static QObject *menuHelperSingletonProvider(QQmlEngine *engine, QJSEngine *jsEng
     return new MenuHelper();
 }
 
+static QObject *appLauncherSingletonProvider(QQmlEngine *engine, QJSEngine *jsEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(jsEngine);
+    return new AppLauncher();
+}
+
 void FolderPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.private.desktopcontainment.folder"));
@@ -47,4 +55,5 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
+    qmlRegisterSingletonType<AppLauncher>(uri, 0, 1, "AppLauncher", appLauncherSingletonProvider);
 }

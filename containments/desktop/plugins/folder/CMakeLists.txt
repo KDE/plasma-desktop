@@ -5,6 +5,7 @@ if(BUILD_TESTING)
 endif(BUILD_TESTING)
 
 set(folderplugin_SRCS
+    applauncher.cpp
     directorypicker.cpp
     foldermodel.cpp
     folderplugin.cpp
@@ -40,6 +41,7 @@ target_link_libraries(folderplugin
                       KF6::I18n
                       KF6::PlasmaQuick
                       KF6::ConfigGui
+                      KF6::Notifications
                       KF6::XmlGui)
 
 install(TARGETS folderplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)

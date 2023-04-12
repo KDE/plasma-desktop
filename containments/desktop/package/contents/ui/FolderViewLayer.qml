@@ -353,11 +353,7 @@ FocusScope {
                 cursorShape: Qt.PointingHandCursor
 
                 onClicked: {
-                    var action = plasmoid.action("run associated application");
-
-                    if (action) {
-                        action.trigger();
-                    }
+                    Folder.AppLauncher.openUrl(folderView.url)
                 }
             }
 
