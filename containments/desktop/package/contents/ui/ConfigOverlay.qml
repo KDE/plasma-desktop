@@ -176,19 +176,6 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             ActionButton {
                 svg: configIconsSvg
-                elementId: "maximize"
-                iconSize: overlay.iconSize
-                toolTip: i18n("Open Externally")
-                visible: qAction && qAction.enabled || false
-                qAction: applet ? applet.action("run associated application") : null
-                Component.onCompleted: {
-                    if (qAction) {
-                        qAction.enabled = true;
-                    }
-                }
-            }
-            ActionButton {
-                svg: configIconsSvg
                 elementId: "showbackground"
                 toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
                 iconSize: overlay.iconSize
