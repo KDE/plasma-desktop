@@ -432,6 +432,7 @@ PlasmaComponents.ContextMenu {
 
                     menuItem = menu.newMenuItem(activitiesDesktopsMenu);
                     menuItem.text = activityInfo.activityName(runningActivities[i]);
+                    menuItem.icon = activityInfo.activityIcon(runningActivities[i]);
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding( (function(activityId) {
                         return function() {
@@ -469,6 +470,7 @@ PlasmaComponents.ContextMenu {
 
                     menuItem = menu.newMenuItem(activitiesDesktopsMenu);
                     menuItem.text = i18n("Move to %1", activityInfo.activityName(activityId))
+                    menuItem.icon = activityInfo.activityIcon(activityId)
                     menuItem.clicked.connect((function(activityId) {
                         return function () {
                             return tasksModel.requestActivities(menu.modelIndex, [activityId]);
@@ -536,9 +538,10 @@ PlasmaComponents.ContextMenu {
 
                 if (menu.visualParent === null) return;
 
-                var createNewItem = function(id, title, url, activities) {
+                var createNewItem = function(id, title, iconName, url, activities) {
                     var result = menu.newMenuItem(activitiesLaunchersMenu);
                     result.text = title;
+                    result.icon = iconName;
 
                     result.visible = true;
                     result.checkable = true;
@@ -564,20 +567,20 @@ PlasmaComponents.ContextMenu {
 
                 var activities = tasksModel.launcherActivities(url);
 
-                createNewItem(activityInfo.nullUuid, i18n("On All Activities"), url, activities);
+                createNewItem(activityInfo.nullUuid, i18n("On All Activities"), "", url, activities);
 
                 if (activityInfo.numberOfRunningActivities <= 1) {
                     return;
                 }
 
-                createNewItem(activityInfo.currentActivity, i18n("On The Current Activity"), url, activities);
+                createNewItem(activityInfo.currentActivity, i18n("On The Current Activity"), activityInfo.activityIcon(activityInfo.currentActivity), url, activities);
 
                 menu.newSeparator(activitiesLaunchersMenu);
 
                 var runningActivities = activityInfo.runningActivities();
 
                 runningActivities.forEach(function(id) {
-                    createNewItem(id, activityInfo.activityName(id), url, activities);
+                    createNewItem(id, activityInfo.activityName(id), activityInfo.activityIcon(id), url, activities);
                 });
             }
 
