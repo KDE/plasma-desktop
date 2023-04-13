@@ -43,6 +43,8 @@ Item {
         id: iconShaderSource
         sourceItem: icon
         hideSource: GraphicsInfo.api !== GraphicsInfo.Software
+
+        anchors.fill: parent
     }
 
     ShaderEffectSource {
@@ -50,6 +52,8 @@ Item {
         sourceItem: badgeMask
         hideSource: true
         live: false
+
+        anchors.fill: parent
     }
 
     ShaderEffect {
@@ -64,15 +68,7 @@ Item {
 
         supportsAtlasTextures: true
 
-        fragmentShader: `
-            varying highp vec2 qt_TexCoord0;
-            uniform highp float qt_Opacity;
-            uniform lowp sampler2D source;
-            uniform lowp sampler2D mask;
-            void main() {
-                gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0 - (texture2D(mask, qt_TexCoord0.st).a)) * qt_Opacity;
-            }
-        `
+        fragmentShader: "qrc:/org/kde/plasma/taskmanager/plugin/badge.frag.qsb"
     }
 
     Badge {

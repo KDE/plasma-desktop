@@ -19,6 +19,14 @@ install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/pri
 
 add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
 
+qt6_add_shaders(taskmanagerplugin "taskmanager_shaders"
+    PREFIX
+        "/org/kde/plasma/taskmanager"
+    FILES
+        "plugin/badge.frag"
+    BATCHABLE
+)
+
 # FIXME Cleanup no longer used libs.
 target_link_libraries(taskmanagerplugin
                       Qt::Core
