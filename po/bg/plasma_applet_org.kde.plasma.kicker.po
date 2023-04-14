@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 02:13+0000\n"
-"PO-Revision-Date: 2023-01-21 20:11+0100\n"
+"PO-Revision-Date: 2023-04-13 23:17+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -174,8 +174,7 @@ msgid "Searching for '%1'"
 msgstr "Търсене за \"%1\""
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, fuzzy, kde-format
-#| msgid "Type to search…"
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Въведете за търсене…"
@@ -200,9 +199,3 @@ msgstr "Приложения и документи"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Редактиране на приложения…"
-
-#~ msgid "Recent contacts"
-#~ msgstr "Скорошни контакти"
-
-#~ msgid "Often used contacts"
-#~ msgstr "Често използвани контакти"
