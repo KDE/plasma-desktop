@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017.
-# Vit Pelcak <vit@pelcak.org>, 2015, 2019, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2015, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-12 02:13+0000\n"
-"PO-Revision-Date: 2021-06-02 16:17+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-04-14 21:56+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -177,8 +177,7 @@ msgid "Searching for '%1'"
 msgstr "Vyhledávám %1'"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, fuzzy, kde-format
-#| msgid "Type to search…"
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Text k vyhledání…"
@@ -203,9 +202,3 @@ msgstr "Aplikace a dokumenty"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Upravit aplikace…"
-
-#~ msgid "Recent contacts"
-#~ msgstr "Nedávné kontakty"
-
-#~ msgid "Often used contacts"
-#~ msgstr "Často používané kontakty"
