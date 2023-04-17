@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2022-12-10 11:32+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -376,22 +376,17 @@ msgstr "Wpisz własny tytuł..."
 msgid "Rotate"
 msgstr "Obróć"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "Otwórz zewnętrznie"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Ukryj tło"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Pokaż tło"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"
@@ -592,6 +587,9 @@ msgstr "Z podglądem"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Unieruchomione"
+
+#~ msgid "Open Externally"
+#~ msgstr "Otwórz zewnętrznie"
 
 #~ msgid "OK"
 #~ msgstr "OK"

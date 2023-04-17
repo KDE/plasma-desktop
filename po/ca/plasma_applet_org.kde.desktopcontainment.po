@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2022-11-22 10:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -380,22 +380,17 @@ msgstr "Introduïu un títol personalitzat…"
 msgid "Rotate"
 msgstr "Gira"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "Obre externament"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Oculta el fons"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Mostra el fons"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
@@ -596,3 +591,6 @@ msgstr "Mostra les vistes prèvies"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
+
+#~ msgid "Open Externally"
+#~ msgstr "Obre externament"

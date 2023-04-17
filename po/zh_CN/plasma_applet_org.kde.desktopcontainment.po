@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -376,22 +376,17 @@ msgstr "输入自定义标题…"
 msgid "Rotate"
 msgstr "旋转"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "外部打开"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "隐藏背景"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "显示背景"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "移除"
@@ -592,3 +587,6 @@ msgstr "显示预览"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "已锁定"
+
+#~ msgid "Open Externally"
+#~ msgstr "外部打开"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2023-03-01 00:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -376,22 +376,17 @@ msgstr "사용자 정의 제목 입력…"
 msgid "Rotate"
 msgstr "회전"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "외부 프로그램으로 열기"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "배경 숨기기"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "배경 표시"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "삭제"
@@ -592,6 +587,9 @@ msgstr "미리 보기 표시"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "잠김"
+
+#~ msgid "Open Externally"
+#~ msgstr "외부 프로그램으로 열기"
 
 #~ msgid "OK"
 #~ msgstr "확인"

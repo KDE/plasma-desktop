@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2022-11-23 08:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -378,22 +378,17 @@ msgstr "Vnesite naslov po meri…"
 msgid "Rotate"
 msgstr "Zavrti"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "Odpri od zunaj"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Skrij ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Prikaži ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
@@ -594,6 +589,9 @@ msgstr "Pokaži predoglede"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Zaklenjeno"
+
+#~ msgid "Open Externally"
+#~ msgstr "Odpri od zunaj"
 
 #~ msgid "OK"
 #~ msgstr "OK"

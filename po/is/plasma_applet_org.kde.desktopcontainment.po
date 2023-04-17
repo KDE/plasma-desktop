@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2023-03-12 21:52+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -379,22 +379,17 @@ msgstr "Sláðu inn sérsniðinn titil…"
 msgid "Rotate"
 msgstr "Snúa"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "Opna með öðru forriti"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Fela bakgrunn"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Birta bakgrunn"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"
@@ -595,6 +590,9 @@ msgstr "Birta forskoðun"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Læst"
+
+#~ msgid "Open Externally"
+#~ msgstr "Opna með öðru forriti"
 
 #~ msgid "OK"
 #~ msgstr "Í lagi"

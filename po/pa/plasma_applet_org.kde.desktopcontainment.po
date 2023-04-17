@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 02:36+0000\n"
+"POT-Creation-Date: 2023-04-17 03:27+0000\n"
 "PO-Revision-Date: 2022-11-19 06:25-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -379,22 +379,17 @@ msgstr "ਪਸੰਦੀਦਾ ਟਾਈਟਲ ਦਿਓ…"
 msgid "Rotate"
 msgstr "ਘੁੰਮਾਓ"
 
-#: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
-msgid "Open Externally"
-msgstr "ਬਾਹਰ ਖੋਲ੍ਹੋ"
-
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਲੁਕਾਓ"
 
-#: package/contents/ui/ConfigOverlay.qml:193
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਵੇਖਾਓ"
 
-#: package/contents/ui/ConfigOverlay.qml:241
+#: package/contents/ui/ConfigOverlay.qml:228
 #, kde-format
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -595,6 +590,9 @@ msgstr "ਝਲਕਾਂ ਵੇਖਾਓ"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "ਲਾਕ ਕੀਤੇ"
+
+#~ msgid "Open Externally"
+#~ msgstr "ਬਾਹਰ ਖੋਲ੍ਹੋ"
 
 #~ msgid "OK"
 #~ msgstr "ਠੀਕ ਹੈ"
