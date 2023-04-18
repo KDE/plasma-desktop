@@ -16,6 +16,7 @@
 #include <KCMultiDialog>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <QApplication>
 #include <QNetworkDiskCache>
 #include <QStorageInfo>
 
