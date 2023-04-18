@@ -75,13 +75,13 @@ void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
             return;
         }
 
-        unsigned char sendVal[2] = {0};
+        unsigned char sendVal[3] = {0};
         if (num_items_return == 1) {
             sendVal[0] = val;
         } else {
             // Special case for acceleration profile.
             const Atom accel = XInternAtom(dpy, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, True);
-            if (num_items_return != 2 || valAtom != accel) {
+            if (num_items_return < 2 || num_items_return > 3 || valAtom != accel) {
                 return;
             }
             sendVal[val] = 1;
