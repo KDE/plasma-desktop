@@ -32,27 +32,23 @@ PlasmaCore.Dialog {
 
         readonly property int headingLabel: 2
 
-        RowLayout {
-            PlasmaExtras.Heading {
-                level: 3
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", " Panel Settings")
-            }
+        PlasmaExtras.PlasmoidHeading {
 
-            Item { Layout.fillWidth: true }
+            RowLayout {
+                anchors.fill: parent
+                PlasmaExtras.Heading {
+                    level: 3
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", " Panel Settings")
+                }
 
-            PC3.ToolButton {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-                icon.name: "delete"
-                onClicked: plasmoid.action("remove").trigger();
-            }
+                Item { Layout.fillWidth: true }
 
-        }
+                PC3.ToolButton {
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+                    icon.name: "delete"
+                    onClicked: plasmoid.action("remove").trigger();
+                }
 
-        PlasmaCore.SvgItem {
-            Layout.fillWidth: true
-            elementId: "horizontal-line"
-            svg: PlasmaCore.Svg {
-                imagePath: "widgets/line"
             }
         }
 
@@ -244,48 +240,41 @@ PlasmaCore.Dialog {
             }
         }
 
-        PlasmaCore.SvgItem {
-            Layout.fillWidth: true
+        PlasmaExtras.PlasmoidHeading {
+            location: PlasmaExtras.PlasmoidHeading.Footer
             Layout.topMargin: PlasmaCore.Units.smallSpacing
-            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+            Layout.fillWidth: true
+            RowLayout {
+                anchors.centerIn: parent
+                spacing: PlasmaCore.Units.largeSpacing
 
-            elementId: "horizontal-line"
-            svg: PlasmaCore.Svg {
-                imagePath: "widgets/line"
-            }
-        }
+                PlasmaExtras.Heading {
+                    level: menuColumn.headingLabel
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut")
+                    visible: panel.adaptiveOpacityEnabled
 
-        RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
-            Layout.leftMargin: PlasmaCore.Units.smallSpacing
-            Layout.rightMargin: PlasmaCore.Units.smallSpacing
+                    MouseArea {
+                        id: mouseArea
+                        anchors.fill: parent
+                        hoverEnabled: true
+                    }
 
-            PlasmaExtras.Heading {
-                level: menuColumn.headingLabel
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut")
-                visible: panel.adaptiveOpacityEnabled
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
+                    PC3.ToolTip {
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
+                        visible: mouseArea.containsMouse
+                    }
                 }
 
-                PC3.ToolTip {
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
-                    visible: mouseArea.containsMouse
-                }
-            }
-
-            KeySequenceItem {
-                id: button
-                keySequence: plasmoid.globalShortcut
-                onCaptureFinished: {
-                    plasmoid.globalShortcut = button.keySequence
+                KeySequenceItem {
+                    id: button
+                    keySequence: plasmoid.globalShortcut
+                    onCaptureFinished: {
+                        plasmoid.globalShortcut = button.keySequence
+                    }
                 }
             }
         }
+
     }
 
     function hide() {
