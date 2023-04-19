@@ -30,12 +30,19 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
         int keyInt = keyEvent->modifiers() | keyEvent->key();
         if (KStandardShortcut::deleteFile().contains(QKeySequence(keyInt))) {
             Q_EMIT deleteFile();
-        } else if (KStandardShortcut::renameFile().contains(QKeySequence(keyInt))) {
+            return true;
+        }
+        if (KStandardShortcut::renameFile().contains(QKeySequence(keyInt))) {
             Q_EMIT renameFile();
-        } else if (KStandardShortcut::moveToTrash().contains(QKeySequence(keyInt))) {
+            return true;
+        }
+        if (KStandardShortcut::moveToTrash().contains(QKeySequence(keyInt))) {
             Q_EMIT moveToTrash();
-        } else if (KStandardShortcut::createFolder().contains(QKeySequence(keyInt))) {
+            return true;
+        }
+        if (KStandardShortcut::createFolder().contains(QKeySequence(keyInt))) {
             Q_EMIT createFolder();
+            return true;
         }
     }
 
