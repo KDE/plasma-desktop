@@ -593,6 +593,7 @@ PlasmaExtras.Menu {
 
     PlasmaExtras.MenuItem {
         visible: (visualParent
+                && get(atm.IsStartup) !== true
                 && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                 && !launcherToggleAction.visible
                 && activityInfo.numberOfRunningActivities < 2)
