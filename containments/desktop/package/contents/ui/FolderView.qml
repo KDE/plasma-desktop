@@ -1011,6 +1011,13 @@ FocusScope {
                         rename();
                     }
 
+                    onMoveToTrash: {
+                        const action = dir.action("trash");
+                        if (action && action.enabled) {
+                            action.trigger();
+                        }
+                    }
+
                     onCreateFolder: {
                         model.createFolder();
                     }
@@ -1019,11 +1026,7 @@ FocusScope {
                 Keys.onPressed: {
                     event.accepted = true;
 
-                    if (event.matches(StandardKey.Delete)) {
-                        if (dir.hasSelection()) {
-                            dir.action("trash").trigger();
-                        }
-                    } else if (event.key === Qt.Key_Control) {
+                    if (event.key === Qt.Key_Control) {
                         ctrlPressed = true;
                     } else if (event.key === Qt.Key_Shift) {
                         shiftPressed = true;
