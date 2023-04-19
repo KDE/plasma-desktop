@@ -40,6 +40,14 @@ ColumnLayout {
             text = displayParent;
         }
 
+        // Normally the window title will always have " — [app name]" at the end of
+        // the window-provided title. But if it doesn't, this is intentional 100%
+        // of the time because the developer or user has deliberately removed that
+        // part, so just display it with no more fancy processing.
+        if (!text.includes("—")) {
+            return text;
+        }
+
         // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
         // In this case save <#number> as counter and delete it at the end of text.
         text = `${(text.match(/.*(?=\s*(—|-))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
