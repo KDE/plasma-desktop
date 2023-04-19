@@ -61,7 +61,7 @@ AbstractKickoffItemDelegate {
             rows: root.compact ? 1 : 2
             columns: root.compact ? 2 : 1
             rowSpacing: 0
-            columnSpacing: root.spacing
+            columnSpacing: Kirigami.Units.largeSpacing
 
             PC3.Label {
                 id: label
