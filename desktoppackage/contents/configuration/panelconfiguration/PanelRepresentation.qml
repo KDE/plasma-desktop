@@ -22,6 +22,7 @@ Item {
     property bool adaptivePanel: false
     property int floatingGap: -1
     property int windowZ: 0
+    property int screenHeight: Math.round(screenRect.height / 2)
 
     signal clicked()
 
@@ -173,7 +174,7 @@ Item {
             }
         }
 
-        QtControls.Label {
+        PC3.Label {
             text: panelRepresentation.text
             Layout.alignment: Qt.AlignHCenter
             Layout.maximumWidth: screenRect.implicitWidth

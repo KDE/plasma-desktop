@@ -23,12 +23,12 @@ PlasmaCore.Dialog {
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
         id: menuColumn
-        Layout.minimumWidth: menuColumn.implicitWidth + PlasmaCore.Units.largeSpacing * 2 //for compensating for margins
-        Layout.minimumHeight: menuColumn.implicitHeight
-        spacing: PlasmaCore.Units.smallSpacing
+        width: PlasmaCore.Units.gridUnit * 30
+        height: PlasmaCore.Units.gridUnit * 43
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
+        spacing: PlasmaCore.Units.largeSpacing
 
         readonly property int headingLabel: 2
 
@@ -52,22 +52,28 @@ PlasmaCore.Dialog {
             }
         }
 
-        PlasmaExtras.Heading {
-            level: menuColumn.headingLabel
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
-            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
-            type: PlasmaExtras.Heading.Type.Primary
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", " Select Alignment")
-        }
-
         RowLayout {
             spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
             Layout.leftMargin: PlasmaCore.Units.largeSpacing
             Layout.rightMargin: PlasmaCore.Units.largeSpacing
 
+            Item {
+                Layout.preferredWidth: menuColumn.width / 5
+                Layout.fillHeight: true
+                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                PlasmaExtras.Heading {
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.topMargin: referenceRepresentation.screenHeight - height / 2
+                    level: menuColumn.headingLabel
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
+                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment:")
+                }
+            }
+
             PanelRepresentation {
+                id: referenceRepresentation
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
                 tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the top if the panel is not maximized.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel
                 to the left if the panel is not maximized.")
@@ -94,20 +100,36 @@ PlasmaCore.Dialog {
                 checked: panel.alignment === Qt.AlignRight
                 onClicked: panel.alignment = Qt.AlignRight
             }
-        }
 
-        PlasmaExtras.Heading {
-            level: menuColumn.headingLabel
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: PlasmaCore.Units.largeSpacing
-            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
-            type: PlasmaExtras.Heading.Type.Primary
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Visibility")
-        }
 
+        }
+        PlasmaCore.SvgItem {
+            Layout.fillWidth: true
+            elementId: "horizontal-line"
+            svg: PlasmaCore.Svg {
+                id: lineSvg
+                imagePath: "widgets/line"
+            }
+        }
         RowLayout {
             spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
+            Layout.leftMargin: PlasmaCore.Units.largeSpacing
+            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+
+            Item {
+                Layout.preferredWidth: menuColumn.width / 5
+                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.fillHeight: true
+                PlasmaExtras.Heading {
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.topMargin: referenceRepresentation.screenHeight - height / 2
+                    level: menuColumn.headingLabel
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
+                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility:")
+                }
+            }
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
@@ -128,11 +150,15 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
             }
         }
-
         RowLayout {
             spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: PlasmaCore.Units.largeSpacing
+            Layout.leftMargin: PlasmaCore.Units.largeSpacing
+            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+
+            Item {
+                Layout.preferredWidth: menuColumn.width / 5
+                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+            }
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows In Front")
@@ -155,24 +181,30 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.WindowsGoBelow
             }
         }
-
-        PlasmaExtras.Heading {
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: PlasmaCore.Units.largeSpacing
-            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
-            type: PlasmaExtras.Heading.Type.Primary
-            level: menuColumn.headingLabel
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Opacity")
-            visible: panel.adaptiveOpacityEnabled
+        PlasmaCore.SvgItem {
+            Layout.fillWidth: true
+            elementId: "horizontal-line"
+            svg: lineSvg
         }
-
         RowLayout {
-            id: opacityButtons
             spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
             Layout.leftMargin: PlasmaCore.Units.largeSpacing
             Layout.rightMargin: PlasmaCore.Units.largeSpacing
-            visible: panel.adaptiveOpacityEnabled
+
+            Item {
+                Layout.preferredWidth: menuColumn.width / 5
+                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.fillHeight: true
+                PlasmaExtras.Heading {
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.topMargin: referenceRepresentation.screenHeight - height / 2
+                    level: menuColumn.headingLabel
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
+                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity:")
+                }
+            }
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Fully Opaque")
@@ -203,21 +235,30 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.opacityMode = Panel.Global.Translucent
             }
         }
-
-        PlasmaExtras.Heading {
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: PlasmaCore.Units.largeSpacing
-            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
-            type: PlasmaExtras.Heading.Type.Primary
-            level: menuColumn.headingLabel
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Select Edge Separation")
+        PlasmaCore.SvgItem {
+            Layout.fillWidth: true
+            elementId: "horizontal-line"
+            svg: lineSvg
         }
-
         RowLayout {
             spacing: PlasmaCore.Units.largeSpacing
-            Layout.alignment: Qt.AlignHCenter
             Layout.leftMargin: PlasmaCore.Units.largeSpacing
             Layout.rightMargin: PlasmaCore.Units.largeSpacing
+
+            Item {
+                Layout.preferredWidth: menuColumn.width / 5
+                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.fillHeight: true
+                PlasmaExtras.Heading {
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.topMargin: referenceRepresentation.screenHeight - height / 2
+                    level: menuColumn.headingLabel
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
+                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating:")
+                }
+            }
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
@@ -243,6 +284,9 @@ PlasmaCore.Dialog {
         PlasmaExtras.PlasmoidHeading {
             location: PlasmaExtras.PlasmoidHeading.Footer
             Layout.topMargin: PlasmaCore.Units.smallSpacing
+            topPadding: PlasmaCore.Units.smallSpacing * 2
+            bottomPadding: PlasmaCore.Units.smallSpacing
+
             Layout.fillWidth: true
             RowLayout {
                 anchors.centerIn: parent
