@@ -99,7 +99,7 @@ void DeviceAutomounter::deviceAdded(const QString &udi)
 
     if (dev.is<Solid::StorageAccess>()) {
         Solid::StorageAccess *sa = dev.as<Solid::StorageAccess>();
-        if (sa) {
+        if (sa && !sa->isIgnored()) {
             connect(sa, &Solid::StorageAccess::accessibilityChanged, this, &DeviceAutomounter::deviceMountChanged);
         }
     }
