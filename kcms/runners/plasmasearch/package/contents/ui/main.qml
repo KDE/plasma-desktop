@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
 
-import org.kde.kconfig 1.0
+import org.kde.config
 import org.kde.kcm 1.3 as KCM
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcmutils 1.0 as KCMUtils

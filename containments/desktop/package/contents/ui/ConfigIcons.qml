@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.iconthemes as KIconThemes
-import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.config // for KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
