@@ -44,7 +44,7 @@ ColumnLayout {
         // the window-provided title. But if it doesn't, this is intentional 100%
         // of the time because the developer or user has deliberately removed that
         // part, so just display it with no more fancy processing.
-        if (!text.includes("—")) {
+        if (!text.includes("—") && !text.includes("-")) {
             return text;
         }
 
