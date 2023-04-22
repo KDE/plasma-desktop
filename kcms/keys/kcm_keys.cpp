@@ -190,9 +190,15 @@ void KCMKeys::addApplication(QQuickItem *ctx)
 
 void KCMKeys::addCommand(const QString &exec)
 {
-    QString serviceName = KIO::DesktopExecParser::executableName(exec);
+    // escape %'s in the exec with %%
+    QString escapedExec = exec;
+    escapedExec.replace("%%", "%");
+    escapedExec.replace('%', "%%");
+    QString serviceName = KIO::DesktopExecParser::executableName(escapedExec);
     if (serviceName.isEmpty()) {
-        return;
+        // DesktopExecParser fails if there are any %'s in the exec which aren't valid % placeholders per the desktop file standard
+        // escaping with backslashes or doubling doesn't seem to work either, so we just do this
+        serviceName = escapedExec.left(escapedExec.indexOf(" "));
     }
     QString menuId;
     QString newPath = KService::newServicePath(false /* ignored argument */, serviceName, &menuId);
@@ -201,11 +207,11 @@ void KCMKeys::addCommand(const QString &exec)
     KConfigGroup cg = desktopFile.desktopGroup();
     cg.writeEntry("Type", "Application");
 
-    QString finalExec = exec;
+    QString finalExec = escapedExec;
 
     // If it was added as a URL, convert it to a local path, because desktop
     // files can't take URLs in their exec keys
-    const QUrl execAsURL = QUrl(exec);
+    const QUrl execAsURL = QUrl(escapedExec);
     if (!execAsURL.scheme().isEmpty()) {
         finalExec = execAsURL.toLocalFile();
     }
@@ -234,6 +240,9 @@ void KCMKeys::addCommand(const QString &exec)
 QString KCMKeys::editCommand(const QString &componentName, const QString &newExec)
 {
     QString finalExec = newExec;
+
+    finalExec.replace("%%", "%");
+    finalExec.replace('%', "%%");
 
     // If it was added as a URL, convert it to a local path, because desktop
     // files can't take URLs in their exec keys
