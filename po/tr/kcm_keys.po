@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-10 02:27+0000\n"
+"POT-Creation-Date: 2023-04-23 03:28+0000\n"
 "PO-Revision-Date: 2023-03-24 17:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr "Genel kısayollar hizmetiyle iletişim kurarken hata oluştu"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Genel kısayollar arka plan programı ile iletişim kurulamadı"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "%1 kısayolu zaten ortak %2 '%3' eylemine atanmış.\n"
 "Yeniden atamak istiyor musunuz?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "%1 kısayolu zaten %2 '%3' eylemine atanmış.\n"
 "Yeniden atamak istiyor musunuz?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

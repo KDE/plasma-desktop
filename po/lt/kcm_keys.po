@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-10 02:27+0000\n"
+"POT-Creation-Date: 2023-04-23 03:28+0000\n"
 "PO-Revision-Date: 2023-02-04 20:02+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -42,7 +42,7 @@ msgstr "Klaida susisiekiant su visuotine sparčiųjų klavišų tarnyba"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Nepavyko susisiekti su visuotinių sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas bendram %2 veiksmui „%3“.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -61,7 +61,7 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas veiksmui „%2“, kuris priklauso %3.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

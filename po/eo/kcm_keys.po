@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-10 02:27+0000\n"
+"POT-Creation-Date: 2023-04-23 03:28+0000\n"
 "PO-Revision-Date: 2023-04-09 22:11+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr "Eraro dum komunikado kun la ĉiea ŝparvoja servo"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Malsukcesis komuniki kun demono por ĉieaj ŝparvojoj"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Ŝparvojo %1 jam estas asignita al la komuna ago %2 '%3'.\n"
 "Ĉu vi volas reasigni ĝin?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Ŝparvojo %1 jam estas asignita al ago '%2' de %3.\n"
 "Ĉu vi volas reasigni ĝin?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-10 02:27+0000\n"
+"POT-Creation-Date: 2023-04-23 03:28+0000\n"
 "PO-Revision-Date: 2023-01-11 21:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Errorea lasterbide orokorreko zerbitzuarekin komunikatzean"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Huts egin du lasterbide orokorreko daimonarekin komunikatzea"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 "%1 lasterbideak esleitua du %2 ekintza komuna «%3».\n"
 "Esleipen berria egin nahi diozu?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -62,7 +62,7 @@ msgstr ""
 "%1 lasterbideak esleitua du %3(e)ko «%2» ekintza.\n"
 "Esleipen berria egin nahi diozu?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
