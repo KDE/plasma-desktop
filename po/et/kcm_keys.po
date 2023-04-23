@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2020-10-07 22:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -41,7 +41,7 @@ msgstr "Tõrge suhtlemisel globaalsete kiirklahvide teenusega"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Suhtlemine globaalsete kiirklahvide deemoniga nurjus"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud tüüpilisele menüükäsule \"%2 -> %3\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud rakenduse/teenuse %3 toimingule \"%2\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

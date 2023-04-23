@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2023-01-18 10:06+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -43,7 +43,7 @@ msgstr "Ошибка обмена данными с глобальной слу�
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не удалось связаться со службой поддержки глобальных комбинаций клавиш"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 "Комбинация клавиш «%1» уже назначена действию %3 из основного раздела %2."
 "Переназначить?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -62,7 +62,7 @@ msgstr ""
 "Комбинация клавиш «%1» уже назначена действию «%2» компонента %3. "
 "Переназначить?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

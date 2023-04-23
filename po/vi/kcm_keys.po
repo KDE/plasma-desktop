@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Lỗi khi liên lạc với dịch vụ phím tắt toàn cục"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Liên lạc với trình nền phím tắt toàn cục thất bại"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Phím tắt %1 đã được gán cho hành động %2 chung '%3' rồi.\n"
 "Bạn có muốn gán lại nó không?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Phím tắt %1 đã được gán cho hành động '%2' của mục %3 rồi.\n"
 "Bạn có muốn gán lại nó không?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

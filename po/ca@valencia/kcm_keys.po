@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2023-01-11 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "S'ha produït un error en comunicar amb el servei de dreceres globals"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "No s'ha pogut comunicar amb el domini de dreceres globals"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 "La drecera %1 ja es troba assignada a l'acció %2 comuna «%3».\n"
 "Voleu reassignar-la?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -63,7 +63,7 @@ msgstr ""
 "La drecera %1 ja es troba assignada a l'acció «%2 de %3»\n"
 "Voleu reassignar-la?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

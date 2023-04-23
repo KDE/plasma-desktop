@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2023-01-11 09:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Erro ao comunicar com o serviço de atalhos globais"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Não foi possível comunicar com o serviço de atalhos globais"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 "O atalho %1 já está atribuído à acção comum de %2 '%3'.\n"
 "Deseja atribuí-la de novo?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -55,7 +55,7 @@ msgstr ""
 "O atalho %1 já está atribuído à acção comum '%2' de %3.\n"
 "Deseja atribuí-la de novo?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

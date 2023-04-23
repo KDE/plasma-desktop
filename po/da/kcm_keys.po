@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2022-08-20 17:32+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr "Fejl under kommunikation med tjenesten for globale genveje"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Kunne ikke kommunikere med dæmonen for globale genveje"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Genvejen %1 er allerede tildelt til den almindelige %2-handling \"%3\".\n"
 "Vil du omtildele den?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Genvejen %1 er allerede tildelt til handlingen \"%2\" af %3.\n"
 "Vil du omtildele den?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

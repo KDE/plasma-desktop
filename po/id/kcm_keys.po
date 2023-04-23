@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"POT-Creation-Date: 2023-04-23 04:12+0000\n"
 "PO-Revision-Date: 2022-05-09 20:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Galat ketika sedang berkomunikasi dengan layanan pintasan global"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Gagal untuk berkomunikasi dengan daemon pintasan global"
 
-#: kcm_keys.cpp:297
+#: kcm_keys.cpp:306
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Pintasan %1 sudah ditetapkan ke %2 umum aksi '%3'.\n"
 "Apakah kamu ingin menetapkannya ulang?"
 
-#: kcm_keys.cpp:301
+#: kcm_keys.cpp:310
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Pintasan %1 sudah ditetapkan ke aksi '%2' dari %3.\n"
 "Apakah kamu ingin menetapkannya ulang?"
 
-#: kcm_keys.cpp:302
+#: kcm_keys.cpp:311
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
