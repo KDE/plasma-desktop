@@ -213,14 +213,6 @@ pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)
 
 ecm_find_qmlmodule(org.kde.pipewire 0.1)
 
-find_package(Synaptics)
-set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
-add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries are needed for the synaptics touchpad KCM")
-
-if(SYNAPTICS_FOUND)
-    set(HAVE_SYNAPTICS 1)
-endif()
-
 if(XORGLIBINPUT_FOUND)
   set(HAVE_XORGLIBINPUT 1)
 endif()

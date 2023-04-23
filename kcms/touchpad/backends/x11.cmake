@@ -10,10 +10,6 @@ SET(backend_SRCS
     backends/x11/xrecordkeyboardmonitor.cpp
 )
 
-if(SYNAPTICS_FOUND)
-    list(APPEND backend_SRCS backends/x11/synapticstouchpad.cpp)
-endif()
-
 if (XORGLIBINPUT_FOUND)
 
     SET(backend_SRCS
@@ -37,10 +33,6 @@ SET(backend_LIBS
     X11::XCB
     PkgConfig::XORGSERVER
 )
-
-if(SYNAPTICS_FOUND)
-    list(APPEND backend_LIBS PkgConfig::SYNAPTICS)
-endif()
 
 add_executable(kcm-touchpad-list-devices backends/x11/listdevices.cpp)
 target_link_libraries(kcm-touchpad-list-devices

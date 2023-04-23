@@ -5,27 +5,6 @@ set(KCM_TOUCHPAD_SRCS
     resources.qrc
 )
 
-if (BUILD_KCM_TOUCHPAD_X11)
-    set(KCM_TOUCHPAD_SRCS
-        ${KCM_TOUCHPAD_SRCS}
-        xlib/customslider.cpp
-        xlib/sliderpair.cpp
-        xlib/testarea.cpp
-        xlib/testbutton.cpp
-        xlib/touchpadconfigxlib.cpp
-        xlib/customconfigdialogmanager.cpp
-    )
-
-    ki18n_wrap_ui(KCM_TOUCHPAD_SRCS
-        xlib/ui/pointermotion.ui
-        xlib/ui/tap.ui
-        xlib/ui/scroll.ui
-        xlib/ui/sensitivity.ui
-        xlib/ui/kded.ui
-        xlib/ui/testarea.ui
-    )
-endif()
-
 add_library(kcm_touchpad MODULE ${KCM_TOUCHPAD_SRCS})
 kcmutils_generate_desktop_file(kcm_touchpad)
 

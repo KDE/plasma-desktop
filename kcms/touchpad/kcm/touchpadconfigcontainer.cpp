@@ -10,12 +10,7 @@
 #include "libinput/touchpadconfiglibinput.h"
 #include "touchpadbackend.h"
 #include "touchpadconfigplugin.h"
-
 #include <config-build-options.h>
-
-#if BUILD_KCM_TOUCHPAD_X11
-#include "xlib/touchpadconfigxlib.h"
-#endif
 
 #include <KPluginFactory>
 #include <KWindowSystem>
@@ -37,29 +32,8 @@ TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginM
     : KCModule(parent, data)
     , m_plugin(nullptr)
 {
-    if (TouchpadBackend *backend = TouchpadBackend::implementation(); backend != nullptr) {
-        switch (backend->getMode()) {
-#if BUILD_KCM_TOUCHPAD_X11
-        case TouchpadInputBackendMode::XLibinput:
-        case TouchpadInputBackendMode::Unset:
-            m_plugin = new TouchpadConfigLibinput(this, backend);
-            break;
-        case TouchpadInputBackendMode::XSynaptics:
-            m_plugin = new TouchpadConfigXlib(this, backend);
-            break;
-#endif
-#if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
-        case TouchpadInputBackendMode::WaylandLibinput:
-            m_plugin = new TouchpadConfigLibinput(this, backend);
-            break;
-#endif
-        default:
-            Q_UNUSED(m_plugin);
-        }
-    }
-    if (m_plugin == nullptr) {
-        qFatal("Not able to select appropriate configuration plugin, aborting kcm_touchpad startup");
-    }
+    TouchpadBackend *backend = TouchpadBackend::implementation();
+    m_plugin = new TouchpadConfigLibinput(this, backend);
 
     setButtons(KCModule::Default | KCModule::Apply);
 }
@@ -71,8 +45,6 @@ void TouchpadConfigContainer::kcmInit()
     if (backend->getMode() == TouchpadInputBackendMode::XLibinput) {
         backend->getConfig();
         backend->applyConfig();
-    } else if (backend->getMode() == TouchpadInputBackendMode::XSynaptics) {
-        TouchpadConfigXlib::kcmInit();
     }
 #endif
 }

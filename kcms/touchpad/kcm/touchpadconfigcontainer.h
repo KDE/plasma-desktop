@@ -11,13 +11,11 @@
 
 class TouchpadConfigPlugin;
 class TouchpadConfigLibinput;
-class TouchpadConfigXlib;
 
 class TouchpadConfigContainer : public KCModule
 {
     Q_OBJECT
 
-    friend TouchpadConfigXlib;
     friend TouchpadConfigLibinput;
 
 public:

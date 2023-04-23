@@ -20,7 +20,6 @@ enum class TouchpadInputBackendMode {
 #endif
 #if BUILD_KCM_TOUCHPAD_X11
     XLibinput = 2,
-    XSynaptics = 3,
 #endif
 };
 

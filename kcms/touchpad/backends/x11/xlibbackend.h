@@ -13,7 +13,6 @@
 #include <QtGui/private/qtx11extras_p.h>
 
 #include "libinputtouchpad.h"
-#include "synapticstouchpad.h"
 #include "touchpadbackend.h"
 #include "xlibtouchpad.h"
 
@@ -83,7 +82,6 @@ protected:
     xcb_connection_t *m_connection;
 
     XcbAtom m_enabledAtom, m_mouseAtom, m_keyboardAtom, m_touchpadAtom;
-    XcbAtom m_synapticsIdentifierAtom;
     XcbAtom m_libinputIdentifierAtom;
 
     XlibTouchpad *findTouchpad();

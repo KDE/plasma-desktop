@@ -26,9 +26,6 @@
 #include <X11/extensions/XInput.h>
 #include <X11/extensions/XInput2.h>
 
-#if HAVE_SYNAPTICS
-#include <synaptics-properties.h>
-#endif
 #include <xserver-properties.h>
 
 struct DeviceListDeleter {
@@ -80,9 +77,6 @@ XlibBackend::XlibBackend(QObject *parent)
     m_touchpadAtom.intern(m_connection, XI_TOUCHPAD);
     m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
 
-#if HAVE_SYNAPTICS
-    m_synapticsIdentifierAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
-#endif
     m_libinputIdentifierAtom.intern(m_connection, "libinput Send Events Modes Available");
 
     m_device.reset(findTouchpad());
@@ -111,12 +105,6 @@ XlibTouchpad *XlibBackend::findTouchpad()
             if (*atom == m_libinputIdentifierAtom.atom()) {
                 setMode(TouchpadInputBackendMode::XLibinput);
                 return new LibinputTouchpad(m_display.get(), info->id);
-            }
-#endif
-#if HAVE_SYNAPTICS
-            if (*atom == m_synapticsIdentifierAtom.atom()) {
-                setMode(TouchpadInputBackendMode::XSynaptics);
-                return new SynapticsTouchpad(m_display.get(), info->id);
             }
 #endif
         }
@@ -345,13 +333,6 @@ QVector<QObject *> XlibBackend::getDevices() const
     LibinputTouchpad *libinputtouchpad = dynamic_cast<LibinputTouchpad *>(m_device.get());
     if (libinputtouchpad) {
         touchpads.push_back(libinputtouchpad);
-    }
-#endif
-
-#if HAVE_SYNAPTICS
-    SynapticsTouchpad *synaptics = dynamic_cast<SynapticsTouchpad *>(m_device.get());
-    if (synaptics) {
-        touchpads.push_back(synaptics);
     }
 #endif
 
