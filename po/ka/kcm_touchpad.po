@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2023-02-11 07:14+0100\n"
+"PO-Revision-Date: 2023-04-23 06:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -488,6 +488,8 @@ msgid ""
 "This program incorporates work covered by this copyright notice:\n"
 "Copyright © 2002-2005,2007 Peter Osterlund"
 msgstr ""
+"ეს პროგრამა შეიცავს ნაშრომს, რომელიც საავტორო უფლებებითაა დაცული:\n"
+"Copyright © 2002-2005,2007 Peter Osterlund"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:92
 #, kde-format
@@ -606,6 +608,8 @@ msgid ""
 "If there was no keyboard activity for more than specified\n"
 "number of milliseconds, touchpad will be enabled again"
 msgstr ""
+"თუ კლავიატურას არ შეეხებით მითითებულზე უფრო მეტ\n"
+"მილიწამში, თაჩპედი ისევ ჩაირთვება"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
@@ -626,6 +630,9 @@ msgid ""
 "You will be still able to move pointer using touchpad and perform clicks "
 "with hardware buttons."
 msgstr ""
+"წკაპის ემულაციისა და გადახვევის გამორთვა.\n"
+"თაჩპედით კურსორის გამოძრავება და ფიზიკურ ღილაკებზე დაჭერა ჯერ კიდევ "
+"შეგეძლებათ."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:109
@@ -659,6 +666,9 @@ msgid ""
 "You can add them to this list so that they will be ignored when they're "
 "plugged in."
 msgstr ""
+"ზოგიერთ მოწყობილობას შეიძლება სულ ტყუილად ვთვლით თაგუნად.\n"
+"ამ სიაში შეგიძლიათ ჩაამატოთ მოწყობილობები, რომლებიც შეერთებისას გამოტოვებული "
+"იქნება."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
 #: kcm/xlib/ui/pointermotion.ui:14
@@ -752,12 +762,14 @@ msgstr "მაქსიმალური ფაქტორი:"
 #, kde-format
 msgid "Finger pressure at which minimum pressure motion factor is applied"
 msgstr ""
+"თითის დაწოლა, როცა გამოიყენება მინიმალური დაწოლის გადაადგილების ფაქტორი"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
 #: kcm/xlib/ui/pointermotion.ui:166
 #, kde-format
 msgid "Finger pressure at which maximum pressure motion factor is applied"
 msgstr ""
+"თითის დაწოლა, როცა გამოიყენება მაქსიმალური დაწოლის გადაადგილების ფაქტორი"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
 #: kcm/xlib/ui/pointermotion.ui:179
@@ -967,6 +979,7 @@ msgid ""
 "Your finger needs to produce this many scrolls per second in order to start "
 "coasting"
 msgstr ""
+"თქვენს თითს სჭირდება ამდენი გადახვევა წამში, რომ ინერციით გადახვევა დაიწყოთ"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:233
@@ -985,7 +998,7 @@ msgstr "შენელება:"
 #: kcm/xlib/ui/scroll.ui:250
 #, kde-format
 msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr ""
+msgstr "წამების/წამების² რაოდენობა ინერციით გადახვევის სიჩქარის შესამცირებლად"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
 #: kcm/xlib/ui/scroll.ui:256
@@ -1023,6 +1036,10 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
+"გადახვევა ჩართულია, როდესაც გადაადგილება იწყება მოცემულ ტრიგერის რეგიონში.\n"
+"თითის გადატანა საათის ისრის მიმართულებით წრეებში სენსორული პანელის ცენტრის "
+"გარშემო\n"
+"გადახვევს ქვემოთ და საათის ისრის საწინააღმდეგო მოძრაობა გადახვევს ზემოთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:291
@@ -1042,7 +1059,7 @@ msgstr "ტრიგერის რაიონი:"
 #: kcm/xlib/ui/scroll.ui:316
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr ""
+msgstr "ტრიგერის ადგილი თაჩპედზე მრგვლად გადახვევის დასაწყებად"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/scroll.ui:323
@@ -1055,7 +1072,7 @@ msgstr "კუთხე:"
 #: kcm/xlib/ui/scroll.ui:345
 #, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr ""
+msgstr "თითის გადაადგილების კუთხე (გრადუსებში) გადახვევის მოვლენის დასაწყებად"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348
@@ -1071,6 +1088,8 @@ msgid ""
 "When used together with vertical scrolling, hitting the upper or lower right "
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
+"როცა გამოიყენება ვერტიკალურად გადახვევასთან ერთად, ზედა ან ქვედა მარჯვენა "
+"კუთხესი მოხვედრა ვერტიკალური გადახვევიდან წრიულზე გადაირთვება"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
 #: kcm/xlib/ui/sensitivity.ui:14
@@ -1122,6 +1141,8 @@ msgid ""
 "If palm detection should be enabled. Note that this also requires hardware/"
 "firmware support from the touchpad"
 msgstr ""
+"თუ ხელისგულის ამოცნობა ჩართული უნდა იყოს. დაიმახსოვრეთ, რომ ეს თაჩპედიდან "
+"აპარატურულ/მიკროკოდის მხარდაჭერასაც მოითხოვს"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
 #: kcm/xlib/ui/sensitivity.ui:81
@@ -1148,13 +1169,13 @@ msgstr "მინიმალური დაწოლა:"
 #: kcm/xlib/ui/sensitivity.ui:113
 #, kde-format
 msgid "Minimum finger width at which touch is considered a palm"
-msgstr ""
+msgstr "თითის მინიმალური სიგანე, რომლის შემდეგაც ის ხელისგულად იქნება აღქმული"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
 #: kcm/xlib/ui/sensitivity.ui:129
 #, kde-format
 msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr ""
+msgstr "თითის მინიმალური წნევა, რომლის შემდეგაც ის ხელისგულად იქნება აღქმული"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
 #: kcm/xlib/ui/tap.ui:14
@@ -1275,6 +1296,8 @@ msgid ""
 "(touching and releasing the finger), then touching again and moving the "
 "finger on the touchpad"
 msgstr ""
+"ეს ჟესტი გადათრევის ალტერნატიული გზაა. ის დატყაპუნებით (თითით შეხების და "
+"გაშვების), შემდეგ კიდევ შეხებით და თაჩპედზე თითის გადაადგილებით ხორციელდება"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:254
@@ -1289,6 +1312,9 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
+"თუ გამორთულია, დაატყაპუნეთ-და-გადაათრიეთ ჟესტი მაშინ სრულდება, როცა თითს "
+"აიღებთ. თუ გამორთულია, ჟესტი მანამდე იქნება აქტიური, სანამ დრო არ გავა, ან "
+"მეორედ არ დატყაპუნებთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:269
@@ -1311,6 +1337,8 @@ msgid ""
 "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
+"რამდენი ხანი სჭირდება (მილიწამებში) ჩაკეტილი გადათრევების რეჟიმის "
+"ავტომატურად გამორთვას მას შემდეგ, რაც თაჩპედიდან თითს აიღებთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2022-12-09 07:59+0100\n"
+"PO-Revision-Date: 2023-04-23 06:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -61,6 +61,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
+"<qt>კალიბრაცია აპირებს თქვენი მოწყობილობის მნიშვნელობების დიაპაზონები "
+"შეამოწმოს. <br /><br />გადაიტანეთ <b>ღერძი %1 %2</b> თქვენს მოწყობილობაზე "
+"<b>მინიმალურ<b> პოზიციაში</b>.<br /><br /> შემდეგ ნაბიჯზე გადასასვლელად ამ "
+"მოწყობილობის ნებისმიერ ღილაკს ან 'შემდეგი' ღილაკს დააწექით.</qt>"
 
 #: caldialog.cpp:110
 #, kde-format
@@ -70,6 +74,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
+"<qt>კალიბრაცია აპირებს თქვენი მოწყობილობის მნიშვნელობების დიაპაზონები "
+"შეამოწმოს. <br /><br />გადაიტანეთ <b>ღერძი %1 %2</b> თქვენს მოწყობილობაზე "
+"<b>ცენტრალურ<b> პოზიციაში</b>.<br /><br /> შემდეგ ნაბიჯზე გადასასვლელად ამ "
+"მოწყობილობის ნებისმიერ ღილაკს ან 'შემდეგი' ღილაკს დააწექით.</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -79,6 +87,10 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
+"<qt>კალიბრაცია აპირებს თქვენი მოწყობილობის მნიშვნელობების დიაპაზონები "
+"შეამოწმოს. <br /><br />გადაიტანეთ <b>ღერძი %1 %2</b> თქვენს მოწყობილობაზე "
+"<b>მაქსიმალურ<b> პოზიციაში</b>.<br /><br /> შემდეგ ნაბიჯზე გადასასვლელად ამ "
+"მოწყობილობის ნებისმიერ ღილაკს ან 'შემდეგი' ღილაკს დააწექით.</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
@@ -123,6 +135,8 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
+"ამჟამად გაშვებული ბირთვის დრაივერის ვერსია(%1.%2.%3) ის არაა, რომლითაც ეს "
+"მოდული იქნა აგებული (%4.%5.%6)."
 
 #: joydevice.cpp:71
 #, kde-format
@@ -249,6 +263,10 @@ msgid ""
 "done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
 "one attached, please enter the correct device file."
 msgstr ""
+"ამ კომპიუტერზე ჯოისტიკის მოწყობილობები ავტომატურად ვერ ვიპოვე.<br /"
+">შევამოწმე /dev/js[0-4] და /dev/input/js[0-4]<br />თუ იმაში, რომ ერთ-ერთი "
+"შეერთებულია, დარწმუნებული ბრძანდებით, მოწყობილობის ფაილი შეგიძლიათ ხელით "
+"მიუთითოთ."
 
 #: joywidget.cpp:226
 #, kde-format
@@ -257,6 +275,9 @@ msgid ""
 "Please select a device from the list or\n"
 "enter a device file, like /dev/js0."
 msgstr ""
+"მითითებული მოწყობილობის სახელი არასწორია (არ შეიცავს /dev).\n"
+"აირჩიეთ მოწყობილობა სიიდან ან შეიყვანეთ\n"
+"მოწყობილობის ფაილის სახელი. მაგ: /dev/js0."
 
 #: joywidget.cpp:229
 #, kde-format
@@ -285,6 +306,9 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
+"<qt>კალიბრაცია სიზუსტის შემოწმებას აპირებს.<br /><br /><b>გადმოიტანეთ ყველ "
+"ღერძი მათ ცენტრალურ მდებარეობაზე და ამის შემდეგ ჯოისტიკს აღარ შეეხოთ.</"
+"b><br /><br />კალიბრაციის დასაწყებად დააწკაპუნეთ OK.</qt>"
 
 #: joywidget.cpp:367
 #, kde-format
