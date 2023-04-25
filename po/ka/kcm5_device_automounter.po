@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2022-09-02 07:59+0200\n"
+"PO-Revision-Date: 2023-04-24 05:40+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,6 +37,10 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
+"ეს სია სისტემისთვის ცნობილ საცავის მოწყობილობებს შეიცავს. თუ \"შესვლისას "
+"მიმაგრება\" ჩართულია, მოწყობილობა ავტომატურად იქნება მიმაგრებული იმის "
+"მიუხედავად, რომ \"შესვლისას ყველა მოხსნადი საცავის მიმაგრება\" გამორთულია. "
+"იგივე ეხება \"ავტომატური მიმაგრება მიერთებისას\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -48,6 +52,10 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
+"ამ ღილაკზე დაწოლა მონიშნული მოწყობილობების 'დავიწყებას' გამოიწვევს. ეს "
+"გამოგადგებათ, თუ 'ავტომატურად მხოლოდ იმ საცავების მიმაგრება, რომლებიც ადრე "
+"გამოიყენებოდა' ჩართულია. თუ მოწყობილობას დაივიწყებთ და ჩართულია მხოლოდ "
+"ნაცნობი მოწყობილობების მიმაგრება, ის ავტომატურად მიმაგრებული აღარ იქნება."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -66,6 +74,12 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
+"როცა ეს ჩართული არაა, ავტომატურად მხოლოდ დამახსოვრებული მოწყობილობები იქნება "
+"მიმაგრებული. მოწყობილობა 'დამახსოვრებულია', თუის ოდესმე მიმაგრებულა. "
+"მაგალითად, USB მედია დამკვრელის დასატენად შეერთება მის 'დასამახსოვრებლად' "
+"საკმარისი არაა - თუ ფაილებს არ გახსნით, შემდეგ ჯერზე ის ავტომატურად "
+"მიმაგრებული არ იქნება. თუ მოწყობილობას გახსნით, შემდეგ ჯერზე ის ავტომატურად "
+"იქნება მიმაგრებული."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
