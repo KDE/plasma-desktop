@@ -300,10 +300,4 @@ Item {
             }
         }
     }
-
-
-    Component.onCompleted: {
-        //configure the view behavior
-        desktop.windowType = Shell.Desktop.Desktop;
-    }
 }
