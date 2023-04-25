@@ -457,6 +457,7 @@ KCM.AbstractKCM {
             Component.onCompleted: open()
             onAccepted: {
                 cmdField.text = selectedFile
+                cmdField.text = kcm.quoteUrl(selectedFile)
                 openScriptFileDialogLoader.active = false
             }
             onRejected: openScriptFileDialogLoader.active = false
