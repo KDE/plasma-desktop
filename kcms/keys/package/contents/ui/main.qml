@@ -455,7 +455,7 @@ KCM.AbstractKCM {
             nameFilters: [ i18nc("Template for file dialog","Script file (*.*sh)") ]
             Component.onCompleted: open()
             onAccepted: {
-                cmdField.text = fileUrl
+                cmdField.text = kcm.quoteUrl(fileUrl)
                 openScriptFileDialogLoader.active = false
             }
             onRejected: openScriptFileDialogLoader.active = false

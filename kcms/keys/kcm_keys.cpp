@@ -21,6 +21,7 @@
 #include <KMessageBox>
 #include <KOpenWithDialog>
 #include <KPluginFactory>
+#include <KShell>
 #include <kglobalaccel_interface.h>
 
 #include "basemodel.h"
@@ -256,6 +257,11 @@ QString KCMKeys::editCommand(const QString &componentName, const QString &newExe
     cg.writeEntry("Exec", finalExec);
     cg.sync();
     return finalExec;
+}
+
+QString KCMKeys::quoteUrl(const QUrl &url)
+{
+    return KShell::quoteArg(url.toLocalFile());
 }
 
 QString KCMKeys::keySequenceToString(const QKeySequence &keySequence) const
