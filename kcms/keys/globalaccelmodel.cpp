@@ -101,9 +101,14 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     KService::Ptr service = KService::serviceByStorageId(componentUnique);
     // Not a normal desktop file but maybe specific file in kglobalaccel dir
     if (!service && componentUnique.endsWith(QLatin1String(".desktop"))) {
-        service = new KService(QStandardPaths::locate(QStandardPaths::ApplicationsLocation, componentUnique));
-        if (!service) {
-            service = new KService(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kglobalaccel/") + componentUnique));
+        QString path = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, componentUnique);
+
+        if (path.isEmpty()) {
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kglobalaccel/") + componentUnique);
+        }
+
+        if (!path.isEmpty()) {
+            service = new KService(path);
         }
     }
 
