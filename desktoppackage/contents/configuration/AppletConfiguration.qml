@@ -131,12 +131,9 @@ Rectangle {
             bottom: parent.bottom
         }
         width: Kirigami.Units.gridUnit * 7
+        contentWidth: availableWidth
         Kirigami.Theme.colorSet: Kirigami.Theme.View
         Kirigami.Theme.inherit: false
-        leftPadding: 0
-        rightPadding: 0
-        topPadding: 0
-        bottomPadding: 0
         activeFocusOnTab: true
         focus: true
         Accessible.role: Accessible.MenuBar
@@ -193,7 +190,7 @@ Rectangle {
             id: categories
 
             spacing: 0
-            width: categoriesScroll.width
+            width: categoriesScroll.contentWidth
             focus: true
 
             function openCategory(item) {
