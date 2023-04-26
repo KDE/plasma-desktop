@@ -65,7 +65,7 @@ KCM.AbstractKCM {
             showCloseButton: true
             actions: [
                 Kirigami.Action {
-                    iconName: "document-save"
+                    icon.name: "document-save"
                     text: i18n("Save scheme")
                     onTriggered: {
                         shortcutSchemeFileDialogLoader.save = true

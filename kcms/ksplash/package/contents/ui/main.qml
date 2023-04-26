@@ -78,12 +78,12 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 visible: model.pluginName !== "None"
-                iconName: "media-playback-start"
+                icon.name: "media-playback-start"
                 tooltip: i18n("Preview Splash Screen")
                 onTriggered: kcm.test(model.pluginName)
             },
             Kirigami.Action {
-                iconName: model.pendingDeletion ? "edit-undo" : "edit-delete"
+                icon.name: model.pendingDeletion ? "edit-undo" : "edit-delete"
                 tooltip: i18n("Uninstall")
                 enabled: model.uninstallable
                 onTriggered: model.pendingDeletion = !model.pendingDeletion
