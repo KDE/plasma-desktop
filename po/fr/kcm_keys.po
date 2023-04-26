@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-01-14 19:34+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -33,12 +33,12 @@ msgstr "Erreur durant l'ajout de %1. Il semble n'y avoir aucune action."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Erreur durant la communication avec le service des raccourcis globaux"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Impossible de communiquer avec le démon des raccourcis généraux"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 "Le raccourci %1 est déjà assigné à l'action commune %2 « %3 »\n"
 "Voulez-vous vraiment le ré-assigner ?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -57,7 +57,7 @@ msgstr ""
 "Le raccourci %1 est déjà assigné à l'action commune « %2 » de %3\n"
 "Voulez-vous vraiment le ré-assigner ?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -161,7 +161,7 @@ msgstr "Exporter un thème..."
 msgid "Export Shortcut Scheme"
 msgstr "Exporter un schéma de raccourcis"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importer un schéma de raccourcis"
@@ -215,22 +215,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Fichier de script (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Sélectionner un schéma à importer :"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Schéma personnalisé"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Sélectionner un fichier..."
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importer"

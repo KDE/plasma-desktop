@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-01-11 21:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "Errorea %1 gehitzean, ekintzarik ez duela ematen du."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Errorea lasterbide orokorreko zerbitzuarekin komunikatzean"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Huts egin du lasterbide orokorreko daimonarekin komunikatzea"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 "%1 lasterbideak esleitua du %2 ekintza komuna «%3».\n"
 "Esleipen berria egin nahi diozu?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -62,7 +62,7 @@ msgstr ""
 "%1 lasterbideak esleitua du %3(e)ko «%2» ekintza.\n"
 "Esleipen berria egin nahi diozu?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -164,7 +164,7 @@ msgstr "Esportatu antolaera..."
 msgid "Export Shortcut Scheme"
 msgstr "Esportatu lasterbide-antolaera"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Inportatu lasterbide-antolaera"
@@ -218,22 +218,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Gidoi fitxategia (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Hautatu inportatu beharreko antolaera:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Norberak finkatutako antolaera"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Hautatu fitxategia..."
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Inportatu"

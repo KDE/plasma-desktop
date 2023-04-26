@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-02-01 18:23+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -37,13 +37,13 @@ msgstr "Fehler beim Hinzufügen von %1, es gibt anscheinen keine Aktionen."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fehler bei der Kommunikation mit dem Dienst für globale Kurzbefehle"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr ""
 "Die Kommunikation mit dem Dienst für globale Kurzbefehle ist fehlgeschlagen"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 "Der Kurzbefehl %1 ist bereits der Aktion „%3“ in Kategorie %2 zugewiesen.\n"
 "Möchten Sie ihn neu zuweisen?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -62,7 +62,7 @@ msgstr ""
 "Der Kurzbefehl %1 ist bereits der Aktion „%2“ von %3 zugewiesen.\n"
 "Möchten Sie ihn neu zuweisen?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -167,7 +167,7 @@ msgstr "Schema exportieren ..."
 msgid "Export Shortcut Scheme"
 msgstr "Kurzbefehl-Schema exportieren"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Kurzbefehl-Schema importieren"
@@ -221,22 +221,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Skriptdatei (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Zu importierendes Schema auswählen:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Eigenes Schema"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Datei auswählen ..."
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importieren"

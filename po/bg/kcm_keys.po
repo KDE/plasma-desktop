@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-01-11 20:11+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "Грешка при добавяне на %1, изглежда, че н�
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Грешка при комуникация с глобалната услуга за клавишна комбинация"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Неуспешна комуникация с демона за глобални клавишни комбинации"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "Клавишна комбинация %1 вече е присвоена на общото %2 действие '%3'. \n"
 "Искате ли да го пренасочите?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Клавишна комбинация %1 вече е присвоена на действие \"%2\" от %3. \n"
 "Искате ли да го пренасочите?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -161,7 +161,7 @@ msgstr "Схема за експортиране…"
 msgid "Export Shortcut Scheme"
 msgstr "Експортиране схема на клавишна комбинация"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Импортиране схема на клавишна комбинация"
@@ -215,22 +215,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Скриптов файл (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Избиране на схема за импортиране:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Потребителска схема"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Избиране на файл…"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Внасяне"

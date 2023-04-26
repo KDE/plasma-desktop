@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-04-09 22:11+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -36,12 +36,12 @@ msgstr "Eraro dum aldono de %1, ŝajnas, ke ĝi ne havas agojn."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Eraro dum komunikado kun la ĉiea ŝparvoja servo"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Malsukcesis komuniki kun demono por ĉieaj ŝparvojoj"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Ŝparvojo %1 jam estas asignita al la komuna ago %2 '%3'.\n"
 "Ĉu vi volas reasigni ĝin?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Ŝparvojo %1 jam estas asignita al ago '%2' de %3.\n"
 "Ĉu vi volas reasigni ĝin?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -162,7 +162,7 @@ msgstr "Eksporta Skemo…"
 msgid "Export Shortcut Scheme"
 msgstr "Eksporti Ŝparvojan Skemon"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importi Ŝparvojan Skemon"
@@ -216,22 +216,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Skriptdosiero (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Elektu la skemon por importi:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Propra Skemo"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Elektu Dosieron…"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importi"

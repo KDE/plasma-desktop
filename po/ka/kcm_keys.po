@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-01-12 07:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -36,12 +36,12 @@ msgstr "შეცდომა %1-ის დამატებისას. რ�
 msgid "Error while communicating with the global shortcuts service"
 msgstr "გლობალური მალსახმობის სერვისთან ურთიერთობის შეცდომა"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "გლობალური მალსახმობის სერვისთან დაკავშირების შეცდომა"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "მალსახმობი %1 უკვე მინიჭებულია ჩვეულებრივ %2 ქმედებაზე %3.\n"
 "გნებავთ მისი თავიდან მინიჭება?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "მალსახმობი %1 უკვე მინიჭებულია %3-ის ქმედებაზე %2.\n"
 "გნებავთ მისი თავიდან მინიჭება?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -162,7 +162,7 @@ msgstr "სქემის გატანა…"
 msgid "Export Shortcut Scheme"
 msgstr "მალსახმობების სქემის გატანა"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "მალსახმობების სქემის შემოტანა"
@@ -216,22 +216,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "სკრიპტის ფაილი (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "არჩიეთ შემოსატანი სქემა:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "ხელით მითითებული სქემა"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "აირჩიეთ ფაილი…"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "შემოტანა"

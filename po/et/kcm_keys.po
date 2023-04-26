@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2020-10-07 22:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -36,12 +36,12 @@ msgstr ""
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Tõrge suhtlemisel globaalsete kiirklahvide teenusega"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Suhtlemine globaalsete kiirklahvide deemoniga nurjus"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud tüüpilisele menüükäsule \"%2 -> %3\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -60,7 +60,7 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud rakenduse/teenuse %3 toimingule \"%2\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -164,7 +164,7 @@ msgstr "Ekspordi skeem ..."
 msgid "Export Shortcut Scheme"
 msgstr "Kiirklahviskeemi eksport"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Kiirklahviskeemi import"
@@ -218,23 +218,23 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Imporditav skeem:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Kohandatud skeem"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, fuzzy, kde-format
 #| msgid "Select File..."
 msgid "Select File…"
 msgstr "Vali fail ..."
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Impordi"

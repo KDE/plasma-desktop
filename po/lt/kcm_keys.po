@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-04-26 02:16+0000\n"
 "PO-Revision-Date: 2023-02-04 20:02+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -37,12 +37,12 @@ msgstr "Klaida pridedant %1, atrodo, kad programa neturi veiksmų."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Klaida susisiekiant su visuotine sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Nepavyko susisiekti su visuotinių sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas bendram %2 veiksmui „%3“.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -61,7 +61,7 @@ msgstr ""
 "Spartusis klavišas %1 jau yra priskirtas veiksmui „%2“, kuris priklauso %3.\n"
 "Ar norite priskirti jį iš naujo?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
@@ -165,7 +165,7 @@ msgstr "Eksportuoti schemą…"
 msgid "Export Shortcut Scheme"
 msgstr "Eksportuoti sparčiųjų klavišų schemą"
 
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:469
+#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importuoti sparčiųjų klavišų schemą"
@@ -219,22 +219,22 @@ msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Scenarijaus failas (*.*sh)"
 
-#: package/contents/ui/main.qml:476
+#: package/contents/ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Pasirinkite norimą importuoti schemą:"
 
-#: package/contents/ui/main.qml:490
+#: package/contents/ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Tinkinta schema"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Pasirinkti failą…"
 
-#: package/contents/ui/main.qml:495
+#: package/contents/ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importuoti"
