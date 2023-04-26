@@ -15,6 +15,9 @@ import org.kde.kcm 1.4 as KCM
 KCM.SimpleKCM {
     id: root
 
+    implicitWidth: Kirigami.Units.gridUnit * 44
+    implicitHeight: Kirigami.Units.gridUnit * 33
+
     Kirigami.FormLayout {
         width: parent.width
 
