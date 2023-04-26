@@ -20,7 +20,6 @@ QQC2.ItemDelegate {
 
 //BEGIN properties
     Layout.fillWidth: true
-    Layout.maximumWidth: Kirigami.Units.gridUnit * 7
     hoverEnabled: true
 
     Accessible.role: Accessible.MenuItem
