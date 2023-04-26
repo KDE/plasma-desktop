@@ -221,9 +221,45 @@ KCM.SimpleKCM {
 
                 model: kcm.mostUsedModel
                 delegate: MostUsedIcon {
+                    id: delegate
+
+                    required property int index
+                    required property var model
+
                     kcmIcon: model.decoration
                     kcmName: model.display
+                    opacity: 0
+
                     onClicked: kcm.openKCM(model.kcmPlugin)
+
+                    // Make buttons fade in diagonally
+                    SequentialAnimation on opacity {
+                        running: true
+                        loops: 1
+
+                        PauseAnimation {
+                            duration: {
+                                // When items are getting removed from a Repeater, their index is
+                                // set to -1, but then PauseAnimation would complain loudly.
+                                if (delegate.index < 0) {
+                                    return 0;
+                                }
+                                // Rectilinear distance in Manhattan geometry, except row height is
+                                // slightly bigger than column width.
+                                const row = Math.floor(delegate.index / mostUsedGrid.columns);
+                                const column = delegate.index % mostUsedGrid.columns;
+                                const distance = (row * 1.3) + column;
+                                // Extra one for initial delay of the very first button.
+                                return (distance + 1) * Kirigami.Units.shortDuration;
+                            }
+                        }
+
+                        OpacityAnimator {
+                            // This duration should be longer than the delay step, so they overlap.
+                            duration: Kirigami.Units.longDuration
+                            to: 1
+                        }
+                    }
                 }
 
                 onItemAdded: (index, item) => {
