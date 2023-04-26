@@ -9,7 +9,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.2
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcm 1.4 as KCM
 
 KCM.SimpleKCM {
@@ -211,22 +211,16 @@ KCM.SimpleKCM {
             rowSpacing: 0
             columnSpacing: 0
 
+            Kirigami.SizeGroup {
+                id: mostUsedPagesSizeGroup
+                mode: Kirigami.SizeGroup.Width
+            }
+
             Repeater {
                 id: recentlyUsedRepeater
 
-                readonly property int widestButton: {
-                    let currentWidest = 0;
-                    for (let i = 0; i < count; i++) {
-                        if (itemAt(i).implicitWidth > currentWidest) {
-                            currentWidest = itemAt(i).implicitWidth;
-                        }
-                    }
-                    return currentWidest;
-                }
-
                 model: kcm.mostUsedModel
                 delegate: MostUsedIcon {
-                    Layout.preferredWidth: recentlyUsedRepeater.widestButton
                     kcmIcon: model.decoration
                     kcmName: model.display
                     onClicked: kcm.openKCM(model.kcmPlugin)
@@ -238,6 +232,7 @@ KCM.SimpleKCM {
                         // No, it doesn't work as a binding on children list.
                         mostUsedGrid.Kirigami.FormData.buddyFor = item;
                     }
+                    mostUsedPagesSizeGroup.items.push(item);
                 }
             }
         }
