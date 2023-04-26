@@ -32,7 +32,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignCenter
             spacing: Kirigami.Units.gridUnit * 2
 
-            QQC2.ButtonGroup { id: themeGroup } // needed?
+            QQC2.ButtonGroup { id: themeGroup }
 
             Thumbnail {
                 imageSource: kcm.defaultLightLookAndFeel.thumbnail
