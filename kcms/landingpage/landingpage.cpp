@@ -215,13 +215,6 @@ void KCMLandingPage::save()
     }
 }
 
-static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry)
-{
-    if (from.hasKey(entry)) {
-        to.writeEntry(entry, from.readEntry(entry));
-    }
-}
-
 LookAndFeelGroup *KCMLandingPage::defaultLightLookAndFeel() const
 {
     return m_defaultLightLookAndFeel;
