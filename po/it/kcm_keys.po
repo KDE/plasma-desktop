@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 04:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2023-01-12 17:39+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "Errore nell'aggiunta di %1, sembra che non abbia azioni."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Errore nella comunicazione col servizio delle scorciatoie globali"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Impossibile comunicare col demone delle scorciatoie globali"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "La scorciatoia %1 è già assegnata all'azione comune «%3» in %2.\n"
 "Vuoi riassegnarla?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "La scorciatoia %1 è già assegnata all'azione «%2» di %3.\n"
 "Vuoi riassegnarla?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

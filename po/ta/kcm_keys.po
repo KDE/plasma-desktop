@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 04:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2023-01-12 21:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "%1 தனை சேர்ப்பதில் சிக்கல்; �
 msgid "Error while communicating with the global shortcuts service"
 msgstr "பொது சுருக்குவழி சேவையை தொடர்பு கொள்வதில் சிக்கல்"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "பொது சுருக்குவழி பின்னணி சேவையை தொடர்பு கொள்ளுதல் தோல்வியடைந்தது"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -59,7 +59,7 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, %3-யின் '%2' செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"

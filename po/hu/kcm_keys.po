@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 04:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2021-10-17 16:22+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -36,12 +36,12 @@ msgid "Error while communicating with the global shortcuts service"
 msgstr ""
 "Hiba a globális gyorsbillentyű-szolgáltatással történő kommunikáció során"
 
-#: kcm_keys.cpp:56
+#: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "A kommunikáció a globális gyorsbillentyű-szolgáltatással meghiúsult"
 
-#: kcm_keys.cpp:306
+#: kcm_keys.cpp:312
 #, kde-format
 msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 "%2).\n"
 "Szeretné máshoz rendelni?"
 
-#: kcm_keys.cpp:310
+#: kcm_keys.cpp:316
 #, kde-format
 msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
@@ -61,7 +61,7 @@ msgstr ""
 "A(z) %1 gyorsbillentyűt már hozzárendelték a(z) %3 „%2” műveletéhez.\n"
 "Szeretné máshoz rendelni?"
 
-#: kcm_keys.cpp:311
+#: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
