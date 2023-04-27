@@ -18,11 +18,14 @@ Kirigami.ScrollablePage {
     signal settingValueChanged()
 
     function saveConfig() {
-        for (let key in plasmoid.configuration) {
-            if (loader.item["cfg_" + key] != undefined) {
-                plasmoid.configuration[key] = loader.item["cfg_" + key]
+        const config = Plasmoid.configuration; // type: KConfigPropertyMap
+
+        config.keys().forEach(key => {
+            const cfgKey = "cfg_" + key;
+            if (cfgKey in loader.item) {
+                config[key] = loader.item[cfgKey];
             }
-        }
+        })
 
         // For ConfigurationContainmentActions.qml
         if (loader.item.hasOwnProperty("saveConfig")) {
@@ -46,29 +49,30 @@ Kirigami.ScrollablePage {
         height: Math.max(root.availableHeight, item.implicitHeight ? item.implicitHeight : item.childrenRect.height)
 
         Component.onCompleted: {
-            const plasmoidConfig = plasmoid.configuration
+            const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
-            const props = {}
-            for (let key in plasmoidConfig) {
-                props["cfg_" + key] = plasmoid.configuration[key]
-            }
+            const props = {};
 
-            setSource(configItem.source, props)
+            config.keys().forEach(key => {
+                props["cfg_" + key] = config[key];
+            });
+
+            setSource(configItem.source, props);
         }
 
         onLoaded: {
-            const plasmoidConfig = plasmoid.configuration;
+            const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
-            for (let key in plasmoidConfig) {
-                const changedSignal = item["cfg_" + key + "Changed"]
+            config.keys().forEach(key => {
+                const changedSignal = item["cfg_" + key + "Changed"];
                 if (changedSignal) {
-                    changedSignal.connect(root.settingValueChanged)
+                    changedSignal.connect(root.settingValueChanged);
                 }
-            }
+            });
 
-            const configurationChangedSignal = item.configurationChanged
+            const configurationChangedSignal = item.configurationChanged;
             if (configurationChangedSignal) {
-                configurationChangedSignal.connect(root.settingValueChanged)
+                configurationChangedSignal.connect(root.settingValueChanged);
             }
         }
     }
