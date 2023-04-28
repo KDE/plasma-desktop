@@ -1,23 +1,15 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_landingpage\")
 
-########### next target ###############
-set(kcm_landingpage_SRCS
-  landingpage.cpp
-  landingpagedata.cpp
-)
+kcmutils_add_qml_kcm(kcm_landingpage SOURCES landingpage.cpp landingpagedata.cpp)
 
-kcmutils_generate_module_data(
-    kcm_landingpage_SRCS
+kcmutils_generate_module_data(kcm_landingpage
     MODULE_DATA_HEADER landingpagedata.h
     MODULE_DATA_CLASS_NAME LandingPageData
     SETTINGS_HEADERS landingpage_kdeglobalssettings.h
     SETTINGS_CLASSES LandingPageGlobalsSettings
 )
-
-kconfig_add_kcfg_files(kcm_landingpage_SRCS landingpage_kdeglobalssettings.kcfgc GENERATE_MOC)
-
-kcmutils_add_qml_kcm(kcm_landingpage SOURCES ${kcm_landingpage_SRCS})
+kconfig_add_kcfg_files(kcm_landingpage landingpage_kdeglobalssettings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_landingpage
     Qt::Quick

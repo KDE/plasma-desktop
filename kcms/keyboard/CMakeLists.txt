@@ -124,6 +124,7 @@ target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
     Qt::Xml
+    Qt::GuiPrivate
     KF6::KCMUtils
     KF6::GlobalAccel
     KF6::I18n
@@ -136,11 +137,6 @@ target_link_libraries(kcm_keyboard_static
     X11::X11
     X11::xkbfile
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kcm_keyboard_static Qt6::X11Extras)
-else()
-    target_link_libraries(kcm_keyboard_static Qt::GuiPrivate)
-endif()
 
 kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file(kcm_keyboard)

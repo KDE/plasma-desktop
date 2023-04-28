@@ -1,25 +1,18 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_workspace\")
 
-########### next target ###############
-set(kcm_workspace_SRCS
-  workspaceoptions.cpp
-  workspaceoptionsdata.cpp
-)
+kcmutils_add_qml_kcm(kcm_workspace SOURCES workspaceoptions.cpp workspaceoptionsdata.cpp)
 
-kcmutils_generate_module_data(
-    kcm_workspace_SRCS
+kcmutils_generate_module_data(kcm_workspace
     MODULE_DATA_HEADER workspaceoptionsdata.h
     MODULE_DATA_CLASS_NAME WorkspaceOptionsData
     SETTINGS_HEADERS workspaceoptions_plasmasettings.h workspaceoptions_kdeglobalssettings.h workspaceoptions_kwinsettings.h
     SETTINGS_CLASSES WorkspaceOptionsPlasmaSettings WorkspaceOptionsGlobalsSettings WorkspaceOptionsKwinSettings
 )
 
-kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kdeglobalssettings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_plasmasettings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kwinsettings.kcfgc GENERATE_MOC)
-
-kcmutils_add_qml_kcm(kcm_workspace SOURCES ${kcm_workspace_SRCS})
+kconfig_add_kcfg_files(kcm_workspace workspaceoptions_kdeglobalssettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_workspace workspaceoptions_plasmasettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_workspace workspaceoptions_kwinsettings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_workspace
     KF6::KCMUtilsQuick

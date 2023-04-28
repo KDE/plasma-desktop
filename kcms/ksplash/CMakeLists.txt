@@ -1,21 +1,16 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
-set(kcm_splashscreen_SRCS
-  kcm.cpp
-)
+kcmutils_add_qml_kcm(kcm_splashscreen SOURCES kcm.cpp)
 
-kcmutils_generate_module_data(
-    kcm_splashscreen_SRCS
+kcmutils_generate_module_data(kcm_splashscreen
     MODULE_DATA_HEADER splashscreendata.h
     MODULE_DATA_CLASS_NAME SplashScreenData
     SETTINGS_HEADERS splashscreensettings.h
     SETTINGS_CLASSES SplashScreenSettings
 )
+kconfig_add_kcfg_files(kcm_splashscreen splashscreensettings.kcfgc GENERATE_MOC)
 
-kconfig_add_kcfg_files(kcm_splashscreen_SRCS splashscreensettings.kcfgc GENERATE_MOC)
-
-kcmutils_add_qml_kcm(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS})
 
 target_link_libraries(kcm_splashscreen
   KF6::KIOWidgets

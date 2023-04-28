@@ -1,7 +1,9 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_componentchooser\")
 
-set(componentchooser_SRCS
+kcmutils_add_qml_kcm(kcm_componentchooser)
+
+target_sources(kcm_componentchooser PRIVATE
     kcm_componentchooser.cpp
     componentchooser.cpp
     applicationmodel.cpp
@@ -19,10 +21,8 @@ set(componentchooser_SRCS
     components/componentchoosertel.cpp
 )
 
-kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
-
-kcmutils_add_qml_kcm(kcm_componentchooser SOURCES ${componentchooser_SRCS})
+kconfig_add_kcfg_files(kcm_componentchooser browser_settings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_componentchooser terminal_settings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_componentchooser
     Qt::Core
@@ -35,4 +35,3 @@ target_link_libraries(kcm_componentchooser
     KF6::KCMUtils
 )
 
-kpackage_install_package(package kcm_componentchooser kcms)

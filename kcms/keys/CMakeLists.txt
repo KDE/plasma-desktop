@@ -1,7 +1,9 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keys\")
 
-set(kcm_keys_SRCS
+kcmutils_add_qml_kcm(kcm_keys)
+
+target_sources(kcm_keys PRIVATE
     basemodel.cpp
     kcm_keys.cpp
     filteredmodel.cpp
@@ -9,7 +11,7 @@ set(kcm_keys_SRCS
     shortcutsmodel.cpp
     standardshortcutsmodel.cpp
     keysdata.cpp
-    )
+)
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
 set_source_files_properties(${kglobalaccel_xml} PROPERTIES
@@ -17,7 +19,7 @@ set_source_files_properties(${kglobalaccel_xml} PROPERTIES
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelInterface"
 )
-qt_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
+qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
 
 set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.kglobalaccel.Component.xml)
 set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
@@ -25,10 +27,11 @@ set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelComponentInterface"
 )
-qt_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
+qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
 
+target_sources(kcm_keys PRIVATE ${kcm_keys_DBUS_SRCS})
 
-ecm_qt_declare_logging_category(kcm_keys_SRCS
+ecm_qt_declare_logging_category(kcm_keys
     HEADER kcmkeys_debug.h
     IDENTIFIER KCMKEYS
     CATEGORY_NAME org.kde.kcm_keys
@@ -36,13 +39,7 @@ ecm_qt_declare_logging_category(kcm_keys_SRCS
     DESCRIPTION "System Settings - Global Shortcuts"
 )
 
-ecm_qt_install_logging_categories(
-    EXPORT KCMKEYS
-    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-)
-
-
-kcmutils_add_qml_kcm(kcm_keys SOURCES ${kcm_keys_SRCS})
+ecm_qt_install_logging_categories(EXPORT KCMKEYS DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 target_link_libraries(kcm_keys
     Qt::DBus

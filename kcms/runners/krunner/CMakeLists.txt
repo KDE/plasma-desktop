@@ -1,19 +1,16 @@
 # KRunner Settings Module
 
-set(kcm_krunnersettings_SRCS
-    krunnersettings.cpp
-)
-kcmutils_generate_module_data(
-    kcm_krunnersettings_SRCS
+
+kcmutils_add_qml_kcm(kcm_krunnersettings SOURCES krunnersettings.cpp INSTALL_NAMESPACE "plasma/kcms/desktop")
+
+kcmutils_generate_module_data(kcm_krunnersettings
     MODULE_DATA_HEADER krunnersettingsdata.h
     MODULE_DATA_CLASS_NAME KRunnerSettingsData
     SETTINGS_HEADERS krunnersettingsbase.h
     SETTINGS_CLASSES KRunnerSettingsBase
 )
 
-kconfig_add_kcfg_files(kcm_krunnersettings_SRCS krunnersettingsbase.kcfgc GENERATE_MOC)
-
-kcmutils_add_qml_kcm(kcm_krunnersettings SOURCES ${kcm_krunnersettings_SRCS} INSTALL_NAMESPACE "plasma/kcms/desktop")
+kconfig_add_kcfg_files(kcm_krunnersettings krunnersettingsbase.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_krunnersettings
     Qt::DBus
