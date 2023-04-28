@@ -1,5 +1,3 @@
-# vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
-project (KCMActivities)
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_activities5\")
 
 set (KAMD_KCM_DATADIR
@@ -11,8 +9,7 @@ if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR}")
 endif ()
 
 configure_file (kactivities-kcm-features.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/kactivities-kcm-features.h)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}) # utils folder
 
 add_subdirectory(imports)
 
