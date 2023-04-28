@@ -2,7 +2,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchscreen\")
 
 kcmutils_add_qml_kcm(kcm_touchscreen SOURCES kcmtouchscreen.cpp)
 
-include(ECMQtDeclareLoggingCategory)
 ecm_qt_declare_logging_category(kcm_touchscreen
     HEADER
         logging.h

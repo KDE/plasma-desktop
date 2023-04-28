@@ -2,7 +2,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_tablet\")
 
 kcmutils_add_qml_kcm(kcm_tablet INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
-include(ECMQtDeclareLoggingCategory)
 ecm_qt_declare_logging_category(kcm_tablet
     HEADER
         logging.h

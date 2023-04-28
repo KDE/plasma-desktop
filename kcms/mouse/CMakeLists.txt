@@ -12,7 +12,6 @@ set(common_SRCS
     inputbackend.cpp
 )
 
-include(ECMQtDeclareLoggingCategory)
 ecm_qt_declare_logging_category(common_SRCS
     HEADER
         logging.h
