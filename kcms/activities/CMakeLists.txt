@@ -10,12 +10,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}) # utils folder
 
 add_subdirectory(imports)
 
-qt_add_dbus_interface(KAMD_KCM_DBUS_SRCS common/dbus/org.kde.ActivityManager.Features.xml features_interface)
-qt_add_dbus_interface(KAMD_KCM_DBUS_SRCS common/dbus/org.kde.ActivityManager.ResourceScoring.xml resourcescoring_interface)
-
 kcoreaddons_add_plugin(kcm_activities INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
 kcmutils_generate_desktop_file(kcm_activities)
+
+qt_add_dbus_interface(KAMD_KCM_DBUS_SRCS common/dbus/org.kde.ActivityManager.Features.xml features_interface)
+qt_add_dbus_interface(KAMD_KCM_DBUS_SRCS common/dbus/org.kde.ActivityManager.ResourceScoring.xml resourcescoring_interface)
 target_sources(kcm_activities PRIVATE
+   ${KAMD_KCM_DBUS_SRCS}
    kcm_activities.cpp
    MainConfigurationWidget.cpp
    ActivitiesTab.cpp
