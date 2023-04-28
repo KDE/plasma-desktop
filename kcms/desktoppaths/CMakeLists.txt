@@ -14,8 +14,7 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES DesktopPathsSettings
 )
 
-kcoreaddons_add_plugin(kcm_desktoppaths SOURCES ${kcm_desktoppaths_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_desktoppaths)
+kcmutils_add_qml_kcm(kcm_desktoppaths SOURCES ${kcm_desktoppaths_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_desktoppaths
     KF6::ConfigCore
@@ -26,5 +25,3 @@ target_link_libraries(kcm_desktoppaths
     KF6::KIOWidgets
     KF6::KIOFileWidgets
 )
-
-kpackage_install_package(package kcm_desktoppaths kcms)

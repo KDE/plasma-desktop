@@ -15,15 +15,12 @@ ecm_qt_declare_logging_category(common_SRCS
     EXPORT
         kcm_touchscreen
 )
-kcoreaddons_add_plugin(kcm_touchscreen INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_add_qml_kcm(kcm_touchscreen)
 
 ecm_qt_install_logging_categories(
     EXPORT kcm_touchscreen
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
-
-kcmutils_generate_desktop_file(kcm_touchscreen)
-
 target_sources(kcm_touchscreen PRIVATE
     ${common_SRCS}
     kcmtouchscreen.cpp
@@ -39,5 +36,3 @@ target_link_libraries(kcm_touchscreen
     Qt::DBus
     kwindevices
 )
-
-kpackage_install_package(package kcm_touchscreen kcms)

@@ -1,14 +1,13 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_baloofile\")
 
-set(kcm_file_SRCS
+kcmutils_add_qml_kcm(kcm_baloofile)
+
+target_sources(kcm_baloofile PRIVATE
   kcm.cpp
   fileexcludefilters.cpp
   filteredfoldermodel.cpp
   baloodata.cpp
 )
-
-kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_baloofile)
 
 target_link_libraries(kcm_baloofile
   KF6::CoreAddons
@@ -20,5 +19,3 @@ target_link_libraries(kcm_baloofile
   Qt::DBus
   Qt::Widgets
 )
-
-kpackage_install_package(package kcm_baloofile kcms)

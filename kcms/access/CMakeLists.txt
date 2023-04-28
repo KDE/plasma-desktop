@@ -19,12 +19,12 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings
 )
 
-kcoreaddons_add_plugin(kcm_access SOURCES ${kcm_access_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_access)
+kcmutils_add_qml_kcm(kcm_access SOURCES ${kcm_access_PART_SRCS})
 
 target_link_libraries(kcm_access
     Qt::DBus
     Qt::Quick
+    Qt::GuiPrivate
     KF6::KCMUtils
     KF6::CoreAddons
     KF6::GuiAddons
@@ -35,11 +35,6 @@ target_link_libraries(kcm_access
     KF6::NotifyConfig
     X11::X11
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kcm_access Qt::X11Extras)
-else()
-    target_link_libraries(kcm_access Qt::GuiPrivate)
-endif()
 
 install(
     FILES
@@ -50,5 +45,3 @@ install(
     DESTINATION
         ${KDE_INSTALL_KCFGDIR}
 )
-
-kpackage_install_package(package kcm_access kcms)

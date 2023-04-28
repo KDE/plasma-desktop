@@ -15,8 +15,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_splashscreen_SRCS splashscreensettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_splashscreen)
+kcmutils_add_qml_kcm(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS})
 
 target_link_libraries(kcm_splashscreen
   KF6::KIOWidgets
@@ -35,8 +34,5 @@ target_link_libraries(kcm_splashscreen
   Qt::QuickWidgets
 )
 
-#this desktop file is installed only for retrocompatibility with sycoca
 install(FILES splashscreensettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install( FILES ksplash.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
-
-kpackage_install_package(package kcm_splashscreen kcms)

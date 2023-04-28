@@ -17,8 +17,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_landingpage_SRCS landingpage_kdeglobalssettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_landingpage SOURCES ${kcm_landingpage_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_landingpage)
+kcmutils_add_qml_kcm(kcm_landingpage SOURCES ${kcm_landingpage_SRCS})
 
 target_link_libraries(kcm_landingpage
     Qt::Quick
@@ -35,12 +34,6 @@ target_link_libraries(kcm_landingpage
 
 if(X11_FOUND)
     target_link_libraries(kcm_landingpage X11::X11)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(kcm_landingpage Qt6::X11Extras)
-    endif()
 endif()
 
-########### install files ###############
 install(FILES landingpage_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-
-kpackage_install_package(package kcm_landingpage kcms)
