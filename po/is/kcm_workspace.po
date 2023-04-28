@@ -1,0 +1,226 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# gummi <gudmundure@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"PO-Revision-Date: 2023-03-16 22:05+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: package/contents/ui/main.qml:27
+#, kde-format
+msgid ""
+"The system must be restarted before changes to the middle-click paste "
+"setting can take effect."
+msgstr ""
+"Það verður að endurræsa tölvuna til að breytingar á límingu með miðjusmelli "
+"verði virkar."
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "Restart"
+msgstr "Endurræsa"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "Visual behavior:"
+msgstr "Sjónræn hegðun:"
+
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display informational tooltips on mouse hover"
+msgstr "Birta upplýsandi vísbendingar þegar mús sveimar yfir"
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#, kde-format
+msgid "Display visual feedback for status changes"
+msgstr "Birta sjónræna svörun við stöðubreytingar"
+
+#: package/contents/ui/main.qml:80
+#, kde-format
+msgid "Animation speed:"
+msgstr "Hraði hreyfiáhrifa:"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Hægt"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Tafarlaus"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Við að smella á skrár eða möppur:"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Opnar þær"
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Veldu með því að smella á valmerkingu atriðis"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Velur þær"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Opna í staðinn með því að tvísmella"
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Smellt í flettistikubrautinni:"
+
+#: package/contents/ui/main.qml:176
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Flettir upp eða niður um síðu"
+
+#: package/contents/ui/main.qml:188
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Miðjusmellur flettir á staðinn þar sem smellt er"
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Flettir á staðinn þar sem smellt er"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Middle Click:"
+msgstr "Miðjusmellur:"
+
+#: package/contents/ui/main.qml:219
+#, kde-format
+msgid "Paste selected text"
+msgstr "Líma valinn texta"
+
+#: package/contents/ui/main.qml:236
+#, kde-format
+msgid "Touch Mode:"
+msgstr "Snertistilling:"
+
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+msgid "Automatically enable as needed"
+msgstr "Gera sjálfkrafa virkt eftir þörfum"
+
+#: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Never enabled"
+msgstr "Aldrei virkt"
+
+#: package/contents/ui/main.qml:250
+#, kde-format
+msgid ""
+"Touch Mode will be automatically activated whenever the system detects a "
+"touchscreen but no mouse or touchpad. For example: when a transformable "
+"laptop's keyboard is flipped around or detached."
+msgstr ""
+"Snertistilling verður sjálfkrafa virkt þegar kerfið greinir snertiskjá en "
+"engamús eða snertiplatta. Til dæmis í fartölvu sem hægt er að breyta í "
+"spjaldtölvu með því að snúa lyklaborðinu eða losa það af."
+
+#: package/contents/ui/main.qml:255
+#, kde-format
+msgctxt "As in: 'Touch Mode is always enabled'"
+msgid "Always enabled"
+msgstr "Alltaf virkt"
+
+#: package/contents/ui/main.qml:280
+#, kde-format
+msgid ""
+"In Touch Mode, many elements of the user interface will become larger to "
+"more easily accommodate touch interaction."
+msgstr ""
+"Í snertistillingu stækka margir hlutir í notandaviðmótinu til að auðveldara "
+"sé að nota snertiskipanir."
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Smella einu sinni til að opna skrár"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Hraði hreyfinga"
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Vinstrismellur í flettistikubrautinni færir flettistikuna um eina síðu"
+
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Skipta sjálfkrafa í snertisnið"
+
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Virkja límingu á vali með miðjusmelli"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Sýna yfirlag á skjá til að gefa til kynna stöðubreytingu eins og á "
+"birtustigi eða hljóðstyrk."
+
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Yfirlag á skjá við breytingu á framsetningu"
+
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Sýna sprettiglugga við breytingu á framsetningu"
