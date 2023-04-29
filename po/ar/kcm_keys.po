@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2023-04-29 02:54+0000\n"
 "PO-Revision-Date: 2023-01-14 13:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,20 +18,20 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: globalaccelmodel.cpp:197
+#: globalaccelmodel.cpp:202
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "خطأ أثناء الحفظ الاختصار %1: %2"
 
-#: globalaccelmodel.cpp:309
+#: globalaccelmodel.cpp:314
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "خطأ أثناء إضافة %1، لا تبدو أنها تحوي إجراءات."
 
-#: globalaccelmodel.cpp:352
+#: globalaccelmodel.cpp:357
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "حدث خطأ أثناء الاتصال بخدمة الاختصارات العالمية"
