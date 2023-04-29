@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-04-21 06:36+0200\n"
+"PO-Revision-Date: 2023-04-28 06:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -933,6 +933,10 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
+"გადახვევა ჩართულია, როდესაც გადაადგილება იწყება მოცემულ ტრიგერის რეგიონში.\n"
+"თითის გადატანა საათის ისრის მიმართულებით წრეებში სენსორული პანელის ცენტრის "
+"გარშემო\n"
+"გადახვევს ქვემოთ და საათის ისრის საწინააღმდეგო მოძრაობა გადახვევს ზემოთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:291
@@ -1205,6 +1209,9 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
+"თუ გამორთულია, დაატყაპუნეთ-და-გადაათრიეთ ჟესტი მაშინ სრულდება, როცა თითს "
+"აიღებთ. თუ გამორთულია, ჟესტი მანამდე იქნება აქტიური, სანამ დრო არ გავა, ან "
+"მეორედ არ დატყაპუნებთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:269
@@ -1227,6 +1234,8 @@ msgid ""
 "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
+"რამდენი ხანი სჭირდება (მილიწამებში) ჩაკეტილი გადათრევების რეჟიმის "
+"ავტომატურად გამორთვას მას შემდეგ, რაც თაჩპედიდან თითს აიღებთ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325

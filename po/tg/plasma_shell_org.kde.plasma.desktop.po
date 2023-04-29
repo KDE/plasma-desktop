@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 02:09+0000\n"
+"POT-Creation-Date: 2023-04-29 02:19+0000\n"
 "PO-Revision-Date: 2021-09-05 11:54-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -271,87 +271,167 @@ msgstr "Амалиётҳои муш"
 msgid "Input Here"
 msgstr "Ба ин ҷо дарҷ кардан"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
+#, fuzzy
+#| msgid "Apply Settings"
+msgid " Panel Settings"
+msgstr "Танзимотро татбиқ кардан"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Тоза кардани лавҳа"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
-msgid "Panel Alignment"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Alignment:"
 msgstr "Москунии лавҳа"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
 msgstr "Боло"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Left"
 msgstr "Чап"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+msgid "Aligns the panel to the top if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+msgid "Aligns the panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
 msgid "Center"
 msgstr "Марказ"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
+msgid "Center aligns the panel if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Bottom"
 msgstr "Поён"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Right"
 msgstr "Рост"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
-msgid "Visibility"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
+msgid "Aligns the panel to the bottom if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
+msgid "Aligns the panel to the right if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
+#, fuzzy
+#| msgid "Visibility"
+msgid "Visibility:"
 msgstr "Намоёнӣ"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
 msgstr "Ҳамеша намоён"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
+msgid "Makes the panel remain visible always."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
 msgstr "Пинҳон кардан ба таври худкор"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
-msgid "Windows Can Cover"
-msgstr "Намоиши дар пеши равзанаҳо"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
-msgid "Windows Go Below"
-msgstr "Намоиши дар зери равзанаҳо"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
-msgid "Opacity"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+msgid ""
+"Makes the panel hidden always but reveals it when mouse enters the area "
+"where the panel would have been if it were not hidden."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#, fuzzy
+#| msgid "Windows Can Cover"
+msgid "Windows In Front"
+msgstr "Намоиши дар пеши равзанаҳо"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+msgid ""
+"Makes the panel remain visible always but maximized windows shall cover it. "
+"It is revealed when mouse enters the area where the panel would have been if "
+"it were not covered."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
+#, fuzzy
+#| msgid "Windows Go Below"
+msgid "Windows Behind"
+msgstr "Намоиши дар зери равзанаҳо"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid ""
+"Makes the panel remain visible always but part of the maximized windows "
+"shall go below the panel as though the panel did not exist."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+msgid "Opacity:"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
+msgid "Fully Opaque"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
+msgid "Makes the panel opaque always."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
-msgid "Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
+msgid "Makes the panel translucent exept when some windows touch it."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 msgid "Translucent"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
-msgid "Maximize Panel"
-msgstr "Лавҳаро ба ҳадди аксар сохтан"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid "Floating Panel"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
+msgid "Makes the panel translucent always."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
+msgid "Floating:"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
+msgid "Floating"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
+msgid "Makes the panel float from the edge of the screen."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
+msgid "Attached"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
+msgid "Makes the panel remain attached to the edge of the panel."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
-msgid "Shortcut"
+msgid "Focus Shortcut"
 msgstr "Миёнбурҳои клавиатура"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
@@ -503,6 +583,9 @@ msgstr ""
 msgid "No widgets available"
 msgstr ""
 
+#~ msgid "Maximize Panel"
+#~ msgstr "Лавҳаро ба ҳадди аксар сохтан"
+
 #~ msgid "Search…"
 #~ msgstr "Ҷустуҷӯ..."
 
@@ -513,11 +596,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Барои ҳаракат кардани лавҳа ба канори дилхоҳи экран, ин тугмаро зер "
 #~ "карда, ба канори дилхоҳ ҳаракат кунед."
-
-#, fuzzy
-#~| msgid "Apply Settings"
-#~ msgid "Settings"
-#~ msgstr "Танзимотро татбиқ кардан"
 
 #~ msgid "Width"
 #~ msgstr "Паҳнӣ"

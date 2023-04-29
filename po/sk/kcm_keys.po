@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:16+0000\n"
+"POT-Creation-Date: 2023-04-29 02:19+0000\n"
 "PO-Revision-Date: 2023-01-11 11:54+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,20 +16,20 @@ msgstr ""
 "X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: globalaccelmodel.cpp:197
+#: globalaccelmodel.cpp:202
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Chyba počas ukladania skratky %1: %2"
 
-#: globalaccelmodel.cpp:309
+#: globalaccelmodel.cpp:314
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Chyba pri pridávaní %1, zdá sa, že nemá žiadne akcie."
 
-#: globalaccelmodel.cpp:352
+#: globalaccelmodel.cpp:357
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Chyba počas komunikácie so službou globálnych skratiek"

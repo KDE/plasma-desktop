@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 02:09+0000\n"
+"POT-Creation-Date: 2023-04-29 02:19+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -273,89 +273,169 @@ msgstr "Hiire toimingud"
 msgid "Input Here"
 msgstr "Sisend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
+#, fuzzy
+#| msgid "Apply Settings"
+msgid " Panel Settings"
+msgstr "Rakenda seadistused"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
 msgstr "Eemalda paneel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
-msgid "Panel Alignment"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Alignment:"
 msgstr "Paneeli joondus"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
 msgstr "Ülal"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Left"
 msgstr "Vasakul"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:73
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+msgid "Aligns the panel to the top if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+msgid "Aligns the panel"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
 msgid "Center"
 msgstr "Keskel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
+msgid "Center aligns the panel if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Bottom"
 msgstr "All"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:83
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Right"
 msgstr "Paremal"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
-msgid "Visibility"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
+msgid "Aligns the panel to the bottom if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
+msgid "Aligns the panel to the right if the panel is not maximized."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
+#, fuzzy
+#| msgid "Visibility"
+msgid "Visibility:"
 msgstr "Nähtavus"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
 msgstr "Alati nähtav"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
+msgid "Makes the panel remain visible always."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
 msgstr "Automaatne peitmine"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
-msgid "Windows Can Cover"
-msgstr "Võib jääda akende alla"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
-msgid "Windows Go Below"
-msgstr "Võib jääda akende peale"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
-msgid "Opacity"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+msgid ""
+"Makes the panel hidden always but reveals it when mouse enters the area "
+"where the panel would have been if it were not hidden."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#, fuzzy
+#| msgid "Windows Can Cover"
+msgid "Windows In Front"
+msgstr "Võib jääda akende alla"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+msgid ""
+"Makes the panel remain visible always but maximized windows shall cover it. "
+"It is revealed when mouse enters the area where the panel would have been if "
+"it were not covered."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
+#, fuzzy
+#| msgid "Windows Go Below"
+msgid "Windows Behind"
+msgstr "Võib jääda akende peale"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+msgid ""
+"Makes the panel remain visible always but part of the maximized windows "
+"shall go below the panel as though the panel did not exist."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+msgid "Opacity:"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
+msgid "Fully Opaque"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
+msgid "Makes the panel opaque always."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
-msgid "Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
+msgid "Makes the panel translucent exept when some windows touch it."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 #, fuzzy
 #| msgid "Translators"
 msgid "Translucent"
 msgstr "Tõlkijad"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
-msgid "Maximize Panel"
-msgstr "Maksimeeri paneel"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid "Floating Panel"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
+msgid "Makes the panel translucent always."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
+msgid "Floating:"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
+msgid "Floating"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
+msgid "Makes the panel float from the edge of the screen."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
+msgid "Attached"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
+msgid "Makes the panel remain attached to the edge of the panel."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
-msgid "Shortcut"
+msgid "Focus Shortcut"
 msgstr "Kiirklahvid"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
@@ -507,6 +587,9 @@ msgstr "Otsinguga ei sobi ükski vidin"
 msgid "No widgets available"
 msgstr "Ühtegi vidinat pole saada"
 
+#~ msgid "Maximize Panel"
+#~ msgstr "Maksimeeri paneel"
+
 #, fuzzy
 #~| msgid "Search..."
 #~ msgid "Search…"
@@ -517,11 +600,6 @@ msgstr "Ühtegi vidinat pole saada"
 
 #~ msgid "Click and drag the button to a screen edge to move the panel there."
 #~ msgstr "Klõpsa ja lohista nupp ekraani serva, et paneel sinna liigutada."
-
-#, fuzzy
-#~| msgid "Apply Settings"
-#~ msgid "Settings"
-#~ msgstr "Rakenda seadistused"
 
 #~ msgid "Width"
 #~ msgstr "Laius"
