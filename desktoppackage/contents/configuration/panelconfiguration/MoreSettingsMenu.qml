@@ -272,7 +272,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Attached")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain attached to the edge of the panel.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain attached to the edge of the screen.")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: !panel.floating
