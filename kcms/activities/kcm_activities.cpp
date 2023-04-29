@@ -40,7 +40,8 @@ bool ActivitiesModule::isNewActivityAuthorized() const
 void ActivitiesModule::configureActivity(const QString &id)
 {
     if (!id.isEmpty() && !KActivities::Controller().activities().contains(id)) {
-        qWarning() << "Cannot configure. There is no activity with id" << id;
+        qWarning() << "Cannot configure activity. There is no activity with id" << id;
+        qWarning() << "List of Activities: " << KActivities::Controller().activities();
         return;
     }
 

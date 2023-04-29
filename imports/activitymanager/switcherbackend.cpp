@@ -360,6 +360,11 @@ void SwitcherBackend::stopActivity(const QString &activity)
     m_activities.stopActivity(activity);
 }
 
+void SwitcherBackend::removeActivity(const QString &activity)
+{
+    m_activities.removeActivity(activity);
+}
+
 bool SwitcherBackend::dropEnabled() const
 {
 #if HAVE_X11

@@ -11,9 +11,9 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.config  // KAuthorize
 
 import org.kde.activities 0.1 as Activities
-import org.kde.activities.settings 0.1
 
 FocusScope {
     id: root
@@ -129,9 +129,9 @@ FocusScope {
 
                 width: parent.width
 
-                onClicked: ActivitySettings.newActivity()
+                onClicked: KCMShell.openSystemSettings("kcm_activities", "newActivity")
 
-                visible: ActivitySettings.newActivityAuthorized
+                visible: KAuthorize.authorize("plasma-desktop/add_activities")
                 opacity: newActivityDialog.status == Loader.Ready ?
                               1 - newActivityDialog.item.opacity : 1
             }

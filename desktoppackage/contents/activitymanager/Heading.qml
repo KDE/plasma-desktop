@@ -15,8 +15,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 // for KCMShell
 import org.kde.kquickcontrolsaddons 2.0
 
-import org.kde.activities.settings 0.1
-
 Item {
     id: root
 

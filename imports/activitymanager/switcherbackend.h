@@ -58,6 +58,7 @@ public Q_SLOTS:
 
     void setCurrentActivity(const QString &activity);
     void stopActivity(const QString &activity);
+    void removeActivity(const QString &activity);
 
     void setDropMode(bool value);
     void drop(QMimeData *mimeData, int modifiers, const QVariant &activityId);
