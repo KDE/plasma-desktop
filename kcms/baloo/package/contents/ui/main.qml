@@ -7,7 +7,7 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.11 as QQC2
-import QtQuick.Dialogs 1.2 as QtDialogs
+import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.baloo.experimental 0.1 as Baloo
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.3 as KCM
@@ -316,7 +316,6 @@ KCM.SimpleKCM {
         sourceComponent: QtDialogs.FileDialog {
             title: fileDialogLoader.included ? i18n("Select a folder to include") : i18n("Select a folder to exclude")
             folder: shortcuts.home
-            selectFolder: true
 
             onAccepted: {
                 kcm.filteredModel.addFolder(fileUrls[0], fileDialogLoader.included)

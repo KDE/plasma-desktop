@@ -8,8 +8,8 @@ import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.13 as Kirigami
-import QtQuick.Dialogs 1.3
-import org.kde.desktopsession.private 1.0 
+import QtQuick.Dialogs 6.3
+import org.kde.desktopsession.private 1.0
 import org.kde.kcm 1.6 as KCM
 
 KCM.SimpleKCM {

@@ -8,7 +8,7 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Dialogs
+import QtQuick.Dialogs 6.3
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 

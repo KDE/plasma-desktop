@@ -6,7 +6,7 @@
 
 import QtCore
 import QtQuick 2.15
-import QtQuick.Dialogs
+import QtQuick.Dialogs 6.3
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
