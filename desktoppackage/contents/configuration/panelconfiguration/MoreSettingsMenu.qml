@@ -217,7 +217,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent exept when some windows touch it.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent except when some windows touch it.")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 adaptivePanel: true
