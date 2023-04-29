@@ -119,7 +119,7 @@ SessionManagementScreen {
 
             //if empty and left or right is pressed change selection in user switch
             //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 if (event.key === Qt.Key_Left && !text) {
                     userList.decrementCurrentIndex();
                     event.accepted = true
