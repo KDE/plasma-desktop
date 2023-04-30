@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
-"PO-Revision-Date: 2023-02-25 23:35+0100\n"
+"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"PO-Revision-Date: 2023-04-29 11:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -266,10 +266,8 @@ msgid "Input Here"
 msgstr "Datu sarrera hemen"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-#, fuzzy
-#| msgid "Settings"
 msgid " Panel Settings"
-msgstr "Ezarpenak"
+msgstr " Panelaren ezarpenak"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
@@ -277,10 +275,8 @@ msgid "Remove Panel"
 msgstr "Kendu panela"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment:"
-msgstr "Panelen lerrokatzea"
+msgstr "Lerrokatzea:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
@@ -292,11 +288,11 @@ msgstr "Ezkerrean"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel to the top if the panel is not maximized."
-msgstr ""
+msgstr "Panela maximizatuta ez badago, goiko aldera lerrokatzen du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel"
-msgstr ""
+msgstr "Panela lerrokatzen du"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
 msgid "Center"
@@ -304,7 +300,7 @@ msgstr "Erdian"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Center aligns the panel if the panel is not maximized."
-msgstr ""
+msgstr "Panela maximizatuta ez badago, erdi aldera lerrokatzen du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Bottom"
@@ -316,17 +312,15 @@ msgstr "Eskuinean"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the bottom if the panel is not maximized."
-msgstr ""
+msgstr "Panela maximizatuta ez badago, beheko aldera lerrokatzen du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the right if the panel is not maximized."
-msgstr ""
+msgstr "Panela maximizatuta ez badago, eskuin aldera lerrokatzen du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility:"
-msgstr "Ikusgaitasuna"
+msgstr "Ikusgaitasuna:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
@@ -334,7 +328,7 @@ msgstr "Beti ikusgai"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
 msgid "Makes the panel remain visible always."
-msgstr ""
+msgstr "Panela beti ikusgai egotea eragiten du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
@@ -345,12 +339,12 @@ msgid ""
 "Makes the panel hidden always but reveals it when mouse enters the area "
 "where the panel would have been if it were not hidden."
 msgstr ""
+"Panela beti ezkutuan egotea eragiten du, hura erakusten du, ordea, ezkutuan "
+"egongo ez balitz, sagua, panela egonen litzatekeen eremuan sartzen denean."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
-#, fuzzy
-#| msgid "Windows Can Cover"
 msgid "Windows In Front"
-msgstr "Leihoek estali dezakete"
+msgstr "Leihoak aurrean"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
 msgid ""
@@ -358,42 +352,45 @@ msgid ""
 "It is revealed when mouse enters the area where the panel would have been if "
 "it were not covered."
 msgstr ""
+"Panela beti ikusgai egotea eragiten du, maximizatutako leihoek, ordea, "
+"estaliko dute. Hura erakusten du, estalita egongo ez balitz, sagua, panela "
+"egonen litzatekeen eremuan sartzen denean."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Behind"
-msgstr "Leihoak honen azpitik"
+msgstr "Leihoak atzean"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid ""
 "Makes the panel remain visible always but part of the maximized windows "
 "shall go below the panel as though the panel did not exist."
 msgstr ""
+"Panela beti ikusgai egotea eragiten du, maximizatutako leihoen zati bat, "
+"ordea, panelik ez balego bezala, paneletik behera joango da."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity:"
-msgstr "Opakutasuna"
+msgstr "Opakutasuna:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-#, fuzzy
-#| msgid "Opaque"
 msgid "Fully Opaque"
-msgstr "Opakua"
+msgstr "Erabat opakua"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
 msgid "Makes the panel opaque always."
-msgstr ""
+msgstr "Panela beti opakua izatea eragiten du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
 msgstr "Moldakorra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-msgid "Makes the panel translucent exept when some windows touch it."
+#, fuzzy
+#| msgid "Makes the panel translucent exept when some windows touch it."
+msgid "Makes the panel translucent except when some windows touch it."
 msgstr ""
+"Panela zeharrargitsu izatea eragiten du, leihoren batek ukitzen duenean izan "
+"ezik."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 msgid "Translucent"
@@ -401,37 +398,33 @@ msgstr "Zeharrargitsua"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
 msgid "Makes the panel translucent always."
-msgstr ""
+msgstr "Panela beti zeharrargitsua izatea eragiten du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating:"
-msgstr "Panel higikorra"
+msgstr "Higikorra:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "Panel higikorra"
+msgstr "Higikorra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
 msgid "Makes the panel float from the edge of the screen."
-msgstr ""
+msgstr "Panela leihoaren ertzetik higikorra izatea eragiten du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
 msgid "Attached"
-msgstr ""
+msgstr "Atxikita"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-msgid "Makes the panel remain attached to the edge of the panel."
-msgstr ""
+#, fuzzy
+#| msgid "Makes the panel remain attached to the edge of the panel."
+msgid "Makes the panel remain attached to the edge of the screen."
+msgstr "Panela pantailaren ertzera atxikita egotea eragiten du."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus Shortcut"
-msgstr "Lasterbideak"
+msgstr "Fokuaren lasterbidea"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"

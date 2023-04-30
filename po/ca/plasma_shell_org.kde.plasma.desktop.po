@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
-"PO-Revision-Date: 2023-02-24 15:03+0100\n"
+"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"PO-Revision-Date: 2023-04-29 12:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -266,10 +266,8 @@ msgid "Input Here"
 msgstr "Introduïu-ho aquí"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-#, fuzzy
-#| msgid "Apply Settings"
 msgid " Panel Settings"
-msgstr "Aplica l'arranjament"
+msgstr " Arranjament del plafó"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
@@ -277,10 +275,8 @@ msgid "Remove Panel"
 msgstr "Elimina el plafó"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment:"
-msgstr "Alineació del plafó"
+msgstr "Alineació:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
@@ -292,11 +288,11 @@ msgstr "Esquerra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel to the top if the panel is not maximized."
-msgstr ""
+msgstr "Alinea el plafó a la part superior si no està maximitzat."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel"
-msgstr ""
+msgstr "Alinea el plafó"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
 msgid "Center"
@@ -304,7 +300,7 @@ msgstr "Centre"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Center aligns the panel if the panel is not maximized."
-msgstr ""
+msgstr "Alinea el plafó al centre si no està maximitzat."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Bottom"
@@ -316,17 +312,15 @@ msgstr "Dreta"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the bottom if the panel is not maximized."
-msgstr ""
+msgstr "Alinea el plafó a la part inferior si no està maximitzat."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the right if the panel is not maximized."
-msgstr ""
+msgstr "Alinea el plafó a la dreta si no està maximitzat."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility:"
-msgstr "Visibilitat"
+msgstr "Visibilitat:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
@@ -334,7 +328,7 @@ msgstr "Sempre visible"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
 msgid "Makes the panel remain visible always."
-msgstr ""
+msgstr "Fa que el plafó estigui sempre visible."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
@@ -345,12 +339,12 @@ msgid ""
 "Makes the panel hidden always but reveals it when mouse enters the area "
 "where the panel would have been if it were not hidden."
 msgstr ""
+"Fa que el plafó sempre estigui ocult, però el mostra quan el ratolí entra a "
+"l'àrea on hauria estat el plafó si no estigués ocult."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
-#, fuzzy
-#| msgid "Windows Can Cover"
 msgid "Windows In Front"
-msgstr "Les finestres el poden tapar"
+msgstr "Les finestres a davant"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
 msgid ""
@@ -358,42 +352,43 @@ msgid ""
 "It is revealed when mouse enters the area where the panel would have been if "
 "it were not covered."
 msgstr ""
+"Fa que el plafó estigui sempre visible, però les finestres maximitzades el "
+"poden cobrir. Es mostra quan el ratolí entra a l'àrea on hauria estat el "
+"plafó si no estigués cobert."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Behind"
-msgstr "Les finestres van a sota"
+msgstr "Les finestres a darrere"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid ""
 "Makes the panel remain visible always but part of the maximized windows "
 "shall go below the panel as though the panel did not exist."
 msgstr ""
+"Fa que el plafó estigui sempre visible, però part de les finestres "
+"maximitzades romandran sota el plafó com si no existís."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity:"
-msgstr "Opacitat"
+msgstr "Opacitat:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-#, fuzzy
-#| msgid "Opaque"
 msgid "Fully Opaque"
-msgstr "Opaca"
+msgstr "Opac completament"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
 msgid "Makes the panel opaque always."
-msgstr ""
+msgstr "Fa que el plafó estigui sempre opac."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
 msgstr "Adaptativa"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-msgid "Makes the panel translucent exept when some windows touch it."
-msgstr ""
+#, fuzzy
+#| msgid "Makes the panel translucent exept when some windows touch it."
+msgid "Makes the panel translucent except when some windows touch it."
+msgstr "Fa translúcid el plafó excepte si alguna finestra el toca."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 msgid "Translucent"
@@ -401,37 +396,33 @@ msgstr "Translúcida"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
 msgid "Makes the panel translucent always."
-msgstr ""
+msgstr "Fa que el plafó estigui sempre translúcid."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating:"
-msgstr "Plafó flotant"
+msgstr "Flotant:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "Plafó flotant"
+msgstr "Flotant"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
 msgid "Makes the panel float from the edge of the screen."
-msgstr ""
+msgstr "Fa que el plafó floti des de la vora de la pantalla."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
 msgid "Attached"
-msgstr ""
+msgstr "Fixat"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-msgid "Makes the panel remain attached to the edge of the panel."
-msgstr ""
+#, fuzzy
+#| msgid "Makes the panel remain attached to the edge of the panel."
+msgid "Makes the panel remain attached to the edge of the screen."
+msgstr "Fa que el plafó es fixi a la vora de la pantalla."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus Shortcut"
-msgstr "Drecera"
+msgstr "Drecera de focus"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"
@@ -580,6 +571,3 @@ msgstr "No hi ha cap giny que coincideixi amb els termes de la cerca"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "No hi ha cap giny disponible"
-
-#~ msgid "Maximize Panel"
-#~ msgstr "Maximitza el plafó"
