@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-27 00:49+0000\n"
-"PO-Revision-Date: 2022-09-02 08:00+0200\n"
+"PO-Revision-Date: 2023-04-30 04:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -94,6 +94,9 @@ msgid ""
 "seconds field to change the relevant value, either using the up and down "
 "buttons to the right or by entering a new value."
 msgstr ""
+"აქ შეგიძლიათ სისტემის დრო შეცვალოთ. დააწკაპუნეთ საათების, წუთების და წამების "
+"ველზე, რათა შესაბამისი მნიშვნელობა შეცვალოთ. ან ზემოთ/ქვემოთ ღილაკებით "
+"მარჯვენა მხარეს, ან ახალი მნიშვნელობის ხელით შეყვანით."
 
 #: dtime.cpp:113
 #, kde-format
@@ -147,6 +150,11 @@ msgid ""
 "feel the system time should be corrected, please contact your system "
 "administrator."
 msgstr ""
+"<h1>თარიღი და დრო </h1> სისტემის პარამეტრების ეს მოდული სისტემის თარიღისა და "
+"დროის შესაცვლელად შეგიძლიათ გამოიყენოთ. რადგანაც ამ პარამეტრებს არა მხოლოდ "
+"თქვენს მომხმარებელზე, არამედ მთელ სისტემაზე აქვს გავლენა, ამ პარამეტრების "
+"შეცვლა მხოლოდ root მომხმარებლით შეგიძლიათ. თუ root-ის პაროლი არ გაქვთ და დრო "
+"გასასწორებელია, დაუკავშირდით სისტემურ ადმინისტრატორს."
 
 #: main.cpp:49
 #, kde-format
@@ -197,6 +205,11 @@ msgid ""
 "Settings as root. If you do not have the root password, but feel the system "
 "time should be corrected, please contact your system administrator."
 msgstr ""
+"<h1>თარიღი და დრო </h1> კონტროლის ეს მოდული სისტემის თარიღისა და დროის "
+"შესაცვლელად შეგიძლიათ გამოიყენოთ. რადგანაც ამ პარამეტრებს არა მხოლოდ თქვენს "
+"მომხმარებელზე, არამედ მთელ სისტემაზე აქვს გავლენა, ამ პარამეტრების შეცვლა "
+"მხოლოდ root მომხმარებლით შეგიძლიათ. თუ root-ის პაროლი არ გაქვთ და დრო "
+"გასასწორებელია, დაუკავშირდით სისტემურ ადმინისტრატორს."
 
 #: main.cpp:113
 #, kde-format
