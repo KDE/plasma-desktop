@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:36+0000\n"
-"PO-Revision-Date: 2023-04-29 12:18+0200\n"
+"PO-Revision-Date: 2023-04-30 11:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -385,8 +385,6 @@ msgid "Adaptive"
 msgstr "Adaptativa"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-#, fuzzy
-#| msgid "Makes the panel translucent exept when some windows touch it."
 msgid "Makes the panel translucent except when some windows touch it."
 msgstr "Fa translúcid el plafó excepte si alguna finestra el toca."
 
@@ -415,10 +413,8 @@ msgid "Attached"
 msgstr "Fixat"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-#, fuzzy
-#| msgid "Makes the panel remain attached to the edge of the panel."
 msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "Fa que el plafó es fixi a la vora de la pantalla."
+msgstr "Fa que el plafó romangui fix a la vora de la pantalla."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
 msgid "Focus Shortcut"

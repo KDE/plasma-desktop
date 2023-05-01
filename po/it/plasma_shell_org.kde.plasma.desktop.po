@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:36+0000\n"
-"PO-Revision-Date: 2023-02-25 00:12+0100\n"
+"PO-Revision-Date: 2023-04-30 11:19+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -267,10 +267,8 @@ msgid "Input Here"
 msgstr "Digita qui"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-#, fuzzy
-#| msgid "Apply Settings"
 msgid " Panel Settings"
-msgstr "Applica impostazioni"
+msgstr "Impostazioni del pannello"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
@@ -278,10 +276,8 @@ msgid "Remove Panel"
 msgstr "Rimuovi pannello"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment:"
-msgstr "Allineamento del pannello"
+msgstr "Allineamento:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
@@ -293,11 +289,11 @@ msgstr "Sinistra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel to the top if the panel is not maximized."
-msgstr ""
+msgstr "Allinea il pannello in alto se il pannello non è ingrandito."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
 msgid "Aligns the panel"
-msgstr ""
+msgstr "Allinea il pannello"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
 msgid "Center"
@@ -305,7 +301,7 @@ msgstr "Centro"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Center aligns the panel if the panel is not maximized."
-msgstr ""
+msgstr "Allinea al centro il pannello se il pannello non è ingrandito."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid "Bottom"
@@ -317,17 +313,15 @@ msgstr "Destra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the bottom if the panel is not maximized."
-msgstr ""
+msgstr "Allinea il pannello in basso se il pannello non è ingrandito."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the right if the panel is not maximized."
-msgstr ""
+msgstr "Allinea il pannello a destra se il pannello non è ingrandito."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility:"
-msgstr "Visibilità"
+msgstr "Visibilità:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
@@ -335,7 +329,7 @@ msgstr "Sempre visibile"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
 msgid "Makes the panel remain visible always."
-msgstr ""
+msgstr "Fa in modo che il pannello rimanga sempre visibile."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
@@ -346,12 +340,12 @@ msgid ""
 "Makes the panel hidden always but reveals it when mouse enters the area "
 "where the panel would have been if it were not hidden."
 msgstr ""
+"Rende sempre nascosto il pannello, ma lo rivela quando il mouse entra "
+"nell'area in cui sarebbe stato il pannello se non fosse stato nascosto."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
-#, fuzzy
-#| msgid "Windows Can Cover"
 msgid "Windows In Front"
-msgstr "Le finestre possono coprire"
+msgstr "Le finestre in primo piano"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
 msgid ""
@@ -359,10 +353,11 @@ msgid ""
 "It is revealed when mouse enters the area where the panel would have been if "
 "it were not covered."
 msgstr ""
+"Fa in modo che il pannello rimanga sempre visibile, ma le finestre "
+"massimizzate lo copriranno. Viene rivelato quando il mouse entra nell'area "
+"dove sarebbe stato il pannello se non fosse stato coperto."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Behind"
 msgstr "Le finestre vanno sotto"
 
@@ -371,22 +366,20 @@ msgid ""
 "Makes the panel remain visible always but part of the maximized windows "
 "shall go below the panel as though the panel did not exist."
 msgstr ""
+"Fa in modo che il pannello rimanga sempre visibile, ma parte delle finestre "
+"ingrandite andranno sotto il pannello come se il pannello non esistesse."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity:"
-msgstr "Opacità"
+msgstr "Opacità:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-#, fuzzy
-#| msgid "Opaque"
 msgid "Fully Opaque"
-msgstr "Opaco"
+msgstr "Completamente opaco"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
 msgid "Makes the panel opaque always."
-msgstr ""
+msgstr "Rende il pannello sempre opaco."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
@@ -402,37 +395,31 @@ msgstr "Trasparente"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
 msgid "Makes the panel translucent always."
-msgstr ""
+msgstr "Rende il pannello sempre trasparente."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating:"
-msgstr "Pannello flottante"
+msgstr "Flottante:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "Pannello flottante"
+msgstr "Flottante"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
 msgid "Makes the panel float from the edge of the screen."
-msgstr ""
+msgstr "Fa fluttuare il pannello dal bordo dello schermo."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
 msgid "Attached"
-msgstr ""
+msgstr "Attaccato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
 msgid "Makes the panel remain attached to the edge of the screen."
 msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus Shortcut"
-msgstr "Scorciatoia"
+msgstr "Scorciatoia per messa a fuoco"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"

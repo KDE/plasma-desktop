@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-28 00:19+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-02-11 23:35+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -31,20 +31,20 @@ msgctxt "Note this is a KRunner keyword"
 msgid "wm console"
 msgstr "คอนโซลพื้นที่ทำงาน"
 
-#: plasma-desktop-runner.cpp:29 plasma-desktop-runner.cpp:32
+#: plasma-desktop-runner.cpp:28 plasma-desktop-runner.cpp:30
 #, kde-format
 msgid ""
 "Opens the Plasma desktop interactive console with a file path to a script on "
 "disk."
 msgstr "เปิดคอนโซลปฏิสัมพันธ์ของพื้นที่ทำงานพลาสมา ด้วยพาธของแฟ้มไปยังสคริปต์บนดิสก์"
 
-#: plasma-desktop-runner.cpp:31
+#: plasma-desktop-runner.cpp:29
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "desktop console :q:"
 msgstr "คอนโซลพื้นที่ทำงาน :q:"
 
-#: plasma-desktop-runner.cpp:35 plasma-desktop-runner.cpp:38
+#: plasma-desktop-runner.cpp:31 plasma-desktop-runner.cpp:32
 #, fuzzy, kde-format
 #| msgid ""
 #| "Opens the Plasma desktop interactive console with a file path to a script "
@@ -53,7 +53,7 @@ msgid ""
 "Opens the KWin interactive console with a file path to a script on disk."
 msgstr "เปิดคอนโซลปฏิสัมพันธ์ของพื้นที่ทำงานพลาสมา ด้วยพาธของแฟ้มไปยังสคริปต์บนดิสก์"
 
-#: plasma-desktop-runner.cpp:37
+#: plasma-desktop-runner.cpp:32
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "desktop console :q:"
@@ -61,12 +61,12 @@ msgctxt "Note this is a KRunner keyword"
 msgid "wm console :q:"
 msgstr "คอนโซลพื้นที่ทำงาน :q:"
 
-#: plasma-desktop-runner.cpp:53
+#: plasma-desktop-runner.cpp:46
 #, kde-format
 msgid "Open Plasma desktop interactive console"
 msgstr "เปิดคอนโซลปฏิสัมพันธ์ของพื้นที่ทำงานพลาสมา"
 
-#: plasma-desktop-runner.cpp:62
+#: plasma-desktop-runner.cpp:55
 #, fuzzy, kde-format
 #| msgid "Open Plasma desktop interactive console"
 msgid "Open KWin interactive console"

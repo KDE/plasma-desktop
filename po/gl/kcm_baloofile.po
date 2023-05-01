@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Marce Villarino <mvillarino@kde-espana.org>, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2019-10-19 15:35+0200\n"
+"PO-Revision-Date: 2023-04-30 10:21+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: package/contents/ui/main.qml:57
 #, kde-format
@@ -25,6 +25,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"Isto desactivará a busca de ficheiros en KRunner e menús de inicio, e "
+"deixará de mostrar os metadatos estendidos en todas as aplicacións de KDE."
 
 #: package/contents/ui/main.qml:66
 #, kde-format
@@ -33,32 +35,34 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"Quere eliminar os datos de indexación gardados? Liberaranse %1 de espazo, "
+"pero se volve activar a indexación máis tarde, haberá que crear de novo o "
+"índice completo. Isto podería levar un tempo, segundo o número de ficheiros "
+"que teña."
 
 #: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Delete Index Data"
-msgstr ""
+msgstr "Eliminar os datos do índice"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
+msgstr "Debe reiniciarse o sistema para que os cambios xurdan efecto."
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Reiniciar"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their content"
+#, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
 msgstr ""
 "A busca de ficheiros permítelle dar rapidamente cos seus ficheiros segundo o "
-"contido"
+"contido."
 
 #: package/contents/ui/main.qml:106
 #, kde-format
@@ -73,69 +77,67 @@ msgstr "Indexar tamén o contido do ficheiro."
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Index hidden files and folders"
-msgstr ""
+msgstr "Indexar os ficheiros e cartafoles agochados"
 
 #: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Status: %1, %2% complete"
-msgstr ""
+msgstr "Estado: %1, %2% completo"
 
 #: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Pause Indexer"
-msgstr ""
+msgstr "Pausar o indexador"
 
 #: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Resume Indexer"
-msgstr ""
+msgstr "Continuar o indexador"
 
 #: package/contents/ui/main.qml:177
 #, kde-format
 msgid "Currently indexing: %1"
-msgstr ""
+msgstr "Indexando actualmente: %1"
 
 #: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Folder specific configuration:"
-msgstr ""
+msgstr "Configuración específica de cartafol:"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Start indexing a folder…"
-msgstr ""
+msgstr "Comezar a indexar un cartafol…"
 
 #: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Stop indexing a folder…"
-msgstr ""
+msgstr "Deixar de indexar un cartafol…"
 
 #: package/contents/ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
-msgstr ""
+msgstr "Non indexado"
 
 #: package/contents/ui/main.qml:272
 #, kde-format
 msgid "Indexed"
-msgstr ""
+msgstr "Indexado"
 
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "Delete entry"
-msgstr ""
+msgstr "Eliminar a entrada"
 
 #: package/contents/ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to include"
-msgstr "Escolla o cartafol que se debe excluír"
+msgstr "Seleccione un cartafol para incluír"
 
 #: package/contents/ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to exclude"
-msgstr "Escolla o cartafol que se debe excluír"
+msgstr "Seleccione un cartafol para excluír"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
