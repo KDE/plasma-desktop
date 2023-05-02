@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:36+0000\n"
-"PO-Revision-Date: 2023-04-09 22:11+0100\n"
+"PO-Revision-Date: 2023-05-01 05:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -68,7 +68,7 @@ msgstr "Forigi"
 
 #: contents/applet/AppletError.qml:123
 msgid "Sorry! There was an error loading %1."
-msgstr "Pardonu! Okazis eraro dum la ŝarĝo de %1."
+msgstr "Pardonu! Okazis eraro dum la ŝargo de %1."
 
 #: contents/applet/AppletError.qml:161
 msgid "Copy to Clipboard"
@@ -263,10 +263,8 @@ msgid "Input Here"
 msgstr "Enigo Ĉi tie"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-#, fuzzy
-#| msgid "Apply Settings"
 msgid " Panel Settings"
-msgstr "Apliki Agordojn"
+msgstr " Panel-agordoj"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
@@ -274,10 +272,8 @@ msgid "Remove Panel"
 msgstr "Forigi Panelon"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment:"
-msgstr "Panela Alineado"
+msgstr "Ĝisrandigo:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
@@ -314,16 +310,15 @@ msgstr "Ĝuste"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgstr ""
+"Ĝisrandigas la panelon al malsupro se la panelo ne estas maksimumigita."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
 msgid "Aligns the panel to the right if the panel is not maximized."
-msgstr ""
+msgstr "Ĝisrandigas la panelon al dekstro se la panelo ne estas maksimumigita."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility:"
-msgstr "Videbleco"
+msgstr "Videbleco:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
@@ -331,7 +326,7 @@ msgstr "Ĉiam Videbla"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
 msgid "Makes the panel remain visible always."
-msgstr ""
+msgstr "Igas la panelon resti ĉiam videbla."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
@@ -342,12 +337,12 @@ msgid ""
 "Makes the panel hidden always but reveals it when mouse enters the area "
 "where the panel would have been if it were not hidden."
 msgstr ""
+"Igas la panelon ĉiam kaŝita sed malkaŝas ĝin kiam la muso eniĝas la areon "
+"kie la panelo troviĝus se ĝi ne estus kaŝita."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
-#, fuzzy
-#| msgid "Windows Can Cover"
 msgid "Windows In Front"
-msgstr "Fenestroj Povas Kovri"
+msgstr "Fenestroj Malfone"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
 msgid ""
@@ -357,10 +352,8 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Behind"
-msgstr "Fenestroj Iru Malsupre"
+msgstr "Fenestroj Fone"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid ""
@@ -369,20 +362,16 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity:"
-msgstr "Opakeco"
+msgstr "Opakeco:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-#, fuzzy
-#| msgid "Opaque"
 msgid "Fully Opaque"
-msgstr "Opaka"
+msgstr "Plene Opaka"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
 msgid "Makes the panel opaque always."
-msgstr ""
+msgstr "Igas la panelon opaka ĉiam."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
@@ -398,37 +387,31 @@ msgstr "Travidebla"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
 msgid "Makes the panel translucent always."
-msgstr ""
+msgstr "Igas la panelon travidebla ĉiam."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating:"
-msgstr "Flosanta Panelo"
+msgstr "Flosanta:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Flosanta Panelo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
 msgid "Makes the panel float from the edge of the screen."
-msgstr ""
+msgstr "Igas la panelon flosi ekde la rando de la ekrano."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
 msgid "Attached"
-msgstr ""
+msgstr "Alligita"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
 msgid "Makes the panel remain attached to the edge of the screen."
-msgstr ""
+msgstr "Igas la panelon resti ligita al la rando de la ekrano."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus Shortcut"
-msgstr "Ŝparvojo"
+msgstr "Fokus-Ŝparvojo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
 msgid "Press this keyboard shortcut to move focus to the Panel"
