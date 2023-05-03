@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:36+0000\n"
-"PO-Revision-Date: 2023-04-29 07:17+0200\n"
+"PO-Revision-Date: 2023-05-02 11:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -267,7 +267,7 @@ msgstr "Vnesite sem"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
 msgid " Panel Settings"
-msgstr "Nastavitve plošče"
+msgstr " Nastavitve plošče"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
@@ -276,7 +276,7 @@ msgstr "Odstrani pult"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
 msgid "Alignment:"
-msgstr "Poravnava"
+msgstr "Poravnava:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
 msgid "Top"
@@ -320,7 +320,7 @@ msgstr "Desno poravnaj ploščo, če plošča ni razpeta."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
 msgid "Visibility:"
-msgstr "Vidnost;"
+msgstr "Vidnost:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
 msgid "Always Visible"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
 msgid "Opacity:"
-msgstr "Neprosojnost;"
+msgstr "Neprosojnost:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
 msgid "Fully Opaque"
@@ -385,8 +385,6 @@ msgid "Adaptive"
 msgstr "Prilagodljivo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-#, fuzzy
-#| msgid "Makes the panel translucent exept when some windows touch it."
 msgid "Makes the panel translucent except when some windows touch it."
 msgstr "Nastavi ploščo prosojno, razen če se je kakšno okno dotika."
 
@@ -415,10 +413,8 @@ msgid "Attached"
 msgstr "Pripeta"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-#, fuzzy
-#| msgid "Makes the panel remain attached to the edge of the panel."
 msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "Nastavi ploščo, da ostane pripeta na rob plošče,"
+msgstr "Nastavi ploščo, da ostane pripeta na rob plošče."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
 msgid "Focus Shortcut"
