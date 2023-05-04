@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-30 03:36+0000\n"
-"PO-Revision-Date: 2023-04-29 10:30+0200\n"
+"PO-Revision-Date: 2023-05-03 08:53+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -258,16 +258,16 @@ msgstr "Działania myszy"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 msgid "Input Here"
-msgstr "Wprowadź tutaj"
+msgstr "Wpisz tutaj"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
 msgid " Panel Settings"
-msgstr "Ustawienia panelu"
+msgstr "Ustawienia paska"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
-msgstr "Usuń panel"
+msgstr "Usuń pasek"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
 msgid "Alignment:"
@@ -327,7 +327,7 @@ msgstr "Czyni pasek zawsze widocznym."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
 msgid "Auto Hide"
-msgstr "Samoczynnie ukryj"
+msgstr "Samoukrywający się"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
 msgid ""
@@ -377,13 +377,11 @@ msgstr "Czyni pasek zawsze nieprzezroczystym."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
 msgid "Adaptive"
-msgstr "Dostosowująca się"
+msgstr "Dostosowujący się"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-#, fuzzy
-#| msgid "Makes the panel translucent exept when some windows touch it."
 msgid "Makes the panel translucent except when some windows touch it."
-msgstr "Czyni pasek przezroczystym z wyjątkiem, gdy dotknie go okno."
+msgstr "Czyni pasek przezroczystym z wyjątkiem, gdy dotknie go jakieś okno."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 msgid "Translucent"
@@ -395,7 +393,7 @@ msgstr "Czyni pasek zawsze przezroczystym."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
 msgid "Floating:"
-msgstr "Pływający:"
+msgstr "Pływanie:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
 msgid "Floating"
@@ -410,10 +408,8 @@ msgid "Attached"
 msgstr "Przytwierdzony"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-#, fuzzy
-#| msgid "Makes the panel remain attached to the edge of the panel."
 msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "Czyni pasek przytwierdzonym do krawędzi paska."
+msgstr "Czyni pasek przytwierdzonym do krawędzi ekranu."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
 msgid "Focus Shortcut"
@@ -472,15 +468,15 @@ msgstr "Przeciąganie przenosi"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr "Klawisze strzałek przesuwają panel"
+msgstr "Klawisze strzałek przesuwają pasek"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
-msgstr "Szerokość panelu:"
+msgstr "Szerokość paska:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel height:"
-msgstr "Wysokość panelu:"
+msgstr "Wysokość paska:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:402
 #: contents/configuration/ShellContainmentConfiguration.qml:43
@@ -489,12 +485,12 @@ msgstr "Zamknij"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr "Zarządzanie panelami i pulpitami"
+msgstr "Zarządzanie paskami i pulpitami"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr "Możesz przeciągać panele i pulpity i przenosić je na różne ekrany."
+msgstr "Możesz przeciągać paski i pulpity i przenosić je na różne ekrany."
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
