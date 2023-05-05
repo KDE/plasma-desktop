@@ -48,10 +48,14 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
-    'plasma/kwayland-integration' : '@same'
     'third-party/packagekit-qt': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
+
+RuntimeDependencies:
+- 'on': ['@all']
+  'require':
+    'plasma/kwayland-integration' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
