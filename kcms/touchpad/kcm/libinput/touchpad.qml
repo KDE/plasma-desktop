@@ -573,6 +573,155 @@ KCM.SimpleKCM{
             Kirigami.FormData.isSection: false
         }
 
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        Layouts.ColumnLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Click method:")
+            Kirigami.FormData.buddyFor: rightClickMethodAreas
+            id: rightClickMethod
+
+            spacing: Kirigami.Units.smallSpacing
+
+            function load() {
+                enabled = touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
+                visible = touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
+
+                rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
+                rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
+
+                if (rightClickMethodAreas.enabled && touchpad.clickMethodAreas) {
+                    rightClickMethodAreas.checked = true
+                } else if (rightClickMethodClickfinger.enabled && touchpad.clickMethodClickfinger) {
+                    rightClickMethodClickfinger.checked = true
+                }
+            }
+
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    touchpad.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
+                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
+                    root.changeSignal()
+                }
+                loading = true
+                middleClickMethod.load()
+                loading = false
+            }
+
+            QQC2.RadioButton {
+                id: rightClickMethodAreas
+                text: i18nd("kcm_touchpad", "Bottom areas")
+
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Software enabled buttons will be added to bottom portion of your touchpad.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+
+                QQC2.Label {
+                    text: i18n("Left click by pressing anywhere\nRight click by pressing bottom right\nMiddle click by pressing bottom middle")
+                    elide: Text.ElideRight
+                    font: Kirigami.Theme.smallFont
+                }
+            }
+
+            QQC2.RadioButton {
+                id: rightClickMethodClickfinger
+                text: i18nd("kcm_touchpad", "Multiple fingers")
+
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Tap with two finger to enable right click.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                
+                QQC2.Label {
+                    Layout.fillWidth: true
+                    text: i18n("Left click by pressing anywhere with one finger\nRight click by pressing anywhere with two fingers\nMiddle click by pressing anywhere with three fingers")
+                    elide: Text.ElideRight
+                    font: Kirigami.Theme.smallFont
+                }
+
+                onCheckedChanged: rightClickMethod.syncCurrent()
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        Layouts.ColumnLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
+            Kirigami.FormData.buddyFor: middleSoftwareEmulation
+            id: middleClickMethod
+
+            spacing: Kirigami.Units.smallSpacing
+            visible: noMiddleSoftwareEmulation.visible ||
+                     middleSoftwareEmulation.visible ||
+                     clickfingerMiddleInfoBox.visible
+
+            function load() {
+                enabled = touchpad.supportsMiddleEmulation
+                if (enabled && touchpad.middleEmulation) {
+                    middleSoftwareEmulation.checked = true
+                } else {
+                    noMiddleSoftwareEmulation.checked = true
+                }
+            }
+
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    touchpad.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
+                    root.changeSignal()
+                }
+                loading = true
+                middleEmulation.load()
+                loading = false
+            }
+
+            QQC2.RadioButton {
+                id: noMiddleSoftwareEmulation
+                text: i18nd("kcm_touchpad", "Press bottom-middle")
+                visible: rightClickMethodAreas.checked
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Software enabled middle-button will be added to bottom portion of your touchpad.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+
+            QQC2.RadioButton {
+                id: middleSoftwareEmulation
+                text: i18nd("kcm_touchpad", "Press bottom left and bottom right corners simultaneously")
+                visible: rightClickMethodAreas.checked
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: middleClickMethod.syncCurrent()
+            }
+
+            QQC2.CheckBox {
+                id: clickfingerMiddleInfoBox
+                text: i18nd("kcm_touchpad", "Press anywhere with three fingers")
+                checked: true
+                enabled: false
+                visible: rightClickMethodClickfinger.checked
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Press anywhere with three fingers.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+        }
+
         // Scrolling
         Layouts.ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
@@ -736,141 +885,6 @@ KCM.SimpleKCM{
             }
             QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
-            Kirigami.FormData.buddyFor: rightClickMethodAreas
-            id: rightClickMethod
-
-            spacing: Kirigami.Units.smallSpacing
-
-            function load() {
-                enabled = touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
-                visible = touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
-
-                rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
-                rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
-
-                if (rightClickMethodAreas.enabled && touchpad.clickMethodAreas) {
-                    rightClickMethodAreas.checked = true
-                } else if (rightClickMethodClickfinger.enabled && touchpad.clickMethodClickfinger) {
-                    rightClickMethodClickfinger.checked = true
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
-                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
-                    root.changeSignal()
-                }
-                loading = true
-                middleClickMethod.load()
-                loading = false
-            }
-
-            QQC2.RadioButton {
-                id: rightClickMethodAreas
-                text: i18nd("kcm_touchpad", "Press bottom-right corner")
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Software enabled buttons will be added to bottom portion of your touchpad.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
-
-            QQC2.RadioButton {
-                id: rightClickMethodClickfinger
-                text: i18nd("kcm_touchpad", "Press anywhere with two fingers")
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Tap with two finger to enable right click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-                onCheckedChanged: rightClickMethod.syncCurrent()
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
-            Kirigami.FormData.buddyFor: middleSoftwareEmulation
-            id: middleClickMethod
-
-            spacing: Kirigami.Units.smallSpacing
-            visible: noMiddleSoftwareEmulation.visible ||
-                     middleSoftwareEmulation.visible ||
-                     clickfingerMiddleInfoBox.visible
-
-            function load() {
-                enabled = touchpad.supportsMiddleEmulation
-                if (enabled && touchpad.middleEmulation) {
-                    middleSoftwareEmulation.checked = true
-                } else {
-                    noMiddleSoftwareEmulation.checked = true
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
-                    root.changeSignal()
-                }
-                loading = true
-                middleEmulation.load()
-                loading = false
-            }
-
-            QQC2.RadioButton {
-                id: noMiddleSoftwareEmulation
-                text: i18nd("kcm_touchpad", "Press bottom-middle")
-                visible: rightClickMethodAreas.checked
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Software enabled middle-button will be added to bottom portion of your touchpad.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
-
-            QQC2.RadioButton {
-                id: middleSoftwareEmulation
-                text: i18nd("kcm_touchpad", "Press bottom left and bottom right corners simultaneously")
-                visible: rightClickMethodAreas.checked
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-                onCheckedChanged: middleClickMethod.syncCurrent()
-            }
-
-            QQC2.CheckBox {
-                id: clickfingerMiddleInfoBox
-                text: i18nd("kcm_touchpad", "Press anywhere with three fingers")
-                checked: true
-                enabled: false
-                visible: rightClickMethodClickfinger.checked
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Press anywhere with three fingers.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
         }
     } // END Kirigami.FormLayout
